@@ -6323,8 +6323,6 @@ void CvUnitAI::AI_greatHunterMove()
 		return;
 	}
 
-	std::vector<UnitAITypes> aeUnitAITypes;
-
 	const int iGHrandom = GC.getGame().getSorenRandNum(5, "AI Great Hunter Decision");
 
 	if (iGHrandom == 0 && AI_leadLegend())
@@ -6353,7 +6351,6 @@ void CvUnitAI::AI_greatHunterMove()
 	if (iGHrandom < 5)
 	{
 		std::vector<UnitAITypes> aeUnitAITypes;
-		aeUnitAITypes.clear();
 		aeUnitAITypes.push_back(UNITAI_HUNTER);
 		aeUnitAITypes.push_back(UNITAI_EXPLORE);
 		if (AI_lead(aeUnitAITypes))
@@ -6421,14 +6418,11 @@ void CvUnitAI::AI_greatAdmiralMove()
 {
 	PROFILE_FUNC();
 
-	std::vector<UnitAITypes> aeUnitAITypes;
-
 	const int iGArandom = GC.getGame().getSorenRandNum(4, "AI Great Admiral Decision");
 
 	if (iGArandom == 0)
 	{
 		std::vector<UnitAITypes> aeUnitAITypes;
-		aeUnitAITypes.clear();
 		aeUnitAITypes.push_back(UNITAI_ATTACK_SEA);
 		aeUnitAITypes.push_back(UNITAI_RESERVE_SEA);
 		aeUnitAITypes.push_back(UNITAI_CARRIER_SEA);
@@ -16842,7 +16836,6 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 	int iImpassableCount = GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType());
 
 	const int iSearchRange = AI_searchRange(iRange);
-
 	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, iSearchRange);
 
 	for(CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
@@ -27639,7 +27632,7 @@ bool CvUnitAI::AI_claimForts(CvReachablePlotSet* pReachablePlots, int iMinValue,
 								{
 									int iValue = 1000;
 
-									foreach_(const CvPlot* pAdjacent, plot()->adjacent()
+									foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent()
 									| filtered(CvPlot::fn::getBonusType(getTeam()) != NO_BONUS))
 									{
 										iValue *= 2;

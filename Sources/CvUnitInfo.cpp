@@ -378,11 +378,6 @@ CvUnitInfo::~CvUnitInfo()
 		SAFE_DELETE(outcomeMission);
 	}
 
-	//foreach_(const CvOutcomeMission* mission, m_aOutcomeMissions)
-	//{
-	//	SAFE_DELETE(mission);
-	//}
-
 	//Struct Vector
 	for (int i=0; i<(int)m_aEnabledCivilizationTypes.size(); i++)
 	{
@@ -1219,6 +1214,10 @@ int CvUnitInfo::getPrereqAndBuilding(int i) const
 bool CvUnitInfo::isPrereqAndBuilding(int i) const
 {
 	return algo::contains(m_aiPrereqAndBuildings, i);
+}
+bool CvUnitInfo::isPrereqOrBuilding(int i) const
+{
+	return algo::contains(m_aiPrereqOrBuildings, i);
 }
 
 //Struct Vector

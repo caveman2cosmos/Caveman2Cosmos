@@ -40146,7 +40146,11 @@ bool CvUnit::doAmbush(bool bAssassinate)
 			CvPlot* pPlot = plot();
 			if (pPlot != NULL)
 			{
-				attackSamePlotSpecifiedUnit(pDefender);
+				CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
+				if (pDefender != NULL)
+				{
+					attackSamePlotSpecifiedUnit(pDefender);
+				}
 			}
 			GET_PLAYER(getOwner()).setAmbushingUnit(FFreeList::INVALID_INDEX);
 		}
