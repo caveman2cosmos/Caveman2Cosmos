@@ -22556,12 +22556,23 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>15</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldModifiers>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>

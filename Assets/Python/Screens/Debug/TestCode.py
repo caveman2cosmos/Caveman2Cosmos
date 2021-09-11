@@ -1605,7 +1605,6 @@ class TestCode:
 					iTech = pTechCommerceChange.eTech
 					iCommerce = pTechCommerceChange.eCommerce
 					aTechCommerceChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
-					self.log(CvBuildingInfo.getType()+" "+str(pTechCommerceChange.value))
 				if CvBuildingInfo.isAnyTechCommerceModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1735,7 +1734,6 @@ class TestCode:
 					iTerrain = pTerrainYieldChanges.eTerrain
 					iYield = pTerrainYieldChanges.eYield
 					aTerrainYieldChanges[BASE][iTerrain][iYield] += pTerrainYieldChanges.value
-					self.log(CvBuildingInfo.getType()+" "+str(pTerrainYieldChanges.value))
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
