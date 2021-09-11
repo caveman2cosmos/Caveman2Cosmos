@@ -22658,13 +22658,27 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 					{
 						szBuffer.append(
 							CvWString::format(
-								L"\n%c<link=%s>%s</link>: ",
+								L"\n%c<link=%s>%s</link>",
 								gDLL->getSymbolID(BULLET_CHAR),
 								CvWString(GC.getTerrainInfo(pair.first).getType()).GetCString(),
 								GC.getTerrainInfo(pair.first).getDescription()
 							)
 						);
 						bFirst = false;
+
+						if (pCity != NULL)
+						{
+							int iCount = 0;
+							foreach_(const CvPlot* plotX, pCity->plots(NUM_CITY_PLOTS))
+							{
+								if (plotX->getTerrainType() == pair.first && pCity->canWork(plotX))
+								{
+									iCount++;
+								}
+							}
+							szBuffer.append(CvWString::format(L" (%d): ", iCount));
+						}
+						else szBuffer.append(L": ");
 					}
 					else szBuffer.append(L", ");
 
