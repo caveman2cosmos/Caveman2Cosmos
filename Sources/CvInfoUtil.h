@@ -11,12 +11,9 @@
 
 struct CvInfoUtil
 {
-	//===============================================================================
-	// Each struct holds a pointer to a variable.
-	// These structs are added to the m_DataMembers vector for iteration.
-	// A call can be made to each struct by iterating over the vector.
-	// Structs may reach to a call in different ways depending on its derived class.
-	//===============================================================================
+	//============
+	// Base class
+	//============
 
 	struct Var
 	{
@@ -32,9 +29,9 @@ struct CvInfoUtil
 		//CvWString m_tag;
 	};
 
-	//============
-	// IDValueMap
-	//============
+	//====================
+	// IDValueMap wrapper
+	//====================
 
 	template <typename IDValueMap_T>
 	struct IDValueMapVar : public Var
@@ -71,9 +68,9 @@ struct CvInfoUtil
 		return *this;
 	}
 
-	//====================================
-	// IDValueMap with delayed resolution
-	//====================================
+	//============================================
+	// IDValueMap with delayed resolution wrapper
+	//============================================
 
 	template <typename IDValueMap_T>
 	struct IDValueMapDelayedResolutionVar : public Var
