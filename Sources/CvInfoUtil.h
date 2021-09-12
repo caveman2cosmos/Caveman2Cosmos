@@ -1,13 +1,14 @@
 #pragma once
 
-#ifndef CVINFO_UTIL_H
-#define CVINFO_UTIL_H
+#ifndef CvInfoUtil_h__
+#define CvInfoUtil_h__
 
 #include "CvGameCoreDLL.h"
-//#include "CvGlobals.h"
-//#include "CvInfos.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
+#include "IDValueMap.h"
+
 
 struct CvInfoUtil
 {
@@ -17,17 +18,116 @@ struct CvInfoUtil
 
 	struct Var
 	{
+		Var(const wchar_t* tag)
+			: m_tag(tag)
+		{}
+
 		virtual ~Var() {}
 		virtual void initVar() {}
 		virtual void uninitVar() {}
 		virtual void checkSum(uint32_t& iSum) const {}
-		virtual void readXml(CvXMLLoadUtility&) {}
+		virtual void readXml(CvXMLLoadUtility*) {}
 		virtual void copyNonDefaults(const Var&) {}
 
-	private:
-		//const wchar_t* m_tag;
-		//CvWString m_tag;
+	protected:
+		const wchar_t* m_tag;
 	};
+
+	//========================
+	// Info type enum wrapper
+	//========================
+
+	template <typename Enum_t>
+	struct EnumVar : public Var
+	{
+		EnumVar(Enum_t& var, const wchar_t* tag)
+			: Var(tag)
+			, m_ptr(&var)
+		{}
+
+		virtual void initVar()
+		{
+			//*m_ptr = static_cast<Enum_t>(-1);
+			*m_ptr = Enum_t(-1);
+		}
+
+		virtual void checkSum(uint32_t& iSum) const
+		{
+			CheckSum(iSum, *m_ptr);
+		}
+
+		virtual void readXml(CvXMLLoadUtility* pXML)
+		{
+			if (pXML->TryMoveToXmlFirstChild(m_tag))
+			{
+				CvString szTextVal;
+				pXML->GetXmlVal(szTextVal);
+				*m_ptr = static_cast<Enum_t>(GC.getInfoTypeForString(szTextVal));
+				pXML->MoveToXmlParent();
+			}
+		}
+
+		virtual void copyNonDefaults(const EnumVar<Enum_t>& pOther)
+		{
+			if (*m_ptr == -1)
+				*m_ptr = *pOther.m_ptr;
+		}
+
+	protected:
+		Enum_t* m_ptr;
+	};
+
+	template <typename Enum_t>
+	CvInfoUtil& addEnum(Enum_t& var, const wchar_t* tag)
+	{
+		m_DataMembers.push_back(EnumVar<Enum_t>(var, tag));
+		return *this;
+	}
+
+	//====================
+	// Vector wrapper
+	//====================
+
+	template <typename T>
+	struct VectorVar : public Var
+	{
+		VectorVar(std::vector<T>& vec, const wchar_t* tag)
+			: Var(tag)
+			, m_ptr(&vec)
+		{}
+
+		virtual void checkSum(uint32_t& iSum) const
+		{
+			CheckSumC(iSum, *m_ptr);
+		}
+
+		virtual void readXml(CvXMLLoadUtility* pXML)
+		{
+			pXML->SetOptionalVector(m_ptr, m_tag);
+		}
+
+		virtual void copyNonDefaults(const Var& pOther)
+		{
+			foreach_(const T& element, *static_cast<const VectorVar<T>&>(pOther).m_ptr)
+			{
+				if (element > -1 && !algo::contains(*m_ptr, element))
+				{
+					m_ptr->push_back(element);
+				}
+			}
+			algo::sort(*m_ptr);
+		}
+
+	protected:
+		std::vector<T>* m_ptr;
+	};
+
+	template <typename T>
+	CvInfoUtil& add(std::vector<T>& vec, const wchar_t* tag)
+	{
+		m_DataMembers.push_back(VectorVar<T>(vec, tag));
+		return *this;
+	}
 
 	//====================
 	// IDValueMap wrapper
@@ -37,32 +137,31 @@ struct CvInfoUtil
 	struct IDValueMapVar : public Var
 	{
 		IDValueMapVar(IDValueMap_T& map, const wchar_t* tag)
-			: m_var(&map)
-			, m_tag(tag)
+			: Var(tag)
+			, m_ptr(&map)
 		{}
 
 		virtual void checkSum(uint32_t& iSum) const
 		{
-			CheckSumC(iSum, *m_var);
+			CheckSumC(iSum, *m_ptr);
 		}
 
-		virtual void readXml(CvXMLLoadUtility& pXML)
+		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			m_var->read(&pXML, m_tag.c_str());
+			m_ptr->read(pXML, m_tag);
 		}
 
 		virtual void copyNonDefaults(const Var& pOther)
 		{
-			m_var->copyNonDefaults(*static_cast<const IDValueMapVar&>(pOther).m_var);
+			m_ptr->copyNonDefaults(*static_cast<const IDValueMapVar&>(pOther).m_ptr);
 		}
 
-	private:
-		IDValueMap_T* m_var;
-		const CvWString m_tag;
+	protected:
+		IDValueMap_T* m_ptr;
 	};
 
 	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& addVar(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
+	CvInfoUtil& add(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
 	{
 		m_DataMembers.push_back(IDValueMapVar<IDValueMap<T1, T2, default_> >(map, tag));
 		return *this;
@@ -76,37 +175,36 @@ struct CvInfoUtil
 	struct IDValueMapDelayedResolutionVar : public Var
 	{
 		IDValueMapDelayedResolutionVar(IDValueMap_T& map, const wchar_t* tag)
-			: m_var(&map)
-			, m_tag(tag)
+			: Var(tag)
+			, m_ptr(&map)
 		{}
 
 		virtual void uninitVar()
 		{
-			m_var->removeDelayedResolution();
+			m_ptr->removeDelayedResolution();
 		}
 
 		virtual void checkSum(uint32_t& iSum) const
 		{
-			CheckSumC(iSum, *m_var);
+			CheckSumC(iSum, *m_ptr);
 		}
 
-		virtual void readXml(CvXMLLoadUtility& pXML)
+		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			m_var->readWithDelayedResolution(&pXML, m_tag.c_str());
+			m_ptr->readWithDelayedResolution(pXML, m_tag);
 		}
 
 		virtual void copyNonDefaults(const Var& pOther)
 		{
-			m_var->copyNonDefaultsDelayedResolution(*static_cast<const IDValueMapVar&>(pOther).m_var);
+			m_ptr->copyNonDefaultsDelayedResolution(*static_cast<const IDValueMapVar&>(pOther).m_ptr);
 		}
 
-	private:
-		IDValueMap_T* m_var;
-		const CvWString m_tag;
+	protected:
+		IDValueMap_T* m_ptr;
 	};
 
 	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& addDelayedResolutionVar(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
+	CvInfoUtil& addDelayedResolution(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
 	{
 		m_DataMembers.push_back(IDValueMapDelayedResolutionVar<IDValueMap<T1, T2, default_> >(map, tag));
 		return *this;

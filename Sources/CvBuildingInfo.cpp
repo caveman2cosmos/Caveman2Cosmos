@@ -1738,7 +1738,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
-	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_iPrereqAndTech);
 	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
@@ -2123,8 +2122,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitCombatOngoingTrainingDurations);
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
-	CheckSumC(iSum, m_aTechHappinessChanges);
-	CheckSumC(iSum, m_aTechHealthChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
 	CheckSumC(iSum, m_aExtraFreeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
@@ -2164,7 +2161,11 @@ CvInfoUtil CvBuildingInfo::getDataMembers()
 {
 	return
 		CvInfoUtil()
-			.addVar(m_piBonusHealthChanges, L"BonusHealthChanges")
+			.addEnum(m_iObsoleteTech, L"ObsoleteTech")
+			.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+			.add(m_aTechHappinessChanges, L"TechHappinessChanges")
+			.add(m_aTechHealthChanges, L"TechHealthChanges")
+			.add(m_aePrereqOrBonuses, L"PrereqBonuses")
 		;
 }
 
@@ -2232,9 +2233,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqAndTech = pXML->GetInfoClass(szTextVal);
@@ -3599,9 +3597,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
 
-	m_aTechHappinessChanges.read(pXML, L"TechHappinessChanges");
-	m_aTechHealthChanges.read(pXML, L"TechHealthChanges");
-
 	//Arrays
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
 	//TB Combat Mods (Buildings) end
@@ -3629,7 +3624,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aTechCommercePercent.readPairedArray(pXML, L"TechCommercePercentChanges");
 	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
 
-	algo::for_each(static_cast<CvInfoUtil&>(getDataMembers()), bind(&CvInfoUtil::Var::readXml, _1, *pXML));
+	algo::for_each(static_cast<CvInfoUtil&>(getDataMembers()), bind(&CvInfoUtil::Var::readXml, _1, pXML));
 
 	return true;
 }
@@ -3797,7 +3792,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getVictoryPrereq() == iTextDefault) m_iVictoryPrereq = pClassInfo->getVictoryPrereq();
 	if (getFreeStartEra() == iTextDefault) m_iFreeStartEra = pClassInfo->getFreeStartEra();
 	if (getMaxStartEra() == iTextDefault) m_iMaxStartEra = pClassInfo->getMaxStartEra();
-	if (getObsoleteTech() == iTextDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getPrereqAndTech() == iTextDefault) m_iPrereqAndTech = pClassInfo->getPrereqAndTech();
 	if (getPrereqVicinityBonus() == iTextDefault) m_iPrereqVicinityBonus = pClassInfo->getPrereqVicinityBonus();
 	if (getPrereqRawVicinityBonus() == iTextDefault) m_iPrereqRawVicinityBonus = pClassInfo->getPrereqRawVicinityBonus();
@@ -4899,9 +4893,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_aTechOutbreakLevelChanges.push_back(std::make_pair(eTech, iChange));
 		}
 	}
-
-	m_aTechHappinessChanges.copyNonDefaults(pClassInfo->getTechHappinessChanges());
-	m_aTechHealthChanges.copyNonDefaults(pClassInfo->getTechHealthChanges());
 
 	//Arrays
 	for ( int i = 0; i < GC.getNumHurryInfos(); i++ )
