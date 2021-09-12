@@ -335,7 +335,7 @@ void CyInfoPythonInterface1()
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
 		;
 
-	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvBuildingInfo", python::no_init)
+	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo>, boost::noncopyable>("CvBuildingInfo", python::no_init)
 
 		.def("getMaxGlobalInstances", &CvBuildingInfo::getMaxGlobalInstances, "int ()")
 		.def("getMaxTeamInstances", &CvBuildingInfo::getMaxTeamInstances, "int ()")

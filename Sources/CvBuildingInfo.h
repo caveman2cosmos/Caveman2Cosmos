@@ -11,6 +11,7 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "IDValuemap.h"
 
@@ -21,7 +22,7 @@ class CvHotkeyInfo;
 class CvProperties;
 class CvPropertyManipulators;
 class CvXMLLoadUtility;
-struct CvInfoUtil;
+//struct CvInfoUtil;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
@@ -546,7 +547,9 @@ public:
 	void doPostLoadCaching(BuildingTypes eThis);
 
 private:
-	CvInfoUtil getDataMembers();
+	CvInfoUtil& wrapDataMembers();
+
+	CvInfoUtil m_util;
 
 	void setNotShowInCity();
 

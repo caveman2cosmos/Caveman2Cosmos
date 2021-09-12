@@ -10,55 +10,61 @@
 #include "IDValueMap.h"
 
 
-struct CvInfoUtil
+struct CvInfoUtil : bst::noncopyable
 {
-	//============
-	// Base class
-	//============
+	///=============================
+	/// Variable wrapper base class 
+	///=============================
 
-	struct Var
+	struct WrappedVar
 	{
-		Var(const wchar_t* tag)
-			: m_tag(tag)
-		{}
+		//WrappedVar(void* ptr, const wchar_t* tag)
+		//	: m_ptr(ptr)
+		//	, m_tag(tag)
+		//{}
 
-		virtual ~Var() {}
-		virtual void initVar() {}
-		virtual void uninitVar() {}
-		virtual void checkSum(uint32_t& iSum) const {}
-		virtual void readXml(CvXMLLoadUtility*) {}
-		virtual void copyNonDefaults(const Var&) {}
+		virtual ~WrappedVar() {}
+		//virtual void initVar() {}
+		//virtual void uninitVar() {}
+		virtual void checkSum(uint32_t&) const = 0;
+		virtual void readXml(CvXMLLoadUtility*) = 0;
+		virtual void copyNonDefaults(const WrappedVar*)	= 0;
 
 	protected:
-		const wchar_t* m_tag;
+		//void* m_ptr;
+		//CvWString m_tag;
 	};
 
-	//========================
-	// Info type enum wrapper
-	//========================
+	///==============
+	/// Enum wrapper
+	///==============
 
 	template <typename Enum_t>
-	struct EnumVar : public Var
+	struct EnumWrapper : public WrappedVar, bst::noncopyable
 	{
-		EnumVar(Enum_t& var, const wchar_t* tag)
-			: Var(tag)
+		EnumWrapper(Enum_t& var, const wchar_t* tag)
+			//: WrappedVar(tag)
+			: m_tag(tag)
 			, m_ptr(&var)
-		{}
-
-		virtual void initVar()
 		{
-			//*m_ptr = static_cast<Enum_t>(-1);
-			*m_ptr = Enum_t(-1);
+			DEBUG_LOG("CvInfoUtil.log", "Wrapping enum");
 		}
+
+		//void initVar()
+		//{
+		//	*m_ptr = static_cast<Enum_t>(-1);
+		//}
 
 		virtual void checkSum(uint32_t& iSum) const
 		{
+			DEBUG_LOG("CvInfoUtil.log", "Add checkSum for enum");
 			CheckSum(iSum, *m_ptr);
 		}
 
 		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			if (pXML->TryMoveToXmlFirstChild(m_tag))
+			DEBUG_LOG("CvInfoUtil.log", "Set XML value for enum");
+			if (pXML->TryMoveToXmlFirstChild(m_tag.c_str()))
 			{
 				CvString szTextVal;
 				pXML->GetXmlVal(szTextVal);
@@ -67,176 +73,266 @@ struct CvInfoUtil
 			}
 		}
 
-		virtual void copyNonDefaults(const EnumVar<Enum_t>& pOther)
+		virtual void copyNonDefaults(const WrappedVar* pOther)
 		{
+			DEBUG_LOG("CvInfoUtil.log", "Copy non defaults for enum");
 			if (*m_ptr == -1)
-				*m_ptr = *pOther.m_ptr;
+				*m_ptr = *static_cast<const EnumWrapper<Enum_t>*>(pOther)->m_ptr;
 		}
 
 	protected:
+		Enum_t& value()
+		{
+			return static_cast<Enum_t&>(*m_ptr);
+		}
+
 		Enum_t* m_ptr;
+		CvWString m_tag;
 	};
 
 	template <typename Enum_t>
 	CvInfoUtil& addEnum(Enum_t& var, const wchar_t* tag)
 	{
-		m_DataMembers.push_back(EnumVar<Enum_t>(var, tag));
+		m_wrappedVars.push_back(new EnumWrapper<Enum_t>(var, tag));
+		DEBUG_LOG("CvInfoUtil.log", "Number of wrapped data members: %d", m_wrappedVars.size());
 		return *this;
 	}
 
-	//====================
-	// Vector wrapper
-	//====================
+	///====================
+	/// Vector wrapper
+	///====================
 
 	template <typename T>
-	struct VectorVar : public Var
+	struct VectorWrapper : public WrappedVar, bst::noncopyable
 	{
-		VectorVar(std::vector<T>& vec, const wchar_t* tag)
-			: Var(tag)
+		VectorWrapper(std::vector<T>& vec, const wchar_t* tag)
+			//: WrappedVar(tag)
+			: m_tag(tag)
 			, m_ptr(&vec)
-		{}
+		{
+			DEBUG_LOG("CvInfoUtil.log", "Wrapping vector");
+		}
 
 		virtual void checkSum(uint32_t& iSum) const
 		{
+			DEBUG_LOG("CvInfoUtil.log", "Add checkSum for vector");
 			CheckSumC(iSum, *m_ptr);
 		}
 
 		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			pXML->SetOptionalVector(m_ptr, m_tag);
+			DEBUG_LOG("CvInfoUtil.log", "Set XML values for vector");
+			pXML->SetOptionalVector(m_ptr, m_tag.c_str());
 		}
 
-		virtual void copyNonDefaults(const Var& pOther)
+		virtual void copyNonDefaults(const WrappedVar* pOther)
 		{
-			foreach_(const T& element, *static_cast<const VectorVar<T>&>(pOther).m_ptr)
-			{
+			DEBUG_LOG("CvInfoUtil.log", "Copy non defaults for vector");
+			foreach_(const T& element, *static_cast<const VectorWrapper<T>*>(pOther)->m_ptr)
 				if (element > -1 && !algo::contains(*m_ptr, element))
-				{
 					m_ptr->push_back(element);
-				}
-			}
 			algo::sort(*m_ptr);
 		}
 
 	protected:
+		std::vector<T>& value()
+		{
+			return static_cast<std::vector<T>&>(*m_ptr);
+		}
+
 		std::vector<T>* m_ptr;
+		CvWString m_tag;
 	};
 
 	template <typename T>
 	CvInfoUtil& add(std::vector<T>& vec, const wchar_t* tag)
 	{
-		m_DataMembers.push_back(VectorVar<T>(vec, tag));
+		m_wrappedVars.push_back(new VectorWrapper<T>(vec, tag));
+		DEBUG_LOG("CvInfoUtil.log", "Number of wrapped data members: %d", m_wrappedVars.size());
 		return *this;
 	}
 
-	//====================
-	// IDValueMap wrapper
-	//====================
+	///====================
+	/// IDValueMap wrapper
+	///====================
 
 	template <typename IDValueMap_T>
-	struct IDValueMapVar : public Var
+	struct IDValueMapWrapper : public WrappedVar, bst::noncopyable
 	{
-		IDValueMapVar(IDValueMap_T& map, const wchar_t* tag)
-			: Var(tag)
+		IDValueMapWrapper(IDValueMap_T& map, const wchar_t* tag)
+			//: WrappedVar(tag)
+			: m_tag(tag)
 			, m_ptr(&map)
-		{}
+		{
+			DEBUG_LOG("CvInfoUtil.log", "Wrapping vector");
+		}
 
 		virtual void checkSum(uint32_t& iSum) const
 		{
+			DEBUG_LOG("CvInfoUtil.log", "Add checkSum for IDValueMap");
 			CheckSumC(iSum, *m_ptr);
 		}
 
 		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			m_ptr->read(pXML, m_tag);
+			DEBUG_LOG("CvInfoUtil.log", "Set XML values for IDValueMap");
+			m_ptr->read(pXML, m_tag.c_str());
 		}
 
-		virtual void copyNonDefaults(const Var& pOther)
+		virtual void copyNonDefaults(const WrappedVar* pOther)
 		{
-			m_ptr->copyNonDefaults(*static_cast<const IDValueMapVar&>(pOther).m_ptr);
+			DEBUG_LOG("CvInfoUtil.log", "Copy non defaults for IDValueMap");
+			m_ptr->copyNonDefaults(*static_cast<const IDValueMapWrapper*>(pOther)->m_ptr);
 		}
 
 	protected:
+		IDValueMap_T& value()
+		{
+			return static_cast<IDValueMap_T&>(*m_ptr);
+		}
+
 		IDValueMap_T* m_ptr;
+		CvWString m_tag;
 	};
 
 	template <typename T1, typename T2, T2 default_>
 	CvInfoUtil& add(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
 	{
-		m_DataMembers.push_back(IDValueMapVar<IDValueMap<T1, T2, default_> >(map, tag));
+		m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, T2, default_> >(map, tag));
+		DEBUG_LOG("CvInfoUtil.log", "Number of wrapped data members: %d", m_wrappedVars.size());
 		return *this;
 	}
 
-	//============================================
-	// IDValueMap with delayed resolution wrapper
-	//============================================
+	///============================================
+	/// IDValueMap with delayed resolution wrapper
+	///============================================
 
 	template <typename IDValueMap_T>
-	struct IDValueMapDelayedResolutionVar : public Var
+	struct IDValueMapWithDelayedResolutionWrapper : public WrappedVar, bst::noncopyable
 	{
-		IDValueMapDelayedResolutionVar(IDValueMap_T& map, const wchar_t* tag)
-			: Var(tag)
+		IDValueMapWithDelayedResolutionWrapper(IDValueMap_T& map, const wchar_t* tag)
+			//: WrappedVar(tag)
+			: m_tag(tag)
 			, m_ptr(&map)
-		{}
+		{
+			DEBUG_LOG("CvInfoUtil.log", "Wrapping IDValueMap with delayed resolution");
+		}
 
 		virtual void uninitVar()
 		{
+			DEBUG_LOG("CvInfoUtil.log", "Uninit IDValueMap with delayed resolution");
 			m_ptr->removeDelayedResolution();
 		}
 
 		virtual void checkSum(uint32_t& iSum) const
 		{
+			DEBUG_LOG("CvInfoUtil.log", "Add checkSum for IDValueMap with delayed resolution");
 			CheckSumC(iSum, *m_ptr);
 		}
 
 		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			m_ptr->readWithDelayedResolution(pXML, m_tag);
+			DEBUG_LOG("CvInfoUtil.log", "Set XML delayed resolution values for IDValueMap");
+			m_ptr->readWithDelayedResolution(pXML, m_tag.c_str());
 		}
 
-		virtual void copyNonDefaults(const Var& pOther)
+		virtual void copyNonDefaults(const WrappedVar* pOther)
 		{
-			m_ptr->copyNonDefaultsDelayedResolution(*static_cast<const IDValueMapVar&>(pOther).m_ptr);
+			DEBUG_LOG("CvInfoUtil.log", "Copy non defaults with delayed resolution for IDValueMap");
+			m_ptr->copyNonDefaultsDelayedResolution(*static_cast<const IDValueMapWithDelayedResolutionWrapper*>(pOther)->m_ptr);
 		}
 
 	protected:
+		IDValueMap_T& value()
+		{
+			return static_cast<IDValueMap_T&>(*m_ptr);
+		}
+
 		IDValueMap_T* m_ptr;
+		CvWString m_tag;
 	};
 
 	template <typename T1, typename T2, T2 default_>
 	CvInfoUtil& addDelayedResolution(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
 	{
-		m_DataMembers.push_back(IDValueMapDelayedResolutionVar<IDValueMap<T1, T2, default_> >(map, tag));
+		m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, T2, default_> >(map, tag));
+		DEBUG_LOG("CvInfoUtil.log", "Number of wrapped data members: %d", m_wrappedVars.size());
 		return *this;
 	}
 
-	//===========
-	// Iteration
-	//===========
+	///============
+	/// Destructor
+	///============
 
-	typedef std::vector<Var>::iterator        iterator;
-	typedef std::vector<Var>::const_iterator  const_iterator;
+	CvInfoUtil()
+	{
+		DEBUG_LOG("CvInfoUtil.log", "Util created, initial size: %d", m_wrappedVars.size());
+		FAssert(m_wrappedVars.empty());
+		reset();
+	}
 
-	iterator begin() { return m_DataMembers.begin(); }
-	iterator end()   { return m_DataMembers.end(); }
+	~CvInfoUtil()
+	{
+		reset();
+		DEBUG_LOG("CvInfoUtil.log", "Util destroyed, size: %d", m_wrappedVars.size());
+	}
 
-	const_iterator begin() const { return m_DataMembers.begin(); }
-	const_iterator end() const   { return m_DataMembers.end(); }
+	void reset()
+	{
+		foreach_(const WrappedVar* wrapper, m_wrappedVars)
+			delete wrapper;
+		m_wrappedVars.clear();
+	}
 
-	//========
-	// Helper
-	//========
+	///===================================
+	/// Boost range iterator requirements
+	///===================================
+
+	typedef std::vector<WrappedVar*>::iterator        iterator;
+	typedef std::vector<WrappedVar*>::const_iterator  const_iterator;
+
+	iterator begin() { return m_wrappedVars.begin(); }
+	iterator end()   { return m_wrappedVars.end(); }
+
+	const_iterator begin() const { return m_wrappedVars.begin(); }
+	const_iterator end() const   { return m_wrappedVars.end(); }
+
+	///=========
+	/// Helpers
+	///=========
+
+	bool empty() const
+	{
+		return m_wrappedVars.empty();
+	}
+
+	void checkSum(uint32_t& iSum) const
+	{
+		//algo::for_each(m_wrappedVars, bind(WrappedVar::checkSum, _1, iSum));
+		foreach_(const WrappedVar* wrapper, m_wrappedVars)
+			wrapper->checkSum(iSum);
+	}
+
+	void readXml(CvXMLLoadUtility* pXML)
+	{
+		//algo::for_each(m_wrappedVars, bind(WrappedVar::readXml, _1, pXML));
+		foreach_(WrappedVar* wrapper, m_wrappedVars)
+			wrapper->readXml(pXML);
+	}
 
 	void copyNonDefaults(const CvInfoUtil& pOther)
 	{
-		for (uint32_t i = 0, num = m_DataMembers.size(); i < num; i++)
+		size_t num = m_wrappedVars.size(), otherNum = pOther.m_wrappedVars.size();
+		FAssert(num == otherNum);
+		num = std::min(num, otherNum);
+		for (uint32_t i = 0; i < num; i++)
 		{
-			m_DataMembers[i].copyNonDefaults(pOther.m_DataMembers[i]);
+			m_wrappedVars[i]->copyNonDefaults(pOther.m_wrappedVars[i]);
 		}
 	}
 
 private:
-	std::vector<Var> m_DataMembers;
+	std::vector<WrappedVar*> m_wrappedVars;
 };
 
 #endif
