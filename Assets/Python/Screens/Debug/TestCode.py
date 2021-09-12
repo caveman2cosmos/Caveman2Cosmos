@@ -491,6 +491,7 @@ class TestCode:
 	#Building replacements shouldn't obsolete too fast for sanity of beeliners, replacements also shouldn't obsolete at earlier point compared to base
 	def checkBuildingReplacementObsoletion(self):
 		aSpecialReplacementsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		iEndOfTechTreeXGrid = GC.getTechInfo(GC.getInfoTypeForString("TECH_FUTURE_TECH")).getGridX()
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
@@ -583,6 +584,7 @@ class TestCode:
 
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
 			#Ignore Pollution, and Bans
 			if iBuilding not in aSpecialReplacementsList and CvBuildingInfo.getNumReplacedBuilding() != 0:
@@ -603,18 +605,22 @@ class TestCode:
 				#Get replacements, that don't appear as replaced of replaced.
 				aImmediateReplacedList = []
 				aImmediateReplacedObsoletionList = []
+				aImmediateReplacedObsLocList = []
 				aImmediateReplacedNameList = []
 				for i in xrange(len(aReplacedBuildings)):
 					if aReplacedBuildings[i] not in aBuildingReplaced2List:
 						CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedObsoletionList.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingReplacedInfo)[1])
+						aImmediateReplacedObsLocList.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingReplacedInfo)[0])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
-				if CvBuildingInfo.getNumReplacementBuilding() == 0 and len(aImmediateReplacedList) > 1: #Checked building is last in line, and replaces multiple buildings
+				if CvBuildingInfo.getNumReplacementBuilding() == 0 and len(aImmediateReplacedList) > 0: #Checked building is last in line
 					for i in xrange(len(aImmediateReplacedList)):
 						if aImmediateReplacedObsoletionList[i] > min(aImmediateReplacedObsoletionList):
 							self.log(CvBuildingInfo.getType()+" replaced building "+aImmediateReplacedNameList[i]+" should obsolete at "+self.HF.getTechName(min(aImmediateReplacedObsoletionList)))
+						if min(aImmediateReplacedObsLocList) - iTechLoc < 10 and min(aImmediateReplacedObsLocList) != iEndOfTechTreeXGrid - 1: #At least 10 columns between second last building obsoletion and last building unlock, can't move further buildings obsoleteing at end of history
+							self.log(CvBuildingInfo.getType()+" replaced building "+aImmediateReplacedNameList[i]+" last unlock/second last obsoletion "+str(iTechLoc)+"/"+str(min(aImmediateReplacedObsLocList)))
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):

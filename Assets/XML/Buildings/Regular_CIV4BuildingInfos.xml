@@ -5053,7 +5053,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -6960,7 +6960,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -10349,7 +10349,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -12594,7 +12594,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BIOMATERIALS</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -15333,7 +15333,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
@@ -15382,7 +15382,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
@@ -15431,7 +15431,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -15488,7 +15488,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15535,7 +15535,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_PIG</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15581,7 +15581,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<iMinLatitude>40</iMinLatitude>
 			<PrereqOrTerrain>
@@ -15642,7 +15642,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RABBIT</VicinityBonus>
@@ -15697,7 +15697,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15744,7 +15744,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15797,7 +15797,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_WALRUS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
@@ -15847,7 +15847,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
@@ -15896,7 +15896,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15942,7 +15942,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
@@ -15991,7 +15991,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BISON</VicinityBonus>
@@ -16040,7 +16040,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16086,7 +16086,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16139,7 +16139,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -16189,7 +16189,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16235,7 +16235,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16282,7 +16282,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
@@ -16347,7 +16347,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -16410,7 +16410,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
@@ -16469,7 +16469,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16515,7 +16515,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_CORN</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
@@ -16564,7 +16564,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
@@ -16613,7 +16613,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_PIG</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
@@ -16668,7 +16668,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			<iMinLatitude>40</iMinLatitude>
 			<PrereqInCityBuildings>
@@ -16716,7 +16716,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -16766,7 +16766,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_WALRUS</VicinityBonus>
 			<iMinLatitude>40</iMinLatitude>
 			<PrereqInCityBuildings>
@@ -16820,7 +16820,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<VicinityBonus>BONUS_HORSE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
@@ -19674,7 +19674,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -27022,7 +27022,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -33752,7 +33752,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -33960,7 +33960,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -36515,7 +36515,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -38462,7 +38462,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
-			<ObsoleteTech>TECH_INTERGROUP_TRAVEL</ObsoleteTech>
+			<ObsoleteTech>TECH_TACHYON_COMMUNICATIONS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INTERSTELLAR_IMMIGRATION</ObsoletesToBuilding>
 			<iCost>9105</iCost>
 			<iFoodKept>5</iFoodKept>
@@ -38995,7 +38995,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -41430,7 +41430,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PARTICLE_GENETICS</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -41508,7 +41508,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COAST_GUARD</PrereqTech>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_INGOTS</Bonus>
 			<PrereqBonuses>
@@ -43354,7 +43354,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEIGHTLESS_FLIGHT</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -49862,7 +49862,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -51916,7 +51916,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -55415,7 +55415,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -57872,7 +57872,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -58149,7 +58149,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -58519,7 +58519,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -58664,7 +58664,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
@@ -59489,7 +59489,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -60021,7 +60021,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -60549,7 +60549,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -62780,7 +62780,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
@@ -67835,7 +67835,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -68520,7 +68520,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -68636,7 +68636,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -70006,7 +70006,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MICROWAVE_WEAPONRY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -71905,7 +71905,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -78726,7 +78726,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -79685,7 +79685,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -81663,7 +81663,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -84365,7 +84365,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -89558,7 +89558,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACROSCOPIC_SUPERPOSITION</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<iCost>18355</iCost>
 			<CommerceChanges>
@@ -95458,7 +95458,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -97100,7 +97100,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -101996,7 +101996,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -102043,7 +102043,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -102089,7 +102089,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -102133,7 +102133,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -102172,7 +102172,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -102394,7 +102394,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIMULATED_REALITY</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -103034,7 +103034,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -104063,7 +104063,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -110136,7 +110136,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -110270,7 +110270,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -110352,7 +110352,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -110391,7 +110391,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -111181,7 +111181,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_DUNGEON</ExtendsBuilding>
-			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PSYCHOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -113317,7 +113317,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRENCH_WARFARE</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -114134,7 +114134,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NEW_URBANISM</PrereqTech>
 			<iCost>1540</iCost>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_EVOLVED_CONSTRUCTION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ELEVATED_BICYCLE_TRACK</ObsoletesToBuilding>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -114872,7 +114872,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
@@ -117004,7 +117004,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -117919,7 +117919,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
@@ -117960,7 +117960,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
