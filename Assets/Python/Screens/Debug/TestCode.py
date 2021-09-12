@@ -712,10 +712,9 @@ class TestCode:
 						CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 
-				#aTag = [BASE, REPLACED, FINAL]
+				#aTag = [BASE, REPLACED]
 				#BASE - values/arrays of building, that is currently checked
 				#REPLACED - values/arrays of buildings, that got replaced by checked building
-				#FINAL - sum of values/arrays of checked building and its replaced buildings
 				BASE = 0
 				REPLACED = 1
 				MAIN_ARRAY_SIZE = 2
@@ -1514,7 +1513,7 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Modifiers "+str(aTechCommerceModifiers[BASE][iTech])+"/"+str(aTechCommerceModifiers[REPLACED][iTech]))
 					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 						if aTechSpecialistChanges[BASE][iTech][iSpecialist] < aTechSpecialistChanges[REPLACED][iTech][iSpecialist]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType()+" replaced: "+str(aFinalTechSpecialistChanges))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType())
 
 				#======================================================================================================================================
 				#<SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges> - base
