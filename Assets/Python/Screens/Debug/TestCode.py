@@ -28,7 +28,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Replacing building shouldn't unlock or obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
-		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
+		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics. Yields - Food, Production, Commerce. Commerces - Gold, Research, Culture, Espionage. Building productivity is shown as: currently checked building / sum of replaced building tag values")
 		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics, traits, conversely improvements can upgrade, so they are checked too")
 		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building unlock/obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete or unlock together with building, that gives it for free.")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
@@ -1052,23 +1052,23 @@ class TestCode:
 				#Building shouldn't be worse than replaced one!
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					if aYieldChangesList[BASE][iYield] < aYieldChangesList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Yield Changes "+str(aYieldChangesList[BASE])+"/"+str(aYieldChangesList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Changes "+str(aYieldChangesList[BASE])+"/"+str(aYieldChangesList[REPLACED]))
 					if aYieldPerPopChangesList[BASE][iYield] < aYieldPerPopChangesList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Yield Per pop Changes "+str(aYieldPerPopChangesList[BASE])+"/"+str(aYieldPerPopChangesList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Per pop Changes "+str(aYieldPerPopChangesList[BASE])+"/"+str(aYieldPerPopChangesList[REPLACED]))
 					if aSeaPlotYieldChangesList[BASE][iYield] < aSeaPlotYieldChangesList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Sea plot Yield Changes "+str(aSeaPlotYieldChangesList[BASE])+"/"+str(aSeaPlotYieldChangesList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Sea plot Yield Changes "+str(aSeaPlotYieldChangesList[BASE])+"/"+str(aSeaPlotYieldChangesList[REPLACED]))
 					if aRiverPlotYieldChangesList[BASE][iYield] < aRiverPlotYieldChangesList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have River plot Yield Changes "+str(aRiverPlotYieldChangesList[BASE])+"/"+str(aRiverPlotYieldChangesList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" River plot Yield Changes "+str(aRiverPlotYieldChangesList[BASE])+"/"+str(aRiverPlotYieldChangesList[REPLACED]))
 					if aYieldModifiersList[BASE][iYield] < aYieldModifiersList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Yield Modifiers "+str(aYieldModifiersList[BASE])+"/"+str(aYieldModifiersList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Modifiers "+str(aYieldModifiersList[BASE])+"/"+str(aYieldModifiersList[REPLACED]))
 					if aPowerYieldModifiersList[BASE][iYield] < aPowerYieldModifiersList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Yield Power Modifiers "+str(aPowerYieldModifiersList[BASE])+"/"+str(aPowerYieldModifiersList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Power Modifiers "+str(aPowerYieldModifiersList[BASE])+"/"+str(aPowerYieldModifiersList[REPLACED]))
 					if aAreaYieldModifiersList[BASE][iYield] < aAreaYieldModifiersList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Yield Area Modifiers "+str(aAreaYieldModifiersList[BASE])+"/"+str(aAreaYieldModifiersList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Area Modifiers "+str(aAreaYieldModifiersList[BASE])+"/"+str(aAreaYieldModifiersList[REPLACED]))
 					if aGlobalYieldModifiersList[BASE][iYield] < aGlobalYieldModifiersList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Yield Global Modifiers "+str(aGlobalYieldModifiersList[BASE])+"/"+str(aGlobalYieldModifiersList[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Global Modifiers "+str(aGlobalYieldModifiersList[BASE])+"/"+str(aGlobalYieldModifiersList[REPLACED]))
 					if aGlobalSeaPlotYieldChanges[BASE][iYield] < aGlobalSeaPlotYieldChanges[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global sea plot Yield Changes "+str(aGlobalSeaPlotYieldChanges[BASE])+"/"+str(aGlobalSeaPlotYieldChanges[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Global sea plot Yield Changes "+str(aGlobalSeaPlotYieldChanges[BASE])+"/"+str(aGlobalSeaPlotYieldChanges[REPLACED]))
 
 				#=================================================================================================
 				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceAttacks>, <CommerceHappinesses>, <SpecialistExtraCommerces> - base
@@ -1104,19 +1104,19 @@ class TestCode:
 				#Building shouldn't be worse than replaced one!
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					if aCommerceChanges[BASE][iCommerce] < aCommerceChanges[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Changes "+str(aCommerceChanges[BASE])+"/"+str(aCommerceChanges[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Changes "+str(aCommerceChanges[BASE])+"/"+str(aCommerceChanges[REPLACED]))
 					if aCommercePerPopChanges[BASE][iCommerce] < aCommercePerPopChanges[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Per pop Changes "+str(aCommercePerPopChanges[BASE])+"/"+str(aCommercePerPopChanges[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Per pop Changes "+str(aCommercePerPopChanges[BASE])+"/"+str(aCommercePerPopChanges[REPLACED]))
 					if aCommerceModifiers[BASE][iCommerce] < aCommerceModifiers[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Modifiers "+str(aCommerceModifiers[BASE])+"/"+str(aCommerceModifiers[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Modifiers "+str(aCommerceModifiers[BASE])+"/"+str(aCommerceModifiers[REPLACED]))
 					if aGlobalCommerceModifiers[BASE][iCommerce] < aGlobalCommerceModifiers[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Global Modifiers "+str(aGlobalCommerceModifiers[BASE])+"/"+str(aGlobalCommerceModifiers[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Global Modifiers "+str(aGlobalCommerceModifiers[BASE])+"/"+str(aGlobalCommerceModifiers[REPLACED]))
 					if aCommerceAttacks[BASE][iCommerce] < aCommerceAttacks[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Attacks "+str(aCommerceAttacks[BASE])+"/"+str(aCommerceAttacks[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Attacks "+str(aCommerceAttacks[BASE])+"/"+str(aCommerceAttacks[REPLACED]))
 					if aCommerceHappinesses[BASE][iCommerce] < aCommerceHappinesses[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Happinesses "+str(aCommerceHappinesses[BASE])+"/"+str(aCommerceHappinesses[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Happinesses "+str(aCommerceHappinesses[BASE])+"/"+str(aCommerceHappinesses[REPLACED]))
 					if aSpecialistExtraCommerces[BASE][iCommerce] < aSpecialistExtraCommerces[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Commerce Specialist extra Commerces "+str(aSpecialistExtraCommerces[BASE])+"/"+str(aSpecialistExtraCommerces[REPLACED]))
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Specialist extra Commerces "+str(aSpecialistExtraCommerces[BASE])+"/"+str(aSpecialistExtraCommerces[REPLACED]))
 
 				#=================================================================================================
 				#<SpecialistCounts>, <FreeSpecialistCounts> - base
@@ -1424,16 +1424,16 @@ class TestCode:
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aBonusYieldChanges[BASE][iBonus][iYield] < aBonusYieldChanges[REPLACED][iBonus][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Yield Changes "+str(aBonusYieldChanges[BASE][iBonus])+"/"+str(aBonusYieldChanges[REPLACED][iBonus]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" "+GC.getYieldInfo(iYield).getType()+" Bonus Yield Changes "+str(aBonusYieldChanges[BASE][iBonus])+"/"+str(aBonusYieldChanges[REPLACED][iBonus]))
 						if aVicinityBonusYieldChanges[BASE][iBonus][iYield] < aVicinityBonusYieldChanges[REPLACED][iBonus][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus vicinity Yield Changes "+str(aVicinityBonusYieldChanges[BASE][iBonus])+"/"+str(aVicinityBonusYieldChanges[REPLACED][iBonus]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" "+GC.getYieldInfo(iYield).getType()+" Bonus vicinity Yield Changes "+str(aVicinityBonusYieldChanges[BASE][iBonus])+"/"+str(aVicinityBonusYieldChanges[REPLACED][iBonus]))
 						if aBonusYieldModifiers[BASE][iBonus][iYield] < aBonusYieldModifiers[REPLACED][iBonus][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Yield Modifiers "+str(aBonusYieldModifiers[BASE][iBonus])+"/"+str(aBonusYieldModifiers[REPLACED][iBonus]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" "+GC.getYieldInfo(iYield).getType()+" Bonus Yield Modifiers "+str(aBonusYieldModifiers[BASE][iBonus])+"/"+str(aBonusYieldModifiers[REPLACED][iBonus]))
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if aBonusCommercePercentChanges[BASE][iBonus][iCommerce] < aBonusCommercePercentChanges[REPLACED][iBonus][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce percent Changes "+str(aBonusCommercePercentChanges[BASE][iBonus])+"/"+str(aBonusCommercePercentChanges[REPLACED][iBonus]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Bonus Commerce percent Changes "+str(aBonusCommercePercentChanges[BASE][iBonus])+"/"+str(aBonusCommercePercentChanges[REPLACED][iBonus]))
 						if aBonusCommerceModifiers[BASE][iBonus][iCommerce] < aBonusCommerceModifiers[REPLACED][iBonus][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce Modifiers "+str(aBonusCommerceModifiers[BASE][iBonus])+"/"+str(aBonusCommerceModifiers[REPLACED][iBonus]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Bonus Commerce Modifiers "+str(aBonusCommerceModifiers[BASE][iBonus])+"/"+str(aBonusCommerceModifiers[REPLACED][iBonus]))
 
 				#======================================================================================================================================
 				#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
@@ -1501,16 +1501,16 @@ class TestCode:
 				for iTech in xrange(GC.getNumTechInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aTechYieldChanges[BASE][iTech][iYield] < aTechYieldChanges[REPLACED][iTech][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Yield Changes "+str(aTechYieldChanges[BASE][iTech])+"/"+str(aTechYieldChanges[REPLACED][iTech]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getYieldInfo(iYield).getType()+" Tech Yield Changes "+str(aTechYieldChanges[BASE][iTech])+"/"+str(aTechYieldChanges[REPLACED][iTech]))
 						if aTechYieldModifiers[BASE][iTech][iYield] < aTechYieldModifiers[REPLACED][iTech][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Yield Modifiers "+str(aTechYieldModifiers[BASE][iTech])+"/"+str(aTechYieldModifiers[REPLACED][iTech]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getYieldInfo(iYield).getType()+" Tech Yield Modifiers "+str(aTechYieldModifiers[BASE][iTech])+"/"+str(aTechYieldModifiers[REPLACED][iTech]))
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if aTechCommerceChanges[BASE][iTech][iCommerce] < aTechCommerceChanges[REPLACED][iTech][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Changes "+str(aTechCommerceChanges[BASE][iTech])+"/"+str(aTechCommerceChanges[REPLACED][iTech]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce Changes "+str(aTechCommerceChanges[BASE][iTech])+"/"+str(aTechCommerceChanges[REPLACED][iTech]))
 						if aTechCommercePercentChanges[BASE][iTech][iCommerce] < aTechCommercePercentChanges[REPLACED][iTech][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce percent Changes "+str(aTechCommercePercentChanges[BASE][iTech])+"/"+str(aTechCommercePercentChanges[REPLACED][iTech]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce percent Changes "+str(aTechCommercePercentChanges[BASE][iTech])+"/"+str(aTechCommercePercentChanges[REPLACED][iTech]))
 						if aTechCommerceModifiers[BASE][iTech][iCommerce] < aTechCommerceModifiers[REPLACED][iTech][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Modifiers "+str(aTechCommerceModifiers[BASE][iTech])+"/"+str(aTechCommerceModifiers[REPLACED][iTech]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce Modifiers "+str(aTechCommerceModifiers[BASE][iTech])+"/"+str(aTechCommerceModifiers[REPLACED][iTech]))
 					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 						if aTechSpecialistChanges[BASE][iTech][iSpecialist] < aTechSpecialistChanges[REPLACED][iTech][iSpecialist]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType())
@@ -1554,12 +1554,12 @@ class TestCode:
 				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aSpecialistYieldChanges[BASE][iSpecialist][iYield] < aSpecialistYieldChanges[REPLACED][iSpecialist][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Yield Changes "+str(aSpecialistYieldChanges[BASE][iSpecialist])+"/"+str(aSpecialistYieldChanges[REPLACED][iSpecialist]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" "+GC.getYieldInfo(iYield).getType()+" Specialist Yield Changes "+str(aSpecialistYieldChanges[BASE][iSpecialist])+"/"+str(aSpecialistYieldChanges[REPLACED][iSpecialist]))
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if aLocalSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aLocalSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Local Specialist Commerce Changes "+str(aLocalSpecialistCommerceChanges[BASE][iSpecialist])+"/"+str(aLocalSpecialistCommerceChanges[REPLACED][iSpecialist]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Local Specialist Commerce Changes "+str(aLocalSpecialistCommerceChanges[BASE][iSpecialist])+"/"+str(aLocalSpecialistCommerceChanges[REPLACED][iSpecialist]))
 						if aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Commerce Changes "+str(aSpecialistCommerceChanges[BASE][iSpecialist])+"/"+str(aSpecialistCommerceChanges[REPLACED][iSpecialist]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Specialist Commerce Changes "+str(aSpecialistCommerceChanges[BASE][iSpecialist])+"/"+str(aSpecialistCommerceChanges[REPLACED][iSpecialist]))
 
 				#==============================================================================================================
 				#<TerrainYieldChanges> - base
@@ -1582,7 +1582,7 @@ class TestCode:
 				for iTerrain in xrange(GC.getNumTerrainInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aTerrainYieldChanges[BASE][iTerrain][iYield] < aTerrainYieldChanges[REPLACED][iTerrain][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" Terrain Yields "+str(aTerrainYieldChanges[BASE][iTerrain])+"/"+str(aTerrainYieldChanges[REPLACED][iTerrain]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" "+GC.getYieldInfo(iYield).getType()+" Terrain Yields "+str(aTerrainYieldChanges[BASE][iTerrain])+"/"+str(aTerrainYieldChanges[REPLACED][iTerrain]))
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base
@@ -1605,7 +1605,7 @@ class TestCode:
 				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if aGlobalBuildingExtraCommerces[BASE][iAffectedBuilding][iCommerce] < aGlobalBuildingExtraCommerces[REPLACED][iAffectedBuilding][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuilding).getType()+" Global Building extra Commerces "+str(aGlobalBuildingExtraCommerces[BASE][iAffectedBuilding])+"/"+str(aGlobalBuildingExtraCommerces[REPLACED][iAffectedBuilding]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuilding).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Global Building extra Commerces "+str(aGlobalBuildingExtraCommerces[BASE][iAffectedBuilding])+"/"+str(aGlobalBuildingExtraCommerces[REPLACED][iAffectedBuilding]))
 
 	#Building - check if building replacements are present in tags affecting buildings
 	def checkBuildingReplacingAvailability(self):
