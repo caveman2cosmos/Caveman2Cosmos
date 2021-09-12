@@ -1440,14 +1440,8 @@ public:
 	int getNumUnitFullHeal() const;
 	void changeNumUnitFullHeal(int iChange);
 
-	int getCommerceAttacks(CommerceTypes eIndex) const;
-	void changeCommerceAttacks(CommerceTypes eIndex, int iChange);
-	int getMaxCommerceAttacks(CommerceTypes eIndex) const;
-	void changeMaxCommerceAttacks(CommerceTypes eIndex, int iChange);
-
 	void doAttack();
 	void doHeal();
-	void decayCommerce();
 
 	void doCorporation();
 	int getCorporationInfluence(CorporationTypes eCorporation) const;
@@ -1792,8 +1786,6 @@ protected:
 
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
-	int* m_aiCommerceAttacks;
-	int* m_aiMaxCommerceAttacks;
 	bool* m_pabAutomatedCanBuild;
 
 	std::vector<BuildingCommerceModifier> m_aBuildingCommerceModifier;

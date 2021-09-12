@@ -36534,12 +36534,6 @@
 			</PrereqOrBuildings>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
-			<CommerceAttacks>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>8</iCommerce>
-			</CommerceAttacks>
 			<iAsset>4</iAsset>
 			<iPower>4</iPower>
 		</BuildingInfo>
@@ -59109,12 +59103,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
-			<CommerceAttacks>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>8</iCommerce>
-			</CommerceAttacks>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>

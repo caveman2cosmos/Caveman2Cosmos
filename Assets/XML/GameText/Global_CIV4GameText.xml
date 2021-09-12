@@ -18873,16 +18873,6 @@
 		<Spanish>[ICON_BULLET]%D1%% %F2 por líder %s3_trait</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_COMMERE_ATTACKS</Tag>
-		<English>[ICON_BULLET]%D1%F2 from Imprisoned Soldiers</English>
-		<French>[ICON_BULLET]%D1%F2 de Soldats emprisonnés</French>
-		<German>[ICON_BULLET]%D1%F2 durch gefangene Soldaten</German>
-		<Italian>[ICON_BULLET]%D1%F2 da Soldati imprigionati</Italian>
-		<Spanish>[ICON_BULLET]%D1%F2 de soldados prisioneros</Spanish>
-		<Polish>[ICON_BULLET]%D1%F2 z uwięzionych żołnierzy</Polish>
-		<Russian>[ICON_BULLET]%D1%F2 îò çàêëþ÷åííûõ â òþðüìó ñîëäàò</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_CORPORATION_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1%F2 from Corporations</English>
 		<French>[ICON_BULLET]%D1%F2 grâce aux sociétés commerciales</French>

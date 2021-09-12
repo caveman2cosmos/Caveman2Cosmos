@@ -14387,7 +14387,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_GOLD) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_GOLD) > 0 ||
-			kBuilding.getCommerceAttacks(COMMERCE_GOLD) > 0 ||
 			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_GOLD) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_GOLD) > 0)
 		{
@@ -14405,7 +14404,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_RESEARCH) > 0 ||
-			kBuilding.getCommerceAttacks(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_RESEARCH) > 0)
 		{
@@ -14422,7 +14420,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_CULTURE) > 0 ||
-			kBuilding.getCommerceAttacks(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_CULTURE) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_CULTURE) > 0)
 		{
@@ -14584,7 +14581,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_ESPIONAGE) > 0 ||
-			kBuilding.getCommerceAttacks(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_ESPIONAGE) > 0)
 		{
@@ -16406,8 +16402,6 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	int iResult = 0;
 	iResult += 4 * (iBaseCommerceChange + GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI) + aiFreeSpecialistCommerce[iI]);
-
-	iResult += kBuilding.getCommerceAttacks(iI) * 2;
 
 	if ((CommerceTypes)iI == COMMERCE_CULTURE)
 	{

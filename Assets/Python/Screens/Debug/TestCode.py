@@ -1071,12 +1071,11 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Global sea plot Yield Changes "+str(aGlobalSeaPlotYieldChanges[BASE])+"/"+str(aGlobalSeaPlotYieldChanges[REPLACED]))
 
 				#=================================================================================================
-				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceAttacks>, <CommerceHappinesses>, <SpecialistExtraCommerces> - base
+				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceHappinesses>, <SpecialistExtraCommerces> - base
 				aCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aCommercePerPopChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aGlobalCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
-				aCommerceAttacks = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aCommerceHappinesses = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aSpecialistExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1084,20 +1083,18 @@ class TestCode:
 					aCommercePerPopChanges[BASE][iCommerce] += CvBuildingInfo.getCommercePerPopChange(iCommerce)
 					aCommerceModifiers[BASE][iCommerce] += CvBuildingInfo.getCommerceModifier(iCommerce)
 					aGlobalCommerceModifiers[BASE][iCommerce] += CvBuildingInfo.getGlobalCommerceModifier(iCommerce)
-					aCommerceAttacks[BASE][iCommerce] += CvBuildingInfo.getCommerceAttacks(iCommerce)
 					aCommerceHappinesses[BASE][iCommerce] += CvBuildingInfo.getCommerceHappiness(iCommerce)
 					aSpecialistExtraCommerces[BASE][iCommerce] += CvBuildingInfo.getSpecialistExtraCommerce(iCommerce)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceAttacks>, <CommerceHappinesses>, <SpecialistExtraCommerces>
+					#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceHappinesses>, <SpecialistExtraCommerces>
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						aCommerceChanges[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceChange(iCommerce)
 						aCommercePerPopChanges[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommercePerPopChange(iCommerce)
 						aCommerceModifiers[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceModifier(iCommerce)
 						aGlobalCommerceModifiers[REPLACED][iCommerce] += CvReplacedBuildingInfo.getGlobalCommerceModifier(iCommerce)
-						aCommerceAttacks[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceAttacks(iCommerce)
 						aCommerceHappinesses[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceHappiness(iCommerce)
 						aSpecialistExtraCommerces[REPLACED][iCommerce] += CvReplacedBuildingInfo.getSpecialistExtraCommerce(iCommerce)
 
@@ -1111,8 +1108,6 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Modifiers "+str(aCommerceModifiers[BASE])+"/"+str(aCommerceModifiers[REPLACED]))
 					if aGlobalCommerceModifiers[BASE][iCommerce] < aGlobalCommerceModifiers[REPLACED][iCommerce]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Global Modifiers "+str(aGlobalCommerceModifiers[BASE])+"/"+str(aGlobalCommerceModifiers[REPLACED]))
-					if aCommerceAttacks[BASE][iCommerce] < aCommerceAttacks[REPLACED][iCommerce]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Attacks "+str(aCommerceAttacks[BASE])+"/"+str(aCommerceAttacks[REPLACED]))
 					if aCommerceHappinesses[BASE][iCommerce] < aCommerceHappinesses[REPLACED][iCommerce]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Happinesses "+str(aCommerceHappinesses[BASE])+"/"+str(aCommerceHappinesses[REPLACED]))
 					if aSpecialistExtraCommerces[BASE][iCommerce] < aSpecialistExtraCommerces[REPLACED][iCommerce]:

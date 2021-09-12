@@ -241,7 +241,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_pbPrereqOrFeature(NULL)
 //New Integer Arrays
 ,m_piBonusDefenseChanges(NULL)
-,m_piCommerceAttacks(NULL)
 //New Multidimensional Integer Arrays
 ,m_ppaiTechCommerceChange(NULL)
 ,m_ppaiTechYieldChange(NULL)
@@ -358,7 +357,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
-	SAFE_DELETE_ARRAY(m_piCommerceAttacks);
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommercePercentChanges, GC.getNumBonusInfos());
@@ -1019,17 +1017,6 @@ int CvBuildingInfo::getBonusDefenseChanges(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
-}
-
-int CvBuildingInfo::getCommerceAttacks(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
-	return m_piCommerceAttacks ? m_piCommerceAttacks[i] : 0;
-}
-
-int* CvBuildingInfo::getCommerceAttacksArray() const
-{
-	return m_piCommerceAttacks;
 }
 
 int CvBuildingInfo::getBonusCommerceModifier(int i, int j) const
@@ -1981,7 +1968,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
 	CheckSumC(iSum, m_aUnitCombatExtraStrength);
-	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
 
 	for(int i = 0; i < GC.getNumTechInfos(); i++)
 	{
@@ -2864,12 +2850,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbPrereqOrFeature, L"PrereqOrFeature", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piBonusDefenseChanges, L"BonusDefenseChanges", GC.getNumBonusInfos());
 	m_aUnitCombatExtraStrength.read(pXML, L"UnitCombatExtraStrengths");
-
-	if (pXML->TryMoveToXmlFirstChild(L"CommerceAttacks"))
-	{
-		pXML->SetCommerce(&m_piCommerceAttacks);
-		pXML->MoveToXmlParent();
-	}
 
 	if (pXML->TryMoveToXmlFirstChild(L"BonusCommerceModifiers"))
 	{
@@ -4300,18 +4280,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (!m_iConnectedCityMaintenanceModifier) m_iConnectedCityMaintenanceModifier = pClassInfo->getConnectedCityMaintenanceModifier();
 
 	m_aUnitCombatExtraStrength.copyNonDefaults(pClassInfo->getUnitCombatExtraStrength());
-
-	for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
-	{
-		if ( getCommerceAttacks(j) == iDefault && pClassInfo->getCommerceAttacks(j) != iDefault)
-		{
-			if ( NULL == m_piCommerceAttacks )
-			{
-				CvXMLLoadUtility::InitList(&m_piCommerceAttacks,NUM_COMMERCE_TYPES,iDefault);
-			}
-			m_piCommerceAttacks[j] = pClassInfo->getCommerceAttacks(j);
-		}
-	}
 
 	for ( int j = 0; j < GC.getNumTerrainInfos(); j++)
 	{

@@ -425,9 +425,6 @@ public:
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
 
-	int getCommerceAttacks(int i) const;
-	int* getCommerceAttacksArray() const;
-
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
 	bool isUnitCombatRetrainType(int i) const;
@@ -772,7 +769,6 @@ private:
 	bool* m_pbCommerceChangeOriginalOwner;
 	bool* m_pabHurry;
 
-	int* m_piCommerceAttacks;
 	int* m_piBonusDefenseChanges;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;

@@ -22687,15 +22687,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		{
-			if (kBuilding.getCommerceAttacks(iI) > 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FROM_ATTACKS", GC.getCommerceInfo((CommerceTypes) iI).getChar(), kBuilding.getCommerceAttacks(iI), GC.getCommerceInfo((CommerceTypes) iI).getChar(), GC.getCommerceInfo((CommerceTypes) iI).getChar(), GC.getDefineINT("COMMERCE_ATTACKS_FADE_RATE")));
-			}
-		}
-
 		for (int iI = 0; iI < GC.getNumReligionInfos(); ++iI)
 		{
 			if (kBuilding.getReligionChange(iI) > 0)
@@ -32948,17 +32939,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			iCommerce100 += 100 * iFreeCityCommerce;
 		}
 	}
-	//STEP 7 : Commerce Attacks
-	{
-		const int iCommerceAttacks = city.getCommerceAttacks(eCommerceType);
-		if (0 != iCommerceAttacks)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERE_ATTACKS", iCommerceAttacks, info.getChar()));
-			iCommerce100 += 100 * iCommerceAttacks;
-		}
-	}
-	//STEP 8 : Minted Commerce
+	//STEP 7 : Minted Commerce
 	if (eCommerceType == COMMERCE_GOLD)
 	{
 		const int iMintedCommerce100 = city.getMintedCommerceTimes100();
@@ -32969,7 +32950,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			iCommerce100 += iMintedCommerce100;
 		}
 	}
-	//STEP 9 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
+	//STEP 8 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
 	if (owner.isGoldenAge())
 	{
 		const int iGoldenAgeCommerce = owner.getGoldenAgeCommerce(eCommerceType);

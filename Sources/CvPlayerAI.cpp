@@ -24134,19 +24134,27 @@ void CvPlayerAI::AI_calculateAverages() const
 		foreach_(const CvCity* pLoopCity, cities())
 		{
 			int iCommerce = pLoopCity->getYieldRate(YIELD_COMMERCE);
+
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			{
+				iCommerce +=
+				(
+					(pLoopCity->getSpecialistPopulation() + pLoopCity->getNumGreatPeople()) * getSpecialistExtraCommerce((CommerceTypes)iI)
+					+
+					pLoopCity->getBuildingCommerce((CommerceTypes)iI)
+					+
+					pLoopCity->getSpecialistCommerce((CommerceTypes)iI)
+					+
+					pLoopCity->getReligionCommerce((CommerceTypes)iI)
+					+
+					getFreeCityCommerce((CommerceTypes)iI)
+				);
+			}
 			iTotalCommerce += iCommerce;
 
-			int iExtraCommerce = 0;
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
-				iExtraCommerce +=((pLoopCity->getSpecialistPopulation() + pLoopCity->getNumGreatPeople()) * getSpecialistExtraCommerce((CommerceTypes)iI));
-				iExtraCommerce += (pLoopCity->getBuildingCommerce((CommerceTypes)iI) + pLoopCity->getSpecialistCommerce((CommerceTypes)iI) + pLoopCity->getReligionCommerce((CommerceTypes)iI) + getFreeCityCommerce((CommerceTypes)iI));
-			}
-			iTotalCommerce += iExtraCommerce;
-
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-			{
-				m_aiAverageCommerceExchange[iI] += ((iCommerce + iExtraCommerce) * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI)) / 100;
+				m_aiAverageCommerceExchange[iI] += iCommerce * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI) / 100;
 			}
 		}
 
@@ -24154,7 +24162,7 @@ void CvPlayerAI::AI_calculateAverages() const
 		{
 			if (m_aiAverageCommerceExchange[iI] > 0)
 			{
-				m_aiAverageCommerceExchange[iI] = (100 * iTotalCommerce) / m_aiAverageCommerceExchange[iI];
+				m_aiAverageCommerceExchange[iI] = 100 * iTotalCommerce / m_aiAverageCommerceExchange[iI];
 			}
 			else
 			{

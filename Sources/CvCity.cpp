@@ -97,8 +97,6 @@ CvCity::CvCity()
 	m_aiBonusCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiBonusCommercePercentChanges = new int[NUM_COMMERCE_TYPES];
 	m_aiBuildingCommerceTechChange = new int[NUM_COMMERCE_TYPES];
-	m_aiCommerceAttacks = new int[NUM_COMMERCE_TYPES];
-	m_aiMaxCommerceAttacks = new int[NUM_COMMERCE_TYPES];
 
 	m_cachedPropertyNeeds = NULL;
 	m_pabHadVicinityBonus = NULL;
@@ -213,8 +211,6 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
-	SAFE_DELETE_ARRAY(m_aiCommerceAttacks);
-	SAFE_DELETE_ARRAY(m_aiMaxCommerceAttacks);
 }
 
 
@@ -701,8 +697,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		m_aiBonusCommercePercentChanges[iI] = 0;
 		m_aiBuildingCommerceTechChange[iI] = 0;
-		m_aiCommerceAttacks[iI] = 0;
-		m_aiMaxCommerceAttacks[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
 	}
 
@@ -1383,8 +1377,6 @@ void CvCity::doTurn()
 	doAttack();
 	//Heals friendly units in the city extra, if applicable
 	doHeal();
-	//Decays the CommerceAttacks
-	decayCommerce();
 	//Spreads corporations
 	doCorporation();
 	//Counts down the disable power timer
@@ -5032,7 +5024,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			)
 			* iChange
 		);
-		changeMaxCommerceAttacks(eCommerceX, kBuilding.getCommerceAttacks(iI) * iChange);
 		changeCommerceHappinessPer(eCommerceX, kBuilding.getCommerceHappiness(iI) * iChange);
 	}
 
@@ -11967,7 +11958,7 @@ int CvCity::getCommerceFromPercent(CommerceTypes eIndex, int iYieldRate) const
 
 int CvCity::getBaseCommerceRate(CommerceTypes eIndex) const
 {
-	return (getBaseCommerceRateTimes100(eIndex) / 100);
+	return getBaseCommerceRateTimes100(eIndex) / 100;
 }
 
 int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
@@ -11997,16 +11988,13 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
 	iBaseCommerceRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
 
-	//STEP 7 : Commerce Attacks
-	iBaseCommerceRate += 100 * getCommerceAttacks(eIndex);
-
-	//STEP 8 : Minted Commerce
+	//STEP 7 : Minted Commerce
 	if (eIndex == COMMERCE_GOLD)
 	{
 		iBaseCommerceRate += getMintedCommerceTimes100();
 	}
 
-	//STEP 9 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
+	//STEP 8 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
 	if (GET_PLAYER(getOwner()).isGoldenAge())
 	{
 		iBaseCommerceRate += 100 * (GET_PLAYER(getOwner()).getGoldenAgeCommerce(eIndex));
@@ -12359,9 +12347,24 @@ int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, Buildi
  */
 int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
 	int iExtraRateTimes100 = 100 * getAdditionalBaseCommerceRateByBuilding(eIndex, eBuilding);
 
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	if (kBuilding.isForceAllTradeRoutes())
+	{
+		const int iCurrentTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
+
+		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(1);
+
+		const int iFutureTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
+
+		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(-1);
+
+		iExtraRateTimes100 += (iFutureTradeRevenue - iCurrentTradeRevenue) * GET_PLAYER(getOwner()).getCommercePercent(eIndex);
+	}
+	iExtraRateTimes100 += getPopulation() * kBuilding.getCommercePerPopChange(eIndex);
+
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		if (hasBonus((BonusTypes)iI))
@@ -12392,8 +12395,6 @@ int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, Buildi
 	{
 		iExtraRate = 0;
 	}
-	iExtraRate += getPopulation() * kBuilding.getCommercePerPopChange(eIndex) / 100;
-
 	iExtraRate += getBuildingCommerceChange(eBuilding, eIndex);
 
 	if (kBuilding.getReligionType() != NO_RELIGION
@@ -12404,11 +12405,19 @@ int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, Buildi
 
 	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
 	{
-		iExtraRate += GC.getReligionInfo((ReligionTypes)(kBuilding.getGlobalReligionCommerce())).getGlobalReligionCommerce(eIndex) * GC.getGame().countReligionLevels((ReligionTypes)(kBuilding.getGlobalReligionCommerce()));
+		iExtraRate += (
+			GC.getReligionInfo((ReligionTypes)kBuilding.getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
+			*
+			GC.getGame().countReligionLevels((ReligionTypes)kBuilding.getGlobalReligionCommerce())
+		);
 	}
 	if (kBuilding.getGlobalCorporationCommerce() != NO_CORPORATION)
 	{
-		iExtraRate += GC.getCorporationInfo((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())).getHeadquarterCommerce(eIndex) * GC.getGame().countCorporationLevels((CorporationTypes)(kBuilding.getGlobalCorporationCommerce()));
+		iExtraRate += (
+			GC.getCorporationInfo((CorporationTypes)kBuilding.getGlobalCorporationCommerce()).getHeadquarterCommerce(eIndex)
+			*
+			GC.getGame().countCorporationLevels((CorporationTypes)kBuilding.getGlobalCorporationCommerce())
+		);
 	}
 	// ignore double-time check since this assumes you are building it this turn
 
@@ -12425,33 +12434,17 @@ int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, Buildi
 	{
 		if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 		{
-			iExtraRate += (kBuilding.getTechCommerceChange(iI, eIndex));
+			iExtraRate += kBuilding.getTechCommerceChange(iI, eIndex);
 		}
 	}
-
-	if (kBuilding.isForceAllTradeRoutes())
-	{
-		int iCurrentTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
-
-		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(1);
-
-		int iFutureTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
-
-		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(-1);
-
-		iExtraRate += (iFutureTradeRevenue - iCurrentTradeRevenue) * GET_PLAYER(getOwner()).getCommercePercent(eIndex) / 100;
-	}
-
-	int iFreeSpecialistCommerce = 0;
 
 	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 	{
 		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
 
-		iFreeSpecialistCommerce += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, eIndex);
+		iExtraRate += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, eIndex);
 	}
-	iExtraRate += iFreeSpecialistCommerce;
 
 	if (kBuilding.getNumPopulationEmployed() > 0)
 	{
@@ -17003,8 +16996,10 @@ void CvCity::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommerceRateModifier);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
-	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
-	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
+	// @SAVEBREAK DELETE - Toffer - 13.09.2021
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_aiCommerceAttacks, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_aiMaxCommerceAttacks, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
 
@@ -17626,8 +17621,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_fPopulationgrowthratepercentageLog);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommerceRateModifier);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
-	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
-	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, m_iCiv);
 
@@ -20105,49 +20098,6 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eB
 }
 
 
-int CvCity::getCommerceAttacks(CommerceTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-	return std::min(getMaxCommerceAttacks(eIndex), m_aiCommerceAttacks[eIndex]);
-}
-
-void CvCity::changeCommerceAttacks(CommerceTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-
-	if (iChange != 0)
-	{
-		m_aiCommerceAttacks[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getCommerceRate(eIndex))
-
-		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
-
-		AI_setAssignWorkDirty(true);
-
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-		}
-	}
-}
-
-int CvCity::getMaxCommerceAttacks(CommerceTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-	return m_aiMaxCommerceAttacks[eIndex];
-}
-
-void CvCity::changeMaxCommerceAttacks(CommerceTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-
-	if (iChange != 0)
-	{
-		m_aiMaxCommerceAttacks[eIndex] += iChange;
-	}
-}
-
-
 void CvCity::changeUnitProductionModifier(const UnitTypes eUnit, const int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
@@ -21580,24 +21530,6 @@ void CvCity::doHeal()
 	}
 }
 
-void CvCity::decayCommerce()
-{
-	if (GC.getGame().getElapsedGameTurns() % std::max(1, GC.getCOMMERCE_ATTACKS_FADE_RATE()))
-	{
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		{
-			if (getCommerceAttacks((CommerceTypes)iI) > 0)
-			{
-				changeCommerceAttacks((CommerceTypes)iI, -1);
-			}
-			else if (getCommerceAttacks((CommerceTypes)iI) < 0)
-			{
-				changeCommerceAttacks((CommerceTypes)iI, 1);
-			}
-		}
-	}
-}
-
 void CvCity::doCorporation()
 {
 	PROFILE_FUNC();
@@ -22444,8 +22376,6 @@ void CvCity::clearModifierTotals()
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		m_aiBonusCommercePercentChanges[iI] = 0;
 		m_aiBuildingCommerceTechChange[iI] = 0;
-		m_aiCommerceAttacks[iI] = 0;
-		m_aiMaxCommerceAttacks[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
 	}
 

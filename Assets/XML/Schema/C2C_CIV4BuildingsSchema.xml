@@ -928,7 +928,6 @@
 		<element type="iNoEntryDefenseLevel" minOccurs="0"/>
 		<element type="iNumUnitFullHeal" minOccurs="0"/>
 		<element type="iOccupationTimeModifier" minOccurs="0"/>
-		<element type="CommerceAttacks" minOccurs="0"/>
 		<element type="UnitCombatExtraStrengths" minOccurs="0"/>
 		<element type="ExtendsBuilding" minOccurs="0"/>
 		<element type="ObsoletesToBuilding" minOccurs="0"/>
@@ -1268,9 +1267,6 @@
 	</ElementType>
 	<ElementType name="BonusYieldChanges" content="eltOnly">
 		<element type="BonusYieldChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CommerceAttacks" content="eltOnly">
-		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="VicinityBonusYieldChanges" content="eltOnly">
 		<element type="BonusYieldChange" minOccurs="0" maxOccurs="*"/>
