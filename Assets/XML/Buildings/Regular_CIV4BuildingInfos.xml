@@ -26058,6 +26058,13 @@
 			</CommerceChanges>
 			<iLineOfSight>1</iLineOfSight>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -62138,6 +62145,13 @@
 			</HealUnitCombatTypes>
 			<iLineOfSight>1</iLineOfSight>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -100369,9 +100383,20 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_IGLOO</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
