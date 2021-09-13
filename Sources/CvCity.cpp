@@ -12127,69 +12127,70 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	if (getNumActiveBuilding(eBuilding) > 0)
+	if (getNumActiveBuilding(eBuilding) < 1)
 	{
-		int iCommerce = 0;
+		return 0;
+	}
+	int iCommerce = 0;
+	int iOtherCommerce = 0;
 
-		if (!isReligiouslyLimitedBuilding(eBuilding))
+	if (!isReligiouslyLimitedBuilding(eBuilding))
+	{
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
+
+		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 		{
-			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-			int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
+			iBaseCommerceChange = 0;
+		}
+		iCommerce += iBaseCommerceChange + getBuildingCommerceChange(eBuilding, eIndex);
 
-			if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-			{
-				iBaseCommerceChange = 0;
-			}
-			iCommerce += iBaseCommerceChange + getBuildingCommerceChange(eBuilding, eIndex);
-
-			if (bFull)
-			{
-				// Toffer - These are cached separately, so should not be counted when caching m_aiBuildingCommerce through this function.
-				iCommerce += (
-					(
-						kBuilding.getCommercePerPopChange(eIndex)
-						+ getBonusCommercePercentChanges(eIndex, eBuilding)
-						+ getBuildingCommerceTechChange(eIndex, eBuilding)
-					)
-					/ 100
-				);
-			}
-			if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION
-			&& GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
-			{
-				iCommerce += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
-			}
-
-			if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION)
-			{
-				iCommerce +=
+		if (bFull)
+		{
+			// Toffer - These are cached separately, so should not be counted when caching m_aiBuildingCommerce through this function.
+			iOtherCommerce = (
 				(
-					GC.getReligionInfo((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
-					*
-					GC.getGame().countReligionLevels((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce())
-				);
-			}
+					kBuilding.getCommercePerPopChange(eIndex)
+					+ getBonusCommercePercentChanges(eIndex, eBuilding)
+					+ getBuildingCommerceTechChange(eIndex, eBuilding)
+				)
+				/ 100
+			);
+		}
+		if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION
+		&& GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
+		{
+			iCommerce += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
 		}
 
-		if (GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce() != NO_CORPORATION)
+		if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION)
 		{
 			iCommerce +=
 			(
-				GC.getCorporationInfo((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce()).getHeadquarterCommerce(eIndex)
+				GC.getReligionInfo((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
 				*
-				GC.getGame().countCorporationLevels((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce())
+				GC.getGame().countReligionLevels((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce())
 			);
 		}
-
-		if (GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex) != 0
-		&& getBuildingOriginalTime(eBuilding) != MIN_INT
-		&& GC.getGame().getGameTurnYear() - getBuildingOriginalTime(eBuilding) >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex))
-		{
-			return iCommerce * 2;
-		}
-		return iCommerce;
 	}
-	return 0;
+
+	if (GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce() != NO_CORPORATION)
+	{
+		iCommerce +=
+		(
+			GC.getCorporationInfo((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce()).getHeadquarterCommerce(eIndex)
+			*
+			GC.getGame().countCorporationLevels((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce())
+		);
+	}
+
+	if (GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex) != 0
+	&& getBuildingOriginalTime(eBuilding) != MIN_INT
+	&& GC.getGame().getGameTurnYear() - getBuildingOriginalTime(eBuilding) >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex))
+	{
+		iCommerce *= 2;
+	}
+	return iCommerce + iOtherCommerce;
 }
 
 int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
