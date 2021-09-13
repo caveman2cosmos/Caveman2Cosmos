@@ -606,10 +606,6 @@
 	<ElementType name="CommerceFlexibles" content="eltOnly">
 		<element type="bCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bCommerceChangeOriginalOwner" content="textOnly" dt:type="boolean"/>
-	<ElementType name="CommerceChangeOriginalOwners" content="eltOnly">
-		<element type="bCommerceChangeOriginalOwner" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="ConstructSound" content="textOnly"/>
 	<ElementType name="BonusType" content="textOnly"/>
 	<ElementType name="iHealthChange" content="textOnly" dt:type="int"/>
@@ -959,7 +955,6 @@
 		<element type="SpecialistCounts" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
 		<element type="CommerceFlexibles" minOccurs="0"/>
-		<element type="CommerceChangeOriginalOwners" minOccurs="0"/>
 		<element type="ConstructSound" minOccurs="0"/>
 		<element type="BonusHealthChanges" minOccurs="0"/>
 		<element type="BonusHappinessChanges" minOccurs="0"/>

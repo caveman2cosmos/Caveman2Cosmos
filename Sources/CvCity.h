@@ -1033,8 +1033,8 @@ public:
 	void changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange);
 
 	int getBuildingCommerce(CommerceTypes eIndex) const;
-	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
-	int getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
+	int getBuildingCommerce100(CommerceTypes eIndex) const;
+	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull = false) const;
 	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
@@ -1070,6 +1070,9 @@ public:
 	int getCommerceHappinessByType(CommerceTypes eIndex) const;
 	int getCommerceHappiness() const;
 	void changeCommerceHappinessPer(CommerceTypes eIndex, int iChange);
+
+	void changeCommercePerPopFromBuildings(const CommerceTypes eIndex, const int iChange);
+	int getCommercePerPopFromBuildings(const CommerceTypes eIndex) const;
 
 	int getDomainFreeExperience(DomainTypes eIndex) const;
 	void changeDomainFreeExperience(DomainTypes eIndex, int iChange);
@@ -1931,6 +1934,7 @@ protected:
 	int* m_aiCorporationCommerce;
 	int* m_aiCommerceRateModifier;
 	int* m_aiCommerceHappinessPer;
+	int* m_commercePerPopFromBuildings;
 	int* m_aiDomainFreeExperience;
 	int* m_aiDomainProductionModifier;
 	int* m_aiCulture;

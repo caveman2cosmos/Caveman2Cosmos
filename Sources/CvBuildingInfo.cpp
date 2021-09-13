@@ -190,7 +190,6 @@ m_piDomainProductionModifier(NULL),
 m_piFlavorValue(NULL),
 m_piImprovementFreeSpecialist(NULL),
 m_pbCommerceFlexible(NULL),
-m_pbCommerceChangeOriginalOwner(NULL),
 m_ppaiSpecialistYieldChange(NULL),
 m_ppaiSpecialistCommerceChange(NULL),
 m_ppaiBonusYieldModifier(NULL)
@@ -344,7 +343,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piImprovementFreeSpecialist);
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
-	SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
 	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistYieldChange, GC.getNumSpecialistInfos());
@@ -756,13 +754,6 @@ bool CvBuildingInfo::isCommerceFlexible(int i) const
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_pbCommerceFlexible ? m_pbCommerceFlexible[i] : false;
 }
-
-bool CvBuildingInfo::isCommerceChangeOriginalOwner(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
-	return m_pbCommerceChangeOriginalOwner ? m_pbCommerceChangeOriginalOwner[i] : false;
-}
-
 
 int CvBuildingInfo::getPrereqInCityBuilding(const int i) const
 {
@@ -1876,7 +1867,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_piImprovementFreeSpecialist);
 
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceFlexible);
-	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceChangeOriginalOwner);
 
 	if (m_ppaiSpecialistYieldChange)
 	{
@@ -2564,14 +2554,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	}
 	else
 		SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
-
-	if (pXML->TryMoveToXmlFirstChild(L"CommerceChangeOriginalOwners"))
-	{
-		pXML->SetCommerce(&m_pbCommerceChangeOriginalOwner);
-		pXML->MoveToXmlParent();
-	}
-	else
-		SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
 
 	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
@@ -4030,14 +4012,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 				CvXMLLoadUtility::InitList(&m_pbCommerceFlexible,NUM_COMMERCE_TYPES,bDefault);
 			}
 			m_pbCommerceFlexible[j] = pClassInfo->isCommerceFlexible(j);
-		}
-		if ( isCommerceChangeOriginalOwner(j) == bDefault && pClassInfo->isCommerceChangeOriginalOwner(j) != bDefault)
-		{
-			if ( NULL == m_pbCommerceChangeOriginalOwner )
-			{
-				CvXMLLoadUtility::InitList(&m_pbCommerceChangeOriginalOwner,NUM_COMMERCE_TYPES,bDefault);
-			}
-			m_pbCommerceChangeOriginalOwner[j] = pClassInfo->isCommerceChangeOriginalOwner(j);
 		}
 	}
 

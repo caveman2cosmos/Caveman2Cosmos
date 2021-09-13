@@ -24067,7 +24067,7 @@ int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 
 void CvPlayerAI::AI_calculateAverages() const
 {
-	if ( m_iAveragesCacheTurn != GC.getGame().getGameTurn() )
+	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -24079,97 +24079,66 @@ void CvPlayerAI::AI_calculateAverages() const
 		}
 		m_iAverageGreatPeopleMultiplier = 0;
 
-		int iTotalPopulation = 0;
-		foreach_(const CvCity* pLoopCity, cities())
+		int64_t* sumBaseCommerce = new int64_t[NUM_COMMERCE_TYPES]();
+		int64_t* sumFinalCommerce = new int64_t[NUM_COMMERCE_TYPES]();
 		{
-			int iPopulation = std::max(pLoopCity->getPopulation(), NUM_CITY_PLOTS);
-			iTotalPopulation += iPopulation;
+			int iTotalPopulation = 0;
 
-			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+			foreach_(const CvCity* cityX, cities())
 			{
-				m_aiAverageYieldMultiplier[iI] += iPopulation * pLoopCity->AI_yieldMultiplier((YieldTypes)iI);
+				const int iPopulation = std::max(cityX->getPopulation(), NUM_CITY_PLOTS);
+				iTotalPopulation += iPopulation;
+
+				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+				{
+					m_aiAverageYieldMultiplier[iI] += iPopulation * cityX->AI_yieldMultiplier((YieldTypes)iI);
+				}
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+				{
+					m_aiAverageCommerceMultiplier[iI] += iPopulation * cityX->getTotalCommerceRateModifier((CommerceTypes)iI);
+
+					sumBaseCommerce[iI] += cityX->getBaseCommerceRateTimes100((CommerceTypes)iI);
+					sumFinalCommerce[iI] += cityX->getCommerceRateTimes100((CommerceTypes)iI);
+				}
+				m_iAverageGreatPeopleMultiplier += iPopulation * cityX->getTotalGreatPeopleRateModifier();
 			}
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+
+			if (iTotalPopulation > 0)
 			{
-				m_aiAverageCommerceMultiplier[iI] += iPopulation * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI);
-			}
-			m_iAverageGreatPeopleMultiplier += iPopulation * pLoopCity->getTotalGreatPeopleRateModifier();
-		}
-
-
-		if (iTotalPopulation > 0)
-		{
-			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-			{
-				m_aiAverageYieldMultiplier[iI] = std::max(1, m_aiAverageYieldMultiplier[iI] / iTotalPopulation);
-			}
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-			{
-				m_aiAverageCommerceMultiplier[iI] = std::max(1, m_aiAverageCommerceMultiplier[iI] / iTotalPopulation);
-			}
-			m_iAverageGreatPeopleMultiplier = std::max(1, m_iAverageGreatPeopleMultiplier / iTotalPopulation);
-		}
-		else
-		{
-			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-			{
-				m_aiAverageYieldMultiplier[iI] = 100;
-			}
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-			{
-				m_aiAverageCommerceMultiplier[iI] = 100;
-			}
-			m_iAverageGreatPeopleMultiplier = 100;
-		}
-
-
-		//Calculate Exchange Rate
-
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		{
-			m_aiAverageCommerceExchange[iI] = 0;
-		}
-
-		int iTotalCommerce = 0;
-		foreach_(const CvCity* pLoopCity, cities())
-		{
-			int iCommerce = pLoopCity->getYieldRate(YIELD_COMMERCE);
-
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-			{
-				iCommerce +=
-				(
-					(pLoopCity->getSpecialistPopulation() + pLoopCity->getNumGreatPeople()) * getSpecialistExtraCommerce((CommerceTypes)iI)
-					+
-					pLoopCity->getBuildingCommerce((CommerceTypes)iI)
-					+
-					pLoopCity->getSpecialistCommerce((CommerceTypes)iI)
-					+
-					pLoopCity->getReligionCommerce((CommerceTypes)iI)
-					+
-					getFreeCityCommerce((CommerceTypes)iI)
-				);
-			}
-			iTotalCommerce += iCommerce;
-
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-			{
-				m_aiAverageCommerceExchange[iI] += iCommerce * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI) / 100;
-			}
-		}
-
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		{
-			if (m_aiAverageCommerceExchange[iI] > 0)
-			{
-				m_aiAverageCommerceExchange[iI] = 100 * iTotalCommerce / m_aiAverageCommerceExchange[iI];
+				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+				{
+					m_aiAverageYieldMultiplier[iI] = std::max(1, m_aiAverageYieldMultiplier[iI] / iTotalPopulation);
+				}
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+				{
+					m_aiAverageCommerceMultiplier[iI] = std::max(1, m_aiAverageCommerceMultiplier[iI] / iTotalPopulation);
+				}
+				m_iAverageGreatPeopleMultiplier = std::max(1, m_iAverageGreatPeopleMultiplier / iTotalPopulation);
 			}
 			else
 			{
-				m_aiAverageCommerceExchange[iI] = 100;
+				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+				{
+					m_aiAverageYieldMultiplier[iI] = 100;
+				}
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+				{
+					m_aiAverageCommerceMultiplier[iI] = 100;
+				}
+				m_iAverageGreatPeopleMultiplier = 100;
 			}
 		}
-
+		//Calculate Exchange Rate
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		{
+			m_aiAverageCommerceExchange[iI] = (
+				static_cast<int>(
+					100 * std::max<int64_t>(1, sumBaseCommerce[iI])
+					/	std::max<int64_t>(1, sumFinalCommerce[iI])
+				)
+			);
+		}
+		// Timestamp
 		m_iAveragesCacheTurn = GC.getGame().getGameTurn();
 	}
 }

@@ -16638,12 +16638,6 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 		iResult += 40;
 	}
 
-	if (kBuilding.isCommerceChangeOriginalOwner(iI)
-		&& (kBuilding.getCommerceChange(iI) > 0 || kBuilding.getCommercePerPopChange(iI) > 0))
-	{
-		iResult++;
-	}
-
 	if (iI == COMMERCE_GOLD && kOwner.AI_isFinancialTrouble())
 	{
 		iResult *= 2;
