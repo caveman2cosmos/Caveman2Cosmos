@@ -29380,7 +29380,7 @@ void CvPlayer::validateCommerce() const
 			{
 				if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
 				{
-					const int iBuildingGold = pLoopCity->getBuildingCommerceByBuilding(COMMERCE_GOLD, (BuildingTypes)iI);
+					const int iBuildingGold = pLoopCity->getBuildingCommerceByBuilding(COMMERCE_GOLD, (BuildingTypes)iI, true);
 					if ( iBuildingGold != 0)
 					{
 						const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);

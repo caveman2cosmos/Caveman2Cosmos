@@ -54,6 +54,7 @@ CvCity::CvCity()
 	m_aiCorporationCommerce = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceHappinessPer = new int[NUM_COMMERCE_TYPES];
+	m_commercePerPopFromBuildings = new int[NUM_COMMERCE_TYPES];
 	m_aiDomainFreeExperience = new int[NUM_DOMAIN_TYPES];
 	m_aiDomainProductionModifier = new int[NUM_DOMAIN_TYPES];
 
@@ -200,6 +201,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiCorporationCommerce);
 	SAFE_DELETE_ARRAY(m_aiCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiCommerceHappinessPer);
+	SAFE_DELETE_ARRAY(m_commercePerPopFromBuildings);
 	SAFE_DELETE_ARRAY(m_aiDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_aiDomainProductionModifier);
 	SAFE_DELETE_ARRAY(m_aiCulture);
@@ -694,6 +696,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiCorporationCommerce[iI] = 0;
 		m_aiCommerceRateModifier[iI] = 0;
 		m_aiCommerceHappinessPer[iI] = 0;
+		m_commercePerPopFromBuildings[iI] = 0;
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		m_aiBonusCommercePercentChanges[iI] = 0;
 		m_aiBuildingCommerceTechChange[iI] = 0;
@@ -4946,6 +4949,8 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		PROFILE("CvCity::processBuilding.Commerces");
 		const CommerceTypes eCommerceX = static_cast<CommerceTypes>(iI);
 
+		changeCommercePerPopFromBuildings(eCommerceX, iChange * kBuilding.getCommercePerPopChange(iI));
+
 		updateCommerceRateByBuilding(
 			eBuilding, eCommerceX,
 			(
@@ -4954,8 +4959,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			)
 			* iChange
 		);
-		//TB Debug note: For buildings, apparently the value is being independently calculated during the update routine.  It should NOT need to be processed into this Commerce Rate Modifier which apparently now only tracks Event commerce modifier adjustments.
-		//Apparently I was wrong on the above statement...
 		changeCommerceRateModifier(eCommerceX, kBuilding.getCommerceModifier(iI) * iChange);
 
 		updateCommerceModifierByBuilding(
@@ -11925,7 +11928,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	iBaseCommerceRate += 100 * getCorporationCommerce(eIndex);
 
 	//STEP 5 : Building Commerce
-	iBaseCommerceRate += 100 * getBuildingCommerce(eIndex) + getBonusCommercePercentChanges(eIndex) + getBuildingCommerceTechChange(eIndex);
+	iBaseCommerceRate += getBuildingCommerce100(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
 	iBaseCommerceRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
@@ -12106,8 +12109,18 @@ int CvCity::getBuildingCommerce(CommerceTypes eIndex) const
 	return m_aiBuildingCommerce[eIndex];
 }
 
+int CvCity::getBuildingCommerce100(CommerceTypes eIndex) const
+{
+	return (
+		100 * getBuildingCommerce(eIndex)
+		+ getBonusCommercePercentChanges(eIndex)
+		+ getBuildingCommerceTechChange(eIndex)
+		+ getCommercePerPopFromBuildings(eIndex) * getPopulation()
+	);
+}
 
-int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
+
+int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull) const
 {
 	PROFILE_FUNC();
 
@@ -12129,10 +12142,20 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 				{
 					iBaseCommerceChange = 0;
 				}
-
-				iBaseCommerceChange += kBuilding.getCommercePerPopChange(eIndex) * getPopulation() / 100;
 				iCommerce += iBaseCommerceChange + getBuildingCommerceChange(eBuilding, eIndex);
 
+				if (bFull)
+				{
+					// Toffer - These are cached separately, so should not be counted when caching m_aiBuildingCommerce through this function.
+					iCommerce += (
+						(
+							kBuilding.getCommercePerPopChange(eIndex)
+							+ getBonusCommercePercentChanges(eIndex, eBuilding)
+							+ getBuildingCommerceTechChange(eIndex, eBuilding)
+						)
+						/ 100
+					);
+				}
 				if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION
 				&& GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
 				{
@@ -12193,28 +12216,20 @@ int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingT
 			iBaseCommerceChange = 0;
 		}
 
-		iBaseCommerceChange += ((kBuilding.getCommercePerPopChange(eIndex) * getPopulation()) / 100);
-
 		if (iBaseCommerceChange != 0)
 		{
 			if (hasOrbitalInfrastructure())
 			{
 				iCommerce += std::min((iBaseCommerceChange * iNumOrbital), getPopulation());
 			}
-
-			if (!hasOrbitalInfrastructure())
+			else
 			{
 				iCommerce += std::min((iBaseCommerceChange * iNumOrbital), getPopulation());
-				if (iCommerce != 0)
-				{
-					iCommerce /= 2;
-				}
+				iCommerce /= 2;
 			}
 		}
-
 		return iCommerce;
 	}
-
 	return 0;
 }
 
@@ -12452,6 +12467,7 @@ void CvCity::updateBuildingCommerce()
 	{
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
+			const CommerceTypes eType = static_cast<CommerceTypes>(iI);
 			int iNewBuildingCommerce = 0;
 
 			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
@@ -12459,16 +12475,16 @@ void CvCity::updateBuildingCommerce()
 				//ls612: Support for Orbital buildings
 				if (GC.getBuildingInfo((BuildingTypes)iJ).isOrbital())
 				{
-					iNewBuildingCommerce += getOrbitalBuildingCommerceByBuilding(((CommerceTypes)iI), ((BuildingTypes)iJ));
+					iNewBuildingCommerce += getOrbitalBuildingCommerceByBuilding(eType, (BuildingTypes)iJ);
 				}
-				else iNewBuildingCommerce += getBuildingCommerceByBuilding(((CommerceTypes)iI), ((BuildingTypes)iJ));
+				else iNewBuildingCommerce += getBuildingCommerceByBuilding(eType, (BuildingTypes)iJ);
 			}
 
-			if (getBuildingCommerce((CommerceTypes)iI) != iNewBuildingCommerce)
+			if (getBuildingCommerce(eType) != iNewBuildingCommerce)
 			{
 				m_aiBuildingCommerce[iI] = iNewBuildingCommerce;
 
-				setCommerceDirty((CommerceTypes)iI);
+				setCommerceDirty(eType);
 			}
 		}
 	}
@@ -12883,6 +12899,21 @@ void CvCity::changeCommerceHappinessPer(CommerceTypes eIndex, int iChange)
 
 		AI_setAssignWorkDirty(true);
 	}
+}
+
+
+void CvCity::changeCommercePerPopFromBuildings(const CommerceTypes eIndex, const int iChange)
+{
+	if (iChange != 0)
+	{
+		m_commercePerPopFromBuildings[eIndex] += iChange;
+		setCommerceDirty(eIndex);
+	}
+}
+
+int CvCity::getCommercePerPopFromBuildings(const CommerceTypes eIndex) const
+{
+	return m_commercePerPopFromBuildings[eIndex];
 }
 
 
@@ -17370,6 +17401,8 @@ void CvCity::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMaxFoodKeptPercent, SAVE_VALUE_ANY);	// was present in old formats
@@ -17798,6 +17831,8 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, it->second, "TerrainYieldChanges");
 		}
 	}
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -19924,16 +19959,7 @@ void CvCity::changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange
 	if (iChange != 0)
 	{
 		m_aiBonusCommercePercentChanges[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getCommerceRate(eIndex))
-
-		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
-
-		AI_setAssignWorkDirty(true);
-
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-		}
+		setCommerceDirty(eIndex);
 	}
 }
 
@@ -19982,15 +20008,7 @@ void CvCity::changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBuildingCommerceTechChange[eIndex] += iChange;
-
-		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
-
-		AI_setAssignWorkDirty(true);
-
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-		}
+		setCommerceDirty(eIndex);
 	}
 }
 
@@ -22312,6 +22330,7 @@ void CvCity::clearModifierTotals()
 		m_aiCorporationCommerce[iI] = 0;
 		m_aiCommerceRateModifier[iI] = 0;
 		m_aiCommerceHappinessPer[iI] = 0;
+		m_commercePerPopFromBuildings[iI] = 0;
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		m_aiBonusCommercePercentChanges[iI] = 0;
 		m_aiBuildingCommerceTechChange[iI] = 0;
