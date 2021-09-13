@@ -20907,7 +20907,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	}
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	bool bRelDisabled = false;
-	bool bFirst = true;
 
 	const bool bCity = pCity != NULL;
 
@@ -20918,6 +20917,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(CvWString::format(L"%s\n", kBuilding.getDescription()));
 			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED"));
 
+			bool bFirst = true;
 			for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)) > 0)
@@ -21055,36 +21055,25 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				}
 				aiCommerceModifiers[iI] = kBuilding.getCommerceModifier(iI);
 
-				if (bCity)
+				if (!bCity)
 				{
-					iBaseCommerceChange += kBuilding.getCommercePerPopChange(iI) * pCity->getPopulation() / 100;
-
-					if (pCity->getNumActiveBuilding(eBuilding) > 0)
+					aiCommerces[iI] = iBaseCommerceChange;
+				}
+				else if (pCity->getNumActiveBuilding(eBuilding) > 0)
+				{
+					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding, true);
+				}
+				else
+				{
+					aiCommerces[iI] = iBaseCommerceChange + kBuilding.getCommercePerPopChange(iI) * pCity->getPopulation() / 100;
+					if (ePlayer != NO_PLAYER)
 					{
-						aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding, true);
-					}
-					else
-					{
-						aiCommerces[iI] = iBaseCommerceChange;
-						if (ePlayer != NO_PLAYER)
-						{
-							aiCommerces[iI] += GET_TEAM(eTeam).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI);
-							aiCommerceModifiers[iI] += GET_TEAM(eTeam).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
-						}
+						aiCommerces[iI] += GET_TEAM(eTeam).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI);
+						aiCommerceModifiers[iI] += GET_TEAM(eTeam).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
 					}
 				}
-				else aiCommerces[iI] = iBaseCommerceChange;
 			}
 			setCommerceChangeHelp(szBuffer, L", ", L"", L"", aiCommerces, false, false);
-
-			if (!bCity)
-			{
-				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-				{
-					aiCommerces[iI] = kBuilding.getCommercePerPopChange(iI);
-				}
-				setCommercePerPopChangeHelp(szBuffer, L", ", L"", L"", aiCommerces, false, false);
-			}
 
 			setYieldChangeHelp(szBuffer, L", ", L"", L"", aiYieldModifiers, true, bCivilopediaText);
 			setCommerceChangeHelp(szBuffer, L", ", L"", L"", aiCommerceModifiers, true, bCivilopediaText);
@@ -21201,7 +21190,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (!bRelDisabled)
 	{
-		int aiCommerce[NUM_COMMERCE_TYPES];
 		int iCount = 0;
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
@@ -21222,7 +21210,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 					if (iCount > 3) iCount = iLast = 0;
 				}
 			}
-			aiCommerce[iI] = kBuilding.getCommercePerPopChange(iI);
 		}
 		int aiYields[NUM_YIELD_TYPES];
 		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
@@ -21231,7 +21218,27 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 		setYieldPerPopChangeHelp(szBuffer, L", ", L"", L"", aiYields, false, true);
 
-		setCommercePerPopChangeHelp(szBuffer, L", ", L"", L"", aiCommerce, false, true);
+		if (kBuilding.getCommercePerPopChangeArray())
+		{
+			bool bFirst = true;
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+			{
+				const int iValue = kBuilding.getCommercePerPopChange(iI);
+				if (iValue != 0)
+				{
+					if (bFirst)
+					{
+						szBuffer.append(CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_PER_POPULATION").GetCString()));
+						bFirst = false;
+					}
+					else szBuffer.append(L", ");
+
+					CvWString szValue;
+					makeValueString(szValue, iValue, true);
+					szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+				}
+			}
+		}
 	}
 
 	//	Hurry types
@@ -21321,7 +21328,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
 	}
 
-	bFirst = true;
+	bool bFirst = true;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
@@ -25659,23 +25666,21 @@ void CvGameTextMgr::setYieldPerPopChangeHelp(CvWStringBuffer &szBuffer, const Cv
  */
 bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent, bool bNewLine, bool bStarted, bool bPerPop)
 {
-	CvWString szTempBuffer;
 	CvWString szPerPop;
-//	bool bStarted;
-	int iI;
 
 	if (bPerPop)
 	{
 		szPerPop.append(gDLL->getText("TXT_KEY_PER_POP"));
 	}
-//	bStarted = false;
+//	bool bStarted = false;
 
-	if ( piYieldChange != NULL )
+	if (piYieldChange != NULL)
 	{
-		for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
 			if (piYieldChange != NULL && piYieldChange[iI] != 0)
 			{
+				CvWString szTempBuffer;
 				if (!bStarted)
 				{
 					if (bNewLine)
@@ -25684,176 +25689,114 @@ bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const
 					}
 					if (!bPerPop)
 					{
-						szTempBuffer += CvWString::format(L"%s%s%s%d%s%c",
+						szTempBuffer += CvWString::format(
+							L"%s%s%s%d%s%c",
 							szStart.GetCString(),
 							szSpace.GetCString(),
 							piYieldChange[iI] > 0 ? L"+" : L"",
 							piYieldChange[iI],
 							bPercent ? L"%" : L"",
-							GC.getYieldInfo((YieldTypes)iI).getChar());
+							GC.getYieldInfo((YieldTypes)iI).getChar()
+						);
+					}
+					else if (piYieldChange[iI] % 100 == 0)
+					{
+						szTempBuffer += CvWString::format(
+							L"%s%s%s%d%s%c%s",
+							szStart.GetCString(),
+							szSpace.GetCString(),
+							piYieldChange[iI] > 0 ? L"+" : L"",
+							piYieldChange[iI] / 100,
+							bPercent ? L"%" : L"",
+							GC.getYieldInfo((YieldTypes)iI).getChar(),
+							szPerPop.GetCString()
+						);
 					}
 					else
 					{
-						if (piYieldChange[iI] % 100 == 0)
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d%s%c%s",
-								szStart.GetCString(),
-								szSpace.GetCString(),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d.%02d%s%c%s",
-								szStart.GetCString(),
-								szSpace.GetCString(),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								piYieldChange[iI] % 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
+						szTempBuffer += CvWString::format(
+							L"%s%s%s%d.%02d%s%c%s",
+							szStart.GetCString(),
+							szSpace.GetCString(),
+							piYieldChange[iI] > 0 ? L"+" : L"",
+							piYieldChange[iI] / 100,
+							piYieldChange[iI] % 100,
+							bPercent ? L"%" : L"",
+							GC.getYieldInfo((YieldTypes)iI).getChar(),
+							szPerPop.GetCString()
+						);
 					}
+				}
+				else if (!bPerPop)
+				{
+					szTempBuffer.Format(
+						L", %s%d%s%c",
+						piYieldChange[iI] > 0 ? L"+" : L"",
+						piYieldChange[iI],
+						bPercent ? L"%" : L"",
+						GC.getYieldInfo((YieldTypes)iI).getChar()
+					);
+				}
+				else if (piYieldChange[iI] % 100 == 0)
+				{
+					szTempBuffer.Format(
+						L", %s%d%s%c%s",
+						piYieldChange[iI] > 0 ? L"+" : L"",
+						piYieldChange[iI] / 100,
+						bPercent ? L"%" : L"",
+						GC.getYieldInfo((YieldTypes)iI).getChar(),
+						szPerPop.GetCString()
+					);
 				}
 				else
 				{
-					if (!bPerPop)
-					{
-						szTempBuffer.Format(L", %s%d%s%c",
-							piYieldChange[iI] > 0 ? L"+" : L"",
-							piYieldChange[iI],
-							bPercent ? L"%" : L"",
-							GC.getYieldInfo((YieldTypes)iI).getChar());
-					}
-					else
-					{
-						if (piYieldChange[iI] % 100 == 0)
-						{
-							szTempBuffer.Format((L", %s%d%s%c%s"),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer.Format((L", %s%d.%02d%s%c%s"),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								piYieldChange[iI] % 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
-					}
+					szTempBuffer.Format(
+						L", %s%d.%02d%s%c%s",
+						piYieldChange[iI] > 0 ? L"+" : L"",
+						piYieldChange[iI] / 100,
+						piYieldChange[iI] % 100,
+						bPercent ? L"%" : L"",
+						GC.getYieldInfo((YieldTypes)iI).getChar(),
+						szPerPop.GetCString()
+					);
 				}
 				szBuffer.append(szTempBuffer);
-
 				bStarted = true;
 			}
 		}
-
 		if (bStarted)
 		{
 			szBuffer.append(szEnd);
 		}
 	}
-
-// added
-	return bStarted;
+	return bStarted; // added
 }
 
 void CvGameTextMgr::setCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine)
 {
-	setResumableCommerceChangeHelp(szBuffer, szStart, szSpace, szEnd, piCommerceChange, bPercent, bNewLine);
-}
-void CvGameTextMgr::setCommercePerPopChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine)
-{
-	setResumableCommerceChangeHelp(szBuffer, szStart, szSpace, szEnd, piCommerceChange, bPercent, bNewLine, false, true);
-}
-
-/*
- * Adds the ability to pass in and get back the value of bStarted so that
- * it can be used with other setResumable<xx>ChangeHelp() calls on a single line.
- */
-bool CvGameTextMgr::setResumableCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine, bool bStarted, bool bPerPop)
-{
-	CvWString szTempBuffer;
-	CvWString szPerPop;
-//	bool bStarted;
-	int iI;
-
-//	bStarted = false;
-
-	if (bPerPop)
+	if (piCommerceChange)
 	{
-		szPerPop.append(gDLL->getText("TXT_KEY_PER_POP"));
-	}
-	if ( piCommerceChange )
-	{
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+		bool bStarted = false;
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 		{
 			if (piCommerceChange[iI] != 0)
 			{
-				if (!bStarted)
+				CvWString szTempBuffer;
+				if (bNewLine)
 				{
-					if (bNewLine)
-					{
-						szTempBuffer.Format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR));
-					}
-					if (bPerPop)
-					{
-						if (piCommerceChange[iI] % 100 == 0)
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d%s%c%s", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d.%02d%s%c%s", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, piCommerceChange[iI] % 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-					}
-					else
-					{
-						szTempBuffer += CvWString::format(L"%s%s%s%d%s%c", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI], ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar());
-					}
+					szTempBuffer.Format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR));
 				}
-				else
-				{
-					if (bPerPop)
-					{
-						if (piCommerceChange[iI] % 100 == 0)
-						{
-							szTempBuffer.Format((L", %s%d%s%c%s"), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer.Format((L", %s%d.%02d%s%c%s"), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, piCommerceChange[iI] % 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-					}
-					else
-					{
-						szTempBuffer.Format((L", %s%d%s%c"), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI], ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar());
-					}
-				}
-				szBuffer.append(szTempBuffer);
+				szTempBuffer += CvWString::format(L"%s%s%s%d%s%c", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI], ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar());
 
+				szBuffer.append(szTempBuffer);
 				bStarted = true;
 			}
 		}
+		if (bStarted)
+		{
+			szBuffer.append(szEnd);
+		}
 	}
-
-	if (bStarted)
-	{
-		szBuffer.append(szEnd);
-	}
-
-// added
-	return bStarted;
 }
 
 /*
