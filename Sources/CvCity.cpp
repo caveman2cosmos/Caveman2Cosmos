@@ -12143,7 +12143,23 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 		{
 			iBaseCommerceChange = 0;
 		}
-		iCommerce += iBaseCommerceChange + getBuildingCommerceChange(eBuilding, eIndex);
+		else if (iBaseCommerceChange != 0)
+		{
+			if (kBuilding.isOrbital())
+			{
+				if (hasOrbitalInfrastructure())
+				{
+					iCommerce += std::min(iBaseCommerceChange * GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure(), getPopulation());
+				}
+				else
+				{
+					iCommerce += std::min(iBaseCommerceChange * GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure(), getPopulation());
+					iCommerce /= 2;
+				}
+			}
+			else iCommerce += iBaseCommerceChange;
+		}
+		iCommerce += getBuildingCommerceChange(eBuilding, eIndex);
 
 		if (bFull)
 		{
@@ -12191,44 +12207,6 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 		iCommerce *= 2;
 	}
 	return iCommerce + iOtherCommerce;
-}
-
-int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
-{
-	PROFILE_FUNC();
-
-	//ls612: Orbital Buildings have their commerce handled in a special manner
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
-
-	if (getNumActiveBuilding(eBuilding) > 0)
-	{
-		int iCommerce = 0;
-		const int iNumOrbital = GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure();
-
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
-
-		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-		{
-			iBaseCommerceChange = 0;
-		}
-
-		if (iBaseCommerceChange != 0)
-		{
-			if (hasOrbitalInfrastructure())
-			{
-				iCommerce += std::min((iBaseCommerceChange * iNumOrbital), getPopulation());
-			}
-			else
-			{
-				iCommerce += std::min((iBaseCommerceChange * iNumOrbital), getPopulation());
-				iCommerce /= 2;
-			}
-		}
-		return iCommerce;
-	}
-	return 0;
 }
 
 
@@ -12470,12 +12448,7 @@ void CvCity::updateBuildingCommerce()
 
 			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 			{
-				//ls612: Support for Orbital buildings
-				if (GC.getBuildingInfo((BuildingTypes)iJ).isOrbital())
-				{
-					iNewBuildingCommerce += getOrbitalBuildingCommerceByBuilding(eType, (BuildingTypes)iJ);
-				}
-				else iNewBuildingCommerce += getBuildingCommerceByBuilding(eType, (BuildingTypes)iJ);
+				iNewBuildingCommerce += getBuildingCommerceByBuilding(eType, (BuildingTypes)iJ);
 			}
 
 			if (getBuildingCommerce(eType) != iNewBuildingCommerce)
