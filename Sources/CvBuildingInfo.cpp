@@ -190,7 +190,6 @@ m_piDomainProductionModifier(NULL),
 m_piFlavorValue(NULL),
 m_piImprovementFreeSpecialist(NULL),
 m_pbCommerceFlexible(NULL),
-m_pbCommerceChangeOriginalOwner(NULL),
 m_ppaiSpecialistYieldChange(NULL),
 m_ppaiSpecialistCommerceChange(NULL),
 m_ppaiBonusYieldModifier(NULL)
@@ -241,7 +240,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_pbPrereqOrFeature(NULL)
 //New Integer Arrays
 ,m_piBonusDefenseChanges(NULL)
-,m_piCommerceAttacks(NULL)
 //New Multidimensional Integer Arrays
 ,m_ppaiTechCommerceChange(NULL)
 ,m_ppaiTechYieldChange(NULL)
@@ -345,7 +343,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piImprovementFreeSpecialist);
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
-	SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
 	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistYieldChange, GC.getNumSpecialistInfos());
@@ -358,7 +355,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
-	SAFE_DELETE_ARRAY(m_piCommerceAttacks);
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommercePercentChanges, GC.getNumBonusInfos());
@@ -759,13 +755,6 @@ bool CvBuildingInfo::isCommerceFlexible(int i) const
 	return m_pbCommerceFlexible ? m_pbCommerceFlexible[i] : false;
 }
 
-bool CvBuildingInfo::isCommerceChangeOriginalOwner(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
-	return m_pbCommerceChangeOriginalOwner ? m_pbCommerceChangeOriginalOwner[i] : false;
-}
-
-
 int CvBuildingInfo::getPrereqInCityBuilding(const int i) const
 {
 	return m_aiPrereqInCityBuildings[i];
@@ -1019,17 +1008,6 @@ int CvBuildingInfo::getBonusDefenseChanges(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
-}
-
-int CvBuildingInfo::getCommerceAttacks(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
-	return m_piCommerceAttacks ? m_piCommerceAttacks[i] : 0;
-}
-
-int* CvBuildingInfo::getCommerceAttacksArray() const
-{
-	return m_piCommerceAttacks;
 }
 
 int CvBuildingInfo::getBonusCommerceModifier(int i, int j) const
@@ -1889,7 +1867,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_piImprovementFreeSpecialist);
 
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceFlexible);
-	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceChangeOriginalOwner);
 
 	if (m_ppaiSpecialistYieldChange)
 	{
@@ -1981,7 +1958,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
 	CheckSumC(iSum, m_aUnitCombatExtraStrength);
-	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
 
 	for(int i = 0; i < GC.getNumTechInfos(); i++)
 	{
@@ -2579,14 +2555,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	else
 		SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 
-	if (pXML->TryMoveToXmlFirstChild(L"CommerceChangeOriginalOwners"))
-	{
-		pXML->SetCommerce(&m_pbCommerceChangeOriginalOwner);
-		pXML->MoveToXmlParent();
-	}
-	else
-		SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
-
 	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
 	m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
@@ -2864,12 +2832,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbPrereqOrFeature, L"PrereqOrFeature", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piBonusDefenseChanges, L"BonusDefenseChanges", GC.getNumBonusInfos());
 	m_aUnitCombatExtraStrength.read(pXML, L"UnitCombatExtraStrengths");
-
-	if (pXML->TryMoveToXmlFirstChild(L"CommerceAttacks"))
-	{
-		pXML->SetCommerce(&m_piCommerceAttacks);
-		pXML->MoveToXmlParent();
-	}
 
 	if (pXML->TryMoveToXmlFirstChild(L"BonusCommerceModifiers"))
 	{
@@ -4051,14 +4013,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			}
 			m_pbCommerceFlexible[j] = pClassInfo->isCommerceFlexible(j);
 		}
-		if ( isCommerceChangeOriginalOwner(j) == bDefault && pClassInfo->isCommerceChangeOriginalOwner(j) != bDefault)
-		{
-			if ( NULL == m_pbCommerceChangeOriginalOwner )
-			{
-				CvXMLLoadUtility::InitList(&m_pbCommerceChangeOriginalOwner,NUM_COMMERCE_TYPES,bDefault);
-			}
-			m_pbCommerceChangeOriginalOwner[j] = pClassInfo->isCommerceChangeOriginalOwner(j);
-		}
 	}
 
 	for ( int j = 0; j < GC.getNumReligionInfos(); j++)
@@ -4300,18 +4254,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (!m_iConnectedCityMaintenanceModifier) m_iConnectedCityMaintenanceModifier = pClassInfo->getConnectedCityMaintenanceModifier();
 
 	m_aUnitCombatExtraStrength.copyNonDefaults(pClassInfo->getUnitCombatExtraStrength());
-
-	for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
-	{
-		if ( getCommerceAttacks(j) == iDefault && pClassInfo->getCommerceAttacks(j) != iDefault)
-		{
-			if ( NULL == m_piCommerceAttacks )
-			{
-				CvXMLLoadUtility::InitList(&m_piCommerceAttacks,NUM_COMMERCE_TYPES,iDefault);
-			}
-			m_piCommerceAttacks[j] = pClassInfo->getCommerceAttacks(j);
-		}
-	}
 
 	for ( int j = 0; j < GC.getNumTerrainInfos(); j++)
 	{

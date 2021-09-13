@@ -128,14 +128,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>
@@ -206,14 +206,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -498,14 +498,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -803,14 +803,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>
@@ -885,14 +885,14 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>
@@ -928,14 +928,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>
@@ -977,14 +977,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1066,14 +1066,14 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -1218,14 +1218,14 @@
 			<CommerceChanges>
 				<iCommerce>-250</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1425,14 +1425,14 @@
 			<CommerceChanges>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 				<BuildingType>BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</BuildingType>
@@ -1564,14 +1564,14 @@
 			<CommerceChanges>
 				<iCommerce>-500</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -1642,14 +1642,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1838,14 +1838,14 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 			</PrereqInCityBuildings>

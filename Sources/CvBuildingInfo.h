@@ -311,7 +311,6 @@ public:
 	int getImprovementFreeSpecialist(int i) const;
 
 	bool isCommerceFlexible(int i) const;
-	bool isCommerceChangeOriginalOwner(int i) const;
 
 	int getPrereqNumOfBuilding(BuildingTypes e) const;
 	const IDValueMap<BuildingTypes, int>& getPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding; }
@@ -424,9 +423,6 @@ public:
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
-
-	int getCommerceAttacks(int i) const;
-	int* getCommerceAttacksArray() const;
 
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
@@ -769,10 +765,8 @@ private:
 	bool* m_pbPrereqOrImprovement;
 	bool* m_pbPrereqOrFeature;
 	bool* m_pbCommerceFlexible;
-	bool* m_pbCommerceChangeOriginalOwner;
 	bool* m_pabHurry;
 
-	int* m_piCommerceAttacks;
 	int* m_piBonusDefenseChanges;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
