@@ -347,6 +347,9 @@ public:
 	const IDValueMap<TechTypes, int*>& getTechCommercePercentChanges() const { return m_aTechCommercePercent; }
 	const python::list cyGetTechCommercePercentChanges() const;
 
+	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
+	const python::list cyGetTerrainYieldChanges() const;
+
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
 	bool hasExtraFreeBonus(BonusTypes eBonus) const;
@@ -421,9 +424,6 @@ public:
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
-
-	int getCommerceAttacks(int i) const;
-	int* getCommerceAttacksArray() const;
 
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
@@ -769,7 +769,6 @@ private:
 	bool* m_pbCommerceChangeOriginalOwner;
 	bool* m_pabHurry;
 
-	int* m_piCommerceAttacks;
 	int* m_piBonusDefenseChanges;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
@@ -857,6 +856,7 @@ private:
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
 	IDValueMap<TechTypes, int*> m_aTechCommercePercent;
+	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

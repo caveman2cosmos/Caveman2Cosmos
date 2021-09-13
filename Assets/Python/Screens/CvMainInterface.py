@@ -2963,8 +2963,8 @@ class CvMainInterface:
 		iRow = 0
 		y = -2
 		for szName, i, CvBuildingInfo in aBuildingList:
-			iBuilt = CyCity.getNumRealBuilding(i)
-			if iBuilt:
+
+			if CyCity.getNumRealBuilding(i):
 				szStat = ""
 
 				if CyCity.getNumActiveBuilding(i) > 0:
@@ -2987,12 +2987,12 @@ class CvMainInterface:
 							szStat += str(-iHappiness) + iconUnhappy
 
 					for j in xrange(YieldTypes.NUM_YIELD_TYPES):
-						iYield = iBuilt * (CvBuildingInfo.getYieldChange(j) +  CyCity.getBuildingYieldChange(i, j) + CyTeam.getBuildingYieldChange(i, j))
+						iYield = CvBuildingInfo.getYieldChange(j) +  CyCity.getBuildingYieldChange(i, j) + CyTeam.getBuildingYieldChange(i, j)
 						if iYield:
 							szStat += str(iYield) + iconYieldList[j]
 							self.yields.addBuilding(j, iYield)
 				for j in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-					iCommerce = CyCity.getBuildingCommerceByBuilding(j, i) / iBuilt + CyCity.getBonusCommercePercentChanges(j, i) / 100
+					iCommerce = CyCity.getBuildingCommerceByBuilding(j, i) + (CyCity.getBonusCommercePercentChanges(j, i) + CyCity.getBuildingCommerceTechChange(j, i)) / 100
 					# AIAndy: display maintenance as negative gold
 					if j == CommerceTypes.COMMERCE_GOLD:
 						iCommerceChange = CvBuildingInfo.getCommerceChange(j)
@@ -5285,7 +5285,7 @@ class CvMainInterface:
 					szTxt = CyGameTextMgr().getBuildingHelp(ID, True, CyCity, False, False, True)
 					self.updateTooltip(screen, szTxt)
 				else:
-					aList = [TRNSLTR.getText("TXT_KEY_CONCEPT_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
+					aList = [TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
 					self.updateTooltip(screen, aList[ID])
 
 			elif BASE == "BonusList":

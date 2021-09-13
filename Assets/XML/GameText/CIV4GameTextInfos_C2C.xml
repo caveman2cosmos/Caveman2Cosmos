@@ -429,14 +429,6 @@
 		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
-		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
-		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
-		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
 		<English>Sum: %d1%% = %s2%F3</English>
 	</TEXT>

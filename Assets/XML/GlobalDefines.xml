@@ -394,7 +394,7 @@
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
@@ -910,7 +910,7 @@
 	</Define>
 	<Define>
 		<DefineName>UNIT_PRODUCTION_PERCENT_SM</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PROJECT_PRODUCTION_PERCENT</DefineName>
@@ -953,6 +953,11 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Toffer - Perhaps make this a handicap tag,
+			AI has strong combat mod against barbs on high difficulty,
+			so why not allow NPC to be more on par with tech leader on high difficulty.
+			This can never give barbs techs that no other player has, it just determines how fast they catch up.
+		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>

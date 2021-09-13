@@ -9,6 +9,15 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COAL_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECHCOAL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -279,8 +288,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_PEAT_DYNAMO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEAT_DYNAMO</ArtDefineTag>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -404,8 +418,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOOD_DYNAMO</ArtDefineTag>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

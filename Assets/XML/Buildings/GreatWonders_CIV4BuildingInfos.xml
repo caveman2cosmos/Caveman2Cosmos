@@ -969,16 +969,13 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_GAS_STATION</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-				<BuildingType>BUILDING_GAS_STATION</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_GAS_STATION</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>7080</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2363,9 +2360,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SEXTANT</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3210</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -3017,6 +3015,10 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ADVANCED_FLOODWALL</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -3679,6 +3681,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 				<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2640</iCost>
 			<CommerceChanges>
@@ -5777,7 +5780,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DJENNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DJENNE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_DJENNE_HELP</Help>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DJENNE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DJENNE</MovieDefineTag>
@@ -5791,6 +5793,10 @@
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>2280</iCost>
 			<BonusProductionModifiers>
@@ -5799,6 +5805,24 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<YieldChanges>
+						<iYield>1</iYield>
+						<iYield>2</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6318,7 +6342,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
@@ -6537,6 +6561,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ConstructCondition>
 				<Or>
@@ -6945,6 +6970,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -7737,7 +7763,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
@@ -8759,9 +8785,10 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>
 			<CommerceChanges>
@@ -8844,6 +8871,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_LARGE_SUSPENSION_BRIDGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TELEPORT_BOOTH</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -9325,9 +9356,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CORPORATION</ObsoleteTech>
 			<iCost>1152</iCost>
 			<CommerceChanges>
@@ -10693,6 +10725,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>1800</iCost>
@@ -12124,9 +12157,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1512</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -12508,7 +12542,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
@@ -13741,7 +13775,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
@@ -14977,6 +15011,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>1800</iCost>
@@ -15258,8 +15293,8 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -16140,6 +16175,7 @@
 			<FreeBuilding>BUILDING_INTERNATIONAL_PORT</FreeBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -16282,8 +16318,11 @@
 			</FreeSpecialistCounts>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AERIAL_CITY</BuildingType>
-				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</PrereqOrBuildings>
 			<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
@@ -16354,9 +16393,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1512</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>2</iHappiness>
@@ -19409,7 +19449,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>

@@ -3672,18 +3672,6 @@
 		<Russian>Èíñòèòóòû èì. Êîíôóöèÿ - ýòî íåêîììåð÷åñêèå ãîñóäàðñòâåííûå ó÷ðåæäåíèÿ, îòíîñÿùèõñÿ ê âåäåíèþ Ìèíèñòåðñòâà îáðàçîâàíèÿ ÊÍÐ, çàÿâëåííîé öåëüþ êîòîðûõ ÿâëÿåòñÿ ïîïóëÿðèçàöèÿ êèòàéñêîãî ÿçûêà è êóëüòóðû, ïîääåðæêó ðåãèîíàëüíîãî ïðåïîäàâàíèÿ êèòàéñêîãî ÿçûêà íà ìåæäóíàðîäíîì óðîâíå, è îðãàíèçàöèÿ êóëüòóðíîãî îáìåíà. Èíñòèòóòû Êîíôóöèÿ ïðîäâèãàþò êëàññè÷åñêèé êèòàéñêèé ÿçûê è ëèòåðàòóðó, îêàçûâàþò ïîääåðæêó îðãàíèçàöèÿì, òàêèì êàê Áðèòàíñêèé Ñîâåò, Ôðàíöóçñêèé Àëüÿíñ è íåìåöêèé óíèâåðñèòåò Ãåòå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORAL_MYTH</Tag>
-		<English>Myth (L) - Coral Reef</English>
-		<French>Mythe du Récif de corail</French>
-		<Polish>Mit Rafy Koralowej</Polish>
-		<Russian>Ìèô î êîðàë. ðèôå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Coral Reef</English>
-		<Russian>Ïåñíÿ î êîðàë. ðèôå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT</Tag>
 		<English>Great Mosque of Desert</English>
 		<French>La Grande Mosquée du Désert</French>
@@ -4152,18 +4140,6 @@
 		<Italian>L'Eretteo è un antico tempio greco sul lato nord dell'Acropoli di Atene, in Grecia. L'Eretteo è stato associato con alcuni dei reperti più antichi e santi degli Ateniesi: il Palladio, che era un xoanon (definita come una effigie di legno caduta dal cielo - non umana) di Atena Polia (protettrice della città); i segni del tridente di Poseidone e il pozzo di acqua salata (il "mare di sale"), il risultato del colpo di Poseidone; l'olivo sacro che spuntò quando Atena colpì la roccia con la sua lancia nella sua rivalità con Poseidone per la città; il presunto luogo di sepoltura del mitico re Cecrope ed Eretteo; i recinti sacri delle tre figlie di Cecrope, ovveri Erse, Pandrosus e Aglauro; e quelli degli eroi tribali Pandion e Boutes.</Italian>
 		<Polish>Erechtejon - czteropoziomowa świątynia zbudowana na ateńskim Akropolu, poświęcona Posejdonowi i Atenie. Swiątynię wzniesiono na cześć Erechteusza, jednego z pierwszych władców ateńskich. Wybudowana na miejscu wcześniejszych kultów m.in. Zeusa Hypatosa, herosa Butesa. Pierwsza świątynia została zniszczona podczas wojen perskich (480 p.n.e.), odbudowana jako prostylos w porządku jońskim w latach 421 p.n.e.-406 p.n.e. W VI wieku świątynię zamieniono na kościół chrześcijański, a następnie używany był przez Turków jako harem. W XVII-XIX wieku popadł w ruinę, a w latach 1902-1909 poddano go rekonstrukcji.</Polish>
 		<Russian>Ýðåõòåéîí - âûäàþùèéñÿ ïàìÿòíèê äðåâíåãðå÷åñêîé àðõèòåêòóðû, îäèí èç ãëàâíûõ õðàìîâ äðåâíèõ Àôèí, ðàñïîëîæåííûé íà Àêðîïîëå ê ñåâåðó îò Ïàðôåíîíà. Ïîñòðîéêà äàòèðóåòñÿ 421-406 ãîäàìè äî í. ý. Âûïîëíåí â èîíè÷åñêîì îðäåðå. Õðàì ïîñâÿùåí Àôèíå, Ïîñåéäîíó è ëåãåíäàðíîìó àôèíñêîìó öàðþ Ýðåõòåþ. Íà÷àòûé ïîñëå ñìåðòè Ïåðèêëà - îêîëî 421 ãîäà äî í. ý., Ýðåõòåéîí ñòðîèëñÿ â ñëîæíîé îáñòàíîâêå è áûë çàâåðøåí íàêàíóíå êðóøåíèÿ Àôèí îò ñïàðòàíöåâ â 406 ãîäó äî í. ý. Íàçâàíèå õðàì ïîëó÷èë èç-çà îñòàòêîâ ãðîáà Ýðåõòåÿ. Îí ðàñïîëàãàëñÿ íà ìåñòå ìèôè÷åñêîãî ñïîðà Àôèíû è Ïîñåéäîíà çà îáëàäàíèå Àòòèêîé. Õðàì áûë ñâîåîáðàçíûì õðàíèëèùåì âàæíåéøèõ ðåëèêâèé ïîëèñà. Ñàìî îëèâêîâîå äåðåâî Àôèíû (â 480 ãîäó îíî áûëî ñîææåíî, íî çàòåì, ïî ëåãåíäå, âîçðîäèëîñü âíîâü) ðîñëî ðÿäîì - â ïðèëåãàâøåì ê Ýðåõòåéîíó ñ çàïàäà ñâÿòèëèùå íèìôû Ïàíäðîñû. Â õðàìå íàõîäèëñÿ è êîëîäåö ñ êëþ÷îì ñîëåíîé âîäû, âûáèòûì Ïîñåéäîíîì.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FALL_MYTH</Tag>
-		<English>Myth (L) - Stone from the Sky</English>
-		<French>Mythe de la Pierre venue du ciel</French>
-		<Polish>Mit Skały z niebios</Polish>
-		<Russian>Ìèô î íåáåñíîì êàìíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Stone from the Sky</English>
-		<Russian>Ïåñíÿ î íåáåñíîì êàìíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIDIAS</Tag>
@@ -4685,6 +4661,48 @@
 		<Russian>Åæåíåäåëüíî ìîðìîíû ïîñåùàþò ñîáðàíèÿ, êîòîðûå îòêðûòû äëÿ âñåõ. Íî ó ìîðìîíîâ åñòü è äðóãèå çäàíèÿ, êîòîðûå îíè ïîñåùàþò, è îíè íàçûâàþòñÿ õðàìàìè. Îíè íå îòêðûòû äëÿ âñåõ ëþäåé è èõ íå èñïîëüçóþò äëÿ âîñêðåñíûõ áîãîñëóæåíèé. Ïî ìíåíèþ ìîðìîíîâ, äëÿ òîãî ÷òîáû âîéòè â õðàì, ÷åëîâåê äîëæåí áûòü äîñòîéíûì ÷ëåíîì Öåðêâè Èèñóñà Õðèñòà Ñâÿòûõ ïîñëåäíèõ äíåé (ìîðìîíñêîé Öåðêâè). Îí èëè îíà äîëæíû áûòü ÷ëåíîì Öåðêâè íå ìåíåå ãîäà, áûòü âçðîñëûì (òî åñòü íå ðåáåíêîì) è æèòü ïî çàïîâåäÿì, òî åñòü áûòü äîñòîéíûì. ×ëåíû Öåðêâè çàêëþ÷àþò çàâåòû ñ Áîãîì. Ïåðâûé çàâåò îíè çàêëþ÷àþò ïðè êðåùåíèè, êîãäà îáåùàþò âçÿòü íà ñåáÿ èìÿ Èèñóñà Õðèñòà è âûïîëíÿòü Åãî çàïîâåäè. Â õðàìå ÷ëåíû Öåðêâè çàêëþ÷àþò äîïîëíèòåëüíûå çàâåòû, êîòîðûå â ñëó÷àå íàðóøåíèÿ âëåêóò çà ñîáîé ñåðüåçíûå ïîñëåäñòâèÿ. Òàê êàê Ãîñïîäü óñòàíàâëèâàåò âûñîêèå ñòàíäàðòû äëÿ òåõ, êòî ïîñåùàåò õðàìû, è ïîòîìó ÷òî Îí ïðåäóïðåæäàåò î ïîñëåäñòâèÿõ íåñîáëþäåíèÿ çàâåòîâ, ÷ëåíû Öåðêâè äîëæíû èìåòü çíàíèÿ î âñåõ ñòàíäàðòàõ Öåðêâè è áûòü ãîòîâûìè ñîáëþäàòü çàêëþ÷åííûå ñâÿùåííûå çàâåòû.[PARAGRAPH:2]Îïðåäåëåííûå çàâåòû çàêëþ÷àþòñÿ òîëüêî â õðàìå. Íàïðèìåð, äîñòîéíûå ÷ëåíû Öåðêâè ìîãóò çàêëþ÷àòü áðàê â õðàìå. Ýòîò îáðÿä îòëè÷àåòñÿ îò äðóãèõ îáðÿäîâ áðàêîñî÷åòàíèÿ, òàê êàê áðàê íå çàêàí÷èâàåòñÿ ñî ñìåðòüþ. Ìîðìîíñêèé áðàê âå÷åí â áóêâàëüíîì ñìûñëå ýòîãî ñëîâà - ñîãëàñíî âåðå ïîñëåäîâàòåëåé Äæ. Ñìèòà, áðàê çàêëþ÷åííûé íà çåìëå, ïðîäîëæàåò èìåòü ñèëó è ïîñëå ñìåðòè ñóïðóãîâ. Äðóãîé îáðÿä ? ýòî êðåùåíèå çà óìåðøèõ. Ìîðìîíû âåðÿò, ÷òî ñîãëàñíî Ñâ. Ïèñàíèÿì âñå äîëæíû áûòü êðåùåíû íàäëåæàùåé âëàñòüþ. Òåì íå ìåíåå, íå âñå èìåëè òàêóþ âîçìîæíîñòü ïðè æèçíè íà çåìëå. Â õðàìàõ äîñòîéíûå ÷ëåíû Öåðêâè îò äâåíàäöàòè è ñòàðøå (åäèíñòâåííûé îáðÿä, êîòîðûé ìîãóò ñîâåðøàòü ïîäðîñòêè) ìîãóò ñîâåðøàòü êðåùåíèå çà òåõ, êòî óìåðëè. Ýòî íå îçíà÷àåò, ÷òî ÷åëîâåê â äóõîâíîì ìèðå ñðàçó ñòàíîâèòñÿ ìîðìîíîì. Ýòî âñåãî ëèøü ïðåäîñòàâëÿåò åìó âîçìîæíîñòü ïðèíÿòü âåðó, åñëè îí ýòîãî ïîæåëàåò. Åñëè îí îòêàæåòñÿ îò ñîâåðøåííîãî êðåùåíèÿ, âñå âåðíåòñÿ íà ñâîè ìåñòà, êàê áóäòî ýòîò îáðÿä è íå áûë âûïîëíåí. Èõ èìåíà íå âíîñÿò â ñïèñêè ÷ëåíîâ Öåðêâè. Ýòè ñïèñêè ïîêàçûâàþò ëèøü òî, ÷òî èì áûëà äàíà òàêàÿ âîçìîæíîñòü. ×åëîâåê, çà êîòîðîãî áûë ñîâåðøåí îáðÿä êðåùåíèÿ ïîñëå åãî ñìåðòè, äîëæåí èñïîëüçîâàòü ñâîþ ñâîáîäó âûáîðà, ÷òîáû ðåøèòü, ïðèíèìàòü äàííûé îáðÿä èëè íåò.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CORAL</Tag>
+		<English>Folklore (E) - Coral Reef</English>
+		<French>Mythe du Récif de corail</French>
+		<Polish>Mit Rafy Koralowej</Polish>
+		<Russian>Ìèô î êîðàë. ðèôå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FALL</Tag>
+		<English>Folklore (E) - Stone from the Sky</English>
+		<French>Mythe de la Pierre venue du ciel</French>
+		<Polish>Mit Skały z niebios</Polish>
+		<Russian>Ìèô î íåáåñíîì êàìíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OASIS</Tag>
+		<English>Folklore (E) - Oasis</English>
+		<French>Mythe de l'Oasis</French>
+		<Polish>Mit Oazy</Polish>
+		<Russian>Ìèô îá îàçèñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OUTCROP</Tag>
+		<English>Folklore (E) - Landform</English>
+		<French>Mythe de la Formation de la terre</French>
+		<Polish>Mit Form Skalnych</Polish>
+		<Russian>Ìèô î ôîðìå Çåìëè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_REEF</Tag>
+		<English>Folklore (E) - Reef</English>
+		<French>Mythe du Récif</French>
+		<Polish>Mit Rafy</Polish>
+		<Russian>Ìèô î ðèôå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VOLCANO</Tag>
+		<English>Folklore (E) - Volcano</English>
+		<French>Mythe du Volcan</French>
+		<Polish>Mit Wulkanu</Polish>
+		<Russian>Ìèô î âóëêàíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAITERUKOB</Tag>
 		<English>Naiteru-Kob Bless</English>
 		<French>Bénédiction de Naiteru-Kob</French>
@@ -5196,18 +5214,6 @@
 		<Russian>Íèìðóä (àññèð. Êàëüõó, äð.-åâð. Êàëàõ?) - äðåâíèé ãîðîä â Ìåñîïîòàìèè, íà òåððèòîðèè ñîâðåìåííîãî Èðàêà. Åãî ðóèíû íàõîäèëèñü ê þãî-âîñòîêó îò ãîðîäà Ìîñóë, ó ðåêè Òèãð â Èðàêå. Íèìðóä áûë îñíîâàí â XIII âåêå äî í. ý. Ñàëìàíàñàðîì I è ñïóñòÿ ÷åòûðåñòà ëåò âî âðåìÿ öàðñòâîâàíèÿ Àøøóð-íàöèð-àïàëà II ñòàë ñòîëèöåé Àññèðèè. Â 612 ãîäó äî í. ý. áûë ðàçðóøåí ìèäèéöàìè è õàëäåÿìè. Ïåðâûå ðàñêîïêè ïðîâîäèëèñü â 1846 ãîäó àíãëè÷àíèíîì Îñòèíîì Ãåíðè Ëýéàðäîì. Áûëè îáíàðóæåíû îñòàòêè áîëüøîãî äâîðöà è êðåïîñòíûõ ñîîðóæåíèé. Áûëè íàéäåíû ìíîãî÷èñëåííûå ðåëüåôû èç àëåáàñòðà è ðåçíûå ôèãóðêè èç ñëîíîâîé êîñòè, à òàêæå ×åðíûé îáåëèñê è ñòàòóè. Â 1955 ãîäó âî âðåìÿ ðàñêîïîê, ïðîâîäèâøèõñÿ Ìàêñîì Ìàëëîóýíîì â õðàìå Íàáó, áûëè îáíàðóæåíû ãëèíÿíûå ïëèòû ñ êëèíîïèñüþ, ñîäåðæàùèå êëÿòâû âàññàëîâ è àññèðèéñêèõ ñàíîâíèêîâ, äàòèðóåìûå 672 ãîäîì äî í. ý. Ýòè çàïèñè ïîñëóæèëè âàæíûì ïîñîáèåì äëÿ èçó÷åíèÿ àññèðèéñêîãî ïðàâà è ðåëèãèè. Â êîíöå 1980-õ ãîäîâ èðàêñêèìè àðõåîëîãàìè â ÷åòûðåõ öàðñêèõ çàõîðîíåíèÿõ íåïîäàëåêó îò Íèìðóäà áûë îáíàðóæåí íàáîð þâåëèðíûõ èçäåëèé, äàòèðîâàííûõ êîíöîì X âåêà äî í. ý. Â åãî ñîñòàâ âõîäÿò çîëîòûå ñåðüãè, êîëüöà, îæåðåëüÿ, òàðåëêè, êóáêè è êóâøèíû, óêðàøåííûå ôèëèãðàíüþ è ïîëóäðàãîöåííûìè êàìíÿìè. Êàê ñ÷èòàþò ó÷åíûå, ïî õóäîæåñòâåííûì äîñòîèíñòâàì èõ ìîæíî ñðàâíèòü ñ íàõîäêàìè â ãðîáíèöå åãèïåòñêîãî ôàðàîíà Òóòàíõàìîíà. Îêêóïàöèÿ ýòîé òåððèòîðèè àìåðèêàíñêèìè èíòåðâåíòàìè âî âðåìÿ Èðàêñêîé âîéíû â 2003 ãîäó ïðèâåëà ê êðóïíûì ðàçðóøåíèÿì íà ìåñòå äðåâíåãî ãîðîäà. 5 ìàðòà 2015 ãîäà áîåâèêè òåððîðèñòè÷åñêîé îðãàíèçàöèè ÈÃÈË, ïîä êîíòðîëåì êîòîðîé íà òîò ìîìåíò íàõîäèëàñü çíà÷èòåëüíàÿ òåððèòîðèÿ ñåâåðíîãî Èðàêà, óíè÷òîæèëè ðóèíû äðåâíåãî ãîðîäà ñ ïîìîùüþ òÿæåëîé òåõíèêè. Â Áàãäàäå ïîêà çàòðóäíÿþòñÿ îöåíèòü, êàêîé èìåííî óðîí íàíåñåí òåððîðèñòàìè, íî îòìå÷àþò, ÷òî àðòåôàêòû, êîòîðûì áîëåå äâóõ òûñÿ÷ ëåò, óòåðÿíû áåçâîçâðàòíî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OASIS_MYTH</Tag>
-		<English>Myth (L) - Oasis</English>
-		<French>Mythe de l'Oasis</French>
-		<Polish>Mit Oazy</Polish>
-		<Russian>Ìèô îá îàçèñå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Oasis</English>
-		<Russian>Ïåñíÿ îá îàçèñå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBATALA</Tag>
 		<English>Pattaky of Obatala</English>
 		<French>Pattaky d'Obatala</French>
@@ -5303,18 +5309,6 @@
 		<Russian>Ïàòòàêè - ñîâîêóïíîñòü âñåõ îáðÿäîâ, ìèôîâ, ñâÿùåííûõ ïåñíåé, òàíöåâ è ïîâåðèé, â ÷åñòü âåðõîâíîãî áîæåñòâà Îëîäóìàðå, Òâîðöà ýòîãî ìèðà, à òàêæå îðèøåé ( áîæåñòâåííûõ ïåðâîïðåäêîâ ïëåìåí Çàï. Àôðèêè, âåëèêèõ êîðîëåé äðåâíîñòè, ñîòâîðåííûõ ìëàäøèìè áîãàìè ïî ïðèêàçó Îëîäóìàðå). Îøîñè ÿâëÿåòñÿ îðèøåé îõîòû è õîçÿèíîì ëåñîâ è äèêèõ æèâîòíûõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OUTCROP_MYTH</Tag>
-		<English>Myth (L) - Landform</English>
-		<French>Mythe de la Formation de la terre</French>
-		<Polish>Mit Form Skalnych</Polish>
-		<Russian>Ìèô î ôîðìå Çåìëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Landform</English>
-		<Russian>Ïåñíÿ î ôîðìå Çåìëè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIR_E_NARAKI</Tag>
 		<English>Pir-e Naraki</English>
 		<Italian>
@@ -5368,18 +5362,6 @@
 		<Italian>La Scuola di Quanzhen, comunemente chiamata Complete reality in inglese, è un importante setta del Taoismo che ha avuto origine nella Cina settentrionale. E' stata fondata dal sacerdote taoista Wang Chongyang nel 12° secolo, durante l'ascesa della dinastia Jin. Quando i Mongoli invasero la Cina del Nord nel 1254, i taoisti Quanzhen furono tra coloro che esercitarono grande sforzo nel mantenere la pace, salvando così migliaia di vite, in particolare ai cinesi di origine Han. Questo ramo del Taoismo è anche menzionato spesso in popolari romanzi wuxia del Jinyong, tra cui la trilogia di Condor.Il significato di Quanzhen può essere tradotto letteralmente in "All True" e per questo motivo, è spesso chiamata la "All True Religion" o la "Via di completezza e di Verità." In alcuni testi è indicata anche come il "Cammino di perfezione completa."</Italian>
 		<Polish>Szkołą Quanzhen to Taoistyczna sekta pochodząca z Północnych Chin.</Polish>
 		<Russian>Öþàíü÷æýíü (êèò. quanzhenjiao), Øêîëà Ñîâåðøåííîé Èñòèíû, Øêîëà Ñîâåðøåííîé Ïîäëèííîñòè - îñíîâíàÿ øêîëà äàîñèçìà, ðàñïðîñòðàíåííàÿ ïðåèìóùåñòâåííî íà ñåâåðå Êèòàÿ. Øêîëó îñíîâàë äàîñ Âàí ×óíúÿí (1112 - 1169) â XII âåêå, êîãäà íàèáîëüøåãî ìîãóùåñòâà äîñòèãëà ÷æóð÷æýíüñêàÿ äèíàñòèÿ Öçèíü (1115-1234). Êîãäà â 1254 â Ñåâåðíûé Êèòàé âòîðãëèñü ìîíãîëû è îäåðæàëè ïîáåäó íàä äèíàñòèåé Ñóí, äàîñû øêîëû Öþàíü÷æýíü ïðèëîæèëè îãðîìíûå óñèëèÿ äëÿ äîñòèæåíèÿ ìèðà è ñïàñåíèÿ æèçíè òûñÿ÷ ëþäåé. Îñíîâíûì ïîëîæåíèåì øêîëû Ñîâåðøåííîé Èñòèíû ñòàëî òðåáîâàíèå îáÿçàòåëüíîãî ïðèíÿòèÿ äàîñàìè ìîíàøåñêîãî îáåòà, îñîáîå çíà÷åíèå èìåëà âñòðå÷à åå îñíîâàòåëÿ - Âàí ×óíúÿíà ñ áåññìåðòíûì Ëþé Äóíáèíåì â 1159. Â öåëîì ýòî îïðåäåëèëî ïåðñîíàëüíûé õàðàêòåð äàííîãî íàïðàâëåíèÿ äàîñèçìà. Äîãìàòè÷åñêîé îñíîâîé ïîâñåäíåâíîé æèçíè äàîñîâ øêîëû Ñîâåðøåííîé èñòèíû ÿâëÿþòñÿ îáåòû (öçå). Â íà÷àëå XIII âåêà øêîëà Öþàíü÷æýíü ðàñïðîñòðàíèëîñü ïî âñåìó Êèòàþ, ïîëüçóÿñü ïðèâèëåãèÿìè ñíà÷àëà ÷æóð÷æýíüñêèõ, à ïîòîì ìîíãîëüñêèõ (Þàíü) âëàñòåé. Öþ ×óöçè (1148-1227) âñòðå÷àëñÿ ñ ×èíãèñõàíîì. ×èíãèñõàíà çàèíòåðåñîâàëè ïåðñïåêòèâû îáðåòåíèÿ áåññìåðòèÿ, îäíàêî Öþ ×óöçè îáúÿñíèë åìó áåññìûñëåííîñòü ëåêàðñòâ è ýëèêñèðîâ è çíà÷åíèå ìåäèòàöèé è âíóòðåííåé àëõèìèè, è áûë ïðèíÿò ñ áîëüøèì óâàæåíèåì. Ïîçäíåå ìîíãîëû ïåðåîðèåíòèðîâàëèñü íà áóääèçì, è ïðîøëî íåñêîëüêî íåóäà÷íûõ äèñïóòîâ î ðåëèãèîçíîì ïðèîðèòåòå Áóääû èëè Ëàî-öçû, çàêîí÷èâøèõñÿ ïîëíûì ïîðàæåíèåì äàîñîâ, íå èìåþùèõ ñòîëü îòòî÷åííîé êóëüòóðû äèñêóññèé. Ïîñëå 1281 øêîëà Öþàíü÷æýíü áûëà ïîäâåðãíóòà ðåïðåññèÿì (õîòÿ ìîíãîëû ïðîäîëæàëè ïðèçíàâàòü ñóùåñòâóþùóþ íà þãå Øêîëó Íåáåñíûõ Íàñòàâíèêîâ. Â 1368 ñ ïðèõîäîì ê âëàñòè êèòàéñêîé äèíàñòèè Ìèí àâòîðèòåò øêîëû Öþàíü÷æýíü áûë âîññòàíîâëåí, ïîñëå ÷åãî Öþàí÷æýíü îáúåäèíèëàñü ñ þæíîé øêîëîé Öçèíüäàíü (øêîëà Çîëîòà è Êèíîâàðè).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REEF_MYTH</Tag>
-		<English>Myth (L) - Reef</English>
-		<French>Mythe du Récif</French>
-		<Polish>Mit Rafy</Polish>
-		<Russian>Ìèô î ðèôå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Reef</English>
-		<Russian>Ïåñíÿ î ðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODNOVERY_CATHEDRAL</Tag>
@@ -6211,18 +6193,6 @@
 		<Italian>La Biblioteca apostolica vaticana è la biblioteca della Santa Sede, attualmente situata nella Città del Vaticano. Si tratta di una delle più antiche biblioteche del mondo e contiene una delle collezioni più significative di testi storici. Formalmente istituita nel 1475, in realtà è molto più antica; ha 75.000 codici risalenti a svariati periodi storici diversi. Dal luglio 2007 la biblioteca è stata temporaneamente chiusa al pubblico per la ricostruzione, che dovrebbe essere completato entro settembre 2010.</Italian>
 		<Polish>Biblioteka Watykańska (Bibliotheca Apostolica Vaticana) - biblioteka znajdująca się na terenie państwa Watykan. Jedna z najstarszych i najbardziej znanych bibliotek. Założona w roku 1448 przez papieża Mikołaja V jako publiczna biblioteka miasta Rzym i początkowo zbiory zawierały 350 greckich, łacińskich i hebrajskich woluminów. Zbiory rosły w szybkim tempie - rok 1455 - 1200 woluminów, rok 1481 - 3500 woluminów, rok 1990 - 1,3 mln woluminów. Dzisiaj biblioteka przechowuje 75 000 manuskryptów i ponad 1,1 miliona drukowanych książek, w tym 8500 inkunabułów. Ponadto w Tajnych Archiwach Watykanu przechowywane jest 150 000 pozycji.</Polish>
 		<Russian>Âàòèêàíñêàÿ Áèáëèîòåêà - ýòî áèáëèîòåêà Ñâÿòîãî Ïðåñòîëà, â íàñòîÿùåå âðåìÿ íàõîäèòñÿ â Ðèìå. Ýòî îäíà èç ñòàðåéøèõ áèáëèîòåê â ìèðå, êîòîðàÿ ñîäåðæèò îäíó èç ñàìûõ çíà÷èòåëüíûõ êîëëåêöèé èñòîðè÷åñêèõ òåêñòîâ. Îôèöèàëüíî ñîçäàíà â 1475 ãîäó, õîòÿ íà ñàìîì äåëå îíà ãîðàçäî äðåâíåå. Â íåé õðàíèòñÿ ñâûøå 75,000 èñòîðè÷åñêèõ õðîíèê è ìàíóñêðèïòîâ.Ñ èþëÿ 2007 ã. áèáëèîòåêà áûëà âðåìåííî çàêðûòà äëÿ ïîñåòèòåëåé íà ðåìîíò, êîòîðûé çàâåðøèëñÿ ê ñåíòÿáðþ 2010 ãîäà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VOLCANO_MYTH</Tag>
-		<English>Myth (L) - Volcano</English>
-		<French>Mythe du Volcan</French>
-		<Polish>Mit Wulkanu</Polish>
-		<Russian>Ìèô î âóëêàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Volcano</English>
-		<Russian>Ïåñíÿ î âóëêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VOODOO_CATHEDRAL</Tag>
@@ -13283,6 +13253,22 @@
 		<English>[NEWLINE][SPACE][SPACE] *</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_BULLET_D1_F2_FROM_S3</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
+		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
+		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
+		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
+		<English>[ICON_BULLET]%s1 %F2 from %s3</English>
+		<French>[ICON_BULLET]%s1 %F2 en raison de %s3</French>
+		<German>[ICON_BULLET]%s1 %F2 durch %s3</German>
+		<Italian>[ICON_BULLET]%s1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HINT_55</Tag>
 		<English>During wartime, your ships may sever all naval trade routes entering an enemy city by using the "Blockade" Mission within range of the opposing metropolis. Using a Privateer to blockade a city during peace time will even allow you to plunder gold from your enemy's treasury!</English>
 		<French>En temps de guerre, vos navires peuvent couper toutes les routes commerciales maritimes rejoignant une ville ennemie, en exécutant la mission Blocus près de la métropole adverse. Utiliser des Corsaires pour bloquer une ville en tant de paix vous permet même de piller l'or du trésor ennemi !</French>
@@ -15201,10 +15187,6 @@
 		<English>Earth</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAP_SUBTERRAIN</Tag>
-		<English>Underground</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Tag>
 		<English>Inner Solar System</English>
 	</TEXT>
@@ -15940,6 +15922,10 @@
 		<German>Weitläufige Kontinente</German>
 		<Italian>Continenti ampi</Italian>
 		<Spanish>Continentes amplios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SUBTERRAIN</Tag>
+		<English>Underground</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SUBTERRANEAN</Tag>
@@ -18852,15 +18838,6 @@
 		<Russian>[ICON_BULLET]%D1%%%F2 Îò áîíóñîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_BUILDING_COMMERCE</Tag>
-		<English>[ICON_BULLET]%s1%F2 from Buildings</English>
-		<French>[ICON_BULLET]%s1%F2 en raison des bâtiments</French>
-		<German>[ICON_BULLET]%s1%F2 durch Gebäude und Effekte</German>
-		<Italian>[ICON_BULLET]%s1%F2 dagli edifici</Italian>
-		<Spanish>[ICON_BULLET]%s1 %F2 por edificios</Spanish>
-		<Russian>[ICON_BULLET]%s1%F2 от зданий</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_EVENTS</Tag>
 		<English>[ICON_BULLET]%D1%% %F2 from Events</English>
 		<French>[ICON_BULLET]%D1%% %F2 des Evénements</French>
@@ -18894,16 +18871,6 @@
 		<German>[ICON_BULLET]%D1%%%F2 für %s3:2_trait Staatsoberhaupt</German>
 		<Italian>[ICON_BULLET]%D1%%%F2 per un leader %s3_trait</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por líder %s3_trait</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_COMMERE_ATTACKS</Tag>
-		<English>[ICON_BULLET]%D1%F2 from Imprisoned Soldiers</English>
-		<French>[ICON_BULLET]%D1%F2 de Soldats emprisonnés</French>
-		<German>[ICON_BULLET]%D1%F2 durch gefangene Soldaten</German>
-		<Italian>[ICON_BULLET]%D1%F2 da Soldati imprigionati</Italian>
-		<Spanish>[ICON_BULLET]%D1%F2 de soldados prisioneros</Spanish>
-		<Polish>[ICON_BULLET]%D1%F2 z uwięzionych żołnierzy</Polish>
-		<Russian>[ICON_BULLET]%D1%F2 îò çàêëþ÷åííûõ â òþðüìó ñîëäàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_CORPORATION_COMMERCE</Tag>
@@ -19103,14 +19070,6 @@
 		<Spanish>-----------------------[NEWLINE]Consumo total de alimentos: %d1[ICON_EATENFOOD]</Spanish>
 		<Polish>-----------------------[NEWLINE]Konsumowana żywność: %d1[ICON_EATENFOOD]</Polish>
 		<Russian>-----------------------[NEWLINE]Âñåãî ïèùè ïîòðåáëåíî: %d1[ICON_EATENFOOD]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TRAIT_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1 %F2 from %s3_Trait</English>
-		<French>[ICON_BULLET]%D1 %F2 de %s3_Trait</French>
-		<Italian>[ICON_BULLET]%D1 %F2 da %s3_Trait</Italian>
-		<Polish>[ICON_BULLET]%D1 %F2 z %s3_Trait</Polish>
-		<Russian>[ICON_BULLET]%D1%F2 îò %D2_Trait</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_WASTED_FOOD</Tag>

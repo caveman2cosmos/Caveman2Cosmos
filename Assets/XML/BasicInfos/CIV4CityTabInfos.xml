@@ -13,7 +13,7 @@
 		</CityTabInfo>
 		<CityTabInfo>
 			<Type>CITYTAB_BUILDINGS</Type>
-			<Description>TXT_KEY_CONCEPT_BUILDINGS</Description>
+			<Description>TXT_KEY_WB_BUILDINGS</Description>
 			<Button>,Art/Interface/Buttons/CityTabs/Buildings.dds,Art/Interface/Buttons/CityTab_CityScreen_MiniMap_AdvisorTab_Atlas.dds,1,1</Button>
 		</CityTabInfo>
 		<CityTabInfo>

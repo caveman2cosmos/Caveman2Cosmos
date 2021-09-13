@@ -6675,7 +6675,7 @@
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -42040,9 +42040,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FERTILITY_CLINIC</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
@@ -43185,6 +43186,15 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_ENTERTAINER</UnitType>
 			</UnitUpgrades>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
@@ -43291,6 +43301,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<iCost>200</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43388,6 +43407,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<iCost>700</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43677,6 +43705,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>

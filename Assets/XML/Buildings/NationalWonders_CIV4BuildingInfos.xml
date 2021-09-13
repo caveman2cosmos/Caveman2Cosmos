@@ -493,7 +493,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BULL_LEAPING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
@@ -972,9 +972,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_CHIEFS_PYRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
 				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
+				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CHIEFDOM</CivicOption>
@@ -1425,7 +1429,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1946,43 +1949,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_FOUNDLING_HOSPITAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FOUNDLING_HOSPITAL</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FUSION_PLANT</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<SpecialBuildingType>SPECIALBUILDING_FUSION_PLANT</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_FUSION_PLANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FUSION_PLANT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FUSION_PLANT</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
-			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_FUSION</PrereqTech>
-			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LABORATORY</BuildingType>
-				<BuildingType>BUILDING_POWER_LINES</BuildingType>
-			</PrereqInCityBuildings>
-			<iCost>6490</iCost>
-			<CommerceChanges>
-				<iCommerce>-1000</iCommerce>
-			</CommerceChanges>
-			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<bPower>1</bPower>
-			<FreeAreaBuilding>BUILDING_GOOD_FUSION</FreeAreaBuilding>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GARDEN_CITY</Type>
@@ -3202,15 +3168,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SERVANTS_QUARTERS</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_IMPERIAL_FORTRESS</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -3235,6 +3204,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7223,6 +7197,11 @@
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
@@ -7485,6 +7464,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

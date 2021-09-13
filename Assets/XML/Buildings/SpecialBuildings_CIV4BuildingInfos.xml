@@ -420,6 +420,10 @@
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -702,7 +706,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -719,7 +727,11 @@
 			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -743,6 +755,16 @@
 			<Description>TXT_KEY_BUILDING_CAVE_DWELLING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVE_DWELLING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -756,8 +778,6 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>20</iDefense>
-			<iBombardDefense>20</iBombardDefense>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<bAutoBuild>1</bAutoBuild>
@@ -1396,41 +1416,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CORAL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_1_HQ</Type>
@@ -6029,50 +6014,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISNEYLAND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRAGON_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_DRAGON_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_DRAGON_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DRAGON_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_DRUG_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6133,78 +6074,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EARTH_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_EARTH_MYTH_EFFECT</FreeBuilding>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_GPS</Type>
@@ -6387,6 +6256,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iHealth>1</iHealth>
+			<iHappiness>1</iHappiness>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT</Type>
@@ -6402,13 +6272,16 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
-			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6423,7 +6296,11 @@
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8653,41 +8530,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FALL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8731,6 +8573,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_DAYCARE_CENTER</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -8851,18 +8697,6 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DANCE</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</Type>
@@ -9377,6 +9211,10 @@
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9387,6 +9225,12 @@
 			<Description>TXT_KEY_BUILDING_FRAT_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FRAT_HOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -9459,23 +9303,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GOOD_FUSION</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_FUSION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_FUSION_PEDIA</Civilopedia>
-			<PrereqTech>TECH_FUSION</PrereqTech>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1000</iYield>
-			</YieldChanges>
-			<bPower>1</bPower>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FUSION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_GORGE</Type>
@@ -9846,8 +9673,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_BURROW</BuildingType>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
-				<BuildingType>BUILDING_IGLOO</BuildingType>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
@@ -9889,9 +9714,6 @@
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_FRAT_HOUSE</BuildingType>
-				<BuildingType>BUILDING_SORORITY_HOUSE</BuildingType>
-				<BuildingType>BUILDING_TRAILER_PARK</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9962,7 +9784,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -10181,7 +10003,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -10526,10 +10348,10 @@
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -10862,10 +10684,10 @@
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>4</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -11097,17 +10919,10 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>9</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11178,6 +10993,13 @@
 			<Description>TXT_KEY_BUILDING_IGLOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<iMinLatitude>50</iMinLatitude>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -11965,56 +11787,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISMSILVER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MERMAID_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MERMAID_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<bWater>1</bWater>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MERMAID_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MERMAID_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MERMAID_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12118,18 +11890,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
@@ -12658,74 +12418,27 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OASIS_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
+			<Type>BUILDING_OLD_CITY_WALLS</Type>
+			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_GEOLOGY</ID>
-						</Has>
-					</Active>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_OUTCROP_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<iConquestProb>80</iConquestProb>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_ANTS</Type>
@@ -12842,14 +12555,16 @@
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCARECROWS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCARECROWS</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SCARECROWS</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -13132,14 +12847,16 @@
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RAT_CATCHER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -13147,16 +12864,6 @@
 				<iYield>-1</iYield>
 				<iYield>-1</iYield>
 			</YieldModifiers>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<YieldModifiers>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13297,51 +13004,6 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_WASPS</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PHOENIX_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_PHOENIX_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_PHOENIX_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PHOENIX_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
@@ -14205,41 +13867,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RAIN_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REEF_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_RODNOVERY_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_SHRINE_PEDIA</Civilopedia>
@@ -14581,79 +14208,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SEAFARING_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_SEA_MYTH_EFFECT</FreeBuilding>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH_EFFECT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SHAMAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_SHRINE_PEDIA</Civilopedia>
@@ -14765,7 +14319,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -14782,7 +14340,11 @@
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -14856,79 +14418,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_SKY_MYTH_EFFECT</FreeBuilding>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
@@ -15331,7 +14820,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
@@ -15632,6 +15120,12 @@
 			<Description>TXT_KEY_BUILDING_SORORITY_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SORORITY_HOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15865,18 +15359,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_HUT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
@@ -16683,6 +16165,12 @@
 			<Description>TXT_KEY_BUILDING_TRAILER_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRAILER_PARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -16803,54 +16291,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TREE_HALLOW</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_UNICORN_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNICORN_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_UNICORN_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_UNICORN_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_UNICORN_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_HEALTH_CARE</Type>
@@ -17195,41 +16635,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_VOLCANOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_VOODOO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_SHRINE_PEDIA</Civilopedia>
@@ -17353,7 +16758,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
