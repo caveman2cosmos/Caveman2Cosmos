@@ -516,14 +516,14 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_TRANSFINITE_COMPUTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_TRANSFINITE_COMPUTATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
@@ -825,14 +825,14 @@
 				<iCommerce>-20</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SUBDIMENSIONAL_UNIVERSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SUBDIMENSIONAL_UNIVERSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
 			</PrereqInCityBuildings>
@@ -1296,51 +1296,51 @@
 				<iCommerce>120</iCommerce>
 				<iCommerce>120</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SIMULATION_AWARENESS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_DIRECTED_COSMIC_EVOLUTION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>20</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ASCENSION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_UNIVERSAL_SINGULARITY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SIMULATION_AWARENESS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>2000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+				<TechCommercePercentChange>
+					<TechType>TECH_DIRECTED_COSMIC_EVOLUTION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+				<TechCommercePercentChange>
+					<TechType>TECH_OMEGA_POINT</TechType>
+					<CommercePercents>
+						<iCommercePercent>2000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+				<TechCommercePercentChange>
+					<TechType>TECH_ASCENSION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+				<TechCommercePercentChange>
+					<TechType>TECH_ALPHA_POINT</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>2000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+				<TechCommercePercentChange>
+					<TechType>TECH_UNIVERSAL_SINGULARITY</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_5D_ARTIFICIAL_GRAVITY</BuildingType>
