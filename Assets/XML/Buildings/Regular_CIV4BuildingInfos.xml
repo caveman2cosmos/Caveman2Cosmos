@@ -2383,12 +2383,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<CommercePerPopChanges>
-				<iCommerce>-50</iCommerce>
-				<iCommerce>25</iCommerce>
-				<iCommerce>-150</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommercePerPopChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
