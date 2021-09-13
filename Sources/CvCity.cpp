@@ -1541,64 +1541,6 @@ void CvCity::doTurn()
 
 	// ONEVENT - Do turn
 	CvEventReporter::getInstance().cityDoTurn(this, getOwner());
-
-	/*
-#ifdef _DEBUG
-	{
-		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-		{
-			int iCount = 0;
-
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
-			{
-				if (isWorkingPlot(iJ))
-				{
-					CvPlot* pPlot = getCityIndexPlot(iJ);
-
-					if (pPlot != NULL)
-					{
-						iCount += pPlot->getYield((YieldTypes)iI);
-					}
-				}
-			}
-
-			for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-			{
-				iCount += specialistYieldTotal((SpecialistTypes)iJ, (YieldTypes)iI);
-			}
-
-			const int iNumBuildingInfos = GC.getNumBuildingInfos();
-			for (int iJ = 0; iJ < iNumBuildingInfos; iJ++)
-			{
-				if (hasFullyActiveBuilding((BuildingTypes)iJ))
-				{
-					iCount += GC.getBuildingInfo((BuildingTypes)iJ).getYieldChange(iI) + getBuildingYieldChange((BuildingTypes)iJ, (YieldTypes)iI);
-					iCount += GC.getBuildingInfo((BuildingTypes)iJ).getYieldPerPopChange(iI) * getPopulation() / 100;
-				}
-			}
-
-			iCount += getTradeYield((YieldTypes)iI);
-			iCount += getCorporationYield((YieldTypes)iI);
-
-			FAssert(iCount == getPlotYield((YieldTypes)iI) + getExtraYield((YieldTypes)iI));
-		}
-
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		{
-			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
-			FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);
-			FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);
-			FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);
-			FAssert(GET_PLAYER(getOwner()).getFreeCityCommerce((CommerceTypes)iI) >= 0);
-		}
-
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI)) : 0));
-		}
-	}
-#endif
-	*/
 }
 
 void CvCity::doAutobuild()
@@ -12547,9 +12489,6 @@ void CvCity::changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiSpecialistCommerce100[eIndex] += iChange;
-		//TBNOTE: This should be allowed to be less than one.  Some specialists go negative on commerce.
-		/*FAssert(getSpecialistCommerce(eIndex) >= 0);*/
-
 		setCommerceDirty(eIndex);
 	}
 }
@@ -12701,20 +12640,19 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eCorporation)
 
-	int iYield = 0;
-
-	if (isActiveCorporation(eCorporation) && !isDisorder())
+	if (!isActiveCorporation(eCorporation) || isDisorder())
 	{
-		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
-		{
-			if (getNumBonuses(eBonus) > 0)
-			{
-				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
-			}
-		}
-		iYield += GC.getCorporationInfo(eCorporation).getYieldChange(eIndex) * 100;
+		return 0;
 	}
+	int iYield = GC.getCorporationInfo(eCorporation).getYieldChange(eIndex) * 100;
 
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+	{
+		if (getNumBonuses(eBonus) > 0)
+		{
+			iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+		}
+	}
 	return (iYield + 99) / 100;
 }
 
@@ -12723,24 +12661,25 @@ int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, Corporatio
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eCorporation)
 
-	int iCommerce = 0;
-
-	if (isActiveCorporation(eCorporation) && !isDisorder())
+	if (!isActiveCorporation(eCorporation) || isDisorder())
 	{
-		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
-		{
-			if (getNumBonuses(eBonus) > 0)
-			{
-				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
-			}
-		}
-		iCommerce += GC.getCorporationInfo(eCorporation).getCommerceChange(eIndex) * 100;
-
-		iCommerce *= (GET_TEAM(getTeam()).getCorporationRevenueModifier() + 100);
-		iCommerce /= 100;
+		return 0;
 	}
+	int iCommerce = GC.getCorporationInfo(eCorporation).getCommerceChange(eIndex) * 100;
 
-	return (iCommerce + 99) / 100;
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+	{
+		if (getNumBonuses(eBonus) > 0)
+		{
+			iCommerce += (
+				GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex)
+				* getNumBonuses(eBonus)
+				* GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+				/ 100
+			);
+		}
+	}
+	return (getModifiedIntValue(iCommerce, GET_TEAM(getTeam()).getCorporationRevenueModifier()) + 99) / 100;
 }
 
 void CvCity::updateCorporationCommerce(CommerceTypes eIndex)

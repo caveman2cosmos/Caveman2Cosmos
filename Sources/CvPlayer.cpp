@@ -13242,8 +13242,6 @@ void CvPlayer::changeFreeCityCommerce(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiFreeCityCommerce[eIndex] += iChange;
-		//TB Note: A negative should be allowed
-
 		setCommerceDirty(eIndex);
 	}
 }
