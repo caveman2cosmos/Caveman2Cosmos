@@ -17356,7 +17356,7 @@ void CvCity::read(FDataStreamBase* pStream)
 
 	// Toffer - Read Maps
 	{
-		short iSize;
+		short iSize = 0;
 		short iType;
 		int* yields = new int[NUM_YIELD_TYPES];
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "TerrainYieldChangesSize");
