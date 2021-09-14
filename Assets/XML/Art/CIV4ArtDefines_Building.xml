@@ -47302,7 +47302,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Electricity/art/solarmirrorplant.dds</Button>
+			<Button>art/Electricity/art/renewablemegacomplexplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IMPERIAL_FORTRESS</Type>
@@ -47312,7 +47312,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/Castle2.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/imperial_fortress.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ALTERNATIVE_MEDICINE</Type>
