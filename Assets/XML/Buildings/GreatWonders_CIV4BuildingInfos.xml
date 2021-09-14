@@ -717,6 +717,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -724,9 +729,10 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8678,6 +8684,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>

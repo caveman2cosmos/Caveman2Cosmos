@@ -8777,9 +8777,18 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HOSPITAL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HEALTHCARE_MEGACOMPLEX</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
@@ -8905,9 +8914,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
