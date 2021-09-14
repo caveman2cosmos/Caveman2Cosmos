@@ -19500,6 +19500,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_TLATILCO</BonusType>
@@ -22459,6 +22460,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>
@@ -23074,6 +23076,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_APOTHECARY</UnitType>
@@ -24804,6 +24807,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDIC</UnitType>
@@ -43658,6 +43662,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>

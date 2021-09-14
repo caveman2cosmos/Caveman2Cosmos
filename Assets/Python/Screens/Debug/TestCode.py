@@ -1453,7 +1453,7 @@ class TestCode:
 				for pTechCommerceChange in CvBuildingInfo.getTechCommercePercentChanges():
 					iTech = pTechCommerceChange.eTech
 					iCommerce = pTechCommerceChange.eCommerce
-					aTechCommerceChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
+					aTechCommercePercentChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
 				if CvBuildingInfo.isAnyTechCommerceModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1482,7 +1482,7 @@ class TestCode:
 					for pTechCommerceChange in CvReplacedBuildingInfo.getTechCommercePercentChanges():
 						iTech = pTechCommerceChange.eTech
 						iCommerce = pTechCommerceChange.eCommerce
-						aTechCommerceChanges[BASE][REPLACED][iCommerce] += pTechCommerceChange.value
+						aTechCommercePercentChanges[REPLACED][iTech][iCommerce] += pTechCommerceChange.value
 					if CvReplacedBuildingInfo.isAnyTechCommerceModifiers():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):

@@ -9381,6 +9381,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HEALTHCARE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>3</iHealth>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>

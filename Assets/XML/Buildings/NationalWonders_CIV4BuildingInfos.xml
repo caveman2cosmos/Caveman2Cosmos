@@ -716,14 +716,14 @@
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2200,6 +2200,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2228,6 +2229,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PHARMACY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4107,9 +4113,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6292,15 +6301,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_RED_CROSS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -6351,9 +6355,12 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_PHARMACEUTICALS</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>8290</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
