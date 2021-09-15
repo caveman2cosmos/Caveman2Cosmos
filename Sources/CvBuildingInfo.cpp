@@ -309,7 +309,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
 {
-	//algo::for_each(static_cast<CvInfoUtil&>(wrapDataMembers()), bind(&CvInfoUtil::WrappedVar::initVar, _1));
+	CvInfoUtil::initVars(this);
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -428,7 +428,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
 
-	//algo::for_each(static_cast<CvInfoUtil&>(wrapDataMembers()), bind(&CvInfoUtil::WrappedVar::uninitVar, _1));
+	CvInfoUtil::uninitVars(this);
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -2154,23 +2154,18 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aTechCommercePercent);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
 
-	//algo::for_each(const_cast<CvBuildingInfo*>(this)->getDataMembers(), bind(&CvInfoUtil::WrappedVar::checkSum, _1, iSum));
-	const_cast<CvBuildingInfo*>(this)->wrapDataMembers().checkSum(iSum);
+	CvInfoUtil::checkSum(const_cast<CvBuildingInfo*>(this), iSum);
 }
 
-CvInfoUtil& CvBuildingInfo::wrapDataMembers()
+void CvBuildingInfo::wrapDataMembers(CvInfoUtil& util)
 {
-	if (m_util.empty())
-	{
-		m_util
-			.addEnum(m_iObsoleteTech, L"ObsoleteTech")
-			.add(m_piBonusHealthChanges, L"BonusHealthChanges")
-			.add(m_aTechHappinessChanges, L"TechHappinessChanges")
-			.add(m_aTechHealthChanges, L"TechHealthChanges")
-			//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
-		;
-	}
-	return m_util;
+	util
+		.addEnum(m_iObsoleteTech, L"ObsoleteTech")
+		.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+		.add(m_aTechHappinessChanges, L"TechHappinessChanges")
+		.add(m_aTechHealthChanges, L"TechHealthChanges")
+		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
+	;
 }
 
 //
@@ -3628,8 +3623,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aTechCommercePercent.readPairedArray(pXML, L"TechCommercePercentChanges");
 	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
 
-	//algo::for_each(static_cast<CvInfoUtil&>(wrapDataMembers()), bind(&CvInfoUtil::WrappedVar::readXml, _1, pXML));
-	wrapDataMembers().readXml(pXML);
+	CvInfoUtil::readXml(this, pXML);
 
 	return true;
 }
@@ -4957,7 +4951,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercentChanges());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 
-	wrapDataMembers().copyNonDefaults(pClassInfo->wrapDataMembers());
+	CvInfoUtil::copyNonDefaults(this, pClassInfo);
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
