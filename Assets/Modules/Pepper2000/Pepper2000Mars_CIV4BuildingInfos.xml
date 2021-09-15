@@ -860,14 +860,14 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_OPTRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>

@@ -20,8 +20,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_NEUTRINO_COMMUNICATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -29,8 +29,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>
@@ -178,20 +178,20 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_HYPERMAGNETICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PLANET_CRACKING</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_INTERIOR_CITY</Type>
@@ -775,8 +775,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_NANOSHIELDING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -784,8 +784,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_NANOMORPHIC_TROIDS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -793,8 +793,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_NANO_DISASSEMBLY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -802,8 +802,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_NANOTROIDS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -811,8 +811,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iDefense>10</iDefense>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
@@ -1561,29 +1561,29 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_ORBITAL_ACCELERATOR</FreeBuilding>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_OMEGA_MINUS_ENGINEERING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>5000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CONTROLLED_VACUUM_COLLAPSE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>5000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CONTROLLED_INFLATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>5000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_AB_MATTER</BonusType>
@@ -1871,14 +1871,14 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_PLANET_CRACKING</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IO_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -2147,14 +2147,14 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_PLANET_CRACKING</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KUIPER_BELT_FUSION</BuildingType>
 			</PrereqInCityBuildings>
@@ -3833,14 +3833,14 @@
 				<iCommerce>500</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_SOLAR_DYSON_SPHERE_EFFECT</FreeBuilding>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_ULTIMA_ARCHITECTURE</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>

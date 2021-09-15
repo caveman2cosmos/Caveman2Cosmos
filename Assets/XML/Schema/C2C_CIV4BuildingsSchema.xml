@@ -931,7 +931,6 @@
 		<element type="iHealthPercentPerPopulation" minOccurs="0"/>
 		<element type="iHappinessPercentPerPopulation" minOccurs="0"/>
 		<element type="BonusCommercePercentChanges" minOccurs="0"/>
-		<element type="TechCommerceChanges" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="fVisibilityPriority" minOccurs="0"/>
 		<element type="SeaPlotYieldChanges" minOccurs="0"/>
@@ -1094,13 +1093,6 @@
 	<!-- Technology Affected Buildings: BEGIN -->
 	<ElementType name="TechCommerce" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="TechCommerceChange" content="eltOnly">
-		<element type="PrereqTech"/>
-		<element type="TechCommerce"/>
-	</ElementType>
-	<ElementType name="TechCommerceChanges" content="eltOnly">
-		<element type="TechCommerceChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TechYield" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
