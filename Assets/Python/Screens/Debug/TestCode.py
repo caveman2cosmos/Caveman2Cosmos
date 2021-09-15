@@ -3282,6 +3282,7 @@ class TestCode:
 		aObsoletedBuildingOnTechCountList = [[0 for x in xrange(GC.getNumBuildingInfos())] for y in xrange(GC.getNumTechInfos())]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
 			aReplacementList = [] #Exclude wonders, special and religious buildings
 			if not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getObsoleteTech() != -1 and CvBuildingInfo.getReligionType() == -1 and CvBuildingInfo.getPrereqReligion() == -1:
@@ -3291,9 +3292,7 @@ class TestCode:
 
 				if len(aReplacementList) == 0:
 					aObsoletedBuildingOnTechCountList[CvBuildingInfo.getObsoleteTech()][iBuilding] = 1
-					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
-					if CvBuildingInfo.getNumReplacedBuilding() != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
+					self.log(str(iTechLoc)+" tech column, "+CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
 
 		for iTech in xrange(GC.getNumTechInfos()):
 			aBuildingsList = []
