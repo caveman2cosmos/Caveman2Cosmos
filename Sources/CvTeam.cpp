@@ -6542,7 +6542,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 
 	// Toffer - Read vectors
 	{
-		short iSize;
+		short iSize = 0;
 		short iType;
 		// Tech
 		WRAPPER_READ_DECORATED(wrapper, "CvTeam", &iSize, "NoTradeTechSize");
@@ -6559,7 +6559,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	}
 	// Toffer - Read maps
 	{
-		short iSize;
+		short iSize = 0;
 		short iType;
 		uint32_t iCountU;
 		// Unit counters

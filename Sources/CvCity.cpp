@@ -17120,7 +17120,7 @@ void CvCity::read(FDataStreamBase* pStream)
 
 	// Toffer - Read vectors
 	{
-		short iSize;
+		short iSize = 0;
 		short iType;
 		// Building
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "FreeBuildingsSize");
@@ -17134,6 +17134,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_vFreeBuildings.push_back(iType);
 			}
 		}
+		iSize = 0;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "DisabledBuildingsSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -17148,7 +17149,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	}
 	// Toffer - Read maps
 	{
-		short iSize;
+		short iSize = 0;
 		short iType;
 		int iCount;
 		uint16_t sCountU;
@@ -17166,6 +17167,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			}
 		}
 		// Building
+		iSize = 0;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingProductionModSize");
 		while (iSize-- > 0)
 		{
@@ -17178,6 +17180,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_buildingProductionMod.insert(std::make_pair(iType, iCount));
 			}
 		}
+		iSize = 0;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "FreeAreaBuildingCountSize");
 		while (iSize-- > 0)
 		{
@@ -17191,6 +17194,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			}
 		}
 		// Unit
+		iSize = 0;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "UnitProductionModSize");
 		while (iSize-- > 0)
 		{
