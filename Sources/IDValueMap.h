@@ -249,7 +249,7 @@ typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
-typedef std::pair<TechTypes, int*> TechCommerceModifiers;
+typedef std::pair<TechTypes, int*> TechCommerceChanges;
 typedef std::pair<TerrainTypes, int*> TerrainYieldChanges;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;

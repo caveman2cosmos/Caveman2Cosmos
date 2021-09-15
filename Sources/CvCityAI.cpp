@@ -14387,7 +14387,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_GOLD) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_GOLD) > 0 ||
-			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_GOLD) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_GOLD) > 0)
 		{
 			return true;
@@ -14404,7 +14403,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_RESEARCH) > 0 ||
-			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_RESEARCH) > 0)
 		{
 			return true;
@@ -14420,7 +14418,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_CULTURE) > 0 ||
-			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_CULTURE) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_CULTURE) > 0)
 		{
 			return true;
@@ -14581,7 +14578,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_ESPIONAGE) > 0 ||
-			kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_ESPIONAGE) > 0)
 		{
 			return true;
@@ -16388,20 +16384,11 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 	bool bCulturalVictory1 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
-	// unused: bool bCulturalVictory2 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
 	bool bCulturalVictory3 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
-	ReligionTypes eStateReligion = kOwner.getStateReligion();
 
-	int iBaseCommerceChange = GC.getBuildingInfo(eBuilding).getCommerceChange((CommerceTypes)iI);
+	int iBaseCommerceChange = getBaseCommerceRateFromBuilding100((CommerceTypes)iI, eBuilding) / 100;
 
-	if (iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-	{
-		iBaseCommerceChange = 0;
-	}
-	iBaseCommerceChange += GC.getBuildingInfo(eBuilding).getCommercePerPopChange((CommerceTypes)iI) * getPopulation() / 100;
-
-	int iResult = 0;
-	iResult += 4 * (iBaseCommerceChange + GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI) + aiFreeSpecialistCommerce[iI]);
+	int iResult = 4 * (iBaseCommerceChange + aiFreeSpecialistCommerce[iI]);
 
 	if ((CommerceTypes)iI == COMMERCE_CULTURE)
 	{
@@ -16564,18 +16551,23 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	iResult += kBuilding.getGlobalCommerceModifier(iI) * GET_PLAYER(getOwner()).getCommerceRate((CommerceTypes)iI) / 8;
 	iResult += kBuilding.getSpecialistExtraCommerce(iI) * kOwner.getTotalPopulation() / 3;
-
-	if (eStateReligion != NO_RELIGION)
 	{
-		iResult += (kBuilding.getStateReligionCommerce(iI) * kOwner.getHasReligionCount(eStateReligion) * 3);
-	}
+		const ReligionTypes eStateReligion = kOwner.getStateReligion();
 
-	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
-	{
-		iResult += (GC.getReligionInfo((ReligionTypes)(kBuilding.getGlobalReligionCommerce())).getGlobalReligionCommerce(iI) * GC.getGame().countReligionLevels((ReligionTypes)(kBuilding.getGlobalReligionCommerce())) * 2);
-		if (eStateReligion == (ReligionTypes)(kBuilding.getGlobalReligionCommerce()))
+		if (eStateReligion != NO_RELIGION)
 		{
-			iResult += 10;
+			iResult += kBuilding.getStateReligionCommerce(iI) * kOwner.getHasReligionCount(eStateReligion) * 3;
+		}
+		const ReligionTypes eReligionGlobalCommerce = (ReligionTypes)kBuilding.getGlobalReligionCommerce();
+
+		if (eReligionGlobalCommerce != NO_RELIGION)
+		{
+			iResult += GC.getReligionInfo(eReligionGlobalCommerce).getGlobalReligionCommerce(iI) * GC.getGame().countReligionLevels(eReligionGlobalCommerce) * 2;
+
+			if (eStateReligion == eReligionGlobalCommerce)
+			{
+				iResult += 10;
+			}
 		}
 	}
 

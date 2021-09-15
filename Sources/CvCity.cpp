@@ -4951,14 +4951,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		changeCommercePerPopFromBuildings(eCommerceX, iChange * kBuilding.getCommercePerPopChange(iI));
 
-		updateCommerceRateByBuilding(
-			eBuilding, eCommerceX,
-			(
-				GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, eCommerceX)
-				+ GET_PLAYER(getOwner()).getBuildingCommerceChange(eBuilding, eCommerceX)
-			)
-			* iChange
-		);
+		updateCommerceRateByBuilding(eBuilding, eCommerceX, GET_PLAYER(getOwner()).getBuildingCommerceChange(eBuilding, eCommerceX) * iChange);
 		changeCommerceRateModifier(eCommerceX, kBuilding.getCommerceModifier(iI) * iChange);
 
 		updateCommerceModifierByBuilding(
@@ -5321,13 +5314,13 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
-	foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
+	foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
 	{
-		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
-				changeBuildingCommerceTechChange((CommerceTypes)iI, iChange * modifier.second[(CommerceTypes)iI]);
+				changeBuildingCommerceTechChange((CommerceTypes)iI, iChange * pair.second[(CommerceTypes)iI]);
 			}
 		}
 	}
@@ -12231,7 +12224,7 @@ int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes 
  */
 int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
-	const int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
+	const int iExtraRateTimes100 = getBaseCommerceRateFromBuilding100(eIndex, eBuilding);
 	const int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
 
 	if (iExtraRateTimes100 == 0 && iExtraModifier == 0)
@@ -12278,67 +12271,29 @@ int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, Buildi
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding) const
-{
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
-	int iExtraRateTimes100 = 100 * getAdditionalBaseCommerceRateByBuilding(eIndex, eBuilding);
-
-	if (kBuilding.isForceAllTradeRoutes())
-	{
-		const int iCurrentTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
-
-		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(1);
-
-		const int iFutureTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
-
-		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(-1);
-
-		iExtraRateTimes100 += (iFutureTradeRevenue - iCurrentTradeRevenue) * GET_PLAYER(getOwner()).getCommercePercent(eIndex);
-	}
-	iExtraRateTimes100 += getPopulation() * kBuilding.getCommercePerPopChange(eIndex);
-
-	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	{
-		if (hasBonus((BonusTypes)iI))
-		{
-			iExtraRateTimes100 += kBuilding.getBonusCommercePercentChanges(iI, eIndex);
-		}
-	}
-	foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
-	{
-		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
-		{
-			iExtraRateTimes100 += modifier.second[eIndex];
-		}
-	}
-	return iExtraRateTimes100;
-}
-
-
-int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
+int CvCity::getBaseCommerceRateFromBuilding100(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	int iExtraRate = kBuilding.getCommerceChange(eIndex);
-	if (iExtraRate < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
+	int iExtraRate100 = 100 * kBuilding.getCommerceChange(eIndex);
+	if (iExtraRate100 < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 	{
-		iExtraRate = 0;
+		iExtraRate100 = 0;
 	}
-	iExtraRate += getBuildingCommerceChange(eBuilding, eIndex);
+	iExtraRate100 += 100 * getBuildingCommerceChange(eBuilding, eIndex);
 
 	if (kBuilding.getReligionType() != NO_RELIGION
 	&& kBuilding.getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
 	{
-		iExtraRate += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
+		iExtraRate100 += 100 * GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
 	}
 
 	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
 	{
-		iExtraRate += (
+		iExtraRate100 += 100 * (
 			GC.getReligionInfo((ReligionTypes)kBuilding.getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
 			*
 			GC.getGame().countReligionLevels((ReligionTypes)kBuilding.getGlobalReligionCommerce())
@@ -12346,37 +12301,28 @@ int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, Buildi
 	}
 	if (kBuilding.getGlobalCorporationCommerce() != NO_CORPORATION)
 	{
-		iExtraRate += (
+		iExtraRate100 += 100 * (
 			GC.getCorporationInfo((CorporationTypes)kBuilding.getGlobalCorporationCommerce()).getHeadquarterCommerce(eIndex)
 			*
 			GC.getGame().countCorporationLevels((CorporationTypes)kBuilding.getGlobalCorporationCommerce())
 		);
 	}
-	// ignore double-time check since this assumes you are building it this turn
 
 	// Specialists
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 	{
 		if (kBuilding.getFreeSpecialistCount((SpecialistTypes)iI) != 0)
 		{
-			iExtraRate += getAdditionalBaseCommerceRateBySpecialist(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
-		}
-	}
-
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
-		{
-			iExtraRate += kBuilding.getTechCommerceChange(iI, eIndex);
+			iExtraRate100 += 100 * getAdditionalBaseCommerceRateBySpecialist(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
 		}
 	}
 
 	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 	{
-		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+		const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
 
-		iExtraRate += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, eIndex);
+		iExtraRate100 += 100 * GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, eIndex);
 	}
 
 	if (kBuilding.getNumPopulationEmployed() > 0)
@@ -12387,13 +12333,43 @@ int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, Buildi
 		int iHappiness;
 		int iHealthiness;
 		removeWorstCitizenActualEffects(kBuilding.getNumPopulationEmployed(), iGreatPeopleRate, iHappiness, iHealthiness, paiYield, paiCommerce);
-		iExtraRate += paiCommerce[eIndex];
+		iExtraRate100 += 100 * paiCommerce[eIndex];
 		SAFE_DELETE_ARRAY(paiCommerce);
 		SAFE_DELETE_ARRAY(paiYield);
 	}
 
-	return iExtraRate;
+	// Toffer - The rest are already scaled up two orders of magnitude.
+	if (kBuilding.isForceAllTradeRoutes())
+	{
+		const int iCurrentTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
+
+		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(1);
+
+		const int iFutureTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
+
+		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(-1);
+
+		iExtraRate100 += (iFutureTradeRevenue - iCurrentTradeRevenue) * GET_PLAYER(getOwner()).getCommercePercent(eIndex);
+	}
+	iExtraRate100 += getPopulation() * kBuilding.getCommercePerPopChange(eIndex);
+
+	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	{
+		if (hasBonus((BonusTypes)iI))
+		{
+			iExtraRate100 += kBuilding.getBonusCommercePercentChanges(iI, eIndex);
+		}
+	}
+	foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
+		{
+			iExtraRate100 += pair.second[eIndex];
+		}
+	}
+	return iExtraRate100;
 }
+
 
 
 /*
@@ -20000,11 +19976,11 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech)
 	{
 		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			foreach_(const TechCommerceModifiers& modifier, GC.getBuildingInfo((BuildingTypes)iI).getTechCommercePercentChanges())
+			foreach_(const TechCommerceChanges& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChanges100())
 			{
-				if (eTech == modifier.first)
+				if (eTech == pair.first)
 				{
-					iPercentCommerce += modifier.second[eIndex];
+					iPercentCommerce += pair.second[eIndex];
 				}
 			}
 		}
@@ -20019,11 +19995,11 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eB
 		return 0;
 	}
 	int iPercentCommerce = 0;
-	foreach_(const TechCommerceModifiers& modifier, GC.getBuildingInfo(eBuilding).getTechCommercePercentChanges())
+	foreach_(const TechCommerceChanges& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
 	{
-		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
-			iPercentCommerce += modifier.second[eIndex];
+			iPercentCommerce += pair.second[eIndex];
 		}
 	}
 	return iPercentCommerce;

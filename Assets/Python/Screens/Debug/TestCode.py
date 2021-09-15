@@ -1446,11 +1446,7 @@ class TestCode:
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 							aTechYieldModifiers[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
-				if CvBuildingInfo.isAnyTechCommerceChanges():
-					for iTech in xrange(GC.getNumTechInfos()):
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							aTechCommerceChanges[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
-				for pTechCommerceChange in CvBuildingInfo.getTechCommercePercentChanges():
+				for pTechCommerceChange in CvBuildingInfo.getTechCommerceChanges100():
 					iTech = pTechCommerceChange.eTech
 					iCommerce = pTechCommerceChange.eCommerce
 					aTechCommercePercentChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
@@ -1475,11 +1471,7 @@ class TestCode:
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 								aTechYieldModifiers[REPLACED][iTech][iYield] += CvReplacedBuildingInfo.getTechYieldModifier(iTech, iYield)
-					if CvReplacedBuildingInfo.isAnyTechCommerceChanges():
-						for iTech in xrange(GC.getNumTechInfos()):
-							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-								aTechCommerceChanges[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
-					for pTechCommerceChange in CvReplacedBuildingInfo.getTechCommercePercentChanges():
+					for pTechCommerceChange in CvReplacedBuildingInfo.getTechCommerceChanges100():
 						iTech = pTechCommerceChange.eTech
 						iCommerce = pTechCommerceChange.eCommerce
 						aTechCommercePercentChanges[REPLACED][iTech][iCommerce] += pTechCommerceChange.value
@@ -2411,17 +2403,6 @@ class TestCode:
 									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
 								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-
-				#Check if Commerce Changes techs don't appear before building can be unlocked or after is obsoleted
-				if CvBuildingInfo.isAnyTechCommerceChanges():
-					for iTech in xrange(GC.getNumTechInfos()):
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							if CvBuildingInfo.getTechCommerceChange(iTech, iCommerce):
-								iTechMLoc = GC.getTechInfo(iTech).getGridX()
-								if iTechMLoc <= iTechLoc:
-									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
 
 				#Check if Commerce Modifiers techs don't appear before building can be unlocked or after is obsoleted
 				if CvBuildingInfo.isAnyTechCommerceModifiers():

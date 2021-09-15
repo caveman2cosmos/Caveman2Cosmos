@@ -343,8 +343,8 @@ public:
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
-	const IDValueMap<TechTypes, int*>& getTechCommercePercentChanges() const { return m_aTechCommercePercent; }
-	const python::list cyGetTechCommercePercentChanges() const;
+	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
+	const python::list cyGetTechCommerceChanges100() const;
 
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
@@ -405,9 +405,6 @@ public:
 
 	int getBonusCommercePercentChanges(int i, int j) const;
 	int* getBonusCommercePercentChangesArray(int i) const;
-
-	int getTechCommerceChange(int i, int j) const;
-	int* getTechCommerceChangeArray(int i) const;
 
 	int getTechYieldChange(int i, int j) const;
 	int* getTechYieldChangeArray(int i) const;
@@ -486,7 +483,6 @@ public:
 	bool isAnySpecialistYieldChanges() const		{ return m_ppaiSpecialistYieldChange != NULL; }
 	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
 	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
-	bool isAnyTechCommerceChanges() const			{ return m_ppaiTechCommerceChange != NULL; }
 	bool isAnyTechYieldChanges() const				{ return m_ppaiTechYieldChange != NULL; }
 	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
 	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
@@ -796,7 +792,6 @@ private:
 	int* m_piVictoryThreshold;
 
 	int** m_ppaiBonusCommerceModifier;
-	int** m_ppaiTechCommerceChange;
 	int** m_ppaiTechYieldChange;
 	int** m_ppaiTechSpecialistChange;
 	int** m_ppaiTechCommerceModifier;
@@ -853,7 +848,7 @@ private:
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
-	IDValueMap<TechTypes, int*> m_aTechCommercePercent;
+	IDValueMap<TechTypes, int*> m_techCommerceChanges;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;

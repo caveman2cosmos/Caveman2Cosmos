@@ -65,7 +65,6 @@ m_Properties(this)
 
 	m_ppaaiImprovementYieldChange = NULL;
 
-	m_ppiBuildingCommerceChange = NULL;
 	m_ppiBuildingYieldChange = NULL;
 	m_ppiBuildingSpecialistChange = NULL;
 	m_ppiBuildingCommerceModifier = NULL;
@@ -176,7 +175,6 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
-	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingYieldChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingSpecialistChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
@@ -398,17 +396,6 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		}
 
 		m_aeRevealedBonuses.clear();
-
-		FAssertMsg(m_ppiBuildingCommerceChange==NULL, "about to leak memory, CvTeam::m_ppiBuildingCommerceChange");
-		m_ppiBuildingCommerceChange = new int*[GC.getNumBuildingInfos()];
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			m_ppiBuildingCommerceChange[iI] = new int[NUM_COMMERCE_TYPES];
-			for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-			{
-				m_ppiBuildingCommerceChange[iI][iJ] = 0;
-			}
-		}
 
 		FAssertMsg(m_ppiBuildingYieldChange==NULL, "about to leak memory, CvTeam::m_ppiBuildingYieldChange");
 		m_ppiBuildingYieldChange = new int*[GC.getNumBuildingInfos()];
@@ -5965,7 +5952,6 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
-			changeBuildingCommerceChange(((BuildingTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChange(eTech, iJ) * iChange));
 			changeBuildingCommerceModifier(((BuildingTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifier(eTech, iJ) * iChange));
 		}
 
@@ -6612,9 +6598,11 @@ void CvTeam::read(FDataStreamBase* pStream)
 	{
 		int	newIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, i, true);
 
+		// @SAVEBREAK DELETE
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingCommerceChange[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
+		// SAVEBREAK@
 		if ( newIndex != -1 )
 		{
-			WRAPPER_READ_ARRAY(wrapper, "CvTeam", NUM_COMMERCE_TYPES, m_ppiBuildingCommerceChange[newIndex]);
 			WRAPPER_READ_ARRAY(wrapper, "CvTeam", NUM_YIELD_TYPES, m_ppiBuildingYieldChange[newIndex]);
 			WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppiBuildingSpecialistChange[newIndex]);
 			WRAPPER_READ_ARRAY(wrapper, "CvTeam", NUM_COMMERCE_TYPES, m_ppiBuildingCommerceModifier[newIndex]);
@@ -6623,7 +6611,6 @@ void CvTeam::read(FDataStreamBase* pStream)
 		else
 		{
 			//	Consume the values
-			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingCommerceChange[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingYieldChange[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingSpecialistChange[newIndex], SAVE_VALUE_TYPE_CLASS_INT_ARRAY);
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingCommerceModifier[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
@@ -6785,7 +6772,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", NUM_COMMERCE_TYPES, m_ppiBuildingCommerceChange[iI]);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", NUM_YIELD_TYPES, m_ppiBuildingYieldChange[iI]);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppiBuildingSpecialistChange[iI]);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", NUM_COMMERCE_TYPES, m_ppiBuildingCommerceModifier[iI]);
@@ -7537,43 +7523,6 @@ int64_t CvTeam::getTotalVictoryScore() const
 }
 
 
-int CvTeam::getBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
-	return m_ppiBuildingCommerceChange[eIndex1][eIndex2];
-}
-
-void CvTeam::changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
-
-	if (iChange != 0)
-	{
-		const int iOldValue = m_ppiBuildingCommerceChange[eIndex1][eIndex2];
-		m_ppiBuildingCommerceChange[eIndex1][eIndex2] += iChange;
-
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
-			{
-				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-				{
-					if (pLoopCity->hasFullyActiveBuilding(eIndex1))
-					{
-						pLoopCity->updateCommerceRateByBuilding(
-							eIndex1, eIndex2,
-							pLoopCity->getBuildingCommerceChange(eIndex1, eIndex2) - iOldValue + getBuildingCommerceChange(eIndex1, eIndex2)
-						);
-					}
-				}
-			}
-		}
-		updateCommerce();
-	}
-}
-
 int CvTeam::getBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
@@ -7925,7 +7874,6 @@ void CvTeam::recalculateModifiers()
 
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
-			m_ppiBuildingCommerceChange[iI][iJ] = 0;
 			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
