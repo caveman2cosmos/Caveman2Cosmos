@@ -5770,7 +5770,7 @@ void CvTeam::setCircumnavigated(bool bNewValue)
 }
 
 
-void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
+void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce, const bool bRecalc)
 {
 	PROFILE_FUNC();
 
@@ -6067,10 +6067,13 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 				// A new tech can effect best plot build decisions so mark stale in all cities
 				cityX->AI_markBestBuildValuesStale();
 
-				// Buildings may change commerce output with tech
-				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+				if (!bRecalc) // Toffer this is applied during building recalc which happens before tech recalc.
 				{
-					cityX->changeBuildingCommerceTechChange((CommerceTypes)iJ, iChange * cityX->getBuildingCommerceTechChange((CommerceTypes)iJ, eTech));
+					// Buildings may change commerce output with tech
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+					{
+						cityX->changeBuildingCommerceTechChange((CommerceTypes)iJ, iChange * cityX->getBuildingCommerceTechChange((CommerceTypes)iJ, eTech));
+					}
 				}
 			}
 		}
@@ -7915,7 +7918,7 @@ void CvTeam::recalculateModifiers()
 	{
 		if (isHasTech((TechTypes)iI))
 		{
-			processTech((TechTypes)iI, 1);
+			processTech((TechTypes)iI, 1, false, true);
 		}
 	}
 	//	Reapply circumnavigation bonus

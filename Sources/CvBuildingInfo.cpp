@@ -3506,7 +3506,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aGlobalBuildingProductionModifier.readWithDelayedResolution(pXML, L"GlobalBuildingProductionModifiers");
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
-	m_techCommerceChanges.readPairedArray(pXML, L"TechCommercePercentChanges");
+	m_techCommerceChanges.readPairedArray(pXML, L"TechCommerceChanges");
 	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
 
 	return true;

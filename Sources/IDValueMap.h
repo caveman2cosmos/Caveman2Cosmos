@@ -28,7 +28,7 @@ struct IDValueMap
 		{
 			const int iNumChildren = pXML->GetXmlChildrenNumber();
 
-			if (pXML->TryMoveToXmlFirstChild(L"TechCommercePercentChange"))
+			if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChange"))
 			{
 				for (int j = 0; j < iNumChildren; ++j)
 				{
