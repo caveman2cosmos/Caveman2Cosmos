@@ -355,14 +355,14 @@
 				<iCommerce>-5</iCommerce>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_ECOLOGICAL_ENGINEERING</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLIMATOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>

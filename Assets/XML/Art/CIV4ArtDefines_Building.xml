@@ -19584,6 +19584,16 @@
 			<Button>art/Health/Art/healingclay.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HEALING_CLAY</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>art/Health/Art/healingclay.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HEALTHFOOD_STORE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -47343,6 +47353,16 @@
 			<NIF/>
 			<KFM/>
 			<Button>Art/interface/buttons/buildings/intelligent_personal_assistant.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HEALTHCARE_MEGACOMPLEX</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Hospital.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,10</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
