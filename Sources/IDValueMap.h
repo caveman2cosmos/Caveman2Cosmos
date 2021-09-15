@@ -28,7 +28,7 @@ struct IDValueMap
 		{
 			const int iNumChildren = pXML->GetXmlChildrenNumber();
 
-			if (pXML->TryMoveToXmlFirstChild(L"TechCommercePercentChange"))
+			if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChange"))
 			{
 				for (int j = 0; j < iNumChildren; ++j)
 				{
@@ -249,7 +249,7 @@ typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
-typedef std::pair<TechTypes, int*> TechCommerceModifiers;
+typedef std::pair<TechTypes, int*> TechCommerceChanges;
 typedef std::pair<TerrainTypes, int*> TerrainYieldChanges;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;

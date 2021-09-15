@@ -5973,16 +5973,23 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 					for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{
-						int iCommerceChange = kLoopBuilding.getTechCommerceChange(eTech, iJ);
-						int iCommerceModifier = kLoopBuilding.getTechCommerceModifier(eTech, iJ);
-
-						if ( iCommerceChange != 0 )
+						int iCommerceChange = 0;
+						foreach_(const TechCommerceChanges& pair, kLoopBuilding.getTechCommerceChanges100())
 						{
-							iTempValue += 400*iCommerceChange;
+							if (eTech == pair.first)
+							{
+								iCommerceChange += pair.second[iJ];
+							}
 						}
-						if ( iCommerceModifier != 0 )
+
+						if (iCommerceChange != 0)
 						{
-							iTempValue += (4*getCommerceRate((CommerceTypes)iJ)*iCommerceModifier)/getNumCities();
+							iTempValue += 400 * iCommerceChange;
+						}
+						const int iCommerceModifier = kLoopBuilding.getTechCommerceModifier(eTech, iJ);
+						if (iCommerceModifier != 0)
+						{
+							iTempValue += 4 * getCommerceRate((CommerceTypes)iJ) * iCommerceModifier / getNumCities();
 						}
 					}
 
