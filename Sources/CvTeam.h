@@ -600,7 +600,7 @@ protected:
 	void updateTechShare(TechTypes eTech);
 	void updateTechShare();
 	void testCircumnavigated();
-	void processTech(TechTypes eTech, int iChange, bool bAnnounce = false, const bool bRecalc = false);
+	void processTech(TechTypes eTech, int iChange, bool bAnnounce = false);
 	void cancelDefensivePacts();
 	void announceTechToPlayers(TechTypes eIndex, bool bPartial = false);
 
