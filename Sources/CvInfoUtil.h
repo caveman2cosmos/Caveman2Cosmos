@@ -27,13 +27,13 @@ struct CvInfoUtil : bst::noncopyable
 		m_wrappedVars.clear();
 	}
 
-	static void initVars(CvInfoUtil util)
+	static void initDataMembers(CvInfoUtil util)
 	{
 		foreach_(WrappedVar* wrapper, util.m_wrappedVars)
 			wrapper->initVar();
 	}
 
-	static void uninitVars(CvInfoUtil util)
+	static void uninitDataMembers(CvInfoUtil util)
 	{
 		foreach_(WrappedVar* wrapper, util.m_wrappedVars)
 			wrapper->uninitVar();

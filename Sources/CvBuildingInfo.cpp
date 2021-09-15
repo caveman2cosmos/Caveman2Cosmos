@@ -309,7 +309,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
 {
-	CvInfoUtil::initVars(this);
+	CvInfoUtil::initDataMembers(this);
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -428,7 +428,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
 
-	CvInfoUtil::uninitVars(this);
+	CvInfoUtil::uninitDataMembers(this);
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
