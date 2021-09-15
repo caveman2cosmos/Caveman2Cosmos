@@ -24079,8 +24079,8 @@ void CvPlayerAI::AI_calculateAverages() const
 		}
 		m_iAverageGreatPeopleMultiplier = 0;
 
-		int64_t* sumBaseCommerce = new int64_t[NUM_COMMERCE_TYPES]();
-		int64_t* sumFinalCommerce = new int64_t[NUM_COMMERCE_TYPES]();
+		int64_t sumBaseCommerce[NUM_COMMERCE_TYPES];
+		int64_t sumFinalCommerce[NUM_COMMERCE_TYPES];
 		{
 			int iTotalPopulation = 0;
 
