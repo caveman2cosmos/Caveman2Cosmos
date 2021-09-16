@@ -11,6 +11,7 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "IDValuemap.h"
 
@@ -21,6 +22,7 @@ class CvHotkeyInfo;
 class CvProperties;
 class CvPropertyManipulators;
 class CvXMLLoadUtility;
+//struct CvInfoUtil;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
@@ -528,6 +530,7 @@ public:
 	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
 	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
+	void wrapDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
