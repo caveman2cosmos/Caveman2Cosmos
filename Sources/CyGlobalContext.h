@@ -36,6 +36,8 @@ public:
 	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
 	int getTypesEnum(const char* szType) const;
 
+	void sendDataMembersToPython(CvInfoBase* info, const std::string file) const;
+
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
 	const CvTerrainInfo* getTerrainInfo(int i) const;
