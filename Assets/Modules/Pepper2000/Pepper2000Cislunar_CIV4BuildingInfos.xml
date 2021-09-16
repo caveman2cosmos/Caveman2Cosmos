@@ -340,8 +340,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_PHASING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -349,8 +349,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AEROGEL_SHIELDING</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
@@ -450,15 +450,15 @@
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_SOCIAL_CALCULUS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_GERONTOCRACY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -466,16 +466,16 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CULTURAL_EVOLUTION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PRECISION_SOCIAL_ENGINEERING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -483,8 +483,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>5000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_COLONY_GOVERNANCE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -492,8 +492,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
@@ -1274,15 +1274,15 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_KUIPER_BELT_EXPLORATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_HARROP_SATELLITE</Type>
@@ -1699,14 +1699,14 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_LABS</Type>

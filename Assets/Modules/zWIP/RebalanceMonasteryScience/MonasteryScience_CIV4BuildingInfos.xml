@@ -3,8 +3,8 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -12,8 +12,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

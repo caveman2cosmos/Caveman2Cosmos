@@ -161,20 +161,20 @@
 				<iYield>50</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_LAUNCH_ARCOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_COLONY_ARCOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
@@ -265,14 +265,14 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_OPTRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -813,14 +813,14 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<iHealth>5</iHealth>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_THERMAL_NEGATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>

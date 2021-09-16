@@ -493,26 +493,26 @@
 				<iYield>25</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_GRAND_UNIFICATION_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PARTICLE_GENETICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
 			</PrereqInCityBuildings>
@@ -539,32 +539,32 @@
 				<iYield>10</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_DIRECTED_PANSPERMIA</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_GRAND_UNIFICATION_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PARTICLE_GENETICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
 			</PrereqInCityBuildings>
@@ -623,14 +623,14 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GRAVITRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
 			</PrereqInCityBuildings>
@@ -845,26 +845,26 @@
 				<iYield>20</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_FEDERATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ASTROIMPERIALISM</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_WARFARE</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqInCityBuildings>
@@ -1376,14 +1376,14 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_SPIRITUAL_REALMS</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PHILOTE_PRODUCER</BuildingType>
 				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
@@ -1722,14 +1722,14 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_MATERIALIZATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
 			</PrereqInCityBuildings>
@@ -2184,14 +2184,14 @@
 				<iYield>30</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_SPECIES_AMALGAMATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
@@ -2226,14 +2226,14 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_EXPERIMENTAL_COSMOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BLACK_HOLE_COMPUTER</BuildingType>
@@ -3287,14 +3287,14 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GRAVITRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -3413,8 +3413,8 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_WARFARE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -3422,16 +3422,16 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CULTURAL_LONGEVITY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_COSMIC_WARFARE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -3439,14 +3439,14 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_TACHYON_COMMUNICATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_COSMIC_GOVERNANCE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -3454,8 +3454,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_FEDERATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -3463,8 +3463,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAPITAL_CITY</BuildingType>
@@ -3571,8 +3571,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_PLANET_SCANNING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -3580,15 +3580,15 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PLANET_SCOUTING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</Type>
@@ -4157,36 +4157,36 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_SPACETIME_ECONOMICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ULTRACOMPUTING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_UNIFICATION_MATHEMATICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CULTURAL_LONGEVITY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_IMMORTALITY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -4194,14 +4194,14 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_COMPUTRONIUM_UNIVERSE</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
@@ -5175,15 +5175,15 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_PARTICLE_GENETICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
@@ -5916,14 +5916,14 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GRAVITRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
@@ -5975,14 +5975,14 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_LUMINAL_BEINGS</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
@@ -6378,14 +6378,14 @@
 				<iYield>0</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_JOVIAN_TERRAFORMING</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
@@ -6449,14 +6449,14 @@
 				<iYield>3</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_GRAVITY_CONTROL</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqInCityBuildings>
@@ -6500,14 +6500,14 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_TRANSDIMENSIONAL_COMMERCE</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7207,14 +7207,14 @@
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<iHappiness>3</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_METAVERSE</TechType>
 					<CommercePercents>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
@@ -7340,14 +7340,14 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_MATERIALIZATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
 			</PrereqInCityBuildings>
