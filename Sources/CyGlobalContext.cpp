@@ -111,11 +111,6 @@ int CyGlobalContext::getTypesEnum(const char* szType) const
 	return GC.getTypesEnum(szType);
 }
 
-void CyGlobalContext::sendDataMembersToPython(CvInfoBase* info, const std::string file) const
-{
-	CvInfoUtil(info).callPython(file);
-}
-
 const CvMapInfo& CyGlobalContext::getMapInfo(MapTypes eMap) const
 {
 	return GC.getMapInfo(eMap);

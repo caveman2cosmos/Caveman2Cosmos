@@ -24,6 +24,8 @@ def RemoveSign(argsList):
 def initBUG():
 	import BugInit
 	BugInit.init()
+	import CvInfoUtilInterface
+	CvInfoUtilInterface.init()
 
 # don't make this an event - Moose
 def init():

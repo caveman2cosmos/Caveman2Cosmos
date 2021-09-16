@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
@@ -112,7 +113,7 @@ DllExport void DLLPublishToPython()
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
 	CyIntExprPythonInterface();
-
+	CvInfoUtil::publishPythonInterface();
 	SCyDebug::installInPython();
 
 	//
