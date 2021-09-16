@@ -211,7 +211,6 @@ public:
 	bool isHasEmbassy(TeamTypes eIndex) const;
 	void setHasEmbassy(TeamTypes eIndex, bool bNewValue);
 	int getBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
 
 	int getBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2) const;
 	void changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2, int iChange);
@@ -562,7 +561,6 @@ protected:
 	bool* m_abIsRebelAgainst;
 	bool* m_pabHasTech;
 
-	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBuildingYieldChange;
 	int** m_ppiBuildingSpecialistChange;
 	int** m_ppiBuildingCommerceModifier;
