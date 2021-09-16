@@ -309,7 +309,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
 {
-	CvInfoUtil::initDataMembers(this);
+	CvInfoUtil(this).initDataMembers();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -428,7 +428,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
 
-	CvInfoUtil::uninitDataMembers(this);
+	CvInfoUtil(this).uninitDataMembers();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -2154,7 +2154,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aTechCommercePercent);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
 
-	CvInfoUtil::checkSum(const_cast<CvBuildingInfo*>(this), iSum);
+	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
 }
 
 void CvBuildingInfo::wrapDataMembers(CvInfoUtil& util)
@@ -3623,7 +3623,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aTechCommercePercent.readPairedArray(pXML, L"TechCommercePercentChanges");
 	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
 
-	CvInfoUtil::readXml(this, pXML);
+	CvInfoUtil(this).readXml(pXML);
 
 	return true;
 }
@@ -4951,7 +4951,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercentChanges());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 
-	CvInfoUtil::copyNonDefaults(this, pClassInfo);
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)

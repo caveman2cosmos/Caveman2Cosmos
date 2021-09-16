@@ -27,34 +27,34 @@ struct CvInfoUtil : bst::noncopyable
 		m_wrappedVars.clear();
 	}
 
-	static void initDataMembers(CvInfoUtil util)
+	void initDataMembers()
 	{
-		foreach_(WrappedVar* wrapper, util.m_wrappedVars)
+		foreach_(WrappedVar* wrapper, m_wrappedVars)
 			wrapper->initVar();
 	}
 
-	static void uninitDataMembers(CvInfoUtil util)
+	void uninitDataMembers()
 	{
-		foreach_(WrappedVar* wrapper, util.m_wrappedVars)
+		foreach_(WrappedVar* wrapper, m_wrappedVars)
 			wrapper->uninitVar();
 	}
 
-	static void checkSum(CvInfoUtil util, uint32_t& iSum)
+	void checkSum(uint32_t& iSum)
 	{
-		foreach_(const WrappedVar* wrapper, util.m_wrappedVars)
+		foreach_(const WrappedVar* wrapper, m_wrappedVars)
 			wrapper->checkSum(iSum);
 	}
 
-	static void readXml(CvInfoUtil util, CvXMLLoadUtility* pXML)
+	void readXml(CvXMLLoadUtility* pXML)
 	{
-		foreach_(WrappedVar* wrapper, util.m_wrappedVars)
+		foreach_(WrappedVar* wrapper, m_wrappedVars)
 			wrapper->readXml(pXML);
 	}
 
-	static void copyNonDefaults(CvInfoUtil util, const CvInfoUtil otherUtil)
+	void copyNonDefaults(const CvInfoUtil otherUtil)
 	{
-		for (uint32_t i = 0, num = util.m_wrappedVars.size(); i < num; i++)
-			util.m_wrappedVars[i]->copyNonDefaults(otherUtil.m_wrappedVars[i]);
+		for (uint32_t i = 0, num = m_wrappedVars.size(); i < num; i++)
+			m_wrappedVars[i]->copyNonDefaults(otherUtil.m_wrappedVars[i]);
 	}
 
 	///=============================
