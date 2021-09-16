@@ -114,7 +114,7 @@ struct CvInfoUtil : bst::noncopyable
 				*m_ptr = *static_cast<const IntWrapper*>(pOther)->m_ptr;
 		}
 
-		virtual void sendVarToPython(const char* file)
+		void sendVarToPython(const char* file)
 		{
 			Cy::call(file, "handleInteger", Cy::Args()
 				<< *m_ptr
@@ -177,7 +177,7 @@ struct CvInfoUtil : bst::noncopyable
 				*m_ptr = *static_cast<const EnumWrapper*>(pOther)->m_ptr;
 		}
 
-		virtual void sendVarToPython(const char* file)
+		void sendVarToPython(const char* file)
 		{
 			Cy::call(file, "handleEnum", Cy::Args()
 				<< static_cast<int>(*m_ptr)
@@ -195,9 +195,9 @@ struct CvInfoUtil : bst::noncopyable
 		return *this;
 	}
 
-	///================
+	///====================
 	/// Vector wrapper
-	///================
+	///====================
 
 	template <typename T>
 	struct VectorWrapper : WrappedVar
@@ -225,7 +225,7 @@ struct CvInfoUtil : bst::noncopyable
 			algo::sort(*m_ptr);
 		}
 
-		virtual void sendVarToPython(const char* file)
+		void sendVarToPython(const char* file)
 		{
 			Cy::call(file, "handleVector", Cy::Args()
 				<< static_cast<const std::vector<int>&>(*m_ptr)
@@ -270,7 +270,7 @@ struct CvInfoUtil : bst::noncopyable
 			m_ptr->copyNonDefaults(*static_cast<const IDValueMapWrapper*>(pOther)->m_ptr);
 		}
 
-		virtual void sendVarToPython(const char* file)
+		void sendVarToPython(const char* file)
 		{
 		}
 
@@ -317,7 +317,7 @@ struct CvInfoUtil : bst::noncopyable
 			m_ptr->copyNonDefaultsDelayedResolution(*static_cast<const IDValueMapWithDelayedResolutionWrapper*>(pOther)->m_ptr);
 		}
 
-		virtual void sendVarToPython(const char* file)
+		void sendVarToPython(const char* file)
 		{
 		}
 
