@@ -14,16 +14,16 @@ def init():
 		CvInfoUtil(pInfo).sendDataMembersToPython("CvInfoUtilInterface")
 
 def handleInteger(args):
-	i, tag = args
-	GAME.log("CvInfoUtil.log", g_infoType + " - " + tag + " - Int recieved, value: %d" %i)
+	i = args
+	GAME.log("CvInfoUtil.log", g_infoType + " - Int recieved, value: %d" %i)
 
 def handleEnum(args):
-	e, tag = args
-	GAME.log("CvInfoUtil.log", g_infoType + " - " + tag + " - Enum recieved, value: %d" %e)
+	e = args
+	GAME.log("CvInfoUtil.log", g_infoType + " - Enum recieved, value: %d" %e)
 
 def handleVector(args):
-	v, tag = args
-	msg = g_infoType + " - " + tag + " - Vector recieved"
+	v = args
+	msg = g_infoType + " - Vector recieved"
 	if v:
 		values = ", values:"
 		for i in v:

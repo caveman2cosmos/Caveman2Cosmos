@@ -77,7 +77,7 @@ struct CvInfoUtil : bst::noncopyable
 		virtual void sendVarToPython(const char*) = 0;
 
 	protected:
-		const CvWString m_tag;
+		const std::wstring m_tag;
 	};
 
 	///=================
@@ -118,7 +118,6 @@ struct CvInfoUtil : bst::noncopyable
 		{
 			Cy::call(file, "handleInteger", Cy::Args()
 				<< *m_ptr
-				<< m_tag
 			);
 		}
 
@@ -182,7 +181,6 @@ struct CvInfoUtil : bst::noncopyable
 		{
 			Cy::call(file, "handleEnum", Cy::Args()
 				<< static_cast<int>(*m_ptr)
-				<< m_tag
 			);
 		}
 
@@ -197,9 +195,9 @@ struct CvInfoUtil : bst::noncopyable
 		return *this;
 	}
 
-	///====================
+	///================
 	/// Vector wrapper
-	///====================
+	///================
 
 	template <typename T>
 	struct VectorWrapper : WrappedVar
@@ -231,7 +229,6 @@ struct CvInfoUtil : bst::noncopyable
 		{
 			Cy::call(file, "handleVector", Cy::Args()
 				<< static_cast<const std::vector<int>&>(*m_ptr)
-				<< m_tag
 			);
 		}
 
@@ -347,10 +344,10 @@ struct CvInfoUtil : bst::noncopyable
 	}
 
 private:
-	void sendDataMembersToPython(const char* file)
+	void sendDataMembersToPython(const std::string file)
 	{
 		foreach_(WrappedVar* wrapper, m_wrappedVars)
-			wrapper->sendVarToPython(file);
+			wrapper->sendVarToPython(file.c_str());
 	}
 
 	///========================================================
