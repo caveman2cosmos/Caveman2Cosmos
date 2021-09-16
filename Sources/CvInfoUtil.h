@@ -58,7 +58,7 @@ struct CvInfoUtil : bst::noncopyable
 	}
 
 	///=============================
-	/// Variable wrapper base class 
+	/// Variable wrapper base class
 	///=============================
 
 	struct WrappedVar : bst::noncopyable
