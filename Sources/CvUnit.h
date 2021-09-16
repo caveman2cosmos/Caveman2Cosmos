@@ -663,8 +663,6 @@ public:
 	bool isTerrainProtected(TerrainTypes eIndex) const;
 	int getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders = false) const;
 
-	void doCommerceAttacks(const CvUnit* pDefender, const CvPlot* pPlot);
-
 	bool isAutoPromoting() const;
 	void setAutoPromoting(bool bNewValue);
 	bool isAutoUpgrading() const;

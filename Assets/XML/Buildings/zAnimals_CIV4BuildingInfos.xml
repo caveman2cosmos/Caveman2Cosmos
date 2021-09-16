@@ -27,15 +27,15 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -229,15 +229,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -286,15 +286,15 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -343,15 +343,15 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -390,15 +390,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -711,15 +711,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -776,15 +776,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -1245,15 +1245,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -1509,15 +1509,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -1688,15 +1688,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -1914,15 +1914,15 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MASTER_HUNTER</Type>
@@ -2131,15 +2131,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -2317,15 +2317,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -2382,15 +2382,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -2447,15 +2447,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -2620,15 +2620,15 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_REMAINS</Type>
@@ -2652,15 +2652,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -2769,15 +2769,15 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_CAGE</Type>
@@ -2807,15 +2807,15 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROO_HERD</Type>
@@ -2872,15 +2872,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -3048,15 +3048,15 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LITERATURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_LITERATURE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3135,15 +3135,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -3408,15 +3408,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>

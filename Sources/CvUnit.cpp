@@ -3141,8 +3141,6 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 	{
 		doDynamicXP(pDefender, pPlot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage, iInitialAttXP, iInitialDefXP, iInitialAttGGXP, iInitialDefGGXP, bPromotion, bDefPromotion);
 	}
-	doCommerceAttacks(pDefender, pPlot);
-	doCommerceAttacks(this, pPlot);
 }
 
 
@@ -30820,23 +30818,6 @@ void CvUnit::changeTerrainProtected(TerrainTypes eIndex, int iChange)
 	}
 }
 
-void CvUnit::doCommerceAttacks(const CvUnit* pDefender, const CvPlot* pPlot)
-{
-	if (pDefender->isDead())
-	{
-		CvCity* city = pPlot->getPlotCity();
-		if (city != NULL)
-		{
-			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-			{
-				if (city->getMaxCommerceAttacks((CommerceTypes)iI) > 0)
-				{
-					city->changeCommerceAttacks((CommerceTypes)iI, 1);
-				}
-			}
-		}
-	}
-}
 
 int CvUnit::getZoneOfControlCount() const
 {

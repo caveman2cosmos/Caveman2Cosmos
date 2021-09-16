@@ -10,6 +10,9 @@ TRNSLTR = CyTranslator()
 class Pedia:
 
 	def __init__(self, screenId):
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
+
 		self.screenId = screenId
 		self.bNotPedia = True
 		self.pediaHistory = [(-1, "", 0)]
@@ -498,7 +501,7 @@ class Pedia:
 				if self.SECTION == [iCategory, self.szCatAllEras]:
 					szSubCat = self.SECTION[1]
 				else:
-					iEra = self.getItsEra(CvUnitInfo)
+					iEra = self.getUnitEra(CvUnitInfo)
 					szSubCat = self.mapSubCat.get(iCategory)[iEra]
 			print "Selected: %s", CvUnitInfo.getDescription()
 
@@ -527,7 +530,7 @@ class Pedia:
 				if self.SECTION == [iCategory, self.szCatAllEras]:
 					szSubCat = self.SECTION[1]
 				else:
-					iEra = self.getItsEra(CvBuildingInfo)
+					iEra = self.getBuildingEra(CvBuildingInfo)
 					szSubCat = self.mapSubCat.get(iCategory)[iEra]
 			print "Selected: %s", CvBuildingInfo.getDescription()
 
@@ -822,7 +825,7 @@ class Pedia:
 			elif szSubCat == self.szCatAllEras:
 				bValid = True
 			else:
-				iEra = self.getItsEra(CvUnitInfo)
+				iEra = self.getUnitEra(CvUnitInfo)
 				if szSubCat == aSubCatList[iEra]:
 					bValid = True
 			if bValid:
@@ -947,7 +950,7 @@ class Pedia:
 				if szSubCat == self.szCatAllEras:
 					bValid = True
 				else:
-					iEra = self.getItsEra(CvBuildingInfo)
+					iEra = self.getBuildingEra(CvBuildingInfo)
 					if szSubCat == aSubCatList[iEra]:
 						bValid = True
 			if bValid:
@@ -1322,17 +1325,77 @@ class Pedia:
 		list.sort()
 		return list
 
-	def getItsEra(self, CvItsInfo):
-		CvTechInfo = GC.getTechInfo(CvItsInfo.getPrereqAndTech())
-		iCost = GC.getTechInfo(CvItsInfo.getProductionCost())
+	def getBuildingEra(self, CvBuildingInfo):
+		iEra = 0
+
+		#Main tech requirement
+		if CvBuildingInfo.getPrereqAndTech() != -1:
+			iEra = GC.getTechInfo(CvBuildingInfo.getPrereqAndTech()).getEra()
+
+		#Tech Type requirement
+		for iTech in CvBuildingInfo.getPrereqAndTechs():
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+
+		#Tech requirement as defined in special building infos (core tech)
+		if CvBuildingInfo.getSpecialBuildingType() != -1:
+			iTech = GC.getSpecialBuildingInfo(CvBuildingInfo.getSpecialBuildingType()).getTechPrereq()
+			if iTech != -1 and GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+
+		#Tech requirement derived from location of religion in tech tree
+		if CvBuildingInfo.getPrereqReligion() != -1:
+			iTech = GC.getReligionInfo(CvBuildingInfo.getPrereqReligion()).getTechPrereq()
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+		if CvBuildingInfo.getReligionType() != -1:
+			iTech = GC.getReligionInfo(CvBuildingInfo.getReligionType()).getTechPrereq()
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+		if CvBuildingInfo.getPrereqStateReligion() != -1:
+			iTech = GC.getReligionInfo(CvBuildingInfo.getPrereqStateReligion()).getTechPrereq()
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+
+		#Folklore handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.
+		if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_",0,18) != -1:
+			iPrereqBuilding = GC.getInfoTypeForString("BUILDING_ANIMAL_FOLKLORE_REQUIRE")
+			if GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra() > iEra:
+				iEra = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra()
+
+		#Tech GOM requirements
+		aTechGOMReqList = []
+		for i in range(2):
+			aTechGOMReqList.append([])
+		self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
+
+		#Extract GOM AND requirements
+		for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+			if GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getEra() > iEra:
+				iEra = GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getEra()
+
+		#Extract GOM OR requirements - those are OR type requirements, so pick earliest one.
+		aEraList = []
+		for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aEraList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getEra())
+		if len(aEraList) > 0 and min(aEraList) > iEra:
+			iEra = min(aEraList)
+
+		if iEra == 0 and CvBuildingInfo.getProductionCost() > 0:
+			return 1 #Put it in Prehistoric era - buildable building wasn't tied in any way to tech
+		else:
+			return iEra + 1
+
+	def getUnitEra(self, CvUnitInfo):
+		CvTechInfo = GC.getTechInfo(CvUnitInfo.getPrereqAndTech())
+		iCost = CvUnitInfo.getProductionCost()
 		if CvTechInfo == None and iCost < 1:
 			iEra = 0
 		elif CvTechInfo == None and iCost >= 1:
 			iEra = 1
 		else:
 			iEra = CvTechInfo.getEra() + 1
-		i = 0
-		for iType in CvItsInfo.getPrereqAndTechs():
+		for iType in CvUnitInfo.getPrereqAndTechs():
 			iEraTemp = GC.getTechInfo(iType).getEra() + 1
 			if iEraTemp > iEra:
 				iEra = iEraTemp

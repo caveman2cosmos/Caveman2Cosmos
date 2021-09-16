@@ -7393,6 +7393,10 @@
 					<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
@@ -12871,6 +12875,10 @@
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -13071,6 +13079,10 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -13661,6 +13673,10 @@
 					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -13776,6 +13792,10 @@
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -13820,6 +13840,10 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -14141,6 +14165,10 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+					<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>

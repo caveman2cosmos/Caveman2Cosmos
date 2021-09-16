@@ -5490,6 +5490,14 @@
 		<Russian>Äèñò. îáñòðåë</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_TEXT</Tag>
+		<English>Dynamic Civ Names</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
+		<English>Civ names will have various names depending on civic choices and other factors</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_EMERGENCY_DRAFT_ENABLED_HOVER</Tag>
 		<English>Causes weakened units to spawn in defense of cities that are under attack with no defender if the defenseless city still has significant cultural influence of the owning civilization</English>
 		<French>Lorsque activé, les Villes sans défense, mais possédant une influence culturelle suffisante vont spontanément générer des unités défensives de base.</French>

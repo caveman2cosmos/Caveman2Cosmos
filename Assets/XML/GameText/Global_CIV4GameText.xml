@@ -13269,6 +13269,12 @@
 		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PER_POPULATION</Tag>
+		<English>Per population</English>
+		<French>par Population</French>
+		<Russian>за население</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HINT_55</Tag>
 		<English>During wartime, your ships may sever all naval trade routes entering an enemy city by using the "Blockade" Mission within range of the opposing metropolis. Using a Privateer to blockade a city during peace time will even allow you to plunder gold from your enemy's treasury!</English>
 		<French>En temps de guerre, vos navires peuvent couper toutes les routes commerciales maritimes rejoignant une ville ennemie, en exécutant la mission Blocus près de la métropole adverse. Utiliser des Corsaires pour bloquer une ville en tant de paix vous permet même de piller l'or du trésor ennemi !</French>
@@ -18871,16 +18877,6 @@
 		<German>[ICON_BULLET]%D1%%%F2 für %s3:2_trait Staatsoberhaupt</German>
 		<Italian>[ICON_BULLET]%D1%%%F2 per un leader %s3_trait</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por líder %s3_trait</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_COMMERE_ATTACKS</Tag>
-		<English>[ICON_BULLET]%D1%F2 from Imprisoned Soldiers</English>
-		<French>[ICON_BULLET]%D1%F2 de Soldats emprisonnés</French>
-		<German>[ICON_BULLET]%D1%F2 durch gefangene Soldaten</German>
-		<Italian>[ICON_BULLET]%D1%F2 da Soldati imprigionati</Italian>
-		<Spanish>[ICON_BULLET]%D1%F2 de soldados prisioneros</Spanish>
-		<Polish>[ICON_BULLET]%D1%F2 z uwięzionych żołnierzy</Polish>
-		<Russian>[ICON_BULLET]%D1%F2 îò çàêëþ÷åííûõ â òþðüìó ñîëäàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_CORPORATION_COMMERCE</Tag>
