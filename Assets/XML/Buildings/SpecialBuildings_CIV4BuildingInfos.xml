@@ -475,9 +475,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
@@ -9280,7 +9281,7 @@
 			<Description>TXT_KEY_BUILDING_GRASS_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<Bonus>BONUS_GRASS</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9289,11 +9290,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9430,11 +9432,11 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MUD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_TIPI</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9572,7 +9574,6 @@
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
 				<BuildingType>BUILDING_HOGAN</BuildingType>
 				<BuildingType>BUILDING_PUEBLO</BuildingType>
-				<BuildingType>BUILDING_CLIFF_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -9590,14 +9591,12 @@
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
@@ -15182,13 +15181,14 @@
 			<Description>TXT_KEY_BUILDING_STONE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STONE_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_MUD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -15198,7 +15198,7 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -15303,7 +15303,7 @@
 			<Description>TXT_KEY_BUILDING_TIPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIPI_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_HIDE</Bonus>
@@ -15321,7 +15321,6 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
@@ -16034,7 +16033,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
@@ -16094,7 +16093,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
 			<iHealth>-1</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -16119,11 +16118,12 @@
 			</PrereqOrFeature>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
