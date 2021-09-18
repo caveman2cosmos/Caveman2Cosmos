@@ -15,10 +15,9 @@ struct WrappedVar;
 
 struct CvInfoUtil : bst::noncopyable
 {
-	template <class CvInfoClass_T>
-	CvInfoUtil(CvInfoClass_T* info)
+	CvInfoUtil(CvInfoBase* info)
 	{
-		info->wrapDataMembers(*this);
+		info->getDataMembers(*this);
 	}
 
 	~CvInfoUtil()
@@ -66,7 +65,8 @@ struct CvInfoUtil : bst::noncopyable
 	{
 		friend struct CvInfoUtil;
 
-		explicit WrappedVar(void* var, const wchar_t* tag)
+	protected:
+		WrappedVar(void* var, const wchar_t* tag)
 			: m_ptr(var)
 			, m_tag(tag)
 		{}
@@ -77,17 +77,15 @@ struct CvInfoUtil : bst::noncopyable
 		virtual void uninitVar() {}
 		//virtual void copyVar() {}
 
-		virtual void read(FDataStreamBase*) {}
-		virtual void write(FDataStreamBase*) {}
+		//virtual void read(FDataStreamBase*) {}
+		//virtual void write(FDataStreamBase*) {}
 
-		virtual void checkSum(uint32_t&) const {}
+		virtual void checkSum(uint32_t&) const = 0;
 		virtual void readXml(CvXMLLoadUtility*) = 0;
 		virtual void copyNonDefaults(const WrappedVar*)	= 0;
-		virtual void sendVarToPython(const char*) = 0;
 
 		virtual void sendVarToPython(const char*) const {}
 
-	protected:
 		void* m_ptr;
 		const std::wstring m_tag;
 	};
@@ -99,6 +97,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename T>
 	struct IntWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		IntWrapper(T& var, const wchar_t* tag, T defaultValue)
 			: WrappedVar(static_cast<void*>(&var), tag)
 			, m_default(defaultValue)
@@ -132,16 +133,9 @@ struct CvInfoUtil : bst::noncopyable
 			);
 		}
 
-		void sendVarToPython(const char* file)
-		{
-			Cy::call(file, "handleInteger", Cy::Args()
-				<< *m_ptr
-			);
-		}
-
-	protected:
 		T& ref() const { return *static_cast<T*>(m_ptr); }
 
+	private:
 		const T m_default;
 	};
 
@@ -164,6 +158,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename Enum_t>
 	struct EnumWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		EnumWrapper(Enum_t& var, const wchar_t* tag)
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
@@ -202,14 +199,6 @@ struct CvInfoUtil : bst::noncopyable
 			);
 		}
 
-		void sendVarToPython(const char* file)
-		{
-			Cy::call(file, "handleEnum", Cy::Args()
-				<< static_cast<int>(*m_ptr)
-			);
-		}
-
-	protected:
 		Enum_t& ref() const { return *static_cast<Enum_t*>(m_ptr); }
 	};
 
@@ -226,6 +215,9 @@ struct CvInfoUtil : bst::noncopyable
 
 	struct StringWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		StringWrapper(CvString& var, const wchar_t* tag)
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
@@ -245,7 +237,6 @@ struct CvInfoUtil : bst::noncopyable
 				ref() = static_cast<const StringWrapper*>(source)->ref();
 		}
 
-	protected:
 		CvString& ref() const { return *static_cast<CvString*>(m_ptr); }
 	};
 
@@ -262,6 +253,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename T>
 	struct ArrayWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		ArrayWrapper(T*& var, const wchar_t* tag, size_t size, T defaultValue)
 			: WrappedVar(static_cast<void*>(&var), tag)
 			, m_size(size)
@@ -311,6 +305,7 @@ struct CvInfoUtil : bst::noncopyable
 
 		void sendVarToPython(const char* file) const
 		{
+			/*
 			if (const T*& array = ref())
 			{
 				PyObject* list = PyList_New(static_cast<int>(m_size));
@@ -329,12 +324,13 @@ struct CvInfoUtil : bst::noncopyable
 				//	<< Cy::Array<T>(array, m_size)
 				//);
 			}
+			*/
 		}
 
-	protected:
 		T*& ref()				{ return *static_cast<T**>(m_ptr); }
 		const T*& ref() const	{ return *static_cast<const T**>(m_ptr); }
 
+	private:
 		const size_t m_size;
 		const T m_default;
 	};
@@ -352,6 +348,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename T>
 	struct DoubleArrayWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		DoubleArrayWrapper(T** var, const wchar_t* tag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int size1, int size2, T defaultValue)
 			: WrappedVar(static_cast<void*>(&var), tag)
 			, m_size1(size1)
@@ -444,14 +443,10 @@ struct CvInfoUtil : bst::noncopyable
 			}
 		}
 
-		void sendVarToPython(const char* file) const
-		{
-		}
-
-	protected:
 		T**& ref()				{ return *static_cast<T***>(m_ptr); }
 		const T**& ref() const	{ return *static_cast<const T***>(m_ptr); }
 
+	private:
 		const int m_size1;
 		const int m_size2;
 		const T m_default;
@@ -472,6 +467,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename T>
 	struct VectorWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		VectorWrapper(std::vector<T>& var, const wchar_t* tag)
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
@@ -501,14 +499,6 @@ struct CvInfoUtil : bst::noncopyable
 			);
 		}
 
-		void sendVarToPython(const char* file)
-		{
-			Cy::call(file, "handleVector", Cy::Args()
-				<< static_cast<const std::vector<int>&>(*m_ptr)
-			);
-		}
-
-	protected:
 		std::vector<T>& ref() const { return *static_cast<std::vector<T>*>(m_ptr); }
 	};
 
@@ -526,6 +516,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename IDValueMap_T>
 	struct IDValueMapWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		IDValueMapWrapper(IDValueMap_T& var, const wchar_t* tag)
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
@@ -545,11 +538,6 @@ struct CvInfoUtil : bst::noncopyable
 			ref().copyNonDefaults(static_cast<const IDValueMapWrapper*>(source)->ref());
 		}
 
-		void sendVarToPython(const char* file)
-		{
-		}
-
-	protected:
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
@@ -567,6 +555,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename IDValueMap_T>
 	struct IDValueMapWithDelayedResolutionWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		IDValueMapWithDelayedResolutionWrapper(IDValueMap_T& var, const wchar_t* tag)
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
@@ -591,7 +582,6 @@ struct CvInfoUtil : bst::noncopyable
 			ref().copyNonDefaultsDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
 		}
 
-	protected:
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
@@ -609,6 +599,9 @@ struct CvInfoUtil : bst::noncopyable
 	template <typename IDValueMap_T>
 	struct IDValueMapOfPairedArrayWrapper : WrappedVar
 	{
+		friend struct CvInfoUtil;
+
+	protected:
 		IDValueMapOfPairedArrayWrapper(IDValueMap_T& var, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
 			: WrappedVar(static_cast<void*>(&var), rootTag)
 			, m_pairedArraySize(pairedArraySize)
@@ -647,9 +640,9 @@ struct CvInfoUtil : bst::noncopyable
 		{
 		}
 
-	protected:
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 
+	private:
 		const int m_pairedArraySize;
 		const std::wstring m_firstChildTag;
 		const std::wstring m_secondChildTag;

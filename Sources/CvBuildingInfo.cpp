@@ -2109,7 +2109,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
 }
 
-void CvBuildingInfo::wrapDataMembers(CvInfoUtil& util)
+void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
 		.addEnum(m_iObsoleteTech, L"ObsoleteTech")
