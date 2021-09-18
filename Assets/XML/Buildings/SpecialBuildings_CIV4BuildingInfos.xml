@@ -834,7 +834,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<FreePromotion>PROMOTION_MARAUDER</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1067,7 +1071,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<FreePromotion>PROMOTION_MARAUDER</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1087,7 +1095,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<FreePromotion>PROMOTION_CITY_GARRISON1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_CITY_GARRISON1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1375,7 +1387,11 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_MORALE</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MORALE</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GlobalReligionCommerce>RELIGION_CONFUCIANISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -15879,7 +15895,11 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<FreePromotion>PROMOTION_ARCHER_TRADITION</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_ARCHER_TRADITION</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -15928,7 +15948,11 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<FreePromotion>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<PropertyManipulators>
@@ -15991,7 +16015,11 @@
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<FreePromotion>PROMOTION_TRADITION_WORK_ETHIC</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_TRADITION_WORK_ETHIC</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
@@ -16539,7 +16567,11 @@
 			</CommerceChanges>
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<FreePromotion>PROMOTION_WAR_CRY</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_WAR_CRY</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>

@@ -1438,7 +1438,11 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreePromotion>PROMOTION_URBAN_TACTICS1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_FREIGHT</UnitType>
@@ -3448,7 +3452,11 @@
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<FreePromotion>PROMOTION_HUNTER2</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_HUNTER2</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -6328,7 +6336,11 @@
 			</PropertyManipulators>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_FIRST_AID_PEOPLE1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_FIRST_AID_PEOPLE1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>

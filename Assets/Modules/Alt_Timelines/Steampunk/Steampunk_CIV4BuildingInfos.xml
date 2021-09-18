@@ -192,7 +192,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<FreePromotion>PROMOTION_NAVIGATION2</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_NAVIGATION2</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>

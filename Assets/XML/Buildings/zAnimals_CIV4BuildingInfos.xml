@@ -2078,7 +2078,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_SEA_HUNTER</ArtDefineTag>
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
-			<FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SEA_HUNTER1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

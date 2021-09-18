@@ -433,7 +433,11 @@
 				<BonusType>BONUS_BRICKS</BonusType>
 				<BonusType>BONUS_STONE</BonusType>
 			</PrereqBonuses>
-			<FreePromotion>PROMOTION_FANATIC</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_FANATIC</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -990,7 +994,11 @@
 			</CommerceChangeDoubleTimes>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_ORDER_OF_ORMAZD</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_ORDER_OF_ORMAZD</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -1749,7 +1757,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BAKER_STREET</MovieDefineTag>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<FreePromotion>PROMOTION_SECURITY2</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SECURITY2</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -2528,7 +2540,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BLARNEY</MovieDefineTag>
 			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<FreePromotion>PROMOTION_DECEPTION1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_DECEPTION1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -2801,7 +2817,11 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_SPEED</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SPEED</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6130,7 +6150,11 @@
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
-			<FreePromotion>PROMOTION_SENTRY</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SENTRY</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iWorkerSpeedModifier>30</iWorkerSpeedModifier>
 			<iMilitaryProductionModifier>30</iMilitaryProductionModifier>
@@ -6779,7 +6803,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>
-			<FreePromotion>PROMOTION_COASTAL_GUARD1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_COASTAL_GUARD1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
@@ -7526,7 +7554,11 @@
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
-			<FreePromotion>PROMOTION_SHOCK</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SHOCK</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iWarWearinessModifier>-30</iWarWearinessModifier>
 			<Flavors>
@@ -7616,7 +7648,11 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<FreePromotion>PROMOTION_COMBAT1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_COMBAT1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iHurryAngerModifier>-25</iHurryAngerModifier>
 			<FreeBuilding>BUILDING_COLOSSEUM</FreeBuilding>
 			<iAsset>2</iAsset>
@@ -12763,7 +12799,11 @@
 					<iExperience>2</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
-			<FreePromotion>PROMOTION_NAVIGATION1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_NAVIGATION1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
 			<iAsset>14</iAsset>
 			<Flavors>
@@ -13066,7 +13106,11 @@
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
-			<FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SEA_HUNTER1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iFoodKept>30</iFoodKept>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<Flavors>
@@ -13152,7 +13196,11 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<FreePromotion>PROMOTION_LOOTER</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_LOOTER</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -13452,7 +13500,11 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_WARMTH1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iDefense>100</iDefense>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -17587,7 +17639,11 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_MORALE</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MORALE</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iCost>1860</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
@@ -17689,7 +17745,17 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SHAOLIN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHAOLIN</MovieDefineTag>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
-			<FreePromotion>PROMOTION_MARTIAL_ARTS</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARTIAL_ARTS</PromotionType>
+				</FreePromoType>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARTIAL_ARTS2</PromotionType>
+				</FreePromoType>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARTIAL_ARTS3</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -17711,8 +17777,6 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<FreePromotion_2>PROMOTION_MARTIAL_ARTS2</FreePromotion_2>
-			<FreePromotion_3>PROMOTION_MARTIAL_ARTS3</FreePromotion_3>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18274,7 +18338,11 @@
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
-			<FreePromotion>PROMOTION_TACTICS</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_TACTICS</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iEspionageDefense>30</iEspionageDefense>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<Flavors>
@@ -20479,7 +20547,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<FreePromotion>PROMOTION_PATRIOTIC1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_PATRIOTIC1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -21322,7 +21394,11 @@
 					<iExperience>4</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
-			<FreePromotion>PROMOTION_COMBAT1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_COMBAT1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<DomainProductionModifiers>
 				<DomainProductionModifier>
 					<DomainType>DOMAIN_SEA</DomainType>
