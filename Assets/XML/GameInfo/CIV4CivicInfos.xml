@@ -9530,6 +9530,10 @@
 					<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -11888,6 +11892,10 @@
 					<BuildingType>BUILDING_EMPORIUM</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
@@ -13992,37 +14000,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<!-- Wrong Civic for these Modifiers
-			<BuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MINING_INC_SURVEY_OFFICE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ALUMINUM_CO_R_AND_D</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_STANDARD_ETHANOL_DISTILLERY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FOOD_PROCESSING_PLANT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CEREAL_MILLS_FACTORY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SID_SUSHI_RESTAURANT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers> -->
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -20091,6 +20068,10 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EMPORIUM</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>

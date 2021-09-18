@@ -83,6 +83,7 @@ struct CvInfoUtil : bst::noncopyable
 		virtual void checkSum(uint32_t&) const {}
 		virtual void readXml(CvXMLLoadUtility*) = 0;
 		virtual void copyNonDefaults(const WrappedVar*)	= 0;
+		virtual void sendVarToPython(const char*) = 0;
 
 		virtual void sendVarToPython(const char*) const {}
 
@@ -128,6 +129,13 @@ struct CvInfoUtil : bst::noncopyable
 		{
 			Cy::call(file, "handleInteger", Cy::Args()
 				<< ref()
+			);
+		}
+
+		void sendVarToPython(const char* file)
+		{
+			Cy::call(file, "handleInteger", Cy::Args()
+				<< *m_ptr
 			);
 		}
 
@@ -191,6 +199,13 @@ struct CvInfoUtil : bst::noncopyable
 		{
 			Cy::call(file, "handleEnum", Cy::Args()
 				<< static_cast<int>(ref())
+			);
+		}
+
+		void sendVarToPython(const char* file)
+		{
+			Cy::call(file, "handleEnum", Cy::Args()
+				<< static_cast<int>(*m_ptr)
 			);
 		}
 
@@ -486,6 +501,13 @@ struct CvInfoUtil : bst::noncopyable
 			);
 		}
 
+		void sendVarToPython(const char* file)
+		{
+			Cy::call(file, "handleVector", Cy::Args()
+				<< static_cast<const std::vector<int>&>(*m_ptr)
+			);
+		}
+
 	protected:
 		std::vector<T>& ref() const { return *static_cast<std::vector<T>*>(m_ptr); }
 	};
@@ -521,6 +543,10 @@ struct CvInfoUtil : bst::noncopyable
 		void copyNonDefaults(const WrappedVar* source)
 		{
 			ref().copyNonDefaults(static_cast<const IDValueMapWrapper*>(source)->ref());
+		}
+
+		void sendVarToPython(const char* file)
+		{
 		}
 
 	protected:
@@ -615,6 +641,10 @@ struct CvInfoUtil : bst::noncopyable
 		void copyNonDefaults(const WrappedVar* source)
 		{
 			ref().copyNonDefaultPairedArrays(static_cast<const IDValueMapOfPairedArrayWrapper*>(source)->ref());
+		}
+
+		void sendVarToPython(const char* file)
+		{
 		}
 
 	protected:
