@@ -122,6 +122,28 @@ struct IDValueMap
 		}
 	}
 
+#define COPY(dst, src, typeName)						 \
+	{													 \
+		const int iNum = sizeof(src) / sizeof(typeName); \
+		dst = new typeName[iNum];						 \
+		for (int i = 0; i < iNum; i++)					 \
+			dst[i] = src[i];							 \
+	}
+
+	void copyNonDefaultPairedArrays(const IDValueMap<ID_, Value_, defaultValue>& other)
+	{
+		foreach_(const pair_t& otherPair, other)
+		{
+			if (!hasValue(otherPair.first))
+			{
+				pair_t pair = pair_t();
+				pair.first = otherPair.first;
+				COPY(pair.second, otherPair.second, Value_);
+				m_map.push_back(pair);
+			}
+		}
+	}
+
 	void copyNonDefaultDelayedResolution(const IDValueMap<ID_, Value_, defaultValue>& other)
 	{
 		if (m_map.empty())
