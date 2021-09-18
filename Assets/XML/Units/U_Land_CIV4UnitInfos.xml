@@ -33770,6 +33770,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
@@ -38179,6 +38180,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCIENT_VETERINARIAN</BuildingType>
 				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
@@ -38361,8 +38363,11 @@
 			</UnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<iCost>330</iCost>
@@ -38554,8 +38559,11 @@
 			</UnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqBonuses>
@@ -40401,6 +40409,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
@@ -40511,6 +40520,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_APOTHECARY</UnitType>
@@ -40615,6 +40625,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>
@@ -40717,6 +40728,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SURGEON</UnitType>
@@ -40818,6 +40830,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDIC</UnitType>
@@ -40918,9 +40931,10 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE</UnitType>
 				<UnitType>UNIT_MEDICAL_LAB_TECH</UnitType>
@@ -41034,9 +41048,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE_II</UnitType>
 			</UnitUpgrades>
@@ -41159,9 +41174,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
 			</UnitUpgrades>
@@ -41276,9 +41292,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41405,9 +41422,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41529,9 +41547,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -41644,10 +41663,13 @@
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
 				<BuildingType>BUILDING_REJUVENATION_TANK</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_STATION</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>

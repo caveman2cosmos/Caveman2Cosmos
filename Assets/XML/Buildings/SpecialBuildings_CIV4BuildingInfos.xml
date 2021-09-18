@@ -475,9 +475,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
@@ -4605,92 +4606,92 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_CURRENCY</TechType>
 					<CommercePercents>
 						<iCommercePercent>-100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_USURY</TechType>
 					<CommercePercents>
 						<iCommercePercent>-200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_BANKING</TechType>
 					<CommercePercents>
 						<iCommercePercent>-200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_MERCANTILISM</TechType>
 					<CommercePercents>
 						<iCommercePercent>-200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ECONOMICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>-300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CONSUMERISM</TechType>
 					<CommercePercents>
 						<iCommercePercent>-300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_APPLIED_ECONOMICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>-400</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_GLOBALIZATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>-500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CONGLOMERATES</TechType>
 					<CommercePercents>
 						<iCommercePercent>-500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_MEGACORPORATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>-500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ENVIRONMENTAL_ECONOMICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>-300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PLANETARY_ECONOMICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>-300</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_LUNAR_TRADE</TechType>
 					<CommercePercents>
 						<iCommercePercent>-200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_INTERSTELLAR_TRADE</TechType>
 					<CommercePercents>
 						<iCommercePercent>-200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
@@ -5966,47 +5967,47 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_WEARABLE_COMPUTERS</TechType>
 					<CommercePercents>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_DIGITIZATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_CYBERWARFARE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_AUTOMATED_TRAFFIC</TechType>
 					<CommercePercents>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<CommercePercents>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</Type>
@@ -9280,7 +9281,7 @@
 			<Description>TXT_KEY_BUILDING_GRASS_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<Bonus>BONUS_GRASS</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9289,11 +9290,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9381,6 +9383,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HEALTHCARE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>3</iHealth>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -9425,11 +9432,11 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MUD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_TIPI</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9567,7 +9574,6 @@
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
 				<BuildingType>BUILDING_HOGAN</BuildingType>
 				<BuildingType>BUILDING_PUEBLO</BuildingType>
-				<BuildingType>BUILDING_CLIFF_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -9585,14 +9591,12 @@
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
@@ -11424,16 +11428,16 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_LITERATURE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>-100</iCommercePercent>
 						<iCommercePercent>-200</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14998,8 +15002,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_FREE_ARTISTRY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -15007,8 +15011,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_PRINTING_PRESS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -15016,8 +15020,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ELECTRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
@@ -15025,8 +15029,8 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<iEspionageDefense>2</iEspionageDefense>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -15177,13 +15181,14 @@
 			<Description>TXT_KEY_BUILDING_STONE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STONE_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_MUD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -15193,7 +15198,7 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -15298,7 +15303,7 @@
 			<Description>TXT_KEY_BUILDING_TIPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIPI_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_HIDE</Bonus>
@@ -15316,7 +15321,6 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
@@ -16029,7 +16033,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
@@ -16089,7 +16093,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
 			<iHealth>-1</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -16114,11 +16118,12 @@
 			</PrereqOrFeature>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>

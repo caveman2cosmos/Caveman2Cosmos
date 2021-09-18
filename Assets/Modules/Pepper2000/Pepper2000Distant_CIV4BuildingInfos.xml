@@ -934,14 +934,14 @@
 				<iCommerce>100</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 			</PrereqInCityBuildings>
@@ -1269,20 +1269,20 @@
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
 			<iHappiness>6</iHappiness>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_ARCHETYPAL_VECTOR_SPACES</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_OMEGA_POINT</TechType>
 					<CommercePercents>
 						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 			</PrereqInCityBuildings>

@@ -27,128 +27,128 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_ZEPPELINS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_AVIATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ROCKETRY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ADVANCED_ROCKETRY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ADVANCED_AVIATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_NAVAL_FLIGHT</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_JET_PROPULSION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_VERTICAL_FLIGHT</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ASTRONAUTICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_SUPERSONIC_FLIGHT</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_STEALTH</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_UNMANNED_AIR_VEHICLES</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_HYPERSONIC_FLIGHT</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_SKYROADS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_ORBITAL_FLIGHT</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
@@ -716,14 +716,14 @@
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2200,6 +2200,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2228,6 +2229,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PHARMACY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2732,15 +2738,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FISHMONGER</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FISHMONGER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2761,6 +2762,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FISHMONGER</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3225,15 +3231,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3254,6 +3255,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4107,9 +4113,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4153,29 +4162,29 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_ASTROBIOLOGY_LAB</FreeBuilding>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_XENODIPLOMACY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_BINARY_SEMIOTICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_INTERSTELLAR_COMMUNICATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
@@ -4592,6 +4601,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POST_OFFICE</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5746,15 +5756,15 @@
 			<YieldChanges>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_ADAPTIVE_RADIATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>400</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
@@ -6216,29 +6226,29 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<TechCommercePercentChanges>
-				<TechCommercePercentChange>
+			<TechCommerceChanges>
+				<TechCommerceChange>
 					<TechType>TECH_MASS_TRANSIT</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-				<TechCommercePercentChange>
+				</TechCommerceChange>
+				<TechCommerceChange>
 					<TechType>TECH_SUPERSONIC_RAILS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>100</iCommercePercent>
 					</CommercePercents>
-				</TechCommercePercentChange>
-			</TechCommercePercentChanges>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
@@ -6292,15 +6302,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_RED_CROSS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -6351,9 +6356,12 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_PHARMACEUTICALS</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>8290</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>

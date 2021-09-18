@@ -17341,9 +17341,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
-		//	Building commerce changes
-			if (kBuilding.isAnyTechCommerceChanges())
-				buildBuildingTechCommerceChangeString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building yield changes
 			if (kBuilding.isAnyTechYieldChanges())
 				buildBuildingTechYieldChangeString(szBuffer, eTech, iI, true, bPlayerContext);
@@ -21068,7 +21065,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 					aiCommerces[iI] = iBaseCommerceChange + kBuilding.getCommercePerPopChange(iI) * pCity->getPopulation() / 100;
 					if (ePlayer != NO_PLAYER)
 					{
-						aiCommerces[iI] += GET_TEAM(eTeam).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI);
 						aiCommerceModifiers[iI] += GET_TEAM(eTeam).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
 					}
 				}
@@ -22617,12 +22613,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
+		foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
 		{
 			bFirst = true;
 			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 			{
-				const int iValue = modifier.second[iJ];
+				const int iValue = pair.second[iJ];
 				if (iValue != 0)
 				{
 					if (bFirst)
@@ -22631,8 +22627,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 							CvWString::format(
 								L"\n%c%s <link=%s>%s</link>: ",
 								gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
-								CvWString(GC.getTechInfo(modifier.first).getType()).GetCString(),
-								GC.getTechInfo(modifier.first).getDescription()
+								CvWString(GC.getTechInfo(pair.first).getType()).GetCString(),
+								GC.getTechInfo(pair.first).getDescription()
 							)
 						);
 						bFirst = false;
@@ -22747,22 +22743,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			const TechTypes eTech = static_cast<TechTypes>(iTech);
 			if (GC.getGame().canEverResearch(eTech))
 			{
-				if (kBuilding.isAnyTechCommerceChanges())
-				{
-					if (bCivilopediaText)
-					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else
-					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceChangeArray(iTech), false, true);
-				}
 				if (kBuilding.isAnyTechYieldChanges())
 				{
 					if (bCivilopediaText)
@@ -27307,22 +27287,6 @@ void CvGameTextMgr::buildYieldChangeString(CvWStringBuffer &szBuffer, TechTypes 
 	}
 
 	setYieldChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getImprovementInfo((ImprovementTypes)iYieldType).getTechYieldChangesArray(eTech), false, bList);
-}
-
-
-void CvGameTextMgr::buildBuildingTechCommerceChangeString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-	if (bList)
-	{
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%c<link=%s>%s</link>", gDLL->getSymbolID(BULLET_CHAR), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-
-	setCommerceChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechCommerceChangeArray(eTech), false, bList);
 }
 
 

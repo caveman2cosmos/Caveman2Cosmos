@@ -2499,13 +2499,13 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		changeGold(iCaptureGold);
 	}
 
-	bool* pabHasReligion = new bool[GC.getNumReligionInfos()];
-	bool* pabHolyCity = new bool[GC.getNumReligionInfos()];
-	bool* pabHasCorporation = new bool[GC.getNumCorporationInfos()];
-	bool* pabHeadquarters = new bool[GC.getNumCorporationInfos()];
-	int* paiNumRealBuilding = new int[iNumBuildingInfos];
-	int* paiBuildingOriginalOwner = new int[iNumBuildingInfos];
-	int* paiBuildingOriginalTime = new int[iNumBuildingInfos];
+	bst::scoped_array<bool> pabHasReligion(new bool[GC.getNumReligionInfos()]);
+	bst::scoped_array<bool> pabHolyCity(new bool[GC.getNumReligionInfos()]);
+	bst::scoped_array<bool> pabHasCorporation(new bool[GC.getNumCorporationInfos()]);
+	bst::scoped_array<bool> pabHeadquarters(new bool[GC.getNumCorporationInfos()]);
+	bst::scoped_array<int> paiNumRealBuilding(new int[iNumBuildingInfos]);
+	bst::scoped_array<int> paiBuildingOriginalOwner(new int[iNumBuildingInfos]);
+	bst::scoped_array<int> paiBuildingOriginalTime(new int[iNumBuildingInfos]);
 
 	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); ++iI)
 	{
@@ -2806,14 +2806,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	{
 		logBBAI("  Player %d (%S) acquires city %S bConq %d bTrade %d", getID(), getCivilizationDescription(0), pNewCity->getName(0).GetCString(), bConquest, bTrade );
 	}
-
-	SAFE_DELETE_ARRAY(pabHasReligion);
-	SAFE_DELETE_ARRAY(pabHolyCity);
-	SAFE_DELETE_ARRAY(pabHasCorporation);
-	SAFE_DELETE_ARRAY(pabHeadquarters);
-	SAFE_DELETE_ARRAY(paiNumRealBuilding);
-	SAFE_DELETE_ARRAY(paiBuildingOriginalOwner);
-	SAFE_DELETE_ARRAY(paiBuildingOriginalTime);
 
 	if (!bConquest)
 	{
@@ -18908,7 +18900,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		// Toffer - Read maps
 		{
-			short iSize;
+			short iSize = 0;
 			short iType;
 			char cCount;
 			int iCount;
@@ -18928,6 +18920,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_bonusExport.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusImportSize");
 			while (iSize-- > 0)
 			{
@@ -18940,6 +18933,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_bonusImport.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusMintedPercentSize");
 			while (iSize-- > 0)
 			{
@@ -18953,6 +18947,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 			// Building counters
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingMakingSize");
 			while (iSize-- > 0)
 			{
@@ -18965,6 +18960,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_buildingMaking.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iFreeBuildingCountSize");
 			while (iSize-- > 0)
 			{
@@ -18977,6 +18973,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_freeBuildingCount.insert(std::make_pair(iType, sCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHappinessSize");
 			while (iSize-- > 0)
 			{
@@ -18989,6 +18986,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_extraBuildingHappiness.insert(std::make_pair(iType, iCount));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHealthSize");
 			while (iSize-- > 0)
 			{
@@ -19001,6 +18999,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_extraBuildingHealth.insert(std::make_pair(iType, iCount));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingProductionModSize");
 			while (iSize-- > 0)
 			{
@@ -19013,6 +19012,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_buildingProductionMod.insert(std::make_pair(iType, iCount));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingCostModSize");
 			while (iSize-- > 0)
 			{
@@ -19026,6 +19026,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 			// Unit counters
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCountSize");
 			while (iSize-- > 0)
 			{
@@ -19038,6 +19039,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_unitCount.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitMakingSize");
 			while (iSize-- > 0)
 			{
@@ -19050,6 +19052,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_unitMaking.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatGeneralPointsTypeSize");
 			while (iSize-- > 0)
 			{
@@ -19062,6 +19065,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_greatGeneralPointsType.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGoldenAgeOnBirthOfGreatPersonCountSize");
 			while (iSize-- > 0)
 			{
@@ -19074,6 +19078,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair(iType, cCount));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatPeopleRateforUnitSize");
 			while (iSize-- > 0)
 			{
@@ -19086,6 +19091,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_greatPeopleRateforUnit.insert(std::make_pair(iType, iCount));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitProductionModSize");
 			while (iSize-- > 0)
 			{
@@ -19099,6 +19105,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 			// Unit-Combat counters
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatProductionModSize");
 			while (iSize-- > 0)
 			{
@@ -19111,6 +19118,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_unitCombatProductionMod.insert(std::make_pair(iType, iCount));
 				}
 			}
+			iSize = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatFreeXPSize");
 			while (iSize-- > 0)
 			{
@@ -19980,7 +19988,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		// Toffer - Read maps
 		{
-			short iSize;
+			short iSize = 0;
 			short iType;
 			uint32_t iCountU;
 			// Unit counters
