@@ -21363,9 +21363,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (!bRelDisabled)
 	{
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion(), szBuffer);
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_2(), szBuffer);
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_3(), szBuffer);
+		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
+		{
+			if (kFreePromo.m_pExprFreePromotionCondition == NULL)
+			{
+				setFreePromoBuildingHelp(kFreePromo.ePromotion, szBuffer);
+			}
+		}
 	}
 
 	if (kBuilding.isProvidesFreshWater())
@@ -22231,12 +22235,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (!bRelDisabled)
 	{
-		foreach_(const FreePromoTypes& pFreePromo, kBuilding.getFreePromoTypes())
+		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
 		{
-			const BoolExpr* pExpr = pFreePromo.m_pExprFreePromotionCondition;
+			const BoolExpr* pExpr = kFreePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
-				const PromotionTypes ePromo = pFreePromo.ePromotion;
+				const PromotionTypes ePromo = kFreePromo.ePromotion;
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(GC.getPromotionInfo(ePromo).getType()).GetCString(), GC.getPromotionInfo(ePromo).getTextKeyWide()));
 				szBuffer.append(" (");
 				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES"));

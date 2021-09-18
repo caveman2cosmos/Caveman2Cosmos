@@ -88,7 +88,6 @@ public:
 	int getNumExtraFreeBonuses() const				{ return m_aExtraFreeBonuses.size(); }
 	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
 	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
-	int getFreePromotion() const					{ return m_iFreePromotion; }
 	int getCivicOption() const						{ return m_iCivicOption; }
 	int getAIWeight() const							{ return m_iAIWeight; }
 	int getProductionCost() const					{ return m_iProductionCost; }
@@ -177,8 +176,6 @@ public:
 	void setMissionType(int iNewType)				{ m_iMissionType = iNewType; }
 	int getVoteSourceType() const					{ return m_iVoteSourceType; }
 	int getDCMAirbombMission() const				{ return m_iDCMAirbombMission; }
-	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
-	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
 	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
 	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
 	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
@@ -465,7 +462,7 @@ public:
 
 	bool isHurry(int i) const;
 
-	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
+	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aConditionalFreePromotions; }
 	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
 	int getNumHealUnitCombatTypes() const;
@@ -512,8 +509,6 @@ public:
 	int getTechHealth(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
 	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
-
-	//cost BoolExpr* getFreePromotionCondition();
 
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 
@@ -585,8 +580,6 @@ private:
 	mutable bool m_bEnablesOtherBuildingsValue;
 	bool m_bEnablesUnits;
 
-	int m_iFreePromotion_2;
-	int m_iFreePromotion_3;
 	int m_iPrereqVicinityBonus;
 	int m_iPrereqRawVicinityBonus;
 	int m_iGlobalPopulationgrowthratepercentage;
@@ -621,7 +614,6 @@ private:
 	int m_iNumFreeBonuses;
 	BuildingTypes m_iFreeBuilding;
 	BuildingTypes m_iFreeAreaBuilding;
-	int m_iFreePromotion;
 	int m_iCivicOption;
 	int m_iAIWeight;
 	int m_iProductionCost;
@@ -751,7 +743,6 @@ private:
 	UnitTypes m_ePropertySpawnUnit;
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
-	//TechTypes m_eFreeSpecialTech;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
@@ -812,7 +803,6 @@ private:
 	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	std::vector<TechTypes> m_piPrereqAndTechs;
-	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
 	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
@@ -822,7 +812,7 @@ private:
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
-	std::vector<FreePromoTypes> m_aFreePromoTypes;
+	std::vector<FreePromoTypes> m_aConditionalFreePromotions;
 	std::vector<TraitTypes> m_aiFreeTraitTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 
@@ -865,7 +855,6 @@ private:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
-	//const BoolExpr* m_pExprFreePromotionCondition;
 };
 
 #endif

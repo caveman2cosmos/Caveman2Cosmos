@@ -3423,7 +3423,7 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
 
-		if (getNumActiveBuilding(eBuilding) > 0 && !GC.getBuildingInfo(eBuilding).getFreePromoTypes().empty())
+		if (getNumActiveBuilding(eBuilding) > 0)
 		{
 			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eBuilding), pUnit);
 		}
@@ -4839,10 +4839,10 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			clearRawVicinityBonusCache(kBuilding.getExtraFreeBonus(iI));
 		}
 
-		if (kBuilding.getFreePromotion() != NO_PROMOTION)
-		{
-			changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion(), iChange);
-		}
+		//if (kBuilding.getFreePromotion() != NO_PROMOTION)
+		//{
+		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion(), iChange);
+		//}
 
 		if (kBuilding.getPropertySpawnProperty() != NO_PROPERTY && kBuilding.getPropertySpawnUnit() != NO_UNIT)
 		{
@@ -4853,15 +4853,15 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnit());
 		}
 
-		if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
-		{
-			changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_2(), iChange);
-		}
+		//if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
+		//{
+		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_2(), iChange);
+		//}
 
-		if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
-		{
-			changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_3(), iChange);
-		}
+		//if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
+		//{
+		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_3(), iChange);
+		//}
 
 		changeEspionageDefenseModifier(kBuilding.getEspionageDefenseModifier() * iChange);
 
@@ -20173,29 +20173,13 @@ void CvCity::doPromotion()
 		}
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-		if (kBuilding.isApplyFreePromotionOnMove())
+		if (kBuilding.isApplyFreePromotionOnMove() && !kBuilding.getFreePromoTypes().empty())
 		{
-			const bool bHasFreePromofromList = !kBuilding.getFreePromoTypes().empty();
-
-			const PromotionTypes ePromotion1 = (PromotionTypes)kBuilding.getFreePromotion();
-			const PromotionTypes ePromotion2 = (PromotionTypes)kBuilding.getFreePromotion_2();
-			const PromotionTypes ePromotion3 = (PromotionTypes)kBuilding.getFreePromotion_3();
-
-			if (ePromotion1 != NO_PROMOTION || ePromotion2 != NO_PROMOTION || ePromotion3 != NO_PROMOTION || bHasFreePromofromList)
+			foreach_(CvUnit* pLoopUnit, plot()->units())
 			{
-				foreach_(CvUnit* pLoopUnit, plot()->units())
+				if (pLoopUnit->getTeam() == GET_PLAYER(getOwner()).getTeam())
 				{
-					if (GET_TEAM(pLoopUnit->getTeam()).getID() == GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getID())
-					{
-						assignPromotionChecked(ePromotion1, pLoopUnit);
-						assignPromotionChecked(ePromotion2, pLoopUnit);
-						assignPromotionChecked(ePromotion3, pLoopUnit);
-
-						if (bHasFreePromofromList)
-						{
-							assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
-						}
-					}
+					assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
 				}
 			}
 		}
@@ -23419,9 +23403,11 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
 
 bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
 {
-	if (promotion != NO_PROMOTION &&
-		((GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion)) ||
-			unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
+	if (unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
+#ifdef COMBAT_MOD_EQUIPTMENT
+	|| (GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion))
+#endif // COMBAT_MOD_EQUIPTMENT
+			)
 	{
 		unit->setHasPromotion(promotion, true);
 		return true;
@@ -23431,17 +23417,18 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) cons
 
 void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit) const
 {
-	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
+	foreach_(const FreePromoTypes& kFreePromo, building.getFreePromoTypes())
 	{
-		if (freePromoType.ePromotion != NO_PROMOTION &&
-			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
-				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
+		if (unit->canAcquirePromotion(kFreePromo.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
+#ifdef COMBAT_MOD_EQUIPTMENT
+		|| (GC.getPromotionInfo(kFreePromo.ePromotion).isEquipment() && canEquip(unit, kFreePromo.ePromotion))
+#endif // COMBAT_MOD_EQUIPTMENT
+			)
 		{
-			if (!freePromoType.m_pExprFreePromotionCondition ||
-				//freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
-				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
+			if (!kFreePromo.m_pExprFreePromotionCondition ||
+				kFreePromo.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
 			{
-				unit->setHasPromotion(freePromoType.ePromotion, true);
+				unit->setHasPromotion(kFreePromo.ePromotion, true);
 			}
 		}
 	}
@@ -23454,9 +23441,9 @@ bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			if (pUnit->isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).isEquipment())
+			const PromotionTypes eMayDeny = ((PromotionTypes)iI);
+			if (pUnit->isHasPromotion(eMayDeny) && GC.getPromotionInfo(eMayDeny).isEquipment())
 			{
-				const PromotionTypes eMayDeny = ((PromotionTypes)iI);
 				if (GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionInfo(eMayDeny).getPromotionLine() != NO_PROMOTIONLINE)
 				{
 					if (GC.getPromotionInfo(eEquipment).getPromotionLine() == GC.getPromotionInfo(eMayDeny).getPromotionLine())
