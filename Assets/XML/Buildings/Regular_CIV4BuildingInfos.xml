@@ -3777,7 +3777,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
-			<ObsoleteTech>TECH_NANOMORPHIC_TROIDS</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_ANDROIDS</Bonus>
 			<PrereqInCityBuildings>
@@ -7682,7 +7681,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IMPRESSIONISM</PrereqTech>
-			<ObsoleteTech>TECH_HOLOGRAPHICS</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_DYE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_PAPER</Bonus>
@@ -14820,7 +14823,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>410</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -26309,7 +26316,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>1230</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -28078,7 +28089,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_DYE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_PAPER</Bonus>
@@ -34123,6 +34138,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DRYING_FRAME</BuildingType>
 				<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -34183,6 +34199,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DRYING_FRAME</BuildingType>
 				<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>40</iCost>
 			<iHealth>1</iHealth>
@@ -36401,7 +36418,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFINING</PrereqTech>
-			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CHEMICALS</Bonus>
@@ -38543,7 +38564,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
-			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>234</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -42805,7 +42830,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_RAW_FISH</Bonus>
@@ -52107,7 +52136,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GASTRONOMY</PrereqTech>
-			<ObsoleteTech>TECH_DESIGNER_MICROBIOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
@@ -55810,15 +55843,91 @@
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3665</iCost>
+			<iTradeRoutes>1</iTradeRoutes>
+			<iTradeRouteModifier>15</iTradeRouteModifier>
 			<CommerceChanges>
-				<iCommerce>85</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>90</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceModifiers>
 			<YieldChanges>
-				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>15</iYield>
 			</YieldChanges>
+			<BonusHappinessChanges>
+				<BonusHappinessChange>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_DYE</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_HATS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_SHOES</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+			</BonusHappinessChanges>
+			<BonusHealthChanges>
+				<BonusHealthChange>
+					<BonusType>BONUS_SALT</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+			</BonusHealthChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_CLAM</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CRAB</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_FISH</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_LOBSTER</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_SHRIMP</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_WHALE</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_TIRES</BonusType>
@@ -55901,25 +56010,25 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_FRUIT</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_VEGETABLES</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_NUTS</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_BERRIES</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -55961,7 +56070,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_CHEESE</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -56141,7 +56250,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_PENCILS</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -56171,7 +56280,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_COMPUTERS</BonusType>
 					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -56237,7 +56346,49 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_WAX</BonusType>
 					<CommerceModifiers>
+						<iCommerce>2</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_CHARCOAL</BonusType>
+					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_CLAY</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_DRUGS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_GRAINS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_GRAPHITE</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_SEASONING</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_QUANTUM_DOTS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
@@ -56247,12 +56398,36 @@
 					<iHappiness>1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
-			<iHealth>7</iHealth>
-			<iHappiness>11</iHappiness>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<TechType>TECH_GUILDS</TechType>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_TELEPHONE</TechType>
+					<CommercePercents>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_CONSUMERISM</TechType>
+					<CommercePercents>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<iHealth>8</iHealth>
+			<iHappiness>15</iHappiness>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<iSpecialistCount>4</iSpecialistCount>
+					<iSpecialistCount>5</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -56273,8 +56448,13 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<iAmountPerTurn>25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -62407,7 +62587,11 @@
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HEALTHCARE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1410</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -62476,7 +62660,11 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTHING</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_INVENTION</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>40</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -63594,7 +63782,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -65214,7 +65406,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TELEGRAPH</PrereqTech>
 			<iCost>710</iCost>
-			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -65252,7 +65448,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONY</PrereqTech>
-			<ObsoleteTech>TECH_CROP_ROTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<VicinityBonus>BONUS_CORN</VicinityBonus>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
@@ -67099,7 +67299,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>332</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -78601,7 +78805,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PRESS_AGENCY</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>710</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -85322,6 +85530,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PHOTOGRAPHY</PrereqTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
@@ -88113,10 +88326,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_PHOTOGRAPHY_STUDIO</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PHOTOGRAPHY_STUDIO</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</ReplacementBuildings>
 			<iCost>410</iCost>
 			<CommerceChanges>
@@ -88145,7 +88359,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
-			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_PAPER</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -91503,7 +91721,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-			<ObsoleteTech>TECH_DIGITIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -100895,7 +101117,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
 			<iCost>2305</iCost>
-			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -101523,6 +101749,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_DRYING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_RAW_MEAT</Bonus>
@@ -104587,7 +104818,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PAPER</PrereqTech>
-			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<Bonus>BONUS_PAPER</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -107671,7 +107906,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
 			<iCost>2305</iCost>
-			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
@@ -107839,7 +108078,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<iCost>261</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -112161,7 +112404,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
-			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_HYPERMARKET</ObsoletesToBuilding>
 			<PrereqBonuses>
 				<Bonus>BONUS_TOYS</Bonus>
 			</PrereqBonuses>

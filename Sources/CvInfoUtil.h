@@ -5,6 +5,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvPython.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "IDValueMap.h"
@@ -58,7 +59,7 @@ struct CvInfoUtil : bst::noncopyable
 	}
 
 	///=============================
-	/// Variable wrapper base class 
+	/// Variable wrapper base class
 	///=============================
 
 	struct WrappedVar : bst::noncopyable
@@ -70,12 +71,13 @@ struct CvInfoUtil : bst::noncopyable
 		virtual ~WrappedVar() {}
 		virtual void initVar() {}
 		virtual void uninitVar() {}
-		virtual void checkSum(uint32_t& iSum) const = 0;
+		virtual void checkSum(uint32_t&) const = 0;
 		virtual void readXml(CvXMLLoadUtility*) = 0;
 		virtual void copyNonDefaults(const WrappedVar*)	= 0;
+		virtual void sendVarToPython(const char*) = 0;
 
 	protected:
-		const CvWString m_tag;
+		const std::wstring m_tag;
 	};
 
 	///=================
@@ -112,6 +114,13 @@ struct CvInfoUtil : bst::noncopyable
 				*m_ptr = *static_cast<const IntWrapper*>(pOther)->m_ptr;
 		}
 
+		void sendVarToPython(const char* file)
+		{
+			Cy::call(file, "handleInteger", Cy::Args()
+				<< *m_ptr
+			);
+		}
+
 	protected:
 		T* m_ptr;
 		const T m_default;
@@ -123,7 +132,7 @@ struct CvInfoUtil : bst::noncopyable
 		return *this;
 	}
 
-	CvInfoUtil& add(bool& var, const wchar_t* tag, bool defaultValue = 0)
+	CvInfoUtil& add(bool& var, const wchar_t* tag, bool defaultValue = false)
 	{
 		m_wrappedVars.push_back(new IntWrapper<bool>(var, tag, defaultValue));
 		return *this;
@@ -168,6 +177,13 @@ struct CvInfoUtil : bst::noncopyable
 				*m_ptr = *static_cast<const EnumWrapper*>(pOther)->m_ptr;
 		}
 
+		void sendVarToPython(const char* file)
+		{
+			Cy::call(file, "handleEnum", Cy::Args()
+				<< static_cast<int>(*m_ptr)
+			);
+		}
+
 	protected:
 		Enum_t* m_ptr;
 	};
@@ -209,6 +225,13 @@ struct CvInfoUtil : bst::noncopyable
 			algo::sort(*m_ptr);
 		}
 
+		void sendVarToPython(const char* file)
+		{
+			Cy::call(file, "handleVector", Cy::Args()
+				<< static_cast<const std::vector<int>&>(*m_ptr)
+			);
+		}
+
 	protected:
 		std::vector<T>* m_ptr;
 	};
@@ -245,6 +268,10 @@ struct CvInfoUtil : bst::noncopyable
 		virtual void copyNonDefaults(const WrappedVar* pOther)
 		{
 			m_ptr->copyNonDefaults(*static_cast<const IDValueMapWrapper*>(pOther)->m_ptr);
+		}
+
+		void sendVarToPython(const char* file)
+		{
 		}
 
 	protected:
@@ -290,6 +317,10 @@ struct CvInfoUtil : bst::noncopyable
 			m_ptr->copyNonDefaultsDelayedResolution(*static_cast<const IDValueMapWithDelayedResolutionWrapper*>(pOther)->m_ptr);
 		}
 
+		void sendVarToPython(const char* file)
+		{
+		}
+
 	protected:
 		IDValueMap_T* m_ptr;
 	};
@@ -301,7 +332,28 @@ struct CvInfoUtil : bst::noncopyable
 		return *this;
 	}
 
+	///==================
+	/// Python interface
+	///==================
+
+	static void publishPythonInterface()
+	{
+		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvInfoBase*>())
+			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
+		;
+	}
+
 private:
+	void sendDataMembersToPython(const std::string file)
+	{
+		foreach_(WrappedVar* wrapper, m_wrappedVars)
+			wrapper->sendVarToPython(file.c_str());
+	}
+
+	///========================================================
+	/// Wrapped pointers to the data members of an info object
+	///========================================================
+
 	std::vector<WrappedVar*> m_wrappedVars;
 };
 
