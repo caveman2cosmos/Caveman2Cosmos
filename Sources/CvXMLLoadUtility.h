@@ -531,6 +531,9 @@ public:
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
 
+	template <class T>
+	void SetList(T** ppList, int size, const wchar_t* tag);
+
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal = 0);
 
@@ -855,6 +858,31 @@ void CvXMLLoadUtility::InitPointerList(T*** pppList, int size)
 	for (int i = 0; i < size; i++)
 	{
 		(*pppList)[i] = NULL;
+	}
+}
+
+template <class T>
+void CvXMLLoadUtility::SetList(T** ppList, int size, const wchar_t* tag)
+{
+	InitList(ppList, size);
+
+	if (TryMoveToXmlFirstChild(tag))
+	{
+		if (const int iNumSibs = GetXmlChildrenNumber())
+		{
+			if (GetChildXmlVal(&(*ppList)[0]))
+			{
+				for (int i = 1; i < iNumSibs; i++)
+				{
+					if (!GetNextXmlVal(&(*ppList)[i]))
+					{
+						break;
+					}
+				}
+				MoveToXmlParent();
+			}
+		}
+		MoveToXmlParent();
 	}
 }
 

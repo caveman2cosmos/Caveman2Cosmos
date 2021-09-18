@@ -21,14 +21,42 @@ def handleEnum(args):
 	e = args
 	GAME.log("CvInfoUtil.log", g_infoType + " - Enum recieved, value: %d" %e)
 
+def handleString(args):
+	pass
+
+def handleArray(args):
+	a = args
+	msg = g_infoType + " - Array recieved"
+	_formatValues(a, msg)
+	GAME.log("CvInfoUtil.log", msg)
+
+def handle2DArray(args):
+	pass
+
 def handleVector(args):
 	v = args
 	msg = g_infoType + " - Vector recieved"
-	if v:
-		values = ", values:"
-		for i in v:
-			values += "\s%d," %i
-		msg += values.pop()
+	_formatValues(v, msg)
 	GAME.log("CvInfoUtil.log", msg)
 
-#def handleIDValueMap(args):
+def handleIDValueMap(args):
+	pass
+
+def _formatValues(seq, msg):
+	if seq:
+		values = ", values:"
+		for i in seq:
+			assert(i is not None)
+			try:
+				if isinstance(i, int):
+					values += "\s%d," %i
+				else:
+					values += "\s%d," %int(i)
+				values.pop()
+			except:
+				try:
+					values += "\s" + str(i) + ","
+					values.pop()
+				except:
+					values += "\sFormat list values failed!"
+		msg += values
