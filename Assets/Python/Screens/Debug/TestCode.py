@@ -833,7 +833,7 @@ class TestCode:
 					aFreePromotion = [CvReplacedBuildingInfo.getFreePromotion(), CvReplacedBuildingInfo.getFreePromotion_2(), CvReplacedBuildingInfo.getFreePromotion_3()]
 					for i in xrange(len(aBaseFreePromotion)):
 						if aBaseFreePromotion[i] != aFreePromotion[i] and aFreePromotion[i] != -1:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" base free promotion: "+str(aBaseFreePromotion[i])+" replaced free promotion: "+GC.getPromotionInfo(aFreePromotion[i]).getType())
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" base free promotion: "+str(GC.getPromotionInfo(aBaseFreePromotion[i]).getType())+" replaced free promotion: "+GC.getPromotionInfo(aFreePromotion[i]).getType())
 					aFoodKept[REPLACED] += CvReplacedBuildingInfo.getFoodKept()
 					aPopulationgrowthratepercentage[REPLACED] += CvReplacedBuildingInfo.getPopulationgrowthratepercentage()
 					aAdjacentDamagePercent[REPLACED] += CvReplacedBuildingInfo.getAdjacentDamagePercent()

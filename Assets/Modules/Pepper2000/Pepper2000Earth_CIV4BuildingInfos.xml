@@ -349,7 +349,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
-			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<iCost>1540</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>

@@ -164,7 +164,11 @@
 			<Civilopedia>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
-			<ObsoleteTech>TECH_POP_ART</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

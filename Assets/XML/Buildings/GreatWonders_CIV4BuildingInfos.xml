@@ -3381,6 +3381,11 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
@@ -6007,6 +6012,7 @@
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
 				<BuildingType>BUILDING_IRON_MINE</BuildingType>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
@@ -15280,14 +15286,24 @@
 					<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
+					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

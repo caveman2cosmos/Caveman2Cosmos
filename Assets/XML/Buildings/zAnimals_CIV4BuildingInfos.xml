@@ -631,7 +631,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_CARNIVAL</ConstructSound>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
