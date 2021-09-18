@@ -7,7 +7,7 @@ from typing import Sequence, Tuple
 
 class _PythonVersion(Enum):
     python_2: str = "2"
-    python_3: str = "3"
+    #python_3: str = "3"
 
 
 def _args() -> Namespace:
