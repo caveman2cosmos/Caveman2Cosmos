@@ -462,7 +462,7 @@ public:
 
 	bool isHurry(int i) const;
 
-	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aConditionalFreePromotions; }
+	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
 	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
 	int getNumHealUnitCombatTypes() const;
@@ -812,7 +812,7 @@ private:
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
-	std::vector<FreePromoTypes> m_aConditionalFreePromotions;
+	std::vector<FreePromoTypes> m_aFreePromoTypes;
 	std::vector<TraitTypes> m_aiFreeTraitTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 

@@ -2032,7 +2032,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 			kFreePromotion.m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
-	iNumElements = m_aHealUnitCombatTypes.size();
+	int iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aHealUnitCombatTypes[i].eUnitCombat);
@@ -3334,7 +3334,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"FreePromoTypes"))
 	{
 		const int iNum = pXML->GetXmlChildrenNumber(L"FreePromoType" );
-		m_aConditionalFreePromotions.resize(iNum); // Important to keep the delayed resolution pointers correct
+		m_aFreePromoTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -3344,11 +3344,11 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PromotionType");
-					m_aConditionalFreePromotions[i].ePromotion = (PromotionTypes)pXML->GetInfoClass(szTextVal);
-					FAssert(m_aConditionalFreePromotions[i].ePromotion > -1);
+					m_aFreePromoTypes[i].ePromotion = (PromotionTypes)pXML->GetInfoClass(szTextVal);
+					FAssert(m_aFreePromoTypes[i].ePromotion > -1);
 					if (pXML->TryMoveToXmlFirstChild(L"FreePromotionCondition"))
 					{
-						m_aConditionalFreePromotions[i].m_pExprFreePromotionCondition = BoolExpr::read(pXML);
+						m_aFreePromoTypes[i].m_pExprFreePromotionCondition = BoolExpr::read(pXML);
 						pXML->MoveToXmlParent();
 					}
 					i++;
@@ -4611,7 +4611,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	{
 		m_bDamageAttackerCapable = true;
 	}
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aConditionalFreePromotions, pClassInfo->m_aConditionalFreePromotions);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->getFreePromoTypes());
 	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqNotInCityBuildings, pClassInfo->m_vPrereqNotInCityBuildings);
