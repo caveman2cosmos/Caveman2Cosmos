@@ -578,7 +578,7 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
@@ -601,7 +601,7 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>

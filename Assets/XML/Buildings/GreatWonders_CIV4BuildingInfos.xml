@@ -5864,7 +5864,7 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iMaintenanceModifier>-50</iMaintenanceModifier>
+			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<iAsset>14</iAsset>
 			<Flavors>
 				<Flavor>
@@ -11642,7 +11642,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalHealth>2</iGlobalHealth>
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>
-			<iMaintenanceModifier>-15</iMaintenanceModifier>
+			<iMaintenanceModifier>-8</iMaintenanceModifier>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -13208,7 +13208,7 @@
 			<iCost>1860</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
-			<iMaintenanceModifier>-50</iMaintenanceModifier>
+			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<iDefense>50</iDefense>
 			<iAsset>12</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -14704,7 +14704,7 @@
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iDomesticGreatGeneralRateModifier>50</iDomesticGreatGeneralRateModifier>
-			<iMaintenanceModifier>-25</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -15431,7 +15431,7 @@
 			<iCost>5940</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
-			<iGlobalMaintenanceModifier>-50</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-25</iGlobalMaintenanceModifier>
 			<iRevIdxNational>-10</iRevIdxNational>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -22612,7 +22612,7 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iMaintenanceModifier>-20</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iAsset>3</iAsset>
 			<iPower>3</iPower>
 			<Flavors>

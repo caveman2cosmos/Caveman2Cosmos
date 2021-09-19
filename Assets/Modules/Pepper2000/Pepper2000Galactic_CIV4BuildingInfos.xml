@@ -45,7 +45,7 @@
 			</MapCategoryTypes>
 			<iHealth>1</iHealth>
 			<iFoodKept>10</iFoodKept>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -206,7 +206,7 @@
 				<iYield>30</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
 			</PrereqInCityBuildings>
@@ -1119,7 +1119,7 @@
 				<iYield>25</iYield>
 			</YieldChanges>
 			<iFoodKept>5</iFoodKept>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLONY_EUGENICS</Type>
@@ -1407,7 +1407,7 @@
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
 			<iFoodKept>-5</iFoodKept>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_AGGRESSIVE</Type>
@@ -1872,7 +1872,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
 			</PrereqInCityBuildings>
@@ -3465,7 +3465,7 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAPITAL_CITY</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
@@ -4338,7 +4338,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINING_PLANET</Type>
@@ -5214,7 +5214,7 @@
 				<iYield>50</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
@@ -5398,7 +5398,7 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqBonuses>
 				<BonusType>BONUS_SPACEPUNK</BonusType>
 			</PrereqBonuses>
@@ -7019,7 +7019,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7215,7 +7215,7 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 			</PrereqInCityBuildings>

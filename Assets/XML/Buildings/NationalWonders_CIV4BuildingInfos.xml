@@ -1559,7 +1559,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>-30</iMaintenanceModifier>
+			<iMaintenanceModifier>-15</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5838,7 +5838,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bCapital>1</bCapital>
 			<bGovernmentCenter>1</bGovernmentCenter>
-			<iMaintenanceModifier>-25</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -6929,7 +6929,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>-20</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>

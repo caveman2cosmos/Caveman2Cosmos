@@ -83,7 +83,7 @@
 			</PrereqBonuses>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>-15</iMaintenanceModifier>
+			<iMaintenanceModifier>-8</iMaintenanceModifier>
 			<iHealth>-3</iHealth>
 			<iHappiness>-3</iHappiness>
 			<iAsset>5</iAsset>

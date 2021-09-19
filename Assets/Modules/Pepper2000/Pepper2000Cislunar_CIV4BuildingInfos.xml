@@ -268,7 +268,7 @@
 				<iYield>10</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ORGANIC_COLONY</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
@@ -314,7 +314,7 @@
 				<iYield>0</iYield>
 				<iYield>75</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
@@ -494,7 +494,7 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
@@ -528,7 +528,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>

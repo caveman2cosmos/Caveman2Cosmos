@@ -9376,7 +9376,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iEspionageDefense>2</iEspionageDefense>
-			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14143,7 +14143,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>100</iConquestProb>
-			<iMaintenanceModifier>-25</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>

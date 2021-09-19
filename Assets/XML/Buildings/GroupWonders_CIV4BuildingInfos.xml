@@ -1112,7 +1112,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iDistanceMaintenanceModifier>-25</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-10</iDistanceMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1449,7 +1449,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGlobalMaintenanceModifier>-20</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-10</iGlobalMaintenanceModifier>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_POLICING1</PromotionType>
@@ -2654,7 +2654,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGlobalMaintenanceModifier>-20</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-10</iGlobalMaintenanceModifier>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_POLICING1</PromotionType>
@@ -3220,7 +3220,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGlobalMaintenanceModifier>-20</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-10</iGlobalMaintenanceModifier>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_POLICING1</PromotionType>
