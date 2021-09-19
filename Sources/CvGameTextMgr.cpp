@@ -17101,19 +17101,14 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 		buildTechTreeString(szBuffer, eTech, bPlayerContext, eFromTech);
 	}
 
-	//	Obsolete Buildings
+	// Obsolete Buildings
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		if (!bPlayerContext || playerAct->getBuildingCount((BuildingTypes)iI) > 0)
+		if ((!bPlayerContext || playerAct->getBuildingCount((BuildingTypes)iI) > 0)
+		&& GC.getGame().canEverConstruct((BuildingTypes)iI)
+		&& GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() == eTech)
 		{
-			if (GC.getGame().canEverConstruct((BuildingTypes)iI))
-			{
-				//	Obsolete Buildings Check...
-				if (GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() == eTech)
-				{
-					buildObsoleteString(szBuffer, (BuildingTypes)iI, true);
-				}
-			}
+			buildObsoleteString(szBuffer, (BuildingTypes)iI, true);
 		}
 	}
 
@@ -17197,7 +17192,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 	buildPermanentAllianceString(szBuffer, eTech, true, bPlayerContext);
 
 	const CvTechInfo& kTech = GC.getTechInfo(eTech);
-	//   Enables Embassies...
+	// Enables Embassies...
 	buildEmbassyString(szBuffer, eTech, true, bPlayerContext);
 
 	//	Peak passability...
@@ -17335,6 +17330,35 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
+			foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
+			{
+				if (pair.first == eTech)
+				{
+					bool bFirst = true;
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ", 
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							CvWString szValue; makeValueString(szValue, pair.second[iJ], true);
+							szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+						}
+					}
+				}
+			}
 		//	Building yield changes
 			if (kBuilding.isAnyTechYieldChanges())
 				buildBuildingTechYieldChangeString(szBuffer, eTech, iI, true, bPlayerContext);
