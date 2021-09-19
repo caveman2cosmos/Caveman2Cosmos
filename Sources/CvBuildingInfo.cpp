@@ -918,6 +918,14 @@ const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
 	return pyList;
 }
 
+const python::list CvBuildingInfo::cyGetFreePromoTypes() const
+{
+	python::list pyList = python::list();
+	foreach_(const FreePromoTypes& pChange, m_aFreePromoTypes)
+		pyList.append(pChange);
+	return pyList;
+}
+
 const TCHAR* CvBuildingInfo::getButton() const
 {
 	const CvString cDefault = CvString::format("").GetCString();

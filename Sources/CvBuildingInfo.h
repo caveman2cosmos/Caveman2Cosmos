@@ -466,6 +466,8 @@ public:
 	bool isHurry(int i) const;
 
 	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
+	const python::list cyGetFreePromoTypes() const;
+
 	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
 	int getNumHealUnitCombatTypes() const;

@@ -209,4 +209,8 @@ void CyStructsPythonInterface1()
 		.def_readonly("eYield", &TerrainYieldChange::eYield)
 		.def_readonly("value", &TerrainYieldChange::iChange)
 	;
+
+	python::class_<FreePromoTypes>("FreePromoTypes", python::no_init)
+		.def_readonly("ePromotion", &FreePromoTypes::ePromotion)
+	;
 }
