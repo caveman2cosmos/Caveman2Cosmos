@@ -136,6 +136,7 @@ class CvModLoadControlInfo;
 /************************************************************************************************/
 class CvMapInfo;
 
+#include "CvInfoClassTraits.h"
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
