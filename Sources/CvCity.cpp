@@ -5327,7 +5327,13 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	}
 	foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
 	{
-		changeTerrainYieldChanges(pair.first, pair.second);
+		int* yields = new int[NUM_YIELD_TYPES];
+
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			yields[iI] = iChange * pair.second[iI];
+		}
+		changeTerrainYieldChanges(pair.first, yields);
 	}
 
 	foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())

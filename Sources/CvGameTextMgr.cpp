@@ -17047,14 +17047,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 }
 
-// BUG - Trade Denial - start
-void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, TechTypes eFromTech)
-{
-	setTechTradeHelp(szBuffer, eTech, NO_PLAYER, bCivilopediaText, bPlayerContext, bStrategyText, bTreeInfo, eFromTech);
-}
 
-void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech, PlayerTypes eTradePlayer, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, TechTypes eFromTech)
-// BUG - Trade Denial - end
+void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, TechTypes eFromTech)
 {
 	PROFILE_FUNC();
 
@@ -17091,9 +17085,9 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 
 	//	Tech Name
-	if (!bCivilopediaText && (!bTreeInfo || (NO_TECH == eFromTech)))
+	if (!bCivilopediaText && (!bTreeInfo || NO_TECH == eFromTech))
 	{
-		szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTech).getDescription());
+		szTempBuffer.Format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTech).getDescription());
 		szBuffer.append(szTempBuffer);
 	}
 
@@ -17107,19 +17101,14 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		buildTechTreeString(szBuffer, eTech, bPlayerContext, eFromTech);
 	}
 
-	//	Obsolete Buildings
+	// Obsolete Buildings
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		if (!bPlayerContext || playerAct->getBuildingCount((BuildingTypes)iI) > 0)
+		if ((!bPlayerContext || playerAct->getBuildingCount((BuildingTypes)iI) > 0)
+		&& GC.getGame().canEverConstruct((BuildingTypes)iI)
+		&& GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() == eTech)
 		{
-			if (GC.getGame().canEverConstruct((BuildingTypes)iI))
-			{
-				//	Obsolete Buildings Check...
-				if (GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() == eTech)
-				{
-					buildObsoleteString(szBuffer, (BuildingTypes)iI, true);
-				}
-			}
+			buildObsoleteString(szBuffer, (BuildingTypes)iI, true);
 		}
 	}
 
@@ -17203,7 +17192,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	buildPermanentAllianceString(szBuffer, eTech, true, bPlayerContext);
 
 	const CvTechInfo& kTech = GC.getTechInfo(eTech);
-	//   Enables Embassies...
+	// Enables Embassies...
 	buildEmbassyString(szBuffer, eTech, true, bPlayerContext);
 
 	//	Peak passability...
@@ -17341,6 +17330,35 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
+			foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
+			{
+				if (pair.first == eTech)
+				{
+					bool bFirst = true;
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ", 
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							CvWString szValue; makeValueString(szValue, pair.second[iJ], true);
+							szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+						}
+					}
+				}
+			}
 		//	Building yield changes
 			if (kBuilding.isAnyTechYieldChanges())
 				buildBuildingTechYieldChangeString(szBuffer, eTech, iI, true, bPlayerContext);
@@ -17625,26 +17643,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ERA_ADVANCE", GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getTextKeyWide()));
 		}
 	}
-
-// BUG - Trade Denial - start
-	if (eTradePlayer != NO_PLAYER && ePlayerAct != NO_PLAYER && getBugOptionBOOL("MiscHover__TechTradeDenial", true, "BUG_TECH_TRADE_DENIAL_HOVER"))
-	{
-		TradeData trade;
-		trade.m_eItemType = TRADE_TECHNOLOGIES;
-		trade.m_iData = eTech;
-
-		if (GET_PLAYER(eTradePlayer).canTradeItem(ePlayerAct, trade, false))
-		{
-			DenialTypes eDenial = GET_PLAYER(eTradePlayer).getTradeDenial(ePlayerAct, trade);
-			if (eDenial != NO_DENIAL)
-			{
-				szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GC.getDenialInfo(eDenial).getDescription());
-				szBuffer.append(NEWLINE);
-				szBuffer.append(szTempBuffer);
-			}
-		}
-	}
-// BUG - Trade Denial - end
 
 	if (bStrategyText && !CvWString(GC.getTechInfo(eTech).getStrategy()).empty()
 	&& (ePlayerAct == NO_PLAYER || playerAct->isOption(PLAYEROPTION_ADVISOR_HELP)))
