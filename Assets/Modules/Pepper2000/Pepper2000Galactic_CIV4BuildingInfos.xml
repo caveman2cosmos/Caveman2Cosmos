@@ -3904,14 +3904,14 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_PERSONAL_STARCRAFT</BonusType>
-					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
