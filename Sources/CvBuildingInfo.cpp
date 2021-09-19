@@ -13,6 +13,7 @@
 #include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
@@ -304,7 +305,9 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnUnit(NO_UNIT)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
-{ }
+{
+	CvInfoUtil(this).initDataMembers();
+}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -418,6 +421,8 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aGlobalBuildingProductionModifier.removeDelayedResolution();
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
+
+	CvInfoUtil(this).uninitDataMembers();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -910,6 +915,14 @@ const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
 				pyList.append(TerrainYieldChange(pChange.first, (YieldTypes)i, pChange.second[i]));
 		}
 	}
+	return pyList;
+}
+
+const python::list CvBuildingInfo::cyGetFreePromoTypes() const
+{
+	python::list pyList = python::list();
+	foreach_(const FreePromoTypes& pChange, m_aFreePromoTypes)
+		pyList.append(pChange);
 	return pyList;
 }
 
@@ -1692,7 +1705,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
-	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_iPrereqAndTech);
 	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
@@ -1836,7 +1848,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumReligionInfos(), m_piReligionChange);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piSpecialistCount);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piFreeSpecialistCount);
-	CheckSumC(iSum, m_piBonusHealthChanges);
+	//CheckSumC(iSum, m_piBonusHealthChanges);
 	CheckSumC(iSum, m_piBonusHappinessChanges);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusProductionModifier);
 	CheckSumC(iSum, m_aUnitCombatFreeExperience);
@@ -2073,8 +2085,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitCombatOngoingTrainingDurations);
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
-	CheckSumC(iSum, m_aTechHappinessChanges);
-	CheckSumC(iSum, m_aTechHealthChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
 	CheckSumC(iSum, m_aExtraFreeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
@@ -2106,6 +2116,20 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 	CheckSumC(iSum, m_techCommerceChanges);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
+
+	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
+}
+
+void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
+{
+	util
+		.addEnum(m_iObsoleteTech, L"ObsoleteTech")
+		.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+		.add(m_aTechHappinessChanges, L"TechHappinessChanges")
+		.add(m_aTechHealthChanges, L"TechHealthChanges")
+		//.add(m_piImprovementFreeSpecialist, L"ImprovementFreeSpecialists", GC.getNumSpecialistInfos())
+		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
+	;
 }
 
 //
@@ -2172,9 +2196,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqAndTech = pXML->GetInfoClass(szTextVal);
@@ -2536,7 +2557,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
-	m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
+	//m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
 	m_piBonusHappinessChanges.read(pXML, L"BonusHappinessChanges");
 	pXML->SetVariableListTagPair(&m_piBonusProductionModifier, L"BonusProductionModifiers", GC.getNumBonusInfos());
 	m_aUnitCombatFreeExperience.read(pXML, L"UnitCombatFreeExperiences");
@@ -3479,9 +3500,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
 
-	m_aTechHappinessChanges.read(pXML, L"TechHappinessChanges");
-	m_aTechHealthChanges.read(pXML, L"TechHealthChanges");
-
 	//Arrays
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
 	//TB Combat Mods (Buildings) end
@@ -3506,8 +3524,10 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aGlobalBuildingProductionModifier.readWithDelayedResolution(pXML, L"GlobalBuildingProductionModifiers");
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
-	m_techCommerceChanges.readPairedArray(pXML, L"TechCommerceChanges");
-	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
+	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents", NUM_COMMERCE_TYPES);
+	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges", NUM_YIELD_TYPES);
+
+	CvInfoUtil(this).readXml(pXML);
 
 	return true;
 }
@@ -3675,7 +3695,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getVictoryPrereq() == iTextDefault) m_iVictoryPrereq = pClassInfo->getVictoryPrereq();
 	if (getFreeStartEra() == iTextDefault) m_iFreeStartEra = pClassInfo->getFreeStartEra();
 	if (getMaxStartEra() == iTextDefault) m_iMaxStartEra = pClassInfo->getMaxStartEra();
-	if (getObsoleteTech() == iTextDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getPrereqAndTech() == iTextDefault) m_iPrereqAndTech = pClassInfo->getPrereqAndTech();
 	if (getPrereqVicinityBonus() == iTextDefault) m_iPrereqVicinityBonus = pClassInfo->getPrereqVicinityBonus();
 	if (getPrereqRawVicinityBonus() == iTextDefault) m_iPrereqRawVicinityBonus = pClassInfo->getPrereqRawVicinityBonus();
@@ -3982,7 +4001,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getConstructSound() == cDefault) m_szConstructSound = pClassInfo->getConstructSound();
 
-	m_piBonusHealthChanges.copyNonDefaults(pClassInfo->m_piBonusHealthChanges);
+	//m_piBonusHealthChanges.copyNonDefaults(pClassInfo->m_piBonusHealthChanges);
 	m_piBonusHappinessChanges.copyNonDefaults(pClassInfo->m_piBonusHappinessChanges);
 
 	for ( int j = 0; j < GC.getNumBonusInfos(); j++)
@@ -4018,7 +4037,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumSpecialistInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumSpecialistInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -4101,7 +4120,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			}
 		}
 	}
-	for ( int i = 0; i < GC.getNumBonusInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -4243,7 +4262,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_piBonusDefenseChanges[j] = pClassInfo->getBonusDefenseChanges(j);
 		}
 	}
-	for ( int i = 0; i < GC.getNumBonusInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
 		{
@@ -4276,7 +4295,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBonusInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -4309,7 +4328,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBonusInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
 		{
@@ -4342,7 +4361,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBonusInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -4411,7 +4430,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_piPrereqOrVicinityBonuses, pClassInfo->m_piPrereqOrVicinityBonuses);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrRawVicinityBonuses, pClassInfo->getPrereqOrRawVicinityBonuses());
 
-	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumTechInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -4444,7 +4463,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumTechInfos(); i++)
 	{
 		for ( int j = 0; j < GC.getNumSpecialistInfos(); j++)
 		{
@@ -4477,7 +4496,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumTechInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
 		{
@@ -4510,7 +4529,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumTechInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -4725,9 +4744,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	m_aTechHappinessChanges.copyNonDefaults(pClassInfo->getTechHappinessChanges());
-	m_aTechHealthChanges.copyNonDefaults(pClassInfo->getTechHealthChanges());
-
 	//Arrays
 	for ( int i = 0; i < GC.getNumHurryInfos(); i++ )
 	{
@@ -4785,6 +4801,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
 	m_techCommerceChanges.copyNonDefaults(pClassInfo->getTechCommerceChanges100());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)

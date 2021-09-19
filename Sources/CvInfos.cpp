@@ -9662,7 +9662,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiImprovementYieldChanges, GC.getNumImprovementInfos(), NUM_YIELD_TYPES);
+				pXML->Init2DList(&m_ppiImprovementYieldChanges, GC.getNumImprovementInfos(), NUM_YIELD_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"ImprovementType");
@@ -9769,7 +9769,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos(), NUM_YIELD_TYPES);
+				pXML->Init2DList(&m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos(), NUM_YIELD_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"SpecialistType");
@@ -9809,7 +9809,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos(), NUM_COMMERCE_TYPES);
+				pXML->Init2DList(&m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos(), NUM_COMMERCE_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"SpecialistType");
@@ -9849,7 +9849,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiTerrainYieldChanges, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
+				pXML->Init2DList(&m_ppiTerrainYieldChanges, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"TerrainType");
@@ -9892,7 +9892,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
+				pXML->Init2DList(&m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"BuildingType");
@@ -9931,7 +9931,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiBuildingCommerceChange, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
+				pXML->Init2DList(&m_ppiBuildingCommerceChange, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"BuildingType");
@@ -9970,7 +9970,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiBonusCommerceModifier, GC.getNumBonusInfos(), NUM_COMMERCE_TYPES);
+				pXML->Init2DList(&m_ppiBonusCommerceModifier, GC.getNumBonusInfos(), NUM_COMMERCE_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"BonusType");
@@ -10310,7 +10310,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiImprovementYieldChanges )
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiImprovementYieldChanges, GC.getNumImprovementInfos(), NUM_YIELD_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiImprovementYieldChanges, GC.getNumImprovementInfos(), NUM_YIELD_TYPES);
 				}
 				else if ( NULL == m_ppiImprovementYieldChanges[i] )
 				{
@@ -10402,7 +10402,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiSpecialistYieldPercentChanges )
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos(), NUM_YIELD_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos(), NUM_YIELD_TYPES);
 				}
 				else if ( NULL == m_ppiSpecialistYieldPercentChanges[i] )
 				{
@@ -10418,7 +10418,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiSpecialistCommercePercentChanges )
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos(), NUM_COMMERCE_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos(), NUM_COMMERCE_TYPES);
 				}
 				else if ( NULL == m_ppiSpecialistCommercePercentChanges[i] )
 				{
@@ -10451,7 +10451,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiBuildingCommerceChange )
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiBuildingCommerceChange, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiBuildingCommerceChange, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
 				}
 				else if ( NULL == m_ppiBuildingCommerceChange[i] )
 				{
@@ -10470,7 +10470,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiTerrainYieldChanges)
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiTerrainYieldChanges, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiTerrainYieldChanges, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
 				}
 				else if ( NULL == m_ppiTerrainYieldChanges[i] )
 				{
@@ -10488,7 +10488,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiBuildingCommerceModifier)
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos(), NUM_COMMERCE_TYPES);
 				}
 				else if ( NULL == m_ppiBuildingCommerceModifier[i] )
 				{
@@ -10514,7 +10514,7 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 			{
 				if ( NULL == m_ppiBonusCommerceModifier )
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiBonusCommerceModifier, GC.getNumBonusInfos(), NUM_COMMERCE_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiBonusCommerceModifier, GC.getNumBonusInfos(), NUM_COMMERCE_TYPES);
 				}
 				else if ( NULL == m_ppiBonusCommerceModifier[i] )
 				{
@@ -22735,7 +22735,7 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DBoolList(&m_ppbFreePromotionUnitCombats, GC.getNumPromotionInfos(), -1);
+				CvXMLLoadUtility::InitPointerList(&m_ppbFreePromotionUnitCombats, GC.getNumPromotionInfos());
 				for (int j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PromotionType");
@@ -22753,7 +22753,7 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 
 							if (0 < iNumChildren)
 							{
-								pXML->CvXMLLoadUtility::InitList(&m_ppbFreePromotionUnitCombats[iIndex], GC.getNumUnitCombatInfos());
+								CvXMLLoadUtility::InitList(&m_ppbFreePromotionUnitCombats[iIndex], GC.getNumUnitCombatInfos());
 
 								// if the call to the function that sets the current xml node to it's first non-comment
 								// child and sets the parameter with the new node's value succeeds
@@ -23856,7 +23856,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 			{
 				if ( NULL == m_ppbFreePromotionUnitCombats )
 				{
-					CvXMLLoadUtility::Init2DBoolList(&m_ppbFreePromotionUnitCombats, GC.getNumPromotionInfos(), GC.getNumUnitCombatInfos());
+					CvXMLLoadUtility::Init2DList(&m_ppbFreePromotionUnitCombats, GC.getNumPromotionInfos(), GC.getNumUnitCombatInfos());
 				}
 				else if ( NULL == m_ppbFreePromotionUnitCombats[i] )
 				{
@@ -23972,7 +23972,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 	//Arrays
-	for ( int i = 0; i < GC.getNumSpecialistInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumSpecialistInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -24015,7 +24015,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumImprovementInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumImprovementInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -24164,7 +24164,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumSpecialistInfos(); i++)	// "Init2DIntList" verify method
+	for ( int i = 0; i < GC.getNumSpecialistInfos(); i++)
 	{
 		for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
 		{

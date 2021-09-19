@@ -1438,7 +1438,11 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreePromotion>PROMOTION_URBAN_TACTICS1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_FREIGHT</UnitType>
@@ -2738,15 +2742,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FISHMONGER</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FISHMONGER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2767,6 +2766,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FISHMONGER</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3231,15 +3235,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3260,6 +3259,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3448,7 +3452,11 @@
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<FreePromotion>PROMOTION_HUNTER2</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_HUNTER2</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -4601,6 +4609,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POST_OFFICE</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6327,7 +6336,11 @@
 			</PropertyManipulators>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_FIRST_AID_PEOPLE1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_FIRST_AID_PEOPLE1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
@@ -7470,6 +7483,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

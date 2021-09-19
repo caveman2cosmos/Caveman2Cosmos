@@ -631,7 +631,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_CARNIVAL</ConstructSound>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -2079,7 +2078,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_SEA_HUNTER</ArtDefineTag>
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
-			<FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_SEA_HUNTER1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

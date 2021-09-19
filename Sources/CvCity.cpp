@@ -1026,6 +1026,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_BuildingList.init();
 		AI_reset();
 	}
+	m_terrainYieldChanges.clear();
 
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;

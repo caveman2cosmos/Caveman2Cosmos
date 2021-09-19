@@ -22,52 +22,24 @@ struct IDValueMap
 {
 	typedef std::pair<ID_, Value_> pair_t;
 
-	void readPairedArray(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
+	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
 	{
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
 			const int iNumChildren = pXML->GetXmlChildrenNumber();
 
-			if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChange"))
+			if (pXML->TryMoveToXmlFirstChild())
 			{
 				for (int j = 0; j < iNumChildren; ++j)
 				{
 					CvString szTextVal;
-					pXML->GetChildXmlValByName(szTextVal, L"TechType");
-					const int k = pXML->GetInfoClass(szTextVal);
-					if (k > -1)
+					pXML->GetChildXmlValByName(szTextVal, firstChildTag);
+					pair_t pair = pair_t();
+					pair.first = static_cast<ID_>(GC.getInfoTypeForString(szTextVal));
+					if (pair.first > -1)
 					{
-						pair_t pair = pair_t();
-						pair.first = static_cast<ID_>(k);
-						if (pXML->TryMoveToXmlFirstChild(L"CommercePercents"))
-						{
-							pXML->SetCommerce(&pair.second);
-							pXML->MoveToXmlParent();
-							m_map.push_back(pair);
-						}
-					}
-					if (!pXML->TryMoveToXmlNextSibling())
-						break;
-				}
-				pXML->MoveToXmlParent();
-			}
-			else if (pXML->TryMoveToXmlFirstChild(L"TerrainYieldChange"))
-			{
-				for (int j = 0; j < iNumChildren; ++j)
-				{
-					CvString szTextVal;
-					pXML->GetChildXmlValByName(szTextVal, L"TerrainType");
-					const int k = pXML->GetInfoClass(szTextVal);
-					if (k > -1)
-					{
-						pair_t pair = pair_t();
-						pair.first = static_cast<ID_>(k);
-						if (pXML->TryMoveToXmlFirstChild(L"YieldChanges"))
-						{
-							pXML->SetYields(&pair.second);
-							pXML->MoveToXmlParent();
-							m_map.push_back(pair);
-						}
+						pXML->SetList(&pair.second, pairedArraySize, secondChildTag);
+						m_map.push_back(pair);
 					}
 					if (!pXML->TryMoveToXmlNextSibling())
 						break;
@@ -89,9 +61,11 @@ struct IDValueMap
 				{
 					if (pXML->TryMoveToXmlFirstChild())
 					{
-						pair_t pair = pair_t();
-						if (readChildPair(pXML, pair))
-							m_map.push_back(pair);
+						CvString szTextVal;
+						pXML->GetXmlVal(szTextVal);
+						int value = defaultValue;
+						pXML->GetNextXmlVal(&value);
+						m_map.push_back(std::make_pair(static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal)), value));
 						pXML->MoveToXmlParent();
 					}
 				} while (pXML->TryMoveToXmlNextSibling());
@@ -137,38 +111,6 @@ struct IDValueMap
 		}
 	}
 
-	template <class T>
-	bool readChildPair(CvXMLLoadUtility* pXML, T& pair)
-	{
-		CvString szTextVal;
-		pXML->GetXmlVal(szTextVal);
-		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
-		//pair.second = defaultValue;
-		pXML->GetNextXmlVal(&pair.second);
-		return true;
-	}
-
-	template <>
-	bool readChildPair<std::pair<ID_, int*> >(CvXMLLoadUtility* pXML, std::pair<ID_, int*>& pair)
-	{
-		CvString szTextVal;
-		pXML->GetChildXmlValByName(szTextVal, L"TechType");
-		//pXML->GetXmlVal(szTextVal);
-		//GC.addDelayedResolution((int*)&pair.first, szTextVal);
-		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
-		FASSERT_NOT_NEGATIVE(pair.first);
-
-		pair.second = NULL;
-		if (pXML->TryMoveToXmlFirstChild(L"CommercePercents"))
-		{
-			FErrorMsg("set commerce");
-			pXML->SetCommerce(&pair.second);
-			pXML->MoveToXmlParent();
-			return true;
-		}
-		return false;
-	}
-
 	void copyNonDefaults(const IDValueMap<ID_, Value_, defaultValue>& other)
 	{
 		foreach_(const pair_t& otherPair, other)
@@ -176,6 +118,28 @@ struct IDValueMap
 			if (!hasValue(otherPair.first))
 			{
 				m_map.push_back(std::make_pair(otherPair.first, otherPair.second));
+			}
+		}
+	}
+
+#define COPY(dst, src, typeName)						 \
+	{													 \
+		const int iNum = sizeof(src) / sizeof(typeName); \
+		dst = new typeName[iNum];						 \
+		for (int i = 0; i < iNum; i++)					 \
+			dst[i] = src[i];							 \
+	}
+
+	void copyNonDefaultPairedArrays(const IDValueMap<ID_, Value_, defaultValue>& other)
+	{
+		foreach_(const pair_t& otherPair, other)
+		{
+			if (!hasValue(otherPair.first))
+			{
+				pair_t pair = pair_t();
+				pair.first = otherPair.first;
+				COPY(pair.second, otherPair.second, Value_);
+				m_map.push_back(pair);
 			}
 		}
 	}

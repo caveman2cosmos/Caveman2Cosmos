@@ -2921,7 +2921,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 		iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
-			InitStringList(ppszList, iInfoBaseLength, szDefaultListVal);
+			InitList(ppszList, iInfoBaseLength, szDefaultListVal);
 			pszList = *ppszList;
 			if(!(iNumSibs <= iInfoBaseLength))
 			{
@@ -3299,7 +3299,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 		iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
-			InitStringList(ppszList, iTagListLength, szDefaultListVal);
+			InitList(ppszList, iTagListLength, szDefaultListVal);
 			pszList = *ppszList;
 			if(!(iNumSibs <= iTagListLength))
 			{

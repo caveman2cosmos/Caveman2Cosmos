@@ -720,7 +720,7 @@ class TestCode:
 				MAIN_ARRAY_SIZE = 2
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
+				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
 				aPower = [CvBuildingInfo.isPower(), 0]
 				aProvidesFreshWater = [CvBuildingInfo.isProvidesFreshWater(), 0]
 				aTradeRoutes = [CvBuildingInfo.getTradeRoutes(), 0]
@@ -753,7 +753,6 @@ class TestCode:
 				aRiverDefensePenalty = [CvBuildingInfo.getRiverDefensePenalty(), 0]
 				aExperience = [CvBuildingInfo.getFreeExperience(), 0]
 				aGlobalExperience = [CvBuildingInfo.getGlobalFreeExperience(), 0]
-				aBaseFreePromotion = [CvBuildingInfo.getFreePromotion(), CvBuildingInfo.getFreePromotion_2(), CvBuildingInfo.getFreePromotion_3()]
 				aFoodKept = [CvBuildingInfo.getFoodKept(), 0]
 				aPopulationgrowthratepercentage = [CvBuildingInfo.getPopulationgrowthratepercentage(), 0]
 				aAdjacentDamagePercent = [CvBuildingInfo.getAdjacentDamagePercent(), 0]
@@ -795,7 +794,7 @@ class TestCode:
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
+					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
 					aPower[REPLACED] += CvReplacedBuildingInfo.isPower()
 					aProvidesFreshWater[REPLACED] += CvReplacedBuildingInfo.isProvidesFreshWater()
 					aTradeRoutes[REPLACED] += CvReplacedBuildingInfo.getTradeRoutes()
@@ -830,10 +829,6 @@ class TestCode:
 					aRiverDefensePenalty[REPLACED] += CvReplacedBuildingInfo.getRiverDefensePenalty()
 					aExperience[REPLACED] += CvReplacedBuildingInfo.getFreeExperience()
 					aGlobalExperience[REPLACED] += CvReplacedBuildingInfo.getGlobalFreeExperience()
-					aFreePromotion = [CvReplacedBuildingInfo.getFreePromotion(), CvReplacedBuildingInfo.getFreePromotion_2(), CvReplacedBuildingInfo.getFreePromotion_3()]
-					for i in xrange(len(aBaseFreePromotion)):
-						if aBaseFreePromotion[i] != aFreePromotion[i] and aFreePromotion[i] != -1:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" base free promotion: "+str(aBaseFreePromotion[i])+" replaced free promotion: "+GC.getPromotionInfo(aFreePromotion[i]).getType())
 					aFoodKept[REPLACED] += CvReplacedBuildingInfo.getFoodKept()
 					aPopulationgrowthratepercentage[REPLACED] += CvReplacedBuildingInfo.getPopulationgrowthratepercentage()
 					aAdjacentDamagePercent[REPLACED] += CvReplacedBuildingInfo.getAdjacentDamagePercent()
@@ -1338,6 +1333,26 @@ class TestCode:
 				for iUnit in xrange(GC.getNumUnitInfos()):
 					if aUnitProductionModifiers[BASE][iUnit] < aUnitProductionModifiers[REPLACED][iUnit]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitInfo(iUnit).getType()+" Unit production Modifiers "+str(aUnitProductionModifiers[BASE][iUnit])+"/"+str(aUnitProductionModifiers[REPLACED][iUnit]))
+
+				#=================================================================================================
+				#<FreePromoTypes> - base
+				aFreePromoTypes = [[0 for x in xrange(GC.getNumPromotionInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				for pFreePromotionTypes in CvBuildingInfo.getFreePromoTypes():
+					iPromotion = pFreePromotionTypes.ePromotion
+					aFreePromoTypes[BASE][iPromotion] += 1
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<FreePromoTypes>
+					for pFreePromotionTypes in CvReplacedBuildingInfo.getFreePromoTypes():
+						iPromotion = pFreePromotionTypes.ePromotion
+						aFreePromoTypes[REPLACED][iPromotion] += 1
+
+				#Building shouldn't be worse than replaced one!
+				for iPromotion in xrange(GC.getNumPromotionInfos()):
+					if aFreePromoTypes[BASE][iPromotion] == 0 and aFreePromoTypes[REPLACED][iPromotion] != 0: #We are checking presence, as it doesn't have value
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getPromotionInfo(iPromotion).getType()+" Free Promotion")
 
 				#=================================================================================================
 				#<PropertyManipulators> - base
