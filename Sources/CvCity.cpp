@@ -4929,14 +4929,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		const YieldTypes eYieldX = static_cast<YieldTypes>(iI);
 		changeSeaPlotYield(eYieldX, kBuilding.getSeaPlotYieldChange(iI) * iChange);
 		changeRiverPlotYield(eYieldX, kBuilding.getRiverPlotYieldChange(iI) * iChange);
-		changeExtraYield(eYieldX,
-			(
-				kBuilding.getYieldChange(iI)
-				+ getBuildingYieldChange(eBuilding, eYieldX)
-				+ GET_TEAM(getTeam()).getBuildingYieldChange(eBuilding, eYieldX)
-			)
-			* iChange
-		);
+		changeExtraYield(eYieldX, (kBuilding.getYieldChange(iI) + getBuildingYieldChange(eBuilding, eYieldX)) * iChange);
 		changeBaseYieldPerPopRate(eYieldX, kBuilding.getYieldPerPopChange(iI) * iChange);
 		changeYieldRateModifier(eYieldX, kBuilding.getYieldModifier(iI) * iChange);
 
@@ -5315,7 +5308,17 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
-	foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
+	foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
+		{
+			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+			{
+				changeExtraYield((YieldTypes)iI, iChange * pair.second[(YieldTypes)iI]);
+			}
+		}
+	}
+	foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
@@ -11183,11 +11186,11 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 	}
 
 	// Tech
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	foreach_(const TechArray& pair, building.getTechYieldChanges100())
 	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
-			iExtraYield += building.getTechYieldChange(iI, eIndex);
+			iExtraYield += pair.second[eIndex];
 		}
 	}
 
@@ -12367,7 +12370,7 @@ int CvCity::getBaseCommerceRateFromBuilding100(CommerceTypes eIndex, BuildingTyp
 			iExtraRate100 += kBuilding.getBonusCommercePercentChanges(iI, eIndex);
 		}
 	}
-	foreach_(const TechCommerceChanges& pair, kBuilding.getTechCommerceChanges100())
+	foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
@@ -19978,21 +19981,21 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex) const
 
 int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const
 {
-	int iPercentCommerce = 0;
+	int iCommerce100 = 0;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			foreach_(const TechCommerceChanges& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChanges100())
+			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChanges100())
 			{
 				if (eTech == pair.first)
 				{
-					iPercentCommerce += pair.second[eIndex];
+					iCommerce100 += pair.second[eIndex];
 				}
 			}
 		}
 	}
-	return iPercentCommerce;
+	return iCommerce100;
 }
 
 int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eBuilding) const
@@ -20001,15 +20004,35 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eB
 	{
 		return 0;
 	}
-	int iPercentCommerce = 0;
-	foreach_(const TechCommerceChanges& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
+	int iCommerce100 = 0;
+	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
-			iPercentCommerce += pair.second[eIndex];
+			iCommerce100 += pair.second[eIndex];
 		}
 	}
-	return iPercentCommerce;
+	return iCommerce100;
+}
+
+
+int CvCity::getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const
+{
+	int iYield100 = 0;
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		{
+			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechYieldChanges100())
+			{
+				if (eTech == pair.first)
+				{
+					iYield100 += pair.second[eYield];
+				}
+			}
+		}
+	}
+	return iYield100;
 }
 
 

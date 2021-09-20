@@ -1492,6 +1492,8 @@ public:
 	int getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const;
 	int getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 
+	int getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const;
+
 	bool isAutomatedCanBuild(BuildTypes eBuild) const;
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue);
 
