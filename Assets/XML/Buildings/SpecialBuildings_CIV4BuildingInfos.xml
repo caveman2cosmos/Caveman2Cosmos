@@ -8458,11 +8458,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_FERTILTY_DANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
-			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_CHILDBIRTH_HUT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_ANCIENT_CUSTOMS</ID>
+					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_CHILDCAREHUT</ID>
