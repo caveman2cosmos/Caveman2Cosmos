@@ -6376,6 +6376,7 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 		8 * (
 			kBuilding.getYieldChange(eYield) + iFreeSpecialistYield
 			+ getPopulation() * kBuilding.getYieldPerPopChange(eYield) / 100
+			+ getBuildingYieldTechChange(eYield, eBuilding)
 		)
 	);
 
@@ -16426,9 +16427,27 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	iResult += iTempValue;
 
-	iTempValue = 0;
-	iTempValue += ((kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE)) * getPlotYield(YIELD_COMMERCE) + aiFreeSpecialistYield[YIELD_COMMERCE]) / 8;
-	iTempValue += (kBuilding.getYieldChange(YIELD_COMMERCE) + kBuilding.getYieldPerPopChange(YIELD_COMMERCE) * getPopulation() / 100) * 8;
+	iTempValue = (
+		(
+			getPlotYield(YIELD_COMMERCE)
+			* (
+				kBuilding.getYieldModifier(YIELD_COMMERCE)
+				+
+				GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE)
+			)
+			+ aiFreeSpecialistYield[YIELD_COMMERCE]
+		)
+		/ 8
+		+
+		8 * (
+			kBuilding.getYieldChange(YIELD_COMMERCE)
+			+
+			kBuilding.getYieldPerPopChange(YIELD_COMMERCE) * getPopulation() / 100
+			+
+			getBuildingYieldTechChange(YIELD_COMMERCE, eBuilding) / 100
+		)
+	);
+
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{
 		if (hasBonus((BonusTypes)iJ))

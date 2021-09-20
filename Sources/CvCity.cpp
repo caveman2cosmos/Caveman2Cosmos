@@ -37,6 +37,7 @@ CvCity::CvCity()
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
 	m_aiExtraYield = new int[NUM_YIELD_TYPES];
+	m_extraYield100 = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldPerPopRate = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiPowerYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -183,6 +184,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiRiverPlotYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldRate);
 	SAFE_DELETE_ARRAY(m_aiExtraYield);
+	SAFE_DELETE_ARRAY(m_extraYield100);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldPerPopRate);
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiPowerYieldRateModifier);
@@ -675,6 +677,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiRiverPlotYield[iI] = 0;
 		m_aiBaseYieldRate[iI] = 0;
 		m_aiExtraYield[iI] = 0;
+		m_extraYield100[iI] = 0;
 		m_aiBaseYieldPerPopRate[iI] = 0;
 		m_aiYieldRateModifier[iI] = 0;
 		m_aiPowerYieldRateModifier[iI] = 0;
@@ -5314,7 +5317,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		{
 			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
-				changeExtraYield((YieldTypes)iI, iChange * pair.second[(YieldTypes)iI]);
+				changeExtraYield100((YieldTypes)iI, iChange * pair.second[(YieldTypes)iI]);
 			}
 		}
 	}
@@ -11353,22 +11356,44 @@ void CvCity::changePlotYield(YieldTypes eIndex, int iChange)
 }
 
 
-int CvCity::getExtraYield(YieldTypes eIndex) const
+void CvCity::changeExtraYield100(YieldTypes eYield, int iChange)
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return m_aiExtraYield[eIndex] + popYield(eIndex);
-}
-
-void CvCity::changeExtraYield(YieldTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	if (iChange != 0)
 	{
-		m_aiExtraYield[eIndex] += iChange;
+		m_extraYield100[eYield] += iChange;
 		onYieldChange();
 	}
 }
+int CvCity::getExtraYield100(YieldTypes eYield) const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+	return (
+		m_extraYield100[eYield]
+		+
+		m_aiExtraYield[eYield] * 100
+		+
+		getPopulation() * getBaseYieldPerPopRate(eYield)
+	);
+}
+
+void CvCity::changeExtraYield(YieldTypes eYield, int iChange)
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+
+	if (iChange != 0)
+	{
+		m_aiExtraYield[eYield] += iChange;
+		onYieldChange();
+	}
+}
+int CvCity::getExtraYield(YieldTypes eYield) const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+	return getExtraYield100(eYield) / 100;
+}
+
 
 
 void CvCity::onYieldChange()
@@ -11388,13 +11413,6 @@ void CvCity::onYieldChange()
 			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
-}
-
-
-int CvCity::popYield(YieldTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return getPopulation() * m_aiBaseYieldPerPopRate[eIndex] / 100;
 }
 
 int CvCity::getBaseYieldPerPopRate(YieldTypes eIndex)	const
@@ -17363,6 +17381,7 @@ void CvCity::read(FDataStreamBase* pStream)
 		}
 	}
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_extraYield100);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
@@ -17793,6 +17812,7 @@ void CvCity::write(FDataStreamBase* pStream)
 		}
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_extraYield100);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -20030,6 +20050,23 @@ int CvCity::getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const
 					iYield100 += pair.second[eYield];
 				}
 			}
+		}
+	}
+	return iYield100;
+}
+
+int CvCity::getBuildingYieldTechChange(YieldTypes eYield, BuildingTypes eBuilding) const
+{
+	if (!hasFullyActiveBuilding(eBuilding))
+	{
+		return 0;
+	}
+	int iYield100 = 0;
+	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechYieldChanges100())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
+		{
+			iYield100 += pair.second[eYield];
 		}
 	}
 	return iYield100;
@@ -22298,6 +22335,7 @@ void CvCity::clearModifierTotals()
 		m_aiCorporationYield[iI] = 0;
 		m_aiExtraSpecialistYield[iI] = 0;
 		m_aiExtraYield[iI] = 0;
+		m_extraYield100[iI] = 0;
 	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
