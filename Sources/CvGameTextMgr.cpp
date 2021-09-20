@@ -17343,7 +17343,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 							{
 								szBuffer.append(
 									CvWString::format(
-										L"\n%c<link=%s>%s</link>: ", 
+										L"\n%c<link=%s>%s</link>: ",
 										gDLL->getSymbolID(BULLET_CHAR),
 										CvWString(kBuilding.getType()).GetCString(),
 										kBuilding.getDescription()

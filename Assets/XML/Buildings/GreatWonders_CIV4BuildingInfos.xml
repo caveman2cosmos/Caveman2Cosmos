@@ -882,9 +882,10 @@
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRONZE_WARES</Bonus>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STARGAZERS_HUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
@@ -8115,9 +8116,10 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SUNDIAL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
@@ -19648,9 +19650,10 @@
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
 			</TechTypes>
 			<bRiver>1</bRiver>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WATERCLOCK</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 			<iCost>1680</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -20460,15 +20463,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iTradeRoutes>1</iTradeRoutes>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>

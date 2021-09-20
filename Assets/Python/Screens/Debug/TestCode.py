@@ -1865,8 +1865,10 @@ class TestCode:
 			#<BuildingProductionModifierTypes>
 			aReplacementBuildingsList = []
 			aUniqueReplacementBuildingsList = []
+			aBuildingProductionModifierValues = []
 			for i in xrange(CvTraitInfo.getNumBuildingProductionModifiers()):
 				iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
+				aBuildingProductionModifierValues.append(CvTraitInfo.getBuildingProductionModifier(i).value)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
@@ -1884,12 +1886,16 @@ class TestCode:
 					aUniqueReplacementBuildingsList.append(aReplacementBuildingsList[i])
 			if len(aUniqueReplacementBuildingsList) > 0:
 				self.log(CvTraitInfo.getType()+" BuildingProductionModifierTypes "+str(aUniqueReplacementBuildingsList))
+			if len(aBuildingProductionModifierValues) != 0 and min(aBuildingProductionModifierValues) != max(aBuildingProductionModifierValues):
+				self.log("Complex Trait "+CvTraitInfo.getType()+" should have same BuildingProductionModifierTypes value for listed buildings")
 
 			#<BuildingHappinessModifierTypes>
 			aReplacementBuildingsList = []
 			aUniqueReplacementBuildingsList = []
+			aBuildingHappinessModifierValues = []
 			for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
 				iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i).id
+				aBuildingHappinessModifierValues.append(CvTraitInfo.getBuildingHappinessModifier(i).value)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
@@ -1906,6 +1912,8 @@ class TestCode:
 					aUniqueReplacementBuildingsList.append(aReplacementBuildingsList[i])
 			if len(aUniqueReplacementBuildingsList) > 0:
 				self.log(CvTraitInfo.getType()+" BuildingHappinessModifierTypes "+str(aUniqueReplacementBuildingsList))
+			if len(aBuildingHappinessModifierValues) != 0 and min(aBuildingHappinessModifierValues) != max(aBuildingHappinessModifierValues):
+				self.log("Complex Trait "+CvTraitInfo.getType()+" should have same BuildingHappinessModifierTypes value for listed buildings")
 
 	#Buildings - free rewards
 	def checkBuildingFreeReward(self):

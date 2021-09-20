@@ -1071,6 +1071,18 @@
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -5004,6 +5016,18 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>

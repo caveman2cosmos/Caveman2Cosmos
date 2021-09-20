@@ -38462,9 +38462,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WATCHMAKERS_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>

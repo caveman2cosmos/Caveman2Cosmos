@@ -532,9 +532,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -580,9 +581,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>936</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -628,9 +630,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -680,9 +683,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -731,9 +735,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -782,9 +787,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -830,9 +836,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -882,9 +889,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -934,9 +942,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -984,9 +993,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>936</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -1037,9 +1047,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -1091,9 +1102,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
