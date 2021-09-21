@@ -11117,14 +11117,7 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 {
 	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	int iExtraYield =
-	(
-		building.getYieldChange(eIndex)
-		+
-		building.getYieldPerPopChange(eIndex) * getPopulation() / 100
-		+
-		getBuildingYieldChange(eBuilding, eIndex)
-	);
+	int iExtraYield = building.getYieldChange(eIndex) + getBuildingYieldChange(eBuilding, eIndex);
 
 	// Trade
 	const int iPlayerTradeYieldModifier = GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex);
@@ -11145,18 +11138,17 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 			const CvCity* pCity = getTradeCity(iI);
 			if (pCity)
 			{
-				int iTradeProfit = getBaseTradeProfit(pCity);
+				const int iTradeProfit = getBaseTradeProfit(pCity);
 				int iTradeModifier = totalTradeModifier(pCity);
-				int iTradeYield = iTradeProfit * iTradeModifier / iTradeProfitDivisor * iPlayerTradeYieldModifier / 100;
-				iTotalTradeYield += iTradeYield;
+
+				iTotalTradeYield += iTradeProfit * iTradeModifier / iTradeProfitDivisor * iPlayerTradeYieldModifier / 100;
 
 				iTradeModifier += building.getTradeRouteModifier();
 				if (pCity->getOwner() != getOwner())
 				{
 					iTradeModifier += building.getForeignTradeRouteModifier();
 				}
-				int iNewTradeYield = iTradeProfit * iTradeModifier / iTradeProfitDivisor * iPlayerTradeYieldModifier / 100;
-				iNewTotalTradeYield += iNewTradeYield;
+				iNewTotalTradeYield += iTradeProfit * iTradeModifier / iTradeProfitDivisor * iPlayerTradeYieldModifier / 100;
 			}
 		}
 #ifdef _MOD_FRACTRADE
@@ -11188,16 +11180,19 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 		}
 	}
 
-	// Tech
-	foreach_(const TechArray& pair, building.getTechYieldChanges100())
 	{
-		if (GET_TEAM(getTeam()).isHasTech(pair.first))
+		int iExtraYield100 = building.getYieldPerPopChange(eIndex) * getPopulation();
+		// Tech
+		foreach_(const TechArray& pair, building.getTechYieldChanges100())
 		{
-			iExtraYield += pair.second[eIndex];
+			if (GET_TEAM(getTeam()).isHasTech(pair.first))
+			{
+				iExtraYield100 += pair.second[eIndex];
+			}
 		}
+		iExtraYield += iExtraYield100 / 100;
 	}
-
-	int iTradeRoutes = building.getGlobalTradeRoutes() + building.getCoastalTradeRoutes() + building.getTradeRoutes();
+	const int iTradeRoutes = building.getGlobalTradeRoutes() + building.getCoastalTradeRoutes() + building.getTradeRoutes();
 	if (iTradeRoutes != 0)
 	{
 		int* paiTradeYields = new int[NUM_YIELD_TYPES];
