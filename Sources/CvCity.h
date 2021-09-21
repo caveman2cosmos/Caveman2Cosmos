@@ -980,8 +980,9 @@ public:
 	int getExtraYield(YieldTypes eYield) const;
 	int getExtraYield100(YieldTypes eYield) const;
 	void changeExtraYield(YieldTypes eYield, int iChange);
-	void changeBuildingExtraYield100(YieldTypes eYield, int iChange);
 	// ! Toffer
+	void changeBuildingExtraYield100(YieldTypes eYield, int iChange);
+	int getBuildingExtraYield100(YieldTypes eYield) const;
 
 	void onYieldChange();
 

@@ -4930,9 +4930,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		PROFILE("CvCity::processBuilding.Yields");
 		const YieldTypes eYieldX = static_cast<YieldTypes>(iI);
+		changeBuildingExtraYield100(eYieldX, 100 * iChange * (kBuilding.getYieldChange(iI) + getBuildingYieldChange(eBuilding, eYieldX)));
 		changeSeaPlotYield(eYieldX, kBuilding.getSeaPlotYieldChange(iI) * iChange);
 		changeRiverPlotYield(eYieldX, kBuilding.getRiverPlotYieldChange(iI) * iChange);
-		changeExtraYield(eYieldX, (kBuilding.getYieldChange(iI) + getBuildingYieldChange(eBuilding, eYieldX)) * iChange);
 		changeBaseYieldPerPopRate(eYieldX, kBuilding.getYieldPerPopChange(iI) * iChange);
 		changeYieldRateModifier(eYieldX, kBuilding.getYieldModifier(iI) * iChange);
 
@@ -11362,15 +11362,22 @@ void CvCity::changeBuildingExtraYield100(YieldTypes eYield, int iChange)
 	}
 }
 
+int CvCity::getBuildingExtraYield100(YieldTypes eYield) const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+	return m_buildingExtraYield100[eYield];
+}
+
+
 int CvCity::getExtraYield100(YieldTypes eYield) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 	return (
 		m_aiExtraYield[eYield] * 100
 		+
-		m_buildingExtraYield100[eYield]
+		getBuildingExtraYield100(eYield)
 		+
-		m_aiBaseYieldPerPopRate[eYield] * getPopulation()
+		getBaseYieldPerPopRate(eYield) * getPopulation()
 	);
 }
 

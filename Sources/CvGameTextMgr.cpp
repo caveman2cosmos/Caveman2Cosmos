@@ -21048,11 +21048,32 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				aiYieldModifiers[iI] = kBuilding.getYieldModifier(iI);
 				if (bCity)
 				{
-					aiYields[iI] += pCity->getBuildingYieldChange(eBuilding, (YieldTypes)iI) + kBuilding.getYieldPerPopChange(iI) * pCity->getPopulation() / 100;
+					aiYields[iI] += pCity->getBuildingYieldChange(eBuilding, (YieldTypes)iI);
 					aiYieldModifiers[iI] += (pCity->getBuildingYieldModifier(eBuilding, (YieldTypes)iI) + GET_TEAM(eTeam).getBuildingYieldModifier(eBuilding, (YieldTypes)iI));
 				}
 			}
-
+			if (player)
+			{
+				int* aiYields100 = new int[NUM_YIELD_TYPES]();
+				foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
+				{
+					if (GET_TEAM(eTeam).isHasTech(pair.first))
+					{
+						for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+						{
+							aiYields100[iI] += pair.second[(YieldTypes)iI];
+						}
+					}
+				}
+				for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+				{
+					if (bCity)
+					{
+						aiYields100[iI] += kBuilding.getYieldPerPopChange(iI) * pCity->getPopulation();
+					}
+					aiYields[iI] += aiYields100[iI] / 100;
+				}
+			}
 			setYieldChangeHelp(szBuffer, L", ", L"", L"", aiYields, false, false);
 
 			if (!bCity)
@@ -32229,35 +32250,6 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
-	/*
-	int iBaseRate = city.getPlotYield(YIELD_FOOD);
-
-	// Buildings
-	int iBuildingFood = 0;
-	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if (city.hasFullyActiveBuilding((BuildingTypes)i))
-		{
-			iBuildingFood +=
-			(
-				GC.getBuildingInfo((BuildingTypes)i).getYieldChange(YIELD_FOOD)
-				+
-				GC.getBuildingInfo((BuildingTypes)i).getYieldPerPopChange(YIELD_FOOD) * city.getPopulation() / 100
-				+
-				city.getBuildingYieldChange((BuildingTypes)i, YIELD_FOOD)
-				+
-				GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)i, YIELD_FOOD)
-			);
-		}
-	}
-	if (iBuildingFood != 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iBuildingFood, info.getChar(), L"TXT_KEY_WB_BUILDINGS"));
-		iBaseRate += iBuildingFood;
-	}
-	*/
-
 	int iRate = city.getYieldRate(YIELD_FOOD);
 
 	// shows Base Food and lists all modifiers
@@ -33279,20 +33271,36 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		}
 	}
 	// Trade
-	const int iTradeYield = city.getTradeYield(eYieldType);
-	if (iTradeYield != 0)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
-		iYield -= iTradeYield;
+		const int iTradeYield = city.getTradeYield(eYieldType);
+		if (iTradeYield != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
+			iYield -= iTradeYield;
+		}
 	}
 	// Corporations
-	const int iCorporationYield = city.getCorporationYield(eYieldType);
-	if (iCorporationYield != 0)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationYield, info.getChar()));
-		iYield += iCorporationYield;
+		const int iCorporationYield = city.getCorporationYield(eYieldType);
+		if (iCorporationYield != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationYield, info.getChar()));
+			iYield -= iCorporationYield;
+		}
+	}
+	// Buildings
+	{
+		const int iBuildingYield100 = city.getBuildingExtraYield100(eYieldType);
+		if (0 != iBuildingYield100)
+		{
+			CvWString szValue;
+			makeValueString(szValue, iBuildingYield100, true);
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_BULLET_S1_F2_FROM_S3", szValue.GetCString(), info.getChar(), L"TXT_KEY_WB_BUILDINGS"));
+			iYield -= iBuildingYield100 / 100;
+		}
 	}
 
 	// Yield specifics
