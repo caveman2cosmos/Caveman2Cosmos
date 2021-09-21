@@ -18682,6 +18682,10 @@
 					<BuildingType>BUILDING_ORBITAL_HOTEL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TOURISM_MEGACOMPLEX</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<iAsset>20</iAsset>
