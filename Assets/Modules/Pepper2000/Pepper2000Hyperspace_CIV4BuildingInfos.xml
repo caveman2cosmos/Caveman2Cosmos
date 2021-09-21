@@ -483,7 +483,7 @@
 					<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -512,7 +512,7 @@
 					<PrereqTech>TECH_TRANSFINITE_STRUCTURES</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1043,7 +1043,7 @@
 					<PrereqTech>TECH_PARAMETER_TUNING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>

@@ -242,7 +242,6 @@ m_ppaiBonusYieldModifier(NULL)
 //New Integer Arrays
 ,m_piBonusDefenseChanges(NULL)
 //New Multidimensional Integer Arrays
-,m_ppaiTechYieldChange(NULL)
 ,m_ppaiTechSpecialistChange(NULL)
 ,m_ppaiTechCommerceModifier(NULL)
 ,m_ppaiTechYieldModifier(NULL)
@@ -361,7 +360,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommercePercentChanges, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiVicinityBonusYieldChanges, GC.getNumBonusInfos());
-	SAFE_DELETE_ARRAY2(m_ppaiTechYieldChange, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiTechSpecialistChange, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiTechCommerceModifier, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiTechYieldModifier, GC.getNumTechInfos());
@@ -886,11 +884,27 @@ const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 	return pyList;
 }
 
+const python::list CvBuildingInfo::cyGetTechYieldChanges100() const
+{
+	python::list pyList = python::list();
+
+	foreach_(const TechArray& pChange, m_techYieldChanges)
+	{
+		for (int i = 0; i < NUM_YIELD_TYPES; i++)
+		{
+			const int iValue = pChange.second[i];
+			if (iValue != 0)
+				pyList.append(TechYieldChange(pChange.first, (YieldTypes)i, pChange.second[i]));
+		}
+	}
+	return pyList;
+}
+
 const python::list CvBuildingInfo::cyGetTechCommerceChanges100() const
 {
 	python::list pyList = python::list();
 
-	foreach_(const TechCommerceChanges& pChange, m_techCommerceChanges)
+	foreach_(const TechArray& pChange, m_techCommerceChanges)
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -1081,23 +1095,6 @@ int* CvBuildingInfo::getVicinityBonusYieldChangesArray(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_ppaiVicinityBonusYieldChanges[i];
-}
-
-int CvBuildingInfo::getTechYieldChange(int i, int j) const
-{
-	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
-
-	if (i == NO_TECH)
-	{
-		return (m_ppaiTechYieldChange ? 1 : 0);
-	}
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-	return (m_ppaiTechYieldChange && m_ppaiTechYieldChange[i]) ? m_ppaiTechYieldChange[i][j] : 0;
-}
-
-int* CvBuildingInfo::getTechYieldChangeArray(int i) const
-{
-	return (m_ppaiTechYieldChange ? m_ppaiTechYieldChange[i] : NULL);
 }
 
 int CvBuildingInfo::getTechSpecialistChange(int i, int j) const
@@ -1954,8 +1951,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 
 	for(int i = 0; i < GC.getNumTechInfos(); i++)
 	{
-		if (m_ppaiTechYieldChange)
-			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppaiTechYieldChange[i]);
 		if (m_ppaiTechSpecialistChange)
 			CheckSumI(iSum, GC.getNumSpecialistInfos(), m_ppaiTechSpecialistChange[i]);
 		if (m_ppaiTechCommerceModifier)
@@ -2114,6 +2109,8 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_iExtraPlayerInstances);
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
+
+	CheckSumC(iSum, m_techYieldChanges);
 	CheckSumC(iSum, m_techCommerceChanges);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
 
@@ -3070,51 +3067,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_piPrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
 	pXML->SetOptionalVector(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
-	if (pXML->TryMoveToXmlFirstChild(L"TechYieldChanges"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		if (pXML->TryMoveToXmlFirstChild())
-		{
-			if (0 < iNumSibs)
-			{
-				for (int j = 0; j < iNumSibs; j++)
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
-					const int k = pXML->GetInfoClass(szTextVal);
-
-					if (k > -1)
-					{
-						if ( m_ppaiTechYieldChange == NULL )
-						{
-							m_ppaiTechYieldChange = new int*[GC.getNumTechInfos()];
-
-							for(int i = 0; i < GC.getNumTechInfos(); i++)
-							{
-								m_ppaiTechYieldChange[i] = NULL;
-							}
-						}
-						// if we can set the current xml node to it's next sibling
-						if (pXML->TryMoveToXmlFirstChild(L"TechYield"))
-						{
-							// call the function that sets the yield change variable
-							pXML->SetYields(&m_ppaiTechYieldChange[k]);
-							pXML->MoveToXmlParent();
-						}
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-			}
-
-			pXML->MoveToXmlParent();
-		}
-
-		pXML->MoveToXmlParent();
-	}
-
 	if (pXML->TryMoveToXmlFirstChild(L"TechSpecialistChanges"))
 	{
 		const int iNumSibs = pXML->GetXmlChildrenNumber();
@@ -3524,6 +3476,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aGlobalBuildingProductionModifier.readWithDelayedResolution(pXML, L"GlobalBuildingProductionModifiers");
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
+
+	m_techYieldChanges.readPairedArrays(pXML, L"TechYieldChanges", L"PrereqTech", L"TechYield", NUM_YIELD_TYPES);
 	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents", NUM_COMMERCE_TYPES);
 	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges", NUM_YIELD_TYPES);
 
@@ -4432,39 +4386,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	for ( int i = 0; i < GC.getNumTechInfos(); i++)
 	{
-		for ( int j = 0; j < NUM_YIELD_TYPES; j++)
-		{
-			if ( getTechYieldChange(i,j) == iDefault )
-			{
-				const int iChange = pClassInfo->getTechYieldChange(i, j);
-
-				if ( iChange != iDefault )
-				{
-					if ( m_ppaiTechYieldChange == NULL )
-					{
-						m_ppaiTechYieldChange = new int*[GC.getNumTechInfos()];
-						for(int k = 0; k < GC.getNumTechInfos(); k++)
-						{
-							m_ppaiTechYieldChange[k] = NULL;
-						}
-					}
-					if ( m_ppaiTechYieldChange[i] == NULL )
-					{
-						m_ppaiTechYieldChange[i] = new int[NUM_YIELD_TYPES];
-						for(int k = 0; k < NUM_YIELD_TYPES; k++)
-						{
-							m_ppaiTechYieldChange[i][k] = NULL;
-						}
-					}
-
-					m_ppaiTechYieldChange[i][j] = iChange;
-				}
-			}
-		}
-	}
-
-	for ( int i = 0; i < GC.getNumTechInfos(); i++)
-	{
 		for ( int j = 0; j < GC.getNumSpecialistInfos(); j++)
 		{
 			if ( getTechSpecialistChange(i,j) == iDefault )
@@ -4799,6 +4720,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aGlobalBuildingProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingProductionModifiers());
 	m_aPrereqNumOfBuilding.copyNonDefaultDelayedResolution(pClassInfo->getPrereqNumOfBuildings());
 	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
+
+	m_techYieldChanges.copyNonDefaults(pClassInfo->getTechYieldChanges100());
 	m_techCommerceChanges.copyNonDefaults(pClassInfo->getTechCommerceChanges100());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 
