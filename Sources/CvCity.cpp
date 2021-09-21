@@ -37,7 +37,7 @@ CvCity::CvCity()
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
 	m_aiExtraYield = new int[NUM_YIELD_TYPES];
-	m_extraYield100 = new int[NUM_YIELD_TYPES];
+	m_buildingExtraYield100 = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldPerPopRate = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiPowerYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -184,7 +184,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiRiverPlotYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldRate);
 	SAFE_DELETE_ARRAY(m_aiExtraYield);
-	SAFE_DELETE_ARRAY(m_extraYield100);
+	SAFE_DELETE_ARRAY(m_buildingExtraYield100);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldPerPopRate);
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiPowerYieldRateModifier);
@@ -677,7 +677,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiRiverPlotYield[iI] = 0;
 		m_aiBaseYieldRate[iI] = 0;
 		m_aiExtraYield[iI] = 0;
-		m_extraYield100[iI] = 0;
+		m_buildingExtraYield100[iI] = 0;
 		m_aiBaseYieldPerPopRate[iI] = 0;
 		m_aiYieldRateModifier[iI] = 0;
 		m_aiPowerYieldRateModifier[iI] = 0;
@@ -5317,7 +5317,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		{
 			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
-				changeExtraYield100((YieldTypes)iI, iChange * pair.second[(YieldTypes)iI]);
+				changeBuildingExtraYield100((YieldTypes)iI, iChange * pair.second[(YieldTypes)iI]);
 			}
 		}
 	}
@@ -11351,25 +11351,26 @@ void CvCity::changePlotYield(YieldTypes eIndex, int iChange)
 }
 
 
-void CvCity::changeExtraYield100(YieldTypes eYield, int iChange)
+void CvCity::changeBuildingExtraYield100(YieldTypes eYield, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	if (iChange != 0)
 	{
-		m_extraYield100[eYield] += iChange;
+		m_buildingExtraYield100[eYield] += iChange;
 		onYieldChange();
 	}
 }
+
 int CvCity::getExtraYield100(YieldTypes eYield) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 	return (
-		m_extraYield100[eYield]
-		+
 		m_aiExtraYield[eYield] * 100
 		+
-		getPopulation() * getBaseYieldPerPopRate(eYield)
+		m_buildingExtraYield100[eYield]
+		+
+		m_aiBaseYieldPerPopRate[eYield] * getPopulation()
 	);
 }
 
@@ -17376,7 +17377,7 @@ void CvCity::read(FDataStreamBase* pStream)
 		}
 	}
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
-	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_extraYield100);
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_buildingExtraYield100);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
@@ -17807,7 +17808,7 @@ void CvCity::write(FDataStreamBase* pStream)
 		}
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
-	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_extraYield100);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_buildingExtraYield100);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -22330,7 +22331,7 @@ void CvCity::clearModifierTotals()
 		m_aiCorporationYield[iI] = 0;
 		m_aiExtraSpecialistYield[iI] = 0;
 		m_aiExtraYield[iI] = 0;
-		m_extraYield100[iI] = 0;
+		m_buildingExtraYield100[iI] = 0;
 	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)

@@ -980,7 +980,7 @@ public:
 	int getExtraYield(YieldTypes eYield) const;
 	int getExtraYield100(YieldTypes eYield) const;
 	void changeExtraYield(YieldTypes eYield, int iChange);
-	void changeExtraYield100(YieldTypes eYield, int iChange);
+	void changeBuildingExtraYield100(YieldTypes eYield, int iChange);
 	// ! Toffer
 
 	void onYieldChange();
@@ -1921,7 +1921,7 @@ protected:
 	int* m_aiSeaPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
-	int* m_extraYield100;
+	int* m_buildingExtraYield100;
 	int* m_aiExtraYield;
 	int* m_aiBaseYieldPerPopRate;
 	int* m_aiYieldRateModifier;

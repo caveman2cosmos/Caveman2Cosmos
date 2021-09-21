@@ -33122,9 +33122,6 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	int iMod = 0;
 	if (iActualBaseMod != 100)
 	{
-		// Toffer
-		// There may be a better way to get the event modifiers isolated, though the only one I can think
-		// of is to add a new player and city variable to store the eventModifiers explicitly.
 		int iEventModifier = city.getYieldRateModifier(eYieldType) + owner.getYieldRateModifier(eYieldType);
 		// Traits
 		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)

@@ -5226,7 +5226,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 				}
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
-					cityX->changeExtraYield100((YieldTypes)iJ, iChange * cityX->getBuildingYieldTechChange((YieldTypes)iJ, eTech));
+					cityX->changeBuildingExtraYield100((YieldTypes)iJ, iChange * cityX->getBuildingYieldTechChange((YieldTypes)iJ, eTech));
 				}
 				// A new tech can effect best plot build decisions so mark stale in all cities
 				cityX->AI_markBestBuildValuesStale();
