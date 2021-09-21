@@ -33292,7 +33292,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	}
 	// Buildings
 	{
-		const int iBuildingYield100 = city.getBuildingExtraYield100(eYieldType);
+		const int iBuildingYield100 = city.getBuildingExtraYield100(eYieldType) + city.getBaseYieldPerPopRate(eYieldType) * city.getPopulation();
 		if (0 != iBuildingYield100)
 		{
 			CvWString szValue;

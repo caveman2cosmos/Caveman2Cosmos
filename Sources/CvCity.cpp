@@ -11424,6 +11424,7 @@ int CvCity::getBaseYieldPerPopRate(YieldTypes eIndex)	const
 
 	return m_aiBaseYieldPerPopRate[eIndex];
 }
+
 void CvCity::setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
@@ -11434,7 +11435,6 @@ void CvCity::setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue)
 		onYieldChange();
 	}
 }
-
 
 void CvCity::changeBaseYieldPerPopRate(YieldTypes eIndex, int iChange)
 {
