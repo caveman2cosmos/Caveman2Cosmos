@@ -378,7 +378,7 @@
 				<iCommerce>200</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
@@ -483,7 +483,7 @@
 					<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -512,7 +512,7 @@
 					<PrereqTech>TECH_TRANSFINITE_STRUCTURES</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -601,14 +601,14 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_QUANTONIUM_CRYSTAL</BonusType>
-					<CommerceModifiers>
-						<iCommerce>30</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>3000</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Type>
@@ -629,7 +629,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1043,7 +1043,7 @@
 					<PrereqTech>TECH_PARAMETER_TUNING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>

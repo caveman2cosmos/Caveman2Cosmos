@@ -48,11 +48,6 @@
 					type="boolean" default="True"/>
 		</section>
 
-		<section id="Tech">
-			<option id="TechTradeDenial" key="Trade Denial"
-					type="boolean" default="True"/>
-		</section>
-
 		<section id="Bonus">
 			<option id="BonusTradeDenial" key="Trade Denial"
 					type="boolean" default="True"/>

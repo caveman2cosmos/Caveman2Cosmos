@@ -5973,18 +5973,13 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 					for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{
-						int iCommerceChange = 0;
-						foreach_(const TechCommerceChanges& pair, kLoopBuilding.getTechCommerceChanges100())
+						foreach_(const TechArray& pair, kLoopBuilding.getTechCommerceChanges100())
 						{
 							if (eTech == pair.first)
 							{
-								iCommerceChange += pair.second[iJ];
+								iTempValue += 4 * pair.second[iJ];
+								break;
 							}
-						}
-
-						if (iCommerceChange != 0)
-						{
-							iTempValue += 400 * iCommerceChange;
 						}
 						const int iCommerceModifier = kLoopBuilding.getTechCommerceModifier(eTech, iJ);
 						if (iCommerceModifier != 0)
@@ -5995,14 +5990,16 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 					for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
-						int iYieldChange = kLoopBuilding.getTechYieldChange(eTech, iJ);
-						int iYieldModifier = kLoopBuilding.getTechYieldModifier(eTech, iJ);
-
-						if ( iYieldChange != 0 )
+						foreach_(const TechArray& pair, kLoopBuilding.getTechYieldChanges100())
 						{
-							iTempValue += 400*iYieldChange;
+							if (eTech == pair.first)
+							{
+								iTempValue += 4 * pair.second[iJ];
+								break;
+							}
 						}
-						if ( iYieldModifier != 0 )
+						const int iYieldModifier = kLoopBuilding.getTechYieldModifier(eTech, iJ);
+						if (iYieldModifier != 0)
 						{
 							iTempValue += (4*calculateTotalYield((YieldTypes)iJ)*iYieldModifier)/getNumCities();
 						}

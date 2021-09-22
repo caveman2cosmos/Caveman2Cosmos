@@ -482,7 +482,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
 			<iCost>1540</iCost>
-			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>8</iCommerce>
@@ -2349,11 +2348,11 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>

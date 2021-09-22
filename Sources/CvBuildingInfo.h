@@ -345,6 +345,9 @@ public:
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
+	const IDValueMap<TechTypes, int*>& getTechYieldChanges100() const { return m_techYieldChanges; }
+	const python::list cyGetTechYieldChanges100() const;
+
 	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
@@ -408,9 +411,6 @@ public:
 	int getBonusCommercePercentChanges(int i, int j) const;
 	int* getBonusCommercePercentChangesArray(int i) const;
 
-	int getTechYieldChange(int i, int j) const;
-	int* getTechYieldChangeArray(int i) const;
-
 	int getTechSpecialistChange(int i, int j) const;
 	int* getTechSpecialistChangeArray(int i) const;
 
@@ -466,6 +466,8 @@ public:
 	bool isHurry(int i) const;
 
 	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
+	const python::list cyGetFreePromoTypes() const;
+
 	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
 	int getNumHealUnitCombatTypes() const;
@@ -485,7 +487,6 @@ public:
 	bool isAnySpecialistYieldChanges() const		{ return m_ppaiSpecialistYieldChange != NULL; }
 	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
 	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
-	bool isAnyTechYieldChanges() const				{ return m_ppaiTechYieldChange != NULL; }
 	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
 	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
 	bool isAnyTechYieldModifiers() const			{ return m_ppaiTechYieldModifier != NULL; }
@@ -795,7 +796,6 @@ private:
 	int* m_piVictoryThreshold;
 
 	int** m_ppaiBonusCommerceModifier;
-	int** m_ppaiTechYieldChange;
 	int** m_ppaiTechSpecialistChange;
 	int** m_ppaiTechCommerceModifier;
 	int** m_ppaiTechYieldModifier;
@@ -851,6 +851,7 @@ private:
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
+	IDValueMap<TechTypes, int*> m_techYieldChanges;
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
 
