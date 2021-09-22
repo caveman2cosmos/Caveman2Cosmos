@@ -87,7 +87,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
@@ -129,7 +129,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>7</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
@@ -168,7 +168,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
@@ -248,7 +248,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>7</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>

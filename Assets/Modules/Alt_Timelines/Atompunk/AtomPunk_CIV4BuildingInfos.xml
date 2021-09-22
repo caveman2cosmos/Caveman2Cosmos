@@ -162,7 +162,7 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TESLA_INFANTRY</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<SpecialistCounts>

@@ -502,7 +502,7 @@
 					<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1090,7 +1090,7 @@
 					<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>

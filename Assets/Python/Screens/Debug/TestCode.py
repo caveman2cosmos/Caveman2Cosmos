@@ -55,7 +55,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
-		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
+		self.main.addTestCode(screen, self.listStandaloneBuildings, "Building - list stand-alone buildings", "List regular non religious/civic buildings, that aren't part of replacement chain")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -1453,22 +1453,23 @@ class TestCode:
 				aTechCommercePercentChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechSpecialistChanges = [[[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-				if CvBuildingInfo.isAnyTechYieldChanges():
-					for iTech in xrange(GC.getNumTechInfos()):
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							aTechYieldChanges[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldChange(iTech, iYield)
+
+				for entry in CvBuildingInfo.getTechYieldChanges100():
+					aTechYieldChanges[BASE][entry.eTech][entry.eYield] += entry.value
+
 				if CvBuildingInfo.isAnyTechYieldModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 							aTechYieldModifiers[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
-				for pTechCommerceChange in CvBuildingInfo.getTechCommerceChanges100():
-					iTech = pTechCommerceChange.eTech
-					iCommerce = pTechCommerceChange.eCommerce
-					aTechCommercePercentChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
+
+				for entry in CvBuildingInfo.getTechCommerceChanges100():
+					aTechCommercePercentChanges[BASE][entry.eTech][entry.eCommerce] += entry.value
+
 				if CvBuildingInfo.isAnyTechCommerceModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 							aTechCommerceModifiers[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+
 				if CvBuildingInfo.isAnyTechSpecialistChanges():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
@@ -1865,8 +1866,10 @@ class TestCode:
 			#<BuildingProductionModifierTypes>
 			aReplacementBuildingsList = []
 			aUniqueReplacementBuildingsList = []
+			aBuildingProductionModifierValues = []
 			for i in xrange(CvTraitInfo.getNumBuildingProductionModifiers()):
 				iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
+				aBuildingProductionModifierValues.append(CvTraitInfo.getBuildingProductionModifier(i).value)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
@@ -1884,12 +1887,16 @@ class TestCode:
 					aUniqueReplacementBuildingsList.append(aReplacementBuildingsList[i])
 			if len(aUniqueReplacementBuildingsList) > 0:
 				self.log(CvTraitInfo.getType()+" BuildingProductionModifierTypes "+str(aUniqueReplacementBuildingsList))
+			if len(aBuildingProductionModifierValues) != 0 and min(aBuildingProductionModifierValues) != max(aBuildingProductionModifierValues):
+				self.log("Complex Trait "+CvTraitInfo.getType()+" should have same BuildingProductionModifierTypes value for listed buildings")
 
 			#<BuildingHappinessModifierTypes>
 			aReplacementBuildingsList = []
 			aUniqueReplacementBuildingsList = []
+			aBuildingHappinessModifierValues = []
 			for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
 				iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i).id
+				aBuildingHappinessModifierValues.append(CvTraitInfo.getBuildingHappinessModifier(i).value)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
@@ -1906,6 +1913,8 @@ class TestCode:
 					aUniqueReplacementBuildingsList.append(aReplacementBuildingsList[i])
 			if len(aUniqueReplacementBuildingsList) > 0:
 				self.log(CvTraitInfo.getType()+" BuildingHappinessModifierTypes "+str(aUniqueReplacementBuildingsList))
+			if len(aBuildingHappinessModifierValues) != 0 and min(aBuildingHappinessModifierValues) != max(aBuildingHappinessModifierValues):
+				self.log("Complex Trait "+CvTraitInfo.getType()+" should have same BuildingHappinessModifierTypes value for listed buildings")
 
 	#Buildings - free rewards
 	def checkBuildingFreeReward(self):
@@ -3272,28 +3281,70 @@ class TestCode:
 			if len(aTechXY) > 1 and 100*iTechMainLoc+iTechMainRow != max(aTechXY):
 				self.log(CvUnitInfo.getType()+" Main tech isn't most advanced, switch it to "+str(aTechList[aTechXY.index(max(aTechXY))]))
 
-	#Building - list buildings, that obsolete without replacement
-	def listObsoleteingBuildings(self):
+	#Building - list buildings, that are stand-alone
+	def listStandaloneBuildings(self):
 		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
-		aObsoletedBuildingOnTechCountList = [[0 for x in xrange(GC.getNumBuildingInfos())] for y in xrange(GC.getNumTechInfos())]
+		aSpecialBuildingList = [GC.getInfoTypeForString("SPECIALBUILDING_CORPORATION"), GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION")]
+		#We are excluding bans from valid replacements, and some special building classes must be standalone
+
+		#Get buildings and their requirements in 2D array
+		aBuildings = [[0 for x in xrange(GC.getNumBuildingInfos())] for y in xrange(GC.getNumBuildingInfos())]
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
+				aBuildings[iPrereqBuilding][iBuilding] = 1
+			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
+				aBuildings[iPrereqBuilding][iBuilding] = 1
+			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
+				iPrereqBuilding = pair.id
+				aBuildings[iPrereqBuilding][iBuilding] = 1
+			aBuildingGOMReqList = []
+			for i in range(2):
+				aBuildingGOMReqList.append([])
+			self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
+			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
+				aBuildings[iPrereqBuilding][iBuilding] = 1
+			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
+				aBuildings[iPrereqBuilding][iBuilding] = 1
+
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
+			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 
-			aReplacementList = [] #Exclude wonders, special and religious buildings
-			if not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getObsoleteTech() != -1 and CvBuildingInfo.getReligionType() == -1 and CvBuildingInfo.getPrereqReligion() == -1:
-				for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-					if GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType() not in aSpecialReplacementsList:
-						aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
+			#Exclude Space buildings, National wonders, World wonders, Natural wonders, No cost buildings, continental culture, religious buildings, civic buildings, certain special buildings
+			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getType().find("_CULTURE_LOCAL_") == -1 and CvBuildingInfo.getReligionType() == -1 and CvBuildingInfo.getPrereqReligion() == -1 and iSpecialBuilding not in aSpecialBuildingList:
+				bRequiresCivic = False #Civic requiring buildings shouldn't be in upgrade chain
+				for iCivic in xrange(GC.getNumCivicInfos()):
+					if CvBuildingInfo.isPrereqAndCivics(iCivic):
+						bRequiresCivic = True
+						break
+					if CvBuildingInfo.isPrereqOrCivics(iCivic):
+						bRequiresCivic = True
+						break
 
-				if len(aReplacementList) == 0:
-					aObsoletedBuildingOnTechCountList[CvBuildingInfo.getObsoleteTech()][iBuilding] = 1
-					self.log(str(iTechLoc)+" tech column, "+CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
+				if not bRequiresCivic:
+					aReplacementList = []
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						if GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType() not in aSpecialReplacementsList:
+							aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
+					aReplacedList = []
+					for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
+						if GC.getBuildingInfo(CvBuildingInfo.getReplacedBuilding(i)).getType() not in aSpecialReplacementsList:
+							aReplacedList.append(CvBuildingInfo.getReplacedBuilding(i))
 
-		for iTech in xrange(GC.getNumTechInfos()):
-			aBuildingsList = []
-			for iBuilding in xrange(GC.getNumBuildingInfos()):
-				if aObsoletedBuildingOnTechCountList[iTech][iBuilding]:
-					aBuildingsList.append(GC.getBuildingInfo(iBuilding).getType())
-			if len(aBuildingsList) > 0:
-				self.log(str(len(aBuildingsList))+" obsoletions at "+GC.getTechInfo(iTech).getType()+", regular buildings without replacement: "+str(aBuildingsList))
+					iUsedBy = 0
+					if max(aBuildings[iBuilding]) == 1:
+						for i in xrange(len(aBuildings[iBuilding])):
+							iUsedBy += aBuildings[iBuilding][i]
+
+					#Standalone buildings, used by few buildings
+					if len(aReplacementList) == 0 and len(aReplacedList) == 0 and iUsedBy <= 5:
+						if CvBuildingInfo.getObsoleteTech() == -1:
+							self.log(str(iTechLoc)+" tech column, "+CvBuildingInfo.getType()+" is stand-alone, required by "+str(iUsedBy)+" buildings")
+						else:
+							self.log(str(iTechLoc)+" tech column, "+CvBuildingInfo.getType()+" is stand-alone, required by "+str(iUsedBy)+" buildings, obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType())

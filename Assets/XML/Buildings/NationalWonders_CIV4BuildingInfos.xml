@@ -662,9 +662,10 @@
 			<Description>TXT_KEY_BUILDING_CAPTURED_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_FIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EARTH_OVEN</ObsoleteTech>
 			<iCost>40</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -681,19 +682,19 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_IMU</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BONFIRE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<bNeverCapture>1</bNeverCapture>
@@ -1446,19 +1447,19 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_FREIGHT</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_MOTORCYCLE</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_JEEP</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_HUMVEE</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<bNeverCapture>1</bNeverCapture>
@@ -1559,7 +1560,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>-30</iMaintenanceModifier>
+			<iMaintenanceModifier>-15</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4472,7 +4473,7 @@
 			<DomainProductionModifiers>
 				<DomainProductionModifier>
 					<DomainType>DOMAIN_AIR</DomainType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</DomainProductionModifier>
 			</DomainProductionModifiers>
 			<HealUnitCombatTypes>
@@ -4846,38 +4847,38 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_GOLD_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_SILVER_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_PLATINUM_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_ELECTRUM_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<iAsset>8</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -5527,14 +5528,14 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_HIT_MOVIES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<iGlobalGreatPeopleRateModifier>10</iGlobalGreatPeopleRateModifier>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
@@ -5838,7 +5839,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bCapital>1</bCapital>
 			<bGovernmentCenter>1</bGovernmentCenter>
-			<iMaintenanceModifier>-25</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -6929,7 +6930,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>-20</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7403,91 +7404,95 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_VACATION_RESORT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CRUISE_PORT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_UNESCO_SITE</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WATER_PARK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TOURIST_TRAP</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PUBLIC_BEACH</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CAMP_GROUNDS</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLAR_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_OUTBACK_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SAFARI_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_JUNGLE_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WILDWEST_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_RIVER_RAFTING_DOCK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TOURISM_MEGACOMPLEX</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iAsset>2</iAsset>

@@ -791,6 +791,19 @@ struct BuildingCommerceModifier
 	void write(FDataStreamBase* pStream);
 };
 
+const struct TechYieldChange
+{
+	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)
+		: eTech(eTech)
+		, eYield(eYield)
+		, iChange(iChange)
+	{}
+
+	const TechTypes eTech;
+	const YieldTypes eYield;
+	const int iChange;
+};
+
 const struct TechCommerceChange
 {
 	TechCommerceChange(TechTypes eTech, CommerceTypes eCommerce, int iChange)
