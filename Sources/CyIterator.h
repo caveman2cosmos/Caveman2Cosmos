@@ -1,3 +1,8 @@
+#pragma once
+
+#ifndef CyIterator_h__
+#define CyIterator_h__
+
 #include <boost/python/object/iterator_core.hpp>
 
 template <typename Container>
@@ -34,3 +39,5 @@ void publishPythonIteratorInterface()
 		.def("next", &CyIterator<Container>::next, python::return_value_policy<python::reference_existing_object>())
 	;
 }
+
+#endif
