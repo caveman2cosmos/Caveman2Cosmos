@@ -398,7 +398,8 @@ namespace Cy
 		{
 			python::converter::registry::push_back(&PyIntConverter::convertible, &PyIntConverter::fromPython<T>, python::type_id<T>());
 			python::converter::registry::insert(PyIntConverter::toPython, python::type_id<T>());
-			python::converter::registry::insert(ContainerConverter<std::vector<T> >::toPython, python::type_id<std::vector<T> >());
+
+			publishIDValueMapPythonInterface<IDValueMap<T, int, 0> >();
 		}
 
 		const struct PyIntConverter
@@ -419,18 +420,6 @@ namespace Cy
 			static PyObject* toPython(const void* p)
 			{
 				return PyInt_FromLong(*static_cast<const long*>(p));
-			}
-		};
-
-		template <typename Container_T>
-		struct ContainerConverter
-		{
-			static PyObject* toPython(const void* p)
-			{
-				python::list l = python::list();
-				foreach_(const Container_T::value_type& i, *static_cast<const Container_T*>(p))
-					l += python::handle<>(PyInt_FromLong(static_cast<long>(i)));
-				return l.ptr();
 			}
 		};
 	}
