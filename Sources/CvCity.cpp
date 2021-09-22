@@ -11037,6 +11037,21 @@ int CvCity::getPlotYieldChange(const CvPlot* pPlot, const YieldTypes eYield) con
 }
 
 
+// Toffer - Base yield directly produced by building, not indirectly through trade, plots, specialists, modifiers, etc.
+int CvCity::getBaseYieldRateFromBuilding100(const YieldTypes eYield, const BuildingTypes eBuilding) const
+{
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+	return (
+		building.getYieldChange(eYield) * 100
+		+
+		building.getYieldPerPopChange(eYield) * getPopulation()
+		+
+		GET_TEAM(getTeam()).getBuildingYieldTechChange(eYield, eBuilding)
+		+
+		getBuildingYieldChange(eBuilding, eYield)
+	);
+}
+
 /*
  * Returns the total additional yield that adding one of the given buildings will provide.
  *
@@ -11117,7 +11132,7 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 {
 	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	int iExtraYield = building.getYieldChange(eIndex) + getBuildingYieldChange(eBuilding, eIndex);
+	int iExtraYield = getBaseYieldRateFromBuilding100(eIndex, eBuilding) / 100;
 
 	// Trade
 	const int iPlayerTradeYieldModifier = GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex);
@@ -11180,18 +11195,6 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 		}
 	}
 
-	{
-		int iExtraYield100 = building.getYieldPerPopChange(eIndex) * getPopulation();
-		// Tech
-		foreach_(const TechArray& pair, building.getTechYieldChanges100())
-		{
-			if (GET_TEAM(getTeam()).isHasTech(pair.first))
-			{
-				iExtraYield100 += pair.second[eIndex];
-			}
-		}
-		iExtraYield += iExtraYield100 / 100;
-	}
 	const int iTradeRoutes = building.getGlobalTradeRoutes() + building.getCoastalTradeRoutes() + building.getTradeRoutes();
 	if (iTradeRoutes != 0)
 	{
@@ -12192,7 +12195,7 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 				(
 					kBuilding.getCommercePerPopChange(eIndex)
 					+ getBonusCommercePercentChanges(eIndex, eBuilding)
-					+ getBuildingCommerceTechChange(eIndex, eBuilding)
+					+ GET_TEAM(getTeam()).getBuildingCommerceTechChange(eIndex, eBuilding)
 				)
 				/ 100
 			);
@@ -20021,23 +20024,6 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech)
 	return iCommerce100;
 }
 
-int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eBuilding) const
-{
-	if (!hasFullyActiveBuilding(eBuilding))
-	{
-		return 0;
-	}
-	int iCommerce100 = 0;
-	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
-	{
-		if (GET_TEAM(getTeam()).isHasTech(pair.first))
-		{
-			iCommerce100 += pair.second[eIndex];
-		}
-	}
-	return iCommerce100;
-}
-
 
 int CvCity::getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const
 {
@@ -20053,23 +20039,6 @@ int CvCity::getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const
 					iYield100 += pair.second[eYield];
 				}
 			}
-		}
-	}
-	return iYield100;
-}
-
-int CvCity::getBuildingYieldTechChange(YieldTypes eYield, BuildingTypes eBuilding) const
-{
-	if (!hasFullyActiveBuilding(eBuilding))
-	{
-		return 0;
-	}
-	int iYield100 = 0;
-	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechYieldChanges100())
-	{
-		if (GET_TEAM(getTeam()).isHasTech(pair.first))
-		{
-			iYield100 += pair.second[eYield];
 		}
 	}
 	return iYield100;

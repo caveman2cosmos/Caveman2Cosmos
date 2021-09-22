@@ -714,6 +714,11 @@ void CyTeam::changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int 
 	m_pTeam->changeImprovementYieldChange((ImprovementTypes)eIndex1, (YieldTypes)eIndex2, iChange);
 }
 
+int CyTeam::getBuildingCommerceTechChange(int eIndex, int eBuilding) const
+{
+	return m_pTeam->getBuildingCommerceTechChange((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
+}
+
 int CyTeam::getVictoryCountdown(int /*VictoryTypes*/ eVictory) const
 {
 	return m_pTeam->getVictoryCountdown((VictoryTypes)eVictory);

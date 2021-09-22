@@ -180,6 +180,8 @@ public:
 	int getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2) const;
 	void changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);
 
+	int getBuildingCommerceTechChange(int eIndex, int eBuilding) const;
+
 	int getVictoryCountdown(int /*VictoryTypes*/ eVictory) const;
 	int getVictoryDelay(int /*VictoryTypes*/ eVictory) const;
 	bool canLaunch(int /*VictoryTypes*/ eVictory) const;

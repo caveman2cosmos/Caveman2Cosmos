@@ -412,6 +412,9 @@ public:
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 
+	int getBuildingYieldTechChange(const YieldTypes eYield, const BuildingTypes eBuilding) const;
+	int getBuildingCommerceTechChange(const CommerceTypes eIndex, const BuildingTypes eBuilding) const;
+
 	void addPropertiesAllCities(const CvProperties* pProp);
 	void subtractPropertiesAllCities(const CvProperties* pProp);
 
