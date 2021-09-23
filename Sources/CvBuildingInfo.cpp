@@ -907,7 +907,8 @@ const python::list CvBuildingInfo::cyGetTechYieldModifiers() const
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
 			const int iValue = pair.second[i];
-			if (iValue != 0) pyList.append(TechYieldChange(pair.first, (YieldTypes)i, pair.second[i]));
+			if (iValue != 0)
+				pyList.append(TechYieldChange(pair.first, (YieldTypes)i, pair.second[i]));
 		}
 	}
 	return pyList;
