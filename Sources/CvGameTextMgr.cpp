@@ -21049,7 +21049,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				if (bCity)
 				{
 					aiYields[iI] += pCity->getBuildingYieldChange(eBuilding, (YieldTypes)iI);
-					aiYieldModifiers[iI] += (pCity->getBuildingYieldModifier(eBuilding, (YieldTypes)iI) + GET_TEAM(eTeam).getBuildingYieldModifier(eBuilding, (YieldTypes)iI));
+					aiYieldModifiers[iI] += pCity->getBuildingYieldModifier(eBuilding, (YieldTypes)iI);
 				}
 			}
 			if (player)

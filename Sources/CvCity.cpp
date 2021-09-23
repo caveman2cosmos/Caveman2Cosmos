@@ -19573,9 +19573,8 @@ int CvCity::calculateBuildingYieldModifier(YieldTypes eYield) const
 
 	if (m_cachedBuildingYieldModifers[eYield] == -1)
 	{
-		const int iNumBuildingInfos = GC.getNumBuildingInfos();
 		int iTotalModifier = 0;
-		for (int iI = 0; iI < iNumBuildingInfos; iI++)
+		for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 		{
 			if (hasFullyActiveBuilding((BuildingTypes)iI))
 			{
