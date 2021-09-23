@@ -398,8 +398,6 @@ namespace Cy
 		{
 			python::converter::registry::push_back(&PyIntConverter::convertible, &PyIntConverter::fromPython<T>, python::type_id<T>());
 			python::converter::registry::insert(PyIntConverter::toPython, python::type_id<T>());
-
-			publishIDValueMapPythonInterface<IDValueMap<T, int, 0> >();
 		}
 
 		const struct PyIntConverter
