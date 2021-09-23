@@ -12237,19 +12237,6 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 }
 
 
-// BUG - Building Additional Commerce - start
-/*
- * Returns the rounded total additional commerce that adding one of the given buildings will provide.
- *
- * Doesn't check if the building can be constructed in this city.
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
- */
-int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
-{
-	return getAdditionalCommerceTimes100ByBuilding(eIndex, eBuilding) / 100;
-}
-
-
 /*
  * Returns the total additional commerce times 100 that adding one of the given buildings will provide.
  *
