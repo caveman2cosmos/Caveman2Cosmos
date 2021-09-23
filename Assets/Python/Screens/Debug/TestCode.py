@@ -1457,10 +1457,8 @@ class TestCode:
 				for entry in CvBuildingInfo.getTechYieldChanges100():
 					aTechYieldChanges[BASE][entry.eTech][entry.eYield] += entry.value
 
-				if CvBuildingInfo.isAnyTechYieldModifiers():
-					for iTech in xrange(GC.getNumTechInfos()):
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							aTechYieldModifiers[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
+				for entry in CvBuildingInfo.getTechYieldModifiers():
+					aTechYieldModifiers[BASE][entry.eTech][entry.eYield] += entry.value
 
 				for entry in CvBuildingInfo.getTechCommerceChanges100():
 					aTechCommercePercentChanges[BASE][entry.eTech][entry.eCommerce] += entry.value
@@ -1479,6 +1477,7 @@ class TestCode:
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
+					'''
 					if CvReplacedBuildingInfo.isAnyTechYieldChanges():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -1487,6 +1486,7 @@ class TestCode:
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 								aTechYieldModifiers[REPLACED][iTech][iYield] += CvReplacedBuildingInfo.getTechYieldModifier(iTech, iYield)
+					'''
 					for pTechCommerceChange in CvReplacedBuildingInfo.getTechCommerceChanges100():
 						iTech = pTechCommerceChange.eTech
 						iCommerce = pTechCommerceChange.eCommerce
@@ -2407,6 +2407,7 @@ class TestCode:
 						self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
 
 				#Check if Yield Changes techs don't appear before building can be unlocked or after is obsoleted
+				'''
 				if CvBuildingInfo.isAnyTechYieldChanges():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -2427,6 +2428,7 @@ class TestCode:
 									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
 								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+				'''
 
 				#Check if Commerce Modifiers techs don't appear before building can be unlocked or after is obsoleted
 				if CvBuildingInfo.isAnyTechCommerceModifiers():

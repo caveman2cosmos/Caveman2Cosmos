@@ -6343,13 +6343,14 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield) const
 {
-	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
-
-	iValue += AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
-
+	int iValue = (
+		tradeRouteValue(kBuilding, eYield, bForeignTrade)
+		+
+		AI_buildingSpecialYieldChangeValue(eBuilding, eYield)
+	);
 	int iBaseRate = getPlotYield(eYield);
 	{
-		int iTerrainChange = 0;
+		int iPlotChange = 0;
 		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
 		{
 			if (pair.second[eYield] != 0)
@@ -6359,48 +6360,41 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 				{
 					if (plotX->getTerrainType() == pair.first && canWork(plotX))
 					{
-						iTerrainChange += pair.second[eYield];
+						iPlotChange += pair.second[eYield];
 					}
 				}
 			}
 		}
-		if (iTerrainChange != 0)
+		if (kBuilding.getRiverPlotYieldChange(eYield) > 0)
 		{
-			iValue += std::min(getPopulation(), 10) * iTerrainChange;
-			iBaseRate += iTerrainChange * 3 / 4;
+			iPlotChange += kBuilding.getRiverPlotYieldChange(eYield) * countNumRiverPlots();
+		}
+		if (iPlotChange != 0)
+		{
+			iValue += std::min(getPopulation(), 10) * iPlotChange;
+			iBaseRate += iPlotChange * 3 / 4;
 		}
 	}
-	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
-
 	iValue += 8 * (iFreeSpecialistYield + getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) / 100);
-
-	iValue += iBaseRate * (
-		kBuilding.getYieldModifier(eYield) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield)
-		) / 12;
-
-	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{
-		if (hasBonus((BonusTypes)iJ))
+		int iMod = kBuilding.getYieldModifier(eYield) + GET_TEAM(getTeam()).getBuildingYieldTechModifier(eYield, eBuilding);
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			iValue += kBuilding.getBonusYieldModifier(iJ, eYield) * iBaseRate / 12;
-			if (kBuilding.getVicinityBonusYieldChanges(iJ, eYield) != 0 && (hasVicinityBonus((BonusTypes)iJ) || hasRawVicinityBonus((BonusTypes)iJ)))
+			if (hasBonus((BonusTypes)iI))
 			{
-				iValue += (kBuilding.getVicinityBonusYieldChanges(iJ, eYield) * 8);
+				iMod += kBuilding.getBonusYieldModifier(iI, eYield);
+				if (kBuilding.getVicinityBonusYieldChanges(iI, eYield) != 0 && (hasVicinityBonus((BonusTypes)iI) || hasRawVicinityBonus((BonusTypes)iI)))
+				{
+					iValue += kBuilding.getVicinityBonusYieldChanges(iI, eYield) * 8;
+				}
 			}
-
 		}
+		if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
+		{
+			iMod += getPowerYieldRateModifier(eYield);
+		}
+		iValue += iBaseRate * iMod / 12;
 	}
-
-	if (kBuilding.getRiverPlotYieldChange(eYield) > 0)
-	{
-		iValue += kBuilding.getRiverPlotYieldChange(eYield) * countNumRiverPlots() * 4;
-	}
-
-	if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
-	{
-		iValue += iBaseRate * getPowerYieldRateModifier(eYield) / 20;
-	}
-
 	return iValue;
 }
 
@@ -14328,7 +14322,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	(
 		buildingModifiesGenericYields
 		|| kBuilding.getYieldModifier(YIELD_COMMERCE) > 0
-		|| GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE) > 0
+		|| GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_COMMERCE, eBuilding) > 0
 		|| kBuilding.getPowerYieldModifier(YIELD_COMMERCE) > 0
 		|| kBuilding.getSeaPlotYieldChange(YIELD_COMMERCE) > 0
 		|| kBuilding.getRiverPlotYieldChange(YIELD_COMMERCE) > 0
@@ -14343,7 +14337,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| bHasTradeRouteValue
 		|| kBuilding.getFoodKept() > 0
 		|| kBuilding.getSeaPlotYieldChange(YIELD_FOOD) > 0
-		|| GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_FOOD) > 0
+		|| GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_FOOD, eBuilding) > 0
 		|| kBuilding.getYieldModifier(YIELD_FOOD) > 0
 		|| kBuilding.getRiverPlotYieldChange(YIELD_FOOD) > 0
 		|| getBaseYieldRateFromBuilding100(YIELD_FOOD, eBuilding) > 0)
@@ -14356,7 +14350,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		if (buildingModifiesGenericYields
 		|| bHasTradeRouteValue
 		|| kBuilding.getYieldModifier(YIELD_PRODUCTION) > 0
-		|| GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_PRODUCTION) > 0
+		|| GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_PRODUCTION, eBuilding) > 0
 		|| kBuilding.getPowerYieldModifier(YIELD_PRODUCTION) > 0
 		|| kBuilding.getSeaPlotYieldChange(YIELD_PRODUCTION) > 0
 		|| kBuilding.getRiverPlotYieldChange(YIELD_PRODUCTION) > 0
@@ -16404,13 +16398,16 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	//	Multiply up by the city's current commerce rate modifier
 	iResult = iResult * getTotalCommerceRateModifier((CommerceTypes)iI) / 100;
 
+	// Toffer - Hmm, the following code is odd, why not use the AI_buildingYieldValue function?
+
 	//	Factor in yield changes
-	int iTempValue = getPlotYield(YIELD_COMMERCE)
-		* (kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE));
-
-	iTempValue *= kOwner.getCommercePercent((CommerceTypes)iI);
-
-	iTempValue /= 3000;
+	const int iSemiModifiedBase = (
+		getPlotYield(YIELD_COMMERCE) * (
+			kBuilding.getYieldModifier(YIELD_COMMERCE)
+			+ GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_COMMERCE, eBuilding)
+		)
+	);
+	int iTempValue = iSemiModifiedBase * kOwner.getCommercePercent((CommerceTypes)iI) / 3000;
 
 	// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
 	// we do _not_ want to build this here (unless the value was small anyway)
@@ -16422,16 +16419,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	iResult += iTempValue;
 
 	iTempValue = (
-		(
-			getPlotYield(YIELD_COMMERCE)
-			* (
-				kBuilding.getYieldModifier(YIELD_COMMERCE)
-				+
-				GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE)
-			)
-			+ aiFreeSpecialistYield[YIELD_COMMERCE]
-		)
-		/ 8
+		(iSemiModifiedBase + aiFreeSpecialistYield[YIELD_COMMERCE]) / 8
 		+
 		getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) * 8 / 100
 	);

@@ -5677,7 +5677,6 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder ) const
 {
-
 	PROFILE_FUNC();
 
 	if ( gPlayerLogLevel > 2 )
@@ -5998,10 +5997,17 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 								break;
 							}
 						}
-						const int iYieldModifier = kLoopBuilding.getTechYieldModifier(eTech, iJ);
-						if (iYieldModifier != 0)
+						foreach_(const TechArray& pair, kLoopBuilding.getTechYieldModifiers())
 						{
-							iTempValue += (4*calculateTotalYield((YieldTypes)iJ)*iYieldModifier)/getNumCities();
+							if (eTech == pair.first)
+							{
+								const int iYieldModifier = pair.second[iJ];
+								if (iYieldModifier != 0)
+								{
+									iTempValue += 4 * calculateTotalYield((YieldTypes)iJ) * iYieldModifier / getNumCities();
+								}
+								break;
+							}
 						}
 					}
 
