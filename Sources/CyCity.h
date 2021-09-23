@@ -318,7 +318,7 @@ public:
 	int getNumPopulationEmployed() const;
 
 	int getBonusCommercePercentChanges(int eIndex, int eBuilding) const;
-	int getBuildingCommerceTechChange(int eIndex, int eBuilding) const;
+	int getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const;
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);

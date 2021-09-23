@@ -963,6 +963,7 @@ public:
 
 	int getPlotYieldChange(const CvPlot* pPlot, const YieldTypes eYield) const;
 
+	int getBaseYieldRateFromBuilding100(const YieldTypes eIndex, const BuildingTypes eBuilding) const;
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
 	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
@@ -1494,10 +1495,8 @@ public:
 	void changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange);
 	int getBuildingCommerceTechChange(CommerceTypes eIndex) const;
 	int getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const;
-	int getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 
 	int getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const;
-	int getBuildingYieldTechChange(YieldTypes eYield, BuildingTypes eBuilding) const;
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const;
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue);

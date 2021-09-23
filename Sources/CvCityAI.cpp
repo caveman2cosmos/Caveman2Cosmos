@@ -6372,13 +6372,7 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 	}
 	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
 
-	iValue += (
-		8 * (
-			kBuilding.getYieldChange(eYield) + iFreeSpecialistYield
-			+ getPopulation() * kBuilding.getYieldPerPopChange(eYield) / 100
-			+ getBuildingYieldTechChange(eYield, eBuilding)
-		)
-	);
+	iValue += 8 * (iFreeSpecialistYield + getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) / 100);
 
 	iValue += iBaseRate * (
 		kBuilding.getYieldModifier(eYield) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield)
@@ -14331,48 +14325,48 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	);
 
 	bool buildingModifiesCommerceYields =
-		(buildingModifiesGenericYields ||
-			kBuilding.getYieldModifier(YIELD_COMMERCE) > 0 ||
-			GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE) > 0 ||
-			kBuilding.getPowerYieldModifier(YIELD_COMMERCE) > 0 ||
-			kBuilding.getSeaPlotYieldChange(YIELD_COMMERCE) > 0 ||
-			kBuilding.getRiverPlotYieldChange(YIELD_COMMERCE) > 0 ||
-			kBuilding.getYieldChange(YIELD_COMMERCE) > 0 ||
-			kBuilding.getYieldPerPopChange(YIELD_COMMERCE) > 0);
+	(
+		buildingModifiesGenericYields
+		|| kBuilding.getYieldModifier(YIELD_COMMERCE) > 0
+		|| GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE) > 0
+		|| kBuilding.getPowerYieldModifier(YIELD_COMMERCE) > 0
+		|| kBuilding.getSeaPlotYieldChange(YIELD_COMMERCE) > 0
+		|| kBuilding.getRiverPlotYieldChange(YIELD_COMMERCE) > 0
+		|| getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) > 0
+	);
+
+	const bool bHasTradeRouteValue = buildingHasTradeRouteValue(eBuilding);
 
 	if ((iFocusFlags & BUILDINGFOCUS_FOOD) != 0)
 	{
-		if (buildingModifiesGenericYields ||
-			buildingHasTradeRouteValue(eBuilding) ||
-			kBuilding.getFoodKept() > 0 ||
-			kBuilding.getSeaPlotYieldChange(YIELD_FOOD) > 0 ||
-			GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_FOOD) > 0 ||
-			kBuilding.getYieldChange(YIELD_FOOD) > 0 ||
-			kBuilding.getYieldPerPopChange(YIELD_FOOD) > 0 ||
-			kBuilding.getYieldModifier(YIELD_FOOD) > 0 ||
-			kBuilding.getRiverPlotYieldChange(YIELD_FOOD) > 0 ||
-			kBuilding.getHurryCostModifier() < 0)
+		if (buildingModifiesGenericYields
+		|| bHasTradeRouteValue
+		|| kBuilding.getFoodKept() > 0
+		|| kBuilding.getSeaPlotYieldChange(YIELD_FOOD) > 0
+		|| GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_FOOD) > 0
+		|| kBuilding.getYieldModifier(YIELD_FOOD) > 0
+		|| kBuilding.getRiverPlotYieldChange(YIELD_FOOD) > 0
+		|| getBaseYieldRateFromBuilding100(YIELD_FOOD, eBuilding) > 0)
 		{
 			return true;
 		}
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_PRODUCTION) != 0)
 	{
-		if (buildingModifiesGenericYields ||
-			buildingHasTradeRouteValue(eBuilding) ||
-			kBuilding.getYieldModifier(YIELD_PRODUCTION) > 0 ||
-			GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_PRODUCTION) > 0 ||
-			kBuilding.getPowerYieldModifier(YIELD_PRODUCTION) > 0 ||
-			kBuilding.getSeaPlotYieldChange(YIELD_PRODUCTION) > 0 ||
-			kBuilding.getRiverPlotYieldChange(YIELD_PRODUCTION) > 0 ||
-			kBuilding.getYieldChange(YIELD_PRODUCTION) > 0 ||
-			kBuilding.getYieldPerPopChange(YIELD_PRODUCTION) > 0 ||
-			kBuilding.getHurryCostModifier() < 0 ||
-			kBuilding.getMilitaryProductionModifier() > 0 ||
-			kBuilding.getSpaceProductionModifier() > 0 ||
-			kBuilding.getGlobalSpaceProductionModifier() > 0 ||
-			kBuilding.getDomainProductionModifier(NO_DOMAIN) > 0 ||
-			kBuilding.getNumUnitCombatProdModifiers() > 0)
+		if (buildingModifiesGenericYields
+		|| bHasTradeRouteValue
+		|| kBuilding.getYieldModifier(YIELD_PRODUCTION) > 0
+		|| GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_PRODUCTION) > 0
+		|| kBuilding.getPowerYieldModifier(YIELD_PRODUCTION) > 0
+		|| kBuilding.getSeaPlotYieldChange(YIELD_PRODUCTION) > 0
+		|| kBuilding.getRiverPlotYieldChange(YIELD_PRODUCTION) > 0
+		|| kBuilding.getHurryCostModifier() < 0
+		|| kBuilding.getMilitaryProductionModifier() > 0
+		|| kBuilding.getSpaceProductionModifier() > 0
+		|| kBuilding.getGlobalSpaceProductionModifier() > 0
+		|| kBuilding.getDomainProductionModifier(NO_DOMAIN) > 0
+		|| kBuilding.getNumUnitCombatProdModifiers() > 0
+		|| getBaseYieldRateFromBuilding100(YIELD_PRODUCTION, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14380,7 +14374,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	if ((iFocusFlags & BUILDINGFOCUS_GOLD) != 0)
 	{
 		if (buildingModifiesCommerceYields ||
-			buildingHasTradeRouteValue(eBuilding) ||
+			bHasTradeRouteValue ||
 			kBuilding.getCommerceChange(COMMERCE_GOLD) > 0 ||
 			kBuilding.getCommercePerPopChange(COMMERCE_GOLD) > 0 ||
 			kBuilding.getCommerceModifier(COMMERCE_GOLD) > 0 ||
@@ -14396,7 +14390,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	if ((iFocusFlags & BUILDINGFOCUS_RESEARCH) != 0)
 	{
 		if (buildingModifiesCommerceYields ||
-			buildingHasTradeRouteValue(eBuilding) ||
+			bHasTradeRouteValue ||
 			kBuilding.getCommerceChange(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getCommercePerPopChange(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getCommerceModifier(COMMERCE_RESEARCH) > 0 ||
@@ -14411,7 +14405,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	if ((iFocusFlags & BUILDINGFOCUS_CULTURE) != 0)
 	{
 		if (buildingModifiesCommerceYields ||
-			buildingHasTradeRouteValue(eBuilding) ||
+			bHasTradeRouteValue ||
 			kBuilding.getCommerceChange(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getCommercePerPopChange(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getCommerceModifier(COMMERCE_CULTURE) > 0 ||
@@ -14570,7 +14564,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	if ((iFocusFlags & BUILDINGFOCUS_ESPIONAGE) != 0)
 	{
 		if (buildingModifiesCommerceYields ||
-			buildingHasTradeRouteValue(eBuilding) ||
+			bHasTradeRouteValue ||
 			kBuilding.getEspionageDefenseModifier() > 0 ||
 			kBuilding.getCommerceChange(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getCommercePerPopChange(COMMERCE_ESPIONAGE) > 0 ||
@@ -16439,13 +16433,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 		)
 		/ 8
 		+
-		8 * (
-			kBuilding.getYieldChange(YIELD_COMMERCE)
-			+
-			kBuilding.getYieldPerPopChange(YIELD_COMMERCE) * getPopulation() / 100
-			+
-			getBuildingYieldTechChange(YIELD_COMMERCE, eBuilding) / 100
-		)
+		getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) * 8 / 100
 	);
 
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)

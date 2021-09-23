@@ -5613,7 +5613,6 @@ int CvTeam::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eInde
 	return m_ppaaiImprovementYieldChange[eIndex1][eIndex2];
 }
 
-
 void CvTeam::changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex1)
@@ -5628,6 +5627,34 @@ void CvTeam::changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes e
 		updateYield();
 	}
 }
+
+
+int CvTeam::getBuildingYieldTechChange(const YieldTypes eYield, const BuildingTypes eBuilding) const
+{
+	int iYield100 = 0;
+	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechYieldChanges100())
+	{
+		if (isHasTech(pair.first))
+		{
+			iYield100 += pair.second[eYield];
+		}
+	}
+	return iYield100;
+}
+
+int CvTeam::getBuildingCommerceTechChange(const CommerceTypes eIndex, const BuildingTypes eBuilding) const
+{
+	int iCommerce100 = 0;
+	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
+	{
+		if (isHasTech(pair.first))
+		{
+			iCommerce100 += pair.second[eIndex];
+		}
+	}
+	return iCommerce100;
+}
+
 // Protected Functions...
 
 void CvTeam::doWarWeariness()
