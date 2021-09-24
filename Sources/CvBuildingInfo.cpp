@@ -688,12 +688,6 @@ int CvBuildingInfo::getBonusProductionModifier(int i) const
 	return m_piBonusProductionModifier ? m_piBonusProductionModifier[i] : 0;
 }
 
-int CvBuildingInfo::getUnitCombatFreeExperience(UnitCombatTypes e) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), e)
-	return m_aUnitCombatFreeExperience.getValue(e);
-}
-
 int CvBuildingInfo::getDomainFreeExperience(int i) const
 {
 	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i)

@@ -225,11 +225,6 @@ void publishIDValueMapPythonInterface()
 		.def("getValue", &IDValueMap_t::getValue)
 	;
 
-	//python::class_<IDValueMap_t::value_type>("CyPair", python::no_init)
-	//	.def_readonly("id", &IDValueMap_t::value_type::first)
-	//	.def_readonly("value", &IDValueMap_t::value_type::second)
-	//;
-
 	publishPythonIteratorInterface<IDValueMap_t::python_iterator>();
 }
 

@@ -5388,7 +5388,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							&& kUnitInfo.getDomainType() == DOMAIN_SEA
 							&& canTrain((UnitTypes)iI))
 						{
-							iValue += (kBuilding.getUnitCombatFreeExperience(eCombatType) * (bMetAnyCiv ? 6 : 3));
+							iValue += (kBuilding.getUnitCombatFreeExperience().getValue(eCombatType) * (bMetAnyCiv ? 6 : 3));
 
 							if (kBuilding.isUnitCombatRetrainType(eCombatType))
 							{
@@ -15519,7 +15519,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 					if (eCombatType != NO_UNITCOMBAT && kUnitInfo.getDomainType() == DOMAIN_SEA && canTrain((UnitTypes)iI))
 					{
-						iValue += kBuilding.getUnitCombatFreeExperience(eCombatType) * (bMetAnyCiv ? 6 : 3);
+						iValue += kBuilding.getUnitCombatFreeExperience().getValue(eCombatType) * (bMetAnyCiv ? 6 : 3);
 
 						if (kBuilding.isUnitCombatRetrainType(eCombatType))
 						{
