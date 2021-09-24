@@ -21,7 +21,8 @@
 template <class ID_, class Value_, Value_ defaultValue = static_cast<Value_>(0)>
 struct IDValueMap
 {
-	typedef typename std::pair<ID_, Value_>						value_type;
+	typedef std::pair<ID_, Value_> value_type;
+
 	typedef typename std::vector<value_type>::iterator			iterator;
 	typedef typename std::vector<value_type>::const_iterator	const_iterator;
 
@@ -31,9 +32,11 @@ struct IDValueMap
 	const_iterator begin() const	{ return m_map.begin(); }
 	const_iterator end() const		{ return m_map.end(); }
 
-	CyIterator<IDValueMap>* pyIter()
+	typedef CyIterator<iterator> python_iterator;
+
+	python_iterator* pyIter()
 	{
-		return new CyIterator<IDValueMap>(begin(), end());
+		return new python_iterator(begin(), end());
 	}
 
 	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
@@ -219,17 +222,15 @@ void publishIDValueMapPythonInterface()
 	python::class_<IDValueMap_t, boost::noncopyable>("IDValueMap", python::no_init)
 		.def("__iter__", &IDValueMap_t::pyIter, python::return_value_policy<python::manage_new_object>())
 		.def("__contains__", &IDValueMap_t::hasValue)
-		//.def("__len__", &IDValueMap_t::size)
-		//.def("__getitem__", &IDValueMap_t::)
 		.def("getValue", &IDValueMap_t::getValue)
 	;
 
-	python::class_<IDValueMap_t::value_type>("CyPair", python::no_init)
-		.def_readonly("id", &IDValueMap_t::value_type::first)
-		.def_readonly("value", &IDValueMap_t::value_type::second)
-	;
+	//python::class_<IDValueMap_t::value_type>("CyPair", python::no_init)
+	//	.def_readonly("id", &IDValueMap_t::value_type::first)
+	//	.def_readonly("value", &IDValueMap_t::value_type::second)
+	//;
 
-	publishPythonIteratorInterface<IDValueMap_t>();
+	publishPythonIteratorInterface<IDValueMap_t::python_iterator>();
 }
 
 typedef std::pair<BonusTypes, int> BonusModifier2;

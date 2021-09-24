@@ -1192,19 +1192,19 @@ class TestCode:
 				#<TechHappinessChanges>, <TechHealthChanges> - base
 				aTechHappinessChanges = [[0 for x in xrange(GC.getNumTechInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aTechHealthChanges = [[0 for x in xrange(GC.getNumTechInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
-				for pair in CvBuildingInfo.getTechHappinessChanges():
-					aTechHappinessChanges[BASE][pair.id] += pair.value
-				for pair in CvBuildingInfo.getTechHealthChanges():
-					aTechHealthChanges[BASE][pair.id] += pair.value
+				for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
+					aTechHappinessChanges[BASE][iTech] += iHappiness
+				for iTech, iHealth in CvBuildingInfo.getTechHealthChanges():
+					aTechHealthChanges[BASE][iTech] += iHealth
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<TechHappinessChanges>, <TechHealthChanges>
-					for pair in CvReplacedBuildingInfo.getTechHappinessChanges():
-						aTechHappinessChanges[REPLACED][pair.id] += pair.value
-					for pair in CvReplacedBuildingInfo.getTechHealthChanges():
-						aTechHealthChanges[REPLACED][pair.id] += pair.value
+					for iTech, iHappiness in CvReplacedBuildingInfo.getTechHappinessChanges():
+						aTechHappinessChanges[REPLACED][iTech] += iHappiness
+					for iTech, iHealth in CvReplacedBuildingInfo.getTechHealthChanges():
+						aTechHealthChanges[REPLACED][iTech] += iHealth
 
 				#Building shouldn't be worse than replaced one!
 				for iTech in xrange(GC.getNumTechInfos()):
@@ -2389,8 +2389,7 @@ class TestCode:
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			if CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0: #Redundant tech tags are carried over from replaced buildings
 				#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
-				for pair in CvBuildingInfo.getTechHappinessChanges():
-					iTech = pair.id
+				for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
 					iTechTLoc = GC.getTechInfo(iTech).getGridX()
 					if iTechTLoc <= iTechLoc:
 						self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
@@ -2398,8 +2397,7 @@ class TestCode:
 						self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
 
 				#Check if Health Changes techs don't appear before building can be unlocked or after is obsoleted
-				for pair in CvBuildingInfo.getTechHealthChanges():
-					iTech = pair.id
+				for iTech, iHealth in CvBuildingInfo.getTechHealthChanges():
 					iTechTLoc = GC.getTechInfo(iTech).getGridX()
 					if iTechTLoc <= iTechLoc:
 						self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())

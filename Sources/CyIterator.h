@@ -5,38 +5,52 @@
 
 #include <boost/python/object/iterator_core.hpp>
 
-template <typename Container>
+
+struct CovertToTuple
+{
+	typedef python::tuple return_type;
+
+	template <typename T1, typename T2>
+	static return_type convert(const std::pair<T1, T2>& pair)
+	{
+		return python::make_tuple(static_cast<int>(pair.first), pair.second);
+	}
+};
+
+
+template <typename Iterator, typename Converter = CovertToTuple>
 class CyIterator
 {
 public:
-	CyIterator(typename Container::iterator& cur, typename Container::iterator& end)
-		: m_cur(cur)
+	CyIterator(const Iterator& begin, const Iterator& end)
+		: m_cur(begin)
 		, m_end(end)
 	{}
 
-	//CyIterator* __iter__()
-	//{
-	//	return this;
-	//}
+	CyIterator* __iter__()
+	{
+		return this;
+	}
 
-	typename Container::value_type& next()
+	typename Converter::return_type next()
 	{
 		if (m_cur == m_end)
 			python::objects::stop_iteration_error();
-		return *m_cur++;
+		return Converter::convert(*m_cur++);
 	}
 
 private:
-	typename Container::iterator m_cur;
-	typename Container::iterator m_end;
+	Iterator m_cur;
+	Iterator m_end;
 };
 
-template <typename Container>
+
+template <typename Iterator>
 void publishPythonIteratorInterface()
 {
-	python::class_<CyIterator<Container> >("CyIterator", python::no_init)
-		//.def("__iter__", &CyIterator<Container>::__iter__)
-		.def("next", &CyIterator<Container>::next, python::return_value_policy<python::reference_existing_object>())
+	python::class_<Iterator>("CyIterator", python::no_init)
+		//.def("__iter__", &Iterator::__iter__, python::return_value_policy<python::reference_existing_object>())
+		.def("next", &Iterator::next)
 	;
 }
 
