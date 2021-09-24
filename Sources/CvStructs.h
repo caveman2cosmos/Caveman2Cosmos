@@ -759,21 +759,6 @@ struct PropertySpawns
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
-struct BuildingYieldModifier
-{
-	BuildingTypes eBuilding;
-	YieldTypes eYield;
-	int iChange;
-
-	BuildingYieldModifier()
-		: eBuilding(NO_BUILDING)
-		, eYield(NO_YIELD)
-		, iChange(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
 
 struct BuildingCommerceModifier
 {

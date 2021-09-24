@@ -17395,9 +17395,36 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 		//	Building commerce changes
 			if (kBuilding.isAnyTechCommerceModifiers())
 				buildBuildingTechCommerceModifierString(szBuffer, eTech, iI, true, bPlayerContext);
-		//	Building yield changes
-			if (kBuilding.isAnyTechYieldModifiers())
-				buildBuildingTechYieldModifierString(szBuffer, eTech, iI, true, bPlayerContext);
+		// Building yield modifier changes
+			bFirst = true;
+			foreach_(const TechArray& pair, kBuilding.getTechYieldModifiers())
+			{
+				if (pair.first == eTech)
+				{
+					for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ",
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							szBuffer.append(CvWString::format(L"%d%%%c", pair.second[iJ], GC.getYieldInfo((YieldTypes) iJ).getChar()));
+						}
+					}
+					break;
+				}
+			}
 		//	Building happy changes
 			buildBuildingTechHappinessChangesString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building health changes
@@ -21049,7 +21076,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				if (bCity)
 				{
 					aiYields[iI] += pCity->getBuildingYieldChange(eBuilding, (YieldTypes)iI);
-					aiYieldModifiers[iI] += (pCity->getBuildingYieldModifier(eBuilding, (YieldTypes)iI) + GET_TEAM(eTeam).getBuildingYieldModifier(eBuilding, (YieldTypes)iI));
+					aiYieldModifiers[iI] += GET_TEAM(pCity->getTeam()).getBuildingYieldTechModifier((YieldTypes)iI, eBuilding);
 				}
 			}
 			if (player)
@@ -22738,6 +22765,33 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
+		foreach_(const TechArray& pair, kBuilding.getTechYieldModifiers())
+		{
+			bFirst = true;
+			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+			{
+				const int iValue = pair.second[iI];
+				if (iValue != 0)
+				{
+					if (bFirst)
+					{
+						szBuffer.append(
+							CvWString::format(
+								L"\n%c%s <link=%s>%s</link>: ",
+								gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+								CvWString(GC.getTechInfo(pair.first).getType()).GetCString(),
+								GC.getTechInfo(pair.first).getDescription()
+							)
+						);
+						bFirst = false;
+					}
+					else szBuffer.append(L", ");
+
+					szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getYieldInfo((YieldTypes) iI).getChar()));
+				}
+			}
+		}
+
 		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
 		{
 			bFirst = true;
@@ -22877,23 +22931,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceModifierArray(iTech), true, true);
-				}
-
-				if (kBuilding.isAnyTechYieldModifiers())
-				{
-					if (bCivilopediaText)
-					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else
-					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					setYieldChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechYieldModifierArray(iTech), true, true);
 				}
 
 				if (kBuilding.getTechHealth(eTech) != 0)
@@ -27414,21 +27451,6 @@ void CvGameTextMgr::buildBuildingTechCommerceModifierString(CvWStringBuffer &szB
 	setCommerceChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechCommerceModifierArray(eTech), true, bList);
 }
 
-
-void CvGameTextMgr::buildBuildingTechYieldModifierString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-	if (bList)
-	{
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%c<link=%s>%s</link>", gDLL->getSymbolID(BULLET_CHAR), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-
-	setYieldChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechYieldModifierArray(eTech), true, bList);
-}
 
 void CvGameTextMgr::buildBuildingTechHappinessChangesString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
 {
@@ -33111,93 +33133,105 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 
 	const int iActualBaseMod = city.getBaseYieldRateModifier(eYieldType);
 	int iBaseModifier = 100;
-	int iMod = 0;
+
 	if (iActualBaseMod != 100)
 	{
 		int iEventModifier = city.getYieldRateModifier(eYieldType) + owner.getYieldRateModifier(eYieldType);
 		// Traits
-		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			if (owner.hasTrait((TraitTypes)iI))
+			int iMod = 0;
+			for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 			{
-				const int iTemp = GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
-				iEventModifier -= iTemp;
-				iMod += iTemp;
+				if (owner.hasTrait((TraitTypes)iI))
+				{
+					const int iTemp = GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
+					if (iTemp != 0)
+					{
+						iEventModifier -= iTemp;
+						iMod += iTemp;
+					}
+				}
 			}
-		}
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Civics
-		iMod = 0;
-		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
-			if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
+			int iMod = 0;
+			for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{
-				const int iTemp = GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
-				iEventModifier -= iTemp;
-				iMod += iTemp;
+				if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
+				{
+					const int iTemp = GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
+					if (iTemp != 0)
+					{
+						iEventModifier -= iTemp;
+						iMod += iTemp;
+					}
+				}
 			}
-		}
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Buildings
-		iMod = 0;
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
-			if (city.getNumActiveBuilding((BuildingTypes)iI) > 0)
+			int iMod = city.getBuildingYieldModifier(eYieldType);
+
+			for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 			{
-				const int iTemp = building.getYieldModifier(eYieldType);
-				iEventModifier -= iTemp;
-				iMod += iTemp;
-				iMod += GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)iI, eYieldType);
-			}
-			for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-			{
-				if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
+				const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
+				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 				{
-					foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
+					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
 					{
-						if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
 						{
-							const int iTemp = building.getGlobalYieldModifier(eYieldType);
-							iEventModifier -= iTemp;
-							iMod += iTemp;
+							if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+							{
+								const int iTemp = building.getGlobalYieldModifier(eYieldType);
+								if (iTemp != 0)
+								{
+									iEventModifier -= iTemp;
+									iMod += iTemp;
+								}
+							}
 						}
 					}
 				}
 			}
-		}
-		if (NULL != city.area())
-		{
-			iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
-		}
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			if (city.area())
+			{
+				iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
+			}
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Resources
-		iMod = city.getBonusYieldRateModifier(eYieldType);
-		if (0 != iMod)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			const int iMod = city.getBonusYieldRateModifier(eYieldType);
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Power
 		if (city.isPower())
 		{
-			iMod = city.getPowerYieldRateModifier(eYieldType);
+			const int iMod = city.getPowerYieldRateModifier(eYieldType);
 			if (0 != iMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_POWER", iMod, info.getChar()));
@@ -33208,7 +33242,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		// Capital
 		if (city.isCapital())
 		{
-			iMod = owner.getCapitalYieldRateModifier(eYieldType);
+			const int iMod = owner.getCapitalYieldRateModifier(eYieldType);
 			if (0 != iMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iMod, info.getChar()));
@@ -33224,14 +33258,14 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			iBaseModifier += iEventModifier;
 		}
 		FAssertMsg(iActualBaseMod == iBaseModifier, CvString::format("Total Yield Modifier %d should be %d", iBaseModifier, iActualBaseMod).c_str())
-	}
 
-	// Sub total
-	if (iBaseModifier != 100)
-	{
-		const int iModBaseYield100 = iBaseYield * iBaseModifier;
-		CvWString szYield = CvWString::format(L"%d.%02d", iModBaseYield100/100, iModBaseYield100%100);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD", iBaseModifier-100, szYield.GetCString(), info.getChar()));
+		// Sub total
+		if (iBaseModifier != 100)
+		{
+			const int iModBaseYield100 = iBaseYield * iBaseModifier;
+			CvWString szYield = CvWString::format(L"%d.%02d", iModBaseYield100/100, iModBaseYield100%100);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD", iBaseModifier-100, szYield.GetCString(), info.getChar()));
+		}
 	}
 	szBuffer.append(SEPARATOR);
 

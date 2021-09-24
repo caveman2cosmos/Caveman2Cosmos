@@ -348,6 +348,9 @@ public:
 	const IDValueMap<TechTypes, int*>& getTechYieldChanges100() const { return m_techYieldChanges; }
 	const python::list cyGetTechYieldChanges100() const;
 
+	const IDValueMap<TechTypes, int*>& getTechYieldModifiers() const { return m_techYieldModifiers; }
+	const python::list cyGetTechYieldModifiers() const;
+
 	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
@@ -416,9 +419,6 @@ public:
 
 	int getTechCommerceModifier(int i, int j) const;
 	int* getTechCommerceModifierArray(int i) const;
-
-	int getTechYieldModifier(int i, int j) const;
-	int* getTechYieldModifierArray(int i) const;
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
@@ -489,7 +489,6 @@ public:
 	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
 	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
 	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
-	bool isAnyTechYieldModifiers() const			{ return m_ppaiTechYieldModifier != NULL; }
 	bool isAnyBonusCommerceModifiers() const		{ return m_ppaiBonusCommerceModifier != NULL; }
 	bool isAnyBonusYieldChanges() const				{ return m_ppaiBonusYieldChanges != NULL; }
 	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
@@ -798,7 +797,6 @@ private:
 	int** m_ppaiBonusCommerceModifier;
 	int** m_ppaiTechSpecialistChange;
 	int** m_ppaiTechCommerceModifier;
-	int** m_ppaiTechYieldModifier;
 	int** m_ppiImprovementYieldChanges;
 	int** m_ppaiBonusYieldChanges;
 	int** m_ppaiBonusCommercePercentChanges;
@@ -852,6 +850,7 @@ private:
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
 	IDValueMap<TechTypes, int*> m_techYieldChanges;
+	IDValueMap<TechTypes, int*> m_techYieldModifiers;
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
 
