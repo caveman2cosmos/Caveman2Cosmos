@@ -396,35 +396,6 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-void BuildingYieldModifier::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void BuildingYieldModifier::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
-	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", eYield);
-	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", iChange);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
 
 void BuildingCommerceModifier::read(FDataStreamBase* pStream)
 {

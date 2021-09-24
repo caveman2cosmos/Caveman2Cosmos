@@ -985,6 +985,9 @@ public:
 	void changeBuildingExtraYield100(YieldTypes eYield, int iChange);
 	int getBuildingExtraYield100(YieldTypes eYield) const;
 
+	void changeBuildingYieldModifier(YieldTypes eYield, int iChange);
+	int getBuildingYieldModifier(YieldTypes eYield) const;
+
 	void onYieldChange();
 
 	int getBaseYieldPerPopRate(YieldTypes eIndex) const;
@@ -1040,7 +1043,6 @@ public:
 	int getBuildingCommerce(CommerceTypes eIndex) const;
 	int getBuildingCommerce100(CommerceTypes eIndex) const;
 	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull = false) const;
-	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getBaseCommerceRateFromBuilding100(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
@@ -1375,7 +1377,6 @@ public:
 	void updateMaxSpecialistCount(BuildingTypes eBuilding, SpecialistTypes eSpecialist, int iChange);
 	void updateCommerceModifierByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
 	void updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
-	void updateYieldModifierByBuilding(BuildingTypes eBuilding, YieldTypes eYield, int iChange);
 	//int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;
 	//void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 	int calculateBonusDefense() const;
@@ -1383,10 +1384,8 @@ public:
 	void setCivilizationType(int iCiv);
 
 	int getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const;
-	int getBuildingYieldModifier(BuildingTypes eBuilding, YieldTypes eYield) const;
 
 	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
-	int calculateBuildingYieldModifier(YieldTypes eYield) const;
 	int getRevTrend() const;
 	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
@@ -1497,6 +1496,7 @@ public:
 	int getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const;
 
 	int getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const;
+	int getBuildingYieldTechModifier(YieldTypes eYield, TechTypes eTech) const;
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const;
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue);
@@ -1797,7 +1797,6 @@ protected:
 	bool* m_pabAutomatedCanBuild;
 
 	std::vector<BuildingCommerceModifier> m_aBuildingCommerceModifier;
-	std::vector<BuildingYieldModifier> m_aBuildingYieldModifier;
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
@@ -1922,6 +1921,7 @@ protected:
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
 	int* m_buildingExtraYield100;
+	int* m_buildingYieldMod;
 	int* m_aiExtraYield;
 	int* m_aiBaseYieldPerPopRate;
 	int* m_aiYieldRateModifier;
@@ -2191,7 +2191,6 @@ private:
 	mutable stdext::hash_map<UnitTypes,UnitTypes> m_eCachedAllUpgradesResultsRoot;
 	mutable bool m_canTrainCachePopulated;
 	mutable bool m_canTrainCacheDirty;
-	mutable int m_cachedBuildingYieldModifers[NUM_YIELD_TYPES];
 	bool m_bPlotWorkingMasked;
 	mutable int m_totalCommerceRateModifier[NUM_COMMERCE_TYPES];
 

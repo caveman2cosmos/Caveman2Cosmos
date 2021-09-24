@@ -887,7 +887,7 @@
 					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>5</iYield>
 					</TechYield>
 				</TechYieldModifier>
 			</TechYieldModifiers>
