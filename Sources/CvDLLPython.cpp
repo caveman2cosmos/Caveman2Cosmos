@@ -7,6 +7,7 @@
 #include "CyPlot.h"
 #include "CyUnit.h"
 #include "SCyDebug.h"
+#include "IDValueMap.h"
 #include "Win32.h"
 
 
@@ -91,6 +92,13 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<VictoryTypes>();
 	registerAllowPyIntAsType<VoteTypes>();
 	registerAllowPyIntAsType<VoteSourceTypes>();
+
+	publishIDValueMapPythonInterface<IDValueMap<BonusTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<BuildingTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TechTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TerrainTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitCombatTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitTypes, int> >();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
