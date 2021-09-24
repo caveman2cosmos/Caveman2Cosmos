@@ -232,6 +232,7 @@ typedef std::pair<BonusTypes, int> BonusModifier2;
 typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
+typedef std::pair<ReligionTypes, int> ReligionModifier;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
 typedef std::pair<TechTypes, int*> TechArray;
