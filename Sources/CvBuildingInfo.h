@@ -288,26 +288,21 @@ public:
 
 	int getBonusHealthChanges(int i) const;
 	const IDValueMap<BonusTypes, int>& getBonusHealth() const { return m_piBonusHealthChanges; }
-	const python::list cyGetBonusHealth() const { return m_piBonusHealthChanges.makeList(); }
 
 	int getBonusHappinessChanges(int i) const;
 	const IDValueMap<BonusTypes, int>& getBonusHappiness() const { return m_piBonusHappinessChanges; }
-	const python::list cyGetBonusHappiness() const { return m_piBonusHappinessChanges.makeList(); }
 
 	int getBonusProductionModifier(int i) const;
 	int getDomainFreeExperience(int i) const;
 	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
 
-	int getUnitCombatFreeExperience(UnitCombatTypes e) const;
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience; }
-	const python::list cyGetUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience.makeList(); }
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
 	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
-	const python::list cyGetBuildingHappinessChanges() const { return m_aBuildingHappinessChanges.makeList(); }
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
@@ -316,7 +311,6 @@ public:
 
 	int getPrereqNumOfBuilding(BuildingTypes e) const;
 	const IDValueMap<BuildingTypes, int>& getPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding; }
-	const python::list cyGetPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding.makeList(); }
 
 	int getPrereqOrBuilding(const int i) const;
 	short getNumPrereqOrBuilding() const;
@@ -343,7 +337,6 @@ public:
 	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
-	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
 	const IDValueMap<TechTypes, int*>& getTechYieldChanges100() const { return m_techYieldChanges; }
 	const python::list cyGetTechYieldChanges100() const;
@@ -369,13 +362,10 @@ public:
 	bool isPrereqOrFeature(int i) const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
-	const python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
 
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
-	const python::list cyGetGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier.makeList(); }
 
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingCostModifiers() const { return m_aGlobalBuildingCostModifier; }
-	const python::list cyGetGlobalBuildingCostModifiers() const { return m_aGlobalBuildingCostModifier.makeList(); }
 
 	int getBonusDefenseChanges(int i) const;
 
@@ -421,7 +411,6 @@ public:
 	int* getTechCommerceModifierArray(int i) const;
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
-	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
 
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
@@ -507,13 +496,9 @@ public:
 
 	int getTechHappiness(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
-	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
 
 	int getTechHealth(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
-	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
-
-	//cost BoolExpr* getFreePromotionCondition();
 
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 

@@ -415,9 +415,7 @@ class PediaBuilding:
 			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
 
 		# Empire building requirements
-		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
-			eBuildingX = pair.id
-			iPrereqNumOfBuilding = pair.value
+		for eBuildingX, iPrereqNumOfBuilding in CvTheBuildingInfo.getPrereqNumOfBuildings():
 			if iPrereqNumOfBuilding > 0:
 				if CyPlayer:
 					aList3.append((eBuildingX, CyPlayer.getBuildingPrereqBuilding(iTheBuilding, eBuildingX, 0)))
