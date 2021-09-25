@@ -150,7 +150,7 @@ void CyInfoPythonInterface3()
 		.def("getSound", &CvCorporationInfo::getSound, "string ()")
 
 		// Arrays
-		.def("getPrereqBonuses", &CvCorporationInfo::cyGetPrereqBonuses)
+		.def("getPrereqBonuses", &CvCorporationInfo::getPrereqBonuses, python::return_value_policy<python::reference_existing_object>())
 		.def("getCommerceProduced", &CvCorporationInfo::getCommerceProduced, "int (int i)")
 		.def("getYieldProduced", &CvCorporationInfo::getYieldProduced, "int (int i)")
 	;

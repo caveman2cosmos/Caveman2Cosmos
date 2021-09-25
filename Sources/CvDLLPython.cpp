@@ -93,6 +93,10 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<VoteTypes>();
 	registerAllowPyIntAsType<VoteSourceTypes>();
 
+	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<MapCategoryTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<TechTypes>, CovertToInteger>();
+
 	publishIDValueMapPythonInterface<IDValueMap<BonusTypes, int> >();
 	publishIDValueMapPythonInterface<IDValueMap<BuildingTypes, int> >();
 	publishIDValueMapPythonInterface<IDValueMap<TechTypes, int> >();
