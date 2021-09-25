@@ -1223,8 +1223,8 @@ class TestCode:
 					aGlobalBuildingProductionModifiers[BASE][iBuilding] += iGlobalProductionModifier
 				for iBuilding, iHappiness in CvBuildingInfo.getBuildingHappinessChanges():
 					aBuildingHappinessChanges[BASE][iBuilding] += iHappiness
-				for pair in CvBuildingInfo.getBuildingProductionModifiers():
-					aBuildingProductionModifiers[BASE][pair.id] += pair.value
+				for iBuilding, iProductionModifier in CvBuildingInfo.getBuildingProductionModifiers():
+					aBuildingProductionModifiers[BASE][iBuilding] += iProductionModifier
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
@@ -2537,7 +2537,7 @@ class TestCode:
 			#<GlobalBuildingProductionModifiers>
 			for iAffectedBuilding, iGlobalProductionModifier in CvAffectingBuildingInfo.getGlobalBuildingProductionModifiers():
 				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
-					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
 
 			#<BuildingHappinessChanges>
