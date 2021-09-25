@@ -4786,14 +4786,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			}
 		}
 
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 		{
-			if (kBuilding.getReligionChange(iI) > 0)
+			if (!kTeam.hasHolyCity(pair.first))
 			{
-				if (!(kTeam.hasHolyCity((ReligionTypes)iI)))
-				{
-					return 0;
-				}
+				return 0;
 			}
 		}
 
@@ -6254,11 +6251,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+					foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 					{
-						if (kBuilding.getReligionChange(iI) > 0 && kTeam.hasHolyCity((ReligionTypes)iI))
+						if (kTeam.hasHolyCity(pair.first))
 						{
-							iValue += (kBuilding.getReligionChange(iI) * ((eStateReligion == iI) ? 10 : 1));
+							iValue += (pair.second * (eStateReligion == pair.first ? 10 : 1));
 						}
 					}
 
@@ -14895,9 +14892,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			}
 			if (bSkipBuilding) continue;
 
-			for (int iI = 0; iI < iNumReligions; iI++)
+			foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 			{
-				if (kBuilding.getReligionChange(iI) > 0 && !team.hasHolyCity((ReligionTypes)iI))
+				if (!team.hasHolyCity(pair.first))
 				{
 					bSkipBuilding = true;
 					break;
@@ -16336,11 +16333,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				for (int iI = 0; iI < iNumReligions; iI++)
+				foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 				{
-					if (kBuilding.getReligionChange(iI) > 0 && team.hasHolyCity((ReligionTypes)iI))
+					if (team.hasHolyCity(pair.first))
 					{
-						iValue += kBuilding.getReligionChange(iI) * (eStateReligion == iI ? 10 : 1);
+						iValue += pair.second * (eStateReligion == pair.first ? 10 : 1);
 					}
 				}
 

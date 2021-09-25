@@ -282,7 +282,7 @@ public:
 	int getStateReligionCommerce(int i) const;
 	int* getStateReligionCommerceArray() const;
 	int getCommerceHappiness(int i) const;
-	int getReligionChange(int i) const;
+	const IDValueMap<ReligionTypes, int>& getReligionChanges() const { return m_religionChange; }
 	int getSpecialistCount(int i) const;
 	int getFreeSpecialistCount(int i) const;
 
@@ -757,7 +757,6 @@ private:
 	int* m_piSpecialistExtraCommerce;
 	int* m_piStateReligionCommerce;
 	int* m_piCommerceHappiness;
-	int* m_piReligionChange;
 	int* m_piSpecialistCount;
 	int* m_piFreeSpecialistCount;
 	int* m_piBonusProductionModifier;
@@ -815,6 +814,7 @@ private:
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingCostModifier;
+	IDValueMap<ReligionTypes, int> m_religionChange;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;

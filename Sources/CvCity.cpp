@@ -4959,10 +4959,10 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 	if (!bReligiously)
 	{
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 		{
 			PROFILE("CvCity::processBuilding.Religions");
-			changeReligionInfluence((ReligionTypes) iI, kBuilding.getReligionChange(iI) * iChange);
+			changeReligionInfluence(pair.first, pair.second * iChange);
 		}
 	}
 
@@ -14562,12 +14562,9 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 					}
 				}
 
-				for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+				foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 				{
-					if (kBuilding.getReligionChange(iI) > 0)
-					{
-						setHasReligion(((ReligionTypes)iI), true, true, true);
-					}
+					setHasReligion(pair.first, true, true, true);
 				}
 
 				if (kBuilding.getFreeTechs() > 0)
