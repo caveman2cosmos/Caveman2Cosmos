@@ -1297,19 +1297,9 @@ const std::vector<TechTypes>& CvUnitInfo::getPrereqAndTechs() const
 	return m_piPrereqAndTechs;
 }
 
-const python::list CvUnitInfo::cyGetPrereqAndTechs() const
-{
-	return Cy::makeList(m_piPrereqAndTechs);
-}
-
 const std::vector<BonusTypes>& CvUnitInfo::getPrereqOrBonuses() const
 {
 	return m_piPrereqOrBonuses;
-}
-
-const python::list CvUnitInfo::cyGetPrereqOrBonuses() const
-{
-	return Cy::makeList(m_piPrereqOrBonuses);
 }
 
 int CvUnitInfo::getFlavorValue(int i) const

@@ -182,7 +182,6 @@ m_piGlobalCommerceModifier(NULL),
 m_piSpecialistExtraCommerce(NULL),
 m_piStateReligionCommerce(NULL),
 m_piCommerceHappiness(NULL),
-m_piReligionChange(NULL),
 m_piSpecialistCount(NULL),
 m_piFreeSpecialistCount(NULL),
 m_piBonusProductionModifier(NULL),
@@ -334,7 +333,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piSpecialistExtraCommerce);
 	SAFE_DELETE_ARRAY(m_piStateReligionCommerce);
 	SAFE_DELETE_ARRAY(m_piCommerceHappiness);
-	SAFE_DELETE_ARRAY(m_piReligionChange);
 	SAFE_DELETE_ARRAY(m_piSpecialistCount);
 	SAFE_DELETE_ARRAY(m_piFreeSpecialistCount);
 	SAFE_DELETE_ARRAY(m_piBonusProductionModifier);
@@ -632,12 +630,6 @@ int CvBuildingInfo::getCommerceHappiness(int i) const
 	}
 }
 
-int CvBuildingInfo::getReligionChange(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), i)
-	return m_piReligionChange ? m_piReligionChange[i] : 0;
-}
-
 int CvBuildingInfo::getSpecialistCount(int i) const
 {
 	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i)
@@ -713,16 +705,6 @@ int CvBuildingInfo::getDomainProductionModifier(int i) const
 const std::vector<TechTypes>& CvBuildingInfo::getPrereqAndTechs() const
 {
 	return m_piPrereqAndTechs;
-}
-
-const python::list CvBuildingInfo::cyGetPrereqAndTechs() const
-{
-	return Cy::makeList(m_piPrereqAndTechs);
-}
-
-int CvBuildingInfo::getPrereqNumOfBuilding(BuildingTypes e) const
-{
-	return m_aPrereqNumOfBuilding.getValue(e);
 }
 
 int CvBuildingInfo::getFlavorValue(int i) const
@@ -1839,7 +1821,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piSpecialistExtraCommerce);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piStateReligionCommerce);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceHappiness);
-	CheckSumI(iSum, GC.getNumReligionInfos(), m_piReligionChange);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piSpecialistCount);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piFreeSpecialistCount);
 	//CheckSumC(iSum, m_piBonusHealthChanges);
@@ -2120,6 +2101,7 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_piBonusHealthChanges, L"BonusHealthChanges")
 		.add(m_aTechHappinessChanges, L"TechHappinessChanges")
 		.add(m_aTechHealthChanges, L"TechHealthChanges")
+		.add(m_religionChange, L"ReligionChanges")
 		//.add(m_piImprovementFreeSpecialist, L"ImprovementFreeSpecialists", GC.getNumSpecialistInfos())
 		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
 	;
@@ -2534,8 +2516,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		SAFE_DELETE_ARRAY(m_piCommerceHappiness);
 	}
-
-	pXML->SetVariableListTagPair(&m_piReligionChange, L"ReligionChanges", GC.getNumReligionInfos());
 
 	pXML->SetVariableListTagPair(&m_piSpecialistCount, L"SpecialistCounts", GC.getNumSpecialistInfos());
 	pXML->SetVariableListTagPair(&m_piFreeSpecialistCount, L"FreeSpecialistCounts", GC.getNumSpecialistInfos());
@@ -3875,18 +3855,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumReligionInfos(); j++)
-	{
-		if ( getReligionChange(j) == iDefault && pClassInfo->getReligionChange(j) != iDefault)
-		{
-			if ( NULL == m_piReligionChange )
-			{
-				CvXMLLoadUtility::InitList(&m_piReligionChange,GC.getNumReligionInfos(),iDefault);
-			}
-			m_piReligionChange[j] = pClassInfo->getReligionChange(j);
-		}
-	}
-
 	for ( int j = 0; j < GC.getNumSpecialistInfos(); j++)
 	{
 		if ( getSpecialistCount(j) == iDefault && pClassInfo->getSpecialistCount(j) != iDefault)
@@ -4712,23 +4680,6 @@ bool CvBuildingInfo::getNotShowInCity() const
 void CvBuildingInfo::setNotShowInCity()
 {
 	m_bNotShowInCity = (m_szArtDefineTag == "" || getArtInfo()->getScale() == 0.0 || stricmp(getArtInfo()->getNIF(), "Art/empty.nif") == 0);
-}
-
-
-int CvBuildingInfo::getNumPrereqOrBonuses() const
-{
-	return m_aePrereqOrBonuses.size();
-}
-
-BonusTypes CvBuildingInfo::getPrereqOrBonuses(int i) const
-{
-	FASSERT_BOUNDS(0, getNumPrereqOrBonuses(), i)
-	return static_cast<BonusTypes>(m_aePrereqOrBonuses[i]);
-}
-
-const python::list CvBuildingInfo::cyGetPrereqOrBonuses() const
-{
-	return Cy::makeList(m_aePrereqOrBonuses);
 }
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const

@@ -32,7 +32,7 @@ struct IDValueMap
 	const_iterator begin() const	{ return m_map.begin(); }
 	const_iterator end() const		{ return m_map.end(); }
 
-	typedef CyIterator<iterator> python_iterator;
+	typedef CyIterator<iterator, CovertToTuple> python_iterator;
 
 	python_iterator* pyIter()
 	{
@@ -232,6 +232,7 @@ typedef std::pair<BonusTypes, int> BonusModifier2;
 typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
+typedef std::pair<ReligionTypes, int> ReligionModifier;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
 typedef std::pair<TechTypes, int*> TechArray;
