@@ -333,7 +333,7 @@ python::list CyMap::areas() const
 
 	foreach_(CvArea* area, m_pMap->areas())
 	{
-		list.append(new CyArea(area));
+		list.append(CyArea(area));
 	}
 	return list;
 }
