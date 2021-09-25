@@ -1427,19 +1427,9 @@ const std::vector<TechTypes>& CvTechInfo::getPrereqOrTechs() const
 	return m_piPrereqOrTechs;
 }
 
-const python::list CvTechInfo::cyGetPrereqOrTechs() const
-{
-	return Cy::makeList(m_piPrereqOrTechs);
-}
-
 const std::vector<TechTypes>& CvTechInfo::getPrereqAndTechs() const
 {
 	return m_piPrereqAndTechs;
-}
-
-const python::list CvTechInfo::cyGetPrereqAndTechs() const
-{
-	return Cy::makeList(m_piPrereqAndTechs);
 }
 
 bool CvTechInfo::isCommerceFlexible(int i) const
@@ -19350,11 +19340,6 @@ int* CvCorporationInfo::getCommerceChangeArray() const
 const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 {
 	return m_vPrereqBonuses;
-}
-
-const python::list CvCorporationInfo::cyGetPrereqBonuses() const
-{
-	return Cy::makeList(m_vPrereqBonuses);
 }
 
 int CvCorporationInfo::getHeadquarterCommerce(int i) const

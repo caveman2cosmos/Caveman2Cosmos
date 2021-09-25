@@ -93,10 +93,11 @@ public:
 		return container[i];
 	}
 
-	static bool contains(Container& container, PyObject* key)
+	static bool contains(Container& container, typename Container::value_type item)
 	{
-		python::extract<typename Container::value_type const&> x(key);
-		return x.check() && algo::contains(container, x());
+		//python::extract<typename Container::value_type const&> x(key);
+		//return x.check() && algo::contains(container, x());
+		return algo::contains(container, item);
 	}
 
 	typedef CyIterator<typename Container::iterator, Converter>  python_iterator;

@@ -715,16 +715,6 @@ const std::vector<TechTypes>& CvBuildingInfo::getPrereqAndTechs() const
 	return m_piPrereqAndTechs;
 }
 
-const python::list CvBuildingInfo::cyGetPrereqAndTechs() const
-{
-	return Cy::makeList(m_piPrereqAndTechs);
-}
-
-int CvBuildingInfo::getPrereqNumOfBuilding(BuildingTypes e) const
-{
-	return m_aPrereqNumOfBuilding.getValue(e);
-}
-
 int CvBuildingInfo::getFlavorValue(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
@@ -4712,18 +4702,6 @@ bool CvBuildingInfo::getNotShowInCity() const
 void CvBuildingInfo::setNotShowInCity()
 {
 	m_bNotShowInCity = (m_szArtDefineTag == "" || getArtInfo()->getScale() == 0.0 || stricmp(getArtInfo()->getNIF(), "Art/empty.nif") == 0);
-}
-
-
-int CvBuildingInfo::getNumPrereqOrBonuses() const
-{
-	return m_aePrereqOrBonuses.size();
-}
-
-BonusTypes CvBuildingInfo::getPrereqOrBonuses(int i) const
-{
-	FASSERT_BOUNDS(0, getNumPrereqOrBonuses(), i)
-	return static_cast<BonusTypes>(m_aePrereqOrBonuses[i]);
 }
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
