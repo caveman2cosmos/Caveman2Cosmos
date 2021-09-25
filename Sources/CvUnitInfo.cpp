@@ -1307,11 +1307,6 @@ const std::vector<BonusTypes>& CvUnitInfo::getPrereqOrBonuses() const
 	return m_piPrereqOrBonuses;
 }
 
-const python::list CvUnitInfo::cyGetPrereqOrBonuses() const
-{
-	return Cy::makeList(m_piPrereqOrBonuses);
-}
-
 int CvUnitInfo::getFlavorValue(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)

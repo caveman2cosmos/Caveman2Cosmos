@@ -13677,11 +13677,6 @@ const std::vector<BonusTypes>& CvRouteInfo::getPrereqOrBonuses() const
 	return m_piPrereqOrBonuses;
 }
 
-const python::list CvRouteInfo::cyGetPrereqOrBonuses() const
-{
-	return Cy::makeList(m_piPrereqOrBonuses);
-}
-
 bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;

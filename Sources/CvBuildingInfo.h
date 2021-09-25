@@ -300,7 +300,6 @@ public:
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience; }
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
 
@@ -486,7 +485,6 @@ public:
 	int getNumPrereqOrBonuses() const;
 	BonusTypes getPrereqOrBonuses(int i) const;
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const;
 
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
 	const python::list cyGetPrereqOrVicinityBonuses() const { return Cy::makeList(m_piPrereqOrVicinityBonuses); }

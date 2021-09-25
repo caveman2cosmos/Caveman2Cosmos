@@ -4726,11 +4726,6 @@ BonusTypes CvBuildingInfo::getPrereqOrBonuses(int i) const
 	return static_cast<BonusTypes>(m_aePrereqOrBonuses[i]);
 }
 
-const python::list CvBuildingInfo::cyGetPrereqOrBonuses() const
-{
-	return Cy::makeList(m_aePrereqOrBonuses);
-}
-
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
 {
 	return algo::contains(m_vPrereqOrBuilding, i);
