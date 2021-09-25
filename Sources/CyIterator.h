@@ -7,7 +7,18 @@
 #include <boost/python/def_visitor.hpp>
 
 
-struct CovertToTuple
+const struct CovertToInteger
+{
+	typedef int return_type;
+
+	template <typename T>
+	static return_type convert(const T& item)
+	{
+		return static_cast<return_type>(item);
+	}
+};
+
+const struct CovertToTuple
 {
 	typedef python::tuple return_type;
 
@@ -19,7 +30,7 @@ struct CovertToTuple
 };
 
 
-template <typename Iterator, typename Converter = CovertToTuple>
+template <typename Iterator, typename Converter>
 class CyIterator
 {
 public:
@@ -56,8 +67,8 @@ void publishPythonIteratorInterface()
 }
 
 
-template <typename Container>
-class CyVector : public python::def_visitor<CyVector<Container> >
+template <typename Container, typename Converter>
+class CyVector : public python::def_visitor<CyVector<Container, Converter> >
 {
 public:
 	template <class Class>
@@ -87,19 +98,23 @@ public:
 		return x.check() && algo::contains(container, x());
 	}
 
-	static CyIterator<typename Container::iterator>* iter(Container& container)
+	typedef CyIterator<typename Container::iterator, Converter>  python_iterator;
+
+	static python_iterator* iter(Container& container)
 	{
-		return new CyIterator<typename Container::iterator>(container.begin(), container.end());
+		return new python_iterator(container.begin(), container.end());
 	}
 };
 
 
-template <typename Vector_t>
+template <typename Container, typename Converter>
 void publishPythonVectorInterface()
 {
-	python::class_<Vector_t>("CyVector", python::no_init)
-		.def(CyVector<Vector_t>())
+	python::class_<Container>("CyVector", python::no_init)
+		.def(CyVector<Container, Converter>())
 	;
+
+	publishPythonIteratorInterface<CyIterator<typename Container::iterator, Converter> >();
 }
 
 #endif

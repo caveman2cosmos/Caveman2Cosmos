@@ -32,7 +32,7 @@ struct IDValueMap
 	const_iterator begin() const	{ return m_map.begin(); }
 	const_iterator end() const		{ return m_map.end(); }
 
-	typedef CyIterator<iterator> python_iterator;
+	typedef CyIterator<iterator, CovertToTuple> python_iterator;
 
 	python_iterator* pyIter()
 	{
