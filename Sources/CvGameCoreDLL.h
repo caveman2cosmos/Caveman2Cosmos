@@ -257,7 +257,6 @@ using bst::bind;
 #include <boost/python/class.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
-#include <boost/python/def_visitor.hpp>
 #include <boost/python/enum.hpp>
 #include <boost/python/manage_new_object.hpp>
 #include <boost/python/return_value_policy.hpp>

@@ -76,7 +76,7 @@ public:
 	{
 		cl
 			.def("__len__", size)
-			.def("__getitem__", &get_item)
+			.def("__getitem__", &getItem)
 			.def("__contains__", &contains)
 			.def("__iter__", &iter, python::return_value_policy<python::manage_new_object>())
 		;
@@ -87,7 +87,7 @@ public:
 		return container.size();
 	}
 
-	static typename Container::value_type get_item(Container& container, int i)
+	static typename Container::value_type getItem(Container& container, int i)
 	{
 		FASSERT_BOUNDS(0, container.size(), i);
 		return container[i];
@@ -95,8 +95,6 @@ public:
 
 	static bool contains(Container& container, typename Container::value_type item)
 	{
-		//python::extract<typename Container::value_type const&> x(key);
-		//return x.check() && algo::contains(container, x());
 		return algo::contains(container, item);
 	}
 
