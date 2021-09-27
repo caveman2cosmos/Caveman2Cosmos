@@ -553,13 +553,6 @@ void CvEventReporter::playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPl
 	m_kPythonEventMgr.reportPlayerGoldTrade(eFromPlayer, eToPlayer, iAmount);
 }
 
-// BUG - Revolution Event - start
-void CvEventReporter::playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	m_kPythonEventMgr.reportPlayerRevolution(ePlayerID, iAnarchyLength, paeOldCivics, paeNewCivics);
-}
-// BUG - Revolution Event - end
-
 void CvEventReporter::chat(CvWString szString)
 {
 	m_kPythonEventMgr.reportChat(szString);

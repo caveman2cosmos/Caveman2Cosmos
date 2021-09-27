@@ -62,16 +62,16 @@ namespace Cy
 		>::type type;
 	};
 	// Wrapper for simple array arguments
-	template < class Ty_ >
-	struct Array
-	{
-		typedef Ty_ value_type;
-
-		Array(const value_type* vals, int len) : vals(vals), len(len) {}
-
-		const value_type* vals;
-		int len;
-	};
+	//template < class Ty_ >
+	//struct Array
+	//{
+	//	typedef Ty_ value_type;
+	//
+	//	Array(const value_type* vals, int len) : vals(vals), len(len) {}
+	//
+	//	const value_type* vals;
+	//	int len;
+	//};
 
 	struct Args;
 
@@ -93,14 +93,14 @@ namespace Cy
 	};
 
 	// Array specialization
-	template < class Ty_ >
-	struct ArgTraits< Array<Ty_> > //: ArgTraitsBase< Array<Ty_> >
-	{
-		static void add(Args& args, const Array<Ty_>& arg)
-		{
-			args.args().add(arg.vals, arg.len);
-		}
-	};
+	//template < class Ty_ >
+	//struct ArgTraits< Array<Ty_> > //: ArgTraitsBase< Array<Ty_> >
+	//{
+	//	static void add(Args& args, const Array<Ty_>& arg)
+	//	{
+	//		args.args().add(arg.vals, arg.len);
+	//	}
+	//};
 
 	// vector specialization
 	template < class Ty_ >
