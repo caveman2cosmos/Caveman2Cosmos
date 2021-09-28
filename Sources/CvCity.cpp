@@ -4945,9 +4945,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		changeCommercePerPopFromBuildings(eCommerceX, iChange * kBuilding.getCommercePerPopChange(iI));
 
-		updateCommerceRateByBuilding(eBuilding, eCommerceX, GET_PLAYER(getOwner()).getBuildingCommerceChange(eBuilding, eCommerceX) * iChange);
+		changeBuildingCommerceChange(eBuilding, eCommerceX, iChange * GET_PLAYER(getOwner()).getBuildingCommerceChange(eBuilding, eCommerceX));
 
-		changeBuildingCommerceModifier((CommerceTypes)iI, iChange * (kBuilding.getCommerceModifier(iI) + GET_PLAYER(getOwner()).getBuildingCommerceModifier(eBuilding, eCommerceX)));
+		changeBuildingCommerceModifier(eCommerceX, iChange * (kBuilding.getCommerceModifier(iI) + GET_PLAYER(getOwner()).getBuildingCommerceModifier(eBuilding, eCommerceX)));
 
 		changeCommerceHappinessPer(eCommerceX, kBuilding.getCommerceHappiness(iI) * iChange);
 	}
@@ -18684,11 +18684,15 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 
 	if (kEvent.getNumBuildingCommerceChanges() > 0)
 	{
-		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
+		for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 		{
-			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
+			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 			{
-				setBuildingCommerceChange((BuildingTypes)iBuilding, (CommerceTypes)iCommerce, getBuildingCommerceChange((BuildingTypes)iBuilding, (CommerceTypes)iCommerce) + kEvent.getBuildingCommerceChange(iBuilding, iCommerce));
+				const int iChange = kEvent.getBuildingCommerceChange(iI, iJ);
+				if (iChange != 0)
+				{
+					changeBuildingCommerceChange(static_cast<BuildingTypes>(iI), static_cast<CommerceTypes>(iJ), iChange);
+				}
 			}
 		}
 	}
@@ -18876,7 +18880,6 @@ int CvCity::getBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCo
 			return it.iChange;
 		}
 	}
-
 	return 0;
 }
 
@@ -18898,7 +18901,6 @@ void CvCity::setBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eC
 				{
 					commerceChange.iChange = iChange;
 				}
-
 				updateBuildingCommerce();
 			}
 
@@ -19522,49 +19524,6 @@ void CvCity::updateMaxSpecialistCount(BuildingTypes eBuilding, SpecialistTypes e
 	}
 }
 
-
-
-void CvCity::updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
-{
-	for (std::vector<BuildingCommerceChange>::iterator it = m_aBuildingCommerceChange.begin(); it != m_aBuildingCommerceChange.end(); ++it)
-	{
-		BuildingCommerceChange& commerceChange = *it;
-
-		if (commerceChange.eBuilding == eBuilding && commerceChange.eCommerce == eCommerce)
-		{
-			if (commerceChange.iChange != iChange)
-			{
-				if (iChange == 0)
-				{
-					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingCommerceChange.erase(it);
-				}
-				else
-				{
-					commerceChange.iChange = iChange;
-				}
-
-				updateBuildingCommerce();
-			}
-
-			return;
-		}
-	}
-
-	if (0 != iChange)
-	{
-		if (NO_BUILDING != eBuilding)
-		{
-			BuildingCommerceChange kChange;
-			kChange.eBuilding = eBuilding;
-			kChange.eCommerce = eCommerce;
-			kChange.iChange = iChange;
-			m_aBuildingCommerceChange.push_back(kChange);
-
-			updateBuildingCommerce();
-		}
-	}
-}
 
 /*
 	Checks to see if the city is producing a wonder
