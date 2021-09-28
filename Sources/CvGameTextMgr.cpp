@@ -24167,13 +24167,10 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			}
 		}
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+		foreach_(const TerrainTypes prereqOrTerrain, kBuilding.getPrereqOrTerrain())
 		{
-			if (kBuilding.isPrereqOrTerrain(iI))
-			{
-				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getTerrainInfo((TerrainTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-				bFirst = false;
-			}
+			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getTerrainInfo(prereqOrTerrain).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+			bFirst = false;
 		}
 		if (!bFirst)
 		{

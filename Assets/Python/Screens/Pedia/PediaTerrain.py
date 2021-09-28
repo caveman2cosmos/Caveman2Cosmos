@@ -71,7 +71,7 @@ class Page:
 		aList = []
 		for iType in xrange(GC.getNumBuildingInfos()):
 			CvBuilding = GC.getBuildingInfo(iType)
-			if CvBuilding.isPrereqOrTerrain(iTheTerrain) or CvBuilding.isPrereqAndTerrain(iTheTerrain):
+			if iTheTerrain in CvBuilding.getPrereqOrTerrain() or iTheTerrain in CvBuilding.getPrereqAndTerrain():
 				aList.append([iType, CvBuilding.getButton()])
 		if aList:
 			H_ROW_2 -= H_ROW_3

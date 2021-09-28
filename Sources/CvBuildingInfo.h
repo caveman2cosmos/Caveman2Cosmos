@@ -354,8 +354,7 @@ public:
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
-	bool isPrereqOrTerrain(int i) const;
-	bool isPrereqAndTerrain(int i) const;
+	const std::vector<TerrainTypes>& getPrereqOrTerrain() const { return m_prereqOrTerrain; }
 	const std::vector<TerrainTypes>& getPrereqAndTerrain() const { return m_prereqAndTerrain; }
 	const std::vector<ImprovementTypes>& getPrereqOrImprovements() const { return m_prereqOrImprovements; }
 	const std::vector<FeatureTypes>& getPrereqOrFeatures() const { return m_prereqOrFeatures; }
@@ -732,7 +731,6 @@ private:
 
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqAndCivics;
-	bool* m_pbPrereqOrTerrain;
 	bool* m_pbCommerceFlexible;
 	bool* m_pabHurry;
 
@@ -776,6 +774,7 @@ private:
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 
+	std::vector<TerrainTypes> m_prereqOrTerrain;
 	std::vector<TerrainTypes> m_prereqAndTerrain;
 	std::vector<FeatureTypes> m_prereqOrFeatures;
 	std::vector<ImprovementTypes> m_prereqOrImprovements;

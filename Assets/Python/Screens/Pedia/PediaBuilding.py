@@ -525,9 +525,9 @@ class PediaBuilding:
 		# Terrain Req
 		szChild = PF + "TERRAIN"
 		for i in range(GC.getNumTerrainInfos()):
-			if CvTheBuildingInfo.isPrereqAndTerrain(i):
+			if i in CvTheBuildingInfo.getPrereqAndTerrain():
 				aList1.append(i)
-			elif CvTheBuildingInfo.isPrereqOrTerrain(i):
+			elif i in CvTheBuildingInfo.getPrereqOrTerrain():
 				aList2.append(i)
 		if aList1 or aList2:
 			if bPlus:

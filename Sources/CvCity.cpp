@@ -20226,13 +20226,13 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	bool bRequiresTerrain = false;
 	bool bValidTerrain = false;
-	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	foreach_(const TerrainTypes prereqOrTerrain, kBuilding.getPrereqOrTerrain())
 	{
-		if (kBuilding.isPrereqOrTerrain(iI) && !bValidTerrain)
+		if (!bValidTerrain)
 		{
 			bRequiresTerrain = true;
-			const bool bPeak = iI == iTerrainPeak;
-			const bool bHill = iI == iTerrainHill;
+			const bool bPeak = prereqOrTerrain == iTerrainPeak;
+			const bool bHill = prereqOrTerrain == iTerrainHill;
 
 			foreach_(const CvPlot* plotX, plots())
 			{
@@ -20252,7 +20252,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 						break;
 					}
 				}
-				else if (plotX->getTerrainType() == iI)
+				else if (plotX->getTerrainType() == prereqOrTerrain)
 				{
 					bValidTerrain = true;
 					break;
