@@ -89,7 +89,7 @@ public:
 
 	static typename Container::value_type getItem(Container& container, int i)
 	{
-		FASSERT_BOUNDS(0, container.size(), i);
+		FASSERT_BOUNDS(0, (int)container.size(), i);
 		return container[i];
 	}
 
