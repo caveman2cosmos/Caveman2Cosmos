@@ -495,7 +495,7 @@ struct CvInfoUtil : bst::noncopyable
 		void sendVarToPython(const char* file) const
 		{
 			Cy::call(file, "handleVector", Cy::Args()
-				<< static_cast<const std::vector<int>&>(ref())
+				<< &ref()
 			);
 		}
 

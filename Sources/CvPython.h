@@ -103,14 +103,14 @@ namespace Cy
 	};
 
 	// vector specialization
-	template < class Ty_ >
-	struct ArgTraits< std::vector<Ty_> > //: ArgTraitsBase< std::vector<Ty_> >
-	{
-		static void add(Args& args, const std::vector<Ty_>& arg)
-		{
-			args.args().add(arg.empty() ? NULL : &arg[0], arg.size());
-		}
-	};
+	//template < class Ty_ >
+	//struct ArgTraits< std::vector<Ty_> > //: ArgTraitsBase< std::vector<Ty_> >
+	//{
+	//	static void add(Args& args, const std::vector<Ty_>& arg)
+	//	{
+	//		args.args().add(arg.empty() ? NULL : &arg[0], arg.size());
+	//	}
+	//};
 
 	// Lifetime management for objects passed as arguments
 	struct PyWrapBase

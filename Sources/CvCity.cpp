@@ -20319,22 +20319,20 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		}
 	}
 
-	bool bRequiresOrFeature = false;
-	bool bHasValidFeature = false;
-	for (int iI = 0; iI < GC.getNumFeatureInfos() && !bHasValidFeature; iI++)
+	if (!kBuilding.getPrereqOrFeatures().empty())
 	{
-		if (kBuilding.isPrereqOrFeature(iI))
+		bool bHasValidFeature = false;
+		foreach_(const FeatureTypes prereqOrFeature, kBuilding.getPrereqOrFeatures())
 		{
-			bRequiresOrFeature = true;
-			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == iI))
+			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == prereqOrFeature))
 			{
 				bHasValidFeature = true;
 			}
 		}
-	}
-	if (!bHasValidFeature && bRequiresOrFeature)
-	{
-		return false;
+		if (!bHasValidFeature)
+		{
+			return false;
+		}
 	}
 
 	return true;

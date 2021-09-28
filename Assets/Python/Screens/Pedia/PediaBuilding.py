@@ -573,9 +573,8 @@ class PediaBuilding:
 			aList2 = []
 		# Feature Req
 		szChild = PF + "FEATURE"
-		for i in range(GC.getNumFeatureInfos()):
-			if CvTheBuildingInfo.isPrereqOrFeature(i):
-				aList2.append(i)
+		for iFeature in CvTheBuildingInfo.getPrereqOrFeatures():
+			aList2.append(iFeature)
 		if aList2:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

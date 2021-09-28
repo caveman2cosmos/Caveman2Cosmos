@@ -24,7 +24,7 @@ public:
 	void add(const uint8_t* s, int iLength);		// makes a list
 	void add(const int* s, int iLength);		// makes a list
 	void add(const float* s, int iLength);		// makes a list
-
+/*
 	template < class Ty >
 	void add(const std::vector<Ty>& s)
 	{
@@ -38,7 +38,7 @@ public:
 			add(s0, 0);
 		}
 	}
-
+*/
 	DllExport void add(void* p);
 	DllExport void* makeFunctionArgs();
 

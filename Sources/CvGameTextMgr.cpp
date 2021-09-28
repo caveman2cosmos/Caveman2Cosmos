@@ -24208,13 +24208,10 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(ENDCOLR);
 		}
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
+		foreach_(const FeatureTypes prereqOrFeature, kBuilding.getPrereqOrFeatures())
 		{
-			if (kBuilding.isPrereqOrFeature(iI))
-			{
-				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getFeatureInfo((FeatureTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-				bFirst = false;
-			}
+			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getFeatureInfo(prereqOrFeature).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+			bFirst = false;
 		}
 		if (!bFirst)
 		{

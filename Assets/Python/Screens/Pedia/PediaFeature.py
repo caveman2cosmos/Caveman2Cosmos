@@ -72,7 +72,7 @@ class PediaFeature:
 		aList = []
 		for iType in xrange(GC.getNumBuildingInfos()):
 			CvBuilding = GC.getBuildingInfo(iType)
-			if CvBuilding.isPrereqOrFeature(iTheFeature):
+			if iTheFeature in CvBuilding.getPrereqOrFeatures():
 				aList.append([iType, CvBuilding.getButton()])
 		if aList:
 			H_ROW_2 -= H_ROW_3

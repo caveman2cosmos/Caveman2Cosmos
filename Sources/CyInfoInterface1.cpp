@@ -568,7 +568,7 @@ void CyInfoPythonInterface1()
 		.def("isPrereqAndTerrain", &CvBuildingInfo::isPrereqAndTerrain, "bool (int i)")
 
 		.def("getPrereqOrImprovements", &CvBuildingInfo::getPrereqOrImprovements, python::return_value_policy<python::reference_existing_object>())
-		.def("isPrereqOrFeature", &CvBuildingInfo::isPrereqOrFeature, "bool (int i)")
+		.def("getPrereqOrFeatures", &CvBuildingInfo::getPrereqOrFeatures, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getPrereqOrBuilding", &CvBuildingInfo::getPrereqOrBuilding, "int (int i)")
 		.def("getNumPrereqOrBuilding", &CvBuildingInfo::getNumPrereqOrBuilding, "short ()")

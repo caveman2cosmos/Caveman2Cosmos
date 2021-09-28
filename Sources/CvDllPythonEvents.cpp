@@ -209,7 +209,7 @@ struct EventArgs
 	template < class Ty_ >
 	EventArgs& arg(const std::string& name, const Ty_& value)
 	{
-		pyArgs.add(value);
+		//pyArgs.add(value);
 		jsonArgs << logging::JsonValue(name, value);
 		return *this;
 	}
