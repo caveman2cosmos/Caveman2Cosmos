@@ -57,6 +57,7 @@ CvCity::CvCity()
 	m_aiCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceHappinessPer = new int[NUM_COMMERCE_TYPES];
 	m_commercePerPopFromBuildings = new int[NUM_COMMERCE_TYPES];
+	m_buildingCommerceMod = new int[NUM_COMMERCE_TYPES];
 	m_aiDomainFreeExperience = new int[NUM_DOMAIN_TYPES];
 	m_aiDomainProductionModifier = new int[NUM_DOMAIN_TYPES];
 
@@ -187,6 +188,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiExtraYield);
 	SAFE_DELETE_ARRAY(m_buildingExtraYield100);
 	SAFE_DELETE_ARRAY(m_buildingYieldMod);
+	SAFE_DELETE_ARRAY(m_buildingCommerceMod);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldPerPopRate);
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiPowerYieldRateModifier);
@@ -706,6 +708,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiBonusCommercePercentChanges[iI] = 0;
 		m_aiBuildingCommerceTechChange[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
+		m_buildingCommerceMod[iI] = 0;
 	}
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -1014,7 +1017,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		{
 			m_pabAutomatedCanBuild[iI] = true;
 		}
-		m_aBuildingCommerceModifier.clear();
 		m_aPropertySpawns.clear();
 	}
 
@@ -4944,16 +4946,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeCommercePerPopFromBuildings(eCommerceX, iChange * kBuilding.getCommercePerPopChange(iI));
 
 		updateCommerceRateByBuilding(eBuilding, eCommerceX, GET_PLAYER(getOwner()).getBuildingCommerceChange(eBuilding, eCommerceX) * iChange);
-		changeCommerceRateModifier(eCommerceX, kBuilding.getCommerceModifier(iI) * iChange);
 
-		updateCommerceModifierByBuilding(
-			eBuilding, eCommerceX,
-			(
-				GET_TEAM(getTeam()).getBuildingCommerceModifier(eBuilding, eCommerceX)
-				+ GET_PLAYER(getOwner()).getBuildingCommerceModifier(eBuilding, eCommerceX)
-			)
-			* iChange
-		);
+		changeBuildingCommerceModifier((CommerceTypes)iI, iChange * (kBuilding.getCommerceModifier(iI) + GET_PLAYER(getOwner()).getBuildingCommerceModifier(eBuilding, eCommerceX)));
+
 		changeCommerceHappinessPer(eCommerceX, kBuilding.getCommerceHappiness(iI) * iChange);
 	}
 
@@ -5333,6 +5328,16 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
 				changeBuildingCommerceTechChange((CommerceTypes)iI, iChange * pair.second[(CommerceTypes)iI]);
+			}
+		}
+	}
+	foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
+		{
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			{
+				changeBuildingCommerceModifier((CommerceTypes)iI, iChange * pair.second[(CommerceTypes)iI]);
 			}
 		}
 	}
@@ -12019,32 +12024,29 @@ int CvCity::getTotalCommerceRateModifier(CommerceTypes eIndex) const
 		int iTotal = 100;
 		//STEP 1 : Bonus Commerce Rate Modifier
 		iTotal += calculateBonusCommerceRateModifier(eIndex);
-
 		//STEP 2 : Buildings
-			//Base
-		iTotal += getCommerceRateModifier(eIndex);
-		//From modifiers to existing buildings from buildings and techs and such
-		iTotal += calculateBuildingCommerceModifier(eIndex);
-		//Player level building effects
+		iTotal += getBuildingCommerceModifier(eIndex);
+
+		//STEP 2.5 : Player level building effects
 		iTotal += GET_PLAYER(getOwner()).getCommerceRateModifierfromBuildings(eIndex);
 
 		//STEP 3 : Events
-		iTotal += GET_PLAYER(getOwner()).getCommerceRateModifierfromEvents(eIndex);
+		iTotal += getCommerceRateModifier(eIndex) + GET_PLAYER(getOwner()).getCommerceRateModifierfromEvents(eIndex);
 
 		//STEP 4 : Player level
 		//(Noting subtractions so it's easier to follow in comparison to the Text Manager.)
 		//Aside from those noted, Player level modifiers also include Civics, Traits, and Techs
 		//Events and buildings were isolated out so they could be expressed in the above categories
-		iTotal += (GET_PLAYER(getOwner()).getCommerceRateModifier(eIndex)
+		iTotal += (
+			GET_PLAYER(getOwner()).getCommerceRateModifier(eIndex)
 			- GET_PLAYER(getOwner()).getCommerceRateModifierfromEvents(eIndex)
-			- GET_PLAYER(getOwner()).getCommerceRateModifierfromBuildings(eIndex));
-
+			- GET_PLAYER(getOwner()).getCommerceRateModifierfromBuildings(eIndex)
+		);
 		//STEP 5 : Capital Modifier
 		if (isCapital())
 		{
 			iTotal += GET_PLAYER(getOwner()).getCapitalCommerceRateModifier(eIndex);
 		}
-
 		m_totalCommerceRateModifier[eIndex] = std::max(1, iTotal);
 	}
 
@@ -12438,30 +12440,29 @@ int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, Bu
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	int iExtraModifier = 0;
-
-	if (!isReligiouslyLimitedBuilding(eBuilding))
+	if (isReligiouslyLimitedBuilding(eBuilding))
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-		iExtraModifier += kBuilding.getCommerceModifier(eIndex);
-		iExtraModifier += kBuilding.getGlobalCommerceModifier(eIndex);
+		return 0;
+	}
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	int iMod = kBuilding.getCommerceModifier(eIndex) + kBuilding.getGlobalCommerceModifier(eIndex);
+
+	foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
-			if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
-			{
-				iExtraModifier += kBuilding.getTechCommerceModifier(iI, eIndex);
-			}
-		}
-		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-		{
-			if (hasBonus((BonusTypes)iI))
-			{
-				iExtraModifier += kBuilding.getBonusCommerceModifier(iI, eIndex);
-			}
+			iMod += pair.second[eIndex];
 		}
 	}
-	return iExtraModifier;
+	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	{
+		if (hasBonus((BonusTypes)iI))
+		{
+			iMod += kBuilding.getBonusCommerceModifier(iI, eIndex);
+		}
+	}
+	return iMod;
 }
 // BUG - Building Additional Commerce - end
 
@@ -12907,6 +12908,7 @@ void CvCity::changeCommerceHappinessPer(CommerceTypes eIndex, int iChange)
 
 void CvCity::changeCommercePerPopFromBuildings(const CommerceTypes eIndex, const int iChange)
 {
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	if (iChange != 0)
 	{
 		m_commercePerPopFromBuildings[eIndex] += iChange;
@@ -12916,7 +12918,26 @@ void CvCity::changeCommercePerPopFromBuildings(const CommerceTypes eIndex, const
 
 int CvCity::getCommercePerPopFromBuildings(const CommerceTypes eIndex) const
 {
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_commercePerPopFromBuildings[eIndex];
+}
+
+void CvCity::changeBuildingCommerceModifier(CommerceTypes eIndex, int iChange)
+{
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+
+	if (iChange != 0)
+	{
+		m_buildingCommerceMod[eIndex] += iChange;
+		setCommerceModifierDirty(eIndex);
+		GET_PLAYER(getOwner()).invalidateCommerceRankCache();
+	}
+}
+
+int CvCity::getBuildingCommerceModifier(CommerceTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	return m_buildingCommerceMod[eIndex];
 }
 
 
@@ -16998,15 +17019,22 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iHealthPercentPerPopulation);
 
 	unsigned int iNumElts = 0;
+	// @SAVEBREAK DELETE - Toffer - 23.09.2021
 	WRAPPER_READ(wrapper, "CvCity", &iNumElts);
-	m_aBuildingCommerceModifier.clear();
 	for (unsigned int i = 0; i < iNumElts; ++i)
 	{
-		BuildingCommerceModifier kChange;
-		kChange.read(pStream);
-		m_aBuildingCommerceModifier.push_back(kChange);
+		CvTaggedSaveFormatWrapper& wrapper2 = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+
+		wrapper2.AttachToStream(pStream);
+
+		WRAPPER_READ_OBJECT_START(wrapper2);
+
+		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingCommerceModifier", eBuilding, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingCommerceModifier", eCommerce, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingCommerceModifier", iChange, SAVE_VALUE_ANY);
+
+		WRAPPER_READ_OBJECT_END(wrapper2);
 	}
-	// @SAVEBREAK DELETE - Toffer - 23.09.2021
 	WRAPPER_READ(wrapper, "CvCity", &iNumElts);
 	for (unsigned int i = 0; i < iNumElts; ++i)
 	{
@@ -17417,6 +17445,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_buildingExtraYield100);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_buildingYieldMod);
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_buildingCommerceMod);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
@@ -17632,13 +17661,10 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iHappinessPercentPerPopulation);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iHealthPercentPerPopulation);
 
-	WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_aBuildingCommerceModifier.size(), "iNumElts");
-	for (std::vector<BuildingCommerceModifier>::iterator it = m_aBuildingCommerceModifier.begin(); it != m_aBuildingCommerceModifier.end(); ++it)
-	{
-		(*it).write(pStream);
-	}
 	// @SAVEBREAK DELETE - Toffer - 23.09.2021
 	{
+		std::vector<int> m_aBuildingCommerceModifier;
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_aBuildingCommerceModifier.size(), "iNumElts");
 		std::vector<int> m_aBuildingYieldModifier;
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_aBuildingYieldModifier.size(), "iNumElts");
 	}
@@ -17849,6 +17875,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_buildingExtraYield100);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_buildingYieldMod);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_buildingCommerceMod);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -19495,62 +19522,6 @@ void CvCity::updateMaxSpecialistCount(BuildingTypes eBuilding, SpecialistTypes e
 	}
 }
 
-int CvCity::getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const
-{
-	foreach_(const BuildingCommerceModifier& it, m_aBuildingCommerceModifier)
-	{
-		if (it.eBuilding == eBuilding && it.eCommerce == eCommerce)
-		{
-			return it.iChange;
-		}
-	}
-	return 0;
-}
-
-void CvCity::updateCommerceModifierByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
-{
-	for (std::vector<BuildingCommerceModifier>::iterator it = m_aBuildingCommerceModifier.begin(); it != m_aBuildingCommerceModifier.end(); ++it)
-	{
-		BuildingCommerceModifier& commerceModifier = *it;
-
-		if (commerceModifier.eBuilding == eBuilding && commerceModifier.eCommerce == eCommerce)
-		{
-			if (commerceModifier.iChange != iChange)
-			{
-				if (iChange == 0)
-				{
-					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingCommerceModifier.erase(it);
-				}
-				else
-				{
-					commerceModifier.iChange = iChange;
-				}
-
-				setCommerceModifierDirty(eCommerce);
-				//updateBuildingCommerce();
-			}
-
-			return;
-		}
-	}
-
-	if (0 != iChange)
-	{
-		if (NO_BUILDING != eBuilding)
-		{
-			BuildingCommerceModifier kChange;
-			kChange.eBuilding = eBuilding;
-			kChange.eCommerce = eCommerce;
-			kChange.iChange = iChange;
-			m_aBuildingCommerceModifier.push_back(kChange);
-
-			setCommerceModifierDirty(eCommerce);
-			//updateBuildingCommerce();
-			GET_PLAYER(getOwner()).invalidateCommerceRankCache();
-		}
-	}
-}
 
 
 void CvCity::updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
@@ -19594,21 +19565,6 @@ void CvCity::updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes
 		}
 	}
 }
-
-int CvCity::calculateBuildingCommerceModifier(CommerceTypes eCommerce) const
-{
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-	int iTotalModifier = 0;
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
-	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
-		{
-			iTotalModifier += getBuildingCommerceModifier((BuildingTypes)iI, eCommerce);
-		}
-	}
-	return iTotalModifier;
-}
-
 
 /*
 	Checks to see if the city is producing a wonder
@@ -19952,6 +19908,7 @@ void CvCity::changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange)
 	}
 }
 
+
 int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
@@ -19975,6 +19932,26 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech)
 		}
 	}
 	return iCommerce100;
+}
+
+
+int CvCity::getBuildingCommerceTechModifier(CommerceTypes eYield, TechTypes eTech) const
+{
+	int iMod = 0;
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		{
+			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifiers())
+			{
+				if (eTech == pair.first)
+				{
+					iMod += pair.second[eYield];
+				}
+			}
+		}
+	}
+	return iMod;
 }
 
 
@@ -20911,16 +20888,16 @@ CultureLevelTypes CvCity::getCultureLevelForCulture(int iCulture) const
 
 int CvCity::calculateBonusCommerceRateModifier(CommerceTypes eIndex) const
 {
-	int iMultiplier = 0;
+	int iMod = getBonusCommerceRateModifier(eIndex);
+
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		if (hasBonus((BonusTypes)iI))
 		{
-			iMultiplier += GET_PLAYER(getOwner()).getBonusCommerceModifier((BonusTypes)iI, eIndex);//from Player level
+			iMod += GET_PLAYER(getOwner()).getBonusCommerceModifier((BonusTypes)iI, eIndex);//from Player level
 		}
 	}
-	iMultiplier += getBonusCommerceRateModifier(eIndex);//local from buildings
-	return iMultiplier;
+	return iMod;
 }
 
 static bool bonusAvailableFromBuildings(BonusTypes eBonus)
@@ -22300,6 +22277,7 @@ void CvCity::clearModifierTotals()
 		m_aiBonusCommercePercentChanges[iI] = 0;
 		m_aiBuildingCommerceTechChange[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
+		m_buildingCommerceMod[iI] = 0;
 	}
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -22318,8 +22296,6 @@ void CvCity::clearModifierTotals()
 	m_buildingProductionMod.clear();
 	m_unitProductionMod.clear();
 	m_bonusDefenseChanges.clear();
-
-	m_aBuildingCommerceModifier.clear();
 
 	m_terrainYieldChanges.clear();
 

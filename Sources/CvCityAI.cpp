@@ -14308,14 +14308,14 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		return true;
 	}
 
-	bool buildingModifiesGenericYields =
+	const bool buildingModifiesGenericYields =
 	(
 		kBuilding.getBonusYieldModifier(NO_BONUS, NO_COMMERCE) > 0 ||
 		kBuilding.getBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0 ||
 		kBuilding.getVicinityBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0
 	);
 
-	bool buildingModifiesCommerceYields =
+	const bool buildingModifiesCommerceYields =
 	(
 		buildingModifiesGenericYields
 		|| kBuilding.getYieldModifier(YIELD_COMMERCE) > 0
@@ -14372,7 +14372,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_GOLD) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_GOLD) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_GOLD) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_GOLD, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14388,7 +14388,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_RESEARCH) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_RESEARCH) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_RESEARCH, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14403,7 +14403,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_CULTURE) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_CULTURE) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_CULTURE, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14563,7 +14563,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_ESPIONAGE) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_ESPIONAGE) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_ESPIONAGE, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -16440,7 +16440,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	iResult += iTempValue;
 
 	// add value for a commerce modifier
-	int iCommerceModifier = kBuilding.getCommerceModifier(iI) + GET_TEAM(getTeam()).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
+	int iCommerceModifier = kBuilding.getCommerceModifier(iI) + GET_TEAM(getTeam()).getBuildingCommerceTechModifier((CommerceTypes)iI, eBuilding);
 
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{

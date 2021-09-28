@@ -760,22 +760,6 @@ struct PropertySpawns
 	void write(FDataStreamBase* pStream);
 };
 
-struct BuildingCommerceModifier
-{
-	BuildingTypes eBuilding;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	BuildingCommerceModifier()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
 const struct TechYieldChange
 {
 	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)

@@ -5679,12 +5679,12 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 {
 	PROFILE_FUNC();
 
-	if ( gPlayerLogLevel > 2 )
+	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Player %d (%S) evaluating buildings for tech %S",
-				getID(),
-				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription());
+		logBBAI(
+			"Player %d (%S) evaluating buildings for tech %S",
+			getID(), getCivilizationDescription(0), GC.getTechInfo(eTech).getDescription()
+		);
 	}
 #ifdef USE_BOTH_TECHBUILDING_EVALUATIONS
 	bool bCapitalAlone = (GC.getGame().getElapsedGameTurns() > 0) ? AI_isCapitalAreaAlone() : false;
@@ -5968,50 +5968,61 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				if (iNumExisting > 0)
 				{
 					int iTempValue = 0;
-					int iJ;
 
-					for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+					foreach_(const TechArray& pair, kLoopBuilding.getTechCommerceChanges100())
 					{
-						foreach_(const TechArray& pair, kLoopBuilding.getTechCommerceChanges100())
+						if (eTech == pair.first)
 						{
-							if (eTech == pair.first)
+							for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 							{
 								iTempValue += 4 * pair.second[iJ];
-								break;
 							}
-						}
-						const int iCommerceModifier = kLoopBuilding.getTechCommerceModifier(eTech, iJ);
-						if (iCommerceModifier != 0)
-						{
-							iTempValue += 4 * getCommerceRate((CommerceTypes)iJ) * iCommerceModifier / getNumCities();
+							break;
 						}
 					}
-
-					for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+					foreach_(const TechArray& pair, kLoopBuilding.getTechYieldChanges100())
 					{
-						foreach_(const TechArray& pair, kLoopBuilding.getTechYieldChanges100())
+						if (eTech == pair.first)
 						{
-							if (eTech == pair.first)
+							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
 								iTempValue += 4 * pair.second[iJ];
-								break;
 							}
+							break;
 						}
-						foreach_(const TechArray& pair, kLoopBuilding.getTechYieldModifiers())
+					}
+					foreach_(const TechArray& pair, kLoopBuilding.getTechCommerceModifiers())
+					{
+						if (eTech == pair.first)
 						{
-							if (eTech == pair.first)
+							for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+							{
+								const int iCommerceModifier = pair.second[iJ];
+								if (iCommerceModifier != 0)
+								{
+									iTempValue += 4 * getCommerceRate((CommerceTypes)iJ) * iCommerceModifier / getNumCities();
+								}
+							}
+							break;
+						}
+					}
+					foreach_(const TechArray& pair, kLoopBuilding.getTechYieldModifiers())
+					{
+						if (eTech == pair.first)
+						{
+							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
 								const int iYieldModifier = pair.second[iJ];
 								if (iYieldModifier != 0)
 								{
 									iTempValue += 4 * calculateTotalYield((YieldTypes)iJ) * iYieldModifier / getNumCities();
 								}
-								break;
 							}
+							break;
 						}
 					}
 
-					for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 					{
 						int iSpecialistChange = kLoopBuilding.getTechSpecialistChange(eTech, iJ);
 
@@ -6021,43 +6032,23 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 						}
 					}
 
-					if ( iTempValue != 0 )
+					if (iTempValue != 0)
 					{
-						iTempValue = (iTempValue * BUILDING_VALUE_TO_TECH_BUILDING_VALUE_MULTIPLIER)/100;
+						iTempValue = iTempValue * BUILDING_VALUE_TO_TECH_BUILDING_VALUE_MULTIPLIER / 100;
 
-						if ( gPlayerLogLevel > 2 )
+						if (gPlayerLogLevel > 2)
 						{
-							logBBAI("\tBuilding %S is modified.  We have %d of them, total value: %d",
-									kLoopBuilding.getDescription(),
-									iNumExisting,
-									iTempValue);
+							logBBAI(
+								"\tBuilding %S is modified.  We have %d of them, total value: %d", 
+								kLoopBuilding.getDescription(), iNumExisting, iTempValue
+							);
 						}
-
 						iValue += iTempValue;
 					}
 				}
 			}
 		}
 	}
-
-#if 0
-	if (bIsCultureBuilding && iExistingCultureBuildingCount < 2)
-	{
-		if (getFreeCityCommerce(COMMERCE_CULTURE) == 0)
-		{
-			if (getNumCities() > 1)
-			{
-				iValue += 150 * std::max(1, (3 - 2 * iExistingCultureBuildingCount)) * (getNumCities() - 1);
-			}
-		}
-	}
-	// if tech gives at least one building (so we can count each individual building less)
-	if (iBestLandBuildingValue > 0)
-	{
-		iValue += iBestLandBuildingValue;
-	}
-#endif
-
 	return iValue;
 }
 

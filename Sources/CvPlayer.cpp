@@ -27707,11 +27707,11 @@ void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eBuilding, CommerceT
 	{
 		m_ppiBuildingCommerceModifier[eBuilding][eCommerce] += iChange;
 
-		foreach_(CvCity* pLoopCity, cities())
+		foreach_(CvCity* cityX, cities())
 		{
-			if (pLoopCity->hasFullyActiveBuilding(eBuilding))
+			if (cityX->hasFullyActiveBuilding(eBuilding))
 			{
-				pLoopCity->updateCommerceModifierByBuilding(eBuilding, eCommerce, pLoopCity->getBuildingCommerceModifier(eBuilding, eCommerce) + iChange);
+				cityX->changeBuildingCommerceModifier(eCommerce, iChange);
 			}
 		}
 		setCommerceDirty();

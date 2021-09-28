@@ -391,45 +391,6 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-
-void BuildingCommerceModifier::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void BuildingCommerceModifier::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
-	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", eCommerce);
-	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", iChange);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 
 CvBattleRound::CvBattleRound() :
 	m_iWaveSize(0),

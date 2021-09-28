@@ -345,6 +345,9 @@ public:
 	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
+	const IDValueMap<TechTypes, int*>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
+	const python::list cyGetTechCommerceModifiers() const;
+
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
 
@@ -402,9 +405,6 @@ public:
 
 	int getTechSpecialistChange(int i, int j) const;
 	int* getTechSpecialistChangeArray(int i) const;
-
-	int getTechCommerceModifier(int i, int j) const;
-	int* getTechCommerceModifierArray(int i) const;
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 
@@ -472,7 +472,6 @@ public:
 	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
 	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
 	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
-	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
 	bool isAnyBonusCommerceModifiers() const		{ return m_ppaiBonusCommerceModifier != NULL; }
 	bool isAnyBonusYieldChanges() const				{ return m_ppaiBonusYieldChanges != NULL; }
 	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
@@ -768,7 +767,6 @@ private:
 
 	int** m_ppaiBonusCommerceModifier;
 	int** m_ppaiTechSpecialistChange;
-	int** m_ppaiTechCommerceModifier;
 	int** m_ppiImprovementYieldChanges;
 	int** m_ppaiBonusYieldChanges;
 	int** m_ppaiBonusCommercePercentChanges;
@@ -825,6 +823,7 @@ private:
 	IDValueMap<TechTypes, int*> m_techYieldChanges;
 	IDValueMap<TechTypes, int*> m_techYieldModifiers;
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
+	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
