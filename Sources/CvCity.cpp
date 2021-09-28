@@ -20259,42 +20259,41 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 				}
 			}
 		}
+	}
+	foreach_(const TerrainTypes prereqAndTerrain, kBuilding.getPrereqAndTerrain())
+	{
+		const bool bPeak = prereqAndTerrain == iTerrainPeak;
+		const bool bHill = prereqAndTerrain == iTerrainHill;
 
-		if (kBuilding.isPrereqAndTerrain(iI))
+		//Checks the city plots for a valid terrain
+		bool bHasAndTerrain = false;
+		foreach_(const CvPlot* plotX, plots())
 		{
-			const bool bPeak = iI == iTerrainPeak;
-			const bool bHill = iI == iTerrainHill;
-
-			//Checks the city plots for a valid terrain
-			bool bHasAndTerrain = false;
-			foreach_(const CvPlot* plotX, plots())
+			if (bPeak)
 			{
-				if (bPeak)
-				{
-					if (plotX->isAsPeak())
-					{
-						bHasAndTerrain = true;
-						break;
-					}
-				}
-				else if (bHill)
-				{
-					if (plotX->isHills())
-					{
-						bHasAndTerrain = true;
-						break;
-					}
-				}
-				else if (plotX->getTerrainType() == iI)
+				if (plotX->isAsPeak())
 				{
 					bHasAndTerrain = true;
 					break;
 				}
 			}
-			if (!bHasAndTerrain)
+			else if (bHill)
 			{
-				return false;
+				if (plotX->isHills())
+				{
+					bHasAndTerrain = true;
+					break;
+				}
 			}
+			else if (plotX->getTerrainType() == prereqAndTerrain)
+			{
+				bHasAndTerrain = true;
+				break;
+			}
+		}
+		if (!bHasAndTerrain)
+		{
+			return false;
 		}
 	}
 	if (!bValidTerrain && bRequiresTerrain)

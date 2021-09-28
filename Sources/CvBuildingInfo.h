@@ -356,6 +356,7 @@ public:
 	bool isPrereqAndCivics(int iCivic) const;
 	bool isPrereqOrTerrain(int i) const;
 	bool isPrereqAndTerrain(int i) const;
+	const std::vector<TerrainTypes>& getPrereqAndTerrain() const { return m_prereqAndTerrain; }
 	const std::vector<ImprovementTypes>& getPrereqOrImprovements() const { return m_prereqOrImprovements; }
 	const std::vector<FeatureTypes>& getPrereqOrFeatures() const { return m_prereqOrFeatures; }
 
@@ -724,7 +725,6 @@ private:
 	UnitTypes m_ePropertySpawnUnit;
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
-	//TechTypes m_eFreeSpecialTech;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
@@ -733,7 +733,6 @@ private:
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqAndCivics;
 	bool* m_pbPrereqOrTerrain;
-	bool* m_pbPrereqAndTerrain;
 	bool* m_pbCommerceFlexible;
 	bool* m_pabHurry;
 
@@ -777,6 +776,7 @@ private:
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 
+	std::vector<TerrainTypes> m_prereqAndTerrain;
 	std::vector<FeatureTypes> m_prereqOrFeatures;
 	std::vector<ImprovementTypes> m_prereqOrImprovements;
 	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
