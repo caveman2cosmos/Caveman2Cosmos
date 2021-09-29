@@ -988,6 +988,9 @@ public:
 	void changeBuildingYieldModifier(YieldTypes eYield, int iChange);
 	int getBuildingYieldModifier(YieldTypes eYield) const;
 
+	void changeBuildingCommerceModifier(CommerceTypes eIndex, int iChange);
+	int getBuildingCommerceModifier(CommerceTypes eIndex) const;
+
 	void onYieldChange();
 
 	int getBaseYieldPerPopRate(YieldTypes eIndex) const;
@@ -1375,17 +1378,12 @@ public:
 	bool isProductionWonder() const;
 	void updateYieldRate(BuildingTypes eBuilding, YieldTypes eYield, int iChange);
 	void updateMaxSpecialistCount(BuildingTypes eBuilding, SpecialistTypes eSpecialist, int iChange);
-	void updateCommerceModifierByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
-	void updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
 	//int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;
 	//void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 	int calculateBonusDefense() const;
 
 	void setCivilizationType(int iCiv);
 
-	int getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const;
-
-	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
 	int getRevTrend() const;
 	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
@@ -1494,6 +1492,7 @@ public:
 	void changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange);
 	int getBuildingCommerceTechChange(CommerceTypes eIndex) const;
 	int getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const;
+	int getBuildingCommerceTechModifier(CommerceTypes eYield, TechTypes eTech) const;
 
 	int getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const;
 	int getBuildingYieldTechModifier(YieldTypes eYield, TechTypes eTech) const;
@@ -1796,8 +1795,6 @@ protected:
 	int* m_paiUnitCombatExtraStrength;
 	bool* m_pabAutomatedCanBuild;
 
-	std::vector<BuildingCommerceModifier> m_aBuildingCommerceModifier;
-
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
 	std::vector<short> m_vFreeBuildings;
@@ -1922,6 +1919,7 @@ protected:
 	int* m_aiBaseYieldRate;
 	int* m_buildingExtraYield100;
 	int* m_buildingYieldMod;
+	int* m_buildingCommerceMod;
 	int* m_aiExtraYield;
 	int* m_aiBaseYieldPerPopRate;
 	int* m_aiYieldRateModifier;
