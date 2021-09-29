@@ -264,8 +264,7 @@ m_ppaiBonusYieldModifier(NULL)
 #endif
 //TB Combat Mods (Buildings) end
 ,m_bAutoBuild(false)
-,m_bEnablesOtherBuildingsCalculated(false)
-,m_bEnablesOtherBuildingsValue(false)
+,m_bEnablesOtherBuildings(false)
 ,m_bEnablesUnits(false)
 //Team Project (3)
 //TB Building Tags
@@ -1528,61 +1527,7 @@ int CvBuildingInfo::getMaxPopAllowed() const
 
 bool CvBuildingInfo::EnablesOtherBuildings() const
 {
-	if (!m_bEnablesOtherBuildingsCalculated)
-	{
-		const int iId = GC.getInfoTypeForString(getType());
-
-		m_bEnablesOtherBuildingsCalculated = true;
-		m_bEnablesOtherBuildingsValue = false;
-
-		// add the building and its bonuses to the query to see if they influence the construct condition of a building
-		std::vector<GOMQuery> queries;
-		GOMQuery query;
-		query.GOM = GOM_BUILDING;
-		query.id = iId;
-		queries.push_back(query);
-		query.GOM = GOM_BONUS;
-		query.id = getFreeBonus();
-		if (query.id != NO_BONUS)
-		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = getExtraFreeBonus(iJ);
-			queries.push_back(query);
-		}
-
-		for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-		{
-			if(GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(iId)
-			|| GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(iId))
-			{
-				m_bEnablesOtherBuildingsValue = true;
-				break;
-			}
-		}
-
-		if ( !m_bEnablesOtherBuildingsValue )
-		{
-			const BonusTypes eFreeBonus = (BonusTypes)getFreeBonus();
-
-			if ( eFreeBonus != NO_BONUS )
-			{
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-				{
-					if (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqAndBonus() == eFreeBonus
-					|| algo::contains(GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses(), eFreeBonus))
-					{
-						m_bEnablesOtherBuildingsValue = true;
-						break;
-					}
-				}
-			}
-		}
-	}
-
-	return m_bEnablesOtherBuildingsValue;
+	return m_bEnablesOtherBuildings;
 }
 
 bool CvBuildingInfo::isFreeBonusOfBuilding(BonusTypes eBonus) const
@@ -1606,6 +1551,51 @@ bool CvBuildingInfo::isFreeBonusOfBuilding(BonusTypes eBonus) const
 
 namespace CvBuildingInternal
 {
+	bool calculateEnablesOtherBuildings(const CvBuildingInfo& kBuilding, BuildingTypes eBuilding)
+	{
+		// add the building and its bonuses to the query to see if they influence the construct condition of a building
+		std::vector<GOMQuery> queries;
+		GOMQuery query;
+		query.GOM = GOM_BUILDING;
+		query.id = eBuilding;
+		queries.push_back(query);
+		query.GOM = GOM_BONUS;
+		query.id = kBuilding.getFreeBonus();
+		if (query.id != NO_BONUS)
+		{
+			queries.push_back(query);
+		}
+		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
+		{
+			query.id = kBuilding.getExtraFreeBonus(iJ);
+			queries.push_back(query);
+		}
+
+		foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
+		{
+			if (loopBuilding->isPrereqInCityBuilding(eBuilding)
+			||  loopBuilding->isPrereqOrBuilding(eBuilding))
+			{
+				return true;
+			}
+		}
+
+		const BonusTypes eFreeBonus = (BonusTypes)kBuilding.getFreeBonus();
+
+		if (eFreeBonus != NO_BONUS)
+		{
+			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
+			{
+				if (loopBuilding->getPrereqAndBonus() == eFreeBonus
+				|| algo::contains(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 	bool calculateEnablesUnits(const CvBuildingInfo& kBuilding, BuildingTypes eBuilding)
 	{
 		// add the building and its bonuses to the query to see if they influence the construct condition of a building
@@ -1669,6 +1659,7 @@ namespace CvBuildingInternal
 
 void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
 {
+	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, eThis);
 	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
 }
 
