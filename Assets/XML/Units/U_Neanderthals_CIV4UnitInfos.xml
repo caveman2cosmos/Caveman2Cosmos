@@ -958,8 +958,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
+				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_SHEPHERD</UnitType>
@@ -1075,6 +1078,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>

@@ -264,7 +264,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -349,7 +349,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
-			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<iCost>1540</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -357,10 +356,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ECOLOGICAL_ENGINEERING</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -559,7 +558,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
@@ -712,7 +711,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CISLUNAR_SOLAR_ARRAY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
@@ -812,7 +811,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -831,7 +830,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
-			<ObsoleteTech>TECH_FUSION_SPACECRAFT</ObsoleteTech>
 			<iCost>2205</iCost>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
@@ -1127,7 +1125,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
@@ -1219,7 +1217,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CALLISTO_RESUPPLY_BASE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
@@ -1321,7 +1319,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
@@ -1562,7 +1560,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PLANETARY_AWARENESS</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -1593,11 +1591,11 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
@@ -1695,7 +1693,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_INFLATABLE_HABITAT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
@@ -1857,7 +1855,7 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_SATELLITE</UnitType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<CommerceChanges>

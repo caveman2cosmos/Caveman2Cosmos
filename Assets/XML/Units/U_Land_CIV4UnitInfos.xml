@@ -6631,6 +6631,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CRUSADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRUSADER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_CRUSADER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -6670,10 +6671,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CRUSADE</BuildingType>
-			</PrereqAndBuildings>
+			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
+			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
+			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -33768,6 +33770,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
@@ -38177,6 +38180,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCIENT_VETERINARIAN</BuildingType>
 				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
@@ -38359,8 +38363,11 @@
 			</UnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<iCost>330</iCost>
@@ -38455,9 +38462,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WATCHMAKERS_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
@@ -38552,8 +38560,11 @@
 			</UnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqBonuses>
@@ -40289,9 +40300,10 @@
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEALER</UnitType>
 				<UnitType>UNIT_SHEPHERD</UnitType>
@@ -40399,6 +40411,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
@@ -40509,6 +40522,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_APOTHECARY</UnitType>
@@ -40613,6 +40627,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>
@@ -40715,6 +40730,7 @@
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SURGEON</UnitType>
@@ -40816,6 +40832,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDIC</UnitType>
@@ -40916,9 +40933,10 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE</UnitType>
 				<UnitType>UNIT_MEDICAL_LAB_TECH</UnitType>
@@ -41032,9 +41050,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE_II</UnitType>
 			</UnitUpgrades>
@@ -41157,9 +41176,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
 			</UnitUpgrades>
@@ -41274,9 +41294,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41403,9 +41424,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41527,9 +41549,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -41642,10 +41665,13 @@
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
 				<BuildingType>BUILDING_REJUVENATION_TANK</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_STATION</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -42038,9 +42064,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FERTILITY_CLINIC</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
@@ -43183,6 +43210,15 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_ENTERTAINER</UnitType>
 			</UnitUpgrades>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
@@ -43289,6 +43325,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<iCost>200</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43386,6 +43431,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<iCost>700</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43675,6 +43729,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>

@@ -24,7 +24,7 @@
 				<iYield>50</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
@@ -61,7 +61,7 @@
 					<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -862,10 +862,10 @@
 			<iHappiness>1</iHappiness>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_OPTRONICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_OPTRONICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1267,14 +1267,14 @@
 					<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ATOMIZATION_FIELD</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1362,7 +1362,7 @@
 			</MapCategoryTypes>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<PrereqCultureLevel>CULTURELEVEL_ELEGANT</PrereqCultureLevel>
-			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1535,7 +1535,7 @@
 				<iYield>2</iYield>
 				<iYield>60</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1922,7 +1922,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>

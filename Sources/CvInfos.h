@@ -30,6 +30,7 @@ extern bool shouldHaveType;
 
 class CvXMLLoadUtility;
 class IntExpr;
+struct CvInfoUtil;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -77,6 +78,7 @@ public:
 	virtual void read(FDataStreamBase*) {}
 	virtual void write(FDataStreamBase*) {}
 
+	virtual void getDataMembers(CvInfoUtil&) { FErrorMsg("Override this"); }
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual bool readPass2(CvXMLLoadUtility*) { FErrorMsg("Override this"); return false; }
 	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
@@ -443,10 +445,7 @@ public:
 	int getFlavorValue(int i) const;
 
 	const std::vector<TechTypes>& getPrereqOrTechs() const;
-	const python::list cyGetPrereqOrTechs() const;
-
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	bool isCommerceFlexible(int i) const;
 	bool isTerrainTrade(int i) const;
@@ -671,8 +670,7 @@ public:
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
 	bool isCanLeadThroughPeaks() const;
-	int getNumPromotionOverwrites() const;
-	PromotionTypes getPromotionOverwrites(int iI) const;
+	//const std::vector<PromotionTypes>& getPromotionOverwrites() const { return m_vPromotionOverwrites; }
 	TechTypes getObsoleteTech() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -1074,7 +1072,7 @@ protected:
 	//	mountains, and ability to lead a stack through mountains
 	bool m_bCanLeadThroughPeaks;
 	int m_iNumPromotionOverwrites;
-	int* m_piPromotionOverwrites;
+	//std::vector<PromotionTypes> m_vPromotionOverwrites;
 	TechTypes m_iObsoleteTech;
 	int m_iControlPoints;
 	int m_iCommandRange;
@@ -2168,12 +2166,9 @@ public:
 	bool canAcquireExperience() const;
 
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const python::list cyGetPrereqOrBonuses() const;
-
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	// Arrays
 	int getFlavorValue(int i) const;
@@ -4033,7 +4028,6 @@ public:
 	int getTechMovementChange(int i) const;
 
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const python::list cyGetPrereqOrBonuses() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
@@ -5452,7 +5446,6 @@ public:
 	const TCHAR* getSound() const;
 
 	const std::vector<BonusTypes>& getPrereqBonuses() const;
-	const python::list cyGetPrereqBonuses() const;
 
 	// Arrays
 	int getHeadquarterCommerce(int i) const;
@@ -8318,20 +8311,14 @@ public:
 	bool getCity() const;
 	bool getNotCity() const;
 	bool isCapture() const;
-	int getNumPrereqBuildings() const;
-	BuildingTypes getPrereqBuilding(int i) const;
+	const std::vector<BuildingTypes>& getPrereqBuildings() const { return m_aePrereqBuildings; }
 	int getNumExtraChancePromotions() const;
 	PromotionTypes getExtraChancePromotion(int i) const;
 	int getExtraChancePromotionChance(int i) const;
-	int getNumReplaceOutcomes() const;
-	OutcomeTypes getReplaceOutcome(int i) const;
+	const std::vector<OutcomeTypes>& getReplaceOutcomes() const { return m_aeReplaceOutcomes; }
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvOutcomeInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
 	void getCheckSum(uint32_t& iSum) const;
 
 protected:

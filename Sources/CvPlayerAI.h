@@ -597,7 +597,6 @@ protected:
 
 	void AI_doCounter();
 	void AI_doMilitary();
-	void AI_doResearch();
 public:
 	void AI_doCivics();
 protected:

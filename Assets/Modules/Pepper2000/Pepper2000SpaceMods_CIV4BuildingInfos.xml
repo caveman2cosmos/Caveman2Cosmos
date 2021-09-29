@@ -87,15 +87,15 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_TRITON</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_TITANIA</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_OBERON</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -363,20 +363,20 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_GRAND_UNIFICATION_BIOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -556,7 +556,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARS_TERRA</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
@@ -591,7 +591,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_GANYMEDE</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -643,9 +643,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>12310</iCost>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -737,7 +738,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_EDEN</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -863,7 +864,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_MERCURY</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
@@ -939,7 +940,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_TITAN</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -1198,21 +1199,21 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_KEPLER_186F</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_DIRECTED_PANSPERMIA</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1241,7 +1242,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MOON_TERRA</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<TechYieldChanges>
@@ -1250,32 +1251,32 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NUTRACEUTICAL_ANIMALS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NUTRACEUTICAL_ANIMALS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ADAPTIVE_RADIATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ADAPTIVE_RADIATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ECOSYNTHESIS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1305,7 +1306,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_VENUS_TERRA</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
@@ -1337,21 +1338,21 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_KEPLER_22B</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_DIRECTED_PANSPERMIA</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>

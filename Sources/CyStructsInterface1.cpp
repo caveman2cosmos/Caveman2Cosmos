@@ -185,11 +185,38 @@ void CyStructsPythonInterface1()
 	python::class_<BuildingCommerceChange>("BuildingCommerceChange", python::no_init)
 		.def_readonly("eBuilding", &BuildingCommerceChange::eBuilding)
 		.def_readonly("eCommerce", &BuildingCommerceChange::eCommerce)
-		.def_readonly("iChange", &BuildingCommerceChange::iChange)
+		.def_readonly("value", &BuildingCommerceChange::iChange)
 	;
 
 	python::class_<BuildingModifier>("BuildingModifier", python::no_init)
 		.def_readonly("id", &BuildingModifier::eBuilding)
 		.def_readonly("value", &BuildingModifier::iModifier)
+	;
+
+	python::class_<HealUnitCombat>("HealUnitCombat", python::no_init)
+		.def_readonly("eUnitCombat", &HealUnitCombat::eUnitCombat)
+		.def_readonly("value", &HealUnitCombat::iHeal)
+	;
+
+	python::class_<TechCommerceChange>("TechCommerceChange", python::no_init)
+		.def_readonly("eTech", &TechCommerceChange::eTech)
+		.def_readonly("eCommerce", &TechCommerceChange::eCommerce)
+		.def_readonly("value", &TechCommerceChange::iChange)
+	;
+
+	python::class_<TechYieldChange>("TechYieldChange", python::no_init)
+		.def_readonly("eTech", &TechYieldChange::eTech)
+		.def_readonly("eYield", &TechYieldChange::eYield)
+		.def_readonly("value", &TechYieldChange::iChange)
+	;
+
+	python::class_<TerrainYieldChange>("TerrainYieldChange", python::no_init)
+		.def_readonly("eTerrain", &TerrainYieldChange::eTerrain)
+		.def_readonly("eYield", &TerrainYieldChange::eYield)
+		.def_readonly("value", &TerrainYieldChange::iChange)
+	;
+
+	python::class_<FreePromoTypes>("FreePromoTypes", python::no_init)
+		.def_readonly("ePromotion", &FreePromoTypes::ePromotion)
 	;
 }

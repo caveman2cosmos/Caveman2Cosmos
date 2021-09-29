@@ -196,6 +196,8 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")
 
 		.def("getBonusCommercePercentChanges", &CyCity::getBonusCommercePercentChanges, "int (eCommerce, eBuilding)")
+		.def("getBaseYieldRateFromBuilding100", &CyCity::getBaseYieldRateFromBuilding100, "int (iYield, iBuilding)")
+
 		.def("isAutomatedCanBuild", &CyCity::isAutomatedCanBuild, "bool ()")
 		.def("setAutomatedCanBuild", &CyCity::setAutomatedCanBuild, "void ()")
 

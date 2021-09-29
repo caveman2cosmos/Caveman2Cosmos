@@ -584,7 +584,7 @@ class BuildingsGraph(UnitUpgradesGraph):
 			#Create a list of buildings that replace buildingA
 			for i in xrange(info.getNumReplacementBuilding()):
 				CvReplacementBuilding = GC.getBuildingInfo(info.getReplacementBuilding(i))
-				if CvReplacementBuilding.getType().find("_STORIES_EFFECT", -15) == -1 and CvReplacementBuilding.getType() not in aSpecialReplacementsList: #Ignore stories and bans
+				if CvReplacementBuilding.getType() not in aSpecialReplacementsList: #Ignore bans
 					buildingReplacesA.append(info.getReplacementBuilding(i))
 
 			#Create a list of buildings that replace the list buildingReplacesA

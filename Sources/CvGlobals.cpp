@@ -31,6 +31,7 @@ static char gVersionString[1024] = { 0 };
 #	define C2C_VERSION gVersionString
 #endif
 
+/*
 #define COPY(dst, src, typeName) \
 	{ \
 		int iNum = sizeof(src)/sizeof(typeName); \
@@ -38,6 +39,7 @@ static char gVersionString[1024] = { 0 };
 		for (int i =0;i<iNum;i++) \
 			dst[i] = src[i]; \
 	}
+*/
 
 template <class T>
 void deleteInfoArray(std::vector<T*>& array)
@@ -3040,6 +3042,10 @@ void cvInternalGlobals::setIsBug()
 	bBugInitCalled = true;
 
 	::setIsBug();
+
+#ifdef _DEBUG // Matt: temporary
+	Cy::call("CvInfoUtilInterface", "init");
+#endif
 
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))

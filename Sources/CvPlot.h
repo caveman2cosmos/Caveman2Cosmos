@@ -155,6 +155,7 @@ public:
 
 	void erase();
 
+	void clearModifierTotals();
 	void recalculateBaseYield();
 
 /*********************************/

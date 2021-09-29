@@ -168,7 +168,8 @@ void CyTeamPythonInterface()
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
 
-		.def("getBuildingYieldChange", &CyTeam::getBuildingYieldChange,	"int (int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
+		.def("getBuildingCommerceTechChange", &CyTeam::getBuildingCommerceTechChange, "int (eCommerce, eBuilding)")
+
 		.def("isHasEmbassy", &CyTeam::isHasEmbassy, "bool (TeamTypes)")
 
 		.def("getVictoryCountdown", &CyTeam::getVictoryCountdown, "int (int /*VictoryTypes*/)")

@@ -438,10 +438,6 @@
 					<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<ConstructCondition>
 				<And>
@@ -486,17 +482,16 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
 			<iCost>1540</iCost>
-			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ECOLOGICAL_ENGINEERING</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1156,9 +1151,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>12310</iCost>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -1276,7 +1272,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
 			<iCost>2205</iCost>
-			<ObsoleteTech>TECH_FUSION_SPACECRAFT</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2353,11 +2348,11 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>

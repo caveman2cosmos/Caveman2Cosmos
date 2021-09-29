@@ -746,11 +746,6 @@ struct BuildingCommerceChange
 	void write(FDataStreamBase* pStream);
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
@@ -764,42 +759,45 @@ struct PropertySpawns
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
-struct BuildingYieldModifier
-{
-	BuildingTypes eBuilding;
-	YieldTypes eYield;
-	int iChange;
 
-	BuildingYieldModifier()
-		: eBuilding(NO_BUILDING)
-		, eYield(NO_YIELD)
-		, iChange(0)
+const struct TechYieldChange
+{
+	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)
+		: eTech(eTech)
+		, eYield(eYield)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const YieldTypes eYield;
+	const int iChange;
 };
 
-struct BuildingCommerceModifier
+const struct TechCommerceChange
 {
-	BuildingTypes eBuilding;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	BuildingCommerceModifier()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	TechCommerceChange(TechTypes eTech, CommerceTypes eCommerce, int iChange)
+		: eTech(eTech)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const CommerceTypes eCommerce;
+	const int iChange;
 };
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+const struct TerrainYieldChange
+{
+	TerrainYieldChange(TerrainTypes eTerrain, YieldTypes eYield, int iChange)
+		: eTerrain(eTerrain)
+		, eYield(eYield)
+		, iChange(iChange)
+	{}
 
+	const TerrainTypes eTerrain;
+	const YieldTypes eYield;
+	const int iChange;
+};
 
 struct DllExport PBGameSetupData
 {

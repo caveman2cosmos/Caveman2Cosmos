@@ -17047,14 +17047,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 }
 
-// BUG - Trade Denial - start
-void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, TechTypes eFromTech)
-{
-	setTechTradeHelp(szBuffer, eTech, NO_PLAYER, bCivilopediaText, bPlayerContext, bStrategyText, bTreeInfo, eFromTech);
-}
 
-void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech, PlayerTypes eTradePlayer, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, TechTypes eFromTech)
-// BUG - Trade Denial - end
+void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, TechTypes eFromTech)
 {
 	PROFILE_FUNC();
 
@@ -17091,9 +17085,9 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 
 	//	Tech Name
-	if (!bCivilopediaText && (!bTreeInfo || (NO_TECH == eFromTech)))
+	if (!bCivilopediaText && (!bTreeInfo || NO_TECH == eFromTech))
 	{
-		szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTech).getDescription());
+		szTempBuffer.Format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTech).getDescription());
 		szBuffer.append(szTempBuffer);
 	}
 
@@ -17107,19 +17101,14 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		buildTechTreeString(szBuffer, eTech, bPlayerContext, eFromTech);
 	}
 
-	//	Obsolete Buildings
+	// Obsolete Buildings
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		if (!bPlayerContext || playerAct->getBuildingCount((BuildingTypes)iI) > 0)
+		if ((!bPlayerContext || playerAct->getBuildingCount((BuildingTypes)iI) > 0)
+		&& GC.getGame().canEverConstruct((BuildingTypes)iI)
+		&& GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() == eTech)
 		{
-			if (GC.getGame().canEverConstruct((BuildingTypes)iI))
-			{
-				//	Obsolete Buildings Check...
-				if (GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() == eTech)
-				{
-					buildObsoleteString(szBuffer, (BuildingTypes)iI, true);
-				}
-			}
+			buildObsoleteString(szBuffer, (BuildingTypes)iI, true);
 		}
 	}
 
@@ -17203,7 +17192,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	buildPermanentAllianceString(szBuffer, eTech, true, bPlayerContext);
 
 	const CvTechInfo& kTech = GC.getTechInfo(eTech);
-	//   Enables Embassies...
+	// Enables Embassies...
 	buildEmbassyString(szBuffer, eTech, true, bPlayerContext);
 
 	//	Peak passability...
@@ -17341,21 +17330,125 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
-		//	Building commerce changes
-			if (kBuilding.isAnyTechCommerceChanges())
-				buildBuildingTechCommerceChangeString(szBuffer, eTech, iI, true, bPlayerContext);
-		//	Building yield changes
-			if (kBuilding.isAnyTechYieldChanges())
-				buildBuildingTechYieldChangeString(szBuffer, eTech, iI, true, bPlayerContext);
+			bool bFirst = true;
+			foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
+			{
+				if (pair.first == eTech)
+				{
+					for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ",
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							CvWString szValue; makeValueString(szValue, pair.second[iJ], true);
+							szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getYieldInfo((YieldTypes) iJ).getChar()));
+						}
+					}
+					break;
+				}
+			}
+			foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
+			{
+				if (pair.first == eTech)
+				{
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ",
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							CvWString szValue; makeValueString(szValue, pair.second[iJ], true);
+							szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+						}
+					}
+					break;
+				}
+			}
+			bFirst = true;
+			foreach_(const TechArray& pair, kBuilding.getTechYieldModifiers())
+			{
+				if (pair.first == eTech)
+				{
+					for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ",
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							szBuffer.append(CvWString::format(L"%d%%%c", pair.second[iJ], GC.getYieldInfo((YieldTypes) iJ).getChar()));
+						}
+					}
+					break;
+				}
+			}
+			foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+			{
+				if (pair.first == eTech)
+				{
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+					{
+						if (pair.second[iJ] != 0)
+						{
+							if (bFirst)
+							{
+								szBuffer.append(
+									CvWString::format(
+										L"\n%c<link=%s>%s</link>: ",
+										gDLL->getSymbolID(BULLET_CHAR),
+										CvWString(kBuilding.getType()).GetCString(),
+										kBuilding.getDescription()
+									)
+								);
+								bFirst = false;
+							}
+							else szBuffer.append(L", ");
+
+							szBuffer.append(CvWString::format(L"%d%%%c", pair.second[iJ], GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+						}
+					}
+					break;
+				}
+			}
 		//	Building specialist count changes
 			if (kBuilding.isAnyTechSpecialistChanges())
 				buildBuildingTechSpecialistChangeString(szBuffer, eTech, iI, true, bPlayerContext);
-		//	Building commerce changes
-			if (kBuilding.isAnyTechCommerceModifiers())
-				buildBuildingTechCommerceModifierString(szBuffer, eTech, iI, true, bPlayerContext);
-		//	Building yield changes
-			if (kBuilding.isAnyTechYieldModifiers())
-				buildBuildingTechYieldModifierString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building happy changes
 			buildBuildingTechHappinessChangesString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building health changes
@@ -17628,26 +17721,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ERA_ADVANCE", GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getTextKeyWide()));
 		}
 	}
-
-// BUG - Trade Denial - start
-	if (eTradePlayer != NO_PLAYER && ePlayerAct != NO_PLAYER && getBugOptionBOOL("MiscHover__TechTradeDenial", true, "BUG_TECH_TRADE_DENIAL_HOVER"))
-	{
-		TradeData trade;
-		trade.m_eItemType = TRADE_TECHNOLOGIES;
-		trade.m_iData = eTech;
-
-		if (GET_PLAYER(eTradePlayer).canTradeItem(ePlayerAct, trade, false))
-		{
-			DenialTypes eDenial = GET_PLAYER(eTradePlayer).getTradeDenial(ePlayerAct, trade);
-			if (eDenial != NO_DENIAL)
-			{
-				szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GC.getDenialInfo(eDenial).getDescription());
-				szBuffer.append(NEWLINE);
-				szBuffer.append(szTempBuffer);
-			}
-		}
-	}
-// BUG - Trade Denial - end
 
 	if (bStrategyText && !CvWString(GC.getTechInfo(eTech).getStrategy()).empty()
 	&& (ePlayerAct == NO_PLAYER || playerAct->isOption(PLAYEROPTION_ADVISOR_HELP)))
@@ -19969,10 +20042,10 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
 					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-					iExperience = kBuilding.getUnitCombatFreeExperience(eCombatType);
+					iExperience = kBuilding.getUnitCombatFreeExperience().getValue(eCombatType);
 					foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 					{
-						iExperience += kBuilding.getUnitCombatFreeExperience(eSubCombat);
+						iExperience += kBuilding.getUnitCombatFreeExperience().getValue(eSubCombat);
 					}
 					iExperience += kBuilding.getDomainFreeExperience(eDomainType);
 
@@ -20907,15 +20980,17 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	}
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	bool bRelDisabled = false;
-	bool bFirst = true;
 
-	if (pCity != NULL)
+	const bool bCity = pCity != NULL;
+
+	if (bCity)
 	{
 		if (pCity->isDisabledBuilding(eBuilding))
 		{
 			szBuffer.append(CvWString::format(L"%s\n", kBuilding.getDescription()));
 			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED"));
 
+			bool bFirst = true;
 			for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)) > 0)
@@ -20939,7 +21014,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bRelDisabled = !bCivilopediaText;
 		}
 	}
-	const PlayerTypes ePlayer = pCity != NULL ? pCity->getOwner() : GC.getGame().getActivePlayer();
+	const PlayerTypes ePlayer = bCity ? pCity->getOwner() : GC.getGame().getActivePlayer();
 	const CvPlayer* player = ePlayer != NO_PLAYER ? &GET_PLAYER(ePlayer) : NULL;
 	const TeamTypes eTeam = player != NULL ? player->getTeam() : NO_TEAM;
 
@@ -20981,7 +21056,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		if (!bRelDisabled)
 		{
 			{
-				const int iHappiness = NULL != pCity ? pCity->getBuildingHappiness(eBuilding) : kBuilding.getHappiness();
+				const int iHappiness = bCity ? pCity->getBuildingHappiness(eBuilding) : kBuilding.getHappiness();
 
 				if (iHappiness != 0)
 				{
@@ -20992,7 +21067,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				const int iHealth =
 				(
-					NULL != pCity
+					bCity
 					?
 					pCity->getBuildingGoodHealth(eBuilding)
 					:
@@ -21005,7 +21080,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				}
 			}
 
-			if (NULL != pCity)
+			if (bCity)
 			{
 				const int iHealth = pCity->getBuildingBadHealth(eBuilding);
 
@@ -21016,7 +21091,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				}
 			}
 
-			bool bCity = (pCity != NULL);
 			int aiYields[NUM_YIELD_TYPES];
 			int aiYieldModifiers[NUM_YIELD_TYPES];
 			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
@@ -21025,12 +21099,32 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				aiYieldModifiers[iI] = kBuilding.getYieldModifier(iI);
 				if (bCity)
 				{
-					aiYields[iI] += ((kBuilding.getYieldPerPopChange(iI) * pCity->getPopulation())/100);
-					aiYields[iI] += (pCity->getBuildingYieldChange(eBuilding, (YieldTypes)iI) + GET_TEAM(eTeam).getBuildingYieldChange(eBuilding, (YieldTypes)iI));
-					aiYieldModifiers[iI] += (pCity->getBuildingYieldModifier(eBuilding, (YieldTypes)iI) + GET_TEAM(eTeam).getBuildingYieldModifier(eBuilding, (YieldTypes)iI));
+					aiYields[iI] += pCity->getBuildingYieldChange(eBuilding, (YieldTypes)iI);
+					aiYieldModifiers[iI] += GET_TEAM(pCity->getTeam()).getBuildingYieldTechModifier((YieldTypes)iI, eBuilding);
 				}
 			}
-
+			if (player)
+			{
+				int* aiYields100 = new int[NUM_YIELD_TYPES]();
+				foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
+				{
+					if (GET_TEAM(eTeam).isHasTech(pair.first))
+					{
+						for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+						{
+							aiYields100[iI] += pair.second[(YieldTypes)iI];
+						}
+					}
+				}
+				for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+				{
+					if (bCity)
+					{
+						aiYields100[iI] += kBuilding.getYieldPerPopChange(iI) * pCity->getPopulation();
+					}
+					aiYields[iI] += aiYields100[iI] / 100;
+				}
+			}
 			setYieldChangeHelp(szBuffer, L", ", L"", L"", aiYields, false, false);
 
 			if (!bCity)
@@ -21052,40 +21146,24 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				{
 					iBaseCommerceChange = 0;
 				}
-				if (bCity)
-				{
-					iBaseCommerceChange += ((kBuilding.getCommercePerPopChange(iI) * pCity->getPopulation())/100);
-				}
-
 				aiCommerceModifiers[iI] = kBuilding.getCommerceModifier(iI);
-				if (NULL == pCity)
+
+				if (!bCity)
 				{
 					aiCommerces[iI] = iBaseCommerceChange;
 				}
 				else if (pCity->getNumActiveBuilding(eBuilding) > 0)
 				{
-					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding) + (pCity->getBonusCommercePercentChanges((CommerceTypes)iI, eBuilding) / 100);
+					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding, true);
 				}
-				else
+				else aiCommerces[iI] = iBaseCommerceChange + kBuilding.getCommercePerPopChange(iI) * pCity->getPopulation() / 100;
+
+				if (ePlayer != NO_PLAYER)
 				{
-					aiCommerces[iI] = iBaseCommerceChange;
-					if (ePlayer != NO_PLAYER)
-					{
-						aiCommerces[iI] += GET_TEAM(eTeam).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI);
-						aiCommerceModifiers[iI] += GET_TEAM(eTeam).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
-					}
+					aiCommerceModifiers[iI] += GET_TEAM(eTeam).getBuildingCommerceTechModifier((CommerceTypes)iI, eBuilding);
 				}
 			}
 			setCommerceChangeHelp(szBuffer, L", ", L"", L"", aiCommerces, false, false);
-
-			if (!bCity)
-			{
-				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-				{
-					aiCommerces[iI] = kBuilding.getCommercePerPopChange(iI);
-				}
-				setCommercePerPopChangeHelp(szBuffer, L", ", L"", L"", aiCommerces, false, false);
-			}
 
 			setYieldChangeHelp(szBuffer, L", ", L"", L"", aiYieldModifiers, true, bCivilopediaText);
 			setCommerceChangeHelp(szBuffer, L", ", L"", L"", aiCommerceModifiers, true, bCivilopediaText);
@@ -21114,7 +21192,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 
 	// BUG - Building Actual Effects - start
-			if (bActual && NULL != pCity && pCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingActualEffects", true, "BUG_BUILDING_HOVER_ACTUAL_EFFECTS"))
+			if (bActual && bCity && pCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingActualEffects", true, "BUG_BUILDING_HOVER_ACTUAL_EFFECTS"))
 			{
 				CvWString szStart = gDLL->getText("TXT_KEY_ACTUAL_EFFECTS");
 				setBuildingActualEffects(szBuffer, szStart, eBuilding, pCity);
@@ -21136,7 +21214,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		if (isWorldWonder(eBuilding))
 		{
-			if (pCity == NULL || ePlayer == NO_PLAYER)
+			if (!bCity || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED", kBuilding.getMaxGlobalInstances()));
@@ -21150,7 +21228,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (isTeamWonder(eBuilding))
 		{
-			if (pCity == NULL || ePlayer == NO_PLAYER)
+			if (!bCity || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TEAM_WONDER_ALLOWED", kBuilding.getMaxTeamInstances()));
@@ -21165,7 +21243,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		if (isNationalWonder(eBuilding))
 		{
 
-			if (pCity == NULL || ePlayer == NO_PLAYER)
+			if (!bCity || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_ALLOWED", kBuilding.getMaxPlayerInstances()));
@@ -21181,7 +21259,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		if (eSpecialBuilding != NO_SPECIALBUILDING && isNationalWonderGroupSpecialBuilding(eSpecialBuilding))
 		{
 
-			if (pCity == NULL || ePlayer == NO_PLAYER)
+			if (!bCity || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GROUP_WONDER_ALLOWED", GC.getSpecialBuildingInfo(eSpecialBuilding).getTextKeyWide(), GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances()));
@@ -21223,10 +21301,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				}
 			}
 		}
-	}
-
-	if (!bRelDisabled)
-	{
 		int aiYields[NUM_YIELD_TYPES];
 		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
@@ -21234,13 +21308,29 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 		setYieldPerPopChangeHelp(szBuffer, L", ", L"", L"", aiYields, false, true);
 
-		int aiCommerce[NUM_COMMERCE_TYPES];
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+		if (kBuilding.getCommercePerPopChangeArray())
 		{
-			aiCommerce[iI] = kBuilding.getCommercePerPopChange(iI);
+			bool bFirst = true;
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+			{
+				const int iValue = kBuilding.getCommercePerPopChange(iI);
+				if (iValue != 0)
+				{
+					if (bFirst)
+					{
+						szBuffer.append(CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_PER_POPULATION").GetCString()));
+						bFirst = false;
+					}
+					else szBuffer.append(L", ");
+
+					CvWString szValue;
+					makeValueString(szValue, iValue, true);
+					szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+				}
+			}
 		}
-		setCommercePerPopChangeHelp(szBuffer, L", ", L"", L"", aiCommerce, false, true);
 	}
+
 	//	Hurry types
 	for (int iI = 0; iI < GC.getNumHurryInfos(); ++iI)
 	{
@@ -21328,13 +21418,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
 	}
 
-	bFirst = true;
+	bool bFirst = true;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		if (GC.getBuildingInfo(eLoopBuilding).getFreeBuilding() == eBuilding
-		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		&& (!bCity || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_GIVEN_FREE").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -21356,7 +21446,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		if (GC.getBuildingInfo(eLoopBuilding).getFreeAreaBuilding() == eBuilding
-		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		&& (!bCity || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -22546,7 +22636,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				if (kBuilding.getVicinityBonusYieldChangesArray(iI) != NULL )
+				if (kBuilding.getVicinityBonusYieldChangesArray(iI) != NULL)
 				{
 					if (bFirst)
 					{
@@ -22569,7 +22659,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				if (kBuilding.getBonusYieldChangesArray(iI) != NULL )
+				if (kBuilding.getBonusYieldChangesArray(iI) != NULL)
 				{
 					if (bFirst)
 					{
@@ -22587,46 +22677,234 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (kBuilding.isAnyBonusCommercePercentChanges())
 		{
-			// Toffer - ToDo
-			//	switch these two loops around and bundle all the commerce types per bonus into one line.
-			//	e.g. "With Apple: +0.2 [beakerIcon], -0.2 [cultureIcon]".
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
+				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 				{
 					const int iValue = kBuilding.getBonusCommercePercentChanges(iI, iJ);
 					if (iValue != 0)
 					{
-						CvWString szTempBuffer;
-						makeValueString(szTempBuffer,iValue, true);
-						szTempBuffer.Format(
-							L"\n%c%s%c%s<link=%s>%s</link>",
-							gDLL->getSymbolID(BULLET_CHAR), szTempBuffer.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(),
-							gDLL->getText("TXT_KEY_WITH").GetCString(),
-							CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getDescription()
-						);
-						szBuffer.append(szTempBuffer);
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(),
+									GC.getBonusInfo((BonusTypes)iI).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
 					}
 				}
 			}
 		}
 
-		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			if (kBuilding.getCommerceAttacks(iI) > 0)
+			std::map<TechTypes, int*> tempMap;
+
+			foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
 			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FROM_ATTACKS", GC.getCommerceInfo((CommerceTypes) iI).getChar(), kBuilding.getCommerceAttacks(iI), GC.getCommerceInfo((CommerceTypes) iI).getChar(), GC.getCommerceInfo((CommerceTypes) iI).getChar(), GC.getDefineINT("COMMERCE_ATTACKS_FADE_RATE")));
+				tempMap[pair.first] = pair.second;
+			}
+			foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
+			{
+				bFirst = true;
+				for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
+				{
+					const int iValue = pair.second[iJ];
+					if (iValue != 0)
+					{
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getTechInfo(pair.first).getType()).GetCString(),
+									GC.getTechInfo(pair.first).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getYieldInfo((YieldTypes) iJ).getChar()));
+					}
+				}
+				if (tempMap.count(pair.first) == 1)
+				{
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+					{
+						const int iValue = tempMap[pair.first][iJ];
+						if (iValue != 0)
+						{
+							// We know it ain't first as this building has yield change from tech.
+							CvWString szValue;
+							makeValueString(szValue, iValue, true);
+							szBuffer.append(CvWString::format(L", %s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+						}
+					}
+					tempMap.erase(pair.first);
+				}
+			}
+			for (std::map<TechTypes, int*>::const_iterator it = tempMap.begin(), itEnd = tempMap.end(); it != itEnd; ++it)
+			{
+				bFirst = true;
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+				{
+					const int iValue = it->second[iJ];
+					if (iValue != 0)
+					{
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getTechInfo(it->first).getType()).GetCString(),
+									GC.getTechInfo(it->first).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+					}
+				}
+			}
+		}
+		{
+			std::map<TechTypes, int*> tempMap;
+
+			foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+			{
+				tempMap[pair.first] = pair.second;
+			}
+			foreach_(const TechArray& pair, kBuilding.getTechYieldModifiers())
+			{
+				bFirst = true;
+				for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+				{
+					const int iValue = pair.second[iI];
+					if (iValue != 0)
+					{
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getTechInfo(pair.first).getType()).GetCString(),
+									GC.getTechInfo(pair.first).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getYieldInfo((YieldTypes) iI).getChar()));
+					}
+				}
+				if (tempMap.count(pair.first) == 1)
+				{
+					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+					{
+						const int iValue = tempMap[pair.first][iJ];
+						if (iValue != 0)
+						{
+							// We know it ain't first as this building has yield change from tech.
+							szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+						}
+					}
+					tempMap.erase(pair.first);
+				}
+			}
+			for (std::map<TechTypes, int*>::const_iterator it = tempMap.begin(), itEnd = tempMap.end(); it != itEnd; ++it)
+			{
+				bFirst = true;
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+				{
+					const int iValue = it->second[iJ];
+					if (iValue != 0)
+					{
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getTechInfo(it->first).getType()).GetCString(),
+									GC.getTechInfo(it->first).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+					}
+				}
 			}
 		}
 
-		for (int iI = 0; iI < GC.getNumReligionInfos(); ++iI)
+		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
 		{
-			if (kBuilding.getReligionChange(iI) > 0)
+			bFirst = true;
+			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_SPREADS_RELIGION", GC.getReligionInfo((ReligionTypes) iI).getChar()).c_str());
-				szBuffer.append(szTempBuffer);
+				const int iValue = pair.second[iI];
+				if (iValue != 0)
+				{
+					if (bFirst)
+					{
+						szBuffer.append(
+							CvWString::format(
+								L"\n%c<link=%s>%s</link>",
+								gDLL->getSymbolID(BULLET_CHAR),
+								CvWString(GC.getTerrainInfo(pair.first).getType()).GetCString(),
+								GC.getTerrainInfo(pair.first).getDescription()
+							)
+						);
+						bFirst = false;
+
+						if (bCity)
+						{
+							int iCount = 0;
+							foreach_(const CvPlot* plotX, pCity->plots(NUM_CITY_PLOTS))
+							{
+								if (plotX->getTerrainType() == pair.first && pCity->canWork(plotX))
+								{
+									iCount++;
+								}
+							}
+							szBuffer.append(CvWString::format(L" (%d): ", iCount));
+						}
+						else szBuffer.append(L": ");
+					}
+					else szBuffer.append(L", ");
+
+					szBuffer.append(CvWString::format(L"%d%c", iValue, GC.getYieldInfo((YieldTypes) iI).getChar()));
+				}
 			}
+		}
+
+		foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
+		{
+			szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_SPREADS_RELIGION", GC.getReligionInfo(pair.first).getChar()).c_str());
+			szBuffer.append(szTempBuffer);
 		}
 
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
@@ -22680,39 +22958,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			const TechTypes eTech = static_cast<TechTypes>(iTech);
 			if (GC.getGame().canEverResearch(eTech))
 			{
-				if (kBuilding.isAnyTechCommerceChanges())
-				{
-					if (bCivilopediaText)
-					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else
-					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceChangeArray(iTech), false, true);
-				}
-				if (kBuilding.isAnyTechYieldChanges())
-				{
-					if (bCivilopediaText)
-					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else
-					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					setYieldChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechYieldChangeArray(iTech), false, true);
-				}
-
 				if (kBuilding.isAnyTechSpecialistChanges())
 				{
 					for (int iSpecialist = 0; iSpecialist < GC.getNumSpecialistInfos(); iSpecialist++)
@@ -22734,40 +22979,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 							szBuffer.append(szTempBuffer);
 						}
 					}
-				}
-
-				if (kBuilding.isAnyTechCommerceModifiers())
-				{
-					if (bCivilopediaText)
-					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else
-					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceModifierArray(iTech), true, true);
-				}
-
-				if (kBuilding.isAnyTechYieldModifiers())
-				{
-					if (bCivilopediaText)
-					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					else
-					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
-					}
-					setYieldChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechYieldModifierArray(iTech), true, true);
 				}
 
 				if (kBuilding.getTechHealth(eTech) != 0)
@@ -22976,7 +23187,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
 
-		if ((pCity == NULL || pCity->getNumActiveBuilding(eBuildingX) > 0 || pCity->canConstruct(eBuildingX, false, true)))
+		if (!bCity || pCity->getNumActiveBuilding(eBuildingX) > 0 || pCity->canConstruct(eBuildingX, false, true))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REPLACED_BY_BUILDING").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
@@ -23125,7 +23336,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		if (GC.getBuildingInfo(eLoopBuilding).isPrereqInCityBuilding(eBuilding)
-		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		&& (!bCity || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRED_TO_BUILD").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -23140,7 +23351,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrBuilding(eBuilding)
-		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		&& (!bCity || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -23154,8 +23365,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-		if (GC.getBuildingInfo(eLoopBuilding).getPrereqNumOfBuilding(eBuilding)
-		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		if (GC.getBuildingInfo(eLoopBuilding).getPrereqNumOfBuildings().getValue(eBuilding)
+		&& (!bCity || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -23353,7 +23564,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	if (pCity != NULL)
+	if (bCity)
 	{
 		if (GC.getGame().getActivePlayer() != NO_PLAYER
 		&& getBugOptionBOOL("CityScreen__BuildingDoubleCommerce", true, "BUG_BUILDING_DOUBLE_COMMERCE"))
@@ -23441,11 +23652,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	if (pCity == NULL || pCity->getNumRealBuilding(eBuilding) == 0)
+	if (!bCity || pCity->getNumRealBuilding(eBuilding) == 0)
 	{
 		if (!bCivilopediaText)
 		{
-			if (pCity != NULL)
+			if (bCity)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_NUM_TURNS", pCity->getProductionTurnsLeft(eBuilding, ((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength()))));
@@ -23478,7 +23689,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		{
 			if (kBuilding.getBonusProductionModifier(iI) != 0)
 			{
-				if (pCity != NULL)
+				if (bCity)
 				{
 					if (pCity->hasBonus((BonusTypes)iI))
 					{
@@ -23510,7 +23721,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				{
 					szBuffer.append(L')');
 				}
-				if (pCity != NULL)
+				if (bCity)
 				{
 					szBuffer.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 				}
@@ -23538,7 +23749,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		if (pCity != NULL && GC.getGame().isDebugMode() && gDLL->ctrlKey())
+		if (bCity && GC.getGame().isDebugMode() && gDLL->ctrlKey())
 		{
 			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding)));
 		}
@@ -25599,23 +25810,21 @@ void CvGameTextMgr::setYieldPerPopChangeHelp(CvWStringBuffer &szBuffer, const Cv
  */
 bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent, bool bNewLine, bool bStarted, bool bPerPop)
 {
-	CvWString szTempBuffer;
 	CvWString szPerPop;
-//	bool bStarted;
-	int iI;
 
 	if (bPerPop)
 	{
 		szPerPop.append(gDLL->getText("TXT_KEY_PER_POP"));
 	}
-//	bStarted = false;
+//	bool bStarted = false;
 
-	if ( piYieldChange != NULL )
+	if (piYieldChange != NULL)
 	{
-		for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
 			if (piYieldChange != NULL && piYieldChange[iI] != 0)
 			{
+				CvWString szTempBuffer;
 				if (!bStarted)
 				{
 					if (bNewLine)
@@ -25624,176 +25833,114 @@ bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const
 					}
 					if (!bPerPop)
 					{
-						szTempBuffer += CvWString::format(L"%s%s%s%d%s%c",
+						szTempBuffer += CvWString::format(
+							L"%s%s%s%d%s%c",
 							szStart.GetCString(),
 							szSpace.GetCString(),
 							piYieldChange[iI] > 0 ? L"+" : L"",
 							piYieldChange[iI],
 							bPercent ? L"%" : L"",
-							GC.getYieldInfo((YieldTypes)iI).getChar());
+							GC.getYieldInfo((YieldTypes)iI).getChar()
+						);
+					}
+					else if (piYieldChange[iI] % 100 == 0)
+					{
+						szTempBuffer += CvWString::format(
+							L"%s%s%s%d%s%c%s",
+							szStart.GetCString(),
+							szSpace.GetCString(),
+							piYieldChange[iI] > 0 ? L"+" : L"",
+							piYieldChange[iI] / 100,
+							bPercent ? L"%" : L"",
+							GC.getYieldInfo((YieldTypes)iI).getChar(),
+							szPerPop.GetCString()
+						);
 					}
 					else
 					{
-						if (piYieldChange[iI] % 100 == 0)
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d%s%c%s",
-								szStart.GetCString(),
-								szSpace.GetCString(),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d.%02d%s%c%s",
-								szStart.GetCString(),
-								szSpace.GetCString(),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								piYieldChange[iI] % 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
+						szTempBuffer += CvWString::format(
+							L"%s%s%s%d.%02d%s%c%s",
+							szStart.GetCString(),
+							szSpace.GetCString(),
+							piYieldChange[iI] > 0 ? L"+" : L"",
+							piYieldChange[iI] / 100,
+							piYieldChange[iI] % 100,
+							bPercent ? L"%" : L"",
+							GC.getYieldInfo((YieldTypes)iI).getChar(),
+							szPerPop.GetCString()
+						);
 					}
+				}
+				else if (!bPerPop)
+				{
+					szTempBuffer.Format(
+						L", %s%d%s%c",
+						piYieldChange[iI] > 0 ? L"+" : L"",
+						piYieldChange[iI],
+						bPercent ? L"%" : L"",
+						GC.getYieldInfo((YieldTypes)iI).getChar()
+					);
+				}
+				else if (piYieldChange[iI] % 100 == 0)
+				{
+					szTempBuffer.Format(
+						L", %s%d%s%c%s",
+						piYieldChange[iI] > 0 ? L"+" : L"",
+						piYieldChange[iI] / 100,
+						bPercent ? L"%" : L"",
+						GC.getYieldInfo((YieldTypes)iI).getChar(),
+						szPerPop.GetCString()
+					);
 				}
 				else
 				{
-					if (!bPerPop)
-					{
-						szTempBuffer.Format(L", %s%d%s%c",
-							piYieldChange[iI] > 0 ? L"+" : L"",
-							piYieldChange[iI],
-							bPercent ? L"%" : L"",
-							GC.getYieldInfo((YieldTypes)iI).getChar());
-					}
-					else
-					{
-						if (piYieldChange[iI] % 100 == 0)
-						{
-							szTempBuffer.Format((L", %s%d%s%c%s"),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer.Format((L", %s%d.%02d%s%c%s"),
-								piYieldChange[iI] > 0 ? L"+" : L"",
-								piYieldChange[iI] / 100,
-								piYieldChange[iI] % 100,
-								bPercent ? L"%" : L"",
-								GC.getYieldInfo((YieldTypes)iI).getChar(),
-								szPerPop.GetCString());
-						}
-					}
+					szTempBuffer.Format(
+						L", %s%d.%02d%s%c%s",
+						piYieldChange[iI] > 0 ? L"+" : L"",
+						piYieldChange[iI] / 100,
+						piYieldChange[iI] % 100,
+						bPercent ? L"%" : L"",
+						GC.getYieldInfo((YieldTypes)iI).getChar(),
+						szPerPop.GetCString()
+					);
 				}
 				szBuffer.append(szTempBuffer);
-
 				bStarted = true;
 			}
 		}
-
 		if (bStarted)
 		{
 			szBuffer.append(szEnd);
 		}
 	}
-
-// added
-	return bStarted;
+	return bStarted; // added
 }
 
 void CvGameTextMgr::setCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine)
 {
-	setResumableCommerceChangeHelp(szBuffer, szStart, szSpace, szEnd, piCommerceChange, bPercent, bNewLine);
-}
-void CvGameTextMgr::setCommercePerPopChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine)
-{
-	setResumableCommerceChangeHelp(szBuffer, szStart, szSpace, szEnd, piCommerceChange, bPercent, bNewLine, false, true);
-}
-
-/*
- * Adds the ability to pass in and get back the value of bStarted so that
- * it can be used with other setResumable<xx>ChangeHelp() calls on a single line.
- */
-bool CvGameTextMgr::setResumableCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine, bool bStarted, bool bPerPop)
-{
-	CvWString szTempBuffer;
-	CvWString szPerPop;
-//	bool bStarted;
-	int iI;
-
-//	bStarted = false;
-
-	if (bPerPop)
+	if (piCommerceChange)
 	{
-		szPerPop.append(gDLL->getText("TXT_KEY_PER_POP"));
-	}
-	if ( piCommerceChange )
-	{
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+		bool bStarted = false;
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 		{
 			if (piCommerceChange[iI] != 0)
 			{
-				if (!bStarted)
+				CvWString szTempBuffer;
+				if (bNewLine)
 				{
-					if (bNewLine)
-					{
-						szTempBuffer.Format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR));
-					}
-					if (bPerPop)
-					{
-						if (piCommerceChange[iI] % 100 == 0)
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d%s%c%s", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer += CvWString::format(L"%s%s%s%d.%02d%s%c%s", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, piCommerceChange[iI] % 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-					}
-					else
-					{
-						szTempBuffer += CvWString::format(L"%s%s%s%d%s%c", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI], ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar());
-					}
+					szTempBuffer.Format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR));
 				}
-				else
-				{
-					if (bPerPop)
-					{
-						if (piCommerceChange[iI] % 100 == 0)
-						{
-							szTempBuffer.Format((L", %s%d%s%c%s"), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-						else
-						{
-							szTempBuffer.Format((L", %s%d.%02d%s%c%s"), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI] / 100, piCommerceChange[iI] % 100, ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar(), szPerPop.GetCString());
-						}
-					}
-					else
-					{
-						szTempBuffer.Format((L", %s%d%s%c"), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI], ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar());
-					}
-				}
-				szBuffer.append(szTempBuffer);
+				szTempBuffer += CvWString::format(L"%s%s%s%d%s%c", szStart.GetCString(), szSpace.GetCString(), ((piCommerceChange[iI] > 0) ? L"+" : L""), piCommerceChange[iI], ((bPercent) ? L"%" : L""), GC.getCommerceInfo((CommerceTypes) iI).getChar());
 
+				szBuffer.append(szTempBuffer);
 				bStarted = true;
 			}
 		}
+		if (bStarted)
+		{
+			szBuffer.append(szEnd);
+		}
 	}
-
-	if (bStarted)
-	{
-		szBuffer.append(szEnd);
-	}
-
-// added
-	return bStarted;
 }
 
 /*
@@ -27307,38 +27454,6 @@ void CvGameTextMgr::buildYieldChangeString(CvWStringBuffer &szBuffer, TechTypes 
 }
 
 
-void CvGameTextMgr::buildBuildingTechCommerceChangeString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-	if (bList)
-	{
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%c<link=%s>%s</link>", gDLL->getSymbolID(BULLET_CHAR), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-
-	setCommerceChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechCommerceChangeArray(eTech), false, bList);
-}
-
-
-void CvGameTextMgr::buildBuildingTechYieldChangeString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-	if (bList)
-	{
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%c<link=%s>%s</link>", gDLL->getSymbolID(BULLET_CHAR), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-
-	setYieldChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechYieldChangeArray(eTech), false, bList);
-}
-
-
 void CvGameTextMgr::buildBuildingTechSpecialistChangeString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
 {
 	CvWString szTempBuffer;
@@ -27369,36 +27484,6 @@ void CvGameTextMgr::buildBuildingTechSpecialistChangeString(CvWStringBuffer &szB
 	}
 }
 
-void CvGameTextMgr::buildBuildingTechCommerceModifierString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-	if (bList)
-	{
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%c<link=%s>%s</link>", gDLL->getSymbolID(BULLET_CHAR), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-
-	setCommerceChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechCommerceModifierArray(eTech), true, bList);
-}
-
-
-void CvGameTextMgr::buildBuildingTechYieldModifierString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-	if (bList)
-	{
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%c<link=%s>%s</link>", gDLL->getSymbolID(BULLET_CHAR), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
-	}
-
-	setYieldChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechYieldModifierArray(eTech), true, bList);
-}
 
 void CvGameTextMgr::buildBuildingTechHappinessChangesString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
 {
@@ -27654,7 +27739,7 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 
 			if (nOtherAndTechs > 0)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_WITH_SPACE"));
+				szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
 				szBuffer.append(szOtherAndTechs);
 			}
 
@@ -27668,7 +27753,7 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 					}
 					else
 					{
-						szBuffer.append(gDLL->getText("TXT_KEY_WITH_SPACE"));
+						szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
 					}
 					szBuffer.append(szOtherOrTechs);
 				}
@@ -31060,7 +31145,7 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 		}
 	}
 
-	if (info.getPrereqOrBonuses().size() > 0)
+	if (!info.getPrereqOrBonuses().empty())
 	{
 		bool bQualified = true;
 
@@ -32220,35 +32305,6 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
-	/*
-	int iBaseRate = city.getPlotYield(YIELD_FOOD);
-
-	// Buildings
-	int iBuildingFood = 0;
-	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if (city.hasFullyActiveBuilding((BuildingTypes)i))
-		{
-			iBuildingFood +=
-			(
-				GC.getBuildingInfo((BuildingTypes)i).getYieldChange(YIELD_FOOD)
-				+
-				GC.getBuildingInfo((BuildingTypes)i).getYieldPerPopChange(YIELD_FOOD) * city.getPopulation() / 100
-				+
-				city.getBuildingYieldChange((BuildingTypes)i, YIELD_FOOD)
-				+
-				GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)i, YIELD_FOOD)
-			);
-		}
-	}
-	if (iBuildingFood != 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iBuildingFood, info.getChar()));
-		iBaseRate += iBuildingFood;
-	}
-	*/
-
 	int iRate = city.getYieldRate(YIELD_FOOD);
 
 	// shows Base Food and lists all modifiers
@@ -32827,7 +32883,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		if (0 != iSpecialistCommerce)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistCommerce, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iSpecialistCommerce, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
 			iCommerce100 += 100 * iSpecialistCommerce;
 		}
 	}
@@ -32853,12 +32909,12 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 	//STEP 5 : Building Commerce Changes
 	{
-		const int iBuildingCommerce100 = 100 * city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
+		const int iBuildingCommerce100 = city.getBuildingCommerce100(eCommerceType);
 		if (0 != iBuildingCommerce100)
 		{
 			makeValueString(szValue, iBuildingCommerce100, true);
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", szValue.GetCString(), info.getChar()));
+			szBuffer.append(gDLL->getText("TXT_BULLET_S1_F2_FROM_S3", szValue.GetCString(), info.getChar(), L"TXT_KEY_WB_BUILDINGS"));
 			iCommerce100 += iBuildingCommerce100;
 		}
 	}
@@ -32872,17 +32928,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			iCommerce100 += 100 * iFreeCityCommerce;
 		}
 	}
-	//STEP 7 : Commerce Attacks
-	{
-		const int iCommerceAttacks = city.getCommerceAttacks(eCommerceType);
-		if (0 != iCommerceAttacks)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERE_ATTACKS", iCommerceAttacks, info.getChar()));
-			iCommerce100 += 100 * iCommerceAttacks;
-		}
-	}
-	//STEP 8 : Minted Commerce
+	//STEP 7 : Minted Commerce
 	if (eCommerceType == COMMERCE_GOLD)
 	{
 		const int iMintedCommerce100 = city.getMintedCommerceTimes100();
@@ -32893,7 +32939,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			iCommerce100 += iMintedCommerce100;
 		}
 	}
-	//STEP 9 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
+	//STEP 8 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
 	if (owner.isGoldenAge())
 	{
 		const int iGoldenAgeCommerce = owner.getGoldenAgeCommerce(eCommerceType);
@@ -32921,53 +32967,51 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	int iModifier = 100;
 
 	//STEP 1 : Bonus Commerce Rate Modifier
-	int iBonusCommerce = city.calculateBonusCommerceRateModifier(eCommerceType);
-	if (0 != iBonusCommerce)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
-		iModifier += iBonusCommerce;
+		const int iBonusCommerce = city.calculateBonusCommerceRateModifier(eCommerceType);
+		if (0 != iBonusCommerce)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
+			iModifier += iBonusCommerce;
+		}
 	}
-
 	//STEP 2 : Buildings (split into projects and everything else)
-	int iBuildingMod = city.getCommerceRateModifier(eCommerceType);
-	iBuildingMod += city.calculateBuildingCommerceModifier(eCommerceType);
-
-	// return to buildings
-	if (0 != iBuildingMod)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iBuildingMod, info.getChar()));
-		iModifier += iBuildingMod;
+		const int iBuildingMod = city.getBuildingCommerceModifier(eCommerceType);
+		if (0 != iBuildingMod)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iBuildingMod, info.getChar()));
+			iModifier += iBuildingMod;
+		}
 	}
-
 	//STEP 2.5
 	//Display projects (AND Player level buildings (Wonders))
-	int iProjectMod = owner.getCommerceRateModifierfromBuildings(eCommerceType);
+	const int iProjectMod = owner.getCommerceRateModifierfromBuildings(eCommerceType);
 	if (iProjectMod != 0)
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_PROJECTS", iProjectMod, info.getChar()));
 		iModifier += iProjectMod;
 	}
-
 	//STEP 3 : Events
-	int iEventsModifier = 0;
-	iEventsModifier += owner.getCommerceRateModifierfromEvents(eCommerceType);
-	if (0 != iEventsModifier)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_EVENTS", iEventsModifier, info.getChar()));
-		iModifier += iEventsModifier;
+		const int iEventsModifier = city.getCommerceRateModifier(eCommerceType) + owner.getCommerceRateModifierfromEvents(eCommerceType);
+		if (0 != iEventsModifier)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_EVENTS", iEventsModifier, info.getChar()));
+			iModifier += iEventsModifier;
+		}
 	}
-
 	//STEP 4 : Player Level
 	int iPlayerLevelModifier = owner.getCommerceRateModifier(eCommerceType);
 	int iPlayerLevelCompare = 0;
 	//Remove Events - they were included in the above report
 	iPlayerLevelModifier -= owner.getCommerceRateModifierfromEvents(eCommerceType);
 	//Remove Team and Player level Building Modifiers - they were included in the above report
-	iPlayerLevelModifier -= owner.getCommerceRateModifierfromBuildings(eCommerceType);
+	iPlayerLevelModifier -= iProjectMod;
 
 	// Trait
 	for (int i = 0; i < GC.getNumTraitInfos(); i++)
@@ -33102,7 +33146,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 				if (iTraitYield != 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TRAIT_COMMERCE", iTraitYield, info.getChar(), GC.getTraitInfo(eTrait).getDescription()));
+					szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iTraitYield, info.getChar(), GC.getTraitInfo(eTrait).getDescription()));
 					iYield -= iTraitYield;
 				}
 			}
@@ -33120,96 +33164,105 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 
 	const int iActualBaseMod = city.getBaseYieldRateModifier(eYieldType);
 	int iBaseModifier = 100;
-	int iMod = 0;
+
 	if (iActualBaseMod != 100)
 	{
-		// Toffer
-		// There may be a better way to get the event modifiers isolated, though the only one I can think
-		// of is to add a new player and city variable to store the eventModifiers explicitly.
 		int iEventModifier = city.getYieldRateModifier(eYieldType) + owner.getYieldRateModifier(eYieldType);
 		// Traits
-		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			if (owner.hasTrait((TraitTypes)iI))
+			int iMod = 0;
+			for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 			{
-				const int iTemp = GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
-				iEventModifier -= iTemp;
-				iMod += iTemp;
+				if (owner.hasTrait((TraitTypes)iI))
+				{
+					const int iTemp = GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
+					if (iTemp != 0)
+					{
+						iEventModifier -= iTemp;
+						iMod += iTemp;
+					}
+				}
 			}
-		}
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Civics
-		iMod = 0;
-		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
-			if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
+			int iMod = 0;
+			for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{
-				const int iTemp = GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
-				iEventModifier -= iTemp;
-				iMod += iTemp;
+				if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
+				{
+					const int iTemp = GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
+					if (iTemp != 0)
+					{
+						iEventModifier -= iTemp;
+						iMod += iTemp;
+					}
+				}
 			}
-		}
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Buildings
-		iMod = 0;
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
-			if (city.getNumActiveBuilding((BuildingTypes)iI) > 0)
+			int iMod = city.getBuildingYieldModifier(eYieldType);
+
+			for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 			{
-				const int iTemp = building.getYieldModifier(eYieldType);
-				iEventModifier -= iTemp;
-				iMod += iTemp;
-				iMod += GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)iI, eYieldType);
-			}
-			for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-			{
-				if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
+				const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
+				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 				{
-					foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
+					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
 					{
-						if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
 						{
-							const int iTemp = building.getGlobalYieldModifier(eYieldType);
-							iEventModifier -= iTemp;
-							iMod += iTemp;
+							if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+							{
+								const int iTemp = building.getGlobalYieldModifier(eYieldType);
+								if (iTemp != 0)
+								{
+									iEventModifier -= iTemp;
+									iMod += iTemp;
+								}
+							}
 						}
 					}
 				}
 			}
-		}
-		if (NULL != city.area())
-		{
-			iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
-		}
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			if (city.area())
+			{
+				iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
+			}
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Resources
-		iMod = city.getBonusYieldRateModifier(eYieldType);
-		if (0 != iMod)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
+			const int iMod = city.getBonusYieldRateModifier(eYieldType);
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
 		}
 		// Power
 		if (city.isPower())
 		{
-			iMod = city.getPowerYieldRateModifier(eYieldType);
+			const int iMod = city.getPowerYieldRateModifier(eYieldType);
 			if (0 != iMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_POWER", iMod, info.getChar()));
@@ -33220,7 +33273,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		// Capital
 		if (city.isCapital())
 		{
-			iMod = owner.getCapitalYieldRateModifier(eYieldType);
+			const int iMod = owner.getCapitalYieldRateModifier(eYieldType);
 			if (0 != iMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iMod, info.getChar()));
@@ -33236,14 +33289,14 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			iBaseModifier += iEventModifier;
 		}
 		FAssertMsg(iActualBaseMod == iBaseModifier, CvString::format("Total Yield Modifier %d should be %d", iBaseModifier, iActualBaseMod).c_str())
-	}
 
-	// Sub total
-	if (iBaseModifier != 100)
-	{
-		const int iModBaseYield100 = iBaseYield * iBaseModifier;
-		CvWString szYield = CvWString::format(L"%d.%02d", iModBaseYield100/100, iModBaseYield100%100);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD", iBaseModifier-100, szYield.GetCString(), info.getChar()));
+		// Sub total
+		if (iBaseModifier != 100)
+		{
+			const int iModBaseYield100 = iBaseYield * iBaseModifier;
+			CvWString szYield = CvWString::format(L"%d.%02d", iModBaseYield100/100, iModBaseYield100%100);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD", iBaseModifier-100, szYield.GetCString(), info.getChar()));
+		}
 	}
 	szBuffer.append(SEPARATOR);
 
@@ -33272,31 +33325,47 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		if (iSpecialistYield != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistYield, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iSpecialistYield, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
 			iYield -= iSpecialistYield;
 		}
 		if (iFreeSpecialistYield != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iFreeSpecialistYield, info.getChar(), L"TXT_KEY_WB_FREE_SPECIALISTS"));
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iFreeSpecialistYield, info.getChar(), L"TXT_KEY_WB_FREE_SPECIALISTS"));
 			iYield -= iFreeSpecialistYield;
 		}
 	}
 	// Trade
-	const int iTradeYield = city.getTradeYield(eYieldType);
-	if (iTradeYield != 0)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
-		iYield -= iTradeYield;
+		const int iTradeYield = city.getTradeYield(eYieldType);
+		if (iTradeYield != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
+			iYield -= iTradeYield;
+		}
 	}
 	// Corporations
-	const int iCorporationYield = city.getCorporationYield(eYieldType);
-	if (iCorporationYield != 0)
 	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationYield, info.getChar()));
-		iYield += iCorporationYield;
+		const int iCorporationYield = city.getCorporationYield(eYieldType);
+		if (iCorporationYield != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationYield, info.getChar()));
+			iYield -= iCorporationYield;
+		}
+	}
+	// Buildings
+	{
+		const int iBuildingYield100 = city.getBuildingExtraYield100(eYieldType) + city.getBaseYieldPerPopRate(eYieldType) * city.getPopulation();
+		if (0 != iBuildingYield100)
+		{
+			CvWString szValue;
+			makeValueString(szValue, iBuildingYield100, true);
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_BULLET_S1_F2_FROM_S3", szValue.GetCString(), info.getChar(), L"TXT_KEY_WB_BUILDINGS"));
+			iYield -= iBuildingYield100 / 100;
+		}
 	}
 
 	// Yield specifics
@@ -33532,7 +33601,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 				bFirst = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR), L"TXT_KEY_CONCEPT_SPECIALISTS"));
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR), L"TXT_KEY_CONCEPT_SPECIALISTS"));
 		}
 
 		iRate = 0;
@@ -33551,7 +33620,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 				bFirst = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR), L"TXT_KEY_WB_BUILDINGS"));
 		}
 
 		for (int i = 0; i < GC.getNumTraitInfos(); i++)
@@ -33567,7 +33636,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 						bFirst = false;
 					}
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TRAIT_COMMERCE", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR), GC.getTraitInfo((TraitTypes)i).getDescription()));
+					szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR), GC.getTraitInfo((TraitTypes)i).getDescription()));
 				}
 			}
 		}

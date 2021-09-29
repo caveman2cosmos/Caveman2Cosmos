@@ -134,26 +134,26 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -235,7 +235,7 @@
 					<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -268,7 +268,7 @@
 				<iYield>10</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ORGANIC_COLONY</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
@@ -314,7 +314,7 @@
 				<iYield>0</iYield>
 				<iYield>75</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
@@ -342,13 +342,13 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PHASING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PHASING</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -452,49 +452,49 @@
 			<iHealth>1</iHealth>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SOCIAL_CALCULUS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SOCIAL_CALCULUS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_GERONTOCRACY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_GERONTOCRACY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CULTURAL_EVOLUTION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CULTURAL_EVOLUTION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PRECISION_SOCIAL_ENGINEERING</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_COLONY_GOVERNANCE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
@@ -528,7 +528,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -596,21 +596,21 @@
 					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -961,7 +961,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -990,7 +990,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 						<iYield>0</iYield>
 					</TechYield>
 				</TechYieldChange>
@@ -1050,7 +1050,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1120,7 +1120,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1270,17 +1270,17 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_KUIPER_BELT_EXPLORATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
@@ -1695,16 +1695,16 @@
 					<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>

@@ -31,13 +31,21 @@ int CvPropertyManipulators::getNumSources() const
 {
 	return (int) m_apSources.size();
 }
-/*
+
 CvPropertySource* CvPropertyManipulators::getSource(int index) const
 {
 	FASSERT_BOUNDS(0, getNumSources(), index)
 	return m_apSources[index];
 }
-*/
+
+const python::list CvPropertyManipulators::cyGetSources() const
+{
+	python::list l = python::list();
+	foreach_(const CvPropertySource* pSource, m_apSources)
+		l += *pSource;
+	return l;
+}
+
 int CvPropertyManipulators::addSource(PropertySourceTypes eType)
 {
 	switch (eType)
