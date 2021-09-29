@@ -1573,26 +1573,23 @@ namespace CvBuildingInternal
 
 		foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 		{
-			if(loopBuilding->isPrereqInCityBuilding(eBuilding)
-			|| loopBuilding->isPrereqOrBuilding(eBuilding))
+			if (loopBuilding->isPrereqInCityBuilding(eBuilding)
+			||  loopBuilding->isPrereqOrBuilding(eBuilding))
 			{
 				return true;
 			}
 		}
 
-		if (!kBuilding.EnablesOtherBuildings())
-		{
-			const BonusTypes eFreeBonus = (BonusTypes)kBuilding.getFreeBonus();
+		const BonusTypes eFreeBonus = (BonusTypes)kBuilding.getFreeBonus();
 
-			if (eFreeBonus != NO_BONUS)
+		if (eFreeBonus != NO_BONUS)
+		{
+			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 			{
-				foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
+				if (loopBuilding->getPrereqAndBonus() == eFreeBonus
+				|| algo::contains(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
 				{
-					if (loopBuilding->getPrereqAndBonus() == eFreeBonus
-					|| algo::contains(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
-					{
-						return true;
-					}
+					return true;
 				}
 			}
 		}
