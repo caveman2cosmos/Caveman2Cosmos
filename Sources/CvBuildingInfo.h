@@ -579,8 +579,7 @@ private:
 	bool m_bDamageAttackerCapable;
 	bool m_bAutoBuild;
 	bool m_bQuarantine;
-	mutable bool m_bEnablesOtherBuildingsCalculated;
-	mutable bool m_bEnablesOtherBuildingsValue;
+	bool m_bEnablesOtherBuildings;
 	bool m_bEnablesUnits;
 
 	int m_iFreePromotion_2;
