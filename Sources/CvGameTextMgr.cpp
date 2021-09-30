@@ -13313,7 +13313,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iMediumRangeSupportPercentChange = 0;
 	int	iLongRangeSupportPercentChange = 0;
 	int	iFlankSupportPercentChange = 0;
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	int	iDodgeModifierChange = 0;
 	int	iPrecisionModifierChange = 0;
 	int	iPowerShotsChange = 0;
@@ -13439,7 +13439,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iStrAdjperAttChange += promo.getStrAdjperAttChange();
 		iStrAdjperDefChange += promo.getStrAdjperDefChange();
 		iWithdrawAdjperAttChange += promo.getWithdrawAdjperAttChange();
-#endif
+#endif // BATTLEWORN
 		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
 			iUnnerveChange += promo.getUnnerveChange();
@@ -13461,7 +13461,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			iLongRangeSupportPercentChange += promo.getLongRangeSupportPercentChange();
 			iFlankSupportPercentChange += promo.getFlankSupportPercentChange();
 		}
-#endif
+#endif // STRENGTH_IN_NUMBERS
 		iDodgeModifierChange += promo.getDodgeModifierChange();
 		iPrecisionModifierChange += promo.getPrecisionModifierChange();
 		iPowerShotsChange += promo.getPowerShotsChange();
@@ -13999,7 +13999,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLANK_SUPPORT_PERCENT_CHANGE", iFlankSupportPercentChange));
 	}
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	if (iDodgeModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
@@ -14641,25 +14641,25 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(ePromotion).getNumSubCombatChangeTypes(); ++iI)
+		foreach_(const UnitCombatTypes eSubCombat, GC.getPromotionInfo(ePromotion).getSubCombatChanges())
 		{
-			aUnitCombats.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getSubCombatChangeType(iI));
+			aUnitCombats.push_back(eSubCombat.120);
 		}
 	}
 
-	for( iI = 0; iI < (int)aUnitCombats.size(); iI++ )
+	foreach_(const UnitCombatTypes eCombat, aUnitCombats)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SUB_COMBAT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SUB_COMBAT", GC.getUnitCombatInfo(eCombat).getDescription()));
 	}
 
 	aUnitCombats.clear();
 
 	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(ePromotion).getNumRemovesUnitCombatTypes(); ++iI)
+		foreach_(const UnitCombatTypes eUnitCombat, GC.getPromotionInfo(ePromotion).getRemovesUnitCombats())
 		{
-			aUnitCombats.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getRemovesUnitCombatType(iI));
+			aUnitCombats.push_back(eUnitCombat);
 		}
 	}
 

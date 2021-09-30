@@ -11817,16 +11817,16 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 
 bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
 {
-	for (int iI = 0; iI < info.getNumNotOnGameOptions(); iI++)
+	foreach_(const GameOptionTypes eOption, info.getNotOnGameOptions())
 	{
-		if (isOption((GameOptionTypes) info.getNotOnGameOption(iI)))
+		if (isOption(eOption))
 		{
 			return false;
 		}
 	}
-	for (int iI = 0; iI < info.getNumOnGameOptions(); iI++)
+	foreach_(const GameOptionTypes eOption, info.getOnGameOptions())
 	{
-		if (!isOption((GameOptionTypes) info.getOnGameOption(iI)))
+		if (!isOption(eOption))
 		{
 			return false;
 		}

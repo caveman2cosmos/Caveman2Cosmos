@@ -28008,38 +28008,38 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iValue += 15;
 		}
 
-		for (iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+		foreach_(const UnitCombatTypes eSubCombat, kPromotion.getSubCombatChanges())
 		{
 			if (pUnit == NULL)
 			{
-				if (!kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+				if (!kUnit.hasUnitCombat(eSubCombat))
 				{
-					iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+					iValue += AI_unitCombatValue(eSubCombat, eUnit, pUnit, eUnitAI);
 				}
 			}
 			else
 			{
-				if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+				if (!pUnit->isHasUnitCombat(eSubCombat))
 				{
-					iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+					iValue += AI_unitCombatValue(eSubCombat, eUnit, pUnit, eUnitAI);
 				}
 			}
 		}
 
-		for (iI = 0; iI < kPromotion.getNumRemovesUnitCombatTypes(); iI++)
+		foreach_(const UnitCombatTypes eUnitCombat, kPromotion.getRemovesUnitCombats())
 		{
 			if (pUnit == NULL)
 			{
-				if (kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
+				if (kUnit.hasUnitCombat(eUnitCombat))
 				{
-					iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
+					iValue -= AI_unitCombatValue(eUnitCombat, eUnit, pUnit, eUnitAI);
 				}
 			}
 			else
 			{
-				if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
+				if (!pUnit->isHasUnitCombat(eUnitCombat))
 				{
-					iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
+					iValue -= AI_unitCombatValue(eUnitCombat, eUnit, pUnit, eUnitAI);
 				}
 			}
 		}
@@ -33157,38 +33157,38 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += 250;
 	}
 
-	for (iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+	foreach_(const UnitCombatTypes eSubCombat, kPromotion.getSubCombatChanges())
 	{
 		if (pUnit == NULL)
 		{
-			if (!kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+			if (!kUnit.hasUnitCombat(eSubCombat))
 			{
-				iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+				iValue += AI_unitCombatValue(eSubCombat, eUnit, pUnit, eUnitAI);
 			}
 		}
 		else
 		{
-			if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+			if (!pUnit->isHasUnitCombat(eSubCombat))
 			{
-				iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+				iValue += AI_unitCombatValue(eSubCombat, eUnit, pUnit, eUnitAI);
 			}
 		}
 	}
 
-	for (iI = 0; iI < kPromotion.getNumRemovesUnitCombatTypes(); iI++)
+	foreach_(const UnitCombatTypes eUnitCombat, kPromotion.getRemovesUnitCombats())
 	{
 		if (pUnit == NULL)
 		{
-			if (kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
+			if (kUnit.hasUnitCombat(eUnitCombat))
 			{
-				iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
+				iValue -= AI_unitCombatValue(eUnitCombat, eUnit, pUnit, eUnitAI);
 			}
 		}
 		else
 		{
-			if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
+			if (!pUnit->isHasUnitCombat(eUnitCombat))
 			{
-				iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
+				iValue -= AI_unitCombatValue(eUnitCombat, eUnit, pUnit, eUnitAI);
 			}
 		}
 	}

@@ -3662,47 +3662,6 @@ bool CvPromotionInfo::isQuick() const
 	return m_bQuick;
 }
 
-// bool vectors without delayed resolution
-int CvPromotionInfo::getSubCombatChangeType(int i) const
-{
-	return m_aiSubCombatChangeTypes[i];
-}
-
-int CvPromotionInfo::getNumSubCombatChangeTypes() const
-{
-	return (int)m_aiSubCombatChangeTypes.size();
-}
-
-bool CvPromotionInfo::isSubCombatChangeType(int i) const
-{
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
-	if (find(m_aiSubCombatChangeTypes.begin(), m_aiSubCombatChangeTypes.end(), i) == m_aiSubCombatChangeTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
-int CvPromotionInfo::getRemovesUnitCombatType(int i) const
-{
-	return m_aiRemovesUnitCombatTypes[i];
-}
-
-int CvPromotionInfo::getNumRemovesUnitCombatTypes() const
-{
-	return (int)m_aiRemovesUnitCombatTypes.size();
-}
-
-bool CvPromotionInfo::isRemovesUnitCombatType(int i) const
-{
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
-	if (find(m_aiRemovesUnitCombatTypes.begin(), m_aiRemovesUnitCombatTypes.end(), i) == m_aiRemovesUnitCombatTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvPromotionInfo::getOnGameOption(int i) const
 {
 	return m_aiOnGameOptions[i];
@@ -5259,11 +5218,10 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bRemoveAfterSet, L"bRemoveAfterSet");
 	pXML->GetOptionalChildXmlValByName(&m_bQuick, L"bQuick");
 
-	//Arrays
 	//pXML->SetVariableListTagPair(&m_piAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes", GC.getNumUnitCombatInfos());
-	// bool vector without delayed resolution
-	pXML->SetOptionalVector(&m_aiSubCombatChangeTypes, L"SubCombatChangeTypes");
-	pXML->SetOptionalVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
+
+	pXML->SetOptionalVector(&m_aeSubCombatChanges, L"SubCombatChangeTypes");
+	pXML->SetOptionalVector(&m_aeRemovesUnitCombats, L"RemovesUnitCombatTypes");
 	pXML->SetOptionalVector(&m_aiOnGameOptions, L"OnGameOptions");
 	pXML->SetOptionalVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
 	pXML->SetOptionalVector(&m_aiFreetoUnitCombats, L"FreetoUnitCombats");
@@ -5271,11 +5229,9 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aiNotOnDomainTypes, L"NotOnDomainTypes");
 	pXML->SetOptionalVector(&m_aiNoAutoEquiptoCombatClassTypes, L"NoAutoEquiptoCombatClassTypes");
 	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
-
-	// bool vector with delayed resolution
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	pXML->SetOptionalVector(&m_aiCureAfflictionChangeTypes, L"CureAfflictionChangeTypes");
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	pXML->SetOptionalVector(&m_aiPrereqBonusTypes, L"PrereqBonusTypes");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiAddsBuildTypes, L"AddsBuildTypes");
 	pXML->SetOptionalVector(&m_aiNegatesInvisibilityTypes, L"NegatesInvisibilityTypes");
@@ -5323,11 +5279,10 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	pXML->SetOptionalPairVector<AidArray, PropertyTypes, int>(&m_aAidChanges, L"AidChanges");
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 	//pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(m_aAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes");
 
-//Team Project (4)
-		//WorkRateMod
 	pXML->SetOptionalPairVector<TerrainModifierArray, TerrainTypes, int>(&m_aTerrainWorkRateModifierChangeTypes, L"TerrainWorkRateModifierChangeTypes");
 
 	pXML->SetOptionalPairVector<FeatureModifierArray, FeatureTypes, int>(&m_aFeatureWorkRateModifierChangeTypes, L"FeatureWorkRateModifierChangeTypes");
@@ -6064,24 +6019,8 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (isPlotPrereqsKeepAfter() == bDefault) m_bPlotPrereqsKeepAfter = pClassInfo->isPlotPrereqsKeepAfter();
 	if (isRemoveAfterSet() == bDefault) m_bRemoveAfterSet = pClassInfo->isRemoveAfterSet();
 	if (isQuick() == bDefault) m_bQuick = pClassInfo->isQuick();
-	// bool vectors without delayed resolution
-	if (getNumSubCombatChangeTypes() == 0)
-	{
-		m_aiSubCombatChangeTypes.clear();
-		for ( int i = 0; i < pClassInfo->getNumSubCombatChangeTypes(); i++)
-		{
-			m_aiSubCombatChangeTypes.push_back(pClassInfo->getSubCombatChangeType(i));
-		}
-	}
-
-	if (getNumRemovesUnitCombatTypes() == 0)
-	{
-		m_aiRemovesUnitCombatTypes.clear();
-		for ( int i = 0; i < pClassInfo->getNumRemovesUnitCombatTypes(); i++)
-		{
-			m_aiRemovesUnitCombatTypes.push_back(pClassInfo->getRemovesUnitCombatType(i));
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeSubCombatChanges, pClassInfo->getSubCombatChanges());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeRemovesUnitCombats, pClassInfo->getRemovesUnitCombats());
 
 	if (getNumOnGameOptions() == 0)
 	{
@@ -6375,9 +6314,6 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 		}
 	}
 
-
-//Team Project (4)
-		//WorkRateMod
 	if (getNumTerrainWorkRateModifierChangeTypes()==0)
 	{
 		for (int i=0; i < pClassInfo->getNumTerrainWorkRateModifierChangeTypes(); i++)
@@ -6454,7 +6390,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAfflictOnAttackChangeTypes, pClassInfo->m_aAfflictOnAttackChangeTypes);
 	}
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS7
 	if (getNumHealUnitCombatChangeTypes() == 0)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatChangeTypes, pClassInfo->m_aHealUnitCombatChangeTypes);
@@ -6847,11 +6783,9 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bForOffset);
 	CheckSum(iSum, m_bCargoPrereq);
 	CheckSum(iSum, m_bRBombardPrereq);
-	//Arrays
 	//CheckSum(iSum, m_piAIWeightbyUnitCombatTypes, GC.getNumUnitCombatInfos());
-	// bool vectors without delayed resolution
-	CheckSumC(iSum, m_aiSubCombatChangeTypes);
-	CheckSumC(iSum, m_aiRemovesUnitCombatTypes);
+	CheckSumC(iSum, m_aeSubCombatChangeTypes);
+	CheckSumC(iSum, m_aeRemovesUnitCombats);
 	CheckSumC(iSum, m_aiOnGameOptions);
 	CheckSumC(iSum, m_aiNotOnGameOptions);
 	CheckSumC(iSum, m_aiFreetoUnitCombats);
@@ -6859,10 +6793,9 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aiNotOnDomainTypes);
 	CheckSumC(iSum, m_aiNoAutoEquiptoCombatClassTypes);
 	CheckSumC(iSum, m_aiMapTypes);
-	// bool vector with delayed resolution
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	CheckSumC(iSum, m_aiCureAfflictionChangeTypes);
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	CheckSumC(iSum, m_aiPrereqBonusTypes);
 	CheckSumC(iSum, m_aiAddsBuildTypes);
 	CheckSumC(iSum, m_aiNegatesInvisibilityTypes);

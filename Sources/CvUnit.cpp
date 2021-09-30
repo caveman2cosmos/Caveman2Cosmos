@@ -20800,15 +20800,12 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	if (kPromotion.getNumSubCombatChangeTypes() > 0)
+	foreach_(const UnitCombatTypes eSubCombat, kPromotion.getSubCombatChanges())
 	{
-		for (int iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+		//If we have the unitcombat the promotion will give us already
+		if (isHasUnitCombat(eSubCombat))
 		{
-			//If we have the unitcombat the promotion will give us already
-			if (isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -21103,16 +21100,16 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		return false;
 
 	//Disable via NotOnGameOption tag:
-	for (int iI = 0; iI < promotionInfo.getNumNotOnGameOptions(); iI++)
+	foreach_(const GameOptionTypes eOption, promotionInfo.getNotOnGameOptions())
 	{
-		if (GC.getGame().isOption((GameOptionTypes)promotionInfo.getNotOnGameOption(iI)))
+		if (GC.getGame().isOption(eOption))
 		{
 			return false;
 		}
 	}
-	for (int iI = 0; iI < promotionInfo.getNumOnGameOptions(); iI++)
+	foreach_(const GameOptionTypes eOption, promotionInfo.getOnGameOptions())
 	{
-		if (!GC.getGame().isOption((GameOptionTypes)promotionInfo.getOnGameOption(iI)))
+		if (!GC.getGame().isOption(eOption))
 		{
 			return false;
 		}
@@ -22723,14 +22720,14 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraTrapTriggerUnitCombatType(((UnitCombatTypes)iI), (kPromotion.getTrapTriggerUnitCombatType(iI) * iChange));
 	}
 
-	for (iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+	foreach_(const UnitCombatTypes eSubCombat, kPromotion.getSubCombatChanges())
 	{
-		setHasUnitCombat(((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)), bAdding, true);
+		setHasUnitCombat(eSubCombat, bAdding, true);
 	}
 
-	for (iI = 0; iI < kPromotion.getNumRemovesUnitCombatTypes(); iI++)
+	foreach_(const UnitCombatTypes eUnitCombat, kPromotion.getRemovesUnitCombats())
 	{
-		setHasUnitCombat(((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)), bAdding ? false : true, true);
+		setHasUnitCombat(eUnitCombat, bAdding ? false : true, true);
 	}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
