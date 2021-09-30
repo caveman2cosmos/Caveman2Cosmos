@@ -4827,9 +4827,14 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<SeaPlotYieldChanges>
-				<iYield>-3</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-3</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<iRevIdxLocal>20</iRevIdxLocal>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12964,9 +12969,14 @@
 				<iYield>-30</iYield>
 			</YieldChanges>
 			<iGlobalHealth>-2</iGlobalHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-10</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-10</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12993,11 +13003,16 @@
 			<bWater>1</bWater>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-1</iYield>
-				<iYield>0</iYield>
-				<iYield>-1</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13024,11 +13039,16 @@
 			<bWater>1</bWater>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
-			<SeaPlotYieldChanges>
-				<iYield>-2</iYield>
-				<iYield>0</iYield>
-				<iYield>-2</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-2</iYield>
+						<iYield>0</iYield>
+						<iYield>-2</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13055,11 +13075,16 @@
 			<bWater>1</bWater>
 			<iHealth>-4</iHealth>
 			<iHappiness>-5</iHappiness>
-			<SeaPlotYieldChanges>
-				<iYield>-3</iYield>
-				<iYield>0</iYield>
-				<iYield>-3</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-3</iYield>
+						<iYield>0</iYield>
+						<iYield>-3</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13361,11 +13386,16 @@
 			<bWater>1</bWater>
 			<iHappiness>-3</iHappiness>
 			<iHealth>-2</iHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-5</iYield>
-				<iYield>-2</iYield>
-				<iYield>-5</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-5</iYield>
+						<iYield>-2</iYield>
+						<iYield>-5</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13391,9 +13421,14 @@
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHappiness>-2</iHappiness>
 			<iHealth>-2</iHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-5</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-5</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13604,9 +13639,14 @@
 				<iYield>-10</iYield>
 			</YieldChanges>
 			<iGlobalHealth>-1</iGlobalHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-10</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-10</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13638,9 +13678,14 @@
 				<iYield>-10</iYield>
 			</YieldChanges>
 			<iGlobalHealth>-1</iGlobalHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-10</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-10</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

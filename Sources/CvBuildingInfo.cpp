@@ -165,7 +165,6 @@ m_bNukeImmune(false),
 m_bCenterInCity(false),
 m_bStateReligionInCity(false),
 m_bAllowsNukes(false),
-m_piSeaPlotYieldChange(NULL),
 m_piRiverPlotYieldChange(NULL),
 m_piGlobalSeaPlotYieldChange(NULL),
 m_piYieldChange(NULL),
@@ -314,7 +313,6 @@ m_ppaiBonusYieldModifier(NULL)
 CvBuildingInfo::~CvBuildingInfo()
 {
 	SAFE_DELETE_ARRAY(m_piVictoryThreshold);
-	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piGlobalSeaPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
@@ -506,17 +504,6 @@ int CvBuildingInfo::getGlobalYieldModifier(int i) const
 int* CvBuildingInfo::getGlobalYieldModifierArray() const
 {
 	return m_piGlobalYieldModifier;
-}
-
-int CvBuildingInfo::getSeaPlotYieldChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-	return m_piSeaPlotYieldChange ? m_piSeaPlotYieldChange[i] : 0;
-}
-
-int* CvBuildingInfo::getSeaPlotYieldChangeArray() const
-{
-	return m_piSeaPlotYieldChange;
 }
 
 int CvBuildingInfo::getRiverPlotYieldChange(int i) const
@@ -924,13 +911,30 @@ const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
 {
 	python::list pyList = python::list();
 
-	foreach_(const TerrainYieldChanges& pChange, m_aTerrainYieldChanges)
+	foreach_(const TerrainArray& pChange, m_aTerrainYieldChanges)
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
 			const int iValue = pChange.second[i];
 			if (iValue != 0)
 				pyList.append(TerrainYieldChange(pChange.first, (YieldTypes)i, iValue));
+		}
+	}
+	return pyList;
+}
+
+
+const python::list CvBuildingInfo::cyGetPlotYieldChanges() const
+{
+	python::list pyList = python::list();
+
+	foreach_(const PlotArray& pChange, m_aPlotYieldChanges)
+	{
+		for (int i = 0; i < NUM_YIELD_TYPES; i++)
+		{
+			const int iValue = pChange.second[i];
+			if (iValue != 0)
+				pyList.append(GenericTrippleInt((int)pChange.first, i, iValue));
 		}
 	}
 	return pyList;
@@ -1793,7 +1797,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bAllowsNukes);
 
 	CheckSumC(iSum, m_piPrereqAndTechs);
-	CheckSumI(iSum, NUM_YIELD_TYPES, m_piSeaPlotYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piRiverPlotYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piGlobalSeaPlotYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piYieldChange);
@@ -2078,6 +2081,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_techCommerceChanges);
 	CheckSumC(iSum, m_techCommerceModifiers);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
+	CheckSumC(iSum, m_aPlotYieldChanges);
 
 	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
 }
@@ -2316,18 +2320,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAssetValue, L"iAsset");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerValue, L"iPower");
 	pXML->GetOptionalChildXmlValByName(&m_fVisibilityPriority, L"fVisibilityPriority");
-
-	// if we can set the current xml node to it's next sibling
-	if (pXML->TryMoveToXmlFirstChild(L"SeaPlotYieldChanges"))
-	{
-		// call the function that sets the yield change variable
-		pXML->SetYields(&m_piSeaPlotYieldChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piSeaPlotYieldChange);
-	}
 
 	// if we can set the current xml node to it's next sibling
 	if (pXML->TryMoveToXmlFirstChild(L"RiverPlotYieldChanges"))
@@ -3359,6 +3351,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents", NUM_COMMERCE_TYPES);
 	m_techCommerceModifiers.readPairedArrays(pXML, L"TechCommerceModifiers", L"PrereqTech", L"TechCommerce", NUM_COMMERCE_TYPES);
 	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges", NUM_YIELD_TYPES);
+	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields", NUM_YIELD_TYPES);
 
 	CvInfoUtil(this).readXml(pXML);
 
@@ -3650,14 +3643,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 	{
-		if ( getSeaPlotYieldChange(j) == iDefault && pClassInfo->getSeaPlotYieldChange(j) != iDefault)
-		{
-			if ( NULL == m_piSeaPlotYieldChange )
-			{
-				CvXMLLoadUtility::InitList(&m_piSeaPlotYieldChange,NUM_YIELD_TYPES,iDefault);
-			}
-			m_piSeaPlotYieldChange[j] = pClassInfo->getSeaPlotYieldChange(j);
-		}
 		if ( getRiverPlotYieldChange(j) == iDefault && pClassInfo->getRiverPlotYieldChange(j) != iDefault)
 		{
 			if ( NULL == m_piRiverPlotYieldChange )
@@ -4528,6 +4513,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_techCommerceChanges.copyNonDefaults(pClassInfo->getTechCommerceChanges100());
 	m_techCommerceModifiers.copyNonDefaults(pClassInfo->getTechCommerceModifiers());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
+	m_aPlotYieldChanges.copyNonDefaults(pClassInfo->getPlotYieldChanges());
 
 	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 }

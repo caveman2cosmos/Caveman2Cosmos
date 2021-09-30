@@ -799,6 +799,19 @@ const struct TerrainYieldChange
 	const int iChange;
 };
 
+const struct GenericTrippleInt
+{
+	GenericTrippleInt(int iType, int iIndex, int iValue)
+		: iType(iType)
+		, iIndex(iIndex)
+		, iValue(iValue)
+	{}
+
+	const int iType;
+	const int iIndex;
+	const int iValue;
+};
+
 struct DllExport PBGameSetupData
 {
 	PBGameSetupData();

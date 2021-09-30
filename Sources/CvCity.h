@@ -952,16 +952,16 @@ public:
 	void setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups);
 	void updateCultureLevel(bool bUpdatePlotGroups);
 
-	int getSeaPlotYield(YieldTypes eIndex) const;
-	void changeSeaPlotYield(YieldTypes eIndex, int iChange);
-
 	int getRiverPlotYield(YieldTypes eIndex) const;
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
 	int getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const;
 	void changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields);
 
-	int getPlotYieldChange(const CvPlot* pPlot, const YieldTypes eYield) const;
+	int getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const;
+	void changePlotYieldChanges(const PlotTypes ePlot, int* yields);
+
+	int getYieldChangeAt(const CvPlot* pPlot, const YieldTypes eYield) const;
 
 	int getBaseYieldRateFromBuilding100(const YieldTypes eIndex, const BuildingTypes eBuilding) const;
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
@@ -1805,6 +1805,7 @@ protected:
 	std::map<short, int> m_unitProductionMod;
 
 	std::map<short, int*> m_terrainYieldChanges;
+	std::map<short, int*> m_plotYieldChanges;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 
@@ -1914,7 +1915,6 @@ protected:
 	int m_iExtraInsidiousness;
 	int m_iExtraInvestigation;
 
-	int* m_aiSeaPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
 	int* m_buildingExtraYield100;

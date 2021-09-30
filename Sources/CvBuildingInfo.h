@@ -261,8 +261,6 @@ public:
 	int* getAreaYieldModifierArray() const;
 	int getGlobalYieldModifier(int i) const;
 	int* getGlobalYieldModifierArray() const;
-	int getSeaPlotYieldChange(int i) const;
-	int* getSeaPlotYieldChangeArray() const;
 	int getRiverPlotYieldChange(int i) const;
 	int* getRiverPlotYieldChangeArray() const;
 	int getGlobalSeaPlotYieldChange(int i) const;
@@ -350,6 +348,9 @@ public:
 
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
+
+	const IDValueMap<PlotTypes, int*>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
+	const python::list cyGetPlotYieldChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
@@ -738,7 +739,6 @@ private:
 	bool* m_pabHurry;
 
 	int* m_piBonusDefenseChanges;
-	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
 	int* m_piYieldChange;
@@ -824,6 +824,7 @@ private:
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
 	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
+	IDValueMap<PlotTypes, int*> m_aPlotYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 
