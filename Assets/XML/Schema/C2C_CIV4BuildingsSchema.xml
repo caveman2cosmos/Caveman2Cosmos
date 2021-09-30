@@ -940,7 +940,8 @@
 		<element type="BonusCommercePercentChanges" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="fVisibilityPriority" minOccurs="0"/>
-		<element type="SeaPlotYieldChanges" minOccurs="0"/>
+		<element type="TerrainYieldChange" minOccurs="0"/>
+		<element type="PlotYieldChanges" minOccurs="0"/>
 		<element type="RiverPlotYieldChanges" minOccurs="0"/>
 		<element type="GlobalSeaPlotYieldChanges" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
