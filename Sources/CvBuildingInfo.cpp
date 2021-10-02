@@ -234,7 +234,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_pbPrereqAndCivics(NULL)
 ,m_pbPrereqOrTerrain(NULL)
 ,m_pbPrereqAndTerrain(NULL)
-,m_pbPrereqOrImprovement(NULL)
 ,m_pbPrereqOrFeature(NULL)
 //New Integer Arrays
 ,m_piBonusDefenseChanges(NULL)
@@ -344,7 +343,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqAndCivics);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqAndTerrain);
-	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
@@ -1010,12 +1008,6 @@ bool CvBuildingInfo::isPrereqAndTerrain(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_pbPrereqAndTerrain ? m_pbPrereqAndTerrain[i] : false;
-}
-
-bool CvBuildingInfo::isPrereqOrImprovement(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
-	return m_pbPrereqOrImprovement ? m_pbPrereqOrImprovement[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqOrFeature(int i) const
@@ -1894,7 +1886,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqAndCivics);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqOrTerrain);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqAndTerrain);
-	CheckSumI(iSum, GC.getNumImprovementInfos(), m_pbPrereqOrImprovement);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbPrereqOrFeature);
 	CheckSumC(iSum, m_aBuildingProductionModifier);
 	CheckSumC(iSum, m_aGlobalBuildingProductionModifier);
@@ -2080,6 +2071,7 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_aTechHappinessChanges, L"TechHappinessChanges")
 		.add(m_aTechHealthChanges, L"TechHealthChanges")
 		.add(m_religionChange, L"ReligionChanges")
+		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
 		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
 	;
@@ -2766,7 +2758,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_pbPrereqOrTerrain, L"PrereqOrTerrain", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqAndTerrain, L"PrereqAndTerrain", GC.getNumTerrainInfos());
-	pXML->SetVariableListTagPair(&m_pbPrereqOrImprovement, L"PrereqOrImprovement", GC.getNumImprovementInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqOrFeature, L"PrereqOrFeature", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piBonusDefenseChanges, L"BonusDefenseChanges", GC.getNumBonusInfos());
 	m_aUnitCombatExtraStrength.read(pXML, L"UnitCombatExtraStrengths");
@@ -4007,17 +3998,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 				CvXMLLoadUtility::InitList(&m_pbPrereqAndTerrain,GC.getNumTerrainInfos(),bDefault);
 			}
 			m_pbPrereqAndTerrain[j] = pClassInfo->isPrereqAndTerrain(j);
-		}
-	}
-	for ( int j = 0; j < GC.getNumImprovementInfos(); j++)
-	{
-		if ( isPrereqOrImprovement(j) == bDefault && pClassInfo->isPrereqOrImprovement(j) != bDefault)
-		{
-			if ( NULL == m_pbPrereqOrImprovement )
-			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqOrImprovement,GC.getNumImprovementInfos(),bDefault);
-			}
-			m_pbPrereqOrImprovement[j] = pClassInfo->isPrereqOrImprovement(j);
 		}
 	}
 	for ( int j = 0; j < GC.getNumFeatureInfos(); j++)

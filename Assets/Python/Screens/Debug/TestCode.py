@@ -1699,17 +1699,16 @@ class TestCode:
 
 			#<PrereqOrImprovement> - Improvement requirement replacement
 			aImprovementUnlistedUpgrades = []
-			for iImprovement in xrange(GC.getNumImprovementInfos()):
-				if CvBuildingInfo.isPrereqOrImprovement(iImprovement):
-					CvImprovementInfo = GC.getImprovementInfo(iImprovement)
-					if CvImprovementInfo.getImprovementUpgrade() != -1:
-						aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade()).getType())
-					for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
-						if GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType() not in aImprovementUnlistedUpgrades:
-							aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType())
+			for iImprovement in CvBuildingInfo.getPrereqOrImprovements():
+				CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+				if CvImprovementInfo.getImprovementUpgrade() != -1:
+					aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade()).getType())
+				for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+					if GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType() not in aImprovementUnlistedUpgrades:
+						aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType())
 			#If improvement is listed, then remove it
-			for iImprovement in xrange(GC.getNumImprovementInfos()):
-				if CvBuildingInfo.isPrereqOrImprovement(iImprovement) and GC.getImprovementInfo(iImprovement).getType() in aImprovementUnlistedUpgrades:
+			for iImprovement in CvBuildingInfo.getPrereqOrImprovements():
+				if GC.getImprovementInfo(iImprovement).getType() in aImprovementUnlistedUpgrades:
 					aImprovementUnlistedUpgrades.remove(GC.getImprovementInfo(iImprovement).getType())
 			if len(aImprovementUnlistedUpgrades) > 0:
 				self.log(CvBuildingInfo.getType()+" should have improvement upgrades for PrereqOrImprovement "+str(aImprovementUnlistedUpgrades))
