@@ -5734,12 +5734,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+					foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
 					{
-						if (kBuilding.getImprovementFreeSpecialist(iI) > 0)
-						{
-							iValue += kBuilding.getImprovementFreeSpecialist(iI) * countNumImprovedPlots((ImprovementTypes)iI, true) * 50;
-						}
+						iValue += pair.second * countNumImprovedPlots(pair.first, true) * 50;
 					}
 
 					for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -14498,7 +14495,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		if (kBuilding.getSpecialistCount(NO_SPECIALIST) > 0 ||
 			kBuilding.getFreeSpecialistCount(NO_SPECIALIST) > 0 ||
-			kBuilding.getImprovementFreeSpecialist(NO_IMPROVEMENT) > 0 ||
+			!kBuilding.getImprovementFreeSpecialists().empty() ||
 			kBuilding.getTechSpecialistChange(NO_TECH, NO_SPECIALIST) > 0)
 		{
 			return true;
@@ -15810,12 +15807,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+				foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
 				{
-					if (kBuilding.getImprovementFreeSpecialist(iI) > 0)
-					{
-						iValue += kBuilding.getImprovementFreeSpecialist(iI) * countNumImprovedPlots((ImprovementTypes)iI, true) * 50;
-					}
+					iValue += pair.second * countNumImprovedPlots(pair.first, true) * 50;
 				}
 
 				for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)

@@ -1135,15 +1135,15 @@ class TestCode:
 				#=================================================================================================
 				#<ImprovementFreeSpecialists> - base
 				aImprovementFreeSpecialists = [[0 for x in xrange(GC.getNumImprovementInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
-				for iImprovement in xrange(GC.getNumImprovementInfos()):
-					aImprovementFreeSpecialists[BASE][iImprovement] += CvBuildingInfo.getImprovementFreeSpecialist(iImprovement)
+				for iImprovement, iNumFreeSpecialists in CvBuildingInfo.getImprovementFreeSpecialists():
+					aImprovementFreeSpecialists[BASE][iImprovement] += iNumFreeSpecialists
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<ImprovementFreeSpecialists>
-					for iImprovement in xrange(GC.getNumImprovementInfos()):
-						aImprovementFreeSpecialists[REPLACED][iImprovement] += CvReplacedBuildingInfo.getImprovementFreeSpecialist(iImprovement)
+					for iImprovement, iNumFreeSpecialists in CvReplacedBuildingInfo.getImprovementFreeSpecialists():
+						aImprovementFreeSpecialists[REPLACED][iImprovement] += iNumFreeSpecialists
 
 				#Building shouldn't be worse than replaced one!
 				for iImprovement in xrange(GC.getNumImprovementInfos()):
@@ -1683,17 +1683,16 @@ class TestCode:
 
 			#<ImprovementFreeSpecialists> - building references improvements, those potentially can upgrade
 			aImprovementUnlistedUpgrades = []
-			for iImprovement in xrange(GC.getNumImprovementInfos()):
-				if CvBuildingInfo.getImprovementFreeSpecialist(iImprovement) != 0:
-					CvImprovementInfo = GC.getImprovementInfo(iImprovement)
-					if CvImprovementInfo.getImprovementUpgrade() != -1:
-						aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade()).getType())
-					for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
-						if GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType() not in aImprovementUnlistedUpgrades:
-							aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType())
+			for iImprovement, iNumFreeSpecialists in CvBuildingInfo.getImprovementFreeSpecialists():
+				CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+				if CvImprovementInfo.getImprovementUpgrade() != -1:
+					aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade()).getType())
+				for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+					if GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType() not in aImprovementUnlistedUpgrades:
+						aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType())
 			#If improvement is listed, then remove it
-			for iImprovement in xrange(GC.getNumImprovementInfos()):
-				if CvBuildingInfo.getImprovementFreeSpecialist(iImprovement) != 0 and GC.getImprovementInfo(iImprovement).getType() in aImprovementUnlistedUpgrades:
+			for iImprovement, iNumFreeSpecialists in CvBuildingInfo.getImprovementFreeSpecialists():
+				if GC.getImprovementInfo(iImprovement).getType() in aImprovementUnlistedUpgrades:
 					aImprovementUnlistedUpgrades.remove(GC.getImprovementInfo(iImprovement).getType())
 			if len(aImprovementUnlistedUpgrades) > 0:
 				self.log(CvBuildingInfo.getType()+" should have improvement upgrades for ImprovementFreeSpecialists "+str(aImprovementUnlistedUpgrades))

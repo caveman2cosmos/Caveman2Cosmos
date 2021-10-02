@@ -549,7 +549,7 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqNumOfBuildings", &CvBuildingInfo::getPrereqNumOfBuildings, python::return_value_policy<python::reference_existing_object>())
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
-		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
+		.def("getImprovementFreeSpecialists", &CvBuildingInfo::getImprovementFreeSpecialists, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getGlobalBuildingCostModifiers", &CvBuildingInfo::getGlobalBuildingCostModifiers, python::return_value_policy<python::reference_existing_object>())
 		.def("getGlobalBuildingCommerceChanges", &CvBuildingInfo::cyGetGlobalBuildingCommerceChanges)

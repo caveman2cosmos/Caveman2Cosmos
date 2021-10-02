@@ -22971,15 +22971,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
+		foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
 		{
-			if (kBuilding.getImprovementFreeSpecialist(iI) > 0)
-			{
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_IMPROVEMENT_FREE_SPECIALISTS", kBuilding.getImprovementFreeSpecialist(iI)).GetCString() );
-				szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo((ImprovementTypes)iI).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)iI).getDescription());
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getImprovementFreeSpecialist(iI) != iLast));
-				iLast = kBuilding.getImprovementFreeSpecialist(iI);
-			}
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_IMPROVEMENT_FREE_SPECIALISTS", pair.second).c_str());
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo(pair.first).getType()).c_str(), GC.getImprovementInfo(pair.first).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (pair.second != iLast));
+			iLast = pair.second;
 		}
 
 		iLast = 0;
