@@ -7455,17 +7455,19 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 		const TraitTypes eTrait = ((TraitTypes)iI);
 		if (hasTrait(eTrait))
 		{
-			for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
+			const CvTraitInfo& kTrait = GC.getTraitInfo(eTrait);
+
+			for (int j = 0; j < kTrait.getNumBuildingProductionModifiers(); j++)
 			{
-				if (GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
+				if (kTrait.getBuildingProductionModifier(j).eBuilding == eBuilding)
 				{
-					iMultiplier += GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).iModifier;
+					iMultiplier += kTrait.getBuildingProductionModifier(j).iModifier;
 				}
 			}
 
 			if (GC.getBuildingInfo(eBuilding).getSpecialBuilding() != NO_SPECIALBUILDING)
 			{
-				foreach_(const SpecialBuildingModifier& pair, GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifiers())
+				foreach_(const SpecialBuildingModifier& pair, kTrait.getSpecialBuildingProductionModifiers())
 				{
 					if (pair.eSpecialBuilding == GC.getBuildingInfo(eBuilding).getSpecialBuilding())
 					{

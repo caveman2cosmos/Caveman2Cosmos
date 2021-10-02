@@ -22429,9 +22429,9 @@ int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
 
 namespace PureTraits
 {
-	namespace detail
+	namespace
 	{
-		bool isAnyValue()
+		bool anyValue(const SpecialBuildingModifier&)
 		{
 			return true;
 		}
@@ -22443,26 +22443,26 @@ namespace PureTraits
 		{
 			return pair.iModifier < 0;
 		}
-
-		bst::function<bool(const SpecialBuildingModifier&)> isValidValue(bool bNegativeTrait)
-		{
-			if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-				return bind(isAnyValue);
-
-			return bNegativeTrait ? bind(isNegativeValue, _1) : bind(isPositiveValue, _1);
-		}
 	}
 
-	template <typename Range_t>
-	const bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, const Range_t> filter(const Range_t& rng, bool bNegativeTrait)
+	bst::function<bool(const SpecialBuildingModifier&)> bindPredicate(bool bNegativeTrait)
 	{
-		return bst::adaptors::filter(rng, detail::isValidValue(bNegativeTrait));
+		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+			return bind(anyValue, _1);
+
+		return bNegativeTrait ? bind(isNegativeValue, _1) : bind(isPositiveValue, _1);
 	}
-}
+
+	//template <typename Range_t>
+	//const bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, const Range_t> filter(const Range_t& rng, bool bNegativeTrait)
+	//{
+	//	return bst::adaptors::filter(rng, bindPredicate(bNegativeTrait));
+	//}
+};
 
 const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
-	return PureTraits::filter(m_aSpecialBuildingProductionModifiers, m_bNegativeTrait);
+	return bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, PureTraits::bindPredicate(m_bNegativeTrait));
 }
 
 SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const

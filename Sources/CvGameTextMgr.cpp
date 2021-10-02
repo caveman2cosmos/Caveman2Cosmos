@@ -12018,7 +12018,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		iLast = 0;
 		foreach_(const SpecialBuildingModifier& pair, kTrait.getSpecialBuildingProductionModifiers())
 		{
-			//if (kTrait.getSpecialBuildingProductionModifier(j).iModifier == 100)
+			//if (pair.iModifier == 100)
 			//{
 			//	szText = gDLL->getText("TXT_KEY_TRAITHELP_DOUBLE_SPEED");
 			//}

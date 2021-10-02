@@ -5760,6 +5760,7 @@ public:
 
 	int getNumSpecialBuildingProductionModifiers() const;
 	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
+	//const std::vector<SpecialBuildingModifier>& getSpecialBuildingProductionModifiers() const { return m_aSpecialBuildingProductionModifiers; }
 	const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > getSpecialBuildingProductionModifiers() const;
 
 	int getNumBuildingHappinessModifiers() const;
@@ -5786,6 +5787,9 @@ public:
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
+
+	//template <typename Range_t>
+	//const bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, const Range_t> filterPureTraitValues(const Range_t& rng) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
