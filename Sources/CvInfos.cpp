@@ -22427,27 +22427,44 @@ int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
 	return (int)m_aSpecialBuildingProductionModifiers.size();
 }
 
-namespace pure_traits
+namespace PureTraits
 {
-	bool isPositive(SpecialBuildingModifier& pair)
+	namespace detail
 	{
-		return pair.iModifier > 0;
+		bool isAnyValue()
+		{
+			return true;
+		}
+
+		bool isPositiveValue(const SpecialBuildingModifier& pair)
+		{
+			return pair.iModifier > 0;
+		}
+
+		bool isNegativeValue(const SpecialBuildingModifier& pair)
+		{
+			return pair.iModifier < 0;
+		}
+
+		bst::function<bool(const SpecialBuildingModifier&)> isValidValue(bool bNegativeTrait)
+		{
+			if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+				return bind(detail::isAnyValue);
+
+			return bNegativeTrait ? bind(detail::isNegativeValue, _1) : bind(detail::isPositiveValue, _1);
+		}
+	}
+
+	template <typename Range_t>
+	bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, Range_t> filter(Range_t rng, bool bNegativeTrait)
+	{
+		return bst::adaptors::filter(rng, detail::isValidValue(bNegativeTrait));
 	}
 }
 
-bst::iterator_range<std::vector<SpecialBuildingModifier>::iterator> CvTraitInfo::getSpecialBuildingProduction()
+bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProduction()
 {
-	bst::iterator_range<std::vector<SpecialBuildingModifier>::iterator> rng(m_aSpecialBuildingProductionModifiers);
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		bst::function<bool (SpecialBuildingModifier&)> func = bind(pure_traits::isPositive, _1);
-		//bst::range_detail::filtered_range<bst::function<bool (SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > filteredRng = bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, isNegativeTrait() ? !func : func);
-		bst::range_detail::filtered_range<bst::function<bool (SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > filteredRng = bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, func);
-		return rng;
-
-	}
-	return m_aSpecialBuildingProductionModifiers;
+	return PureTraits::filter(m_aSpecialBuildingProductionModifiers, m_bNegativeTrait);
 }
 
 SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const
