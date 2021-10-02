@@ -22456,13 +22456,13 @@ namespace PureTraits
 	}
 
 	template <typename Range_t>
-	bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, Range_t> filter(Range_t rng, bool bNegativeTrait)
+	const bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, const Range_t> filter(const Range_t& rng, bool bNegativeTrait)
 	{
 		return bst::adaptors::filter(rng, detail::isValidValue(bNegativeTrait));
 	}
 }
 
-bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProduction()
+const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProduction() const
 {
 	return PureTraits::filter(m_aSpecialBuildingProductionModifiers, m_bNegativeTrait);
 }

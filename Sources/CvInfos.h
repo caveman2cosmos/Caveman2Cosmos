@@ -5760,7 +5760,7 @@ public:
 
 	int getNumSpecialBuildingProductionModifiers() const;
 	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
-	bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > getSpecialBuildingProduction();
+	const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > getSpecialBuildingProduction() const;
 
 	int getNumBuildingHappinessModifiers() const;
 	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
