@@ -22435,12 +22435,10 @@ namespace PureTraits
 		{
 			return true;
 		}
-
 		bool isPositiveValue(const SpecialBuildingModifier& pair)
 		{
 			return pair.iModifier > 0;
 		}
-
 		bool isNegativeValue(const SpecialBuildingModifier& pair)
 		{
 			return pair.iModifier < 0;
@@ -22449,9 +22447,9 @@ namespace PureTraits
 		bst::function<bool(const SpecialBuildingModifier&)> isValidValue(bool bNegativeTrait)
 		{
 			if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-				return bind(detail::isAnyValue);
+				return bind(isAnyValue);
 
-			return bNegativeTrait ? bind(detail::isNegativeValue, _1) : bind(detail::isPositiveValue, _1);
+			return bNegativeTrait ? bind(isNegativeValue, _1) : bind(isPositiveValue, _1);
 		}
 	}
 
@@ -22462,7 +22460,7 @@ namespace PureTraits
 	}
 }
 
-const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProduction() const
+const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
 	return PureTraits::filter(m_aSpecialBuildingProductionModifiers, m_bNegativeTrait);
 }
