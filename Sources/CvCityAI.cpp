@@ -5494,7 +5494,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				int iCommerceYieldValue = 0;
 				if ((iFocusFlags & (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH | BUILDINGFOCUS_CULTURE | BUILDINGFOCUS_ESPIONAGE)) || iPass > 0)
 				{
-					iCommerceYieldValue = AI_buildingYieldValue(YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade, iFoodDifference, aiFreeSpecialistYield[YIELD_COMMERCE]);
+					iCommerceYieldValue = AI_buildingYieldValue(YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_COMMERCE]);
 				}
 
 				if ((iFocusFlags & BUILDINGFOCUS_GOLD) && iCommerceYieldValue > 0)
@@ -5734,12 +5734,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+					foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
 					{
-						if (kBuilding.getImprovementFreeSpecialist(iI) > 0)
-						{
-							iValue += kBuilding.getImprovementFreeSpecialist(iI) * countNumImprovedPlots((ImprovementTypes)iI, true) * 50;
-						}
+						iValue += pair.second * countNumImprovedPlots(pair.first, true) * 50;
 					}
 
 					for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -6084,7 +6081,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							iValue += kBuilding.getFoodKept() / 2;
 						}
 
-						iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, iFoodDifference, aiFreeSpecialistYield[iI]);
+						iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
 
 						int iGlobalModifier = kBuilding.getGlobalYieldModifier(iI);
 						int iAreaModifier = kBuilding.getAreaYieldModifier(iI);
@@ -6138,7 +6135,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				{
 					if (iFocusFlags & BUILDINGFOCUS_FOOD)
 					{
-						iValue += AI_buildingYieldValue(YIELD_FOOD, eBuilding, kBuilding, bForeignTrade, iFoodDifference, aiFreeSpecialistYield[YIELD_FOOD]);
+						iValue += AI_buildingYieldValue(YIELD_FOOD, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_FOOD]);
 
 						iValue += kBuilding.getFoodKept();
 					}
@@ -6147,7 +6144,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Production");
 
-						int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, iFoodDifference, aiFreeSpecialistYield[YIELD_PRODUCTION]);
+						int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_PRODUCTION]);
 
 						// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
 						// we do _not_ want to build this here (unless the value was small anyway)
@@ -6338,17 +6335,28 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	return std::max(0, iValue);
 }
 
-int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield) const
+int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const
 {
-	int iValue = (
-		tradeRouteValue(kBuilding, eYield, bForeignTrade)
-		+
-		AI_buildingSpecialYieldChangeValue(eBuilding, eYield)
-	);
+	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
+
 	int iBaseRate = getPlotYield(eYield);
 	{
 		int iPlotChange = 0;
-		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
+		foreach_(const PlotArray& pair, kBuilding.getPlotYieldChanges())
+		{
+			if (pair.second[eYield] != 0)
+			{
+				int iCount = 0;
+				foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS))
+				{
+					if (plotX->getPlotType() == pair.first && canWork(plotX))
+					{
+						iPlotChange += pair.second[eYield];
+					}
+				}
+			}
+		}
+		foreach_(const TerrainArray& pair, kBuilding.getTerrainYieldChanges())
 		{
 			if (pair.second[eYield] != 0)
 			{
@@ -9137,25 +9145,13 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 
 			if (iMinTurns > 10
-				&&
-				(
+			&& (
 					building.getHappiness() > 0 && angryPopulation() > 0
 					||
 					building.getHealth() > 0 && healthRate() < 0
-					)
-				) iMinTurns = 10;
+				)
+			) iMinTurns = 10;
 
-
-			if (building.getSeaPlotYieldChange(YIELD_FOOD) > 0 || building.getRiverPlotYieldChange(YIELD_FOOD) > 0)
-			{
-				iMinTurns = std::min(iMinTurns, 10);
-
-				if (AI_buildingSpecialYieldChangeValue(eProductionBuilding, YIELD_FOOD) > (getPopulation() * 2))
-				{
-					bEssential = true;
-					bGrowth = true;
-				}
-			}
 
 			if (building.getMaintenanceModifier() < 0 && getMaintenance() >= 10)
 			{
@@ -12744,50 +12740,6 @@ void CvCityAI::AI_stealPlots()
 }
 
 
-int CvCityAI::AI_buildingSpecialYieldChangeValue(BuildingTypes eBuilding, YieldTypes eYield) const
-{
-	const int iChange = GC.getBuildingInfo(eBuilding).getSeaPlotYieldChange(eYield);
-	if (iChange == 0) return 0;
-
-	int iValue = 0;
-	int iWorkedCount = 0;
-	foreach_(const CvPlot* pLoopPlot, plots(true))
-	{
-		if (pLoopPlot->isWater() && pLoopPlot->getWorkingCity() == this)
-		{
-			// Food is main yield from water plots,
-			// so additional yield of any kind holds more value the more food yield the plot have
-			// because food yield is the main reason to work the tile in the first place.
-			iValue += 2 * pLoopPlot->getYield(YIELD_FOOD);
-
-			if (eYield == YIELD_FOOD)
-			{
-				iValue += 2 * iChange;
-			}
-			else iValue += iChange;
-
-			// +4 if being worked.
-			if (pLoopPlot->isBeingWorked())
-			{
-				iValue += 4;
-				iWorkedCount++;
-			}
-			// +6 if a bonus.
-			iValue += (pLoopPlot->getBonusType(getTeam()) != NO_BONUS ? 6 : 0);
-		}
-	}
-	if (iWorkedCount == 0)
-	{
-		const SpecialistTypes eDefaultSpecialist = (SpecialistTypes)GC.getDEFAULT_SPECIALIST();
-		if (eDefaultSpecialist == NO_SPECIALIST || getSpecialistCount(eDefaultSpecialist) == 0)
-		{
-			iValue /= 2;
-		}
-	}
-	return iValue;
-}
-
-
 int CvCityAI::AI_yieldMultiplier(YieldTypes eYield) const
 {
 	PROFILE_FUNC();
@@ -14308,20 +14260,19 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		return true;
 	}
 
-	bool buildingModifiesGenericYields =
+	const bool buildingModifiesGenericYields =
 	(
 		kBuilding.getBonusYieldModifier(NO_BONUS, NO_COMMERCE) > 0 ||
 		kBuilding.getBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0 ||
 		kBuilding.getVicinityBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0
 	);
 
-	bool buildingModifiesCommerceYields =
+	const bool buildingModifiesCommerceYields =
 	(
 		buildingModifiesGenericYields
 		|| kBuilding.getYieldModifier(YIELD_COMMERCE) > 0
 		|| GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_COMMERCE, eBuilding) > 0
 		|| kBuilding.getPowerYieldModifier(YIELD_COMMERCE) > 0
-		|| kBuilding.getSeaPlotYieldChange(YIELD_COMMERCE) > 0
 		|| kBuilding.getRiverPlotYieldChange(YIELD_COMMERCE) > 0
 		|| getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) > 0
 	);
@@ -14333,7 +14284,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		if (buildingModifiesGenericYields
 		|| bHasTradeRouteValue
 		|| kBuilding.getFoodKept() > 0
-		|| kBuilding.getSeaPlotYieldChange(YIELD_FOOD) > 0
 		|| GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_FOOD, eBuilding) > 0
 		|| kBuilding.getYieldModifier(YIELD_FOOD) > 0
 		|| kBuilding.getRiverPlotYieldChange(YIELD_FOOD) > 0
@@ -14349,7 +14299,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getYieldModifier(YIELD_PRODUCTION) > 0
 		|| GET_TEAM(getTeam()).getBuildingYieldTechModifier(YIELD_PRODUCTION, eBuilding) > 0
 		|| kBuilding.getPowerYieldModifier(YIELD_PRODUCTION) > 0
-		|| kBuilding.getSeaPlotYieldChange(YIELD_PRODUCTION) > 0
 		|| kBuilding.getRiverPlotYieldChange(YIELD_PRODUCTION) > 0
 		|| kBuilding.getHurryCostModifier() < 0
 		|| kBuilding.getMilitaryProductionModifier() > 0
@@ -14372,7 +14321,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_GOLD) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_GOLD) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_GOLD) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_GOLD, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14388,7 +14337,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_RESEARCH) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_RESEARCH) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_RESEARCH) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_RESEARCH, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14403,7 +14352,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_CULTURE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_CULTURE) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_CULTURE) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_CULTURE, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -14546,7 +14495,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		if (kBuilding.getSpecialistCount(NO_SPECIALIST) > 0 ||
 			kBuilding.getFreeSpecialistCount(NO_SPECIALIST) > 0 ||
-			kBuilding.getImprovementFreeSpecialist(NO_IMPROVEMENT) > 0 ||
+			!kBuilding.getImprovementFreeSpecialists().empty() ||
 			kBuilding.getTechSpecialistChange(NO_TECH, NO_SPECIALIST) > 0)
 		{
 			return true;
@@ -14563,7 +14512,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getGlobalCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getSpecialistExtraCommerce(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getStateReligionCommerce(COMMERCE_ESPIONAGE) > 0 ||
-			kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_ESPIONAGE) > 0)
+			GET_TEAM(getTeam()).getBuildingCommerceTechModifier(COMMERCE_ESPIONAGE, eBuilding) > 0)
 		{
 			return true;
 		}
@@ -15635,13 +15584,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				PROFILE("CalculateAllBuildingValues.CommerceYields");
 
 				// commerce yield
-				int iCommerceYieldValue =
-				(
-					AI_buildingYieldValue(
-						YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade,
-						iFoodDifference, aiFreeSpecialistYield[YIELD_COMMERCE]
-					)
+				const int iCommerceYieldValue = (
+					AI_buildingYieldValue(YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_COMMERCE])
 				);
+
 				valuesCache->Accumulate(
 					BUILDINGFOCUSINDEX_GOLD,
 					kOwner.getCommercePercent(COMMERCE_GOLD) * iCommerceYieldValue
@@ -15861,12 +15807,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+				foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
 				{
-					if (kBuilding.getImprovementFreeSpecialist(iI) > 0)
-					{
-						iValue += kBuilding.getImprovementFreeSpecialist(iI) * countNumImprovedPlots((ImprovementTypes)iI, true) * 50;
-					}
+					iValue += pair.second * countNumImprovedPlots(pair.first, true) * 50;
 				}
 
 				for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -16183,7 +16126,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						iValue += kBuilding.getFoodKept() / 2;
 					}
 
-					iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, iFoodDifference, aiFreeSpecialistYield[iI]);
+					iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
 
 					int iGlobalModifier = kBuilding.getGlobalYieldModifier(iI);
 					int iAreaModifier = kBuilding.getAreaYieldModifier(iI);
@@ -16237,11 +16180,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				valuesCache->AccumulateTo(
 					BUILDINGFOCUSINDEX_FOOD,
-					AI_buildingYieldValue(
-						YIELD_FOOD, eBuilding, kBuilding, bForeignTrade,
-						iFoodDifference, aiFreeSpecialistYield[YIELD_FOOD]
-					)
-					+ kBuilding.getFoodKept(),
+					AI_buildingYieldValue(YIELD_FOOD, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_FOOD]) + kBuilding.getFoodKept(),
 					true
 				);
 			}
@@ -16249,7 +16188,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				PROFILE("CalculateAllBuildingValues.Production");
 				int iValue = 0;
 
-				int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, iFoodDifference, aiFreeSpecialistYield[YIELD_PRODUCTION]);
+				int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_PRODUCTION]);
 
 				// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
 				// we do _not_ want to build this here (unless the value was small anyway)
@@ -16440,7 +16379,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	iResult += iTempValue;
 
 	// add value for a commerce modifier
-	int iCommerceModifier = kBuilding.getCommerceModifier(iI) + GET_TEAM(getTeam()).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
+	int iCommerceModifier = kBuilding.getCommerceModifier(iI) + GET_TEAM(getTeam()).getBuildingCommerceTechModifier((CommerceTypes)iI, eBuilding);
 
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{

@@ -269,7 +269,6 @@ public:
 	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 

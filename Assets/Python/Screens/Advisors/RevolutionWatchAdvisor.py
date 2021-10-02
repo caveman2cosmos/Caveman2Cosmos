@@ -588,8 +588,13 @@ class RevolutionWatchAdvisor:
 				else:
 					icon += u"%c" %(gc.getReligionInfo(info.getReligionType()).getChar())
 
-			if info.getFoodKept() > 0 or info.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD) > 0:
+			if info.getFoodKept() > 0:
 				icon += self.foodIcon
+			else:
+				for entry in info.getPlotYieldChange():
+					if entry.iIndex == YieldTypes.YIELD_FOOD and entry.iValue > 0:
+						icon += self.foodIcon
+						break
 
 			if info.getFreeExperience() > 0 or \
 				info.getFreePromotion() != -1 or \

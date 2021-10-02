@@ -261,8 +261,6 @@ public:
 	int* getAreaYieldModifierArray() const;
 	int getGlobalYieldModifier(int i) const;
 	int* getGlobalYieldModifierArray() const;
-	int getSeaPlotYieldChange(int i) const;
-	int* getSeaPlotYieldChangeArray() const;
 	int getRiverPlotYieldChange(int i) const;
 	int* getRiverPlotYieldChangeArray() const;
 	int getGlobalSeaPlotYieldChange(int i) const;
@@ -304,7 +302,7 @@ public:
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
 
 	int getFlavorValue(int i) const;
-	int getImprovementFreeSpecialist(int i) const;
+	const IDValueMap<ImprovementTypes, int>& getImprovementFreeSpecialists() const { return m_improvementFreeSpecialists; }
 
 	bool isCommerceFlexible(int i) const;
 
@@ -345,8 +343,14 @@ public:
 	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
+	const IDValueMap<TechTypes, int*>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
+	const python::list cyGetTechCommerceModifiers() const;
+
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
+
+	const IDValueMap<PlotTypes, int*>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
+	const python::list cyGetPlotYieldChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
@@ -402,9 +406,6 @@ public:
 
 	int getTechSpecialistChange(int i, int j) const;
 	int* getTechSpecialistChangeArray(int i) const;
-
-	int getTechCommerceModifier(int i, int j) const;
-	int* getTechCommerceModifierArray(int i) const;
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 
@@ -472,7 +473,6 @@ public:
 	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
 	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
 	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
-	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
 	bool isAnyBonusCommerceModifiers() const		{ return m_ppaiBonusCommerceModifier != NULL; }
 	bool isAnyBonusYieldChanges() const				{ return m_ppaiBonusYieldChanges != NULL; }
 	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
@@ -554,8 +554,7 @@ private:
 	bool m_bDamageAttackerCapable;
 	bool m_bAutoBuild;
 	bool m_bQuarantine;
-	mutable bool m_bEnablesOtherBuildingsCalculated;
-	mutable bool m_bEnablesOtherBuildingsValue;
+	bool m_bEnablesOtherBuildings;
 	bool m_bEnablesUnits;
 
 	int m_iFreePromotion_2;
@@ -739,7 +738,6 @@ private:
 	bool* m_pabHurry;
 
 	int* m_piBonusDefenseChanges;
-	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
 	int* m_piYieldChange;
@@ -762,12 +760,10 @@ private:
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
-	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
 	int** m_ppaiBonusCommerceModifier;
 	int** m_ppaiTechSpecialistChange;
-	int** m_ppaiTechCommerceModifier;
 	int** m_ppiImprovementYieldChanges;
 	int** m_ppaiBonusYieldChanges;
 	int** m_ppaiBonusCommercePercentChanges;
@@ -814,6 +810,7 @@ private:
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingCostModifier;
+	IDValueMap<ImprovementTypes, int> m_improvementFreeSpecialists;
 	IDValueMap<ReligionTypes, int> m_religionChange;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
@@ -825,7 +822,9 @@ private:
 	IDValueMap<TechTypes, int*> m_techYieldChanges;
 	IDValueMap<TechTypes, int*> m_techYieldModifiers;
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
+	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
+	IDValueMap<PlotTypes, int*> m_aPlotYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

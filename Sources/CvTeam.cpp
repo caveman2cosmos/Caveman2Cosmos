@@ -5210,6 +5210,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 				{
 					cityX->changeBuildingCommerceTechChange((CommerceTypes)iJ, iChange * cityX->getBuildingCommerceTechChange((CommerceTypes)iJ, eTech));
+					cityX->changeBuildingCommerceModifier((CommerceTypes)iJ, iChange * cityX->getBuildingCommerceTechModifier((CommerceTypes)iJ, eTech));
 				}
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
@@ -5658,6 +5659,20 @@ int CvTeam::getBuildingCommerceTechChange(const CommerceTypes eIndex, const Buil
 	return iCommerce100;
 }
 
+
+int CvTeam::getBuildingCommerceTechModifier(const CommerceTypes eIndex, const BuildingTypes eBuilding) const
+{
+	int iMod = 0;
+	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceModifiers())
+	{
+		if (isHasTech(pair.first))
+		{
+			iMod += pair.second[eIndex];
+		}
+	}
+	return iMod;
+}
+
 // Protected Functions...
 
 void CvTeam::doWarWeariness()
@@ -5993,11 +6008,6 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		&& GC.getSpecialBuildingInfo(GC.getBuildingInfo((BuildingTypes)iI).getSpecialBuilding()).getObsoleteTech() == eTech)
 		{
 			changeObsoleteBuildingCount((BuildingTypes)iI, iChange);
-		}
-
-		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-		{
-			changeBuildingCommerceModifier(((BuildingTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifier(eTech, iJ) * iChange));
 		}
 
 		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
@@ -7565,39 +7575,6 @@ void CvTeam::changeBuildingSpecialistChange(BuildingTypes eIndex1, SpecialistTyp
 					pLoopCity->updateMaxSpecialistCount(eIndex1, eIndex2, -iOldValue);
 					// set the new
 					pLoopCity->updateMaxSpecialistCount(eIndex1, eIndex2, getBuildingSpecialistChange(eIndex1, eIndex2));
-				}
-			}
-		}
-	}
-}
-
-int CvTeam::getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
-	return m_ppiBuildingCommerceModifier[eIndex1][eIndex2];
-}
-
-void CvTeam::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
-
-	if (iChange != 0)
-	{
-		const int iOldValue = getBuildingCommerceModifier(eIndex1, eIndex2);
-		m_ppiBuildingCommerceModifier[eIndex1][eIndex2] += iChange;
-
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
-			{
-				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-				{
-					if (pLoopCity->hasFullyActiveBuilding(eIndex1))
-					{
-						pLoopCity->updateCommerceModifierByBuilding(eIndex1, eIndex2, pLoopCity->getBuildingCommerceModifier(eIndex1, eIndex2) - iOldValue + getBuildingCommerceModifier(eIndex1, eIndex2));
-					}
 				}
 			}
 		}

@@ -8731,7 +8731,7 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 	{
 		return;
 	}
-	CivicTypes* paeOldCivics = new CivicTypes[GC.getNumCivicOptionInfos()];
+	bst::scoped_array<CivicTypes> paeOldCivics(new CivicTypes[GC.getNumCivicOptionInfos()]);
 
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
@@ -8782,9 +8782,6 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 	{
 		gDLL->getInterfaceIFace()->setDirty(Popup_DIRTY_BIT, true); // to force an update of the civic chooser popup
 	}
-
-	CvEventReporter::getInstance().playerRevolution(getID(), iAnarchyLength, paeOldCivics, paeNewCivics);
-	delete [] paeOldCivics;
 }
 
 
@@ -27710,11 +27707,11 @@ void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eBuilding, CommerceT
 	{
 		m_ppiBuildingCommerceModifier[eBuilding][eCommerce] += iChange;
 
-		foreach_(CvCity* pLoopCity, cities())
+		foreach_(CvCity* cityX, cities())
 		{
-			if (pLoopCity->hasFullyActiveBuilding(eBuilding))
+			if (cityX->hasFullyActiveBuilding(eBuilding))
 			{
-				pLoopCity->updateCommerceModifierByBuilding(eBuilding, eCommerce, pLoopCity->getBuildingCommerceModifier(eBuilding, eCommerce) + iChange);
+				cityX->changeBuildingCommerceModifier(eCommerce, iChange);
 			}
 		}
 		setCommerceDirty();

@@ -760,22 +760,6 @@ struct PropertySpawns
 	void write(FDataStreamBase* pStream);
 };
 
-struct BuildingCommerceModifier
-{
-	BuildingTypes eBuilding;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	BuildingCommerceModifier()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
 const struct TechYieldChange
 {
 	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)
@@ -813,6 +797,19 @@ const struct TerrainYieldChange
 	const TerrainTypes eTerrain;
 	const YieldTypes eYield;
 	const int iChange;
+};
+
+const struct GenericTrippleInt
+{
+	GenericTrippleInt(int iType, int iIndex, int iValue)
+		: iType(iType)
+		, iIndex(iIndex)
+		, iValue(iValue)
+	{}
+
+	const int iType;
+	const int iIndex;
+	const int iValue;
 };
 
 struct DllExport PBGameSetupData

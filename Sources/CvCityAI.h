@@ -328,7 +328,7 @@ protected:
 	bool AI_potentialPlot(short* piYields) const;
 	bool AI_foodAvailable(int iExtra = 0) const;
 
-	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield) const;
+	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const;
 
 	void AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
 	void AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int iDesiredFoodChange) const;
@@ -364,8 +364,6 @@ protected:
 	//int AI_calculateTargetCulturePerTurn() const;
 
 	void AI_stealPlots();
-
-	int AI_buildingSpecialYieldChangeValue(BuildingTypes kBuilding, YieldTypes eYield) const;
 
 	void AI_cachePlayerCloseness(int iMaxDistance);
 	void AI_updateWorkersNeededHere();

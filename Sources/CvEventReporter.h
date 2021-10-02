@@ -132,8 +132,6 @@ public:
 	void playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
 
-	void playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics);
-
 	void changeTeam(TeamTypes eOld, TeamTypes eNew);
 
 	void victory(TeamTypes eWinner, VictoryTypes eVictory);
