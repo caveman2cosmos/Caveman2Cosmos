@@ -1479,18 +1479,11 @@ class CvEventManager:
 			iImprovement = GC.getInfoTypeForString("IMPROVEMENT_MACHU_PICCHU")
 			if iImprovement > -1:
 				aList = []
-				iCount = -1
 				for CyPlot in CyCity.plot().rect(3, 3):
 					if CyPlot.isPeak():
-						x = CyPlot.getX()
-						y = CyPlot.getY()
-						GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_FOOD, 1)
-						GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_PRODUCTION, 2)
-						GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_COMMERCE, 1)
 						aList.append(CyPlot)
-						iCount += 1
 				if aList:
-					CyPlot = aList[GAME.getSorenRandNum(iCount, "Random Peak")]
+					CyPlot = aList[GAME.getSorenRandNum(len(aList), "Random Peak")]
 					CyPlot.setImprovementType(iImprovement)
 				else:
 					print ("Warning CvEventManager.onBuildingBuilt\n\tMachu Picchu has been built in %s where there is no peaks in vicinity." % CyCity.getName())

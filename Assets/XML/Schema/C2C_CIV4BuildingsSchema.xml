@@ -170,6 +170,16 @@
 	<ElementType name="TerrainYieldChanges" content="eltOnly">
 		<element type="TerrainYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="PlotYieldChanges" content="eltOnly">
+		<element type="PlotYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PlotYieldChange" content="eltOnly">
+		<element type="PlotType"/>
+		<element type="Yields"/>
+	</ElementType>
+	<ElementType name="Yields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="LocalSpecialistCommerceChange" content="eltOnly">
 		<element type="SpecialistType"/>
 		<element type="CommerceChanges"/>
@@ -501,9 +511,6 @@
 	<ElementType name="iHurryAngerModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bBorderObstacle" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
-	<ElementType name="SeaPlotYieldChanges" content="eltOnly">
-		<element type="iYield" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="RiverPlotYieldChanges" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -933,7 +940,8 @@
 		<element type="BonusCommercePercentChanges" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="fVisibilityPriority" minOccurs="0"/>
-		<element type="SeaPlotYieldChanges" minOccurs="0"/>
+		<element type="TerrainYieldChange" minOccurs="0"/>
+		<element type="PlotYieldChanges" minOccurs="0"/>
 		<element type="RiverPlotYieldChanges" minOccurs="0"/>
 		<element type="GlobalSeaPlotYieldChanges" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
@@ -1162,6 +1170,7 @@
 	</ElementType>
 	<ElementType name="bPrereqTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainType" content="textOnly"/>
+	<ElementType name="PlotType" content="textOnly"/>
 	<ElementType name="PrereqTerrain" content="eltOnly">
 		<element type="TerrainType"/>
 		<element type="bPrereqTerrain"/>

@@ -492,6 +492,7 @@ private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
 public:
+	void registerPlotTypes();
 	void registerUnitAIs();
 	void registerAIScales();
 	void registerGameObjects();
@@ -558,6 +559,7 @@ public:
 
 	int getNumBuildingInfos() const;
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
+	const std::vector<CvBuildingInfo*>& getBuildingInfos() const { return m_paBuildingInfo; }
 
 	int getNumSpecialBuildingInfos() const;
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;

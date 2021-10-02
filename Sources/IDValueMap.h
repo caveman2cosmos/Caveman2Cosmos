@@ -230,13 +230,15 @@ void publishIDValueMapPythonInterface()
 
 typedef std::pair<BonusTypes, int> BonusModifier2;
 typedef std::pair<BuildingTypes, int> BuildingModifier2;
+typedef std::pair<ImprovementTypes, int> ImprovementModifier2;
+typedef std::pair<ReligionTypes, int> ReligionModifier;
 typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
-typedef std::pair<ReligionTypes, int> ReligionModifier;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
 typedef std::pair<TechTypes, int*> TechArray;
-typedef std::pair<TerrainTypes, int*> TerrainYieldChanges;
+typedef std::pair<TerrainTypes, int*> TerrainArray;
+typedef std::pair<PlotTypes, int*> PlotArray;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;
 typedef IDValueMap<int, int, 0> IDValueMapModifier;

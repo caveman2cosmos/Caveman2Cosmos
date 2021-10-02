@@ -494,7 +494,7 @@ void CyInfoPythonInterface1()
 
 		.def("getYieldChange", &CvBuildingInfo::getYieldChange, "int (int i)")
 		.def("getYieldPerPopChange", &CvBuildingInfo::getYieldPerPopChange, "int (int i)")
-		.def("getSeaPlotYieldChange", &CvBuildingInfo::getSeaPlotYieldChange, "int (int i)")
+
 		.def("getRiverPlotYieldChange", &CvBuildingInfo::getRiverPlotYieldChange, "int (int i)")
 		.def("getYieldModifier", &CvBuildingInfo::getYieldModifier, "int (int i)")
 		.def("getPowerYieldModifier", &CvBuildingInfo::getPowerYieldModifier, "int (int i)")
@@ -532,6 +532,7 @@ void CyInfoPythonInterface1()
 		.def("getSpecialistCommerceChange", &CvBuildingInfo::getSpecialistCommerceChange, "int (int i, int j)")
 		.def("getSpecialistYieldChange", &CvBuildingInfo::getSpecialistYieldChange, "int (int i, int j)")
 		.def("getTerrainYieldChange", &CvBuildingInfo::cyGetTerrainYieldChanges)
+		.def("getPlotYieldChange", &CvBuildingInfo::cyGetPlotYieldChanges)
 		.def("getFreePromoTypes", &CvBuildingInfo::cyGetFreePromoTypes)
 
 		.def("getBonusYieldChanges", &CvBuildingInfo::getBonusYieldChanges, "int (int i, int j)")
@@ -548,7 +549,7 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqNumOfBuildings", &CvBuildingInfo::getPrereqNumOfBuildings, python::return_value_policy<python::reference_existing_object>())
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
-		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
+		.def("getImprovementFreeSpecialists", &CvBuildingInfo::getImprovementFreeSpecialists, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getGlobalBuildingCostModifiers", &CvBuildingInfo::getGlobalBuildingCostModifiers, python::return_value_policy<python::reference_existing_object>())
 		.def("getGlobalBuildingCommerceChanges", &CvBuildingInfo::cyGetGlobalBuildingCommerceChanges)

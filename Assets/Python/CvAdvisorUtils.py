@@ -723,7 +723,10 @@ def cityAdvise(CyCity, iPlayer):
 
 							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
-							iValue = CvBuildingInfoX.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD)
+							for entry in CvBuildingInfoX.getPlotYieldChange():
+								if entry.iType == PlotTypes.PLOT_OCEAN and entry.iIndex == YieldTypes.YIELD_FOOD:
+									iValue = entry.iValue
+
 							if iValue <= iBestValue: continue
 
 							if CyCity.canConstruct(iBuildingX, False, False, False):

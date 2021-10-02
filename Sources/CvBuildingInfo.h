@@ -261,8 +261,6 @@ public:
 	int* getAreaYieldModifierArray() const;
 	int getGlobalYieldModifier(int i) const;
 	int* getGlobalYieldModifierArray() const;
-	int getSeaPlotYieldChange(int i) const;
-	int* getSeaPlotYieldChangeArray() const;
 	int getRiverPlotYieldChange(int i) const;
 	int* getRiverPlotYieldChangeArray() const;
 	int getGlobalSeaPlotYieldChange(int i) const;
@@ -304,7 +302,7 @@ public:
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
 
 	int getFlavorValue(int i) const;
-	int getImprovementFreeSpecialist(int i) const;
+	const IDValueMap<ImprovementTypes, int>& getImprovementFreeSpecialists() const { return m_improvementFreeSpecialists; }
 
 	bool isCommerceFlexible(int i) const;
 
@@ -350,6 +348,9 @@ public:
 
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
+
+	const IDValueMap<PlotTypes, int*>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
+	const python::list cyGetPlotYieldChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
@@ -553,8 +554,7 @@ private:
 	bool m_bDamageAttackerCapable;
 	bool m_bAutoBuild;
 	bool m_bQuarantine;
-	mutable bool m_bEnablesOtherBuildingsCalculated;
-	mutable bool m_bEnablesOtherBuildingsValue;
+	bool m_bEnablesOtherBuildings;
 	bool m_bEnablesUnits;
 
 	int m_iFreePromotion_2;
@@ -739,7 +739,6 @@ private:
 	bool* m_pabHurry;
 
 	int* m_piBonusDefenseChanges;
-	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
 	int* m_piYieldChange;
@@ -762,7 +761,6 @@ private:
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
-	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
 	int** m_ppaiBonusCommerceModifier;
@@ -812,6 +810,7 @@ private:
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingCostModifier;
+	IDValueMap<ImprovementTypes, int> m_improvementFreeSpecialists;
 	IDValueMap<ReligionTypes, int> m_religionChange;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
@@ -825,6 +824,7 @@ private:
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
 	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
+	IDValueMap<PlotTypes, int*> m_aPlotYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

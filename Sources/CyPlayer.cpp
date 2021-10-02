@@ -1129,11 +1129,6 @@ int CyPlayer::getPlayerTextColorA() const
 	return m_pPlayer->getPlayerTextColorA();
 }
 
-int CyPlayer::getSeaPlotYield(YieldTypes eIndex) const
-{
-	return m_pPlayer->getSeaPlotYield(eIndex);
-}
-
 int CyPlayer::getYieldRateModifier(YieldTypes eIndex) const
 {
 	return m_pPlayer->getYieldRateModifier(eIndex);

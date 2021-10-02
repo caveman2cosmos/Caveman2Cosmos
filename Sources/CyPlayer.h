@@ -297,7 +297,6 @@ public:
 	int getPlayerTextColorB() const;
 	int getPlayerTextColorA() const;
 
-	int getSeaPlotYield(YieldTypes eIndex) const;
 	int getYieldRateModifier(YieldTypes eIndex) const;
 	int getCommercePercent(int /*CommerceTypes*/ eIndex) const;
 	void changeCommercePercent(CommerceTypes eIndex, int iChange);
