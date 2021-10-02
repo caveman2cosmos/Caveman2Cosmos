@@ -302,7 +302,7 @@ public:
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
 
 	int getFlavorValue(int i) const;
-	int getImprovementFreeSpecialist(int i) const;
+	const IDValueMap<ImprovementTypes, int>& getImprovementFreeSpecialists() const { return m_improvementFreeSpecialists; }
 
 	bool isCommerceFlexible(int i) const;
 
@@ -761,7 +761,6 @@ private:
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
-	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
 	int** m_ppaiBonusCommerceModifier;
@@ -811,6 +810,7 @@ private:
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingCostModifier;
+	IDValueMap<ImprovementTypes, int> m_improvementFreeSpecialists;
 	IDValueMap<ReligionTypes, int> m_religionChange;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;

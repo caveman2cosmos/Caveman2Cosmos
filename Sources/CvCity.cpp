@@ -5236,9 +5236,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
+	foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
 	{
-		changeImprovementFreeSpecialists((ImprovementTypes)iI, kBuilding.getImprovementFreeSpecialist(iI) * iChange);
+		changeImprovementFreeSpecialists(pair.first, pair.second * iChange);
 	}
 
 	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealth())
