@@ -22427,6 +22427,29 @@ int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
 	return (int)m_aSpecialBuildingProductionModifiers.size();
 }
 
+namespace pure_traits
+{
+	bool isPositive(SpecialBuildingModifier& pair)
+	{
+		return pair.iModifier > 0;
+	}
+}
+
+bst::iterator_range<std::vector<SpecialBuildingModifier>::iterator> CvTraitInfo::getSpecialBuildingProduction()
+{
+	bst::iterator_range<std::vector<SpecialBuildingModifier>::iterator> rng(m_aSpecialBuildingProductionModifiers);
+
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	{
+		bst::function<bool (SpecialBuildingModifier&)> func = bind(pure_traits::isPositive, _1);
+		//bst::range_detail::filtered_range<bst::function<bool (SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > filteredRng = bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, isNegativeTrait() ? !func : func);
+		bst::range_detail::filtered_range<bst::function<bool (SpecialBuildingModifier&)>, std::vector<SpecialBuildingModifier> > filteredRng = bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, func);
+		return rng;
+
+	}
+	return m_aSpecialBuildingProductionModifiers;
+}
+
 SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumSpecialBuildingProductionModifiers(), iSpecialBuilding)

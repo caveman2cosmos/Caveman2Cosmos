@@ -5760,6 +5760,7 @@ public:
 
 	int getNumSpecialBuildingProductionModifiers() const;
 	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
+	bst::iterator_range<std::vector<SpecialBuildingModifier>::iterator> getSpecialBuildingProduction();
 
 	int getNumBuildingHappinessModifiers() const;
 	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
