@@ -22452,12 +22452,6 @@ namespace PureTraits
 
 		return bNegativeTrait ? bind(isNegativeValue, _1) : bind(isPositiveValue, _1);
 	}
-
-	//template <typename Range_t>
-	//const bst::filtered_range<bst::function<bool(typename const Range_t::value_type&)>, const Range_t> filter(const Range_t& rng, bool bNegativeTrait)
-	//{
-	//	return bst::adaptors::filter(rng, bindPredicate(bNegativeTrait));
-	//}
 };
 
 const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProductionModifiers() const
