@@ -360,7 +360,7 @@ public:
 	bool isPrereqAndCivics(int iCivic) const;
 	bool isPrereqOrTerrain(int i) const;
 	bool isPrereqAndTerrain(int i) const;
-	bool isPrereqOrImprovement(int i) const;
+	const std::vector<ImprovementTypes>& getPrereqOrImprovements() const { return m_prereqOrImprovement; }
 	bool isPrereqOrFeature(int i) const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
@@ -733,7 +733,6 @@ private:
 	bool* m_pbPrereqAndCivics;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
-	bool* m_pbPrereqOrImprovement;
 	bool* m_pbPrereqOrFeature;
 	bool* m_pbCommerceFlexible;
 	bool* m_pabHurry;
@@ -775,6 +774,7 @@ private:
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 
+	std::vector<ImprovementTypes> m_prereqOrImprovement;
 	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	std::vector<TechTypes> m_piPrereqAndTechs;

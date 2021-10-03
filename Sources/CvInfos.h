@@ -5786,6 +5786,7 @@ public:
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;

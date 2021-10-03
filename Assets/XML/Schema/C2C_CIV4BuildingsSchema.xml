@@ -1181,13 +1181,8 @@
 	<ElementType name="PrereqAndTerrain" content="eltOnly">
 		<element type="PrereqTerrain" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereqImprovement" content="textOnly" dt:type="boolean"/>
-	<ElementType name="PrereqImprovement" content="eltOnly">
-		<element type="ImprovementType"/>
-		<element type="bPrereqImprovement"/>
-	</ElementType>
 	<ElementType name="PrereqOrImprovement" content="eltOnly">
-		<element type="PrereqImprovement" minOccurs="0" maxOccurs="*"/>
+		<element type="ImprovementType"/>
 	</ElementType>
 	<ElementType name="FeatureType" content="textOnly"/>
 	<ElementType name="bPrereqFeature" content="textOnly" dt:type="boolean"/>

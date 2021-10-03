@@ -20272,22 +20272,21 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		return false;
 	}
 
-	bool bHasValidImprovement = false;
-	bool bRequiresOrImprovement = false;
-	for (int iI = 0; iI < GC.getNumImprovementInfos() && !bHasValidImprovement; iI++)
+	if (!kBuilding.getPrereqOrImprovements().empty())
 	{
-		if (kBuilding.isPrereqOrImprovement(iI))
+		bool bHasValidImprovement = false;
+		foreach_(const ImprovementTypes prereqOrImprovement, kBuilding.getPrereqOrImprovements())
 		{
-			bRequiresOrImprovement = true;
-			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == iI))
+			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == prereqOrImprovement))
 			{
 				bHasValidImprovement = true;
+				break;
 			}
 		}
-	}
-	if (!bHasValidImprovement && bRequiresOrImprovement)
-	{
-		return false;
+		if (!bHasValidImprovement)
+		{
+			return false;
+		}
 	}
 
 	bool bRequiresOrFeature = false;
