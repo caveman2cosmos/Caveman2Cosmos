@@ -284,11 +284,8 @@ public:
 	int getSpecialistCount(int i) const;
 	int getFreeSpecialistCount(int i) const;
 
-	int getBonusHealthChanges(int i) const;
-	const IDValueMap<BonusTypes, int>& getBonusHealth() const { return m_piBonusHealthChanges; }
-
-	int getBonusHappinessChanges(int i) const;
-	const IDValueMap<BonusTypes, int>& getBonusHappiness() const { return m_piBonusHappinessChanges; }
+	const IDValueMap<BonusTypes, int>& getBonusHealthChanges() const { return m_piBonusHealthChanges; }
+	const IDValueMap<BonusTypes, int>& getBonusHappinessChanges() const { return m_piBonusHappinessChanges; }
 
 	int getBonusProductionModifier(int i) const;
 	int getDomainFreeExperience(int i) const;

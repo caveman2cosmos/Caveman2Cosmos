@@ -4554,7 +4554,7 @@ int CvCity::getBonusHealth(BonusTypes eBonus) const
 	{
 		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			iHealth += GC.getBuildingInfo((BuildingTypes)iI).getBonusHealthChanges(eBonus);
+			iHealth += GC.getBuildingInfo((BuildingTypes)iI).getBonusHealthChanges().getValue(eBonus);
 		}
 	}
 	return iHealth;
@@ -4570,18 +4570,21 @@ int CvCity::getBonusHappiness(BonusTypes eBonus) const
 	{
 		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			iHappiness += GC.getBuildingInfo((BuildingTypes)iI).getBonusHappinessChanges(eBonus);
+			iHappiness += GC.getBuildingInfo((BuildingTypes)iI).getBonusHappinessChanges().getValue(eBonus);
 		}
 	}
-	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	if (hasBonus(eBonus))
 	{
-		if (GET_PLAYER(getOwner()).hasTrait((TraitTypes)iI) && hasBonus(eBonus))
+		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			for (int iJ = 0; iJ < GC.getTraitInfo((TraitTypes)iI).getNumBonusHappinessChanges(); iJ++)
+			if (GET_PLAYER(getOwner()).hasTrait((TraitTypes)iI))
 			{
-				if (GC.getTraitInfo((TraitTypes)iI).getBonusHappinessChange(iJ).eBonus == eBonus)
+				foreach_(const BonusModifier2& pair, GC.getTraitInfo((TraitTypes)iI).getBonusHappinessChanges())
 				{
-					iHappiness += GC.getTraitInfo((TraitTypes)iI).getBonusHappinessChange(iJ).iModifier;
+					if (pair.first == eBonus)
+					{
+						iHappiness += pair.second;
+					}
 				}
 			}
 		}
@@ -4634,7 +4637,7 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		{
 			if (hasFullyActiveBuilding((BuildingTypes)iI))
 			{
-				const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getBonusHealthChanges(eBonus);
+				const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getBonusHealthChanges().getValue(eBonus);
 
 				if (iValue >= 0)
 				{
@@ -4657,7 +4660,7 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		{
 			if (hasFullyActiveBuilding((BuildingTypes)iI))
 			{
-				const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getBonusHappinessChanges(eBonus);
+				const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getBonusHappinessChanges().getValue(eBonus);
 
 				if (iValue >= 0)
 				{
@@ -4668,15 +4671,16 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		}
 		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			if (GET_PLAYER(getOwner()).hasTrait((TraitTypes)iI))
+			const TraitTypes eTrait = (TraitTypes)iI;
+			if (GET_PLAYER(getOwner()).hasTrait(eTrait))
 			{
-				TraitTypes eTrait = (TraitTypes)iI;
 				int iValue = 0;
-				for (int iJ = 0; iJ < GC.getTraitInfo(eTrait).getNumBonusHappinessChanges(); iJ++)
+				foreach_(const BonusModifier2& pair, GC.getTraitInfo((TraitTypes)iI).getBonusHappinessChanges())
 				{
-					if (GC.getTraitInfo(eTrait).getBonusHappinessChange(iJ).eBonus == eBonus)
+					if (pair.first == eBonus)
 					{
-						iValue = GC.getTraitInfo((TraitTypes)iI).getBonusHappinessChange(iJ).iModifier;
+						iValue = pair.second;
+						break;
 					}
 				}
 				if (iValue >= 0)
@@ -5241,7 +5245,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeImprovementFreeSpecialists(pair.first, pair.second * iChange);
 	}
 
-	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealth())
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealthChanges())
 	{
 		if (hasBonus(modifier.first))
 		{
@@ -5256,7 +5260,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		}
 	}
 
-	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappiness())
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappinessChanges())
 	{
 		if (hasBonus(modifier.first))
 		{
@@ -9144,7 +9148,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	}
 
 	// Bonus
-	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappiness())
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappinessChanges())
 	{
 		if ((hasBonus(modifier.first) || kBuilding.getFreeBonus() == modifier.first || kBuilding.hasExtraFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
@@ -9319,7 +9323,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 	}
 
 	// Bonus
-	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealth())
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealthChanges())
 	{
 		if ((hasBonus(modifier.first) || kBuilding.getFreeBonus() == modifier.first || kBuilding.hasExtraFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{

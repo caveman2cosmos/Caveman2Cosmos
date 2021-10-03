@@ -10687,35 +10687,31 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		// Extra Happiness by Bonuses
-		for (iI = 0; iI < kTrait.getNumBonusHappinessChanges(); iI++)
+		foreach_(const BonusModifier2& pair, kTrait.getBonusHappinessChanges())
 		{
-			iCurrentModifier = kTrait.getBonusHappinessChange(iI).iModifier;
-			if (iCurrentModifier != 0)
+			if (!algo::container_contains(iIterationValues, pair.second))
 			{
-				if (!algo::container_contains(iIterationValues, iCurrentModifier))
-				{
-					iIterationValues.push_back(kTrait.getBonusHappinessChange(iI).iModifier);
-				}
+				iIterationValues.push_back(pair.second);
 			}
 		}
 		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
-			for (iI = 0; iI < kTrait.getNumBonusHappinessChanges(); iI++)
+			foreach_(const BonusModifier2& pair, kTrait.getBonusHappinessChanges())
 			{
-				iCurrentModifier = kTrait.getBonusHappinessChange(iI).iModifier;
+				iCurrentModifier = pair.second;
 				if (iCurrentModifier == itrValue)
 				{
-					const BonusTypes eTempBonus = kTrait.getBonusHappinessChange(iI).eBonus;
+					const CvBonusInfo& kTempBonus = GC.getBonusInfo(pair.first);
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
-						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST", iCurrentModifier, ((iCurrentModifier > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), CvWString(GC.getBonusInfo(eTempBonus).getType()).GetCString(), GC.getBonusInfo(eTempBonus).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST", iCurrentModifier, ((iCurrentModifier > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), CvWString(kTempBonus.getType()).c_str(), kTempBonus.getTextKeyWide()));
 						bFirst = false;
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL", CvWString(GC.getBonusInfo(eTempBonus).getType()).GetCString(), GC.getBonusInfo(eTempBonus).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL", CvWString(kTempBonus.getType()).c_str(), kTempBonus.getTextKeyWide()));
 					}
 				}
 			}
@@ -10726,17 +10722,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		iIterationValues.clear();
 		bFound = false;
 		bFirst = true;
-		//iLast = 0;
-		//for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-		//{
-		//	if (kTrait.getBonusHappinessChanges(iI) != 0)
-		//	{
-		//		szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE", abs(kTrait.getBonusHappinessChanges(iI)), ((kTrait.getBonusHappinessChanges(iI) > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
-		//		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getDescription());
-		//		setListHelp(szHelpString, szFirstBuffer, szTempBuffer, L", ", (kTrait.getBonusHappinessChanges(iI) != iLast));
-		//		iLast = kTrait.getBonusHappinessChanges(iI);
-		//	}
-		//}
 
 		//	War Weariness
 		if (kTrait.getWarWearinessAccumulationModifier() != 0)
@@ -22908,7 +22893,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealth())
+		foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealthChanges())
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE", abs(modifier.second), (modifier.second > 0 ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
 			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo(modifier.first).getType()).GetCString(), GC.getBonusInfo(modifier.first).getDescription());
@@ -22979,7 +22964,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 
 		iLast = 0;
-		foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappiness())
+		foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappinessChanges())
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE", abs(modifier.second), modifier.second ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)).c_str());
 			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo(modifier.first).getType()).GetCString(), GC.getBonusInfo(modifier.first).getDescription());
@@ -26111,19 +26096,14 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 			{
 				if (kActivePlayer.isActiveCorporation((CorporationTypes)iCorp) || (bTradingPlayer && GET_PLAYER(eTradingPlayer).isActiveCorporation((CorporationTypes)iCorp)))
 				{
-					foreach_(const BonusTypes ePrereqBonus, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
+					if (algo::container_contains(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
 					{
-						if (eBonus == ePrereqBonus)
-						{
-							if (algo::any_of(kActivePlayer.cities(),
-								bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))
+						if (algo::any_of(kActivePlayer.cities(), bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))
 
-							|| (bTradingPlayer && algo::any_of(GET_PLAYER(eTradingPlayer).cities(),
-								bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))))
-							{
-								szBuffer.append(GC.getCorporationInfo((CorporationTypes)iCorp).getChar());
-								break;
-							}
+						|| (bTradingPlayer && algo::any_of(GET_PLAYER(eTradingPlayer).cities(), bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))))
+						{
+							szBuffer.append(GC.getCorporationInfo((CorporationTypes)iCorp).getChar());
+							break;
 						}
 					}
 				}
@@ -26214,40 +26194,40 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 
 	}
 
-	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
+	foreach_(const CvBuildingInfo* pBuilding, GC.getBuildingInfos())
 	{
-		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(i);
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eLoopBuilding);
-		if (kBuilding.getBonusHappinessChanges(eBonus) != 0)
+		const int iHappiness = pBuilding->getBonusHappinessChanges().getValue(eBonus);
+		if (iHappiness != 0)
 		{
-			if (kBuilding.getBonusHappinessChanges(eBonus) > 0)
+			if (iHappiness > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HAPPY", kBuilding.getBonusHappinessChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HAPPY", iHappiness));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHAPPY", -kBuilding.getBonusHappinessChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHAPPY", -iHappiness));
 			}
 
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", kBuilding.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", pBuilding->getTextKeyWide()));
 		}
 
-		if (kBuilding.getBonusHealthChanges(eBonus) != 0)
+		const int iHealth = pBuilding->getBonusHealthChanges().getValue(eBonus);
+		if (iHealth != 0)
 		{
-			if (kBuilding.getBonusHealthChanges(eBonus) > 0)
+			if (iHealth > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HEALTHY", kBuilding.getBonusHealthChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HEALTHY", iHealth));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHEALTHY", -kBuilding.getBonusHealthChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHEALTHY", -iHealth));
 			}
 
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", kBuilding.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", pBuilding->getTextKeyWide()));
 		}
 	}
 
@@ -26260,7 +26240,7 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 
 		if (GET_PLAYER(eTradePlayer).canTradeItem(GC.getGame().getActivePlayer(), trade, false))
 		{
-			DenialTypes eDenial = GET_PLAYER(eTradePlayer).getTradeDenial(GC.getGame().getActivePlayer(), trade);
+			const DenialTypes eDenial = GET_PLAYER(eTradePlayer).getTradeDenial(GC.getGame().getActivePlayer(), trade);
 			if (eDenial != NO_DENIAL)
 			{
 				CvWString szTempBuffer;

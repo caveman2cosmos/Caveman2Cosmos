@@ -9320,8 +9320,8 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 									iTempValue += kLoopBuilding.getBonusCommercePercentChanges(eBonus, iJ) * iBuildingCount * getCommerceRate((CommerceTypes)iJ) / (10 * std::max(1, getNumCities() * getNumCities()));
 									iTempValue += kLoopBuilding.getBonusCommerceModifier(eBonus, iJ)  * iBuildingCount * 10 / std::max(1, getNumCities());
 								}
-								iTempValue += iBuildingCount * kLoopBuilding.getBonusHappinessChanges(eBonus) * 120 / std::max(1, getNumCities());
-								iTempValue += iBuildingCount * kLoopBuilding.getBonusHealthChanges(eBonus) * 80 / std::max(1, getNumCities());
+								iTempValue += iBuildingCount * kLoopBuilding.getBonusHappinessChanges().getValue(eBonus) * 120 / std::max(1, getNumCities());
+								iTempValue += iBuildingCount * kLoopBuilding.getBonusHealthChanges().getValue(eBonus) * 80 / std::max(1, getNumCities());
 								iTempValue += iBuildingCount * kLoopBuilding.getBonusDefenseChanges(eBonus) * 10 / std::max(1, getNumCities());
 
 								int iTempNonTradeValue = 0;

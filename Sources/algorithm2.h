@@ -341,6 +341,16 @@ namespace algo {
 		return container_contains(rng, item);
 	}
 
+	// FUNCTION TEMPLATE getKeyValue
+	// find the corresponding value for key
+	//template <typename Key_, typename Value_>
+	//Value_ getKeyValue(const IDValueMap<Key_, Value_>& map, Key_ key) {
+	//	foreach_(const std::pair<Key_, Value_>& pair, map)
+	//		if (pair.first == key)
+	//			return pair.second;
+	//	return 0;
+	//}
+
 	// FUNCTION TEMPLATE all_of
 	// test if all elements are true
 	template< class _Range >

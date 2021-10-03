@@ -632,28 +632,6 @@ int CvBuildingInfo::getFreeSpecialistCount(int i) const
 	return m_piFreeSpecialistCount ? m_piFreeSpecialistCount[i] : 0;
 }
 
-int CvBuildingInfo::getBonusHealthChanges(int i) const
-{
-	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
-
-	if (i == NO_BONUS)
-	{
-		return !m_piBonusHealthChanges.empty() ? 1 : 0;
-	}
-	return m_piBonusHealthChanges.getValue((BonusTypes)i);
-}
-
-int CvBuildingInfo::getBonusHappinessChanges(int i) const
-{
-	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
-
-	if (i == NO_BONUS)
-	{
-		return !m_piBonusHappinessChanges.empty() ? 1 : 0;
-	}
-	return m_piBonusHappinessChanges.getValue((BonusTypes)i);
-}
-
 int CvBuildingInfo::getBonusProductionModifier(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
