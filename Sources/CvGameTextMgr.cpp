@@ -12016,29 +12016,18 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// SpecialBuildings
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumSpecialBuildingInfos(); ++iI)
+		foreach_(const SpecialBuildingModifier& pair, kTrait.getSpecialBuildingProductionModifiers())
 		{
-			const SpecialBuildingTypes eSpecialBuilding = ((SpecialBuildingTypes)iI);
-
-			for (int j = 0; j < kTrait.getNumSpecialBuildingProductionModifiers(); j++)
-			{
-				if ((SpecialBuildingTypes)kTrait.getSpecialBuildingProductionModifier(j).eSpecialBuilding == eSpecialBuilding)
-				{
-					if (kTrait.getSpecialBuildingProductionModifier(j).iModifier !=0)
-					{
-						//if (kTrait.getSpecialBuildingProductionModifier(j).iModifier == 100)
-						//{
-						//	szText = gDLL->getText("TXT_KEY_TRAITHELP_DOUBLE_SPEED");
-						//}
-						//else
-						//{
-							szText = gDLL->getText("TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER", kTrait.getSpecialBuildingProductionModifier(j).iModifier);
-						//}
-						setListHelp(szHelpString, szText.GetCString(), GC.getSpecialBuildingInfo(eSpecialBuilding).getDescription(), L", ", (kTrait.getSpecialBuildingProductionModifier(j).iModifier != iLast));
-						iLast = kTrait.getSpecialBuildingProductionModifier(j).iModifier;
-					}
-				}
-			}
+			//if (pair.iModifier == 100)
+			//{
+			//	szText = gDLL->getText("TXT_KEY_TRAITHELP_DOUBLE_SPEED");
+			//}
+			//else
+			//{
+				szText = gDLL->getText("TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER", pair.second);
+			//}
+			setListHelp(szHelpString, szText.c_str(), GC.getSpecialBuildingInfo(pair.first).getDescription(), L", ", (pair.second != iLast));
+			iLast = pair.second;
 		}
 
 		// Buildings

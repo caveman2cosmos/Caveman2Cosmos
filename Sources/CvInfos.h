@@ -5758,8 +5758,7 @@ public:
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
 
-	int getNumSpecialBuildingProductionModifiers() const;
-	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
+	const IDValueMap<SpecialBuildingTypes, int>::filtered_range getSpecialBuildingProductionModifiers() const;
 
 	int getNumBuildingHappinessModifiers() const;
 	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
@@ -5974,7 +5973,7 @@ private:
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
 	std::vector<TechModifier2> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
-	std::vector<SpecialBuildingModifier> m_aSpecialBuildingProductionModifiers;
+	IDValueMap<SpecialBuildingTypes, int> m_aSpecialBuildingProductionModifiers;
 	std::vector<BuildingModifier> m_aBuildingHappinessModifiers;
 	std::vector<UnitModifier> m_aUnitProductionModifiers;
 	std::vector<SpecialUnitModifier> m_aSpecialUnitProductionModifiers;

@@ -579,7 +579,7 @@ struct CvInfoUtil : bst::noncopyable
 
 		void copyNonDefaults(const WrappedVar* source)
 		{
-			ref().copyNonDefaultsDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
+			ref().copyNonDefaultDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
 		}
 
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
