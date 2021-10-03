@@ -28873,12 +28873,9 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		}
 	}
 
-	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumTechResearchModifiers(); iI++)
+	foreach_(const TechModifier& pair, GC.getTraitInfo(eTrait).getTechResearchModifiers())
 	{
-		if (GC.getTraitInfo(eTrait).getTechResearchModifier(iI).iModifier != 0)
-		{
-			changeNationalTechResearchModifier((TechTypes)GC.getTraitInfo(eTrait).getTechResearchModifier(iI).eTech, GC.getTraitInfo(eTrait).getTechResearchModifier(iI).iModifier);
-		}
+		changeNationalTechResearchModifier(pair.first, pair.second);
 	}
 
 	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumUnitCombatFreeExperiences(); iI++)

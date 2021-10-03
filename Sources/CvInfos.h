@@ -5752,8 +5752,7 @@ public:
 	int getNumDomainProductionModifiers() const;
 	DomainModifier getDomainProductionModifier(int iDomain) const;
 
-	int getNumTechResearchModifiers() const;
-	TechModifier2 getTechResearchModifier(int iTech) const;
+	const IDValueMap<TechTypes, int>::filtered getTechResearchModifiers() const;
 
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
@@ -5971,7 +5970,7 @@ private:
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
 	std::vector<DomainModifier> m_aDomainFreeExperiences;
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
-	std::vector<TechModifier2> m_aTechResearchModifiers;
+	IDValueMap<TechTypes, int> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
 	IDValueMap<SpecialBuildingTypes, int> m_aSpecialBuildingProductionModifiers;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessModifiers;

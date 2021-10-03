@@ -22367,31 +22367,6 @@ DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain) const
 	return m_aDomainProductionModifiers[iDomain];
 }
 
-int CvTraitInfo::getNumTechResearchModifiers() const
-{
-	return (int)m_aTechResearchModifiers.size();
-}
-
-TechModifier2 CvTraitInfo::getTechResearchModifier(int iTech) const
-{
-	FASSERT_BOUNDS(0, getNumTechResearchModifiers(), iTech)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		TechModifier2 kMod = m_aTechResearchModifiers[iTech];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aTechResearchModifiers[iTech];
-}
-
 int CvTraitInfo::getNumBuildingProductionModifiers() const
 {
 	return (int)m_aBuildingProductionModifiers.size();
@@ -22447,6 +22422,11 @@ namespace PureTraits
 		return bNegativeTrait ? bind(isNegativeValue<T1, T2>, _1) : bind(isPositiveValue<T1, T2>, _1);
 	}
 };
+
+const IDValueMap<TechTypes, int>::filtered CvTraitInfo::getTechResearchModifiers() const
+{
+	return filter(m_aTechResearchModifiers, PureTraits::getPredicate<TechTypes, int>(m_bNegativeTrait));
+}
 
 const IDValueMap<SpecialBuildingTypes, int>::filtered CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
@@ -22615,6 +22595,7 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 	util
 		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
 		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
+		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 	;
 }
 
@@ -23227,29 +23208,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"DomainProductionModifier"));
 			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"TechResearchModifiers"))
-	{
-		uint iNum = pXML->GetXmlChildrenNumber(L"TechResearchModifier");
-		if(iNum && pXML->TryMoveToXmlFirstChild())
-		{
-			m_aTechResearchModifiers.reserve(iNum);
-			do
-			{
-				if (!pXML->CheckDependency())
-					continue;
-				TechModifier2 kMod;
-				pXML->GetChildXmlValByName(szTextVal, L"TechType");
-				kMod.eTech = (TechTypes)pXML->GetInfoClass(szTextVal);
-				pXML->GetChildXmlValByName(&kMod.iModifier, L"iModifier");
-				if (kMod.eTech == NO_TECH || !kMod.iModifier)
-					continue;
-				m_aTechResearchModifiers.push_back(kMod);
-			} while(pXML->TryMoveToXmlNextSibling(L"TechResearchModifier"));
 			pXML->MoveToXmlParent();
 		}
 		pXML->MoveToXmlParent();
@@ -24196,8 +24154,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aDomainProductionModifiers, pClassInfo->m_aDomainProductionModifiers);
 	}
 
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aTechResearchModifiers, pClassInfo->m_aTechResearchModifiers);
-
 	if (getNumBuildingProductionModifiers() == 0)
 	{
 		int iNum = pClassInfo->getNumBuildingProductionModifiers();
@@ -24455,12 +24411,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aDomainProductionModifiers[i].iModifier);
 	}
 
-	iNumElements = m_aTechResearchModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aTechResearchModifiers[i].eTech);
-		CheckSum(iSum, m_aTechResearchModifiers[i].iModifier);
-	}
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
 
 	iNumElements = m_aBuildingProductionModifiers.size();
