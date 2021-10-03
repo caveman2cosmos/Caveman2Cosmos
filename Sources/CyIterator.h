@@ -82,14 +82,14 @@ public:
 		;
 	}
 
-	static typename Container::size_type size(Container& container)
+	static int size(Container& container)
 	{
-		return container.size();
+		return static_cast<int>(container.size());
 	}
 
 	static typename Container::value_type getItem(Container& container, int i)
 	{
-		FASSERT_BOUNDS(0, (int)container.size(), i);
+		FASSERT_BOUNDS(0, size(container), i);
 		return container[i];
 	}
 

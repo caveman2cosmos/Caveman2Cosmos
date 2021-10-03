@@ -19943,11 +19943,6 @@ CvTraitInfo::~CvTraitInfo()
 		GC.removeDelayedResolution((int*)&(m_aBuildingProductionModifiers[i]));
 	}
 
-	for (int i=0; i<(int)m_aBuildingHappinessModifiers.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aBuildingHappinessModifiers[i]));
-	}
-
 	for (int i=0; i<(int)m_aUnitProductionModifiers.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aUnitProductionModifiers[i]));
@@ -22372,31 +22367,6 @@ DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain) const
 	return m_aDomainProductionModifiers[iDomain];
 }
 
-int CvTraitInfo::getNumTechResearchModifiers() const
-{
-	return (int)m_aTechResearchModifiers.size();
-}
-
-TechModifier2 CvTraitInfo::getTechResearchModifier(int iTech) const
-{
-	FASSERT_BOUNDS(0, getNumTechResearchModifiers(), iTech)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		TechModifier2 kMod = m_aTechResearchModifiers[iTech];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aTechResearchModifiers[iTech];
-}
-
 int CvTraitInfo::getNumBuildingProductionModifiers() const
 {
 	return (int)m_aBuildingProductionModifiers.size();
@@ -22453,34 +22423,19 @@ namespace PureTraits
 	}
 };
 
-const IDValueMap<SpecialBuildingTypes, int>::filtered_range CvTraitInfo::getSpecialBuildingProductionModifiers() const
+const IDValueMap<TechTypes, int>::filtered CvTraitInfo::getTechResearchModifiers() const
 {
-	return bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, PureTraits::getPredicate<SpecialBuildingTypes, int>(m_bNegativeTrait));
+	return filter(m_aTechResearchModifiers, PureTraits::getPredicate<TechTypes, int>(m_bNegativeTrait));
 }
 
-int CvTraitInfo::getNumBuildingHappinessModifiers() const
+const IDValueMap<SpecialBuildingTypes, int>::filtered CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
-	return (int)m_aBuildingHappinessModifiers.size();
+	return filter(m_aSpecialBuildingProductionModifiers, PureTraits::getPredicate<SpecialBuildingTypes, int>(m_bNegativeTrait));
 }
 
-BuildingModifier CvTraitInfo::getBuildingHappinessModifier(int iBuilding) const
+const IDValueMap<BuildingTypes, int>::filtered CvTraitInfo::getBuildingHappinessModifiersFiltered() const
 {
-	FASSERT_BOUNDS(0, getNumBuildingHappinessModifiers(), iBuilding)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		BuildingModifier kMod = m_aBuildingHappinessModifiers[iBuilding];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aBuildingHappinessModifiers[iBuilding];
+	return filter(m_aBuildingHappinessModifiers, PureTraits::getPredicate<BuildingTypes, int>(m_bNegativeTrait));
 }
 
 int CvTraitInfo::getNumUnitProductionModifiers() const
@@ -22639,6 +22594,8 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
 		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
+		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
+		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 	;
 }
 
@@ -23256,29 +23213,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if(pXML->TryMoveToXmlFirstChild(L"TechResearchModifiers"))
-	{
-		uint iNum = pXML->GetXmlChildrenNumber(L"TechResearchModifier");
-		if(iNum && pXML->TryMoveToXmlFirstChild())
-		{
-			m_aTechResearchModifiers.reserve(iNum);
-			do
-			{
-				if (!pXML->CheckDependency())
-					continue;
-				TechModifier2 kMod;
-				pXML->GetChildXmlValByName(szTextVal, L"TechType");
-				kMod.eTech = (TechTypes)pXML->GetInfoClass(szTextVal);
-				pXML->GetChildXmlValByName(&kMod.iModifier, L"iModifier");
-				if (kMod.eTech == NO_TECH || !kMod.iModifier)
-					continue;
-				m_aTechResearchModifiers.push_back(kMod);
-			} while(pXML->TryMoveToXmlNextSibling(L"TechResearchModifier"));
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
 	if(pXML->TryMoveToXmlFirstChild(L"BuildingProductionModifierTypes"))
 	{
 		int i = 0;
@@ -23298,29 +23232,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"BuildingProductionModifierType"));
 			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"BuildingHappinessModifierTypes"))
-	{
-		uint iNum = pXML->GetXmlChildrenNumber(L"BuildingHappinessModifierType");
-		if(iNum && pXML->TryMoveToXmlFirstChild())
-		{
-			m_aBuildingHappinessModifiers.reserve(iNum);
-			do
-			{
-				if (!pXML->CheckDependency())
-					continue;
-				BuildingModifier kMod;
-				pXML->GetChildXmlValByName(szTextVal, L"BuildingType");
-				pXML->GetChildXmlValByName(&kMod.iModifier, L"iBuildingHappinessModifier");
-				if (szTextVal.empty() || !kMod.iModifier)
-					continue;
-				m_aBuildingHappinessModifiers.push_back(kMod);
-				GC.addDelayedResolution(&m_aBuildingHappinessModifiers.back(), szTextVal);
-			} while(pXML->TryMoveToXmlNextSibling(L"BuildingHappinessModifierType"));
 			pXML->MoveToXmlParent();
 		}
 		pXML->MoveToXmlParent();
@@ -24243,8 +24154,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aDomainProductionModifiers, pClassInfo->m_aDomainProductionModifiers);
 	}
 
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aTechResearchModifiers, pClassInfo->m_aTechResearchModifiers);
-
 	if (getNumBuildingProductionModifiers() == 0)
 	{
 		int iNum = pClassInfo->getNumBuildingProductionModifiers();
@@ -24255,8 +24164,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aBuildingProductionModifiers[i].eBuilding), (int*)&(pClassInfo->m_aBuildingProductionModifiers[i].eBuilding));
 		}
 	}
-
-	GC.copyNonDefaultDelayedResolutionVector(m_aBuildingHappinessModifiers, pClassInfo->m_aBuildingHappinessModifiers);
 
 	if (getNumUnitProductionModifiers() == 0)
 	{
@@ -24504,12 +24411,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aDomainProductionModifiers[i].iModifier);
 	}
 
-	iNumElements = m_aTechResearchModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aTechResearchModifiers[i].eTech);
-		CheckSum(iSum, m_aTechResearchModifiers[i].iModifier);
-	}
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
 
 	iNumElements = m_aBuildingProductionModifiers.size();
@@ -24517,13 +24418,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	{
 		CheckSum(iSum, m_aBuildingProductionModifiers[i].eBuilding);
 		CheckSum(iSum, m_aBuildingProductionModifiers[i].iModifier);
-	}
-
-	iNumElements = m_aBuildingHappinessModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aBuildingHappinessModifiers[i].eBuilding);
-		CheckSum(iSum, m_aBuildingHappinessModifiers[i].iModifier);
 	}
 
 	iNumElements = m_aUnitProductionModifiers.size();
