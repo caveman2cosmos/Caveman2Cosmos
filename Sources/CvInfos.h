@@ -5758,9 +5758,7 @@ public:
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
 
-	int getNumSpecialBuildingProductionModifiers() const;
-	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
-	const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > getSpecialBuildingProductionModifiers() const;
+	const IDValueMap<SpecialBuildingTypes, int>::filtered_range getSpecialBuildingProductionModifiers() const;
 
 	int getNumBuildingHappinessModifiers() const;
 	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;

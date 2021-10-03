@@ -22422,61 +22422,40 @@ BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 	return m_aBuildingProductionModifiers[iBuilding];
 }
 
-int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
-{
-	return (int)m_aSpecialBuildingProductionModifiers.size();
-}
-
 namespace PureTraits
 {
 	namespace
 	{
-		bool anyValue(const SpecialBuildingModifier&)
+		template <typename T1, typename T2>
+		bool anyValue(const std::pair<T1, T2>&)
 		{
 			return true;
 		}
-		bool isPositiveValue(const SpecialBuildingModifier& pair)
+		template <typename T1, typename T2>
+		bool isPositiveValue(const std::pair<T1, T2>& pair)
 		{
-			return pair.iModifier > 0;
+			return pair.second > 0;
 		}
-		bool isNegativeValue(const SpecialBuildingModifier& pair)
+		template <typename T1, typename T2>
+		bool isNegativeValue(const std::pair<T1, T2>& pair)
 		{
-			return pair.iModifier < 0;
+			return pair.second < 0;
 		}
 	}
 
-	bst::function<bool(const SpecialBuildingModifier&)> bindPredicate(bool bNegativeTrait)
+	template <typename T1, typename T2>
+	bst::function<bool(const std::pair<T1, T2>&)> getPredicate(bool bNegativeTrait)
 	{
 		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-			return bind(anyValue, _1);
+			return bind(anyValue<T1, T2>, _1);
 
-		return bNegativeTrait ? bind(isNegativeValue, _1) : bind(isPositiveValue, _1);
+		return bNegativeTrait ? bind(isNegativeValue<T1, T2>, _1) : bind(isPositiveValue<T1, T2>, _1);
 	}
 };
 
-const bst::filtered_range<bst::function<bool(const SpecialBuildingModifier&)>, const std::vector<SpecialBuildingModifier> > CvTraitInfo::getSpecialBuildingProductionModifiers() const
+const IDValueMap<SpecialBuildingTypes, int>::filtered_range CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
-	return bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, PureTraits::bindPredicate(m_bNegativeTrait));
-}
-
-SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const
-{
-	FASSERT_BOUNDS(0, getNumSpecialBuildingProductionModifiers(), iSpecialBuilding)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		SpecialBuildingModifier kMod = m_aSpecialBuildingProductionModifiers[iSpecialBuilding];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aSpecialBuildingProductionModifiers[iSpecialBuilding];
+	return bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, PureTraits::getPredicate<SpecialBuildingTypes, int>(m_bNegativeTrait));
 }
 
 int CvTraitInfo::getNumBuildingHappinessModifiers() const
@@ -22659,7 +22638,7 @@ BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
 void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
-		.addWithDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
+		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
 	;
 }
 

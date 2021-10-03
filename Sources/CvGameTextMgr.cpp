@@ -12024,10 +12024,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			//}
 			//else
 			//{
-				szText = gDLL->getText("TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER", pair.iModifier);
+				szText = gDLL->getText("TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER", pair.second);
 			//}
-			setListHelp(szHelpString, szText.c_str(), GC.getSpecialBuildingInfo(pair.eSpecialBuilding).getDescription(), L", ", (pair.iModifier != iLast));
-			iLast = pair.iModifier;
+			setListHelp(szHelpString, szText.c_str(), GC.getSpecialBuildingInfo(pair.first).getDescription(), L", ", (pair.second != iLast));
+			iLast = pair.second;
 		}
 
 		// Buildings
