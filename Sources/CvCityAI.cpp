@@ -14420,7 +14420,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getWarWearinessModifier() < 0
 		|| kBuilding.getGlobalWarWearinessModifier() < 0
 		|| kBuilding.getCommerceHappiness(NO_COMMERCE) > 0
-		|| !kBuilding.getBonusHappiness().empty()
+		|| !kBuilding.getBonusHappinessChanges().empty()
 		|| !kBuilding.getBuildingHappinessChanges().empty()
 		|| GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0)
 		{
@@ -14441,7 +14441,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getGlobalHealth() > 0
 		|| kBuilding.isNoUnhealthyPopulation()
 		|| kBuilding.isBuildingOnlyHealthy()
-		|| kBuilding.getBonusHealthChanges(NO_BONUS) > 0
+		|| !kBuilding.getBonusHealthChanges().empty()
 		|| kBuilding.getHealthPercentPerPopulation() > 0
 		|| GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding) > 0)
 		{

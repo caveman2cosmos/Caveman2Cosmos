@@ -5777,8 +5777,7 @@ public:
 	int getNumUnitCombatProductionModifiers() const;
 	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat) const;
 
-	int getNumBonusHappinessChanges() const;
-	BonusModifier getBonusHappinessChange(int iBonus) const;
+	const IDValueMap<BonusTypes, int>::filtered getBonusHappinessChanges() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
@@ -5979,8 +5978,7 @@ private:
 	std::vector<CivicOptionTypeBool> m_aCivicOptionNoUpkeepTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatFreeExperiences;
 	std::vector<UnitCombatModifier> m_aUnitCombatProductionModifiers;
-	std::vector<BonusModifier> m_aBonusHappinessChanges;
-	//TB Traits mods end
+	IDValueMap<BonusTypes, int> m_aBonusHappinessChanges;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

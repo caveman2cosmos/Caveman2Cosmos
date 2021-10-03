@@ -22564,31 +22564,10 @@ UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
 	return m_aUnitCombatProductionModifiers[iUnitCombat];
 }
 
-int CvTraitInfo::getNumBonusHappinessChanges() const
+const IDValueMap<BonusTypes, int>::filtered CvTraitInfo::getBonusHappinessChanges() const
 {
-	return (int)m_aBonusHappinessChanges.size();
+	return filter(m_aBonusHappinessChanges, PureTraits::getPredicate<BonusTypes, int>(m_bNegativeTrait));
 }
-
-BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
-{
-	FASSERT_BOUNDS(0, getNumBonusHappinessChanges(), iBonus)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		BonusModifier kMod = m_aBonusHappinessChanges[iBonus];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aBonusHappinessChanges[iBonus];
-}
-//TB Traits Mods end
 
 void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
@@ -22596,6 +22575,7 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
 		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
 		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
+		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
 	;
 }
 
@@ -23348,29 +23328,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					pXML->GetChildXmlValByName(&(m_aUnitCombatProductionModifiers[i].iModifier), L"iModifier");
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"UnitCombatProductionModifier"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"BonusHappinessChanges"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"BonusHappinessChange");
-		m_aBonusHappinessChanges.resize(iNum);
-		if (pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BonusHappinessChange"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"BonusType");
-					m_aBonusHappinessChanges[i].eBonus = (BonusTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aBonusHappinessChanges[i].iModifier), L"iHappinessChange");
-					i++;
-				} while (pXML->TryMoveToXmlNextSibling(L"BonusHappinessChange"));
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -24192,11 +24149,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aUnitCombatProductionModifiers, pClassInfo->m_aUnitCombatProductionModifiers);
 	}
 
-	if (getNumBonusHappinessChanges() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aBonusHappinessChanges, pClassInfo->m_aBonusHappinessChanges);
-	}
-
 	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqTrait, (int*)&pClassInfo->m_iPrereqTrait);
 	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqOrTrait1, (int*)&pClassInfo->m_iPrereqOrTrait1);
 	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqOrTrait2, (int*)&pClassInfo->m_iPrereqOrTrait2);
@@ -24454,13 +24406,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	{
 		CheckSum(iSum, m_aUnitCombatProductionModifiers[i].eUnitCombat);
 		CheckSum(iSum, m_aUnitCombatProductionModifiers[i].iModifier);
-	}
-
-	iNumElements = m_aBonusHappinessChanges.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aBonusHappinessChanges[i].eBonus);
-		CheckSum(iSum, m_aBonusHappinessChanges[i].iModifier);
 	}
 
 	//For Pure Traits

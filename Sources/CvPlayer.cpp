@@ -27482,8 +27482,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 				int iTempValue = 0;
 
 				const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
-				iTempValue += kLoopBuilding.getBonusHappinessChanges(eBonus) * 12;
-				iTempValue += kLoopBuilding.getBonusHealthChanges(eBonus) * 8;
+				iTempValue += kLoopBuilding.getBonusHappinessChanges().getValue(eBonus) * 12;
+				iTempValue += kLoopBuilding.getBonusHealthChanges().getValue(eBonus) * 8;
 				iTempValue += kLoopBuilding.getBonusDefenseChanges(eBonus);
 
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)

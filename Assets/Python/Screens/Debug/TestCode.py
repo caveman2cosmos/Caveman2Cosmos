@@ -2486,11 +2486,11 @@ class TestCode:
 					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
 					if iBuildingObsoleteTechLoc < iBonusTechEnable:
 						#<BonusHappinessChanges>
-						if CvBuildingInfo.getBonusHappinessChanges(iBonus) != 0:
+						if iBonus in CvBuildingInfo.getBonusHappinessChanges():
 							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHappinessChanges")
 
 						#<BonusHealthChanges>
-						if CvBuildingInfo.getBonusHealthChanges(iBonus) != 0:
+						if iBonus in CvBuildingInfo.getBonusHealthChanges():
 							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHealthChanges")
 
 						#<BonusProductionModifiers>
