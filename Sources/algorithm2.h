@@ -316,6 +316,7 @@ namespace algo {
 	using bst::search;
 	using bst::search_n;
 	using bst::upper_bound;
+	using bst::container_contains;
 
 	// Set algorithms
 	using bst::includes;
@@ -337,10 +338,7 @@ namespace algo {
 	// test if an element exists in a range
 	template< class _Range, class Item_ >
 	bool contains(const _Range& rng, const Item_& item) {
-		foreach_(const Item_& element, rng)
-			if (element == item)
-				return true;
-		return false;
+		return container_contains(rng, item);
 	}
 
 	// FUNCTION TEMPLATE all_of

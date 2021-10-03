@@ -10421,7 +10421,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	TraitTypes eLoopTrait;
 	int iLast;
 	int iI, iJ;
-	CvWString szText;
 	int iCurrentModifier = 0;
 	std::vector<int> iIterationValues;
 	bool bFound = false;
@@ -10429,7 +10428,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	const CvTraitInfo& kTrait = GC.getTraitInfo(eTrait);
 
 	// Trait Name
-	szText = kTrait.getDescription();
+	CvWString szText = kTrait.getDescription();
 	if (bDawnOfMan)
 	{
 		szTempBuffer.Format(L"%s", szText.GetCString());
@@ -10693,29 +10692,21 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getBonusHappinessChange(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				bFound = false;
-				for (int iJ = 0; iJ < (int)iIterationValues.size(); iJ++)
-				{
-					if (iIterationValues[iJ] == iCurrentModifier)
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
+				if (!algo::container_contains(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getBonusHappinessChange(iI).iModifier);
 				}
 			}
 		}
-		for (int iA = 0; iA < (int)iIterationValues.size(); iA++)
+		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
 			for (iI = 0; iI < kTrait.getNumBonusHappinessChanges(); iI++)
 			{
 				iCurrentModifier = kTrait.getBonusHappinessChange(iI).iModifier;
-				if (iCurrentModifier == iIterationValues[iA])
+				if (iCurrentModifier == itrValue)
 				{
-					BonusTypes eTempBonus = kTrait.getBonusHappinessChange(iI).eBonus;
+					const BonusTypes eTempBonus = kTrait.getBonusHappinessChange(iI).eBonus;
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
@@ -11241,27 +11232,19 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getUnitCombatFreeExperience(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				bFound = false;
-				for (int iJ = 0; iJ < (int)iIterationValues.size(); iJ++)
-				{
-					if (iIterationValues[iJ] == iCurrentModifier)
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
+				if (!algo::container_contains(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getUnitCombatFreeExperience(iI).iModifier);
 				}
 			}
 		}
-		for (int iA = 0; iA < (int)iIterationValues.size(); iA++)
+		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
 			for (iI = 0; iI < kTrait.getNumUnitCombatFreeExperiences(); iI++)
 			{
 				iCurrentModifier = kTrait.getUnitCombatFreeExperience(iI).iModifier;
-				if (iCurrentModifier == iIterationValues[iA])
+				if (iCurrentModifier == itrValue)
 				{
 					const UnitCombatTypes eTempUnitCombat = kTrait.getUnitCombatFreeExperience(iI).eUnitCombat;
 					if (bFirst)
@@ -11357,7 +11340,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		iLast = 0;
 		for (iI = 0; iI < GC.getNumSpecialUnitInfos(); ++iI)
 		{
-			SpecialUnitTypes eSpecialUnit = ((SpecialUnitTypes)iI);
+			const SpecialUnitTypes eSpecialUnit = ((SpecialUnitTypes)iI);
 			for (int j = 0; j < kTrait.getNumSpecialUnitProductionModifiers(); j++)
 			{
 				if ((SpecialUnitTypes)kTrait.getSpecialUnitProductionModifier(j).eSpecialUnit == eSpecialUnit)
@@ -11383,27 +11366,19 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getUnitCombatProductionModifier(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				bFound = false;
-				for (int iJ = 0; iJ < (int)iIterationValues.size(); iJ++)
-				{
-					if (iIterationValues[iJ] == iCurrentModifier)
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
+				if (!algo::container_contains(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getUnitCombatProductionModifier(iI).iModifier);
 				}
 			}
 		}
-		for (int iA = 0; iA < (int)iIterationValues.size(); iA++)
+		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
 			for (iI = 0; iI < kTrait.getNumUnitCombatProductionModifiers(); iI++)
 			{
 				iCurrentModifier = kTrait.getUnitCombatProductionModifier(iI).iModifier;
-				if (iCurrentModifier == iIterationValues[iA])
+				if (iCurrentModifier == itrValue)
 				{
 					UnitCombatTypes eTempUnitCombat = kTrait.getUnitCombatProductionModifier(iI).eUnitCombat;
 					if (bFirst)
@@ -11870,27 +11845,19 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getImprovementUpgradeModifier(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				bFound = false;
-				for (int iJ = 0; iJ < (int)iIterationValues.size(); iJ++)
-				{
-					if (iIterationValues[iJ] == iCurrentModifier)
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
+				if (!algo::container_contains(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getImprovementUpgradeModifier(iI).iModifier);
 				}
 			}
 		}
-		for (int iA = 0; iA < (int)iIterationValues.size(); iA++)
+		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
 			for (iI = 0; iI < kTrait.getNumImprovementUpgradeModifierTypes(); iI++)
 			{
 				iCurrentModifier = kTrait.getImprovementUpgradeModifier(iI).iModifier;
-				if (iCurrentModifier == iIterationValues[iA])
+				if (iCurrentModifier == itrValue)
 				{
 					const ImprovementTypes eTempImprovement = kTrait.getImprovementUpgradeModifier(iI).eImprovement;
 					if (bFirst)
@@ -11919,27 +11886,19 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getBuildWorkerSpeedModifier(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				bFound = false;
-				for (int iJ = 0; iJ < (int)iIterationValues.size(); iJ++)
-				{
-					if (iIterationValues[iJ] == iCurrentModifier)
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
+				if (!algo::container_contains(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getBuildWorkerSpeedModifier(iI).iModifier);
 				}
 			}
 		}
-		for (int iA = 0; iA < (int)iIterationValues.size(); iA++)
+		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
 			for (iI = 0; iI < kTrait.getNumBuildWorkerSpeedModifierTypes(); iI++)
 			{
 				iCurrentModifier = kTrait.getBuildWorkerSpeedModifier(iI).iModifier;
-				if (iCurrentModifier == iIterationValues[iA])
+				if (iCurrentModifier == itrValue)
 				{
 					const BuildTypes eTempBuild = kTrait.getBuildWorkerSpeedModifier(iI).eBuild;
 					if (bFirst)
@@ -11964,43 +11923,31 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		//RESEARCH MODIFIERS
 				// Tech Research Modifier
-		for (iI = 0; iI < kTrait.getNumTechResearchModifiers(); iI++)
+		foreach_(const TechModifier& pair, kTrait.getTechResearchModifiers())
 		{
-			iCurrentModifier = kTrait.getTechResearchModifier(iI).iModifier;
-			if (iCurrentModifier != 0)
+			if (!algo::container_contains(iIterationValues, pair.second))
 			{
-				bFound = false;
-				for (int iJ = 0; iJ < (int)iIterationValues.size(); iJ++)
-				{
-					if (iIterationValues[iJ] == iCurrentModifier)
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
-				{
-					iIterationValues.push_back(kTrait.getTechResearchModifier(iI).iModifier);
-				}
+				iIterationValues.push_back(pair.second);
 			}
 		}
-		for (int iA = 0; iA < (int)iIterationValues.size(); iA++)
+		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
-			for (iI = 0; iI < kTrait.getNumTechResearchModifiers(); iI++)
+			foreach_(const TechModifier& pair, kTrait.getTechResearchModifiers())
 			{
-				iCurrentModifier = kTrait.getTechResearchModifier(iI).iModifier;
-				if (iCurrentModifier == iIterationValues[iA])
+				iCurrentModifier = pair.second;
+				if (iCurrentModifier == itrValue)
 				{
-					const TechTypes eTempTech = kTrait.getTechResearchModifier(iI).eTech;
+					const CvTechInfo& kTempTech = GC.getTechInfo(pair.first);
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
-						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_FIRST", iCurrentModifier, CvWString(GC.getTechInfo(eTempTech).getType()).GetCString(), GC.getTechInfo(eTempTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_FIRST", iCurrentModifier, CvWString(kTempTech.getType()).c_str(), kTempTech.getTextKeyWide()));
 						bFirst = false;
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL", CvWString(GC.getTechInfo(eTempTech).getType()).GetCString(), GC.getTechInfo(eTempTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL", CvWString(kTempTech.getType()).GetCString(), kTempTech.getTextKeyWide()));
 					}
 				}
 			}
@@ -12065,35 +12012,26 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Buildings
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		foreach_(const BuildingModifier2& pair, kTrait.getBuildingHappinessModifiersFiltered())
 		{
-			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eLoopBuilding = pair.first;
 
 			if (!isWorldWonder(eLoopBuilding))
 			{
-				for (int j = 0; j < kTrait.getNumBuildingHappinessModifiers(); j++)
+				const int iHappiness = pair.second;
+				if (iHappiness > 0)
 				{
-					if ((BuildingTypes)kTrait.getBuildingHappinessModifier(j).eBuilding == eLoopBuilding)
-					{
-						const int iHappiness = kTrait.getBuildingHappinessModifier(j).iModifier;
-						if (iHappiness != 0)
-						{
-							if (iHappiness > 0)
-							{
-								szText = gDLL->getText("TXT_KEY_TRAITHELP_BUILDING_HAPPINESS", iHappiness, gDLL->getSymbolID(HAPPY_CHAR));
-							}
-							else
-							{
-								szText = gDLL->getText("TXT_KEY_TRAITHELP_BUILDING_HAPPINESS", -iHappiness, gDLL->getSymbolID(UNHAPPY_CHAR));
-							}
-
-							CvWString szBuilding;
-							szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-							setListHelp(szHelpString, szText.GetCString(), szBuilding, L", ", (iHappiness != iLast));
-							iLast = iHappiness;
-						}
-					}
+					szText = gDLL->getText("TXT_KEY_TRAITHELP_BUILDING_HAPPINESS", iHappiness, gDLL->getSymbolID(HAPPY_CHAR));
 				}
+				else
+				{
+					szText = gDLL->getText("TXT_KEY_TRAITHELP_BUILDING_HAPPINESS", -iHappiness, gDLL->getSymbolID(UNHAPPY_CHAR));
+				}
+
+				CvWString szBuilding;
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).c_str(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+				setListHelp(szHelpString, szText.c_str(), szBuilding, L", ", (iHappiness != iLast));
+				iLast = iHappiness;
 			}
 		}
 
@@ -23517,15 +23455,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		{
 			foreach_(const CvTraitInfo* pTrait, GC.getTraitInfos())
 			{
-				for (int j = 0; j < pTrait->getNumBuildingHappinessModifiers(); j++)
+				foreach_(const BuildingModifier2& pair, pTrait->getBuildingHappinessModifiersFiltered())
 				{
-					if (pTrait->getBuildingHappinessModifier(j).eBuilding == eBuilding)
+					if (pair.first == eBuilding)
 					{
-						if (pTrait->getBuildingHappinessModifier(j).iModifier != 0)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT", pTrait->getBuildingHappinessModifier(j).iModifier, pTrait->getTextKeyWide()));
-						}
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT", pair.second, pTrait->getTextKeyWide()));
 					}
 				}
 			}

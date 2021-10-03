@@ -5752,16 +5752,15 @@ public:
 	int getNumDomainProductionModifiers() const;
 	DomainModifier getDomainProductionModifier(int iDomain) const;
 
-	int getNumTechResearchModifiers() const;
-	TechModifier2 getTechResearchModifier(int iTech) const;
+	const IDValueMap<TechTypes, int>::filtered getTechResearchModifiers() const;
 
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
 
-	const IDValueMap<SpecialBuildingTypes, int>::filtered_range getSpecialBuildingProductionModifiers() const;
+	const IDValueMap<SpecialBuildingTypes, int>::filtered getSpecialBuildingProductionModifiers() const;
 
-	int getNumBuildingHappinessModifiers() const;
-	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
+	const IDValueMap<BuildingTypes, int>&			getBuildingHappinessModifiers() const { return m_aBuildingHappinessModifiers; }
+	const IDValueMap<BuildingTypes, int>::filtered	getBuildingHappinessModifiersFiltered() const;
 
 	int getNumUnitProductionModifiers() const;
 	UnitModifier getUnitProductionModifier(int iUnit) const;
@@ -5971,10 +5970,10 @@ private:
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
 	std::vector<DomainModifier> m_aDomainFreeExperiences;
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
-	std::vector<TechModifier2> m_aTechResearchModifiers;
+	IDValueMap<TechTypes, int> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
 	IDValueMap<SpecialBuildingTypes, int> m_aSpecialBuildingProductionModifiers;
-	std::vector<BuildingModifier> m_aBuildingHappinessModifiers;
+	IDValueMap<BuildingTypes, int> m_aBuildingHappinessModifiers;
 	std::vector<UnitModifier> m_aUnitProductionModifiers;
 	std::vector<SpecialUnitModifier> m_aSpecialUnitProductionModifiers;
 	std::vector<CivicOptionTypeBool> m_aCivicOptionNoUpkeepTypes;
