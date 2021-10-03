@@ -7422,7 +7422,8 @@ int CvPlayer::getProductionModifier(UnitTypes eUnit) const
 	{
 		if (hasTrait((TraitTypes)iI))
 		{
-			CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iI);
+			const CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iI);
+
 			for (int j = 0; j < kTrait.getNumUnitProductionModifiers(); j++)
 			{
 				if ((UnitTypes)kTrait.getUnitProductionModifier(j).eUnit == eUnit)
@@ -7455,21 +7456,24 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 		const TraitTypes eTrait = ((TraitTypes)iI);
 		if (hasTrait(eTrait))
 		{
-			for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
+			const CvTraitInfo& kTrait = GC.getTraitInfo(eTrait);
+
+			for (int j = 0; j < kTrait.getNumBuildingProductionModifiers(); j++)
 			{
-				if (GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
+				if (kTrait.getBuildingProductionModifier(j).eBuilding == eBuilding)
 				{
-					iMultiplier += GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).iModifier;
+					iMultiplier += kTrait.getBuildingProductionModifier(j).iModifier;
 				}
 			}
+			const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(eBuilding).getSpecialBuilding();
 
-			if (GC.getBuildingInfo(eBuilding).getSpecialBuilding() != NO_SPECIALBUILDING)
+			if (eSpecialBuilding != NO_SPECIALBUILDING)
 			{
-				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialBuildingProductionModifiers(); j++)
+				foreach_(const SpecialBuildingModifier& pair, kTrait.getSpecialBuildingProductionModifiers())
 				{
-					if (GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == GC.getBuildingInfo(eBuilding).getSpecialBuilding())
+					if (pair.first == eSpecialBuilding)
 					{
-						iMultiplier += GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).iModifier;
+						iMultiplier += pair.second;
 					}
 				}
 			}

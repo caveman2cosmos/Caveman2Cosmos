@@ -19943,11 +19943,6 @@ CvTraitInfo::~CvTraitInfo()
 		GC.removeDelayedResolution((int*)&(m_aBuildingProductionModifiers[i]));
 	}
 
-	for (int i=0; i<(int)m_aSpecialBuildingProductionModifiers.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aSpecialBuildingProductionModifiers[i]));
-	}
-
 	for (int i=0; i<(int)m_aBuildingHappinessModifiers.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aBuildingHappinessModifiers[i]));
@@ -22427,29 +22422,40 @@ BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 	return m_aBuildingProductionModifiers[iBuilding];
 }
 
-int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
+namespace PureTraits
 {
-	return (int)m_aSpecialBuildingProductionModifiers.size();
-}
-
-SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const
-{
-	FASSERT_BOUNDS(0, getNumSpecialBuildingProductionModifiers(), iSpecialBuilding)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	namespace
 	{
-		SpecialBuildingModifier kMod = m_aSpecialBuildingProductionModifiers[iSpecialBuilding];
-		if (isNegativeTrait() && kMod.iModifier > 0)
+		template <typename T1, typename T2>
+		bool anyValue(const std::pair<T1, T2>&)
 		{
-			kMod.iModifier = 0;
+			return true;
 		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
+		template <typename T1, typename T2>
+		bool isPositiveValue(const std::pair<T1, T2>& pair)
 		{
-			kMod.iModifier = 0;
+			return pair.second > 0;
 		}
-		return kMod;
+		template <typename T1, typename T2>
+		bool isNegativeValue(const std::pair<T1, T2>& pair)
+		{
+			return pair.second < 0;
+		}
 	}
-	return m_aSpecialBuildingProductionModifiers[iSpecialBuilding];
+
+	template <typename T1, typename T2>
+	bst::function<bool(const std::pair<T1, T2>&)> getPredicate(bool bNegativeTrait)
+	{
+		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+			return bind(anyValue<T1, T2>, _1);
+
+		return bNegativeTrait ? bind(isNegativeValue<T1, T2>, _1) : bind(isPositiveValue<T1, T2>, _1);
+	}
+};
+
+const IDValueMap<SpecialBuildingTypes, int>::filtered_range CvTraitInfo::getSpecialBuildingProductionModifiers() const
+{
+	return bst::adaptors::filter(m_aSpecialBuildingProductionModifiers, PureTraits::getPredicate<SpecialBuildingTypes, int>(m_bNegativeTrait));
 }
 
 int CvTraitInfo::getNumBuildingHappinessModifiers() const
@@ -22631,9 +22637,9 @@ BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
 
 void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
-	//util
-	//	.add(m_aePrereqOrBonuses, L"PrereqBonuses")
-	//;
+	util
+		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
+	;
 }
 
 bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
@@ -23291,30 +23297,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					GC.addDelayedResolution((int*)&(m_aBuildingProductionModifiers[i].eBuilding), szTextVal);
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"BuildingProductionModifierType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"SpecialBuildingProductionModifierTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"SpecialBuildingProductionModifierType" );
-		m_aSpecialBuildingProductionModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"SpecialBuildingProductionModifierType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"SpecialBuildingType");
-					pXML->GetChildXmlValByName(&(m_aSpecialBuildingProductionModifiers[i].iModifier), L"iSpecialBuildingProductionModifier");
-					GC.addDelayedResolution((int*)&(m_aSpecialBuildingProductionModifiers[i].eSpecialBuilding), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"SpecialBuildingProductionModifierType"));
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -24274,17 +24256,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	if (getNumSpecialBuildingProductionModifiers() == 0)
-	{
-		int iNum = pClassInfo->getNumSpecialBuildingProductionModifiers();
-		m_aSpecialBuildingProductionModifiers.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aSpecialBuildingProductionModifiers[i].iModifier = pClassInfo->m_aSpecialBuildingProductionModifiers[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aSpecialBuildingProductionModifiers[i].eSpecialBuilding), (int*)&(pClassInfo->m_aSpecialBuildingProductionModifiers[i].eSpecialBuilding));
-		}
-	}
-
 	GC.copyNonDefaultDelayedResolutionVector(m_aBuildingHappinessModifiers, pClassInfo->m_aBuildingHappinessModifiers);
 
 	if (getNumUnitProductionModifiers() == 0)
@@ -24546,13 +24517,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	{
 		CheckSum(iSum, m_aBuildingProductionModifiers[i].eBuilding);
 		CheckSum(iSum, m_aBuildingProductionModifiers[i].iModifier);
-	}
-
-	iNumElements = m_aSpecialBuildingProductionModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aSpecialBuildingProductionModifiers[i].eSpecialBuilding);
-		CheckSum(iSum, m_aSpecialBuildingProductionModifiers[i].iModifier);
 	}
 
 	iNumElements = m_aBuildingHappinessModifiers.size();
