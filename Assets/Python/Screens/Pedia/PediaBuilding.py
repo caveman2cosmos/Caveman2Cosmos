@@ -553,9 +553,8 @@ class PediaBuilding:
 			aList2 = []
 		# Improvement Req
 		szChild = PF + "IMP"
-		for i in range(GC.getNumImprovementInfos()):
-			if CvTheBuildingInfo.isPrereqOrImprovement(i):
-				aList2.append(i)
+		for iPrereqOrImprovement in CvTheBuildingInfo.getPrereqOrImprovements():
+			aList2.append(iPrereqOrImprovement)
 		if aList2:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

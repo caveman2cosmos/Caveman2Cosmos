@@ -13,6 +13,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvInfoUtil.h"
 #include "CvPlayerAI.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
@@ -19893,7 +19894,9 @@ CvTraitInfo::CvTraitInfo()
 	, m_piGoldenAgeCommerceChangesFiltered(NULL)
 	//TB Traits Mods end
 	, m_piBonusHappinessChangesFiltered(NULL)
-	{ }
+{
+	CvInfoUtil(this).initDataMembers();
+}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -19976,6 +19979,8 @@ CvTraitInfo::~CvTraitInfo()
 	GC.removeDelayedResolution((int*)&m_iPrereqTrait);
 	GC.removeDelayedResolution((int*)&m_iPrereqOrTrait1);
 	GC.removeDelayedResolution((int*)&m_iPrereqOrTrait2);
+
+	CvInfoUtil(this).uninitDataMembers();
 }
 
 int CvTraitInfo::getHealth() const
@@ -23753,6 +23758,8 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iPrereqOrTrait1, L"TraitPrereqOr1");
 	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iPrereqOrTrait2, L"TraitPrereqOr2");
 
+	CvInfoUtil(this).readXml(pXML);
+
 	return true;
 }
 
@@ -24307,6 +24314,8 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqTrait, (int*)&pClassInfo->m_iPrereqTrait);
 	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqOrTrait1, (int*)&pClassInfo->m_iPrereqOrTrait1);
 	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqOrTrait2, (int*)&pClassInfo->m_iPrereqOrTrait2);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 }
 
 void CvTraitInfo::getCheckSum(uint32_t& iSum) const
@@ -24623,6 +24632,8 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	}
 
 	//TB Traits Mods end
+
+	CvInfoUtil(const_cast<CvTraitInfo*>(this)).checkSum(iSum);
 }
 
 
