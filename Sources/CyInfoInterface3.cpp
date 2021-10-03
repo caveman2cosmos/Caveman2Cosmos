@@ -37,7 +37,6 @@ void CyInfoPythonInterface3()
 		.def("getVisible", &CvInterfaceModeInfo::getVisible, "bool ()")
 		.def("getGotoPlot", &CvInterfaceModeInfo::getGotoPlot, "bool ()")
 		.def("getHighlightPlot", &CvInterfaceModeInfo::getHighlightPlot, "bool ()")
-
 	;
 
 
@@ -164,7 +163,6 @@ void CyInfoPythonInterface3()
 		.def("getGreatPeopleRateModifier", &CvTraitInfo::getGreatPeopleRateModifier, "int ()")
 		.def("getGreatGeneralRateModifier", &CvTraitInfo::getGreatGeneralRateModifier, "int ()")
 		.def("getNumBuildingProductionModifiers", &CvTraitInfo::getNumBuildingProductionModifiers, "int ()")
-		.def("getNumBuildingHappinessModifiers", &CvTraitInfo::getNumBuildingHappinessModifiers, "int ()")
 
 		.def("getRevIdxLocal", &CvTraitInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvTraitInfo::getRevIdxNational, "int ()")
@@ -179,11 +177,9 @@ void CyInfoPythonInterface3()
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
 		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
-		.def("getBuildingHappinessModifier", &CvTraitInfo::getBuildingHappinessModifier)
+		.def("getBuildingHappinessModifiers", &CvTraitInfo::getBuildingHappinessModifiers, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getImprovementYieldChange", &CvTraitInfo::getImprovementYieldChange, "int (int i, int j)")
-
-		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
 	;
 
 	python::class_<CvWorldInfo, python::bases<CvInfoBase> >("CvWorldInfo", python::no_init)

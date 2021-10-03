@@ -1871,8 +1871,7 @@ class TestCode:
 			aReplacementBuildingsList = []
 			aUniqueReplacementBuildingsList = []
 			aBuildingHappinessModifierValues = []
-			for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
-				iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i).id
+			for iAffectedBuilding, iHappiness in CvTraitInfo.getBuildingHappinessModifiers():
 				aBuildingHappinessModifierValues.append(CvTraitInfo.getBuildingHappinessModifier(i).value)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
@@ -1880,8 +1879,7 @@ class TestCode:
 						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
 							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
 				#If affected building replacement is listed, then remove it from buildings to be added
-				for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
-					iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i).id
+				for iAffectedBuilding, iHappiness in CvTraitInfo.getBuildingHappinessModifiers():
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 			#Get unique unlisted replacements
