@@ -261,8 +261,6 @@ public:
 	int* getAreaYieldModifierArray() const;
 	int getGlobalYieldModifier(int i) const;
 	int* getGlobalYieldModifierArray() const;
-	int getSeaPlotYieldChange(int i) const;
-	int* getSeaPlotYieldChangeArray() const;
 	int getRiverPlotYieldChange(int i) const;
 	int* getRiverPlotYieldChangeArray() const;
 	int getGlobalSeaPlotYieldChange(int i) const;
@@ -282,41 +280,30 @@ public:
 	int getStateReligionCommerce(int i) const;
 	int* getStateReligionCommerceArray() const;
 	int getCommerceHappiness(int i) const;
-	int getReligionChange(int i) const;
+	const IDValueMap<ReligionTypes, int>& getReligionChanges() const { return m_religionChange; }
 	int getSpecialistCount(int i) const;
 	int getFreeSpecialistCount(int i) const;
 
-	int getBonusHealthChanges(int i) const;
-	const IDValueMap<BonusTypes, int>& getBonusHealth() const { return m_piBonusHealthChanges; }
-	const python::list cyGetBonusHealth() const { return m_piBonusHealthChanges.makeList(); }
-
-	int getBonusHappinessChanges(int i) const;
-	const IDValueMap<BonusTypes, int>& getBonusHappiness() const { return m_piBonusHappinessChanges; }
-	const python::list cyGetBonusHappiness() const { return m_piBonusHappinessChanges.makeList(); }
+	const IDValueMap<BonusTypes, int>& getBonusHealthChanges() const { return m_piBonusHealthChanges; }
+	const IDValueMap<BonusTypes, int>& getBonusHappinessChanges() const { return m_piBonusHappinessChanges; }
 
 	int getBonusProductionModifier(int i) const;
 	int getDomainFreeExperience(int i) const;
 	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
 
-	int getUnitCombatFreeExperience(UnitCombatTypes e) const;
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience; }
-	const python::list cyGetUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience.makeList(); }
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
-	const python::list cyGetBuildingHappinessChanges() const { return m_aBuildingHappinessChanges.makeList(); }
 
 	int getFlavorValue(int i) const;
-	int getImprovementFreeSpecialist(int i) const;
+	const IDValueMap<ImprovementTypes, int>& getImprovementFreeSpecialists() const { return m_improvementFreeSpecialists; }
 
 	bool isCommerceFlexible(int i) const;
 
-	int getPrereqNumOfBuilding(BuildingTypes e) const;
 	const IDValueMap<BuildingTypes, int>& getPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding; }
-	const python::list cyGetPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding.makeList(); }
 
 	int getPrereqOrBuilding(const int i) const;
 	short getNumPrereqOrBuilding() const;
@@ -343,16 +330,24 @@ public:
 	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
-	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
 	const IDValueMap<TechTypes, int*>& getTechYieldChanges100() const { return m_techYieldChanges; }
 	const python::list cyGetTechYieldChanges100() const;
 
+	const IDValueMap<TechTypes, int*>& getTechYieldModifiers() const { return m_techYieldModifiers; }
+	const python::list cyGetTechYieldModifiers() const;
+
 	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
+	const IDValueMap<TechTypes, int*>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
+	const python::list cyGetTechCommerceModifiers() const;
+
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
+
+	const IDValueMap<PlotTypes, int*>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
+	const python::list cyGetPlotYieldChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
@@ -362,17 +357,12 @@ public:
 	bool isPrereqAndCivics(int iCivic) const;
 	bool isPrereqOrTerrain(int i) const;
 	bool isPrereqAndTerrain(int i) const;
-	bool isPrereqOrImprovement(int i) const;
+	const std::vector<ImprovementTypes>& getPrereqOrImprovements() const { return m_prereqOrImprovement; }
 	bool isPrereqOrFeature(int i) const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
-	const python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
-
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
-	const python::list cyGetGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier.makeList(); }
-
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingCostModifiers() const { return m_aGlobalBuildingCostModifier; }
-	const python::list cyGetGlobalBuildingCostModifiers() const { return m_aGlobalBuildingCostModifier.makeList(); }
 
 	int getBonusDefenseChanges(int i) const;
 
@@ -414,14 +404,7 @@ public:
 	int getTechSpecialistChange(int i, int j) const;
 	int* getTechSpecialistChangeArray(int i) const;
 
-	int getTechCommerceModifier(int i, int j) const;
-	int* getTechCommerceModifierArray(int i) const;
-
-	int getTechYieldModifier(int i, int j) const;
-	int* getTechYieldModifierArray(int i) const;
-
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
-	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
 
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
@@ -432,7 +415,6 @@ public:
 	bool isMayDamageAttackingUnitCombatType(int i) const;
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
-	const python::list cyGetMapCategories() const { return Cy::makeList(m_aeMapCategoryTypes); }
 
 	int getNumUnitCombatRepelModifiers() const;
 	int getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad = false) const;
@@ -488,33 +470,20 @@ public:
 	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
 	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
 	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
-	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
-	bool isAnyTechYieldModifiers() const			{ return m_ppaiTechYieldModifier != NULL; }
 	bool isAnyBonusCommerceModifiers() const		{ return m_ppaiBonusCommerceModifier != NULL; }
 	bool isAnyBonusYieldChanges() const				{ return m_ppaiBonusYieldChanges != NULL; }
 	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
 	bool isAnyBonusCommercePercentChanges() const	{ return m_ppaiBonusCommercePercentChanges != NULL; }
 
-	int getNumPrereqOrBonuses() const;
-	BonusTypes getPrereqOrBonuses(int i) const;
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const;
-
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
-	const python::list cyGetPrereqOrVicinityBonuses() const { return Cy::makeList(m_piPrereqOrVicinityBonuses); }
-
 	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
-	const python::list cyGetPrereqOrRawVicinityBonuses() const { return Cy::makeList(m_aePrereqOrRawVicinityBonuses); }
 
 	int getTechHappiness(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
-	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
 
 	int getTechHealth(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
-	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
-
-	//cost BoolExpr* getFreePromotionCondition();
 
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 
@@ -582,8 +551,7 @@ private:
 	bool m_bDamageAttackerCapable;
 	bool m_bAutoBuild;
 	bool m_bQuarantine;
-	mutable bool m_bEnablesOtherBuildingsCalculated;
-	mutable bool m_bEnablesOtherBuildingsValue;
+	bool m_bEnablesOtherBuildings;
 	bool m_bEnablesUnits;
 
 	int m_iFreePromotion_2;
@@ -762,13 +730,11 @@ private:
 	bool* m_pbPrereqAndCivics;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
-	bool* m_pbPrereqOrImprovement;
 	bool* m_pbPrereqOrFeature;
 	bool* m_pbCommerceFlexible;
 	bool* m_pabHurry;
 
 	int* m_piBonusDefenseChanges;
-	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
 	int* m_piYieldChange;
@@ -785,20 +751,16 @@ private:
 	int* m_piSpecialistExtraCommerce;
 	int* m_piStateReligionCommerce;
 	int* m_piCommerceHappiness;
-	int* m_piReligionChange;
 	int* m_piSpecialistCount;
 	int* m_piFreeSpecialistCount;
 	int* m_piBonusProductionModifier;
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
-	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
 	int** m_ppaiBonusCommerceModifier;
 	int** m_ppaiTechSpecialistChange;
-	int** m_ppaiTechCommerceModifier;
-	int** m_ppaiTechYieldModifier;
 	int** m_ppiImprovementYieldChanges;
 	int** m_ppaiBonusYieldChanges;
 	int** m_ppaiBonusCommercePercentChanges;
@@ -809,6 +771,7 @@ private:
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 
+	std::vector<ImprovementTypes> m_prereqOrImprovement;
 	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	std::vector<TechTypes> m_piPrereqAndTechs;
@@ -844,6 +807,8 @@ private:
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingCostModifier;
+	IDValueMap<ImprovementTypes, int> m_improvementFreeSpecialists;
+	IDValueMap<ReligionTypes, int> m_religionChange;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
@@ -852,8 +817,11 @@ private:
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
 	IDValueMap<TechTypes, int*> m_techYieldChanges;
+	IDValueMap<TechTypes, int*> m_techYieldModifiers;
 	IDValueMap<TechTypes, int*> m_techCommerceChanges;
+	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
 	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
+	IDValueMap<PlotTypes, int*> m_aPlotYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

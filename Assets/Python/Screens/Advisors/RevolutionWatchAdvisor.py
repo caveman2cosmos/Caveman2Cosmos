@@ -588,8 +588,13 @@ class RevolutionWatchAdvisor:
 				else:
 					icon += u"%c" %(gc.getReligionInfo(info.getReligionType()).getChar())
 
-			if info.getFoodKept() > 0 or info.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD) > 0:
+			if info.getFoodKept() > 0:
 				icon += self.foodIcon
+			else:
+				for entry in info.getPlotYieldChange():
+					if entry.iIndex == YieldTypes.YIELD_FOOD and entry.iValue > 0:
+						icon += self.foodIcon
+						break
 
 			if info.getFreeExperience() > 0 or \
 				info.getFreePromotion() != -1 or \
@@ -1476,8 +1481,8 @@ class RevolutionWatchAdvisor:
 
 				for i in range(gc.getNumBonusInfos()):
 					if city.hasBonus(i):
-						iHealth += info.getBonusHealthChanges(i)
-						iHappiness += info.getBonusHappinessChanges(i)
+						iHealth += info.getBonusHealthChanges().getValue(i)
+						iHappiness += info.getBonusHappinessChanges().getValue(i)
 
 				if iHealth > 0:
 					szReturn = self.stripStr(szReturn, self.healthIcon)
@@ -1692,20 +1697,20 @@ class RevolutionWatchAdvisor:
 					info = gc.getBuildingInfo(i)
 					if self.calculateNetHappiness(city) < 3 and self.calculateNetHappiness(city) - self.calculateNetHealth(city) > 2:
 						iHealth = info.getHealth()
-						for j in range(gc.getNumBonusInfos()):
-							if city.hasBonus(j):
-								iHealth += info.getBonusHealthChanges(j)
+						for eBonus, iNumHappiness in info.getBonusHappinessChanges():
+							if city.hasBonus(eBonus):
+								iHealth += iNumHappiness
 						value = iHealth / float(info.getProductionCost())
-						if(value > bestData):
+						if value > bestData:
 							bestOrder = i
 							bestData = value
 					elif self.calculateNetHealth(city) < 3 and self.calculateNetHealth(city) - self.calculateNetHappiness(city) > 2:
 						iHappiness = info.getHappiness()
-						for j in range(gc.getNumBonusInfos()):
-							if city.hasBonus(j):
-								iHappiness += info.getBonusHappinessChanges(j)
+						for eBonus, iNumHappiness in info.getBonusHappinessChanges():
+							if city.hasBonus(eBonus):
+								iHappiness += iNumHappiness
 						value = iHappiness  / float(info.getProductionCost())
-						if(value > bestData):
+						if value > bestData:
 							bestOrder = i
 							bestData = value
 

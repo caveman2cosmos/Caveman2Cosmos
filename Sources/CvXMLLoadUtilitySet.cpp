@@ -782,6 +782,7 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 	//	Koshling - replaced XML-based registration of UNITAI types with internal registration.  Since they are a DLL-defined enum
 	//	anyway this allows new UNITAIs to be defined freely without ordering issues (in the XML or DLL), which in turn makes it
 	//	easier to merge mods with different UNITAI changes.  The XML is retained purely for documentary purposes
+	GC.registerPlotTypes();
 	GC.registerUnitAIs();
 	GC.registerAIScales();
 	GC.registerGameObjects();

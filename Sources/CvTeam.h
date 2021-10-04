@@ -215,12 +215,6 @@ public:
 	int getBuildingSpecialistChange(BuildingTypes eIndex1, SpecialistTypes eIndex2) const;
 	void changeBuildingSpecialistChange(BuildingTypes eIndex1, SpecialistTypes eIndex2, int iChange);
 
-	int getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
-
-	int getBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eIndex2) const;
-	void changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eIndex2, int iChange);
-
 	int getLimitedBordersTradingCount() const;
 	bool isLimitedBordersTrading() const;
 	void changeLimitedBordersTradingCount(int iChange);
@@ -413,7 +407,9 @@ public:
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 
 	int getBuildingYieldTechChange(const YieldTypes eYield, const BuildingTypes eBuilding) const;
+	int getBuildingYieldTechModifier(const YieldTypes eYield, const BuildingTypes eBuilding) const;
 	int getBuildingCommerceTechChange(const CommerceTypes eIndex, const BuildingTypes eBuilding) const;
+	int getBuildingCommerceTechModifier(const CommerceTypes eIndex, const BuildingTypes eBuilding) const;
 
 	void addPropertiesAllCities(const CvProperties* pProp);
 	void subtractPropertiesAllCities(const CvProperties* pProp);

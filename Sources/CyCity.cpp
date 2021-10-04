@@ -1114,11 +1114,6 @@ int CyCity::getCultureThreshold() const
 	return m_pCity->getCultureThreshold();
 }
 
-int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
-{
-	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
-}
-
 int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
 {
 	return m_pCity->getPlotYield((YieldTypes)eIndex);

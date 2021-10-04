@@ -227,7 +227,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getCultureLevel", &CyCity::getCultureLevel, "int /*CultureLevelTypes*/ ()")
 		.def("getCultureThreshold", &CyCity::getCultureThreshold)
 
-		.def("getSeaPlotYield", &CyCity::getSeaPlotYield, "int (int /*YieldTypes*/) - total YieldType for water plots")
 		.def("getPlotYield", &CyCity::getPlotYield, "int (int /*YieldTypes*/) - base rate for YieldType")
 		.def("getBaseYieldRateModifier", &CyCity::getBaseYieldRateModifier)
 		.def("getYieldRate", &CyCity::getYieldRate, "int (int /*YieldTypes*/) - total value of YieldType")

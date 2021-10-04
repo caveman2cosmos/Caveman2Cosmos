@@ -204,6 +204,12 @@ void CyStructsPythonInterface1()
 		.def_readonly("value", &TechCommerceChange::iChange)
 	;
 
+	python::class_<TechYieldChange>("TechYieldChange", python::no_init)
+		.def_readonly("eTech", &TechYieldChange::eTech)
+		.def_readonly("eYield", &TechYieldChange::eYield)
+		.def_readonly("value", &TechYieldChange::iChange)
+	;
+
 	python::class_<TerrainYieldChange>("TerrainYieldChange", python::no_init)
 		.def_readonly("eTerrain", &TerrainYieldChange::eTerrain)
 		.def_readonly("eYield", &TerrainYieldChange::eYield)

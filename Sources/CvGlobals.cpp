@@ -1369,14 +1369,27 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 //	return *(m_paTraitOptionEditsInfo[e]);
 //}
 
+
+//	Toffer - Added internal registration of plot types
+#define	REGISTER_PLOT_TYPE(x)	setInfoTypeFromString(#x,x)
+
+void cvInternalGlobals::registerPlotTypes()
+{
+	REGISTER_PLOT_TYPE(NO_PLOT);
+	REGISTER_PLOT_TYPE(PLOT_PEAK);
+	REGISTER_PLOT_TYPE(PLOT_HILLS);
+	REGISTER_PLOT_TYPE(PLOT_LAND);
+	REGISTER_PLOT_TYPE(PLOT_OCEAN);
+}
+// ! Toffer
+
+//	Koshling - added internal registration of supported UnitAI types, not reliant
+//	on external definition in XML
 CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
 {
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eUnitAINum)
 	return *(m_paUnitAIInfos[eUnitAINum]);
 }
-
-//	Koshling - added internal registration of supported UnitAI types, not reliant
-//	on external definition in XML
 void cvInternalGlobals::registerUnitAI(const char* szType, int enumVal)
 {
 	FAssertMsg(m_paUnitAIInfos.size() == enumVal, "enumVal not expected value");

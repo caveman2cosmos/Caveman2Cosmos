@@ -494,9 +494,9 @@ struct CvInfoUtil : bst::noncopyable
 
 		void sendVarToPython(const char* file) const
 		{
-			Cy::call(file, "handleVector", Cy::Args()
-				<< static_cast<const std::vector<int>&>(ref())
-			);
+			//Cy::call(file, "handleVector", Cy::Args()
+			//	<< ref()
+			//);
 		}
 
 		std::vector<T>& ref() const { return *static_cast<std::vector<T>*>(m_ptr); }
@@ -579,7 +579,7 @@ struct CvInfoUtil : bst::noncopyable
 
 		void copyNonDefaults(const WrappedVar* source)
 		{
-			ref().copyNonDefaultsDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
+			ref().copyNonDefaultDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
 		}
 
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }

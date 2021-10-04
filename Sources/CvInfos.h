@@ -445,10 +445,7 @@ public:
 	int getFlavorValue(int i) const;
 
 	const std::vector<TechTypes>& getPrereqOrTechs() const;
-	const python::list cyGetPrereqOrTechs() const;
-
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	bool isCommerceFlexible(int i) const;
 	bool isTerrainTrade(int i) const;
@@ -2169,12 +2166,9 @@ public:
 	bool canAcquireExperience() const;
 
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const python::list cyGetPrereqOrBonuses() const;
-
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	// Arrays
 	int getFlavorValue(int i) const;
@@ -4034,7 +4028,6 @@ public:
 	int getTechMovementChange(int i) const;
 
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const python::list cyGetPrereqOrBonuses() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
@@ -5453,7 +5446,6 @@ public:
 	const TCHAR* getSound() const;
 
 	const std::vector<BonusTypes>& getPrereqBonuses() const;
-	const python::list cyGetPrereqBonuses() const;
 
 	// Arrays
 	int getHeadquarterCommerce(int i) const;
@@ -5760,17 +5752,15 @@ public:
 	int getNumDomainProductionModifiers() const;
 	DomainModifier getDomainProductionModifier(int iDomain) const;
 
-	int getNumTechResearchModifiers() const;
-	TechModifier2 getTechResearchModifier(int iTech) const;
+	const IDValueMap<TechTypes, int>::filtered getTechResearchModifiers() const;
 
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
 
-	int getNumSpecialBuildingProductionModifiers() const;
-	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
+	const IDValueMap<SpecialBuildingTypes, int>::filtered getSpecialBuildingProductionModifiers() const;
 
-	int getNumBuildingHappinessModifiers() const;
-	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
+	const IDValueMap<BuildingTypes, int>&			getBuildingHappinessModifiers() const { return m_aBuildingHappinessModifiers; }
+	const IDValueMap<BuildingTypes, int>::filtered	getBuildingHappinessModifiersFiltered() const;
 
 	int getNumUnitProductionModifiers() const;
 	UnitModifier getUnitProductionModifier(int iUnit) const;
@@ -5787,13 +5777,13 @@ public:
 	int getNumUnitCombatProductionModifiers() const;
 	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat) const;
 
-	int getNumBonusHappinessChanges() const;
-	BonusModifier getBonusHappinessChange(int iBonus) const;
+	const IDValueMap<BonusTypes, int>::filtered getBonusHappinessChanges() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
@@ -5979,17 +5969,16 @@ private:
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
 	std::vector<DomainModifier> m_aDomainFreeExperiences;
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
-	std::vector<TechModifier2> m_aTechResearchModifiers;
+	IDValueMap<TechTypes, int> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
-	std::vector<SpecialBuildingModifier> m_aSpecialBuildingProductionModifiers;
-	std::vector<BuildingModifier> m_aBuildingHappinessModifiers;
+	IDValueMap<SpecialBuildingTypes, int> m_aSpecialBuildingProductionModifiers;
+	IDValueMap<BuildingTypes, int> m_aBuildingHappinessModifiers;
 	std::vector<UnitModifier> m_aUnitProductionModifiers;
 	std::vector<SpecialUnitModifier> m_aSpecialUnitProductionModifiers;
 	std::vector<CivicOptionTypeBool> m_aCivicOptionNoUpkeepTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatFreeExperiences;
 	std::vector<UnitCombatModifier> m_aUnitCombatProductionModifiers;
-	std::vector<BonusModifier> m_aBonusHappinessChanges;
-	//TB Traits mods end
+	IDValueMap<BonusTypes, int> m_aBonusHappinessChanges;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

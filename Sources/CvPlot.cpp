@@ -8093,7 +8093,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 				if (pWorkingCity != NULL && (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false)))
 				{
-					iYield += pWorkingCity->getPlotYieldChange(this, eYield);
+					iYield += pWorkingCity->getYieldChangeAt(this, eYield);
 				}
 			}
 		}
@@ -11911,7 +11911,7 @@ bool CvPlot::shouldUsePlotBuilder() const
 	return false;
 }
 
-
+/* Unused...
 int CvPlot::calculateMaxYield(YieldTypes eYield) const
 {
 	if (getTerrainType() == NO_TERRAIN)
@@ -11941,7 +11941,7 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 		{
 			const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iBuilding);
-			iBuildingYield = std::max(building.getSeaPlotYieldChange(eYield) + building.getGlobalSeaPlotYieldChange(eYield), iBuildingYield);
+			iBuildingYield = std::max(building.getGlobalSeaPlotYieldChange(eYield), iBuildingYield);
 		}
 		iMaxYield += iBuildingYield;
 	}
@@ -11970,6 +11970,7 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 
 	return iMaxYield;
 }
+*/
 
 int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const
 {
