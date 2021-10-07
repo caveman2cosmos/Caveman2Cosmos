@@ -5734,7 +5734,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
+					foreach_(const ImprovementModifier& pair, kBuilding.getImprovementFreeSpecialists())
 					{
 						iValue += pair.second * countNumImprovedPlots(pair.first, true) * 50;
 					}
@@ -15807,7 +15807,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
+				foreach_(const ImprovementModifier& pair, kBuilding.getImprovementFreeSpecialists())
 				{
 					iValue += pair.second * countNumImprovedPlots(pair.first, true) * 50;
 				}
