@@ -5743,8 +5743,7 @@ public:
 	int getNumDisallowedTraitTypes() const;
 	DisallowedTraitType isDisallowedTraitType(int iTrait) const;
 
-	int getNumDomainFreeExperiences() const;
-	DomainModifier getDomainFreeExperience(int iDomain) const;
+	const IDValueMap<DomainTypes, int>::filtered getDomainFreeExperience() const;
 
 	int getNumDomainProductionModifiers() const;
 	DomainModifier getDomainProductionModifier(int iDomain) const;
@@ -5964,7 +5963,7 @@ private:
 	IDValueMap<ImprovementTypes, int> m_aImprovementUpgradeModifierTypes;
 	IDValueMap<BuildTypes, int> m_aBuildWorkerSpeedModifierTypes;
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
-	std::vector<DomainModifier> m_aDomainFreeExperiences;
+	IDValueMap<DomainTypes, int> m_aDomainFreeExperiences;
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
 	IDValueMap<TechTypes, int> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
