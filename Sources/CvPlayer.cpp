@@ -28786,7 +28786,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 
 	foreach_(const ImprovementModifier& pair, GC.getTraitInfo(eTrait).getImprovementUpgradeModifiers())
 	{
-		changeImprovementUpgradeRateModifierSpecific(pair.first, pair.second);
+		changeImprovementUpgradeRateModifierSpecific(pair.first, iChange * pair.second);
 	}
 
 	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumBuildWorkerSpeedModifierTypes(); iI++)
