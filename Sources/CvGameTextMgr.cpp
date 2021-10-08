@@ -11862,35 +11862,31 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		bFirst = true;
 
 
-		for (iI = 0; iI < kTrait.getNumBuildWorkerSpeedModifierTypes(); iI++)
+		foreach_(const BuildModifier2& pair, kTrait.getBuildWorkerSpeedModifiers())
 		{
-			iCurrentModifier = kTrait.getBuildWorkerSpeedModifier(iI).iModifier;
-			if (iCurrentModifier != 0)
+			if (!algo::container_contains(iIterationValues, pair.second))
 			{
-				if (!algo::container_contains(iIterationValues, iCurrentModifier))
-				{
-					iIterationValues.push_back(kTrait.getBuildWorkerSpeedModifier(iI).iModifier);
-				}
+				iIterationValues.push_back(pair.second);
 			}
 		}
 		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
-			for (iI = 0; iI < kTrait.getNumBuildWorkerSpeedModifierTypes(); iI++)
+			foreach_(const BuildModifier2& pair, kTrait.getBuildWorkerSpeedModifiers())
 			{
-				iCurrentModifier = kTrait.getBuildWorkerSpeedModifier(iI).iModifier;
+				iCurrentModifier = pair.second;
 				if (iCurrentModifier == itrValue)
 				{
-					const BuildTypes eTempBuild = kTrait.getBuildWorkerSpeedModifier(iI).eBuild;
+					const CvBuildInfo& kTempBuild = GC.getBuildInfo(pair.first);
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
-						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
+						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(kTempBuild.getType()).c_str(), kTempBuild.getDescription()));
 						bFirst = false;
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL", CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
+						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL", CvWString(kTempBuild.getType()).c_str(), kTempBuild.getDescription()));
 					}
 				}
 			}

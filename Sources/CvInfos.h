@@ -5738,9 +5738,7 @@ public:
 	// int vector utilizing struct with delayed resolution
 
 	const IDValueMap<ImprovementTypes, int>::filtered getImprovementUpgradeModifiers() const;
-
-	int getNumBuildWorkerSpeedModifierTypes() const;
-	BuildModifier getBuildWorkerSpeedModifier(int iBuild) const;
+	const IDValueMap<BuildTypes, int>::filtered getBuildWorkerSpeedModifiers() const;
 
 	int getNumDisallowedTraitTypes() const;
 	DisallowedTraitType isDisallowedTraitType(int iTrait) const;
@@ -5964,7 +5962,7 @@ private:
 	// bool vector without delayed resolution
 	// int vector utilizing struct with delayed resolution
 	IDValueMap<ImprovementTypes, int> m_aImprovementUpgradeModifierTypes;
-	std::vector<BuildModifier> m_aBuildWorkerSpeedModifierTypes;
+	IDValueMap<BuildTypes, int> m_aBuildWorkerSpeedModifierTypes;
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
 	std::vector<DomainModifier> m_aDomainFreeExperiences;
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
