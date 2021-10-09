@@ -230,6 +230,7 @@ void publishIDValueMapPythonInterface()
 typedef std::pair<BonusTypes, int> BonusModifier2;
 typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<BuildTypes, int> BuildModifier2;
+typedef std::pair<DomainTypes, int> DomainModifier2;
 typedef std::pair<SpecialBuildingTypes, int> SpecialBuildingModifier;
 typedef std::pair<ImprovementTypes, int> ImprovementModifier;
 typedef std::pair<ReligionTypes, int> ReligionModifier;

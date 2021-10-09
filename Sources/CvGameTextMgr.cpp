@@ -11266,13 +11266,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_EXPERIENCE_IN_BORDERS", kTrait.getExpInBorderModifier()));
 		}
 
-		for (iI = 0; iI < kTrait.getNumDomainFreeExperiences() ; ++iI)
+		foreach_(const DomainModifier2& pair, kTrait.getDomainFreeExperience())
 		{
-			if (kTrait.getDomainFreeExperience(iI).iModifier != 0)
-			{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_XP", GC.getDomainInfo((DomainTypes)kTrait.getDomainFreeExperience(iI).eDomain).getTextKeyWide(), kTrait.getDomainFreeExperience(iI).iModifier));
-			}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_XP", GC.getDomainInfo(pair.first).getTextKeyWide(), pair.second));
 		}
 
 		//	Capital XP Modifier
