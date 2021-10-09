@@ -28789,16 +28789,9 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		changeImprovementUpgradeRateModifierSpecific(pair.first, iChange * pair.second);
 	}
 
-	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumBuildWorkerSpeedModifierTypes(); iI++)
+	foreach_(const BuildModifier2& pair, GC.getTraitInfo(eTrait).getBuildWorkerSpeedModifiers())
 	{
-		if ((BuildTypes)GC.getTraitInfo(eTrait).getBuildWorkerSpeedModifier(iI).eBuild != NO_BUILD)
-		{
-			BuildTypes eBuild = ((BuildTypes)GC.getTraitInfo(eTrait).getBuildWorkerSpeedModifier(iI).eBuild);
-			if (GC.getTraitInfo(eTrait).getBuildWorkerSpeedModifier(iI).iModifier != 0)
-			{
-				changeBuildWorkerSpeedModifierSpecific(eBuild, iChange*GC.getTraitInfo(eTrait).getBuildWorkerSpeedModifier(iI).iModifier);
-			}
-		}
+		changeBuildWorkerSpeedModifierSpecific(pair.first, iChange * pair.second);
 	}
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)

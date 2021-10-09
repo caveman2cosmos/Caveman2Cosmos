@@ -19928,11 +19928,6 @@ CvTraitInfo::~CvTraitInfo()
 	SAFE_DELETE_ARRAY2(m_ppaiImprovementYieldChange, GC.getNumImprovementInfos());
 
 //	 int vector utilizing struct with delayed resolution
-	for (int i=0; i<(int)m_aBuildWorkerSpeedModifierTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aBuildWorkerSpeedModifierTypes[i]));
-	}
-
 	for (int i=0; i<(int)m_aDisallowedTraitTypes.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aDisallowedTraitTypes[i]));
@@ -22292,29 +22287,9 @@ const IDValueMap<ImprovementTypes, int>::filtered CvTraitInfo::getImprovementUpg
 	return filter(m_aImprovementUpgradeModifierTypes, PureTraits::getPredicate<ImprovementTypes, int>(m_bNegativeTrait));
 }
 
-int CvTraitInfo::getNumBuildWorkerSpeedModifierTypes() const
+const IDValueMap<BuildTypes, int>::filtered CvTraitInfo::getBuildWorkerSpeedModifiers() const
 {
-	return (int)m_aBuildWorkerSpeedModifierTypes.size();
-}
-
-BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild) const
-{
-	FASSERT_BOUNDS(0, getNumBuildWorkerSpeedModifierTypes(), iBuild)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		BuildModifier kMod = m_aBuildWorkerSpeedModifierTypes[iBuild];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aBuildWorkerSpeedModifierTypes[iBuild];
+	return filter(m_aBuildWorkerSpeedModifierTypes, PureTraits::getPredicate<BuildTypes, int>(m_bNegativeTrait));
 }
 
 int CvTraitInfo::getNumDisallowedTraitTypes() const
@@ -22554,6 +22529,7 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
 		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
+		.addDelayedResolution(m_aBuildWorkerSpeedModifierTypes, L"BuildWorkerSpeedModifierTypes")
 		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
 		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
@@ -23056,30 +23032,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChanges);
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"BuildWorkerSpeedModifierTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"BuildWorkerSpeedModifierType" );
-		m_aBuildWorkerSpeedModifierTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BuildWorkerSpeedModifierType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"BuildType");
-					pXML->GetChildXmlValByName(&(m_aBuildWorkerSpeedModifierTypes[i].iModifier), L"iBuildWorkerSpeedModifier");
-					GC.addDelayedResolution((int*)&(m_aBuildWorkerSpeedModifierTypes[i].eBuild), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"BuildWorkerSpeedModifierType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
 	}
 
 	if(pXML->TryMoveToXmlFirstChild(L"DisallowedTraitTypes"))
@@ -24009,17 +23961,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	if (getNumBuildWorkerSpeedModifierTypes() == 0)
-	{
-		int iNum = pClassInfo->getNumBuildWorkerSpeedModifierTypes();
-		m_aBuildWorkerSpeedModifierTypes.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aBuildWorkerSpeedModifierTypes[i].iModifier = pClassInfo->m_aBuildWorkerSpeedModifierTypes[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aBuildWorkerSpeedModifierTypes[i].eBuild), (int*)&(pClassInfo->m_aBuildWorkerSpeedModifierTypes[i].eBuild));
-		}
-	}
-
 	if (getNumDisallowedTraitTypes() == 0)
 	{
 		int iNum = pClassInfo->getNumDisallowedTraitTypes();
@@ -24280,13 +24221,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	// int vectors utilizing struct with delayed resolution
 	int iNumElements;
 	int i;
-
-	iNumElements = m_aBuildWorkerSpeedModifierTypes.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aBuildWorkerSpeedModifierTypes[i].eBuild);
-		CheckSum(iSum, m_aBuildWorkerSpeedModifierTypes[i].iModifier);
-	}
 
 	iNumElements = m_aDisallowedTraitTypes.size();
 	for (i = 0; i < iNumElements; ++i)
