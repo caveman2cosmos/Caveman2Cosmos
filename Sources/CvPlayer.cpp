@@ -28849,12 +28849,9 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		changeNationalDomainFreeExperience(pair.first, pair.second);
 	}
 
-	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumDomainProductionModifiers(); iI++)
+	foreach_(const DomainModifier2& pair, GC.getTraitInfo(eTrait).getDomainProductionModifiers())
 	{
-		if (GC.getTraitInfo(eTrait).getDomainProductionModifier(iI).iModifier != 0)
-		{
-			changeNationalDomainProductionModifier((DomainTypes)GC.getTraitInfo(eTrait).getDomainProductionModifier(iI).eDomain, GC.getTraitInfo(eTrait).getDomainProductionModifier(iI).iModifier);
-		}
+		changeNationalDomainProductionModifier(pair.first, pair.second);
 	}
 
 	foreach_(const TechModifier& pair, GC.getTraitInfo(eTrait).getTechResearchModifiers())
