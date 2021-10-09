@@ -22253,31 +22253,43 @@ int* CvTraitInfo::getGoldenAgeCommerceChangesArray() const
 	return m_piGoldenAgeCommerceChanges;
 }
 
-// int vector utilizing struct with delayed resolution
-int CvTraitInfo::getNumImprovementUpgradeModifierTypes() const
+namespace PureTraits
 {
-	return (int)m_aImprovementUpgradeModifierTypes.size();
-}
-
-ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement) const
-{
-	FASSERT_BOUNDS(0, getNumImprovementUpgradeModifierTypes(), iImprovement)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	namespace
 	{
-		ImprovementModifier kMod = m_aImprovementUpgradeModifierTypes[iImprovement];
-		if (isNegativeTrait() && kMod.iModifier > 0)
+		template <typename T1, typename T2>
+		bool anyValue(const std::pair<T1, T2>&)
 		{
-			kMod.iModifier = 0;
+			return true;
 		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
+		template <typename T1, typename T2>
+		bool isPositiveValue(const std::pair<T1, T2>& pair)
 		{
-			kMod.iModifier = 0;
+			return pair.second > 0;
 		}
-		return kMod;
+		template <typename T1, typename T2>
+		bool isNegativeValue(const std::pair<T1, T2>& pair)
+		{
+			return pair.second < 0;
+		}
 	}
 
-	return m_aImprovementUpgradeModifierTypes[iImprovement];
+	template <typename T1, typename T2>
+	bst::function<bool(const std::pair<T1, T2>&)> getPredicate(bool bNegativeTrait)
+	{
+		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+			return bind(anyValue<T1, T2>, _1);
+
+		if (bNegativeTrait)
+			return bind(isNegativeValue<T1, T2>, _1);
+		else
+			return bind(isPositiveValue<T1, T2>, _1);
+	}
+};
+
+const IDValueMap<ImprovementTypes, int>::filtered CvTraitInfo::getImprovementUpgradeModifiers() const
+{
+	return filter(m_aImprovementUpgradeModifierTypes, PureTraits::getPredicate<ImprovementTypes, int>(m_bNegativeTrait));
 }
 
 int CvTraitInfo::getNumBuildWorkerSpeedModifierTypes() const
@@ -22391,37 +22403,6 @@ BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 	}
 	return m_aBuildingProductionModifiers[iBuilding];
 }
-
-namespace PureTraits
-{
-	namespace
-	{
-		template <typename T1, typename T2>
-		bool anyValue(const std::pair<T1, T2>&)
-		{
-			return true;
-		}
-		template <typename T1, typename T2>
-		bool isPositiveValue(const std::pair<T1, T2>& pair)
-		{
-			return pair.second > 0;
-		}
-		template <typename T1, typename T2>
-		bool isNegativeValue(const std::pair<T1, T2>& pair)
-		{
-			return pair.second < 0;
-		}
-	}
-
-	template <typename T1, typename T2>
-	bst::function<bool(const std::pair<T1, T2>&)> getPredicate(bool bNegativeTrait)
-	{
-		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-			return bind(anyValue<T1, T2>, _1);
-
-		return bNegativeTrait ? bind(isNegativeValue<T1, T2>, _1) : bind(isPositiveValue<T1, T2>, _1);
-	}
-};
 
 const IDValueMap<TechTypes, int>::filtered CvTraitInfo::getTechResearchModifiers() const
 {
@@ -22576,6 +22557,7 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
 		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
+		.add(m_aImprovementUpgradeModifierTypes, L"ImprovementUpgradeModifierTypes")
 	;
 }
 
@@ -23074,30 +23056,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChanges);
-	}
-
-	// int vector utilizing struct with delayed resolution
-	if(pXML->TryMoveToXmlFirstChild(L"ImprovementUpgradeModifierTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"ImprovementUpgradeModifierType" );
-		m_aImprovementUpgradeModifierTypes.resize(iNum);
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"ImprovementUpgradeModifierType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"ImprovementType");
-					m_aImprovementUpgradeModifierTypes[i].eImprovement = (ImprovementTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aImprovementUpgradeModifierTypes[i].iModifier), L"iImprovementUpgradeModifier");
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"ImprovementUpgradeModifierType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
 	}
 
 	if(pXML->TryMoveToXmlFirstChild(L"BuildWorkerSpeedModifierTypes"))
@@ -24051,12 +24009,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	// int vector utilizing struct with delayed resolution
-	if (getNumImprovementUpgradeModifierTypes() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aImprovementUpgradeModifierTypes, pClassInfo->m_aImprovementUpgradeModifierTypes);
-	}
-
 	if (getNumBuildWorkerSpeedModifierTypes() == 0)
 	{
 		int iNum = pClassInfo->getNumBuildWorkerSpeedModifierTypes();
@@ -24328,13 +24280,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	// int vectors utilizing struct with delayed resolution
 	int iNumElements;
 	int i;
-
-	iNumElements = m_aImprovementUpgradeModifierTypes.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aImprovementUpgradeModifierTypes[i].eImprovement);
-		CheckSum(iSum, m_aImprovementUpgradeModifierTypes[i].iModifier);
-	}
 
 	iNumElements = m_aBuildWorkerSpeedModifierTypes.size();
 	for (i = 0; i < iNumElements; ++i)

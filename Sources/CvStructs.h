@@ -137,13 +137,6 @@ struct BonusModifier
 	operator int() const {return (int)eBonus;}
 	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };
-struct ImprovementModifier
-{
-	ImprovementTypes eImprovement;
-	int iModifier;
-	operator int() const {return (int)eImprovement;}
-	bool operator< (const ImprovementModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
-};
 struct DisallowedTraitType
 {
 	TraitTypes eTrait;
