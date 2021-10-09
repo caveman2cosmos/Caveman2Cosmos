@@ -22237,7 +22237,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 			else
 			{
-				//setFreePromoBuildingHelp(ePromo, szBuffer);
+				setFreePromoBuildingHelp(ePromo, szBuffer);
 			}
 			//if (GC.getBuildingInfo(eBuilding).isFreePromoType(iI))
 			//{
