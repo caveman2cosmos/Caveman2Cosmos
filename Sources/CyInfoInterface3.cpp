@@ -162,7 +162,6 @@ void CyInfoPythonInterface3()
 		.def("getLevelExperienceModifier", &CvTraitInfo::getLevelExperienceModifier, "int ()")
 		.def("getGreatPeopleRateModifier", &CvTraitInfo::getGreatPeopleRateModifier, "int ()")
 		.def("getGreatGeneralRateModifier", &CvTraitInfo::getGreatGeneralRateModifier, "int ()")
-		.def("getNumBuildingProductionModifiers", &CvTraitInfo::getNumBuildingProductionModifiers, "int ()")
 
 		.def("getRevIdxLocal", &CvTraitInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvTraitInfo::getRevIdxNational, "int ()")
@@ -176,8 +175,8 @@ void CyInfoPythonInterface3()
 		.def("getShortDescription", &CvTraitInfo::getShortDescription, "int (int i)")
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
-		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
-		.def("getBuildingHappinessModifiers", &CvTraitInfo::getBuildingHappinessModifiers, python::return_value_policy<python::reference_existing_object>())
+		.def("getBuildingProductionModifiers", &CvTraitInfo::getBuildingProductionModifiersUnfiltered, python::return_value_policy<python::reference_existing_object>())
+		.def("getBuildingHappinessModifiers", &CvTraitInfo::getBuildingHappinessModifiersUnfiltered, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getImprovementYieldChange", &CvTraitInfo::getImprovementYieldChange, "int (int i, int j)")
 	;

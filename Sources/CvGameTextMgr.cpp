@@ -11950,40 +11950,29 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Buildings
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		foreach_(const BuildingModifier2& pair, kTrait.getBuildingProductionModifiers())
 		{
-			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-			if (!isWorldWonder(eLoopBuilding))
+			if (!isWorldWonder(pair.first))
 			{
-				for (int j = 0; j < kTrait.getNumBuildingProductionModifiers(); j++)
-				{
-					if (kTrait.getBuildingProductionModifier(j).eBuilding == eLoopBuilding)
-					{
-						if (kTrait.getBuildingProductionModifier(j).iModifier != 0)
-						{
-							//if (kTrait.getBuildingProductionModifier(j).iModifier == 100)
-							//{
-							//	szText = gDLL->getText("TXT_KEY_TRAITHELP_DOUBLE_SPEED");
-							//}
-							//else
-							//{
-								szText = gDLL->getText("TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER", kTrait.getBuildingProductionModifier(j).iModifier);
-							//}
+				//if (kTrait.getBuildingProductionModifier(j).iModifier == 100)
+				//{
+				//	szText = gDLL->getText("TXT_KEY_TRAITHELP_DOUBLE_SPEED");
+				//}
+				//else
+				//{
+					szText = gDLL->getText("TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER", pair.second);
+				//}
 
-							CvWString szBuilding;
-							szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-							setListHelp(szHelpString, szText.GetCString(), szBuilding, L", ", (kTrait.getBuildingProductionModifier(j).iModifier != iLast));
-							iLast = kTrait.getBuildingProductionModifier(j).iModifier;
-						}
-					}
-				}
+				CvWString szBuilding;
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(pair.first).getType()).c_str(), GC.getBuildingInfo(pair.first).getDescription());
+				setListHelp(szHelpString, szText.c_str(), szBuilding, L", ", (pair.second != iLast));
+				iLast = pair.second;
 			}
 		}
 
 		// Buildings
 		iLast = 0;
-		foreach_(const BuildingModifier2& pair, kTrait.getBuildingHappinessModifiersFiltered())
+		foreach_(const BuildingModifier2& pair, kTrait.getBuildingHappinessModifiers())
 		{
 			const BuildingTypes eLoopBuilding = pair.first;
 
@@ -12007,12 +11996,9 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		// Property manipulators
-		const CvPropertyManipulators* pMani = kTrait.getPropertyManipulators();
-		if (pMani)
+		if (const CvPropertyManipulators* pMani = kTrait.getPropertyManipulators())
 			pMani->buildDisplayString(szHelpString);
 	}
-
-//	return szHelpString;
 }
 
 
@@ -23404,23 +23390,19 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		// Trait
 		foreach_(const CvTraitInfo* pTrait, GC.getTraitInfos())
 		{
-			for (int j = 0; j < pTrait->getNumBuildingProductionModifiers(); j++)
+			const int iProduction = algo::map::get_key_value(pTrait->getBuildingProductionModifiers(), eBuilding);
+
+			if (iProduction != 0)
 			{
-				if (pTrait->getBuildingProductionModifier(j).eBuilding == eBuilding)
+				if (iProduction == 100)
 				{
-					if (pTrait->getBuildingProductionModifier(j).iModifier != 0)
-					{
-						if (pTrait->getBuildingProductionModifier(j).iModifier == 100)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", pTrait->getTextKeyWide()));
-						}
-						else
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", pTrait->getBuildingProductionModifier(j).iModifier, pTrait->getTextKeyWide()));
-						}
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", pTrait->getTextKeyWide()));
+				}
+				else
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", iProduction, pTrait->getTextKeyWide()));
 				}
 			}
 		}
@@ -23429,13 +23411,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		{
 			foreach_(const CvTraitInfo* pTrait, GC.getTraitInfos())
 			{
-				foreach_(const BuildingModifier2& pair, pTrait->getBuildingHappinessModifiersFiltered())
+				const int iHappiness = algo::map::get_key_value(pTrait->getBuildingHappinessModifiers(), eBuilding);
+
+				if (iHappiness != 0)
 				{
-					if (pair.first == eBuilding)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT", pair.second, pTrait->getTextKeyWide()));
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT", iHappiness, pTrait->getTextKeyWide()));
 				}
 			}
 		}

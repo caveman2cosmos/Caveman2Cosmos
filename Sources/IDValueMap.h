@@ -18,7 +18,7 @@
 
 // The maps are assumed to be small, so a vector of pairs is used
 
-template <class ID_, class Value_, Value_ defaultValue = 0>
+template <class ID_, class Value_ = int, Value_ defaultValue = 0>
 struct IDValueMap
 {
 	typedef std::pair<ID_, Value_>																	value_type;
@@ -225,6 +225,35 @@ void publishIDValueMapPythonInterface()
 	;
 
 	publishPythonIteratorInterface<IDValueMap_t::python_iterator>();
+}
+
+namespace algo
+{
+	namespace map
+	{
+		// FUNCTION TEMPLATE getKeyValue
+		// find the corresponding value for key
+		template <typename Map_t>
+		typename Map_t::value_type::second_type get_key_value(const Map_t& map, typename Map_t::value_type::first_type key)
+		{
+			foreach_(const typename Map_t::value_type& pair, map)
+				if (pair.first == key)
+					return pair.second;
+			return 0;
+		}
+
+		// FUNCTION TEMPLATE getKeyValue
+		// for boost::filtered_range
+		// find the corresponding value for key
+		template <typename Map_t>
+		typename Map_t::value_type::second_type get_key_value(const typename Map_t::filtered& map, typename Map_t::value_type::first_type key)
+		{
+			foreach_(const typename Map_t::value_type& pair, map)
+				if (pair.first == key)
+					return pair.second;
+			return 0;
+		}
+	}
 }
 
 typedef std::pair<BonusTypes, int> BonusModifier2;

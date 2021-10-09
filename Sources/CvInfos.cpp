@@ -19933,11 +19933,6 @@ CvTraitInfo::~CvTraitInfo()
 		GC.removeDelayedResolution((int*)&(m_aDisallowedTraitTypes[i]));
 	}
 
-	for (int i=0; i<(int)m_aBuildingProductionModifiers.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aBuildingProductionModifiers[i]));
-	}
-
 	for (int i=0; i<(int)m_aUnitProductionModifiers.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aUnitProductionModifiers[i]));
@@ -22282,12 +22277,12 @@ namespace PureTraits
 	}
 };
 
-const IDValueMap<ImprovementTypes, int>::filtered CvTraitInfo::getImprovementUpgradeModifiers() const
+const IDValueMap<ImprovementTypes>::filtered CvTraitInfo::getImprovementUpgradeModifiers() const
 {
 	return filter(m_aImprovementUpgradeModifierTypes, PureTraits::getPredicate<ImprovementTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<BuildTypes, int>::filtered CvTraitInfo::getBuildWorkerSpeedModifiers() const
+const IDValueMap<BuildTypes>::filtered CvTraitInfo::getBuildWorkerSpeedModifiers() const
 {
 	return filter(m_aBuildWorkerSpeedModifierTypes, PureTraits::getPredicate<BuildTypes, int>(m_bNegativeTrait));
 }
@@ -22304,52 +22299,32 @@ DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
 	return m_aDisallowedTraitTypes[iTrait];
 }
 
-const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainFreeExperience() const
+const IDValueMap<DomainTypes>::filtered CvTraitInfo::getDomainFreeExperience() const
 {
 	return filter(m_aDomainFreeExperiences, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainProductionModifiers() const
+const IDValueMap<DomainTypes>::filtered CvTraitInfo::getDomainProductionModifiers() const
 {
 	return filter(m_aDomainProductionModifiers, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
 }
 
-int CvTraitInfo::getNumBuildingProductionModifiers() const
+const IDValueMap<BuildingTypes>::filtered CvTraitInfo::getBuildingProductionModifiers() const
 {
-	return (int)m_aBuildingProductionModifiers.size();
+	return filter(m_aBuildingProductionModifiers, PureTraits::getPredicate<BuildingTypes, int>(m_bNegativeTrait));
 }
 
-BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
-{
-	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		BuildingModifier kMod = m_aBuildingProductionModifiers[iBuilding];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aBuildingProductionModifiers[iBuilding];
-}
-
-const IDValueMap<TechTypes, int>::filtered CvTraitInfo::getTechResearchModifiers() const
+const IDValueMap<TechTypes>::filtered CvTraitInfo::getTechResearchModifiers() const
 {
 	return filter(m_aTechResearchModifiers, PureTraits::getPredicate<TechTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<SpecialBuildingTypes, int>::filtered CvTraitInfo::getSpecialBuildingProductionModifiers() const
+const IDValueMap<SpecialBuildingTypes>::filtered CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
 	return filter(m_aSpecialBuildingProductionModifiers, PureTraits::getPredicate<SpecialBuildingTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<BuildingTypes, int>::filtered CvTraitInfo::getBuildingHappinessModifiersFiltered() const
+const IDValueMap<BuildingTypes>::filtered CvTraitInfo::getBuildingHappinessModifiers() const
 {
 	return filter(m_aBuildingHappinessModifiers, PureTraits::getPredicate<BuildingTypes, int>(m_bNegativeTrait));
 }
@@ -22480,7 +22455,7 @@ UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
 	return m_aUnitCombatProductionModifiers[iUnitCombat];
 }
 
-const IDValueMap<BonusTypes, int>::filtered CvTraitInfo::getBonusHappinessChanges() const
+const IDValueMap<BonusTypes>::filtered CvTraitInfo::getBonusHappinessChanges() const
 {
 	return filter(m_aBonusHappinessChanges, PureTraits::getPredicate<BonusTypes, int>(m_bNegativeTrait));
 }
@@ -22491,6 +22466,7 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
 		.addDelayedResolution(m_aBuildWorkerSpeedModifierTypes, L"BuildWorkerSpeedModifierTypes")
 		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
+		.addDelayedResolution(m_aBuildingProductionModifiers, L"BuildingProductionModifierTypes")
 		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
 		.add(m_aImprovementUpgradeModifierTypes, L"ImprovementUpgradeModifierTypes")
@@ -23013,30 +22989,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					GC.addDelayedResolution((int*)&(m_aDisallowedTraitTypes[i].eTrait), szTextVal);
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"DisallowedTraitType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"BuildingProductionModifierTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"BuildingProductionModifierType" );
-		m_aBuildingProductionModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BuildingProductionModifierType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"BuildingType");
-					pXML->GetChildXmlValByName(&(m_aBuildingProductionModifiers[i].iModifier), L"iBuildingProductionModifier");
-					GC.addDelayedResolution((int*)&(m_aBuildingProductionModifiers[i].eBuilding), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"BuildingProductionModifierType"));
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -23910,17 +23862,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	if (getNumBuildingProductionModifiers() == 0)
-	{
-		int iNum = pClassInfo->getNumBuildingProductionModifiers();
-		m_aBuildingProductionModifiers.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aBuildingProductionModifiers[i].iModifier = pClassInfo->m_aBuildingProductionModifiers[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aBuildingProductionModifiers[i].eBuilding), (int*)&(pClassInfo->m_aBuildingProductionModifiers[i].eBuilding));
-		}
-	}
-
 	if (getNumUnitProductionModifiers() == 0)
 	{
 		int iNum = pClassInfo->getNumUnitProductionModifiers();
@@ -23937,7 +23878,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aSpecialUnitProductionModifiers, pClassInfo->m_aSpecialUnitProductionModifiers);
 	}
 
-//Team Project (8)
 	if (getNumUnitCombatFreeExperiences() == 0)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aUnitCombatFreeExperiences, pClassInfo->m_aUnitCombatFreeExperiences);
@@ -24135,13 +24075,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	}
 
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
-
-	iNumElements = m_aBuildingProductionModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aBuildingProductionModifiers[i].eBuilding);
-		CheckSum(iSum, m_aBuildingProductionModifiers[i].iModifier);
-	}
 
 	iNumElements = m_aUnitProductionModifiers.size();
 	for (i = 0; i < iNumElements; ++i)

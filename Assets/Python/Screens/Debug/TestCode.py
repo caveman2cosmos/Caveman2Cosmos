@@ -1844,9 +1844,8 @@ class TestCode:
 			aReplacementBuildingsList = []
 			aUniqueReplacementBuildingsList = []
 			aBuildingProductionModifierValues = []
-			for i in xrange(CvTraitInfo.getNumBuildingProductionModifiers()):
-				iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
-				aBuildingProductionModifierValues.append(CvTraitInfo.getBuildingProductionModifier(i).value)
+			for iAffectedBuilding, iProduction in CvTraitInfo.getBuildingProductionModifiers():
+				aBuildingProductionModifierValues.append(iProduction)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
