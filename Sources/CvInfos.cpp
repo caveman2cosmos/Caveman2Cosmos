@@ -22309,29 +22309,9 @@ const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainFreeExperienc
 	return filter(m_aDomainFreeExperiences, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
 }
 
-int CvTraitInfo::getNumDomainProductionModifiers() const
+const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainProductionModifiers() const
 {
-	return (int)m_aDomainProductionModifiers.size();
-}
-
-DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain) const
-{
-	FASSERT_BOUNDS(0, getNumDomainProductionModifiers(), iDomain)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		DomainModifier kMod = m_aDomainProductionModifiers[iDomain];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aDomainProductionModifiers[iDomain];
+	return filter(m_aDomainProductionModifiers, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
 }
 
 int CvTraitInfo::getNumBuildingProductionModifiers() const
@@ -22515,6 +22495,7 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
 		.add(m_aImprovementUpgradeModifierTypes, L"ImprovementUpgradeModifierTypes")
 		.add(m_aDomainFreeExperiences, L"DomainFreeExperiences")
+		.add(m_aDomainProductionModifiers, L"DomainProductionModifiers")
 	;
 }
 
@@ -23032,29 +23013,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					GC.addDelayedResolution((int*)&(m_aDisallowedTraitTypes[i].eTrait), szTextVal);
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"DisallowedTraitType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"DomainProductionModifiers"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"DomainProductionModifier" );
-		m_aDomainProductionModifiers.resize(iNum);
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"DomainProductionModifier"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"DomainType");
-					m_aDomainProductionModifiers[i].eDomain = (DomainTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aDomainProductionModifiers[i].iModifier), L"iModifier");
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"DomainProductionModifier"));
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -23952,11 +23910,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	if (getNumDomainProductionModifiers() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aDomainProductionModifiers, pClassInfo->m_aDomainProductionModifiers);
-	}
-
 	if (getNumBuildingProductionModifiers() == 0)
 	{
 		int iNum = pClassInfo->getNumBuildingProductionModifiers();
@@ -24179,13 +24132,6 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	for (i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aDisallowedTraitTypes[i].eTrait);
-	}
-
-	iNumElements = m_aDomainProductionModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aDomainProductionModifiers[i].eDomain);
-		CheckSum(iSum, m_aDomainProductionModifiers[i].iModifier);
 	}
 
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());

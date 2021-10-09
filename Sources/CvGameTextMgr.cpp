@@ -11383,13 +11383,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		bFound = false;
 		bFirst = true;
 
-		for (iI = 0; iI < kTrait.getNumDomainProductionModifiers(); ++iI)
+		foreach_(const DomainModifier2& pair, kTrait.getDomainProductionModifiers())
 		{
-			if (kTrait.getDomainProductionModifier(iI).iModifier != 0)
-			{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_BUILDS_FASTER_DOMAIN", GC.getDomainInfo((DomainTypes)kTrait.getDomainProductionModifier(iI).eDomain).getTextKeyWide(), kTrait.getDomainProductionModifier(iI).iModifier));
-			}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_BUILDS_FASTER_DOMAIN", GC.getDomainInfo(pair.first).getTextKeyWide(), pair.second));
 		}
 
 		//	State Religion Unit Production Modifier
