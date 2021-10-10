@@ -3,6 +3,7 @@
 #ifndef CvInfoArray_h__
 #define CvInfoArray_h__
 
+
 #define EXPAND_FOR_EACH_INFO_CLASS(MACRO_FUNC)	\
 	MACRO_FUNC(CvBuildingInfo, BUILDING_INFO, BuildingTypes) \
 	MACRO_FUNC(CvUnitInfo, UNIT_INFO, UnitTypes) \
@@ -109,6 +110,8 @@
 	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes)
 
 
+class CvInfoBase;
+
 template <class InfoClass_>
 struct InfoClassTraits
 {
@@ -120,6 +123,8 @@ struct InfoClassTraits
 
 
 #define DECLARE_INFO_CLASS_TRAITS(_class, _classEnum, _indexType)	\
+																	\
+class _class;														\
 																	\
 template <>															\
 struct InfoClassTraits<_class>										\
@@ -139,12 +144,6 @@ struct InfoClassTraits<_indexType>									\
 	static const InfoClassTypes InfoClassEnum = _classEnum;			\
 };
 
-
-#define FORWARD_DECLARATION(_class, _classEnum, _indexType) \
-	class _class;
-
-
-EXPAND_FOR_EACH_INFO_CLASS(FORWARD_DECLARATION)
 
 EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS)
 
