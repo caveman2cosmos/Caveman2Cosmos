@@ -64,8 +64,7 @@ bool UnitFilterIsCombat::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *p
 
 bool UnitFilterIsCombats::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
-	const UnitCombatTypes eCombat = (UnitCombatTypes)(GC.getUnitInfo(eUnit).getUnitCombatType());
-	return std::find(m_eCombats.begin(), m_eCombats.end(), eCombat) != m_eCombats.end();
+	return algo::contains(m_eCombats, (UnitCombatTypes)GC.getUnitInfo(eUnit).getUnitCombatType());
 }
 
 void UnitFilterIsCombats::addCombat(UnitCombatTypes eCombat)

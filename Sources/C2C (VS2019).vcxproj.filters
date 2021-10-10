@@ -665,7 +665,10 @@
     <ClInclude Include="CvInfos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvInfoWater.h">
+     <ClInclude Include="CvInfoUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+   <ClInclude Include="CvInfoWater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvInitCore.h">
@@ -822,6 +825,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CyHallOfFameInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CyIterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CyMap.h">

@@ -49,6 +49,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AESOP_CRIME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AESOP_CRIME_PEDIA</Civilopedia>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -92,6 +93,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -124,11 +126,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -156,10 +153,9 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_BURROW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BURROW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
-				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -215,11 +211,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_NORDIC</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -233,174 +224,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_ALUMINUM_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_CAMEL_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_ELEPHANT_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MINING</PrereqTech>
-			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MINING</PrereqTech>
-			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
-			<RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAHAI_SHRINE</Type>
@@ -449,11 +272,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -468,6 +286,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELIEF_KARMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_KARMA_PEDIA</Civilopedia>
+			<PrereqTech>TECH_KARMA</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -492,6 +311,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELIEF_REINCARNATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_REINCARNATION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -517,6 +337,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELIEF_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_RESURRECTION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -584,6 +405,10 @@
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -615,7 +440,6 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
@@ -651,9 +475,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
@@ -765,11 +590,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_CANAANITE</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -867,7 +687,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -883,7 +707,12 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -907,6 +736,16 @@
 			<Description>TXT_KEY_BUILDING_CAVE_DWELLING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVE_DWELLING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -920,8 +759,6 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>20</iDefense>
-			<iBombardDefense>20</iBombardDefense>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<bAutoBuild>1</bAutoBuild>
@@ -997,7 +834,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<FreePromotion>PROMOTION_MARAUDER</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1230,7 +1071,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<FreePromotion>PROMOTION_MARAUDER</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1250,7 +1095,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<FreePromotion>PROMOTION_CITY_GARRISON1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_CITY_GARRISON1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1389,6 +1238,7 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEANAIR_ACT</ArtDefineTag>
@@ -1421,6 +1271,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -1536,7 +1387,11 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_MORALE</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_MORALE</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<GlobalReligionCommerce>RELIGION_CONFUCIANISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -1558,41 +1413,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CORAL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_1_HQ</Type>
@@ -1622,11 +1442,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_1</FoundsCorporation>
@@ -1674,11 +1489,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_2</FoundsCorporation>
@@ -1723,11 +1533,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_3</FoundsCorporation>
@@ -1772,11 +1577,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_4</FoundsCorporation>
@@ -1821,11 +1621,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_5</FoundsCorporation>
@@ -1870,11 +1665,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_6</FoundsCorporation>
@@ -1919,11 +1709,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_7</FoundsCorporation>
@@ -1968,11 +1753,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_ADVENTURE</FoundsCorporation>
@@ -2021,11 +1801,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_BULLSEYE</FoundsCorporation>
@@ -2074,11 +1849,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_BURGERWORLD</FoundsCorporation>
@@ -2127,11 +1897,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_EMPCLOTH</FoundsCorporation>
@@ -2176,11 +1941,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_EWTRADE</FoundsCorporation>
@@ -2229,11 +1989,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_FASHION</FoundsCorporation>
@@ -2278,11 +2033,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_MALLWART</FoundsCorporation>
@@ -2371,11 +2121,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_MCDOWELLS</FoundsCorporation>
@@ -2424,11 +2169,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_MILEHIGH</FoundsCorporation>
@@ -2473,11 +2213,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_MOBBY</FoundsCorporation>
@@ -2526,11 +2261,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_MOONBEAN</FoundsCorporation>
@@ -2576,11 +2306,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_RED</FoundsCorporation>
@@ -2712,11 +2437,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_WONKA</FoundsCorporation>
@@ -2758,7 +2478,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ANIMALABUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ARMEDCOMMUNITIES</Type>
@@ -2769,8 +2489,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ARMEDCOMMUNITIES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<Bonus>BONUS_FIREARMS</Bonus>
-			<iHealth>2</iHealth>
-			<iHappiness>2</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-2</iHappiness>
 			<iInvestigation>20</iInvestigation>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -2783,7 +2503,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2793,7 +2513,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ARMEDCOMMUNITIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ARSON</Type>
@@ -2831,7 +2551,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ARSON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ASIMOV</Type>
@@ -2857,7 +2577,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ASIMOV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BANKROBBERY</Type>
@@ -2887,7 +2607,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BANKROBBERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BLACKMAIL</Type>
@@ -2917,7 +2637,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BLACKMAIL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BLACKMARKETS</Type>
@@ -2959,7 +2679,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BLACKMARKETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BRAINWASHING</Type>
@@ -3001,7 +2721,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BRAINWASHING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BRIBERY</Type>
@@ -3036,7 +2756,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BRIBERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BURGLARY</Type>
@@ -3057,104 +2777,104 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_JEWELRY</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_SCULPTURES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_POTTERY</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_GLASSWARE</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_CLOTHING</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_HATS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_SHOES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_PERCUSSION_INSTRUMENTS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_WOODWIND_INSTRUMENTS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_BRASS_INSTRUMENTS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_STRING_INSTRUMENTS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_BOOKS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_BICYCLES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_TOYS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_SKIS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_COMPUTERS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<iRevIdxLocal>15</iRevIdxLocal>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3165,7 +2885,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BURGLARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CARBOMBING</Type>
@@ -3204,7 +2924,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CARBOMBING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CARTHEIFT</Type>
@@ -3235,7 +2955,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CARTHEIFT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CHILDLABOR</Type>
@@ -3267,7 +2987,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CHILDLABOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CORRUPTION</Type>
@@ -3305,7 +3025,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CORRUPTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_COUNTERFEITING</Type>
@@ -3331,7 +3051,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_COUNTERFEITING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CYBERBULLYING</Type>
@@ -3346,7 +3066,7 @@
 			<iInsidiousness>1</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CYBERBULLYING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CYBERWARFARE</Type>
@@ -3376,7 +3096,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CYBERWARFARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DOMESTICVIOLENCE</Type>
@@ -3398,7 +3118,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DOMESTICVIOLENCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DRUGCARTELS</Type>
@@ -3413,8 +3133,6 @@
 			<CommerceModifiers>
 				<iCommerce>-15</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_DRUGS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iInsidiousness>15</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -3438,7 +3156,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUGCARTELS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DRUGS</Type>
@@ -3474,7 +3192,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DRUNKDRIVING</Type>
@@ -3497,7 +3215,7 @@
 			<iInsidiousness>6</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUNKDRIVING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ELDERABUSE</Type>
@@ -3520,7 +3238,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ELDERABUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_EMBEZZLEMENT</Type>
@@ -3546,7 +3264,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EMBEZZLEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_EPIRACY</Type>
@@ -3575,7 +3293,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EPIRACY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_EXTORTION</Type>
@@ -3605,7 +3323,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EXTORTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_FALSEACCUSATIONS</Type>
@@ -3626,7 +3344,7 @@
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FALSEACCUSATIONS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_FIGHTING</Type>
@@ -3655,7 +3373,7 @@
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FIGHTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_FORGERY</Type>
@@ -3678,7 +3396,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FORGERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GANGS</Type>
@@ -3717,7 +3435,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GANGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GANGWARFARE</Type>
@@ -3756,7 +3474,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GANGWARFARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GENEFORGERY</Type>
@@ -3780,7 +3498,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GENEFORGERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GRAFFITI</Type>
@@ -3803,16 +3521,16 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_DYE</BonusType>
-					<CommerceModifiers>
-						<iCommerce>-2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-2</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>-200</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3822,7 +3540,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GRAFFITI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GUNRAMPAGE</Type>
@@ -3854,7 +3572,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GUNRAMPAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_HACKING</Type>
@@ -3882,7 +3600,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HACKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_HATECRIME</Type>
@@ -3916,7 +3634,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HATECRIME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_HUMANTRAFFICKING</Type>
@@ -3953,7 +3671,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HUMANTRAFFICKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_IDENTITYTHEFT</Type>
@@ -3980,7 +3698,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_IDENTITYTHEFT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ILLEGALIMMIGRATION</Type>
@@ -4027,7 +3745,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ILLEGALIMMIGRATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INSIDERTRADING</Type>
@@ -4058,7 +3776,7 @@
 			</CommerceModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSIDERTRADING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INSUBORDINATION</Type>
@@ -4074,7 +3792,7 @@
 			<iRevIdxLocal>25</iRevIdxLocal>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSUBORDINATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INSURANCEFRAUD</Type>
@@ -4100,7 +3818,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSURANCEFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INTERNETFRAUD</Type>
@@ -4126,7 +3844,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INTERNETFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_JAILBREAK</Type>
@@ -4138,7 +3856,6 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
-				<BuildingType>BUILDING_CYROGENIC_PRISON</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 				<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
 				<BuildingType>BUILDING_ALCATRAZ</BuildingType>
@@ -4165,7 +3882,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_JAILBREAK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_KIDNAPPING</Type>
@@ -4194,7 +3911,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_KIDNAPPING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_LITERING</Type>
@@ -4224,7 +3941,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LITERING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_LOOTING</Type>
@@ -4271,7 +3988,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LOOTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_LYING</Type>
@@ -4292,7 +4009,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LYING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MALWARE</Type>
@@ -4322,7 +4039,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MALWARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MEDICALFRAUD</Type>
@@ -4357,7 +4074,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MEDICALFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MILITARYDESERTION</Type>
@@ -4386,7 +4103,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MILITARYDESERTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MOB</Type>
@@ -4429,7 +4146,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MOB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MONEYLAUNDERING</Type>
@@ -4456,7 +4173,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MONEYLAUNDERING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MUGGING</Type>
@@ -4491,7 +4208,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MUGGING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MURDER</Type>
@@ -4524,7 +4241,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MURDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ORGANTRADE</Type>
@@ -4553,7 +4270,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ORGANTRADE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_PICKPOCKET</Type>
@@ -4586,7 +4303,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PICKPOCKET</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_PLANEHIJACKING</Type>
@@ -4623,7 +4340,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PLANEHIJACKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_POACHING</Type>
@@ -4661,7 +4378,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_POACHING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_PUBLICINTOXICATION</Type>
@@ -4688,7 +4405,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PUBLICINTOXICATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_RACKETEERTING</Type>
@@ -4724,7 +4441,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RACKETEERTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_RAPE</Type>
@@ -4757,7 +4474,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RAPE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_RIOTING</Type>
@@ -4799,7 +4516,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RIOTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SCHOOLSHOOTING</Type>
@@ -4823,7 +4540,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SCHOOLSHOOTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SECTARIANVIOLENCE</Type>
@@ -4863,7 +4580,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SECTARIANVIOLENCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SEXUALHARASSMENT</Type>
@@ -4884,7 +4601,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SEXUALHARASSMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SHOPLIFTING</Type>
@@ -4907,93 +4624,93 @@
 			</UnitCombatFreeExperiences>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CURRENCY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CURRENCY</TechType>
+					<CommercePercents>
+						<iCommercePercent>-100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_USURY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_USURY</TechType>
+					<CommercePercents>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_BANKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_BANKING</TechType>
+					<CommercePercents>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MERCANTILISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_MERCANTILISM</TechType>
+					<CommercePercents>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ECONOMICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>-300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CONSUMERISM</TechType>
+					<CommercePercents>
+						<iCommercePercent>-300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_APPLIED_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-4</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_APPLIED_ECONOMICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>-400</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_GLOBALIZATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>-500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CONGLOMERATES</TechType>
+					<CommercePercents>
+						<iCommercePercent>-500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MEGACORPORATIONS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_MEGACORPORATIONS</TechType>
+					<CommercePercents>
+						<iCommercePercent>-500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ENVIRONMENTAL_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ENVIRONMENTAL_ECONOMICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>-300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PLANETARY_ECONOMICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>-300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_INTERSTELLAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SHOPLIFTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SOLICITING</Type>
@@ -5008,7 +4725,7 @@
 			<iInsidiousness>2</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SOLICITING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SPORTSRIOTS</Type>
@@ -5034,7 +4751,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SPORTSRIOTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TAXEVASION</Type>
@@ -5054,7 +4771,7 @@
 			<iInsidiousness>2</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TAXEVASION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TIMELINETAMPERING</Type>
@@ -5091,7 +4808,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TIMELINETAMPERING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TOXICDUMPING</Type>
@@ -5110,9 +4827,14 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<SeaPlotYieldChanges>
-				<iYield>-3</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-3</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<iRevIdxLocal>20</iRevIdxLocal>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5128,7 +4850,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TOXICDUMPING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TRESSPASSING</Type>
@@ -5149,7 +4871,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TRESSPASSING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TRUANCY</Type>
@@ -5173,7 +4895,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TRUANCY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_UNLICENSEDCLONING</Type>
@@ -5196,7 +4918,7 @@
 			<iRevIdxLocal>20</iRevIdxLocal>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_UNLICENSEDCLONING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_VIGILANTISM</Type>
@@ -5206,7 +4928,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_VIGILANTISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_VIGILANTISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHappiness>2</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5231,7 +4953,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5241,7 +4963,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_VIGILANTISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_WEAPONSTRAFFICKING</Type>
@@ -5253,8 +4975,6 @@
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
-			<FreeBonus>BONUS_FIREARMS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iInsidiousness>10</iInsidiousness>
 			<iRevIdxLocal>50</iRevIdxLocal>
@@ -5278,7 +4998,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_WEAPONSTRAFFICKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_WELFAREFRAUD</Type>
@@ -5312,7 +5032,7 @@
 			</CommerceModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_WELFAREFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
@@ -5347,6 +5067,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5706,7 +5427,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_ANTHRAX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_BIRDFLU</Type>
@@ -5737,7 +5458,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_BIRDFLU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_CHOLERA</Type>
@@ -5774,7 +5495,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_CHOLERA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_COMMONCOLD</Type>
@@ -5792,7 +5513,7 @@
 			</YieldModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_COMMONCOLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_DIPHTHERIA</Type>
@@ -5829,7 +5550,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_DIPHTHERIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_DYSENTERY</Type>
@@ -5866,7 +5587,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_DYSENTERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_HIV</Type>
@@ -5893,7 +5614,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_HIV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<!-- Should be given by python when butchering units.
 		<BuildingInfo>
@@ -5917,7 +5638,7 @@
 			</YieldModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		-->
 		<BuildingInfo>
@@ -5945,7 +5666,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_LEPROSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_MALARIA</Type>
@@ -5976,7 +5697,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_MALARIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_MEASLES</Type>
@@ -6003,7 +5724,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_MEASLES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_PLAGUE</Type>
@@ -6034,7 +5755,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_PLAGUE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SCARLETFEAVER</Type>
@@ -6061,7 +5782,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SCARLETFEAVER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SCURVY</Type>
@@ -6087,7 +5808,7 @@
 			</BonusHealthChanges>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SCURVY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SMALLPOX</Type>
@@ -6114,7 +5835,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SMALLPOX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SWINEFLU</Type>
@@ -6142,7 +5863,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SWINEFLU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_TYPHOIDFEAVER</Type>
@@ -6179,7 +5900,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_TYPHOIDFEAVER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISNEYLAND_EFFECT</Type>
@@ -6188,54 +5909,11 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DISNEYLAND</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DRAGON_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_DRAGON_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_DRAGON_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DRAGON_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRUG_PROHIBITION</Type>
@@ -6244,6 +5922,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DRUG_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUG_PROHIBITION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -6299,78 +5978,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTH_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_EARTH_MYTH_EFFECT</FreeBuilding>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_EFFECT_GPS</Type>
 			<Description>TXT_KEY_BUILDING_EFFECT_GPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EFFECT_GPS_PEDIA</Civilopedia>
@@ -6383,43 +5990,43 @@
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_WEARABLE_COMPUTERS</TechType>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_DIGITIZATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_DIGITIZATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CYBERWARFARE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_AUTOMATED_TRAFFIC</TechType>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_WAR_SIMULATIONS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ONLINE_COMMUNITY</TechType>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
@@ -6513,6 +6120,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
+			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
@@ -6527,7 +6135,30 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iHealth>1</iHealth>
+			<iHappiness>1</iHappiness>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT</Type>
@@ -6543,13 +6174,16 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
-			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6563,7 +6197,12 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6582,6 +6221,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ENHANCED_SPECIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENHANCED_SPECIES_PEDIA</Civilopedia>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<BonusYieldChanges>
 				<BonusYieldChange>
 					<BonusType>BONUS_BARLEY</BonusType>
@@ -7128,6 +6768,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7188,7 +6829,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS10</Type>
@@ -7237,7 +6878,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS11</Type>
@@ -7284,7 +6925,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS12</Type>
@@ -7333,7 +6974,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS13</Type>
@@ -7380,7 +7021,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS2</Type>
@@ -7429,7 +7070,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS3</Type>
@@ -7476,7 +7117,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS4</Type>
@@ -7525,7 +7166,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS5</Type>
@@ -7572,7 +7213,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS6</Type>
@@ -7621,7 +7262,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS7</Type>
@@ -7668,7 +7309,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS8</Type>
@@ -7717,7 +7358,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS9</Type>
@@ -7764,7 +7405,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS1</Type>
@@ -7779,7 +7420,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS10</Type>
@@ -7794,7 +7435,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS11</Type>
@@ -7809,7 +7450,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS12</Type>
@@ -7824,7 +7465,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS13</Type>
@@ -7839,7 +7480,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS2</Type>
@@ -7854,7 +7495,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS3</Type>
@@ -7869,7 +7510,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS4</Type>
@@ -7884,7 +7525,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS5</Type>
@@ -7899,7 +7540,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS6</Type>
@@ -7914,7 +7555,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS7</Type>
@@ -7929,7 +7570,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS8</Type>
@@ -7944,7 +7585,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS9</Type>
@@ -7959,7 +7600,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS1</Type>
@@ -7974,7 +7615,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS10</Type>
@@ -7990,7 +7631,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS11</Type>
@@ -8006,7 +7647,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS12</Type>
@@ -8022,7 +7663,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS13</Type>
@@ -8038,7 +7679,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS2</Type>
@@ -8054,7 +7695,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS3</Type>
@@ -8070,7 +7711,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS4</Type>
@@ -8086,7 +7727,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS5</Type>
@@ -8102,7 +7743,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS6</Type>
@@ -8118,7 +7759,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS7</Type>
@@ -8134,7 +7775,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS8</Type>
@@ -8150,7 +7791,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS9</Type>
@@ -8166,7 +7807,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS1</Type>
@@ -8212,7 +7853,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS10</Type>
@@ -8261,7 +7902,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS11</Type>
@@ -8308,7 +7949,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS12</Type>
@@ -8357,7 +7998,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS13</Type>
@@ -8404,7 +8045,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS2</Type>
@@ -8453,7 +8094,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS3</Type>
@@ -8500,7 +8141,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS4</Type>
@@ -8549,7 +8190,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS5</Type>
@@ -8596,7 +8237,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS6</Type>
@@ -8645,7 +8286,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS7</Type>
@@ -8692,7 +8333,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS8</Type>
@@ -8741,7 +8382,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS9</Type>
@@ -8788,42 +8429,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FALL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
@@ -8832,7 +8438,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_FERTILITYFESTIVAL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Civilopedia>
-			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -8857,11 +8463,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_FERTILTY_DANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
-			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_CHILDBIRTH_HUT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_ANCIENT_CUSTOMS</ID>
+					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_CHILDCAREHUT</ID>
@@ -8869,6 +8480,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_DAYCARE_CENTER</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -8989,18 +8604,6 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DANCE</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</Type>
@@ -9515,6 +9118,10 @@
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9525,6 +9132,12 @@
 			<Description>TXT_KEY_BUILDING_FRAT_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FRAT_HOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -9536,13 +9149,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -9555,6 +9161,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GAMBLING_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GAMBLING_BAN_PEDIA</Civilopedia>
+			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -9569,6 +9176,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9590,6 +9198,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 			</ReplacementBuildings>
+			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<iHappiness>2</iHappiness>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9603,28 +9212,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_FUSION</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_FUSION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_FUSION_PEDIA</Civilopedia>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1000</iYield>
-			</YieldChanges>
-			<bPower>1</bPower>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FUSION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_GOOD_GORGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_GORGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_GORGE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iHealth>10</iHealth>
 			<iHappiness>10</iHappiness>
 			<YieldChanges>
@@ -9643,6 +9237,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9667,6 +9262,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9685,6 +9281,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW_PEDIA</Civilopedia>
+			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9710,7 +9307,7 @@
 			<Description>TXT_KEY_BUILDING_GRASS_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<Bonus>BONUS_GRASS</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9719,11 +9316,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9744,7 +9342,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD_PEDIA</Civilopedia>
-			<PrereqTech>TECH_COMPUTER_NETWORKS</PrereqTech>
+			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
@@ -9788,7 +9386,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iEspionageDefense>2</iEspionageDefense>
-			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9810,7 +9408,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_HEALTH_SPA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HEALTHCARE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>3</iHealth>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -9855,11 +9458,11 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MUD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_TIPI</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -9983,8 +9586,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_BURROW</BuildingType>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
-				<BuildingType>BUILDING_IGLOO</BuildingType>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
@@ -9999,7 +9600,6 @@
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
 				<BuildingType>BUILDING_HOGAN</BuildingType>
 				<BuildingType>BUILDING_PUEBLO</BuildingType>
-				<BuildingType>BUILDING_CLIFF_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -10017,18 +9617,13 @@
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_FRAT_HOUSE</BuildingType>
-				<BuildingType>BUILDING_SORORITY_HOUSE</BuildingType>
-				<BuildingType>BUILDING_TRAILER_PARK</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -10099,7 +9694,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -10218,17 +9813,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource><PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10329,7 +9913,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -10445,13 +10029,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10681,10 +10258,10 @@
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -10797,13 +10374,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10855,7 +10425,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10894,7 +10465,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10931,7 +10503,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10969,7 +10542,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -11006,7 +10580,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -11019,10 +10594,10 @@
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>4</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -11041,7 +10616,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -11076,7 +10652,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11114,7 +10691,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11135,13 +10713,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11156,7 +10727,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11193,7 +10765,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11205,8 +10778,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
@@ -11236,7 +10807,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11246,8 +10818,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
@@ -11259,17 +10829,10 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>9</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11284,7 +10847,8 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11295,8 +10859,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
@@ -11325,6 +10887,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ReplacementBuildings>
@@ -11340,6 +10903,13 @@
 			<Description>TXT_KEY_BUILDING_IGLOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<iMinLatitude>50</iMinLatitude>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -11489,11 +11059,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -11585,7 +11150,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
@@ -11611,7 +11176,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
@@ -11637,7 +11202,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
@@ -11663,7 +11228,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<!--
 		<BuildingInfo>
@@ -11690,7 +11255,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
@@ -11716,7 +11281,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
@@ -11742,7 +11307,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
@@ -11768,7 +11333,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
@@ -11794,7 +11359,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
@@ -11820,7 +11385,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
@@ -11846,7 +11411,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
@@ -11872,7 +11437,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		-->
 		<BuildingInfo>
@@ -11891,12 +11456,12 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LITERATURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LITERATURE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-100</iCommercePercent>
+						<iCommercePercent>-200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PropertyManipulators>
@@ -12036,6 +11601,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
 			<PropertyManipulators>
@@ -12066,6 +11632,7 @@
 					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE_GOOD</ArtDefineTag>
@@ -12125,56 +11692,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISMSILVER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MERMAID_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MERMAID_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<bWater>1</bWater>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MERMAID_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MERMAID_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MERMAID_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12210,6 +11727,10 @@
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</ImprovementFreeSpecialist>
+				<ImprovementFreeSpecialist>
+					<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
@@ -12262,11 +11783,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -12274,18 +11790,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
@@ -12430,11 +11934,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_MORMON</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -12537,6 +12036,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
@@ -12799,11 +12299,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -12813,70 +12308,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OASIS_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_GEOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_OLD_CITY_WALLS</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_RIFLING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12887,41 +12329,6 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_OUTCROP_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_ANTS</Type>
@@ -12961,7 +12368,8 @@
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_BOTANY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LADYBUGX</ObsoletesToBuilding>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -13036,14 +12444,17 @@
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCARECROWS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCARECROWS</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SCARECROWS</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -13325,14 +12736,17 @@
 			<iMaxLatitude>80</iMaxLatitude>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RAT_CATCHER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -13340,16 +12754,6 @@
 				<iYield>-1</iYield>
 				<iYield>-1</iYield>
 			</YieldModifiers>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<YieldModifiers>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13492,51 +12896,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_WASPS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PHOENIX_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_PHOENIX_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_PHOENIX_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PHOENIX_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -13593,7 +12952,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_ACIDRAIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_BLACKENEDSKIES</Type>
@@ -13610,9 +12969,14 @@
 				<iYield>-30</iYield>
 			</YieldChanges>
 			<iGlobalHealth>-2</iGlobalHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-10</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-10</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13627,7 +12991,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_BLACKENEDSKIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_COAST1</Type>
@@ -13639,11 +13003,16 @@
 			<bWater>1</bWater>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-1</iYield>
-				<iYield>0</iYield>
-				<iYield>-1</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13658,7 +13027,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_COAST1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_COAST2</Type>
@@ -13670,11 +13039,16 @@
 			<bWater>1</bWater>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
-			<SeaPlotYieldChanges>
-				<iYield>-2</iYield>
-				<iYield>0</iYield>
-				<iYield>-2</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-2</iYield>
+						<iYield>0</iYield>
+						<iYield>-2</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13689,7 +13063,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_COAST2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_COAST3</Type>
@@ -13701,11 +13075,16 @@
 			<bWater>1</bWater>
 			<iHealth>-4</iHealth>
 			<iHappiness>-5</iHappiness>
-			<SeaPlotYieldChanges>
-				<iYield>-3</iYield>
-				<iYield>0</iYield>
-				<iYield>-3</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-3</iYield>
+						<iYield>0</iYield>
+						<iYield>-3</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13720,7 +13099,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_COAST3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING1</Type>
@@ -13748,7 +13127,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GLOBALWARMING1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING2</Type>
@@ -13776,7 +13155,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GLOBALWARMING2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING3</Type>
@@ -13805,7 +13184,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GLOBALWARMING3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GROUNDWATER1</Type>
@@ -13835,7 +13214,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GROUNDWATER1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GROUNDWATER2</Type>
@@ -13865,7 +13244,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GROUNDWATER2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GROUNDWATER3</Type>
@@ -13896,7 +13275,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GROUNDWATER3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_OZONE1</Type>
@@ -13929,7 +13308,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_OZONE1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_OZONE2</Type>
@@ -13962,7 +13341,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_OZONE2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_OZONE3</Type>
@@ -13995,7 +13374,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_OZONE3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_REDTIDE</Type>
@@ -14007,11 +13386,16 @@
 			<bWater>1</bWater>
 			<iHappiness>-3</iHappiness>
 			<iHealth>-2</iHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-5</iYield>
-				<iYield>-2</iYield>
-				<iYield>-5</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-5</iYield>
+						<iYield>-2</iYield>
+						<iYield>-5</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14026,7 +13410,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_REDTIDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_REEFBLEACHING</Type>
@@ -14037,9 +13421,14 @@
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHappiness>-2</iHappiness>
 			<iHealth>-2</iHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-5</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-5</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14049,7 +13438,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_REEFBLEACHING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_RIVER1</Type>
@@ -14080,7 +13469,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_RIVER1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_RIVER2</Type>
@@ -14111,7 +13500,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_RIVER2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_RIVER3</Type>
@@ -14142,7 +13531,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_RIVER3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_SMOG1</Type>
@@ -14172,7 +13561,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_SMOG1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_SMOG2</Type>
@@ -14202,7 +13591,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_SMOG2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_SMOG3</Type>
@@ -14233,7 +13622,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_SMOG3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_TOXICATMOSPHERE</Type>
@@ -14250,9 +13639,14 @@
 				<iYield>-10</iYield>
 			</YieldChanges>
 			<iGlobalHealth>-1</iGlobalHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-10</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-10</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14267,7 +13661,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_TOXICATMOSPHERE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_TOXICHYDROSPHERE</Type>
@@ -14284,9 +13678,14 @@
 				<iYield>-10</iYield>
 			</YieldChanges>
 			<iGlobalHealth>-1</iGlobalHealth>
-			<SeaPlotYieldChanges>
-				<iYield>-10</iYield>
-			</SeaPlotYieldChanges>
+			<PlotYieldChanges>
+				<PlotYieldChange>
+					<PlotType>PLOT_OCEAN</PlotType>
+					<Yields>
+						<iYield>-10</iYield>
+					</Yields>
+				</PlotYieldChange>
+			</PlotYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14301,7 +13700,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_TOXICHYDROSPHERE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROSTITUTION_BAN</Type>
@@ -14310,6 +13709,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PROSTITUTION_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROSTITUTION_BAN_PEDIA</Civilopedia>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -14397,41 +13797,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RAIN_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REEF_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_RODNOVERY_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_SHRINE_PEDIA</Civilopedia>
@@ -14472,11 +13837,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_RODNOVERY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -14493,6 +13853,7 @@
 			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_HELP</Help>
+			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<iTradeRoutes>3</iTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -14531,6 +13892,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14556,6 +13918,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14668,11 +14031,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -14770,79 +14128,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SEAFARING_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_SEA_MYTH_EFFECT</FreeBuilding>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH_EFFECT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SHAMAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_SHRINE_PEDIA</Civilopedia>
@@ -14908,7 +14193,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>100</iConquestProb>
-			<iMaintenanceModifier>-25</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -14927,11 +14212,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>SND_BUILD_SHINTO</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -14954,7 +14234,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -14970,7 +14254,12 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -15027,11 +14316,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_GOLD_WARES</BonusType>
@@ -15046,79 +14330,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_SKY_MYTH_EFFECT</FreeBuilding>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -15130,6 +14341,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
+			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
@@ -15518,9 +14730,10 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
 				<BuildingType>BUILDING_MUSIC_HUT</BuildingType>
@@ -15793,6 +15006,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SMOKING_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMOKING_PROHIBITION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -15816,6 +15030,12 @@
 			<Description>TXT_KEY_BUILDING_SORORITY_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SORORITY_HOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15827,13 +15047,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -15857,31 +15070,31 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_FREE_ARTISTRY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PRINTING_PRESS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ELECTRONICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iEspionageDefense>2</iEspionageDefense>
@@ -16034,13 +15247,14 @@
 			<Description>TXT_KEY_BUILDING_STONE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STONE_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_MUD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -16050,24 +15264,12 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_HUT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
@@ -16151,11 +15353,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SIBERIAN</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -16172,7 +15369,7 @@
 			<Description>TXT_KEY_BUILDING_TIPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIPI_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_HIDE</Bonus>
@@ -16190,7 +15387,6 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
@@ -16240,6 +15436,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -16286,6 +15483,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16335,7 +15533,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS10</Type>
@@ -16377,7 +15575,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS2</Type>
@@ -16417,7 +15615,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS3</Type>
@@ -16457,7 +15655,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS4</Type>
@@ -16497,7 +15695,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS5</Type>
@@ -16537,7 +15735,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS6</Type>
@@ -16577,7 +15775,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS7</Type>
@@ -16617,7 +15815,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS8</Type>
@@ -16657,7 +15855,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS9</Type>
@@ -16697,7 +15895,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_ARCHERY</Type>
@@ -16708,7 +15906,7 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLETCHER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
@@ -16744,10 +15942,14 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<FreePromotion>PROMOTION_ARCHER_TRADITION</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_ARCHER_TRADITION</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -16796,7 +15998,12 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<FreePromotion>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
+			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -16855,9 +16062,14 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
+			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<FreePromotion>PROMOTION_TRADITION_WORK_ETHIC</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_TRADITION_WORK_ETHIC</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
@@ -16870,6 +16082,12 @@
 			<Description>TXT_KEY_BUILDING_TRAILER_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRAILER_PARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -16893,8 +16111,8 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -16939,8 +16157,6 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -16955,7 +16171,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
 			<iHealth>-1</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -16979,13 +16195,13 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
@@ -16993,54 +16209,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TREE_HALLOW</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_UNICORN_MYTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNICORN_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_UNICORN_MYTH_EFFECT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_UNICORN_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_UNICORN_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_HEALTH_CARE</Type>
@@ -17117,7 +16285,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_THEFT</PrereqTech>
-			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17140,7 +16308,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
-			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17163,7 +16331,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
-			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17248,7 +16416,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
+			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
@@ -17314,7 +16482,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<ObsoleteTech>TECH_LEVITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -17385,41 +16553,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_VOLCANOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_VOODOO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_SHRINE_PEDIA</Civilopedia>
@@ -17454,11 +16587,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_VOODOO</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -17489,7 +16617,11 @@
 			</CommerceChanges>
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<FreePromotion>PROMOTION_WAR_CRY</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_WAR_CRY</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -17543,7 +16675,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -17645,7 +16777,6 @@
 					<bHurry>1</bHurry>
 				</Hurry>
 			</Hurrys>
-			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STREET_CLEANER</BuildingType>
@@ -17701,6 +16832,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17762,11 +16897,6 @@
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
 			<Flavors>
 				<Flavor>

@@ -64,8 +64,6 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCHAILECT</Type>
@@ -208,14 +206,6 @@
 			<FreeBonus>BONUS_IRON_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COBALT_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TIN_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -448,10 +438,6 @@
 					<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<ConstructCondition>
 				<And>
@@ -496,17 +482,16 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
 			<iCost>1540</iCost>
-			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ECOLOGICAL_ENGINEERING</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -856,8 +841,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
-			<iCost>52530</iCost>
+			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
+			<iCost>60930</iCost>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -1166,9 +1151,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>12310</iCost>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -1286,7 +1272,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
 			<iCost>2205</iCost>
-			<ObsoleteTech>TECH_FUSION_SPACECRAFT</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2074,7 +2059,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
@@ -2112,7 +2097,7 @@
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
@@ -2363,11 +2348,11 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
@@ -2929,7 +2914,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>

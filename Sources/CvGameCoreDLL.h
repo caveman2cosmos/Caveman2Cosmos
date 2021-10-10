@@ -223,6 +223,7 @@ const std::string getModDir();
 #include <boost155/utility.hpp>
 #include <boost155/foreach.hpp>
 #include <boost155/functional.hpp>
+#include <boost155/detail/algorithm.hpp>
 
 // Ranges
 #include <boost155/range.hpp>
@@ -234,7 +235,8 @@ const std::string getModDir();
 #include <boost155/range/numeric.hpp>
 
 // Make boost foreach look nice enough to actually use
-#define foreach_ BOOST_155_FOREACH
+#define foreach_		 BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
 
 // Alias our latest boost version
 namespace bst = boost155;

@@ -17,7 +17,7 @@ void CyBoolExprPythonInterface()
 		.value("BOOLEXPR_OR", BOOLEXPR_OR)
 	;
 
-	python::class_<BoolExpr>("CyBoolExpr", python::no_init)
+	python::class_<BoolExpr, boost::noncopyable>("CyBoolExpr", python::no_init)
 		.def("getType", &BoolExpr::getType)
 	;
 

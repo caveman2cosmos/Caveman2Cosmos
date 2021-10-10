@@ -129,6 +129,7 @@ public:
 
 	void setHumanDisabled(bool newVal);
 	bool isHumanDisabled() const;
+	bool isNormalAI() const;
 
 	DllExport bool isHuman() const;
 	DllExport void updateHuman();
@@ -1251,9 +1252,6 @@ public:
 	int getForceAllTradeRoutes() const;
 	void changeForceAllTradeRoutes(int iChange);
 
-	int getWorldTradeRoutes() const;
-	void changeWorldTradeRoutes(int iChange);
-
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
 
@@ -1520,7 +1518,6 @@ protected:
 	int m_iCivilizationHealth;
 	int m_iNoCapitalUnhappiness;
 	int m_iProjectHealth;
-	int m_iWorldTradeRoutes;
 	int m_iForceAllTradeRoutes;
 	int m_iProjectHappiness;
 	int m_iWorldHealth;

@@ -17,10 +17,8 @@ import SdToolKit
 import CvScreensInterface
 import ScreenResolution as SR
 
-try:
-	import RebelTypes
-except:
-	pass
+import RebelTypes
+
 import RevInstances
 from TextUtils import getCityTextList
 import BugCore
@@ -210,10 +208,8 @@ class Revolution:
 		# Function loads info required by other components
 		if self.LOG_DEBUG: CvUtil.pyPrint( "  Loading revolution data" )
 
-		try:
-			if self.bRebelTypes: RebelTypes.setup()
-		except:
-			print "[ERROR] Could not run RebelTypes.setup()"
+		if self.bRebelTypes:
+			RebelTypes.setup()
 
 		self.iNationalismTech = GC.getInfoTypeForString(RevDefs.sXMLNationalism)
 		self.iLiberalismTech = GC.getInfoTypeForString(RevDefs.sXMLLiberalism)
@@ -2494,20 +2490,13 @@ class Revolution:
 									handoverCities = [pCity] + handoverCities
 									break
 
-							if( len(handoverCities) > 0 ) :
+							if handoverCities:
 
-								# Enable only for debugging handover cities
-								if( False ) :
-									if(pPlayer.isHuman() or pPlayer.isHumanDisabled()):
-										GAME.setForcedAIAutoPlay(pPlayer.getID(), 0, False )
-									iPrevHuman = GAME.getActivePlayer()
-									RevUtils.changeHuman( pPlayer.getID(), iPrevHuman )
-
-								if( self.LOG_DEBUG ) :
+								if self.LOG_DEBUG:
 									str = "[REV] Revolt: Offering peace in exchange for handover of: "
-									for pCity in handoverCities :
+									for pCity in handoverCities:
 										str += "%s, "%pCity.getName()
-									if( self.LOG_DEBUG ) : CvUtil.pyPrint(str)
+									print str
 
 								# Determine strength of rebellion
 								bIsJoinWar = False
@@ -3641,10 +3630,10 @@ class Revolution:
 		return
 
 
-	def chooseRevolutionCiv( self, cityList, bJoinCultureWar = True, bReincarnate = True, bJoinRebels = True, bSpreadRebels = False, pNotThisCiv = None, giveTechs = True, giveRelType = -1, bMatchCivics = False ) :
+	def chooseRevolutionCiv(self, cityList, bJoinCultureWar = True, bReincarnate = True, bJoinRebels = True, bSpreadRebels = False, pNotThisCiv = None, giveTechs = True, giveRelType = -1, bMatchCivics = False):
 		# All cities should have same owner
 
-		if( self.bRebelTypes ) :
+		if self.bRebelTypes:
 			RebelTypes.setup()
 
 		pRevPlayer = None
@@ -3652,8 +3641,6 @@ class Revolution:
 
 		owner = GC.getPlayer( cityList[0].getOwner() )
 		ownerTeam = GC.getTeam( owner.getTeam() )
-
-
 
 		# TODO:  Turn into a pick best option as opposed to first option
 		# Attempt to find a worthy civ to reincarnate from these cities
@@ -3824,10 +3811,10 @@ class Revolution:
 
 			# Create list of available civs and similar civ types
 			cultPlayer = None
-			if( pCity.countTotalCultureTimes100() > 50*100 ) :
-				cultPlayer = GC.getPlayer( pCity.findHighestCulture() )
-				if( cultPlayer.getID() == owner.getID() ) :
-					cultPlayer = None
+			if pCity.countTotalCultureTimes100() > 5000:
+				iHighestCulturePlayer = pCity.findHighestCulture()
+				if iHighestCulturePlayer != owner.getID():
+					cultPlayer = GC.getPlayer(iHighestCulturePlayer)
 
 			# Don't incarnate as either of these
 			iBarbarian = GC.getInfoTypeForString(RevDefs.sXMLBarbarian)
@@ -3836,66 +3823,59 @@ class Revolution:
 			# Civs with similar style to cultOwner, if they exist
 			similarStyleCivs = []
 			similarOwnerStyleCivs = []
-			for civType in xrange(GC.getNumCivilizationInfos()):
-				if not civType == iBarbarian:
-					taken = False
-					for i in xrange(GC.getMAX_PC_PLAYERS()):
-						if( civType == GC.getPlayer(i).getCivilizationType() ) :
-							# Switch in preparation for defining regions of the world for different rebel civ types
-							if( GC.getPlayer(i).isEverAlive() or RevData.revObjectExists(GC.getPlayer(i)) ) :
-								taken = True
-								break
-					if( not taken ) :
-						availableCivs.append(civType)
-						if( not cultPlayer == None ) :
-							if( GC.getCivilizationInfo( cultPlayer.getCivilizationType() ).getArtStyleType() == GC.getCivilizationInfo(civType).getArtStyleType() ) :
-								similarStyleCivs.append(civType)
-						if( GC.getCivilizationInfo( owner.getCivilizationType() ).getArtStyleType() == GC.getCivilizationInfo(civType).getArtStyleType() ) :
-							similarOwnerStyleCivs.append(civType)
+			for iCivX in xrange(GC.getNumCivilizationInfos()):
+				civX = GC.getCivilizationInfo(iCivX)
+				if not civX.isPlayable(): continue
 
-			if( len(availableCivs) < 1 ) :
-				if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: No available civs, spawning as Barbarians")
-				pRevPlayer = GC.getPlayer( GC.getBARBARIAN_PLAYER() )
+				for i in xrange(GC.getMAX_PC_PLAYERS()):
+					# Switch in preparation for defining regions of the world for different rebel civ types
+					if (iCivX == GC.getPlayer(i).getCivilizationType()
+					and (GC.getPlayer(i).isEverAlive() or RevData.revObjectExists(GC.getPlayer(i)))
+					): break
+				else:
+					availableCivs.append(iCivX)
+					if cultPlayer:
+						if GC.getCivilizationInfo(cultPlayer.getCivilizationType()).getArtStyleType() == civX.getArtStyleType():
+							similarStyleCivs.append(iCivX)
+					if GC.getCivilizationInfo(owner.getCivilizationType()).getArtStyleType() == civX.getArtStyleType():
+						similarOwnerStyleCivs.append(iCivX)
+
+			if not availableCivs:
+				print "[REV] Revolt: No available civs, spawning as Barbarians"
+				pRevPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
 				return [pRevPlayer, bIsJoinWar]
 
 			newCivIdx = None
 
 			# If city has a revolutionary civ type, if that type is available choose it
-			if( RevData.getCityVal(pCity, 'RevolutionCiv') in availableCivs ) :
+			if RevData.getCityVal(pCity, 'RevolutionCiv') in availableCivs:
 				# City previously rebelled as available civ type
-				if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: Respawning previous rebel civ type for this city")
+				if self.LOG_DEBUG:
+					print "[REV] Revolt: Respawning previous rebel civ type for this city"
 				newCivIdx = RevData.getCityVal(pCity, 'RevolutionCiv')
-			else :
-				chosenCivs = []
-				try :
-					if( not cultPlayer == None ) :
-						shortListType = cultPlayer.getCivilizationType()
-						#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: Using cultural owner %s for short list"%(GC.getCivilizationInfo(shortListType).getShortDescription(0)))
-					else :
-						shortListType = owner.getCivilizationType()
-					#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: looking up %d in list of length %d"%(shortListType,len(RebelTypes.RebelTypeList)))
-					rebList = RebelTypes.RebelTypeList[shortListType]
-					#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: %d civs on short list for this type"%(len(rebList)))
-					for civType in rebList :
-						if( civType in availableCivs ) :
+			else:
+				if self.bRebelTypes:
+					chosenCivs = []
+
+					if cultPlayer:
+						iCiv = cultPlayer.getCivilizationType()
+					else: iCiv = owner.getCivilizationType()
+
+					rebList = RebelTypes.RebelTypeList[iCiv]
+					for civType in rebList:
+						if civType in availableCivs:
 							chosenCivs.append(civType)
 
-					#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: Found %d civs available from short list"%(len(chosenCivs)))
-				except :
-					pass
-
-				if( self.bRebelTypes and len(chosenCivs) > 0 ) :
-					#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: Creating a civ from short list")
-					availableCivs = chosenCivs
-				else :
-					if( self.bArtStyleTypes ) :
-						if( len(similarStyleCivs) > 0 ) :
+					if chosenCivs:
+						availableCivs = chosenCivs
+				else:
+					if self.bArtStyleTypes:
+						if similarStyleCivs:
 							# Create a civ using style of cultural owner of city
-							#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: Creating a similar style civ to cultural owner %s"%(cultPlayer.getCivilizationDescription(0)))
 							availableCivs = similarStyleCivs
-						elif( len(similarOwnerStyleCivs) > 0 ) :
+
+						elif similarOwnerStyleCivs:
 							# Create a civ using style of owner of city
-							#if( self.LOG_DEBUG ) : CvUtil.pyPrint("[REV] Revolt: Creating a similar style civ to owner %s"%(owner.getCivilizationDescription(0)))
 							availableCivs = similarOwnerStyleCivs
 
 				newCivIdx = availableCivs[GAME.getSorenRandNum(len(availableCivs),'Revolution: pick unused civ type')]

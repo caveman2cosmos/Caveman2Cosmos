@@ -227,7 +227,6 @@ class CvEventManager:
 					"HELSINKI"				: GC.getInfoTypeForString("BUILDING_HELSINKI"),
 					"TAIPEI_101"			: GC.getInfoTypeForString('BUILDING_TAIPEI_101'),
 					"LOTUS_TEMPLE"			: GC.getInfoTypeForString('BUILDING_LOTUS_TEMPLE'),
-					"DJENNE"				: GC.getInfoTypeForString("BUILDING_DJENNE"),
 					"NANITE_DEFUSER"		: GC.getInfoTypeForString("BUILDING_NANITE_DEFUSER"),
 					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLO'),
 					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_APPIAN_WAY'),
@@ -245,7 +244,6 @@ class CvEventManager:
 					"ADVANCED_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ADVANCED_SHIELDING"),
 					"GREAT_ZIMBABWE"		: GC.getInfoTypeForString("BUILDING_GREAT_ZIMBABWE"),
 					"CRUSADE"				: GC.getInfoTypeForString("BUILDING_CRUSADE"),
-					"KENTUCKY_DERBY"		: GC.getInfoTypeForString("BUILDING_KENTUCKY_DERBY"),
 					"ALAMO"					: GC.getInfoTypeForString("BUILDING_ALAMO"),
 					"WORLD_BANK"			: GC.getInfoTypeForString("BUILDING_WORLD_BANK"),
 					"CYRUS_CYLINDER"		: GC.getInfoTypeForString("BUILDING_CYRUS_CYLINDER"),
@@ -575,7 +573,7 @@ class CvEventManager:
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
-			"CRUSADE",			"KENTUCKY_DERBY",		"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
+			"CRUSADE",			"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
 			"LASCAUX",			"WORLD_BANK",			"TAIPEI_101",			"CYRUS_CYLINDER",
 			"FA_MEN_SI",		"WEMBLEY",				"PERGAMON",				"CYRUS_TOMB",			"TSUKIJI",
 			"BIODOME",			"NAZCA_LINES",			"THE_MOTHERLAND_CALLS",	"GREAT_JAGUAR_TEMPLE",	"GREAT_BATH",
@@ -625,8 +623,8 @@ class CvEventManager:
 		self.aWonderTuple = [aList0, aList1, aList2, aList3, aList4]
 		# [0][X] = KEY		[1][X] = iBuilding		[2][X] = iTech (Obsolete)		[3][X] = iCityID		[4][X] = iOwner
 		''' X:
-		[0]  Crusade			[1]  Kentucky Derby			[2]  Great Zimbabwe			[3]  Helsinki			[4]  Alamo
-		[5]  Lascaux			[6]  World Bank				[7]  Taipei 101				[8]  Cyrus Cylinder		etc.
+		[0]  Crusade			[1]  Great Zimbabwe			[2]  Helsinki				[3]  Alamo
+		[4]  Lascaux			[5]  World Bank				[6]  Taipei 101				[7]  Cyrus Cylinder		etc.
 		'''
 
 	def onGameStart(self, argsList):
@@ -1334,11 +1332,6 @@ class CvEventManager:
 				if iUnit > -1:
 					CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
 					CyCity.addProductionExperience(CyUnit, False)
-			elif KEY == "KENTUCKY_DERBY":
-				iUnit = GC.getInfoTypeForString("UNIT_SUBDUED_HORSE")
-				if iUnit > -1:
-					CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-					CyCity.addProductionExperience(CyUnit, False)
 			elif KEY == "TAIPEI_101":
 				iTeam = CyPlayer.getTeam()
 				for iPlayerX in xrange(self.MAX_PC_PLAYERS):
@@ -1438,24 +1431,6 @@ class CvEventManager:
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.countNumCitiesByArea(CyArea) > 0:
 						CyTeamX.meet(iTeam, True)
-		# Djenne
-		elif iBuilding == mapBuildingType["DJENNE"]:
-			MAP = GC.getMap()
-			iX = CyCity.getX()
-			iY = CyCity.getY()
-			DESERT	= GC.getTERRAIN_DESERT()
-			DUNES	= GC.getInfoTypeForString('TERRAIN_DUNES')
-			for x in xrange(iX - 2, iX + 3, 1):
-				for y in xrange(iY - 2, iY + 3, 1):
-					CyPlot = MAP.plot(x, y)
-					if CyPlot.isPlayerCityRadius(iPlayer):
-						iTerrain = CyPlot.getTerrainType()
-						if iTerrain == DESERT:
-							GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_COMMERCE, 2)
-						elif iTerrain == DUNES:
-							GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_COMMERCE, 1)
-			if iPlayer == GAME.getActivePlayer():
-				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_DJENNE_PYTHON",()), iPlayer, 16, 'Art/Interface/Buttons/Great_Wonders/great_mosque_of_djenne.dds', ColorTypes(44), iX, iY, True, True)
 		# Lotus Temple
 		elif iBuilding == mapBuildingType["LOTUS_TEMPLE"]:
 			bHuman = CyPlayer.isHuman()
@@ -1504,18 +1479,11 @@ class CvEventManager:
 			iImprovement = GC.getInfoTypeForString("IMPROVEMENT_MACHU_PICCHU")
 			if iImprovement > -1:
 				aList = []
-				iCount = -1
 				for CyPlot in CyCity.plot().rect(3, 3):
 					if CyPlot.isPeak():
-						x = CyPlot.getX()
-						y = CyPlot.getY()
-						GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_FOOD, 1)
-						GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_PRODUCTION, 2)
-						GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_COMMERCE, 1)
 						aList.append(CyPlot)
-						iCount += 1
 				if aList:
-					CyPlot = aList[GAME.getSorenRandNum(iCount, "Random Peak")]
+					CyPlot = aList[GAME.getSorenRandNum(len(aList), "Random Peak")]
 					CyPlot.setImprovementType(iImprovement)
 				else:
 					print ("Warning CvEventManager.onBuildingBuilt\n\tMachu Picchu has been built in %s where there is no peaks in vicinity." % CyCity.getName())
@@ -2659,7 +2627,7 @@ class CvEventManager:
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
 								if bActive:
-									szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_CAPTURED_YOU", (0, CvBuildingInfo.getDescription()))
+									szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_CAPTURED_YOU", (CvBuildingInfo.getDescription(),))
 								else:
 									szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_CAPTURED", (szPlayerName, CvBuildingInfo.getDescription()))
 
@@ -2695,22 +2663,11 @@ class CvEventManager:
 
 				if KEY == "CRUSADE":
 					iBuilding = aWonderTuple[1][i]
-					if CyCity.getBuildingOriginalOwner(iBuilding) == iPlayer and not (GAME.getGameTurn() % (1 + 4 * self.iTrainPrcntGS / 100)):
+					if CyCity.getBuildingOriginalOwner(iBuilding) == iPlayer and not (GAME.getGameTurn() % (1 + 2 * self.iTrainPrcntGS / 100)):
 						CyPlayer = GC.getPlayer(iPlayer)
 						iUnit = GC.getInfoTypeForString("UNIT_CRUSADER")
 						CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
 						CyCity.addProductionExperience(CyUnit, False)
-
-				elif KEY == "KENTUCKY_DERBY":
-					if GAME.getGameTurn() % (1 + 3 * self.iTrainPrcntGS / 100): continue
-					CyPlayer = GC.getPlayer(iPlayer)
-					iUnit = GC.getInfoTypeForString("UNIT_SUBDUED_HORSE")
-					iX = CyCity.getX()
-					iY = CyCity.getY()
-					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-					CyCity.addProductionExperience(CyUnit, False)
-					if iPlayer == GAME.getActivePlayer():
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_KENTUCKY_DERBY",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
 
 				elif KEY == "GREAT_ZIMBABWE":
 					if CyCity.isFoodProduction():

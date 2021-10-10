@@ -5,8 +5,8 @@ from CvPythonExtensions import *
 class PediaBuilding:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
 
 		self.main = parent
 
@@ -321,7 +321,7 @@ class PediaBuilding:
 		aGOMTechReqList = []
 		for i in range(2):
 			aGOMTechReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+		self.HF.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
 
 		#GOM AND requirements
 		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
@@ -415,9 +415,7 @@ class PediaBuilding:
 			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
 
 		# Empire building requirements
-		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
-			eBuildingX = pair.id
-			iPrereqNumOfBuilding = pair.value
+		for eBuildingX, iPrereqNumOfBuilding in CvTheBuildingInfo.getPrereqNumOfBuildings():
 			if iPrereqNumOfBuilding > 0:
 				if CyPlayer:
 					aList3.append((eBuildingX, CyPlayer.getBuildingPrereqBuilding(iTheBuilding, eBuildingX, 0)))
@@ -432,7 +430,7 @@ class PediaBuilding:
 		aGOMBuildingReqList = []
 		for i in range(2):
 			aGOMBuildingReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
+		self.HF.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
 
 		#GOM AND prereqs
 		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND])):
@@ -555,9 +553,8 @@ class PediaBuilding:
 			aList2 = []
 		# Improvement Req
 		szChild = PF + "IMP"
-		for i in range(GC.getNumImprovementInfos()):
-			if CvTheBuildingInfo.isPrereqOrImprovement(i):
-				aList2.append(i)
+		for iPrereqOrImprovement in CvTheBuildingInfo.getPrereqOrImprovements():
+			aList2.append(iPrereqOrImprovement)
 		if aList2:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

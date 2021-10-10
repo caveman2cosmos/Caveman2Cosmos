@@ -208,7 +208,7 @@ class CvFinanceAdvisor:
 		# buildings includes 50% capital bonus for Bureaucracy civic
 		iBuildings = iTotalCommerce - iCommerce
 		if iBuildings > 0:
-			szText = TRNSLTR.getText("TXT_KEY_CONCEPT_BUILDINGS", ())
+			szText = TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ())
 			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 1)
 			screen.setLabelAt("", Pnl, uFont2 + str(iBuildings), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 			iCommerce += iBuildings
@@ -507,7 +507,7 @@ class CvFinanceAdvisor:
 		y += 20
 
 		if fBuildings:
-			szText = TRNSLTR.getText("TXT_KEY_CONCEPT_BUILDINGS", ())
+			szText = TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ())
 			screen.setLabelAt(aName(), Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 1)
 			screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fBuildings)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 			y += 20

@@ -58,13 +58,13 @@ class BoolExpr
 {
 public:
 	virtual ~BoolExpr();
-	virtual bool evaluate(const CvGameObject*) const { return false; }
-	virtual BoolExprChange evaluateChange(const CvGameObject*, const std::vector<GOMOverride>&) const { return NO_BOOLEXPR_CHANGE; }
-	virtual bool getInvolvesGOM(const std::vector<GOMQuery>&) const { return false; }
+	virtual bool evaluate(const CvGameObject*) const = 0;
+	virtual BoolExprChange evaluateChange(const CvGameObject*, const std::vector<GOMOverride>&) const = 0;
+	virtual bool getInvolvesGOM(const std::vector<GOMQuery>&) const = 0;
 	static const BoolExpr* read(CvXMLLoadUtility* pXML);
-	virtual void getCheckSum(uint32_t&) const { }
-	virtual void buildDisplayString(CvWStringBuffer&) const { }
-	virtual int getBindingStrength() const { return 0; } // How strong the operator binds in language so brackets can be placed appropriately
+	virtual void getCheckSum(uint32_t&) const = 0;
+	virtual void buildDisplayString(CvWStringBuffer&) const = 0;
+	virtual int getBindingStrength() const = 0; // How strong the operator binds in language so brackets can be placed appropriately
 	virtual BoolExprTypes getType() const { return NO_BOOLEXPR; }
 };
 

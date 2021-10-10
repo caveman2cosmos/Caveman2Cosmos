@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
@@ -6,6 +7,7 @@
 #include "CyPlot.h"
 #include "CyUnit.h"
 #include "SCyDebug.h"
+#include "IDValueMap.h"
 #include "Win32.h"
 
 
@@ -40,6 +42,7 @@ void CyGameCoreUtilsPythonInterface();
 void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 void CyBoolExprPythonInterface();
+void CyIntExprPythonInterface();
 
 
 DllExport void DLLPublishToPython()
@@ -90,6 +93,19 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<VoteTypes>();
 	registerAllowPyIntAsType<VoteSourceTypes>();
 
+	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<MapCategoryTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<TechTypes>, CovertToInteger>();
+
+	publishIDValueMapPythonInterface<IDValueMap<BonusTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<BuildingTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<ImprovementTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TechTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TerrainTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitCombatTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitTypes, int> >();
+
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
 	CyRandomPythonInterface();
@@ -110,7 +126,8 @@ DllExport void DLLPublishToPython()
 	CyMessageControlInterface();
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
-
+	CyIntExprPythonInterface();
+	CvInfoUtil::publishPythonInterface();
 	SCyDebug::installInPython();
 
 	//

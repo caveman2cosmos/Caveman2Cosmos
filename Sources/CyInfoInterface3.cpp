@@ -37,7 +37,6 @@ void CyInfoPythonInterface3()
 		.def("getVisible", &CvInterfaceModeInfo::getVisible, "bool ()")
 		.def("getGotoPlot", &CvInterfaceModeInfo::getGotoPlot, "bool ()")
 		.def("getHighlightPlot", &CvInterfaceModeInfo::getHighlightPlot, "bool ()")
-
 	;
 
 
@@ -150,7 +149,7 @@ void CyInfoPythonInterface3()
 		.def("getSound", &CvCorporationInfo::getSound, "string ()")
 
 		// Arrays
-		.def("getPrereqBonuses", &CvCorporationInfo::cyGetPrereqBonuses)
+		.def("getPrereqBonuses", &CvCorporationInfo::getPrereqBonuses, python::return_value_policy<python::reference_existing_object>())
 		.def("getCommerceProduced", &CvCorporationInfo::getCommerceProduced, "int (int i)")
 		.def("getYieldProduced", &CvCorporationInfo::getYieldProduced, "int (int i)")
 	;
@@ -163,6 +162,7 @@ void CyInfoPythonInterface3()
 		.def("getLevelExperienceModifier", &CvTraitInfo::getLevelExperienceModifier, "int ()")
 		.def("getGreatPeopleRateModifier", &CvTraitInfo::getGreatPeopleRateModifier, "int ()")
 		.def("getGreatGeneralRateModifier", &CvTraitInfo::getGreatGeneralRateModifier, "int ()")
+		.def("getNumBuildingProductionModifiers", &CvTraitInfo::getNumBuildingProductionModifiers, "int ()")
 
 		.def("getRevIdxLocal", &CvTraitInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvTraitInfo::getRevIdxNational, "int ()")
@@ -176,8 +176,10 @@ void CyInfoPythonInterface3()
 		.def("getShortDescription", &CvTraitInfo::getShortDescription, "int (int i)")
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
+		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
+		.def("getBuildingHappinessModifiers", &CvTraitInfo::getBuildingHappinessModifiers, python::return_value_policy<python::reference_existing_object>())
 
-		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
+		.def("getImprovementYieldChange", &CvTraitInfo::getImprovementYieldChange, "int (int i, int j)")
 	;
 
 	python::class_<CvWorldInfo, python::bases<CvInfoBase> >("CvWorldInfo", python::no_init)

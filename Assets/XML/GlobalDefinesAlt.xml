@@ -265,10 +265,6 @@
 		<DefineName>BUG_UNIT_EXPERIENCE_MODIFIERS_HOVER</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>BUG_TECH_TRADE_DENIAL_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
 	<!-- Bonus -->
 	<Define>
 		<DefineName>BUG_BONUS_TRADE_DENIAL_HOVER</DefineName>

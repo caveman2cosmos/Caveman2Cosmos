@@ -31,6 +31,7 @@ static char gVersionString[1024] = { 0 };
 #	define C2C_VERSION gVersionString
 #endif
 
+/*
 #define COPY(dst, src, typeName) \
 	{ \
 		int iNum = sizeof(src)/sizeof(typeName); \
@@ -38,6 +39,7 @@ static char gVersionString[1024] = { 0 };
 		for (int i =0;i<iNum;i++) \
 			dst[i] = src[i]; \
 	}
+*/
 
 template <class T>
 void deleteInfoArray(std::vector<T*>& array)
@@ -1367,14 +1369,27 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 //	return *(m_paTraitOptionEditsInfo[e]);
 //}
 
+
+//	Toffer - Added internal registration of plot types
+#define	REGISTER_PLOT_TYPE(x)	setInfoTypeFromString(#x,x)
+
+void cvInternalGlobals::registerPlotTypes()
+{
+	REGISTER_PLOT_TYPE(NO_PLOT);
+	REGISTER_PLOT_TYPE(PLOT_PEAK);
+	REGISTER_PLOT_TYPE(PLOT_HILLS);
+	REGISTER_PLOT_TYPE(PLOT_LAND);
+	REGISTER_PLOT_TYPE(PLOT_OCEAN);
+}
+// ! Toffer
+
+//	Koshling - added internal registration of supported UnitAI types, not reliant
+//	on external definition in XML
 CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
 {
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eUnitAINum)
 	return *(m_paUnitAIInfos[eUnitAINum]);
 }
-
-//	Koshling - added internal registration of supported UnitAI types, not reliant
-//	on external definition in XML
 void cvInternalGlobals::registerUnitAI(const char* szType, int enumVal)
 {
 	FAssertMsg(m_paUnitAIInfos.size() == enumVal, "enumVal not expected value");
@@ -2421,47 +2436,35 @@ void cvInternalGlobals::cacheGlobals()
 }
 
 
-bool cvInternalGlobals::getDefineBOOL(const char * szName) const
+bool cvInternalGlobals::getDefineBOOL(const char* szName, bool bDefault) const
 {
-	bool bReturn = false;
-	bool success = GC.getDefinesVarSystem()->GetValue( szName, bReturn );
-	//FAssertMsg( success, szName );
-	return bReturn;
+	const bool success = m_VarSystem->GetValue(szName, bDefault);
+	//FAssertMsg(success, szName);
+	return bDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName, const int iDefault) const
+int cvInternalGlobals::getDefineINT(const char* szName, int iDefault) const
 {
-	int iReturn = 0;
-
-	if (GC.getDefinesVarSystem()->GetValue(szName, iReturn))
-	{
-		return iReturn;
-	}
+	const bool success = m_VarSystem->GetValue(szName, iDefault);
+	//FAssertMsg(success, szName);
 	return iDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName) const
+float cvInternalGlobals::getDefineFLOAT(const char* szName, float fDefault) const
 {
-	int iReturn = 0;
-	GC.getDefinesVarSystem()->GetValue(szName, iReturn);
-	return iReturn;
+	const bool success = m_VarSystem->GetValue(szName, fDefault);
+	//FAssertMsg(success, szName);
+	return fDefault;
 }
 
-float cvInternalGlobals::getDefineFLOAT(const char * szName) const
+const char* cvInternalGlobals::getDefineSTRING(const char* szName, const char* szDefault) const
 {
-	float fReturn = 0;
-	GC.getDefinesVarSystem()->GetValue(szName, fReturn);
-	return fReturn;
+	const bool success = m_VarSystem->GetValue(szName, szDefault);
+	//FAssertMsg(success, szName);
+	return szDefault;
 }
 
-const char * cvInternalGlobals::getDefineSTRING(const char * szName) const
-{
-	const char * szReturn = NULL;
-	GC.getDefinesVarSystem()->GetValue(szName, szReturn);
-	return szReturn;
-}
-
-void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpdate)
+void cvInternalGlobals::setDefineINT(const char* szName, int iValue, bool bUpdate)
 {
 	if (getDefineINT(szName) != iValue)
 	{
@@ -2469,14 +2472,14 @@ void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpda
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, iValue, -1.0f, "");
 		}
-		else GC.getDefinesVarSystem()->SetValue(szName, iValue);
+		else m_VarSystem->SetValue(szName, iValue);
 
 		cacheEnumGlobals();
 		cacheGlobals();
 	}
 }
 
-void cvInternalGlobals::setDefineFLOAT(const char * szName, float fValue, bool bUpdate)
+void cvInternalGlobals::setDefineFLOAT(const char* szName, float fValue, bool bUpdate)
 {
 	if (getDefineFLOAT(szName) != fValue)
 	{
@@ -2484,13 +2487,13 @@ void cvInternalGlobals::setDefineFLOAT(const char * szName, float fValue, bool b
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, fValue, "");
 		}
-		else GC.getDefinesVarSystem()->SetValue(szName, fValue);
+		else m_VarSystem->SetValue(szName, fValue);
 
 		cacheGlobals();
 	}
 }
 
-void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szValue, bool bUpdate )
+void cvInternalGlobals::setDefineSTRING(const char* szName, const char* szValue, bool bUpdate)
 {
 	if (getDefineSTRING(szName) != szValue)
 	{
@@ -2498,7 +2501,7 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, -1.0f, szValue);
 		}
-		else GC.getDefinesVarSystem()->SetValue( szName, szValue );
+		else m_VarSystem->SetValue(szName, szValue);
 
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
@@ -2790,7 +2793,7 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 			vInfoMapKeys.push_back(sKey);
 		}
 
-		std::sort(vInfoMapKeys.begin(), vInfoMapKeys.end());
+		algo::sort(vInfoMapKeys);
 
 		foreach_(const std::string& sKey, vInfoMapKeys)
 		{
@@ -3052,6 +3055,10 @@ void cvInternalGlobals::setIsBug()
 	bBugInitCalled = true;
 
 	::setIsBug();
+
+#ifdef _DEBUG // Matt: temporary
+	Cy::call("CvInfoUtilInterface", "init");
+#endif
 
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))

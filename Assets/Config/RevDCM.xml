@@ -14,6 +14,9 @@
 			<option id="RevDCMHiddenAttitude" key="RevDCMHiddenAttitude" type="boolean" default="True" get="isHiddenAttitude" set="setHiddenAttitude">
 				<change module="RevDCM" function="changedHiddenAttitude"/>
 			</option>
+			<option id="DYNAMIC_CIV_NAMES" key="DYNAMIC_CIV_NAMES" type="boolean" default="False" get="isDYNAMIC_CIV_NAMES" set="setDYNAMIC_CIV_NAMES">
+				<change module="RevDCM" function="changedDYNAMIC_CIV_NAMES"/>
+			</option>
 		</section>
 		<section id="RevDCM_seige">
 			<option id="DCM_RANGE_BOMBARD" key="DCM_RANGE_BOMBARD" type="boolean" default="True" get="isDCM_RANGE_BOMBARD" set="setDCM_RANGE_BOMBARD">

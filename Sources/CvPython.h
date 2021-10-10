@@ -62,16 +62,16 @@ namespace Cy
 		>::type type;
 	};
 	// Wrapper for simple array arguments
-	template < class Ty_ >
-	struct Array
-	{
-		typedef Ty_ value_type;
-
-		Array(const value_type* vals, int len) : vals(vals), len(len) {}
-
-		const value_type* vals;
-		int len;
-	};
+	//template < class Ty_ >
+	//struct Array
+	//{
+	//	typedef Ty_ value_type;
+	//
+	//	Array(const value_type* vals, int len) : vals(vals), len(len) {}
+	//
+	//	const value_type* vals;
+	//	int len;
+	//};
 
 	struct Args;
 
@@ -93,14 +93,14 @@ namespace Cy
 	};
 
 	// Array specialization
-	template < class Ty_ >
-	struct ArgTraits< Array<Ty_> > //: ArgTraitsBase< Array<Ty_> >
-	{
-		static void add(Args& args, const Array<Ty_>& arg)
-		{
-			args.args().add(arg.vals, arg.len);
-		}
-	};
+	//template < class Ty_ >
+	//struct ArgTraits< Array<Ty_> > //: ArgTraitsBase< Array<Ty_> >
+	//{
+	//	static void add(Args& args, const Array<Ty_>& arg)
+	//	{
+	//		args.args().add(arg.vals, arg.len);
+	//	}
+	//};
 
 	// vector specialization
 	template < class Ty_ >
@@ -398,7 +398,6 @@ namespace Cy
 		{
 			python::converter::registry::push_back(&PyIntConverter::convertible, &PyIntConverter::fromPython<T>, python::type_id<T>());
 			python::converter::registry::insert(PyIntConverter::toPython, python::type_id<T>());
-			python::converter::registry::insert(ContainerConverter<std::vector<T> >::toPython, python::type_id<std::vector<T> >());
 		}
 
 		const struct PyIntConverter
@@ -419,18 +418,6 @@ namespace Cy
 			static PyObject* toPython(const void* p)
 			{
 				return PyInt_FromLong(*static_cast<const long*>(p));
-			}
-		};
-
-		template <typename Container_T>
-		struct ContainerConverter
-		{
-			static PyObject* toPython(const void* p)
-			{
-				python::list l = python::list();
-				foreach_(const Container_T::value_type& i, *static_cast<const Container_T*>(p))
-					l += python::handle<>(PyInt_FromLong(static_cast<long>(i)));
-				return l.ptr();
 			}
 		};
 	}

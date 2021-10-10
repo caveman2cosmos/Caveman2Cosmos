@@ -782,6 +782,7 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 	//	Koshling - replaced XML-based registration of UNITAI types with internal registration.  Since they are a DLL-defined enum
 	//	anyway this allows new UNITAIs to be defined freely without ordering issues (in the XML or DLL), which in turn makes it
 	//	easier to merge mods with different UNITAI changes.  The XML is retained purely for documentary purposes
+	GC.registerPlotTypes();
 	GC.registerUnitAIs();
 	GC.registerAIScales();
 	GC.registerGameObjects();
@@ -892,7 +893,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.m_paCivicInfo, "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, &GC.m_CivicInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paPlayerColorInfo, "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
 	LoadGlobalClassInfo(GC.m_paBuildInfo, "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, &GC.m_BuildInfoReplacements);
-	LoadGlobalClassInfo(GC.m_paOutcomeInfo, "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
+	LoadGlobalClassInfo(GC.m_paOutcomeInfo, "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", false);
 
 	//	AlbertS2: Register mission types
 	GC.registerMissions();
@@ -2325,7 +2326,7 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 	}
 
 	// sort the array
-	std::sort(viOrderPriority.begin(), viOrderPriority.end(), sortHotkeyPriority);
+	algo::sort(viOrderPriority, sortHotkeyPriority);
 
 	// insert new order into the array to return
 	for (int iI = 0; iI < iLength; iI++)
@@ -2921,7 +2922,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 		iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
-			InitStringList(ppszList, iInfoBaseLength, szDefaultListVal);
+			InitList(ppszList, iInfoBaseLength, szDefaultListVal);
 			pszList = *ppszList;
 			if(!(iNumSibs <= iInfoBaseLength))
 			{
@@ -3299,7 +3300,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 		iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
-			InitStringList(ppszList, iTagListLength, szDefaultListVal);
+			InitList(ppszList, iTagListLength, szDefaultListVal);
 			pszList = *ppszList;
 			if(!(iNumSibs <= iTagListLength))
 			{
@@ -3609,174 +3610,6 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-
-/*************************************************************************************************/
-/**	New Tag Defs	(XMLInfos)				08/09/08								Xienwolf	**/
-/**																								**/
-/**									Loads Information from XML									**/
-/*************************************************************************************************/
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetChildList(int** ppiYield)
-//
-//  PURPOSE :   Generates a Vector String containing all data from single entry children fields
-//
-//------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad)
-{
-	std::vector<CvString> paszXMLLoad;
-	CvString szTextVal;
-
-	int iNumSibs = GetXmlChildrenNumber();
-	if (0 < iNumSibs)
-	{
-		if (GetChildXmlVal(szTextVal))
-		{
-			for (int iI = 0; iI < iNumSibs; iI++)
-			{
-				bool bLoad = true;
-				int iSize = paszXMLLoad.size();
-				for (int iJ = 0; iJ < iSize; ++iJ)
-				{
-					if(szTextVal == paszXMLLoad[iJ])
-					{
-						bLoad = false;
-					}
-				}
-				if (bLoad)
-				{
-					paszXMLLoad.push_back(szTextVal);
-				}
-				if (!GetNextXmlVal(szTextVal))
-				{
-					break;
-				}
-			}
-
-			MoveToXmlParent();
-		}
-	}
-	MoveToXmlParent();
-
-	*iNumEntries = paszXMLLoad.size();
-	*aszXMLLoad = paszXMLLoad;
-	paszXMLLoad.clear();
-}
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
-//
-//  PURPOSE :   Generates an Int Array containing all data from single entry children fields
-//
-//------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
-{
-	int* ppiXMLLoad;
-	CvString szTextVal;
-	std::vector<int> szTemp;
-
-	int iNumSibs = GetXmlChildrenNumber();
-	if (iNumSibs > 0)
-	{
-		if (GetChildXmlVal(szTextVal))
-		{
-			for (int iI = 0; iI < iNumSibs; iI++)
-			{
-				int iNew = GetInfoClass(szTextVal);
-				if(iNew == -1)
-				{
-					char szMessage[1024];
-					sprintf(szMessage, "Index is -1 inside function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-					gDLL->MessageBox(szMessage, "XML Error");
-				}
-				else
-				{
-					bool bLoad = true;
-					int iSize = szTemp.size();
-					for (int iJ = 0; iJ < iSize; ++iJ)
-					{
-						if(iNew == szTemp[iJ])
-						{
-							bLoad = false;
-						}
-					}
-					if (bLoad)
-					{
-						szTemp.push_back(iNew);
-					}
-				}
-				if (!GetNextXmlVal(szTextVal))
-				{
-					break;
-				}
-			}
-
-			MoveToXmlParent();
-		}
-	}
-	MoveToXmlParent();
-
-	int iSize = szTemp.size();
-	*iNumEntries = iSize;
-	//Redo function to use and return a list, then build the array from that list
-	//ppiXMLLoad = new int[iSize];
-	*piXMLLoad = new int[iSize];
-	ppiXMLLoad = *piXMLLoad;
-	for (int i = 0; i < iSize; ++i)
-	{
-		ppiXMLLoad[i] = szTemp[i];
-	}
-	szTemp.clear();
-}
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad)
-//
-//  PURPOSE :   Generates an Bool Array containing True in any listed field
-//
-//------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad)
-{
-	bool* ppbXMLLoad = NULL;
-	ppbXMLLoad = *pbXMLLoad;
-	CvString szTextVal;
-
-	int iNumSibs = GetXmlChildrenNumber();
-	if (iNumEntries < iNumSibs)
-	{
-		char	szMessage[1024];
-		sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-	if (iNumSibs > 0)
-	{
-		if (GetChildXmlVal(szTextVal))
-		{
-			for (int iI = 0; iI < iNumSibs; iI++)
-			{
-				int eLoad = GetInfoClass(szTextVal);
-				if(eLoad == -1)
-				{
-					char szMessage[1024];
-					sprintf(szMessage, "Index is -1 inside function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-					gDLL->MessageBox(szMessage, "XML Error");
-				}
-				ppbXMLLoad[eLoad] = true;
-				if (!GetNextXmlVal(szTextVal))
-				{
-					break;
-				}
-			}
-
-			MoveToXmlParent();
-		}
-	}
-
-	MoveToXmlParent();
-}
-/*************************************************************************************************/
-/**	New Tag Defs							END													**/
-/*************************************************************************************************/
 
 void CvXMLLoadUtility::RemoveTGAFiller()
 {

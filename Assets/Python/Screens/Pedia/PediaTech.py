@@ -5,8 +5,8 @@ from CvPythonExtensions import *
 class PediaTech:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
 
 		self.main = parent
 
@@ -156,7 +156,7 @@ class PediaTech:
 			aGOMTechReqList = []
 			for i in range(2):
 				aGOMTechReqList.append([])
-			self.GOMReqs.getGOMReqs(GC.getBuildingInfo(iBuilding).getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+			self.HF.getGOMReqs(GC.getBuildingInfo(iBuilding).getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
 			if isTechRequiredForBuilding(iTheTech, iBuilding) or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND] or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aList1.append(iBuilding)
 		for iProject in range(GC.getNumProjectInfos()):
@@ -186,7 +186,7 @@ class PediaTech:
 			aGOMTechReqList = []
 			for i in range(2):
 				aGOMTechReqList.append([])
-			self.GOMReqs.getGOMReqs(GC.getUnitInfo(iUnit).getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+			self.HF.getGOMReqs(GC.getUnitInfo(iUnit).getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
 			if isTechRequiredForUnit(iTheTech, iUnit) or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND] or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aList1.append(iUnit)
 		if aList1:
