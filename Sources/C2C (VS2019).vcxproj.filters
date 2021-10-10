@@ -659,6 +659,9 @@
     <ClInclude Include="CvGlobals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CvInfoClassTraits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CvInfoReplacements.h">
       <Filter>Header Files</Filter>
     </ClInclude>

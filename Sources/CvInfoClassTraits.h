@@ -3,25 +3,6 @@
 #ifndef CvInfoArray_h__
 #define CvInfoArray_h__
 
-enum RiverModelTypes { };
-enum WaterPlaneTypes { };
-enum TerrainPlaneTypes { };
-enum UnitFormationTypes { };
-enum LandscapeTypes { };
-enum ThroneRoomTypes { };
-enum ThroneRoomStyleTypes { };
-enum SlideShowTypes { };
-enum SlideShowRandomTypes { };
-enum WorldPickerTypes { };
-enum SpaceShipTypes { };
-enum RouteModelTypes { };
-enum ActionTypes { };
-enum DiplomacyTypes { };
-enum MainMenuTypes { };
-enum ModLoadControlTypes { };
-enum HintTypes { };
-
-
 #define EXPAND_FOR_EACH_INFO_CLASS(MACRO_FUNC)	\
 	MACRO_FUNC(CvBuildingInfo, BUILDING_INFO, BuildingTypes) \
 	MACRO_FUNC(CvUnitInfo, UNIT_INFO, UnitTypes) \

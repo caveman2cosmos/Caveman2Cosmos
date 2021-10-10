@@ -3480,4 +3480,22 @@ enum InfoClassTypes
 	NUM_INFO_CLASSES
 };
 
+enum RiverModelTypes { };
+enum WaterPlaneTypes { };
+enum TerrainPlaneTypes { };
+enum UnitFormationTypes { };
+enum LandscapeTypes { };
+enum ThroneRoomTypes { };
+enum ThroneRoomStyleTypes { };
+enum SlideShowTypes { };
+enum SlideShowRandomTypes { };
+enum WorldPickerTypes { };
+enum SpaceShipTypes { };
+enum RouteModelTypes { };
+enum ActionTypes { };
+enum DiplomacyTypes { };
+enum MainMenuTypes { };
+enum ModLoadControlTypes { };
+enum HintTypes { };
+
 #endif	// CVENUMS_h
