@@ -819,6 +819,11 @@
 		<Tag>TXT_KEY_BONUS_BEAVERS</Tag>
 		<English>Beavers</English>
 		<French>Castors</French>
+		<German>
+			<Text>Biber:Biber:Bibern:Biber</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Castori</Italian>
 		<Polish>Bobry</Polish>
 		<Russian>Áîáðû</Russian>
@@ -826,6 +831,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BEAVERS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]beaver[COLOR_REVERT] is a large, primarily nocturnal, semi-aquatic rodent. Beavers are known for their natural trait of building dams on rivers and streams, and building their homes in the resulting pond. Beavers also build canals to float building materials that are difficult to haul over land. Beavers were hunted for millennia, mainly for their fur and for their bitter-tasting secretion (called "castoreum") contained in their sacs, that is used in traditional medicine or as a taste enhancer for vanilla, strawberry and raspberry flavorings.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Biber[COLOR_REVERT] sind die zweitgrößten Nagetiere der Erde und als Baumeister bekannt für ihre Biberdämme, mit denen sie Bäche aufstauen und künstliche Teiche anlegen können. Bevor der Mensch den Nutzen des Bibers für die Ökosysteme erkannte, wurde er besonders im Mittelalter wegen seines Felles und seines Fleisches gejagt. Letzteres war besonders in der Fastenzeit beliebt, da der Biber durch ein päpstliches Edikt zum halben Fisch erklärt wurde und der "fischige Teil" ab den Hinterläufen trotz Fastengeboten gegessen werden durfte. Aus dem wasserdichten Fell wurden hauptsächlich Mützen, aus Biberhaaren auch andere Kleidungsstücke hergestellt. Bibergeil oder Castoreum, ein Sekret aus den paarigen, keulenförmigen Beuteln unter dem Schambein des Bibers, wurde bis ins 19. Jahrhundert als Medikament u.a. gegen Gicht, Krämpfe, hysterische Anfälle und Nervosität eingesetzt. Außerdem war es zeitweise auch als Aphrodisiakum begehrt. Heute nutzt man es nur noch in der Homöopathie und der Parfümerie. In den USA darf es allerdings auch als Lebensmittelzusatzstoff verwendet werden. Dort nutzt man es als "natürliches" Vanille-, Himbeer- oder Erdbeeraroma.</German>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]castoro[COLOR_REVERT] è un grande roditore semi-acquatico, principalmente notturno. I castori sono noti per la loro caratteristica naturale di costruire dighe su fiumi e torrenti e di costruire le loro case nello stagno risultante. I castori costruiscono anche canali per far galleggiare materiali da costruzione difficili da trasportare via terra. I castori sono stati cacciati per millenni, principalmente per la loro pelliccia e per la loro secrezione dal sapore amaro (chiamata "castoreum") contenuta nelle loro sacche, che viene utilizzata nella medicina tradizionale o come esaltatore di gusto per gli aromi di vaniglia, fragola e lampone.</Italian>
 		<Russian>Бобер - это крупный, преимущественно ночной грызун, ведущий полуводный образ жизни. Бобры известны своей природной способностью строить плотины на реках и ручьях и строить свои дома в образовавшемся пруду. Бобры также строят каналы для плавания строительных материалов, которые трудно перевозить по суше. На бобра охотились на протяжении тысячелетий, главным образом из-за их меха и горького экстракта (называемого «кастореум»), содержащегося в его железах, используемого в традиционной медицине или как усилитель вкуса в ароматизаторах ванили, клубники и малины.</Russian>
 	</TEXT>
@@ -971,6 +977,11 @@
 		<Tag>TXT_KEY_BONUS_BISON</Tag>
 		<English>Bison</English>
 		<French>Bisons</French>
+		<German>
+			<Text>Bisons:Bisons:Bisons:Bisons</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Bisonte</Italian>
 		<Spanish>Bisonte</Spanish>
 		<Polish>Bizony</Polish>
@@ -979,6 +990,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BISON_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]bison[COLOR_REVERT] is a large ungulate ruminant, similar in appearance to other bovines such as cattle and buffaloes. They are broad and muscular with shaggy coats of long hair, and travel in herds. Adults of the American species grow up to 2 m (6 ft 7 in) in height and 3.35 m (11 ft) in length, and can weigh from around 400 to 1,270 kg (880 to 2,800 lb); European bisons can reach up to 2.1 m (6 ft 11 in) in height and 2.9 m (9 ft 6 in) in length, and can weigh from 800 to 1,000 kg (1,800 to 2,200 lb).</English>
+		<German>Bei [COLOR_HIGHLIGHT_TEXT]Bisons[COLOR_REVERT] (oft auch einfach Büffel genannt) oder ihren nahen europäischen Verwandten, den Wisents, handelt es sich um große Wildrinder mit einer meist imposanteren und muskulöseren Vorderpartie. Sie waren eine wertvolle Nahrungsquelle für Jäger und Sammler, aber die Menschen nutzten auch Fell, Sehnen und Knochen zur Herstellung von Kleidung, Decken, Schilden, Seilen, Leim, Instrumenten, Schmuck, Werkzeugen und Zelten. Selbst der Büffelmist wurde als Brennmaterial verwendet.[NEWLINE]Im 19. Jahrhundert wurde ein Verfahren entwickelt, mit dem man aus Büffelleder Schuhsohlen und Antriebsriemen für Maschinen herstellen konnte. Die erhöhte Nachfrage führte zusammen mit anderen Faktoren zu einer fast vollständigen Ausrottung der Amerikanischen Bisons.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]bisonte[COLOR_REVERT] è un grande ruminante ungulato, simile nell'aspetto ad altri bovini come bovini e bufali. È un animale largo e muscoloso, con una pelliccia lunga e ispida, che viaggia in branchi. Gli adulti della specie americana crescono fino a 2 m di altezza e 3,35 m di lunghezza e possono pesare da circa 400 a 1.270 kg; i bisonti europei possono raggiungere fino a 2,1 metri di altezza e 2,9 metri di lunghezza e possono pesare da 800 a 1.000 kg.</Italian>
 		<Russian>Бизоны - таксономическая группа, состоящая из шести видов крупных копытных животных подсемейства Bovinae. Два из этих видов все еще существуют: американский равнинный бизон (B. bison bison) и американский лесной бизон (B. bison athabascae) - это подвиды, обитающие в Северной Америке, и европейский зубр (B. bonasus), обитающий в Европе и на Кавказе.</Russian>
 	</TEXT>
@@ -2311,9 +2323,9 @@
 		<English>Deer</English>
 		<French>Cerf</French>
 		<German>
-			<Text>Rotwild:Rotwilds:Rotwild:Rotwild</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
+			<Text>Hirsche:Hirsche:Hirschen:Hirsche</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
 		</German>
 		<Italian>Cervo</Italian>
 		<Spanish>Ciervo</Spanish>
@@ -2323,7 +2335,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DEER_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]deer[COLOR_REVERT] is a ruminant mammal, with long, powerful legs, a diminutive tail and long ears. Male deers also grow and shed new antlers each year. Deers have played a role in mythology, religion, and literature throughout history, as well as in heraldry. Deer hunting has been a popular activity since at least the Middle Ages and remains a resource for many families today. They have been hunted for their meat, their skin (that makes for soft, strong buckskin), and their antlers (used for handles for knives).</English>
-		<German>Diese wiederkäuenden Säugetiere sind auf allen Kontinenten (mit Ausnahme Australiens und Afrikas) anzutreffen. Rehe unterscheiden sich von anderen Wiederkäuern durch ihr Geweih. Die männlichen Tiere nennt man Hirsche oder Böcke, die weiblichen Tiere Kühe oder Ricken. Jungtiere sind Kitze oder Kälber. [PARAGRAPH:1]Vermutlich hat sich die Spezies in der Neuen Welt vor etwa fünf Millionen Jahren in den Wäldern Nordamerikas und Sibiriens entwickelt.</German>
+		<German>Während der umgangssprachliche Begriff Hirsch im Deutschen eher den Rothirsch als spezielles Exemplar bezeichnet, sind in der Familie der [COLOR_HIGHLIGHT_TEXT]Hirsche[COLOR_REVERT] eine Vielzahl an Geweihträgern zusammengefasst: Rehe, Rotwild, Damwild, Rentiere und Elche sind die in Europa bekanntesten. In der Frühzeit wurden Hirsche vom Menschen hauptsächlich wegen ihres Fleisches und ihres Fells gejagt. Außerdem stellten die stolzen Geweihe der Männchen bis in die Neuzeit begehrte Trophäen dar.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]cervo[COLOR_REVERT] è un mammifero ruminante, con zampe lunghe e potenti, una coda minuta e orecchie lunghe. Gli esemplari maschi, inoltre, rinnovano i propri palchi di corna ogni anno. I cervi hanno avuto un ruolo lungo la storia umana nella mitologia, nella religione, nella letteratura e nell'araldica. La caccia al cervo è stata un'attività popolare almeno dal Medioevo e rimane oggi una risorsa per molte famiglie. I cervi sono stati cacciati per la loro carne, la loro pelle (che rende la pelle di daino morbida e resistente) e le loro corna (usate per i manici dei coltelli).</Italian>
 		<Russian>Эти жвачные млекопитающие широко распространены, с представителями на всех континентах, кроме Австралии и Африки. Олени отличаются от других жвачных животных тем, что у них рога вместо рогов. Самцов оленей называют оленями, оленями, оленями или быками, а самок - оленями, ланями или коровами. Молодых оленей часто называют оленями или телятами.[PARAGRAPH:1]Считается, что виды Нового Света появились около пяти миллионов лет назад в лесах Северной Америки и Сибири.</Russian>
 	</TEXT>
@@ -2653,7 +2665,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ELEPHANTS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]elephant[COLOR_REVERT] is a large mammal with relatively small eyes and large mobile ears. They are equipped with two prominent ivory tusks and a trunk, derived from the fusion of nose and upper lip: it is a very versatile, prehensile organ, equipped with numerous nerve endings. Elephants have highly developed hearing and smell, which compensate for a rather weak vision. Elephants are herbivores and feed mainly on tree foliage. They need large quantities of food and their passage has a devastating effect on vegetation; as a result, they tend to move continuously.</English>
-		<German>Elefanten sind die größten lebenden Landsäugetiere. Schon bei der Geburt wiegt ein Elefantenkalb etwa 100 Kilogramm. In der Wildnis zeigen Elefanten ein komplexes Sozialverhalten und starke Familienbindungen. Elefanten bilden Herden von 15 bis 30, manchmal auch mehr Tieren, die gewöhnlich miteinander verwandt sind. Das größte und älteste Weibchen fungiert als Leittier, auch die Rangfolge der anderen Weibchen wird durch Größe und Alter bestimmt. Die Männchen haben ihre eigene Rangfolge, die sie über Wettkämpfe mittels Einsatz des Kopfes und der Stoßzähne finden. Elefanten kommunizieren über sehr tiefe Unterschalltöne, welche sich über weite Entfernungen ausbreiten. Die Zähmung von Elefanten begann vor etwa 4000 Jahren im Indus-Tal. Der erste militärische Einsatz von Elefanten wird erwähnt in mehreren Hymnen in Sanskrit, der klassischen Literatur- und Gelehrtensprache Indiens, und lässt sich auf etwa 1100 v.Chr. datieren. Von Indien aus verbreitete sich die Verwendung von Elefanten Richtung Westen nach Persien, wo sie beim Gefecht von Gaugamela gegen Alexander den Großen eingesetzt wurden. Obwohl sie in diesem Kampf keine signifikante Rolle spielten, erkannte Alexander ihre Nützlichkeit und begann, Elefanten in seine Armee zu integrieren. Später wurden Elefanten für viele Kriege in Europa genutzt, wie beispielsweise während der berühmten Makedonischen Kriege oder während des 2. Punischen Krieges durch den Feldherren Hannibal.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Elefanten[COLOR_REVERT] haben den Menschen wegen ihrer Größe und ihrer Kraft schon seit Urzeiten fasziniert. Ihre Zähmung begann vor etwa 4000 Jahren im Indus-Tal. Antike Kunstgegenstände belegen, dass Elefanten bereits um 2000 v.Chr. als Reit- und Lastentiere genutzt wurden. Der erste militärische Einsatz wird in mehreren Hymnen in Sanskrit, der klassischen Literatur- und Gelehrtensprache Indiens, erwähnt und lässt sich auf etwa 1100 v.Chr. datieren. Schon seit der Steinzeit werden Elefanten auch wegen ihres Fleisches gejagt. Neben dem Fell, der Haut und den Knochen wurde auch das [LINK=BONUS_IVORY]Elfenbein[\LINK] der erlegten Tiere genutzt, Letzteres hauptsächlich für Schmuckgegenstände. Eine gestiegene Nachfrage nach dem seltenen Rohstoff führte zu exzessiver Bejagung und Massentötungen von Elefanten in den letzten Jahrhunderten. Dadurch gingen die Bestände dramatisch zurück.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]elefante[COLOR_REVERT] è un mammifero di grandi dimensioni, con occhi relativamente piccoli e grandi orecchie mobili. Sono dotati di due zanne prominenti in avorio e di una proboscide, derivata dalla fusione di naso e labbro superiore: è un organo molto versatile, prensile, dotato di numerose terminazioni nervose. Gli elefanti hanno un udito e un olfatto molto sviluppati, che compensano una vista piuttosto debole. Gli elefanti sono erbivori e si nutrono principalmente di fogliame degli alberi. Necessitano di grandi quantità di cibo e il loro passaggio ha un effetto devastante sulla vegetazione; di conseguenza, tendono a spostarsi in continuazione.</Italian>
 		<Russian>Слоны - самые крупные из ныне живущих наземных млекопитающих. При рождении слоненок обычно весит до одного центнера (100 кг)! В дикой природе слоны демонстрируют сложное социальное поведение и крепкие семейные узы. Социальная иерархия в группах телят и коров основана на размере и возрасте: самый большой и самый старый находятся наверху, а самый маленький и самый молодой - последним. Мужчины-подростки определяют свой собственный порядок ранжирования в рыцарских соревнованиях, используя голову и бивни. Слоны общаются с очень низкими и дальними дозвуковыми тонами.[PARAGRAPH:1]Приручение слонов началось в долине Инда около 4000 лет назад. Первое военное применение слонов датируется примерно 1100 годом до нашей эры и упоминается в нескольких санскритских гимнах. С востока боевые слоны мигрировали в Персидскую империю, где они выступили против Александра Македонского в битве при Гавгамеле. Хотя они не сыграли значительной роли в битве, Александр увидел их полезность и начал включать их в свою армию. Позже это использование распространилось по Европе, и слоны использовались в таких известных кампаниях, как Македонские войны и Ганнибал во время Второй Пунической войны.</Russian>
 	</TEXT>
@@ -3558,7 +3570,11 @@
 		<Tag>TXT_KEY_BONUS_GUINEA_PIGS</Tag>
 		<English>Guinea Pigs</English>
 		<French>Cochons d'Inde</French>
-		<German>Hausmeerschweinchen</German>
+		<German>
+			<Text>Meerschweinchen:Meerschweinchen:Meerschweinchen:Meerschweinchen</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Porcellini d'India</Italian>
 		<Spanish>Cobayos</Spanish>
 		<Polish>Świnki morskie</Polish>
@@ -3567,6 +3583,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUINEA_PIGS_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Guinea pig[COLOR_REVERT], also known as cavy, is a species of rodent. They originated in the Andes of South America, and scientific studies suggest they are descendants of a closely related species of cavy, that was domesticated as livestock and as a source of food, but also used in folk medicine and in community religious ceremonies. In Western society, the domestic guinea pig has enjoyed widespread popularity as a household pet since 16th century, but they were also frequently used as model organisms in biological experimentation, so that "guinea pig" came into use to describe any kind of test subject, including humans.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Meerschweinchen[COLOR_REVERT] stammen ursprünglich aus Südamerika und wurden dort bereits um 5000 bis 2000 v.Chr. zur Fleisch- und Pelzproduktion domestiziert. Auch heute noch werden in der Andenregion Meerschweinchen gegessen, aktuell werden sogar größere und fettere Rassen gezüchtet. Sie eignen sich auch gut als Futtertiere für Zoos oder als Versuchstiere für die Forschung. Als Haustiere werden Meerschweinchen erst seit Beginn des 20. Jahrhunderts gezüchtet. Heute sind sie besonders bei Kindern beliebt, werden aber leider häufig einzeln und nicht in der Gruppe gehalten. Das zählt als nicht artgerecht im Sinne des Tierschutzgesetzes.</German>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]porcellino d'India[COLOR_REVERT], noto anche come cavia, è una specie di roditore. I porcellini d'India avuto origine nelle Ande del Sud America; studi scientifici suggeriscono che discendono da una specie selvatica strettamente correlata, che è stata nel tempo addomesticata come bestiame e come fonte di cibo, ma utilizzata anche nella medicina popolare e nelle cerimonie religiose. Nella società occidentale, hanno goduto di una diffusa popolarità come animali domestici dal XVI secolo, ma sono state anche frequentemente utilizzati come organismi modello nella sperimentazione biologica, al punto che il termine "cavia" viene comunemente utilizzato per descrivere qualsiasi tipo di soggetto di prova, compresi gli umani.</Italian>
 		<Russian>Морская свинка, также известная как гвинейская свинка, была впервые одомашнена еще в 5000 г. до н.э. племенами Андского региона Южной Америки. На языке кечуа его называют «куви». Статуи датируются ок. 500 г. до н.э. - 500 г. н.э., изображающие морских свинок, были обнаружены при археологических раскопках в Перу и Эквадоре. Племена моче в древнем Перу поклонялись животным и часто изображали морских свинок в своем искусстве. В наше время их используют в пищу и в качестве домашних животных из-за их послушного характера.</Russian>
 	</TEXT>
@@ -4623,6 +4640,11 @@
 		<Tag>TXT_KEY_BONUS_KANGAROO</Tag>
 		<English>Kangaroo</English>
 		<French>Kangourou</French>
+		<German>
+			<Text>Kängurus:Kängurus:Kängurus:Kängurus</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Canguro</Italian>
 		<Spanish>Canguros</Spanish>
 		<Polish>Kangury</Polish>
@@ -4631,6 +4653,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANGAROO_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]kangaroo[COLOR_REVERT] is a marsupial animal from the Macropodidae family, indigenous to Australia. Depending on their size, they can be called kangaroos, wallaroo, and wallaby, from biggest to smallest. Kangaroos have large, powerful hind legs, large feet adapted for leaping, a long muscular tail for balance, and a small head. Like most marsupials, female kangaroos have a pouch called a marsupium, in which joeys complete postnatal development. Kangaroo is a symbol of Australia, due to its importance to Australian culture and national image. Nonetheless, wild kangaroos are shot for meat, leather hides, and to protect grazing land.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Kängurus[COLOR_REVERT] wurden schon lange vor der Ankunft der Europäer von den Aborigines bejagt. Diese nutzten nicht nur das nahrhafte Fleisch, sondern verarbeiteten auch das Fell der Beuteltiere. Heute ist das Kängurufleisch seltsamerweise eher im Ausland beliebt und wird von den Australiern vorwiegend zu Tierfutter verarbeitet. Das sehr reißfeste Känguruleder hingegen wird auch heute noch für die Herstellung von Handschuhen, Stiefeln und Schuhen verwendet.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]canguro[COLOR_REVERT] è un animale marsupiale della famiglia Macropodidae, originario dell'Australia. A seconda delle loro dimensioni, possono essere chiamati canguri, wallaroo e wallaby (dal più grande al più piccolo). I canguri hanno zampe posteriori grandi e potenti, piedi larghi adatti per saltare, una lunga coda muscolare che usano per mantenere l'equilibrio e una testa piccola. Come la maggior parte dei marsupiali, i canguri femmina hanno una sacca anteriore chiamata marsupio, in cui i cuccioli completano il proprio sviluppo postnatale. Il canguro è un simbolo dell'Australia, per la sua importanza per la cultura e l'immagine nazionale australiana. Tuttavia, i canguri selvatici vengono cacciati per le loro carni e pelli e per proteggere i pascoli.</Italian>
 		<Russian>Кенгуру - сумчатое животное из семейства Macropodidae (макроподы, что означает «большая лапа»). Обычно этот термин используется для описания крупнейших видов из этого семейства, особенно представителей рода Macropus, красных кенгуру, антилопинных кенгуру, восточных серых кенгуру и западных серых кенгуру. Кенгуру - эндемики страны Австралия. Более мелкие макроподы обитают в Австралии и Новой Гвинее.[PARAGRAPH:2]У кенгуру большие мощные задние лапы, большие ступни, приспособленные для прыжков, длинный мускулистый хвост для равновесия и маленькая голова. Как и у большинства сумчатых, у самок кенгуру есть сумочка, называемая сумчатым телом, в которой джои завершают постнатальное развитие.[PARAGRAPH:2]Более крупные кенгуру гораздо лучше приспособились к изменениям, внесенным в австралийский ландшафт человеком, и, хотя многие из их меньших собратьев находятся под угрозой исчезновения, их много. Их практически не разводят, но диких кенгуру отстреливают ради мяса, кожи и защиты пастбищ овец и крупного рогатого скота. Хотя есть некоторые разногласия, заготовка мяса кенгуру имеет много преимуществ для окружающей среды и здоровья по сравнению с традиционным мясом.[PARAGRAPH:2]Кенгуру - национальный символ Австралии: его эмблема используется на австралийском гербе, на некоторых денежных знаках страны, а также некоторыми известными организациями Австралии, включая Qantas. Кенгуру важен как для австралийской культуры, так и для национального имиджа, и, следовательно, существует множество ссылок на популярную культуру.</Russian>
 	</TEXT>
@@ -6846,7 +6869,7 @@
 		<Tag>TXT_KEY_BONUS_PIG_PEDIA</Tag>
 		<English>The pig has been domesticated for about 5,000 to 7,000 years and the animal is found across Europe, the Middle East, and extends in Asia as far as Indonesia and Japan. Pigs are one of the most intelligent animals, and some are even kept as pets. Pigs are reportedly more trainable than dogs and cats.</English>
 		<French>Le cochon a été domestiqué il y a 5 à 7 000 ans. On le trouve dans toute l'Europe, au Moyen-Orient et jusqu'en Indonésie et au japon. Le cochon est un des animaux les plus intelligents, et il arrive parfois que l'on en fasse un animal de compagnie. Aux dires de certains, il serait même plus facile à dresser que le chat ou le chien.</French>
-		<German>Das [COLOR_HIGHLIGHT_TEXT]Schwein[COLOR_REVERT] wurde vor etwa 7000 Jahren domestiziert und ist in Europa, dem Mittleren Osten, Asien, Indonesien und Japan anzutreffen. Schweine sind überaus intelligent und werden heute vermehrt als Haustiere gehalten. Neuen Studien zufolge sind Schweine sogar gelehriger als Hunde und Katzen. Gezüchtet wird es hauptsächlich als Fleischlieferant, auch wenn in verschiedenen Religionen das Schweinefleisch tabu ist. Außerdem werden Innereien, Knochen (für Suppen und als Dünger), Haut (früher für Leder, heute hauptsächlich für Gelatine) und Borsten (für Bürsten und Pinsel) verwendet.</German>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Schwein[COLOR_REVERT] wurde vor etwa 7000 Jahren domestiziert und ist in Europa, dem Mittleren Osten, Asien, Indonesien und Japan anzutreffen. Schweine sind überaus intelligent und werden heute vermehrt als Haustiere gehalten. Neuen Studien zufolge sind Schweine sogar gelehriger als Hunde und Katzen. Gezüchtet werden sie hauptsächlich als Fleischlieferant, auch wenn in verschiedenen Religionen das Schweinefleisch tabu ist. Außerdem werden Innereien, Knochen (für Suppen und als Dünger), Haut (früher für Leder, heute hauptsächlich für Gelatine) und Borsten (für Bürsten und Pinsel) verwendet.</German>
 		<Italian>Il primo maiale addomesticato risale a circa 5.000 o 7.000 anni fa. Questo animale è comunemente diffuso in Europa, Medio Oriente, Asia e persino in Indonesia e Giappone. I maiali sono tra gli animali più intelligenti e possono essere addirittura degli animali da compagnia, poiché sono più facilmente addestrabili di cani e gatti.</Italian>
 		<Russian>Свинью приручили от 5000 до 7000 лет, и это животное встречается по всей Европе, на Ближнем Востоке и распространяется в Азии до Индонезии и Японии. Свиньи - одни из самых умных животных, и некоторых из них даже содержат в качестве домашних животных. Сообщается, что свиней легче дрессировать, чем собак и кошек.</Russian>
 	</TEXT>
