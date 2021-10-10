@@ -419,6 +419,7 @@
     <ClInclude Include="CvGlobals.h" />
     <ClInclude Include="CvHallOfFameInfo.h" />
     <ClInclude Include="CvInfoReplacements.h" />
+    <ClInclude Include="CvInfoClassTraits.h" />
     <ClInclude Include="CvInfos.h" />
     <ClInclude Include="CvInfoUtil.h" />
     <ClInclude Include="CvInfoWater.h" />
