@@ -22,13 +22,13 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NEUTRINO_COMMUNICATIONS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NEUTRINO_COMMUNICATIONS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -55,6 +55,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_PLANET</Type>
@@ -138,6 +139,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_EPITAXY_FACTORY</Type>
@@ -172,22 +174,22 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_HYPERMAGNETICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PLANET_CRACKING</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
@@ -218,7 +220,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -576,7 +578,7 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
@@ -599,7 +601,7 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>
@@ -775,40 +777,40 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANOSHIELDING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NANOSHIELDING</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NANOMORPHIC_TROIDS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANO_DISASSEMBLY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NANO_DISASSEMBLY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANOTROIDS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NANOTROIDS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iDefense>10</iDefense>
@@ -1318,7 +1320,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -1450,7 +1452,7 @@
 					<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1458,6 +1460,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CANDLE</Type>
@@ -1498,6 +1501,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CORE</Type>
@@ -1521,7 +1525,7 @@
 					<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1534,6 +1538,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_UNIFICATION_ACCELERATOR</Type>
@@ -1558,25 +1563,25 @@
 			<FreeBuilding>BUILDING_ORBITAL_ACCELERATOR</FreeBuilding>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_OMEGA_MINUS_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_OMEGA_MINUS_ENGINEERING</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CONTROLLED_VACUUM_COLLAPSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CONTROLLED_INFLATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CONTROLLED_INFLATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<BonusProductionModifiers>
@@ -1645,7 +1650,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DEEP_SPACE_FARM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -1693,7 +1698,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1868,10 +1873,10 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PLANET_CRACKING</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1920,6 +1925,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Type>
@@ -2014,6 +2020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KBO_OUTPOST</Type>
@@ -2046,7 +2053,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -2142,10 +2149,10 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_PLANET_CRACKING</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -2276,7 +2283,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -2313,19 +2320,19 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
@@ -2881,6 +2888,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_SPACECRAFT_FACTORY</Type>
@@ -2915,6 +2923,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_VR</Type>
@@ -2999,6 +3008,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_BASE</Type>
@@ -3045,7 +3055,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -3628,7 +3638,7 @@
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>60</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
@@ -3673,14 +3683,23 @@
 					<TerrainType>TERRAIN_EUROPA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MERCURY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ASTEROID_SURFACE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>40</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3708,15 +3727,47 @@
 					<TerrainType>TERRAIN_KUIPER_BELT_OBJECT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_JUPITER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_SATURN</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_URANUS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_NEPTUNE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_EUROPA</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MERCURY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ASTEROID_SURFACE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3759,6 +3810,7 @@
 				<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_DYSON_SPHERE</Type>
@@ -3783,10 +3835,10 @@
 			<FreeBuilding>BUILDING_SOLAR_DYSON_SPHERE_EFFECT</FreeBuilding>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ULTIMA_ARCHITECTURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ULTIMA_ARCHITECTURE</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqAmountBuildings>
@@ -3956,6 +4008,7 @@
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 				<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUN_SCOOP_POWER_PLANT</Type>
@@ -3983,6 +4036,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPERATURE_REGULATOR</Type>
@@ -4104,11 +4158,11 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_OCEAN_PLANET</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -4183,6 +4237,7 @@
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 				<BuildingType>BUILDING_JOVIAN_ANTIMATTER_HARVESTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_MERCURY</Type>
@@ -4566,19 +4621,19 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ORBITAL_DEFENSES</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DEEP_SPACE_CLOAKING</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iMilitaryProductionModifier>100</iMilitaryProductionModifier>

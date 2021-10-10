@@ -133,4 +133,14 @@
 		<Polish>Jednostka</Polish>
 		<Russian>Îòðÿä</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_WITH</Tag>
+		<English>With</English>
+		<French>Avec</French>
+		<German>Mit</German>
+		<Italian>Con</Italian>
+		<Spanish>Con</Spanish>
+		<Polish>Z</Polish>
+		<Russian>Ñ</Russian>
+	</TEXT>
 </Civ4GameText>

@@ -8,6 +8,7 @@
 #include "CvString.h"
 
 class BoolExpr;
+class CvPlot;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
@@ -136,13 +137,6 @@ struct BonusModifier
 	operator int() const {return (int)eBonus;}
 	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };
-struct ImprovementModifier
-{
-	ImprovementTypes eImprovement;
-	int iModifier;
-	operator int() const {return (int)eImprovement;}
-	bool operator< (const ImprovementModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
-};
 struct DisallowedTraitType
 {
 	TraitTypes eTrait;
@@ -170,13 +164,6 @@ struct BuildingModifier
 	int* operator&() {return reinterpret_cast<int*>(&eBuilding);}
 	operator int() const {return (int)eBuilding;}
 	bool operator< (const BuildingModifier& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
-};
-struct SpecialBuildingModifier
-{
-	SpecialBuildingTypes eSpecialBuilding;
-	int iModifier;
-	operator int() const {return (int)eSpecialBuilding;}
-	bool operator< (const SpecialBuildingModifier& rhs) const {return (int)eSpecialBuilding < (int)rhs.eSpecialBuilding;}
 };
 struct UnitModifier
 {
@@ -323,9 +310,10 @@ struct PromotionLineAfflictionModifier
 
 struct XYCoords
 {
-	XYCoords(int x=0, int y=0) : iX(x), iY(y) {}
-	int iX;
-	int iY;
+	XYCoords(int x = INVALID_PLOT_COORD, int y = INVALID_PLOT_COORD);
+	XYCoords(const CvPlot& plot);
+
+	CvPlot* plot() const;
 
 	bool operator<  (const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX < xy.iX)); }
 	bool operator<= (const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX <= xy.iX)); }
@@ -333,6 +321,9 @@ struct XYCoords
 	bool operator== (const XYCoords xy) const { return (!(iY != xy.iY || iX != xy.iX)); }
 	bool operator>= (const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX >= xy.iX)); }
 	bool operator>  (const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX > xy.iX)); }
+
+	int iX;
+	int iY;
 };
 
 struct IDInfo
@@ -741,11 +732,6 @@ struct BuildingCommerceChange
 	void write(FDataStreamBase* pStream);
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
@@ -759,56 +745,57 @@ struct PropertySpawns
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
-struct BuildingYieldModifier
-{
-	BuildingTypes eBuilding;
-	YieldTypes eYield;
-	int iChange;
 
-	BuildingYieldModifier()
-		: eBuilding(NO_BUILDING)
-		, eYield(NO_YIELD)
-		, iChange(0)
+const struct TechYieldChange
+{
+	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)
+		: eTech(eTech)
+		, eYield(eYield)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const YieldTypes eYield;
+	const int iChange;
 };
 
-struct BuildingCommerceModifier
+const struct TechCommerceChange
 {
-	BuildingTypes eBuilding;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	BuildingCommerceModifier()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	TechCommerceChange(TechTypes eTech, CommerceTypes eCommerce, int iChange)
+		: eTech(eTech)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const CommerceTypes eCommerce;
+	const int iChange;
 };
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-
-
-struct FOWVis
+const struct TerrainYieldChange
 {
-	uint uiCount;
-	POINT* pOffsets;  // array of "Offset" points
-
-	FOWVis()
-		: uiCount(0)
-		, pOffsets(NULL)
+	TerrainYieldChange(TerrainTypes eTerrain, YieldTypes eYield, int iChange)
+		: eTerrain(eTerrain)
+		, eYield(eYield)
+		, iChange(iChange)
 	{}
 
-	// python friendly accessors
-	POINT getOffsets(int i) const { return pOffsets[i]; }
+	const TerrainTypes eTerrain;
+	const YieldTypes eYield;
+	const int iChange;
+};
+
+const struct GenericTrippleInt
+{
+	GenericTrippleInt(int iType, int iIndex, int iValue)
+		: iType(iType)
+		, iIndex(iIndex)
+		, iValue(iValue)
+	{}
+
+	const int iType;
+	const int iIndex;
+	const int iValue;
 };
 
 struct DllExport PBGameSetupData

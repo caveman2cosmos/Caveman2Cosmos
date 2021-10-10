@@ -35,7 +35,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_PANTHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LION_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -106,7 +106,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_LION</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LION_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -172,7 +172,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_CAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_CAMEL_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -248,7 +248,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_LLAMA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LLAMA_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -260,9 +260,24 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_LLAMA_FARM</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_LLAMA_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -323,7 +338,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_DONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
@@ -333,10 +348,26 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_DONKEY_FARM</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -427,7 +458,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_HORSE_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -439,8 +470,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_HORSE_STORY</BuildingType>
-				<BuildingType>BUILDING_HORSE_STORIES</BuildingType>
+				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -539,7 +569,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BISON</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BISON_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -551,10 +581,25 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_BISON_HERD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -617,7 +662,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BUFFALO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BUFFALO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -629,10 +674,25 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_BUFFALO_HERD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -694,7 +754,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_CATTLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_CATTLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -712,6 +772,7 @@
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COW_FARM</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -768,7 +829,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MUSKOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_MUSKOX_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -783,8 +844,12 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -834,7 +899,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_AARDVARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -847,7 +912,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_AARDVARK_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -903,7 +968,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BOAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BOAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -920,6 +985,7 @@
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PIG_FARM</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -976,7 +1042,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DARTFROG_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -987,8 +1053,12 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<iCost>90</iCost>
 			<iMoves>1</iMoves>
@@ -1042,17 +1112,13 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_ASIANBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASIANBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ASIANBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1061,7 +1127,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1116,7 +1182,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BROWN_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -1127,17 +1193,13 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1192,7 +1254,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_BLACKBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BLACKBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1200,10 +1262,6 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1212,7 +1270,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1267,7 +1325,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAVE_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1276,10 +1334,6 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -1287,7 +1341,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1342,7 +1396,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_GRIZZLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GRIZZLY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GRIZZLY_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1350,10 +1404,6 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_MYTH</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_STORY</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_STORIES</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1362,7 +1412,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1413,7 +1463,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_PANDA_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PANDA_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1423,17 +1473,13 @@
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1488,7 +1534,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_POLARBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_POLAR_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_POLAR_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1497,17 +1543,13 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1558,19 +1600,14 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_REDPANDA</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDPANDA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_REDPANDA_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_MYTH</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_STORY</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_RACCOON_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1579,7 +1616,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REDPANDA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -1635,7 +1672,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SLOTHBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOTHBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1643,10 +1680,6 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1655,7 +1688,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1710,7 +1743,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SPECTACLEDBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPECTACLEDBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SPECTACLED_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1718,10 +1751,6 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1730,7 +1759,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1787,7 +1816,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SUNBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUNBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SUN_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1795,10 +1824,6 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1807,7 +1832,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1863,7 +1888,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_ELEPHANT_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -1936,7 +1961,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -1945,9 +1970,6 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_MYTH</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_STORY</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_STORIES</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -1964,7 +1986,7 @@
 			<iCityDefense>-80</iCityDefense>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 			</PrereqAndBuildings>
 			<UnitMeshGroups>
@@ -2012,7 +2034,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HIPPO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_HIPPO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2024,7 +2046,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_HIPPOS_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -2082,7 +2104,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_WOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
@@ -2091,23 +2113,22 @@
 				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_WOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_ARCTICFOX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GREY_WOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DHOLE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DINGO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_EWOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FENNECFOX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MANEDWOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_REDFOX_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -2162,7 +2183,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BLACK_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2171,14 +2192,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_MYTH</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2235,7 +2253,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_INDIAN_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2244,14 +2262,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_MYTH</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2308,7 +2323,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2317,14 +2332,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_MYTH</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINO</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2381,7 +2393,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2390,14 +2402,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_MYTH</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2453,7 +2462,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BAIRDS_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2462,14 +2471,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -2524,7 +2530,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BRAZILIAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2533,14 +2539,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_BRAZILIAN_TAPIR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BRAZILIAN_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BRAZILIAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -2595,7 +2598,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2604,14 +2607,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_MALAYAN_TAPIR_MYTH</BuildingType>
-				<BuildingType>BUILDING_MALAYAN_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_MALAYAN_TAPIR_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_MALAYAN_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -2666,7 +2666,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MOUNTAIN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2675,14 +2675,11 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_MOUNTAIN_TAPIR_MYTH</BuildingType>
-				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_MOUNTAIN_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -2736,7 +2733,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_LIZARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIZARD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LIZARD_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2745,16 +2742,25 @@
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
-				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_REPTILE_CAGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RE_PET_SHOP</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_NILE_MONITOR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_KOMODO_DRAGON</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_NILE_MONITOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -2811,7 +2817,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SNAKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_SNAKE_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -2823,16 +2829,25 @@
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_SNAKES_STORY</BuildingType>
-				<BuildingType>BUILDING_SNAKES_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_REPTILE_CAGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RE_PET_SHOP</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iMoves>1</iMoves>
@@ -2884,7 +2899,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2903,6 +2918,10 @@
 			</PrereqOrBuildings>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_TAMED_DONKEY</UnitType>
+			</UnitUpgrades>
+			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<iCost>60</iCost>
 			<iMoves>2</iMoves>
 			<iWithdrawalProb>40</iWithdrawalProb>
@@ -2980,7 +2999,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
@@ -2991,11 +3010,9 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
-				<BuildingType>BUILDING_HORSE_STORY</BuildingType>
-				<BuildingType>BUILDING_HORSE_STORIES</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
@@ -3003,6 +3020,10 @@
 				<BuildingType>BUILDING_HORSE_NATIONAL</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_TAMED_HORSE</UnitType>
+			</UnitUpgrades>
+			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>60</iCost>
 			<iMoves>3</iMoves>
@@ -3085,7 +3106,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_WOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
@@ -3101,18 +3122,22 @@
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_WOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_ARCTICFOX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GREY_WOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DHOLE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DINGO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_EWOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FENNECFOX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MANEDWOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_REDFOX_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_TAMED_WOLF</UnitType>
+			</UnitUpgrades>
+			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<iCost>60</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>

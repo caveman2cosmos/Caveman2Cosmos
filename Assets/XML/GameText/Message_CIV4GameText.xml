@@ -64,13 +64,6 @@
 		<Russian>Инквизиция не сумела уничтожить в городе %s1_city все негосударственные религии.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_KENTUCKY_DERBY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Kentucky Derby[COLOR_REVERT] has produced a [COLOR_UNIT_TEXT]Subdued Horse[COLOR_REVERT]!</English>
-		<French>Le [COLOR_BUILDING_TEXT]Derby du Kentucky[COLOR_REVERT] a produit un [COLOR_UNIT_TEXT]Cheval apprivoisé[COLOR_REVERT]!</French>
-		<Italian>Il [COLOR_BUILDING_TEXT]Derby del Kentucky[COLOR_REVERT] ha prodotto un [COLOR_UNIT_TEXT]Cavallo ammaestrato[COLOR_REVERT]!</Italian>
-		<Russian>[COLOR_BUILDING_TEXT]Дерби Кентукки[COLOR_REVERT] произвело [COLOR_UNIT_TEXT]Прирученную лошадь[COLOR_REVERT]!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_LITIGATION</Tag>
 		<English>Corporation was removed from city.</English>
 	</TEXT>

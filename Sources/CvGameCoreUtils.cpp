@@ -4668,3 +4668,27 @@ void AddDLLMessage(
 		<< bForce
 	);
 }
+
+
+// Toffer - If a value with decimals can be negative, it needs to be handled something like this to get the minus sign correctly in text.
+void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumberCutDecimals, int iNumDecimals)
+{
+	if (bWholeNumberCutDecimals && iValue % 100 == 0)
+	{
+		szValue.Format(L"%d", iValue / 100);
+	}
+	else
+	{
+		//iNumDecimals = range(iNumDecimals, 0, 9);
+		if (iValue < 0)
+		{
+			if (iValue / 100 == 0)
+			{
+				szValue.Format(L"-0.%02d", abs(iValue) % 100);
+			}
+			else szValue.Format(L"%d.%02d", iValue / 100, abs(iValue) % 100);
+		}
+		else szValue.Format(L"%d.%02d", iValue / 100, iValue % 100);
+	}
+}
+// ! Toffer

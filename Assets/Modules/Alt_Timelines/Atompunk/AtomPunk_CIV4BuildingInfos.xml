@@ -36,6 +36,17 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HI_TECH_NUCLEAR_REACTOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_URANIUM</Bonus>
@@ -57,14 +68,11 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-			</ReplacementBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -80,6 +88,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<bPower>1</bPower>
 			<bNeverCapture>1</bNeverCapture>
@@ -108,52 +117,52 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SUPERCONDUCTORS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_WIRELESS_ELECTRICITY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LASER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LASER</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_QUANTUM_TELEPORTATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CONTROLLED_PLASMA</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CONTROLLED_PLASMA</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TESLA_INFANTRY</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<SpecialistCounts>
@@ -165,6 +174,12 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -177,6 +192,16 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_GENERATION_IV_REACTOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -193,7 +218,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-25</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -211,6 +236,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
@@ -239,13 +265,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NUCLEAR_PLANT</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
-				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-			</ReplacementBuildings>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
@@ -261,6 +281,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -289,16 +310,15 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldModifiers>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_URANIUM_MINE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -715,32 +735,32 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_EXPLORATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SPACE_STATIONS</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ROBOTICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ROBOTICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CLONING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CLONING</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -756,7 +776,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
-			<ObsoleteTech>TECH_KNOWLEDGE_MANAGEMENT</ObsoleteTech>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COMPUTER_NETWORK</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -777,6 +798,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
+			<iHealth>-1</iHealth>
 			<iTradeRoutes>2</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -795,8 +817,6 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<RelationType>RELATION_SAME_PLOT</RelationType>
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>

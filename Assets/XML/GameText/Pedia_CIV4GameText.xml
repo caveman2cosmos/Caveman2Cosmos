@@ -191,28 +191,6 @@
 		<English>Unique Bonuses</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING</Tag>
-		<English>Buildings</English>
-		<French>
-			<Text>Bâtiments</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Gebäude</German>
-		<Italian>
-			<Text>Edifici</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Edificios</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Budynki</Polish>
-		<Russian>Çäàíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>

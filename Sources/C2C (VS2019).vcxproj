@@ -420,6 +420,7 @@
     <ClInclude Include="CvHallOfFameInfo.h" />
     <ClInclude Include="CvInfoReplacements.h" />
     <ClInclude Include="CvInfos.h" />
+    <ClInclude Include="CvInfoUtil.h" />
     <ClInclude Include="CvInfoWater.h" />
     <ClInclude Include="CvInitCore.h" />
     <ClInclude Include="CvMap.h" />
@@ -473,6 +474,7 @@
     <ClInclude Include="CyGameTextMgr.h" />
     <ClInclude Include="CyGlobalContext.h" />
     <ClInclude Include="CyHallOfFameInfo.h" />
+    <ClInclude Include="CyIterator.h" />
     <ClInclude Include="CyMap.h" />
     <ClInclude Include="CyMapGenerator.h" />
     <ClInclude Include="CyMessageControl.h" />

@@ -4829,24 +4829,6 @@
 		<Russian>Ýôôåêòû çäîðîâüÿ îò îñîáåííîñòåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_HOVER</Tag>
-		<English>When checked, hovering over a technology in the "Won't Trade" column of the Foreign Advisor's TECHS page will show you the AI's reason for denying the trade.</English>
-		<French>Lorsque activé, La raison qu'a l'IA pour refuser l'échange d'une technologie sera disponible en infobulle dans l'écran du Conseiller aux relations étrangères.</French>
-		<German>Zeigt die Gründe für die Verweigerung eines Handels an, wenn der Mauszeiger über eine Technologie in der Spalte "Unverhandelbar" auf der Seite "Technologien" des Auslandsberaters bewegt wird</German>
-		<Italian>Quando è selezionato, posizionando il cursore su una Tecnologia nella colonna 'Non commercia' della pagina delle Tecnologie del Consigliere Estero verrà visualizzata la ragione per cui l'AI rifiuta di commerciare tale Tecnologia.</Italian>
-		<Spanish>Cuando se activa, mostrará la razón por la que la IA no comerciará una tecnología pasando el ratón por encima de ella en la columna de 'No comercia' en la pantalla de Tecnología en el Consejero de Exteriores.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïåðåìåùåíèå íàä òåõíîëîãèåé â êîëîíêå "Íå ìîæåò òîðãîâàòü" íà ñòðàíèöå òåõíîëîãèé ñîâåòíèêà ïî èíîñòðàííûì äåëàì áóäåò ïîêàçûâàòü âàì ïðè÷èíó îòêàçà ÈÈ â òîðãîâëå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_TEXT</Tag>
-		<English>Technology Trade Denial</English>
-		<French>Refus d'échange de Technologies</French>
-		<German>Verweigerung von Technologien</German>
-		<Italian>Rifiuto di commercio di Tecnologie</Italian>
-		<Spanish>Rechazo a comerciar tecnología</Spanish>
-		<Russian>Îòêàç òîðãîâëè òåõíîëîãèÿìè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__UNITEXPERIENCEMODIFIERS_HOVER</Tag>
 		<English>When checked, displays the experience point modifiers (buildings, military instructors, civics, and wonders) in the Train Unit button hover.</English>
 		<French>Lorsque activé, affiche les modificateurs (bâtiments, instructeurs, doctrines, Merveilles) des points d'expérience initiaux.</French>
@@ -5488,6 +5470,14 @@
 		<German>Fernbombardierung</German>
 		<Spanish>Bombardeo a distancia</Spanish>
 		<Russian>Äèñò. îáñòðåë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_TEXT</Tag>
+		<English>Dynamic Civ Names</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
+		<English>Civ names will have various names depending on civic choices and other factors</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_EMERGENCY_DRAFT_ENABLED_HOVER</Tag>

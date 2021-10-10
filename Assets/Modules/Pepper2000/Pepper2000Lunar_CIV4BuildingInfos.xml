@@ -130,10 +130,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -179,6 +179,7 @@
 				<BuildingType>BUILDING_LUNAR_PARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ASSEMBLY_PLANT</Type>
@@ -207,10 +208,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<SpecialistCounts>
@@ -340,6 +341,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_CHEMICAL_STORAGE</Type>
@@ -369,6 +371,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_COMETARY_BOMBARDMENT</Type>
@@ -394,6 +397,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_SPACE_PORT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_CONCRETE_MILL</Type>
@@ -465,6 +469,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_DROID_FACTORY</Type>
@@ -495,10 +500,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<SpecialistCounts>
@@ -547,6 +552,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_FISH_FARM</Type>
@@ -799,10 +805,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -881,10 +887,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -924,10 +930,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -973,10 +979,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>50</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>5000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1062,10 +1068,10 @@
 			</BonusYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<SpecialistCounts>
@@ -1164,6 +1170,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Type>
@@ -1213,10 +1220,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1279,6 +1286,7 @@
 					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_RESEARCH_BASE</Type>
@@ -1302,71 +1310,71 @@
 				<iCommerce>-500</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_STEEL_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_ALGAE</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_TITANIUM_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_MANGANESE</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_MAGNESIUM_ORE</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_PLASTIC</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_SYNTHETIC_RUBBER</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_ROCKET_FUEL</BonusType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -1419,10 +1427,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1510,13 +1518,14 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_SOIL_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SHIPYARD</Type>
@@ -1557,10 +1566,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<SpecialistCounts>
@@ -1635,10 +1644,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>100</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>10000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1681,6 +1690,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ALGAE_FARM</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOLAR_ARRAY</Type>
@@ -1714,6 +1724,7 @@
 				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 				<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOLAR_PANELS</Type>
@@ -1746,6 +1757,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SPACE_PORT</Type>
@@ -1828,10 +1840,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>200</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_TRADE</TechType>
+					<CommercePercents>
+						<iCommercePercent>20000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1909,6 +1921,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_FOUNDRY</Type>
@@ -1941,6 +1954,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MITHRIL</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOON_TERRA</Type>
@@ -1988,6 +2002,7 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOON_TERRA_EFFECT</Type>
@@ -2052,6 +2067,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

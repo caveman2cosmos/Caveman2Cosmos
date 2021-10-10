@@ -10,11 +10,6 @@
 // Python wrapper class for CvCity
 //
 
-CyCity::CyCity() : m_pCity(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
 	FAssert(m_pCity != NULL);
@@ -1119,11 +1114,6 @@ int CyCity::getCultureThreshold() const
 	return m_pCity->getCultureThreshold();
 }
 
-int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
-{
-	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
-}
-
 int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
 {
 	return m_pCity->getPlotYield((YieldTypes)eIndex);
@@ -1712,6 +1702,11 @@ int CyCity::getNumPopulationEmployed() const
 int CyCity::getBonusCommercePercentChanges(int eIndex, int eBuilding) const
 {
 	return m_pCity->getBonusCommercePercentChanges((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
+}
+
+int CyCity::getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const
+{
+	return m_pCity->getBaseYieldRateFromBuilding100((YieldTypes)iYield, (BuildingTypes)iBuilding);
 }
 
 bool CyCity::isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const

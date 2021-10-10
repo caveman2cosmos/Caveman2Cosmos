@@ -498,11 +498,7 @@ int CvImprovementInfo::getNumAlternativeImprovementUpgradeTypes() const
 
 bool CvImprovementInfo::isAlternativeImprovementUpgradeType(int i) const
 {
-	if (find(m_aiAlternativeImprovementUpgradeTypes.begin(), m_aiAlternativeImprovementUpgradeTypes.end(), i) == m_aiAlternativeImprovementUpgradeTypes.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiAlternativeImprovementUpgradeTypes, i);
 }
 
 int CvImprovementInfo::getFeatureChangeType(int i) const
@@ -517,11 +513,7 @@ int CvImprovementInfo::getNumFeatureChangeTypes() const
 
 bool CvImprovementInfo::isFeatureChangeType(int i) const
 {
-	if (find(m_aiFeatureChangeTypes.begin(), m_aiFeatureChangeTypes.end(), i) == m_aiFeatureChangeTypes.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiFeatureChangeTypes, i);
 }
 
 //Post Load functions
@@ -767,7 +759,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiTechYieldChanges, GC.getNumTechInfos(), NUM_YIELD_TYPES);
+				pXML->Init2DList(&m_ppiTechYieldChanges, GC.getNumTechInfos(), NUM_YIELD_TYPES);
 				for (j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
@@ -811,7 +803,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiRouteYieldChanges, GC.getNumRouteInfos(), NUM_YIELD_TYPES);
+				pXML->Init2DList(&m_ppiRouteYieldChanges, GC.getNumRouteInfos(), NUM_YIELD_TYPES);
 				for (j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"RouteType");
@@ -869,7 +861,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	//		{
 	//			if (0 < iNumSibs)
 	//			{
-	//				pXML->Init2DIntList(&m_ppiTraitYieldChanges, GC.getNumTraitInfos(), NUM_YIELD_TYPES);
+	//				pXML->Init2DList(&m_ppiTraitYieldChanges, GC.getNumTraitInfos(), NUM_YIELD_TYPES);
 	//				for (j=0;j<iNumSibs;j++)
 	//				{
 	//					pXML->GetChildXmlValByName(szTextVal, L"TraitType");
@@ -1056,7 +1048,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 			}
 		}
 	}
-	for (int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
+	for (int i = 0; i < GC.getNumTechInfos(); i++)
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -1064,7 +1056,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 			{
 				if (NULL == m_ppiTechYieldChanges)
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiTechYieldChanges, GC.getNumTechInfos(), NUM_YIELD_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiTechYieldChanges, GC.getNumTechInfos(), NUM_YIELD_TYPES);
 				}
 				else if (NULL == m_ppiTechYieldChanges[i])
 				{
@@ -1074,7 +1066,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 			}
 		}
 	}
-	for (int i = 0; i < GC.getNumRouteInfos(); i++)	// "Init2DIntList" verify method
+	for (int i = 0; i < GC.getNumRouteInfos(); i++)
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -1082,7 +1074,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 			{
 				if (NULL == m_ppiRouteYieldChanges)
 				{
-					CvXMLLoadUtility::Init2DIntList(&m_ppiRouteYieldChanges, GC.getNumRouteInfos(), NUM_YIELD_TYPES);
+					CvXMLLoadUtility::Init2DList(&m_ppiRouteYieldChanges, GC.getNumRouteInfos(), NUM_YIELD_TYPES);
 				}
 				else if (NULL == m_ppiRouteYieldChanges[i])
 				{
@@ -1099,7 +1091,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
 	if (getPrereqTech() == NO_TECH) m_iPrereqTech = pClassInfo->getPrereqTech();
 
-	//for ( int i = 0; i < GC.getNumTraitInfos(); i++)	// "Init2DIntList" verify method
+	//for ( int i = 0; i < GC.getNumTraitInfos(); i++)
 	//{
 	//	for ( int j = 0; j < NUM_YIELD_TYPES; j++)
 	//	{
@@ -1107,7 +1099,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	//		{
 	//			if ( NULL == m_ppiTraitYieldChanges )
 	//			{
-	//				pXML->Init2DIntList(&m_ppiTraitYieldChanges, GC.getNumTraitInfos(), NUM_YIELD_TYPES);
+	//				pXML->Init2DList(&m_ppiTraitYieldChanges, GC.getNumTraitInfos(), NUM_YIELD_TYPES);
 	//			}
 	//			else if ( NULL == m_ppiTraitYieldChanges[i] )
 	//			{

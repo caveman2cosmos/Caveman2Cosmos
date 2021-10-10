@@ -30,6 +30,7 @@ extern bool shouldHaveType;
 
 class CvXMLLoadUtility;
 class IntExpr;
+struct CvInfoUtil;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -77,6 +78,7 @@ public:
 	virtual void read(FDataStreamBase*) {}
 	virtual void write(FDataStreamBase*) {}
 
+	virtual void getDataMembers(CvInfoUtil&) { FErrorMsg("Override this"); }
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual bool readPass2(CvXMLLoadUtility*) { FErrorMsg("Override this"); return false; }
 	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
@@ -443,10 +445,7 @@ public:
 	int getFlavorValue(int i) const;
 
 	const std::vector<TechTypes>& getPrereqOrTechs() const;
-	const python::list cyGetPrereqOrTechs() const;
-
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	bool isCommerceFlexible(int i) const;
 	bool isTerrainTrade(int i) const;
@@ -671,8 +670,7 @@ public:
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
 	bool isCanLeadThroughPeaks() const;
-	int getNumPromotionOverwrites() const;
-	PromotionTypes getPromotionOverwrites(int iI) const;
+	//const std::vector<PromotionTypes>& getPromotionOverwrites() const { return m_vPromotionOverwrites; }
 	TechTypes getObsoleteTech() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -1074,7 +1072,7 @@ protected:
 	//	mountains, and ability to lead a stack through mountains
 	bool m_bCanLeadThroughPeaks;
 	int m_iNumPromotionOverwrites;
-	int* m_piPromotionOverwrites;
+	//std::vector<PromotionTypes> m_vPromotionOverwrites;
 	TechTypes m_iObsoleteTech;
 	int m_iControlPoints;
 	int m_iCommandRange;
@@ -1711,7 +1709,7 @@ public:
 	int getNumSeeInvisibleTypes() const;
 	int getAdvisorType() const;
 	int getMaxStartEra() const;
-	int getForceObsoleteTech() const;
+	int getObsoleteTech() const;
 	bool isStateReligion() const;
 	int getPrereqGameOption() const;
 	int getNotGameOption() const;
@@ -1914,7 +1912,7 @@ public:
 
 	UnitCombatTypes getSubCombatType(int i) const;
 	int getNumSubCombatTypes() const;
-	bool isSubCombatType(int i) const;
+	bool isSubCombatType(UnitCombatTypes e) const;
 	const std::vector<UnitCombatTypes>& getSubCombatTypes() const;
 
 	int getCureAfflictionType(int i) const;
@@ -1926,13 +1924,11 @@ public:
 	bool isHealAsType(int i) const;
 	void setHealAsTypes();
 
-	int getTerrainImpassableType(int i) const;
-	int getNumTerrainImpassableTypes() const;
-	bool isTerrainImpassableType(int i) const;
+	bool isTerrainImpassableType(TerrainTypes e) const;
+	const std::vector<TerrainTypes>& getImpassableTerrains() const { return m_vTerrainImpassableTypes; }
 
-	int getFeatureImpassableType(int i) const;
-	int getNumFeatureImpassableTypes() const;
-	bool isFeatureImpassableType(int i) const;
+	bool isFeatureImpassableType(FeatureTypes e) const;
+	const std::vector<FeatureTypes>& getImpassableFeatures() const { return m_vFeatureImpassableTypes; }
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
@@ -2170,12 +2166,9 @@ public:
 	bool canAcquireExperience() const;
 
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const python::list cyGetPrereqOrBonuses() const;
-
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
-	const python::list cyGetPrereqAndTechs() const;
 
 	// Arrays
 	int getFlavorValue(int i) const;
@@ -2237,8 +2230,6 @@ public:
 	bool getHasBuilding(int i) const;
 	int getNumBuildings() const;
 
-	//bool getTerrainImpassable(int i) const;
-	//bool getFeatureImpassable(int i) const;
 	bool getTerrainNative(int i) const;
 	bool getFeatureNative(int i) const;
 	bool getFreePromotions(int i) const;
@@ -2349,7 +2340,7 @@ protected:
 	int m_iInvisibleType;
 	int m_iAdvisorType;
 	int m_iMaxStartEra;
-	int m_iForceObsoleteTech;
+	int m_iObsoleteTech;
 	bool m_bStateReligion;
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
@@ -2364,7 +2355,6 @@ protected:
 	std::vector<BuildTypes> m_workerBuilds;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
-
 	std::vector<int> m_aiTargetUnit;
 	std::vector<int> m_aiDefendAgainstUnit;
 	std::vector<int> m_aiSupersedingUnits;
@@ -2589,8 +2579,8 @@ protected:
 	std::vector<UnitCombatTypes> m_aiSubCombatTypes;
 	std::vector<int> m_aiCureAfflictionTypes;
 	std::vector<int> m_aiHealAsTypes;
-	std::vector<int> m_aiTerrainImpassableTypes;
-	std::vector<int> m_aiFeatureImpassableTypes;
+	std::vector<TerrainTypes> m_vTerrainImpassableTypes;
+	std::vector<FeatureTypes> m_vFeatureImpassableTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<int> m_aiTrapSetWithPromotionTypes;
 	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
@@ -3020,6 +3010,10 @@ public:
 	int getBonusCommerceModifier(int i, int j) const;
 	int* getBonusCommerceModifierArray(int i) const;
 
+	int getBuildingProductionModifier(BuildingTypes e) const;
+	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
+	const python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
+
 	int getBuildingHappinessChanges(int i) const;
 	int getBuildingHealthChanges(int i) const;
 	int getFeatureHappinessChanges(int i) const;
@@ -3027,7 +3021,6 @@ public:
 	int getFreeSpecialistCount(int i) const;
 	int getFlavorValue(int i) const;
 	int getUnitCombatProductionModifier(int i) const;
-	int getBuildingProductionModifier(int i) const;
 	int getUnitProductionModifier(int i) const;
 	int getImprovementHappinessChanges(int i) const;
 	int getImprovementHealthPercentChanges(int i) const;
@@ -3190,7 +3183,6 @@ protected:
 	int* m_piSpecialistExtraCommerce;
 
 	int* m_paiUnitCombatProductionModifier;
-	int* m_paiBuildingProductionModifier;
 	int* m_paiBuildingHappinessChanges;
 	int* m_paiBuildingHealthChanges;
 	int* m_paiFeatureHappinessChanges;
@@ -3206,6 +3198,8 @@ protected:
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBonusCommerceModifier;
 	int** m_ppiImprovementYieldChanges;
+
+	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 
 	std::vector<CvString> m_aszUnitProdModforPass3;
 	std::vector<int> m_aiUnitProdModforPass3;
@@ -3745,15 +3739,12 @@ private:
 	int m_iAIWarWearinessPercent;
 	int m_iAIPerEraModifier;
 	int m_iAIAdvancedStartPercent;
-	int m_iNumGoodies;
 
 	CvString m_szHandicapName;
 
 	IDValueMapPercent m_Percent;
 
-	// Arrays
-
-	int* m_piGoodies;
+	std::vector<int> m_piGoodies;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4037,7 +4028,6 @@ public:
 	int getTechMovementChange(int i) const;
 
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const python::list cyGetPrereqOrBonuses() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
@@ -5456,7 +5446,6 @@ public:
 	const TCHAR* getSound() const;
 
 	const std::vector<BonusTypes>& getPrereqBonuses() const;
-	const python::list cyGetPrereqBonuses() const;
 
 	// Arrays
 	int getHeadquarterCommerce(int i) const;
@@ -5748,32 +5737,23 @@ public:
 
 	// int vector utilizing struct with delayed resolution
 
-	int getNumImprovementUpgradeModifierTypes() const;
-	ImprovementModifier getImprovementUpgradeModifier(int iImprovement) const;
-
-	int getNumBuildWorkerSpeedModifierTypes() const;
-	BuildModifier getBuildWorkerSpeedModifier(int iBuild) const;
+	const IDValueMap<ImprovementTypes, int>::filtered getImprovementUpgradeModifiers() const;
+	const IDValueMap<BuildTypes, int>::filtered getBuildWorkerSpeedModifiers() const;
 
 	int getNumDisallowedTraitTypes() const;
 	DisallowedTraitType isDisallowedTraitType(int iTrait) const;
 
-	int getNumDomainFreeExperiences() const;
-	DomainModifier getDomainFreeExperience(int iDomain) const;
-
-	int getNumDomainProductionModifiers() const;
-	DomainModifier getDomainProductionModifier(int iDomain) const;
-
-	int getNumTechResearchModifiers() const;
-	TechModifier2 getTechResearchModifier(int iTech) const;
+	const IDValueMap<DomainTypes, int>::filtered getDomainFreeExperience() const;
+	const IDValueMap<DomainTypes, int>::filtered getDomainProductionModifiers() const;
+	const IDValueMap<TechTypes, int>::filtered getTechResearchModifiers() const;
 
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
 
-	int getNumSpecialBuildingProductionModifiers() const;
-	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
+	const IDValueMap<SpecialBuildingTypes, int>::filtered getSpecialBuildingProductionModifiers() const;
 
-	int getNumBuildingHappinessModifiers() const;
-	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
+	const IDValueMap<BuildingTypes, int>&			getBuildingHappinessModifiers() const { return m_aBuildingHappinessModifiers; }
+	const IDValueMap<BuildingTypes, int>::filtered	getBuildingHappinessModifiersFiltered() const;
 
 	int getNumUnitProductionModifiers() const;
 	UnitModifier getUnitProductionModifier(int iUnit) const;
@@ -5790,13 +5770,13 @@ public:
 	int getNumUnitCombatProductionModifiers() const;
 	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat) const;
 
-	int getNumBonusHappinessChanges() const;
-	BonusModifier getBonusHappinessChange(int iBonus) const;
+	const IDValueMap<BonusTypes, int>::filtered getBonusHappinessChanges() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
@@ -5977,22 +5957,21 @@ private:
 	int* m_piGoldenAgeCommerceChangesFiltered;
 	// bool vector without delayed resolution
 	// int vector utilizing struct with delayed resolution
-	std::vector<ImprovementModifier> m_aImprovementUpgradeModifierTypes;
-	std::vector<BuildModifier> m_aBuildWorkerSpeedModifierTypes;
+	IDValueMap<ImprovementTypes, int> m_aImprovementUpgradeModifierTypes;
+	IDValueMap<BuildTypes, int> m_aBuildWorkerSpeedModifierTypes;
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
-	std::vector<DomainModifier> m_aDomainFreeExperiences;
-	std::vector<DomainModifier> m_aDomainProductionModifiers;
-	std::vector<TechModifier2> m_aTechResearchModifiers;
+	IDValueMap<DomainTypes, int> m_aDomainFreeExperiences;
+	IDValueMap<DomainTypes, int> m_aDomainProductionModifiers;
+	IDValueMap<TechTypes, int> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
-	std::vector<SpecialBuildingModifier> m_aSpecialBuildingProductionModifiers;
-	std::vector<BuildingModifier> m_aBuildingHappinessModifiers;
+	IDValueMap<SpecialBuildingTypes, int> m_aSpecialBuildingProductionModifiers;
+	IDValueMap<BuildingTypes, int> m_aBuildingHappinessModifiers;
 	std::vector<UnitModifier> m_aUnitProductionModifiers;
 	std::vector<SpecialUnitModifier> m_aSpecialUnitProductionModifiers;
 	std::vector<CivicOptionTypeBool> m_aCivicOptionNoUpkeepTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatFreeExperiences;
 	std::vector<UnitCombatModifier> m_aUnitCombatProductionModifiers;
-	std::vector<BonusModifier> m_aBonusHappinessChanges;
-	//TB Traits mods end
+	IDValueMap<BonusTypes, int> m_aBonusHappinessChanges;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8322,20 +8301,14 @@ public:
 	bool getCity() const;
 	bool getNotCity() const;
 	bool isCapture() const;
-	int getNumPrereqBuildings() const;
-	BuildingTypes getPrereqBuilding(int i) const;
+	const std::vector<BuildingTypes>& getPrereqBuildings() const { return m_aePrereqBuildings; }
 	int getNumExtraChancePromotions() const;
 	PromotionTypes getExtraChancePromotion(int i) const;
 	int getExtraChancePromotionChance(int i) const;
-	int getNumReplaceOutcomes() const;
-	OutcomeTypes getReplaceOutcome(int i) const;
+	const std::vector<OutcomeTypes>& getReplaceOutcomes() const { return m_aeReplaceOutcomes; }
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvOutcomeInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
 	void getCheckSum(uint32_t& iSum) const;
 
 protected:

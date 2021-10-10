@@ -51,7 +51,6 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import CvEventInterface
-import Popup as PyPopup
 import BugConfigTracker
 import math
 import SystemPaths as SP
@@ -589,8 +588,13 @@ class RevolutionWatchAdvisor:
 				else:
 					icon += u"%c" %(gc.getReligionInfo(info.getReligionType()).getChar())
 
-			if info.getFoodKept() > 0 or info.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD) > 0:
+			if info.getFoodKept() > 0:
 				icon += self.foodIcon
+			else:
+				for entry in info.getPlotYieldChange():
+					if entry.iIndex == YieldTypes.YIELD_FOOD and entry.iValue > 0:
+						icon += self.foodIcon
+						break
 
 			if info.getFreeExperience() > 0 or \
 				info.getFreePromotion() != -1 or \
@@ -1477,8 +1481,8 @@ class RevolutionWatchAdvisor:
 
 				for i in range(gc.getNumBonusInfos()):
 					if city.hasBonus(i):
-						iHealth += info.getBonusHealthChanges(i)
-						iHappiness += info.getBonusHappinessChanges(i)
+						iHealth += info.getBonusHealthChanges().getValue(i)
+						iHappiness += info.getBonusHappinessChanges().getValue(i)
 
 				if iHealth > 0:
 					szReturn = self.stripStr(szReturn, self.healthIcon)
@@ -1693,20 +1697,20 @@ class RevolutionWatchAdvisor:
 					info = gc.getBuildingInfo(i)
 					if self.calculateNetHappiness(city) < 3 and self.calculateNetHappiness(city) - self.calculateNetHealth(city) > 2:
 						iHealth = info.getHealth()
-						for j in range(gc.getNumBonusInfos()):
-							if city.hasBonus(j):
-								iHealth += info.getBonusHealthChanges(j)
+						for eBonus, iNumHappiness in info.getBonusHappinessChanges():
+							if city.hasBonus(eBonus):
+								iHealth += iNumHappiness
 						value = iHealth / float(info.getProductionCost())
-						if(value > bestData):
+						if value > bestData:
 							bestOrder = i
 							bestData = value
 					elif self.calculateNetHealth(city) < 3 and self.calculateNetHealth(city) - self.calculateNetHappiness(city) > 2:
 						iHappiness = info.getHappiness()
-						for j in range(gc.getNumBonusInfos()):
-							if city.hasBonus(j):
-								iHappiness += info.getBonusHappinessChanges(j)
+						for eBonus, iNumHappiness in info.getBonusHappinessChanges():
+							if city.hasBonus(eBonus):
+								iHappiness += iNumHappiness
 						value = iHappiness  / float(info.getProductionCost())
-						if(value > bestData):
+						if value > bestData:
 							bestOrder = i
 							bestData = value
 
@@ -2998,7 +3002,6 @@ class RevolutionWatchAdvisor:
 
 
 	def renamePage(self, inputClass):
-
 		eventManager = CvEventInterface.getEventManager()
 
 		if not self.renameEventContext or self.renameEventContext is None:
@@ -3012,39 +3015,22 @@ class RevolutionWatchAdvisor:
 		CvEventInterface.beginEvent(self.renameEventContext)
 
 	def renameBegin(self, argsList):
-
-		popup = PyPopup.PyPopup(self.renameEventContext, EventContextTypes.EVENTCONTEXT_SELF)
+		popup = CyPopup(self.renameEventContext, EventContextTypes.EVENTCONTEXT_SELF, True)
 		popup.setSize(400,175)
-		popup.setUserData( (self.currentPageNum, 0) )
-		popup.setHeaderString(u"Rename Revolution Watch Advisor")
-		popup.setBodyString("Enter a name for this page")
-		popup.createEditBox( self.PAGES[self.currentPageNum]["name"], 0 )
-		#popup.createRadioButtons(2, 1)
-		#popup.setCheckBoxText(0, "Show specialist controls", 1)
-		#popup.setCheckBoxText(1, "Hide specialist controls", 1)
-		#popup.createRadioButtons(2, 2)
-		#popup.setRadioButtonText(0, "Show culture legend", 2)
-		#popup.setRadioButtonText(1, "Hide culture legend", 2)
-		#popup.createRadioButtons(2, 3)
-		#popup.setCheckBoxText(0, "Show great person legend", 3)
-		#popup.setCheckBoxText(1, "Hide great person legend", 3)
-		popup.launch()
-
-		return 0
+		popup.setUserData((self.currentPageNum, 0))
+		popup.setHeaderString(u"Rename Revolution Watch Advisor", 1<<2)
+		popup.setBodyString("Enter a name for this page", 1<<0)
+		popup.createEditBox(self.PAGES[self.currentPageNum]["name"], 0)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 	def renameApply(self, playerID, userData, popupReturn):
-
-		pageNum = userData[0]
-
 		self.customizingSaveSelection()
-		screen = self.getScreen()
 
-		self.PAGES[pageNum]["name"] = popupReturn.getEditBoxString(0)
+		self.PAGES[userData[0]]["name"] = popupReturn.getEditBoxString(0)
 
 		self.drawScreen(self.currentPage)
 		self.customizingRestoreSelection()
 
-		return 0
 
 	def stripStr(self, s, out):
 		while s.find(out) != -1:

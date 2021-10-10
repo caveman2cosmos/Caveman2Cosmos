@@ -14,6 +14,8 @@
 #include "CvCityAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 
 plotInfo::plotInfo() :
 	index(0),
@@ -37,6 +39,21 @@ std::string plotInfo::ToJSON()
 
 	const std::string output = oss.str();
 	return output;
+}
+
+XYCoords::XYCoords(int x, int y)
+	: iX(x)
+	, iY(y)
+{}
+
+XYCoords::XYCoords(const CvPlot& plot)
+	: iX(plot.getX())
+	, iY(plot.getY())
+{}
+
+CvPlot* XYCoords::plot() const
+{
+	return GC.getMap().plotSorenINLINE(iX, iY);
 }
 
 int EventTriggeredData::getID() const
@@ -373,74 +390,6 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
-
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void BuildingYieldModifier::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void BuildingYieldModifier::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
-	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", eYield);
-	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", iChange);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
-
-void BuildingCommerceModifier::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void BuildingCommerceModifier::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
-	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", eCommerce);
-	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", iChange);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 
 CvBattleRound::CvBattleRound() :

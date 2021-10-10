@@ -47,19 +47,19 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BATH_HOUSE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistCommerceChanges>
@@ -151,99 +151,111 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARRACKS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GARRISON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BIOENHANCEMENT_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FLETCHER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WARRIOR_HUT</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MERCENARY_CAMP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MERCENARY_STABLES</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SALOON</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PIRATES_COVE</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MOB_STOREFRONT</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_REBEL_CAMP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TERRORISTS_COMPOUND</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CROSSES</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STOCKS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GALLOWS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GUILLOTINE</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ELECTRIC_CHAIR</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LETHAL_INJECTION</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PUBLIC_STONING</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_JAIL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -313,51 +325,71 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SUMERIAN_ZIGGURAT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SEMINARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_UNIVERSAL_CHURCH</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CANDLEMAKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GRAVEYARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TUMULUS</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AZTEC_SACRIFICIAL_ALTAR</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CANDLE_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -524,55 +556,83 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LAW_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LAW_FIRM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STRATEGIC_GRAIN_RESERVE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOWN_HALL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_VILLAGE_HALL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PARTS_PLANT</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<CapitalCommerceModifiers>
@@ -647,39 +707,59 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GUILDHALL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AUTOMATION_CLOCK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STEPRECKONER_MANUFACTORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STONEWORKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FORGE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WORKHOUSE</BuildingType>
-					<iBuildingProductionModifier>60</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FOUNDRY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementUpgradeModifierTypes>
@@ -745,7 +825,7 @@
 					<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>5</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
@@ -857,115 +937,163 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARABIAN_MADRASSA</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHINESE_PAVILLION</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GREEK_ODEON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ORCHESTRION_THEATER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RADIOPLEX</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SCHOOL_OF_RHETORIC</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SEAL_MAKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ACTORS_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MUSICIAN_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_VR_THEATER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARENA</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HIPPODROME</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MAYA_BALL_COURT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ART_PATRONAGE</BuildingType>
-					<iBuildingProductionModifier>30</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FRESCO</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_TOURNAMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SPEEDWAY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -991,6 +1119,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -1060,15 +1192,23 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TAX_OFFICE</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -1144,27 +1284,51 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OTTOMAN_HAMMAM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_KHMER_BARAY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HARBOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<UnitProductionModifierTypes>
@@ -1214,10 +1378,6 @@
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
 					<UnitType>UNIT_CONSTRUCT_SHIP</UnitType>
-					<iUnitProductionModifier>25</iUnitProductionModifier>
-				</UnitProductionModifierType>
-				<UnitProductionModifierType>
-					<UnitType>UNIT_RAPANUIWORKER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
@@ -1280,7 +1440,7 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RECRUITMENT_OFFICE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -1330,6 +1490,14 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_STELE</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -1406,83 +1574,147 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARCHERY_RANGE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RADAR_STATION</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ANTI_MISSILE_BATTERIES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MOAT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AUTOMATED_DEFENSES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NEANDERTHAL_CAVES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUNKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PALACE_WALLS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PALISADE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WALLS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARRICADES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARBWIRE_FENCE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_EARTHWALL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_EBGATEHOUSE</BuildingType>
-					<iBuildingProductionModifier>75</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_STAR_FORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELECTRIC_FENCE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -1540,7 +1772,7 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_THINK_TANK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<UnitProductionModifierTypes>
@@ -1620,59 +1852,83 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DRYDOCK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BOATYARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MARINA</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SAIL_WEAVER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FISHTRAPS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHIPYARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RIVER_PORT</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RIVER_AUTHORITY</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_AQUAFARM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<UnitProductionModifierTypes>
@@ -1835,39 +2091,67 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MONGOL_GER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HAWKING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TANNERY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BEADMAKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STABLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FALCONER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LEATHER_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -1877,6 +2161,22 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_FURRIER</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -1894,7 +2194,31 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -1908,7 +2232,7 @@
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 					<YieldChanges>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -1916,7 +2240,7 @@
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 					<YieldChanges>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
@@ -1992,71 +2316,107 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FOOD_PROCESSING_PLANT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WATERMILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WINDMILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DONKEY_MILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OXEN_MILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_QUERN</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BAKERY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OXEN_FARM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOWN_WELL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARTESIAN_WELL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_IRRIGATION_CANALS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHINAMPA</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GREAT_CHINAMPA</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RICE_TERRACE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INCAN_TERRACE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -2148,79 +2508,95 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PANOPTICON_PRISON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BROTHEL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CYROGENIC_PRISON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_JAIL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INTERROGATION_BUILDING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLICE_BOX</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHECKPOINT</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ASSASSINS_DEN</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SMUGGLERS_SHANTY</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHOP_SHOP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DRUGLORDS_MANSON</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_REEDUCATION_CENTER</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_GENTLEMANS_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CYBERNETIC_PRISON</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistCommerceChanges>
@@ -2266,47 +2642,59 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ZUSE_COMPUTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MUNICIP_COMP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MADSCIENTIST_CASTLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LAB</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ACCELERATOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHURCH_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -2367,43 +2755,63 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GROVE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CITY_PARK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_REHABILITATION_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARBER_SHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HEALERHUT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DOCTOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RETIREMENT_HOME</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SOCIAL_JUSTICE_ORGANIZATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -2421,6 +2829,18 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_RED_CROSS</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -2628,53 +3048,69 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GROVE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CITY_PARK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_THRONE_ROOM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOLL_HOUSE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SOCIAL_SERVICES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PUBLIC_POOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLIS_COUNCIL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_POLIS_COUNCIL</BuildingType>
-					<iBuildingHappinessModifier>2</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iCivicAnarchyTimeModifier>-30</iCivicAnarchyTimeModifier>
@@ -2887,7 +3323,7 @@
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
-					<iBuildingHappinessModifier>3</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<PropertyManipulators>
@@ -3344,7 +3780,7 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FREE_PORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<FreePromotionUnitCombatTypes>
@@ -3503,13 +3939,57 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-					<iBuildingProductionModifier>-60</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_BARBARIAN</Type>
@@ -3580,19 +4060,19 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BATH_HOUSE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistCommerceChanges>
@@ -3664,99 +4144,111 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARRACKS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GARRISON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BIOENHANCEMENT_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FLETCHER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WARRIOR_HUT</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MERCENARY_CAMP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MERCENARY_STABLES</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SALOON</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PIRATES_COVE</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MOB_STOREFRONT</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_REBEL_CAMP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TERRORISTS_COMPOUND</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CROSSES</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STOCKS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GALLOWS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GUILLOTINE</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ELECTRIC_CHAIR</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LETHAL_INJECTION</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PUBLIC_STONING</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_JAIL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -3815,51 +4307,71 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SUMERIAN_ZIGGURAT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SEMINARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_UNIVERSAL_CHURCH</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CANDLEMAKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GRAVEYARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TUMULUS</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AZTEC_SACRIFICIAL_ALTAR</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CANDLE_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -4032,55 +4544,83 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LAW_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LAW_FIRM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STRATEGIC_GRAIN_RESERVE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOWN_HALL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_VILLAGE_HALL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PARTS_PLANT</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<CapitalCommerceModifiers>
@@ -4144,39 +4684,59 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GUILDHALL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AUTOMATION_CLOCK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STEPRECKONER_MANUFACTORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STONEWORKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FORGE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WORKHOUSE</BuildingType>
-					<iBuildingProductionModifier>60</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FOUNDRY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementUpgradeModifierTypes>
@@ -4242,7 +4802,7 @@
 					<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>5</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
@@ -4344,115 +4904,163 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARABIAN_MADRASSA</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHINESE_PAVILLION</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GREEK_ODEON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ORCHESTRION_THEATER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RADIOPLEX</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SCHOOL_OF_RHETORIC</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SEAL_MAKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ACTORS_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MUSICIAN_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_VR_THEATER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARENA</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HIPPODROME</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MAYA_BALL_COURT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ART_PATRONAGE</BuildingType>
-					<iBuildingProductionModifier>30</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FRESCO</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_TOURNAMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SPEEDWAY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -4478,6 +5086,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -4560,15 +5172,23 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TAX_OFFICE</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -4645,27 +5265,51 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OTTOMAN_HAMMAM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_KHMER_BARAY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HARBOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<UnitProductionModifierTypes>
@@ -4718,10 +5362,6 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_RAPANUIWORKER</UnitType>
-					<iUnitProductionModifier>25</iUnitProductionModifier>
-				</UnitProductionModifierType>
-				<UnitProductionModifierType>
 					<UnitType>UNIT_PARK_RANGER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
@@ -4770,7 +5410,7 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RECRUITMENT_OFFICE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -4820,6 +5460,14 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_STELE</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -4878,83 +5526,147 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARCHERY_RANGE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RADAR_STATION</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ANTI_MISSILE_BATTERIES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MOAT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AUTOMATED_DEFENSES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NEANDERTHAL_CAVES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUNKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PALACE_WALLS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PALISADE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WALLS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARRICADES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARBWIRE_FENCE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_EARTHWALL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_EBGATEHOUSE</BuildingType>
-					<iBuildingProductionModifier>75</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_STAR_FORT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELECTRIC_FENCE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -5017,7 +5729,7 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_THINK_TANK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<UnitProductionModifierTypes>
@@ -5098,59 +5810,83 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DRYDOCK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BOATYARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MARINA</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SAIL_WEAVER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FISHTRAPS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHIPYARD</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RIVER_PORT</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RIVER_AUTHORITY</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_AQUAFARM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<UnitProductionModifierTypes>
@@ -5304,39 +6040,67 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MONGOL_GER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HAWKING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TANNERY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BEADMAKER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STABLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FALCONER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LEATHER_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -5346,6 +6110,22 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_FURRIER</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -5363,7 +6143,31 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -5463,71 +6267,107 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FOOD_PROCESSING_PLANT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WATERMILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_WINDMILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DONKEY_MILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OXEN_MILL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_QUERN</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BAKERY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OXEN_FARM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOWN_WELL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ARTESIAN_WELL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_IRRIGATION_CANALS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHINAMPA</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GREAT_CHINAMPA</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RICE_TERRACE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INCAN_TERRACE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -5620,79 +6460,95 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PANOPTICON_PRISON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BROTHEL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CYROGENIC_PRISON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_JAIL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_INTERROGATION_BUILDING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLICE_BOX</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHECKPOINT</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ASSASSINS_DEN</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SMUGGLERS_SHANTY</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHOP_SHOP</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DRUGLORDS_MANSON</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_REEDUCATION_CENTER</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_GENTLEMANS_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CYBERNETIC_PRISON</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistCommerceChanges>
@@ -5740,47 +6596,59 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ZUSE_COMPUTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MUNICIP_COMP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MADSCIENTIST_CASTLE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LAB</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ACCELERATOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHURCH_SCHOOL</BuildingType>
-					<iBuildingProductionModifier>10</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
@@ -5840,43 +6708,63 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GROVE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CITY_PARK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_REHABILITATION_CENTER</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BARBER_SHOP</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HEALERHUT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_DOCTOR</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_RETIREMENT_HOME</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SOCIAL_JUSTICE_ORGANIZATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
@@ -5894,6 +6782,18 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_RED_CROSS</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -6103,53 +7003,69 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GROVE</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CITY_PARK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_THRONE_ROOM</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TOLL_HOUSE</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SOCIAL_SERVICES</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
-					<iBuildingProductionModifier>50</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_PUBLIC_POOL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_POLIS_COUNCIL</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_POLIS_COUNCIL</BuildingType>
-					<iBuildingHappinessModifier>2</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iCivicAnarchyTimeModifier>-30</iCivicAnarchyTimeModifier>
@@ -6364,7 +7280,7 @@
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
-					<iBuildingHappinessModifier>3</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
@@ -6835,7 +7751,7 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_FREE_PORT</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<FreePromotionUnitCombatTypes>
@@ -6998,13 +7914,57 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-					<iBuildingProductionModifier>-60</iBuildingProductionModifier>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_ANCIENT_WAY_OF_THE_FIST</Type>

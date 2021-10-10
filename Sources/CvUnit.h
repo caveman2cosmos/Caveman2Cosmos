@@ -451,6 +451,8 @@ public:
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
 
+	CvUnit& operator=(const CvUnit& other);
+
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
 	friend bool operator==(const CvUnit& lhs, const CvUnit& rhs) { return &lhs == &rhs; }
@@ -660,8 +662,6 @@ public:
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;
 	int getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders = false) const;
-
-	void doCommerceAttacks(const CvUnit* pDefender, const CvPlot* pPlot);
 
 	bool isAutoPromoting() const;
 	void setAutoPromoting(bool bNewValue);
@@ -2738,6 +2738,7 @@ public:
 	void changeBombardDirectCount(int iChange);
 
 	static int applySMRank(int value, int rankChange, int rankMultiplier);
+	static int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 	int getNoSelfHealCount() const;
 	bool hasNoSelfHeal() const;

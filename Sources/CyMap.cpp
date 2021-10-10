@@ -1,7 +1,3 @@
-//
-// Python wrapper class for CvMap
-//
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvInitCore.h"
@@ -14,14 +10,17 @@
 #include "CyMap.h"
 #include "CyPlot.h"
 
-CyMap::CyMap() : m_pMap(NULL)
-{
-	m_pMap = &GC.getMap();
-}
+//
+// Python wrapper class for CvMap
+//
 
-CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
-{
-}
+CyMap::CyMap()
+	: m_pMap(&GC.getMap())
+{ }
+
+CyMap::CyMap(MapTypes eMap)
+	: m_pMap(&GC.getMapByIndex(eMap))
+{ }
 
 int CyMap::getType()
 {
@@ -334,7 +333,7 @@ python::list CyMap::areas() const
 
 	foreach_(CvArea* area, m_pMap->areas())
 	{
-		list.append(new CyArea(area));
+		list.append(CyArea(area));
 	}
 	return list;
 }
@@ -435,4 +434,9 @@ void CyMap::calculateCanalAndChokePoints()
 	{
 		m_pMap->calculateCanalAndChokePoints();
 	}
+}
+
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+{
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
 }

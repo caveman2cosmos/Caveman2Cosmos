@@ -1,9 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -172,7 +167,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
@@ -202,6 +197,8 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<Actions>
 				<Action>
+					<!-- Delete this action after finishing multimaps if we doesn't want single map space scenario support -->
+					<!-- It teleports unit to Lunar surface -->
 					<MissionType>MISSION_EXPLORE_MOON</MissionType>
 					<iCost>
 						<Adapt>
@@ -5946,7 +5943,7 @@
 				<BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
 			<iBaseHurry>1000</iBaseHurry>
-			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqAndBuildings>

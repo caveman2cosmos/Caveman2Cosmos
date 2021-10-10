@@ -20,12 +20,24 @@
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
+			<!-- Subterrain map -->
+			<!-- This is underground part of starting map -->
+			<Type>MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_MAP_SUBTERRAIN</Description>
+			<iGridWidth>0</iGridWidth>
+			<iGridHeight>0</iGridHeight>
+			<bWrapX>0</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap/>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
 			<!-- Cislunar map -->
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_CISLUNAR</Type>
 			<Description>TXT_KEY_MAP_CISLUNAR</Description>
-			<iGridWidth>36</iGridWidth>
-			<iGridHeight>28</iGridHeight>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>

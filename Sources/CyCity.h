@@ -17,7 +17,6 @@ struct OrderData;
 class CyCity
 {
 public:
-	CyCity();
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
 
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
@@ -270,7 +269,6 @@ public:
 	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
@@ -319,6 +317,7 @@ public:
 	int getNumPopulationEmployed() const;
 
 	int getBonusCommercePercentChanges(int eIndex, int eBuilding) const;
+	int getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const;
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);

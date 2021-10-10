@@ -3,9 +3,7 @@
 # by jdog5000
 # Version 0.71
 
-
 from CvPythonExtensions import *
-import Popup as PyPopup
 # --------- Revolution mod -------------
 import RevDefs
 import RevUtils
@@ -41,91 +39,63 @@ class ChangePlayer:
 
 # Chooser window for switching a players civ
 def changeCivPopup():
-
-	popup = PyPopup.PyPopup(RevDefs.changeCivPopup,contextType = EventContextTypes.EVENTCONTEXT_ALL)
-	popup.setHeaderString('Change a civ?')
-	popup.setBodyString('Which civ to change, to which civ and leader and what team?')
+	iNumCivs = GC.getMAX_PC_PLAYERS()
+	popup = CyPopup(RevDefs.changeCivPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
+	popup.setHeaderString('Change a civ?', 1<<2)
+	popup.setBodyString('Which civ to change, to which civ and leader and what team?', 1<<0)
 	popup.addSeparator()
 
 	popup.createPythonPullDown('Switch this civ ...', 1)
-	for iPlayerX in range(0,GC.getMAX_PC_PLAYERS()):
+	for iPlayerX in xrange(iNumCivs):
 		CyPlayerX = GC.getPlayer(iPlayerX)
 		if CyPlayerX.isAlive():
 			popup.addPullDownString(CyPlayerX.getName() + " - " + CyPlayerX.getCivilizationShortDescription(0), iPlayerX, 1)
 
 	CyPlayer = GC.getActivePlayer()
-	popup.popup.setSelectedPulldownID(CyPlayer.getID(), 1)
+	popup.setSelectedPulldownID(CyPlayer.getID(), 1)
 
 	popup.createPythonPullDown(' ... to this civ', 2)
 	for i in range(GC.getNumCivilizationInfos()):
-		newCivInfo = GC.getCivilizationInfo(i)
-		popup.addPullDownString("%s Empire" %(newCivInfo.getAdjective(0)), i, 2)
+		popup.addPullDownString("%s Empire" %(GC.getCivilizationInfo(i).getAdjective(0)), i, 2)
 
-	popup.popup.setSelectedPulldownID(CyPlayer.getCivilizationType(), 2)
+	popup.setSelectedPulldownID(CyPlayer.getCivilizationType(), 2)
 
-	popup.createPythonPullDown( ' ... with this leader', 3 )
-	for i in range(0,GC.getNumLeaderHeadInfos()):
-		newLeaderInfo = GC.getLeaderHeadInfo(i)
-		leaderName = newLeaderInfo.getDescription()
-#			leaderName = newLeaderInfo.getLeaderHead()  # this is the full path of the head animation
-#			if( leaderName.count('/') > 0 ):
-#				leaderName = leaderName.split('/')[-2]  # hack to get to just name
-#				leaderName = leaderName.replace('_',' ')
-#				leaderName = leaderName.title()
-#		print "	CP: Leadername %s" % leaderName
+	popup.createPythonPullDown(' ... with this leader', 3)
+	for i in xrange(GC.getNumLeaderHeadInfos()):
+		popup.addPullDownString(GC.getLeaderHeadInfo(i).getDescription(), i, 3)
 
-		popup.addPullDownString( "%s"%(leaderName), i, 3 )
-
-	popup.popup.setSelectedPulldownID(CyPlayer.getLeaderType(), 3)
+	popup.setSelectedPulldownID(CyPlayer.getLeaderType(), 3)
 
 	popup.createPythonPullDown(' ... on this team', 4)
 	popup.addPullDownString("Keep current team", -1, 4)  # Team idx of -1 maintains current team setting
-	for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
+	for iPlayerX in xrange(iNumCivs):
 		CyPlayerX = GC.getPlayer(iPlayerX)
 		if CyPlayerX.isAlive():
 			popup.addPullDownString("Team with the " + CyPlayerX.getCivilizationShortDescription(0), iPlayerX, 4)
 
-	popup.popup.setSelectedPulldownID( -1, 4 )
+	popup.setSelectedPulldownID(-1, 4)
 	popup.addSeparator()
 	popup.addButton('Cancel')
-	popup.launch()
+	popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 # Handles changeCiv popup
 def changeCivHandler(playerID, netUserData, popupReturn):
 
-	if not popupReturn.getButtonClicked(): # if you pressed cancel
-		return
+	if not popupReturn.getButtonClicked():
+		return # pressed 'cancel' button
 
 	iPlayer = popupReturn.getSelectedPullDownValue(1)
 	newCivType = popupReturn.getSelectedPullDownValue(2)
 	newLeaderType = popupReturn.getSelectedPullDownValue(3)
 	iTeam = popupReturn.getSelectedPullDownValue(4)
 
-	if iTeam > -1 and iTeam <= GC.getMAX_PC_TEAMS():
-		playerI = GC.getPlayer(iPlayer)
-		if playerI.isAlive:
-			print "	CP: You have selected player %d, the %s, on team %d" %(iPlayer, playerI.getCivilizationDescription(0), playerI.getTeam())
-
-			teamI = GC.getTeam(iTeam)
-			print "	CP: New team idx is %d" % iTeam
-
-	#player = GC.getPlayer(iPlayer)
-	#GAME.changePlayer(iPlayer, newCivType, newLeaderType, iTeam, player.isHuman(), True)
-	success = RevUtils.changeCiv(iPlayer, newCivType, newLeaderType, iTeam)
-
-	if success:
+	if RevUtils.changeCiv(iPlayer, newCivType, newLeaderType, iTeam):
 		CyInterface().addImmediateMessage("Player %d has been changed"%(iPlayer),"")
 		print "	CP: Player change completed"
 	else:
 		CyInterface().addImmediateMessage("An error occured in changeCiv.","")
 		print "	CP: Error on changeCiv"
-		return
 
-
-	popup = PyPopup.PyPopup(RevDefs.updateGraphicsPopup,contextType = EventContextTypes.EVENTCONTEXT_ALL)
-	popup.setBodyString("If you see any unit flags or other graphics which have not updated to the new civ type, press Ctrl+Shift+U to update them.  Note that this will end you turn and (in rare circumstances) flash other parts of the game map on the screen.\n\nYou can also do this now by clicking the top button below now.")
-	popup.addButton( "Update now" )
-	#popup.launch()
 
 def updateGraphicsHandler( playerID, netUserData, popupReturn ):
 
@@ -156,12 +126,12 @@ def updateGraphics():
 
 # Chooser window for switching human player
 def changeHumanPopup(bDied=False):
-	popup = PyPopup.PyPopup(RevDefs.changeHumanPopup,contextType = EventContextTypes.EVENTCONTEXT_ALL)
-	popup.setHeaderString('Pick a new civ')
+	popup = CyPopup(RevDefs.changeHumanPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
+	popup.setHeaderString('Pick a new civ', 1<<2)
 	if bDied:
-		popup.setBodyString('Your civ has been eliminated. Would you like to continue as another leader?')
+		popup.setBodyString('Your civ has been eliminated. Would you like to continue as another leader?', 1<<0)
 	else:
-		popup.setBodyString('Which civ would you like to lead?')
+		popup.setBodyString('Which civ would you like to lead?', 1<<0)
 	popup.addSeparator()
 
 	popup.createPythonPullDown('Take control of this civ ...', 1)
@@ -170,10 +140,10 @@ def changeHumanPopup(bDied=False):
 		if CyPlayerX.isAlive():
 			popup.addPullDownString(CyPlayerX.getName() + " - " + CyPlayerX.getCivilizationShortDescription(0), iPlayerX, 1)
 
-	popup.popup.setSelectedPulldownID(GC.getActivePlayer().getID(), 1)
+	popup.setSelectedPulldownID(GC.getActivePlayer().getID(), 1)
 	popup.addSeparator()
 	popup.addButton('Cancel')
-	popup.launch()
+	popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 # Handles changeHuman popup
 def changeHumanHandler(playerID, netUserData, popupReturn):

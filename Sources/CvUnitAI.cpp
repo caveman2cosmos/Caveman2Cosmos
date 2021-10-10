@@ -87,6 +87,28 @@ CvUnitAI::~CvUnitAI()
 }
 
 
+CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
+{
+	m_iBirthmark = other.m_iBirthmark;
+	m_eUnitAIType = other.m_eUnitAIType;
+	m_iAutomatedAbortTurn = other.m_iAutomatedAbortTurn;
+	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
+	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
+	m_contractualState = other.m_contractualState;
+	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
+	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
+	m_bHasAttacked = other.m_bHasAttacked;
+	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
+	m_iGarrisonCity = other.m_iGarrisonCity;
+	m_iGenericValue = other.m_iGenericValue;
+	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
+
+	//static_cast<CvUnit&>(*this) = static_cast<const CvUnit&>(other)
+
+	return *this;
+}
+
+
 void CvUnitAI::AI_init(UnitAITypes eUnitAI, int iBirthmark)
 {
 	AI_reset(eUnitAI);
@@ -8201,41 +8223,40 @@ void CvUnitAI::AI_exploreSeaMove()
 		{
 			return;
 		}
-	}
-
-	if (!isHuman() && !isNPC()) //XXX move some of this into a function? maybe useful elsewhere
-	{
-		//Obsolete?
-		int iValue = GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), AI_getUnitAIType(), area());
-		int iBestValue = GET_PLAYER(getOwner()).AI_bestAreaUnitAIValue(AI_getUnitAIType(), area());
-
-		if (iValue < iBestValue)
+		if (!isNPC()) //XXX move some of this into a function? maybe useful elsewhere
 		{
-			//Transform
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_WORKER_SEA, area()) > 0)
-			{
-				AI_setUnitAIType(UNITAI_WORKER_SEA);
-				return;
-			}
+			//Obsolete?
+			int iValue = GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), AI_getUnitAIType(), area());
+			int iBestValue = GET_PLAYER(getOwner()).AI_bestAreaUnitAIValue(AI_getUnitAIType(), area());
 
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_PIRATE_SEA, area()) > 0)
+			if (iValue < iBestValue)
 			{
-				AI_setUnitAIType(UNITAI_PIRATE_SEA);
-				return;
-			}
+				//Transform
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_WORKER_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_WORKER_SEA);
+					return;
+				}
 
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
-			{
-				AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
-				return;
-			}
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_PIRATE_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_PIRATE_SEA);
+					return;
+				}
 
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_RESERVE_SEA, area()) > 0)
-			{
-				AI_setUnitAIType(UNITAI_RESERVE_SEA);
-				return;
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
+					return;
+				}
+
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_RESERVE_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_RESERVE_SEA);
+					return;
+				}
+				scrap();
 			}
-			scrap();
 		}
 	}
 
@@ -15632,7 +15653,7 @@ namespace scoring {
 		}
 
 		// Sort scores
-		std::sort(scores.begin(), scores.end(), ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
+		algo::sort(scores, ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
 
 		// Find the first city we can path to safely
 		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
@@ -16913,7 +16934,7 @@ bool CvUnitAI::AI_explore()
 		}
 	}
 
-	std::sort(plotValues.begin(), plotValues.end(), plotValueSortPredicate);
+	algo::sort(plotValues, plotValueSortPredicate);
 
 	for(int iI = plotValues.size()-1; iI >= 0; iI--)
 	{
@@ -17128,7 +17149,7 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 	//	Sort the plots found on their values
 	while(plotValues.size() > 0)
 	{
-		std::sort(plotValues.begin(), plotValues.end(), plotValueSortPredicate);
+		algo::sort(plotValues, plotValueSortPredicate);
 
 		iValue = plotValues[plotValues.size()-1].value;
 		pLoopPlot = plotValues[plotValues.size()-1].plot;

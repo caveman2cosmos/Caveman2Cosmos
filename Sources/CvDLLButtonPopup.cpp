@@ -720,9 +720,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		break;
 
-	case BUTTONPOPUP_SAVE_INFO_LOST:
-		break;
-
 	case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			if (1 == pPopupReturn->getButtonClicked())
@@ -1125,10 +1122,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			return launchGetSaveFormatPopup(pPopup, info);
 		}
-		case BUTTONPOPUP_SAVE_INFO_LOST:
-		{
-			return launchGetSaveInfoLostPopup(pPopup, info);
-		}
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			return launchModifierRecalculationPopup(pPopup, info);
@@ -1367,26 +1360,26 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		// Work out statistics about the spread of the building scores so we can see if any are highly recommended
 		float average;
-		int minScore, maxScore;
+		int64_t minScore, maxScore;
 		CvCity::ScoredBuilding::averageMinMax(bestBuildings, average, minScore, maxScore);
 
 		bestBuildings.resize(std::min<int>(5, bestBuildings.size()));
 
-		float cutOff = average + (maxScore - average) * 0.75f;
+		const float cutOff = average + (maxScore - average) * 0.75f;
 		for(size_t idx = 0; idx < bestBuildings.size(); ++idx)
 		{
-			BuildingTypes building = bestBuildings[idx].building;
-			AdvisorTypes advisor = (AdvisorTypes)(GC.getBuildingInfo(building).getAdvisorType());
+			const BuildingTypes building = bestBuildings[idx].building;
+			const AdvisorTypes advisor = (AdvisorTypes)GC.getBuildingInfo(building).getAdvisorType();
 			if (bestBuildings[idx].score > cutOff && advisor != NO_ADVISOR)
 			{
 				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
+				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			}
 			else
 			{
 				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
+				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
 				// CvWString szBuildingText = CvWString::format(L"%s (%d)", GC.getBuildingInfo(building).getDescription(), iTurns);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			}
@@ -1479,7 +1472,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 
 		// Sort the projects by turns to complete
-		std::sort(projects.begin(), projects.end());
+		algo::sort(projects);
 
 		// Lets only keep 5 (probably there will never be this many projects)
 		projects.resize(std::min<int>(5, projects.size()));
@@ -2899,18 +2892,6 @@ bool CvDLLButtonPopup::launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &in
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT").c_str(), NULL, 1, WIDGET_GENERAL);
 
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
-	return true;
-}
-
-bool CvDLLButtonPopup::launchGetSaveInfoLostPopup(CvPopup* pPopup, CvPopupInfo &info)
-{
-	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_NON_FATAL_FORMAT_LOAD_ERROR");
-
-	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szBuffer);
-
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, info.getText());
-
-	gDLL->getInterfaceIFace()->popupLaunch(pPopup);
 	return true;
 }
 

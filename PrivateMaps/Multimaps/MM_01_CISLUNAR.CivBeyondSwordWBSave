@@ -1,13 +1,13 @@
 BeginMeta
 	Version=C2C_1
-	Description=Cislunar Map
+	Description=Cislunar Space
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
 BeginMap
-	grid width=36
-	grid height=28
-	top latitude=0
-	bottom latitude=0
+	grid width=48
+	grid height=32
+	top latitude=90
+	bottom latitude=-90
 	wrap X=1
 	wrap Y=0
 	world size=WORLDSIZE_DUEL
@@ -156,6 +156,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=0, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=0, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=0, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=0, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=1, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -296,6 +316,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=1, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=1, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=1, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=1, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=2, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -327,6 +367,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2, y=6
+	StartingPlot
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -436,6 +477,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=2, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=2, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=2, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=2, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=3, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -517,7 +578,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3, y=16
-	StartingPlot
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -573,6 +633,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=3, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=3, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=3, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=3, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -717,6 +797,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=4, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=4, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=4, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=4, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=5, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -853,6 +953,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=5, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=5, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=5, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=5, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -997,6 +1117,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=6, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=6, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=6, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=6, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=7, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -1133,6 +1273,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=7, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=7, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=7, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=7, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -1277,6 +1437,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=8, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=8, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=8, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=8, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=9, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -1413,6 +1593,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=9, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=9, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=9, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=9, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -1557,6 +1757,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=10, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=10, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=10, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=10, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=11, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -1693,6 +1913,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=11, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=11, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=11, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=11, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -1837,6 +2077,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=12, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=12, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=12, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=12, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=13, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -1973,6 +2233,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=13, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=13, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=13, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=13, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -2117,6 +2397,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=14, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=14, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=14, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=14, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=15, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -2253,6 +2553,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=15, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=15, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=15, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=15, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -2397,6 +2717,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=16, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=16, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=16, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=16, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=17, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -2533,6 +2873,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=17, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=17, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=17, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=17, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -2677,6 +3037,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=18, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=18, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=18, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=18, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=19, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -2813,6 +3193,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=19, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=19, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=19, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=19, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -2957,6 +3357,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=20, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=20, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=20, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=20, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=21, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -3093,6 +3513,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=21, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=21, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=21, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=21, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -3237,6 +3677,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=22, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=22, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=22, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=22, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=23, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -3373,6 +3833,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=23, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=23, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=23, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=23, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -3517,6 +3997,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=24, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=24, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=24, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=24, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=25, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -3653,6 +4153,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=25, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=25, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=25, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=25, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -3797,6 +4317,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=26, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=26, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=26, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=26, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=27, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -3933,6 +4473,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=27, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=27, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=27, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=27, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -4077,6 +4637,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=28, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=28, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=28, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=28, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=29, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -4213,6 +4793,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=29, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=29, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=29, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=29, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -4357,6 +4957,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=30, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=30, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=30, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=30, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=31, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -4493,6 +5113,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=31, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=31, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=31, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=31, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -4637,6 +5277,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=32, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=32, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=32, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=32, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=33, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -4773,6 +5433,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=33, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=33, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=33, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=33, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
@@ -4917,6 +5597,26 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
+	x=34, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=34, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=34, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=34, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
 	x=35, y=0
 	TerrainType=TERRAIN_ORBIT
 	PlotType=2
@@ -5053,6 +5753,1946 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=35, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=35, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=35, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=35, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=36, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=37, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=39, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=40, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=41, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=42, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=43, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=44, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=45, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=46, y=31
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=0
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=1
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=2
+	TerrainType=TERRAIN_ORBIT
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=3
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=4
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=5
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=6
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=7
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=8
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=9
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=10
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=11
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=12
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=13
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=14
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=15
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=16
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=17
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=18
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=19
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=20
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=21
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=22
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=23
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=24
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=25
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=26
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=27
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=28
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=29
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=30
+	TerrainType=TERRAIN_CISLUNAR_SPACE
+	PlotType=2
+EndPlot
+BeginPlot
+	x=47, y=31
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot

@@ -517,45 +517,22 @@ public:
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
 
-/*************************************************************************************************/
-/**	New Tag Defs	(XMLInfos)				08/09/08								Xienwolf	**/
-/**																								**/
-/**								Defines Function for Use in .cpp								**/
-/*************************************************************************************************/
-	// acquire a list of unknown length of String data from a Child setup in a String (typically for Pass 3 Use)
-	void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
-	// acquire a list of unknown length of String data from a Child setup in an Array of INTs
-	void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
-	// acquire a list of known length of String data from a Child setup true values in an Array of BOOLs
-	void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
-/*************************************************************************************************/
-/**	New Tag Defs							END													**/
-/*************************************************************************************************/
-
-	//Searches the InfoClass for the pszVal and returns the location if a match
-	//				is found.
+	// Searches the InfoClass for the pszVal and returns the location if a match is found.
 	static int GetInfoClass(const TCHAR* pszVal);
 
 	template <class T>
-	static void InitList(T **ppList, int iListLen, T val = 0);
+	static void InitList(T** ppList, int iListLen, T val = 0);
 
-	void InitStringList(CvString **ppszList, int iListLen, CvString szString);
+	template <class T>
+	static void Init2DList(T*** pppList, int size1, int size2, T val = 0);
+
+	template <class T>
+	static void InitPointerList(T*** pppList, int size);
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
 
-	// allocate and initialize a 2 dimensional array of bool pointers
-	static void Init2DBoolList(bool*** pppbList, int iSizeX, int iSizeY);
-
-	// allocate and initialize a 2 dimensional array of int pointers
-	static void Init2DIntList(int*** pppiList, int iSizeX, int iSizeY);
-	// allocate and initialize a 2 dimensional array of float pointers
-	static void Init2DFloatList(float*** pppfList, int iSizeX, int iSizeY);
-	// allocate and initialize a 2D array of DirectionTypes
-	static void Init2DDirectionTypesList(DirectionTypes*** pppiList, int iSizeX, int iSizeY);
-	// allocate an array of int pointers
-	static void InitPointerIntList(int*** pppiList, int iSizeX);
-	// allocate an array of float pointers
-	static void InitPointerFloatList(float*** pppfList, int iSizeX);
+	template <class T>
+	void SetList(T** ppList, int size, const wchar_t* tag);
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal = 0);
@@ -686,13 +663,13 @@ public:
 	{
 		foreach_(const T& it, source)
 		{
-			if (it > -1 && !algo::contains(target, it))
+			if (/*it > -1 &&*/ !algo::contains(target, it))
 			{
 				target.push_back(it);
 			}
 		}
 
-		std::sort(target.begin(), target.end());
+		algo::sort(target);
 	}
 
 	template<class T>
@@ -720,7 +697,7 @@ public:
 						}
 					}
 
-					std::sort(aInfos->begin(), aInfos->end());
+					algo::sort(*aInfos);
 
 					MoveToXmlParent();
 				}
@@ -846,13 +823,67 @@ private:
 /////////////////////////// inlines / templates
 //
 template <class T>
-void CvXMLLoadUtility::InitList(T **ppList, int iListLen, T val)
+void CvXMLLoadUtility::InitList(T **ppList, int size, T val)
 {
-	FAssertMsg((0 <= iListLen),"list size to allocate is less than 0");
-	*ppList = new T[iListLen];
+	FAssert(size > 0);
 
-	for (int i=0;i<iListLen;i++)
+	*ppList = new T[size];
+
+	for (int i = 0; i < size; i++)
 		(*ppList)[i] = val;
+}
+
+template <class T>
+void CvXMLLoadUtility::Init2DList(T*** pppList, int size1, int size2, T val)
+{
+	FAssertMsg(*pppList == NULL, "memory leak?");
+	FAssert(size1 > 0);
+
+	*pppList = new T*[size1];
+
+	for (int i = 0; i < size1; i++)
+	{
+		InitList(&(*pppList)[i], size2, val);
+	}
+}
+
+template <class T>
+void CvXMLLoadUtility::InitPointerList(T*** pppList, int size)
+{
+	FAssertMsg(*pppList == NULL, "memory leak?");
+	FAssert(size > 0);
+
+	*pppList = new T*[size];
+
+	for (int i = 0; i < size; i++)
+	{
+		(*pppList)[i] = NULL;
+	}
+}
+
+template <class T>
+void CvXMLLoadUtility::SetList(T** ppList, int size, const wchar_t* tag)
+{
+	InitList(ppList, size);
+
+	if (TryMoveToXmlFirstChild(tag))
+	{
+		if (const int iNumSibs = GetXmlChildrenNumber())
+		{
+			if (GetChildXmlVal(&(*ppList)[0]))
+			{
+				for (int i = 1; i < iNumSibs; i++)
+				{
+					if (!GetNextXmlVal(&(*ppList)[i]))
+					{
+						break;
+					}
+				}
+				MoveToXmlParent();
+			}
+		}
+		MoveToXmlParent();
+	}
 }
 
 template <class T>
