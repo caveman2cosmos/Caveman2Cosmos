@@ -22220,21 +22220,24 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-
 	if (!bRelDisabled)
 	{
-		foreach_(const FreePromoTypes& pFreePromo, kBuilding.getFreePromoTypes())
+		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
 		{
-			const BoolExpr* pExpr = pFreePromo.m_pExprFreePromotionCondition;
+			const PromotionTypes ePromo = kFreePromo.ePromotion;
+			const BoolExpr* pExpr = kFreePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
-				const PromotionTypes ePromo = pFreePromo.ePromotion;
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(GC.getPromotionInfo(ePromo).getType()).GetCString(), GC.getPromotionInfo(ePromo).getTextKeyWide()));
 				szBuffer.append(" (");
 				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES"));
 				pExpr->buildDisplayString(szBuffer);
 				szBuffer.append(gDLL->getText("TXT_KEY_REVERT_COLOR"));
 				szBuffer.append(")");
+			}
+			else
+			{
+				setFreePromoBuildingHelp(ePromo, szBuffer);
 			}
 			//if (GC.getBuildingInfo(eBuilding).isFreePromoType(iI))
 			//{

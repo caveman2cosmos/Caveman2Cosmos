@@ -2739,11 +2739,21 @@
 		<Tag>TXT_KEY_UNIT_TAMED_GIRAFFE</Tag>
 		<English>Tamed Giraffe</English>
 		<French>Girafe (domptée)</French>
+		<German>
+			<Text>Gezähmte Giraffe:Gezähmten Giraffe:Gezähmten Giraffe:Gezähmte Giraffe:Gezähmte Giraffen:Gezähmten Giraffen:Gezähmten Giraffen:Gezähmten Giraffen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Æèðàô (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_INDIAN_RHINO</Tag>
 		<English>Tamed Indian Rhinoceros</English>
+		<German>
+			<Text>Gezähmtes Panzernashorn:Gezähmten Panzernashorns:Gezähmten Panzernashorn:Gezähmte Panzernashorn:Gezähmte Panzernashörner:Gezähmten Panzernashörner:Gezähmten Panzernashörnern:Gezähmten Panzernashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<French>Rhinocéros Indien dompté</French>
 		<Polish>Oswojony Nosorożec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã (äîì.)</Russian>

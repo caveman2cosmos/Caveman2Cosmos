@@ -9203,4 +9203,17 @@ protected:
 	int m_iFontButtonIndex;
 };
 
+class CvUnitAIInfo : public CvInfoBase { };
+class CvDomainInfo : public CvInfoBase { };
+class CvConceptInfo : public CvInfoBase { };
+class CvNewConceptInfo : public CvInfoBase { };
+class CvCityTabInfo : public CvInfoBase { };
+class CvCalendarInfo : public CvInfoBase { };
+class CvSeasonInfo : public CvInfoBase { };
+class CvMonthInfo : public CvInfoBase { };
+class CvDenialInfo : public CvInfoBase { };
+class CvAttitudeInfo : public CvInfoBase { };
+class CvMemoryInfo : public CvInfoBase { };
+class CvHintInfo : public CvInfoBase { };
+
 #endif
