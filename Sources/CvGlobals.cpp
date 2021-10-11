@@ -3104,10 +3104,6 @@ bool cvInternalGlobals::isXMLLogging() const
 // calculate asset checksum
 uint32_t cvInternalGlobals::getAssetCheckSum() const
 {
-	for (int i = 0; i < NUM_INFO_CLASSES; i++)
-		if (m_aInfoVectors[i] == NULL)
-			logging::logMsg("error.log", "%d", i);
-
 	uint32_t iSum = 0;
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
