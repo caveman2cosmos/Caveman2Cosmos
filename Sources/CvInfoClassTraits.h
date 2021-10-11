@@ -107,8 +107,20 @@
 	MACRO_FUNC(CvOutcomeInfo, OUTCOME_INFO, OutcomeTypes) \
 	MACRO_FUNC(CvUnitCombatInfo, UNIT_COMBAT_INFO, UnitCombatTypes) \
 	MACRO_FUNC(CvModLoadControlInfo, MOD_LOAD_CONTROL_INFO, ModLoadControlTypes) \
-	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes)
+	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes) \
+	MACRO_FUNC(CvArtInfoMisc, MISC_ART_INFO, MiscArtTypes) \
+	MACRO_FUNC(CvArtInfoUnit, UNIT_ART_INFO, UnitArtTypes) \
+	MACRO_FUNC(CvArtInfoBuilding, BUILDING_ART_INFO, BuildingArtTypes) \
+	MACRO_FUNC(CvArtInfoCivilization, CIVILIZATION_ART_INFO, CivilizationArtTypes) \
+	MACRO_FUNC(CvArtInfoLeaderhead, LEADER_HEAD_ART_INFO, LeaderheadArtTypes) \
+	MACRO_FUNC(CvArtInfoBonus, BONUS_ART_INFO, BonusArtTypes) \
+	MACRO_FUNC(CvArtInfoImprovement, IMPROVEMENT_ART_INFO, ImprovementArtTypes) \
+	MACRO_FUNC(CvArtInfoTerrain, TERRAIN_ART_INFO, TerrainArtTypes) \
+	MACRO_FUNC(CvArtInfoFeature, FEATURE_ART_INFO, FeatureArtTypes) \
+	MACRO_FUNC(CvArtInfoMovie, MOVIE_ART_INFO, MovieArtTypes) \
+	MACRO_FUNC(CvArtInfoInterface, INTERFACE_ART_INFO, InterfaceArtTypes)
 
+	//MACRO_FUNC(CvArtInfoAsset, , AssetArtTypes)
 
 class CvInfoBase;
 

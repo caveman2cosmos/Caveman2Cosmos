@@ -3430,7 +3430,6 @@ enum InfoClassTypes
 	COLOR_INFO,
 	PLAYER_COLOR_INFO,
 	ADVISOR_INFO,
-	RIVER_INFO,
 	RIVER_MODEL_INFO,
 	WATER_PLANE_INFO,
 	TERRAIN_PLANE_INFO,
@@ -3440,7 +3439,6 @@ enum InfoClassTypes
 	ENTITY_EVENT_INFO,
 	EFFECT_INFO,
 	ATTACHABLE_INFO,
-	CAMERA_INFO,
 	UNIT_FORMATION_INFO,
 	LANDSCAPE_INFO,
 	BONUS_CLASS_INFO,
@@ -3477,6 +3475,18 @@ enum InfoClassTypes
 	MOD_LOAD_CONTROL_INFO,
 	HINT_INFO,
 
+	MISC_ART_INFO,
+	UNIT_ART_INFO,
+	BUILDING_ART_INFO,
+	CIVILIZATION_ART_INFO,
+	LEADER_HEAD_ART_INFO,
+	BONUS_ART_INFO,
+	IMPROVEMENT_ART_INFO,
+	TERRAIN_ART_INFO,
+	FEATURE_ART_INFO,
+	MOVIE_ART_INFO,
+	INTERFACE_ART_INFO,
+
 	NUM_INFO_CLASSES
 };
 
@@ -3497,5 +3507,17 @@ enum DiplomacyTypes { };
 enum MainMenuTypes { };
 enum ModLoadControlTypes { };
 enum HintTypes { };
+
+enum MiscArtTypes { };
+enum UnitArtTypes { };
+enum BuildingArtTypes { };
+enum CivilizationArtTypes { };
+enum LeaderheadArtTypes { };
+enum BonusArtTypes { };
+enum TerrainArtTypes { };
+enum ImprovementArtTypes { };
+enum FeatureArtTypes { };
+enum MovieArtTypes { };
+enum InterfaceArtTypes { };
 
 #endif	// CVENUMS_h

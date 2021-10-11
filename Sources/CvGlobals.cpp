@@ -508,7 +508,6 @@ void cvInternalGlobals::uninit()
 	algo::for_each(m_plotGroupFinders, bind(deleteFAStar, _1));
 
 	m_typesMap.clear();
-	m_aInfoVectors.clear();
 }
 
 void cvInternalGlobals::clearTypesMap()
@@ -1394,9 +1393,7 @@ void cvInternalGlobals::registerUnitAI(const char* szType, int enumVal)
 {
 	FAssertMsg(m_paUnitAIInfos.size() == enumVal, "enumVal not expected value");
 
-	CvInfoBase* entry = new	CvInfoBase(szType);
-
-	m_paUnitAIInfos.push_back(entry);
+	m_paUnitAIInfos.push_back(new CvUnitAIInfo(szType));
 	setInfoTypeFromString(szType, enumVal);
 }
 
@@ -1462,6 +1459,8 @@ void cvInternalGlobals::registerUnitAIs()
 	REGISTER_UNITAI(UNITAI_SEE_INVISIBLE);
 	REGISTER_UNITAI(UNITAI_SEE_INVISIBLE_SEA);
 	REGISTER_UNITAI(UNITAI_ESCORT);
+
+	addToInfosVectors(&m_paUnitAIInfos);
 }
 
 //	AIAndy - added internal registration of supported AIScale types similar to UnitAIs but without info class
@@ -1615,9 +1614,7 @@ void cvInternalGlobals::registerMission(const char* szType, int enumVal)
 {
 	FAssert(m_paMissionInfo.size() == enumVal);
 
-	CvMissionInfo* entry = new CvMissionInfo(szType);
-
-	m_paMissionInfo.push_back(entry);
+	m_paMissionInfo.push_back(new CvMissionInfo(szType));
 	setInfoTypeFromString(szType, enumVal);
 }
 
@@ -2712,7 +2709,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paPropertyInfo);
 
 	clearTypesMap();
-	m_aInfoVectors.clear();
 }
 
 //
@@ -2817,12 +2813,6 @@ void cvInternalGlobals::infoTypeFromStringReset()
 	}
 
 	m_infosMap.clear();
-}
-
-void cvInternalGlobals::addToInfosVectors(void *infoVector)
-{
-	std::vector<CvInfoBase *> *infoBaseVector = (std::vector<CvInfoBase *> *) infoVector;
-	m_aInfoVectors.push_back(infoBaseVector);
 }
 
 void cvInternalGlobals::infosReset()
@@ -3114,6 +3104,10 @@ bool cvInternalGlobals::isXMLLogging() const
 // calculate asset checksum
 uint32_t cvInternalGlobals::getAssetCheckSum() const
 {
+	for (int i = 0; i < NUM_INFO_CLASSES; i++)
+		if (m_aInfoVectors[i] == NULL)
+			logging::logMsg("error.log", "%d", i);
+
 	uint32_t iSum = 0;
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{

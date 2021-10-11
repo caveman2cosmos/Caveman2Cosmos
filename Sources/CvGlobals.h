@@ -136,6 +136,7 @@ class CvModLoadControlInfo;
 /************************************************************************************************/
 class CvMapInfo;
 
+#include "CvInfoClassTraits.h"
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
@@ -248,10 +249,18 @@ public:
 	void setInfoTypeFromString(const char* szType, int idx);
 	void logInfoTypeMap(const char* tagMsg = "");
 	void infoTypeFromStringReset();
-	void addToInfosVectors(void *infoVector);
 	void infosReset();
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
+
+	template <class CvInfoClass_t>
+	void addToInfosVectors(std::vector<CvInfoClass_t*>* infoVector)
+	{
+		const InfoClassTypes eInfoClass = InfoClassTraits<CvInfoClass_t>::InfoClassEnum;
+		FASSERT_BOUNDS(0, NUM_INFO_CLASSES, eInfoClass);
+		FAssert(m_aInfoVectors[eInfoClass] == NULL);
+		m_aInfoVectors[eInfoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(infoVector);
+	}
 
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
@@ -259,7 +268,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
-		foreach_(T type, vector)
+		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
@@ -903,7 +912,7 @@ protected:
 	// all type strings are upper case and are kept in this hash map for fast lookup, Moose
 	typedef stdext::hash_map<const char* /* type */, int /* info index */, SZStringHash> InfosMap;
 	InfosMap m_infosMap;
-	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
+	bst::array<std::vector<CvInfoBase*>*, NUM_INFO_CLASSES> m_aInfoVectors;
 
 	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class)
 
@@ -914,7 +923,7 @@ protected:
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
 	std::vector<CvAdvisorInfo*> m_paAdvisorInfo;
-	std::vector<CvInfoBase*> m_paHints;
+	std::vector<CvHintInfo*> m_paHints;
 	std::vector<CvMainMenuInfo*> m_paMainMenus;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -987,13 +996,13 @@ protected:
 	std::vector<CvSpawnInfo*> m_paSpawnInfo;
 	CvInfoReplacements<CvSpawnInfo> m_SpawnInfoReplacements;
 	std::vector<CvSpecialUnitInfo*> m_paSpecialUnitInfo;
-	std::vector<CvInfoBase*> m_paConceptInfo;
-	std::vector<CvInfoBase*> m_paNewConceptInfo;
-	std::vector<CvInfoBase*> m_paCityTabInfo;
-	std::vector<CvInfoBase*> m_paCalendarInfo;
-	std::vector<CvInfoBase*> m_paSeasonInfo;
-	std::vector<CvInfoBase*> m_paMonthInfo;
-	std::vector<CvInfoBase*> m_paDenialInfo;
+	std::vector<CvConceptInfo*> m_paConceptInfo;
+	std::vector<CvNewConceptInfo*> m_paNewConceptInfo;
+	std::vector<CvCityTabInfo*> m_paCityTabInfo;
+	std::vector<CvCalendarInfo*> m_paCalendarInfo;
+	std::vector<CvSeasonInfo*> m_paSeasonInfo;
+	std::vector<CvMonthInfo*> m_paMonthInfo;
+	std::vector<CvDenialInfo*> m_paDenialInfo;
 	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
@@ -1001,11 +1010,10 @@ protected:
 	std::vector<CvMapCategoryInfo*> m_paMapCategoryInfo;
 	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
 	std::vector<CvIdeaInfo*> m_paIdeaInfo;
-	std::vector<CvInfoBase*> m_paDomainInfo;
-	std::vector<CvInfoBase*> m_paUnitAIInfos;
-	std::vector<CvInfoBase*> m_paAttitudeInfos;
-	std::vector<CvInfoBase*> m_paMemoryInfos;
-	std::vector<CvInfoBase*> m_paFeatInfos;
+	std::vector<CvDomainInfo*> m_paDomainInfo;
+	std::vector<CvUnitAIInfo*> m_paUnitAIInfos;
+	std::vector<CvAttitudeInfo*> m_paAttitudeInfos;
+	std::vector<CvMemoryInfo*> m_paMemoryInfos;
 	std::vector<CvGameOptionInfo*> m_paGameOptionInfos;
 	std::vector<CvMPOptionInfo*> m_paMPOptionInfos;
 	std::vector<CvForceControlInfo*> m_paForceControlInfos;

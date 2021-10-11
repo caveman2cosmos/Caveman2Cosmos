@@ -9203,7 +9203,16 @@ protected:
 	int m_iFontButtonIndex;
 };
 
-class CvUnitAIInfo : public CvInfoBase { };
+//======================================================================================================
+//					CvUnitAIInfo
+//======================================================================================================
+
+class CvUnitAIInfo : public CvInfoBase
+{
+public:
+	CvUnitAIInfo(const char* szType);
+};
+
 class CvDomainInfo : public CvInfoBase { };
 class CvConceptInfo : public CvInfoBase { };
 class CvNewConceptInfo : public CvInfoBase { };

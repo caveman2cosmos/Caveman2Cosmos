@@ -1507,6 +1507,8 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		GC.m_paActionInfo.push_back(pActionInfo);
 	}
 
+	GC.addToInfosVectors(&GC.m_paActionInfo);
+
 	SAFE_DELETE_ARRAY(piOrderedIndex);
 	SAFE_DELETE_ARRAY(piIndexList);
 	SAFE_DELETE_ARRAY(piPriorityList);
@@ -2208,6 +2210,8 @@ void CvXMLLoadUtility::LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const
 
 void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching)
 {
+	GC.addToInfosVectors(&DiploInfos);
+
 	bool bLoaded = false;
 
 	if (!bLoaded)
