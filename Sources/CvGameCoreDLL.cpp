@@ -1,6 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
-#include "c2c_rpc.h"
+#include "rpc_client.h"
 #include <psapi.h>
 
 static CRITICAL_SECTION g_cPythonSection;
@@ -91,7 +91,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-		rpc::createServerProcess();
+		rpc::client::createServerProcess();
 
 		logging::createLogsFolder();
 		logging::deleteLogs();

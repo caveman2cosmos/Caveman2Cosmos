@@ -34,7 +34,7 @@
 #include "IServerUtils.h"
 
 #define TYPE_FORMAT_STRING_SIZE   7                                 
-#define PROC_FORMAT_STRING_SIZE   31                                
+#define PROC_FORMAT_STRING_SIZE   55                                
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   0            
@@ -129,6 +129,23 @@ static const IServerUtils_MIDL_PROC_FORMAT_STRING IServerUtils__MIDL_ProcFormatS
 /* 26 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
 /* 28 */	NdrFcShort( 0x4 ),	/* Type Offset=4 */
 
+	/* Procedure shutDownServer */
+
+/* 30 */	0x32,		/* FC_BIND_PRIMITIVE */
+			0x48,		/* Old Flags:  */
+/* 32 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 36 */	NdrFcShort( 0x1 ),	/* 1 */
+/* 38 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
+/* 40 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 42 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 44 */	0x40,		/* Oi2 Flags:  has ext, */
+			0x0,		/* 0 */
+/* 46 */	0x8,		/* 8 */
+			0x1,		/* Ext Flags:  new corr desc, */
+/* 48 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 50 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 52 */	NdrFcShort( 0x0 ),	/* 0 */
+
 			0x0
         }
     };
@@ -150,7 +167,8 @@ static const IServerUtils_MIDL_TYPE_FORMAT_STRING IServerUtils__MIDL_TypeFormatS
 
 static const unsigned short IServerUtils_FormatStringOffsetTable[] =
     {
-    0
+    0,
+    30
     };
 
 
@@ -181,17 +199,19 @@ static const MIDL_STUB_DESC IServerUtils_StubDesc =
 static const RPC_DISPATCH_FUNCTION IServerUtils_table[] =
     {
     NdrServerCall2,
+    NdrServerCall2,
     0
     };
 static const RPC_DISPATCH_TABLE IServerUtils_v1_0_DispatchTable = 
     {
-    1,
+    2,
     (RPC_DISPATCH_FUNCTION*)IServerUtils_table
     };
 
 static const SERVER_ROUTINE IServerUtils_ServerRoutineTable[] = 
     {
-    (SERVER_ROUTINE)Output
+    (SERVER_ROUTINE)Output,
+    (SERVER_ROUTINE)shutDownServer
     };
 
 static const MIDL_SERVER_INFO IServerUtils_ServerInfo = 

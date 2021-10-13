@@ -21,7 +21,7 @@
 #include "CvImprovementInfo.h"
 #include <time.h> 
 #include <sstream>
-#include "c2c_rpc.h"
+#include "rpc_client.h"
 
 static char gVersionString[1024] = { 0 };
 
@@ -453,7 +453,7 @@ void cvInternalGlobals::init()
 
 	OutputDebugString("Initializing Internal Globals: End");
 
-	rpc::init();
+	rpc::client::init();
 }
 
 //
@@ -513,6 +513,8 @@ void cvInternalGlobals::uninit()
 
 	m_typesMap.clear();
 	m_aInfoVectors.clear();
+
+	rpc::client::shutDownServer();
 }
 
 void cvInternalGlobals::clearTypesMap()

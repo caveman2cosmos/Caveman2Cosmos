@@ -5,4 +5,5 @@
 interface IServerUtils
 {
    void Output([in, string] const char* szOutput);
+   void shutDownServer();
 }

@@ -54,6 +54,8 @@ extern "C"{
 void Output( 
     /* [string][in] */ const char *szOutput);
 
+void shutDownServer( void);
+
 
 extern handle_t hIServerUtilsBinding;
 

@@ -3,6 +3,23 @@
 #include <iostream>
 #include <assert.h>
 
+void FRpcAssert(RPC_STATUS status)
+{
+    if (FAILED(status))
+    {
+        assert(false);
+        exit(status);
+    }
+}
+
+void shutDownServer()
+{
+	assert(false);
+	const RPC_STATUS status = RpcMgmtStopServerListening(IServerUtils_v1_0_s_ifspec);
+	FRpcAssert(status);
+	exit(0);
+}
+
 void Output(const char* szOutput)
 {
    std::cout << szOutput << std::endl;
@@ -11,20 +28,6 @@ void Output(const char* szOutput)
 RPC_STATUS CALLBACK SecurityCallback(RPC_IF_HANDLE, void*)
 {
     return RPC_S_OK;
-}
-
-//DWORD WINAPI ServerListen(LPVOID)
-//{
-//   return RpcServerListen(1, RPC_C_LISTEN_MAX_CALLS_DEFAULT, false);
-//}
-
-void FRpcAssert(RPC_STATUS status)
-{
-	if (FAILED(status))
-	{
-		assert(false);
-		exit(status);
-	}
 }
 
 int main()
@@ -52,7 +55,7 @@ int main()
 
 	status = RpcServerListen(1, RPC_C_LISTEN_MAX_CALLS_DEFAULT, FALSE);
 
-	FRpcAssert(status);
+	exit(0);
 }
 
 void* __RPC_USER midl_user_allocate(size_t size)
