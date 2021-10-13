@@ -133,7 +133,7 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
+
 }
 
 void CvEventReporter::newGame()
@@ -167,7 +167,7 @@ void CvEventReporter::init()
 
 void CvEventReporter::update(float fDeltaTime)
 {
-	m_kPythonEventMgr.reportUpdate(fDeltaTime);
+	// Toffer - Called by exe every frame, might be useful.
 }
 
 void CvEventReporter::unInit()
@@ -383,11 +383,6 @@ void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
 }
 
-void CvEventReporter::unitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	m_kPythonEventMgr.reportUnitSetXY(pPlot, pUnit);
-}
-
 void CvEventReporter::unitCreated(CvUnit *pUnit)
 {
 	m_kPythonEventMgr.reportUnitCreated(pUnit);
@@ -557,13 +552,6 @@ void CvEventReporter::playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPl
 {
 	m_kPythonEventMgr.reportPlayerGoldTrade(eFromPlayer, eToPlayer, iAmount);
 }
-
-// BUG - Revolution Event - start
-void CvEventReporter::playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	m_kPythonEventMgr.reportPlayerRevolution(ePlayerID, iAnarchyLength, paeOldCivics, paeNewCivics);
-}
-// BUG - Revolution Event - end
 
 void CvEventReporter::chat(CvWString szString)
 {

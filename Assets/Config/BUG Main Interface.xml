@@ -20,6 +20,7 @@
 
 			<!-- Auto-end decisionless turns -->
 			<option id="AutoEndDecisionlessTurns" key="AutoEndDecisionlessTurns" type="boolean" default="False" get="isAutoEndDecisionlessTurns" dirtyBit="MiscButtons"/>
+			<list id="AutoEndTurnDelay" key="AutoEndTurnDelay" type="int" default="2" listType="int" values="0,1,2,3,4,5,6,7,8,9" get="getAutoEndTurnDelay" set="setAutoEndTurnDelay"/>
 
 			<!-- Execute AI moves in minimal turn slices -->
 			<option id="MinimizeAITurnSlices" key="MinimizeAITurnSlices" type="boolean" default="True" get="isMinimizeAITurnSlices" dirtyBit="MiscButtons"/>

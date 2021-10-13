@@ -155,6 +155,7 @@ public:
 
 	void erase();
 
+	void clearModifierTotals();
 	void recalculateBaseYield();
 
 /*********************************/
@@ -661,7 +662,7 @@ public:
 	void updateIrrigated();
 
 	bool isPotentialCityWork() const;
-	bool isPotentialCityWorkForArea(CvArea* pArea) const;
+	bool isPotentialCityWorkForArea(const CvArea* pArea) const;
 	void updatePotentialCityWork();
 
 	bool isShowCitySymbols() const;
@@ -745,7 +746,6 @@ public:
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;
 	bool hasYield() const;
-	int calculateMaxYield(YieldTypes eYield) const;
 	int getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const;
 
 	int getCulture(PlayerTypes eIndex) const;
@@ -828,9 +828,10 @@ public:
 	DllExport void setLayoutStateToCurrent();
 	bool updatePlotBuilder();
 
-	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
-	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
-	bool shouldUsePlotBuilder();
+	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) const; // determines how the improvement state is shown in the engine
+	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked) const; // determines how the bonus state is shown in the engine
+
+	bool shouldUsePlotBuilder() const;
 	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
@@ -1118,17 +1119,11 @@ public:
 	//	Toggle plot in/out of contribution
 	void ToggleInPlotGroupsZobristContributors();
 
-	inline int getZobristContribution() const
-	{
-		return m_zobristContribution;
-	}
+	inline int getZobristContribution() const { return m_zobristContribution; }
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-#endif
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 
@@ -1138,11 +1133,15 @@ public:
 
 	void unitGameStateCorrections();
 
-	bool isMapType(MapTypes eIndex) const;
+	bool isMapCategoryType(MapCategoryTypes eMapCategory) const;
+	const std::vector<MapCategoryTypes>& getMapCategories() const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
 	int getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 protected:
 	// AIAndy: Properties

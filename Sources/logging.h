@@ -57,7 +57,7 @@ namespace logging
 		picojson::value value;
 
 		JsonValue() {}
-		template <class Ty_> 
+		template <class Ty_>
 		JsonValue(const std::string& name, const Ty_& value)
 			: name(name)
 			, value(make_json_value(value))
@@ -68,7 +68,7 @@ namespace logging
 		//JsonValue(const std::string& name, float value) : name(name), value(picojson::value(static_cast<double>(value))) {}
 		//JsonValue(const std::string& name, const std::string& value) : name(name), value(picojson::value(value)) {}
 		//template < class Ty_ >
-		//JsonValue(const std::string& name, const std::vector<Ty_>& inarr) : name(name) 
+		//JsonValue(const std::string& name, const std::vector<Ty_>& inarr) : name(name)
 		//{
 		//	picojson::value::array arr;
 		//	for (std::vector<Ty_>::const_iterator itr = inarr.begin(); itr != inarr.end(); ++itr)
@@ -94,7 +94,6 @@ namespace logging
 	void logMsg(const char* file, const char* msg, ...);
 	void logMsgW(const char* file, const wchar_t* msg, ...);
 
-	void createLogsFolder();
 	void deleteLogs();
 }
 

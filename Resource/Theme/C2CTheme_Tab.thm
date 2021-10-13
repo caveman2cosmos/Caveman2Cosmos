@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Tab.thm
 Content		:	Civ4 - GTab control theme
@@ -769,7 +769,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 4);
 						Margin			= GRectMargin(6,4,6,1);
 						Indent			= GRectMargin(0,2,0,0);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -826,7 +826,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 1);
 						Margin			= GRectMargin(6,4,6,1);
 						Indent			= GRectMargin(0,2,0,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -1023,7 +1023,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 1);
 						Margin			= GRectMargin(6,4,6,1);
 						Indent			= GRectMargin(0,2,0,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -1408,7 +1408,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 1);
 						Margin			= GRectMargin(4,6,1,6);
 						Indent			= GRectMargin(2,0,0,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
@@ -1549,7 +1549,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 4);
 						Margin			= GRectMargin(5,6,1,6);
 						Indent			= GRectMargin(2,0,0,0);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -1746,7 +1746,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 4);
 						Margin			= GRectMargin(5,6,1,6);
 						Indent			= GRectMargin(2,0,0,0);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -1803,7 +1803,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 1);
 						Margin			= GRectMargin(4,6,1,6);
 						Indent			= GRectMargin(2,0,0,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -2002,7 +2002,7 @@ with GFC_Control_Button
 				.BeginCut_ClipMargin_Select		= GRectMargin(0,6,0,0);	//L,T,R,B
 				.EndCut_ClipMargin_Default		= GRectMargin(0,0,0,6);	//L,T,R,B	(Bottom Cut)
 				.EndCut_ClipMargin_Select		= GRectMargin(0,0,0,6);	//L,T,R,B
-			} 
+			}
 		}
 		// Left Top - edge single
 		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_SingleBeginEdge
@@ -2518,7 +2518,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 4);
 						Margin			= GRectMargin(6,4,6,1);
 						Indent			= GRectMargin(0,0,0,2);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -2774,7 +2774,7 @@ with GFC_Control_Button
 				.BeginCut_ClipMargin_Select		= GRectMargin(6,0,0,0);	//L,T,R,B
 				.EndCut_ClipMargin_Default		= GRectMargin(0,0,6,0);	//L,T,R,B	(Right Cut)
 				.EndCut_ClipMargin_Select		= GRectMargin(0,0,6,0);	//L,T,R,B
-			} 
+			}
 		}
 		// Bottom Left - edge single
 		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_SingleBeginEdge
@@ -2899,7 +2899,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 4);
 						Margin			= GRectMargin(1,6,5,6);
 						Indent			= GRectMargin(0,0,2,0);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
@@ -2956,7 +2956,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 1);
 						Margin			= GRectMargin(1,6,4,6);
 						Indent			= GRectMargin(0,0,2,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
@@ -3096,7 +3096,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 4);
 						Margin			= GRectMargin(1,6,5,6);
 						Indent			= GRectMargin(0,0,2,0);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -3153,7 +3153,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 1);
 						Margin			= GRectMargin(1,6,4,6);
 						Indent			= GRectMargin(0,0,2,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -3293,7 +3293,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 4);
 						Margin			= GRectMargin(1,6,5,6);
 						Indent			= GRectMargin(0,0,2,0);
-					}	
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -3350,7 +3350,7 @@ with GFC_Control_Button
 						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 1);
 						Margin			= GRectMargin(1,6,4,6);
 						Indent			= GRectMargin(0,0,2,0);
-					}		
+					}
 					layer {
 						DestCombine		= GColorCombine(Add,Disable);
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -3549,7 +3549,7 @@ with GFC_Control_Button
 				.BeginCut_ClipMargin_Select		= GRectMargin(0,6,0,0);	//L,T,R,B
 				.EndCut_ClipMargin_Default		= GRectMargin(0,0,0,6);	//L,T,R,B	(Bottom Cut)
 				.EndCut_ClipMargin_Select		= GRectMargin(0,0,0,6);	//L,T,R,B
-			} 
+			}
 		}
 		// Right Top - edge single
 		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_SingleBeginEdge

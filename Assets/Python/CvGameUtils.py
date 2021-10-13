@@ -12,10 +12,6 @@ GAME = GC.getGame()
 class CvGameUtils:
 
 	def __init__(self):
-		self.reset()
-
-	def reset(self):
-		# Cache
 		self.fScoreFreeMod = GC.getDefineINT("SCORE_FREE_PERCENT") / 100.0
 		self.SCORE_POPULATION_FACTOR = GC.getDefineINT("SCORE_POPULATION_FACTOR")
 		self.SCORE_LAND_FACTOR = GC.getDefineINT("SCORE_LAND_FACTOR")
@@ -28,81 +24,8 @@ class CvGameUtils:
 		self.CAPTURE_GOLD_RAND2 = GC.getDefineINT("CAPTURE_GOLD_RAND2")
 		self.CAPTURE_GOLD_MAX_TURNS = GC.getDefineINT("CAPTURE_GOLD_MAX_TURNS")
 
-		self.BASE_UNIT_UPGRADE_COST = GC.getDefineINT("BASE_UNIT_UPGRADE_COST")
-		self.UNIT_UPGRADE_COST_PER_PRODUCTION = GC.getDefineINT("UNIT_UPGRADE_COST_PER_PRODUCTION")
-
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
-
-		self.iReplicators = GC.getInfoTypeForString("BONUS_REPLICATORS")
-		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
-
-	def isVictoryTest(self):
-		return GAME.getElapsedGameTurns() > 10
-
-	def isPlayerResearch(self, argsList):
-		ePlayer = argsList[0]
-		return True
-
-	def createBarbarianUnits(self):
-		return False
-
-	def skipResearchPopup(self, argsList):
-		ePlayer = argsList[0]
-		return False
-
-	def showTechChooserButton(self, argsList):
-		ePlayer = argsList[0]
-		return True
-
-	def getFirstRecommendedTech(self, argsList):
-		ePlayer = argsList[0]
-		return TechTypes.NO_TECH
-
-	def getSecondRecommendedTech(self, argsList):
-		ePlayer = argsList[0]
-		eFirstTech = argsList[1]
-		return TechTypes.NO_TECH
-
-	def canRazeCity(self, argsList):
-		iRazingPlayer, pCity = argsList
-		return True
-
-	def canDeclareWar(self, argsList):
-		iAttackingTeam, iDefendingTeam = argsList
-		return True
-
-	def skipProductionPopup(self, argsList):
-		pCity = argsList[0]
-		return False
-
-	def showExamineCityButton(self, argsList):
-		pCity = argsList[0]
-		return True
-
-	def getRecommendedUnit(self, argsList):
-		pCity = argsList[0]
-		return UnitTypes.NO_UNIT
-
-	def getRecommendedBuilding(self, argsList):
-		pCity = argsList[0]
-		return BuildingTypes.NO_BUILDING
-
-	def updateColoredPlots(self):
-		return False
-
-	def unitCannotMoveInto(self, argsList):
-		ePlayer = argsList[0]
-		iUnitId = argsList[1]
-		iPlotX = argsList[2]
-		iPlotY = argsList[3]
-		return False
-
-	def cannotHandleAction(self, argsList):
-		pPlot = argsList[0]
-		iAction = argsList[1]
-		bTestVisible = argsList[2]
-		return False
 
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList
@@ -118,82 +41,13 @@ class CvGameUtils:
 					return 1
 				return 0
 
-		return -1	# Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
-
-	def cannotFoundCity(self, argsList):
-		iPlayer, iPlotX, iPlotY = argsList
-		return False
-
-	def cannotSelectionListMove(self, argsList):
-		pPlot = argsList[0]
-		bAlt = argsList[1]
-		bShift = argsList[2]
-		bCtrl = argsList[3]
-		return False
-
-	def cannotSelectionListGameNetMessage(self, argsList):
-		eMessage = argsList[0]
-		iData2 = argsList[1]
-		iData3 = argsList[2]
-		iData4 = argsList[3]
-		iFlags = argsList[4]
-		bAlt = argsList[5]
-		bShift = argsList[6]
-		return False
-
-	def cannotDoControl(self, argsList):
-		eControl = argsList[0]
-		return False
-
-	def canDoCivic(self, argsList):
-		ePlayer = argsList[0]
-		eCivic = argsList[1]
-		return False
-
-	def cannotDoCivic(self, argsList):
-		ePlayer = argsList[0]
-		eCivic = argsList[1]
-		return False
-
-	def canTrain(self, argsList):
-		pCity = argsList[0]
-		eUnit = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		bIgnoreCost = argsList[4]
-		bIgnoreUpgrades = argsList[5]
-		return False
-
-	def cannotTrain(self, argsList):
-		pCity = argsList[0]
-		eUnit = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		bIgnoreCost = argsList[4]
-		bIgnoreUpgrades = argsList[5]
-		return False
-
-	def canConstruct(self, argsList):
-		pCity = argsList[0]
-		eBuilding = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		bIgnoreCost = argsList[4]
-		return False
-
-	def cannotConstruct(self, argsList):
-		pCity = argsList[0]
-		eBuilding = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		bIgnoreCost = argsList[4]
-		return False
+		return -1 # Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
 
 	def cannotMaintain(self, argsList):
-		CyCity, iProcess, bContinue, = argsList
+		CyCity, iProcess, = argsList
 		if not CyCity:
 			print "CyCity == None"
-			print "CyCity, iProcess, bContinue", argsList
+			print "CyCity, iProcess", argsList
 			return False
 
 		aMap = {
@@ -223,23 +77,6 @@ class CvGameUtils:
 					return False
 			elif PROCESS == TYPE:
 				bFound = True
-		return False
-
-	def AI_chooseTech(self, argsList):
-		ePlayer = argsList[0]
-		bFree = argsList[1]
-		return TechTypes.NO_TECH
-
-	def AI_chooseProduction(self, argsList):
-		pCity = argsList[0]
-		return False
-
-	def AI_unitUpdate(self, argsList):
-		pUnit = argsList[0]
-		return False
-
-	def AI_doDiplo(self, argsList):
-		ePlayer = argsList[0]
 		return False
 
 	def calculateScore(self, argsList):
@@ -320,54 +157,6 @@ class CvGameUtils:
 		score += temp
 		return int(score)
 
-	def doHolyCity(self):
-		return False
-
-	def doResearch(self, argsList):
-		#ePlayer = argsList[0]
-		return False
-
-	def doGoody(self, argsList):
-		#ePlayer, pPlot, pUnit, = argsList
-		return False
-
-	def doGrowth(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doProduction(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doCulture(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doPlotCulture(self, argsList):
-		#pCity, bUpdate, ePlayer, iCultureRate, = argsList
-		return False
-
-	def doReligion(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def cannotSpreadReligion(self, argsList):
-		#iOwner, iUnitID, iReligion, iX, iY = argsList[0]
-		return False
-
-	def doGreatPeople(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doMeltdown(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	# Allows you to perform an action after an AIAutoPlay.
-	def doReviveActivePlayer(self, argsList):
-		#iPlayer = argsList[0]
-		return False
-
 	def doPillageGold(self, argsList):
 		CyPlot, CyUnit, = argsList
 
@@ -412,40 +201,6 @@ class CvGameUtils:
 			CvUtil.sendMessage(CyTranslator().getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", (int(gold), CyCity.getName())), iOwnerNew, 10, '', ColorTypes(10))
 
 		return int(gold)
-
-
-	def citiesDestroyFeatures(self, argsList):
-		#iX, iY = argsList
-		return True
-
-	def canFoundCitiesOnWater(self, argsList):
-		#iX, iY = argsList
-		return False
-
-	def doCombat(self, argsList):
-		#pSelectionGroup, pDestPlot = argsList
-		return False
-
-	# Returns the unit type to be conscripted.
-	def getConscriptUnitType(self, argsList):
-		#iPlayer = argsList[0]
-		return -1
-
-	def canPickPlot(self, argsList):
-		#pPlot = argsList[0]
-		return true
-
-	def getUnitCostMod(self, argsList):
-		#iPlayer, iUnit = argsList
-		return -1
-
-	def getBuildingCostMod(self, argsList):
-		#iPlayer, iCityID, iBuilding = argsList
-		return -1
-
-	def canUpgradeAnywhere(self, argsList):
-		#pUnit = argsList
-		return 0
 
 	def getWidgetHelp(self, argsList):
 		eWidgetType, iData1, iData2, bOption = argsList
@@ -502,7 +257,7 @@ class CvGameUtils:
 				elif iData2 == 7:
 					return CyTranslator().getText("TXT_KEY_WB_CITY_DATA2",())
 				elif iData2 == 8:
-					return CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING",())
+					return CyTranslator().getText("TXT_KEY_WB_BUILDINGS",())
 				elif iData2 == 9:
 					return "Platy Builder\nVersion: 4.17b"
 				elif iData2 == 10:
@@ -658,7 +413,7 @@ class CvGameUtils:
 								lBuildings.append(GC.getBuildingInfo(i).getDescription())
 					if lBuildings:
 						lBuildings.sort()
-						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()) + ": </color>"
+						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()) + ": </color>"
 						iRange = len(lBuildings)
 						for i in xrange(iRange):
 							sText += lBuildings[i]
@@ -754,34 +509,3 @@ class CvGameUtils:
 					sText += "\n" + CyTranslator().getText("TXT_KEY_CIVICS_SCREEN_NO_UPKEEP", ())
 				return sText
 		return ""
-
-	def getUpgradePriceOverride(self, argsList):
-		iPlayer, iUnit, iUnitTypeUpgrade = argsList
-
-		CyPlayer = GC.getPlayer(iPlayer)
-		if CyPlayer.isNPC():
-			# This check is later repeated in the dll if this check fails...
-			# A redundancy that can be removed by making the check in dll happen before this python function is called.
-			# Then this check wouldn't have to be here as it will then always fail here.
-			# I see no reason why python coders would ever need to mess with the core rule that NPC upgrade units for free.
-			return 0
-
-		if GC.getTeam(CyPlayer.getTeam()).isHasTech(self.iRapidPrototyping) and CyPlayer.hasBonus(self.iReplicators):
-
-			price = self.BASE_UNIT_UPGRADE_COST
-			iHammerDif = CyPlayer.getUnitProductionNeeded(iUnitTypeUpgrade) - CyPlayer.getUnitProductionNeeded(iUnit)
-			if iHammerDif > 0:
-				price += iHammerDif * self.UNIT_UPGRADE_COST_PER_PRODUCTION
-
-			if not CyPlayer.isHuman():
-				CvHandicap = GC.getHandicapInfo(GC.getGame().getHandicapType())
-				fModAI = CvHandicap.getAIUnitUpgradePercent() / 100.0
-				fModAI *= (CvHandicap.getAIPerEraModifier() * CyPlayer.getCurrentEra() + 100) / 100.0
-				if fModAI < 0:
-					fModAI = 0
-				price *= fModAI
-				price -= price * CyPlayer.getUnit(iUnit).getUpgradeDiscount() / 100.0
-			if price < 2:
-				return 0
-			return int(price/2.0)
-		return -1

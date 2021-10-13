@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Window.thm
 Content		:	Civ4 - GWindow control theme
@@ -44,7 +44,7 @@ with GFC_Control_Window
 			.ResizeGrip		=	GFC_CtrlTheme_Bitmap_Control_Window_Child_ResizeGrip;
 			.PopupMenu		=	GFC_CtrlTheme_Bitmap_Control_Window_Child_PopupMenu;
 		}
-		// Child styles	
+		// Child styles
 		// - Default TitleBar,OuterBorder and InnerBorder style ids are overriden
 		//   by the custom Bitmap theme styles (see below)
 		with .StyleId
@@ -153,7 +153,7 @@ with GFC_Control_Window
 			with .OuterBorder
 			{
 				.Normal				=	GPropertyId(GFC_Control_StandardBorder_Style);
-				.Maximized			=	GPropertyId(GFC_Control_StandardBorder_Style);	
+				.Maximized			=	GPropertyId(GFC_Control_StandardBorder_Style);
 				.Minimized			=	GPropertyId(GFC_Control_StandardBorder_Style);
 				.Collapsed			=	GPropertyId(GFC_Control_StandardBorder_Style);
 				.NoBorderNormal		=	.Normal;
@@ -204,7 +204,7 @@ with GFC_Control_Window
 				layer
 				{
 					LayerFlags	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					CenterColor	=	SF_CtrlTheme_Civ4_Control_Color_BG; 
+					CenterColor	=	SF_CtrlTheme_Civ4_Control_Color_BG;
 				}
 				layer
 				{
@@ -366,7 +366,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Skin
 		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
 		DestCombine		=	GColorCombine(BlendSource,Disable);
 		FactorCombine	= 	GColorCombine(Modulate,Modulate);
-		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
 		Margin			=	GRectMargin(10,8,10,8);
 		Indent			=	GRectMargin(2,0,2,7);
@@ -378,7 +378,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Skin
 		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
 		DestCombine		=	GColorCombine(BlendSource,Disable);
 		FactorCombine	= 	GColorCombine(Modulate,Modulate);
-		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
 		Margin			=	GRectMargin(10,24,10,24);
 		Indent			=	GRectMargin(2,8,2,15);
@@ -400,7 +400,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Skin
 	}
 	layer
 	{
-		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 0);
 		Margin			=	GRectMargin(7,16,41,19);
@@ -479,7 +479,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Skin
 	}
 	layer
 	{
-		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 0);
 		Margin			=	GRectMargin(7,16,41,19);
@@ -499,7 +499,7 @@ style SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Style
 	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
 
 	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
-	
+
 	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
 	{
 		.Full_Default 	= SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Skin;
@@ -538,7 +538,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_InFrameBorder_Normal_Skin
 		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
 		DestCombine		=	GColorCombine(BlendSource,Disable);
 		FactorCombine	= 	GColorCombine(Modulate,Modulate);
-		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
 		Margin			=	GRectMargin(10,24,10,24);
 		Indent			=	GRectMargin(2,13,2,15);
@@ -556,10 +556,10 @@ skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_InFrameBorder_Normal_Skin
 		DestCombine		=	GColorCombine(BlendSource,Disable);
 		Image			=	GBitmap("../../../../Resource/Civ4/win_border_x.tga", HVGrid, 2, 2, 0, 1);
 		Margin			=	GRectMargin(7,16,41,19);
-	}	
+	}
 	layer
 	{
-		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 1);
 		Margin			=	GRectMargin(7,16,41,19);
@@ -638,7 +638,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBarResize_InFrameBorder_Normal_Skin
 	}
 	layer
 	{
-		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 1);
 		Margin			=	GRectMargin(7,16,41,19);
@@ -741,7 +741,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_Tool_InFrameBorder_Normal_Skin
 		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
 		DestCombine		=	GColorCombine(BlendSource,Disable);
 		FactorCombine	= 	GColorCombine(Modulate,Modulate);
-		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
 		Margin			=	GRectMargin(10,8,10,8);
 		Indent			=	GRectMargin(2,0,2,2);
@@ -753,7 +753,7 @@ skin SF_CtrlTheme_Civ4_Control_Window_Tool_InFrameBorder_Normal_Skin
 		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
 		DestCombine		=	GColorCombine(BlendSource,Disable);
 		FactorCombine	= 	GColorCombine(Modulate,Modulate);
-		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
 		Margin			=	GRectMargin(10,24,10,24);
 		Indent			=	GRectMargin(2,8,2,10);
@@ -928,7 +928,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CloseButton_Normal_Style
 
 
 
-//****** Normal Maximize Button ****** 
+//****** Normal Maximize Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeButton_Normal_Style
 {
@@ -991,7 +991,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeButton_Normal_Style
 }
 
 
-//****** Normal Minimize Button ****** 
+//****** Normal Minimize Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeButton_Normal_Style
 {
@@ -1054,7 +1054,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeButton_Normal_Style
 }
 
 
-//****** Normal Restore Down Button ****** 
+//****** Normal Restore Down Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeRestoreButton_Normal_Style
 {
@@ -1117,7 +1117,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeRestoreButton_Normal_S
 }
 
 
-//****** Normal Restore Up Button ****** 
+//****** Normal Restore Up Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeRestoreButton_Normal_Style
 {
@@ -1183,7 +1183,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeRestoreButton_Normal_S
 
 
 
-//****** Normal Collapse Button ****** 
+//****** Normal Collapse Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseButton_Normal_Style
 {
@@ -1246,7 +1246,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseButton_Normal_Style
 
 
 
-//****** Normal CollapseRestore Button ****** 
+//****** Normal CollapseRestore Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseRestoreButton_Normal_Style
 {
@@ -1309,7 +1309,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseRestoreButton_Normal_S
 }
 
 
-//****** Normal Help Button ****** 
+//****** Normal Help Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_HelpButton_Normal_Style
 {
@@ -1399,7 +1399,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CloseButton_Normal_Style
 	map GFC_Control								=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool Maximize Button ****** 
+//****** Tool Maximize Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MaximizeButton_Normal_Style
 {
@@ -1424,7 +1424,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MaximizeButton_Normal_Style
 	map GFC_Control							=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool MaximizeRestore Button ****** 
+//****** Tool MaximizeRestore Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MaximizeRestoreButton_Normal_Style
 {
@@ -1449,7 +1449,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MaximizeRestoreButton_Normal_Style
 	map GFC_Control								=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool Minimize Button ****** 
+//****** Tool Minimize Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MinimizeButton_Normal_Style
 {
@@ -1474,7 +1474,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MinimizeButton_Normal_Style
 	map GFC_Control								=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool MinimizeRestore Button ****** 
+//****** Tool MinimizeRestore Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MinimizeRestoreButton_Normal_Style
 {
@@ -1500,7 +1500,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MinimizeRestoreButton_Normal_Style
 	map GFC_Control								=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool Collapse Button ****** 
+//****** Tool Collapse Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CollapseButton_Normal_Style
 {
@@ -1525,7 +1525,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CollapseButton_Normal_Style
 	map GFC_Control								=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool CollapseRestore Button ****** 
+//****** Tool CollapseRestore Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CollapseRestoreButton_Normal_Style
 {
@@ -1551,7 +1551,7 @@ style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CollapseRestoreButton_Normal_Style
 	map GFC_Control								=	GFC_Control_DefaultButton_Style;
 }
 
-//****** Tool Help Button ****** 
+//****** Tool Help Button ******
 
 style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_HelpButton_Normal_Style
 {
@@ -1866,7 +1866,7 @@ with GFC_Control_TitleBar
 		}
 		layer
 		{
-			LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+			LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 														GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 			Image			=	GBitmap("../../../../Resource/Civ4/win_title_mask.tga", HVGrid, 1, 2, 0, 0);
 			Margin			=	GRectMargin(10,11,10,11);
@@ -1909,7 +1909,7 @@ with GFC_Control_TitleBar
 		}
 		layer
 		{
-			LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+			LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 														  GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 			Image			=	GBitmap("../../../../Resource/Civ4/win_title_mask.tga", HVGrid, 1, 2, 0, 1);
 			Margin			=	GRectMargin(10,11,10,11);
@@ -1952,8 +1952,8 @@ with GFC_Control_TitleBar
 	{
 
 		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
-		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;	
-		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;	
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;
 	}
 
 	style SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Maximized_Style
@@ -1964,11 +1964,11 @@ with GFC_Control_TitleBar
 		{
 			.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default_Maximize;
 			.Full_Winoff		= .Full_Default;
-		}	
+		}
 
 		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
-		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;	
-		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;	
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;
 	}
 
 
@@ -1982,8 +1982,8 @@ with GFC_Control_TitleBar
 		}
 
 		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
-		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;	
-		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;	
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;
 	}
 
 
@@ -1991,8 +1991,8 @@ with GFC_Control_TitleBar
 	{
 
 		map SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;
-		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;	
-		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;	
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;
 	}
 
 	// *** Label styles
@@ -2005,7 +2005,7 @@ with GFC_Control_TitleBar
 		GFC_Control_Label_Font_Text_Disable			=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
 		GFC_Control_Label_Font_Text_Winoff			=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
 		GFC_Control_Label_Font_Text_WinoffDisable	=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
-		
+
 		with GFC_Control_Label_Color
 		{
 			.Text_Default							=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_Text_Default];
@@ -2059,7 +2059,7 @@ with GFC_Control_TitleBar
 			.Text_Disable							=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_Disable];
 			.Text_Winoff							=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_Winoff];
 			.Text_WinoffDisable						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_WinoffDisable];
-													
+
 			.TextShadow_Default						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Default];
 			.TextShadow_Disable						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Disable];
 			.TextShadow_Winoff						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Winoff];
@@ -2321,7 +2321,7 @@ with GFC_Control_TitleBar
 		.Font_Text								=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Font_Title];
 
 		GFC_Control_Flag_RegionClipParent		=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
-		
+
 		with .Color
 		{
 			.Text_Default						=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_Title_Default];
@@ -2518,8 +2518,8 @@ with GFC_Control_TitleBar
 	{
 
 		map SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;
-		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;	
-		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;	
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;
 	}
 
 
@@ -2815,7 +2815,7 @@ with GFC_Control_TitleBar
 				.Minimized					=	GPropertyId(GFC_Control_EmptyBorder_Style);
 				.Collapsed					=	GPropertyId(GFC_Control_EmptyBorder_Style);
 
-				.SysBorderCollapsed			=	GPropertyId(GFC_Control_EmptyBorder_Style);	
+				.SysBorderCollapsed			=	GPropertyId(GFC_Control_EmptyBorder_Style);
 			}
 			with .OuterBorder
 			{

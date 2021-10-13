@@ -36,7 +36,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -46,7 +46,7 @@ def getNumCustomMapOptionValues(argsList):
 		3:  2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -73,7 +73,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -97,11 +97,11 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(2) == 1 or map.getCustomMapOption(2) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(2) == 2)
-	
+
 def normalizeAddExtras():
 	if (CyMap().getCustomMapOption(3) == 1):
 		balancer.normalizeAddExtras()
@@ -115,7 +115,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(3) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def isAdvancedMap():
@@ -159,7 +159,7 @@ class DonutFractalWorld(CvMapGeneratorUtil.FractalWorld):
 		iHillsBottom2 = self.hillsFrac.getHeightFromPercent(max((self.hillGroupTwoBase - self.hillGroupTwoRange), 0))
 		iHillsTop2 = self.hillsFrac.getHeightFromPercent(min((self.hillGroupTwoBase + self.hillGroupTwoRange), 100))
 		iPeakThreshold = self.peaksFrac.getHeightFromPercent(self.peakPercent)
-		
+
 		iCenterX = int(self.iNumPlotsX / 2)
 		iCenterY = int(self.iNumPlotsY / 2)
 		iRadius = min((iCenterX - 4), (iCenterY - 4))
@@ -214,11 +214,11 @@ class DonutTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 		self.iRadius = min((self.iCenterX - 4), (self.iCenterY - 4))
 		self.iHoleRadius = int(self.iRadius / 2)
 		self.userInputCenter = self.map.getCustomMapOption(0)
-		
+
 	def getLatitudeAtPlot(self, iX, iY):
 		return 0
 
-	def generateTerrain(self):		
+	def generateTerrain(self):
 		terrainData = [0]*(self.iWidth*self.iHeight)
 		for x in range(self.iWidth):
 			for y in range(self.iHeight):
@@ -260,7 +260,7 @@ class DonutFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
 		return
-		
+
 	def addJunglesAtPlot(self, pPlot, iX, iY, lat):
 		if (CyMap().getCustomMapOption(1) == 1): pass #No Jungles option
 		else: #Normal Jungles
@@ -286,4 +286,3 @@ def findStartingPlot(argsList):
 
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
-	

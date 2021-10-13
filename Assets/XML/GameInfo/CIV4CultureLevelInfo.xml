@@ -620,7 +620,7 @@
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
-					<iThreshold>160000</iThreshold>
+					<iThreshold>1600000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
@@ -668,7 +668,7 @@
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
-					<iThreshold>320000</iThreshold>
+					<iThreshold>3200000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>

@@ -14,7 +14,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASPATIAL_ROUTE</Tag>
-		<English>Build [LINK=ROUTE_ASPATIAL_ROUTE]Aspatial Route[\LINK]</English>
+		<English>Make [LINK=ROUTE_ASPATIAL_ROUTE]Aspatial Route[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_ASPATIAL_ROUTE]Route Aspatiale[\LINK]</French>
 		<Russian>Îòêðûòü àñòð. âðàòà</Russian>
 	</TEXT>
@@ -26,15 +26,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_GALAXY</Tag>
-		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_GALAXY]Galaxy[\LINK]</English>
-		<French>Terraformer la [LINK=IMPROVEMENT_BIOTIC_GALAXY]Galaxie[\LINK]</French>
-		<Russian>Ïðåîáðàç. ãàëàêòèêó</Russian>
+		<English>Build [LINK=IMPROVEMENT_BIOTIC_GALAXY]Biotic Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Tag>
-		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Neutron Star[\LINK]</English>
-		<French>Terraformer une [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Étoile à Neutron[\LINK]</French>
-		<Russian>Òåððàôîðì. íåéòð. çâåçäû</Russian>
+		<English>Build [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Biotic Neutron Star[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Tag>
@@ -68,7 +64,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMPACT_WORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
+		<English>Make [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_COMPACT_WORMHOLE]Compact Trou de Ver[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=ROUTE_COMPACT_WORMHOLE]Ìàëóþ ÷åðâîòî÷èíó[\LINK]</Russian>
 	</TEXT>
@@ -104,13 +100,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Tag>
-		<English>Helioform [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Brown Dwarf[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Helioformed Brown Dwarf[\LINK]</English>
 		<French>Hélioformer une [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Naine Brune[\LINK]</French>
 		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Êîðè÷íåâûé êàðëèê[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLANE</Tag>
-		<English>Build [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
+		<English>Make [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_HYPERLANE]Hyperligne[\LINK]</French>
 		<Russian>Ïðîëîæèòü ãèïåðëàéí</Russian>
 	</TEXT>
@@ -187,6 +183,15 @@
 		<Russian>Ñòðîèòü ãàçîêîìïðåññîð</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_ARCOLOGY</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Lunar Arcology[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Arcologie Lunaire[\LINK]</French>
@@ -223,6 +228,11 @@
 		<Russian>Ëóííûé àâàíïîñò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
+		<English>Make [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_MARTIAN_FARM</Tag>
 		<English>Build [LINK=IMPROVEMENT_MARTIAN_FARM]Martian Farm[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MARTIAN_FARM]Ferme Martienne[\LINK]</French>
@@ -236,7 +246,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
+		<English>Make [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_MEGAWORMHOLE]Méga-Trou de Ver[\LINK]</French>
 		<Russian>Ñîçäàòü [LINK=ROUTE_MEGAWORMHOLE]Áîë. ÷åðâîòî÷èíó[\LINK]</Russian>
 	</TEXT>
@@ -266,7 +276,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Tag>
-		<English>Build [LINK=ROUTE_ORBITAL_TRAJECTORY]Orbital Trajectory[\LINK]</English>
+		<English>Make [LINK=ROUTE_ORBITAL_TRAJECTORY]Orbital Trajectory[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_ORBITAL_TRAJECTORY]Trajectoire Orbitale[\LINK]</French>
 		<Russian>Ïðîëîæèòü îðáèò. òðàåêòîðèþ</Russian>
 	</TEXT>
@@ -284,21 +294,28 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_ASTEROID</Tag>
-		<English>Place [LINK=IMPROVEMENT_PLACE_ASTEROID]Asteroid[\LINK]</English>
-		<French>Place [LINK=IMPROVEMENT_PLACE_ASTEROID]Astéroide[\LINK]</French>
-		<Russian>Çàêðåïèòü [LINK=IMPROVEMENT_PLACE_ASTEROID]Àñòåðîèä[\LINK]</Russian>
+		<English>Create [LINK=FEATURE_ASTEROIDS]Asteroid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_GALAXY</Tag>
-		<English>Place [LINK=IMPROVEMENT_PLACE_GALAXY]Galaxy[\LINK]</English>
-		<French>Place [LINK=IMPROVEMENT_PLACE_GALAXY]Galaxie[\LINK]</French>
-		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_PLACE_GALAXY]Ãàëàêòèêó[\LINK]</Russian>
+		<English>Create [LINK=FEATURE_GALAXY]Galaxy[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
+		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
 		<English>Build [LINK=IMPROVEMENT_SATELLITE_STATION]Satellite Station[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SATELLITE_STATION]Station Satellite[\LINK]</French>
 		<Russian>Ñòðîèòü îðá. ñòàíöèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
+		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Tag>
@@ -314,21 +331,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_TRAJECTORY</Tag>
-		<English>Build [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
-		<French>Construire un [LINK=ROUTE_SOLAR_TRAJECTORY]Trajectoire Solaire[\LINK]</French>
-		<Russian>Ïðîëîæèòü ñîëí. òðàåêòîðèþ</Russian>
+		<English>Make [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_ARRAY</Tag>
 		<English>Build [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Space Solar Array[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Réseau solaire spatial[\LINK]</French>
 		<Russian>Ñòðîèòü ñîëí. áàòàðåþ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
-		<English>Build [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
-		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV1</Tag>
@@ -338,15 +347,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV2</Tag>
-		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station to Lv. 2[\LINK]</English>
-		<French>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV2]Station spatiale to Niv. 2[\LINK]</French>
-		<Russian>Óëó÷øèòü äî [LINK=IMPROVEMENT_SPACE_STATION_LV2]Êîñìè÷. ñòàíöèè 2 óð.[\LINK]</Russian>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station Lv. 2[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV3</Tag>
-		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station to Lv. 3[\LINK]</English>
-		<French>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV3]Station spatiale to Niv. 3[\LINK]</French>
-		<Russian>Óëó÷øèòü äî [LINK=IMPROVEMENT_SPACE_STATION_LV2]Êîñìè÷. ñòàíöèè 3 óð.[\LINK]</Russian>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station Lv. 3[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPIRITUAL_REALM</Tag>
@@ -380,51 +385,37 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORMED_PLANET</Tag>
-		<English>Terraform [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planet[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Terraformed Planet[\LINK]</English>
 		<French>Terraformer la [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planète[\LINK]</French>
 		<Russian>Òåððàôîðì. ïëàíåòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_BRANESPACE]Chronoform Toward Branespace[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_BRANESPACE]Chronoformer en Espace de Brane[\LINK]</French>
-		<Russian>Õðîíîôîðì. â Áðàíó</Russian>
+		<English>Terraform towards [LINK=TERRAIN_BRANESPACE]Branespace[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_FUTURE</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_FUTURE]Chronoform Toward the Future[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_FUTURE]Chronoformer vers le Futur[\LINK]</French>
-		<Russian>Õðîíîôîðì. â áóäóùåå</Russian>
+		<English>Terraform towards [LINK=TERRAIN_DISTANT_FUTURE]Distant Future[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_HYPERSPACE]Chronoform Toward Hyperspace[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_HYPERSPACE]Chronoformer en Hyperespace[\LINK]</French>
-		<Russian>Õðîíîôîðì. äî ãèïåðêîñì.</Russian>
+		<English>Terraform towards [LINK=TERRAIN_HYPERSPACE]Hyperspace[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MARS</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_MARS]Terraform Toward Green Mars[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_MARS]Terraformer vers une planète Mars Verte[\LINK]</French>
-		<Russian>Òåððàôîðì. äî Çåëåíîé ëóíû</Russian>
+		<English>Terraform towards [LINK=TERRAIN_GREEN_MARS]Green Mars[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MOON</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_MOON]Terraform Toward Green Moon[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_MOON]Terraformer vers une Lune Verte[\LINK]</French>
-		<Russian>Òåððàôîðìèðîâàòü ëóíó</Russian>
+		<English>Terraform towards [LINK=TERRAIN_GREEN_MOON]Green Moon[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_NEUTRON_STAR]Induce A Supernova[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_NEUTRON_STAR]Induire une Supernova[\LINK]</French>
-		<Russian>Âçîðâàòü Ñâåðõíîâóþ</Russian>
+		<English>Terraform towards [LINK=TERRAIN_NEUTRON_STAR]Neutron Star[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PAST</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_PAST]Chronoform Toward the Past[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_PAST]Chronoformer vers le Passé[\LINK]</French>
-		<Russian>Õðîíîôîðì. â ïðîøëîå</Russian>
+		<English>Terraform towards [LINK=TERRAIN_DISTANT_PAST]Distant Past[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TIME_MANIFOLD</Tag>
@@ -434,9 +425,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRUE_VACUUM</Tag>
-		<English>[LINK=IMPROVEMENT_TRUE_VACUUM]Collapse the Vacuum[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TRUE_VACUUM]Réduire le vide[\LINK]</French>
-		<Russian>Ñâåðíóòü âàêóóì</Russian>
+		<English>Build [LINK=IMPROVEMENT_TRUE_VACUUM]True Vacuum[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VENUS_AERIAL_FARM</Tag>
@@ -452,7 +441,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
+		<English>Make [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_WORMHOLE]Trou de Ver[\LINK]</French>
 		<Russian>Ïðîëîæèòü ÷åðâîòî÷èíó</Russian>
 	</TEXT>
@@ -787,6 +776,19 @@
 		<English>This device extracts material from the outer atmosphere of a gas giant.</English>
 		<French>Cet appareil extrait du matériau de l'atmosphère extérieure d'une géante gazeuse.</French>
 		<Russian>Ýòî óñòðîéñòâî èçâëåêàåò öåííûå ðåñóðñû èç âíåøíåé àòìîñôåðû ãàçîâîãî ãèãàíòà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
+		<English>Listening Node</English>
+		<French>Station d'écoute</French>
+		<Italian>Nodo d'ascolto</Italian>
+		<Spanish>
+			<Text>Nodo de escucha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja Nasłuchowa</Polish>
+		<Russian>Óçåë ñâÿçè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Tag>
@@ -1167,6 +1169,18 @@
 		<English>Capture an asteroid</English>
 		<French>Capturer un astéroïde</French>
 		<Russian>Çàõâàò àñòåðîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
+		<English>Become Bulldozer</English>
+		<French>Convertir en Bulldozer</French>
+		<Russian>Ñáîðêà Êîìáàéíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
+		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
+		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
+		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
@@ -1610,18 +1624,6 @@
 		<English>Analyze Mission Data</English>
 		<French>Analyser les Données de Mission</French>
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Become Bulldozer</English>
-		<French>Convertir en Bulldozer</French>
-		<Russian>Ñáîðêà Êîìáàéíà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
-		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
-		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
-		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER</Tag>
@@ -2122,6 +2124,11 @@
 		<Russian>Ãèïåðëàéí</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
+		<English>Lunar Path</English>
+		<Russian>Лунная дорога</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ROUTE_MEGAWORMHOLE</Tag>
 		<English>Megawormhole</English>
 		<French>Méga-Trou de Ver</French>
@@ -2132,6 +2139,11 @@
 		<English>Orbital Trajectory</English>
 		<French>Trajectoire Orbitale</French>
 		<Russian>Îðáèò. òðàåêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
+		<English>Planetary Maglev</English>
+		<Russian>Планетарный маглев</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Tag>
@@ -2303,7 +2315,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. It also can be transformed to Lunar bulldozer to build lunar mines and route.</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.[NEWLINE]It also can be transformed to [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_BASES]Lunar Bases[\LINK] to build lunar mines and route.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2432,16 +2444,8 @@
 		<Russian>Òÿæåëàÿ ðàêåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Tag>
-		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][ICON_BULLET][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT][NEWLINE][ICON_BULLET]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3</French>
-		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ñîáðàíî íà Çåìëå, îíî ïîëåçíî òîëüêî çà ïðåäåëàìè ðîäíîé ïëàíåòû.[NEWLINE]Îáíîâëåíèå äî êîñìè÷åñêîãî ïîñåëåíöà íà óðîâíå êîñìè÷åñêîé ñòàíöèè. 3</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
-		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
-		<French>Cette fusée lourde développée commercialement est une mise à niveau de vos anciennes navettes spatiales.</French>
-		<Russian>Ýòà òÿæåëàÿ, êîììåð÷åñêè ðàçðàáîòàííàÿ ðàêåòà ÿâëÿåòñÿ îáíîâëåíèåì âàøèõ ñòàðûõ êîñìè÷åñêèõ êîðàáëåé.</Russian>
+		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.[NEWLINE]Upgrades to a Cislunar, Lunar, Planetary settler on Space Station Lv. 3 at [LINK=TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS]Advanced Environmental Systems[\LINK], [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK], [LINK=TECH_PLANETARY_COLONIZATION]Planetary Colonization[\LINK] respectively</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2665,7 +2669,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE][ICON_BULLET]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
+		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2701,6 +2705,21 @@
 		<English>A reward from exploring the Moon</English>
 		<French>Une récompense de l'exploration de la Lune</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
+		<English>Lunar Rover</English>
+		<French>Véhicule Lunaire</French>
+		<Italian>Rover lunare</Italian>
+		<Polish>Łazik Księżycowy</Polish>
+		<Russian>Ëóíîõîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
+		<English>Lunar Exploration Unit.</English>
+		<Italian>Unità da esplorazione lunare.</Italian>
+		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
+		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_WORKER</Tag>
@@ -2983,7 +3002,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
-		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][ICON_BULLET][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
+		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ìîæåò áûòü ïîñòðîåíî íà Çåìëå, õîòÿ ïîëåçíî òîëüêî çà åå ïðåäåëàìè.</Russian>
 	</TEXT>
@@ -3046,16 +3065,6 @@
 		<English>A reward from your Low Earth Orbit space station</English>
 		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP</Tag>
-		<English>Lunar Supply Ship</English>
-		<French>Vaisseau de ravitaillement</French>
-		<Russian>Êîðàáëü ñíàáæåíèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
-		<English>Early space unit dedicated to supply of Lunar colonies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
@@ -3239,65 +3248,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
+		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains.[NEWLINE]Interstellar and Stellar colonies are completely different.</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
-		<English>Build [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
-		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
-		<English>Build [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
-		<English>Lunar Path</English>
-		<Russian>Лунная дорога</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
-		<English>Planetary Maglev</English>
-		<Russian>Планетарный маглев</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
-		<English>Lunar Rover</English>
-		<French>Véhicule Lunaire</French>
-		<Italian>Rover lunare</Italian>
-		<Polish>Łazik Księżycowy</Polish>
-		<Russian>Ëóíîõîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
-		<English>Lunar Exploration Unit.</English>
-		<Italian>Unità da esplorazione lunare.</Italian>
-		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
-		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
-		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
-		<English>Listening Node</English>
-		<French>Station d'écoute</French>
-		<Italian>Nodo d'ascolto</Italian>
-		<Spanish>
-			<Text>Nodo de escucha</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Boja Nasłuchowa</Polish>
-		<Russian>Óçåë ñâÿçè</Russian>
 	</TEXT>
 </Civ4GameText>

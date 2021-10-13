@@ -14,6 +14,8 @@
 #include "CvCityAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 
 plotInfo::plotInfo() :
 	index(0),
@@ -39,14 +41,29 @@ std::string plotInfo::ToJSON()
 	return output;
 }
 
-int EventTriggeredData::getID() const 
-{ 
-	return m_iId; 
+XYCoords::XYCoords(int x, int y)
+	: iX(x)
+	, iY(y)
+{}
+
+XYCoords::XYCoords(const CvPlot& plot)
+	: iX(plot.getX())
+	, iY(plot.getY())
+{}
+
+CvPlot* XYCoords::plot() const
+{
+	return GC.getMap().plotSorenINLINE(iX, iY);
 }
 
-void EventTriggeredData::setID(int iID) 
-{ 
-	m_iId = iID; 
+int EventTriggeredData::getID() const
+{
+	return m_iId;
+}
+
+void EventTriggeredData::setID(int iID)
+{
+	m_iId = iID;
 }
 
 void EventTriggeredData::read(FDataStreamBase* pStream)
@@ -67,7 +84,7 @@ void EventTriggeredData::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iUnitId);
 	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_eOtherPlayer);
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iOtherPlayerCityId);
-	
+
 	//	Expiration was not stored in older saves (which didn;t store expired events for replay)
 	//	so default to false if absent
 	m_bExpired = false;
@@ -110,14 +127,14 @@ void EventTriggeredData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-int VoteSelectionData::getID() const 
-{ 
-	return iId; 
+int VoteSelectionData::getID() const
+{
+	return iId;
 }
 
-void VoteSelectionData::setID(int iID) 
-{ 
-	iId = iID; 
+void VoteSelectionData::setID(int iID)
+{
+	iId = iID;
 }
 
 void VoteSelectionData::read(FDataStreamBase* pStream)
@@ -173,14 +190,14 @@ void VoteSelectionData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-int VoteTriggeredData::getID() const 
-{ 
-	return iId; 
+int VoteTriggeredData::getID() const
+{
+	return iId;
 }
 
-void VoteTriggeredData::setID(int iID) 
-{ 
-	iId = iID; 
+void VoteTriggeredData::setID(int iID)
+{
+	iId = iID;
 }
 
 void VoteTriggeredData::read(FDataStreamBase* pStream)
@@ -374,78 +391,10 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void BuildingYieldModifier::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void BuildingYieldModifier::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
-	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", eYield);
-	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", iChange);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
-
-void BuildingCommerceModifier::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void BuildingCommerceModifier::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
-	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", eCommerce);
-	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", iChange);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 
 CvBattleRound::CvBattleRound() :
 	m_iWaveSize(0),
-	m_bRangedRound(false) 
+	m_bRangedRound(false)
 {
 	m_aNumKilled[BATTLE_UNIT_ATTACKER] = m_aNumKilled[BATTLE_UNIT_DEFENDER] = 0;
 	m_aNumAlive[BATTLE_UNIT_ATTACKER] = m_aNumAlive[BATTLE_UNIT_DEFENDER] = 0;
@@ -798,7 +747,7 @@ bool CvAirMissionDefinition::isDead(BattleUnitTypes unitType) const
 {
 	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	FAssertMsg(getUnit(unitType) != NULL, "[Jason] Invalid battle unit type.");
-	return getDamage(unitType) >= getUnit(unitType)->maxHitPoints();
+	return getDamage(unitType) >= getUnit(unitType)->getMaxHP();
 }
 
 PBGameSetupData::PBGameSetupData()

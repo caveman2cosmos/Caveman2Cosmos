@@ -247,11 +247,6 @@
 			<Button>art/Buttons/Traits/TraitBigot.dds</Button>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_HUNTER_GATHERER</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_HUNTER_GATHERER</Description>
-			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PROMOTION_PACIFIST</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PROMOTION_PACIFIST</Description>
 			<Button>art/Buttons/Promotions/PromotionPacifist.dds</Button>

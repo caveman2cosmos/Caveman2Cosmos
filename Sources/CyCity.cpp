@@ -10,14 +10,9 @@
 // Python wrapper class for CvCity
 //
 
-CyCity::CyCity() : m_pCity(NULL)
-{
-	FErrorMsg("CyCity constructor should not be called with a no parameter");
-}
-
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-	FAssertMsg(m_pCity != NULL, "CyCity constructor should not be called with a NULL parameter");
+	FAssert(m_pCity != NULL);
 }
 
 void CyCity::kill()
@@ -115,39 +110,39 @@ int CyCity::countNumWaterPlots() const
 	return m_pCity->countNumWaterPlots();
 }
 
-int CyCity::findBaseYieldRateRank(int /*YieldTypes*/ eYield) const
+int CyCity::findBaseYieldRateRank(YieldTypes eYield) const
 {
-	return m_pCity->findBaseYieldRateRank((YieldTypes) eYield);
+	return m_pCity->findBaseYieldRateRank(eYield);
 }
 
-int CyCity::findYieldRateRank(int /*YieldTypes*/ eYield) const
+int CyCity::findYieldRateRank(YieldTypes eYield) const
 {
-	return m_pCity->findYieldRateRank((YieldTypes) eYield);
+	return m_pCity->findYieldRateRank(eYield);
 }
 
-int CyCity::findCommerceRateRank(int /*CommerceTypes*/ eCommerce) const
+int CyCity::findCommerceRateRank(CommerceTypes eCommerce) const
 {
-	return m_pCity->findCommerceRateRank((CommerceTypes) eCommerce);
+	return m_pCity->findCommerceRateRank(eCommerce);
 }
 
-bool CyCity::canTrain(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const
+bool CyCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const
 {
-	return m_pCity->canTrain((UnitTypes)eUnit, bContinue, bTestVisible, bIgnoreCost, bIgnoreUpgrades);
+	return m_pCity->canTrain(eUnit, bContinue, bTestVisible, bIgnoreCost, bIgnoreUpgrades);
 }
 
-bool CyCity::canConstruct(int /*BuildingTypes*/ eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const
+bool CyCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const
 {
-	return m_pCity->canConstruct((BuildingTypes)eBuilding, bContinue, bTestVisible, bIgnoreCost);
+	return m_pCity->canConstruct(eBuilding, bContinue, bTestVisible, bIgnoreCost);
 }
 
-bool CyCity::canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible) const
+bool CyCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible) const
 {
-	return m_pCity->canCreate((ProjectTypes)eProject, bContinue, bTestVisible);
+	return m_pCity->canCreate(eProject, bContinue, bTestVisible);
 }
 
-bool CyCity::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue) const
+bool CyCity::canMaintain(ProcessTypes eProcess) const
 {
-	return m_pCity->canMaintain((ProcessTypes)eProcess, bContinue);
+	return m_pCity->canMaintain(eProcess);
 }
 
 int CyCity::getFoodTurnsLeft() const
@@ -180,9 +175,9 @@ bool CyCity::isProductionProcess() const
 	return m_pCity->isProductionProcess();
 }
 
-int CyCity::getProductionExperience(int /*UnitTypes*/ eUnit) const
+int CyCity::getProductionExperience(UnitTypes eUnit) const
 {
-	return m_pCity->getProductionExperience((UnitTypes) eUnit);
+	return m_pCity->getProductionExperience(eUnit);
 }
 
 void CyCity::addProductionExperience(const CyUnit& kUnit, bool bConscript)
@@ -190,22 +185,22 @@ void CyCity::addProductionExperience(const CyUnit& kUnit, bool bConscript)
 	m_pCity->addProductionExperience(kUnit.getUnit(), bConscript);
 }
 
-int /*UnitTypes*/ CyCity::getProductionUnit() const
+UnitTypes CyCity::getProductionUnit() const
 {
 	return m_pCity->getProductionUnit();
 }
 
-int /*BuildingTypes*/ CyCity::getProductionBuilding() const
+BuildingTypes CyCity::getProductionBuilding() const
 {
 	return m_pCity->getProductionBuilding();
 }
 
-int /*ProjectTypes*/ CyCity::getProductionProject() const
+ProjectTypes CyCity::getProductionProject() const
 {
 	return m_pCity->getProductionProject();
 }
 
-int /*ProcessTypes*/ CyCity::getProductionProcess() const
+ProcessTypes CyCity::getProductionProcess() const
 {
 	return m_pCity->getProductionProcess();
 }
@@ -285,11 +280,6 @@ void CyCity::changeProduction(int iChange)
 	m_pCity->changeProduction(iChange);
 }
 
-int CyCity::getProductionModifier() const
-{
-	return m_pCity->getProductionModifier();
-}
-
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
 {
 	return m_pCity->getCurrentProductionDifference(
@@ -328,9 +318,9 @@ int CyCity::getBonusHappiness(int /*BonusTypes*/ iBonus) const
 	return m_pCity->getBonusHappiness((BonusTypes) iBonus);
 }
 
-int CyCity::getBonusPower(int /*BonusTypes*/ eBonus, bool bDirty) const
+int CyCity::getBonusPower(int /*BonusTypes*/ eBonus) const
 {
-	return m_pCity->getBonusPower((BonusTypes)eBonus, bDirty);
+	return m_pCity->getBonusPower((BonusTypes)eBonus);
 }
 
 int CyCity::getBonusYieldRateModifier(int /*YieldTypes*/ eIndex, int /*BonusTypes*/ eBonus) const
@@ -874,6 +864,11 @@ int CyCity::getFoodKept() const
 	return m_pCity->getFoodKept();
 }
 
+int CyCity::getMaxProductionOverflow() const
+{
+	return m_pCity->getMaxProductionOverflow();
+}
+
 int CyCity::getOverflowProduction() const
 {
 	return m_pCity->getOverflowProduction();
@@ -959,16 +954,6 @@ bool CyCity::isPower() const
 	return m_pCity->isPower();
 }
 
-bool CyCity::isAreaCleanPower() const
-{
-	return m_pCity->isAreaCleanPower();
-}
-
-bool CyCity::isDirtyPower() const
-{
-	return m_pCity->isDirtyPower();
-}
-
 int CyCity::getDefenseDamage() const
 {
 	return m_pCity->getDefenseDamage();
@@ -1022,11 +1007,6 @@ bool CyCity::isNeverLost() const
 void CyCity::setNeverLost(int iNewValue)
 {
 	m_pCity->setNeverLost(iNewValue);
-}
-
-int CyCity::getMADIncoming() const
-{
-	return m_pCity->getMADIncoming();
 }
 
 bool CyCity::isBombarded() const
@@ -1132,11 +1112,6 @@ int /*CultureLevelTypes*/ CyCity::getCultureLevel() const
 int CyCity::getCultureThreshold() const
 {
 	return m_pCity->getCultureThreshold();
-}
-
-int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
-{
-	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
 }
 
 int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
@@ -1609,6 +1584,11 @@ OrderData CyCity::getOrderFromQueue(int iIndex) const
 	return m_pCity->getOrderAt(iIndex);
 }
 
+bool CyCity::AI_isEmphasizeSpecialist(int /*SpecialistTypes*/ iIndex) const
+{
+	return m_pCity->AI_isEmphasizeSpecialist((SpecialistTypes)iIndex);
+}
+
 bool CyCity::AI_isEmphasize(int iEmphasizeType) const
 {
 	return m_pCity->AI_isEmphasize((EmphasizeTypes)iEmphasizeType);
@@ -1704,9 +1684,9 @@ int CyCity::calculateCorporateTaxes() const
 	return m_pCity->calculateCorporateTaxes();
 }
 
-void CyCity::changePowerCount(int iChange, bool bDirty)
+void CyCity::changePowerCount(int iChange)
 {
-	m_pCity->changePowerCount(iChange, bDirty);
+	m_pCity->changePowerCount(iChange);
 }
 
 void CyCity::changeEventAnger(int iChange)
@@ -1722,6 +1702,11 @@ int CyCity::getNumPopulationEmployed() const
 int CyCity::getBonusCommercePercentChanges(int eIndex, int eBuilding) const
 {
 	return m_pCity->getBonusCommercePercentChanges((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
+}
+
+int CyCity::getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const
+{
+	return m_pCity->getBaseYieldRateFromBuilding100((YieldTypes)iYield, (BuildingTypes)iBuilding);
 }
 
 bool CyCity::isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const

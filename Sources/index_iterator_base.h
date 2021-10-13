@@ -39,7 +39,7 @@ public:
 
 private:
 	friend class bst::iterator_core_access;
-	void increment() 
+	void increment()
 	{
 		m_curr = core_access::next(derived(), m_owner, &m_idx, m_reverse);
 	}

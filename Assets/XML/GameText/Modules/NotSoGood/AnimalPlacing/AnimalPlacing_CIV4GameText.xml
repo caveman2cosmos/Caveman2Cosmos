@@ -2,387 +2,387 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_ALMONDS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_ALMONDS]Almonds Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_ALMONDS]Almonds Bonus[\LINK]</English>
 		<Polish>Zasadz Migdalowca</Polish>
 		<Russian>Посадить Миндаль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_APPLE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_APPLE]Apple Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_APPLE]Apple Bonus[\LINK]</English>
 		<Polish>Zasadz Jablonie</Polish>
 		<Russian>Посадить яблони</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_BANANA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_BANANA]Banana Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_BANANA]Banana Bonus[\LINK]</English>
 		<Polish>Zasadz Bananowce</Polish>
 		<Russian>Посадить бананы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_BARLEY</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_BARLEY]Barley Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_BARLEY]Barley Bonus[\LINK]</English>
 		<Polish>Zasiej Jeczmien</Polish>
 		<Russian>Посадить ячмень</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_BEAVERS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_BEAVERS]Beavers Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_BEAVERS]Beavers Bonus[\LINK]</English>
 		<Polish>Umiesc Rodzine Bobrów</Polish>
 		<Russian>Разводить бобров</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_BISON</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_BISON]Bison Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_BISON]Bison Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Bizonów</Polish>
 		<Russian>Разводить стадо бизонов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_CAMEL</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_CAMEL]Camel Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_CAMEL]Camel Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Wielbladów</Polish>
 		<Russian>Разводить стадо верблюдов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COCA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_COCA]Coca Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_COCA]Coca Bonus[\LINK]</English>
 		<Polish>Zasadz Kakaowce</Polish>
 		<Russian>Посадить коку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COCOA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_COCOA]Cocoa Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_COCOA]Cocoa Bonus[\LINK]</English>
 		<Polish>Zasiej Koke</Polish>
 		<Russian>Посадить какао</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COCONUT</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_COCONUT]Coconut Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_COCONUT]Coconut Bonus[\LINK]</English>
 		<Polish>Zasadz Palmy Kokosowe</Polish>
 		<Russian>Посадить кокос</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COFFEE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_COFFEE]Coffee Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_COFFEE]Coffee Bonus[\LINK]</English>
 		<Polish>Zasiej Krzewy Kawy</Polish>
 		<Russian>Посадить кофе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_CORN</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_CORN]Corn Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_CORN]Corn Bonus[\LINK]</English>
 		<Polish>Zasiej Kukurydze</Polish>
 		<Russian>Посадить кукурузу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COTTON</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_COTTON]Cotton Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_COTTON]Cotton Bonus[\LINK]</English>
 		<Polish>Zasiej Bawelne</Polish>
 		<Russian>Посадить хлопок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COW</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_COW]Cow Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_COW]Cow Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Krów</Polish>
 		<Russian>Разводить стадо коров</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_DATES</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_DATES]Dates Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_DATES]Dates Bonus[\LINK]</English>
 		<Polish>Zasadz Daktylowce</Polish>
 		<Russian>Посадить финики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_DEER</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_DEER]Deer Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_DEER]Deer Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Jeleni</Polish>
 		<Russian>Разводить стадо оленей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_DONKEY</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_DONKEY]Donkey Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_DONKEY]Donkey Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Oslów</Polish>
 		<Russian>Разводить стадо ослов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_ELEPHANTS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_ELEPHANTS]Elephants Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_ELEPHANTS]Elephants Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Sloni</Polish>
 		<Russian>Разводить стадо слонов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_FIG</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_FIG]Figs Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_FIG]Figs Bonus[\LINK]</English>
 		<Polish>Zasadz Figowce</Polish>
 		<Russian>Посадить фиги</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_FLAX</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_FLAX]Flax Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_FLAX]Flax Bonus[\LINK]</English>
 		<Polish>Zasiej Len</Polish>
 		<Russian>Посадить лен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_GRAPES</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_GRAPES]Grapes Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_GRAPES]Grapes Bonus[\LINK]</English>
 		<Polish>Zasadz Winogrona</Polish>
 		<Russian>Посадить виноград</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_GUAVAS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_GUAVAS]Guavas Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_GUAVAS]Guavas Bonus[\LINK]</English>
 		<Russian>Посадить гуаву</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_GUINEA_PIGS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_GUINEA_PIGS]Guinea Pigs Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_GUINEA_PIGS]Guinea Pigs Bonus[\LINK]</English>
 		<Russian>Разводить морских свинок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_HEMP</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_HEMP]Hemp Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_HEMP]Hemp Bonus[\LINK]</English>
 		<Polish>Zasiej Konopie</Polish>
 		<Russian>Посадить коноплю</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_HENNA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_HENNA]Henna Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_HENNA]Henna Bonus[\LINK]</English>
 		<Polish>Zasadz Henne</Polish>
 		<Russian>Посадить хну</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_HORSE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_HORSE]Horse Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_HORSE]Horse Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Koni</Polish>
 		<Russian>Разводить табун лошадей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_INCENSE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_INCENSE]Incense Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_INCENSE]Incense Bonus[\LINK]</English>
 		<Polish>Zasadz Kadzidlo</Polish>
 		<Russian>Посадить фимиам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_INDIGO</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_INDIGO]Indigo Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_INDIGO]Indigo Bonus[\LINK]</English>
 		<Polish>Zasadz Indigo</Polish>
 		<Russian>Посадить индиго</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_KANGAROO</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_KANGAROO]Kangaroo Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_KANGAROO]Kangaroo Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Kangurów</Polish>
 		<Russian>Разводить стадо кенгуру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_KAVA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_KAVA]Kava Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_KAVA]Kava Bonus[\LINK]</English>
 		<Russian>Посадить кава</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_LEMONS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_LEMONS]Lemons Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_LEMONS]Lemons Bonus[\LINK]</English>
 		<Polish>Zasadz Cytryny</Polish>
 		<Russian>Посадить лимоны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_LLAMA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_LLAMA]Llama Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_LLAMA]Llama Bonus[\LINK]</English>
 		<Italian>Place LLama Bonus</Italian>
 		<Polish>Umiesc Stado Lam</Polish>
 		<Russian>Разводить стадо лам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MAMMOTH</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_MAMMOTH]Mammoth Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_MAMMOTH]Mammoth Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Mamutów</Polish>
 		<Russian>Разводить стадо мамонтов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MANGO</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_MANGO]Mango Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_MANGO]Mango Bonus[\LINK]</English>
 		<Polish>Zasadz Mango</Polish>
 		<Russian>Посадить манго</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MELONS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_MELONS]Melons Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_MELONS]Melons Bonus[\LINK]</English>
 		<Polish>Zasiej Melony</Polish>
 		<Russian>Посадить арбузы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MUSHROOMS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_MUSHROOMS]Mushrooms Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_MUSHROOMS]Mushrooms Bonus[\LINK]</English>
 		<Polish>Utwórz Grzybnie</Polish>
 		<Russian>Посадить грибы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_OLIVES</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_OLIVES]Olives Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_OLIVES]Olives Bonus[\LINK]</English>
 		<Polish>Zasadz Oliwki</Polish>
 		<Russian>Посадить оливки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_OPIUM</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_OPIUM]Opium Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_OPIUM]Opium Bonus[\LINK]</English>
 		<Polish>Zasiej Opium</Polish>
 		<Russian>Посадить опиум</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PAPAYA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PAPAYA]Papaya Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PAPAYA]Papaya Bonus[\LINK]</English>
 		<Polish>Zasadz Papaye</Polish>
 		<Russian>Посадить папайя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PAPYRUS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PAPYRUS]Papyrus Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PAPYRUS]Papyrus Bonus[\LINK]</English>
 		<Polish>Zasiej Papirusowca</Polish>
 		<Russian>Посадить папирус</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PARROTS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PARROTS]Parrots Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PARROTS]Parrots Bonus[\LINK]</English>
 		<Russian>Разводить попугаев</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PEYOTE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PEYOTE]Peyote Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PEYOTE]Peyote Bonus[\LINK]</English>
 		<Polish>Zasiej Peyotla</Polish>
 		<Russian>Посадить пейот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PIG</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PIG]Pig Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PIG]Pig Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Swin</Polish>
 		<Russian>Разводить стадо свиней</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PISTACHIO</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PISTACHIO]Pistachio Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PISTACHIO]Pistachio Bonus[\LINK]</English>
 		<Polish>Zasadz Pistacje</Polish>
 		<Russian>Посадить фисташки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_POMEGRANATE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_POMEGRANATE]Pomegranate Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_POMEGRANATE]Pomegranate Bonus[\LINK]</English>
 		<Russian>Посадить гранат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_POTATOES</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_POTATOES]Potatoes Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_POTATOES]Potatoes Bonus[\LINK]</English>
 		<Polish>Zasadz Ziemniaki</Polish>
 		<Russian>Посадить картофель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_POULTRY</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_POULTRY]Poultry Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_POULTRY]Poultry Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Drobiu</Polish>
 		<Russian>Разводить дом. птицу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PRICKLY_PEAR</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PRICKLY_PEAR]Prickly Pear Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PRICKLY_PEAR]Prickly Pear Bonus[\LINK]</English>
 		<Polish>Zasiej Kaktusy</Polish>
 		<Russian>Посадить опунцию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PRIME_TIMBER</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PRIME_TIMBER]Prime Timber Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PRIME_TIMBER]Prime Timber Bonus[\LINK]</English>
 		<Polish>Zasadz Drzewa Wysokiej Jakosci</Polish>
 		<Russian>Посадить строевой лес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PUMPKIN</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_PUMPKIN]Pumpkin Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_PUMPKIN]Pumpkin Bonus[\LINK]</English>
 		<Polish>Zasiej Dynie</Polish>
 		<Russian>Посадить тыквы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_RABBIT</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_RABBIT]Rabbit Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_RABBIT]Rabbit Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Królików</Polish>
 		<Russian>Разводить стадо кроликов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_RESIN</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_RESIN]Resin Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_RESIN]Resin Bonus[\LINK]</English>
 		<Polish>Zasadz Drzewa Zywiczne</Polish>
 		<Russian>Посадить смоляной лес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_RICE</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_RICE]Rice Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_RICE]Rice Bonus[\LINK]</English>
 		<Polish>Zasiej Ryz</Polish>
 		<Russian>Посадить рис</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_RUBBER</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_RUBBER]Rubber Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_RUBBER]Rubber Bonus[\LINK]</English>
 		<Polish>Zasadz Kauczukowce</Polish>
 		<Russian>Посадить каучуковые растения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SEA_LION_AND_SEAL</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_SEA_LION_AND_SEAL]Sea Lion and Seal Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_SEA_LION_AND_SEAL]Sea Lion and Seal Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Lwów Morskich</Polish>
 		<Russian>Разводить тюленей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SHEEP</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_SHEEP]Sheep Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_SHEEP]Sheep Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Owiec</Polish>
 		<Russian>Разводить стадо овец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SILK</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_SILK]Silk Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_SILK]Silk Bonus[\LINK]</English>
 		<Polish>Stwórz Kolonie Jedwabników</Polish>
 		<Russian>Разводить тутового шелкопряда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SPICES</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_SPICES]Spices Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_SPICES]Spices Bonus[\LINK]</English>
 		<Polish>Zasiej Przyprawy</Polish>
 		<Russian>Посадить специи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SQUASH</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_SQUASH]Squash Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_SQUASH]Squash Bonus[\LINK]</English>
 		<Polish>Zasiej Kabaczki</Polish>
 		<Russian>Посадить кабачок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SUGAR</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_SUGAR]Sugar Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_SUGAR]Sugar Bonus[\LINK]</English>
 		<Polish>Zasiej Trzcine Cukrowa</Polish>
 		<Russian>Посадить сахарный тростник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_TEA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_TEA]Tea Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_TEA]Tea Bonus[\LINK]</English>
 		<Polish>Zasiej Herbate</Polish>
 		<Russian>Посадить чай</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_TOBACCO</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_TOBACCO]Tobacco Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_TOBACCO]Tobacco Bonus[\LINK]</English>
 		<Polish>Zasiej Tyton</Polish>
 		<Russian>Посадить тобак</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_VANILLA</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_VANILLA]Vanilla Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_VANILLA]Vanilla Bonus[\LINK]</English>
 		<Polish>Zasadz Wanilie</Polish>
 		<Russian>Посадить ваниль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_WALRUS</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_WALRUS]Walrus Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_WALRUS]Walrus Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Morsów</Polish>
 		<Russian>Разводить моржей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_WHEAT</Tag>
-		<English>Place [LINK=IMPROVEMENT_BONUS_WHEAT]Wheat Bonus[\LINK]</English>
+		<English>Place [LINK=BONUS_WHEAT]Wheat Bonus[\LINK]</English>
 		<Polish>Zasiej Pszenice</Polish>
 		<Russian>Посадить пшеницу</Russian>
 	</TEXT>

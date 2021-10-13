@@ -594,4 +594,3 @@ def normalizeRemovePeaks():
 
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
-	

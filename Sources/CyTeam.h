@@ -5,7 +5,7 @@
 
 //
 // Python wrapper class for CvTeam
-// 
+//
 
 class CvTeam;
 class CyArea;
@@ -77,13 +77,13 @@ public:
 	int getTotalPopulation() const;
 	int getTotalLand() const;
 	int getNukeInterception() const;
-	void changeNukeInterception(int iChange);	 
+	void changeNukeInterception(int iChange);
 
 	int getForceTeamVoteEligibilityCount(int /*VoteSourceTypes*/ eVoteSource) const;
 	bool isForceTeamVoteEligible(int /*VoteSourceTypes*/ eVoteSource) const;
 	void changeForceTeamVoteEligibilityCount(int /*VoteSourceTypes*/ eVoteSource, int iChange);
 	int getExtraWaterSeeFromCount() const;
-	bool isExtraWaterSeeFrom() const;		 
+	bool isExtraWaterSeeFrom() const;
 	void changeExtraWaterSeeFromCount(int iChange);
 	int getMapTradingCount() const;
 	bool isMapTrading() const;
@@ -99,25 +99,25 @@ public:
 	void changeOpenBordersTradingCount(int iChange);
 	int getDefensivePactTradingCount() const;
 	bool isDefensivePactTrading() const;
-	void changeDefensivePactTradingCount(int iChange);															
+	void changeDefensivePactTradingCount(int iChange);
 	int getPermanentAllianceTradingCount() const;
 	bool isPermanentAllianceTrading() const;
-	void changePermanentAllianceTradingCount(int iChange);													
+	void changePermanentAllianceTradingCount(int iChange);
 	int getVassalTradingCount() const;
 	bool isVassalStateTrading() const;
-	void changeVassalTradingCount(int iChange);													
+	void changeVassalTradingCount(int iChange);
 	int getBridgeBuildingCount() const;
 	bool isBridgeBuilding() const;
-	void changeBridgeBuildingCount(int iChange);																		
+	void changeBridgeBuildingCount(int iChange);
 	int getIrrigationCount() const;
 	bool isIrrigation() const;
-	void changeIrrigationCount(int iChange);																				
+	void changeIrrigationCount(int iChange);
 	int getIgnoreIrrigationCount() const;
 	bool isIgnoreIrrigation() const;
-	void changeIgnoreIrrigationCount(int iChange);																	
+	void changeIgnoreIrrigationCount(int iChange);
 	int getWaterWorkCount() const;
 	bool isWaterWork() const;
-	void changeWaterWorkCount(int iChange);																	
+	void changeWaterWorkCount(int iChange);
 
 	int getVassalPower() const;
 	void setVassalPower(int iPower);
@@ -132,8 +132,8 @@ public:
 
 	int getID() const;
 
-	int getWarWeariness(int /*TeamTypes*/ eIndex) const;								 
-	void changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange);	 
+	int getWarWeariness(int /*TeamTypes*/ eIndex) const;
+	void changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange);
 
 	int getCommerceFlexibleCount(int /*CommerceTypes*/ eIndex) const;
 	bool isCommerceFlexible(int /*CommerceTypes*/ eIndex) const;
@@ -180,7 +180,7 @@ public:
 	int getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2) const;
 	void changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);
 
-	int getBuildingYieldChange(int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const;
+	int getBuildingCommerceTechChange(int eIndex, int eBuilding) const;
 
 	int getVictoryCountdown(int /*VictoryTypes*/ eVictory) const;
 	int getVictoryDelay(int /*VictoryTypes*/ eVictory) const;

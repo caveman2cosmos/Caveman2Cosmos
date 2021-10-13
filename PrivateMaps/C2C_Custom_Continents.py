@@ -34,7 +34,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -43,7 +43,7 @@ def getNumCustomMapOptionValues(argsList):
 		2:  2
 		}
 	return option_values[iOption]
-	
+
 
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
@@ -69,7 +69,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -91,11 +91,11 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(1) == 1 or map.getCustomMapOption(1) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(1) == 2)
-	
+
 def normalizeAddExtras():
 	if (CyMap().getCustomMapOption(2) == 1):
 		balancer.normalizeAddExtras()
@@ -109,7 +109,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(2) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def isAdvancedMap():
@@ -131,22 +131,22 @@ def beforeGeneration():
 	iPlayers = gc.getGame().countCivPlayersEverAlive()
 	iTeams = gc.getGame().countCivTeamsEverAlive()
 	bThisMapBalanced = False # Balanced means use only "fair" templates where all continents are roughly the same value. The "fair" template is always to be ID# 0 in the template data list.
-	
-	# If binary shift is employed for any layers, use these values to decide whether 
+
+	# If binary shift is employed for any layers, use these values to decide whether
 	# or not to shift all such layers in this map instance.
 	#
-	# The binary shift allows a single templateID to be able to reverse itself 
+	# The binary shift allows a single templateID to be able to reverse itself
 	# (north-south, or east-west) to be able to contain up to four "versions" of one pattern.
 	#
 	# If binary shift is not employed, the alternative is random shift within a range.
-	# Ideally I would have included both options concurrently, but the line on more 
+	# Ideally I would have included both options concurrently, but the line on more
 	# and more sophistication has to be drawn somewhere!
 	#
 	# Binary shift rolls (one each for horizontal or vertical shifting):
 	xShiftRoll = dice.get(2, "Region Shift, Horizontal - Custom Continents PYTHON")
 	yShiftRoll = dice.get(2, "Region Shift, Vertical - Custom Continents PYTHON")
 	#print xShiftRoll, yShiftRoll
-	
+
 	# Determine the number of continents.
 	userInputContinents = map.getCustomMapOption(0)
 	if userInputContinents > 1:
@@ -194,16 +194,16 @@ def beforeGeneration():
 		else:
 			iNumConts = 6
 	#print("Continents: ", iNumConts)
-	
+
 	# List of number of template instances, indexed by number of continents selected.
 	configs = [0, 0, 10, 9, 7, 6, 6]
-	
+
 	# Choose a template for this game.
 	if bThisMapBalanced:
 		templateID = 0
-		# For "One Per Team" setting, ensure (reasonably) fair continents for each 
-		# team by using the zero template. If you want to be able to play team matches 
-		# on unbalanced templates, then manually set the number of continents on 
+		# For "One Per Team" setting, ensure (reasonably) fair continents for each
+		# team by using the zero template. If you want to be able to play team matches
+		# on unbalanced templates, then manually set the number of continents on
 		# startup. For instance, for four teams, set it to 4 instead of to One Per Team.
 	else:
 		templateID = dice.get(configs[iNumConts], "Template - Custom Continents PYTHON")
@@ -809,7 +809,7 @@ def beforeGeneration():
 	# List region_coords: [WestLon, EastLon, SouthLat, NorthLat]
 	cont_data = templates[(iNumConts, templateID)]
 	#print cont_data
-		
+
 class CCMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 	def generatePlotsByRegion(self):
 		# Sirian's MultilayeredFractal class, controlling function.
@@ -817,7 +817,7 @@ class CCMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		global xShiftRoll, yShiftRoll
 		userInputContinents = self.map.getCustomMapOption(0)
 		defaultWater = [55, 60, 65, 70, 75, 80, 85] # Default values if iWater is set to -1
-		
+
 		# Add a few random patches of Tiny Islands first.
 		numTinies = 1 + self.dice.get(4, "Tiny Islands - Custom Continents PYTHON")
 		#print("Patches of Tiny Islands: ", numTinies)
@@ -912,11 +912,11 @@ class CCMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 					iGrain = grainRoll + 3
 				else: # Unexpected data value, transforming to Grain 2.
 					iGrain = 2
-				
+
 				# Handle the water value.
 				if iWater == -1:
 					iWater = defaultWater[iGrain]
-				
+
 				# Handle the map fractal flags.
 				if flagID == 0:
 					iFlags = 0
@@ -1007,7 +1007,7 @@ def assignStartingPlots():
 			del team_list[iChooseTeam]
 	CyPythonMgr().allowDefaultImpl()
 	return
-	
+
 def findStartingPlot(argsList):
 	# Unless "One Per Team", use default.
 	userInputContinents = CyMap().getCustomMapOption(0)
@@ -1055,7 +1055,7 @@ def findStartingPlot(argsList):
 		if x >= iWestX and x <= iEastX and y >= iSouthY and y <= iNorthY:
 			return true
 		return false
-	
+
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 
 def normalizeStartingPlotLocations():

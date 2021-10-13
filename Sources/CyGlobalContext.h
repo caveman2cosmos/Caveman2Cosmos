@@ -10,7 +10,6 @@
 
 #include "CvGlobals.h"
 
-class CvArtFileMgr;
 class CyGame;
 class CyMap;
 class CyPlayer;
@@ -20,28 +19,24 @@ class CyTeam;
 class CyGlobalContext
 {
 public:
-	CyGlobalContext();
-	virtual ~CyGlobalContext();
-
 	static CyGlobalContext& getInstance();		// singleton accessor
+	static void initStatics();
 
 	bool isDebugBuild() const;
 	CyGame* getCyGame() const;
 	CyMap* getCyMap() const;
-
-	void switchMap(int iMap);
-	CyMap* getMapByIndex(int iIndex);
-
-	CyPlayer* getCyPlayer(int idx) const;
+	void switchMap(MapTypes eMap);
+	CyMap* getMapByIndex(MapTypes eMap) const;
+	CyPlayer* getCyPlayer(PlayerTypes ePlayer) const;
 	CyPlayer* getCyActivePlayer() const;
 	CvRandom& getCyASyncRand() const;
-	CyTeam* getCyTeam(int i) const;
+	CyTeam* getCyTeam(TeamTypes eTeam) const;
 
 	int getInfoTypeForString(const char* szInfoType) const;
 	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
 	int getTypesEnum(const char* szType) const;
 
-	const CvMapInfo& getMapInfo(int i) const;
+	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
 	const CvTerrainInfo* getTerrainInfo(int i) const;
 	const CvBonusClassInfo* getBonusClassInfo(int i) const;
@@ -217,8 +212,6 @@ public:
 	bool isSS_ENABLED() const { return GC.isSS_ENABLED(); }
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
 	bool isSS_ASSASSINATE() const { return GC.isSS_ASSASSINATE(); }
-
-	int getNUM_BUILDING_PREREQ_OR_BONUSES() const { return GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); }
 
 	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
 	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }

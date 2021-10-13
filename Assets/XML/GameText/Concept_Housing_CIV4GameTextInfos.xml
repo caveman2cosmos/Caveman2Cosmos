@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_AUTO_BUILDINGS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_AUTO_BUILDINGS</Tag>
 		<English>Automatically built buildings</English>
 		<German>Automatische Stadteffekte</German>
 		<Italian>Edifici automatici</Italian>
@@ -15,7 +15,7 @@
 		<Russian>В моде Caveman2Cosmos некоторые здания автоматически строятся и удаляются по мере изменения условий в вашем городе. Это моделирует механизмы и управляет эффектами, которые не могут быть выполнены любым другим способом. В частности, некоторые из них реализованы следующим образом:[PARAGRAPH:1][ICON_BULLET]Жилье;[PARAGRAPH:1][ICON_BULLET]Преступления;[PARAGRAPH:1][ICON_BULLET]Болезни;[PARAGRAPH:1][ICON_BULLET]Загрязнения.[PARAGRAPH:1]Эти постройки можно увидеть на вкладке «Специальные здания» вместе с сооружениями, построенными с помощью таких юнитов, как прирученные животные.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_HOUSING_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_HOUSING</Tag>
 		<English>Housing</English>
 		<German>Wohnraum</German>
 		<Italian>Abitazioni</Italian>

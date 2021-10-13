@@ -107,7 +107,7 @@ UnitSortList::UnitSortList(const CvPlayer *pPlayer, const CvCity *pCity)
 {
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
-	
+
 	m_apUnitSort[UNIT_SORT_NAME] = new UnitSortName();
 	m_apUnitSort[UNIT_SORT_COST] = new UnitSortCost(true);
 	m_apUnitSort[UNIT_SORT_STRENGTH] = new UnitSortStrength();

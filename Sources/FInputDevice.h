@@ -23,12 +23,12 @@
 //  CLASS:      FInputDevice
 //
 //  PURPOSE:    Samples input device and sets mapping to indicate what input events
-//		happened since the last update call.  Expected derivations include keyboard and mouse devices 
+//		happened since the last update call.  Expected derivations include keyboard and mouse devices
 //			for specific hardware platforms.
 //		Also provides immediate (stateless) mode functionality for queries like
 //			isKeyDownNow().
 //		Currently only keyboard events are supported.
-//		HotKey mappings can be set which will map input1 to input2.  When input1 happens, input2 
+//		HotKey mappings can be set which will map input1 to input2.  When input1 happens, input2
 //			will be reported.
 //
 //+++++++++++++++++++++++++
@@ -64,7 +64,7 @@ public:
 
 	// these input events are added to the input map (if appropriate) whenever the input device is sampled.
 	// currently only uses keyboard input events.
-	enum InputType		
+	enum InputType
 	{
 		NONE	= 0	  ,
 		KB_NONE = NONE  ,
@@ -79,7 +79,7 @@ public:
 		KB_7          ,
 		KB_8          ,
 		KB_9          ,
-		KB_MINUS      ,	    /* - on main keyboard */		
+		KB_MINUS      ,	    /* - on main keyboard */
 		KB_A          ,
 		KB_B         ,
 		KB_C          ,
@@ -123,7 +123,7 @@ public:
 		KB_SLASH      ,
 		KB_RSHIFT     ,
 		KB_NUMPADSTAR   ,
-		KB_LALT      ,	
+		KB_LALT      ,
 		KB_SPACE      ,
 		KB_CAPSLOCK    ,
 		KB_F1         ,
@@ -152,7 +152,7 @@ public:
 		KB_NUMPAD9    ,
 		KB_NUMPADMINUS   ,
 		KB_NUMPADPLUS        ,
-		KB_NUMPADPERIOD    , 
+		KB_NUMPADPERIOD    ,
 		KB_NUMPADEQUALS,
 		KB_AT,
 		KB_UNDERLINE,
@@ -175,7 +175,7 @@ public:
 		KB_DOWN       ,
 		KB_PGDN       ,
 		KB_INSERT     ,
-		KB_DELETE,     
+		KB_DELETE,
 
 		M_NONE,
 		M_LEFT,
@@ -221,7 +221,7 @@ public:
 	virtual ~FInputDevice();
 
 	bool Init(unsigned long flags=INP_DEFAULT_FLAGS);
-	bool UnInit();									
+	bool UnInit();
 
 	virtual bool ReadInputs() = 0;									// sample input and fill in InputEventList
 

@@ -1,1105 +1,463 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTEATER_MYTH</Tag>
-		<English>Myth - Anteater</English>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Tag>
+		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
+		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
+		<English>Unit Reward - Dance (Bird)</English>
+		<French>Danse des Oiseaux</French>
+		<Russian>Òàíåö ïòèöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Tag>
+		<English>Some birds are said to dance and these dances inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
+		<English>Donkey Breeder</English>
+		<French>Éleveur d'ânes</French>
+		<Russian>Îñëèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
+		<English>Flocks of Duck</English>
+		<Russian>Ñòàÿ óòîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Duck.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
+		<English>Unit Reward - Dance (Fox)</English>
+		<French>Danse du Renard</French>
+		<Russian>Òàíåö ëèñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
+		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
+		<English>Dance - Haka</English>
+		<French>Danse - Haka</French>
+		<Russian>Òàíåö Õàêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
+		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
+		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
+		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
+		<English>Horse Breeder</English>
+		<French>Éleveur de chevaux</French>
+		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
+		<English>Folklore - Anteater</English>
 		<French>Mythe du Fourmilier</French>
 		<Polish>Mit - Mrówkojad</Polish>
 		<Russian>Ìèô î ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTEATER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Anteater</English>
-		<French>Effet (Mythe du Fourmilier)</French>
-		<Polish>Efekt Mitu - Mrówkojad</Polish>
-		<Russian>Ïåñíÿ î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTEATER_STORIES</Tag>
-		<English>Stories - Anteater</English>
-		<French>Histoires des Fourmiliers</French>
-		<Polish>Historie - Mrówkojad</Polish>
-		<Russian>Ñêàçû î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTEATER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Anteater</English>
-		<French>Effet (Histoires des Fourmiliers)</French>
-		<Polish>Efekt Historii - Mrówkojad</Polish>
-		<Russian>Ïðåäàíèÿ î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTEATER_STORY</Tag>
-		<English>Story - Anteater</English>
-		<French>Histoire du Fourmilier</French>
-		<Polish>Opowieść - Mrówkojad</Polish>
-		<Russian>Ñêàçêà î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BADGER_MYTH</Tag>
-		<English>Myth - Badger</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
+		<English>Folklore - Badger</English>
 		<French>Mythe du Blaireau</French>
 		<Polish>Mit - Borsuk</Polish>
 		<Russian>Ìèô î áàðñóêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BADGER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Badger</English>
-		<French>Effet (Mythe du Blaireau)</French>
-		<Polish>Efekt Mitu - Borsuk</Polish>
-		<Russian>Ïåñíÿ î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BADGER_STORIES</Tag>
-		<English>Stories - Badger</English>
-		<French>Histoires des Blaireaux</French>
-		<Polish>Historie - Borsuk</Polish>
-		<Russian>Ñêàçû î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BADGER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Badger</English>
-		<French>Effet (Histoires des Blaireaux)</French>
-		<Polish>Efekt Historii - Borsuk</Polish>
-		<Russian>Ïðåäàíèÿ î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BADGER_STORY</Tag>
-		<English>Story - Badger</English>
-		<French>Histoire du Blaireau</French>
-		<Polish>Opowieść - Borsuk</Polish>
-		<Russian>Ñêàçêà î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BALLPYTHON_MYTH</Tag>
-		<English>Myth - Ballpython</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALLPYTHON</Tag>
+		<English>Folklore - Ballpython</English>
 		<French>Mythe du Python royal</French>
 		<Polish>Mit - Pyton Królewski</Polish>
 		<Russian>Ìèô î êîð. ïèòîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BALLPYTHON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Ballpython</English>
-		<French>Effet (Mythe du Python royal)</French>
-		<Polish>Efekt Mitu - Pyton Królewski</Polish>
-		<Russian>Ïåñíÿ î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BALLPYTHON_STORIES</Tag>
-		<English>Stories - Ballpython</English>
-		<French>Histoires des Pythons royaux</French>
-		<Polish>Historie - Pyton Królewski</Polish>
-		<Russian>Ñêàçû î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BALLPYTHON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Ballpython</English>
-		<French>Effet (Histoires des Pythons royaux)</French>
-		<Polish>Efekt Historii - Pyton Królewski</Polish>
-		<Russian>Ïðåäàíèÿ î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BALLPYTHON_STORY</Tag>
-		<English>Story - Ballpython</English>
-		<French>Histoire du Python royal</French>
-		<Polish>Opowieść - Pyton Królewski</Polish>
-		<Russian>Ñêàçêà î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BARBARYAPE_MYTH</Tag>
-		<English>Myth - Barbary Ape</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARYAPE</Tag>
+		<English>Folklore - Barbary Ape</English>
 		<French>Mythe du Macaque berbère</French>
 		<Polish>Mit - Magot</Polish>
 		<Russian>Ìèô î ìàãîòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BARBARYAPE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Barbary Ape</English>
-		<French>Effet (Mythe du Macaque berbère)</French>
-		<Polish>Efekt Mitu - Magot</Polish>
-		<Russian>Ïåñíÿ î ìàãîòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BARBARYAPE_STORIES</Tag>
-		<English>Stories - Barbary Ape</English>
-		<French>Histoires des Macaques berbères</French>
-		<Polish>Historie - Magot</Polish>
-		<Russian>Ñêàçû î ìàãîòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BARBARYAPE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Barbary Ape</English>
-		<French>Effet (Histoires des Macaques berbères)</French>
-		<Polish>Efekt Historii - Magot</Polish>
-		<Russian>Ïðåäàíèÿ î ìàãîòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BARBARYAPE_STORY</Tag>
-		<English>Story - Barbary Ape</English>
-		<French>Histoire du Macaque berbère</French>
-		<Polish>Opowieść - Magot</Polish>
-		<Russian>Ñêàçêà î ìàãîòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAVER_MYTH</Tag>
-		<English>Myth - Beaver</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BEAVER</Tag>
+		<English>Folklore - Beaver</English>
 		<French>Mythe du Castor</French>
 		<Polish>Mit - Bóbr</Polish>
 		<Russian>Ìèô î áîáðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAVER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Beaver</English>
-		<French>Effet (Mythe du Castor)</French>
-		<Polish>Efekt Mitu - Bóbr</Polish>
-		<Russian>Ïåñíÿ î áîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAVER_STORIES</Tag>
-		<English>Stories - Beaver</English>
-		<French>Histoires des Castors</French>
-		<Polish>Historie - Bóbr</Polish>
-		<Russian>Ñêàçû î áîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAVER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Beaver</English>
-		<French>Effet (Histoires des Castors)</French>
-		<Polish>Efekt Historii - Bóbr</Polish>
-		<Russian>Ïðåäàíèÿ î áîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAVER_STORY</Tag>
-		<English>Story - Beaver</English>
-		<French>Histoire du Castor</French>
-		<Polish>Opowieść - Bóbr</Polish>
-		<Russian>Ñêàçêà î áîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BENGALTIGER_MYTH</Tag>
-		<English>Myth - Bengal Tiger</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BENGALTIGER</Tag>
+		<English>Folklore - Bengal Tiger</English>
 		<French>Mythe du Tigre du Bengale</French>
 		<Polish>Mit - Tygrys Bengalski</Polish>
 		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BENGALTIGER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Bengal Tiger</English>
-		<French>Effet (Mythe du Tigre du Bengale)</French>
-		<Polish>Efekt Mitu - Tygrys Bengalski</Polish>
-		<Russian>Ïåñíÿ î áåíãàë. òèãðå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BIRD</Tag>
+		<English>Folklore (T) - Birds</English>
+		<French>Mythe des Oiseaux</French>
+		<Polish>Mit - Ptaki</Polish>
+		<Russian>Ìèô î ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BENGALTIGER_STORIES</Tag>
-		<English>Stories - Bengal Tiger</English>
-		<French>Histoires des Tigres du Bengal</French>
-		<Polish>Historie - Tygrys Bengalski</Polish>
-		<Russian>Ñêàçû î áåíãàë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BENGALTIGER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Bengal Tiger</English>
-		<French>Effet (Histoires des Tigres du Bengal)</French>
-		<Polish>Efekt Historii - Tygrys Bengalski</Polish>
-		<Russian>Ïðåäàíèÿ î áåíãàë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BENGALTIGER_STORY</Tag>
-		<English>Story - Bengal Tiger</English>
-		<French>Histoire du Tigre du Bengale</French>
-		<Polish>Opowieść - Tygrys Bengalski</Polish>
-		<Russian>Ñêàçêà î áåíãàë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_MYTH</Tag>
-		<English>Myth - Bison</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BISON</Tag>
+		<English>Folklore - Bison</English>
 		<French>Mythe du Bison</French>
 		<Polish>Mit - Bizon</Polish>
 		<Russian>Ìèô î áèçîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Bison</English>
-		<French>Effet (Mythe du Bison)</French>
-		<Polish>Efekt Mitu - Bizon</Polish>
-		<Russian>Ïåñíÿ î áèçîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_STORIES</Tag>
-		<English>Stories - Bison</English>
-		<French>Histoires des Bisons</French>
-		<Polish>Historie - Bizon</Polish>
-		<Russian>Ñêàçû î áèçîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Bison</English>
-		<French>Effet (Histoires des Bisons)</French>
-		<Polish>Efekt Historii - Bizon</Polish>
-		<Russian>Ïðåäàíèÿ î áèçîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_STORY</Tag>
-		<English>Story - Bison</English>
-		<French>Histoire du Bison</French>
-		<Polish>Opowieść - Bizon</Polish>
-		<Russian>Ñêàçêà î áèçîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOAR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Boar</English>
-		<French>Effet (Mythe du Sanglier)</French>
-		<Polish>Efekt Mitu - Dzik</Polish>
-		<Russian>Ïåñíÿ î êàáàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOAR_STORIES</Tag>
-		<English>Stories - Boar</English>
-		<French>Histoires des Sangliers</French>
-		<Polish>Historie - Dzik</Polish>
-		<Russian>Ñêàçû î êàáàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOAR_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Boar</English>
-		<French>Effet (Histoires des Sangliers)</French>
-		<Polish>Efekt Historii - Dzik</Polish>
-		<Russian>Ïðåäàíèÿ î êàáàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOAR_STORY</Tag>
-		<English>Story - Boar</English>
-		<French>Histoire du Sanglier</French>
-		<Polish>Opowieść - Dzik</Polish>
-		<Russian>Ñêàçêà î êàáàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BONGO_MYTH</Tag>
-		<English>Myth - Bongo</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BONGO</Tag>
+		<English>Folklore - Bongo</English>
 		<French>Mythe du Bongo</French>
 		<Russian>Ìèô î áîíãî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BONGO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Bongo</English>
-		<French>Effet (Mythe du Bongo)</French>
-		<Russian>Ïåñíÿ î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BONGO_STORIES</Tag>
-		<English>Stories - Bongo</English>
-		<French>Histoires de Bongo</French>
-		<Russian>Ñêàçû î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BONGO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Bongo</English>
-		<French>Effet (Histoires de Bongo)</French>
-		<Russian>Ïðåäàíèÿ î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BONGO_STORY</Tag>
-		<English>Story - Bongo</English>
-		<French>Histoire du Bongo</French>
-		<Russian>Ñêàçêà î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH</Tag>
-		<English>Myth - Buffalo</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUFFALO</Tag>
+		<English>Folklore - Buffalo</English>
 		<French>Mythe du Buffle</French>
 		<Russian>Ìèô î áóéâîëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Buffalo</English>
-		<French>Effet (Mythe du Buffle)</French>
-		<Russian>Ïåñíÿ î áóéâîëå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUG</Tag>
+		<English>Folklore (T) - Bug</English>
+		<French>Mythe des insectes</French>
+		<Polish>Mit - Ptaki morskie</Polish>
+		<Russian>Ìèô î æóêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_STORIES</Tag>
-		<English>Stories - Buffalo</English>
-		<French>Histoires de Buffle</French>
-		<Russian>Ñêàçû î áóéâîëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Buffalo</English>
-		<French>Effet (Histoires de Buffle)</French>
-		<Russian>Ïðåäàíèÿ î áóéâîëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_STORY</Tag>
-		<English>Story - Buffalo</English>
-		<French>Histoire du Buffle</French>
-		<Russian>Ñêàçêà î áóéâîëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COBRA_MYTH</Tag>
-		<English>Myth - Cobra</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_COBRA</Tag>
+		<English>Folklore - Cobra</English>
 		<French>Mythe du Cobra</French>
 		<Russian>Ìèô î êîáðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COBRA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Cobra</English>
-		<French>Effet (Mythe du Cobra)</French>
-		<Russian>Ïåñíÿ î êîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COBRA_STORIES</Tag>
-		<English>Stories - Cobra</English>
-		<French>Histoires des Cobras</French>
-		<Russian>Ñêàçû î êîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COBRA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Cobra</English>
-		<French>Effet (Histoires des Cobras)</French>
-		<Russian>Ïðåäàíèÿ î êîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COBRA_STORY</Tag>
-		<English>Story - Cobra</English>
-		<French>Histoire du Cobra</French>
-		<Russian>Ñêàçêà î êîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROW_MYTH</Tag>
-		<English>Myth - Crow</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROW</Tag>
+		<English>Folklore - Crow</English>
 		<French>Mythe du Corbeau</French>
 		<Russian>Ìèô î âîðîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROW_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Crow</English>
-		<French>Effet (Mythe du Corbeau)</French>
-		<Russian>Ïåñíÿ î âîðîíå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Tag>
+		<English>Folklore (T) - Donkey</English>
+		<French>Mythe de l'Ane</French>
+		<Russian>Ìèô îá îñëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROW_STORIES</Tag>
-		<English>Stories - Crow</English>
-		<French>Histoires de Corbeaux</French>
-		<Russian>Ñêàçû î âîðîíå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
+		<English>Folklore (T) - Tales of Fish</English>
+		<French>
+			<Text>Mythe des Bancs de Poissons</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito - Storie di pesce</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit - Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROW_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Crow</English>
-		<French>Effet (Histoires de Corbeaux)</French>
-		<Russian>Ïðåäàíèÿ î âîðîíå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
+		<English>Folklore (T) - Flightless Birds</English>
+		<French>Mythe des Oiseaux marcheurs</French>
+		<Polish>Mit - Ptaki-Nieloty</Polish>
+		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROW_STORY</Tag>
-		<English>Story - Crow</English>
-		<French>Histoire du Corbeau</French>
-		<Russian>Ñêàçêà î âîðîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH</Tag>
-		<English>Myth - Galapagos Tortoise</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</Tag>
+		<English>Folklore - Galapagos Tortoise</English>
 		<French>Mythe de la Tortue des Galapagos</French>
 		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Galapagos Tortoise</English>
-		<French>Effet (Mythe de la Tortue des Galapagos)</French>
-		<Russian>Ïåñíÿ î ñëîíîâîé ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORIES</Tag>
-		<English>Stories - Galapagos Tortoise</English>
-		<French>Histoires de Tortues des Galapagos</French>
-		<Russian>Ñêàçû î ñëîíîâîé ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Galapagos Tortoise</English>
-		<French>Effet (Histoires de Tortues des Galapagos)</French>
-		<Russian>Ïðåäàíèÿ î ñëîíîâîé ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORY</Tag>
-		<English>Story - Galapagos Tortoise</English>
-		<French>Histoire de la Tortue des Galapagos</French>
-		<Russian>Ñêàçêà î ñëîíîâîé ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH</Tag>
-		<English>Myth - Gazelle</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GAZELLE</Tag>
+		<English>Folklore - Gazelle</English>
 		<French>Mythe de la Gazelle</French>
 		<Russian>Ìèô î ãàçåëè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gazelle</English>
-		<French>Effet (Mythe de la Gazelle)</French>
-		<Russian>Ïåñíÿ î ãàçåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GAZELLE_STORIES</Tag>
-		<English>Stories - Gazelle</English>
-		<French>Histoires de Gazelle</French>
-		<Russian>Ñêàçû î ãàçåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GAZELLE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gazelle</English>
-		<French>Effet (Histoires de Gazelle)</French>
-		<Russian>Ïðåäàíèÿ î ãàçåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GAZELLE_STORY</Tag>
-		<English>Story - Gazelle</English>
-		<French>Histoire de la Gazelle</French>
-		<Russian>Ñêàçêà î ãàçåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GELADA_MYTH</Tag>
-		<English>Myth - Gelada Baboon</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GELADA</Tag>
+		<English>Folklore - Gelada Baboon</English>
 		<French>Mythe du Babouin Gelada</French>
 		<Russian>Ìèô î ãåëàäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GELADA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gelada Baboon</English>
-		<French>Effet (Mythe du Babouin Gelada)</French>
-		<Russian>Ïåñíÿ î ãåëàäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GELADA_STORIES</Tag>
-		<English>Stories - Gelada Baboon</English>
-		<French>Histoires de Babouins Gelada</French>
-		<Russian>Ñêàçû î ãåëàäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GELADA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gelada Baboon</English>
-		<French>Effet (Histoires de Babouin Gelada)</French>
-		<Russian>Ïðåäàíèÿ î ãåëàäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GELADA_STORY</Tag>
-		<English>Story - Gelada Baboon</English>
-		<French>Histoire du Babouin Gelada</French>
-		<Russian>Ñêàçêà î ãåëàäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH</Tag>
-		<English>Myth - Gemsbok</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GEMSBOK</Tag>
+		<English>Folklore - Gemsbok</English>
 		<French>Mythe de l'Oryx gazelle</French>
 		<Russian>Ìèô î ñåðíîáûêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gemsbok</English>
-		<French>Effet (Mythe de l'Oryx gazelle)</French>
-		<Russian>Ïåñíÿ î ñåðíîáûêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GEMSBOK_STORIES</Tag>
-		<English>Stories - Gemsbok</English>
-		<French>Histoires d'Oryx gazelle</French>
-		<Russian>Ñêàçû î ñåðíîáûêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GEMSBOK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gemsbok</English>
-		<French>Effet (Histoires d'Oryx gazelle)</French>
-		<Russian>Ïðåäàíèÿ î ñåðíîáûêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GEMSBOK_STORY</Tag>
-		<English>Story - Gemsbok</English>
-		<French>Histoire de l'Oryx gazelle</French>
-		<Russian>Ñêàçêà î ñåðíîáûêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH</Tag>
-		<English>Myth - Gerenuk</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GERENUK</Tag>
+		<English>Folklore - Gerenuk</English>
 		<French>Mythe de la Gazelle de Waller</French>
 		<Russian>Ìèô î ãåðåíóêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gerenuk</English>
-		<French>Effet (Mythe de la Gazelle de Waller)</French>
-		<Russian>Ïåñíÿ î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GERENUK_STORIES</Tag>
-		<English>Stories - Gerenuk</English>
-		<French>Histoires de Gazelle de Waller</French>
-		<Russian>Ñêàçû î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GERENUK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gerenuk</English>
-		<French>Effet (Histoires de Gazelle de Waller)</French>
-		<Russian>Ïðåäàíèÿ î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GERENUK_STORY</Tag>
-		<English>Story - Gerenuk</English>
-		<French>Histoire de la Gazelle de Waller</French>
-		<Russian>Ñêàçêà î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH</Tag>
-		<English>Myth - Gorilla</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GORILLA</Tag>
+		<English>Folklore - Gorilla</English>
 		<French>Mythe du Gorille</French>
 		<Russian>Ìèô î ãîðèëëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gorilla</English>
-		<French>Effet (Mythe du Gorille)</French>
-		<Russian>Ïåñíÿ î ãîðèëëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GORILLA_STORIES</Tag>
-		<English>Stories - Gorilla</English>
-		<French>Histoires de Gorille</French>
-		<Russian>Ñêàçû î ãîðèëëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GORILLA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gorilla</English>
-		<French>Effet (Histoires de Gorille)</French>
-		<Russian>Ïðåäàíèÿ î ãîðèëëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GORILLA_STORY</Tag>
-		<English>Story - Gorilla</English>
-		<French>Histoire du Gorille</French>
-		<Russian>Ñêàçêà î ãîðèëëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GULL_MYTH</Tag>
-		<English>Myth - Gull</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GULL</Tag>
+		<English>Folklore - Gull</English>
 		<French>Mythe du Goéland</French>
 		<Russian>Ìèô î ÷àéêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GULL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gull</English>
-		<French>Effet (Mythe du Goéland)</French>
-		<Russian>Ïåñíÿ î ÷àéêå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORSE</Tag>
+		<English>Folklore - Horse</English>
+		<French>
+			<Text>Mythe du Cheval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito del cavallo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GULL_STORIES</Tag>
-		<English>Stories - Gull</English>
-		<French>Histoires de Goéland</French>
-		<Russian>Ñêàçû î ÷àéêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GULL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gull</English>
-		<French>Effet (Histoires de Goéland)</French>
-		<Russian>Ïðåäàíèÿ î ÷àéêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GULL_STORY</Tag>
-		<English>Story - Gull</English>
-		<French>Histoire du Goéland</French>
-		<Russian>Ñêàçêà î ÷àéêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HYENA_MYTH</Tag>
-		<English>Myth - Hyena</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HYENA</Tag>
+		<English>Folklore - Hyena</English>
 		<French>Mythe de la Hyène</French>
 		<Russian>Ìèô î ãèåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HYENA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Hyena</English>
-		<French>Effet (Mythe de la Hyène)</French>
-		<Russian>Ïåñíÿ î ãèåíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HYENA_STORIES</Tag>
-		<English>Stories - Hyena</English>
-		<French>Histoires de Hyènes</French>
-		<Russian>Ñêàçû î ãèåíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HYENA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Hyena</English>
-		<French>Effet (Histoires de Hyènes)</French>
-		<Russian>Ïðåäàíèÿ î ãèåíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HYENA_STORY</Tag>
-		<English>Story - Hyena</English>
-		<French>Histoire de la Hyène</French>
-		<Russian>Ñêàçêà î ãèåíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IGUANA_MYTH</Tag>
-		<English>Myth - Iguana</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IGUANA</Tag>
+		<English>Folklore - Iguana</English>
 		<French>Mythe de l'Iguane</French>
 		<Russian>Ìèô î èãóàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IGUANA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Iguana</English>
-		<French>Effet (Mythe de l'Iguane)</French>
-		<Russian>Ïåñíÿ î èãóàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IGUANA_STORIES</Tag>
-		<English>Stories - Iguana</English>
-		<French>Histoires des Iguanes</French>
-		<Russian>Ñêàçû î èãóàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IGUANA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Iguana</English>
-		<French>Effet (Histoires des Iguanes)</French>
-		<Russian>Ïðåäàíèÿ î èãóàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IGUANA_STORY</Tag>
-		<English>Story - Iguana</English>
-		<French>Histoire de l'Iguane</French>
-		<Russian>Ñêàçêà î èãóàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IMPALA_MYTH</Tag>
-		<English>Myth - Impala</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IMPALA</Tag>
+		<English>Folklore - Impala</English>
 		<French>Mythe de l'Impala</French>
 		<Russian>Ìèô îá èìïàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IMPALA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Impala</English>
-		<French>Effet (Mythe de l'Impala)</French>
-		<Russian>Ïåñíÿ îá èìïàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IMPALA_STORIES</Tag>
-		<English>Stories - Impala</English>
-		<French>Histoires de Impala</French>
-		<Russian>Ñêàçû îá èìïàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IMPALA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Impala</English>
-		<French>Effet (Histoires de Impala)</French>
-		<Russian>Ïðåäàíèÿ îá èìïàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IMPALA_STORY</Tag>
-		<English>Story - Impala</English>
-		<French>Histoire de l'Impala</French>
-		<Russian>Ñêàçêà îá èìïàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAGUAR_MYTH</Tag>
-		<English>Myth - Jaguar</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAGUAR</Tag>
+		<English>Folklore - Jaguar</English>
 		<French>Mythe du Jaguar</French>
 		<Russian>Ìèô îá ÿãóàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAGUAR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Jaguar</English>
-		<French>Effet (Mythe du Jaguar)</French>
-		<Russian>Ïåñíÿ îá ÿãóàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAGUAR_STORIES</Tag>
-		<English>Stories - Jaguar</English>
-		<French>Histoires de Jaguar</French>
-		<Russian>Ñêàçû îá ÿãóàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAGUAR_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Jaguar</English>
-		<French>Effet (Histoires de Jaguar)</French>
-		<Russian>Ïðåäàíèÿ îá ÿãóàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAGUAR_STORY</Tag>
-		<English>Story - Jaguar</English>
-		<French>Histoire du Jaguar</French>
-		<Russian>Ñêàçêà îá ÿãóàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH</Tag>
-		<English>Myth - Grey Kangaroo</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_GREY</Tag>
+		<English>Folklore - Grey Kangaroo</English>
 		<French>Mythe du Kangourou gris</French>
 		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Grey Kangaroo</English>
-		<French>Effet (Mythe du Kangourou gris)</French>
-		<Russian>Ïåñíÿ î ñåðîì êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_STORIES</Tag>
-		<English>Stories - Grey Kangaroo</English>
-		<French>Histoires de Kangourou gris</French>
-		<Russian>Ñêàçû î ñåðîì êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Grey Kangaroo</English>
-		<French>Effet (Histoires de Kangourou gris)</French>
-		<Russian>Ïðåäàíèÿ î ñåðîì êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_STORY</Tag>
-		<English>Story - Grey Kangaroo</English>
-		<French>Histoire du Kangourou gris</French>
-		<Russian>Ñêàçêà î ñåðîì êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_MYTH</Tag>
-		<English>Myth - Red Kangaroo</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_RED</Tag>
+		<English>Folklore - Red Kangaroo</English>
 		<French>Mythe du Kangourou roux</French>
 		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Red Kangaroo</English>
-		<French>Effet (Mythe du Kangourou roux)</French>
-		<Russian>Ïåñíÿ î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_STORIES</Tag>
-		<English>Stories - Red Kangaroo</English>
-		<French>Histoires de Kangourou roux</French>
-		<Russian>Ñêàçû î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Red Kangaroo</English>
-		<French>Effet (Histoires de Kangourou roux)</French>
-		<Russian>Ïðåäàíèÿ î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_STORY</Tag>
-		<English>Story - Red Kangaroo</English>
-		<French>Histoire du Kangourou roux</French>
-		<Russian>Ñêàçêà î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOALA_MYTH</Tag>
-		<English>Myth - Koala</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOALA</Tag>
+		<English>Folklore - Koala</English>
 		<French>Mythe du Koala</French>
 		<Russian>Ìèô î êîàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOALA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Koala</English>
-		<French>Effet (Mythe du Koala)</French>
-		<Russian>Ïåñíÿ î êîàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOALA_STORIES</Tag>
-		<English>Stories - Koala</English>
-		<French>Histoires de Koala</French>
-		<Russian>Ñêàçû î êîàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOALA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Koala</English>
-		<French>Effet (Histoires de Koala)</French>
-		<Russian>Ïðåäàíèÿ î êîàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOALA_STORY</Tag>
-		<English>Story - Koala</English>
-		<French>Histoire du Koala</French>
-		<Russian>Ñêàçêà î êîàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_MYTH</Tag>
-		<English>Myth - Komodo Dragon</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
+		<English>Folklore - Komodo Dragon</English>
 		<French>Mythe du Dragon de Komodo</French>
 		<Russian>Ìèô î êîì. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Komodo Dragon</English>
-		<French>Effet (Mythe du Dragon de Komodo)</French>
-		<Russian>Ïåñíÿ î êîì. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_STORIES</Tag>
-		<English>Stories - Komodo Dragon</English>
-		<French>Histoires des Dragons de Komodo</French>
-		<Russian>Ñêàçû î êîì. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Komodo Dragon</English>
-		<French>Effet (Histoires des Dragons de Komodo)</French>
-		<Russian>Ïðåäàíèÿ î êîì. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_STORY</Tag>
-		<English>Story - Komodo Dragon</English>
-		<French>Histoire du Dragon de Komodo</French>
-		<Russian>Ñêàçêà î êîì. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH</Tag>
-		<English>Myth - Kookaburra</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOOKABURRA</Tag>
+		<English>Folklore - Kookaburra</English>
 		<French>Mythe du Kookaboura</French>
 		<Russian>Ìèô î êóêàáàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Kookaburra</English>
-		<French>Effet (Mythe du Kookaboura)</French>
-		<Russian>Ïåñíÿ î êóêàáàðå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
+		<English>Folklore - Fish</English>
+		<French>Mythe des Poissons (local)</French>
+		<Polish>Mit - Ryby (regionalne)</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOOKABURRA_STORIES</Tag>
-		<English>Stories - Kookaburra</English>
-		<French>Histoires de Kookaboura</French>
-		<Russian>Ñêàçû î êóêàáàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOOKABURRA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Kookaburra</English>
-		<French>Effet (Histoires de Kookaboura)</French>
-		<Russian>Ïðåäàíèÿ î êóêàáàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOOKABURRA_STORY</Tag>
-		<English>Story - Kookaburra</English>
-		<French>Histoire du Kookaboura</French>
-		<Russian>Ñêàçêà î êóêàáàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Lion</English>
-		<French>Effet (Mythe du Lion)</French>
-		<Russian>Ïåñíÿ î ëüâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_STORIES</Tag>
-		<English>Stories - Lion</English>
-		<French>Histoires de Lion</French>
-		<Russian>Ñêàçû î ëüâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Lion</English>
-		<French>Effet (Histoires de Lion)</French>
-		<Russian>Ïðåäàíèÿ î ëüâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Llama</English>
-		<French>Effet (Mythe du Lama)</French>
-		<Russian>Ïåñíÿ î ëàìå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_STORIES</Tag>
-		<English>Stories - Llama</English>
-		<French>Histoires de Lama</French>
-		<Russian>Ñêàçû î ëàìå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Llama</English>
-		<French>Effet (Histoires de Lama)</French>
-		<Russian>Ïðåäàíèÿ î ëàìå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH</Tag>
-		<English>Myth - Mandrill</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANDRILL</Tag>
+		<English>Folklore - Mandrill</English>
 		<French>Mythe du Mandrill</French>
 		<Russian>Ìèô î ìàíäðèëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Mandrill</English>
-		<French>Effet (Mythe du Mandrill)</French>
-		<Russian>Ïåñíÿ î ìàíäðèëå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NEW_W_MONKEY</Tag>
+		<English>Folklore (T) - New World Monkeys</English>
+		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANDRILL_STORIES</Tag>
-		<English>Stories - Mandrill</English>
-		<French>Histoires de Mandrill</French>
-		<Russian>Ñêàçû î ìàíäðèëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANDRILL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Mandrill</English>
-		<French>Effet (Histoires de Mandrill)</French>
-		<Russian>Ïðåäàíèÿ î ìàíäðèëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANDRILL_STORY</Tag>
-		<English>Story - Mandrill</English>
-		<French>Histoire du Mandrill</French>
-		<Russian>Ñêàçêà î ìàíäðèëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_MYTH</Tag>
-		<English>Myth - Nile Monitor</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_MONITOR</Tag>
+		<English>Folklore - Nile Monitor</English>
 		<French>Mythe du Varan du Nil</French>
 		<Russian>Ìèô î íèë. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Nile Monitor</English>
-		<French>Effet (Mythe du Varan du Nil)</French>
-		<Russian>Ïåñíÿ î íèë. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_STORIES</Tag>
-		<English>Stories - Nile Monitor</English>
-		<French>Histoires des Varans du Nil</French>
-		<Russian>Ñêàçû î íèë. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Nile Monitor</English>
-		<French>Effet (Histoires des Varans du Nil)</French>
-		<Russian>Ïðåäàíèÿ î íèë. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_STORY</Tag>
-		<English>Story - Nile Monitor</English>
-		<French>Histoire du Varan du Nil</French>
-		<Russian>Ñêàçêà î íèë. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH</Tag>
-		<English>Myth - Okapi</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OKAPI</Tag>
+		<English>Folklore - Okapi</English>
 		<French>Mythe de l'Okapi</French>
 		<Russian>Ìèô îá îêàïè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Okapi</English>
-		<French>Effet (Mythe de l'Okapi)</French>
-		<Russian>Ïåñíÿ îá îêàïè</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_W_MONKEY</Tag>
+		<English>Folklore (T) - Old World Monkeys</English>
+		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OKAPI_STORIES</Tag>
-		<English>Stories - Okapi</English>
-		<French>Histoires de Okapi</French>
-		<Russian>Ñêàçû îá îêàïè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OKAPI_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Okapi</English>
-		<French>Effet (Histoires de Okapi)</French>
-		<Russian>Ïðåäàíèÿ îá îêàïè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OKAPI_STORY</Tag>
-		<English>Story - Okapi</English>
-		<French>Histoire de l'Okapi</French>
-		<Russian>Ñêàçêà îá îêàïè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH</Tag>
-		<English>Myth - Orangutan</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORANGUTAN</Tag>
+		<English>Folklore - Orangutan</English>
 		<French>Mythe de l'Orang-outan</French>
 		<Russian>Ìèô îá îðàíãóòàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Orangutan</English>
-		<French>Effet (Mythe de l'Orang-outan)</French>
-		<Russian>Ïåñíÿ îá îðàíãóòàíå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OWL</Tag>
+		<English>Folklore (T) - Owls</English>
+		<French>Mythe des Chouettes</French>
+		<Polish>Folklore - Sowy</Polish>
+		<Russian>Ìèô î ñîâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORANGUTAN_STORIES</Tag>
-		<English>Stories - Orangutan</English>
-		<French>Histoires d'Orang-outans</French>
-		<Russian>Ñêàçû îá îðàíãóòàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORANGUTAN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Orangutan</English>
-		<French>Effet (Histoires d' Orang-outans)</French>
-		<Russian>Ïðåäàíèÿ îá îðàíãóòàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORANGUTAN_STORY</Tag>
-		<English>Story - Orangutan</English>
-		<French>Histoire de l'Orang-outan</French>
-		<Russian>Ñêàçêà îá îðàíãóòàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH</Tag>
-		<English>Myth - Oxpecker</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OXPECKER</Tag>
+		<English>Folklore - Oxpecker</English>
 		<French>Mythe du Pique-bœufs</French>
 		<Russian>Ìèô î âîëîêëþå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Oxpecker</English>
-		<French>Effet (Mythe du Pique-bœufs)</French>
-		<Russian>Ïåñíÿ î âîëîêëþå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OXPECKER_STORIES</Tag>
-		<English>Stories - Oxpecker</English>
-		<French>Histoires de Pique-bœufs</French>
-		<Russian>Ñêàçû î âîëîêëþå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OXPECKER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Oxpecker</English>
-		<French>Effet (Histoires de Pique-bœufs)</French>
-		<Russian>Ïðåäàíèÿ î âîëîêëþå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OXPECKER_STORY</Tag>
-		<English>Story - Oxpecker</English>
-		<French>Histoire du Pique-bœufs</French>
-		<Russian>Ñêàçêà î âîëîêëþå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH</Tag>
-		<English>Myth - Peacock</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PEACOCK</Tag>
+		<English>Folklore - Peacock</English>
 		<French>Mythe du Paon</French>
 		<Russian>Ìèô î ïàâëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Peacock</English>
-		<French>Effet (Mythe du Paon)</French>
-		<Russian>Ïåñíÿ î ïàâëèíå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PENGUIN</Tag>
+		<English>Folklore (T) - Penguin</English>
+		<French>Mythe du Pingouin</French>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_STORIES</Tag>
-		<English>Stories - Peacock</English>
-		<French>Histoires de Paon</French>
-		<Russian>Ñêàçû î ïàâëèíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Peacock</English>
-		<French>Effet (Histoires de Paon)</French>
-		<Russian>Ïðåäàíèÿ î ïàâëèíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_STORY</Tag>
-		<English>Story - Peacock</English>
-		<French>Histoire du Paon</French>
-		<Russian>Ñêàçêà î ïàâëèíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Tag>
-		<English>Myth - Procoptodon</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PROCOPTODON</Tag>
+		<English>Folklore - Procoptodon</English>
 		<French>Mythe du Procoptodon</French>
 		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Procoptodon</English>
-		<French>Effet (Mythe du Procoptodon)</French>
-		<Russian>Ïåñíÿ î ïðîêîïòîäîíå</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFFADDER</Tag>
+		<English>Folklore - Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
+		<English>Folklore - Quoll</English>
+		<French>Mythe du Chat marsupial</French>
+		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAPTOR</Tag>
+		<English>Folklore (T) - Raptors</English>
+		<French>Mythe des Rapaces</French>
+		<Polish>Mit - Ptaki drapieżne</Polish>
+		<Russian>Ìèô î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RATEL</Tag>
+		<English>Folklore - Ratel</English>
+		<French>Mythe du Ratel</French>
+		<Russian>Ìèô î ìåäîåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RODENT</Tag>
+		<English>Folklore (T) - Rodent</English>
+		<French>Mythe des Rongeurs</French>
+		<Polish>Mit - Gryzonie</Polish>
+		<Russian>Ìèô î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_BIRD</Tag>
+		<English>Folklore (T) - Sea Birds</English>
+		<French>Mythe des Oiseaux marins</French>
+		<Polish>Mit - Ptaki morskie</Polish>
+		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNAKES</Tag>
+		<English>Folklore (T) - Snakes</English>
+		<French>Mythe des Serpents</French>
+		<Russian>Ìèô î çìåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
+		<English>Folklore - Viper</English>
+		<French>Mythe de la Vipère</French>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLAROO</Tag>
+		<English>Folklore - Wallaroo</English>
+		<French>Mythe du Wallaroo</French>
+		<Russian>Ìèô î êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WARTHOG</Tag>
+		<English>Folklore - Warthog</English>
+		<French>Mythe du Phacochère</French>
+		<Polish>Mit - Guziec</Polish>
+		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDEBEEST</Tag>
+		<English>Folklore - Wildebeest</English>
+		<French>Mythe du Gnou</French>
+		<Russian>Ìèô î ãíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
+		<English>Folklore (T) - Wolf</English>
+		<French>
+			<Text>Mythe des Loups</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito del lupo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit - Wilk</Polish>
+		<Russian>Ìèô î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
+		<English>Flocks of Peacock</English>
+		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Peacocks.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
@@ -1108,271 +466,58 @@
 		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_STORIES</Tag>
-		<English>Stories - Procoptodon</English>
-		<French>Histoires de Procoptodon</French>
-		<Russian>Ñêàçû î ïðîêîïòîäîíå</Russian>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
+		<English>Flocks of Turkey</English>
+		<Russian>Ñòàÿ èíäååê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Procoptodon</English>
-		<French>Effet (Histoires de Procoptodon)</French>
-		<Russian>Ïðåäàíèÿ î ïðîêîïòîäîíå</Russian>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Turkey.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_STORY</Tag>
-		<English>Story - Procoptodon</English>
-		<French>Histoire du Procoptodon</French>
-		<Russian>Ñêàçêà î ïðîêîïòîäîíå</Russian>
+		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
+		<English>Shock and Awe - Cacophony</English>
+		<French>Choc et stupeur - Cacophonie</French>
+		<Russian>Øîê è òðåïåò - êàêîôîíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PUFFADDER_MYTH</Tag>
-		<English>Myth - Puff Adder</English>
-		<French>Mythe de la Vipère heurtante</French>
-		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
+		<English>Shock and Awe - Haka</English>
+		<French>Choc et stupeur - Haka</French>
+		<Russian>Øîê è òðåïåò - Õàêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PUFFADDER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Puff Adder</English>
-		<French>Effet (Mythe de la Vipère heurtante)</French>
-		<Russian>Ïåñíÿ î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PUFFADDER_STORIES</Tag>
-		<English>Stories - Puff Adder</English>
-		<French>Histoires des Vipères heurtantes</French>
-		<Russian>Ñêàçû î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PUFFADDER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Puff Adder</English>
-		<French>Effet (Histoires des Vipères heurtantes)</French>
-		<Russian>Ïðåäàíèÿ î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PUFFADDER_STORY</Tag>
-		<English>Story - Puff Adder</English>
-		<French>Histoire de la Vipère heurtante</French>
-		<Russian>Ñêàçêà î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUOLL_MYTH</Tag>
-		<English>Myth - Quoll</English>
-		<French>Mythe du Chat marsupial</French>
-		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUOLL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Quoll</English>
-		<French>Effet (Mythe du Chat marsupial)</French>
-		<Russian>Ïåñíÿ î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUOLL_STORIES</Tag>
-		<English>Stories - Quoll</English>
-		<French>Histoires de Chat marsupial</French>
-		<Russian>Ñêàçû î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUOLL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Quoll</English>
-		<French>Effet (Histoires de Chat marsupial)</French>
-		<Russian>Ïðåäàíèÿ î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUOLL_STORY</Tag>
-		<English>Story - Quoll</English>
-		<French>Histoire du Chat marsupial</French>
-		<Russian>Ñêàçêà î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATEL_MYTH</Tag>
-		<English>Myth - Ratel</English>
-		<French>Mythe du Ratel</French>
-		<Russian>Ìèô î ìåäîåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATEL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Ratel</English>
-		<French>Effet (Mythe du Ratel)</French>
-		<Russian>Ïåñíÿ î ìåäîåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATEL_STORIES</Tag>
-		<English>Stories - Ratel</English>
-		<French>Histoires de Ratel</French>
-		<Russian>Ñêàçû î ìåäîåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATEL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Ratel</English>
-		<French>Effet (Histoires de Ratel)</French>
-		<Russian>Ïðåäàíèÿ î ìåäîåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATEL_STORY</Tag>
-		<English>Story - Ratel</English>
-		<French>Histoire du Ratel</French>
-		<Russian>Ñêàçêà î ìåäîåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKES_MYTH</Tag>
-		<English>Myth - Snakes</English>
-		<French>Mythe des Serpents</French>
-		<Russian>Ìèô î çìåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKES_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Snakes</English>
-		<French>Effet (Mythe des Serpents)</French>
-		<Russian>Ïåñíÿ î çìåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKES_STORIES</Tag>
-		<English>Stories - Snakes</English>
-		<French>Histoires des Serpents</French>
-		<Russian>Ñêàçû î çìåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKES_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Snakes</English>
-		<French>Effet (Histoires des Serpents)</French>
-		<Russian>Ïðåäàíèÿ î çìåÿõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKES_STORY</Tag>
-		<English>Story - Snakes</English>
-		<French>Histoire des Serpents</French>
-		<Russian>Ñêàçêà î çìåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VIPER_MYTH</Tag>
-		<English>Myth - Viper</English>
-		<French>Mythe de la Vipère</French>
-		<Russian>Ìèô î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VIPER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Viper</English>
-		<French>Effet (Mythe de la Vipère)</French>
-		<Russian>Ïåñíÿ î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VIPER_STORIES</Tag>
-		<English>Stories - Viper</English>
-		<French>Histoires des Vipères</French>
-		<Russian>Ñêàçû î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VIPER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Viper</English>
-		<French>Effet (Histoires des Vipères)</French>
-		<Russian>Ïðåäàíèÿ î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VIPER_STORY</Tag>
-		<English>Story - Viper</English>
-		<French>Histoire de la Vipère</French>
-		<Russian>Ñêàçêà î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALLAROO_MYTH</Tag>
-		<English>Myth - Wallaroo</English>
-		<French>Mythe du Wallaroo</French>
-		<Russian>Ìèô î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALLAROO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Wallaroo</English>
-		<French>Effet (Mythe du Wallaroo)</French>
-		<Russian>Ïåñíÿ î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALLAROO_STORIES</Tag>
-		<English>Stories - Wallaroo</English>
-		<French>Histoires de Wallaroo</French>
-		<Russian>Ñêàçû î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALLAROO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Wallaroo</English>
-		<French>Effet (Histoires de Wallaroo)</French>
-		<Russian>Ïðåäàíèÿ î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALLAROO_STORY</Tag>
-		<English>Story - Wallaroo</English>
-		<French>Histoire du Wallaroo</French>
-		<Russian>Ñêàçêà î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WARTHOG_MYTH</Tag>
-		<English>Myth - Warthog</English>
-		<French>Mythe du Phacochère</French>
-		<Polish>Mit - Guziec</Polish>
-		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WARTHOG_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Warthog</English>
-		<French>Effet (Mythe du Phacochère)</French>
-		<Polish>Efekt Mitu - Guziec</Polish>
-		<Russian>Ïåñíÿ î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WARTHOG_STORIES</Tag>
-		<English>Stories - Warthog</English>
-		<French>Histoires des Phacochères</French>
-		<Polish>Historie - Guziec</Polish>
-		<Russian>Ñêàçû î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WARTHOG_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Warthog</English>
-		<French>Effet (Histoires des Phacochères)</French>
-		<Polish>Efekt Historii - Guziec</Polish>
-		<Russian>Ïðåäàíèÿ î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WARTHOG_STORY</Tag>
-		<English>Story - Warthog</English>
-		<French>Histoire du Phacochère</French>
-		<Polish>Opowieść - Guziec</Polish>
-		<Russian>Ñêàçêà î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH</Tag>
-		<English>Myth - Wildebeest</English>
-		<French>Mythe du Gnou</French>
-		<Russian>Ìèô î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Wildebeest</English>
-		<French>Effet (Mythe du Gnou)</French>
-		<Russian>Ïåñíÿ î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORIES</Tag>
-		<English>Stories - Wildebeest</English>
-		<French>Histoires de Gnou</French>
-		<Russian>Ñêàçû î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Wildebeest</English>
-		<French>Effet (Histoires de Gnou)</French>
-		<Russian>Ïðåäàíèÿ î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORY</Tag>
-		<English>Story - Wildebeest</English>
-		<French>Histoire du Gnou</French>
-		<Russian>Ñêàçêà î ãíó</Russian>
+		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
+		<English>Shock and Awe - War Cry</English>
+		<French>Choc et stupeur - Cri de guerre</French>
+		<Russian>Øîê è òðåïåò - Áîåâîé êëè÷</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA_PEDIA</Tag>
 		<English>Naja is a genus of venomous elapid snakes known as cobras. Several other genera include species commonly called cobras (for example the rinkhals, or ring-necked spitting cobra), but of all the snakes known by that name, members of the genus Naja are the most widespread and the most widely recognized as cobras. Various species occur in regions throughout Africa, Southwest Asia, South Asia and Southeast Asia.[PARAGRAPH:2]Until recently the genus Naja had 20 to 22 species, but it has undergone several taxonomic revisions in recent years, so sources vary greatly. There is however wide support for a 2009 revision that synonymised the genera Boulengerina and Paranaja with Naja. According to that revision the genus Naja now includes 28 species.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DONKEY</Tag>
+		<English>Donkey</English>
+		<French>
+			<Text>Onagre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Onagro</Italian>
+		<Spanish>
+			<Text>Onagro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Dziki Osioł</Polish>
+		<Russian>Îñåë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HORSE_PEDIA</Tag>
+		<English>[COLOR_UNIT_TEXT] Horses [COLOR_REVERT] belong to the order of odd ungulates. They have existed for about 56 million years. The genus includes wild horses (from which the house forms arose), donkeys, and some species of zebra. Today they live in Africa and Asia. [NEWLINE] Their habitat is open landscapes, which are usually grassy, ​​but can also be desert-like. With their robust physique and long limbs, they are perfectly adapted to these regions. The head of the animals is comparatively large and elongated in the facial area, with eyes lying on the side and large, flexible ears. In most species, the fur is short and forms longer hairs on the neck, forelock and tail. The color varies depending on the species and is noticeably striped in zebras. The limbs end in wide hooves, with the animals only walking on the last toe (pointed walkers). The natural gaits step, trot and gallop are differentiated according to speed and sequence of movements. Horses are particularly active at twilight and nocturnal in the tropics, and more during the day in temperate zones. They spend most of their active time eating. Their food is mainly grass, less often leaves and twigs. On average, they only need 2.5 hours of sleep, mostly dozing with their eyes open, which is a typical feature of escape animals. Horses are social animals that live together in groups that either consist of mares and young animals or form a larger "harem" that also includes one or more stallions. Communication is varied and takes place via visual, tactile and olfactory signals. Mares usually give birth to a single young animal, which is relatively heavy in relation to the mother and also precocious. It can follow the mother just a few hours after the birth. In the wild, horses can live to be 21 to 40 years old. Large predators, including hyenas, wolves and big cats, count as natural enemies. When threatened, horses flee, are cornered, kicked or bite. [NEWLINE] Horses have long been of great importance to humans. In the Paleolithic they were a source of raw materials and food. In the Upper Paleolithic, numerous depictions were made in cave paintings, e.g. in the Lascaux cave. The domestication of the first donkeys probably began around 3000 BC. in Egypt. Since then, horses have become an integral part of human cultural history. As pack animals, draft animals or riding animals, house donkeys and domestic horses achieved worldwide distribution. The first modern horses came to America in 1492 with Christopher Columbus. With the motorization of agriculture and increasing automobile traffic, the importance of livestock decreased in the western industrialized countries and is largely limited to riding as a hobby or sport. In addition, mare's and donkey's milk and horse meat are used as food. The skin can be made into leather and plays a role in the manufacture of shoes. Horsehair is used, among other things, to cover string bows and is also used in upholstery.</English>
+		<German>[COLOR_UNIT_TEXT]Pferde[COLOR_REVERT] gehören zur Ordnung der Unpaarhufer. Sie existieren schon seit etwa 56 Millionen Jahren. Die Gattung umfasst wildlebende Pferde (aus denen die Hausformen entstanden sind), Esel und einige Zebraarten. Sie leben heute in Afrika und Asien.[NEWLINE]Ihr Lebensraum sind offene Landschaften, die in der Regel grasbewachsen sind, aber auch wüstenartig sein können. Mit ihrem robusten Körperbau und den langen Gliedmaßen sind sie perfekt an diese Regionen angepasst. Der Kopf der Tiere ist vergleichsweise groß und im Gesichtsbereich langgezogen, mit seitlich liegenden Augen und großen, beweglichen Ohren. Bei den meisten Arten ist das Fell kurz und bildet an Nacken, Schopf und Schwanz längere Haare. Die Farbe variiert je nach Art und ist bei Zebras auffällig gestreift. Die Gliedmaßen enden in breiten Hufen, wobei die Tiere nur auf dem letzten Zehenglied laufen (Spitzengänger). Nach Geschwindigkeit und Bewegungsabfolge werden dabei die natürlichen Gangarten Schritt, Trab und Galopp unterschieden. Pferde sind besonders in den Tropen dämmerungs- und nachtaktiv, in gemäßigten Zonen eher tagsüber. Die meiste aktive Zeit verbringen sie mit Fressen. Ihre Nahrung bilden hauptsächlich Gräser, seltener Blätter und Zweige. Durchschnittlich brauchen sie nur 2,5 Stunden Schlaf, wobei sie meist nur mit offenen Augen dösen, was ein typisches Merkmal für Fluchttiere ist. Pferde sind soziale Tiere, die in Gruppen zusammenleben, welche entweder aus Stuten und Jungtieren bestehen oder einen größeren "Harem" bilden, der auch ein oder mehrere Hengste mit einschließt. Die Kommunikation ist vielseitig und erfolgt über visuelle, taktile und olfaktorische Signale. Stuten gebären in der Regel ein einzelnes Jungtier, das im Verhältnis zur Mutter relativ schwer und auch frühreif ist. Bereits wenige Stunden nach der Geburt kann es der Mutter folgen. In freier Wildbahn können Pferde 21 bis 40 Jahre alt werden. Als natürliche Feinde zählen große Raubtiere, u.a. Hyänen, Wölfe und Großkatzen. Bei Bedrohung ergreifen Pferde die Flucht, werden sie in die Enge getrieben, treten oder beißen sie auch.[NEWLINE]Pferde haben schon lange eine große Bedeutung für den Menschen. In der Altsteinzeit waren sie eine Rohstoff- und Nahrungsquelle. Im Jungpaläolithikum entstanden zahlreiche Darstellung in der Höhlenmalerei, z.B. in der Höhle von Lascaux. Die Domestizierung der ersten Esel begann vermutlich ca. 3000 v.Chr. in Ägypten. Seither sind Pferde aus der menschlichen Kulturgeschichte nicht mehr wegzudenken. Als Last-, Zug- oder Reittiere erlangten Hausesel und Hauspferd eine weltweite Verbreitung. Die ersten modernen Pferde kamen 1492 mit Christoph Kolumbus nach Amerika. Mit der Motorisierung der Landwirtschaft und dem zunehmenden Automobilverkehr nahm die Bedeutung als Nutztier in den westlichen Industrieländern ab und beschränkt sich weitgehend auf Reiten als Hobby oder Sport. Des Weiteren werden Stuten- und Eselsmilch sowie Pferdefleich als Nahrungsmittel verwendet. Die Haut kann zu Leder verarbeitet werden und spielt bei der Schuhherstellung eine Rolle. Rosshaar dient u.a. zur Bespannung von Streichbögen und findet auch in der Polsterei Verwendung.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IGUANA_PEDIA</Tag>
@@ -1393,74 +538,43 @@
 		<German>Die giftige [COLOR_UNIT_TEXT]Puffotter[COLOR_REVERT] (Bitis arietans) aus der Familie der Vipern ist in fast ganz Afrika (die innere Sahara und die Regenwaldgebiete ausgenommen) sowie im Südwesten der Arabischen Halbinsel zu Hause.[NEWLINE]Die kräftige Schlange kann verschiedene Färbungen aufweisen mit bräunlichen Querbinden entlang des ganzen Körpers. Markant ist der breite und flache Kopf, der deutlich vom Hals abgesetzt ist. Die Giftzähne sind sehr lang. Je nach Lebensraum wird die Puffotter 80 bis 180 cm lang, wobei die Männchen länger sind als die Weibchen. Sie bevorzugt Savannen und Steppen, fühlt sich aber auch in Wäldern, Oasen und nahe von menschlichen Siedlungen wohl und ist bis in 3000 Meter Höhe anzutreffen, auch Kälte macht ihr nichts aus. Die eigentlich nachtaktiven Tiere sieht man in der Regenzeit auch tagsüber in der Sonne liegen. In Nord- und Südafrika halten sie Winterruhe. Ihre Nahrung besteht u.a. aus kleinen Säugern, Vögeln und Echsen, aber auch Fischen und Heuschrecken. Als Lauerjäger warten sie, bis die Beute in Reichweite kommt. Da die Puffotter ovovivipar ist, bringt sie ca. 30 bis 80 lebende Jungtiere zur Welt, die nur von einer dünnen Embryonalhülle umgeben sind, welche kurz nach der Geburt durchbrochen wird. Unter den Männchen kommt es zu Paarungskämpfen, die jedoch ohne Verletzungen ausgehen.[NEWLINE]Die meisten Giftschlangenbisse in Afrika werden von Puffottern verursacht. Ihr Giftvorrat reicht aus, um vier bis fünf Menschen zu töten. Es wirkt gewebezerstörend und hämotoxisch, verursacht Gewebeblutungen und Nekrosen. Die Puffotter greift nicht von selbst an, wehrt sich jedoch, wenn man ihr zu nahe kommt oder unbeabsichtigt auf sie tritt.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_COBRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cobra, Myths of Earth and Snakes, Reptile Cage and Enclosure, Snake pit and charmer</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe et Histoires des Cobras[NEWLINE][ICON_BULLET]Mythe de la Terre et des serpents[NEWLINE][ICON_BULLET]Cage et enclos pour Reptiles[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY</Tag>
+		<English>Subdued Donkey</English>
+		<French>Ane (App.)</French>
+		<Russian>Îñåë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Kangaroo and Marsupial, Marsupial Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
+		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
+		<English>Amphibian Colony</English>
+		<French>Colonie d'Amphibiens</French>
+		<Polish>Kolonia Płazów</Polish>
+		<Russian>Êîëîíèÿ àìôèáèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Nile Monitor, Myths of Reptile and Dragon, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe, et Histoires du Varan du Nil[NEWLINE][ICON_BULLET]Mythes des Reptiles et Dragons[NEWLINE][ICON_BULLET]Cage à Reptiles Enclos</French>
+		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Tag>
+		<English>[ICON_BULLET]Use the [COLOR_HIGHLIGHT_TEXT]Amphibian Colony[COLOR_REVERT] to spread [COLOR_HIGHLIGHT_TEXT]Amphibian Ponds[COLOR_REVERT] to other cities.</English>
+		<Polish>Użyj [COLOR_HIGHLIGHT_TEXT]Kolonii Płazów[COLOR_REVERT] by rozprzestrzenić [COLOR_HIGHLIGHT_TEXT]Stawyz z płazami[COLOR_REVERT] do innych miast.</Polish>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Используйте [COLOR_HIGHLIGHT_TEXT]Колонию амфибий[COLOR_REVERT] для размещения [COLOR_HIGHLIGHT_TEXT]Затонов амфибий[COLOR_REVERT] в других городах.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Okapi and Myth - Giraffe, Carnival and Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Okapi et Mythe des Girafes, Carnaval et Cage et Enclos pour Herbivores exotiques</French>
+		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Tag>
+		<English>Tamed Donkey (Breeding Pair)</English>
+		<French>Couple reproducteur - Ânes</French>
+		<Russian>Çàâîä÷èê îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Orangutan and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Orangutan et Ancient de la Forêt, Cage et Enclos pour primates</French>
+		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Oxpecker and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Pique-bœufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
+		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
+		<English>Tamed Horse (Breeding Pair)</English>
+		<French>Couple reproducteur - Chevaux</French>
+		<Russian>Çàâîä÷èê ëîøàäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Peacock and Birds, Bird Cage and Enclosure, Poultry Flock, Feather Worker and Flocks of Peacock</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Paon et des Oiseaux, Cages à Oiseaux, Atelier de Plumes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Puff adder, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Vipère heurtante[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à serpents et Charmeur</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Quoll and Marsupials, Marsupial Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Chat marsupial et autres Marsupiaux, Cage et Enclos pour Marsupiaux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ratel and weasel, Nocturnal and Bad Boy Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Ratel et de la Belette, Cage et Enclos pour nocturnes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Saiga and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Saiga et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Viper, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires des Vipères[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wallaroo and Marsupial, Kangaroo Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsupial, Kangaroo Herd, Cage et Enclosure</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wildebeest and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Gnou et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
+		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LIZARD</Tag>
@@ -1488,5 +602,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Tag>
 		<English>Tamed Snake</English>
 		<French>Serpent (dompté)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Tag>
+		<English>Tamed Wolf (Breeding Pair)</English>
+		<French>Couple reproducteur - Loup</French>
+		<Russian>Çàâîä÷èê âîëêîâ</Russian>
 	</TEXT>
 </Civ4GameText>

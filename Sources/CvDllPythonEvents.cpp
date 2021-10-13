@@ -214,18 +214,18 @@ struct EventArgs
 		return *this;
 	}
 
-	template < class Ty_ >
-	EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
-	{
-		pyArgs.add(value);
-		std::vector<Ty_> arr;
-		for (int idx = 0; idx < value.len; ++idx)
-		{
-			arr.push_back(value.vals[idx]);
-		}
-		jsonArgs << logging::JsonValue(name, arr);
-		return *this;
-	}
+	//template < class Ty_ >
+	//EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
+	//{
+	//	pyArgs.add(value);
+	//	std::vector<Ty_> arr;
+	//	for (int idx = 0; idx < value.len; ++idx)
+	//	{
+	//		arr.push_back(value.vals[idx]);
+	//	}
+	//	jsonArgs << logging::JsonValue(name, arr);
+	//	return *this;
+	//}
 
 	template < class Ty_, class Ty2_ >
 	EventArgs& arg(const std::string& name, const Ty_& value, const Ty2_& valueJson)
@@ -278,7 +278,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 	eventData.pyArgs << gDLL->shiftKey();
 	eventData.pyArgs << (gDLL->getChtLvl() > 0);
 
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
+#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off ..
 #ifdef USE_INTERNAL_PROFILER
 	static	std::map<int,ProfileSample*>*	g_pythonProfiles = NULL;
 
@@ -312,7 +312,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 		pSample = itr->second;
 	}
 
-	CProfileScope detailedScope(pSample);		
+	CProfileScope detailedScope(pSample);
 #endif
 #endif
 
@@ -376,19 +376,6 @@ void CvDllPythonEvents::reportInit()
 	eventData
 		.arg("event", "Init");
 	postEvent(eventData, "Init");
-}
-
-void CvDllPythonEvents::reportUpdate(float fDeltaTime)
-{
-	if (GC.getUSE_ON_UPDATE_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "Update")
-			.arg("fDeltaTime", fDeltaTime);
-		postEvent(eventData, "Update");
-	}
 }
 
 void CvDllPythonEvents::reportUnInit()
@@ -650,8 +637,13 @@ void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityBuilt")
-		.arg("pCity", pCity)
-		.arg("pUnit", pUnit);
+		.arg("pCity", pCity);
+
+	if (pUnit)
+		eventData.arg("pUnit", pUnit);
+	else
+		eventData.arg("pUnit", NULL);
+
 	postEvent(eventData, "cityBuilt");
 }
 
@@ -793,7 +785,7 @@ void CvDllPythonEvents::reportCityHurry( CvCity *pCity, HurryTypes eHurry )
 	postEvent(eventData,"cityHurry");
 }
 
-void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
+void CvDllPythonEvents::reportSelectionGroupPushMission(const CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
 {
 	if (NULL == pSelectionGroup)
 	{
@@ -804,7 +796,7 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelec
 
 	//using namespace bst::lambda;
 
-	std::transform(pSelectionGroup->beginUnits(), pSelectionGroup->endUnits(), std::back_inserter(aiUnitIds), bst::bind(&CvUnit::getID, _1));
+	algo::transform(pSelectionGroup->units(), std::back_inserter(aiUnitIds), bind(&CvUnit::getID, _1));
 
 	EventArgs eventData;
 	eventData
@@ -828,29 +820,13 @@ void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOl
 	postEvent(eventData, "unitMove");
 }
 
-void CvDllPythonEvents::reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	if (GC.getUSE_ON_UNIT_SET_XY_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitSetXY")
-			.arg("pPlot", pPlot)
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitSetXY");
-	}
-}
-
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_CREATED_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitCreated")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitCreated");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitCreated")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitCreated");
 }
 
 void CvDllPythonEvents::reportUnitBuilt(CvCity *pCity, CvUnit* pUnit)
@@ -888,14 +864,11 @@ void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eU
 
 void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_LOST_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitLost")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitLost");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitLost")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitLost");
 }
 
 void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
@@ -923,14 +896,11 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 
 void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_SELECTED_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitSelected")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitSelected");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitSelected")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitSelected");
 }
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
@@ -994,9 +964,14 @@ void CvDllPythonEvents::reportGoodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyP
 	eventData
 		.arg("event", "goodyReceived")
 		.arg("ePlayer", ePlayer)
-		.arg("pGoodyPlot", pGoodyPlot)
-		.arg("pGoodyUnit", pGoodyUnit)
-		.arg("eGoodyType", eGoodyType);
+		.arg("pGoodyPlot", pGoodyPlot);
+
+	if (pGoodyUnit)
+		eventData.arg("pGoodyUnit", pGoodyUnit);
+	else
+		eventData.arg("pGoodyUnit", NULL);
+
+	eventData.arg("eGoodyType", eGoodyType);
 	postEvent(eventData, "goodyReceived");
 }
 
@@ -1199,7 +1174,6 @@ void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, R
 	postEvent(eventData, "playerChangeStateReligion");
 }
 
-
 void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount)
 {
 	EventArgs eventData;
@@ -1210,20 +1184,6 @@ void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTyp
 		.arg("iAmount", iAmount);
 	postEvent(eventData, "playerGoldTrade");
 }
-
-// BUG - Revolution Event - start
-void CvDllPythonEvents::reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "playerRevolution")
-		.arg("ePlayerID", ePlayerID)
-		.arg("iAnarchyLength", iAnarchyLength)
-		.arg("paeOldCivics", Cy::Array<int>((const int*)paeOldCivics, GC.getNumCivicOptionInfos()))
-		.arg("paeNewCivics", Cy::Array<int>((const int*)paeNewCivics, GC.getNumCivicOptionInfos()));
-	postEvent(eventData, "playerRevolution");
-}
-// BUG - Revolution Event - end
 
 void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs)
 {
@@ -1242,7 +1202,6 @@ void CvDllPythonEvents::preSave()
 		.arg("event", "OnPreSave");
 	postEvent(eventData, "OnPreSave");
 }
-
 
 void CvDllPythonEvents::reportChangeTeam(TeamTypes eOld, TeamTypes eNew)
 {

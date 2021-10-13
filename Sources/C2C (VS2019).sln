@@ -9,19 +9,21 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CvGameCoreServer", "Server\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Interface", "Interface\Interface.vcxproj", "{6536EBEC-014E-4D6B-97BE-223137694CA8}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python", "..\Assets\Python\Python.pyproj", "{17044446-585F-4E8C-AFA6-0B4B7101BBFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Assert|x64 = Assert|x64
+		Assert|Any CPU = Assert|Any CPU
 		Assert|x86 = Assert|x86
-		Debug|x64 = Debug|x64
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
-		FinalRelease|x64 = FinalRelease|x64
+		FinalRelease|Any CPU = FinalRelease|Any CPU
 		FinalRelease|x86 = FinalRelease|x86
-		Profile|x64 = Profile|x64
+		Profile|Any CPU = Profile|Any CPU
 		Profile|x86 = Profile|x86
-		Release|x64 = Release|x64
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
-		Testing|x64 = Testing|x64
+		Testing|Any CPU = Testing|Any CPU
 		Testing|x86 = Testing|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution

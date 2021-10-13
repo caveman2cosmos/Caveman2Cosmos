@@ -43,7 +43,7 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 	int iNumNewListElements = *pNumNewListElements;
 
 	for ( int j = 0; j < iNumNewListElements; j++ )
-	{	
+	{
 		iCount = 0;
 		for ( int i = 0; i < iNumOldListElements; i++ )
 		{
@@ -51,13 +51,13 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 			{
 				break;
 			}
-			else 
+			else
 			{
 				iCount++;
 			}
-		}		
+		}
 		if ( iCount == iNumOldListElements ) //it's not a dupe, we want to add it to the array
-		{			
+		{
 			m_iAddNumNames++;		// Nr of Elements to add to the new array
 		}
 		else  //set empty, don't want a dupe!
@@ -65,19 +65,19 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 			pszListNew[j] = szDefaultListVal;
 		}
 	}
-	
 
-	// Make a temp Array of the new size		
-	CvString* m_paszTempList = new CvString[iNumOldListElements + m_iAddNumNames];	
+
+	// Make a temp Array of the new size
+	CvString* m_paszTempList = new CvString[iNumOldListElements + m_iAddNumNames];
 	iCount = 0;
 
 	//read values from previous infoclass object, we want them to be first...
 	for ( int i = 0; i < iNumOldListElements; i++ )
-	{	
-		m_paszTempList[i] = pszListOld[i];	
+	{
+		m_paszTempList[i] = pszListOld[i];
 		iCount++;
 	}
-	
+
 	//read values from new infoclass object
 	for ( int i = 0; i < iNumNewListElements; i++ )
 	{
@@ -85,9 +85,9 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 		{
 			m_paszTempList[iCount] = pszListNew[i];
 			iCount++;
-		}			
+		}
 	}
-	
+
 	// set Number of array elements need for the additional list plus old list
 	*pNumNewListElements = iNumOldListElements + m_iAddNumNames;
 	// delete infoclass array ppszListNew
@@ -108,29 +108,6 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 	SAFE_DELETE_ARRAY(m_paszTempList);
 }
 
-bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const
-{	
-	for ( int j = 0; j < iNumValueNew; j++ )
-	{	
-		if ( ppiListNew[j] == iValueOld)
-		{
-			return true; 			
-		}
-	}	
-	return false;
-}
-
-bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const
-{	
-	for ( int j = 0; j < iNumValueNew; j++ )
-	{	
-		if ( ppiListNew[j] == wValueOld)
-		{
-			return true; 			
-		}
-	}	
-	return false;
-}
 
 bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 {
@@ -154,7 +131,7 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 #if (DEBUG_IS_MODULAR_ART == 1)
 		szDebugBuffer.Format(" EMPTY location, aborting.");
 		gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
-#endif	
+#endif
 		return false;
 	}
 
@@ -184,7 +161,7 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 
 	int iReplaced = m_szFolderPath.Replace('/','\\');
 #if (DEBUG_IS_MODULAR_ART == 1)
-	
+
 	szDebugBuffer.Format("  Replaced %i occurrences of '/' with '\\'.", iReplaced);
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 
@@ -193,14 +170,14 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 	iReplaced = m_szFolderPath.Replace(CvString("\\\\"),CvString("\\"));
 #if (DEBUG_IS_MODULAR_ART == 1)
 	szDebugBuffer.Format("  Replaced %i occurrences of '\\\\' with '\\'.", iReplaced);
-	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());	
+	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 
 	szDebugBuffer.Format("  Path WITH given location: '%s'", m_szFolderPath.c_str());
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 #endif
 	FILE *file;
 	DWORD dwAttr = GetFileAttributes(m_szFolderPath.c_str());
-	if(dwAttr != 0xffffffff && (dwAttr & FILE_ATTRIBUTE_DIRECTORY)) 
+	if(dwAttr != 0xffffffff && (dwAttr & FILE_ATTRIBUTE_DIRECTORY))
 	{
 #if (DEBUG_IS_MODULAR_ART == 1)
 		szDebugBuffer.Format(" '%s' is a DIRECTORY, no modular art?", m_szFolderPath.c_str());
@@ -217,25 +194,25 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 /* DEBUG_IS_MODULAR_ART                    END                                                  */
 /************************************************************************************************/
 
-	if (file == NULL) 
+	if (file == NULL)
 	{
-		return false;		
+		return false;
 	}
 	fclose(file);
 
 #if (DEBUG_IS_MODULAR_ART == 1)
 	szDebugBuffer.Format("=== isModularArt END ===");
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
-#endif	
+#endif
 
 	return true;
 }
 
 CvString CvXMLLoadUtilityModTools::deleteFileName(const char* szDirName, const char szLocateChar)
-{	
+{
 	CvString szDirNameStrip = szDirName;
 	string::size_type pos = szDirNameStrip.find_last_of(szLocateChar);
-	if(pos != string::npos) 
+	if(pos != string::npos)
 	{
 		szDirNameStrip.erase(pos + 1);
 	}

@@ -61,7 +61,7 @@
 		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
 		<English>Locally</English>
 		<French>Local</French>
-		<German>örtlich</German>
+		<German>lokal</German>
 		<Russian>(вблизи ресурса)</Russian>
 	</TEXT>
 	<TEXT>
@@ -170,13 +170,12 @@
 		<Russian>Íàðîäû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
+		<English>Technocultural Bonuses</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
-		<English>Other Bonuses</English>
-		<French>Autres Bonus</French>
-		<German>Güter</German>
-		<Spanish>Otros recursos</Spanish>
-		<Polish>Inne Bonusy</Polish>
-		<Russian>Òîâàðû</Russian>
+		<English>Manufactured Bonuses</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
@@ -188,26 +187,8 @@
 		<Russian>Ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING</Tag>
-		<English>Buildings</English>
-		<French>
-			<Text>Bâtiments</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Gebäude</German>
-		<Italian>
-			<Text>Edifici</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Edificios</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Budynki</Polish>
-		<Russian>Çäàíèÿ</Russian>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
+		<English>Unique Bonuses</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
@@ -597,6 +578,10 @@
 		<Russian>Óïðàâëåíèå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
+		<English>Space</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>
@@ -638,6 +623,10 @@
 		<French>Unités Spéciales</French>
 		<German>Spezialeinheiten</German>
 		<Russian>Особые юниты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
+		<English>Spreading Units</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
@@ -874,11 +863,6 @@
 		<Russian>Íå èçìåíÿòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
-		<English>Non-Combat</English>
-		<Russian>Небоевой</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
 		<English>Quote</English>
 		<French>Citations</French>
@@ -1055,11 +1039,8 @@
 		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_SCREEN_EXIT</Tag>
-		<English>Exit</English>
-		<French>Quitter</French>
-		<German>Beenden</German>
-		<Italian>Esci</Italian>
-		<Spanish>Salir</Spanish>
+		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
+		<English>Non-Combat</English>
+		<Russian>Небоевой</Russian>
 	</TEXT>
 </Civ4GameText>

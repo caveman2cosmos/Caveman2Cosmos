@@ -92,7 +92,7 @@ public:
 
 	// Deletes Maps, Reloads Infos from XML, Rebuilds Maps
 	DllExport void Reset();
-	
+
 	// Builds Maps
 	DllExport void buildArtFileInfoMaps();
 

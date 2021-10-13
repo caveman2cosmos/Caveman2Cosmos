@@ -28,7 +28,6 @@ def readAndApplyDesc(argsList):
 	'''
 	print "--- CvWBInterface.readAndApplyDesc(argsList) ---"
 	fileName = argsList[0]
-	if not adjustMap(fileName): return -1
 
 	if WBDesc.read(fileName) < 0:
 		return -1
@@ -63,7 +62,7 @@ def getGameData():
 	t = ()
 	t += (
 		GC.getInfoTypeForString(WBDesc.mapDesc.worldSize), GC.getInfoTypeForString(WBDesc.mapDesc.climate),
-		GC.getInfoTypeForString(WBDesc.mapDesc.seaLevel), gameWB.iStartEra, GC.getInfoTypeForString(gameWB.speedType), gameWB.iCalendarType
+		GC.getInfoTypeForString(WBDesc.mapDesc.seaLevel), gameWB.iStartEra, getInfoType(gameWB.speedType), gameWB.iCalendarType
 	)
 	types = gameWB.options
 	iLength = len(types)
@@ -116,10 +115,15 @@ def getPlayerData():
 	for i in xrange(GC.getMAX_PLAYERS()):
 		playerWB = playerTuple[i]
 		t += (
-			GC.getInfoTypeForString(playerWB.civType), playerWB.isPlayableCiv, GC.getInfoTypeForString(playerWB.leaderType), playerWB.iHandicap,
-			playerWB.iTeam, GC.getInfoTypeForString(playerWB.color), GC.getInfoTypeForString(playerWB.artStyle), 0, playerWB.isWhiteFlag
+			getInfoType(playerWB.civType), playerWB.isPlayableCiv, getInfoType(playerWB.leaderType), playerWB.iHandicap,
+			playerWB.iTeam, getInfoType(playerWB.color), getInfoType(playerWB.artStyle), 0, playerWB.isWhiteFlag
 		)
 	return t
+
+def getInfoType(TYPE):
+	if TYPE is None:
+		return -1
+	return GC.getInfoTypeForString(TYPE)
 
 #---------------------#
 # Apply Scenario file #

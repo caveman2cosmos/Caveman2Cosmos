@@ -3,11 +3,11 @@
 //
 //  FILE:    CvInfoWater.cpp
 //
-//  AUTHOR:	
-//					
-//					
+//  AUTHOR:
 //
-//  PURPOSE: The base class for all info classes to inherit from.  
+//
+//
+//  PURPOSE: The base class for all info classes to inherit from.
 //
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
@@ -28,7 +28,7 @@
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvWaterPlaneInfo::CvWaterPlaneInfo() 
+CvWaterPlaneInfo::CvWaterPlaneInfo()
 	: m_fMaterialAlpha(0.0f)
 	, m_BaseTextureScale(0.0f)
 	, m_fURate(0.0f)
@@ -154,7 +154,7 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 			pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
 			m_szTransitionTexture = szTextVal;
 		}
-		
+
 		pXML->MoveToXmlParent();
 	}
 
@@ -298,9 +298,6 @@ bool CvTerrainPlaneInfo::read(CvXMLLoadUtility* pXML)
 void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo)
 {
 	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1	
 	float fDefault = 0.0f;
 	CvString cDefault = CvString::format("").GetCString();
 	CvWString wDefault = CvWString::format(L"").GetCString();
@@ -376,7 +373,7 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 
 	pXML->GetChildXmlValByName( &m_bVisible, L"bVisible");
-	
+
 	pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
 	m_szBaseTexture = szTextVal;
 
@@ -397,10 +394,6 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
 {
 	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1	
-	float fDefault = 0.0f;
 	CvString cDefault = CvString::format("").GetCString();
 	CvWString wDefault = CvWString::format(L"").GetCString();
 
@@ -412,5 +405,5 @@ void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
 	if ( getCameraOverlayType() == CAMERA_OVERLAY_DECAL )
 	{
 		m_eCameraOverlayType = pClassInfo->getCameraOverlayType();
-	}	
+	}
 }
