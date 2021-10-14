@@ -234,21 +234,16 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 		else
 		{
 			std::vector<CvString> aszFiles;
-			CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
-
-			pModEnumVector->loadModControlArray(aszFiles, "globaldefines");
+			CvXMLLoadUtilitySetMod::loadModControlArray(aszFiles, "globaldefines");
 
 			foreach_(const CvString& szFile, aszFiles)
 			{
 				if (!ReadGlobalDefines(szFile, cache))
 				{
-					SAFE_DELETE(pModEnumVector);
 					OutputDebugString("Setting Global Defines: End\n");
 					return false;
 				}
 			}
-			SAFE_DELETE(pModEnumVector);
-			aszFiles.clear();
 		}
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 END                                                  */
@@ -1954,14 +1949,11 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: %s\n", szFileRoot);
 
-	CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-
 	if (!bLoaded)
 	{
 		std::vector<CvString> aszFiles;
 		CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
-		pModEnumVector->MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
+		CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
 		if(aszFiles.size() == 0)
 			aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
@@ -2010,7 +2002,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 				{
 					std::vector<CvString> aszFiles;
 					CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
-					pModEnumVector->MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
+					CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
 					if(aszFiles.size() == 0)
 						aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
@@ -2069,7 +2061,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 			else
 			{
 				std::vector<CvString> aszFiles;
-				pModEnumVector->loadModControlArray(aszFiles, szFileRoot);
+				CvXMLLoadUtilitySetMod::loadModControlArray(aszFiles, szFileRoot);
 
 				foreach_(const CvString& szFile, aszFiles)
 				{
@@ -2092,7 +2084,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 				{
 					std::vector<CvString> aszFiles;
 					CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
-					pModEnumVector->MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
+					CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
 					if(aszFiles.size() == 0)
 						aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
@@ -2146,17 +2138,6 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 			m_pParser->resetDocumentPool();
 		}
 	}
-
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/26/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	SAFE_DELETE(pModEnumVector);
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 }
 
 /************************************************************************************************/
@@ -2212,16 +2193,6 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 
 	if (!bLoaded)
 	{
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/26/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-		CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
 		bLoaded = LoadCivXml(NULL, CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
 		if (!bLoaded)
@@ -2265,7 +2236,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 			{
 				std::vector<CvString> aszFiles;
 				//aszFiles.reserve(10000);
-				pModEnumVector->loadModControlArray(aszFiles, szFileRoot);
+				CvXMLLoadUtilitySetMod::loadModControlArray(aszFiles, szFileRoot);
 
 				foreach_(const CvString& szFile, aszFiles)
 				{
@@ -2287,16 +2258,6 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 		}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		SAFE_DELETE(pModEnumVector);
-		SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	}
 }
 
@@ -3389,9 +3350,7 @@ DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
-	CvXMLLoadUtilitySetMod* pSetMod = new CvXMLLoadUtilitySetMod;
-	pSetMod->setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls, "CIV4ModularLoadingControls", L"Type"));
-	SAFE_DELETE(pSetMod);
+	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls, "CIV4ModularLoadingControls", L"Type"));
 }
 
 // In the next 2 methods we load the MLF classes
