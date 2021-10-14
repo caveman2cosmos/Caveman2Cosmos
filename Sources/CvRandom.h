@@ -17,7 +17,7 @@ public:
 	void uninit();
 	void reset(unsigned long ulSeed = 0);
 
-	DllExport uint16_t get(uint16_t usNum, const TCHAR* pszLog = NULL);  //  Returns value from 0 to num-1 inclusive.
+	DllExport uint16_t get(uint16_t usNum, const char* pszLog = NULL);  //  Returns value from 0 to num-1 inclusive.
 	DllExport float getFloat();
 	unsigned int getInt();
 

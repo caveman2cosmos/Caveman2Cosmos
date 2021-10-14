@@ -166,7 +166,7 @@ bool CvSelectionGroupAI::AI_update()
 				//if (GC.getLogging())
 				//{
 					int iPass = iTempHack - 90;
-					TCHAR szOut[1024];
+					char szOut[1024];
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf
@@ -187,7 +187,7 @@ bool CvSelectionGroupAI::AI_update()
 			{
 				if (GC.getLogging())
 				{
-					TCHAR szOut[1024];
+					char szOut[1024];
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf

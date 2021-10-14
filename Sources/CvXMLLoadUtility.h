@@ -74,7 +74,7 @@ public:
 	DllExport bool LoadGraphicOptions();
 
 	// read the global defines from a specific file
-	bool ReadGlobalDefines(const TCHAR* szXMLFileName, CvCacheObject* cache);
+	bool ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache);
 	// loads globaldefines.xml and calls various other functions to load relevant global variables
 	DllExport bool SetGlobalDefines();
 	// loads globaltypes.xml and calls various other functions to load relevant global variables
@@ -261,7 +261,7 @@ public:
 
 	// loads an xml file into the FXml variable.  The szFilename parameter has
 	// the m_szXmlPath member variable pre-pended to it to form the full pathname
-	bool LoadCivXml(FXml* pFXml, const TCHAR* szFilename);
+	bool LoadCivXml(FXml* pFXml, const char* szFilename);
 
 	int  GetXmlChildrenNumber() { return m_pCurrentXmlElement->getChildElementCount(); }
 	int  GetXmlSiblingsNumber()
@@ -518,7 +518,7 @@ public:
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
 
 	// Searches the InfoClass for the pszVal and returns the location if a match is found.
-	static int GetInfoClass(const TCHAR* pszVal);
+	static int GetInfoClass(const char* pszVal);
 
 	template <class T>
 	static void InitList(T** ppList, int iListLen, T val = 0);
@@ -708,14 +708,14 @@ public:
 	}
 
 	// create a hot key from a description
-	CvWString CreateHotKeyFromDescription(const TCHAR* pszHotKey, bool bShift = false, bool bAlt = false, bool bCtrl = false);
+	CvWString CreateHotKeyFromDescription(const char* pszHotKey, bool bShift = false, bool bAlt = false, bool bCtrl = false);
 
 	// function that sets the number of strings in a list, initializes the string to the correct length, and fills it from the
 	// current xml file, it assumes that the current node is the parent node of the string list children
 	bool SetStringList(CvString** ppszStringArray, int* piSize);
 
 	// get the integer value for the keyboard mapping of the hotkey if it exists
-	int GetHotKeyInt(const TCHAR* pszHotKeyVal);
+	int GetHotKeyInt(const char* pszHotKeyVal);
 
 	// Returns true if the dependency list is satisfied, false if not.
 	inline bool CheckDependency();
@@ -814,7 +814,7 @@ private:
 	void SetGameText(const wchar_t* szTextGroup, const wchar_t* szTagName, std::vector<CvGameText>& texts);
 
 	// create a keyboard string from a KB code, Delete would be returned for KB_DELETE
-	CvWString CreateKeyStringFromKBCode(const TCHAR* pszHotKey);
+	CvWString CreateKeyStringFromKBCode(const char* pszHotKey);
 
 	void orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength);
 };

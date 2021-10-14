@@ -272,7 +272,7 @@ bool CvImprovementInfo::isPermanent() const
 	return m_bPermanent;
 }
 
-const TCHAR* CvImprovementInfo::getArtDefineTag() const
+const char* CvImprovementInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -397,7 +397,7 @@ int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 		return m_paImprovementBonus[i].m_iDiscoverRand;
 }
 
-const TCHAR* CvImprovementInfo::getButton() const
+const char* CvImprovementInfo::getButton() const
 {
 	/************************************************************************************************/
 	/* XMLCOPY								 10/25/07								MRGENIE	  */
@@ -422,12 +422,12 @@ const CvArtInfoImprovement* CvImprovementInfo::getArtInfo() const
 	return ARTFILEMGR.getImprovementArtInfo(getArtDefineTag());
 }
 
-const TCHAR* CvArtInfoImprovement::getShaderNIF() const
+const char* CvArtInfoImprovement::getShaderNIF() const
 {
 	return m_szShaderNIF;
 }
 
-void CvArtInfoImprovement::setShaderNIF(const TCHAR* szDesc)
+void CvArtInfoImprovement::setShaderNIF(const char* szDesc)
 {
 	m_szShaderNIF = szDesc;
 }

@@ -502,7 +502,7 @@ public:
 	DllExport const CvWString getName(uint uiForm = 0) const;
 	DllExport int getSubUnitsAlive() const;
 	DllExport const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra) const;
-	DllExport const TCHAR* getButton() const;
+	DllExport const char* getButton() const;
 	DllExport int getGroupSize() const;
 	DllExport int getGroupDefinitions() const;
 	DllExport int getUnitGroupRequired(int i) const;

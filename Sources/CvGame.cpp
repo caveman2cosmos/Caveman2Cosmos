@@ -3930,7 +3930,7 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 
 	if (GC.getLogging())
 	{
-		TCHAR szOut[1024];
+		char szOut[1024];
 		sprintf(szOut, "setAutoPlay called for player %d - set to: %d\n", iPlayer, iNewValue);
 		gDLL->messageControlLog(szOut);
 	}
@@ -5714,7 +5714,7 @@ const CvWString & CvGame::getName()
 }
 
 
-void CvGame::setName(const TCHAR* szName)
+void CvGame::setName(const char* szName)
 {
 	GC.getInitCore().setGameName(szName);
 }
@@ -8959,7 +8959,7 @@ void CvGame::logNetMsgData(char* format, ...)
 {
 	if (isNetworkMultiPlayer())
 	{
-		TCHAR szOut[1024];
+		char szOut[1024];
 		if (getActivePlayer() != -1)
 			sprintf(szOut, "Player %d - Multiplayer Game Log.log", getActivePlayer());
 		else
@@ -11749,9 +11749,9 @@ void CvGame::logOOSSpecial(int iLocID, int iVar, int iVar2, int iVar3)
 {
 	if (isNetworkMultiPlayer())
 	{
-		TCHAR szFile[1024];
+		char szFile[1024];
 		sprintf(szFile, "OOSSpecialLogger - Player %d - Set %d.log", getActivePlayer(), isFinalInitialized() ? getGameTurn()/50 : -1);
-		TCHAR szOut[1024];
+		char szOut[1024];
 		sprintf(szOut, "iLocID %d - iVar %d - iVar2 %d - iVar3 %d\n\tmapRand %d\n\tSorenRand %d", iLocID, iVar, iVar2, iVar3, getMapRand().getSeed(), getSorenRand().getSeed());
 		gDLL->logMsg(szFile, szOut, false, false);
 	}
