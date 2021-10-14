@@ -21,16 +21,13 @@
 //  DESC:   Group of functions to enable true Modular loading for Civilization 4 BtS
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvXMLLoadUtilityModTools
+namespace CvXMLLoadUtilityModTools
 {
-//---------------------------------------PUBLIC INTERFACE---------------------------------
-public:
 	void StringArrayExtend( CvString **ppszListNew, int* iNumNewListElements,
 							CvString **ppszListOld, int iNumOldListElements,
-							CvString szDefaultListVal = CvString()) const;
+							CvString szDefaultListVal = CvString());
 
 	bool isModularArt(const char* szLocationName);
-	CvString deleteFileName(const char* szDirName, const char szLocateChar);
-};
+}
 
 #endif	// XML_LOAD_UTILITY_H
