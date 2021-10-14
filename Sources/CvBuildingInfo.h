@@ -24,6 +24,9 @@ class CvPropertyManipulators;
 class CvXMLLoadUtility;
 //struct CvInfoUtil;
 
+typedef std::pair<BuildingTypes, ReligionTypes> ShrineBuilding;
+
+
 class CvBuildingInfo : public CvHotkeyInfo
 {
 public:
@@ -500,6 +503,8 @@ public:
 	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
 	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
+	static const std::vector<ShrineBuilding>& getShrineBuildings() { return m_shrineBuildings; }
+
 	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -835,6 +840,8 @@ private:
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
 	//const BoolExpr* m_pExprFreePromotionCondition;
+
+	static std::vector<ShrineBuilding> m_shrineBuildings;
 };
 
 #endif

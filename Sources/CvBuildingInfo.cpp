@@ -21,6 +21,8 @@
 //					CvBuildingInfo
 //======================================================================================================
 
+std::vector<ShrineBuilding> CvBuildingInfo::m_shrineBuildings;
+
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvBuildingInfo()
@@ -1622,8 +1624,12 @@ void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
 {
 	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, eThis);
 	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
-}
 
+	if (getHolyCity() != NO_RELIGION)
+	{
+		m_shrineBuildings.push_back(std::make_pair(eThis, (ReligionTypes)getReligionType()));
+	}
+}
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {

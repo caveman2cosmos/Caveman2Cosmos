@@ -1041,7 +1041,7 @@ void CyGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std
 
 bool CyGame::hasSkippedSaveChecksum() const
 {
-	return m_pGame.hasSkippedSaveChecksum();
+	return gDLL->hasSkippedSaveChecksum();
 }
 
 void CyGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
