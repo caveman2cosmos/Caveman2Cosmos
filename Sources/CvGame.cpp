@@ -9287,49 +9287,15 @@ BuildingTypes CvGame::getShrineBuilding(int eIndex, ReligionTypes eReligion)
 	return eBuilding;
 }
 
-void CvGame::changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion, bool bRemove)
+void CvGame::changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
-	FAssertMsg(bRemove || m_iShrineBuildingCount < GC.getNumBuildingInfos(), "trying to add too many buildings to CvGame::changeShrineBuilding");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), m_iShrineBuildingCount);
 
-	if (bRemove)
-	{
-		bool bFound = false;
-
-		for (int iI = 0; iI < m_iShrineBuildingCount; iI++)
-		{
-			if (!bFound)
-			{
-				// note, eReligion is not important if we removing, since each building is always one religion
-				if (m_aiShrineBuilding[iI] == (int) eBuilding)
-					bFound = true;
-			}
-
-			if (bFound)
-			{
-				int iToMove = iI + 1;
-				if (iToMove < m_iShrineBuildingCount)
-				{
-					m_aiShrineBuilding[iI] = m_aiShrineBuilding[iToMove];
-					m_aiShrineReligion[iI] = m_aiShrineReligion[iToMove];
-				}
-				else
-				{
-					m_aiShrineBuilding[iI] = (int) NO_BUILDING;
-					m_aiShrineReligion[iI] = (int) NO_RELIGION;
-				}
-
-				m_iShrineBuildingCount--;
-			}
-		}
-	}
-	else if (m_iShrineBuildingCount < GC.getNumBuildingInfos())
-	{
-		// add this item to the end
-		m_aiShrineBuilding[m_iShrineBuildingCount] = eBuilding;
-		m_aiShrineReligion[m_iShrineBuildingCount] = eReligion;
-		m_iShrineBuildingCount++;
-	}
+	// add this item to the end
+	m_aiShrineBuilding[m_iShrineBuildingCount] = eBuilding;
+	m_aiShrineReligion[m_iShrineBuildingCount] = eReligion;
+	m_iShrineBuildingCount++;
 }
 
 bool CvGame::culturalVictoryValid() const
@@ -9354,7 +9320,6 @@ int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 
 void CvGame::doUpdateCacheOnTurn()
 {
-
 	// reset shrine count
 	m_iShrineBuildingCount = 0;
 

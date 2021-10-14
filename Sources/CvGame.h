@@ -632,7 +632,7 @@ public:
 
 	int getShrineBuildingCount(ReligionTypes eReligion = NO_RELIGION);
 	BuildingTypes getShrineBuilding(int eIndex, ReligionTypes eReligion = NO_RELIGION);
-	void changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion, bool bRemove = false);
+	void changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion);
 
 	bool culturalVictoryValid() const;
 	int culturalVictoryNumCultureCities() const;
