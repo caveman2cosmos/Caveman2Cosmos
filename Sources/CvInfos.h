@@ -13,7 +13,6 @@
 #ifndef CV_INFO_H
 #define CV_INFO_H
 
-#include "CvXMLLoadUtilityModTools.h"
 #include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"

@@ -17,6 +17,7 @@
 #include "CvPlayerAI.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
+#include "CvXMLLoadUtilityModTools.h"
 #include "CheckSum.h"
 #include "CvImprovementInfo.h"
 
@@ -635,8 +636,7 @@ bool CvDiplomacyResponse::read(CvXMLLoadUtility* pXML)
 }
 void CvDiplomacyResponse::UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int iIndex)
 {
-	bool bDefault = false;
-	CvXMLLoadUtilityModTools* pModTools = new CvXMLLoadUtilityModTools;
+	const bool bDefault = false;
 
 	// We use the String append mechanism from WOC default = assume the modder added his strings
 	// purposly, so those are on the first place, the strings previously are appended after them
@@ -646,9 +646,8 @@ void CvDiplomacyResponse::UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int
 		m_paszNewNames[i] = pDiplomacyInfo->getDiplomacyText(iIndex, i);
 	}
 
-	pModTools->StringArrayExtend(&m_paszDiplomacyText, &m_iNumDiplomacyText, &m_paszNewNames, pDiplomacyInfo->getNumDiplomacyText(iIndex));
+	CvXMLLoadUtilityModTools::StringArrayExtend(&m_paszDiplomacyText, &m_iNumDiplomacyText, &m_paszNewNames, pDiplomacyInfo->getNumDiplomacyText(iIndex));
 	SAFE_DELETE_ARRAY(m_paszNewNames);
-	SAFE_DELETE(pModTools);
 
 	// if anything is true, we don't overwrite(assuming the modder did set it true purposly
 	for ( int i = 0; i < GC.getNumLeaderHeadInfos(); ++i)
@@ -11802,9 +11801,7 @@ void CvCivilizationInfo::copyNonDefaults(const CvCivilizationInfo* pClassInfo)
 			m_paszOldNames[i] = pClassInfo->getCityNames(i);
 		}
 
-		CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
-		pCurrentUnit->StringArrayExtend(&m_paszCityNames, &m_iNumCityNames, &m_paszOldNames, pClassInfo->getNumCityNames());
-		delete pCurrentUnit;
+		CvXMLLoadUtilityModTools::StringArrayExtend(&m_paszCityNames, &m_iNumCityNames, &m_paszOldNames, pClassInfo->getNumCityNames());
 		SAFE_DELETE_ARRAY(m_paszOldNames)
 	}
 

@@ -37,6 +37,6 @@ namespace CvXMLLoadUtilitySetMod
 								bool							bSearchSubdirectories = false);
 
 	void loadModControlArray(std::vector<CvString>&	aszFiles, const char* szFileRoot);
-};
+}
 
 #endif	// XML_LOAD_UTILITY_SET_MOD_H
