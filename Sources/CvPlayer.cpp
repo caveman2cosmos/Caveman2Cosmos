@@ -2171,8 +2171,6 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		iBestArea = findStartingArea();
 	}
 
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
-
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
 		CvPlot *pBestPlot = NULL;
@@ -2183,7 +2181,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| !plot->isMapCategoryType(earth)
+			|| (CURRENT_MAP == MAP_EARTH && !plot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
