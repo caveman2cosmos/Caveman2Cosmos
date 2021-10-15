@@ -10471,7 +10471,7 @@ bool CvUnit::found()
 		return false;
 	}
 
-	if (!canFound(plot()))
+	if (!canFound(pPlot))
 	{
 		return false;
 	}
