@@ -21,8 +21,6 @@
 //					CvBuildingInfo
 //======================================================================================================
 
-std::vector<ShrineBuilding> CvBuildingInfo::m_shrineBuildings;
-
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvBuildingInfo()
@@ -1620,14 +1618,12 @@ namespace CvBuildingInternal
 }
 
 
-void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
+void CvBuildingInfo::doPostLoadCaching(std::vector<CvBuildingInfo*>& buildingInfos)
 {
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, eThis);
-	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
-
-	if (getHolyCity() != NO_RELIGION)
+	for (uint32_t i = 0, num = buildingInfos.size(); i < num; i++)
 	{
-		m_shrineBuildings.push_back(std::make_pair(eThis, (ReligionTypes)getReligionType()));
+		buildingInfos[i]->m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*buildingInfos[i], (BuildingTypes)i);
+		buildingInfos[i]->m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*buildingInfos[i], (BuildingTypes)i);
 	}
 }
 

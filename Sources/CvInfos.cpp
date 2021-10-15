@@ -19090,6 +19090,19 @@ void CvReligionInfo::getCheckSum(uint32_t& iSum) const
 	m_PropertyManipulators.getCheckSum(iSum);
 }
 
+void CvReligionInfo::doPostLoadCaching(std::vector<CvReligionInfo*>& religionInfos)
+{
+	for (int i = 0, num = GC.getNumBuildingInfos(); i < num; i++)
+	{
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)i);
+
+		if (kBuilding.getHolyCity() != NO_RELIGION)
+		{
+			religionInfos[kBuilding.getReligionType()]->m_shrineBuildings.push_back((BuildingTypes)i);
+		}
+	}
+}
+
 //======================================================================================================
 //					CvCorporationInfo
 //======================================================================================================

@@ -24,9 +24,6 @@ class CvPropertyManipulators;
 class CvXMLLoadUtility;
 //struct CvInfoUtil;
 
-typedef std::pair<BuildingTypes, ReligionTypes> ShrineBuilding;
-
-
 class CvBuildingInfo : public CvHotkeyInfo
 {
 public:
@@ -503,8 +500,6 @@ public:
 	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
 	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
-	static const std::vector<ShrineBuilding>& getShrineBuildings() { return m_shrineBuildings; }
-
 	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -512,7 +507,7 @@ public:
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
-	void doPostLoadCaching(BuildingTypes eThis);
+	static void doPostLoadCaching(std::vector<CvBuildingInfo*>& buildingInfos);
 
 private:
 	void setNotShowInCity();
@@ -840,8 +835,6 @@ private:
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
 	//const BoolExpr* m_pExprFreePromotionCondition;
-
-	static std::vector<ShrineBuilding> m_shrineBuildings;
 };
 
 #endif

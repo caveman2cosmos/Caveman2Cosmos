@@ -656,10 +656,10 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 					if (eGreatPeopleUnit != NO_UNIT)
 					{
 						// note, for normal XML, this count will be one (there is only 1 shrine building for each religion)
-						foreach_(const ShrineBuilding& pair, CvBuildingInfo::getShrineBuildings())
+						foreach_(const BuildingTypes eBuilding, GC.getReligionInfo(eReligion).getShrineBuildings())
 						{
 							// if this unit builds or forceBuilds this building
-							if (pair.second == eReligion && GC.getUnitInfo(eGreatPeopleUnit).getHasBuilding(pair.first))
+							if (GC.getUnitInfo(eGreatPeopleUnit).getHasBuilding(eBuilding))
 							{
 								bNeedProphet = true;
 								iBestSpreadValue = std::max(iBestSpreadValue, GC.getGame().countReligionLevels(eReligion));
@@ -671,7 +671,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 			if (bNeedProphet)
 			{
-				iTempValue += ((iGreatPeopleRate * iBestSpreadValue));
+				iTempValue += (iGreatPeopleRate * iBestSpreadValue);
 			}
 		}
 

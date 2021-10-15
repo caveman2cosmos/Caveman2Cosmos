@@ -5370,11 +5370,12 @@ public:
 	int* getStateReligionCommerceArray() const;
 	int getFlavorValue(int i) const;
 
+	const std::vector<BuildingTypes>& getShrineBuildings() const { return m_shrineBuildings; }
+
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvReligionInfo* pClassInfo);
-
 	void getCheckSum(uint32_t& iSum) const;
+	static void doPostLoadCaching(std::vector<CvReligionInfo*>& religionInfos);
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -5406,6 +5407,8 @@ protected:
 	int* m_paiHolyCityCommerce;
 	int* m_paiStateReligionCommerce;
 	int* m_piFlavorValue;
+
+	std::vector<BuildingTypes> m_shrineBuildings;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

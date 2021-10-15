@@ -18785,9 +18785,9 @@ void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)
 bool CvCity::hasShrine(ReligionTypes eReligion) const
 {
 	// note, for normal XML, this count will be one, there is only one shrine of each religion
-	foreach_(const ShrineBuilding& pair, CvBuildingInfo::getShrineBuildings())
+	foreach_(const BuildingTypes eBuilding, GC.getReligionInfo(eReligion).getShrineBuildings())
 	{
-		if (pair.second == eReligion && getNumActiveBuilding(pair.first) > 0)
+		if (getNumActiveBuilding(eBuilding) > 0)
 		{
 			return true;
 		}
