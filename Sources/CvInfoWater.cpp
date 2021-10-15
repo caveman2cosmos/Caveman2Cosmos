@@ -71,12 +71,12 @@ NiColor	CvWaterPlaneInfo::getMaterialEmmisive() const// The water plane's materi
 	return m_kMaterialEmmisive;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvWaterPlaneInfo::getBaseTexture() const
+const char* CvWaterPlaneInfo::getBaseTexture() const
 {
 	return m_szBaseTexture;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvWaterPlaneInfo::getTransitionTexture() const
+const char* CvWaterPlaneInfo::getTransitionTexture() const
 {
 	return m_szTransitionTexture;
 }
@@ -224,7 +224,7 @@ float CvTerrainPlaneInfo::getCloseAlpha() const		// The water plane's material a
 	return m_fCloseAlpha;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvTerrainPlaneInfo::getBaseTexture() const
+const char* CvTerrainPlaneInfo::getBaseTexture() const
 {
 	return m_szBaseTexture;
 }
@@ -356,7 +356,7 @@ bool CvCameraOverlayInfo::isVisible() const
 	return m_bVisible;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvCameraOverlayInfo::getBaseTexture() const
+const char* CvCameraOverlayInfo::getBaseTexture() const
 {
 	return m_szBaseTexture;
 }

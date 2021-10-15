@@ -8,6 +8,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
+#include "CvXMLLoadUtilityModTools.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
@@ -17,7 +18,7 @@
 // Macro for Setting Global Art Defines
 #define INIT_XML_GLOBAL_LOAD(xmlInfoPath, infoArray, numInfos)  SetGlobalClassInfo(infoArray, xmlInfoPath, numInfos);
 
-bool CvXMLLoadUtility::ReadGlobalDefines(const TCHAR* szXMLFileName, CvCacheObject* cache)
+bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache)
 {
 	OutputDebugString("Reading Global Defines: Start");
 
@@ -1152,7 +1153,7 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetGlobalStringArray(TCHAR (**ppszString)[256], char* szTagName, int* iNumVals)
+//  FUNCTION:   SetGlobalStringArray(char (**ppszString)[256], char* szTagName, int* iNumVals)
 //
 //  PURPOSE :   takes the szTagName parameter and if it finds it in the currently selected XML element
 //				then it loads the ppszString parameter with the string values under it and the
@@ -1585,7 +1586,7 @@ void CvXMLLoadUtility::SetGlobalUnitScales(float* pfLargeScale, float* pfSmallSc
 		if (GetChildXmlVal(pfLargeScale))
 		{
 			// set the current xml node to it's next sibling and then
-			// get the sibling's TCHAR value
+			// get the sibling's char value
 			GetNextXmlVal(pfSmallScale);
 
 			// set the current xml node to it's parent node
@@ -2410,7 +2411,7 @@ void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTi
 	int i=0;				//loop counter
 	int iNumChildren;		// the number of siblings the current xml node has
 	int iFeatureIndex;
-	TCHAR szTextVal[256];	// temporarily hold the text value of the current xml node
+	char szTextVal[256];	// temporarily hold the text value of the current xml node
 	int* paiFeatureTech = NULL;
 	int* paiFeatureTime = NULL;
 	int* paiFeatureProduction = NULL;
@@ -2492,7 +2493,7 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 {
 	int i = 0;				//loop counter
 	int iNumChildren;		// the number of siblings the current xml node has
-	TCHAR szNodeVal[256];	// temporarily holds the string value of the current xml node
+	char szNodeVal[256];	// temporarily holds the string value of the current xml node
 	CvImprovementBonusInfo* paImprovementBonus;	// local pointer to the bonus type struct in memory
 
 	// initialize the boolean list to the correct size and all the booleans to false
@@ -2573,7 +2574,7 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(	int **ppiList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(	int **ppiList, const char* szRootTagName,
 //										int iInfoBaseSize, int iInfoBaseLength, int iDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -2606,7 +2607,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 			if (TryMoveToXmlFirstChild())
 			{
 				int* piList = *ppiList;
-				TCHAR szTextVal[256];
+				char szTextVal[256];
 				for (int i = 0; i < iNumChildren; i++)
 				{
 					if (GetChildXmlVal(szTextVal))
@@ -2643,8 +2644,8 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 	int iIndexVal;
 	int iNumSibs;
 	int iValue;
-	TCHAR szTextPosition[256];
-	TCHAR szTextVal[256];
+	char szTextPosition[256];
+	char szTextVal[256];
 	int* piList = NULL;
 
 	if (0 > iInfoBaseLength)
@@ -2720,7 +2721,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(	bool **ppbList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(	bool **ppbList, const char* szRootTagName,
 //										int iInfoBaseSize, int iInfoBaseLength, bool bDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -2731,7 +2732,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	bool* pbList;
 
 	if(!(0 < iInfoBaseLength))
@@ -2788,7 +2789,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(	float **ppfList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(	float **ppfList, const char* szRootTagName,
 //										int iInfoBaseSize, int iInfoBaseLength, float fDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -2799,7 +2800,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* sz
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	float* pfList;
 
 	if(!(0 < iInfoBaseLength))
@@ -2856,7 +2857,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* sz
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(	CvString **ppfList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(	CvString **ppfList, const char* szRootTagName,
 //										int iInfoBaseSize, int iInfoBaseLength, CvString szDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -2867,7 +2868,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	CvString* pszList;
 
 	if(!(0 < iInfoBaseLength))
@@ -2924,7 +2925,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(int **ppiList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(int **ppiList, const char* szRootTagName,
 //										CvString* m_paszTagList, int iTagListLength, int iDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -2936,7 +2937,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	int* piList;
 
 	if(!(0 < iTagListLength))
@@ -2993,7 +2994,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(int **ppiList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(int **ppiList, const char* szRootTagName,
 //										CvString* m_paszTagList, int iTagListLength, int iDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml for audio scripts
@@ -3005,7 +3006,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	int* piList;
 	CvString szTemp;
 
@@ -3079,7 +3080,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPairForAudioScripts(int **ppiList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPairForAudioScripts(int **ppiList, const char* szRootTagName,
 //										int iInfoBaseLength, int iDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml for audio scripts
@@ -3090,7 +3091,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	int* piList;
 	CvString szTemp;
 
@@ -3164,7 +3165,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetVariableListTagPair(bool **ppbList, const TCHAR* szRootTagName,
+//  FUNCTION:   SetVariableListTagPair(bool **ppbList, const char* szRootTagName,
 //										CvString* m_paszTagList, int iTagListLength, int iDefaultListVal)
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -3176,7 +3177,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	bool* pbList;
 
 	if(!(0 < iTagListLength))
@@ -3233,7 +3234,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 
 //------------------------------------------------------------------------------------------------------
 //
-//	FUNCTION:	SetVariableListTagPair(CvString **ppszList, const TCHAR* szRootTagName,
+//	FUNCTION:	SetVariableListTagPair(CvString **ppszList, const char* szRootTagName,
 //							CvString* m_paszTagList, int iTagListLength, CvString szDefaultListVal = "")
 //
 //  PURPOSE :   allocate and initialize a list from a tag pair in the xml
@@ -3245,7 +3246,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 	int i;
 	int iIndexVal;
 	int iNumSibs;
-	TCHAR szTextVal[256];
+	char szTextVal[256];
 	CvString* pszList;
 
 	if(!(0 < iTagListLength))
@@ -3364,8 +3365,6 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 	bool bContinue = true;
 	int m_iDirDepth = 0;
 
-	CvXMLLoadUtilityModTools* pProgramDir = new CvXMLLoadUtilityModTools;
-
 	std::string szDirDepth = "modules\\";
 	std::string szModDirectory = "modules";
 	std::string szConfigString;
@@ -3375,7 +3374,6 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 	if (!bLoaded)
 	{
 		DEBUG_LOG("MLF.log", "MLF not found, you will now load the modules without Modular Loading Control");
-		SAFE_DELETE(pProgramDir);
 		return false;
 	}
 	else
@@ -3390,21 +3388,18 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 			if (szConfigString == "NONE")
 			{
 				DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
-				SAFE_DELETE(pProgramDir);
 				return false;   // abort without enumerating anything
 			}
 		}
 		else
 		{
 			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
-			SAFE_DELETE(pProgramDir);
 			return false;
 		}
 
 		if (!SetModLoadControlInfo(aInfos, szXmlPath, szConfigString, szDirDepth, m_iDirDepth))
 		{
 			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str(), szFileRoot);
-			SAFE_DELETE(pProgramDir);
 			return false;
 		}
 
@@ -3430,7 +3425,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 							szModDirectory = GC.getModLoadControlInfos(iInfos).getModuleFolder(i);
 
 							//Check if this Modulefolder is parent to a child MLF
-							if ( pProgramDir->isModularArt(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+							if (CvXMLLoadUtilityModTools::isModularArt(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
 							{
 								bLoaded = LoadCivXml(NULL, CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot));
 							}
@@ -3470,23 +3465,20 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 			}
 		}
 	}
-	SAFE_DELETE(pProgramDir);
 	return true;
 }
 
 template <class T>
 bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth, int iDirDepth)
 {
-	OutputDebugString("Setting Mod Control Infos");
-
-	std::string szCandidateConfig;
+	OutputDebugString("Setting Mod Control Infos\n");
 
 	if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/ConfigurationInfos/ConfigurationInfo"))
 	{
 		// loop through each tag
 		do
 		{
-			szCandidateConfig = "NONE";
+			std::string szCandidateConfig = "NONE";
 			GetChildXmlValByName(szCandidateConfig, szTagName);
 			if (szCandidateConfig == szConfigString)
 			{
@@ -3499,10 +3491,9 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 					break;
 				}
 
-				int iIndex = -1;
 				if (NULL != pClassInfo->getType())
 				{
-					iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
+					const int iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
 					if ( iIndex != -1 )
 					{
 						DEBUG_LOG("MLF.log", "Type \"%s\" is specified more than once", pClassInfo->getType());

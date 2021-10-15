@@ -2054,15 +2054,13 @@ void CvInitCore::setPathNames()
 	exePath = new CvString();
 	exeName = new CvString();
 
-	TCHAR pathBuffer[4096];
-	DWORD result;
-	TCHAR* pos;
+	char pathBuffer[4096];
 
-	result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
-	pos = strchr(pathBuffer, '\\');
+	DWORD result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
+	char* pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
 	{
-		TCHAR* next = strchr(pos + 1, '\\');
+		char* next = strchr(pos + 1, '\\');
 		if (!next)
 		{
 			*pos = 0;
@@ -2076,7 +2074,7 @@ void CvInitCore::setPathNames()
 	pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
 	{
-		TCHAR* next = strchr(pos + 1, '\\');
+		char* next = strchr(pos + 1, '\\');
 		if (!next)
 		{
 			*pos = 0;
