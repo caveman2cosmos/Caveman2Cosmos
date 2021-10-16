@@ -1114,6 +1114,7 @@ void CyEnumsPythonInterface()
 		.value("UNITAI_HEALER_SEA", UNITAI_HEALER_SEA)
 		.value("UNITAI_HUNTER_ESCORT", UNITAI_HUNTER_ESCORT)
 		.value("NUM_UNITAI_TYPES", NUM_UNITAI_TYPES)
+		.value("UNITAI_SUBDUED_ANIMAL", UNITAI_SUBDUED_ANIMAL)
 		;
 
 	python::enum_<InvisibleTypes>("InvisibleTypes")
