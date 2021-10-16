@@ -12251,71 +12251,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_FEMALE_SELECTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Selection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_ACTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Action</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AMAZON_SELECTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Amazon_Selection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AMAZON_ACTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Amazon_Action</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMWARLORD_COMMAND</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/FemWarlord_Command</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_MISSIONARY_SELECTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Missionary_Selection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_MISSIONARY_ACTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Missionary_Action</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_ELEPHANT</SoundID>
-			<Filename>Sounds/Units/Elephant</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_HORSE</SoundID>
 			<Filename>Sounds/Units/Horse</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_GORILLA</SoundID>
-			<Filename>Sounds/Units/Gorilla</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

@@ -274,6 +274,7 @@
     <ClCompile Include="CvTeamAI.cpp" />
     <ClCompile Include="CvUnit.cpp" />
     <ClCompile Include="CvUnitAI.cpp" />
+    <ClCompile Include="CvUnitComponents.cpp" />
     <ClCompile Include="CvUnitFilters.cpp" />
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
@@ -291,6 +292,7 @@
     <ClCompile Include="CyArgsList.cpp" />
     <ClCompile Include="CyArtFileMgr.cpp" />
     <ClCompile Include="CyArtFileMgrInterface.cpp" />
+    <ClCompile Include="CyBoolExprInterface.cpp" />
     <ClCompile Include="CyCity.cpp" />
     <ClCompile Include="CyCityInterface1.cpp" />
     <ClCompile Include="CyCityInterface2.cpp" />
@@ -417,7 +419,9 @@
     <ClInclude Include="CvGlobals.h" />
     <ClInclude Include="CvHallOfFameInfo.h" />
     <ClInclude Include="CvInfoReplacements.h" />
+    <ClInclude Include="CvInfoClassTraits.h" />
     <ClInclude Include="CvInfos.h" />
+    <ClInclude Include="CvInfoUtil.h" />
     <ClInclude Include="CvInfoWater.h" />
     <ClInclude Include="CvInitCore.h" />
     <ClInclude Include="CvMap.h" />
@@ -453,6 +457,7 @@
     <ClInclude Include="CvTeamAI.h" />
     <ClInclude Include="CvUnit.h" />
     <ClInclude Include="CvUnitAI.h" />
+    <ClInclude Include="CvUnitComponents.h" />
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />
     <ClInclude Include="CvUnitList.h" />
@@ -470,6 +475,7 @@
     <ClInclude Include="CyGameTextMgr.h" />
     <ClInclude Include="CyGlobalContext.h" />
     <ClInclude Include="CyHallOfFameInfo.h" />
+    <ClInclude Include="CyIterator.h" />
     <ClInclude Include="CyMap.h" />
     <ClInclude Include="CyMapGenerator.h" />
     <ClInclude Include="CyMessageControl.h" />

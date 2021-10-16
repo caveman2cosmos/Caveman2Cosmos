@@ -49,7 +49,7 @@ namespace detail {
 	};
 
 	template <class O, class R, class D>
-	struct is_algo_functor< algo_functor<O, R, D> > : bst::integral_constant<bool, true> 
+	struct is_algo_functor< algo_functor<O, R, D> > : bst::integral_constant<bool, true>
 	{
 		static const bool value = true;
 	};
@@ -147,8 +147,8 @@ namespace detail {
 //     };
 //     ...
 // };
-// 
-// Results in usage like: 
+//
+// Results in usage like:
 //   CvUnit::fn::getID()
 //
 // The functors generated can be combined using comparison and boolean operators
@@ -156,7 +156,7 @@ namespace detail {
 //   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
 // or
 //   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
-// 
+//
 namespace map_fun_details {
 
 	template < class Ty_, class Enable_ = void >
@@ -316,6 +316,7 @@ namespace algo {
 	using bst::search;
 	using bst::search_n;
 	using bst::upper_bound;
+	using bst::container_contains;
 
 	// Set algorithms
 	using bst::includes;
@@ -335,28 +336,20 @@ namespace algo {
 	// Custom
 	// FUNCTION TEMPLATE contains
 	// test if an element exists in a range
-	template<class Item_>
-	bool contains(const std::vector<Item_>& rng, const Item_& item) {
-		foreach_(const Item_& element, rng)
-			if (element == item)
-				return true;
-		return false;
-	}
-
-	// FUNCTION TEMPLATE contains
-	// test if an element exists in a range
 	template< class _Range, class Item_ >
 	bool contains(const _Range& rng, const Item_& item) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (*_First == item) {
-				return true;
-			}
-		}
-		return false;
+		return container_contains(rng, item);
 	}
+
+	// FUNCTION TEMPLATE getKeyValue
+	// find the corresponding value for key
+	//template <typename Key_, typename Value_>
+	//Value_ getKeyValue(const IDValueMap<Key_, Value_>& map, Key_ key) {
+	//	foreach_(const std::pair<Key_, Value_>& pair, map)
+	//		if (pair.first == key)
+	//			return pair.second;
+	//	return 0;
+	//}
 
 	// FUNCTION TEMPLATE all_of
 	// test if all elements are true
@@ -452,7 +445,7 @@ namespace algo {
 			bst::random_access_traversal_tag
 		>,
 		size_t
-	>::type 
+	>::type
 	count_all(const _Range& rng) {
 		typedef typename bst::range_iterator<_Range>::type itr;
 		itr _First = bst::begin(rng), _Last = bst::end(rng);
@@ -478,7 +471,7 @@ namespace std {
 //	// FUNCTION TEMPLATE any_of
 //	template <class _InIt, class _Pr>
 //	bool any_of(_InIt _First, const _InIt _Last, _Pr _Pred) { // test if any element satisfies _Pred
-//		
+//
 //		for (; _First != _Last; ++_First) {
 //			if (_Pred(*_First)) {
 //				return true;

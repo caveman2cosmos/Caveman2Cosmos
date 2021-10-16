@@ -89,7 +89,6 @@ public:
 	void selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
 
 	void unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot);
-	void unitSetXY(CvPlot* pPlot, CvUnit* pUnit);
 	void unitCreated(CvUnit *pUnit);
 	void unitBuilt(CvCity *pCity, CvUnit *pUnit);
 	void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker);
@@ -132,8 +131,6 @@ public:
 	void setPlayerAlive( PlayerTypes ePlayerID, bool bNewValue );
 	void playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
-
-	void playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics);
 
 	void changeTeam(TeamTypes eOld, TeamTypes eNew);
 

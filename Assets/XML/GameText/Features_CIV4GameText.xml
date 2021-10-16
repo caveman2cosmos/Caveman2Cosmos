@@ -1,6 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_FEATUREHELP_NO_IMPROVEMENT</Tag>
+		<English>[NEWLINE][ICON_BULLET]Cannot build any improvements on this terrain</English>
+		<French>[NEWLINE][ICON_BULLET]Impossible de construire d'aménagements sur ce terrain</French>
+		<German>[NEWLINE][ICON_BULLET]Landschaftsausbau in dieser Umgebung nicht möglich</German>
+		<Italian>[NEWLINE][ICON_BULLET]Non si possono realizzare miglioramenti su questo terreno</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]En este terreno no se pueden construir mejoras</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET]Nie można wybudować żadnych ulepszeń terenu na tym polu.</Polish>
+		<Russian>[NEWLINE][ICON_BULLET]Íà ýòîì òèïå ìåñòíîñòè íåëüçÿ ñòðîèòü îáúåêòû.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_ASTEROIDS</Tag>
 		<English>Asteroids</English>
 		<French>
@@ -514,16 +524,6 @@
 		<German>Bei [COLOR_HIGHLIGHT_TEXT]Mangroven[COLOR_REVERT] handelt es sich um Bäume und Sträucher mittlerer Höhe, die sich an das Leben im Gezeitenbereich tropischer Meeresküsten und brackiger Flussmündungen angepasst haben. Sie sind besonders salztolerant und können mit Hilfe ihrer markanten Stelz- oder Brettwurzeln auch auf instabilem und sauerstoffarmem Boden gedeihen. Große zusammenhängende Ökosysteme werden Mangrovenwälder oder Mangrovensümpfe genannt. Mangroven sind für den Küstenschutz sehr wichtig, denn sie verhindern die Küstenerosion und können die zerstörerischen Auswirkungen von Sturmfluten und Tsunamis mindern. Leider werden sie heute häufig abgeholzt, um neue Strände für den Tourismus zu schaffen, was auf lange Sicht aber den Landverlust fördert.</German>
 		<Polish>Namorzyny, lasy namorzynowe, mangrowe, mangrowia - wiecznie zielona, pionierska formacja roślinna wybrzeży morskich w niemal całej strefie międzyzwrotnikowej. Jej zasięg w tej strefie ograniczają zimne prądy morskie omywające zachodnie wybrzeża Ameryki Południowej i Afryki. Namorzyny stanowią formację ziemno-wodną powstającą na przybrzeżnych płyciznach morskich, w miejscach osłoniętych (rafami koralowymi, w zatokach, lagunach i ujściach rzek). Niektóre płaskie wyspy pokrywają w całości. Szerokość pasa namorzynów sięgać może kilku kilometrów. Na ogół występują w obszarze pływów morskich i dlatego bywają też określane jako lasy pływowe. Określenie to nie jest jednak ścisłe, bowiem nie zawsze w miejscach występowania namorzynów pływy są wyraźne. Namorzyny zajmują ok. 150 tysięcy km2 (stan w roku 2010), przy czym między 1980 i 2010 rokiem ubyło ich 35 tysięcy km2. Państwa, na których wybrzeżach znajdują się największe zasoby tej formacji to Indonezja (21%), Brazylia (9%) i Australia (7%).</Polish>
 		<Russian>Мангровые деревья - это различные виды деревьев до средней высоты и кустарники, которые растут в солончаковых прибрежных отложениях в тропиках и субтропиках - в основном между 25° северной широты и 25° южной широты. (137 760 км²), охватывающая 118 стран и территорий. Это слово используется по крайней мере в трех смыслах: (1) в наиболее широком смысле для обозначения среды обитания и всего комплекса растений или мангала, для которого также используются термины биом мангрового леса, мангровое болото и мангровый лес, (2) для обозначения все деревья и большие кусты в мангровом болоте, и (3) узко для обозначения семейства мангровых растений, Rhizophoraceae, или, более конкретно, просто для мангровых деревьев рода Rhizophora. Термин «мангровые заросли» пришел в английский из испанского (возможно, через португальский) и имеет карибское происхождение, вероятно, Таино. Раньше это было «мангровое дерево» (от португальского mangue или испанского mangle), но оно было искажено влиянием народной этимологии слова «роща».[PARAGRAPH:2]Биом мангровых зарослей, или мангал, представляет собой отдельную засоленную лесную или кустарниковую среду обитания, характеризующуюся осадочной прибрежной средой, где мелкие отложения (часто с высоким содержанием органических веществ) собираются в областях, защищенных от воздействия волн высокой энергии. Мангровые заросли доминируют на трех четвертях тропического побережья. Солевые условия, переносимые различными видами мангровых зарослей, варьируются от солоноватой воды до чистой морской воды (от 30 до 40 ppt) до воды, концентрированной путем испарения, до более чем двукратной солености морской воды в океане (до 90 ppt).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATUREHELP_NO_IMPROVEMENT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Cannot build any improvements on this terrain</English>
-		<French>[NEWLINE][ICON_BULLET]Impossible de construire d'aménagements sur ce terrain</French>
-		<German>[NEWLINE][ICON_BULLET]Landschaftsausbau in dieser Umgebung nicht möglich</German>
-		<Italian>[NEWLINE][ICON_BULLET]Non si possono realizzare miglioramenti su questo terreno</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]En este terreno no se pueden construir mejoras</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Nie można wybudować żadnych ulepszeń terenu na tym polu.</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]Íà ýòîì òèïå ìåñòíîñòè íåëüçÿ ñòðîèòü îáúåêòû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OASIS</Tag>

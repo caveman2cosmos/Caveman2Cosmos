@@ -11,7 +11,6 @@ Created:	2009-01-21
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvPython.h"
-#include "FVariableSystem.h"
 
 bool g_bIsBug = false;
 
@@ -23,47 +22,6 @@ void setIsBug()
 	// set the unit and building filters to default state once Bug is available
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", false));
 	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
-}
-
-
-bool getDefineBOOL(const char* xmlKey, bool bDefault)
-{
-	int iResult = 0;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, iResult))
-	{
-		return iResult != 0;
-	}
-	return bDefault;
-}
-
-int getDefineINT(const char* xmlKey, int iDefault)
-{
-	int iResult = 0;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, iResult))
-	{
-		return iResult;
-	}
-	return iDefault;
-}
-
-float getDefineFLOAT(const char* xmlKey, float fDefault)
-{
-	float fResult = 0.0;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, fResult))
-	{
-		return fResult;
-	}
-	return fDefault;
-}
-
-const char * getDefineSTRING(const char* xmlKey, const char * szDefault)
-{
-	const char * szResult = NULL;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, szResult))
-	{
-		return szResult;
-	}
-	return szDefault;
 }
 
 
@@ -82,8 +40,8 @@ bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 		tmp.append(id);
 		xmlKey = tmp.c_str();
 	}
-	//logging::logMsg("bull.log", "debug - getBugOptionBOOL %s", xmlKey);
-	return getDefineBOOL(xmlKey, bDefault);
+	//logMsg("debug - getBugOptionBOOL %s", xmlKey);
+	return GC.getDefineBOOL(xmlKey, bDefault);
 }
 
 int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
@@ -101,6 +59,6 @@ int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
 		tmp.append(id);
 		xmlKey = tmp.c_str();
 	}
-	//logging::logMsg("bull.log", "debug - getBugOptionINT %s", xmlKey);
-	return getDefineINT(xmlKey, iDefault);
+	//logMsg("debug - getBugOptionINT %s", xmlKey);
+	return GC.getDefineINT(xmlKey, iDefault);
 }

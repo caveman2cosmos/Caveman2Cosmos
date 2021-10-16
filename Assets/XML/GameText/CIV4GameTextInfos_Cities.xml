@@ -639,6 +639,30 @@
 		<Russian>Анджар</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANKARA</Tag>
+		<English>Ankara</English>
+		<French>
+			<Text>Ankara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ankara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ankara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ankara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANKOBER</Tag>
 		<English>Ankober</English>
 		<Italian>Ancober</Italian>
@@ -659,8 +683,40 @@
 		<Russian>Анкасмарка</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANTALYA</Tag>
+		<English>Antalya</English>
+		<French>
+			<Text>Antalya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Antalya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Antalya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Antalya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANTAWAYLLA</Tag>
 		<English>Antawaylla</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANTIOCH</Tag>
+		<English>Antioch</English>
+		<French>Antioche</French>
+		<German>Antiochia</German>
+		<Italian>Antiochia</Italian>
+		<Spanish>Antioquía</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANTIUM</Tag>
@@ -898,6 +954,30 @@
 		<Italian>Artemisio</Italian>
 		<Spanish>Artemisio</Spanish>
 		<Russian>Артемисион</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARTUIN</Tag>
+		<English>Artuin</English>
+		<French>
+			<Text>Artvin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Artuin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Artuin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Artvin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARUTAM</Tag>
@@ -1615,6 +1695,30 @@
 		<Russian>Траванкор</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BODRUM</Tag>
+		<English>Bodrum</English>
+		<French>
+			<Text>Bodrum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bodrum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bodrum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bodrum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BOGHAZKOY</Tag>
 		<English>Boghazkoy</English>
 		<Russian>Áîãàçêåé</Russian>
@@ -1887,6 +1991,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BURMULA</Tag>
 		<English>Burmula</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BURSA</Tag>
+		<English>Bursa</English>
+		<French>
+			<Text>Brousse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bursa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bursa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bursa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BUSIRIS</Tag>
@@ -2316,6 +2444,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CHINOOK</Tag>
 		<English>Chinook</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHIOS</Tag>
+		<English>Chios</English>
+		<French>
+			<Text>Chios</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chios</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quíos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CHITA</Tag>
@@ -2834,6 +2986,30 @@
 		<Russian>Деметрия</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DENIZLI</Tag>
+		<English>Denizli</English>
+		<French>
+			<Text>Denizli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Denizli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Denizli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Denizli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DENVER</Tag>
 		<English>Denver</English>
 		<Russian>Денвер</Russian>
@@ -2934,6 +3110,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIVONA</Tag>
 		<English>Divona</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DIYARBAKIR</Tag>
+		<English>Diyarbakir</English>
+		<French>
+			<Text>Diyarbakir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Diyarbakir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Diyarbakir</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Diyarbakir</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIYARBEKR</Tag>
@@ -3158,6 +3358,30 @@
 		<Russian>Íåôåðõåñåñ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EDIRNE</Tag>
+		<English>Edirne</English>
+		<French>
+			<Text>Edirne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Edirne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Edirne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Edirne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EDZNA</Tag>
 		<English>Edzná</English>
 	</TEXT>
@@ -3180,6 +3404,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EKALLATUM</Tag>
 		<English>Ekallatum</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EKBALAM</Tag>
+		<English>Ekbalam</English>
+		<French>Ekbalam</French>
+		<German>Ek Balam</German>
+		<Italian>Ekbalam</Italian>
+		<Spanish>Ek Balam</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EKUPHAKAMENI</Tag>
@@ -3302,6 +3534,30 @@
 		<Russian>Эрденет</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EREGLI</Tag>
+		<English>Eregli</English>
+		<French>
+			<Text>Eregli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Eregli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Eregli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Eregli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ERENHOT</Tag>
 		<English>Erenhot</English>
 		<German>Eren Hot</German>
@@ -3350,6 +3606,30 @@
 		<English>Eshnunna</English>
 		<German>Eschnunna</German>
 		<Spanish>Esnunna</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ESKISEHIR</Tag>
+		<English>Eskisehir</English>
+		<French>
+			<Text>Eskisehir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Eskisehir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Eskisehir</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Eskishehir</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ESSEN</Tag>
@@ -3652,6 +3932,30 @@
 		<English>Gayagaanhe</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GAZIANTEP</Tag>
+		<English>Gaziantep</English>
+		<French>
+			<Text>Gaziantep</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gaziantep</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gaziantep</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gaziantep</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GAZIURA</Tag>
 		<English>Gaziura</English>
 	</TEXT>
@@ -3752,6 +4056,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GOLD_COAST</Tag>
 		<English>Gold Coast</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GONDAR</Tag>
+		<English>Gondar</English>
+		<French>Gondar</French>
+		<German>Gondar</German>
+		<Italian>Gondar</Italian>
+		<Spanish>Gondar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GORKUM</Tag>
@@ -4576,6 +4888,30 @@
 		<Russian>Индапура</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_INEBOLU</Tag>
+		<English>Inebolu</English>
+		<French>
+			<Text>Inebolu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Inebolu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Inebolu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ínebolu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_INGWAVUMA</Tag>
 		<English>Ingwavuma</English>
 		<Russian>Èíãâàâóìà</Russian>
@@ -4659,6 +4995,30 @@
 		<Russian>Истахр</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ISTANBUL</Tag>
+		<English>Istanbul</English>
+		<French>
+			<Text>Istanbul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Istanbul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Istanbul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Estambul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ISUWA</Tag>
 		<English>Isuwa</English>
 	</TEXT>
@@ -4713,6 +5073,30 @@
 		<Tag>TXT_KEY_CITY_NAME_IZATA</Tag>
 		<English>Izata</English>
 		<Russian>Èçàòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IZMIR</Tag>
+		<English>Izmir</English>
+		<French>
+			<Text>Izmir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Izmir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Izmir</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Esmirna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IZMIT</Tag>
@@ -5201,6 +5585,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAWAUKA</Tag>
 		<English>Kawauka</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAYSERI</Tag>
+		<English>Kayseri</English>
+		<French>
+			<Text>Kayseri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kayseri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kayseri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kayseri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAZALLU</Tag>
@@ -5803,6 +6211,30 @@
 		<English>Lami</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAMIA</Tag>
+		<English>Lamia</English>
+		<French>
+			<Text>Lamia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lamia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lamia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lamia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LAMPANG</Tag>
 		<English>Lampang</English>
 		<Russian>Ëàìïàíã</Russian>
@@ -6119,6 +6551,14 @@
 		<Tag>TXT_KEY_CITY_NAME_LOYANG</Tag>
 		<English>Loyang</English>
 		<Russian>Лоян</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LUBAANTUM</Tag>
+		<English>Lubaantun</English>
+		<French>Lubaantun</French>
+		<German>Lubaantun</German>
+		<Italian>Lubaantun</Italian>
+		<Spanish>Lubaantun</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LUBARDA</Tag>
@@ -6454,6 +6894,30 @@
 		<English>Markasunay</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARMARIS</Tag>
+		<English>Marmaris</English>
+		<French>
+			<Text>Physkos </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Marmaris</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Marmaris</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Marmaris</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MARQASI</Tag>
 		<English>Marqasi</English>
 		<Russian>Ìàðêàñè</Russian>
@@ -6472,6 +6936,30 @@
 		<Italian>Marsiglia</Italian>
 		<Spanish>Marsella</Spanish>
 		<Russian>Марсель</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARSIN</Tag>
+		<English>Marsin</English>
+		<French>
+			<Text>Mersin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Marsin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Marsin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Marsin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MASA</Tag>
@@ -6881,6 +7369,30 @@
 		<Russian>Ìóã</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MUGLA</Tag>
+		<English>Mugla</English>
+		<French>
+			<Text>Mugla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mugla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mugla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mugla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MUISAK</Tag>
 		<English>Muisak</English>
 	</TEXT>
@@ -7158,6 +7670,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NANRANTSOUAK</Tag>
 		<English>Nanrantsouak</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NANTES</Tag>
+		<English>Nantes</English>
+		<French>Nantes</French>
+		<German>Nantes</German>
+		<Italian>Nantes</Italian>
+		<Spanish>Nantes</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NANTONG</Tag>
@@ -7674,6 +8194,30 @@
 		<English>Ohau</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OIDU</Tag>
+		<English>Oidu</English>
+		<French>
+			<Text>Ordu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oidu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oidu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ordu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OITERIO</Tag>
 		<English>Oiterio</English>
 	</TEXT>
@@ -8127,6 +8671,30 @@
 		<Russian>Ïàòèãðàáàíà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PATRAS</Tag>
+		<English>Patras</English>
+		<French>
+			<Text>Patras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Patras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Patrasso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Patras</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PATTAYA</Tag>
 		<English>Pattaya</English>
 		<Russian>Ïàòòàéÿ</Russian>
@@ -8143,6 +8711,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PA_CHAN</Tag>
 		<English>Pa' Chan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PELLA</Tag>
+		<English>Pella</English>
+		<French>
+			<Text>Pella</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pella</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pella</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pela</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PENAFIEL</Tag>
@@ -9043,6 +9635,54 @@
 		<Russian>Ñàìáõóïóðà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAMOS</Tag>
+		<English>Samos</English>
+		<French>
+			<Text>Samos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Samos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Samo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Samos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAMSUN</Tag>
+		<English>Samsun</English>
+		<French>
+			<Text>Samsun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Samsun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Samsun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Samsun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAMUHA</Tag>
 		<English>Samuha</English>
 	</TEXT>
@@ -9511,6 +10151,30 @@
 		<Russian>Сигтуна</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SILIFKE</Tag>
+		<English>Silifke</English>
+		<French>
+			<Text>Silifke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Silifke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Silifke</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Silifke</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SILKEBORG</Tag>
 		<English>Silkeborg</English>
 		<Russian>Ñèëüêåáîðã</Russian>
@@ -9546,6 +10210,30 @@
 		<Russian>Ñèíãáóðè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SINOP</Tag>
+		<English>Sinop</English>
+		<French>
+			<Text>Sinop</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sinop</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sinop</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sinop</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIPKA</Tag>
 		<English>Sipka</English>
 	</TEXT>
@@ -9563,6 +10251,30 @@
 		<Tag>TXT_KEY_CITY_NAME_SITIO</Tag>
 		<English>Sitio</English>
 		<Russian>Ñèòèî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIVAS</Tag>
+		<English>Sivas</English>
+		<French>
+			<Text>Sivas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sivas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sivas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sivas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIWAN_WAA_KI</Tag>
@@ -10505,6 +11217,30 @@
 		<Tag>TXT_KEY_CITY_NAME_TIRUCHIRAPALLI</Tag>
 		<English>Tiruchirapalli</English>
 		<Russian>Тиручирапалли</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TIRYNS</Tag>
+		<English>Tiryns</English>
+		<French>
+			<Text>Tiryns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tiryns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tiryns</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tirinto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TITIQAQA</Tag>
@@ -11770,763 +12506,6 @@
 		<Russian>Цофим</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ZORAN</Tag>
-		<English>Zoran</English>
-		<Russian>Цоран</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ZURICH</Tag>
-		<English>Zürich</English>
-		<French>Zurich</French>
-		<Italian>Zurigo</Italian>
-		<Spanish>Zúrich</Spanish>
-		<Russian>Цюрих</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ZUTPHEN</Tag>
-		<English>Zutphen</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ZWOLLE</Tag>
-		<English>Zwolle</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ANKARA</Tag>
-		<English>Ankara</English>
-		<French>
-			<Text>Ankara</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Ankara</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ankara</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ankara</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ANTALYA</Tag>
-		<English>Antalya</English>
-		<French>
-			<Text>Antalya</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Antalya</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Antalya</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Antalya</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ANTIOCH</Tag>
-		<English>Antioch</English>
-		<French>Antioche</French>
-		<German>Antiochia</German>
-		<Italian>Antiochia</Italian>
-		<Spanish>Antioquía</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ARTUIN</Tag>
-		<English>Artuin</English>
-		<French>
-			<Text>Artvin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Artuin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Artuin</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Artvin</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_BODRUM</Tag>
-		<English>Bodrum</English>
-		<French>
-			<Text>Bodrum</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Bodrum</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Bodrum</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bodrum</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_BURSA</Tag>
-		<English>Bursa</English>
-		<French>
-			<Text>Brousse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Bursa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Bursa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bursa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CHIOS</Tag>
-		<English>Chios</English>
-		<French>
-			<Text>Chios</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Chios</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Chio</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quíos</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_DENIZLI</Tag>
-		<English>Denizli</English>
-		<French>
-			<Text>Denizli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Denizli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Denizli</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Denizli</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_DIYARBAKIR</Tag>
-		<English>Diyarbakir</English>
-		<French>
-			<Text>Diyarbakir</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Diyarbakir</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Diyarbakir</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Diyarbakir</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_EDIRNE</Tag>
-		<English>Edirne</English>
-		<French>
-			<Text>Edirne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Edirne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Edirne</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Edirne</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_EKBALAM</Tag>
-		<English>Ekbalam</English>
-		<French>Ekbalam</French>
-		<German>Ek Balam</German>
-		<Italian>Ekbalam</Italian>
-		<Spanish>Ek Balam</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_EREGLI</Tag>
-		<English>Eregli</English>
-		<French>
-			<Text>Eregli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Eregli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Eregli</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Eregli</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ESKISEHIR</Tag>
-		<English>Eskisehir</English>
-		<French>
-			<Text>Eskisehir</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Eskisehir</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Eskisehir</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Eskishehir</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_GAZIANTEP</Tag>
-		<English>Gaziantep</English>
-		<French>
-			<Text>Gaziantep</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gaziantep</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Gaziantep</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gaziantep</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_GONDAR</Tag>
-		<English>Gondar</English>
-		<French>Gondar</French>
-		<German>Gondar</German>
-		<Italian>Gondar</Italian>
-		<Spanish>Gondar</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_INEBOLU</Tag>
-		<English>Inebolu</English>
-		<French>
-			<Text>Inebolu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Inebolu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Inebolu</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ínebolu</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ISTANBUL</Tag>
-		<English>Istanbul</English>
-		<French>
-			<Text>Istanbul</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Istanbul</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Istanbul</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Estambul</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_IZMIR</Tag>
-		<English>Izmir</English>
-		<French>
-			<Text>Izmir</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Izmir</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Izmir</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Esmirna</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_KAYSERI</Tag>
-		<English>Kayseri</English>
-		<French>
-			<Text>Kayseri</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kayseri</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Kayseri</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Kayseri</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LAMIA</Tag>
-		<English>Lamia</English>
-		<French>
-			<Text>Lamia</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Lamia</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lamia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lamia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LUBAANTUM</Tag>
-		<English>Lubaantun</English>
-		<French>Lubaantun</French>
-		<German>Lubaantun</German>
-		<Italian>Lubaantun</Italian>
-		<Spanish>Lubaantun</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MARMARIS</Tag>
-		<English>Marmaris</English>
-		<French>
-			<Text>Physkos </Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Marmaris</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Marmaris</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Marmaris</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MARSIN</Tag>
-		<English>Marsin</English>
-		<French>
-			<Text>Mersin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Marsin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Marsin</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Marsin</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MUGLA</Tag>
-		<English>Mugla</English>
-		<French>
-			<Text>Mugla</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mugla</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Mugla</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mugla</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NANTES</Tag>
-		<English>Nantes</English>
-		<French>Nantes</French>
-		<German>Nantes</German>
-		<Italian>Nantes</Italian>
-		<Spanish>Nantes</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_OIDU</Tag>
-		<English>Oidu</English>
-		<French>
-			<Text>Ordu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Oidu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Oidu</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ordu</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_PATRAS</Tag>
-		<English>Patras</English>
-		<French>
-			<Text>Patras</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Patras</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Patrasso</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Patras</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_PELLA</Tag>
-		<English>Pella</English>
-		<French>
-			<Text>Pella</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Pella</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pella</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pela</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SAMOS</Tag>
-		<English>Samos</English>
-		<French>
-			<Text>Samos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Samos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Samo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Samos</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SAMSUN</Tag>
-		<English>Samsun</English>
-		<French>
-			<Text>Samsun</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Samsun</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Samsun</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Samsun</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SILIFKE</Tag>
-		<English>Silifke</English>
-		<French>
-			<Text>Silifke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Silifke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Silifke</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Silifke</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SINOP</Tag>
-		<English>Sinop</English>
-		<French>
-			<Text>Sinop</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sinop</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sinop</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sinop</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SIVAS</Tag>
-		<English>Sivas</English>
-		<French>
-			<Text>Sivas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sivas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sivas</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sivas</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_TIRYNS</Tag>
-		<English>Tiryns</English>
-		<French>
-			<Text>Tiryns</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Tiryns</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Tiryns</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Tirinto</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZONGULDAK</Tag>
 		<English>Zonguldak</English>
 		<French>
@@ -12549,5 +12528,26 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZORAN</Tag>
+		<English>Zoran</English>
+		<Russian>Цоран</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZURICH</Tag>
+		<English>Zürich</English>
+		<French>Zurich</French>
+		<Italian>Zurigo</Italian>
+		<Spanish>Zúrich</Spanish>
+		<Russian>Цюрих</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZUTPHEN</Tag>
+		<English>Zutphen</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZWOLLE</Tag>
+		<English>Zwolle</English>
 	</TEXT>
 </Civ4GameText>

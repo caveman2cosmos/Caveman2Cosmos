@@ -33,7 +33,7 @@ class WoodlandCycle:
 			if plot.isWater() or plot.isPeak(): continue
 			plots.append(plot)
 		self.iMaxIndex = len(plots)
-		self.iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		self.iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 
 	# Called at the beginning of the end of each turn
 	def onBeginGameTurn(self, argsList):
@@ -140,7 +140,7 @@ class WoodlandCycle:
 
 				for CyUnit in plot.units():
 					if CyUnit.canFight():
-						iHP = CyUnit.currHitPoints()
+						iHP = CyUnit.getHP()
 						iDamage = 5 + GAME.getSorenRandNum(29, "Ouch")
 						if iHP > iDamage:
 							CyUnit.changeDamage(iDamage, -1)

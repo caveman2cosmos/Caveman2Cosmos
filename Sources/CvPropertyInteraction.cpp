@@ -13,7 +13,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
-CvPropertyInteraction::CvPropertyInteraction() : 
+CvPropertyInteraction::CvPropertyInteraction() :
 									m_eSourceProperty(NO_PROPERTY),
 									m_eTargetProperty(NO_PROPERTY),
 									m_eObjectType(NO_GAMEOBJECT),
@@ -50,24 +50,9 @@ PropertyTypes CvPropertyInteraction::getTargetProperty() const
 	return m_eTargetProperty;
 }
 
-void CvPropertyInteraction::setSourceProperty(PropertyTypes eProperty)
-{
-	m_eSourceProperty = eProperty;
-}
-
-void CvPropertyInteraction::setTargetProperty(PropertyTypes eProperty)
-{
-	m_eTargetProperty = eProperty;
-}
-
 GameObjectTypes CvPropertyInteraction::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertyInteraction::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertyInteraction::getRelation() const
@@ -75,19 +60,9 @@ RelationTypes CvPropertyInteraction::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertyInteraction::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertyInteraction::getRelationData() const
 {
 	return m_iRelationData;
-}
-
-void CvPropertyInteraction::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
 }
 
 bool CvPropertyInteraction::isActive(const CvGameObject *pObject) const
@@ -170,7 +145,7 @@ void CvPropertyInteraction::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertyInteraction::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteraction::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eSourceProperty);
 	CheckSum(iSum, m_eTargetProperty);
@@ -235,7 +210,7 @@ void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertyInteractionConvertConstant::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteractionConvertConstant::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyInteraction::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -312,7 +287,7 @@ void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction
 		m_iInhibitionPercent = pOther->getInhibitionPercent();
 }
 
-void CvPropertyInteractionInhibitedGrowth::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteractionInhibitedGrowth::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyInteraction::getCheckSum(iSum);
 	CheckSum(iSum, m_iGrowthPercent);
@@ -389,7 +364,7 @@ void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction*
 		m_iNoConvertAmount = pOther->getNoConvertAmount();
 }
 
-void CvPropertyInteractionConvertPercent::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteractionConvertPercent::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyInteraction::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);

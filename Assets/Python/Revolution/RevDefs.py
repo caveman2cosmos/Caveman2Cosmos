@@ -177,11 +177,6 @@ changeCivPopup = 7060
 changeHumanPopup = 7061
 updateGraphicsPopup = 7062
 
-## ---------- Misc defines ---------- ##
-
-# Popup ids
-EventKeyDown=6
-
 #RevolutionDCM
 ## ---------- RevWatch defines ---------- ##
 showTrend = 5

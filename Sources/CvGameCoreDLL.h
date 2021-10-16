@@ -67,7 +67,7 @@
 #include <sparsehash/type_traits.h>
 
 
-#define DllExport   __declspec( dllexport ) 
+#define DllExport   __declspec( dllexport )
 
 #include "NiPoint.h"
 
@@ -151,6 +151,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 #define PATHFINDING_CACHE
 #define PATHFINDING_VALIDITY_CACHE
 #define DISCOVERY_TECH_CACHE
+#define YIELD_VALUE_CACHING // KOSHLING - Cache yield values where possible
+#define CAN_TRAIN_CACHING  // Enable canTrain results to be cached within a (caller) defined scope
 
 //
 // Profiler
@@ -178,14 +180,19 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
+// Toffer
 int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
 int64_t intSqrt64(const uint64_t iValue);
+
 int intPow(const int x, const int p);
 int64_t intPow64(const int64_t x, const int p);
 
 int getModifiedIntValue(const int iValue, const int iMod);
+int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
+// ! Toffer
 
 const std::string getModDir();
+
 //
 // Python
 //
@@ -216,9 +223,7 @@ const std::string getModDir();
 #include <boost155/utility.hpp>
 #include <boost155/foreach.hpp>
 #include <boost155/functional.hpp>
-
-
-// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
+#include <boost155/detail/algorithm.hpp>
 
 // Ranges
 #include <boost155/range.hpp>
@@ -230,7 +235,8 @@ const std::string getModDir();
 #include <boost155/range/numeric.hpp>
 
 // Make boost foreach look nice enough to actually use
-#define foreach_ BOOST_155_FOREACH
+#define foreach_		 BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
 
 // Alias our latest boost version
 namespace bst = boost155;
@@ -250,11 +256,13 @@ using bst::bind;
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
-#include <boost/python/manage_new_object.hpp>
-#include <boost/python/return_value_policy.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
 #include <boost/python/enum.hpp>
+#include <boost/python/manage_new_object.hpp>
+#include <boost/python/return_value_policy.hpp>
+#include <boost/python/to_python_converter.hpp>
+#include <boost/python/suite/indexing/container_utils.hpp>
 namespace python = boost::python;
 #endif
 
@@ -276,6 +284,12 @@ namespace python = boost::python;
 
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
+
+//
+// Compiler warnings
+//
+#pragma warning( 3: 4100 ) // unreferenced formal parameter
+//#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
 
 //
 // Json

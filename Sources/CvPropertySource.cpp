@@ -14,7 +14,7 @@
 #include "CheckSum.h"
 #include "IntExpr.h"
 
-CvPropertySource::CvPropertySource() 
+CvPropertySource::CvPropertySource()
 	: m_eProperty(NO_PROPERTY)
 	, m_eObjectType(NO_GAMEOBJECT)
 	, m_eRelation(NO_RELATION)
@@ -23,7 +23,7 @@ CvPropertySource::CvPropertySource()
 {
 }
 
-CvPropertySource::CvPropertySource(PropertyTypes eProperty) 
+CvPropertySource::CvPropertySource(PropertyTypes eProperty)
 	: m_eProperty(eProperty)
 	, m_eObjectType(NO_GAMEOBJECT)
 	, m_eRelation(NO_RELATION)
@@ -43,19 +43,9 @@ PropertyTypes CvPropertySource::getProperty() const
 	return m_eProperty;
 }
 
-void CvPropertySource::setProperty(PropertyTypes eProperty)
-{
-	m_eProperty = eProperty;
-}
-
 GameObjectTypes CvPropertySource::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertySource::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertySource::getRelation() const
@@ -63,19 +53,9 @@ RelationTypes CvPropertySource::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertySource::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertySource::getRelationData() const
 {
 	return m_iRelationData;
-}
-
-void CvPropertySource::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
 }
 
 bool CvPropertySource::isActive(const CvGameObject* pObject) const
@@ -165,13 +145,13 @@ CvPropertySourceConstant::CvPropertySourceConstant()
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty) 
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(NULL)
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn)
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, const IntExpr* pAmountPerTurn)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(pAmountPerTurn)
 {
@@ -241,7 +221,7 @@ void CvPropertySourceConstant::getCheckSum(uint32_t& iSum) const
 }
 
 
-CvPropertySourceConstantLimited::CvPropertySourceConstantLimited() 
+CvPropertySourceConstantLimited::CvPropertySourceConstantLimited()
 	: CvPropertySource()
 	, m_iAmountPerTurn(0)
 	, m_iLimit(0)
@@ -322,7 +302,7 @@ void CvPropertySourceConstantLimited::getCheckSum(uint32_t& iSum) const
 
 
 
-CvPropertySourceDecay::CvPropertySourceDecay() 
+CvPropertySourceDecay::CvPropertySourceDecay()
 	: CvPropertySource()
 	, m_iPercent(0)
 	, m_iNoDecayAmount(0)
