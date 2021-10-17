@@ -259,9 +259,11 @@ public:
 		}
 	}
 
-	// loads an xml file into the FXml variable.  The szFilename parameter has
+private:
+	// Loads an xml file.  The szFilename parameter has
 	// the m_szXmlPath member variable pre-pended to it to form the full pathname
-	bool LoadCivXml(FXml* pFXml, const char* szFilename);
+	bool LoadCivXml(const char* szFilename);
+public:
 
 	int  GetXmlChildrenNumber() { return m_pCurrentXmlElement->getChildElementCount(); }
 	int  GetXmlSiblingsNumber()

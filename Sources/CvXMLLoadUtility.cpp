@@ -245,14 +245,14 @@ int CvXMLLoadUtility::GetInfoClass(const char* pszVal)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   LoadCivXml(FXml* pFXml, char* szFilename)
+//  FUNCTION:   LoadCivXml(const char* szFilename)
 //
 //  PURPOSE :   Gets the full pathname for the xml file from the FileManager .
 //				If it is succesful we return true
 //				from the function and a valid FXml pointer to the pFXml parameter.
 //
 //------------------------------------------------------------------------------------------------------
-bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const char* szFilename)
+bool CvXMLLoadUtility::LoadCivXml(const char* szFilename)
 {
 	char szLog[8192];
 	sprintf(szLog, "LoadCivXml (%s)", szFilename);

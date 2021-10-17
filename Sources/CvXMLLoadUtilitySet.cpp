@@ -29,7 +29,7 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObjec
 		}
 
 		// load the new FXml variable with the szXMLFileName file
-		if (LoadCivXml(NULL, szXMLFileName))
+		if (LoadCivXml(szXMLFileName))
 		{
 			// locate the first define tag in the xml
 			if (TryMoveToXmlFirstMatchingElement(L"/Civ4Defines/Define"))
@@ -506,7 +506,7 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 /* XML_CHECK_DOUBLE_TYPE                   END                                                  */
 /************************************************************************************************/
 
-	if (LoadCivXml(NULL, "xml/GlobalTypes.xml"))
+	if (LoadCivXml("xml/GlobalTypes.xml"))
 	{
 		SetGlobalStringArray(&GC.getAnimationOperatorTypes(), L"/Civ4Types/AnimationOperatorTypes/AnimationOperatorType", &GC.getNumAnimationOperatorTypes());
 		int iEnumVal = NUM_FUNC_TYPES;
@@ -706,7 +706,7 @@ bool CvXMLLoadUtility::LoadGlobalText()
 
 	foreach_(const CvString& szFile, aszFiles)
 	{
-		if (LoadCivXml(NULL, szFile))
+		if (LoadCivXml(szFile))
 		{
 			SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
 		}
@@ -1899,7 +1899,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 	foreach_(const CvString& szFile, aszFiles)
 	{
-		if (LoadCivXml(NULL, szFile))
+		if (LoadCivXml(szFile))
 		{
 			SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
 		}
@@ -1912,7 +1912,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 		foreach_(const CvString& szFile, aszFiles)
 		{
-			if (LoadCivXml(NULL, szFile))
+			if (LoadCivXml(szFile))
 			{
 				SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
 			}
@@ -1929,7 +1929,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (LoadCivXml(NULL, szFile))
+				if (LoadCivXml(szFile))
 				{
 					SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
 				}
@@ -1946,7 +1946,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		{
 			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (LoadCivXml(NULL, szFile))
+				if (LoadCivXml(szFile))
 				{
 					SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
 				}
@@ -1969,7 +1969,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 		foreach_(const CvString& szFile, aszFiles)
 		{
-			if (LoadCivXml(NULL, szFile))
+			if (LoadCivXml(szFile))
 			{
 				SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
 			}
@@ -1986,7 +1986,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (LoadCivXml(NULL, szFile))
+				if (LoadCivXml(szFile))
 				{
 					SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
 				}
@@ -2003,7 +2003,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		{
 			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (LoadCivXml(NULL, szFile))
+				if (LoadCivXml(szFile))
 				{
 					SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
 				}
@@ -2066,7 +2066,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const
 
 void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching)
 {
-	if (LoadCivXml(NULL, CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot)))
+	if (LoadCivXml(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot)))
 	{
 		SetDiplomacyInfo(DiploInfos, szXmlPath);
 
@@ -2077,7 +2077,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 
 			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (LoadCivXml(NULL, szFile))
+				if (LoadCivXml(szFile))
 				{
 					SetDiplomacyInfo(DiploInfos, szXmlPath);
 				}
@@ -2096,7 +2096,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 
 			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (LoadCivXml(NULL, szFile))
+				if (LoadCivXml(szFile))
 				{
 					SetDiplomacyInfo(DiploInfos, szXmlPath);
 				}
@@ -3215,7 +3215,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 	std::string szModDirectory = "modules";
 	std::string szConfigString;
 
-	if (!LoadCivXml(NULL, CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+	if (!LoadCivXml(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
 	{
 		return false;
 	}
@@ -3269,7 +3269,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 
 							//Check if this Modulefolder is parent to a child MLF
 							if (CvXMLLoadUtilityModTools::isModularArt(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot))
-							&& LoadCivXml(NULL, CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+							&& LoadCivXml(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
 							{
 								if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
 								{
@@ -3315,8 +3315,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 			{
 				std::auto_ptr<T> pClassInfo(new T);
 
-				bool bSuccess = pClassInfo->read(this, szDirDepth, iDirDepth);
-				if (!bSuccess)
+				if (!pClassInfo->read(this, szDirDepth, iDirDepth))
 				{
 					FErrorMsg(CvString::format("Couldn't read %s dir %s", szConfigString.c_str(), szDirDepth.c_str()));
 					break;
@@ -3324,8 +3323,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 
 				if (NULL != pClassInfo->getType())
 				{
-					const int iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-					if ( iIndex != -1 )
+					if (GC.getInfoTypeForString(pClassInfo->getType(), true) != -1)
 					{
 						DEBUG_LOG("MLF.log", "Type \"%s\" is specified more than once", pClassInfo->getType());
 						//Catch dupes here, we don't want the overwrite or copy method for the MLF
