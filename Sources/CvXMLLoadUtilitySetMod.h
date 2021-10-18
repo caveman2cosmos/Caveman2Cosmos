@@ -21,11 +21,8 @@
 //  DESC:   Group of functions for Vectorized Enumeration and MLF for Civilization 4 BtS
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvXMLLoadUtilitySetMod
+namespace CvXMLLoadUtilitySetMod
 {
-	//---------------------------------------PUBLIC INTERFACE---------------------------------
-public:
-
     void setModLoadControlDirArray(bool bSetModControl = true);
 
 	void MLFEnumerateFiles(		std::vector<CvString>&	aszFiles,
@@ -40,6 +37,6 @@ public:
 								bool							bSearchSubdirectories = false);
 
 	void loadModControlArray(std::vector<CvString>&	aszFiles, const char* szFileRoot);
-};
+}
 
 #endif	// XML_LOAD_UTILITY_SET_MOD_H

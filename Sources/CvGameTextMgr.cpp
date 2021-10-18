@@ -11266,13 +11266,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_EXPERIENCE_IN_BORDERS", kTrait.getExpInBorderModifier()));
 		}
 
-		for (iI = 0; iI < kTrait.getNumDomainFreeExperiences() ; ++iI)
+		foreach_(const DomainModifier2& pair, kTrait.getDomainFreeExperience())
 		{
-			if (kTrait.getDomainFreeExperience(iI).iModifier != 0)
-			{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_XP", GC.getDomainInfo((DomainTypes)kTrait.getDomainFreeExperience(iI).eDomain).getTextKeyWide(), kTrait.getDomainFreeExperience(iI).iModifier));
-			}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_XP", GC.getDomainInfo(pair.first).getTextKeyWide(), pair.second));
 		}
 
 		//	Capital XP Modifier
@@ -11386,13 +11383,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		bFound = false;
 		bFirst = true;
 
-		for (iI = 0; iI < kTrait.getNumDomainProductionModifiers(); ++iI)
+		foreach_(const DomainModifier2& pair, kTrait.getDomainProductionModifiers())
 		{
-			if (kTrait.getDomainProductionModifier(iI).iModifier != 0)
-			{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_BUILDS_FASTER_DOMAIN", GC.getDomainInfo((DomainTypes)kTrait.getDomainProductionModifier(iI).eDomain).getTextKeyWide(), kTrait.getDomainProductionModifier(iI).iModifier));
-			}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_BUILDS_FASTER_DOMAIN", GC.getDomainInfo(pair.first).getTextKeyWide(), pair.second));
 		}
 
 		//	State Religion Unit Production Modifier
@@ -11825,35 +11819,31 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER", kTrait.getImprovementUpgradeRateModifier()));
 		}
 
-		for (iI = 0; iI < kTrait.getNumImprovementUpgradeModifierTypes(); iI++)
+		foreach_(const ImprovementModifier& pair, kTrait.getImprovementUpgradeModifiers())
 		{
-			iCurrentModifier = kTrait.getImprovementUpgradeModifier(iI).iModifier;
-			if (iCurrentModifier != 0)
+			if (!algo::container_contains(iIterationValues, pair.second))
 			{
-				if (!algo::container_contains(iIterationValues, iCurrentModifier))
-				{
-					iIterationValues.push_back(kTrait.getImprovementUpgradeModifier(iI).iModifier);
-				}
+				iIterationValues.push_back(pair.second);
 			}
 		}
 		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
-			for (iI = 0; iI < kTrait.getNumImprovementUpgradeModifierTypes(); iI++)
+			foreach_(const ImprovementModifier& pair, kTrait.getImprovementUpgradeModifiers())
 			{
-				iCurrentModifier = kTrait.getImprovementUpgradeModifier(iI).iModifier;
+				iCurrentModifier = pair.second;
 				if (iCurrentModifier == itrValue)
 				{
-					const ImprovementTypes eTempImprovement = kTrait.getImprovementUpgradeModifier(iI).eImprovement;
+					const CvImprovementInfo& kTempImprovement = GC.getImprovementInfo(pair.first);
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
-						szHelpString.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(GC.getImprovementInfo(eTempImprovement).getType()).GetCString(), GC.getImprovementInfo(eTempImprovement).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(kTempImprovement.getType()).c_str(), kTempImprovement.getTextKeyWide()));
 						bFirst = false;
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL", CvWString(GC.getImprovementInfo(eTempImprovement).getType()).GetCString(), GC.getImprovementInfo(eTempImprovement).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL", CvWString(kTempImprovement.getType()).c_str(), kTempImprovement.getTextKeyWide()));
 					}
 				}
 			}
@@ -11866,35 +11856,31 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		bFirst = true;
 
 
-		for (iI = 0; iI < kTrait.getNumBuildWorkerSpeedModifierTypes(); iI++)
+		foreach_(const BuildModifier2& pair, kTrait.getBuildWorkerSpeedModifiers())
 		{
-			iCurrentModifier = kTrait.getBuildWorkerSpeedModifier(iI).iModifier;
-			if (iCurrentModifier != 0)
+			if (!algo::container_contains(iIterationValues, pair.second))
 			{
-				if (!algo::container_contains(iIterationValues, iCurrentModifier))
-				{
-					iIterationValues.push_back(kTrait.getBuildWorkerSpeedModifier(iI).iModifier);
-				}
+				iIterationValues.push_back(pair.second);
 			}
 		}
 		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
-			for (iI = 0; iI < kTrait.getNumBuildWorkerSpeedModifierTypes(); iI++)
+			foreach_(const BuildModifier2& pair, kTrait.getBuildWorkerSpeedModifiers())
 			{
-				iCurrentModifier = kTrait.getBuildWorkerSpeedModifier(iI).iModifier;
+				iCurrentModifier = pair.second;
 				if (iCurrentModifier == itrValue)
 				{
-					const BuildTypes eTempBuild = kTrait.getBuildWorkerSpeedModifier(iI).eBuild;
+					const CvBuildInfo& kTempBuild = GC.getBuildInfo(pair.first);
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
-						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
+						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(kTempBuild.getType()).c_str(), kTempBuild.getDescription()));
 						bFirst = false;
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL", CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
+						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL", CvWString(kTempBuild.getType()).c_str(), kTempBuild.getDescription()));
 					}
 				}
 			}
@@ -22234,21 +22220,24 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-
 	if (!bRelDisabled)
 	{
-		foreach_(const FreePromoTypes& pFreePromo, kBuilding.getFreePromoTypes())
+		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
 		{
-			const BoolExpr* pExpr = pFreePromo.m_pExprFreePromotionCondition;
+			const PromotionTypes ePromo = kFreePromo.ePromotion;
+			const BoolExpr* pExpr = kFreePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
-				const PromotionTypes ePromo = pFreePromo.ePromotion;
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(GC.getPromotionInfo(ePromo).getType()).GetCString(), GC.getPromotionInfo(ePromo).getTextKeyWide()));
 				szBuffer.append(" (");
 				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES"));
 				pExpr->buildDisplayString(szBuffer);
 				szBuffer.append(gDLL->getText("TXT_KEY_REVERT_COLOR"));
 				szBuffer.append(")");
+			}
+			else
+			{
+				setFreePromoBuildingHelp(ePromo, szBuffer);
 			}
 			//if (GC.getBuildingInfo(eBuilding).isFreePromoType(iI))
 			//{
@@ -22736,7 +22725,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						if (iValue != 0)
 						{
 							// We know it ain't first as this building has yield change from tech.
-							szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+							szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
 						}
 					}
 					tempMap.erase(pair.first);
@@ -22764,7 +22753,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						}
 						else szBuffer.append(L", ");
 
-						szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+						szBuffer.append(CvWString::format(L"%d%%%c", iValue, GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
 					}
 				}
 			}
@@ -22883,7 +22872,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		foreach_(const ImprovementModifier2& pair, kBuilding.getImprovementFreeSpecialists())
+		foreach_(const ImprovementModifier& pair, kBuilding.getImprovementFreeSpecialists())
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_IMPROVEMENT_FREE_SPECIALISTS", pair.second).c_str());
 			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo(pair.first).getType()).c_str(), GC.getImprovementInfo(pair.first).getDescription());

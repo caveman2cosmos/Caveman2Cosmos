@@ -17,6 +17,7 @@
 #include "CvPlayerAI.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
+#include "CvXMLLoadUtilityModTools.h"
 #include "CheckSum.h"
 #include "CvImprovementInfo.h"
 
@@ -66,7 +67,7 @@ bool CvInfoBase::isGraphicalOnly() const
 	return m_bGraphicalOnly;
 }
 
-const TCHAR* CvInfoBase::getType() const
+const char* CvInfoBase::getType() const
 {
 	// AIAndy: Comparing a CvString to NULL makes no real sense
 	//if (m_szType == NULL)
@@ -80,7 +81,7 @@ const TCHAR* CvInfoBase::getType() const
 	return m_szType;
 }
 
-const TCHAR* CvInfoBase::getButton() const
+const char* CvInfoBase::getButton() const
 {
 	if (m_szButton.empty())
 	{
@@ -473,7 +474,7 @@ bool CvHotkeyInfo::isCtrlDownAlt() const
 	return m_bCtrlDownAlt;
 }
 
-const TCHAR* CvHotkeyInfo::getHotKey() const
+const char* CvHotkeyInfo::getHotKey() const
 {
 	return m_szHotKey;
 }
@@ -483,12 +484,12 @@ const wchar_t* CvHotkeyInfo::getHotKeyDescriptionKey() const
 	return m_szHotKeyDescriptionKey;
 }
 
-const WCHAR* CvHotkeyInfo::getHotKeyAltDescriptionKey() const
+const wchar_t* CvHotkeyInfo::getHotKeyAltDescriptionKey() const
 {
 	return m_szHotKeyAltDescriptionKey;
 }
 
-const WCHAR* CvHotkeyInfo::getHotKeyString() const
+const wchar_t* CvHotkeyInfo::getHotKeyString() const
 {
 	return m_szHotKeyString;
 }
@@ -605,7 +606,7 @@ bool* CvDiplomacyResponse::getDiplomacyPowerTypes() const
 	return m_pbDiplomacyPowerTypes;
 }
 
-const TCHAR* CvDiplomacyResponse::getDiplomacyText(int i) const
+const char* CvDiplomacyResponse::getDiplomacyText(int i) const
 {
 	return m_paszDiplomacyText[i];
 }
@@ -635,8 +636,7 @@ bool CvDiplomacyResponse::read(CvXMLLoadUtility* pXML)
 }
 void CvDiplomacyResponse::UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int iIndex)
 {
-	bool bDefault = false;
-	CvXMLLoadUtilityModTools* pModTools = new CvXMLLoadUtilityModTools;
+	const bool bDefault = false;
 
 	// We use the String append mechanism from WOC default = assume the modder added his strings
 	// purposly, so those are on the first place, the strings previously are appended after them
@@ -646,9 +646,8 @@ void CvDiplomacyResponse::UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int
 		m_paszNewNames[i] = pDiplomacyInfo->getDiplomacyText(iIndex, i);
 	}
 
-	pModTools->StringArrayExtend(&m_paszDiplomacyText, &m_iNumDiplomacyText, &m_paszNewNames, pDiplomacyInfo->getNumDiplomacyText(iIndex));
+	CvXMLLoadUtilityModTools::StringArrayExtend(&m_paszDiplomacyText, &m_iNumDiplomacyText, &m_paszNewNames, pDiplomacyInfo->getNumDiplomacyText(iIndex));
 	SAFE_DELETE_ARRAY(m_paszNewNames);
-	SAFE_DELETE(pModTools);
 
 	// if anything is true, we don't overwrite(assuming the modder did set it true purposly
 	for ( int i = 0; i < GC.getNumLeaderHeadInfos(); ++i)
@@ -797,7 +796,7 @@ int CvSpecialistInfo::getFlavorValue(int i) const
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
-const TCHAR* CvSpecialistInfo::getTexture() const
+const char* CvSpecialistInfo::getTexture() const
 {
 	return m_szTexture;
 }
@@ -1395,17 +1394,17 @@ std::wstring CvTechInfo::getQuote()	const
 	return text;
 }
 
-const TCHAR* CvTechInfo::getQuoteKey() const
+const char* CvTechInfo::getQuoteKey() const
 {
 	return m_szQuoteKey;
 }
 
-const TCHAR* CvTechInfo::getSound() const
+const char* CvTechInfo::getSound() const
 {
 	return m_szSound;
 }
 
-const TCHAR* CvTechInfo::getSoundMP() const
+const char* CvTechInfo::getSoundMP() const
 {
 	return m_szSoundMP;
 }
@@ -2639,7 +2638,7 @@ bool CvPromotionInfo::isImmuneToFirstStrikes() const
 	return m_bImmuneToFirstStrikes;
 }
 
-const TCHAR* CvPromotionInfo::getSound() const
+const char* CvPromotionInfo::getSound() const
 {
 	return m_szSound;
 }
@@ -6784,7 +6783,7 @@ bool CvMissionInfo::getVisible() const
 	return m_bVisible;
 }
 
-const TCHAR* CvMissionInfo::getWaypoint() const
+const char* CvMissionInfo::getWaypoint() const
 {
 	return m_szWaypoint;
 }
@@ -7289,7 +7288,7 @@ CvHotkeyInfo* CvActionInfo::getHotkeyInfo() const
 	return NULL;
 }
 
-const TCHAR* CvActionInfo::getType() const
+const char* CvActionInfo::getType() const
 {
 	if (getHotkeyInfo())
 	{
@@ -7339,7 +7338,7 @@ const wchar_t* CvActionInfo::getStrategy() const
 	return L"";
 }
 
-const TCHAR* CvActionInfo::getButton() const
+const char* CvActionInfo::getButton() const
 {
 	if (getHotkeyInfo())
 	{
@@ -7479,7 +7478,7 @@ bool CvActionInfo::isCtrlDownAlt() const
 	return false;
 }
 
-const TCHAR* CvActionInfo::getHotKey() const
+const char* CvActionInfo::getHotKey() const
 {
 	if (getHotkeyInfo())
 	{
@@ -7961,7 +7960,7 @@ CvUnitFormationInfo::~CvUnitFormationInfo()
 {
 }
 
-const TCHAR* CvUnitFormationInfo::getFormationType() const
+const char* CvUnitFormationInfo::getFormationType() const
 {
 	return m_szFormationType;
 }
@@ -10614,7 +10613,7 @@ int CvDiplomacyInfo::getNumDiplomacyText(int i) const
 	return m_pResponses[i]->getNumDiplomacyText();
 }
 
-const TCHAR* CvDiplomacyInfo::getDiplomacyText(int i, int j) const
+const char* CvDiplomacyInfo::getDiplomacyText(int i, int j) const
 {
 	FASSERT_BOUNDS(0, getNumResponses(), i)
 	FASSERT_BOUNDS(0, getNumDiplomacyText(i), j)
@@ -11107,12 +11106,12 @@ CvRiverModelInfo::~CvRiverModelInfo()
 {
 }
 
-const TCHAR* CvRiverModelInfo::getModelFile() const
+const char* CvRiverModelInfo::getModelFile() const
 {
 	return m_szModelFile;
 }
 
-const TCHAR* CvRiverModelInfo::getBorderFile() const
+const char* CvRiverModelInfo::getBorderFile() const
 {
 	return m_szBorderFile;
 }
@@ -11122,17 +11121,17 @@ int CvRiverModelInfo::getTextureIndex() const
 	return m_iTextureIndex;
 }
 
-const TCHAR* CvRiverModelInfo::getDeltaString() const
+const char* CvRiverModelInfo::getDeltaString() const
 {
 	return m_szDeltaString;
 }
 
-const TCHAR* CvRiverModelInfo::getConnectString() const
+const char* CvRiverModelInfo::getConnectString() const
 {
 	return m_szConnectString;
 }
 
-const TCHAR* CvRiverModelInfo::getRotateString() const
+const char* CvRiverModelInfo::getRotateString() const
 {
 	return m_szRotateString;
 }
@@ -11206,17 +11205,17 @@ RouteTypes CvRouteModelInfo::getRouteType() const		// The route type
 	return m_eRouteType;
 }
 
-const TCHAR* CvRouteModelInfo::getModelFile() const
+const char* CvRouteModelInfo::getModelFile() const
 {
 	return m_szModelFile;
 }
 
-const TCHAR* CvRouteModelInfo::getLateModelFile() const
+const char* CvRouteModelInfo::getLateModelFile() const
 {
 	return m_szLateModelFile;
 }
 
-const TCHAR* CvRouteModelInfo::getModelFileKey() const
+const char* CvRouteModelInfo::getModelFileKey() const
 {
 	return m_szModelFileKey;
 }
@@ -11226,17 +11225,17 @@ bool CvRouteModelInfo::isAnimated() const
 	return m_bAnimated;
 }
 
-const TCHAR* CvRouteModelInfo::getConnectString() const
+const char* CvRouteModelInfo::getConnectString() const
 {
 	return m_szConnectString;
 }
 
-const TCHAR* CvRouteModelInfo::getModelConnectString() const
+const char* CvRouteModelInfo::getModelConnectString() const
 {
 	return m_szModelConnectString;
 }
 
-const TCHAR* CvRouteModelInfo::getRotateString() const
+const char* CvRouteModelInfo::getRotateString() const
 {
 	return m_szRotateString;
 }
@@ -11418,12 +11417,12 @@ const wchar_t* CvCivilizationInfo::getAdjectiveKey() const
 	return m_szAdjectiveKey;
 }
 
-const TCHAR* CvCivilizationInfo::getFlagTexture() const
+const char* CvCivilizationInfo::getFlagTexture() const
 {
 	return ARTFILEMGR.getCivilizationArtInfo( getArtDefineTag() )->getPath();
 }
 
-const TCHAR* CvCivilizationInfo::getArtDefineTag() const
+const char* CvCivilizationInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -11497,12 +11496,12 @@ const CvArtInfoCivilization* CvCivilizationInfo::getArtInfo() const
 /* Catch non-existing tag																	   */
 /************************************************************************************************/
 /*
-const TCHAR* CvCivilizationInfo::getButton() const
+const char* CvCivilizationInfo::getButton() const
 {
 	return getArtInfo()->getButton();
 }
 */
-const TCHAR* CvCivilizationInfo::getButton() const
+const char* CvCivilizationInfo::getButton() const
 {
 	const CvString cDefault = CvString::format("").GetCString();
 	if (getArtDefineTag() == cDefault)
@@ -11802,9 +11801,7 @@ void CvCivilizationInfo::copyNonDefaults(const CvCivilizationInfo* pClassInfo)
 			m_paszOldNames[i] = pClassInfo->getCityNames(i);
 		}
 
-		CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
-		pCurrentUnit->StringArrayExtend(&m_paszCityNames, &m_iNumCityNames, &m_paszOldNames, pClassInfo->getNumCityNames());
-		delete pCurrentUnit;
+		CvXMLLoadUtilityModTools::StringArrayExtend(&m_paszCityNames, &m_iNumCityNames, &m_paszOldNames, pClassInfo->getNumCityNames());
 		SAFE_DELETE_ARRAY(m_paszOldNames)
 	}
 
@@ -13474,7 +13471,7 @@ bool CvGoodyInfo::isNaval() const
 	return m_bNaval;
 }
 
-const TCHAR* CvGoodyInfo::getSound() const
+const char* CvGoodyInfo::getSound() const
 {
 	return m_szSound;
 }
@@ -14147,7 +14144,7 @@ bool CvBonusInfo::isNormalize() const
 	return m_bNormalize;
 }
 
-const TCHAR* CvBonusInfo::getArtDefineTag() const
+const char* CvBonusInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -14211,7 +14208,7 @@ PromotionLineAfflictionModifier CvBonusInfo::getAfflictionCommunicabilityType(in
 }
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-const TCHAR* CvBonusInfo::getButton() const
+const char* CvBonusInfo::getButton() const
 {
 /************************************************************************************************/
 /* XMLCOPY								 10/25/07								MRGENIE	  */
@@ -14706,12 +14703,12 @@ bool CvFeatureInfo::isOnlyBad() const
 }
 // BUG - City Plot Status - end
 
-const TCHAR* CvFeatureInfo::getOnUnitChangeTo() const
+const char* CvFeatureInfo::getOnUnitChangeTo() const
 {
 	return m_szOnUnitChangeTo;
 }
 
-const TCHAR* CvFeatureInfo::getArtDefineTag() const
+const char* CvFeatureInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -14721,7 +14718,7 @@ int CvFeatureInfo::getWorldSoundscapeScriptId() const
 	return m_iWorldSoundscapeScriptId;
 }
 
-const TCHAR* CvFeatureInfo::getEffectType() const
+const char* CvFeatureInfo::getEffectType() const
 {
 	return m_szEffectType;
 }
@@ -14763,7 +14760,7 @@ int CvFeatureInfo::getNumVarieties() const
 	return getArtInfo()->getNumVarieties();
 }
 
-const TCHAR* CvFeatureInfo::getButton() const
+const char* CvFeatureInfo::getButton() const
 {
 /************************************************************************************************/
 /* XMLCOPY								 10/25/07								MRGENIE	  */
@@ -14802,7 +14799,7 @@ int CvFeatureInfo::getCultureDistance() const
 	return m_iCultureDistance;
 }
 
-const TCHAR* CvFeatureInfo::getGrowthSound() const
+const char* CvFeatureInfo::getGrowthSound() const
 {
 	return m_szGrowthSound;
 }
@@ -15311,10 +15308,10 @@ int CvYieldInfo::getColorType() const
 
 // Arrays
 
-const TCHAR* CvYieldInfo::getSymbolPath(int i) const
+const char* CvYieldInfo::getSymbolPath(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getDefineINT("MAX_YIELD_STACK"), i)
-	return m_paszSymbolPath ? m_paszSymbolPath[i] : reinterpret_cast<const TCHAR*>(-1);
+	return m_paszSymbolPath ? m_paszSymbolPath[i] : reinterpret_cast<const char*>(-1);
 }
 
 bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
@@ -15517,7 +15514,7 @@ bool CvTerrainInfo::isFreshWaterTerrain() const
 	return m_bFreshWaterTerrain;
 }
 
-const TCHAR* CvTerrainInfo::getArtDefineTag() const
+const char* CvTerrainInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -15752,7 +15749,7 @@ void CvTerrainInfo::getCheckSum(uint32_t &iSum) const
 	//TB Combat Mods end
 }
 
-const TCHAR* CvTerrainInfo::getButton() const
+const char* CvTerrainInfo::getButton() const
 {
 /************************************************************************************************/
 /* XMLCOPY								 10/25/07								MRGENIE	  */
@@ -15908,7 +15905,7 @@ CvAdvisorInfo::~CvAdvisorInfo()
 {
 }
 
-const TCHAR* CvAdvisorInfo::getTexture() const
+const char* CvAdvisorInfo::getTexture() const
 {
 	return m_szTexture;
 }
@@ -16116,7 +16113,7 @@ CvLeaderHeadInfo::~CvLeaderHeadInfo()
 	SAFE_DELETE_ARRAY(m_piDiploWarMusicScriptIds);
 }
 
-const TCHAR* CvLeaderHeadInfo::getButton() const
+const char* CvLeaderHeadInfo::getButton() const
 {
 /************************************************************************************************/
 /* XMLCOPY								 10/25/07								MRGENIE	  */
@@ -16543,7 +16540,7 @@ int CvLeaderHeadInfo::getFreedomAppreciation() const
 	return m_iFreedomAppreciation;
 }
 
-const TCHAR* CvLeaderHeadInfo::getArtDefineTag() const
+const char* CvLeaderHeadInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -16628,7 +16625,7 @@ int CvLeaderHeadInfo::getDiploWarMusicScriptIds(int i) const
 	return m_piDiploWarMusicScriptIds ? m_piDiploWarMusicScriptIds[i] : -1;
 }
 
-const TCHAR* CvLeaderHeadInfo::getLeaderHead() const
+const char* CvLeaderHeadInfo::getLeaderHead() const
 {
 	const CvArtInfoLeaderhead * pLeaderheadArtInfo;
 	pLeaderheadArtInfo = getArtInfo();
@@ -18336,12 +18333,12 @@ const char* CvProjectInfo::getMovieArtDef() const
 	return m_szMovieArtDef;
 }
 
-const TCHAR* CvProjectInfo::getCreateSound() const
+const char* CvProjectInfo::getCreateSound() const
 {
 	return m_szCreateSound;
 }
 
-void CvProjectInfo::setCreateSound(const TCHAR* szVal)
+void CvProjectInfo::setCreateSound(const char* szVal)
 {
 	m_szCreateSound = szVal;
 }
@@ -18842,29 +18839,29 @@ void CvReligionInfo::setMissionType(int iNewType)
 	m_iMissionType = iNewType;
 }
 
-const TCHAR* CvReligionInfo::getTechButton() const
+const char* CvReligionInfo::getTechButton() const
 {
 	return m_szTechButton;
 }
 
-const TCHAR* CvReligionInfo::getGenericTechButton() const
+const char* CvReligionInfo::getGenericTechButton() const
 {
 	return m_szGenericTechButton;
 }
 
-const TCHAR* CvReligionInfo::getMovieFile() const
+const char* CvReligionInfo::getMovieFile() const
 {
 	return m_szMovieFile;
 }
 
-const TCHAR* CvReligionInfo::getMovieSound() const
+const char* CvReligionInfo::getMovieSound() const
 {
 	return m_szMovieSound;
 }
 
-const TCHAR* CvReligionInfo::getButtonDisabled() const
+const char* CvReligionInfo::getButtonDisabled() const
 {
-	static TCHAR szDisabled[512];
+	static char szDisabled[512];
 
 	szDisabled[0] = '\0';
 
@@ -18878,12 +18875,12 @@ const TCHAR* CvReligionInfo::getButtonDisabled() const
 	return szDisabled;
 }
 
-const TCHAR* CvReligionInfo::getSound() const
+const char* CvReligionInfo::getSound() const
 {
 	return m_szSound;
 }
 
-void CvReligionInfo::setAdjectiveKey(const TCHAR* szVal)
+void CvReligionInfo::setAdjectiveKey(const char* szVal)
 {
 	m_szAdjectiveKey = szVal;
 }
@@ -19246,17 +19243,17 @@ int CvCorporationInfo::getBonusProduced() const
 	return m_iBonusProduced;
 }
 
-const TCHAR* CvCorporationInfo::getMovieFile() const
+const char* CvCorporationInfo::getMovieFile() const
 {
 	return m_szMovieFile;
 }
 
-const TCHAR* CvCorporationInfo::getMovieSound() const
+const char* CvCorporationInfo::getMovieSound() const
 {
 	return m_szMovieSound;
 }
 
-const TCHAR* CvCorporationInfo::getSound() const
+const char* CvCorporationInfo::getSound() const
 {
 	return m_szSound;
 }
@@ -19928,11 +19925,6 @@ CvTraitInfo::~CvTraitInfo()
 	SAFE_DELETE_ARRAY2(m_ppaiImprovementYieldChange, GC.getNumImprovementInfos());
 
 //	 int vector utilizing struct with delayed resolution
-	for (int i=0; i<(int)m_aBuildWorkerSpeedModifierTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aBuildWorkerSpeedModifierTypes[i]));
-	}
-
 	for (int i=0; i<(int)m_aDisallowedTraitTypes.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aDisallowedTraitTypes[i]));
@@ -20319,12 +20311,12 @@ bool CvTraitInfo::isUpgradeAnywhere() const
 /**		REVDCM									END								*/
 /********************************************************************************/
 
-const TCHAR* CvTraitInfo::getShortDescription() const
+const char* CvTraitInfo::getShortDescription() const
 {
 	return m_szShortDescription;
 }
 
-void CvTraitInfo::setShortDescription(const TCHAR* szVal)
+void CvTraitInfo::setShortDescription(const char* szVal)
 {
 	m_szShortDescription = szVal;
 }
@@ -22253,145 +22245,6 @@ int* CvTraitInfo::getGoldenAgeCommerceChangesArray() const
 	return m_piGoldenAgeCommerceChanges;
 }
 
-// int vector utilizing struct with delayed resolution
-int CvTraitInfo::getNumImprovementUpgradeModifierTypes() const
-{
-	return (int)m_aImprovementUpgradeModifierTypes.size();
-}
-
-ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement) const
-{
-	FASSERT_BOUNDS(0, getNumImprovementUpgradeModifierTypes(), iImprovement)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		ImprovementModifier kMod = m_aImprovementUpgradeModifierTypes[iImprovement];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-
-	return m_aImprovementUpgradeModifierTypes[iImprovement];
-}
-
-int CvTraitInfo::getNumBuildWorkerSpeedModifierTypes() const
-{
-	return (int)m_aBuildWorkerSpeedModifierTypes.size();
-}
-
-BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild) const
-{
-	FASSERT_BOUNDS(0, getNumBuildWorkerSpeedModifierTypes(), iBuild)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		BuildModifier kMod = m_aBuildWorkerSpeedModifierTypes[iBuild];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aBuildWorkerSpeedModifierTypes[iBuild];
-}
-
-int CvTraitInfo::getNumDisallowedTraitTypes() const
-{
-	return (int)m_aDisallowedTraitTypes.size();
-}
-
-DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
-{
-	FASSERT_BOUNDS(0, getNumDisallowedTraitTypes(), iTrait)
-
-	return m_aDisallowedTraitTypes[iTrait];
-}
-
-int CvTraitInfo::getNumDomainFreeExperiences() const
-{
-	return (int)m_aDomainFreeExperiences.size();
-}
-
-DomainModifier CvTraitInfo::getDomainFreeExperience(int iDomain) const
-{
-	FASSERT_BOUNDS(0, getNumDomainFreeExperiences(), iDomain)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		DomainModifier kMod = m_aDomainFreeExperiences[iDomain];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aDomainFreeExperiences[iDomain];
-}
-
-int CvTraitInfo::getNumDomainProductionModifiers() const
-{
-	return (int)m_aDomainProductionModifiers.size();
-}
-
-DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain) const
-{
-	FASSERT_BOUNDS(0, getNumDomainProductionModifiers(), iDomain)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		DomainModifier kMod = m_aDomainProductionModifiers[iDomain];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aDomainProductionModifiers[iDomain];
-}
-
-int CvTraitInfo::getNumBuildingProductionModifiers() const
-{
-	return (int)m_aBuildingProductionModifiers.size();
-}
-
-BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
-{
-	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding)
-
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		BuildingModifier kMod = m_aBuildingProductionModifiers[iBuilding];
-		if (isNegativeTrait() && kMod.iModifier > 0)
-		{
-			kMod.iModifier = 0;
-		}
-		else if (!isNegativeTrait() && kMod.iModifier < 0)
-		{
-			kMod.iModifier = 0;
-		}
-		return kMod;
-	}
-	return m_aBuildingProductionModifiers[iBuilding];
-}
-
 namespace PureTraits
 {
 	namespace
@@ -22419,9 +22272,69 @@ namespace PureTraits
 		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 			return bind(anyValue<T1, T2>, _1);
 
-		return bNegativeTrait ? bind(isNegativeValue<T1, T2>, _1) : bind(isPositiveValue<T1, T2>, _1);
+		if (bNegativeTrait)
+			return bind(isNegativeValue<T1, T2>, _1);
+		else
+			return bind(isPositiveValue<T1, T2>, _1);
 	}
 };
+
+const IDValueMap<ImprovementTypes, int>::filtered CvTraitInfo::getImprovementUpgradeModifiers() const
+{
+	return filter(m_aImprovementUpgradeModifierTypes, PureTraits::getPredicate<ImprovementTypes, int>(m_bNegativeTrait));
+}
+
+const IDValueMap<BuildTypes, int>::filtered CvTraitInfo::getBuildWorkerSpeedModifiers() const
+{
+	return filter(m_aBuildWorkerSpeedModifierTypes, PureTraits::getPredicate<BuildTypes, int>(m_bNegativeTrait));
+}
+
+int CvTraitInfo::getNumDisallowedTraitTypes() const
+{
+	return (int)m_aDisallowedTraitTypes.size();
+}
+
+DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
+{
+	FASSERT_BOUNDS(0, getNumDisallowedTraitTypes(), iTrait)
+
+	return m_aDisallowedTraitTypes[iTrait];
+}
+
+const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainFreeExperience() const
+{
+	return filter(m_aDomainFreeExperiences, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
+}
+
+const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainProductionModifiers() const
+{
+	return filter(m_aDomainProductionModifiers, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
+}
+
+int CvTraitInfo::getNumBuildingProductionModifiers() const
+{
+	return (int)m_aBuildingProductionModifiers.size();
+}
+
+BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
+{
+	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding)
+
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	{
+		BuildingModifier kMod = m_aBuildingProductionModifiers[iBuilding];
+		if (isNegativeTrait() && kMod.iModifier > 0)
+		{
+			kMod.iModifier = 0;
+		}
+		else if (!isNegativeTrait() && kMod.iModifier < 0)
+		{
+			kMod.iModifier = 0;
+		}
+		return kMod;
+	}
+	return m_aBuildingProductionModifiers[iBuilding];
+}
 
 const IDValueMap<TechTypes, int>::filtered CvTraitInfo::getTechResearchModifiers() const
 {
@@ -22573,9 +22486,13 @@ void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
 		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
+		.addDelayedResolution(m_aBuildWorkerSpeedModifierTypes, L"BuildWorkerSpeedModifierTypes")
 		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
 		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
+		.add(m_aImprovementUpgradeModifierTypes, L"ImprovementUpgradeModifierTypes")
+		.add(m_aDomainFreeExperiences, L"DomainFreeExperiences")
+		.add(m_aDomainProductionModifiers, L"DomainProductionModifiers")
 	;
 }
 
@@ -23076,54 +22993,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChanges);
 	}
 
-	// int vector utilizing struct with delayed resolution
-	if(pXML->TryMoveToXmlFirstChild(L"ImprovementUpgradeModifierTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"ImprovementUpgradeModifierType" );
-		m_aImprovementUpgradeModifierTypes.resize(iNum);
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"ImprovementUpgradeModifierType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"ImprovementType");
-					m_aImprovementUpgradeModifierTypes[i].eImprovement = (ImprovementTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aImprovementUpgradeModifierTypes[i].iModifier), L"iImprovementUpgradeModifier");
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"ImprovementUpgradeModifierType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"BuildWorkerSpeedModifierTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"BuildWorkerSpeedModifierType" );
-		m_aBuildWorkerSpeedModifierTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BuildWorkerSpeedModifierType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"BuildType");
-					pXML->GetChildXmlValByName(&(m_aBuildWorkerSpeedModifierTypes[i].iModifier), L"iBuildWorkerSpeedModifier");
-					GC.addDelayedResolution((int*)&(m_aBuildWorkerSpeedModifierTypes[i].eBuild), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"BuildWorkerSpeedModifierType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
 	if(pXML->TryMoveToXmlFirstChild(L"DisallowedTraitTypes"))
 	{
 		int i = 0;
@@ -23141,52 +23010,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					GC.addDelayedResolution((int*)&(m_aDisallowedTraitTypes[i].eTrait), szTextVal);
 					i++;
 				} while(pXML->TryMoveToXmlNextSibling(L"DisallowedTraitType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"DomainFreeExperiences"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"DomainFreeExperience" );
-		m_aDomainFreeExperiences.resize(iNum);
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"DomainFreeExperience"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"DomainType");
-					m_aDomainFreeExperiences[i].eDomain = (DomainTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aDomainFreeExperiences[i].iModifier), L"iExperience");
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"DomainFreeExperience"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"DomainProductionModifiers"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"DomainProductionModifier" );
-		m_aDomainProductionModifiers.resize(iNum);
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"DomainProductionModifier"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"DomainType");
-					m_aDomainProductionModifiers[i].eDomain = (DomainTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aDomainProductionModifiers[i].iModifier), L"iModifier");
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"DomainProductionModifier"));
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -24051,23 +23874,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		}
 	}
 
-	// int vector utilizing struct with delayed resolution
-	if (getNumImprovementUpgradeModifierTypes() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aImprovementUpgradeModifierTypes, pClassInfo->m_aImprovementUpgradeModifierTypes);
-	}
-
-	if (getNumBuildWorkerSpeedModifierTypes() == 0)
-	{
-		int iNum = pClassInfo->getNumBuildWorkerSpeedModifierTypes();
-		m_aBuildWorkerSpeedModifierTypes.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aBuildWorkerSpeedModifierTypes[i].iModifier = pClassInfo->m_aBuildWorkerSpeedModifierTypes[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aBuildWorkerSpeedModifierTypes[i].eBuild), (int*)&(pClassInfo->m_aBuildWorkerSpeedModifierTypes[i].eBuild));
-		}
-	}
-
 	if (getNumDisallowedTraitTypes() == 0)
 	{
 		int iNum = pClassInfo->getNumDisallowedTraitTypes();
@@ -24099,16 +23905,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 			}
 			m_piFlavorValue[i] = pClassInfo->getFlavorValue(i);
 		}
-	}
-
-	if (getNumDomainFreeExperiences() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aDomainFreeExperiences, pClassInfo->m_aDomainFreeExperiences);
-	}
-
-	if (getNumDomainProductionModifiers() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aDomainProductionModifiers, pClassInfo->m_aDomainProductionModifiers);
 	}
 
 	if (getNumBuildingProductionModifiers() == 0)
@@ -24329,38 +24125,10 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 	int iNumElements;
 	int i;
 
-	iNumElements = m_aImprovementUpgradeModifierTypes.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aImprovementUpgradeModifierTypes[i].eImprovement);
-		CheckSum(iSum, m_aImprovementUpgradeModifierTypes[i].iModifier);
-	}
-
-	iNumElements = m_aBuildWorkerSpeedModifierTypes.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aBuildWorkerSpeedModifierTypes[i].eBuild);
-		CheckSum(iSum, m_aBuildWorkerSpeedModifierTypes[i].iModifier);
-	}
-
 	iNumElements = m_aDisallowedTraitTypes.size();
 	for (i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aDisallowedTraitTypes[i].eTrait);
-	}
-
-	iNumElements = m_aDomainFreeExperiences.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aDomainFreeExperiences[i].eDomain);
-		CheckSum(iSum, m_aDomainFreeExperiences[i].iModifier);
-	}
-
-	iNumElements = m_aDomainProductionModifiers.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aDomainProductionModifiers[i].eDomain);
-		CheckSum(iSum, m_aDomainProductionModifiers[i].iModifier);
 	}
 
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
@@ -24491,7 +24259,7 @@ CvCursorInfo::~CvCursorInfo()
 {
 }
 
-const TCHAR* CvCursorInfo::getPath()
+const char* CvCursorInfo::getPath()
 {
 	return m_szPath;
 }
@@ -24545,7 +24313,7 @@ CvThroneRoomCamera::~CvThroneRoomCamera()
 {
 }
 
-const TCHAR* CvThroneRoomCamera::getFileName()
+const char* CvThroneRoomCamera::getFileName()
 {
 	return m_szFileName;
 }
@@ -24600,12 +24368,12 @@ CvThroneRoomInfo::~CvThroneRoomInfo()
 {
 }
 
-const TCHAR* CvThroneRoomInfo::getEvent()
+const char* CvThroneRoomInfo::getEvent()
 {
 	return m_szEvent;
 }
 
-const TCHAR* CvThroneRoomInfo::getNodeName()
+const char* CvThroneRoomInfo::getNodeName()
 {
 	return m_szNodeName;
 }
@@ -24810,7 +24578,7 @@ CvSlideShowRandomInfo::~CvSlideShowRandomInfo()
 {
 }
 
-const TCHAR* CvSlideShowRandomInfo::getPath()
+const char* CvSlideShowRandomInfo::getPath()
 {
 	return m_szPath;
 }
@@ -24861,12 +24629,12 @@ CvWorldPickerInfo::~CvWorldPickerInfo()
 {
 }
 
-const TCHAR* CvWorldPickerInfo::getMapName()
+const char* CvWorldPickerInfo::getMapName()
 {
 	return m_szMapName;
 }
 
-const TCHAR* CvWorldPickerInfo::getModelFile()
+const char* CvWorldPickerInfo::getModelFile()
 {
 	return m_szModelFile;
 }
@@ -24886,7 +24654,7 @@ int CvWorldPickerInfo::getNumClimates()
 	return m_aClimates.size();
 }
 
-const TCHAR* CvWorldPickerInfo::getClimatePath(int index)
+const char* CvWorldPickerInfo::getClimatePath(int index)
 {
 	return m_aClimates[index];
 }
@@ -24896,7 +24664,7 @@ int CvWorldPickerInfo::getNumWaterLevelDecals()
 	return m_aWaterLevelDecals.size();
 }
 
-const TCHAR* CvWorldPickerInfo::getWaterLevelDecalPath(int index)
+const char* CvWorldPickerInfo::getWaterLevelDecalPath(int index)
 {
 	return m_aWaterLevelDecals[index];
 }
@@ -24906,7 +24674,7 @@ int CvWorldPickerInfo::getNumWaterLevelGloss()
 	return m_aWaterLevelGloss.size();
 }
 
-const TCHAR* CvWorldPickerInfo::getWaterLevelGlossPath(int index)
+const char* CvWorldPickerInfo::getWaterLevelGlossPath(int index)
 {
 	return m_aWaterLevelGloss[index];
 }
@@ -25063,17 +24831,17 @@ CvSpaceShipInfo::~CvSpaceShipInfo()
 {
 }
 
-const TCHAR* CvSpaceShipInfo::getNodeName()
+const char* CvSpaceShipInfo::getNodeName()
 {
 	return m_szNodeName;
 }
 
-const TCHAR* CvSpaceShipInfo::getProjectName()
+const char* CvSpaceShipInfo::getProjectName()
 {
 	return m_szProjectName;
 }
 
-void CvSpaceShipInfo::setProjectName(const TCHAR* szVal)
+void CvSpaceShipInfo::setProjectName(const char* szVal)
 {
 	m_szProjectName = szVal;
 	m_eProjectType = (ProjectTypes) GC.getInfoTypeForString(m_szProjectName, true);
@@ -25557,22 +25325,22 @@ bool CvEntityEventInfo::getUpdateFormation() const
 // CvAssetInfoBase
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-const TCHAR* CvAssetInfoBase::getTag() const
+const char* CvAssetInfoBase::getTag() const
 {
 	return getType();
 }
 
-void CvAssetInfoBase::setTag(const TCHAR* szDesc)
+void CvAssetInfoBase::setTag(const char* szDesc)
 {
 	m_szType = szDesc;
 }
 
-const TCHAR* CvAssetInfoBase::getPath() const
+const char* CvAssetInfoBase::getPath() const
 {
 	return m_szPath;
 }
 
-void CvAssetInfoBase::setPath(const TCHAR* szDesc)
+void CvAssetInfoBase::setPath(const char* szDesc)
 {
 	m_szPath = szDesc;
 }
@@ -25595,22 +25363,22 @@ bool CvAssetInfoBase::read(CvXMLLoadUtility* pXML)
 // CvArtInfoAsset
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-const TCHAR* CvArtInfoAsset::getNIF() const
+const char* CvArtInfoAsset::getNIF() const
 {
 	return m_szNIF;
 }
 
-const TCHAR* CvArtInfoAsset::getKFM() const
+const char* CvArtInfoAsset::getKFM() const
 {
 	return m_szKFM;
 }
 
-void CvArtInfoAsset::setNIF(const TCHAR* szDesc)
+void CvArtInfoAsset::setNIF(const char* szDesc)
 {
 	m_szNIF = szDesc;
 }
 
-void CvArtInfoAsset::setKFM(const TCHAR* szDesc)
+void CvArtInfoAsset::setKFM(const char* szDesc)
 {
 	m_szKFM = szDesc;
 }
@@ -25692,11 +25460,11 @@ int CvArtInfoBonus::getFontButtonIndex() const
 	return m_iFontButtonIndex;
 }
 
-const TCHAR* CvArtInfoBonus::getShaderNIF() const
+const char* CvArtInfoBonus::getShaderNIF() const
 {
 	return m_szShaderNIF;
 }
-void CvArtInfoBonus::setShaderNIF(const TCHAR* szDesc)
+void CvArtInfoBonus::setShaderNIF(const char* szDesc)
 {
 	m_szShaderNIF = szDesc;
 }
@@ -25756,17 +25524,17 @@ bool CvArtInfoUnit::getActAsAir() const
 	return m_bActAsAir;
 }
 
-const TCHAR* CvArtInfoUnit::getShaderNIF() const
+const char* CvArtInfoUnit::getShaderNIF() const
 {
 	return m_szShaderNIF;
 }
 
-void CvArtInfoUnit::setShaderNIF(const TCHAR* szDesc)
+void CvArtInfoUnit::setShaderNIF(const char* szDesc)
 {
 	m_szShaderNIF = szDesc;
 }
 
-const TCHAR* CvArtInfoUnit::getShadowNIF() const
+const char* CvArtInfoUnit::getShadowNIF() const
 {
 	return m_szShadowNIF;
 }
@@ -25776,7 +25544,7 @@ float CvArtInfoUnit::getShadowScale() const
 	return m_fShadowScale;
 }
 
-const TCHAR* CvArtInfoUnit::getShadowAttachNode() const
+const char* CvArtInfoUnit::getShadowAttachNode() const
 {
 	return m_szShadowAttach;
 }
@@ -25787,7 +25555,7 @@ int CvArtInfoUnit::getDamageStates() const
 }
 
 
-const TCHAR* CvArtInfoUnit::getTrailTexture() const
+const char* CvArtInfoUnit::getTrailTexture() const
 {
 	return m_szTrailTexture;
 }
@@ -25925,12 +25693,12 @@ void CvArtInfoUnit::copyNonDefaults(const CvArtInfoUnit* pClassInfo)
 	// Empty, for Art files we stick to FULL XML defintions
 }
 
-const TCHAR* CvArtInfoUnit::getTrainSound() const
+const char* CvArtInfoUnit::getTrainSound() const
 {
 	return m_szTrainSound;
 }
 
-void CvArtInfoUnit::setTrainSound(const TCHAR* szVal)
+void CvArtInfoUnit::setTrainSound(const char* szVal)
 {
 	m_szTrainSound = szVal;
 }
@@ -25978,7 +25746,7 @@ bool CvArtInfoBuilding::isAnimated() const
 	return m_bAnimated;
 }
 
-const TCHAR* CvArtInfoBuilding::getLSystemName() const
+const char* CvArtInfoBuilding::getLSystemName() const
 {
 	return m_szLSystemName;
 }
@@ -26039,22 +25807,22 @@ void CvArtInfoCivilization::copyNonDefaults(const CvArtInfoCivilization* pClassI
 // CvArtInfoLeaderhead
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-const TCHAR* CvArtInfoLeaderhead::getNoShaderNIF() const
+const char* CvArtInfoLeaderhead::getNoShaderNIF() const
 {
 	return m_szNoShaderNIF;
 }
 
-void CvArtInfoLeaderhead::setNoShaderNIF(const TCHAR* szNIF)
+void CvArtInfoLeaderhead::setNoShaderNIF(const char* szNIF)
 {
 	m_szNoShaderNIF = szNIF;
 }
 
-const TCHAR* CvArtInfoLeaderhead::getBackgroundKFM() const
+const char* CvArtInfoLeaderhead::getBackgroundKFM() const
 {
 	return m_szBackgroundKFM;
 }
 
-void CvArtInfoLeaderhead::setBackgroundKFM( const TCHAR* szKFM)
+void CvArtInfoLeaderhead::setBackgroundKFM(const char* szKFM)
 {
 	m_szBackgroundKFM = szKFM;
 }
@@ -26154,32 +25922,32 @@ CvArtInfoTerrain::CvArtInfoTerrain()
 {
 }
 
-const TCHAR* CvArtInfoTerrain::getBaseTexture()
+const char* CvArtInfoTerrain::getBaseTexture()
 {
 	return getPath();
 }
 
-void CvArtInfoTerrain::setBaseTexture(const TCHAR* szTmp )
+void CvArtInfoTerrain::setBaseTexture(const char* szTmp)
 {
 	setPath(szTmp);
 }
 
-const TCHAR* CvArtInfoTerrain::getGridTexture()
+const char* CvArtInfoTerrain::getGridTexture()
 {
 	return m_szGridTexture;
 }
 
-void CvArtInfoTerrain::setGridTexture(const TCHAR* szTmp )
+void CvArtInfoTerrain::setGridTexture(const char* szTmp)
 {
 	m_szGridTexture = szTmp;
 }
 
-const TCHAR* CvArtInfoTerrain::getDetailTexture()
+const char* CvArtInfoTerrain::getDetailTexture()
 {
 	return m_szDetailTexture;
 }
 
-void CvArtInfoTerrain::setDetailTexture(const TCHAR* szTmp)
+void CvArtInfoTerrain::setDetailTexture(const char* szTmp)
 {
 	m_szDetailTexture = szTmp;
 }
@@ -27041,12 +26809,12 @@ int CvEraInfo::getBeelineStingsTechCostModifier() const
 	return m_iBeelineStingsTechCostModifier;
 }
 
-const TCHAR* CvEraInfo::getAudioUnitVictoryScript() const
+const char* CvEraInfo::getAudioUnitVictoryScript() const
 {
 	return m_szAudioUnitVictoryScript;
 }
 
-const TCHAR* CvEraInfo::getAudioUnitDefeatScript() const
+const char* CvEraInfo::getAudioUnitDefeatScript() const
 {
 	return m_szAudioUnitDefeatScript;
 }
@@ -27836,7 +27604,7 @@ int CvDiplomacyTextInfo::getNumDiplomacyText(int i) const
 	return m_pResponses[i].m_iNumDiplomacyText;
 }
 
-const TCHAR* CvDiplomacyTextInfo::getDiplomacyText(int i, int j) const
+const char* CvDiplomacyTextInfo::getDiplomacyText(int i, int j) const
 {
 	FASSERT_BOUNDS(0, getNumResponses(), i)
 	FASSERT_BOUNDS(0, getNumDiplomacyText(i), j)
@@ -28566,7 +28334,7 @@ int CvEventTriggerInfo::getNumCorporationsRequired() const
 }
 
 // Begin EmperorFool: Events with Images
-const TCHAR* CvEventTriggerInfo::getEventArt() const
+const char* CvEventTriggerInfo::getEventArt() const
 {
 	if (m_szEventArt.empty())
 	{
@@ -31045,7 +30813,7 @@ CvUnitArtStyleTypeInfo::~CvUnitArtStyleTypeInfo()
 {
 }
 
-const TCHAR* CvUnitArtStyleTypeInfo::getEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31061,7 +30829,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getEarlyArtDefineTag(int /*Mesh Index*/ i, 
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31082,7 +30850,7 @@ void CvUnitArtStyleTypeInfo::setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*Un
 	m_azEarlyArtDefineTags.push_back(kTag);
 }
 
-const TCHAR* CvUnitArtStyleTypeInfo::getLateArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getLateArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31098,7 +30866,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getLateArtDefineTag(int /*Mesh Index*/ i, i
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setLateArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setLateArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31119,7 +30887,7 @@ void CvUnitArtStyleTypeInfo::setLateArtDefineTag(int /*Mesh Index*/ i, int /*Uni
 	m_azLateArtDefineTags.push_back(kTag);
 }
 
-const TCHAR* CvUnitArtStyleTypeInfo::getMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31135,7 +30903,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getMiddleArtDefineTag(int /*Mesh Index*/ i,
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31157,7 +30925,7 @@ void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*U
 }
 
 
-const TCHAR* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31173,7 +30941,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31194,7 +30962,7 @@ void CvUnitArtStyleTypeInfo::setClassicalArtDefineTag(int /*Mesh Index*/ i, int 
 	m_azClassicalArtDefineTags.push_back(kTag);
 }
 
-const TCHAR* CvUnitArtStyleTypeInfo::getRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31210,7 +30978,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getRennArtDefineTag(int /*Mesh Index*/ i, i
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31231,7 +30999,7 @@ void CvUnitArtStyleTypeInfo::setRennArtDefineTag(int /*Mesh Index*/ i, int /*Uni
 	m_azRennArtDefineTags.push_back(kTag);
 }
 
-const TCHAR* CvUnitArtStyleTypeInfo::getIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31247,7 +31015,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getIndustrialArtDefineTag(int /*Mesh Index*
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31268,7 +31036,7 @@ void CvUnitArtStyleTypeInfo::setIndustrialArtDefineTag(int /*Mesh Index*/ i, int
 	m_azIndustrialArtDefineTags.push_back(kTag);
 }
 
-const TCHAR* CvUnitArtStyleTypeInfo::getFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
+const char* CvUnitArtStyleTypeInfo::getFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
@@ -31284,7 +31052,7 @@ const TCHAR* CvUnitArtStyleTypeInfo::getFutureArtDefineTag(int /*Mesh Index*/ i,
 	return NULL;
 }
 
-void CvUnitArtStyleTypeInfo::setFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal)
+void CvUnitArtStyleTypeInfo::setFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
