@@ -379,11 +379,19 @@ public:
 	int getPropertyNonBuildingSource(PropertyTypes eProperty) const;
 
 private:
+	int AI_getBuildingYieldValue
+	(
+		BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bForeignTrade, bool bFinancialTrouble,
+		int* aiFreeSpecialistYield, int* aiYieldRank, int iLimitedWonderLimit, const CvArea* pArea, int iTotalPopulation, int iFoodDifference
+	)
+	const;
+
 	int AI_getBuildingProductionValue
 	(
 		BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder,
 		bool bForeignTrade, int iFreeSpecialistYield, int iYieldRank, int iLimitedWonderLimit
-	) const;
+	)
+	const;
 
 	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags) const;
 	void CalculateAllBuildingValues(int iFocusFlags);

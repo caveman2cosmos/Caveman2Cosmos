@@ -4873,7 +4873,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	const ReligionTypes eStateReligion = kOwner.getStateReligion();
 
-	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
+	const CvArea* pArea = area();
+	bool bAreaAlone = kOwner.AI_isAreaAlone(pArea);
 	const bool bMetAnyCiv = GET_TEAM(getTeam()).hasMetAnyCiv(true);
 
 	int iFoodDifference = foodDifference(false);
@@ -4921,9 +4922,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	{
 		return 0;
 	}
+	const int iTotalPopulation = kOwner.getTotalPopulation();
 
 	int iNumCities = kOwner.getNumCities();
-	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwner());
+	int iNumCitiesInArea = pArea->getCitiesPerPlayer(getOwner());
 
 	int aiYieldRank[NUM_YIELD_TYPES];
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -5036,7 +5038,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			const CvCity* pTradeCity = getTradeCity(iI);
 			if (NULL != pTradeCity)
 			{
-				if (GET_PLAYER(pTradeCity->getOwner()).getTeam() != getTeam() || pTradeCity->area() != area())
+				if (GET_PLAYER(pTradeCity->getOwner()).getTeam() != getTeam() || pTradeCity->area() != pArea)
 				{
 					bForeignTrade = true;
 					break;
@@ -5131,8 +5133,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							iValue += iValidUnitCount * modifier.second / 6;
 						}
 
-						bool bDefense = (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE);
-						bool bLandWar = (bDefense || (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
+						bool bDefense = pArea->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
+						bool bLandWar = bDefense || pArea->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || pArea->getAreaAIType(getTeam()) == AREAAI_MASSING;
 						bool bDanger = AI_isDanger();
 
 						if (bDanger || bLandWar)
@@ -5555,7 +5557,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									PROFILE("CalculateAllBuildingValues.IsUnitPrereq");
 
-									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(area(), kUnit.getDefaultUnitAIType()) == 0)
+									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(pArea, kUnit.getDefaultUnitAIType()) == 0)
 									{
 										iValue += iNumCitiesInArea;
 									}
@@ -5810,7 +5812,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += (kBuilding.getDomesticGreatGeneralRateModifier() / 10);
 					}
 
-					if (kBuilding.isAreaBorderObstacle() && !(area()->isBorderObstacle(getTeam())))
+					if (kBuilding.isAreaBorderObstacle() && !(pArea->isBorderObstacle(getTeam())))
 					{
 						if (!GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 						{
@@ -6051,8 +6053,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							}
 							else
 							{
-								int	iBestUnitAIValue = kOwner.AI_unitValue(eBestUnit, eUnitAI, area());
-								int	iThisUnitAIValue = kOwner.AI_unitValue(eLoopUnit, eUnitAI, area());
+								int	iBestUnitAIValue = kOwner.AI_unitValue(eBestUnit, eUnitAI, pArea);
+								int	iThisUnitAIValue = kOwner.AI_unitValue(eLoopUnit, eUnitAI, pArea);
 
 								//	Value as cost of production of the unit we can build scaled by their relative AI value (non-linear - we're squaring the ratio)
 								int	iComparisonToBestFactor = (10 * iThisUnitAIValue) / std::max(1, iBestUnitAIValue);
@@ -6229,7 +6231,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							// BBAI TODO: Smarter monastary construction, better support for mods
 
-							if (kOwner.AI_totalAreaUnitAIs(area(), GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
+							if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
 							{
 								religiousBuildingValue += iNumCitiesInArea;
 							}
@@ -6336,73 +6338,12 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Yields");
-
-						int yieldModifierValue = 0;
-
-						//Trade route yields are now accounted in pass1
-						//iValue += ((kBuilding.getTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
-						//if (bForeignTrade)
-						//{
-						//	iValue += ((kBuilding.getForeignTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
-						//}
-
-						if (iFoodDifference > 0)
-						{
-							iValue += kBuilding.getFoodKept() / 2;
-						}
-
-						iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
-
-						int iGlobalModifier = kBuilding.getGlobalYieldModifier(iI);
-						int iAreaModifier = kBuilding.getAreaYieldModifier(iI);
-						int globalYieldModifierValue = 0;
-
-						if (iGlobalModifier > 0 || iAreaModifier > 0)
-						{
-							foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-							{
-								int iCityValue = pLoopCity->getPlotYield((YieldTypes)iI);
-								globalYieldModifierValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == area() ? iAreaModifier : 0));
-							}
-						}
-						yieldModifierValue += globalYieldModifierValue / 12;
-						//yieldModifierValue += ((kBuilding.getAreaYieldModifier(iI) * iNumCitiesInArea) / 3);
-						//yieldModifierValue += ((kBuilding.getGlobalYieldModifier(iI) * iNumCities) / 3);
-
-						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-						{
-							yieldModifierValue += ((kBuilding.getSpecialistYieldChange(iJ, iI) * kOwner.getTotalPopulation()) / 5);
-						}
-
-						if (yieldModifierValue != 0)
-						{
-							if (bFinancialTrouble && iI == YIELD_COMMERCE)
-							{
-								yieldModifierValue *= 2;
-							}
-
-							yieldModifierValue *= kOwner.AI_yieldWeight((YieldTypes)iI);
-							yieldModifierValue /= 100;
-
-							if (aiYieldRank[iI] == MAX_INT)
-							{
-								aiYieldRank[iI] = findBaseYieldRateRank((YieldTypes)iI);
-							}
-
-							// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-							// we do _not_ want to build this here (unless the value was small anyway)
-							// Exempt unit build from this test however
-							if (bIsLimitedWonder && canConstruct(eBuilding) && (aiYieldRank[iI] > (3 + iLimitedWonderLimit)))
-							{
-								yieldModifierValue *= -1;
-							}
-
-							iValue += yieldModifierValue;
-						}
-					}
+					iValue += (
+						AI_getBuildingYieldValue(
+							eBuilding, kBuilding, bIsLimitedWonder, bForeignTrade, bFinancialTrouble,
+							aiFreeSpecialistYield, aiYieldRank, iLimitedWonderLimit, pArea, iTotalPopulation, iFoodDifference
+						)
+					);
 				}
 				else
 				{
@@ -6456,7 +6397,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 						{
-							directCommerceValue += ((kBuilding.getSpecialistCommerceChange(iJ, iI) * kOwner.getTotalPopulation()) / 6);
+							directCommerceValue += kBuilding.getSpecialistCommerceChange(iJ, iI) * iTotalPopulation / 6;
 						}
 						if (directCommerceValue != 0)
 						{
@@ -16050,68 +15991,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				valuesCache->AccumulateToAny(iValue, false);
 			}
 
-			{
-				PROFILE("CalculateAllBuildingValues.Yields");
+			valuesCache->AccumulateToAny(
+				AI_getBuildingYieldValue(
+					eBuilding, kBuilding, bIsLimitedWonder, bForeignTrade, bFinancialTrouble,
+					aiFreeSpecialistYield, aiYieldRank, iLimitedWonderLimit, pArea, iTotalPopulation, iFoodDifference
+				)
+				, false
+			);
 
-				int iValue = 0;
-				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-				{
-					int yieldValue = 0;
-
-					if (iFoodDifference > 0)
-					{
-						iValue += kBuilding.getFoodKept() / 2;
-					}
-
-					iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
-
-					int iGlobalModifier = kBuilding.getGlobalYieldModifier(iI);
-					int iAreaModifier = kBuilding.getAreaYieldModifier(iI);
-					int iYieldModiferValue = 0;
-
-					if (iGlobalModifier > 0 || iAreaModifier > 0)
-					{
-						foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-						{
-							int iCityValue = pLoopCity->getPlotYield((YieldTypes)iI);
-							iYieldModiferValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == pArea ? iAreaModifier : 0));
-						}
-					}
-					yieldValue += iYieldModiferValue / 12;
-
-					for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-					{
-						yieldValue += kBuilding.getSpecialistYieldChange(iJ, iI) * iTotalPopulation / 5;
-					}
-
-					if (yieldValue != 0)
-					{
-						if (bFinancialTrouble && iI == YIELD_COMMERCE)
-						{
-							yieldValue *= 2;
-						}
-
-						yieldValue *= kOwner.AI_yieldWeight((YieldTypes)iI);
-						yieldValue /= 100;
-
-						if (aiYieldRank[iI] == MAX_INT)
-						{
-							aiYieldRank[iI] = findBaseYieldRateRank((YieldTypes)iI);
-						}
-
-						// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-						// we do _not_ want to build this here (unless the value was small anyway)
-						// Exempt unit build from this test however
-						if (bIsLimitedWonder && canConstruct(eBuilding) && (aiYieldRank[iI] > (3 + iLimitedWonderLimit)))
-						{
-							yieldValue *= -1;
-						}
-
-						iValue += yieldValue;
-					}
-				}
-				valuesCache->AccumulateToAny(iValue, false);
-			}
 			{
 				PROFILE("CalculateAllBuildingValues.Food");
 
@@ -17383,6 +17270,79 @@ bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelect
 	return true;
 }
 
+
+int CvCityAI::AI_getBuildingYieldValue
+(
+	BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bForeignTrade, bool bFinancialTrouble,
+	int* aiFreeSpecialistYield, int* aiYieldRank, int iLimitedWonderLimit, const CvArea* pArea, int iTotalPopulation, int iFoodDifference
+)
+const {
+	PROFILE_FUNC();
+
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	int iValue = 0;
+	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+	{
+		int iYieldValue = 0;
+
+		if (iFoodDifference > 0)
+		{
+			iValue += kBuilding.getFoodKept() / 2;
+		}
+		iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
+		{
+			int iGlobalYieldModValue = 0;
+
+			if (kBuilding.getGlobalYieldModifier(iI) > 0 || kBuilding.getAreaYieldModifier(iI) > 0)
+			{
+				foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				{
+					iGlobalYieldModValue +=
+					(
+						pLoopCity->getPlotYield((YieldTypes)iI)
+						*
+						(
+							kBuilding.getGlobalYieldModifier(iI)
+							+
+							(pLoopCity->area() == pArea ? kBuilding.getAreaYieldModifier(iI) : 0)
+						)
+					);
+				}
+			}
+			iYieldValue = iGlobalYieldModValue / 12;
+		}
+		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+		{
+			iYieldValue += kBuilding.getSpecialistYieldChange(iJ, iI) * iTotalPopulation / 5;
+		}
+
+		if (iYieldValue != 0)
+		{
+			if (bFinancialTrouble && iI == YIELD_COMMERCE)
+			{
+				iYieldValue *= 2;
+			}
+
+			iYieldValue *= kOwner.AI_yieldWeight((YieldTypes)iI);
+			iYieldValue /= 100;
+
+			if (aiYieldRank[iI] == MAX_INT)
+			{
+				aiYieldRank[iI] = findBaseYieldRateRank((YieldTypes)iI);
+			}
+
+			// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
+			// we do _not_ want to build this here (unless the value was small anyway)
+			// Exempt unit build from this test however
+			if (bIsLimitedWonder && canConstruct(eBuilding) && (aiYieldRank[iI] > (3 + iLimitedWonderLimit)))
+			{
+				iYieldValue *= -1;
+			}
+			iValue += iYieldValue;
+		}
+	}
+	return iValue;
+}
 
 int CvCityAI::AI_getBuildingProductionValue
 (
