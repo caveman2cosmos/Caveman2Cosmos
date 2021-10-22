@@ -379,7 +379,12 @@ public:
 	int getPropertyNonBuildingSource(PropertyTypes eProperty) const;
 
 private:
-	int	GetBuildingValue(BuildingTypes eType, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct = false);
+	int AI_getBuildingProductionValue
+	(
+		BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder,
+		bool bForeignTrade, int iFreeSpecialistYield, int iYieldRank, int iLimitedWonderLimit
+	) const;
+
 	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags) const;
 	void CalculateAllBuildingValues(int iFocusFlags);
 	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const;
