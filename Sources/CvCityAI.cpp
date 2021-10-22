@@ -6365,79 +6365,40 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						);
 					}
 				}
-				//	Deal with properties
-				int iPropValue = buildingPropertiesValue(kBuilding);
-				if (iFocusFlags & BUILDINGFOCUS_PROPERTY)
+				// Deal with properties
 				{
-					iValue += iPropValue * 10;
-				}
-				else
-				{
-					iValue += iPropValue * 5;
-				}
+					int iPropValue = buildingPropertiesValue(kBuilding);
 
-				int iInvestigationValue = kBuilding.getInvestigation();
-				if (iFocusFlags & BUILDINGFOCUS_INVESTIGATION)
-				{
-					iValue += iInvestigationValue * 10;
+					if (iFocusFlags & BUILDINGFOCUS_PROPERTY)
+					{
+						iValue += iPropValue * 10;
+					}
+					else
+					{
+						iValue += iPropValue * 5;
+					}
 				}
-				else
 				{
-					iValue += iInvestigationValue * 5;
+					int iInvestigationValue = kBuilding.getInvestigation();
+					if (iFocusFlags & BUILDINGFOCUS_INVESTIGATION)
+					{
+						iValue += iInvestigationValue * 10;
+					}
+					else
+					{
+						iValue += iInvestigationValue * 5;
+					}
 				}
 
 				if (iPass > 0)
 				{
-
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Commerces");
-
-						int directCommerceValue = getBuildingCommerceValue(eBuilding, iI, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
-
-						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-						{
-							directCommerceValue += kBuilding.getSpecialistCommerceChange(iJ, iI) * iTotalPopulation / 6;
-						}
-						if (directCommerceValue != 0)
-						{
-							//	Make sure we don't reduce 1 to 0!
-							if (directCommerceValue >= 2)
-							{
-								directCommerceValue /= 2;
-							}
-
-							if (bFinancialTrouble && iI == COMMERCE_GOLD)
-							{
-								directCommerceValue *= 2;
-							}
-
-							directCommerceValue *= kOwner.AI_commerceWeight(((CommerceTypes)iI), this);
-							directCommerceValue = (directCommerceValue + 99) / 100;
-
-							// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-							// we do _not_ want to build this here (unless the value was small anyway)
-							if (bIsLimitedWonder)
-							{
-								if (MAX_INT == aiCommerceRank[iI])
-								{
-									aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes)iI);
-								}
-								if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
-									|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
-								{
-									directCommerceValue *= -1;
-
-									// for culture, just set it to zero, not negative, just about every wonder gives culture
-									if (iI == COMMERCE_CULTURE)
-									{
-										directCommerceValue = 0;
-									}
-								}
-							}
-							iValue += directCommerceValue;
-						}
-					}
+					iValue += (
+						AI_getBuildingCommerceValue(
+							eBuilding, kBuilding, bIsLimitedWonder, bFinancialTrouble, bCulturalVictory1,
+							aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate, aiCommerceRank,
+							iLimitedWonderLimit, iTotalPopulation
+						)
+					);
 
 					foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 					{
@@ -6513,14 +6474,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			iValue += iPass1Value;
 		}
 
-		if (!bForTech && !canConstruct(eBuilding))
+		// If wonder is being constructed in some special way, reduce the value for small cities.
+		if (!bForTech && bIsLimitedWonder && getPopulation() < 6 && !canConstruct(eBuilding))
 		{
-			//This building is being constructed in some special way,
-			//reduce the value for small cities if it's a wonder.
-			if (getPopulation() < 6 && bIsLimitedWonder)
-			{
-				iValue /= (8 - getPopulation());
-			}
+			iValue /= (8 - getPopulation());
 		}
 	}
 	return std::max(0, iValue);
@@ -15131,7 +15088,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				}
 				iValue += iPromoValue;
 
-				if ((iFocusFlags & BUILDINGFOCUS_INVESTIGATION) && kBuilding.getInvestigation() > 0)
+				if (iFocusFlags & BUILDINGFOCUS_INVESTIGATION)
 				{
 					iValue += kBuilding.getInvestigation() * 5;
 				}
@@ -16018,57 +15975,15 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				, true
 			);
 			{
-				PROFILE("CalculateAllBuildingValues.Properties");
-				// Deal with properties
 				int iValue = buildingPropertiesValue(kBuilding);
 
-				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-				{
-					int directCommerceValue = getBuildingCommerceValue(eBuilding, iI, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
-
-					for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-					{
-						directCommerceValue += kBuilding.getSpecialistCommerceChange(iJ, iI) * iTotalPopulation / 6;
-					}
-					if (directCommerceValue != 0)
-					{
-						// Make sure we don't reduce 1 to 0!
-						if (directCommerceValue >= 2)
-						{
-							directCommerceValue /= 2;
-						}
-
-						if (bFinancialTrouble && iI == COMMERCE_GOLD)
-						{
-							directCommerceValue *= 2;
-						}
-
-						directCommerceValue *= kOwner.AI_commerceWeight((CommerceTypes)iI, this);
-						directCommerceValue = (directCommerceValue + 99) / 100; // Round up
-
-						// If this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-						// we do _not_ want to build this here (unless the value was small anyway)
-						if (bIsLimitedWonder)
-						{
-							if (MAX_INT == aiCommerceRank[iI])
-							{
-								aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes)iI);
-							}
-							if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
-								|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
-							{
-
-								// for culture, just set it to zero, not negative, just about every wonder gives culture
-								if (iI == COMMERCE_CULTURE)
-								{
-									directCommerceValue = 0;
-								}
-								else directCommerceValue *= -1;
-							}
-						}
-						iValue += directCommerceValue;
-					}
-				}
+				iValue += (
+					AI_getBuildingCommerceValue(
+						eBuilding, kBuilding, bIsLimitedWonder, bFinancialTrouble, bCulturalVictory1,
+						aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate, aiCommerceRank,
+						iLimitedWonderLimit, iTotalPopulation
+					)
+				);
 
 				foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 				{
@@ -17311,7 +17226,7 @@ const {
 			}
 			iYieldValue = iGlobalYieldModValue / 12;
 		}
-		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+		for (int iJ = GC.getNumSpecialistInfos() - 1; iJ > -1; iJ--)
 		{
 			iYieldValue += kBuilding.getSpecialistYieldChange(iJ, iI) * iTotalPopulation / 5;
 		}
@@ -17377,4 +17292,62 @@ const {
 		directYieldValue += (directYieldValue * iBoost) / 50;
 	}
 	return iValue + directYieldValue;
+}
+
+
+int CvCityAI::AI_getBuildingCommerceValue
+(
+	BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bFinancialTrouble, bool bCulturalVictory1,
+	int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate, int* aiCommerceRank,
+	int iLimitedWonderLimit, int iTotalPopulation
+)
+const {
+	PROFILE_FUNC();
+
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	int iValue = 0;
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	{
+		int directCommerceValue = getBuildingCommerceValue(eBuilding, iI, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
+
+		for (int iJ = GC.getNumSpecialistInfos() - 1; iJ > -1; iJ--)
+		{
+			directCommerceValue += kBuilding.getSpecialistCommerceChange(iJ, iI) * iTotalPopulation / 6;
+		}
+		if (directCommerceValue != 0)
+		{
+			// Make sure we don't reduce 1 to 0!
+			if (directCommerceValue > 1) directCommerceValue /= 2;
+
+			if (bFinancialTrouble && iI == COMMERCE_GOLD)
+			{
+				directCommerceValue *= 2;
+			}
+
+			directCommerceValue *= kOwner.AI_commerceWeight(static_cast<CommerceTypes>(iI), this);
+			directCommerceValue = (directCommerceValue + 99) / 100; // Round up
+
+			// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
+			// we do _not_ want to build this here (unless the value was small anyway)
+			if (bIsLimitedWonder)
+			{
+				if (MAX_INT == aiCommerceRank[iI])
+				{
+					aiCommerceRank[iI] = findCommerceRateRank(static_cast<CommerceTypes>(iI));
+				}
+				if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
+				|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
+				{
+					// for culture, just set it to zero, not negative, just about every wonder gives culture
+					if (iI == COMMERCE_CULTURE)
+					{
+						directCommerceValue = 0;
+					}
+					else directCommerceValue *= -1;
+				}
+			}
+			iValue += directCommerceValue;
+		}
+	}
+	return iValue;
 }
