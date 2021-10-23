@@ -216,6 +216,12 @@ void CyStructsPythonInterface1()
 		.def_readonly("value", &TerrainYieldChange::iChange)
 	;
 
+	python::class_<GenericTrippleInt>("GenericTrippleInt", python::no_init)
+		.def_readonly("iType", &GenericTrippleInt::iType)
+		.def_readonly("iIndex", &GenericTrippleInt::iIndex)
+		.def_readonly("iValue", &GenericTrippleInt::iValue)
+	;
+
 	python::class_<FreePromoTypes>("FreePromoTypes", python::no_init)
 		.def_readonly("ePromotion", &FreePromoTypes::ePromotion)
 	;
