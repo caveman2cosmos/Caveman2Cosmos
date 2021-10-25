@@ -21003,7 +21003,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 			if (player)
 			{
-				int* aiYields100 = new int[NUM_YIELD_TYPES]();
+				bst::array<int, NUM_YIELD_TYPES> aiYields100;
+				aiYields100.fill(0);
 				foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
 				{
 					if (GET_TEAM(eTeam).isHasTech(pair.first))
@@ -21040,7 +21041,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 			{
 				int iBaseCommerceChange = kBuilding.getCommerceChange(iI);
-				if ( iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE") )
+				if (iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 				{
 					iBaseCommerceChange = 0;
 				}
