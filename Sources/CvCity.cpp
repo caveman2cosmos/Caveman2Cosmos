@@ -5355,7 +5355,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	}
 	foreach_(const PlotArray& pair, kBuilding.getPlotYieldChanges())
 	{
-		int* yields = new int[NUM_YIELD_TYPES];
+		YieldArray yields;
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -11014,9 +11014,9 @@ int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes 
 }
 
 
-void CvCity::changePlotYieldChanges(const PlotTypes ePlot, int* yields)
+void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields)
 {
-	std::map<short, int*>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
+	std::map<short, YieldArray>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
 
 	if (itr == m_plotYieldChanges.end())
 	{
@@ -11053,7 +11053,7 @@ void CvCity::changePlotYieldChanges(const PlotTypes ePlot, int* yields)
 
 int CvCity::getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const
 {
-	std::map<short, int*>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
+	std::map<short, YieldArray>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
 	return itr != m_plotYieldChanges.end() ? itr->second[eYield] : 0;
 }
 
@@ -17466,12 +17466,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	{
 		short iSize = 0;
 		short iType;
-		int* yields = new int[NUM_YIELD_TYPES];
+		YieldArray yields;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "PlotYieldChangesSize");
 		while (iSize-- > 0)
 		{
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "PlotYieldChangesType");
-			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields, "PlotYieldChanges");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields.elems, "PlotYieldChanges");
 
 			if (iType > -1)
 			{
@@ -17909,10 +17909,12 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_buildingCommerceMod);
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_plotYieldChanges.size(), "PlotYieldChangesSize");
-		for (std::map<short, int*>::const_iterator it = m_plotYieldChanges.begin(), itEnd = m_plotYieldChanges.end(); it != itEnd; ++it)
+		//for (std::map<short, YieldArray>::const_iterator it = m_plotYieldChanges.begin(), itEnd = m_plotYieldChanges.end(); it != itEnd; ++it)
+		typedef std::pair<short, YieldArray> PlotYieldChange;
+		foreach_(const PlotYieldChange& plotYieldChange, m_plotYieldChanges)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "PlotYieldChangesType");
-			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, it->second, "PlotYieldChanges");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", plotYieldChange.first, "PlotYieldChangesType");
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, plotYieldChange.second.elems, "PlotYieldChanges");
 		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);

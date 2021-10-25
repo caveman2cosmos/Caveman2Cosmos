@@ -959,7 +959,7 @@ public:
 	void changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields);
 
 	int getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const;
-	void changePlotYieldChanges(const PlotTypes ePlot, int* yields);
+	void changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields);
 
 	int getYieldChangeAt(const CvPlot* pPlot, const YieldTypes eYield) const;
 
@@ -1805,7 +1805,7 @@ protected:
 	std::map<short, int> m_unitProductionMod;
 
 	std::map<short, int*> m_terrainYieldChanges;
-	std::map<short, int*> m_plotYieldChanges;
+	std::map<short, YieldArray> m_plotYieldChanges;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 

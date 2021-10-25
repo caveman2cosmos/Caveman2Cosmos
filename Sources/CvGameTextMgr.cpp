@@ -21003,7 +21003,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 			if (player)
 			{
-				bst::array<int, NUM_YIELD_TYPES> aiYields100;
+				YieldArray aiYields100;
 				aiYields100.fill(0);
 				foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
 				{
