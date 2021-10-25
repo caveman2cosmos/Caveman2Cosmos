@@ -13021,11 +13021,6 @@ int CvBuildInfo::getCost() const
 	return m_iCost;
 }
 
-int CvBuildInfo::getImprovement() const
-{
-	return m_iImprovement;
-}
-
 int CvBuildInfo::getRoute() const
 {
 	return m_iRoute;
@@ -13144,7 +13139,6 @@ const PlaceBonusTypes& CvBuildInfo::getPlaceBonusType(int iIndex) const
 
 bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	CvString szTextVal2;
 	CvString szTextVal3;
@@ -13163,8 +13157,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ImprovementType");
-	m_iImprovement = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iImprovement, L"ImprovementType");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"RouteType");
 	m_iRoute = pXML->GetInfoClass(szTextVal);
 
@@ -13184,11 +13177,10 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"TerrainStructs"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TerrainStruct" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"TerrainStruct" );
 		m_aTerrainStructs.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"TerrainStruct"))
 			{
 				do
@@ -13209,11 +13201,10 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"PlaceBonusTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"PlaceBonusType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"PlaceBonusType" );
 		m_aPlaceBonusTypes.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"PlaceBonusType"))
 			{
 				do
@@ -29169,11 +29160,6 @@ int CvEventInfo::getFeatureChange() const
 	return m_iFeatureChange;
 }
 
-int CvEventInfo::getImprovement() const
-{
-	return m_iImprovement;
-}
-
 int CvEventInfo::getImprovementChange() const
 {
 	return m_iImprovementChange;
@@ -29654,8 +29640,7 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	m_iFeature = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureChange, L"iFeatureChange");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ImprovementType");
-	m_iImprovement = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iImprovement, L"ImprovementType");
 	pXML->GetOptionalChildXmlValByName(&m_iImprovementChange, L"iImprovementChange");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusType");

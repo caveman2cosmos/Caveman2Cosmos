@@ -4869,7 +4869,7 @@ int CvPlayer::countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlo
 			const BuildTypes eBuild = (BuildTypes) iJ;
 
 			if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT
-			&& GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)
+			&& GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)
 			&& canBuild(pLoopPlot, eBuild))
 			{
 				iCount++;
@@ -7757,9 +7757,9 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 	}
 
 	// Unique improvement checks
-	if (kBuild.getImprovement() != NO_IMPROVEMENT)
+	const ImprovementTypes eImprovement = kBuild.getImprovement();
+	if (eImprovement != NO_IMPROVEMENT)
 	{
-		ImprovementTypes eImprovement = (ImprovementTypes)kBuild.getImprovement();
 
 		if (GC.getImprovementInfo(eImprovement).isNational() && getImprovementCount(eImprovement) > 0)
 		{
@@ -17515,7 +17515,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					{
 						for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 						{
-							ImprovementTypes eLoopImprovement = ((ImprovementTypes)(GC.getBuildInfo((BuildTypes)iI).getImprovement()));
+							const ImprovementTypes eLoopImprovement = GC.getBuildInfo((BuildTypes)iI).getImprovement();
 
 							if (eImprovement == eLoopImprovement)
 							{
@@ -18069,7 +18069,7 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 			for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 			{
 				const CvBuildInfo& kBuild = GC.getBuildInfo((BuildTypes)iI);
-				const ImprovementTypes eLoopImprovement = (ImprovementTypes)kBuild.getImprovement();
+				const ImprovementTypes eLoopImprovement = kBuild.getImprovement();
 
 				if (eImprovement == eLoopImprovement && canBuild(pPlot, (BuildTypes)iI))
 				{

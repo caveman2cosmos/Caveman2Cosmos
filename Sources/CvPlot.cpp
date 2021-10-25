@@ -2710,14 +2710,11 @@ long CvPlot::canBuildFromPython(BuildTypes eBuild, PlayerTypes ePlayer) const
 {
 	PROFILE_FUNC();
 
-
 #ifdef CAN_BUILD_VALUE_CACHING
 #ifdef _DEBUG
 //	Uncomment this to perform functional verification
 //#define VERIFY_CAN_BUILD_CACHE_RESULTS
 #endif
-
-	struct canBuildCacheEntry* entry;
 
 	//	If this player does not own, and cannot build a unit that can perform this build
 	//	no need to check with the Python.
@@ -2725,6 +2722,8 @@ long CvPlot::canBuildFromPython(BuildTypes eBuild, PlayerTypes ePlayer) const
 	{
 		return 0L;
 	}
+
+	struct canBuildCacheEntry* entry;
 
 	if ( hasCachedCanBuildEntry(getX(), getY(), eBuild, ePlayer, entry) )
 	{
@@ -2842,7 +2841,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	}
 
 	bool bValid = false;
-	const ImprovementTypes eImprovement = (ImprovementTypes) info.getImprovement();
+	const ImprovementTypes eImprovement = info.getImprovement();
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -2900,7 +2899,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 					if(pLoopUnit->getOwner() != ePlayer
 					&& pLoopUnit->getBuildType() != NO_BUILD)
 					{
-						const ImprovementTypes eImprovementBuild = (ImprovementTypes)GC.getBuildInfo(pLoopUnit->getBuildType()).getImprovement();
+						const ImprovementTypes eImprovementBuild = GC.getBuildInfo(pLoopUnit->getBuildType()).getImprovement();
 
 						if (eImprovementBuild != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovementBuild).isActsAsCity())
 						{
@@ -9639,7 +9638,6 @@ int CvPlot::getBuildProgress(BuildTypes eBuild) const
 bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam)
 {
 	CvCity* pCity = NULL;
-	CvWString szBuffer;
 	int iProduction;
 
 	bool bFinished = false;
@@ -9649,11 +9647,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 	{
 		if (NULL == m_paiBuildProgress)
 		{
-			m_paiBuildProgress = new int[GC.getNumBuildInfos()];
-			for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
-			{
-				m_paiBuildProgress[iI] = 0;
-			}
+			CvXMLLoadUtility::InitList(&m_paiBuildProgress, GC.getNumBuildInfos(), 0);
 		}
 
 		m_paiBuildProgress[eBuild] += iChange;
@@ -9767,7 +9761,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 
 					if ( isInViewport() )
 					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_PLACED_BONUS", GC.getBonusInfo(eBonusPlaced).getTextKeyWide());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLACED_BONUS", GC.getBonusInfo(eBonusPlaced).getTextKeyWide());
 						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getBonusInfo(getBonusType()).getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true);
 					}
 				}
@@ -9776,7 +9770,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 
 					if ( isInViewport() )
 					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_PLACED_BONUS_FAIL");
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLACED_BONUS_FAIL");
 						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, 0, GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
 					}
 				}
@@ -9787,7 +9781,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 			&&  GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE
 			&&  GC.getBuildInfo(eBuild).getTerrainChange() == NO_TERRAIN)
 			{
-				setImprovementType((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
+				setImprovementType(GC.getBuildInfo(eBuild).getImprovement());
 			}
 
 			if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE)
@@ -9802,7 +9796,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 			{
 				if (GC.getBuildInfo(eBuild).isFeatureRemove(getFeatureType()))
 				{
-					FAssertMsg(eTeam != NO_TEAM, "eTeam should be valid");
+					FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 					iProduction = getFeatureProduction(eBuild, eTeam, &pCity);
 
@@ -9813,7 +9807,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 
 						if ( isInViewport() )
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_CLEARING_FEATURE_BONUS", GC.getFeatureInfo(getFeatureType()).getTextKeyWide(), iProduction, pCity->getNameKey());
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CLEARING_FEATURE_BONUS", GC.getFeatureInfo(getFeatureType()).getTextKeyWide(), iProduction, pCity->getNameKey());
 							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(getFeatureType()).getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true);
 						}
 					}
@@ -11987,7 +11981,7 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 
 	iYield += calculateNatureYield(eYield, getTeam(), bIgnoreFeature);
 
-	ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+	ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -12140,15 +12134,14 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 
 		if (NULL == getPlotCity())
 		{
-		for (int i = 0; i < kTrigger.getNumRoutesRequired(); ++i)
-		{
-			if (kTrigger.getRouteRequired(i) == getRouteType())
+			for (int i = 0; i < kTrigger.getNumRoutesRequired(); ++i)
 			{
-				bFoundValid = true;
-				break;
+				if (kTrigger.getRouteRequired(i) == getRouteType())
+				{
+					bFoundValid = true;
+					break;
+				}
 			}
-		}
-
 		}
 
 		if (!bFoundValid)
@@ -12224,7 +12217,7 @@ bool CvPlot::canApplyEvent(EventTypes eEvent) const
 	if (kEvent.getImprovementChange() > 0)
 	{
 		if (getImprovementType() == kEvent.getImprovement()
-		|| !canHaveImprovement((ImprovementTypes)kEvent.getImprovement(), getTeam(), false))
+		|| !canHaveImprovement(kEvent.getImprovement(), getTeam(), false))
 		{
 			return false;
 		}
@@ -12280,7 +12273,7 @@ void CvPlot::applyEvent(EventTypes eEvent)
 	{
 		if (NO_IMPROVEMENT != kEvent.getImprovement())
 		{
-			setImprovementType((ImprovementTypes)kEvent.getImprovement());
+			setImprovementType(kEvent.getImprovement());
 		}
 	}
 	else if (kEvent.getImprovementChange() < 0)
@@ -12830,16 +12823,15 @@ bool CvPlot::isActsAsCity() const
 
 bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer)
 {
-	bool bResult = changeBuildProgress(eBuild, iChange, GET_PLAYER(ePlayer).getTeam());
+	const bool bResult = changeBuildProgress(eBuild, iChange, GET_PLAYER(ePlayer).getTeam());
 
 	if (bResult)
 	{
-		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
+		const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
+
+		if (eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isActsAsCity())
 		{
-			if (GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).isActsAsCity())
-			{
-				setOwner(ePlayer, true, false);
-			}
+			setOwner(ePlayer, true, false);
 		}
 	}
 	return bResult;

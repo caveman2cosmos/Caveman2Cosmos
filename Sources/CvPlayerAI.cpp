@@ -4603,13 +4603,12 @@ techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 	constructTechPathSet(eTech, possiblePaths, *initialSeed);
 
 	//	Find the lowest cost of the possible paths
-	int	iValue;
 	int	iBestValue = 0;
 	techPath* bestPath = NULL;
 
 	foreach_(techPath* path, possiblePaths)
 	{
-		iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 		logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue );
 		if ( iValue >= iBestValue )
 		{
@@ -4645,7 +4644,6 @@ TechTypes CvPlayerAI::findStartTech(techPath* path) const
 
 int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const
 {
-
 	PROFILE_FUNC();
 
 	const CvTechInfo& kTech = GC.getTechInfo(eTech);
@@ -4783,7 +4781,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	{
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pPlot = GC.getMap().plotByIndex(iI);
+			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot->isAsPeak() && pPlot->getOwner() != NO_PLAYER
 			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
 			{
@@ -4977,7 +4975,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	{
 		if (GC.getBuildInfo((BuildTypes)iJ).getTechPrereq() == eTech)
 		{
-			ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo((BuildTypes)iJ).getImprovement();
+			ImprovementTypes eImprovement = GC.getBuildInfo((BuildTypes)iJ).getImprovement();
 
 			if (eImprovement != NO_IMPROVEMENT)
 			{
@@ -24767,7 +24765,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 				const BuildTypes eBuild = pCity->AI_getBestBuild(iI);
 				if (eBuild != NO_BUILD)
 				{
-					const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+					const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 					if (eImprovement != NO_IMPROVEMENT)
 					{
 						const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
