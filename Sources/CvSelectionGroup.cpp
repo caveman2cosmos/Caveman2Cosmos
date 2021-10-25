@@ -4336,14 +4336,14 @@ bool CvSelectionGroup::groupRoadTo(int iX, int iY, int iFlags)
 // Returns true if build should continue...
 bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 {
-	FAssert(getOwner() != NO_PLAYER);
-	FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, getOwner());
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 
 	bool bContinue = false;
 
 	const CvPlot* pPlot = plot();
 
-	const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+	const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 	if (eImprovement != NO_IMPROVEMENT)
 	{
 		if (AI_isControlled())

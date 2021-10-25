@@ -286,8 +286,8 @@ int CvImprovementInfo::getWorldSoundscapeScriptId() const
 
 int CvImprovementInfo::getPrereqNatureYield(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piPrereqNatureYield ? m_piPrereqNatureYield[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piPrereqNatureYield ? m_piPrereqNatureYield[i] : 0;
 }
 
 int* CvImprovementInfo::getPrereqNatureYieldArray() const
@@ -297,8 +297,8 @@ int* CvImprovementInfo::getPrereqNatureYieldArray() const
 
 int CvImprovementInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piYieldChange ? m_piYieldChange[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
 int* CvImprovementInfo::getYieldChangeArray() const
@@ -308,8 +308,8 @@ int* CvImprovementInfo::getYieldChangeArray() const
 
 int CvImprovementInfo::getRiverSideYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piRiverSideYieldChange ? m_piRiverSideYieldChange[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piRiverSideYieldChange ? m_piRiverSideYieldChange[i] : 0;
 }
 
 int* CvImprovementInfo::getRiverSideYieldChangeArray() const
@@ -319,8 +319,8 @@ int* CvImprovementInfo::getRiverSideYieldChangeArray() const
 
 int CvImprovementInfo::getIrrigatedYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piIrrigatedChange ? m_piIrrigatedChange[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piIrrigatedChange ? m_piIrrigatedChange[i] : 0;
 }
 
 int* CvImprovementInfo::getIrrigatedYieldChangeArray() const
@@ -330,21 +330,21 @@ int* CvImprovementInfo::getIrrigatedYieldChangeArray() const
 
 bool CvImprovementInfo::getTerrainMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
-		return m_pbTerrainMakesValid ? m_pbTerrainMakesValid[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
+	return m_pbTerrainMakesValid ? m_pbTerrainMakesValid[i] : false;
 }
 
 bool CvImprovementInfo::getFeatureMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
-		return m_pbFeatureMakesValid ? m_pbFeatureMakesValid[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
+	return m_pbFeatureMakesValid ? m_pbFeatureMakesValid[i] : false;
 }
 
 int CvImprovementInfo::getTechYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppiTechYieldChanges && m_ppiTechYieldChanges[i]) ? m_ppiTechYieldChanges[i][j] : 0;
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
+	return (m_ppiTechYieldChanges && m_ppiTechYieldChanges[i]) ? m_ppiTechYieldChanges[i][j] : 0;
 }
 
 int* CvImprovementInfo::getTechYieldChangesArray(int i) const
@@ -354,9 +354,9 @@ int* CvImprovementInfo::getTechYieldChangesArray(int i) const
 
 int CvImprovementInfo::getRouteYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), i)
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppiRouteYieldChanges && m_ppiRouteYieldChanges[i]) ? m_ppiRouteYieldChanges[i][j] : 0;
+	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
+	return (m_ppiRouteYieldChanges && m_ppiRouteYieldChanges[i]) ? m_ppiRouteYieldChanges[i][j] : 0;
 }
 
 int* CvImprovementInfo::getRouteYieldChangesArray(int i) const
@@ -366,35 +366,35 @@ int* CvImprovementInfo::getRouteYieldChangesArray(int i) const
 
 int CvImprovementInfo::getImprovementBonusYield(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return m_paImprovementBonus[i].m_piYieldChange ? m_paImprovementBonus[i].getYieldChange(j) : 0;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
+	return m_paImprovementBonus[i].m_piYieldChange ? m_paImprovementBonus[i].getYieldChange(j) : 0;
 }
 
 bool CvImprovementInfo::isImprovementBonusMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_bBonusMakesValid;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_bBonusMakesValid;
 }
 
 bool CvImprovementInfo::isImprovementObsoleteBonusMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_bObsoleteBonusMakesValid;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_bObsoleteBonusMakesValid;
 }
 
 bool CvImprovementInfo::isImprovementBonusTrade(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		// Super forts C2C adaptation
-		return m_bIsUniversalTradeBonusProvider || m_paImprovementBonus[i].m_bBonusTrade;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	// Super forts C2C adaptation
+	return m_bIsUniversalTradeBonusProvider || m_paImprovementBonus[i].m_bBonusTrade;
 	// Super forts C2C adaptation end
 }
 
 int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_iDiscoverRand;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_iDiscoverRand;
 }
 
 const char* CvImprovementInfo::getButton() const
@@ -445,8 +445,8 @@ int CvImprovementInfo::getHealthPercent() const
 
 int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_iDepletionRand;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_iDepletionRand;
 }
 
 //int CvImprovementInfo::getTraitYieldChanges(int i, int j) const
@@ -751,7 +751,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	// initialize the boolean list to the correct size and all the booleans to false
-	FAssertMsg((GC.getNumTechInfos() > 0) && (NUM_YIELD_TYPES) > 0, "either the number of tech infos is zero or less or the number of yield types is zero or less");
+	FAssertMsg(GC.getNumTechInfos() > 0, "the number of tech infos is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"TechYieldChanges"))
 	{
 		iNumSibs = pXML->GetXmlChildrenNumber();
@@ -794,13 +794,12 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
 
 	// initialize the boolean list to the correct size and all the booleans to false
-	FAssertMsg((GC.getNumRouteInfos() > 0) && (NUM_YIELD_TYPES) > 0, "either the number of route infos is zero or less or the number of yield types is zero or less");
+	FAssertMsg(GC.getNumRouteInfos() > 0, "the number of route infos is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"RouteYieldChanges"))
 	{
 		iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (0 < iNumSibs)
 			{
 				pXML->Init2DList(&m_ppiRouteYieldChanges, GC.getNumRouteInfos(), NUM_YIELD_TYPES);
