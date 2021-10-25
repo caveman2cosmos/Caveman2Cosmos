@@ -2851,9 +2851,8 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 
 		// Unique range between improvements within same improvement line (e.g. forts)
-		if (GC.getImprovementInfo(eImprovement).getUniqueRange() > 0)
+		if (const int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange())
 		{
-			const int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange();
 			foreach_(const CvPlot* pLoopPlot, rect(iUniqueRange, iUniqueRange))
 			{
 				if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT

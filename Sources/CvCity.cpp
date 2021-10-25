@@ -13972,11 +13972,11 @@ void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 				{
 					bool bCanWorkPlot = false;
 
-					for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+					for (int iJ = SKIP_CITY_HOME_PLOT; iJ < getNumCityPlots(); iJ++)
 					{
-						if (iJ != CITY_HOME_PLOT && !isWorkingPlot(iJ))
+						if (!isWorkingPlot(iJ))
 						{
-							CvPlot* pLoopPlot = getCityIndexPlot(iJ);
+							const CvPlot* pLoopPlot = getCityIndexPlot(iJ);
 
 							if (pLoopPlot != NULL && canWork(pLoopPlot))
 							{
@@ -18524,16 +18524,11 @@ bool CvCity::canApplyEvent(EventTypes eEvent, const EventTriggeredData& kTrigger
 	{
 		int iNumImprovements = 0;
 
-		for (int i = 0; i < getNumCityPlots(); ++i)
+		foreach_(const CvPlot* pPlot, plots(true))
 		{
-			if (CITY_HOME_PLOT != i)
+			if (pPlot->getOwner() == getOwner() && pPlot->isImprovementDestructible())
 			{
-				const CvPlot* pPlot = getCityIndexPlot(i);
-
-				if (NULL != pPlot && pPlot->getOwner() == getOwner() && pPlot->isImprovementDestructible())
-				{
-					++iNumImprovements;
-				}
+				++iNumImprovements;
 			}
 		}
 		if (iNumImprovements < kEvent.getMinPillage())
@@ -19263,21 +19258,15 @@ int CvCity::getBestYieldAvailable(YieldTypes eYield) const
 {
 	int iBestYieldAvailable = 0;
 
-	for (int iJ = 0; iJ < NUM_CITY_PLOTS; ++iJ)
+	for (int iJ = SKIP_CITY_HOME_PLOT; iJ < NUM_CITY_PLOTS; ++iJ)
 	{
-		if (iJ != CITY_HOME_PLOT)
+		if (!isWorkingPlot(iJ))
 		{
-			if (!isWorkingPlot(iJ))
-			{
-				CvPlot* pPlot = getCityIndexPlot(iJ);
+			const CvPlot* pPlot = getCityIndexPlot(iJ);
 
-				if (NULL != pPlot && canWork(pPlot))
-				{
-					if (pPlot->getYield(eYield) > iBestYieldAvailable)
-					{
-						iBestYieldAvailable = pPlot->getYield(eYield);
-					}
-				}
+			if (NULL != pPlot && canWork(pPlot) && pPlot->getYield(eYield) > iBestYieldAvailable)
+			{
+				iBestYieldAvailable = pPlot->getYield(eYield);
 			}
 		}
 	}
@@ -21942,9 +21931,9 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 
 		// check all the plots we working
 		int iWorstPlot = -1;
-		for (int plotIdx = 0; plotIdx < NUM_CITY_PLOTS; plotIdx++)
+		for (int plotIdx = SKIP_CITY_HOME_PLOT; plotIdx < NUM_CITY_PLOTS; plotIdx++)
 		{
-			if (plotIdx != CITY_HOME_PLOT && isWorkingPlot(plotIdx) && !abRemovedPlots[plotIdx])
+			if (isWorkingPlot(plotIdx) && !abRemovedPlots[plotIdx])
 			{
 				const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
 

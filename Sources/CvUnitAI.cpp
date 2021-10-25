@@ -12759,9 +12759,9 @@ int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 
 	iNeeded += (iDefense + 25) / 50;
 
-	if (pPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo((ImprovementTypes)pPlot->getImprovementType()).getCulture() > 0)
+	if (pPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(pPlot->getImprovementType()).getCulture() > 0)
 	{
-		iNeeded = std::max(1 + (GC.getImprovementInfo((ImprovementTypes)pPlot->getImprovementType()).isActsAsCity() ? 1 : 0), iNeeded);
+		iNeeded = std::max(1 + (GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity() ? 1 : 0), iNeeded);
 	}
 
 	if (iNeeded == 0)
@@ -22043,18 +22043,6 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 	{
 		if (pLoopCity != pCity)
 		{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  02/22/10								jdog5000	  */
-/*																							  */
-/* Worker AI, Efficiency																		*/
-/************************************************************************************************/
-			// BBAI efficiency: check area for land units before path generation
-			/*if( (getDomainType() == DOMAIN_LAND) && (pLoopCity->area() != area()) && !(getGroup()->canMoveAllTerrain()) )
-			{
-				continue;
-			}*/
-
-			//iValue = pLoopCity->AI_totalBestBuildValue(area());
 			int iWorkersNeeded = pLoopCity->AI_getWorkersNeeded();
 			int iWorkersHave = pLoopCity->AI_getWorkersHave();
 
@@ -22098,9 +22086,6 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 							}
 						}
 					}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 				}
 			}
 		}

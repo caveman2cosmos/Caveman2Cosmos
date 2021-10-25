@@ -28119,8 +28119,8 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 			return false;
 		}
 	}
-	const CvCity* pCity = pTargetPlot->getPlotCity();
-	if (pCity != NULL)
+	if (pTargetPlot->getPlotCity() != NULL
+	|| (pTargetPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(pTargetPlot->getImprovementType()).isActsAsCity()))
 	{
 		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 		{
@@ -28130,23 +28130,6 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 					CvUnit::fn::plot() == pTargetPlot && CvUnit::fn::getDomainType() == DOMAIN_SEA))
 				{
 					return true;
-				}
-			}
-		}
-	}
-	if (pTargetPlot->getImprovementType() != NO_IMPROVEMENT)
-	{
-		if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).isActsAsCity() && pCity == NULL)
-		{
-			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-			{
-				if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
-				{
-					if (algo::any_of(GET_PLAYER((PlayerTypes)iI).units(),
-						CvUnit::fn::plot() == pTargetPlot && CvUnit::fn::getDomainType() == DOMAIN_SEA))
-					{
-						return true;
-					}
 				}
 			}
 		}
@@ -29173,10 +29156,8 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 				// calculate city resistence % (to be displayed in game log)
 				const float fResistence = (iDefenderCulture-iAttackerCulture) * 100.0f / (2 * pDefenderPlot->countTotalCulture());
 				{
-
-					CvWString szBuffer;
 					CvWString szResistence;
-					szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
 					szResistence.Format(L" %.1f%%", fResistence);
 					szBuffer += szResistence;
 					//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
