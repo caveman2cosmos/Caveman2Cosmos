@@ -22,8 +22,8 @@
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
-class FXmlSchemaCache;
-class FXml;
+//class FXmlSchemaCache;
+//class FXml;
 
 class ParserErrorHandler : public xercesc::ErrorHandler
 {
@@ -503,7 +503,7 @@ public:
 	//	and then gets that node's boolean value
 	bool GetChildXmlVal(bool* pbVal, bool bDefault = false);
 
-	FXml* GetXML() { return NULL; }
+	//FXml* GetXML() { return NULL; }
 	xercesc::DOMElement* GetCurrentXMLElement() { return m_pCurrentXmlElement; }
 	void SetCurrentXMLElement(xercesc::DOMElement* element) { m_pCurrentXmlElement = element; }
 
@@ -825,7 +825,7 @@ private:
 /////////////////////////// inlines / templates
 //
 template <class T>
-void CvXMLLoadUtility::InitList(T **ppList, int size, T val)
+void CvXMLLoadUtility::InitList(T** ppList, int size, T val)
 {
 	FAssert(size > 0);
 

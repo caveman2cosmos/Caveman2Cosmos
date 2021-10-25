@@ -263,7 +263,7 @@ void CvGame::updateColoredPlots()
 									if (eBestBuild != NO_BUILD)
 									{
 										const CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
-										eBestImprovement = (ImprovementTypes)kBestBuild.getImprovement();
+										eBestImprovement = kBestBuild.getImprovement();
 										eBestRoute = (RouteTypes)kBestBuild.getRoute();
 
 										if (ePlotFeature != NO_FEATURE && kBestBuild.isFeatureRemove(ePlotFeature))

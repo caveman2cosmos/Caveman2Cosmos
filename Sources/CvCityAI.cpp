@@ -7751,7 +7751,7 @@ int CvCityAI::AI_getGoodTileCount() const
 
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							bool bIgnoreFeature = false;
@@ -7843,7 +7843,7 @@ int CvCityAI::AI_countWorkedPoorTiles() const
 
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							bool bIgnoreFeature = false;
@@ -7972,7 +7972,7 @@ void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMult
 
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							const bool bIgnoreFeature = pLoopPlot->getFeatureType() != NO_FEATURE && GC.getBuildInfo(eBuild).isFeatureRemove(pLoopPlot->getFeatureType());
@@ -8398,7 +8398,7 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std:
 		if (eBuild != NO_BUILD)
 		{
 			//get plot-improvement that build generates
-			const ImprovementTypes eImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+			const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 			if (eImprovement != NO_IMPROVEMENT)
 			{
 				currentYieldList[iPlotCounter].currentImprovement = eImprovement;
@@ -8443,7 +8443,7 @@ void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCoun
 	const BuildTypes eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
 	{
-		optimalYieldList[iPlotCounter].currentImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+		optimalYieldList[iPlotCounter].currentImprovement = GC.getBuildInfo(eBuild).getImprovement();
 		const ImprovementTypes eImprovement = optimalYieldList[iPlotCounter].currentImprovement;
 		if (eImprovement != NO_IMPROVEMENT)
 		{
@@ -8464,7 +8464,7 @@ void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCoun
 
 		if(optimalYieldList[iPlotCounter].currentBonus != NO_BONUS && optimalYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
 		{
-			CvImprovementInfo *potentialImprovement = &GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement);
+			const CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement);
 			optimalYieldList[iPlotCounter].bonusImproved = potentialImprovement->isImprovementBonusTrade(optimalYieldList[iPlotCounter].currentBonus);
 			optimalYieldList[iPlotCounter].yieldValue += 1000;
 		}
@@ -8617,7 +8617,7 @@ void CvCityAI::AI_updateBestBuildForPlots()
 					//if something is currently being built
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							const bool bIgnoreFeature =
@@ -11514,7 +11514,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 
 						if (eBestBuild != NO_BUILD &&
 							(GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT ||
-							!GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
+							!GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
 						{
 							//Always prefer improvements which connect bonuses.
 							eBestBuild = NO_BUILD;
@@ -11525,7 +11525,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 					{
 						if (eBestBuild != NO_BUILD
 							&& GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
-							&& GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
+							&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
 						{
 							iValue -= 1000;
 						}
@@ -11870,7 +11870,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 							(
 								GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT
 								||
-								!GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)
+								!GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)
 								)
 							)
 						{
@@ -11883,7 +11883,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 					{
 						if (eBestBuild != NO_BUILD
 							&& GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
-							&& GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
+							&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
 						{
 							iValue -= 1000;
 						}
@@ -13490,7 +13490,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 					}
 
 					const int iPlotValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
-					const ImprovementTypes eBestImp = (ImprovementTypes)GC.getBuildInfo(AI_getBestBuild(iI)).getImprovement();
+					const ImprovementTypes eBestImp = GC.getBuildInfo(AI_getBestBuild(iI)).getImprovement();
 					if (eBestImp != NO_IMPROVEMENT
 						&& (getImprovementFreeSpecialists(eBestImp) > 0 || GC.getImprovementInfo(eBestImp).getHappiness() > 0))
 					{
