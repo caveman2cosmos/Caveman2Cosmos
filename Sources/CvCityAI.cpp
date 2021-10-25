@@ -6195,7 +6195,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					if (kBuilding.isProvidesFreshWater() && !plot()->isFreshWater())
 					{
-						;
 						int freshWaterValue = 0;
 						foreach_(const CvPlot* pLoopPlot, plots(NUM_CITY_PLOTS_1, true))
 						{
