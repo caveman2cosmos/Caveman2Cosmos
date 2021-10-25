@@ -22290,7 +22290,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 	//	return true;
 	//}
 	BuildTypes eBestBuild = NO_BUILD;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
 	int iMaxDistFromBorder = -1;
@@ -22309,7 +22309,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
-		CvPlot* pLoopPlot = itr.plot();
+		const CvPlot* pLoopPlot = itr.plot();
 
 		if (/*AI_plotValid(pLoopPlot) &&*/ pLoopPlot->area() == area()
 		&& (pLoopPlot->getOwner() == ePlayer || pLoopPlot->getOwner() == NO_PLAYER && pLoopPlot->isRevealed(getTeam(), false))
@@ -22333,7 +22333,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 				for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 				{
-					BuildTypes eBuild = ((BuildTypes)iJ);
+					const BuildTypes eBuild = ((BuildTypes)iJ);
 
 					if ((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 					{
@@ -22354,7 +22354,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 							}
 							iBuildValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
 
-							if (iBuildValue < iBestBuildValue)
+							if (iBuildValue > iBestBuildValue)
 							{
 								iBestBuildValue = iBuildValue;
 								eBestTempBuild = eBuild;
@@ -22380,7 +22380,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 						{
 							if(pLoopPlot->getOwner() == NO_PLAYER)
 							{
-								CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
+								const CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
 								if(pNearestCity == NULL || plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pNearestCity->getX(), pNearestCity->getY()) > iMaxDistFromBorder || iPathTurns > iMaxDistFromBorder / 2)
 								{
 									continue;
@@ -22487,7 +22487,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 						}
 					}
 
-					CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
+					const CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
 
 					if (pNearestCity != NULL && generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxDistFromBorder/2)
 
@@ -22552,7 +22552,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 						for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 						{
-							BuildTypes eBuild = (BuildTypes) iJ;
+							const BuildTypes eBuild = (BuildTypes) iJ;
 
 							if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 							{
