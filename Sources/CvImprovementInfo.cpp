@@ -28,7 +28,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bIsUniversalTradeBonusProvider(false),
 	m_bIsZOCSource(false),
 	// Super forts C2C adaptation end
-	m_bActsAsCity(true),
+	m_bActsAsCity(false),
 	m_bHillsMakesValid(false),
 	m_bFreshWaterMakesValid(false),
 	m_bRiverSideMakesValid(false),
@@ -697,7 +697,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity", true);
+	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity");
 	pXML->GetOptionalChildXmlValByName(&m_bHillsMakesValid, L"bHillsMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterMakesValid, L"bFreshWaterMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bRiverSideMakesValid, L"bRiverSideMakesValid");
@@ -977,7 +977,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isUniversalTradeBonusProvider() == bDefault) m_bIsUniversalTradeBonusProvider = pClassInfo->isUniversalTradeBonusProvider();
 	if (isZOCSource() == bDefault) m_bIsZOCSource = pClassInfo->isZOCSource();
 	// Super forts C2C adaptation end
-	if (isActsAsCity()) m_bActsAsCity = pClassInfo->isActsAsCity();
+	if (m_bActsAsCity == bDefault) m_bActsAsCity = pClassInfo->isActsAsCity();
 	if (isHillsMakesValid() == bDefault) m_bHillsMakesValid = pClassInfo->isHillsMakesValid();
 	if (isFreshWaterMakesValid() == bDefault) m_bFreshWaterMakesValid = pClassInfo->isFreshWaterMakesValid();
 	if (isRiverSideMakesValid() == bDefault) m_bRiverSideMakesValid = pClassInfo->isRiverSideMakesValid();
