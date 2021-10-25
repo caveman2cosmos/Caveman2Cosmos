@@ -8203,7 +8203,7 @@ namespace {
 // Only used for improvement upgrading.
 int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const
 {
-	FAssert(eImprovement != NO_IMPROVEMENT);
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eImprovement);
 
 	const CvImprovementInfo& improvement = GC.getImprovementInfo(eImprovement);
 	const BonusTypes eBonus = pPlot->getBonusType(getTeam());
@@ -8237,7 +8237,7 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 
 	int iMilitaryValue = 3 * improvement.getAirBombDefense();
 
-	if (improvement.isZOCSource()) iMilitaryValue += 200;
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && improvement.isZOCSource()) iMilitaryValue += 200;
 
 	iMilitaryValue += 2 * (5 * improvement.getVisibilityChange() + 2 * improvement.getSeeFrom());
 

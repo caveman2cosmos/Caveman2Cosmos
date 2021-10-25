@@ -7127,7 +7127,10 @@ void CvPlot::setImprovementCurrentValue()
 		{
 			int iCounterDefenseValue = GC.getImprovementInfo(eImprovement).getAirBombDefense()/10;
 			iCounterDefenseValue += GC.getImprovementInfo(eImprovement).getDefenseModifier()/10;
-			iCounterDefenseValue += (GC.getImprovementInfo(eImprovement).isZOCSource() ? 3 : 0);
+			if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && GC.getImprovementInfo(eImprovement).isZOCSource())
+			{
+				iCounterDefenseValue += 3;
+			}
 			if (!isCityRadius())
 			{
 				iCountervalue += iCounterDefenseValue;

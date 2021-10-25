@@ -22348,7 +22348,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 							{
 								iBuildValue += 2000;
 							}
-							if (kImprovement.isZOCSource())
+							if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kImprovement.isZOCSource())
 							{
 								iBuildValue += 5000;
 							}
@@ -22627,7 +22627,10 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 								{
 									int iDefenseValue = GC.getImprovementInfo(eImprovementX).getAirBombDefense()/10;
 									iDefenseValue += GC.getImprovementInfo(eImprovementX).getDefenseModifier()/10;
-									iDefenseValue += (GC.getImprovementInfo(eImprovementX).isZOCSource() ? 3 : 0);
+									if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && GC.getImprovementInfo(eImprovementX).isZOCSource())
+									{
+										iDefenseValue += 3;
+									}
 									if (!bCityRadius)
 									{
 										iValue += iDefenseValue;
@@ -27938,7 +27941,7 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 				{
 					iValue += 5000; // Equals 50% defense mod
 				}
-				if (kImprovement.isZOCSource())
+				if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kImprovement.isZOCSource())
 				{
 					iValue += 5000; // Equals 50% defense mod
 				}
