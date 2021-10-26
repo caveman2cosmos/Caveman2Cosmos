@@ -537,7 +537,8 @@ public:
 	void SetList(T** ppList, int size, const wchar_t* tag);
 
 	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal = 0);
+	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName,
+		int iInfoBaseLength, int iDefaultListVal = 0);
 
 /************************************************************************************************/
 /* RevDCM  XMLloading                             05/05/10             phungus420               */
@@ -566,24 +567,8 @@ public:
 		int iInfoBaseLength, CvString szDefaultListVal = CvString());
 
 	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, int iDefaultListVal = 0);
-
-	// allocate and initialize a list from a tag pair in the xml for audio scripts
-	void SetVariableListTagPairForAudioScripts(int **ppiList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, int iDefaultListVal = -1);
-
-	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPairForAudioScripts(int **ppiList, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = -1);
-
-	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(bool **ppbList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, bool bDefaultListVal = false);
-
-	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(CvString **ppszList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, CvString szDefaultListVal = CvString());
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
