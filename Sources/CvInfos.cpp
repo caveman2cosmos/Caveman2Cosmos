@@ -6926,15 +6926,12 @@ bool CvCommandInfo::getAll() const
 
 bool CvCommandInfo::read(CvXMLLoadUtility* pXML)
 {
-	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Automate");
-	m_iAutomate = GC.getTypesEnum(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iAutomate, L"Automate");
 	pXML->GetOptionalChildXmlValByName(&m_bConfirmCommand, L"bConfirmCommand");
 	pXML->GetOptionalChildXmlValByName(&m_bVisible, L"bVisible");
 	pXML->GetOptionalChildXmlValByName(&m_bAll, L"bAll");
@@ -7007,18 +7004,13 @@ bool CvAutomateInfo::getVisible() const
 
 bool CvAutomateInfo::read(CvXMLLoadUtility* pXML)
 {
-	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Command");
-	m_iCommand = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Automate");
-	m_iAutomate = GC.getTypesEnum(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iCommand, L"Command");
+	pXML->GetOptionalTypeEnum(m_iAutomate, L"Automate");
 	pXML->GetOptionalChildXmlValByName(&m_bConfirmCommand, L"bConfirmCommand");
 	pXML->GetOptionalChildXmlValByName(&m_bVisible, L"bVisible");
 
@@ -7284,7 +7276,7 @@ CvHotkeyInfo* CvActionInfo::getHotkeyInfo() const
 			break;
 	}
 
-	FAssertMsg((0) ,"Unknown Action Subtype in CvActionInfo::getHotkeyInfo");
+	FErrorMsg("Unknown Action Subtype in CvActionInfo::getHotkeyInfo");
 	return NULL;
 }
 
@@ -11563,24 +11555,12 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	int j, iNumSibs;
-
 	pXML->GetOptionalChildXmlValByName(m_szShortDescriptionKey, L"ShortDescription");
-	// Get the Text from Text/Civ4GameTextXML.xml
-
 	pXML->GetOptionalChildXmlValByName(m_szAdjectiveKey, L"Adjective");
-	// Get the Text from Text/Civ4GameTextXML.xml
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"DefaultPlayerColor");
-	m_iDefaultPlayerColor = pXML->GetInfoClass(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iDefaultPlayerColor, L"DefaultPlayerColor");
 	pXML->GetOptionalChildXmlValByName(m_szArtDefineTag, L"ArtDefineTag");
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ArtStyleType");
-	m_iArtStyleType = GC.getTypesEnum(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"UnitArtStyleType");
-	m_iUnitArtStyleType = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iArtStyleType, L"ArtStyleType");
+	pXML->GetOptionalTypeEnum(m_iUnitArtStyleType, L"UnitArtStyleType");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivilizationSelectionSound");
 	m_iSelectionSoundScriptId = (szTextVal.GetLength() > 0) ? gDLL->getAudioTagIndex( szTextVal.GetCString(), AUDIOTAG_3DSCRIPT ) : -1;
@@ -11605,41 +11585,38 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"InitialCivics"))
 	{
-			iNumSibs = pXML->GetXmlChildrenNumber();
-
-			if (0 < iNumSibs)
+		if (const int iNumSibs = pXML->GetXmlChildrenNumber())
+		{
+			CvXMLLoadUtility::InitList(&m_piCivilizationInitialCivics, GC.getNumCivicOptionInfos());
+			if (pXML->GetChildXmlVal(szTextVal))
 			{
-				pXML->CvXMLLoadUtility::InitList(&m_piCivilizationInitialCivics, GC.getNumCivicOptionInfos());
-				if (pXML->GetChildXmlVal(szTextVal))
+				for (int j = 0; j < iNumSibs; j++)
 				{
-					for (j=0;j<iNumSibs;j++)
+					const CivicTypes eCivic = (CivicTypes)pXML->GetInfoClass(szTextVal);//, true);
+					if ( eCivic != NO_CIVIC )
 					{
-						const CivicTypes eCivic = (CivicTypes)pXML->GetInfoClass(szTextVal);//, true);
-						if ( eCivic != NO_CIVIC )
-						{
-							const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-							const CivicOptionTypes eCivicOption = (CivicOptionTypes)kCivic.getCivicOptionType();
+						const CivicOptionTypes eCivicOption = (CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType();
 
-							if ( eCivicOption != NO_CIVICOPTION )
-							{
-								FAssertMsg((eCivicOption < GC.getNumCivicOptionInfos()),"Bad default civic");
-								m_piCivilizationInitialCivics[eCivicOption] = eCivic;
-							}
-						}
-
-						if (!pXML->GetNextXmlVal(szTextVal))
+						if ( eCivicOption != NO_CIVICOPTION )
 						{
-							break;
+							FAssertMsg((eCivicOption < GC.getNumCivicOptionInfos()),"Bad default civic");
+							m_piCivilizationInitialCivics[eCivicOption] = eCivic;
 						}
 					}
 
-					pXML->MoveToXmlParent();
+					if (!pXML->GetNextXmlVal(szTextVal))
+					{
+						break;
+					}
 				}
+
+				pXML->MoveToXmlParent();
 			}
-			else
-			{
-				SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
-			}
+		}
+		else
+		{
+			SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
+		}
 
 		pXML->MoveToXmlParent();
 	}
@@ -25041,8 +25018,8 @@ bool CvAnimationPathInfo::read(CvXMLLoadUtility* pXML)
 			else
 			{
 				pXML->GetChildXmlValByName(szTempString, L"Operator");
-				iCurrentCategory = GC.getTypesEnum(szTempString.c_str());
-				iCurrentCategory = ((int)ANIMOP_FIRST) + iCurrentCategory;
+				iCurrentCategory = GC.getInfoTypeForString(szTempString.c_str());
+				iCurrentCategory += (int)ANIMOP_FIRST;
 				if (!pXML->GetChildXmlValByName(&fParameter, L"Parameter"))
 				{
 					fParameter = 0.0f;
@@ -25063,9 +25040,7 @@ bool CvAnimationPathInfo::read(CvXMLLoadUtility* pXML)
 
 void CvAnimationPathInfo::copyNonDefaults(CvAnimationPathInfo* pClassInfo)
 {
-	bool bDefault = false;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 

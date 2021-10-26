@@ -634,14 +634,6 @@ public:
 	int getNumUnitArtStyleTypeInfos() const;
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
-	//
-	// Global Types
-	// All type strings are upper case and are kept in this hash map for fast lookup
-	// The other functions are kept for convenience when enumerating, but most are not used
-	//
-	int getTypesEnum(const char* szType) const;				// use this when searching for a type
-	void setTypesEnum(const char* szType, int iEnum);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -1062,10 +1054,6 @@ protected:
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES
 	//////////////////////////////////////////////////////////////////////////
-
-	// all type strings are upper case and are kept in this hash map for fast lookup, Moose
-	typedef stdext::hash_map<std::string /* type string */, int /*enum value */> TypesMap;
-	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
 	CvString *m_paszAnimationOperatorTypes;
@@ -1804,7 +1792,7 @@ public:
 	DllExport int getTypesEnum(const char* szType) const				// use this when searching for a type
 	{
 		PROXY_TRACK("getTypesEnum");
-		return gGlobals->getTypesEnum(szType);
+		return gGlobals->getInfoTypeForString(szType);
 	}
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{

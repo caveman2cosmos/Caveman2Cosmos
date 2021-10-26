@@ -507,13 +507,11 @@ void cvInternalGlobals::uninit()
 	algo::for_each(m_areaFinders, bind(deleteFAStar, _1));
 	algo::for_each(m_plotGroupFinders, bind(deleteFAStar, _1));
 
-	m_typesMap.clear();
 	m_aInfoVectors.clear();
 }
 
 void cvInternalGlobals::clearTypesMap()
 {
-	m_typesMap.clear();
 	if (m_VarSystem)
 	{
 		m_VarSystem->UnInit();
@@ -2547,30 +2545,6 @@ const char* cvInternalGlobals::alternateProfileSampleName() const
 {
 	return m_szAlternateProfilSampleName;
 }
-
-//
-// Global Types Hash Map
-//
-int cvInternalGlobals::getTypesEnum(const char* szType) const
-{
-	FAssertMsg(szType, "null type string");
-	TypesMap::const_iterator it = m_typesMap.find(szType);
-	if (it != m_typesMap.end())
-	{
-		return it->second;
-	}
-
-	FAssertMsg(strcmp(szType, "NONE") == 0 || strcmp(szType, "") == 0, CvString::format("type %s not found", szType).c_str());
-	return -1;
-}
-
-void cvInternalGlobals::setTypesEnum(const char* szType, int iEnum)
-{
-	FAssertMsg(szType, "null type string");
-	FAssertMsg(m_typesMap.find(szType) == m_typesMap.end(), "types entry already exists");
-	m_typesMap[szType] = iEnum;
-}
-
 
 void cvInternalGlobals::deleteInfoArrays()
 {

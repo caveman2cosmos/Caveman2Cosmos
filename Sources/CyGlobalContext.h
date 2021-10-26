@@ -34,7 +34,6 @@ public:
 
 	int getInfoTypeForString(const char* szInfoType) const;
 	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
-	int getTypesEnum(const char* szType) const;
 
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;

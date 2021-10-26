@@ -105,11 +105,6 @@ int CyGlobalContext::getInfoTypeForStringWithHiddenAssert(const char* szInfoType
 	return GC.getInfoTypeForString(szInfoType, true);
 }
 
-int CyGlobalContext::getTypesEnum(const char* szType) const
-{
-	return GC.getTypesEnum(szType);
-}
-
 const CvMapInfo& CyGlobalContext::getMapInfo(MapTypes eMap) const
 {
 	return GC.getMapInfo(eMap);
