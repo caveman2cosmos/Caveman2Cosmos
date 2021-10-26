@@ -1123,21 +1123,14 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum)
 {
-	PROFILE_FUNC();
 	logging::logMsgW("xml.log", L"SetGlobalStringArray %s\n", szTagName);
 
-	int i=0;					//loop counter
-	CvString *pszString;	// hold the local pointer to the newly allocated string memory
-	pszString = NULL;			// null out the local string pointer so that it can be checked at the
-	// end of the function in an FAssert
+	CvString* pszString = NULL; // null out the local string pointer so that it can be checked at the end of the function in an FAssert
 
-	// if we locate the szTagName, the current node is set to the first instance of the tag name in the xml file
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
 	{
 		if (!bUseEnum)
 		{
-			// get the total number of times this tag appears in the xml
-			//*iNumVals = GETXML->NumOfElementsByTagName(NULL,szTagName); WTF?
 			*iNumVals = GetXmlSiblingsNumber(GetXmlTagName());
 		}
 		// initialize the memory based on the total number of tags in the xml and the 256 character length we selected
@@ -1145,25 +1138,12 @@ void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTa
 		// set the local pointer to the memory just allocated
 		pszString = *ppszString;
 
-		// loop through each of the tags
-		for (i=0;i<*iNumVals;i++)
+		for (int i = 0; i < *iNumVals; i++)
 		{
-			// get the string value at the current node
 			GetXmlVal(pszString[i]);
-			GC.setTypesEnum(pszString[i], i);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/29/08                                MRGENIE      */
-/*                                                                                              */
-/* adding to hash map - used for the dependencies                                               */
-/************************************************************************************************/
-			DEBUG_LOG("xml.log", " Adding info type %s with ID %i", pszString[i].c_str(), i);
-			GC.setInfoTypeFromString(pszString[i], i);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
-			// if can't set the current node to a sibling node we will break out of the for loop
-			// otherwise we will keep looping
+			GC.setInfoTypeFromString(pszString[i], i);
+
 			if (!TryMoveToXmlNextSibling())
 			{
 				break;
@@ -2815,7 +2795,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal = GC.getTypesEnum(szTextVal);
+						iIndexVal = GC.getInfoTypeForString(szTextVal);
 						if (iIndexVal != -1)
 						{
 							GetNextXmlVal(&piList[iIndexVal]);
@@ -2885,7 +2865,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal =	GC.getTypesEnum(szTextVal);
+						iIndexVal =	GC.getInfoTypeForString(szTextVal);
 						if (iIndexVal != -1)
 						{
 							GetNextXmlVal(szTemp);
@@ -3055,7 +3035,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal =	GC.getTypesEnum(szTextVal);
+						iIndexVal =	GC.getInfoTypeForString(szTextVal);
 						if (iIndexVal != -1)
 						{
 							GetNextXmlVal(&pbList[iIndexVal]);
@@ -3124,7 +3104,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal =	GC.getTypesEnum(szTextVal);
+						iIndexVal =	GC.getInfoTypeForString(szTextVal);
 						if (iIndexVal != -1)
 						{
 							GetNextXmlVal(pszList[iIndexVal]);
