@@ -265,8 +265,8 @@ private:
 	bool LoadCivXml(const char* szFilename);
 public:
 
-	int  GetXmlChildrenNumber() { return m_pCurrentXmlElement->getChildElementCount(); }
-	int  GetXmlSiblingsNumber()
+	int GetXmlChildrenNumber() const { return m_pCurrentXmlElement->getChildElementCount(); }
+	int GetXmlSiblingsNumber() const
 	{
 		if (xercesc::DOMNode* node = m_pCurrentXmlElement->getParentNode())
 		{
@@ -279,13 +279,13 @@ public:
 		}
 	}
 
-	const XMLCh* GetXmlTagName()
+	const XMLCh* GetXmlTagName() const
 	{
 		// WARINING : here can be a problem, when we turn on namespaces
 		return m_pCurrentXmlElement->getNodeName();
 	}
 
-	int  GetXmlChildrenNumber(const XMLCh* name)
+	int  GetXmlChildrenNumber(const XMLCh* name) const
 	{
 		int number = 0;
 		for (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild();
@@ -298,7 +298,7 @@ public:
 		return number;
 	}
 
-	int  GetXmlSiblingsNumber(const XMLCh* name)
+	int  GetXmlSiblingsNumber(const XMLCh* name) const
 	{
 		int number = 0;
 		for (xercesc::DOMElement* sibling = m_pCurrentXmlElement;
@@ -319,7 +319,7 @@ public:
 		return number;
 	}
 
-	const XMLCh* GetXmlFirstText()
+	const XMLCh* GetXmlFirstText() const
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -339,7 +339,7 @@ public:
 		return NULL;
 	}
 
-	const XMLCh* TryGetXmlFirstText()
+	const XMLCh* TryGetXmlFirstText() const
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -351,7 +351,7 @@ public:
 		return NULL;
 	}
 
-	bool  HasXmlNextSibling()    { return m_pCurrentXmlElement->getNextElementSibling(); }
+	bool HasXmlNextSibling() const    { return m_pCurrentXmlElement->getNextElementSibling(); }
 
 	bool  TryMoveToXmlFirstChild()
 	{
@@ -504,7 +504,7 @@ public:
 	bool GetChildXmlVal(bool* pbVal, bool bDefault = false);
 
 	//FXml* GetXML() { return NULL; }
-	xercesc::DOMElement* GetCurrentXMLElement() { return m_pCurrentXmlElement; }
+	xercesc::DOMElement* GetCurrentXMLElement() const { return m_pCurrentXmlElement; }
 	void SetCurrentXMLElement(xercesc::DOMElement* element) { m_pCurrentXmlElement = element; }
 
 	// loads the local yield from the xml file
@@ -643,14 +643,12 @@ public:
 							aInfos->push_back(std::make_pair(eType, iModifier));
 
 							MoveToXmlParent();
-
 						}
 
 						if (!TryMoveToXmlNextSibling())
 						{
 							break;
 						}
-
 					}
 
 					MoveToXmlParent();
