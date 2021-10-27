@@ -2157,7 +2157,8 @@ def applyMasterBlacksmithDone1(argsList):
 	data = argsList[1]
 
 	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
-	GC.getMap().plot(data.iPlotX, data.iPlotY).setBonusType(iBonus)
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	plot.setBonusType(iBonus)
 
 	CyInterface().addMessage(
 		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
