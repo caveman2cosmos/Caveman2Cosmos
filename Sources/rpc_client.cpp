@@ -55,6 +55,7 @@ namespace rpc
 					NULL, // Protocol dependent network options to use.
 					&szBinding
 				)
+			);
 
 			FRpcAssert(
 				RpcBindingFromStringBinding(szBinding, &hBuildingInfoBinding)
