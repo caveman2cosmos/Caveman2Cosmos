@@ -345,7 +345,7 @@
     <ClCompile Include="IntExpr.cpp" />
     <ClCompile Include="$(SolutionDir)\Interface\IServerUtils_c.c" />
     <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo_c.c" />
- </ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
     <ClInclude Include="BetterBTSAI.h" />
