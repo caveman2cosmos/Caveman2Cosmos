@@ -1,9 +1,11 @@
 #include "CvGameCoreDLL.h"
 #include "rpc_client.h"
-#include "Interface//ITest.h"
-#include "Interface//IServerUtils_c.c"
+#include "Interface/IBuildingInfo.h"
+#include "Interface/IServerUtils_c.c"
 //#include <Rpc.h>
 //#include <Rpcndr.h>
+
+handle_t hBuildingInfoBinding = NULL;
 
 namespace rpc
 {
@@ -27,47 +29,67 @@ namespace rpc
 
 		void init()
 		{
-			RPC_STATUS status;
-		/*
-			//RPC_NS_HANDLE* ImportContext = NULL;
-			//status = RPC_STATUS RpcNsBindingImportBeginA(RPC_C_NS_SYNTAX_DEFAULT, (RPC_CSTR)"CvGameCoreServerEP", ITest_v1_0_s_ifspec, rpcBindingVector, ImportContext);
+			unsigned char* szBinding = NULL;
 
-			status = RpcBindingFromStringBinding((RPC_CSTR)"ncalrpc:[CvGameCoreServer]", &hITestBinding);
-			FRpcAssert(status);
-		*/
-		   unsigned char* szBinding = NULL;
+			FRpcAssert(
+				RpcStringBindingCompose(
+					NULL, // UUID to bind to.
+					reinterpret_cast<unsigned char*>("ncacn_ip_tcp"), // Use TCP/IP
+					reinterpret_cast<unsigned char*>("localhost"), // TCP/IP network
+					reinterpret_cast<unsigned char*>("4747"), // TCP/IP port to use.
+					NULL, // Protocol dependent network options to use.
+					&szBinding
+				)
+			);
 
-			status = RpcStringBindingCompose(NULL,
-			  reinterpret_cast<unsigned char*>("ncacn_ip_tcp"), // Use TCP/IP
-			  reinterpret_cast<unsigned char*>("localhost"), // TCP/IP network
-			  reinterpret_cast<unsigned char*>("4747"), // TCP/IP port to use.
-			  NULL, &szBinding);
+			FRpcAssert(
+				RpcBindingFromStringBinding(szBinding, &hIServerUtilsBinding)
+			);
 
-			FRpcAssert(status);
+			FRpcAssert(
+				RpcStringBindingCompose(
+					NULL, // UUID to bind to.
+					reinterpret_cast<unsigned char*>("ncacn_ip_tcp"), // Use TCP/IP
+					reinterpret_cast<unsigned char*>("localhost"), // TCP/IP network
+					reinterpret_cast<unsigned char*>("4747"), // TCP/IP port to use.
+					NULL, // Protocol dependent network options to use.
+					&szBinding
+				)
 
-			status = RpcBindingFromStringBinding(szBinding, &hIServerUtilsBinding);
-			FRpcAssert(status);
+			FRpcAssert(
+				RpcBindingFromStringBinding(szBinding, &hBuildingInfoBinding)
+			);
 
-			RpcTryExcept
+			FRpcAssert(
+				RpcEpResolveBinding(hBuildingInfoBinding, IBuildingInfo_v1_0_c_ifspec)
+			);
+
+			FRpcAssert(
+				RpcStringFree(&szBinding)
+			);
+/*
+			RPC_IF_HANDLE interfaceHandles[] = {
+				IServerUtils_v1_0_c_ifspec,
+				IBuildingInfo_v1_0_c_ifspec
+			};
+
+			foreach_(RPC_IF_HANDLE& hInterface, interfaceHandles)
 			{
-				Output("Test");
+				FRpcAssert(
+					RpcEpResolveBinding(hBinding, hInterface)
+				);
 			}
-			RpcExcept(1)
-			{
-				std::cerr << "Runtime reported exception " << RpcExceptionCode() << std::endl;
-			}
-			RpcEndExcept
 
-			status = RpcStringFree(&szBinding);
-			FRpcAssert(status);
-
-			status = RpcBindingFree(&hIServerUtilsBinding);
-			FRpcAssert(status);
+			FRpcAssert(
+				RpcStringFree(&RpcBindingFree)
+			);
+*/
+			Output("Test");
 		}
 
 		void FRpcAssert(RPC_STATUS status)
 		{
-//#ifdef _DEBUG
+#ifdef _DEBUG
 			if (FAILED(status))
 			{
 				void* pBuffer = NULL;
@@ -78,12 +100,7 @@ namespace rpc
 				FErrorMsg(str(bst::format("Rpc error: %s (%ud)") %(LPTSTR)pBuffer %status).c_str());
 				LocalFree(pBuffer);
 			}
-//#endif
-		}
-
-		void shutDownServer()
-		{
-			::shutDownServer();
+#endif
 		}
 	}
 }

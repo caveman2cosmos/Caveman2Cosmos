@@ -16,6 +16,10 @@
 #include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
+#include "Interface/IBuildingInfo.h"
+#include "Interface/IBuildingInfo_c.c"
+
+extern handle_t hBuildingInfoBinding;
 
 //======================================================================================================
 //					CvBuildingInfo
@@ -35,7 +39,6 @@ m_iMaxPlayerInstances(-1),
 m_iExtraPlayerInstances(0),
 m_piVictoryThreshold(NULL),
 m_iDCMAirbombMission(0),
-m_bNoLimit(false),
 m_iVictoryPrereq(NO_VICTORY),
 m_iFreeStartEra(NO_ERA),
 m_iMaxStartEra(NO_ERA),
@@ -297,6 +300,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnUnit(NO_UNIT)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
+, m_hContext(IBuildingInfo_create(hBuildingInfoBinding))
 {
 	CvInfoUtil(this).initDataMembers();
 }
@@ -408,6 +412,11 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
 
 	CvInfoUtil(this).uninitDataMembers();
+}
+
+bool CvBuildingInfo::isNoLimit() const
+{
+	return IBuildingInfo_isNoLimit(m_hContext);
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -1627,7 +1636,7 @@ void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
-	CheckSum(iSum, m_bNoLimit);
+	CheckSum(iSum, IBuildingInfo_isNoLimit(m_hContext));
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
@@ -2073,7 +2082,9 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Advisor");
 	m_iAdvisorType = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
+	bool bValue;
+	pXML->GetOptionalChildXmlValByName(&bValue, L"bNoLimit");
+	IBuildingInfo_setNoLimit(m_hContext, bValue);
 
 	pXML->GetOptionalChildXmlValByName(m_szArtDefineTag, L"ArtDefineTag");
 
@@ -3460,7 +3471,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getSpecialBuilding() == iTextDefault) m_eSpecialBuilding = pClassInfo->getSpecialBuilding();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
 
-	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();
+	if (IBuildingInfo_isNoLimit(m_hContext) == bDefault)
+		IBuildingInfo_setNoLimit(m_hContext, pClassInfo->isNoLimit());
 
 	if (getPrereqGameOption() == iTextDefault) m_iPrereqGameOption = pClassInfo->getPrereqGameOption();
 	if (getNotGameOption() == iTextDefault) m_iNotGameOption = pClassInfo->getNotGameOption();

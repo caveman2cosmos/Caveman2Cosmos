@@ -38,14 +38,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <IntDir>$(SolutionDir)..\Build\vs\Server\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)..\Build\vs\Server\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Build\vs\Interface\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\Build\vs\Interface\$(Configuration)\</OutDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <IntDir>$(SolutionDir)..\Build\vs\Server\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)..\Build\vs\Server\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Build\vs\Interface\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\Build\vs\Interface\$(Configuration)\</OutDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -112,11 +112,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="ITest.acf" />
+    <None Include="IBuildingInfo.acf" />
     <None Include="IServerUtils.acf" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="ITest.idl" />
+    <Midl Include="IBuildingInfo.idl" />
     <Midl Include="IServerUtils.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

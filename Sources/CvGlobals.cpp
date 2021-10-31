@@ -522,8 +522,6 @@ void cvInternalGlobals::uninit()
 
 	m_typesMap.clear();
 	m_aInfoVectors.clear();
-
-	rpc::client::shutDownServer();
 }
 
 void cvInternalGlobals::clearTypesMap()

@@ -189,13 +189,6 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="$(SolutionDir)\Interfaces\IServerUtils_c.c">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="$(SolutionDir)\Interfaces\ITest_c.c">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="$(SolutionDir)\Server\CvGameCoreServer.cpp" />
     <ClCompile Include="..\boost_test\test.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
@@ -350,7 +343,9 @@
     <ClCompile Include="FDataIOStream.cpp" />
     <ClCompile Include="FDialogTemplate.cpp" />
     <ClCompile Include="IntExpr.cpp" />
-  </ItemGroup>
+    <ClCompile Include="$(SolutionDir)\Interface\IServerUtils_c.c" />
+    <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo_c.c" />
+ </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
     <ClInclude Include="BetterBTSAI.h" />
@@ -511,6 +506,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Win32.h" />
+    <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
@@ -530,8 +526,8 @@
     <Natvis Include="std.natvis" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)Interface\Interface.vcxproj">
-      <Project>{6536ebec-014e-4d6b-97be-223137694ca8}</Project>
+    <ProjectReference Include="$(SolutionDir)\Interface\Interface.vcxproj">
+      <Project>{6536EBEC-014E-4D6B-97BE-223137694CA8}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

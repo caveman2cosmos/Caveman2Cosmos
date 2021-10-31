@@ -495,6 +495,15 @@
     <ClCompile Include="CvBuildingInfo.cpp">
       <Filter>Source Files\InfoClasses</Filter>
     </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Interface\IServerUtils_c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo_c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Server\CvGameCoreServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -668,10 +677,10 @@
     <ClInclude Include="CvInfos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-     <ClInclude Include="CvInfoUtil.h">
+    <ClInclude Include="CvInfoUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-   <ClInclude Include="CvInfoWater.h">
+    <ClInclude Include="CvInfoWater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvInitCore.h">

@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "rpc_client.h"
+#include "Interface/IServerUtils.h"
 #include <psapi.h>
 
 std::string modDir;
@@ -81,8 +82,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 			}
 		}
 		rpc::client::createServerProcess();
-
-		logging::deleteLogs();
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -92,10 +91,10 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		OutputDebugString(CvString::format("[C2C] DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_PROCESS_DETACH:
+		shutDownServer();
 // BUG - EXE/DLL Paths - start
 		dllModule = NULL;
 // BUG - EXE/DLL Paths - end
-
 		OutputDebugString("[C2C] DLL_PROCESS_DETACH\n");
 		timeEndPeriod(1);
 		break;

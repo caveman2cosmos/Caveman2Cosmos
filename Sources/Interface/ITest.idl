@@ -1,8 +1,0 @@
-[
-	uuid(00000003-EAF3-4A7A-A0F2-BCE4C30DA77E),
-	version(1.0),
-]
-interface ITest
-{
-	void rpc_test();
-}

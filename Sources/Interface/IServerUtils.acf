@@ -1,5 +1,5 @@
 [
-   implicit_handle(handle_t hIServerUtilsBinding)
+	implicit_handle(handle_t hIServerUtilsBinding)
 ]
 interface IServerUtils
 {

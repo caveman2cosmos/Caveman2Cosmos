@@ -1,0 +1,14 @@
+[
+	uuid(00000003-EAF3-4A7A-A0F2-BCE4C30DA77E),
+	version(1.0)
+]
+interface IBuildingInfo
+{
+	typedef [context_handle] void* hIBuildingInfo_t;
+
+	hIBuildingInfo_t IBuildingInfo_create([in] handle_t hBinding);
+	void IBuildingInfo_delete([in] hIBuildingInfo_t hBuilding);
+
+	boolean IBuildingInfo_isNoLimit([in] hIBuildingInfo_t hBuilding);
+	void IBuildingInfo_setNoLimit([in] hIBuildingInfo_t hBuilding, [in] boolean b);
+}
