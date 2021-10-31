@@ -23470,13 +23470,13 @@ bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 
 int CvCity::getBaseYieldRate(YieldTypes eIndex) const
 {
-	int iModifiedYield = getPlotYield(eIndex) + GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
+	int iBaseYield = getPlotYield(eIndex) + GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
 
 	if (GET_PLAYER(getOwner()).isGoldenAge() && GET_PLAYER(getOwner()).getGoldenAgeYield(eIndex) > 0)
 	{
-		iModifiedYield += GET_PLAYER(getOwner()).getGoldenAgeYield(eIndex);
+		iBaseYield += GET_PLAYER(getOwner()).getGoldenAgeYield(eIndex);
 	}
-	return iModifiedYield;
+	return iBaseYield;
 }
 
 

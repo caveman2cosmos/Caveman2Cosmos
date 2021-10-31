@@ -5273,8 +5273,7 @@ bool CvUnit::isActionRecommended(int iAction) const
 		{
 			const BuildTypes eBuild = (BuildTypes) GC.getActionInfo(iAction).getMissionData();
 
-			FAssert(eBuild != NO_BUILD);
-			FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
+			FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 
 			if (canBuild(pPlot, eBuild))
 			{
@@ -5295,7 +5294,7 @@ bool CvUnit::isActionRecommended(int iAction) const
 						}
 					}
 					// Recommend improvement
-					const ImprovementTypes eImprovementNew = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+					const ImprovementTypes eImprovementNew = GC.getBuildInfo(eBuild).getImprovement();
 
 					if (eImprovementNew != NO_IMPROVEMENT)
 					{
@@ -5558,9 +5557,9 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	int iCargoAssetValue = 0;
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	for (uint i = 0; i < aCargoUnits.size(); i++)
+	foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 	{
-		iCargoAssetValue += aCargoUnits[i]->assetValueTotal()/100;
+		iCargoAssetValue += pCargoUnit->assetValueTotal()/100;
 	}
 	iOurDefense = iOurDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
@@ -5602,9 +5601,9 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	iAssetValue = pDefender->assetValueTotal()/100;
 	iCargoAssetValue = 0;
 	pDefender->getCargoUnits(aCargoUnits);
-	for (uint i = 0; i < aCargoUnits.size(); i++)
+	foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 	{
-		iCargoAssetValue += aCargoUnits[i]->assetValueTotal()/100;
+		iCargoAssetValue += pCargoUnit->assetValueTotal()/100;
 	}
 	iTheirDefense = iTheirDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
@@ -5806,9 +5805,8 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 {
 	CvUnit* pUnit;
-	bool bCycle;
 
-	bCycle = false;
+	bool bCycle = false;
 
 	FAssert(getOwner() != NO_PLAYER);
 
@@ -12041,7 +12039,7 @@ bool CvUnit::build(BuildTypes eBuild)
 		const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 		// Super Forts begin *culture*
 		if (kBuild.getImprovement() != NO_IMPROVEMENT
-		&& GC.getImprovementInfo((ImprovementTypes)kBuild.getImprovement()).getCulture() > 0)
+		&& GC.getImprovementInfo(kBuild.getImprovement()).getCulture() > 0)
 		{
 			if (plot()->getOwner() == NO_PLAYER)
 			{
@@ -13093,7 +13091,7 @@ ImprovementTypes CvUnit::getBuildTypeImprovement() const
 {
 	const BuildTypes buildType = getBuildType();
 	if (buildType == NO_BUILD) return NO_IMPROVEMENT;
-	return static_cast<ImprovementTypes>(GC.getBuildInfo(buildType).getImprovement());
+	return GC.getBuildInfo(buildType).getImprovement();
 }
 
 bool CvUnit::isAnimal() const

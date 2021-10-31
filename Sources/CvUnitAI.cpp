@@ -22221,7 +22221,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 						const BuildTypes eBuild = (BuildTypes) iJ;
 
 						if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT
-						&& GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement()).isCarriesIrrigation()
+						&& GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement()).isCarriesIrrigation()
 						&& canBuild(pLoopPlot, eBuild))
 						{
 							const int iValue = 10000 / (GC.getBuildInfo(eBuild).getTime() + 1);
@@ -22290,7 +22290,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 	//	return true;
 	//}
 	BuildTypes eBestBuild = NO_BUILD;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
 	int iMaxDistFromBorder = -1;
@@ -22309,7 +22309,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
-		CvPlot* pLoopPlot = itr.plot();
+		const CvPlot* pLoopPlot = itr.plot();
 
 		if (/*AI_plotValid(pLoopPlot) &&*/ pLoopPlot->area() == area()
 		&& (pLoopPlot->getOwner() == ePlayer || pLoopPlot->getOwner() == NO_PLAYER && pLoopPlot->isRevealed(getTeam(), false))
@@ -22333,11 +22333,11 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 				for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 				{
-					BuildTypes eBuild = ((BuildTypes)iJ);
+					const BuildTypes eBuild = ((BuildTypes)iJ);
 
-					if ((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
+					if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 					{
-						const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
+						const CvImprovementInfo& kImprovement = GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement());
 
 						if ((bCanal && kImprovement.isCanMoveSeaUnits() || kImprovement.isActsAsCity() && kImprovement.getDefenseModifier() > 0)
 						&& canBuild(pLoopPlot, eBuild))
@@ -22354,7 +22354,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 							}
 							iBuildValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
 
-							if (iBuildValue < iBestBuildValue)
+							if (iBuildValue > iBestBuildValue)
 							{
 								iBestBuildValue = iBuildValue;
 								eBestTempBuild = eBuild;
@@ -22380,7 +22380,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 						{
 							if(pLoopPlot->getOwner() == NO_PLAYER)
 							{
-								CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
+								const CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
 								if(pNearestCity == NULL || plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pNearestCity->getX(), pNearestCity->getY()) > iMaxDistFromBorder || iPathTurns > iMaxDistFromBorder / 2)
 								{
 									continue;
@@ -22487,7 +22487,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 						}
 					}
 
-					CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
+					const CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), ePlayer, NO_TEAM, false);
 
 					if (pNearestCity != NULL && generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxDistFromBorder/2)
 
@@ -22552,11 +22552,11 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 						for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 						{
-							BuildTypes eBuild = (BuildTypes) iJ;
+							const BuildTypes eBuild = (BuildTypes) iJ;
 
 							if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 							{
-								const CvImprovementInfo& kImprovementX = GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
+								const CvImprovementInfo& kImprovementX = GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement());
 
 								if ((!bLeaveForests || eFeature == NO_FEATURE || !GC.getBuildInfo(eBuild).isFeatureRemove(eFeature))
 
@@ -22611,7 +22611,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 							if (bDoImprove)
 							{
-								const ImprovementTypes eImprovementX = (ImprovementTypes)GC.getBuildInfo(eBestTempBuild).getImprovement();
+								const ImprovementTypes eImprovementX = GC.getBuildInfo(eBestTempBuild).getImprovement();
 								FAssert(eImprovementX != NO_IMPROVEMENT);
 
 								if (bCityRadius)
@@ -23137,7 +23137,7 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) 
 		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
 		if (kOriginalBuildInfo.isFeatureRemove(eFeature))
 		{
-			if ((kOriginalBuildInfo.getImprovement() == NO_IMPROVEMENT) || (!pPlot->isBeingWorked() || (kFeatureInfo.getYieldChange(YIELD_FOOD) + kFeatureInfo.getYieldChange(YIELD_PRODUCTION)) <= 0))
+			if (kOriginalBuildInfo.getImprovement() == NO_IMPROVEMENT || !pPlot->isBeingWorked() || kFeatureInfo.getYieldChange(YIELD_FOOD) + kFeatureInfo.getYieldChange(YIELD_PRODUCTION) <= 0)
 			{
 				bClearFeature = true;
 			}
@@ -23199,7 +23199,7 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) 
 						iValue *= 2 + iWorkersNeeded + ((pPlot->isHills() && (iWorkersNeeded > 1)) ? 2 * GC.getHILLS_EXTRA_MOVEMENT() : 0);
 						iValue /= 3;
 					}
-					const ImprovementTypes eImprovement = (ImprovementTypes)kOriginalBuildInfo.getImprovement();
+					const ImprovementTypes eImprovement = kOriginalBuildInfo.getImprovement();
 					if (eImprovement != NO_IMPROVEMENT)
 					{
 						int iRouteMultiplier = ((GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, YIELD_FOOD)) * 100);
@@ -27920,7 +27920,7 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
-			const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
+			const CvImprovementInfo& kImprovement = GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement());
 			// Is fort or tower
 			if ((kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
 			&& canBuild(pPlot, eBuild)

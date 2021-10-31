@@ -3847,8 +3847,8 @@ public:
 
 	int getTime() const;
 	int getCost() const;
-	TechTypes getTechPrereq() const { return m_iTechPrereq; }
-	int getImprovement() const;
+	TechTypes getTechPrereq() const			{ return m_iTechPrereq; }
+	ImprovementTypes getImprovement() const	{ return m_iImprovement; }
 	int getRoute() const;
 	int getTerrainChange() const;
 	int getFeatureChange() const;
@@ -3897,7 +3897,7 @@ protected:
 	int m_iTime;
 	int m_iCost;
 	TechTypes m_iTechPrereq;
-	int m_iImprovement;
+	ImprovementTypes m_iImprovement;
 	int m_iRoute;
 	int m_iTerrainChange;
 	int m_iFeatureChange;
@@ -7743,7 +7743,7 @@ public:
 	int getFoodPercent() const;
 	int getFeature() const;
 	int getFeatureChange() const;
-	int getImprovement() const;
+	ImprovementTypes getImprovement() const	{ return m_iImprovement; }
 	int getImprovementChange() const;
 	int getCommerceModifier(int i) const;
 	int getYieldModifier(int i) const;
@@ -7872,7 +7872,7 @@ private:
 	int m_iFoodPercent;
 	int m_iFeature;
 	int m_iFeatureChange;
-	int m_iImprovement;
+	ImprovementTypes m_iImprovement;
 	int m_iImprovementChange;
 	int m_iBonus;
 	int m_iBonusChange;

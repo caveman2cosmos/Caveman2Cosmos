@@ -4528,6 +4528,218 @@ bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building)
 	return false;
 }
 
+
+//	KOSHLING Mod - pre-calculate and cache building values for all focuses
+//
+//	Simple class to hold the calculated values for one building type and city
+#ifdef _DEBUG
+//#define VALIDATE_BUILDING_CACHE_CONSISTENCY
+#endif
+
+class FocusValueSet
+{
+public:
+	FocusValueSet()
+	{
+		for (int i = 0; i < NUM_ALL_BUILDINGFOCUS_FLAGS; i++)
+		{
+			m_focusValues[i] = 0;
+		}
+	}
+
+	void AccumulateTo(int iFocusIndex, int value)
+	{
+		FAssertMsg(iFocusIndex < NUM_ALL_BUILDINGFOCUS_FLAGS, "iFocusIndex out of range")
+			m_focusValues[iFocusIndex] += value;
+	}
+
+	void AccumulateToAny(int value)
+	{
+		AccumulateTo(BUILDINGFOUCSINDEX_ANY, value);
+	}
+
+	void Accumulate(int iFocusIndex, int value, bool toAny)
+	{
+		if (toAny)
+		{
+			AccumulateToAny(value);
+		}
+		else
+		{
+			AccumulateTo(iFocusIndex, value);
+		}
+	}
+
+	void SetValue(int iFocusIndex, int value)
+	{
+		m_focusValues[iFocusIndex] = value;
+	}
+
+	void SetValueAll(int value)
+	{
+		for (int i = 0; i < NUM_ALL_BUILDINGFOCUS_FLAGS; i++)
+		{
+			m_focusValues[i] = value;
+		}
+	}
+
+	int	m_focusValues[NUM_ALL_BUILDINGFOCUS_FLAGS];
+};
+
+class OneBuildingValueCache
+{
+public:
+	OneBuildingValueCache() { }
+
+	void AccumulateTo(int iFocusIndex, int value, bool isThresholdSet)
+	{
+		if (isThresholdSet)
+			m_thresholdSet.AccumulateTo(iFocusIndex, value);
+		else m_noThresholdSet.AccumulateTo(iFocusIndex, value);
+	}
+
+	void AccumulateToAny(int value, bool isThresholdSet)
+	{
+		AccumulateTo(BUILDINGFOUCSINDEX_ANY, value, isThresholdSet);
+	}
+
+	void Accumulate(int iFocusIndex, int value)
+	{
+		AccumulateToAny(value, false);
+		AccumulateTo(iFocusIndex, value, true);
+	}
+
+	void SetValue(int iFocusIndex, int value, bool isThresholdSet)
+	{
+		if (isThresholdSet)
+			m_thresholdSet.SetValue(iFocusIndex, value);
+		else m_noThresholdSet.SetValue(iFocusIndex, value);
+	}
+
+	void SetValueAll(int value, bool isThresholdSet)
+	{
+		for (int i = 0; i < NUM_ALL_BUILDINGFOCUS_FLAGS; i++)
+		{
+			SetValue(i, value, isThresholdSet);
+		}
+	}
+
+	FocusValueSet m_thresholdSet;
+	FocusValueSet m_noThresholdSet;
+};
+
+class BuildingValueCache
+{
+public:
+	explicit BuildingValueCache(CvCityAI* cachedCity)
+	{
+		m_iCachedFlags = 0;
+		m_bIncomplete = false;
+	}
+
+	virtual ~BuildingValueCache()
+	{
+		std::map<int, OneBuildingValueCache*>::const_iterator itr;
+
+		for (itr = m_buildingValues.begin(); itr != m_buildingValues.end(); ++itr)
+		{
+			delete itr->second;
+		}
+	}
+
+	bool HasValues(BuildingTypes eType)
+	{
+		return (m_buildingValues.find(eType) != m_buildingValues.end());
+	}
+
+	int GetValue(BuildingTypes eType, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue)
+	{
+
+		std::map<int, OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eType);
+		if (itr == m_buildingValues.end())
+		{
+			//	No cached value
+			return -1;
+		}
+		int iValueThreshold = 0;
+		int iValueNoThreshold = 0;
+		OneBuildingValueCache* valueCache = itr->second;
+
+		for (int i = 0; i < NUM_REAL_BUILDINGFOCUS_FLAGS; i++)
+		{
+			if ((iFocusFlags & 1 << i) != 0)
+			{
+				iValueThreshold += valueCache->m_thresholdSet.m_focusValues[i];
+				iValueNoThreshold += valueCache->m_noThresholdSet.m_focusValues[i];
+			}
+		}
+
+		//	Add in pseudo-flag contributions
+		if ((iFocusFlags & (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH)) != 0)
+		{
+			iValueThreshold += valueCache->m_thresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDRESEARCH];
+			iValueNoThreshold += valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDRESEARCH];
+		}
+		if ((iFocusFlags & (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_MAINTENANCE)) != 0)
+		{
+			iValueThreshold += valueCache->m_thresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE];
+			iValueNoThreshold += valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE];
+		}
+
+		int iPass1Value = iValueThreshold + valueCache->m_thresholdSet.m_focusValues[BUILDINGFOUCSINDEX_ANY];
+		if (iValueThreshold < threshold)
+		{
+			iPass1Value = 0;
+		}
+
+		int iPass2Value = 0;
+		if ((iFocusFlags & BUILDINGFOCUS_CONSIDER_ANY) != 0)
+		{
+			iPass2Value = valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOUCSINDEX_ANY];
+		}
+		else if (iPass1Value > 0)
+		{
+			iPass2Value = iValueNoThreshold + valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOUCSINDEX_ANY];
+		}
+
+		//	If we are really seeking an answer specifically on the values from the specific flags
+		//	then the rest is just a tie-breaker so dramatically boost the value of the flag-specific
+		//	stuff from pass1
+		if (bMaximizeFlaggedValue)
+		{
+			iPass1Value *= 20;
+		}
+		else
+		{
+			//	Even when not maximizing with all the extra effects on buildings pass1 was getting a
+			//	bit dominated by pass2 so provide a little extra pas1 weight anyway
+			iPass1Value *= 2;
+		}
+		return std::max(0, iPass1Value + iPass2Value);
+	}
+
+	OneBuildingValueCache* GetOneBuildingCache(int eBuilding)
+	{
+		OneBuildingValueCache* result;
+
+		std::map<int, OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eBuilding);
+		if (itr == m_buildingValues.end())
+		{
+			//	New entry
+			result = new OneBuildingValueCache();
+
+			m_buildingValues[eBuilding] = result;
+			return result;
+		}
+		return itr->second;
+	}
+
+	//	One city is cached at a time
+	int			m_iCachedFlags;
+	bool		m_bIncomplete;
+	std::map<int, OneBuildingValueCache*>	m_buildingValues;
+};
+
 int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech)
 {
 	if (bForTech)
@@ -4542,7 +4754,76 @@ int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bF
 int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct)
 {
 	PROFILE_FUNC();
-	return GetBuildingValue(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue, bIgnoreCanConstruct);
+	int iResult = -1;
+
+	// We only pre-calculate and cache values for buildings this city can build
+	// Only trigger a change in cached city from iFocusFlags != 0 which happens at the start
+	//	of building search to choose construction.  Other requests (with 0 flags) can occur
+	//	occassionally from other areas (such as civic evaluation) without implying a lot of locality
+	//	of reference that makes the caching worthwhile
+	if ((bIgnoreCanConstruct || canConstruct(eBuilding)) && (cachedBuildingValues != NULL || iFocusFlags != 0))
+	{
+		if (cachedBuildingValues == NULL)
+		{
+			OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
+			cachedBuildingValues = new BuildingValueCache(this);
+		}
+
+		if (iFocusFlags == 0)
+		{
+			iFocusFlags = BUILDINGFOCUS_CONSIDER_ANY;
+		}
+		if ((cachedBuildingValues->m_iCachedFlags & iFocusFlags) != iFocusFlags)
+		{
+			CalculateAllBuildingValues(~cachedBuildingValues->m_iCachedFlags & iFocusFlags);
+		}
+
+	retry:
+		iResult = cachedBuildingValues->GetValue(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+
+		if (iResult != -1)
+		{
+			if (!isHuman() && iResult > 0)
+			{
+				const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+				const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
+				for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
+				{
+					iResult += kOwner.AI_getFlavorValue((FlavorTypes)iI) * kBuilding.getFlavorValue(iI);
+				}
+			}
+
+#ifdef VALIDATE_BUILDING_CACHE_CONSISTENCY
+			FAssertMsg(
+				AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold) == iResult,
+				"Cached building value result mismatch!!\n"
+			);
+#endif
+		}
+		else if (cachedBuildingValues->m_bIncomplete)
+		{
+			const int iCachedFlags = cachedBuildingValues->m_iCachedFlags;
+			cachedBuildingValues->m_iCachedFlags = 0;
+
+			CalculateAllBuildingValues(iCachedFlags);
+
+			cachedBuildingValues->m_bIncomplete = false;
+			goto retry;
+		}
+		else if (bIgnoreCanConstruct)
+		{
+			iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+		}
+		else iResult = 0;
+	}
+	else
+	{
+		PROFILE("AI_buildingValueThreshold.CacheMiss");
+
+		iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold);
+	}
+	return iResult;
 }
 
 // XXX should some of these count cities, buildings, etc. based on teams (because wonders are shared...)
@@ -4557,9 +4838,8 @@ int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFo
 {
 	PROFILE_FUNC();
 
-	//	We keep a small cache of results for cases not involved in city production (that therefore still
-	//	use this routine)
-	CvChecksum	cacheKey;
+	// We keep a small cache of results for cases not involved in city production (that therefore still use this routine)
+	CvChecksum cacheKey;
 
 	cacheKey.add((int)eBuilding);
 	cacheKey.add(iFocusFlags);
@@ -4573,14 +4853,11 @@ int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFo
 	{
 		return itr->second;
 	}
-	else
-	{
-		int iResult = AI_buildingValueThresholdOriginalUncached(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue, bIgnoreCanBuildReplacement, bForTech);
+	int iResult = AI_buildingValueThresholdOriginalUncached(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue, bIgnoreCanBuildReplacement, bForTech);
 
-		m_buildValueCache.insert(std::make_pair(cacheKey.get(), iResult));
+	m_buildValueCache.insert(std::make_pair(cacheKey.get(), iResult));
 
-		return iResult;
-	}
+	return iResult;
 }
 
 int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanBuildReplacement, bool bForTech)
@@ -4596,7 +4873,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	const ReligionTypes eStateReligion = kOwner.getStateReligion();
 
-	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
+	const CvArea* pArea = area();
+	bool bAreaAlone = kOwner.AI_isAreaAlone(pArea);
 	const bool bMetAnyCiv = GET_TEAM(getTeam()).hasMetAnyCiv(true);
 
 	int iFoodDifference = foodDifference(false);
@@ -4611,8 +4889,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	{
 		iHappyModifier = 1;
 	}
-
-	int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
+	const int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
 
 	//Don't consider a building if it causes the city to immediately start shrinking from unhealthiness
 	//For that purpose ignore bad health and unhappiness from Espionage.
@@ -4645,9 +4922,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	{
 		return 0;
 	}
+	const int iTotalPopulation = kOwner.getTotalPopulation();
 
 	int iNumCities = kOwner.getNumCities();
-	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwner());
+	int iNumCitiesInArea = pArea->getCitiesPerPlayer(getOwner());
 
 	int aiYieldRank[NUM_YIELD_TYPES];
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -4760,7 +5038,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			const CvCity* pTradeCity = getTradeCity(iI);
 			if (NULL != pTradeCity)
 			{
-				if (GET_PLAYER(pTradeCity->getOwner()).getTeam() != getTeam() || pTradeCity->area() != area())
+				if (GET_PLAYER(pTradeCity->getOwner()).getTeam() != getTeam() || pTradeCity->area() != pArea)
 				{
 					bForeignTrade = true;
 					break;
@@ -4855,8 +5133,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							iValue += iValidUnitCount * modifier.second / 6;
 						}
 
-						bool bDefense = (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE);
-						bool bLandWar = (bDefense || (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
+						bool bDefense = pArea->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
+						bool bLandWar = bDefense || pArea->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || pArea->getAreaAIType(getTeam()) == AREAAI_MASSING;
 						bool bDanger = AI_isDanger();
 
 						if (bDanger || bLandWar)
@@ -5120,7 +5398,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 					{
-						int iDomainExpValue = 0;
+						int iDomainExpValue = 6;
+
 						if (iI == DOMAIN_SEA)
 						{
 							iDomainExpValue = 7;
@@ -5129,25 +5408,21 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							iDomainExpValue = 12;
 						}
-						else
-						{
-							iDomainExpValue = 6;
-						}
-						iValue += (kBuilding.getDomainFreeExperience(iI) * (bMetAnyCiv ? iDomainExpValue : iDomainExpValue / 2));
+						iValue += kBuilding.getDomainFreeExperience(iI) * (bMetAnyCiv ? iDomainExpValue : iDomainExpValue / 2);
 					}
-					int iTempValue = 0;
+					int iPromoValue = 0;
 					bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
 					if (kBuilding.getFreePromotion() != NO_PROMOTION)
 					{
-						iTempValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion());
+						iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion());
 					}
 					if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
 					{
-						iTempValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_2());
+						iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_2());
 					}
 					if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
 					{
-						iTempValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
+						iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
 					}
 					foreach_(const FreePromoTypes& freePromoType, kBuilding.getFreePromoTypes())
 					{
@@ -5155,11 +5430,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							if (freePromoType.m_pExprFreePromotionCondition)
 							{
-								iTempValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
+								iPromoValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
 							}
 							else
 							{
-								iTempValue += AI_getPromotionValue(freePromoType.ePromotion);
+								iPromoValue += AI_getPromotionValue(freePromoType.ePromotion);
 							}
 						}
 					}
@@ -5171,26 +5446,26 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							{
 								for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 								{
-									iTempValue += (GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ));
+									iPromoValue += (GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ));
 								}
 							}
 							else
 							{
 								for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 								{
-									iTempValue -= (GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ));
+									iPromoValue -= (GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ));
 								}
 							}
 						}
 					}
 					if (kBuilding.isApplyFreePromotionOnMove())
 					{
-						iTempValue *= 2;
+						iPromoValue *= 2;
 					}
+					iValue += iPromoValue;
 
 					iValue += kBuilding.getNationalCaptureProbabilityModifier() * 2;
 
-					iValue += iTempValue;
 					if ((!isDevelopingCity() || isCapital()) && kBuilding.EnablesUnits())
 					{
 						CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
@@ -5282,7 +5557,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									PROFILE("CalculateAllBuildingValues.IsUnitPrereq");
 
-									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(area(), kUnit.getDefaultUnitAIType()) == 0)
+									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(pArea, kUnit.getDefaultUnitAIType()) == 0)
 									{
 										iValue += iNumCitiesInArea;
 									}
@@ -5537,7 +5812,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += (kBuilding.getDomesticGreatGeneralRateModifier() / 10);
 					}
 
-					if (kBuilding.isAreaBorderObstacle() && !(area()->isBorderObstacle(getTeam())))
+					if (kBuilding.isAreaBorderObstacle() && !(pArea->isBorderObstacle(getTeam())))
 					{
 						if (!GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 						{
@@ -5778,8 +6053,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							}
 							else
 							{
-								int	iBestUnitAIValue = kOwner.AI_unitValue(eBestUnit, eUnitAI, area());
-								int	iThisUnitAIValue = kOwner.AI_unitValue(eLoopUnit, eUnitAI, area());
+								int	iBestUnitAIValue = kOwner.AI_unitValue(eBestUnit, eUnitAI, pArea);
+								int	iThisUnitAIValue = kOwner.AI_unitValue(eLoopUnit, eUnitAI, pArea);
 
 								//	Value as cost of production of the unit we can build scaled by their relative AI value (non-linear - we're squaring the ratio)
 								int	iComparisonToBestFactor = (10 * iThisUnitAIValue) / std::max(1, iBestUnitAIValue);
@@ -5956,7 +6231,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							// BBAI TODO: Smarter monastary construction, better support for mods
 
-							if (kOwner.AI_totalAreaUnitAIs(area(), GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
+							if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
 							{
 								religiousBuildingValue += iNumCitiesInArea;
 							}
@@ -6063,73 +6338,12 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Yields");
-
-						int yieldModifierValue = 0;
-
-						//Trade route yields are now accounted in pass1
-						//iValue += ((kBuilding.getTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
-						//if (bForeignTrade)
-						//{
-						//	iValue += ((kBuilding.getForeignTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
-						//}
-
-						if (iFoodDifference > 0)
-						{
-							iValue += kBuilding.getFoodKept() / 2;
-						}
-
-						iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
-
-						int iGlobalModifier = kBuilding.getGlobalYieldModifier(iI);
-						int iAreaModifier = kBuilding.getAreaYieldModifier(iI);
-						int globalYieldModifierValue = 0;
-
-						if (iGlobalModifier > 0 || iAreaModifier > 0)
-						{
-							foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-							{
-								int iCityValue = pLoopCity->getPlotYield((YieldTypes)iI);
-								globalYieldModifierValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == area() ? iAreaModifier : 0));
-							}
-						}
-						yieldModifierValue += globalYieldModifierValue / 12;
-						//yieldModifierValue += ((kBuilding.getAreaYieldModifier(iI) * iNumCitiesInArea) / 3);
-						//yieldModifierValue += ((kBuilding.getGlobalYieldModifier(iI) * iNumCities) / 3);
-
-						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-						{
-							yieldModifierValue += ((kBuilding.getSpecialistYieldChange(iJ, iI) * kOwner.getTotalPopulation()) / 5);
-						}
-
-						if (yieldModifierValue != 0)
-						{
-							if (bFinancialTrouble && iI == YIELD_COMMERCE)
-							{
-								yieldModifierValue *= 2;
-							}
-
-							yieldModifierValue *= kOwner.AI_yieldWeight((YieldTypes)iI);
-							yieldModifierValue /= 100;
-
-							if (aiYieldRank[iI] == MAX_INT)
-							{
-								aiYieldRank[iI] = findBaseYieldRateRank((YieldTypes)iI);
-							}
-
-							// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-							// we do _not_ want to build this here (unless the value was small anyway)
-							// Exempt unit build from this test however
-							if (bIsLimitedWonder && canConstruct(eBuilding) && (aiYieldRank[iI] > (3 + iLimitedWonderLimit)))
-							{
-								yieldModifierValue *= -1;
-							}
-
-							iValue += yieldModifierValue;
-						}
-					}
+					iValue += (
+						AI_getBuildingYieldValue(
+							eBuilding, kBuilding, bIsLimitedWonder, bForeignTrade, bFinancialTrouble,
+							aiFreeSpecialistYield, aiYieldRank, iLimitedWonderLimit, pArea, iTotalPopulation, iFoodDifference
+						)
+					);
 				}
 				else
 				{
@@ -6142,111 +6356,49 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					if (iFocusFlags & BUILDINGFOCUS_PRODUCTION)
 					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Production");
-
-						int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_PRODUCTION]);
-
-						// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-						// we do _not_ want to build this here (unless the value was small anyway)
-						if (bIsLimitedWonder && (aiYieldRank[YIELD_PRODUCTION] > (3 + iLimitedWonderLimit)))
-						{
-							directYieldValue *= -1;
-						}
-
-						iValue += directYieldValue;
-
-						// Koshling - modify direct production value if the base yield rate for this city (for production) is low
-						// in relation to the amount this would add
-						// i.e. - boost the value of extra production especially when we donit already have much
-						if (directYieldValue > getBaseYieldRate(YIELD_PRODUCTION) / 3)
-						{
-							//	directYieldValue is roughly 8*<direct production gain>, so if that implies a net gain
-							//	of 4% (ish) or more boost the value
-							int iBoost = (directYieldValue * 12 - getBaseYieldRate(YIELD_PRODUCTION) * 4);
-
-							//	Examples -
-							//	1) City production is 1, building adds 1 (directYieldValue 8), so iBoost is 92 - value almost trebbled
-							//	2) Same building when production is already 10, iBoost is 56 - value roughly doubled
-							//	3) Same building when production >= 24 - no boost
-							directYieldValue += (directYieldValue * iBoost) / 50;
-						}
-
-						iValue += directYieldValue;
+						iValue += (
+							AI_getBuildingProductionValue(
+								eBuilding, kBuilding, bIsLimitedWonder, bForeignTrade,
+								aiFreeSpecialistYield[YIELD_PRODUCTION],
+								aiYieldRank[YIELD_PRODUCTION], iLimitedWonderLimit
+							)
+						);
 					}
 				}
-				//	Deal with properties
-				int iPropValue = buildingPropertiesValue(kBuilding);
-				if (iFocusFlags & BUILDINGFOCUS_PROPERTY)
+				// Deal with properties
 				{
-					iValue += iPropValue * 10;
-				}
-				else
-				{
-					iValue += iPropValue * 5;
-				}
+					int iPropValue = buildingPropertiesValue(kBuilding);
 
-				int iInvestigationValue = kBuilding.getInvestigation();
-				if (iFocusFlags & BUILDINGFOCUS_INVESTIGATION)
-				{
-					iValue += iInvestigationValue * 10;
+					if (iFocusFlags & BUILDINGFOCUS_PROPERTY)
+					{
+						iValue += iPropValue * 10;
+					}
+					else
+					{
+						iValue += iPropValue * 5;
+					}
 				}
-				else
 				{
-					iValue += iInvestigationValue * 5;
+					int iInvestigationValue = kBuilding.getInvestigation();
+					if (iFocusFlags & BUILDINGFOCUS_INVESTIGATION)
+					{
+						iValue += iInvestigationValue * 10;
+					}
+					else
+					{
+						iValue += iInvestigationValue * 5;
+					}
 				}
 
 				if (iPass > 0)
 				{
-
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Commerces");
-
-						int directCommerceValue = getBuildingCommerceValue(eBuilding, iI, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
-
-						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-						{
-							directCommerceValue += ((kBuilding.getSpecialistCommerceChange(iJ, iI) * kOwner.getTotalPopulation()) / 6);
-						}
-						if (directCommerceValue != 0)
-						{
-							//	Make sure we don't reduce 1 to 0!
-							if (directCommerceValue >= 2)
-							{
-								directCommerceValue /= 2;
-							}
-
-							if (bFinancialTrouble && iI == COMMERCE_GOLD)
-							{
-								directCommerceValue *= 2;
-							}
-
-							directCommerceValue *= kOwner.AI_commerceWeight(((CommerceTypes)iI), this);
-							directCommerceValue = (directCommerceValue + 99) / 100;
-
-							// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-							// we do _not_ want to build this here (unless the value was small anyway)
-							if (bIsLimitedWonder)
-							{
-								if (MAX_INT == aiCommerceRank[iI])
-								{
-									aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes)iI);
-								}
-								if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
-									|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
-								{
-									directCommerceValue *= -1;
-
-									// for culture, just set it to zero, not negative, just about every wonder gives culture
-									if (iI == COMMERCE_CULTURE)
-									{
-										directCommerceValue = 0;
-									}
-								}
-							}
-							iValue += directCommerceValue;
-						}
-					}
+					iValue += (
+						AI_getBuildingCommerceValue(
+							eBuilding, kBuilding, bIsLimitedWonder, bFinancialTrouble, bCulturalVictory1,
+							aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate, aiCommerceRank,
+							iLimitedWonderLimit, iTotalPopulation
+						)
+					);
 
 					foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 					{
@@ -6322,14 +6474,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			iValue += iPass1Value;
 		}
 
-		if (!bForTech && !canConstruct(eBuilding))
+		// If wonder is being constructed in some special way, reduce the value for small cities.
+		if (!bForTech && bIsLimitedWonder && getPopulation() < 6 && !canConstruct(eBuilding))
 		{
-			//This building is being constructed in some special way,
-			//reduce the value for small cities if it's a wonder.
-			if (getPopulation() < 6 && bIsLimitedWonder)
-			{
-				iValue /= (8 - getPopulation());
-			}
+			iValue /= (8 - getPopulation());
 		}
 	}
 	return std::max(0, iValue);
@@ -7603,7 +7751,7 @@ int CvCityAI::AI_getGoodTileCount() const
 
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							bool bIgnoreFeature = false;
@@ -7695,7 +7843,7 @@ int CvCityAI::AI_countWorkedPoorTiles() const
 
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							bool bIgnoreFeature = false;
@@ -7824,7 +7972,7 @@ void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMult
 
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							const bool bIgnoreFeature = pLoopPlot->getFeatureType() != NO_FEATURE && GC.getBuildInfo(eBuild).isFeatureRemove(pLoopPlot->getFeatureType());
@@ -8250,7 +8398,7 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std:
 		if (eBuild != NO_BUILD)
 		{
 			//get plot-improvement that build generates
-			const ImprovementTypes eImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+			const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 			if (eImprovement != NO_IMPROVEMENT)
 			{
 				currentYieldList[iPlotCounter].currentImprovement = eImprovement;
@@ -8295,7 +8443,7 @@ void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCoun
 	const BuildTypes eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
 	{
-		optimalYieldList[iPlotCounter].currentImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+		optimalYieldList[iPlotCounter].currentImprovement = GC.getBuildInfo(eBuild).getImprovement();
 		const ImprovementTypes eImprovement = optimalYieldList[iPlotCounter].currentImprovement;
 		if (eImprovement != NO_IMPROVEMENT)
 		{
@@ -8316,7 +8464,7 @@ void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCoun
 
 		if(optimalYieldList[iPlotCounter].currentBonus != NO_BONUS && optimalYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
 		{
-			CvImprovementInfo *potentialImprovement = &GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement);
+			const CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement);
 			optimalYieldList[iPlotCounter].bonusImproved = potentialImprovement->isImprovementBonusTrade(optimalYieldList[iPlotCounter].currentBonus);
 			optimalYieldList[iPlotCounter].yieldValue += 1000;
 		}
@@ -8469,7 +8617,7 @@ void CvCityAI::AI_updateBestBuildForPlots()
 					//if something is currently being built
 					if (eBuild != NO_BUILD)
 					{
-						const ImprovementTypes eImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+						const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
 							const bool bIgnoreFeature =
@@ -11366,7 +11514,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 
 						if (eBestBuild != NO_BUILD &&
 							(GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT ||
-							!GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
+							!GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
 						{
 							//Always prefer improvements which connect bonuses.
 							eBestBuild = NO_BUILD;
@@ -11377,7 +11525,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 					{
 						if (eBestBuild != NO_BUILD
 							&& GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
-							&& GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
+							&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
 						{
 							iValue -= 1000;
 						}
@@ -11722,7 +11870,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 							(
 								GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT
 								||
-								!GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)
+								!GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)
 								)
 							)
 						{
@@ -11735,7 +11883,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 					{
 						if (eBestBuild != NO_BUILD
 							&& GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
-							&& GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
+							&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
 						{
 							iValue -= 1000;
 						}
@@ -13342,7 +13490,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 					}
 
 					const int iPlotValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
-					const ImprovementTypes eBestImp = (ImprovementTypes)GC.getBuildInfo(AI_getBestBuild(iI)).getImprovement();
+					const ImprovementTypes eBestImp = GC.getBuildInfo(AI_getBestBuild(iI)).getImprovement();
 					if (eBestImp != NO_IMPROVEMENT
 						&& (getImprovementFreeSpecialists(eBestImp) > 0 || GC.getImprovementInfo(eBestImp).getHappiness() > 0))
 					{
@@ -13963,242 +14111,6 @@ int CvCityAI::AI_getNavalMilitaryProductionRateRank() const
 	return iRank;
 }
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-//
-//	Simple class to hold the calculated values for one building type and city
-#ifdef _DEBUG
-//#define VALIDATE_BUILDING_CACHE_CONSISTENCY
-#endif
-
-class FocusValueSet
-{
-public:
-	FocusValueSet()
-	{
-		for (int i = 0; i < NUM_ALL_BUILDINGFOCUS_FLAGS; i++)
-		{
-			m_focusValues[i] = 0;
-		}
-	}
-
-	void AccumulateTo(int iFocusIndex, int value)
-	{
-		FAssertMsg(iFocusIndex < NUM_ALL_BUILDINGFOCUS_FLAGS, "iFocusIndex out of range")
-			m_focusValues[iFocusIndex] += value;
-	}
-
-	void AccumulateToAny(int value)
-	{
-		AccumulateTo(BUILDINGFOUCSINDEX_ANY, value);
-	}
-
-	void Accumulate(int iFocusIndex, int value, bool toAny)
-	{
-		if (toAny)
-		{
-			AccumulateToAny(value);
-		}
-		else
-		{
-			AccumulateTo(iFocusIndex, value);
-		}
-	}
-
-	void SetValue(int iFocusIndex, int value)
-	{
-		m_focusValues[iFocusIndex] = value;
-	}
-
-	void SetValueAll(int value)
-	{
-		for (int i = 0; i < NUM_ALL_BUILDINGFOCUS_FLAGS; i++)
-		{
-			m_focusValues[i] = value;
-		}
-	}
-
-	int	m_focusValues[NUM_ALL_BUILDINGFOCUS_FLAGS];
-};
-
-class OneBuildingValueCache
-{
-public:
-	OneBuildingValueCache()
-	{
-	}
-
-	void AccumulateTo(int iFocusIndex, int value, bool isThresholdSet)
-	{
-
-		if (isThresholdSet)
-		{
-			m_thresholdSet.AccumulateTo(iFocusIndex, value);
-		}
-		else
-		{
-			m_noThresholdSet.AccumulateTo(iFocusIndex, value);
-		}
-	}
-
-	void AccumulateToAny(int value, bool isThresholdSet)
-	{
-		AccumulateTo(BUILDINGFOUCSINDEX_ANY, value, isThresholdSet);
-	}
-
-	void Accumulate(int iFocusIndex, int value)
-	{
-		AccumulateToAny(value, false);
-		AccumulateTo(iFocusIndex, value, true);
-	}
-
-	void SetValue(int iFocusIndex, int value, bool isThresholdSet)
-	{
-		if (isThresholdSet)
-		{
-			m_thresholdSet.SetValue(iFocusIndex, value);
-		}
-		else
-		{
-			m_noThresholdSet.SetValue(iFocusIndex, value);
-		}
-	}
-
-	void SetValueAll(int value, bool isThresholdSet)
-	{
-		for (int i = 0; i < NUM_ALL_BUILDINGFOCUS_FLAGS; i++)
-		{
-			SetValue(i, value, isThresholdSet);
-		}
-	}
-
-	FocusValueSet	m_thresholdSet;
-	FocusValueSet	m_noThresholdSet;
-};
-
-class BuildingValueCache
-{
-public:
-	explicit BuildingValueCache(CvCityAI* cachedCity)
-	{
-		m_iCachedFlags = 0;
-		m_bIncomplete = false;
-	}
-
-	virtual ~BuildingValueCache()
-	{
-		std::map<int, OneBuildingValueCache*>::const_iterator itr;
-
-		for (itr = m_buildingValues.begin(); itr != m_buildingValues.end(); ++itr)
-		{
-			delete itr->second;
-		}
-	}
-
-	bool HasValues(BuildingTypes eType)
-	{
-		return (m_buildingValues.find(eType) != m_buildingValues.end());
-	}
-
-	int GetValue(BuildingTypes eType, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue)
-	{
-
-		std::map<int, OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eType);
-		if (itr == m_buildingValues.end())
-		{
-			//	No cached value
-			return -1;
-		}
-		else
-		{
-			int iValueThreshold = 0;
-			int iValueNoThreshold = 0;
-			OneBuildingValueCache* valueCache = itr->second;
-
-			for (int i = 0; i < NUM_REAL_BUILDINGFOCUS_FLAGS; i++)
-			{
-				if ((iFocusFlags & 1 << i) != 0)
-				{
-					iValueThreshold += valueCache->m_thresholdSet.m_focusValues[i];
-					iValueNoThreshold += valueCache->m_noThresholdSet.m_focusValues[i];
-				}
-			}
-
-			//	Add in pseudo-flag contributions
-			if ((iFocusFlags & (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH)) != 0)
-			{
-				iValueThreshold += valueCache->m_thresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDRESEARCH];
-				iValueNoThreshold += valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDRESEARCH];
-			}
-			if ((iFocusFlags & (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_MAINTENANCE)) != 0)
-			{
-				iValueThreshold += valueCache->m_thresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE];
-				iValueNoThreshold += valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE];
-			}
-
-			int iPass1Value = iValueThreshold + valueCache->m_thresholdSet.m_focusValues[BUILDINGFOUCSINDEX_ANY];
-			if (iValueThreshold < threshold)
-			{
-				iPass1Value = 0;
-			}
-
-			int iPass2Value;
-			if ((iFocusFlags & BUILDINGFOCUS_CONSIDER_ANY) != 0)
-			{
-				iPass2Value = valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOUCSINDEX_ANY];
-			}
-			else if (iPass1Value > 0)
-			{
-				iPass2Value = iValueNoThreshold + valueCache->m_noThresholdSet.m_focusValues[BUILDINGFOUCSINDEX_ANY];
-			}
-			else
-			{
-				iPass2Value = 0;
-			}
-
-			//	If we are really seeking an answer specifically on the values from the specific flags
-			//	then the rest is just a tie-breaker so dramatically boost the value of the flag-specific
-			//	stuff from pass1
-			if (bMaximizeFlaggedValue)
-			{
-				iPass1Value *= 20;
-			}
-			else
-			{
-				//	Even when not maximizing with all the extra effects on buildings pass1 was getting a
-				//	bit dominated by pass2 so provide a little extra pas1 weight anyway
-				iPass1Value *= 2;
-			}
-
-			return std::max(0, iPass1Value + iPass2Value);
-		}
-	}
-
-	OneBuildingValueCache* GetOneBuildingCache(int eBuilding)
-	{
-		OneBuildingValueCache* result;
-
-		std::map<int, OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eBuilding);
-		if (itr == m_buildingValues.end())
-		{
-
-			//	New entry
-			result = new OneBuildingValueCache();
-
-			m_buildingValues[eBuilding] = result;
-		}
-		else
-		{
-			result = itr->second;
-		}
-
-		return result;
-	}
-
-	//	One city is cached at a time
-	int			m_iCachedFlags;
-	bool		m_bIncomplete;
-	std::map<int, OneBuildingValueCache*>	m_buildingValues;
-};
 
 static bool buildingHasTradeRouteValue(BuildingTypes eBuilding)
 {
@@ -14524,80 +14436,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	return false;
 }
 
-int	CvCityAI::GetBuildingValue(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct)
-{
-	int iResult = -1;
-
-	//	We only pre-calculate and cache values for buildings this city can build
-	//	Only trigger a change in cached city from iFocusFlags != 0 which happens at the start
-	//	of building search to choose construction.  Other requests (with 0 flags) can occur
-	//	occassionally from other areas (such as civic evaluation) without implying a lot of locality
-	//	of reference that makes the caching worthwhile
-	if ((bIgnoreCanConstruct || canConstruct(eBuilding)) && (cachedBuildingValues != NULL || iFocusFlags != 0))
-	{
-		if (cachedBuildingValues == NULL)
-		{
-
-			OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
-			cachedBuildingValues = new BuildingValueCache(this);
-		}
-
-		if (iFocusFlags == 0)
-		{
-			iFocusFlags = BUILDINGFOCUS_CONSIDER_ANY;
-		}
-		if ((cachedBuildingValues->m_iCachedFlags & iFocusFlags) != iFocusFlags)
-		{
-			CalculateAllBuildingValues(~cachedBuildingValues->m_iCachedFlags & iFocusFlags);
-		}
-
-	retry:
-		iResult = cachedBuildingValues->GetValue(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
-
-		if (iResult != -1)
-		{
-			if (!isHuman() && iResult > 0)
-			{
-				const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-				const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
-				for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
-				{
-					iResult += kOwner.AI_getFlavorValue((FlavorTypes)iI) * kBuilding.getFlavorValue(iI);
-				}
-			}
-
-#ifdef VALIDATE_BUILDING_CACHE_CONSISTENCY
-			FAssertMsg(
-				AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold) == iResult,
-				"Cached building value result mismatch!!\n"
-			);
-#endif
-		}
-		else if (cachedBuildingValues->m_bIncomplete)
-		{
-			const int iCachedFlags = cachedBuildingValues->m_iCachedFlags;
-			cachedBuildingValues->m_iCachedFlags = 0;
-
-			CalculateAllBuildingValues(iCachedFlags);
-
-			cachedBuildingValues->m_bIncomplete = false;
-			goto retry;
-		}
-		else if (bIgnoreCanConstruct)
-		{
-			iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
-		}
-		else iResult = 0;
-	}
-	else
-	{
-		PROFILE("GetBuildingValue.CacheMiss");
-
-		iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold);
-	}
-	return iResult;
-}
 
 void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
 {
@@ -14664,13 +14502,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const int iHappinessLevel = iHappyLevel - unhappyLevel(1) + iEspionageHappyCounter / 2;
 	const int iHealthLevel = iGoodHealth - badHealth(/*bNoAngry*/ false, std::max(0, (iHappinessLevel + 1) / 2)) + iEspionageHealthCounter / 2;
 	const int iHappyModifier =
-		(
-			iHappinessLevel >= 10
-			?
-			1
-			:
-			(iHappinessLevel <= iHealthLevel && iHappinessLevel <= 6) ? 6 : 3
-			);
+	(
+		iHappinessLevel >= 10 ? 1
+		:
+		(iHappinessLevel <= iHealthLevel && iHappinessLevel <= 6) ? 6 : 3
+	);
 	const int iBaseHappinessLevel = iCityHappy + iEspionageHappyCounter;
 	const int iBaseHealthLevel = iGoodHealth - iBadHealth + iEspionageHealthCounter;
 	const int iAngryPopulation = range(-iHappinessLevel, 0, iPopulation + 1);
@@ -15155,8 +14991,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Experience");
-				int iValue = 0;
-				iValue += kBuilding.getFreeExperience() * (bMetAnyCiv ? 12 : 6);
+				int iValue = kBuilding.getFreeExperience() * (bMetAnyCiv ? 12 : 6);
 
 				foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())
 				{
@@ -15196,18 +15031,18 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					iValue += kBuilding.getDomainFreeExperience(iI) * (bMetAnyCiv ? iDomainExpValue : iDomainExpValue / 2);
 				}
 
-				int promotionValue = 0;
+				int iPromoValue = 0;
 				if (kBuilding.getFreePromotion() != NO_PROMOTION)
 				{
-					promotionValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion());
+					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion());
 				}
 				if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
 				{
-					promotionValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_2());
+					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_2());
 				}
 				if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
 				{
-					promotionValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
+					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
 				}
 				foreach_(const FreePromoTypes& freePromoType, kBuilding.getFreePromoTypes())
 				{
@@ -15215,9 +15050,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						if (freePromoType.m_pExprFreePromotionCondition)
 						{
-							promotionValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
+							iPromoValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
 						}
-						else promotionValue += AI_getPromotionValue(freePromoType.ePromotion);
+						else iPromoValue += AI_getPromotionValue(freePromoType.ePromotion);
 					}
 				}
 				foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
@@ -15228,32 +15063,32 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						{
 							for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 							{
-								promotionValue += GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ);
+								iPromoValue += GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ);
 							}
 						}
 						else
 						{
 							for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 							{
-								promotionValue -= GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ);
+								iPromoValue -= GC.getLeaderHeadInfo(kOwner.getLeaderType()).getFlavorValue(iJ) * GC.getTraitInfo(eTrait).getFlavorValue(iJ);
 							}
 						}
 					}
 				}
 				if (kBuilding.isApplyFreePromotionOnMove())
 				{
-					promotionValue *= 2;
+					iPromoValue *= 2;
 				}
 
 				iValue += kBuilding.getNationalCaptureProbabilityModifier() * 2;
 
 				if (iFocusFlags & BUILDINGFOCUS_EXPERIENCE)
 				{
-					promotionValue *= 2;
+					iPromoValue *= 2;
 				}
-				iValue += promotionValue;
+				iValue += iPromoValue;
 
-				if ((iFocusFlags & BUILDINGFOCUS_INVESTIGATION) && kBuilding.getInvestigation() > 0)
+				if (iFocusFlags & BUILDINGFOCUS_INVESTIGATION)
 				{
 					iValue += kBuilding.getInvestigation() * 5;
 				}
@@ -15455,8 +15290,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Sea");
-				int iValue = 0;
-				iValue += kBuilding.getFreeExperience() * (bMetAnyCiv ? 16 : 8);
+
+				int iValue = kBuilding.getFreeExperience() * (bMetAnyCiv ? 16 : 8);
 
 				for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 				{
@@ -16113,68 +15948,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				valuesCache->AccumulateToAny(iValue, false);
 			}
 
-			{
-				PROFILE("CalculateAllBuildingValues.Yields");
+			valuesCache->AccumulateToAny(
+				AI_getBuildingYieldValue(
+					eBuilding, kBuilding, bIsLimitedWonder, bForeignTrade, bFinancialTrouble,
+					aiFreeSpecialistYield, aiYieldRank, iLimitedWonderLimit, pArea, iTotalPopulation, iFoodDifference
+				)
+				, false
+			);
 
-				int iValue = 0;
-				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-				{
-					int yieldValue = 0;
-
-					if (iFoodDifference > 0)
-					{
-						iValue += kBuilding.getFoodKept() / 2;
-					}
-
-					iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
-
-					int iGlobalModifier = kBuilding.getGlobalYieldModifier(iI);
-					int iAreaModifier = kBuilding.getAreaYieldModifier(iI);
-					int iYieldModiferValue = 0;
-
-					if (iGlobalModifier > 0 || iAreaModifier > 0)
-					{
-						foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-						{
-							int iCityValue = pLoopCity->getPlotYield((YieldTypes)iI);
-							iYieldModiferValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == pArea ? iAreaModifier : 0));
-						}
-					}
-					yieldValue += iYieldModiferValue / 12;
-
-					for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-					{
-						yieldValue += kBuilding.getSpecialistYieldChange(iJ, iI) * iTotalPopulation / 5;
-					}
-
-					if (yieldValue != 0)
-					{
-						if (bFinancialTrouble && iI == YIELD_COMMERCE)
-						{
-							yieldValue *= 2;
-						}
-
-						yieldValue *= kOwner.AI_yieldWeight((YieldTypes)iI);
-						yieldValue /= 100;
-
-						if (aiYieldRank[iI] == MAX_INT)
-						{
-							aiYieldRank[iI] = findBaseYieldRateRank((YieldTypes)iI);
-						}
-
-						// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-						// we do _not_ want to build this here (unless the value was small anyway)
-						// Exempt unit build from this test however
-						if (bIsLimitedWonder && canConstruct(eBuilding) && (aiYieldRank[iI] > (3 + iLimitedWonderLimit)))
-						{
-							yieldValue *= -1;
-						}
-
-						iValue += yieldValue;
-					}
-				}
-				valuesCache->AccumulateToAny(iValue, false);
-			}
 			{
 				PROFILE("CalculateAllBuildingValues.Food");
 
@@ -16184,93 +15965,25 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					true
 				);
 			}
+			valuesCache->AccumulateTo(
+				BUILDINGFOCUSINDEX_PRODUCTION,
+				AI_getBuildingProductionValue(
+					eBuilding, kBuilding, bIsLimitedWonder, bForeignTrade,
+					aiFreeSpecialistYield[YIELD_PRODUCTION],
+					aiYieldRank[YIELD_PRODUCTION], iLimitedWonderLimit
+				)
+				, true
+			);
 			{
-				PROFILE("CalculateAllBuildingValues.Production");
-				int iValue = 0;
-
-				int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[YIELD_PRODUCTION]);
-
-				// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-				// we do _not_ want to build this here (unless the value was small anyway)
-				if (bIsLimitedWonder && (aiYieldRank[YIELD_PRODUCTION] > (3 + iLimitedWonderLimit)))
-				{
-					directYieldValue *= -1;
-				}
-
-				iValue += directYieldValue;
-
-				// Koshling - modify direct production value if the base yield rate for this city (for production) is low
-				// in relation to the amount this would add
-				// i.e. - boost the value of extra production especially when we donit already have much
-				if (directYieldValue > getPlotYield(YIELD_PRODUCTION) / 3)
-				{
-					// directYieldValue is roughly 8*<direct production gain>,
-					// so if that implies a net gain of 4% (ish) or more value boost.
-					const int iBoost = 12 * directYieldValue - 4 * getPlotYield(YIELD_PRODUCTION);
-
-					// Examples
-					//	1) City poduction is 1, building adds 1 (directYieldValue 8), so iBoost is 92 - value almost trebbled
-					//	2) Same building when prodcution is already 10, iBoost is 56 - value roughly doubled
-					//	3) Same building when production >= 24 - no boost
-					directYieldValue += (directYieldValue * iBoost) / 50;
-				}
-
-				iValue += directYieldValue;
-
-				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_PRODUCTION, iValue, true);
-			}
-			{
-				PROFILE("CalculateAllBuildingValues.Properties");
-				// Deal with properties
 				int iValue = buildingPropertiesValue(kBuilding);
 
-				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-				{
-					int directCommerceValue = getBuildingCommerceValue(eBuilding, iI, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
-
-					for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-					{
-						directCommerceValue += kBuilding.getSpecialistCommerceChange(iJ, iI) * iTotalPopulation / 6;
-					}
-					if (directCommerceValue != 0)
-					{
-						// Make sure we don't reduce 1 to 0!
-						if (directCommerceValue >= 2)
-						{
-							directCommerceValue /= 2;
-						}
-
-						if (bFinancialTrouble && iI == COMMERCE_GOLD)
-						{
-							directCommerceValue *= 2;
-						}
-
-						directCommerceValue *= kOwner.AI_commerceWeight((CommerceTypes)iI, this);
-						directCommerceValue = (directCommerceValue + 99) / 100; // Round up
-
-						// If this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
-						// we do _not_ want to build this here (unless the value was small anyway)
-						if (bIsLimitedWonder)
-						{
-							if (MAX_INT == aiCommerceRank[iI])
-							{
-								aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes)iI);
-							}
-							if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
-								|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
-							{
-
-								// for culture, just set it to zero, not negative, just about every wonder gives culture
-								if (iI == COMMERCE_CULTURE)
-								{
-									directCommerceValue = 0;
-								}
-								else directCommerceValue *= -1;
-							}
-						}
-						iValue += directCommerceValue;
-					}
-				}
+				iValue += (
+					AI_getBuildingCommerceValue(
+						eBuilding, kBuilding, bIsLimitedWonder, bFinancialTrouble, bCulturalVictory1,
+						aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate, aiCommerceRank,
+						iLimitedWonderLimit, iTotalPopulation
+					)
+				);
 
 				foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 				{
@@ -16295,8 +16008,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			if (!isHuman())
 			{
 				valuesCache->AccumulateToAny(kBuilding.getAIWeight(), false);
-				// Flavor calculation is non-linear and cannot be calculated in the caching,
-				// it is calculated post-cache retrieval.
+				// Flavor calculation is non-linear and cannot be calculated in the caching, it is calculated post-cache retrieval.
 			}
 		}
 	}
@@ -17362,35 +17074,38 @@ bool CvCityAI::AI_establishInvestigatorCoverage()
 	//Fox in the henhouse protocol
 	CvPlot* pPlot = plot();
 
-	int iNumLocalCriminals = pPlot->getNumCriminals();
+	const int iNumLocalCriminals = pPlot->getNumCriminals();
 
-	CvUnitSelectionCriteria criteria;
-	criteria.m_bNoNegativeProperties = true;
-
-	int iLocalInvestigators = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);//MISSIONAI_INVESTIGATOR_MAINTAIN is probably not working as designed due to the way the contract broker works.  Once answered, the unit can really only be tracked by its AI type as mission type has been generically set.
-	iLocalInvestigators += pPlot->getNumPlayerUnitAI(UNITAI_INVESTIGATOR, getOwner());
-	iLocalInvestigators += GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_INVESTIGATOR, false, pPlot);
-
-	if (iNumLocalCriminals > 0) // Yes, the first round the city has trained its first criminal it will run into this, even if no spawns ever occur.  Can never be too ready, right?
+	if (iNumLocalCriminals > 0) // Yes, the first round the city has trained its first criminal it will run into this, even if no spawns ever occur. Can never be too ready, right?
 	{
 		//First try for a building that's quick to build and has investigation
-		int iMaxTurns = iNumLocalCriminals * 5;
-		iMaxTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-		iMaxTurns /= 100;
+		const int iMaxTurns = iNumLocalCriminals * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 20;
+
 		if (AI_chooseBuilding(BUILDINGFOCUS_INVESTIGATION, iMaxTurns, 0, -1, true))
 		{
-			if (gCityLogLevel >= 2) logBBAI("      City %S selects an investigation enhancing building", getName().GetCString());
+			if (gCityLogLevel >= 2)
+			{
+				logBBAI("      City %S selects an investigation enhancing building", getName().GetCString());
+			}
 			return true;
 		}
-		else if (iLocalInvestigators < iNumLocalCriminals)
+		CvUnitSelectionCriteria criteria;
+		criteria.m_bNoNegativeProperties = true;
+
+		// MISSIONAI_INVESTIGATOR_MAINTAIN is probably not working as designed due to the way the contract broker works.
+		//	Once answered, the unit can really only be tracked by its AI type as mission type has been generically set.
+		const int iLocalInvestigators = (
+			GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0)
+			+
+			pPlot->getNumPlayerUnitAI(UNITAI_INVESTIGATOR, getOwner())
+			+
+			GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_INVESTIGATOR, false, pPlot)
+		);
+
+		if (iLocalInvestigators < iNumLocalCriminals && iLocalInvestigators < 1
+		&& AI_chooseUnit("Investigator needed", UNITAI_INVESTIGATOR, -1, -1, -1, &criteria))
 		{
-			if (iLocalInvestigators < 1)
-			{
-				if (AI_chooseUnit("Investigator needed", UNITAI_INVESTIGATOR, -1, -1, -1, &criteria))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
 	return false;
@@ -17468,4 +17183,171 @@ bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelect
 		}
 	}
 	return true;
+}
+
+
+int CvCityAI::AI_getBuildingYieldValue
+(
+	BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bForeignTrade, bool bFinancialTrouble,
+	int* aiFreeSpecialistYield, int* aiYieldRank, int iLimitedWonderLimit, const CvArea* pArea, int iTotalPopulation, int iFoodDifference
+)
+const {
+	PROFILE_FUNC();
+
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	int iValue = 0;
+	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+	{
+		int iYieldValue = 0;
+
+		if (iFoodDifference > 0)
+		{
+			iValue += kBuilding.getFoodKept() / 2;
+		}
+		iValue += AI_buildingYieldValue((YieldTypes)iI, eBuilding, kBuilding, bForeignTrade, aiFreeSpecialistYield[iI]);
+		{
+			int iGlobalYieldModValue = 0;
+
+			if (kBuilding.getGlobalYieldModifier(iI) > 0 || kBuilding.getAreaYieldModifier(iI) > 0)
+			{
+				foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				{
+					iGlobalYieldModValue +=
+					(
+						pLoopCity->getPlotYield((YieldTypes)iI)
+						*
+						(
+							kBuilding.getGlobalYieldModifier(iI)
+							+
+							(pLoopCity->area() == pArea ? kBuilding.getAreaYieldModifier(iI) : 0)
+						)
+					);
+				}
+			}
+			iYieldValue = iGlobalYieldModValue / 12;
+		}
+		for (int iJ = GC.getNumSpecialistInfos() - 1; iJ > -1; iJ--)
+		{
+			iYieldValue += kBuilding.getSpecialistYieldChange(iJ, iI) * iTotalPopulation / 5;
+		}
+
+		if (iYieldValue != 0)
+		{
+			if (bFinancialTrouble && iI == YIELD_COMMERCE)
+			{
+				iYieldValue *= 2;
+			}
+
+			iYieldValue *= kOwner.AI_yieldWeight((YieldTypes)iI);
+			iYieldValue /= 100;
+
+			if (aiYieldRank[iI] == MAX_INT)
+			{
+				aiYieldRank[iI] = findBaseYieldRateRank((YieldTypes)iI);
+			}
+
+			// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
+			// we do _not_ want to build this here (unless the value was small anyway)
+			// Exempt unit build from this test however
+			if (bIsLimitedWonder && canConstruct(eBuilding) && (aiYieldRank[iI] > (3 + iLimitedWonderLimit)))
+			{
+				iYieldValue *= -1;
+			}
+			iValue += iYieldValue;
+		}
+	}
+	return iValue;
+}
+
+int CvCityAI::AI_getBuildingProductionValue
+(
+	BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder,
+	bool bForeignTrade, int iFreeSpecialistYield, int iYieldRank, int iLimitedWonderLimit
+)
+const {
+	PROFILE_FUNC();
+
+	int directYieldValue = AI_buildingYieldValue(YIELD_PRODUCTION, eBuilding, kBuilding, bForeignTrade, iFreeSpecialistYield);
+
+	// If this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
+	// we do _not_ want to build this here (unless the value was small anyway)
+	if (bIsLimitedWonder && iYieldRank > 3 + iLimitedWonderLimit)
+	{
+		directYieldValue *= -1;
+	}
+	int iValue = directYieldValue;
+
+	// Koshling - modify direct production value if the base yield rate for this city (for production)
+	//	is low in relation to the amount this would add
+	//	i.e. - boost the value of extra production especially when we don't already have much
+	if (directYieldValue > getYieldRate(YIELD_PRODUCTION) / 3)
+	{
+		// directYieldValue is roughly 8*<direct production gain>, so if that implies a net gain of 4% (ish) or more boost the value
+		int iBoost = directYieldValue * 12 - getYieldRate(YIELD_PRODUCTION) * 4;
+
+		// Examples:
+		//	1) City production is 1, building adds 1 (directYieldValue 8), so iBoost is 92 - value almost trebbled
+		//	2) Same building when production is already 10, iBoost is 56 - value roughly doubled
+		//	3) Same building when production >= 24 - no boost
+		directYieldValue += (directYieldValue * iBoost) / 50;
+	}
+	return iValue + directYieldValue;
+}
+
+
+int CvCityAI::AI_getBuildingCommerceValue
+(
+	BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bFinancialTrouble, bool bCulturalVictory1,
+	int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate, int* aiCommerceRank,
+	int iLimitedWonderLimit, int iTotalPopulation
+)
+const {
+	PROFILE_FUNC();
+
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	int iValue = 0;
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	{
+		int directCommerceValue = getBuildingCommerceValue(eBuilding, iI, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
+
+		for (int iJ = GC.getNumSpecialistInfos() - 1; iJ > -1; iJ--)
+		{
+			directCommerceValue += kBuilding.getSpecialistCommerceChange(iJ, iI) * iTotalPopulation / 6;
+		}
+		if (directCommerceValue != 0)
+		{
+			// Make sure we don't reduce 1 to 0!
+			if (directCommerceValue > 1) directCommerceValue /= 2;
+
+			if (bFinancialTrouble && iI == COMMERCE_GOLD)
+			{
+				directCommerceValue *= 2;
+			}
+
+			directCommerceValue *= kOwner.AI_commerceWeight(static_cast<CommerceTypes>(iI), this);
+			directCommerceValue = (directCommerceValue + 99) / 100; // Round up
+
+			// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
+			// we do _not_ want to build this here (unless the value was small anyway)
+			if (bIsLimitedWonder)
+			{
+				if (MAX_INT == aiCommerceRank[iI])
+				{
+					aiCommerceRank[iI] = findCommerceRateRank(static_cast<CommerceTypes>(iI));
+				}
+				if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
+				|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
+				{
+					// for culture, just set it to zero, not negative, just about every wonder gives culture
+					if (iI == COMMERCE_CULTURE)
+					{
+						directCommerceValue = 0;
+					}
+					else directCommerceValue *= -1;
+				}
+			}
+			iValue += directCommerceValue;
+		}
+	}
+	return iValue;
 }
