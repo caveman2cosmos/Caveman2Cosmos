@@ -8465,9 +8465,15 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	m_bestBuildValuesStale = false;
 
-	const std::vector<int> ratios = CvValueService::CalculateOutPutRatio(this->getBaseYieldRate(YIELD_FOOD),
-	                                                               this->getBaseYieldRate(YIELD_PRODUCTION),
-	                                                               this->getBaseYieldRate(YIELD_COMMERCE));
+	std::vector<int> ratios = CvValueService::CalculateOutPutRatio(this->getBaseYieldRate(YIELD_FOOD),
+	                                                                this->getBaseYieldRate(YIELD_PRODUCTION),
+	                                                                this->getBaseYieldRate(YIELD_COMMERCE));
+	
+	// these are the current default weights to make AI actually care about food at their plots function is built in such a way
+	// that you can call it several times to adjust the ratio
+	// (i.e a city has food preference, call it 2nd time around with 2,1,1, and the value of food will double)
+
+	CvValueService::WeighOutputs(18, 10, 6, ratios);
 
 
 	std::vector<plotInfo> currentYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
