@@ -841,7 +841,7 @@ const python::list CvBuildingInfo::cyGetTechCommerceChanges100() const
 {
 	python::list pyList = python::list();
 
-	foreach_(const TechArray& pChange, m_techCommerceChanges)
+	foreach_(const TechCommerceArray& pChange, m_techCommerceChanges)
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -857,7 +857,7 @@ const python::list CvBuildingInfo::cyGetTechCommerceModifiers() const
 {
 	python::list pyList = python::list();
 
-	foreach_(const TechArray& pChange, m_techCommerceModifiers)
+	foreach_(const TechCommerceArray& pChange, m_techCommerceModifiers)
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -3300,12 +3300,12 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
 
-	m_techYieldChanges.readPairedArrays(pXML, L"TechYieldChanges", L"PrereqTech", L"TechYield", NUM_YIELD_TYPES);
-	m_techYieldModifiers.readPairedArrays(pXML, L"TechYieldModifiers", L"PrereqTech", L"TechYield", NUM_YIELD_TYPES);
-	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents", NUM_COMMERCE_TYPES);
-	m_techCommerceModifiers.readPairedArrays(pXML, L"TechCommerceModifiers", L"PrereqTech", L"TechCommerce", NUM_COMMERCE_TYPES);
-	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges", NUM_YIELD_TYPES);
-	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields", NUM_YIELD_TYPES);
+	m_techYieldChanges.readPairedArrays(pXML, L"TechYieldChanges", L"PrereqTech", L"TechYield");
+	m_techYieldModifiers.readPairedArrays(pXML, L"TechYieldModifiers", L"PrereqTech", L"TechYield");
+	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents");
+	m_techCommerceModifiers.readPairedArrays(pXML, L"TechCommerceModifiers", L"PrereqTech", L"TechCommerce");
+	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges");
+	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields");
 
 	CvInfoUtil(this).readXml(pXML);
 
