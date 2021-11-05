@@ -51,9 +51,6 @@ extern "C"{
 /* interface IServerUtils */
 /* [implicit_handle][version][uuid] */ 
 
-void Output( 
-    /* [string][in] */ const char *szOutput);
-
 void shutDownServer( void);
 
 

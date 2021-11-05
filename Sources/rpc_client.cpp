@@ -85,8 +85,7 @@ namespace rpc
 				RpcStringFree(&RpcBindingFree)
 			);
 */
-			Output("Test");
-		}
+ 		}
 
 		void FRpcAssert(RPC_STATUS status)
 		{

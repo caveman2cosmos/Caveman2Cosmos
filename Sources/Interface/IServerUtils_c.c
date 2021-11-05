@@ -34,8 +34,8 @@
 
 #include "IServerUtils.h"
 
-#define TYPE_FORMAT_STRING_SIZE   7                                 
-#define PROC_FORMAT_STRING_SIZE   55                                
+#define TYPE_FORMAT_STRING_SIZE   3                                 
+#define PROC_FORMAT_STRING_SIZE   25                                
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   0            
@@ -95,24 +95,12 @@ extern const MIDL_STUB_DESC IServerUtils_StubDesc;
 static RPC_BINDING_HANDLE IServerUtils__MIDL_AutoBindHandle;
 
 
-void Output( 
-    /* [string][in] */ const char *szOutput)
-{
-
-    NdrClientCall2(
-                  ( PMIDL_STUB_DESC  )&IServerUtils_StubDesc,
-                  (PFORMAT_STRING) &IServerUtils__MIDL_ProcFormatString.Format[0],
-                  ( unsigned char * )&szOutput);
-    
-}
-
-
 void shutDownServer( void)
 {
 
     NdrClientCall2(
                   ( PMIDL_STUB_DESC  )&IServerUtils_StubDesc,
-                  (PFORMAT_STRING) &IServerUtils__MIDL_ProcFormatString.Format[30],
+                  (PFORMAT_STRING) &IServerUtils__MIDL_ProcFormatString.Format[0],
                   ( unsigned char * )0);
     
 }
@@ -134,45 +122,22 @@ static const IServerUtils_MIDL_PROC_FORMAT_STRING IServerUtils__MIDL_ProcFormatS
         0,
         {
 
-	/* Procedure Output */
+	/* Procedure shutDownServer */
 
 			0x32,		/* FC_BIND_PRIMITIVE */
 			0x48,		/* Old Flags:  */
 /*  2 */	NdrFcLong( 0x0 ),	/* 0 */
 /*  6 */	NdrFcShort( 0x0 ),	/* 0 */
-/*  8 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/*  8 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
 /* 10 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 12 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 14 */	0x42,		/* Oi2 Flags:  clt must size, has ext, */
-			0x1,		/* 1 */
+/* 14 */	0x40,		/* Oi2 Flags:  has ext, */
+			0x0,		/* 0 */
 /* 16 */	0x8,		/* 8 */
 			0x1,		/* Ext Flags:  new corr desc, */
 /* 18 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 20 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 22 */	NdrFcShort( 0x0 ),	/* 0 */
-
-	/* Parameter szOutput */
-
-/* 24 */	NdrFcShort( 0x10b ),	/* Flags:  must size, must free, in, simple ref, */
-/* 26 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
-/* 28 */	NdrFcShort( 0x4 ),	/* Type Offset=4 */
-
-	/* Procedure shutDownServer */
-
-/* 30 */	0x32,		/* FC_BIND_PRIMITIVE */
-			0x48,		/* Old Flags:  */
-/* 32 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 36 */	NdrFcShort( 0x1 ),	/* 1 */
-/* 38 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
-/* 40 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 42 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 44 */	0x40,		/* Oi2 Flags:  has ext, */
-			0x0,		/* 0 */
-/* 46 */	0x8,		/* 8 */
-			0x1,		/* Ext Flags:  new corr desc, */
-/* 48 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 50 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 52 */	NdrFcShort( 0x0 ),	/* 0 */
 
 			0x0
         }
@@ -183,11 +148,6 @@ static const IServerUtils_MIDL_TYPE_FORMAT_STRING IServerUtils__MIDL_TypeFormatS
         0,
         {
 			NdrFcShort( 0x0 ),	/* 0 */
-/*  2 */	
-			0x11, 0x8,	/* FC_RP [simple_pointer] */
-/*  4 */	
-			0x22,		/* FC_C_CSTRING */
-			0x5c,		/* FC_PAD */
 
 			0x0
         }
@@ -195,8 +155,7 @@ static const IServerUtils_MIDL_TYPE_FORMAT_STRING IServerUtils__MIDL_TypeFormatS
 
 static const unsigned short IServerUtils_FormatStringOffsetTable[] =
     {
-    0,
-    30
+    0
     };
 
 

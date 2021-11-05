@@ -10,7 +10,6 @@ namespace rpc
 		void createServerProcess();
 		void init();
 		void FRpcAssert(RPC_STATUS status);
-		void shutDownServer();
 	}
 }
 

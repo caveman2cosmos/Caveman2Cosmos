@@ -1,5 +1,5 @@
-#include "Interface/IServerUtils.h"
-#include "Interface/IBuildingInfo.h"
+#include "../Interface/IServerUtils.h"
+#include "../Interface/IBuildingInfo.h"
 #include "BuildingInfo.h"
 #include <iostream>
 #include <assert.h>
@@ -20,12 +20,10 @@ void shutDownServer()
 	FRpcAssert(
 		RpcMgmtStopServerListening(IServerUtils_v1_0_s_ifspec)
 	);
+	FRpcAssert(
+		RpcMgmtStopServerListening(IBuildingInfo_v1_0_s_ifspec)
+	);
 	exit(0);
-}
-
-void Output(const char* szOutput)
-{
-   std::cout << szOutput << std::endl;
 }
 
 RPC_STATUS CALLBACK SecurityCallback(RPC_IF_HANDLE, void*)
@@ -68,7 +66,6 @@ int main()
 	FRpcAssert(
 		RpcServerListen(1, RPC_C_LISTEN_MAX_CALLS_DEFAULT, false)
 	);
-	exit(0);
 }
 
 void* __RPC_USER midl_user_allocate(size_t size)

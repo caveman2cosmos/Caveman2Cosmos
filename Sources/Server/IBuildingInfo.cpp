@@ -1,5 +1,5 @@
 #include "BuildingInfo.h"
-#include "Interface/IBuildingInfo.h"
+#include "../Interface/IBuildingInfo.h"
 
 
 void __RPC_USER hIBuildingInfo_t_rundown(hIBuildingInfo_t hBuilding)
