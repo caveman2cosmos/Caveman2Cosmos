@@ -19,6 +19,8 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvValueService.h"
+#include "PlotInfo.h"
 
 
 //	KOSHLING MOD - calculate all possible building focuses at once
@@ -8368,23 +8370,6 @@ void CvCityAI::AI_markBestBuildValuesStale()
 	m_bestBuildValuesStale = true;
 }
 
-const std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int commerce) const
-{
-	std::vector<int> ratios = std::vector<int>(NUM_YIELD_TYPES);
-
-	const int totalOutput = std::max(1, food + production + commerce);
-
-	const int foodRatio = 100 - ((food * 100) / totalOutput);
-	const int commerceRatio = 100 - ((commerce * 100) / totalOutput);
-	const int productionRatio = 100 - ((production * 100) / totalOutput);
-
-	ratios[YIELD_FOOD] = foodRatio *10;
-	ratios[YIELD_PRODUCTION] = productionRatio * 10;
-	ratios[YIELD_COMMERCE] = commerceRatio * 30 / 8;
-
-	return ratios;
-}
-
 void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const
 {
 	bool bIgnoreFeature = false;
@@ -8436,13 +8421,12 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std:
 
 void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange) const
 {
-	bool bIgnoreFeature = false;
-
 	AI_newbestPlotBuild(plot, &optimalYieldList[iPlotCounter], ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]);
 
 	const BuildTypes eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
 	{
+		bool bIgnoreFeature = false;
 		optimalYieldList[iPlotCounter].currentImprovement = GC.getBuildInfo(eBuild).getImprovement();
 		const ImprovementTypes eImprovement = optimalYieldList[iPlotCounter].currentImprovement;
 		if (eImprovement != NO_IMPROVEMENT)
@@ -8481,7 +8465,11 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	m_bestBuildValuesStale = false;
 
-	std::vector<int> ratios = AI_calculateOutputRatio(this->getBaseYieldRate(YIELD_FOOD), this->getBaseYieldRate(YIELD_PRODUCTION), this->getBaseYieldRate(YIELD_COMMERCE));
+	const std::vector<int> ratios = CvValueService::CalculateOutPutRatio(this->getBaseYieldRate(YIELD_FOOD),
+	                                                               this->getBaseYieldRate(YIELD_PRODUCTION),
+	                                                               this->getBaseYieldRate(YIELD_COMMERCE));
+
+
 	std::vector<plotInfo> currentYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
 	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
 

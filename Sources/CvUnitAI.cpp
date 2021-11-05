@@ -2113,7 +2113,6 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	bool bCanRoute = canBuildRoute();
-	// Afforess 02/17/10
 	// Workboats don't build Sea Tunnels over Resources
 	if (bCanRoute && getDomainType() != DOMAIN_SEA && !IsAbroad())
 	{
@@ -2275,24 +2274,24 @@ void CvUnitAI::AI_workerMove()
 	bool bBuildFort = false;
 
 	// Super Forts begin *canal* *choke*
-	if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
-	{
-		const CvPlayerAI &player = GET_PLAYER(getOwner());
-		const bool bCanal = player.countNumCoastalCities() > 0;
-		const bool bAirbase = player.AI_totalUnitAIs(UNITAI_PARADROP) || player.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || player.AI_totalUnitAIs(UNITAI_MISSILE_AIR);
+	//if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
+	//{
+	//	const CvPlayerAI &player = GET_PLAYER(getOwner());
+	//	const bool bCanal = player.countNumCoastalCities() > 0;
+	//	const bool bAirbase = player.AI_totalUnitAIs(UNITAI_PARADROP) || player.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || player.AI_totalUnitAIs(UNITAI_MISSILE_AIR);
 
-		if (AI_fortTerritory(bCanal, bAirbase))
-		{
-			return;
-		}
-		bBuildFort = bCanal && bAirbase;
-	}
+	//	if (AI_fortTerritory(bCanal, bAirbase))
+	//	{
+	//		return;
+	//	}
+	//	bBuildFort = bCanal && bAirbase;
+	//}
 
-	// Super Forts begin *canal* *choke*
-	if (!bBuildFort && AI_fortTerritory(true, true /*bCanal, bAirbase*/))
-	{
-		return;
-	}
+	//// Super Forts begin *canal* *choke*
+	//if (!bBuildFort && AI_fortTerritory(true, true /*bCanal, bAirbase*/))
+	//{
+	//	return;
+	//}
 	// Super Forts end
 
 	//if (AI_StrategicForts())

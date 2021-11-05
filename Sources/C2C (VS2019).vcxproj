@@ -194,9 +194,11 @@
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
+    <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="PlotInfo.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
@@ -350,6 +352,7 @@
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
+    <ClInclude Include="CvValueService.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
@@ -401,6 +404,7 @@
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="nullptr_t.h" />
+    <ClInclude Include="PlotInfo.h" />
     <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />

@@ -9,9 +9,11 @@
 #include <vector>
 #include <vector>
 #include <vector>
+#include <vector>
 
 #include "CvCity.h"
 #include "CvPlayerAI.h"
+#include "PlotInfo.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -333,7 +335,7 @@ protected:
 	void AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
 	void AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int iDesiredFoodChange) const;
 	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
-	const std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
+	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
 	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
 
 #ifdef YIELD_VALUE_CACHING
