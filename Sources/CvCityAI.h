@@ -13,6 +13,7 @@
 
 #include "CvCity.h"
 #include "CvPlayerAI.h"
+#include "OutputRatios.h"
 #include "PlotInfo.h"
 
 //	Possible focus flags to use when evaluating buildings
@@ -333,7 +334,8 @@ protected:
 	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const;
 
 	void AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
-	void AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int iDesiredFoodChange) const;
+	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
+	                         iDesiredFoodChange) const;
 	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
 	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
 	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;

@@ -198,6 +198,7 @@
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="OutputRatios.cpp" />
     <ClCompile Include="PlotInfo.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
@@ -404,6 +405,7 @@
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="nullptr_t.h" />
+    <ClInclude Include="OutputRatios.h" />
     <ClInclude Include="PlotInfo.h" />
     <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />

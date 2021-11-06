@@ -513,6 +513,9 @@
     <ClCompile Include="CvValueService.cpp">
       <Filter>Source Files\Services</Filter>
     </ClCompile>
+    <ClCompile Include="OutputRatios.cpp">
+      <Filter>Source Files\Structs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -996,6 +999,9 @@
       <Filter>Header Files\Services</Filter>
     </ClInclude>
     <ClInclude Include="PlotInfo.h">
+      <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputRatios.h">
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
   </ItemGroup>
