@@ -1,4 +1,7 @@
 #pragma once
+
+#ifndef CIV_OUTPUTRATIOS_H
+#define CIV_OUTPUTRATIOS_H
 struct OutputRatios
 {
 	OutputRatios(int food, int production, int commerce);
@@ -12,3 +15,4 @@ struct OutputRatios
 	int commerce_ratio;
 };
 
+#endif

@@ -8370,7 +8370,8 @@ void CvCityAI::AI_markBestBuildValuesStale()
 	m_bestBuildValuesStale = true;
 }
 
-void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const
+void CvCityAI::AI_getCurrentPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot,
+                                      std::vector<plotInfo>& currentYieldList) const
 {
 	bool bIgnoreFeature = false;
 	const int activeWorkerMissions = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
@@ -8414,9 +8415,10 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std:
 	{
 		currentYieldList[iPlotCounter].yields[yieldTypes] = plot->getYield(static_cast<YieldTypes>(yieldTypes));
 	}
-	currentYieldList[iPlotCounter].yieldValue = AI_yieldValue(
-		currentYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
-	if (currentYieldList[iPlotCounter].bonusImproved) currentYieldList[iPlotCounter].yieldValue += 1000;
+	currentYieldList[iPlotCounter].yieldValue = ratios.CalculateOutputValue(currentYieldList[iPlotCounter].yields[YIELD_FOOD], 
+																			currentYieldList[iPlotCounter].yields[YIELD_PRODUCTION], 
+																			currentYieldList[iPlotCounter].yields[YIELD_COMMERCE]);
+	if (currentYieldList[iPlotCounter].bonusImproved) currentYieldList[iPlotCounter].yieldValue += 10000;
 }
 
 void CvCityAI::AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange) const
@@ -8443,8 +8445,9 @@ void CvCityAI::AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const
 				optimalYieldList[iPlotCounter].yields[iYieldType] = yieldIncrease + natureYield;
 			}
 		}
-		optimalYieldList[iPlotCounter].yieldValue = AI_yieldValue(
-			optimalYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
+		optimalYieldList[iPlotCounter].yieldValue = ratios.CalculateOutputValue(optimalYieldList[iPlotCounter].yields[YIELD_FOOD],
+																				optimalYieldList[iPlotCounter].yields[YIELD_PRODUCTION], 
+																				optimalYieldList[iPlotCounter].yields[YIELD_COMMERCE]);
 
 		if(optimalYieldList[iPlotCounter].currentBonus != NO_BONUS && optimalYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
 		{
@@ -8523,7 +8526,7 @@ void CvCityAI::AI_updateBestBuild()
 		currentYieldList[iPlotCounter].owned = true;
 		if (loopedPlot->getWorkingCity() == this) currentYieldList[iPlotCounter].worked = true;
 
-		AI_getCurrentPlotValue(iPlotCounter, loopedPlot, currentYieldList);
+		AI_getCurrentPlotValue(ratios, iPlotCounter, loopedPlot, currentYieldList);
 		AI_getBestPlotValue(ratios, iPlotCounter, loopedPlot, optimalYieldList, iDesiredFoodChange);
 	}
 	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)

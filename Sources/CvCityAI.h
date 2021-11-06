@@ -6,10 +6,6 @@
 #define CIV4_CITY_AI_H
 
 #include <vector>
-#include <vector>
-#include <vector>
-#include <vector>
-#include <vector>
 
 #include "CvCity.h"
 #include "CvPlayerAI.h"
@@ -333,7 +329,7 @@ protected:
 
 	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const;
 
-	void AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
+	void AI_getCurrentPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
 	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
 	                         iDesiredFoodChange) const;
 	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
