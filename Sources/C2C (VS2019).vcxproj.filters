@@ -43,12 +43,15 @@
     <Filter Include="Source Files\Structs">
       <UniqueIdentifier>{dbff6b76-1b72-4f19-ae4c-91729a9df4e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{4dfb3004-68d6-4d78-8643-bb77914cbe00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{736184d4-0ac8-4b49-b20c-bf352de47d97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BetterBTSAI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BoolExpr.cpp">
@@ -516,11 +519,11 @@
     <ClCompile Include="OutputRatios.cpp">
       <Filter>Source Files\Structs</Filter>
     </ClCompile>
+    <ClCompile Include="BetterBTSAI.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BetterBTSAI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvMapExternal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1003,6 +1006,9 @@
     </ClInclude>
     <ClInclude Include="OutputRatios.h">
       <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="BetterBTSAI.h">
+      <Filter>Header Files\Tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
