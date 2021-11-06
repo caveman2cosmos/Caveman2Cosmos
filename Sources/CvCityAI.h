@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "CvCity.h"
-#include "CvPlayerAI.h"
+//#include "CvPlayerAI.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 
