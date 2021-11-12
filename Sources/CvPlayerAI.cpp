@@ -23866,19 +23866,18 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 	// cache the value for each unit type
 	std::vector<int> aiUnitUpgradePrice(GC.getNumUnitInfos(), 0);	// initializes to zeros
 
-	int iLoop;
-	for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		// if experience is below threshold, skip this unit
-		if (pLoopUnit->getExperience() < iExpThreshold)
+		if (pLoopUnit->isDelayedDeath() || pLoopUnit->getExperience() < iExpThreshold)
 		{
 			continue;
 		}
 
-		UnitTypes eUnitType = pLoopUnit->getUnitType();
+		const UnitTypes eUnitType = pLoopUnit->getUnitType();
 
 		// check cached value for this unit type
-		int iCachedUnitGold = aiUnitUpgradePrice[eUnitType];
+		const int iCachedUnitGold = aiUnitUpgradePrice[eUnitType];
 		if (iCachedUnitGold != 0)
 		{
 			// if positive, add it to the sum
@@ -23894,9 +23893,9 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 		int iUnitGold = 0;
 		int iUnitUpgradePossibilities = 0;
 
-		UnitAITypes eUnitAIType = pLoopUnit->AI_getUnitAIType();
-		CvArea* pUnitArea = pLoopUnit->area();
-		int iUnitValue = AI_unitValue(eUnitType, eUnitAIType, pUnitArea);
+		const UnitAITypes eUnitAIType = pLoopUnit->AI_getUnitAIType();
+		const CvArea* pUnitArea = pLoopUnit->area();
+		const int iUnitValue = AI_unitValue(eUnitType, eUnitAIType, pUnitArea);
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
@@ -23904,19 +23903,19 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 			if (pLoopUnit->upgradeAvailable(eUnitType, (UnitTypes) iI))
 			{
 				// is it better?
-				int iUpgradeValue = AI_unitValue((UnitTypes) iI, eUnitAIType, pUnitArea);
+				const int iUpgradeValue = AI_unitValue((UnitTypes) iI, eUnitAIType, pUnitArea);
 				if (iUpgradeValue > iUnitValue)
 				{
 					// can we actually make this upgrade?
 					bool bCanUpgrade = false;
-					CvCity* pCapitalCity = getCapitalCity();
+					const CvCity* pCapitalCity = getCapitalCity();
 					if (pCapitalCity != NULL && pCapitalCity->canTrain((UnitTypes) iI))
 					{
 						bCanUpgrade = true;
 					}
 					else
 					{
-						CvCity* pCloseCity = GC.getMap().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
+						const CvCity* pCloseCity = GC.getMap().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
 						if (pCloseCity != NULL && pCloseCity->canTrain((UnitTypes) iI))
 						{
 							bCanUpgrade = true;

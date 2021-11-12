@@ -12,6 +12,7 @@
 #include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
+#include "CvPropertySolver.h"
 #include "IntExpr.h"
 
 CvPropertySource::CvPropertySource()

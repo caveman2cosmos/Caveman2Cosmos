@@ -26,23 +26,6 @@ typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
 typedef std::vector< std::pair<EraTypes, int> > EraArray;
 typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
 
-struct plotInfo
-{
-	plotInfo();
-	std::string ToJSON();
-
-	int index;
-	bool worked;
-	bool owned;
-	bool bonusImproved;
-	int yieldValue;
-	short yields[NUM_YIELD_TYPES];
-	BonusTypes currentBonus;
-	ImprovementTypes currentImprovement;
-	FeatureTypes currentFeature;
-	BuildTypes currentBuild;
-};
-
 struct AidStruct
 {
 	PropertyTypes eProperty;
