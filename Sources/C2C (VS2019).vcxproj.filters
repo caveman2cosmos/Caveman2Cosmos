@@ -31,12 +31,27 @@
     <Filter Include="Header Files\SupportModules">
       <UniqueIdentifier>{ef8aee7b-1fc1-45c2-83a6-40d5de25929f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Services">
+      <UniqueIdentifier>{b62d5d21-a4dd-4631-a47c-e9fb409bdcea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Services">
+      <UniqueIdentifier>{0952c62f-077f-4126-8423-f904f5546ff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Structs">
+      <UniqueIdentifier>{39daf9b4-b9c9-4c29-b1a0-eb62bcd59886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structs">
+      <UniqueIdentifier>{dbff6b76-1b72-4f19-ae4c-91729a9df4e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{4dfb3004-68d6-4d78-8643-bb77914cbe00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{736184d4-0ac8-4b49-b20c-bf352de47d97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BetterBTSAI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BoolExpr.cpp">
@@ -495,11 +510,20 @@
     <ClCompile Include="CvBuildingInfo.cpp">
       <Filter>Source Files\InfoClasses</Filter>
     </ClCompile>
+    <ClCompile Include="PlotInfo.cpp">
+      <Filter>Source Files\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="CvValueService.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputRatios.cpp">
+      <Filter>Source Files\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="BetterBTSAI.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BetterBTSAI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvMapExternal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -668,10 +692,10 @@
     <ClInclude Include="CvInfos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-     <ClInclude Include="CvInfoUtil.h">
+    <ClInclude Include="CvInfoUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-   <ClInclude Include="CvInfoWater.h">
+    <ClInclude Include="CvInfoWater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvInitCore.h">
@@ -973,6 +997,18 @@
     </ClInclude>
     <ClInclude Include="CvBuildingInfo.h">
       <Filter>Header Files\InfoClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="CvValueService.h">
+      <Filter>Header Files\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="PlotInfo.h">
+      <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputRatios.h">
+      <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="BetterBTSAI.h">
+      <Filter>Header Files\Tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
