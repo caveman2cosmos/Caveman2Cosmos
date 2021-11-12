@@ -6,12 +6,10 @@
 #define CIV4_CITY_AI_H
 
 #include <vector>
-#include <vector>
-#include <vector>
-#include <vector>
 
 #include "CvCity.h"
-#include "CvPlayerAI.h"
+#include "OutputRatios.h"
+#include "PlotInfo.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -188,7 +186,6 @@ public:
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
-	void AI_updateBestBuildForPlots();
 	int AI_getBestBuildValue(int iIndex) const;
 	int AI_totalBestBuildValue(const CvArea* pArea) const;
 
@@ -330,10 +327,11 @@ protected:
 
 	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const;
 
-	void AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
-	void AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int iDesiredFoodChange) const;
+	void AI_getCurrentPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
+	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
+	                         iDesiredFoodChange) const;
 	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
-	const std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
+	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
 	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
 
 #ifdef YIELD_VALUE_CACHING
@@ -346,9 +344,6 @@ protected:
 	int AI_experienceWeight() const;
 	int AI_buildUnitProb() const;
 	bool AI_checkIrrigationSpread(const CvPlot* pPlot) const;
-
-	void AI_bestPlotBuild(CvPlot* pPlot, int& piBestValue, BuildTypes& peBestBuild, int iFoodPriority, int iProductionPriority, int
-	                      iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
 
 	int AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const;
 	void AI_getYieldMultipliers(int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange) const;
