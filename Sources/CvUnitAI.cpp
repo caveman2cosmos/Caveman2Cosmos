@@ -1652,6 +1652,91 @@ void CvUnitAI::AI_animalMove()
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
+void CvUnitAI::AI_SettleFirstCity()
+{
+	// Afforess & Fuyu - Check for Good City Sites Near Starting Location
+	const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	const int iMaxFoundTurn = iGameSpeedPercent / 100;
+
+	if (canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGame().getElapsedGameTurns() <= iMaxFoundTurn)
+	{
+		int iBestValue = 0;
+		int iBestFoundTurn = 0;
+		CvPlot* pBestPlot = NULL;
+
+		for (int iCitySite = 0; iCitySite < GET_PLAYER(getOwner()).AI_getNumCitySites(); iCitySite++)
+		{
+			CvPlot* pCitySite = GET_PLAYER(getOwner()).AI_getCitySite(iCitySite);
+			if (pCitySite->getArea() == getArea() || canMoveAllTerrain())
+			{
+				//int iPlotValue = GET_PLAYER(getOwner()).AI_foundValue(pCitySite->getX(), pCitySite->getY());
+				int iPlotValue = pCitySite->getFoundValue(getOwner());
+				if (iPlotValue > iBestValue)
+				{
+					//Can this unit reach the plot this turn? (getPathLastNode()->m_iData2 == 1)
+					//Will this unit still have movement points left to found the city the same turn? (getPathLastNode()->m_iData1 > 0))
+					int iPathTurns;
+					if (generatePath(pCitySite, 0, false, &iPathTurns))
+					{
+						const int iFoundTurn = GC.getGame().getElapsedGameTurns() + iPathTurns - (getPathMovementRemaining() > 0 ? 1 : 0);
+						if (iFoundTurn <= iMaxFoundTurn)
+						{
+							iPlotValue *= 100; //more precision
+							//the slower the game speed, the less penalty the plotvalue gets for long walks towards it. On normal it's -18% per turn
+							iPlotValue *= 100 - std::min(100, iFoundTurn * 1800 / iGameSpeedPercent);
+							iPlotValue /= 100;
+							if (iPlotValue > iBestValue)
+							{
+								iBestValue = iPlotValue;
+								iBestFoundTurn = iFoundTurn;
+								pBestPlot = pCitySite;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		if (pBestPlot != NULL)
+		{
+			//Don't give up coast or river, don't settle on bonus with food
+			if (plot()->isRiver() && !pBestPlot->isRiver())
+			{
+				const int iOceanMinSize = GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize();
+
+				if (plot()->isCoastalLand(iOceanMinSize) && !pBestPlot->isCoastalLand(iOceanMinSize)
+					|| pBestPlot->getBonusType(NO_TEAM) != NO_BONUS
+					&& pBestPlot->calculateNatureYield(YIELD_FOOD, getTeam(), true) > 0)
+				{
+					pBestPlot = NULL;
+				}
+			}
+		}
+
+		if (pBestPlot != NULL)
+		{
+			if (gUnitLogLevel >= 2)
+			{
+				logBBAI("	Settler not founding in place but moving %d, %d to nearby city site at %d, %d (%d turns away) with value %d)", (pBestPlot->getX() - getX()), (pBestPlot->getY() - getY()), pBestPlot->getX(), pBestPlot->getY(), iBestFoundTurn, iBestValue);
+			}
+			getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pBestPlot);
+			return;
+		}
+	}
+	// ! Afforess & Fuyu - Check for Good City Sites Near Starting Location
+
+	// RevDCM TODO: What makes sense for rebels here?
+	if (canFound(plot()))
+	{
+		if (gUnitLogLevel >= 2)
+		{
+			logBBAI("	Settler (%d) founding in place due to no cities", getID());
+		}
+		getGroup()->pushMission(MISSION_FOUND);
+		return;
+	}
+}
+
 
 void CvUnitAI::AI_settleMove()
 {
@@ -1665,87 +1750,7 @@ void CvUnitAI::AI_settleMove()
 
 	if (GET_PLAYER(getOwner()).getNumCities() == 0)
 	{
-		// Afforess & Fuyu - Check for Good City Sites Near Starting Location
-		const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-		const int iMaxFoundTurn = iGameSpeedPercent / 100;
-
-		if (canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGame().getElapsedGameTurns() <= iMaxFoundTurn)
-		{
-			int iBestValue = 0;
-			int iBestFoundTurn = 0;
-			CvPlot* pBestPlot = NULL;
-
-			for (int iCitySite = 0; iCitySite < GET_PLAYER(getOwner()).AI_getNumCitySites(); iCitySite++)
-			{
-				CvPlot* pCitySite = GET_PLAYER(getOwner()).AI_getCitySite(iCitySite);
-				if (pCitySite->getArea() == getArea() || canMoveAllTerrain())
-				{
-					//int iPlotValue = GET_PLAYER(getOwner()).AI_foundValue(pCitySite->getX(), pCitySite->getY());
-					int iPlotValue = pCitySite->getFoundValue(getOwner());
-					if (iPlotValue > iBestValue)
-					{
-						//Can this unit reach the plot this turn? (getPathLastNode()->m_iData2 == 1)
-						//Will this unit still have movement points left to found the city the same turn? (getPathLastNode()->m_iData1 > 0))
-						int iPathTurns;
-						if (generatePath(pCitySite,0,false,&iPathTurns))
-						{
-							const int iFoundTurn = GC.getGame().getElapsedGameTurns() + iPathTurns - (getPathMovementRemaining() > 0 ? 1 : 0);
-							if (iFoundTurn <= iMaxFoundTurn)
-							{
-								iPlotValue *= 100; //more precision
-								//the slower the game speed, the less penalty the plotvalue gets for long walks towards it. On normal it's -18% per turn
-								iPlotValue *= 100 - std::min(100, iFoundTurn * 1800 / iGameSpeedPercent);
-								iPlotValue /= 100;
-								if (iPlotValue > iBestValue)
-								{
-									iBestValue = iPlotValue;
-									iBestFoundTurn = iFoundTurn;
-									pBestPlot = pCitySite;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			if (pBestPlot != NULL)
-			{
-				//Don't give up coast or river, don't settle on bonus with food
-				if (plot()->isRiver() && !pBestPlot->isRiver())
-				{
-					const int iOceanMinSize = GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize();
-
-					if (plot()->isCoastalLand(iOceanMinSize) && !pBestPlot->isCoastalLand(iOceanMinSize)
-					|| pBestPlot->getBonusType(NO_TEAM) != NO_BONUS
-					&& pBestPlot->calculateNatureYield(YIELD_FOOD, getTeam(), true) > 0)
-					{
-						pBestPlot = NULL;
-					}
-				}
-			}
-
-			if (pBestPlot != NULL)
-			{
-				if (gUnitLogLevel >= 2)
-				{
-					logBBAI("	Settler not founding in place but moving %d, %d to nearby city site at %d, %d (%d turns away) with value %d)", (pBestPlot->getX() - getX()), (pBestPlot->getY() - getY()), pBestPlot->getX(), pBestPlot->getY(), iBestFoundTurn, iBestValue);
-				}
-				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pBestPlot);
-				return;
-			}
-		}
-		// ! Afforess & Fuyu - Check for Good City Sites Near Starting Location
-
-		// RevDCM TODO: What makes sense for rebels here?
-		if (canFound(plot()))
-		{
-			if (gUnitLogLevel >= 2)
-			{
-				logBBAI("	Settler (%d) founding in place due to no cities", getID());
-			}
-			getGroup()->pushMission(MISSION_FOUND);
-			return;
-		}
+		AI_SettleFirstCity();
 	}
 
 	const int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
@@ -2086,6 +2091,7 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
+	// TODO: move out of workermove and into new unitai called UNITAI_MISSIONUNIT ?
 	if (AI_construct(MAX_INT, MAX_INT, 0, true))
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n", getDescription().c_str(), m_iID).c_str());
@@ -2101,6 +2107,7 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
+	// TODO: move out of workermove and into new unitai called UNITAI_MISSIONUNIT ?
 	if (AI_outcomeMission())
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to head off to do an outcome mission\n", getDescription().c_str(), m_iID).c_str());
@@ -16751,32 +16758,32 @@ bool CvUnitAI::AI_explorerJoinOffensiveStacks()
 	if (bOffenseWar && !isHuman() && AI_getUnitAIType() != UNITAI_HUNTER && canAttack())	//	Exempt hunters from this behaviour and also defend-only explorers
 	{
 		//try to join SoD
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(6).stackOfDoom().allowRegrouping()))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(6).stackOfDoom().allowRegrouping()))
 		{
 			return true;
 		}
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
 		{
 			return true;
 		}
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
 		{
 			return true;
 		}
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_COLLATERAL).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_COLLATERAL).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
 		{
 			return true;
 		}
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_COUNTER).maxOwnUnitAI(1).minUnitAI(3).stackOfDoom().allowRegrouping()))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_COUNTER).maxOwnUnitAI(1).minUnitAI(3).stackOfDoom().allowRegrouping()))
 		{
 			return true;
 		}
 		//try to join attacking stack
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1)))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1)))
 		{
 			return true;
 		}
-		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1)))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1)))
 		{
 			return true;
 		}
@@ -21919,7 +21926,8 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 				if (iIndex != CITY_HOME_PLOT && pCity->AI_getBestBuild(iIndex) != NO_BUILD
 				&& (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || GC.getBuildInfo(pCity->AI_getBestBuild(iIndex)).getImprovement() == NO_IMPROVEMENT)
 				&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->AI_getWorkersHave() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
-				&& canBuild(pLoopPlot, pCity->AI_getBestBuild(iIndex)) && generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
+				&& canBuild(pLoopPlot, pCity->AI_getBestBuild(iIndex)) 
+				&& generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
 				{
 					int iValue = pCity->AI_getBestBuildValue(iIndex);
 					int iMaxWorkers = 1;

@@ -8468,13 +8468,19 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	m_bestBuildValuesStale = false;
 
-	OutputRatios ratios = OutputRatios(this->getBaseYieldRate(YIELD_FOOD),this->getBaseYieldRate(YIELD_PRODUCTION),this->getBaseYieldRate(YIELD_COMMERCE));
-	
+	OutputRatios ratios = OutputRatios(this->getBaseYieldRate(YIELD_FOOD), this->getBaseYieldRate(YIELD_PRODUCTION), this->getBaseYieldRate(YIELD_COMMERCE));
+
 	// these are the current default weights to make AI actually care about food at their plots function is built in such a way
 	// that you can call it several times to adjust the ratio
 	// (i.e a city has food preference, call it 2nd time around with 2,1,1, and the value of food will double)
 
 	ratios.WeightOutputs(18, 10, 6);
+
+	if (getPopulation() < (GET_PLAYER(getOwner()).getCurrentEra() + 1) * 4)
+	{
+		// if city is smaller than 4 times the current era double food value
+		ratios.WeightFood(2);
+	}
 
 
 	std::vector<plotInfo> currentYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
@@ -8529,9 +8535,9 @@ void CvCityAI::AI_updateBestBuild()
 		AI_getCurrentPlotValue(ratios, iPlotCounter, loopedPlot, currentYieldList);
 		AI_getBestPlotValue(ratios, iPlotCounter, loopedPlot, optimalYieldList, iDesiredFoodChange);
 	}
-	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
+	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
 	{
-		if(currentYieldList[iPlotCounter].yieldValue >= optimalYieldList[iPlotCounter].yieldValue)
+		if (currentYieldList[iPlotCounter].yieldValue >= optimalYieldList[iPlotCounter].yieldValue)
 		{
 			m_aeBestBuild[iPlotCounter] = NO_BUILD;
 			m_aiBestBuildValue[iPlotCounter] = 0;
@@ -11045,12 +11051,12 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 					iValue -= 1000;
 				}
 			}
-			if(iValue >= 0)
+			if (iValue >= 0)
 			{
 				int aiFinalYields[NUM_YIELD_TYPES];
-				for(int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
+				for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
 				{
-					aiFinalYields[yieldCounter] =  pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
+					aiFinalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
 					aiFinalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
 				}
 				iValue = iValue + (iFoodPriority * aiFinalYields[YIELD_FOOD]) + (iProductionPriority + aiFinalYields[YIELD_PRODUCTION]) + (iCommercePriority * aiFinalYields[YIELD_COMMERCE]);

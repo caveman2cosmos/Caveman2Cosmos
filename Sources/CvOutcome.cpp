@@ -23,6 +23,7 @@
 #include "CyUnit.h"
 #include "CyPlot.h"
 #include "CheckSum.h"
+#include "CvGameAI.h"
 #include "IntExpr.h"
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
