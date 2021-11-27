@@ -3822,7 +3822,6 @@
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<bRequiresIrrigation>1</bRequiresIrrigation>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
