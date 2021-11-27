@@ -1996,17 +1996,16 @@ void CvUnitAI::AI_settleMove()
 
 int CvUnitAI::AI_minSettlerDefense() const
 {
-	return 1;
-	//return (
-	//	GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE)
-	//	*
-	//	(
-	//		// One defender if game-start settler(s), else 2.
-	//		1 + 1 * (getGameTurnCreated() > 0)
-	//		+ // Two more if at war (ignore minor civ).
-	//		2 * GET_TEAM(getTeam()).isAtWar()
-	//	)
-	//);
+	return (
+		GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE)
+		*
+		(
+			// One defender if game-start settler(s), else 2.
+			1 /* + 1 * (getGameTurnCreated() > 0)*/
+			+ // Two more if at war (ignore minor civ).
+			1 * GET_TEAM(getTeam()).isAtWar()
+		)
+	);
 }
 bool CvUnitAI::Worker_CanDefend() {
 	return getGroup()->canDefend();
