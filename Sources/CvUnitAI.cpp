@@ -2177,19 +2177,18 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
-	/*
+	
 	if (pCity != NULL)
 	{
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		foreach_(const CvPlot* pLoopPlot, pCity->plots())
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-			if (iI != CITY_HOME_PLOT
-			&& pLoopPlot != NULL
+			const int plotIndex = pCity->getCityPlotIndex(pLoopPlot);
+			if (pLoopPlot != NULL
 			&& pLoopPlot->getWorkingCity() == pCity
-			&& pLoopPlot->isBeingWorked()
-			&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT
-			&& pCity->AI_getBestBuildValue(iI) > 0
-			&& GC.getBuildInfo((BuildTypes)pCity->AI_getBestBuild(iI)).getImprovement() != NO_IMPROVEMENT)
+			//&& pLoopPlot->isBeingWorked() plot should be improved even if it is not currently worked by the city
+			//&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT //should be considered for improvement even if there already is an improvement there?
+			&& pCity->AI_getBestBuildValue(plotIndex) > 0
+			&& GC.getBuildInfo((BuildTypes)pCity->AI_getBestBuild(plotIndex)).getImprovement() != NO_IMPROVEMENT)
 			{
 				if (AI_improveCity(pCity))
 				{
@@ -2199,7 +2198,7 @@ void CvUnitAI::AI_workerMove()
 			}
 		}
 	}
-	*/
+	
 
 	if (pCity != NULL && pCity->AI_getWorkersNeeded() > 0 && (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3) && AI_improveCity(pCity))
 	{
