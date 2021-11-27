@@ -1047,6 +1047,7 @@
     <None Include="fbuild.bff" />
     <None Include="cpp.hint" />
     <None Include="CvGameCoreDLL.def" />
+    <None Include=".editorconfig" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />
