@@ -5323,7 +5323,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
-	foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
+	foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceChanges100())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
@@ -5333,7 +5333,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
-	foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+	foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceModifiers())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
@@ -5345,7 +5345,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	}
 	foreach_(const TerrainArray& pair, kBuilding.getTerrainYieldChanges())
 	{
-		int* yields = new int[NUM_YIELD_TYPES];
+		YieldArray yields;
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -5355,7 +5355,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	}
 	foreach_(const PlotArray& pair, kBuilding.getPlotYieldChanges())
 	{
-		int* yields = new int[NUM_YIELD_TYPES];
+		YieldArray yields;
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -10967,11 +10967,11 @@ void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
 }
 
 
-void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields)
+void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldArray& yields)
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
 
-	std::map<short, int*>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
+	std::map<short, YieldArray>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
 
 	if (itr == m_terrainYieldChanges.end())
 	{
@@ -11009,14 +11009,14 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields)
 int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
-	std::map<short, int*>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
+	std::map<short, YieldArray>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
 	return itr != m_terrainYieldChanges.end() ? itr->second[eYield] : 0;
 }
 
 
-void CvCity::changePlotYieldChanges(const PlotTypes ePlot, int* yields)
+void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields)
 {
-	std::map<short, int*>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
+	std::map<short, YieldArray>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
 
 	if (itr == m_plotYieldChanges.end())
 	{
@@ -11053,7 +11053,7 @@ void CvCity::changePlotYieldChanges(const PlotTypes ePlot, int* yields)
 
 int CvCity::getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const
 {
-	std::map<short, int*>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
+	std::map<short, YieldArray>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
 	return itr != m_plotYieldChanges.end() ? itr->second[eYield] : 0;
 }
 
@@ -12433,7 +12433,7 @@ int CvCity::getBaseCommerceRateFromBuilding100(CommerceTypes eIndex, BuildingTyp
 			iExtraRate100 += kBuilding.getBonusCommercePercentChanges(iI, eIndex);
 		}
 	}
-	foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
+	foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceChanges100())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
@@ -12463,7 +12463,7 @@ int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, Bu
 
 	int iMod = kBuilding.getCommerceModifier(eIndex) + kBuilding.getGlobalCommerceModifier(eIndex);
 
-	foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+	foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceModifiers())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(pair.first))
 		{
@@ -17445,12 +17445,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	{
 		short iSize = 0;
 		short iType;
-		int* yields = new int[NUM_YIELD_TYPES];
+		YieldArray yields;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "TerrainYieldChangesSize");
 		while (iSize-- > 0)
 		{
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "TerrainYieldChangesType");
-			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields, "TerrainYieldChanges");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields.elems, "TerrainYieldChanges");
 			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iType, true));
 
 			if (iType > -1)
@@ -17466,12 +17466,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	{
 		short iSize = 0;
 		short iType;
-		int* yields = new int[NUM_YIELD_TYPES];
+		YieldArray yields;
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "PlotYieldChangesSize");
 		while (iSize-- > 0)
 		{
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "PlotYieldChangesType");
-			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields, "PlotYieldChanges");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields.elems, "PlotYieldChanges");
 
 			if (iType > -1)
 			{
@@ -17897,10 +17897,10 @@ void CvCity::write(FDataStreamBase* pStream)
 	// Toffer - Write Maps
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_terrainYieldChanges.size(), "TerrainYieldChangesSize");
-		for (std::map<short, int*>::const_iterator it = m_terrainYieldChanges.begin(), itEnd = m_terrainYieldChanges.end(); it != itEnd; ++it)
+		for (std::map<short, YieldArray>::const_iterator it = m_terrainYieldChanges.begin(), itEnd = m_terrainYieldChanges.end(); it != itEnd; ++it)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "TerrainYieldChangesType");
-			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, it->second, "TerrainYieldChanges");
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, it->second.elems, "TerrainYieldChanges");
 		}
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_commercePerPopFromBuildings);
@@ -17909,10 +17909,12 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_buildingCommerceMod);
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_plotYieldChanges.size(), "PlotYieldChangesSize");
-		for (std::map<short, int*>::const_iterator it = m_plotYieldChanges.begin(), itEnd = m_plotYieldChanges.end(); it != itEnd; ++it)
+		//for (std::map<short, YieldArray>::const_iterator it = m_plotYieldChanges.begin(), itEnd = m_plotYieldChanges.end(); it != itEnd; ++it)
+		typedef std::pair<short, YieldArray> PlotYieldChange;
+		foreach_(const PlotYieldChange& plotYieldChange, m_plotYieldChanges)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "PlotYieldChangesType");
-			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, it->second, "PlotYieldChanges");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", plotYieldChange.first, "PlotYieldChangesType");
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, plotYieldChange.second.elems, "PlotYieldChanges");
 		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -19919,7 +19921,7 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech)
 	{
 		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChanges100())
+			foreach_(const TechCommerceArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChanges100())
 			{
 				if (eTech == pair.first)
 				{
@@ -19939,7 +19941,7 @@ int CvCity::getBuildingCommerceTechModifier(CommerceTypes eYield, TechTypes eTec
 	{
 		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifiers())
+			foreach_(const TechCommerceArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifiers())
 			{
 				if (eTech == pair.first)
 				{

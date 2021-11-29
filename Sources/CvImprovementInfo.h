@@ -62,7 +62,6 @@ public:
 	const char* getArtDefineTag() const;
 
 	int getPrereqNatureYield(int i) const;
-	int* getPrereqNatureYieldArray() const;
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
 	int getRiverSideYieldChange(int i) const;
