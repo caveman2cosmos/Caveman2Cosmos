@@ -5967,7 +5967,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				{
 					int iTempValue = 0;
 
-					foreach_(const TechArray& pair, kLoopBuilding.getTechCommerceChanges100())
+					foreach_(const TechCommerceArray& pair, kLoopBuilding.getTechCommerceChanges100())
 					{
 						if (eTech == pair.first)
 						{
@@ -5989,7 +5989,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 							break;
 						}
 					}
-					foreach_(const TechArray& pair, kLoopBuilding.getTechCommerceModifiers())
+					foreach_(const TechCommerceArray& pair, kLoopBuilding.getTechCommerceModifiers())
 					{
 						if (eTech == pair.first)
 						{

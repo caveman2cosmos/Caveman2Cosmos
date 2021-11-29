@@ -4302,6 +4302,7 @@
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iTurnDamage>5</iTurnDamage>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4347,6 +4348,7 @@
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4901,6 +4903,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>10</iTurnDamage>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -5063,6 +5066,7 @@
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>

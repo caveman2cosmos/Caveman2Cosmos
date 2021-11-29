@@ -194,7 +194,9 @@
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
+    <ClCompile Include="CvSettlerAI.cpp" />
     <ClCompile Include="CvValueService.cpp" />
+    <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
@@ -353,10 +355,13 @@
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
+    <ClInclude Include="CvSettlerAI.h" />
     <ClInclude Include="CvValueService.h" />
+    <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
+    <ClInclude Include="GroupingParams.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
@@ -512,6 +517,7 @@
     <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="cpp.hint" />
     <None Include="CvGameCoreDLL.def" />
     <None Include="fbuild.bff" />

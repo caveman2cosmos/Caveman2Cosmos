@@ -12,6 +12,9 @@ class CvPlot;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
+typedef bst::array<int, NUM_COMMERCE_TYPES> CommerceArray;
+typedef bst::array<int, NUM_YIELD_TYPES> YieldArray;
+
 //TB Combat Mod
 typedef std::vector< std::pair<UnitCombatTypes, int> > UnitCombatModifierArray;
 typedef std::vector< std::pair<TechTypes, int> > TechModifierArray;
