@@ -141,6 +141,9 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="StrategicEvents" key="StrategicEvents" type="boolean" default="True" get="isStrategicEvents" set="setStrategicEvents">
 				<change module="ANewDawnSettings" function="changedStrategicEvents"/>
 			</option>
+			<option id="ReligionDecay" key="ReligionDecay" type="boolean" default="True" get="isReligionDecay" set="setReligionDecay">
+				<change module="ANewDawnSettings" function="changedReligionDecay"/>
+			</option>
 			<option id="MultipleReligionSpread" key="MultipleReligionSpread" type="boolean" default="True" get="isMultipleReligionSpread" set="setMultipleReligionSpread">
 				<change module="ANewDawnSettings" function="changedMultipleReligionSpread"/>
 			</option>

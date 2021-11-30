@@ -62,6 +62,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setNoStorms(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
 				ANewDawnOpt.setImprovedXP(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY):
+				ANewDawnOpt.setReligionDecay(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD):
 				ANewDawnOpt.setMultipleReligionSpread(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
@@ -227,6 +229,10 @@ def changedIgnoreDisabledBuildingAlerts(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_IGNORE_DISABLED_ALERTS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_IGNORE_DISABLED_ALERTS), int(value), 0)
 
+def changedReligionDecay(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY), int(value), 0)
+
 def changedMultipleReligionSpread(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD), int(value), 0)
@@ -295,6 +301,7 @@ def setXMLOptionsfromIniFile():
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())
 	changedEventImages(ANewDawnOpt, ANewDawnOpt.isEventImages())
 	changedIgnoreDisabledBuildingAlerts(ANewDawnOpt, ANewDawnOpt.isIgnoreDisabledBuildingAlerts())
+	changedReligionDecay(ANewDawnOpt, ANewDawnOpt.isReligionDecay())
 	changedMultipleReligionSpread(ANewDawnOpt, ANewDawnOpt.isMultipleReligionSpread())
 	changedTerrainDamage(ANewDawnOpt, ANewDawnOpt.isTerrainDamage())
 	changedStrategicEvents(ANewDawnOpt, ANewDawnOpt.isStrategicEvents())
