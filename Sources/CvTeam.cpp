@@ -5649,7 +5649,7 @@ int CvTeam::getBuildingYieldTechModifier(const YieldTypes eYield, const Building
 int CvTeam::getBuildingCommerceTechChange(const CommerceTypes eIndex, const BuildingTypes eBuilding) const
 {
 	int iCommerce100 = 0;
-	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
+	foreach_(const TechCommerceArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceChanges100())
 	{
 		if (isHasTech(pair.first))
 		{
@@ -5663,7 +5663,7 @@ int CvTeam::getBuildingCommerceTechChange(const CommerceTypes eIndex, const Buil
 int CvTeam::getBuildingCommerceTechModifier(const CommerceTypes eIndex, const BuildingTypes eBuilding) const
 {
 	int iMod = 0;
-	foreach_(const TechArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceModifiers())
+	foreach_(const TechCommerceArray& pair, GC.getBuildingInfo(eBuilding).getTechCommerceModifiers())
 	{
 		if (isHasTech(pair.first))
 		{

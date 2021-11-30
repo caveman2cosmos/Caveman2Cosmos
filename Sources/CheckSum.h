@@ -61,6 +61,13 @@ inline void CheckSum(uint32_t& iSum, const std::pair<T1, T2>& p)
 	CheckSum(iSum, p.second);
 }
 
+template <typename T, size_t N>
+inline void CheckSum(uint32_t& iSum, const bst::array<T, N>& kArray)
+{
+	foreach_(const T& element, kArray)
+		CheckSum(iSum, element);
+}
+
 template<typename Cont>
 inline void CheckSumC(uint32_t& iSum, const Cont& kCont)
 {
