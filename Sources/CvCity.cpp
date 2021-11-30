@@ -14598,11 +14598,6 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 					}
 				}
 
-				foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
-				{
-					setHasReligion(pair.first, true, true, true);
-				}
-
 				if (kBuilding.getFreeTechs() > 0)
 				{
 					if (isHuman())
@@ -16565,142 +16560,153 @@ void CvCity::doDecay()
 
 void CvCity::doReligion()
 {
-	if (getReligionCount() == 0 || GC.getGame().isModderGameOption(MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD))
+	CvGame& GAME = GC.getGame();
+	const bool bReligionDecay = GAME.isOption(GAMEOPTION_RELIGION_DECAY);
+	const bool bMultRelSpread = GAME.isModderGameOption(MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD);
+
+	const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+	const int iReligionCount = getReligionCount();
+
+	const int iNumReligions = GC.getNumReligionInfos();
+	int iReligionX = GAME.getSorenRandNum(iNumReligions, "Random start index");
+	int iCount = 0;
+	while (iCount++ < iNumReligions)
 	{
-		const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
-		const bool bReligionDecay = GC.getGame().isOption(GAMEOPTION_RELIGION_DECAY);
+		const ReligionTypes eReligionX = static_cast<ReligionTypes>(iReligionX);
 
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		if (GAME.isReligionFounded(eReligionX))
 		{
-			if (!isHasReligion((ReligionTypes)iI))
+			if (isHasReligion(eReligionX))
 			{
-				if (iI == eStateReligion || !GET_PLAYER(getOwner()).isNoNonStateReligionSpread())
+				if (bReligionDecay)
 				{
-					const int iSpreadMod = 100 + GET_PLAYER(getOwner()).getReligionSpreadRate();
-					if (iSpreadMod > 0)
-					{
-						const int iSpreadFactor = GC.getReligionInfo((ReligionTypes)iI).getSpreadFactor();
-						if (iSpreadFactor > 0)
-						{
-							int iRandThreshold = 0;
+					const CvCity* pHolyCity = GAME.getHolyCity(eReligionX);
 
-							for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+					if (eReligionX != eStateReligion && pHolyCity != this && iReligionCount > 1)
+					{
+						const int iExp = iReligionCount - 2;
+						int iDecay = GC.getReligionInfo(eReligionX).getSpreadFactor() + iExp * iExp;
+
+						foreach_(const CvCity* cityX, GET_PLAYER(getOwner()).cities())
+						{
+							if (cityX->isConnectedTo(this) && cityX->isHasReligion(eReligionX))
 							{
-								if (GET_PLAYER((PlayerTypes)iJ).isAlive())
+								iDecay *= 9;
+								iDecay /= 10 + cityX->getReligionInfluence(eReligionX);
+							}
+						}
+
+						iDecay /= 1 + getReligionInfluence(eReligionX);
+						if (pHolyCity != NULL)
+						{
+							if (pHolyCity->getOwner() == getOwner())
+							{
+								iDecay /= 2;
+							}
+							else if (GET_TEAM(getTeam()).isAtWar(pHolyCity->getTeam()))
+							{
+								iDecay *= 4;
+								iDecay /= 3;
+							}
+						}
+						if (iDecay > 0)
+						{
+							const int iSpreadRand =
+							(
+								GC.getRELIGION_SPREAD_RAND()
+								*
+								GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
+								/
+								100
+							);
+							if (GAME.getSorenRandNum(iSpreadRand, "Religion Decay") < iDecay)
+							{
+								setHasReligion(eReligionX, false, true, false);
+
+								for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 								{
-									foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
+									if (getNumRealBuilding((BuildingTypes)iJ) > 0
+									&& GC.getBuildingInfo((BuildingTypes)iJ).getPrereqReligion() == iReligionX)
 									{
-										if (pLoopCity->isConnectedTo(this))
-										{
-											int iSpread =
-											(
-												pLoopCity->getReligionInfluence((ReligionTypes)iI)
-												*
-												iSpreadFactor
-											);
-											if (iSpread > 0)
-											{
-												iSpread /=
-												(
-													(getReligionCount() + 1)
-													*
-													std::max(
-														1,
-														GC.getRELIGION_SPREAD_DISTANCE_DIVISOR()
-														* plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())
-														/
-														GC.getMap().maxPlotDistance() - 5
-													)
-												);
-												iRandThreshold = std::max(iRandThreshold, iSpread);
-											}
-										}
+										setNumRealBuilding((BuildingTypes)iJ, 0);
 									}
 								}
-							}
-							if (iRandThreshold > 0)
-							{
-								iRandThreshold *= iSpreadMod;
-								iRandThreshold /= 100;
-
-								const int iSpreadRand =
-								(
-									GC.getRELIGION_SPREAD_RAND()
-									*
-									GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
-									/
-									100
-								);
-
-								if (GC.getGame().getSorenRandNum(iSpreadRand, "Religion Spread") < iRandThreshold)
-								{
-									setHasReligion(((ReligionTypes)iI), true, true, true);
-									break;
-								}
+								break;
 							}
 						}
 					}
 				}
 			}
-			else if (bReligionDecay)
+			else if (bMultRelSpread || iReligionCount == 0)
 			{
-				const CvCity* pHolyCity = GC.getGame().getHolyCity((ReligionTypes)iI);
-
-				if (iI != eStateReligion && pHolyCity != this && getReligionCount() > 2)
+				if (eReligionX == eStateReligion || !GET_PLAYER(getOwner()).isNoNonStateReligionSpread())
 				{
-					int iDecay = GC.getReligionInfo((ReligionTypes)iI).getSpreadFactor();
-					//more decay for each religion above 3
-					iDecay += 10 * (getReligionCount() - 3);
+					const int iSpreadFactor = std::max(1, GC.getReligionInfo(eReligionX).getSpreadFactor());
+					int iRandThreshold = 0;
 
-					foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
+					for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 					{
-						if (pLoopCity->isConnectedTo(this) && pLoopCity->isHasReligion((ReligionTypes)iI))
+						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
 						{
-							iDecay *= 9;
-							iDecay /= 10 + pLoopCity->getReligionInfluence((ReligionTypes)iI);
+							foreach_(const CvCity* cityX, GET_PLAYER((PlayerTypes)iJ).cities())
+							{
+								if (cityX == this || cityX->isConnectedTo(this))
+								{
+									int iSpread = cityX->getReligionInfluence(eReligionX);
+									if (iSpread > 0)
+									{
+										iSpread *= iSpreadFactor;
+										if (cityX == this)
+										{
+											iSpread = 2 * iSpread / (iReligionCount + 1);
+										}
+										else
+										{
+											iSpread /=
+											(
+												(iReligionCount + 1)
+												*
+												std::max(
+													1,
+													GC.getRELIGION_SPREAD_DISTANCE_DIVISOR()
+													* plotDistance(getX(), getY(), cityX->getX(), cityX->getY())
+													/
+													GC.getMap().maxPlotDistance() - 5
+												)
+											);
+										}
+										iRandThreshold = std::max(iRandThreshold, iSpread);
+									}
+								}
+							}
 						}
 					}
+					if (iRandThreshold > 0)
+					{
+						iRandThreshold *= std::max(1, getModifiedIntValue(100, GET_PLAYER(getOwner()).getReligionSpreadRate()));
+						iRandThreshold /= 100;
 
-					iDecay /= 1 + getReligionInfluence((ReligionTypes)iI);
-					if (pHolyCity != NULL)
-					{
-						if (pHolyCity->getOwner() == getOwner())
-						{
-							iDecay /= 2;
-						}
-						else if (GET_TEAM(getTeam()).isAtWar(pHolyCity->getTeam()))
-						{
-							iDecay *= 4;
-							iDecay /= 3;
-						}
-					}
-					if (iDecay > 0)
-					{
 						const int iSpreadRand =
 						(
 							GC.getRELIGION_SPREAD_RAND()
 							*
-							GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+							GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 							/
 							100
 						);
-						if (GC.getGame().getSorenRandNum(iSpreadRand, "Religion Decay") < iDecay)
-						{
-							setHasReligion((ReligionTypes)iI, false, true, false);
 
-							for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-							{
-								if (getNumRealBuilding((BuildingTypes)iJ) > 0
-								&& GC.getBuildingInfo((BuildingTypes)iJ).getPrereqReligion() == iI)
-								{
-									setNumRealBuilding((BuildingTypes)iJ, 0);
-								}
-							}
+						if (GAME.getSorenRandNum(iSpreadRand, "Religion Spread") < iRandThreshold)
+						{
+							setHasReligion((eReligionX), true, true, true);
 							break;
 						}
 					}
 				}
 			}
+		}
+		if (++iReligionX == iNumReligions)
+		{
+			iReligionX = 0;
 		}
 	}
 }

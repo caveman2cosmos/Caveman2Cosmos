@@ -21994,9 +21994,8 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	FAssert(eEvent != NO_EVENT);
 
-	//	-1 iEventTriggeredId implies a replay after a reset of modifiers and only modifier effects
-	//	should be applied
-	bool	adjustModifiersOnly = (iEventTriggeredId == -1);
+	// -1 iEventTriggeredId implies a replay after a reset of modifiers and only modifier effects should be applied
+	const bool adjustModifiersOnly = (iEventTriggeredId == -1);
 
 	if ( !adjustModifiersOnly )
 	{
@@ -22191,7 +22190,6 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 		while ((int)apSpreadReligionCities.size() > kEvent.getConvertOwnCities())
 		{
 			const int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (own)");
-
 			int i = 0;
 			for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
 			{
@@ -22200,7 +22198,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 					apSpreadReligionCities.erase(it);
 					break;
 				}
-				++i;
+				i++;
 			}
 		}
 
@@ -22209,82 +22207,66 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			city->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
 		}
 
-		apSpreadReligionCities.clear();
-
-		if (kEvent.getConvertOtherCities() > 0)
+		if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
 		{
-			if (NO_RELIGION != pTriggeredData->m_eReligion)
+			apSpreadReligionCities.clear();
+
+			if (kEvent.getConvertOtherCities() > 0 && NO_RELIGION != pTriggeredData->m_eReligion)
 			{
-				if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
+				foreach_(CvCity* pLoopCity, GET_PLAYER(pTriggeredData->m_eOtherPlayer).cities())
 				{
-					foreach_(CvCity* pLoopCity, GET_PLAYER(pTriggeredData->m_eOtherPlayer).cities())
+					if (
+						!pLoopCity->isHasReligion(pTriggeredData->m_eReligion)
+					&&
+						(
+							-1 == kEvent.getMaxNumReligions()
+							||
+							pLoopCity->getReligionCount() <= kEvent.getMaxNumReligions()
+						)
+					) apSpreadReligionCities.push_back(pLoopCity);
+				}
+			}
+			if (!apSpreadReligionCities.empty())
+			{
+				while (static_cast<int>(apSpreadReligionCities.size()) > kEvent.getConvertOtherCities())
+				{
+					const int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (other)");
+					int i = 0;
+					for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
 					{
-						if (!pLoopCity->isHasReligion(pTriggeredData->m_eReligion))
+						if (i == iChosen)
 						{
-							if (-1 == kEvent.getMaxNumReligions() || pLoopCity->getReligionCount() <= kEvent.getMaxNumReligions())
-							{
-								apSpreadReligionCities.push_back(pLoopCity);
-							}
+							apSpreadReligionCities.erase(it);
+							break;
 						}
+						i++;
 					}
 				}
-			}
-		}
-
-		while ((int)apSpreadReligionCities.size() > kEvent.getConvertOtherCities())
-		{
-			const int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (other)");
-
-			int i = 0;
-			for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
-			{
-				if (i == iChosen)
+				foreach_(CvCity* city, apSpreadReligionCities)
 				{
-					apSpreadReligionCities.erase(it);
-					break;
+					city->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
 				}
-				++i;
 			}
-		}
 
-		foreach_(CvCity* city, apSpreadReligionCities)
-		{
-			city->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
-		}
-
-		if (0 != kEvent.getOurAttitudeModifier())
-		{
-			if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
+			if (0 != kEvent.getOurAttitudeModifier())
 			{
 				if (kEvent.getOurAttitudeModifier() > 0)
 				{
 					AI_changeMemoryCount(pTriggeredData->m_eOtherPlayer, MEMORY_EVENT_GOOD_TO_US, kEvent.getOurAttitudeModifier());
 				}
-				else
-				{
-					AI_changeMemoryCount(pTriggeredData->m_eOtherPlayer, MEMORY_EVENT_BAD_TO_US, -kEvent.getOurAttitudeModifier());
-				}
+				else AI_changeMemoryCount(pTriggeredData->m_eOtherPlayer, MEMORY_EVENT_BAD_TO_US, -kEvent.getOurAttitudeModifier());
 			}
-		}
 
-		if (0 != kEvent.getAttitudeModifier())
-		{
-			if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
+			if (0 != kEvent.getAttitudeModifier())
 			{
 				if (kEvent.getAttitudeModifier() > 0)
 				{
 					GET_PLAYER(pTriggeredData->m_eOtherPlayer).AI_changeMemoryCount(getID(), MEMORY_EVENT_GOOD_TO_US, kEvent.getAttitudeModifier());
 				}
-				else
-				{
-					GET_PLAYER(pTriggeredData->m_eOtherPlayer).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, -kEvent.getAttitudeModifier());
-				}
+				else GET_PLAYER(pTriggeredData->m_eOtherPlayer).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, -kEvent.getAttitudeModifier());
 			}
-		}
 
-		if (0 != kEvent.getTheirEnemyAttitudeModifier())
-		{
-			if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
+			if (0 != kEvent.getTheirEnemyAttitudeModifier())
 			{
 				const TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
 				if (NO_TEAM != eWorstEnemy)
@@ -27074,15 +27056,10 @@ int CvPlayer::getReligionSpreadRate() const
 	return m_iReligionSpreadRate;
 }
 
-void CvPlayer::setReligionSpreadRate(int iValue)
-{
-	FASSERT_NOT_NEGATIVE(iValue);
-	m_iReligionSpreadRate = iValue;
-}
-
 void CvPlayer::changeReligionSpreadRate(int iChange)
 {
-	setReligionSpreadRate(getReligionSpreadRate() + iChange);
+	m_iReligionSpreadRate += iChange;
+	FASSERT_NOT_NEGATIVE(m_iReligionSpreadRate);
 }
 
 int CvPlayer::getDistantUnitSupportCostModifier() const
@@ -28439,7 +28416,7 @@ void CvPlayer::clearModifierTotals()
 	//m_Properties.clear();
 
 	setPopulationgrowthratepercentage(0);
-	setReligionSpreadRate(0);
+	m_iReligionSpreadRate = 0;
 	setDistantUnitSupportCostModifier(0);
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
