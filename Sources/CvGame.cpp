@@ -11042,12 +11042,6 @@ void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue)
 	m_aiModderGameOption[eIndex] = iNewValue;
 }
 
-void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue)
-{
-	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex)
-	m_aiModderGameOption[eIndex] = bNewValue;
-}
-
 void CvGame::doFoundCorporations()
 {
 

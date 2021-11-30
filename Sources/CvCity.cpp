@@ -16561,7 +16561,7 @@ void CvCity::doDecay()
 void CvCity::doReligion()
 {
 	CvGame& GAME = GC.getGame();
-	const bool bReligionDecay = GAME.isOption(GAMEOPTION_RELIGION_DECAY);
+	const bool bReligionDecay = GAME.isModderGameOption(MODDERGAMEOPTION_RELIGION_DECAY);
 	const bool bMultRelSpread = GAME.isModderGameOption(MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD);
 
 	const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();

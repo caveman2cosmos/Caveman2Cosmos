@@ -5505,11 +5505,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_ENABLED_TEXT</Tag>
-		<English>IDW Enabled</English>
-		<French>Activation IDW</French>
-		<German>EbK aktiviert</German>
-		<Spanish>IDW activado</Spanish>
-		<Russian>Âêë. êóëüò. ýêñïàíñèþ</Russian>
+		<English>Influence Driven War (IDW)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_NO_BARBARIAN_INFLUENCE_HOVER</Tag>
@@ -7026,6 +7022,26 @@
 		<Italian>Riforestazione</Italian>
 		<Spanish>Reforestación</Spanish>
 		<Russian>Âêë. ëåñîïîñàäêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_HOVER</Tag>
+		<English>Cities with many religions may have less popular ones slowly decay.</English>
+		<French>Les Villes avec plusieurs religions peuvent voir leur influence décroître. Les religions les moins populaires sont amenées à disparaitre lentement.</French>
+		<German>In Städten mit vielen Religionen können die unpopuläreren nach und nach in Vergessenheit geraten.</German>
+		<Italian>Nelle città con più religioni, quelle meno popolari svaniranno.</Italian>
+		<Spanish>En ciudades con muchas religiones, las menos populares podrían ir decayendo lentamente y desaparecer.</Spanish>
+		<Polish>Miasta z dużą ilością religii w którym jest przewaga jednej religii najmniejsze z nich mogą zniknąć.</Polish>
+		<Russian>Ó ãîðîäîâ ñî ìíîãèìè ðåëèãèÿìè, ìåíåå ïîïóëÿðíûå ìåäëåííî ðàñïàäàþòñÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT</Tag>
+		<English>Religion Decay</English>
+		<French>Décadence des Religions</French>
+		<German>Religionsverfall</German>
+		<Italian>Decadenza delle religioni</Italian>
+		<Spanish>Decadencia de religiones</Spanish>
+		<Polish>Zanikanie Religii</Polish>
+		<Russian>Ðàñïàä ðåëèãèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESET_HOVER</Tag>
