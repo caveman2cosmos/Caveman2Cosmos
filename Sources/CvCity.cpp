@@ -7562,7 +7562,7 @@ int CvCity::getNumWorldWonders() const
 void CvCity::changeNumWorldWonders(int iChange)
 {
 	m_iNumWorldWonders += iChange;
-	FASSERT_NOT_NEGATIVE(getNumWorldWonders())
+	FASSERT_NOT_NEGATIVE(getNumWorldWonders());
 }
 
 
@@ -7575,7 +7575,7 @@ int CvCity::getNumTeamWonders() const
 void CvCity::changeNumTeamWonders(int iChange)
 {
 	m_iNumTeamWonders += iChange;
-	FASSERT_NOT_NEGATIVE(getNumTeamWonders())
+	FASSERT_NOT_NEGATIVE(getNumTeamWonders());
 }
 
 
@@ -7588,7 +7588,7 @@ int CvCity::getNumNationalWonders() const
 void CvCity::changeNumNationalWonders(int iChange)
 {
 	m_iNumNationalWonders += iChange;
-	FASSERT_NOT_NEGATIVE(getNumNationalWonders())
+	FASSERT_NOT_NEGATIVE(getNumNationalWonders());
 }
 
 
@@ -7601,7 +7601,7 @@ int CvCity::getNumBuildings() const
 void CvCity::changeNumBuildings(int iChange)
 {
 	m_iNumBuildings += iChange;
-	FASSERT_NOT_NEGATIVE(getNumBuildings())
+	FASSERT_NOT_NEGATIVE(getNumBuildings());
 }
 
 
@@ -7622,7 +7622,7 @@ void CvCity::changeGovernmentCenterCount(int iChange)
 	if (iChange != 0)
 	{
 		m_iGovernmentCenterCount += iChange;
-		FASSERT_NOT_NEGATIVE(getGovernmentCenterCount())
+		FASSERT_NOT_NEGATIVE(getGovernmentCenterCount());
 
 		setMaintenanceDirty(true);
 	}
@@ -7826,7 +7826,7 @@ void CvCity::updateMaintenance() const
 
 	if (m_iMaintenance != iNewMaintenance)
 	{
-		FASSERT_NOT_NEGATIVE(iNewMaintenance)
+		FASSERT_NOT_NEGATIVE(iNewMaintenance);
 
 		m_iMaintenance = iNewMaintenance;
 	}
@@ -7948,7 +7948,7 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 	}
 	// Toffer - ToDo: Max value should perhaps be a global define.
 	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
-	FASSERT_NOT_NEGATIVE(iNumCitiesMaint)
+	FASSERT_NOT_NEGATIVE(iNumCitiesMaint);
 
 	return iNumCitiesMaint;
 }
@@ -7990,7 +7990,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 
 	iMaintenance = std::min(iMaintenance, GC.getHandicapInfo(getHandicapType()).getMaxColonyMaintenance() * calculateDistanceMaintenanceTimes100() / 100);
 
-	FASSERT_NOT_NEGATIVE(iMaintenance)
+	FASSERT_NOT_NEGATIVE(iMaintenance);
 
 	// Rebels pay less maintenance
 	return owner.isRebel() ? iMaintenance / 2 : iMaintenance;
@@ -8252,7 +8252,7 @@ void CvCity::updateFreshWaterHealth()
 	if (getFreshWaterGoodHealth() != iNewGoodHealth)
 	{
 		m_iFreshWaterGoodHealth = iNewGoodHealth;
-		FASSERT_NOT_NEGATIVE(getFreshWaterGoodHealth())
+		FASSERT_NOT_NEGATIVE(getFreshWaterGoodHealth());
 
 		AI_setAssignWorkDirty(true);
 
@@ -8553,7 +8553,7 @@ void CvCity::changeBuildingGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBuildingGoodHealth += iChange;
-		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth())
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth());
 
 		AI_setAssignWorkDirty(true);
 
@@ -8637,7 +8637,7 @@ void CvCity::changeMilitaryHappinessUnits(int iChange)
 	if (iChange != 0)
 	{
 		m_iMilitaryHappinessUnits += iChange;
-		FASSERT_NOT_NEGATIVE(getMilitaryHappinessUnits())
+		FASSERT_NOT_NEGATIVE(getMilitaryHappinessUnits());
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -8691,7 +8691,7 @@ void CvCity::changeBuildingGoodHappiness(int iChange)
 	if (iChange != 0)
 	{
 		m_iBuildingGoodHappiness += iChange;
-		FASSERT_NOT_NEGATIVE(getBuildingGoodHappiness())
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHappiness());
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -8702,7 +8702,7 @@ void CvCity::changeBuildingBadHappiness(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBuildingBadHappiness = (m_iBuildingBadHappiness + iChange);
+		m_iBuildingBadHappiness += iChange;
 		FAssert(getBuildingBadHappiness() <= 0);
 
 		AI_setAssignWorkDirty(true);
@@ -8751,7 +8751,7 @@ void CvCity::updateExtraBuildingHappiness(bool bLimited)
 	if (getExtraBuildingGoodHappiness() != iNewExtraBuildingGoodHappiness)
 	{
 		m_iExtraBuildingGoodHappiness = iNewExtraBuildingGoodHappiness;
-		FASSERT_NOT_NEGATIVE(getExtraBuildingGoodHappiness())
+		FASSERT_NOT_NEGATIVE(getExtraBuildingGoodHappiness());
 
 		if (!bLimited)
 		{
@@ -9477,7 +9477,7 @@ void CvCity::updateExtraBuildingHealth(bool bLimited)
 	if (getExtraBuildingGoodHealth() != iNewExtraBuildingGoodHealth)
 	{
 		m_iExtraBuildingGoodHealth = iNewExtraBuildingGoodHealth;
-		FASSERT_NOT_NEGATIVE(getExtraBuildingGoodHealth())
+		FASSERT_NOT_NEGATIVE(getExtraBuildingGoodHealth());
 
 		if (!bLimited)
 		{
@@ -9561,7 +9561,7 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 	if (getFeatureGoodHappiness() != iNewFeatureGoodHappiness)
 	{
 		m_iFeatureGoodHappiness = iNewFeatureGoodHappiness;
-		FASSERT_NOT_NEGATIVE(getFeatureGoodHappiness())
+		FASSERT_NOT_NEGATIVE(getFeatureGoodHappiness());
 
 		if (!bLimited)
 		{

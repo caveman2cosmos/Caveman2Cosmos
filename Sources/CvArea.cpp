@@ -733,7 +733,7 @@ void CvArea::changePower(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiPower[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(m_aiPower[eIndex])
+	FASSERT_NOT_NEGATIVE(m_aiPower[eIndex]);
 }
 
 bool CvArea::hasBestFoundValue(PlayerTypes eIndex) const
@@ -940,7 +940,7 @@ void CvArea::changeNumRevealedTiles(TeamTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiNumRevealedTiles[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumRevealedTiles(eIndex))
+	FASSERT_NOT_NEGATIVE(getNumRevealedTiles(eIndex));
 }
 
 
@@ -1079,7 +1079,7 @@ void CvArea::changeNumTrainAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2, int
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1);
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex2);
 	m_aaiNumTrainAIUnits[eIndex1][eIndex2] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumTrainAIUnits(eIndex1, eIndex2))
+	FASSERT_NOT_NEGATIVE(getNumTrainAIUnits(eIndex1, eIndex2));
 }
 
 
@@ -1096,7 +1096,7 @@ void CvArea::changeNumAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2, int iCha
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1);
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex2);
 	m_aaiNumAIUnits[eIndex1][eIndex2] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumAIUnits(eIndex1, eIndex2))
+	FASSERT_NOT_NEGATIVE(getNumAIUnits(eIndex1, eIndex2));
 }
 
 
@@ -1123,7 +1123,7 @@ void CvArea::changeNumBonuses(BonusTypes eBonus, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 	m_paiNumBonuses[eBonus] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumBonuses(eBonus))
+	FASSERT_NOT_NEGATIVE(getNumBonuses(eBonus));
 }
 
 
@@ -1138,14 +1138,13 @@ void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eImprovement);
 	m_paiNumImprovements[eImprovement] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumImprovements(eImprovement))
+	FASSERT_NOT_NEGATIVE(getNumImprovements(eImprovement));
 }
 
 
 // Koshling - record rolling history of the last N turns of our combat losses and what we lost to
 void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, UnitTypes lostToUnitType)
 {
-
 	CombatResultRecord record;
 
 	record.eLoser = ePlayer;
