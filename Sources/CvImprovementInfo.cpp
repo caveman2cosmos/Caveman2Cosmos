@@ -290,11 +290,6 @@ int CvImprovementInfo::getPrereqNatureYield(int i) const
 	return m_piPrereqNatureYield ? m_piPrereqNatureYield[i] : 0;
 }
 
-int* CvImprovementInfo::getPrereqNatureYieldArray() const
-{
-	return m_piPrereqNatureYield;
-}
-
 int CvImprovementInfo::getYieldChange(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);

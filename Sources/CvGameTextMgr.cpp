@@ -17258,7 +17258,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 					break;
 				}
 			}
-			foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
+			foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceChanges100())
 			{
 				if (pair.first == eTech)
 				{
@@ -17316,7 +17316,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 					break;
 				}
 			}
-			foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+			foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceModifiers())
 			{
 				if (pair.first == eTech)
 				{
@@ -21003,7 +21003,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 			if (player)
 			{
-				int* aiYields100 = new int[NUM_YIELD_TYPES]();
+				YieldArray aiYields100;
+				aiYields100.fill(0);
 				foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
 				{
 					if (GET_TEAM(eTeam).isHasTech(pair.first))
@@ -21040,7 +21041,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 			{
 				int iBaseCommerceChange = kBuilding.getCommerceChange(iI);
-				if ( iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE") )
+				if (iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 				{
 					iBaseCommerceChange = 0;
 				}
@@ -22607,11 +22608,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 
 		{
-			std::map<TechTypes, int*> tempMap;
+			std::map<TechTypes, const int*> tempMap;
 
-			foreach_(const TechArray& pair, kBuilding.getTechCommerceChanges100())
+			foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceChanges100())
 			{
-				tempMap[pair.first] = pair.second;
+				tempMap[pair.first] = pair.second.data();
 			}
 			foreach_(const TechArray& pair, kBuilding.getTechYieldChanges100())
 			{
@@ -22656,7 +22657,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 					tempMap.erase(pair.first);
 				}
 			}
-			for (std::map<TechTypes, int*>::const_iterator it = tempMap.begin(), itEnd = tempMap.end(); it != itEnd; ++it)
+			for (std::map<TechTypes, const int*>::const_iterator it = tempMap.begin(), itEnd = tempMap.end(); it != itEnd; ++it)
 			{
 				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
@@ -22686,11 +22687,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 		{
-			std::map<TechTypes, int*> tempMap;
+			std::map<TechTypes, const int*> tempMap;
 
-			foreach_(const TechArray& pair, kBuilding.getTechCommerceModifiers())
+			foreach_(const TechCommerceArray& pair, kBuilding.getTechCommerceModifiers())
 			{
-				tempMap[pair.first] = pair.second;
+				tempMap[pair.first] = pair.second.data();
 			}
 			foreach_(const TechArray& pair, kBuilding.getTechYieldModifiers())
 			{
@@ -22731,7 +22732,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 					tempMap.erase(pair.first);
 				}
 			}
-			for (std::map<TechTypes, int*>::const_iterator it = tempMap.begin(), itEnd = tempMap.end(); it != itEnd; ++it)
+			for (std::map<TechTypes, const int*>::const_iterator it = tempMap.begin(), itEnd = tempMap.end(); it != itEnd; ++it)
 			{
 				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
