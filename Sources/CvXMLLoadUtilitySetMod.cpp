@@ -209,7 +209,7 @@ namespace CvXMLLoadUtilitySetMod
 				//break when we just finished checking the top level
 				if (iDirDepthTemp == 0)
 				{
-					FASSERT_NOT_NEGATIVE(iDirDepthTemp) //should never reach negative values!!
+					FASSERT_NOT_NEGATIVE(iDirDepthTemp); //should never reach negative values!!
 					break;
 				}
 			}

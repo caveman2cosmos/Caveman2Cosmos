@@ -564,7 +564,7 @@ int CvDiplomacyResponse::getNumDiplomacyText() const
 
 bool CvDiplomacyResponse::getCivilizationTypes(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), i);
 	return m_pbCivilizationTypes ? m_pbCivilizationTypes[i] : false;
 }
 
@@ -575,7 +575,7 @@ bool* CvDiplomacyResponse::getCivilizationTypes() const
 
 bool CvDiplomacyResponse::getLeaderHeadTypes(const int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), i);
 	return m_pbLeaderHeadTypes ? m_pbLeaderHeadTypes[i] : false;
 }
 
@@ -586,7 +586,7 @@ bool* CvDiplomacyResponse::getLeaderHeadTypes() const
 
 bool CvDiplomacyResponse::getAttitudeTypes(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, i);
 	return m_pbAttitudeTypes ? m_pbAttitudeTypes[i] : false;
 }
 
@@ -597,7 +597,7 @@ bool* CvDiplomacyResponse::getAttitudeTypes() const
 
 bool CvDiplomacyResponse::getDiplomacyPowerTypes(const int i) const
 {
-	FASSERT_BOUNDS(0, NUM_DIPLOMACYPOWER_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_DIPLOMACYPOWER_TYPES, i);
 	return m_pbDiplomacyPowerTypes ? m_pbDiplomacyPowerTypes[i] : false;
 }
 
@@ -775,7 +775,7 @@ int CvSpecialistInfo::getExperience() const
 
 int CvSpecialistInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -786,13 +786,13 @@ const int* CvSpecialistInfo::getYieldChangeArray() const
 
 int CvSpecialistInfo::getCommerceChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceChange ? m_piCommerceChange[i] : 0;
 }
 
 int CvSpecialistInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
@@ -833,7 +833,7 @@ int CvSpecialistInfo::getInvestigation() const
 
 int CvSpecialistInfo::getTechHappiness(TechTypes eTech) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 	return m_aTechHappinessTypes.getValue(eTech);
 }
 
@@ -844,7 +844,7 @@ int CvSpecialistInfo::getTechHappiness(TechTypes eTech) const
 
 int CvSpecialistInfo::getTechHealth(TechTypes eTech) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 	return m_aTechHealthTypes.getValue(eTech);
 }
 
@@ -855,8 +855,8 @@ int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
 
 const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypes.size(), iUnitCombat)
-	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypesNull.size(), iUnitCombat)
+	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypes.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
 
 	if (!GC.getGame().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
 	{
@@ -1172,7 +1172,7 @@ void CvTechInfo::validate()
 		const CvTechInfo& info = GC.getTechInfo((TechTypes)iI);
 
 		//	Arbitrary tests - add cases as suspected bugs crop up to pre-detect
-		FASSERT_BOUNDS(0, GC.getNumEraInfos(), info.getEra())
+		FASSERT_BOUNDS(0, GC.getNumEraInfos(), info.getEra());
 	}
 #endif
 }
@@ -1418,7 +1418,7 @@ int CvTechInfo::getDomainExtraMoves(int i) const
 
 int CvTechInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
@@ -1434,7 +1434,7 @@ const std::vector<TechTypes>& CvTechInfo::getPrereqAndTechs() const
 
 bool CvTechInfo::isCommerceFlexible(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_pbCommerceFlexible ? m_pbCommerceFlexible[i] : false;
 }
 
@@ -1446,7 +1446,7 @@ bool CvTechInfo::isTerrainTrade(int i) const
 //ls612: Tech Commerce Modifiers
 int CvTechInfo::getCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceModifier ? m_piCommerceModifier[i] : 0;
 }
 
@@ -2655,7 +2655,7 @@ bool CvPromotionInfo::changesMoveThroughPlots() const
 
 int CvPromotionInfo::getTerrainAttackPercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_piTerrainAttackPercent ? m_piTerrainAttackPercent[i] : 0;
 }
 
@@ -2666,7 +2666,7 @@ bool CvPromotionInfo::isAnyTerrainAttackPercent() const
 
 int CvPromotionInfo::getTerrainDefensePercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_piTerrainDefensePercent ? m_piTerrainDefensePercent[i] : 0;
 }
 
@@ -2677,7 +2677,7 @@ bool CvPromotionInfo::isAnyTerrainDefensePercent() const
 
 int CvPromotionInfo::getFeatureAttackPercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_piFeatureAttackPercent ? m_piFeatureAttackPercent[i] : 0;
 }
 
@@ -2688,7 +2688,7 @@ bool CvPromotionInfo::isAnyFeatureAttackPercent() const
 
 int CvPromotionInfo::getFeatureDefensePercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_piFeatureDefensePercent ? m_piFeatureDefensePercent[i] : 0;
 }
 
@@ -2699,7 +2699,7 @@ bool CvPromotionInfo::isAnyFeatureDefensePercent() const
 
 int CvPromotionInfo::getUnitCombatModifierPercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
 	return m_piUnitCombatModifierPercent ? m_piUnitCombatModifierPercent[i] : 0;
 }
 
@@ -2710,7 +2710,7 @@ bool CvPromotionInfo::isAnyUnitCombatModifierPercent() const
 
 int CvPromotionInfo::getDomainModifierPercent(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i);
 	return m_piDomainModifierPercent ? m_piDomainModifierPercent[i] : 0;
 }
 
@@ -2721,31 +2721,31 @@ bool CvPromotionInfo::isAnyDomainModifierPercent() const
 
 bool CvPromotionInfo::getTerrainDoubleMove(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_pbTerrainDoubleMove ? m_pbTerrainDoubleMove[i] : false;
 }
 
 bool CvPromotionInfo::getFeatureDoubleMove(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_pbFeatureDoubleMove ? m_pbFeatureDoubleMove[i] : false;
 }
 
 bool CvPromotionInfo::getUnitCombat(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
 	return m_pbUnitCombat ? m_pbUnitCombat[i] : false;
 }
 //ls612: Terrain Work Modifiers
 int CvPromotionInfo::getTerrainWorkPercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_piTerrainWorkPercent ? m_piTerrainWorkPercent[i] : 0;
 }
 
 int CvPromotionInfo::getFeatureWorkPercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_piFeatureWorkPercent ? m_piFeatureWorkPercent[i] : 0;
 }
 
@@ -3751,7 +3751,7 @@ bool CvPromotionInfo::isNoAutoEquiptoCombatClassType(int i) const
 
 //int CvPromotionInfo::getAIWeightbyUnitCombatType(int i) const
 //{
-//	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
+//	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
 //	return m_piAIWeightbyUnitCombatTypes ? m_piAIWeightbyUnitCombatTypes[i] : 0;
 //}
 
@@ -4562,7 +4562,7 @@ int CvPromotionInfo::getNumAIWeightbyUnitCombatTypes() const
 
 const UnitCombatModifier& CvPromotionInfo::getAIWeightbyUnitCombatType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumAIWeightbyUnitCombatTypes(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumAIWeightbyUnitCombatTypes(), iUnitCombat);
 	return m_aAIWeightbyUnitCombatTypes[iUnitCombat];
 }
 
@@ -4574,7 +4574,7 @@ int CvPromotionInfo::getNumAfflictionFortitudeChangeModifiers() const
 
 const PromotionLineModifier& CvPromotionInfo::getAfflictionFortitudeChangeModifier(int iAfflictionLine) const
 {
-	FASSERT_BOUNDS(0, getNumAfflictionFortitudeChangeModifiers(), iAfflictionLine)
+	FASSERT_BOUNDS(0, getNumAfflictionFortitudeChangeModifiers(), iAfflictionLine);
 	return m_aAfflictionFortitudeChangeModifiers[iAfflictionLine];
 }
 
@@ -4585,7 +4585,7 @@ int CvPromotionInfo::getNumAfflictOnAttackChangeTypes() const
 
 const AfflictOnAttackChange& CvPromotionInfo::getAfflictOnAttackChangeType(int iAfflictionLine) const
 {
-	FASSERT_BOUNDS(0, getNumAfflictOnAttackChangeTypes(), iAfflictionLine)
+	FASSERT_BOUNDS(0, getNumAfflictOnAttackChangeTypes(), iAfflictionLine);
 	return m_aAfflictOnAttackChangeTypes[iAfflictionLine];
 }
 #endif
@@ -4697,7 +4697,7 @@ int CvPromotionInfo::getNumHealUnitCombatChangeTypes() const
 
 const HealUnitCombat& CvPromotionInfo::getHealUnitCombatChangeType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumHealUnitCombatChangeTypes(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumHealUnitCombatChangeTypes(), iUnitCombat);
 	return m_aHealUnitCombatChangeTypes[iUnitCombat];
 }
 
@@ -7745,31 +7745,31 @@ int	CvSpawnInfo::getNumSpawnGroup() const
 
 BonusTypes CvSpawnInfo::getBonus(int index) const
 {
-	FASSERT_BOUNDS(0, getNumBonuses(), index)
+	FASSERT_BOUNDS(0, getNumBonuses(), index);
 	return m_bonusTypes[index];
 }
 
 TerrainTypes CvSpawnInfo::getTerrain(int index) const
 {
-	FASSERT_BOUNDS(0, getNumTerrains(), index)
+	FASSERT_BOUNDS(0, getNumTerrains(), index);
 	return m_terrainTypes[index];
 }
 
 FeatureTypes CvSpawnInfo::getFeature(int index) const
 {
-	FASSERT_BOUNDS(0, getNumFeatures(), index)
+	FASSERT_BOUNDS(0, getNumFeatures(), index);
 	return m_featureTypes[index];
 }
 
 TerrainTypes CvSpawnInfo::getFeatureTerrain(int index) const
 {
-	FASSERT_BOUNDS(0, getNumFeatureTerrains(), index)
+	FASSERT_BOUNDS(0, getNumFeatureTerrains(), index);
 	return m_featureTerrainTypes[index];
 }
 
 UnitTypes CvSpawnInfo::getSpawnGroup(int index) const
 {
-	FASSERT_BOUNDS(0, getNumSpawnGroup(), index)
+	FASSERT_BOUNDS(0, getNumSpawnGroup(), index);
 	return m_spawnGroup[index];
 }
 
@@ -8191,7 +8191,7 @@ int CvSpecialUnitInfo::getPursuitChange() const
 
 bool CvSpecialUnitInfo::isCarrierUnitAIType(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i);
 	return m_pbCarrierUnitAITypes ? m_pbCarrierUnitAITypes[i] : false;
 }
 
@@ -8287,7 +8287,7 @@ bool CvCivicOptionInfo::isPolicy() const
 }
 //bool CvCivicOptionInfo::getTraitNoUpkeep(int i) const
 //{
-//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i)
+//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i);
 //	return m_pabTraitNoUpkeep ? m_pabTraitNoUpkeep[i] : false;
 //}
 
@@ -8990,7 +8990,7 @@ bool CvCivicInfo::isPolicy() const
 // Arrays
 int CvCivicInfo::getYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldModifier ? m_piYieldModifier[i] : 0;
 }
 
@@ -9001,7 +9001,7 @@ int* CvCivicInfo::getYieldModifierArray() const
 
 int CvCivicInfo::getCapitalYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piCapitalYieldModifier ? m_piCapitalYieldModifier[i] : 0;
 }
 
@@ -9012,7 +9012,7 @@ int* CvCivicInfo::getCapitalYieldModifierArray() const
 
 int CvCivicInfo::getTradeYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piTradeYieldModifier ? m_piTradeYieldModifier[i] : 0;
 }
 
@@ -9023,7 +9023,7 @@ int* CvCivicInfo::getTradeYieldModifierArray() const
 
 int CvCivicInfo::getCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceModifier ? m_piCommerceModifier[i] : 0;
 }
 
@@ -9034,7 +9034,7 @@ int* CvCivicInfo::getCommerceModifierArray() const
 
 int CvCivicInfo::getCapitalCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCapitalCommerceModifier ? m_piCapitalCommerceModifier[i] : 0;
 }
 
@@ -9045,7 +9045,7 @@ int* CvCivicInfo::getCapitalCommerceModifierArray() const
 
 int CvCivicInfo::getSpecialistExtraCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piSpecialistExtraCommerce ? m_piSpecialistExtraCommerce[i] : 0;
 }
 
@@ -9056,7 +9056,7 @@ int* CvCivicInfo::getSpecialistExtraCommerceArray() const
 
 int CvCivicInfo::getCivicAttitudeChange(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i);
 	return m_piCivicAttitudeChanges ? m_piCivicAttitudeChanges[i] : 0;
 }
 
@@ -9067,7 +9067,7 @@ int* CvCivicInfo::getCivicAttitudeChanges() const
 
 int CvCivicInfo::getLandmarkYieldChanges(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piLandmarkYieldChanges ? m_piLandmarkYieldChanges[i] : 0;
 }
 
@@ -9079,63 +9079,63 @@ int* CvCivicInfo::getLandmarkYieldChangesArray() const
 
 int CvCivicInfo::getBonusCommerceModifier(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 	return (m_ppiBonusCommerceModifier && m_ppiBonusCommerceModifier[i]) ? m_ppiBonusCommerceModifier[i][j] : 0;
 }
 
 int* CvCivicInfo::getBonusCommerceModifierArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_ppiBonusCommerceModifier ? m_ppiBonusCommerceModifier[i] : NULL;
 }
 
 
 int CvCivicInfo::getBuildingHappinessChanges(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
 	return m_paiBuildingHappinessChanges ? m_paiBuildingHappinessChanges[i] : 0;
 }
 
 int CvCivicInfo::getBuildingHealthChanges(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
 	return m_paiBuildingHealthChanges ? m_paiBuildingHealthChanges[i] : 0;
 }
 
 int CvCivicInfo::getFeatureHappinessChanges(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_paiFeatureHappinessChanges ? m_paiFeatureHappinessChanges[i] : 0;
 }
 
 int CvCivicInfo::getBonusMintedPercent(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_piBonusMintedPercent ? m_piBonusMintedPercent[i] : 0;
 }
 
 int CvCivicInfo::getFreeSpecialistCount(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_piFreeSpecialistCount ? m_piFreeSpecialistCount[i] : 0;
 }
 
 int CvCivicInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
 int CvCivicInfo::getUnitCombatProductionModifier(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
 	return m_paiUnitCombatProductionModifier ? m_paiUnitCombatProductionModifier[i] : 0;
 }
 
 int CvCivicInfo::getUnitProductionModifier(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i);
 	return m_piUnitProductionModifier ? m_piUnitProductionModifier[i] : 0;
 }
 
@@ -9147,75 +9147,75 @@ int CvCivicInfo::getBuildingProductionModifier(BuildingTypes e) const
 
 int CvCivicInfo::getImprovementHappinessChanges(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 	return m_piImprovementHappinessChanges ? m_piImprovementHappinessChanges[i] : 0;
 }
 
 int CvCivicInfo::getImprovementHealthPercentChanges(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 	return m_piImprovementHealthPercentChanges ? m_piImprovementHealthPercentChanges[i] : 0;
 }
 
 
 bool CvCivicInfo::isHurry(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), i);
 	return m_pabHurry ? m_pabHurry[i] : false;
 }
 
 bool CvCivicInfo::isSpecialBuildingNotRequired(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), i);
 	return m_pabSpecialBuildingNotRequired ? m_pabSpecialBuildingNotRequired[i] : false;
 }
 
 bool CvCivicInfo::isSpecialistValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_pabSpecialistValid ? m_pabSpecialistValid[i] : false;
 }
 
 
 int CvCivicInfo::getImprovementYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppiImprovementYieldChanges && m_ppiImprovementYieldChanges[i]) ? m_ppiImprovementYieldChanges[i][j] : 0;
 }
 
 int CvCivicInfo::getTerrainYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppiTerrainYieldChanges && m_ppiTerrainYieldChanges[i]) ? m_ppiTerrainYieldChanges[i][j] : 0;
 }
 
 int CvCivicInfo::getBuildingCommerceModifier(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 	return (m_ppiBuildingCommerceModifier && m_ppiBuildingCommerceModifier[i]) ? m_ppiBuildingCommerceModifier[i][j] : 0;
 }
 
 int CvCivicInfo::getBuildingCommerceChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 	return (m_ppiBuildingCommerceChange && m_ppiBuildingCommerceChange[i]) ? m_ppiBuildingCommerceChange[i][j] : 0;
 }
 
 int CvCivicInfo::getSpecialistYieldPercentChanges(int i, int j ) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppiSpecialistYieldPercentChanges && m_ppiSpecialistYieldPercentChanges[i]) ? m_ppiSpecialistYieldPercentChanges[i][j] : 0;
 }
 
 int CvCivicInfo::getSpecialistCommercePercentChanges(int i, int j ) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 	return (m_ppiSpecialistCommercePercentChanges && m_ppiSpecialistCommercePercentChanges[i]) ? m_ppiSpecialistCommercePercentChanges[i][j] : 0;
 }
 
@@ -9258,7 +9258,7 @@ bool CvCivicInfo::isAnyImprovementYieldChange() const
 
 CvString CvCivicInfo::getCivicAttitudeReason(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i);
 	return m_pszCivicAttitudeReason[i];
 }
 
@@ -11431,20 +11431,20 @@ const char* CvCivilizationInfo::getArtDefineTag() const
 
 int CvCivilizationInfo::getCivilizationFreeUnits(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i);
 	return m_piCivilizationFreeUnits ? m_piCivilizationFreeUnits[i] : 0;
 }
 
 int CvCivilizationInfo::getCivilizationInitialCivics(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), i);
 	return (m_piCivilizationInitialCivics ? m_piCivilizationInitialCivics[i] : -1);
 }
 
 void CvCivilizationInfo::setCivilizationInitialCivics(int iCivicOption, int iCivic)
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), iCivicOption)
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), iCivic)
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), iCivicOption);
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), iCivic);
 
 	if ( NULL == m_piCivilizationInitialCivics )
 	{
@@ -11456,7 +11456,7 @@ void CvCivilizationInfo::setCivilizationInitialCivics(int iCivicOption, int iCiv
 
 bool CvCivilizationInfo::isLeaders(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), i);
 	return m_pbLeaders ? m_pbLeaders[i] : false;
 }
 
@@ -11475,13 +11475,13 @@ bool CvCivilizationInfo::isCivilizationBuilding(int i) const
 
 bool CvCivilizationInfo::isCivilizationFreeTechs(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i);
 	return m_pbCivilizationFreeTechs ? m_pbCivilizationFreeTechs[i] : false;
 }
 
 bool CvCivilizationInfo::isCivilizationDisableTechs(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i);
 	return m_pbCivilizationDisableTechs ? m_pbCivilizationDisableTechs[i] : false;
 }
 
@@ -11518,7 +11518,7 @@ const char* CvCivilizationInfo::getButton() const
 
 std::string CvCivilizationInfo::getCityNames(int i) const
 {
-	FASSERT_BOUNDS(0, getNumCityNames(), i)
+	FASSERT_BOUNDS(0, getNumCityNames(), i);
 	return m_paszCityNames[i];
 }
 
@@ -12458,7 +12458,7 @@ int CvHandicapInfo::getNumGoodies() const
 
 int CvHandicapInfo::getGoodies(int i) const
 {
-	FASSERT_BOUNDS(0, getNumGoodies(), i)
+	FASSERT_BOUNDS(0, getNumGoodies(), i);
 	return m_piGoodies[i];
 }
 
@@ -13051,7 +13051,7 @@ void CvBuildInfo::setDisabled(bool bNewVal)
 }
 bool CvBuildInfo::isNoTechCanRemoveWithNoProductionGain(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_pabNoTechCanRemoveWithNoProductionGain ? m_pabNoTechCanRemoveWithNoProductionGain[i] : false;
 }
 
@@ -13079,25 +13079,25 @@ bool CvBuildInfo::isKill() const
 
 int CvBuildInfo::getFeatureTech(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_paiFeatureTech ? m_paiFeatureTech[i] : -1;
 }
 
 int CvBuildInfo::getFeatureTime(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_paiFeatureTime ? m_paiFeatureTime[i] : 0;
 }
 
 int CvBuildInfo::getFeatureProduction(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_paiFeatureProduction ? m_paiFeatureProduction[i] : 0;
 }
 
 bool CvBuildInfo::isFeatureRemove(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_pabFeatureRemove ? m_pabFeatureRemove[i] : false;
 }
 
@@ -13123,7 +13123,7 @@ int CvBuildInfo::getNumTerrainStructs() const
 
 const TerrainStructs& CvBuildInfo::getTerrainStruct(int iIndex) const
 {
-	FASSERT_BOUNDS(0, getNumTerrainStructs(), iIndex)
+	FASSERT_BOUNDS(0, getNumTerrainStructs(), iIndex);
 	return m_aTerrainStructs[iIndex];
 }
 
@@ -13636,7 +13636,7 @@ int CvRouteInfo::getPrereqBonus() const
 
 int CvRouteInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -13647,7 +13647,7 @@ int* CvRouteInfo::getYieldChangeArray() const
 
 int CvRouteInfo::getTechMovementChange(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i);
 	return m_piTechMovementChange ? m_piTechMovementChange[i] : 0;
 }
 
@@ -13830,7 +13830,7 @@ bool CvImprovementBonusInfo::isBonusTrade() const
 
 int CvImprovementBonusInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -14144,7 +14144,7 @@ const char* CvBonusInfo::getArtDefineTag() const
 
 int CvBonusInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -14155,25 +14155,25 @@ int* CvBonusInfo::getYieldChangeArray() const
 
 int CvBonusInfo::getImprovementChange(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 	return m_piImprovementChange ? m_piImprovementChange[i] : 0;
 }
 
 bool CvBonusInfo::isTerrain(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_pbTerrain ? m_pbTerrain[i] : false;
 }
 
 bool CvBonusInfo::isFeature(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_pbFeature ? m_pbFeature[i] : false;
 }
 
 bool CvBonusInfo::isFeatureTerrain(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_pbFeatureTerrain ?	m_pbFeatureTerrain[i] : false;
 }
 
@@ -14185,7 +14185,7 @@ int CvBonusInfo::getNumAfflictionCommunicabilityTypes() const
 
 PromotionLineAfflictionModifier CvBonusInfo::getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume)
 {
-	FASSERT_BOUNDS(0, getNumAfflictionCommunicabilityTypes(), iPromotionLine)
+	FASSERT_BOUNDS(0, getNumAfflictionCommunicabilityTypes(), iPromotionLine);
 
 	if ((bWorkedTile && !m_aAfflictionCommunicabilityTypes[iPromotionLine].bWorkedTile) ||
 		(bVicinity && !m_aAfflictionCommunicabilityTypes[iPromotionLine].bVicinity) ||
@@ -14723,13 +14723,13 @@ int CvFeatureInfo::getEffectProbability() const
 
 int CvFeatureInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
 int CvFeatureInfo::getRiverYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piRiverYieldChange ? m_piRiverYieldChange[i] : 0;
 }
 
@@ -14742,7 +14742,7 @@ int CvFeatureInfo::get3DAudioScriptFootstepIndex(int i) const
 
 bool CvFeatureInfo::isTerrain(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_pbTerrain ? m_pbTerrain[i] : false;
 }
 
@@ -14818,7 +14818,7 @@ int CvFeatureInfo::getNumAfflictionCommunicabilityTypes() const
 
 PromotionLineAfflictionModifier CvFeatureInfo::getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume)
 {
-	FASSERT_BOUNDS(0, getNumAfflictionCommunicabilityTypes(), iPromotionLine)
+	FASSERT_BOUNDS(0, getNumAfflictionCommunicabilityTypes(), iPromotionLine);
 
 	if ((bWorkedTile && !m_aAfflictionCommunicabilityTypes[iPromotionLine].bWorkedTile) ||
 		(bVicinity && !m_aAfflictionCommunicabilityTypes[iPromotionLine].bVicinity) ||
@@ -15301,13 +15301,12 @@ int CvYieldInfo::getColorType() const
 
 const char* CvYieldInfo::getSymbolPath(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getDefineINT("MAX_YIELD_STACK"), i)
+	FASSERT_BOUNDS(0, GC.getDefineINT("MAX_YIELD_STACK"), i);
 	return m_paszSymbolPath ? m_paszSymbolPath[i] : reinterpret_cast<const char*>(-1);
 }
 
 bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -15519,7 +15518,7 @@ int CvTerrainInfo::getWorldSoundscapeScriptId() const
 
 int CvTerrainInfo::getYield(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYields ? m_piYields[i] : 0;
 }
 
@@ -15553,7 +15552,7 @@ int CvTerrainInfo::getNumAfflictionCommunicabilityTypes() const
 
 PromotionLineAfflictionModifier CvTerrainInfo::getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume)
 {
-	FASSERT_BOUNDS(0, getNumAfflictionCommunicabilityTypes(), iPromotionLine)
+	FASSERT_BOUNDS(0, getNumAfflictionCommunicabilityTypes(), iPromotionLine);
 
 	if ((bWorkedTile && !m_aAfflictionCommunicabilityTypes[iPromotionLine].bWorkedTile) ||
 		(bVicinity && !m_aAfflictionCommunicabilityTypes[iPromotionLine].bVicinity) ||
@@ -15908,19 +15907,18 @@ int CvAdvisorInfo::getNumCodes() const
 
 int CvAdvisorInfo::getEnableCode(uint32_t uiCode) const
 {
-	FASSERT_BOUNDS(0, m_vctEnableDisableCodes.size(), uiCode)
+	FASSERT_BOUNDS(0, m_vctEnableDisableCodes.size(), uiCode);
 	return m_vctEnableDisableCodes[uiCode].first;
 }
 
 int CvAdvisorInfo::getDisableCode(uint32_t uiCode) const
 {
-	FASSERT_BOUNDS(0, m_vctEnableDisableCodes.size(), uiCode)
+	FASSERT_BOUNDS(0, m_vctEnableDisableCodes.size(), uiCode);
 	return m_vctEnableDisableCodes[uiCode].second;
 }
 
 bool CvAdvisorInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -16540,79 +16538,79 @@ const char* CvLeaderHeadInfo::getArtDefineTag() const
 
 bool CvLeaderHeadInfo::hasTrait(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i);
 	return m_pbTraits ? m_pbTraits[i] : false;
 }
 
 int CvLeaderHeadInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
 int CvLeaderHeadInfo::getContactRand(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, i);
 	return m_piContactRand ? m_piContactRand[i] : 0;
 }
 
 int CvLeaderHeadInfo::getContactDelay(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, i);
 	return m_piContactDelay ? m_piContactDelay[i] : 0;
 }
 
 int CvLeaderHeadInfo::getMemoryDecayRand(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, i);
 	return m_piMemoryDecayRand ? m_piMemoryDecayRand[i] : 0;
 }
 
 int CvLeaderHeadInfo::getMemoryAttitudePercent(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, i);
 	return m_piMemoryAttitudePercent ? m_piMemoryAttitudePercent[i] : 0;
 }
 
 int CvLeaderHeadInfo::getNoWarAttitudeProb(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, i);
 	return m_piNoWarAttitudeProb ? m_piNoWarAttitudeProb[i] : 0;
 }
 
 int CvLeaderHeadInfo::getUnitAIWeightModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i);
 	return m_piUnitAIWeightModifier ? m_piUnitAIWeightModifier[i] : 0;
 }
 
 int CvLeaderHeadInfo::getImprovementWeightModifier(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 	return m_piImprovementWeightModifier ? m_piImprovementWeightModifier[i] : 0;
 }
 
 int CvLeaderHeadInfo::getDiploPeaceIntroMusicScriptIds(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i);
 	return m_piDiploPeaceIntroMusicScriptIds ? m_piDiploPeaceIntroMusicScriptIds[i] : -1;
 }
 
 int CvLeaderHeadInfo::getDiploPeaceMusicScriptIds(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i);
 	return m_piDiploPeaceMusicScriptIds ? m_piDiploPeaceMusicScriptIds[i] : -1;
 }
 
 int CvLeaderHeadInfo::getDiploWarIntroMusicScriptIds(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i);
 	return m_piDiploWarIntroMusicScriptIds ? m_piDiploWarIntroMusicScriptIds[i] : -1;
 }
 
 int CvLeaderHeadInfo::getDiploWarMusicScriptIds(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEraInfos(), i);
 	return m_piDiploWarMusicScriptIds ? m_piDiploWarMusicScriptIds[i] : -1;
 }
 
@@ -17860,7 +17858,7 @@ CvProcessInfo::~CvProcessInfo()
 
 int CvProcessInfo::getProductionToCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_paiProductionToCommerceModifier ? m_paiProductionToCommerceModifier[i] : 0;
 }
 
@@ -18045,13 +18043,13 @@ bool CvVoteInfo::isAssignCity() const
 
 bool CvVoteInfo::isForceCivic(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i);
 	return m_pbForceCivic ? m_pbForceCivic[i] : false;
 }
 
 bool CvVoteInfo::isVoteSourceType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), i);
 	return m_abVoteSourceTypes ? m_abVoteSourceTypes[i] : false;
 }
 
@@ -18338,19 +18336,19 @@ void CvProjectInfo::setCreateSound(const char* szVal)
 
 int CvProjectInfo::getBonusProductionModifier(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_piBonusProductionModifier ? m_piBonusProductionModifier[i] : 0;
 }
 
 int CvProjectInfo::getVictoryThreshold(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i);
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
 }
 
 int CvProjectInfo::getVictoryMinThreshold(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i);
 
 	if (m_piVictoryMinThreshold && m_piVictoryMinThreshold[i] != 0)
 	{
@@ -18361,7 +18359,7 @@ int CvProjectInfo::getVictoryMinThreshold(int i) const
 
 int CvProjectInfo::getProjectsNeeded(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), i);
 	return m_piProjectsNeeded ? m_piProjectsNeeded[i] : false;
 }
 
@@ -18402,7 +18400,7 @@ bool CvProjectInfo::isTechShareWithHalfCivs() const
 
 int CvProjectInfo::getCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceModifier ? m_piCommerceModifier[i] : 0;
 }
 
@@ -18885,7 +18883,7 @@ const wchar_t* CvReligionInfo::getAdjectiveKey() const
 
 int CvReligionInfo::getGlobalReligionCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_paiGlobalReligionCommerce ? m_paiGlobalReligionCommerce[i] : 0;
 }
 
@@ -18896,7 +18894,7 @@ int* CvReligionInfo::getGlobalReligionCommerceArray() const
 
 int CvReligionInfo::getHolyCityCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_paiHolyCityCommerce ? m_paiHolyCityCommerce[i] : 0;
 }
 
@@ -18907,7 +18905,7 @@ int* CvReligionInfo::getHolyCityCommerceArray() const
 
 int CvReligionInfo::getStateReligionCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_paiStateReligionCommerce ? m_paiStateReligionCommerce[i] : 0;
 }
 
@@ -18918,7 +18916,7 @@ int* CvReligionInfo::getStateReligionCommerceArray() const
 
 int CvReligionInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
@@ -19286,7 +19284,7 @@ int CvCorporationInfo::getPrereqGameOption() const
 
 int CvCorporationInfo::getPrereqBuilding(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
 	return m_paiPrereqBuilding ? m_paiPrereqBuilding[i] : false;
 }
 
@@ -19296,7 +19294,7 @@ int CvCorporationInfo::getPrereqBuildingValuesVectorElement(const int i) const		
 
 bool CvCorporationInfo::isCompetingCorporation(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), i);
 	return m_pabCompetingCorporation ? m_pabCompetingCorporation[i] : false;
 }
 
@@ -19306,7 +19304,7 @@ bool CvCorporationInfo::getCompetingCorporationValuesVectorElement(const int i) 
 
 int CvCorporationInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -19317,7 +19315,7 @@ int* CvCorporationInfo::getYieldChangeArray() const
 
 int CvCorporationInfo::getCommerceChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceChange ? m_piCommerceChange[i] : 0;
 }
 
@@ -19333,7 +19331,7 @@ const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 
 int CvCorporationInfo::getHeadquarterCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_paiHeadquarterCommerce ? m_paiHeadquarterCommerce[i] : 0;
 }
 
@@ -19344,7 +19342,7 @@ int* CvCorporationInfo::getHeadquarterCommerceArray() const
 
 int CvCorporationInfo::getCommerceProduced(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_paiCommerceProduced ? m_paiCommerceProduced[i] : 0;
 }
 
@@ -19355,7 +19353,7 @@ int* CvCorporationInfo::getCommerceProducedArray() const
 
 int CvCorporationInfo::getYieldProduced(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_paiYieldProduced ? m_paiYieldProduced[i] : 0;
 }
 
@@ -21591,8 +21589,8 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 //Arrays
 int CvTraitInfo::getSpecialistYieldChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21618,7 +21616,7 @@ int CvTraitInfo::getSpecialistYieldChange(int i, int j) const
 
 int* CvTraitInfo::getSpecialistYieldChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21647,7 +21645,7 @@ int* CvTraitInfo::getSpecialistYieldChangeArray(int i) const
 
 int CvTraitInfo::getYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21700,7 +21698,7 @@ int* CvTraitInfo::getYieldModifierArray() const
 
 int CvTraitInfo::getCapitalYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21753,7 +21751,7 @@ int* CvTraitInfo::getCapitalYieldModifierArray() const
 
 int CvTraitInfo::getCapitalCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21806,7 +21804,7 @@ int* CvTraitInfo::getCapitalCommerceModifierArray() const
 
 int CvTraitInfo::getSpecialistExtraCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21859,7 +21857,7 @@ int* CvTraitInfo::getSpecialistExtraCommerceArray() const
 
 int CvTraitInfo::getSpecialistExtraYield(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21912,14 +21910,14 @@ int* CvTraitInfo::getSpecialistExtraYieldArray() const
 
 int CvTraitInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
 int CvTraitInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21945,8 +21943,8 @@ int CvTraitInfo::getYieldChange(int i) const
 
 int CvTraitInfo::getSpecialistCommerceChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -21972,7 +21970,7 @@ int CvTraitInfo::getSpecialistCommerceChange(int i, int j) const
 
 int* CvTraitInfo::getSpecialistCommerceChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22023,7 +22021,7 @@ int CvTraitInfo::getLessYieldThreshold(int i) const
 
 int CvTraitInfo::getSeaPlotYieldChanges(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22076,8 +22074,8 @@ int* CvTraitInfo::getSeaPlotYieldChangesArray() const
 
 int CvTraitInfo::getImprovementYieldChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22103,7 +22101,7 @@ int CvTraitInfo::getImprovementYieldChange(int i, int j) const
 
 int* CvTraitInfo::getImprovementYieldChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22132,7 +22130,7 @@ int* CvTraitInfo::getImprovementYieldChangeArray(int i) const
 
 int CvTraitInfo::getGoldenAgeYieldChanges(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22185,7 +22183,7 @@ int* CvTraitInfo::getGoldenAgeYieldChangesArray() const
 
 int CvTraitInfo::getGoldenAgeCommerceChanges(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22287,7 +22285,7 @@ int CvTraitInfo::getNumDisallowedTraitTypes() const
 
 DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
 {
-	FASSERT_BOUNDS(0, getNumDisallowedTraitTypes(), iTrait)
+	FASSERT_BOUNDS(0, getNumDisallowedTraitTypes(), iTrait);
 
 	return m_aDisallowedTraitTypes[iTrait];
 }
@@ -22309,7 +22307,7 @@ int CvTraitInfo::getNumBuildingProductionModifiers() const
 
 BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 {
-	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding)
+	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22349,7 +22347,7 @@ int CvTraitInfo::getNumUnitProductionModifiers() const
 
 UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit) const
 {
-	FASSERT_BOUNDS(0, getNumUnitProductionModifiers(), iUnit)
+	FASSERT_BOUNDS(0, getNumUnitProductionModifiers(), iUnit);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22374,7 +22372,7 @@ int CvTraitInfo::getNumSpecialUnitProductionModifiers() const
 
 SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUnit) const
 {
-	FASSERT_BOUNDS(0, getNumSpecialUnitProductionModifiers(), iSpecialUnit)
+	FASSERT_BOUNDS(0, getNumSpecialUnitProductionModifiers(), iSpecialUnit);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22399,7 +22397,7 @@ int CvTraitInfo::getNumCivicOptionNoUpkeepTypes() const
 
 CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption) const
 {
-	FASSERT_BOUNDS(0, getNumCivicOptionNoUpkeepTypes(), iCivicOption)
+	FASSERT_BOUNDS(0, getNumCivicOptionNoUpkeepTypes(), iCivicOption);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22425,7 +22423,7 @@ int CvTraitInfo::getNumUnitCombatFreeExperiences() const
 
 UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumUnitCombatFreeExperiences(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumUnitCombatFreeExperiences(), iUnitCombat);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -22450,7 +22448,7 @@ int CvTraitInfo::getNumUnitCombatProductionModifiers() const
 
 UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumUnitCombatProductionModifiers(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumUnitCombatProductionModifiers(), iUnitCombat);
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
@@ -26363,13 +26361,13 @@ bool CvEmphasizeInfo::isAvoidUnhealthyCitizens() const
 
 int CvEmphasizeInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldModifiers ? m_piYieldModifiers[i] : 0;
 }
 
 int CvEmphasizeInfo::getCommerceChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceModifiers ? m_piCommerceModifiers[i] : 0;
 }
 
@@ -26534,7 +26532,7 @@ int CvCultureLevelInfo::getCityDefenseModifier() const
 
 int CvCultureLevelInfo::getSpeedThreshold(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumGameSpeedInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumGameSpeedInfos(), i);
 	return m_paiSpeedThreshold ? m_paiSpeedThreshold[i] : 0;
 }
 
@@ -26840,7 +26838,7 @@ int CvEraInfo::getInitialCityMaintenancePercent() const
 
 int CvEraInfo::getSoundtracks(int i) const
 {
-	FASSERT_BOUNDS(0, getNumSoundtracks(), i)
+	FASSERT_BOUNDS(0, getNumSoundtracks(), i);
 	return m_paiSoundtracks ? m_paiSoundtracks[i] : -1;
 }
 
@@ -27563,42 +27561,42 @@ int CvDiplomacyTextInfo::getNumResponses() const
 
 bool CvDiplomacyTextInfo::getCivilizationTypes(int i, int j) const
 {
-	FASSERT_BOUNDS(0, getNumResponses(), i)
-	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), j)
+	FASSERT_BOUNDS(0, getNumResponses(), i);
+	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), j);
 	return m_pResponses[i].m_pbCivilizationTypes ? m_pResponses[i].m_pbCivilizationTypes[j] : false;
 }
 
 bool CvDiplomacyTextInfo::getLeaderHeadTypes(int i, int j) const
 {
-	FASSERT_BOUNDS(0, getNumResponses(), i)
-	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), j)
+	FASSERT_BOUNDS(0, getNumResponses(), i);
+	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), j);
 	return m_pResponses[i].m_pbLeaderHeadTypes ? m_pResponses[i].m_pbLeaderHeadTypes[j] : false;
 }
 
 bool CvDiplomacyTextInfo::getAttitudeTypes(int i, int j) const
 {
-	FASSERT_BOUNDS(0, getNumResponses(), i)
-	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, j)
+	FASSERT_BOUNDS(0, getNumResponses(), i);
+	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, j);
 	return m_pResponses[i].m_pbAttitudeTypes ? m_pResponses[i].m_pbAttitudeTypes[j] : false;
 }
 
 bool CvDiplomacyTextInfo::getDiplomacyPowerTypes(int i, int j) const
 {
-	FASSERT_BOUNDS(0, getNumResponses(), i)
-	FASSERT_BOUNDS(0, NUM_DIPLOMACYPOWER_TYPES, j)
+	FASSERT_BOUNDS(0, getNumResponses(), i);
+	FASSERT_BOUNDS(0, NUM_DIPLOMACYPOWER_TYPES, j);
 	return m_pResponses[i].m_pbDiplomacyPowerTypes ? m_pResponses[i].m_pbDiplomacyPowerTypes[j] : false;
 }
 
 int CvDiplomacyTextInfo::getNumDiplomacyText(int i) const
 {
-	FASSERT_BOUNDS(0, getNumResponses(), i)
+	FASSERT_BOUNDS(0, getNumResponses(), i);
 	return m_pResponses[i].m_iNumDiplomacyText;
 }
 
 const char* CvDiplomacyTextInfo::getDiplomacyText(int i, int j) const
 {
-	FASSERT_BOUNDS(0, getNumResponses(), i)
-	FASSERT_BOUNDS(0, getNumDiplomacyText(i), j)
+	FASSERT_BOUNDS(0, getNumResponses(), i);
+	FASSERT_BOUNDS(0, getNumDiplomacyText(i), j);
 	return m_pResponses[i].m_paszDiplomacyText[j];
 }
 
@@ -28348,13 +28346,13 @@ bool CvEventTriggerInfo::isTeam() const
 
 const CvWString& CvEventTriggerInfo::getText(int i) const
 {
-	FASSERT_BOUNDS(0, (int)m_aszText.size(), i)
+	FASSERT_BOUNDS(0, m_aszText.size(), i);
 	return m_aszText[i];
 }
 
 int CvEventTriggerInfo::getTextEra(int i) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiTextEra.size(), i)
+	FASSERT_BOUNDS(0, m_aiTextEra.size(), i);
 	return m_aiTextEra[i];
 }
 
@@ -28366,7 +28364,7 @@ int CvEventTriggerInfo::getNumTexts() const
 
 const CvWString& CvEventTriggerInfo::getWorldNews(int i) const
 {
-	FASSERT_BOUNDS(0, getNumWorldNews(), i)
+	FASSERT_BOUNDS(0, getNumWorldNews(), i);
 	return m_aszWorldNews[i];
 }
 
@@ -29110,13 +29108,13 @@ int CvEventInfo::getBuildingChange() const
 
 int CvEventInfo::getCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceModifier ? m_piCommerceModifier[i] : 0;
 }
 
 int CvEventInfo::getYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldModifier ? m_piYieldModifier[i] : 0;
 }
 
@@ -29267,55 +29265,55 @@ int CvEventInfo::getAIValue() const
 
 int CvEventInfo::getAdditionalEventChance(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEventInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), i);
 	return m_piAdditionalEventChance ? m_piAdditionalEventChance[i] : 0;
 }
 
 int CvEventInfo::getAdditionalEventTime(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEventInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), i);
 	return m_piAdditionalEventTime ? m_piAdditionalEventTime[i] : 0;
 }
 
 int CvEventInfo::getClearEventChance(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumEventInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), i);
 	return m_piClearEventChance ? m_piClearEventChance[i] : 0;
 }
 
 int CvEventInfo::getTechFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piTechFlavorValue ? m_piTechFlavorValue[i] : 0;
 }
 
 int CvEventInfo::getPlotExtraYield(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piPlotExtraYields ? m_piPlotExtraYields[i] : 0;
 }
 
 int CvEventInfo::getFreeSpecialistCount(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_piFreeSpecialistCount ? m_piFreeSpecialistCount[i] : 0;
 }
 
 int CvEventInfo::getUnitCombatPromotion(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
 	return m_piUnitCombatPromotions ? m_piUnitCombatPromotions[i] : -1;
 }
 
 int CvEventInfo::getUnitPromotion(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i);
 	return m_piUnitPromotions ? m_piUnitPromotions[i] : -1;
 }
 
 const CvWString& CvEventInfo::getWorldNews(int i) const
 {
-	FASSERT_BOUNDS(0, getNumWorldNews(), i)
+	FASSERT_BOUNDS(0, getNumWorldNews(), i);
 	return m_aszWorldNews[i];
 }
 
@@ -30800,8 +30798,8 @@ CvUnitArtStyleTypeInfo::~CvUnitArtStyleTypeInfo()
 
 const char* CvUnitArtStyleTypeInfo::getEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azEarlyArtDefineTags)
 	{
@@ -30816,8 +30814,8 @@ const char* CvUnitArtStyleTypeInfo::getEarlyArtDefineTag(int /*Mesh Index*/ i, i
 
 void CvUnitArtStyleTypeInfo::setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azEarlyArtDefineTags)
 	{
@@ -30837,8 +30835,8 @@ void CvUnitArtStyleTypeInfo::setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*Un
 
 const char* CvUnitArtStyleTypeInfo::getLateArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azLateArtDefineTags)
 	{
@@ -30853,8 +30851,8 @@ const char* CvUnitArtStyleTypeInfo::getLateArtDefineTag(int /*Mesh Index*/ i, in
 
 void CvUnitArtStyleTypeInfo::setLateArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azLateArtDefineTags)
 	{
@@ -30874,8 +30872,8 @@ void CvUnitArtStyleTypeInfo::setLateArtDefineTag(int /*Mesh Index*/ i, int /*Uni
 
 const char* CvUnitArtStyleTypeInfo::getMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azMiddleArtDefineTags)
 	{
@@ -30890,8 +30888,8 @@ const char* CvUnitArtStyleTypeInfo::getMiddleArtDefineTag(int /*Mesh Index*/ i, 
 
 void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azMiddleArtDefineTags)
 	{
@@ -30912,8 +30910,8 @@ void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*U
 
 const char* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azClassicalArtDefineTags)
 	{
@@ -30928,8 +30926,8 @@ const char* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/ 
 
 void CvUnitArtStyleTypeInfo::setClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azClassicalArtDefineTags)
 	{
@@ -30949,8 +30947,8 @@ void CvUnitArtStyleTypeInfo::setClassicalArtDefineTag(int /*Mesh Index*/ i, int 
 
 const char* CvUnitArtStyleTypeInfo::getRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azRennArtDefineTags)
 	{
@@ -30965,8 +30963,8 @@ const char* CvUnitArtStyleTypeInfo::getRennArtDefineTag(int /*Mesh Index*/ i, in
 
 void CvUnitArtStyleTypeInfo::setRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azRennArtDefineTags)
 	{
@@ -30986,8 +30984,8 @@ void CvUnitArtStyleTypeInfo::setRennArtDefineTag(int /*Mesh Index*/ i, int /*Uni
 
 const char* CvUnitArtStyleTypeInfo::getIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azIndustrialArtDefineTags)
 	{
@@ -31002,8 +31000,8 @@ const char* CvUnitArtStyleTypeInfo::getIndustrialArtDefineTag(int /*Mesh Index*/
 
 void CvUnitArtStyleTypeInfo::setIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azIndustrialArtDefineTags)
 	{
@@ -31023,8 +31021,8 @@ void CvUnitArtStyleTypeInfo::setIndustrialArtDefineTag(int /*Mesh Index*/ i, int
 
 const char* CvUnitArtStyleTypeInfo::getFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(const ArtDefneTag& it, m_azFutureArtDefineTags)
 	{
@@ -31039,8 +31037,8 @@ const char* CvUnitArtStyleTypeInfo::getFutureArtDefineTag(int /*Mesh Index*/ i, 
 
 void CvUnitArtStyleTypeInfo::setFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const char* szVal)
 {
-	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
+	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j);
 
 	foreach_(ArtDefneTag& it, m_azFutureArtDefineTags)
 	{
@@ -31241,13 +31239,13 @@ int CvVoteSourceInfo::getCivic() const
 
 int CvVoteSourceInfo::getReligionYield(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_aiReligionYields[i];
 }
 
 int CvVoteSourceInfo::getReligionCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_aiReligionCommerces[i];
 }
 
@@ -31432,13 +31430,13 @@ CvModLoadControlInfo::~CvModLoadControlInfo()
 
 bool CvModLoadControlInfo::isLoad(int i) const
 {
-	FASSERT_BOUNDS(0, getNumModules(), i)
+	FASSERT_BOUNDS(0, getNumModules(), i);
 	return m_bLoad[i];
 }
 
 void CvModLoadControlInfo::setLoad(int i, bool bLoad)
 {
-	FASSERT_BOUNDS(0, getNumModules(), i)
+	FASSERT_BOUNDS(0, getNumModules(), i);
 	m_bLoad[i] = bLoad;
 }
 
@@ -31454,7 +31452,7 @@ int CvModLoadControlInfo::getDirDepth() const
 
 const std::string CvModLoadControlInfo::getModuleFolder(int i) const
 {
-	FASSERT_BOUNDS(0, getNumModules(), i)
+	FASSERT_BOUNDS(0, getNumModules(), i);
 	return m_paszModuleFolder[i];
 }
 
@@ -31895,14 +31893,14 @@ CvWString CvPropertyInfo::getPrereqMaxDisplayText() const
 
 int CvPropertyInfo::getChangePropagator(const GameObjectTypes eFrom, const GameObjectTypes eTo) const
 {
-	FASSERT_BOUNDS(0, NUM_GAMEOBJECTS, eFrom)
-	FASSERT_BOUNDS(0, NUM_GAMEOBJECTS, eTo)
+	FASSERT_BOUNDS(0, NUM_GAMEOBJECTS, eFrom);
+	FASSERT_BOUNDS(0, NUM_GAMEOBJECTS, eTo);
 	return m_aaiChangePropagator[eFrom][eTo];
 }
 
 const PropertyBuilding& CvPropertyInfo::getPropertyBuilding(int index) const
 {
-	FASSERT_BOUNDS(0, getNumPropertyBuildings(), index)
+	FASSERT_BOUNDS(0, getNumPropertyBuildings(), index);
 	return m_aPropertyBuildings[index];
 }
 
@@ -31913,7 +31911,7 @@ int CvPropertyInfo::getNumPropertyBuildings() const
 
 const PropertyPromotion& CvPropertyInfo::getPropertyPromotion(int index) const
 {
-	FASSERT_BOUNDS(0, getNumPropertyPromotions(), index)
+	FASSERT_BOUNDS(0, getNumPropertyPromotions(), index);
 	return m_aPropertyPromotions[index];
 }
 
@@ -32137,13 +32135,13 @@ int CvOutcomeInfo::getNumExtraChancePromotions() const
 
 PromotionTypes CvOutcomeInfo::getExtraChancePromotion(int i) const
 {
-	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i)
+	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i);
 	return m_aeiExtraChancePromotions[i].first;
 }
 
 int CvOutcomeInfo::getExtraChancePromotionChance(int i) const
 {
-	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i)
+	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i);
 	return m_aeiExtraChancePromotions[i].second;
 }
 
@@ -34073,7 +34071,7 @@ bool CvUnitCombatInfo::isNoSelfHeal() const
 //Arrays
 int CvUnitCombatInfo::getDomainModifierPercent(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i);
 	return m_piDomainModifierPercent ? m_piDomainModifierPercent[i] : 0;
 }
 
@@ -34407,7 +34405,7 @@ int CvUnitCombatInfo::getNumAfflictionFortitudeChangeModifiers() const
 
 const PromotionLineModifier& CvUnitCombatInfo::getAfflictionFortitudeChangeModifier(int iAfflictionLine) const
 {
-	FASSERT_BOUNDS(0, getNumAfflictionFortitudeChangeModifiers(), iAfflictionLine)
+	FASSERT_BOUNDS(0, getNumAfflictionFortitudeChangeModifiers(), iAfflictionLine);
 	return m_aAfflictionFortitudeChangeModifiers[iAfflictionLine];
 }
 #endif
@@ -34419,7 +34417,7 @@ int CvUnitCombatInfo::getNumTerrainAttackChangeModifiers() const
 
 const TerrainModifier& CvUnitCombatInfo::getTerrainAttackChangeModifier(int iTerrain) const
 {
-	FASSERT_BOUNDS(0, getNumTerrainAttackChangeModifiers(), iTerrain)
+	FASSERT_BOUNDS(0, getNumTerrainAttackChangeModifiers(), iTerrain);
 	return m_aTerrainAttackChangeModifiers[iTerrain];
 }
 
@@ -34430,7 +34428,7 @@ int CvUnitCombatInfo::getNumTerrainDefenseChangeModifiers() const
 
 const TerrainModifier& CvUnitCombatInfo::getTerrainDefenseChangeModifier(int iTerrain) const
 {
-	FASSERT_BOUNDS(0, getNumTerrainDefenseChangeModifiers(), iTerrain)
+	FASSERT_BOUNDS(0, getNumTerrainDefenseChangeModifiers(), iTerrain);
 	return m_aTerrainDefenseChangeModifiers[iTerrain];
 }
 
@@ -34441,7 +34439,7 @@ int CvUnitCombatInfo::getNumTerrainWorkChangeModifiers() const
 
 const TerrainModifier& CvUnitCombatInfo::getTerrainWorkChangeModifier(int iTerrain) const
 {
-	FASSERT_BOUNDS(0, getNumTerrainWorkChangeModifiers(), iTerrain)
+	FASSERT_BOUNDS(0, getNumTerrainWorkChangeModifiers(), iTerrain);
 	return m_aTerrainWorkChangeModifiers[iTerrain];
 }
 
@@ -34452,7 +34450,7 @@ int CvUnitCombatInfo::getNumBuildWorkChangeModifiers() const
 
 const BuildModifier& CvUnitCombatInfo::getBuildWorkChangeModifier(int iBuild) const
 {
-	FASSERT_BOUNDS(0, getNumBuildWorkChangeModifiers(), iBuild)
+	FASSERT_BOUNDS(0, getNumBuildWorkChangeModifiers(), iBuild);
 	return m_aBuildWorkChangeModifiers[iBuild];
 }
 
@@ -34463,7 +34461,7 @@ int CvUnitCombatInfo::getNumFeatureAttackChangeModifiers() const
 
 const FeatureModifier& CvUnitCombatInfo::getFeatureAttackChangeModifier(int iFeature) const
 {
-	FASSERT_BOUNDS(0, getNumFeatureAttackChangeModifiers(), iFeature)
+	FASSERT_BOUNDS(0, getNumFeatureAttackChangeModifiers(), iFeature);
 	return m_aFeatureAttackChangeModifiers[iFeature];
 }
 
@@ -34474,7 +34472,7 @@ int CvUnitCombatInfo::getNumFeatureDefenseChangeModifiers() const
 
 const FeatureModifier& CvUnitCombatInfo::getFeatureDefenseChangeModifier(int iFeature) const
 {
-	FASSERT_BOUNDS(0, getNumFeatureDefenseChangeModifiers(), iFeature)
+	FASSERT_BOUNDS(0, getNumFeatureDefenseChangeModifiers(), iFeature);
 	return m_aFeatureDefenseChangeModifiers[iFeature];
 }
 
@@ -34485,7 +34483,7 @@ int CvUnitCombatInfo::getNumFeatureWorkChangeModifiers() const
 
 const FeatureModifier& CvUnitCombatInfo::getFeatureWorkChangeModifier(int iFeature) const
 {
-	FASSERT_BOUNDS(0, getNumFeatureWorkChangeModifiers(), iFeature)
+	FASSERT_BOUNDS(0, getNumFeatureWorkChangeModifiers(), iFeature);
 	return m_aFeatureWorkChangeModifiers[iFeature];
 }
 
@@ -34496,7 +34494,7 @@ int CvUnitCombatInfo::getNumUnitCombatChangeModifiers() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getUnitCombatChangeModifier(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumUnitCombatChangeModifiers(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumUnitCombatChangeModifiers(), iUnitCombat);
 	return m_aUnitCombatChangeModifiers[iUnitCombat];
 }
 
@@ -34507,7 +34505,7 @@ int CvUnitCombatInfo::getNumFlankingStrengthbyUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getFlankingStrengthbyUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumFlankingStrengthbyUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumFlankingStrengthbyUnitCombatTypesChange(), iUnitCombat);
 	return m_aFlankingStrengthbyUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34518,7 +34516,7 @@ int CvUnitCombatInfo::getNumWithdrawVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getWithdrawVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumWithdrawVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumWithdrawVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aWithdrawVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34529,7 +34527,7 @@ int CvUnitCombatInfo::getNumPursuitVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getPursuitVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumPursuitVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumPursuitVSUnitCombatTypesChange(), iUnitCombat);
 	//Note: iUnitCombat is just an index.  It is NOT the UnitCombat ID#.
 	return m_aPursuitVSUnitCombatTypeChange[iUnitCombat];
 }
@@ -34541,7 +34539,7 @@ int CvUnitCombatInfo::getNumRepelVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getRepelVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumRepelVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumRepelVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aRepelVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34552,7 +34550,7 @@ int CvUnitCombatInfo::getNumKnockbackVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getKnockbackVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumKnockbackVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumKnockbackVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aKnockbackVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34563,7 +34561,7 @@ int CvUnitCombatInfo::getNumPunctureVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getPunctureVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumPunctureVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumPunctureVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aPunctureVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34574,7 +34572,7 @@ int CvUnitCombatInfo::getNumArmorVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getArmorVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumArmorVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumArmorVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aArmorVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34585,7 +34583,7 @@ int CvUnitCombatInfo::getNumDodgeVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getDodgeVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumDodgeVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumDodgeVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aDodgeVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34596,7 +34594,7 @@ int CvUnitCombatInfo::getNumPrecisionVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getPrecisionVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumPrecisionVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumPrecisionVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aPrecisionVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34607,7 +34605,7 @@ int CvUnitCombatInfo::getNumCriticalVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getCriticalVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumCriticalVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumCriticalVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aCriticalVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34618,7 +34616,7 @@ int CvUnitCombatInfo::getNumRoundStunVSUnitCombatTypesChange() const
 
 const UnitCombatModifier& CvUnitCombatInfo::getRoundStunVSUnitCombatTypeChange(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumRoundStunVSUnitCombatTypesChange(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumRoundStunVSUnitCombatTypesChange(), iUnitCombat);
 	return m_aRoundStunVSUnitCombatTypeChange[iUnitCombat];
 }
 
@@ -34640,7 +34638,7 @@ int CvUnitCombatInfo::getNumAfflictOnAttackChangeTypes() const
 
 const AfflictOnAttackChange& CvUnitCombatInfo::getAfflictOnAttackChangeType(int iAfflictionLine) const
 {
-	FASSERT_BOUNDS(0, getNumAfflictOnAttackChangeTypes(), iAfflictionLine)
+	FASSERT_BOUNDS(0, getNumAfflictOnAttackChangeTypes(), iAfflictionLine);
 	return m_aAfflictOnAttackChangeTypes[iAfflictionLine];
 }
 #endif

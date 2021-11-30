@@ -499,7 +499,7 @@ void CvArea::changeNumTiles(int iChange)
 	if (iChange != 0)
 	{
 		m_iNumTiles += iChange;
-		FASSERT_NOT_NEGATIVE(getNumTiles())
+		FASSERT_NOT_NEGATIVE(getNumTiles());
 	}
 }
 
@@ -519,8 +519,8 @@ int CvArea::getNumUnownedTiles() const
 void CvArea::changeNumOwnedTiles(int iChange)
 {
 	m_iNumOwnedTiles += iChange;
-	FASSERT_NOT_NEGATIVE(getNumOwnedTiles())
-	FASSERT_NOT_NEGATIVE(getNumUnownedTiles())
+	FASSERT_NOT_NEGATIVE(getNumOwnedTiles());
+	FASSERT_NOT_NEGATIVE(getNumUnownedTiles());
 }
 
 
@@ -533,7 +533,7 @@ int CvArea::getNumRiverEdges() const
 void CvArea::changeNumRiverEdges(int iChange)
 {
 	m_iNumRiverEdges += iChange;
-	FASSERT_NOT_NEGATIVE(getNumRiverEdges())
+	FASSERT_NOT_NEGATIVE(getNumRiverEdges());
 }
 
 
@@ -564,7 +564,7 @@ int CvArea::getNumStartingPlots() const
 void CvArea::changeNumStartingPlots(int iChange)
 {
 	m_iNumStartingPlots += iChange;
-	FASSERT_NOT_NEGATIVE(getNumStartingPlots())
+	FASSERT_NOT_NEGATIVE(getNumStartingPlots());
 }
 
 
@@ -585,9 +585,9 @@ void CvArea::changeUnitsPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_iNumUnits += iChange;
-	FASSERT_NOT_NEGATIVE(getNumUnits())
+	FASSERT_NOT_NEGATIVE(getNumUnits());
 	m_aiUnitsPerPlayer[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getUnitsPerPlayer(eIndex))
+	FASSERT_NOT_NEGATIVE(getUnitsPerPlayer(eIndex));
 }
 
 
@@ -602,7 +602,7 @@ void CvArea::changeAnimalsPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiAnimalsPerPlayer[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getAnimalsPerPlayer(eIndex))
+	FASSERT_NOT_NEGATIVE(getAnimalsPerPlayer(eIndex));
 }
 
 
@@ -617,9 +617,9 @@ void CvArea::changeCitiesPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_iNumCities += iChange;
-	FASSERT_NOT_NEGATIVE(getNumCities())
+	FASSERT_NOT_NEGATIVE(getNumCities());
 	m_aiCitiesPerPlayer[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getCitiesPerPlayer(eIndex))
+	FASSERT_NOT_NEGATIVE(getCitiesPerPlayer(eIndex));
 }
 
 
@@ -634,9 +634,9 @@ void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_iTotalPopulation += iChange;
-	FASSERT_NOT_NEGATIVE(getTotalPopulation())
+	FASSERT_NOT_NEGATIVE(getTotalPopulation());
 	m_aiPopulationPerPlayer[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getPopulationPerPlayer(eIndex))
+	FASSERT_NOT_NEGATIVE(getPopulationPerPlayer(eIndex));
 	changePower(eIndex, iChange);
 }
 
@@ -655,7 +655,7 @@ void CvArea::changeBuildingGoodHealth(PlayerTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBuildingGoodHealth[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth(eIndex))
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth(eIndex));
 
 		GET_PLAYER(eIndex).AI_makeAssignWorkDirty();
 	}
@@ -676,7 +676,7 @@ void CvArea::changeBuildingBadHealth(PlayerTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBuildingBadHealth[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getBuildingBadHealth(eIndex))
+		FASSERT_NOT_NEGATIVE(getBuildingBadHealth(eIndex));
 
 		GET_PLAYER(eIndex).AI_makeAssignWorkDirty();
 	}

@@ -2664,8 +2664,8 @@ bool CvGame::selectionListIgnoreBuildingDefense() const
 
 void CvGame::implementDeal(PlayerTypes eWho, PlayerTypes eOtherWho, CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirList, bool bForce)
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eWho)
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eOtherWho)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eWho);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOtherWho);
 	FAssertMsg(eWho != eOtherWho, "eWho is not expected to be equal with eOtherWho");
 
 	CvDeal* pDeal = addDeal();
@@ -3024,7 +3024,7 @@ int CvGame::countCivTeamsEverAlive() const
 		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
 		if (kPlayer.isEverAlive() && kPlayer.getParent() == NO_PLAYER)
 		{
-			FASSERT_BOUNDS(0, MAX_PC_TEAMS, kPlayer.getTeam())
+			FASSERT_BOUNDS(0, MAX_PC_TEAMS, kPlayer.getTeam());
 
 			if (!teamsAlive[kPlayer.getTeam()])
 			{
@@ -3190,7 +3190,7 @@ int CvGame::goldenAgeLength() const
 
 int CvGame::victoryDelay(VictoryTypes eVictory) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictory)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictory);
 
 	return GC.getVictoryInfo(eVictory).getVictoryDelayTurns() * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100;
 }
@@ -3345,7 +3345,7 @@ void CvGame::setGameTurn(int iNewValue)
 	if (getGameTurn() != iNewValue)
 	{
 		GC.getInitCore().setGameTurn(iNewValue);
-		FASSERT_NOT_NEGATIVE(getGameTurn())
+		FASSERT_NOT_NEGATIVE(getGameTurn());
 
 		if (m_iDateTurn == iNewValue - 1)
 		{
@@ -3417,7 +3417,7 @@ int CvGame::getMaxTurns() const
 void CvGame::setMaxTurns(int iNewValue)
 {
 	GC.getInitCore().setMaxTurns(iNewValue);
-	FASSERT_NOT_NEGATIVE(getMaxTurns())
+	FASSERT_NOT_NEGATIVE(getMaxTurns());
 }
 
 
@@ -3436,7 +3436,7 @@ int CvGame::getMaxCityElimination() const
 void CvGame::setMaxCityElimination(int iNewValue)
 {
 	GC.getInitCore().setMaxCityElimination(iNewValue);
-	FASSERT_NOT_NEGATIVE(getMaxCityElimination())
+	FASSERT_NOT_NEGATIVE(getMaxCityElimination());
 }
 
 int CvGame::getNumAdvancedStartPoints() const
@@ -3448,7 +3448,7 @@ int CvGame::getNumAdvancedStartPoints() const
 void CvGame::setNumAdvancedStartPoints(int iNewValue)
 {
 	GC.getInitCore().setNumAdvancedStartPoints(iNewValue);
-	FASSERT_NOT_NEGATIVE(getNumAdvancedStartPoints())
+	FASSERT_NOT_NEGATIVE(getNumAdvancedStartPoints());
 }
 
 int CvGame::getStartTurn() const
@@ -3584,7 +3584,7 @@ int CvGame::getMaxTurnLen() const
 	}
 	// Now return turn len based on base len and unit and city bonuses
 	const TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
-	FASSERT_BOUNDS(0, GC.getNumTurnTimerInfos(), eTurnTimer)
+	FASSERT_BOUNDS(0, GC.getNumTurnTimerInfos(), eTurnTimer);
 	return
 	(
 		GC.getTurnTimerInfo(eTurnTimer).getBaseTime() +
@@ -3603,7 +3603,7 @@ int CvGame::getTargetScore() const
 void CvGame::setTargetScore(int iNewValue)
 {
 	GC.getInitCore().setTargetScore(iNewValue);
-	FASSERT_NOT_NEGATIVE(getTargetScore())
+	FASSERT_NOT_NEGATIVE(getTargetScore());
 }
 
 
@@ -3630,7 +3630,7 @@ int CvGame::countNumHumanGameTurnActive() const
 void CvGame::changeNumGameTurnActive(int iChange)
 {
 	m_iNumGameTurnActive += iChange;
-	FASSERT_NOT_NEGATIVE(m_iNumGameTurnActive)
+	FASSERT_NOT_NEGATIVE(m_iNumGameTurnActive);
 }
 
 
@@ -3641,7 +3641,7 @@ int CvGame::getNumCities() const
 void CvGame::changeNumCities(int iChange)
 {
 	m_iNumCities += iChange;
-	FASSERT_NOT_NEGATIVE(m_iNumCities)
+	FASSERT_NOT_NEGATIVE(m_iNumCities);
 }
 
 
@@ -3687,7 +3687,7 @@ int CvGame::getTotalPopulation() const
 void CvGame::changeTotalPopulation(int iChange)
 {
 	m_iTotalPopulation += iChange;
-	FASSERT_NOT_NEGATIVE(m_iTotalPopulation)
+	FASSERT_NOT_NEGATIVE(m_iTotalPopulation);
 }
 
 
@@ -3702,7 +3702,7 @@ void CvGame::changeTradeRoutes(int iChange)
 	if (iChange != 0)
 	{
 		m_iTradeRoutes += iChange;
-		FASSERT_NOT_NEGATIVE(getTradeRoutes())
+		FASSERT_NOT_NEGATIVE(getTradeRoutes());
 
 		updateTradeRoutes();
 	}
@@ -3726,7 +3726,7 @@ void CvGame::changeFreeTradeCount(int iChange)
 		const bool bOldFreeTrade = isFreeTrade();
 
 		m_iFreeTradeCount += iChange;
-		FASSERT_NOT_NEGATIVE(m_iFreeTradeCount)
+		FASSERT_NOT_NEGATIVE(m_iFreeTradeCount);
 
 		if (bOldFreeTrade != isFreeTrade())
 		{
@@ -3749,22 +3749,22 @@ bool CvGame::isNoNukes() const
 void CvGame::changeNoNukesCount(int iChange)
 {
 	m_iNoNukesCount += iChange;
-	FASSERT_NOT_NEGATIVE(m_iNoNukesCount)
+	FASSERT_NOT_NEGATIVE(m_iNoNukesCount);
 }
 
 
 int CvGame::getSecretaryGeneralTimer(VoteSourceTypes eVoteSource) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 	return m_aiSecretaryGeneralTimer[eVoteSource];
 }
 
 
 void CvGame::setSecretaryGeneralTimer(VoteSourceTypes eVoteSource, int iNewValue)
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 	m_aiSecretaryGeneralTimer[eVoteSource] = iNewValue;
-	FASSERT_NOT_NEGATIVE(getSecretaryGeneralTimer(eVoteSource))
+	FASSERT_NOT_NEGATIVE(getSecretaryGeneralTimer(eVoteSource));
 }
 
 
@@ -3776,16 +3776,16 @@ void CvGame::changeSecretaryGeneralTimer(VoteSourceTypes eVoteSource, int iChang
 
 int CvGame::getVoteTimer(VoteSourceTypes eVoteSource) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 	return m_aiVoteTimer[eVoteSource];
 }
 
 
 void CvGame::setVoteTimer(VoteSourceTypes eVoteSource, int iNewValue)
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 	m_aiVoteTimer[eVoteSource] = iNewValue;
-	FASSERT_NOT_NEGATIVE(getVoteTimer(eVoteSource))
+	FASSERT_NOT_NEGATIVE(getVoteTimer(eVoteSource));
 }
 
 
@@ -3921,7 +3921,7 @@ int CvGame::getAIAutoPlay(PlayerTypes iPlayer) const
 
 void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 {
-	FASSERT_NOT_NEGATIVE(iNewValue)
+	FASSERT_NOT_NEGATIVE(iNewValue);
 
 	if (isForcedAIAutoPlay(iPlayer) && !bForced)
 	{
@@ -3963,7 +3963,7 @@ void CvGame::changeAIAutoPlay(PlayerTypes iPlayer, int iChange)
 
 bool CvGame::isForcedAIAutoPlay(PlayerTypes iPlayer) const
 {
-	FASSERT_NOT_NEGATIVE(getForcedAIAutoPlay(iPlayer))
+	FASSERT_NOT_NEGATIVE(getForcedAIAutoPlay(iPlayer));
 	return getForcedAIAutoPlay(iPlayer) > 0;
 }
 
@@ -3974,7 +3974,7 @@ int CvGame::getForcedAIAutoPlay(PlayerTypes iPlayer) const
 
 void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 {
-	FASSERT_NOT_NEGATIVE(iNewValue)
+	FASSERT_NOT_NEGATIVE(iNewValue);
 
 	if (!bForced)
 	{
@@ -4104,13 +4104,13 @@ bool CvGame::isDiploVote(VoteSourceTypes eVoteSource) const
 
 int CvGame::getDiploVoteCount(VoteSourceTypes eVoteSource) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 	return m_aiDiploVote[eVoteSource];
 }
 
 void CvGame::changeDiploVote(VoteSourceTypes eVoteSource, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 
 	if (0 != iChange)
 	{
@@ -4123,7 +4123,7 @@ void CvGame::changeDiploVote(VoteSourceTypes eVoteSource, int iChange)
 		}
 
 		m_aiDiploVote[eVoteSource] += iChange;
-		FASSERT_NOT_NEGATIVE(getDiploVoteCount(eVoteSource))
+		FASSERT_NOT_NEGATIVE(getDiploVoteCount(eVoteSource));
 
 		if (!m_bRecalculatingModifiers)
 		{
@@ -4854,14 +4854,14 @@ CalendarTypes CvGame::getCalendar() const
 
 PlayerTypes CvGame::getRankPlayer(int iRank) const
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, iRank)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, iRank);
 	return (PlayerTypes)m_aiRankPlayer[iRank];
 }
 
 
 void CvGame::setRankPlayer(int iRank, PlayerTypes ePlayer)
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, iRank)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, iRank);
 
 	if (getRankPlayer(iRank) != ePlayer)
 	{
@@ -4874,14 +4874,14 @@ void CvGame::setRankPlayer(int iRank, PlayerTypes ePlayer)
 
 int CvGame::getPlayerRank(PlayerTypes ePlayer) const
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 	return m_aiPlayerRank[ePlayer];
 }
 
 
 void CvGame::setPlayerRank(PlayerTypes ePlayer, int iRank)
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 
 	// Attitude cache
 	if (iRank != m_aiPlayerRank[ePlayer])
@@ -4896,25 +4896,25 @@ void CvGame::setPlayerRank(PlayerTypes ePlayer, int iRank)
 		}
 	}
 	m_aiPlayerRank[ePlayer] = iRank;
-	FASSERT_NOT_NEGATIVE(getPlayerRank(ePlayer))
+	FASSERT_NOT_NEGATIVE(getPlayerRank(ePlayer));
 }
 
 
 int CvGame::getPlayerScore(PlayerTypes ePlayer)	const
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 	return m_aiPlayerScore[ePlayer];
 }
 
 
 void CvGame::setPlayerScore(PlayerTypes ePlayer, int iScore)
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 
 	if (getPlayerScore(ePlayer) != iScore)
 	{
 		m_aiPlayerScore[ePlayer] = iScore;
-		FASSERT_NOT_NEGATIVE(getPlayerScore(ePlayer))
+		FASSERT_NOT_NEGATIVE(getPlayerScore(ePlayer));
 
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 	}
@@ -4923,14 +4923,14 @@ void CvGame::setPlayerScore(PlayerTypes ePlayer, int iScore)
 
 TeamTypes CvGame::getRankTeam(int iRank) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, iRank)
+	FASSERT_BOUNDS(0, MAX_TEAMS, iRank);
 	return (TeamTypes)m_aiRankTeam[iRank];
 }
 
 
 void CvGame::setRankTeam(int iRank, TeamTypes eTeam)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (getRankTeam(iRank) != eTeam)
 	{
@@ -4943,22 +4943,22 @@ void CvGame::setRankTeam(int iRank, TeamTypes eTeam)
 
 int CvGame::getTeamRank(TeamTypes eTeam) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 	return m_aiTeamRank[eTeam];
 }
 
 
 void CvGame::setTeamRank(TeamTypes eTeam, int iRank)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 	m_aiTeamRank[eTeam] = iRank;
-	FASSERT_NOT_NEGATIVE(getTeamRank(eTeam))
+	FASSERT_NOT_NEGATIVE(getTeamRank(eTeam));
 }
 
 
 int CvGame::getTeamScore(TeamTypes eTeam) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 	return m_aiTeamScore[eTeam];
 }
 
@@ -4967,7 +4967,7 @@ void CvGame::setTeamScore(TeamTypes eTeam, int iScore)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	m_aiTeamScore[eTeam] = iScore;
-	FASSERT_NOT_NEGATIVE(getTeamScore(eTeam))
+	FASSERT_NOT_NEGATIVE(getTeamScore(eTeam));
 }
 
 
@@ -5015,21 +5015,21 @@ void CvGame::setForceControl(ForceControlTypes eIndex, bool bEnabled)
 
 int CvGame::getUnitCreatedCount(UnitTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
 	return m_paiUnitCreatedCount[eIndex];
 }
 
 
 void CvGame::incrementUnitCreatedCount(UnitTypes eIndex)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
 	m_paiUnitCreatedCount[eIndex]++;
 }
 
 
 bool CvGame::isUnitMaxedOut(UnitTypes eIndex, int iExtra) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
 
 	if (!isWorldUnit(eIndex))
 	{
@@ -5043,14 +5043,14 @@ bool CvGame::isUnitMaxedOut(UnitTypes eIndex, int iExtra) const
 
 int CvGame::getBuildingCreatedCount(BuildingTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
 	return m_paiBuildingCreatedCount[eIndex];
 }
 
 
 bool CvGame::isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
 
 	if (!isWorldWonder(eIndex))
 	{
@@ -5063,7 +5063,7 @@ bool CvGame::isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const
 
 void CvGame::changeNumBuildings(const BuildingTypes eIndex, const short iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
 	m_paiBuildingCreatedCount[eIndex] += iChange;
 	FAssert(m_paiBuildingCreatedCount[eIndex] > -1);
 }
@@ -5071,14 +5071,14 @@ void CvGame::changeNumBuildings(const BuildingTypes eIndex, const short iChange)
 
 int CvGame::getProjectCreatedCount(ProjectTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex);
 	return m_paiProjectCreatedCount[eIndex];
 }
 
 
 bool CvGame::isProjectMaxedOut(ProjectTypes eIndex, int iExtra) const
 {
-	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex);
 
 	if (!isWorldProject(eIndex))
 	{
@@ -5093,14 +5093,14 @@ bool CvGame::isProjectMaxedOut(ProjectTypes eIndex, int iExtra) const
 
 void CvGame::incrementProjectCreatedCount(ProjectTypes eIndex, int iExtra)
 {
-	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex);
 	m_paiProjectCreatedCount[eIndex] += iExtra;
 }
 
 
 int CvGame::getForceCivicCount(CivicTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eIndex);
 	return m_paiForceCivicCount[eIndex];
 }
 
@@ -5126,14 +5126,14 @@ bool CvGame::isForceCivicOption(CivicOptionTypes eCivicOption) const
 
 void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eIndex);
 
 	if (iChange != 0)
 	{
 		const bool bOldForceCivic = isForceCivic(eIndex);
 
 		m_paiForceCivicCount[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getForceCivicCount(eIndex))
+		FASSERT_NOT_NEGATIVE(getForceCivicCount(eIndex));
 
 		if (bOldForceCivic != isForceCivic(eIndex))
 		{
@@ -5145,7 +5145,7 @@ void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 
 PlayerVoteTypes CvGame::getVoteOutcome(VoteTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVoteInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumVoteInfos(), eIndex);
 	return m_paiVoteOutcome[eIndex];
 }
 
@@ -5165,7 +5165,7 @@ bool CvGame::isVotePassed(VoteTypes eIndex) const
 void CvGame::setVoteOutcome(const VoteTriggeredData& kData, PlayerVoteTypes eNewValue)
 {
 	const VoteTypes eIndex = kData.kVoteOption.eVote;
-	FASSERT_BOUNDS(0, GC.getNumVoteInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumVoteInfos(), eIndex);
 
 	if (getVoteOutcome(eIndex) != eNewValue)
 	{
@@ -5191,7 +5191,7 @@ void CvGame::setVoteOutcome(const VoteTriggeredData& kData, PlayerVoteTypes eNew
 
 int CvGame::getReligionGameTurnFounded(ReligionTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex);
 	return m_paiReligionGameTurnFounded[eIndex];
 }
 
@@ -5204,7 +5204,7 @@ bool CvGame::isReligionFounded(ReligionTypes eIndex) const
 
 void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 {
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex);
 
 	if (!isReligionFounded(eIndex))
 	{
@@ -5228,7 +5228,7 @@ void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 
 int CvGame::getTechGameTurnDiscovered(TechTypes eTech) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 	return m_paiTechGameTurnDiscovered[eTech];
 }
 
@@ -5241,7 +5241,7 @@ bool CvGame::isTechDiscovered(TechTypes eTech) const
 
 void CvGame::makeTechDiscovered(TechTypes eTech)
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 
 	if (!isTechDiscovered(eTech))
 	{
@@ -5252,25 +5252,25 @@ void CvGame::makeTechDiscovered(TechTypes eTech)
 
 bool CvGame::isReligionSlotTaken(ReligionTypes eReligion) const
 {
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion);
 	return m_abReligionSlotTaken[eReligion];
 }
 
 void CvGame::setReligionSlotTaken(ReligionTypes eReligion, bool bTaken)
 {
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion);
 	m_abReligionSlotTaken[eReligion] = bTaken;
 }
 
 bool CvGame::isTechCanFoundReligion(TechTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
 	return m_abTechCanFoundReligion[eIndex];
 }
 
 void CvGame::setTechCanFoundReligion(TechTypes eIndex, bool bUsed)
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
 	m_abTechCanFoundReligion[eIndex] = !bUsed;
 }
 
@@ -5319,7 +5319,7 @@ int CvGame::countNumReligionTechsDiscovered() const
 
 int CvGame::getCorporationGameTurnFounded(CorporationTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex);
 	return m_paiCorporationGameTurnFounded[eIndex];
 }
 
@@ -5332,7 +5332,7 @@ bool CvGame::isCorporationFounded(CorporationTypes eIndex) const
 
 void CvGame::makeCorporationFounded(CorporationTypes eIndex, PlayerTypes ePlayer)
 {
-	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex);
 
 	if (!isCorporationFounded(eIndex))
 	{
@@ -5345,41 +5345,41 @@ void CvGame::makeCorporationFounded(CorporationTypes eIndex, PlayerTypes ePlayer
 
 bool CvGame::isVictoryValid(VictoryTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eIndex);
 	return GC.getInitCore().getVictory(eIndex);
 }
 
 void CvGame::setVictoryValid(VictoryTypes eIndex, bool bValid)
 {
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eIndex);
 	GC.getInitCore().setVictory(eIndex, bValid);
 }
 
 
 bool CvGame::isSpecialUnitValid(SpecialUnitTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialUnitInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialUnitInfos(), eIndex);
 	return m_pabSpecialUnitValid[eIndex];
 }
 
 
 void CvGame::makeSpecialUnitValid(SpecialUnitTypes eIndex)
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialUnitInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialUnitInfos(), eIndex);
 	m_pabSpecialUnitValid[eIndex] = true;
 }
 
 
 bool CvGame::isSpecialBuildingValid(SpecialBuildingTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex);
 	return m_pabSpecialBuildingValid[eIndex];
 }
 
 
 void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounce)
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex);
 
 	if (!m_pabSpecialBuildingValid[eIndex])
 	{
@@ -5428,14 +5428,14 @@ void CvGame::setVoteChosen(int iSelection, int iVoteId)
 
 CvCity* CvGame::getHolyCity(ReligionTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex);
 	return getCity(m_paHolyCity[eIndex]);
 }
 
 
 void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce)
 {
-	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex);
 
 	CvCity* pOldValue = getHolyCity(eIndex);
 
@@ -5536,14 +5536,14 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 
 CvCity* CvGame::getHeadquarters(CorporationTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex);
 	return getCity(m_paHeadquarters[eIndex]);
 }
 
 
 void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bAnnounce)
 {
-	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex);
 
 	CvCity* pOldValue = getHeadquarters(eIndex);
 
@@ -5635,7 +5635,7 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 
 PlayerVoteTypes CvGame::getPlayerVote(PlayerTypes eOwnerIndex, int iVoteId) const
 {
-	FASSERT_BOUNDS(0, MAX_PC_PLAYERS, eOwnerIndex)
+	FASSERT_BOUNDS(0, MAX_PC_PLAYERS, eOwnerIndex);
 	FAssert(NULL != getVoteTriggered(iVoteId));
 
 	return GET_PLAYER(eOwnerIndex).getVote(iVoteId);
@@ -5644,7 +5644,7 @@ PlayerVoteTypes CvGame::getPlayerVote(PlayerTypes eOwnerIndex, int iVoteId) cons
 
 void CvGame::setPlayerVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes eNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_PC_PLAYERS, eOwnerIndex)
+	FASSERT_BOUNDS(0, MAX_PC_PLAYERS, eOwnerIndex);
 	FAssert(NULL != getVoteTriggered(iVoteId));
 
 	GET_PLAYER(eOwnerIndex).setVote(iVoteId, eNewValue);
@@ -7310,8 +7310,8 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictory)
-	FASSERT_BOUNDS(0, MAX_PC_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictory);
+	FASSERT_BOUNDS(0, MAX_PC_TEAMS, eTeam);
 	FAssert(GET_TEAM(eTeam).isAlive());
 
 	if (pbEndScore)
@@ -9262,7 +9262,7 @@ int CvGame::getShrineBuildingCount(ReligionTypes eReligion)
 
 BuildingTypes CvGame::getShrineBuilding(int eIndex, ReligionTypes eReligion)
 {
-	FASSERT_BOUNDS(0, m_iShrineBuildingCount, eIndex)
+	FASSERT_BOUNDS(0, m_iShrineBuildingCount, eIndex);
 
 	BuildingTypes eBuilding = NO_BUILDING;
 
@@ -9289,7 +9289,7 @@ BuildingTypes CvGame::getShrineBuilding(int eIndex, ReligionTypes eReligion)
 
 void CvGame::changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion, bool bRemove)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 	FAssertMsg(bRemove || m_iShrineBuildingCount < GC.getNumBuildingInfos(), "trying to add too many buildings to CvGame::changeShrineBuilding");
 
 	if (bRemove)
@@ -11048,44 +11048,43 @@ void CvGame::updateInitialSigns()
 
 bool CvGame::isPreviousRequest(PlayerTypes ePlayer) const
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 	return m_abPreviousRequest[ePlayer];
 }
 
 
 void CvGame::setPreviousRequest(PlayerTypes ePlayer, bool bNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 	m_abPreviousRequest[ePlayer] = bNewValue;
 }
 
 bool CvGame::isModderGameOption(ModderGameOptionTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex);
 	return m_aiModderGameOption[eIndex] > 0;
 }
 
 int CvGame::getModderGameOption(ModderGameOptionTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex);
 	return m_aiModderGameOption[eIndex];
 }
 
 void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex);
 	m_aiModderGameOption[eIndex] = iNewValue;
 }
 
 void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue)
 {
-	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_MODDERGAMEOPTION_TYPES, eIndex);
 	m_aiModderGameOption[eIndex] = bNewValue;
 }
 
 void CvGame::doFoundCorporations()
 {
-
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		doFoundCorporation((CorporationTypes)iI, false);
@@ -11285,13 +11284,13 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 
 int CvGame::getFlexibleDifficultyTimer(PlayerTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	return m_aiFlexibleDifficultyTimer[eIndex];
 }
 
 void CvGame::setFlexibleDifficultyTimer(PlayerTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiFlexibleDifficultyTimer[eIndex] = iNewValue;
 }
 
@@ -11673,13 +11672,13 @@ const CvProperties* CvGame::getPropertiesConst() const
 
 MapTypes CvGame::getCurrentMap() const
 {
-	FASSERT_BOUNDS(0, NUM_MAPS, m_eCurrentMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, m_eCurrentMap);
 	return m_eCurrentMap;
 }
 
 void CvGame::setCurrentMap(MapTypes eNewMap)
 {
-	FASSERT_BOUNDS(0, NUM_MAPS, eNewMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eNewMap);
 	m_eCurrentMap = eNewMap;
 }
 
@@ -11788,16 +11787,16 @@ int CvGame::getTopPopCount() const
 
 int CvGame::getImprovementCount(ImprovementTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex);
 	return m_paiImprovementCount[eIndex];
 }
 
 
 void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex);
 	m_paiImprovementCount[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getImprovementCount(eIndex))
+	FASSERT_NOT_NEGATIVE(getImprovementCount(eIndex));
 }
 
 bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const

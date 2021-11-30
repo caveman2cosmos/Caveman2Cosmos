@@ -154,7 +154,7 @@ public:
 					iResult -= m_pMap->getGridWidth();
 				}
 
-				FASSERT_BOUNDS(0, m_iXSize, iResult)
+				FASSERT_BOUNDS(0, m_iXSize, iResult);
 
 				return iResult;
 			}
@@ -190,7 +190,7 @@ public:
 					iResult -= m_pMap->getGridHeight();
 				}
 
-				FASSERT_BOUNDS(0, m_iYSize, iResult)
+				FASSERT_BOUNDS(0, m_iYSize, iResult);
 
 				return iResult;
 			}
