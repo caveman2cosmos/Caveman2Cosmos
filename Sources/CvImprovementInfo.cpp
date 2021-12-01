@@ -446,8 +446,8 @@ int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 
 //int CvImprovementInfo::getTraitYieldChanges(int i, int j) const
 //{
-//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i)
-//	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i);
+//	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 //	return (m_ppiTraitYieldChanges && m_ppiTraitYieldChanges[i]) ? m_ppiTraitYieldChanges[i][j] : 0;
 //}
 

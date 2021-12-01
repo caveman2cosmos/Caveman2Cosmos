@@ -325,7 +325,7 @@ void CvUnit::changeIdentity(UnitTypes eUnit)
 
 void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
 
 	//	If the current viewport is not yet initialized center it on the first unit created for the active player
 	if (GC.getGame().getActivePlayer() == eOwner
@@ -13508,7 +13508,7 @@ int CvUnit::getExtraStrength() const
 void CvUnit::changeExtraStrength(int iChange)
 {
 	m_iExtraStrength += iChange;
-	FASSERT_NOT_NEGATIVE(m_iExtraStrength)
+	FASSERT_NOT_NEGATIVE(m_iExtraStrength);
 }
 
 int CvUnit::getSMStrength() const
@@ -13520,7 +13520,7 @@ void CvUnit::setSMStrength()
 {
 	const int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
 	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
-	FASSERT_NOT_NEGATIVE(m_iSMStrength)
+	FASSERT_NOT_NEGATIVE(m_iSMStrength);
 }
 
 float CvUnit::fbaseCombatStr() const
@@ -15894,7 +15894,7 @@ int CvUnit::hillsDefenseModifier() const
 
 int CvUnit::terrainAttackModifier(TerrainTypes eTerrain) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain);
 	return (m_pUnitInfo->getTerrainAttackModifier(eTerrain) + getExtraTerrainAttackPercent(eTerrain));
 }
 
@@ -15905,14 +15905,14 @@ int CvUnit::terrainDefenseModifier(TerrainTypes eTerrain) const
 	{
 		return 0;
 	}
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain);
 	return (m_pUnitInfo->getTerrainDefenseModifier(eTerrain) + getExtraTerrainDefensePercent(eTerrain));
 }
 
 
 int CvUnit::featureAttackModifier(FeatureTypes eFeature) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature);
 	return (m_pUnitInfo->getFeatureAttackModifier(eFeature) + getExtraFeatureAttackPercent(eFeature));
 }
 
@@ -15922,13 +15922,13 @@ int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 	{
 		return 0;
 	}
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature);
 	return (m_pUnitInfo->getFeatureDefenseModifier(eFeature) + getExtraFeatureDefensePercent(eFeature));
 }
 
 int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
 	return m_pUnitInfo->getUnitAttackModifier(eUnit);
 }
 
@@ -15939,21 +15939,21 @@ int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 	{
 		return 0;
 	}
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
 	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
 }
 
 
 int CvUnit::unitCombatModifier(UnitCombatTypes eUnitCombat) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 	return (m_pUnitInfo->getUnitCombatModifier(eUnitCombat) + getExtraUnitCombatModifier(eUnitCombat));
 }
 
 
 int CvUnit::domainModifier(DomainTypes eDomain) const
 {
-	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eDomain)
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eDomain);
 	return (m_pUnitInfo->getDomainModifier(eDomain) + getExtraDomainModifier(eDomain));
 }
 
@@ -15999,7 +15999,7 @@ void CvUnit::changeCargoSpace(int iChange)
 	if (iChange != 0)
 	{
 		m_iCargoCapacity += iChange;
-		FASSERT_NOT_NEGATIVE(m_iCargoCapacity)
+		FASSERT_NOT_NEGATIVE(m_iCargoCapacity);
 		setInfoBarDirty(true);
 	}
 }
@@ -17118,7 +17118,7 @@ int CvUnit::getLastMoveTurn() const
 void CvUnit::setLastMoveTurn(int iNewValue)
 {
 	m_iLastMoveTurn = iNewValue;
-	FASSERT_NOT_NEGATIVE(m_iLastMoveTurn)
+	FASSERT_NOT_NEGATIVE(m_iLastMoveTurn);
 }
 
 
@@ -17168,7 +17168,7 @@ int CvUnit::getGameTurnCreated() const
 void CvUnit::setGameTurnCreated(int iNewValue)
 {
 	m_iGameTurnCreated = iNewValue;
-	FASSERT_NOT_NEGATIVE(getGameTurnCreated())
+	FASSERT_NOT_NEGATIVE(getGameTurnCreated());
 }
 
 
@@ -17179,7 +17179,7 @@ int CvUnit::getDamage() const
 
 int CvUnit::getHealAsDamage(UnitCombatTypes eHealAsType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eHealAsType);
 
@@ -17188,7 +17188,7 @@ int CvUnit::getHealAsDamage(UnitCombatTypes eHealAsType) const
 
 void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, PlayerTypes ePlayer)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType);
 
 	if (iChange != 0)
 	{
@@ -17198,13 +17198,13 @@ void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, Player
 
 		setHealAsDamage(eHealAsType, range(iNewValue, 0, getMaxHP()), ePlayer);
 
-		FASSERT_NOT_NEGATIVE(info->m_iHealAsDamage)
+		FASSERT_NOT_NEGATIVE(info->m_iHealAsDamage);
 	}
 }
 
 void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType);
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
 
@@ -17223,7 +17223,7 @@ void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerT
 	{
 		setDamage(iHighestDamage, ePlayer, bNotifyEntity, NO_UNITCOMBAT, true);
 	}
-	FASSERT_NOT_NEGATIVE(info->m_iHealAsDamage)
+	FASSERT_NOT_NEGATIVE(info->m_iHealAsDamage);
 }
 
 int CvUnit::getDamagePercent() const
@@ -17330,7 +17330,7 @@ void CvUnit::setMoves(int iNewValue)
 
 		m_iMoves = iNewValue;
 
-		FASSERT_NOT_NEGATIVE(m_iMoves)
+		FASSERT_NOT_NEGATIVE(m_iMoves);
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -17379,7 +17379,7 @@ void CvUnit::setExperience100(int iNewValue, int iMax)
 	if (getExperience100() != iNewValue && getExperience100() < iMax)
 	{
 		m_iExperience = std::min(iMax, iNewValue);
-		FASSERT_NOT_NEGATIVE(getExperience100())
+		FASSERT_NOT_NEGATIVE(getExperience100());
 
 		if (IsSelected())
 		{
@@ -17663,7 +17663,7 @@ int CvUnit::getCombatTimer() const
 void CvUnit::setCombatTimer(int iNewValue)
 {
 	m_iCombatTimer = iNewValue;
-	FASSERT_NOT_NEGATIVE(getCombatTimer())
+	FASSERT_NOT_NEGATIVE(getCombatTimer());
 }
 
 void CvUnit::changeCombatTimer(int iChange)
@@ -17679,7 +17679,7 @@ int CvUnit::getCombatFirstStrikes() const
 void CvUnit::setCombatFirstStrikes(int iNewValue)
 {
 	m_iCombatFirstStrikes = iNewValue;
-	FASSERT_NOT_NEGATIVE(getCombatFirstStrikes())
+	FASSERT_NOT_NEGATIVE(getCombatFirstStrikes());
 }
 
 void CvUnit::changeCombatFirstStrikes(int iChange)
@@ -17824,7 +17824,7 @@ bool CvUnit::isBlitz() const
 void CvUnit::changeBlitzCount(int iChange)
 {
 	m_iBlitzCount += iChange;
-	FASSERT_NOT_NEGATIVE(getBlitzCount())
+	FASSERT_NOT_NEGATIVE(getBlitzCount());
 }
 
 int CvUnit::getAmphibCount() const
@@ -17840,7 +17840,7 @@ bool CvUnit::isAmphib() const
 void CvUnit::changeAmphibCount(int iChange)
 {
 	m_iAmphibCount += iChange;
-	FASSERT_NOT_NEGATIVE(getAmphibCount())
+	FASSERT_NOT_NEGATIVE(getAmphibCount());
 }
 
 int CvUnit::getRiverCount() const
@@ -17856,7 +17856,7 @@ bool CvUnit::isRiver() const
 void CvUnit::changeRiverCount(int iChange)
 {
 	m_iRiverCount += iChange;
-	FASSERT_NOT_NEGATIVE(getRiverCount())
+	FASSERT_NOT_NEGATIVE(getRiverCount());
 }
 
 int CvUnit::getEnemyRouteCount() const
@@ -17872,7 +17872,7 @@ bool CvUnit::isEnemyRoute() const
 void CvUnit::changeEnemyRouteCount(int iChange)
 {
 	m_iEnemyRouteCount += iChange;
-	FASSERT_NOT_NEGATIVE(getEnemyRouteCount())
+	FASSERT_NOT_NEGATIVE(getEnemyRouteCount());
 }
 
 int CvUnit::getAlwaysHealCount() const
@@ -17888,7 +17888,7 @@ bool CvUnit::isAlwaysHeal() const
 void CvUnit::changeAlwaysHealCount(int iChange)
 {
 	m_iAlwaysHealCount += iChange;
-	FASSERT_NOT_NEGATIVE(getAlwaysHealCount())
+	FASSERT_NOT_NEGATIVE(getAlwaysHealCount());
 }
 
 int CvUnit::getHillsDoubleMoveCount() const
@@ -17904,7 +17904,7 @@ bool CvUnit::isHillsDoubleMove() const
 void CvUnit::changeHillsDoubleMoveCount(int iChange)
 {
 	m_iHillsDoubleMoveCount += iChange;
-	FASSERT_NOT_NEGATIVE(getHillsDoubleMoveCount())
+	FASSERT_NOT_NEGATIVE(getHillsDoubleMoveCount());
 }
 
 int CvUnit::getImmuneToFirstStrikesCount() const
@@ -17915,7 +17915,7 @@ int CvUnit::getImmuneToFirstStrikesCount() const
 void CvUnit::changeImmuneToFirstStrikesCount(int iChange)
 {
 	m_iImmuneToFirstStrikesCount += iChange;
-	FASSERT_NOT_NEGATIVE(getImmuneToFirstStrikesCount())
+	FASSERT_NOT_NEGATIVE(getImmuneToFirstStrikesCount());
 }
 
 
@@ -17927,7 +17927,7 @@ int CvUnit::getAlwaysInvisibleCount() const
 void CvUnit::changeAlwaysInvisibleCount(int iChange)
 {
 	m_iAlwaysInvisibleCount += iChange;
-	FASSERT_NOT_NEGATIVE(getAlwaysInvisibleCount())
+	FASSERT_NOT_NEGATIVE(getAlwaysInvisibleCount());
 }
 
 
@@ -17944,7 +17944,7 @@ bool CvUnit::isDefensiveVictoryMove() const
 void CvUnit::changeDefensiveVictoryMoveCount(int iChange)
 {
 	m_iDefensiveVictoryMoveCount += iChange;
-	FASSERT_NOT_NEGATIVE(getDefensiveVictoryMoveCount())
+	FASSERT_NOT_NEGATIVE(getDefensiveVictoryMoveCount());
 }
 
 
@@ -17961,7 +17961,7 @@ bool CvUnit::isFreeDrop() const
 void CvUnit::changeFreeDropCount(int iChange)
 {
 	m_iFreeDropCount += iChange;
-	FASSERT_NOT_NEGATIVE(getFreeDropCount())
+	FASSERT_NOT_NEGATIVE(getFreeDropCount());
 }
 
 
@@ -17978,7 +17978,7 @@ bool CvUnit::isOffensiveVictoryMove() const
 void CvUnit::changeOffensiveVictoryMoveCount(int iChange)
 {
 	m_iOffensiveVictoryMoveCount += iChange;
-	FASSERT_NOT_NEGATIVE(getOffensiveVictoryMoveCount())
+	FASSERT_NOT_NEGATIVE(getOffensiveVictoryMoveCount());
 }
 
 
@@ -17995,7 +17995,7 @@ bool CvUnit::isOneUp() const
 void CvUnit::changeOneUpCount(int iChange)
 {
 	m_iOneUpCount += iChange;
-	FASSERT_NOT_NEGATIVE(getOneUpCount())
+	FASSERT_NOT_NEGATIVE(getOneUpCount());
 }
 
 int CvUnit::getPillageEspionageCount() const
@@ -18011,7 +18011,7 @@ bool CvUnit::isPillageEspionage() const
 void CvUnit::changePillageEspionageCount(int iChange)
 {
 	m_iPillageEspionageCount += iChange;
-	FASSERT_NOT_NEGATIVE(getPillageEspionageCount())
+	FASSERT_NOT_NEGATIVE(getPillageEspionageCount());
 }
 
 
@@ -18028,7 +18028,7 @@ bool CvUnit::isPillageMarauder() const
 void CvUnit::changePillageMarauderCount(int iChange)
 {
 	m_iPillageMarauderCount += iChange;
-	FASSERT_NOT_NEGATIVE(getPillageMarauderCount())
+	FASSERT_NOT_NEGATIVE(getPillageMarauderCount());
 }
 
 
@@ -18045,7 +18045,7 @@ bool CvUnit::isPillageOnMove() const
 void CvUnit::changePillageOnMoveCount(int iChange)
 {
 	m_iPillageOnMoveCount += iChange;
-	FASSERT_NOT_NEGATIVE(getPillageOnMoveCount())
+	FASSERT_NOT_NEGATIVE(getPillageOnMoveCount());
 }
 
 
@@ -18062,7 +18062,7 @@ bool CvUnit::isPillageOnVictory() const
 void CvUnit::changePillageOnVictoryCount(int iChange)
 {
 	m_iPillageOnVictoryCount += iChange;
-	FASSERT_NOT_NEGATIVE(getPillageOnVictoryCount())
+	FASSERT_NOT_NEGATIVE(getPillageOnVictoryCount());
 }
 
 
@@ -18079,7 +18079,7 @@ bool CvUnit::isPillageResearch() const
 void CvUnit::changePillageResearchCount(int iChange)
 {
 	m_iPillageResearchCount += iChange;
-	FASSERT_NOT_NEGATIVE(getPillageResearchCount())
+	FASSERT_NOT_NEGATIVE(getPillageResearchCount());
 }
 
 
@@ -18258,7 +18258,7 @@ void CvUnit::changeExtraVisibilityRange(int iChange)
 		}
 
 		m_iExtraVisibilityRange += iChange;
-		FASSERT_NOT_NEGATIVE(getExtraVisibilityRange())
+		FASSERT_NOT_NEGATIVE(getExtraVisibilityRange());
 
 		if (plot() != NULL)
 		{
@@ -18286,7 +18286,7 @@ void CvUnit::changeExtraMoves(int iChange)
 	m_iExtraMoves += iChange;
 	m_iMaxMoveCacheTurn--;
 
-	FASSERT_NOT_NEGATIVE(getExtraMoves())
+	FASSERT_NOT_NEGATIVE(getExtraMoves());
 }
 
 int CvUnit::getExtraMoveDiscount() const
@@ -18305,7 +18305,7 @@ int CvUnit::getExtraMoveDiscount() const
 void CvUnit::changeExtraMoveDiscount(int iChange)
 {
 	m_iExtraMoveDiscount += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraMoveDiscount())
+	FASSERT_NOT_NEGATIVE(getExtraMoveDiscount());
 }
 
 
@@ -18510,7 +18510,7 @@ int CvUnit::getExtraVSBarbs(bool bIgnoreCommanders) const
 void CvUnit::changeExtraVSBarbs(int iChange)
 {
 	m_iExtraVSBarbs += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraVSBarbs())
+	FASSERT_NOT_NEGATIVE(getExtraVSBarbs());
 }
 
 int CvUnit::getExtraReligiousCombatModifier(bool bIgnoreCommanders) const
@@ -18698,7 +18698,7 @@ int CvUnit::getExtraOverrun(bool bIgnoreCommanders) const
 void CvUnit::changeExtraOverrun(int iChange)
 {
 	m_iExtraOverrun += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraOverrun())
+	FASSERT_NOT_NEGATIVE(getExtraOverrun());
 }
 
 int CvUnit::getExtraRepel(bool bIgnoreCommanders) const
@@ -18721,7 +18721,7 @@ int CvUnit::getExtraRepel(bool bIgnoreCommanders) const
 void CvUnit::changeExtraRepel(int iChange)
 {
 	m_iExtraRepel += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraRepel())
+	FASSERT_NOT_NEGATIVE(getExtraRepel());
 }
 
 int CvUnit::getExtraFortRepel(bool bIgnoreCommanders) const
@@ -18744,7 +18744,7 @@ int CvUnit::getExtraFortRepel(bool bIgnoreCommanders) const
 void CvUnit::changeExtraFortRepel(int iChange)
 {
 	m_iExtraFortRepel += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraFortRepel())
+	FASSERT_NOT_NEGATIVE(getExtraFortRepel());
 }
 
 int CvUnit::getExtraRepelRetries(bool bIgnoreCommanders) const
@@ -18767,7 +18767,7 @@ int CvUnit::getExtraRepelRetries(bool bIgnoreCommanders) const
 void CvUnit::changeExtraRepelRetries(int iChange)
 {
 	m_iExtraRepelRetries += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraRepelRetries())
+	FASSERT_NOT_NEGATIVE(getExtraRepelRetries());
 }
 
 int CvUnit::getExtraUnyielding(bool bIgnoreCommanders) const
@@ -18786,7 +18786,7 @@ int CvUnit::getExtraUnyielding(bool bIgnoreCommanders) const
 void CvUnit::changeExtraUnyielding(int iChange)
 {
 	m_iExtraUnyielding += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraUnyielding())
+	FASSERT_NOT_NEGATIVE(getExtraUnyielding());
 }
 
 int CvUnit::getExtraKnockback(bool bIgnoreCommanders) const
@@ -18805,7 +18805,7 @@ int CvUnit::getExtraKnockback(bool bIgnoreCommanders) const
 void CvUnit::changeExtraKnockback(int iChange)
 {
 	m_iExtraKnockback += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraKnockback())
+	FASSERT_NOT_NEGATIVE(getExtraKnockback());
 }
 
 int CvUnit::getExtraKnockbackRetries(bool bIgnoreCommanders) const
@@ -18824,7 +18824,7 @@ int CvUnit::getExtraKnockbackRetries(bool bIgnoreCommanders) const
 void CvUnit::changeExtraKnockbackRetries(int iChange)
 {
 	m_iExtraKnockbackRetries += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraKnockbackRetries())
+	FASSERT_NOT_NEGATIVE(getExtraKnockbackRetries());
 }
 
 int CvUnit::getStampedeCount() const
@@ -18923,7 +18923,7 @@ int CvUnit::getExtraStrAdjperRnd(bool bIgnoreCommanders) const
 void CvUnit::changeExtraStrAdjperRnd(int iChange)
 {
 	m_iExtraStrAdjperRnd += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraStrAdjperRnd())
+	FASSERT_NOT_NEGATIVE(getExtraStrAdjperRnd());
 }
 
 int CvUnit::getExtraStrAdjperAtt(bool bIgnoreCommanders) const
@@ -18942,7 +18942,7 @@ int CvUnit::getExtraStrAdjperAtt(bool bIgnoreCommanders) const
 void CvUnit::changeExtraStrAdjperAtt(int iChange)
 {
 	m_iExtraStrAdjperAtt += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraStrAdjperAtt())
+	FASSERT_NOT_NEGATIVE(getExtraStrAdjperAtt());
 }
 
 int CvUnit::getExtraStrAdjperDef(bool bIgnoreCommanders) const
@@ -18965,7 +18965,7 @@ int CvUnit::getExtraStrAdjperDef(bool bIgnoreCommanders) const
 void CvUnit::changeExtraStrAdjperDef(int iChange)
 {
 	m_iExtraStrAdjperDef += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraStrAdjperDef())
+	FASSERT_NOT_NEGATIVE(getExtraStrAdjperDef());
 }
 
 int CvUnit::getExtraWithdrawAdjperAtt(bool bIgnoreCommanders) const
@@ -18984,7 +18984,7 @@ int CvUnit::getExtraWithdrawAdjperAtt(bool bIgnoreCommanders) const
 void CvUnit::changeExtraWithdrawAdjperAtt(int iChange)
 {
 	m_iExtraWithdrawAdjperAtt += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraWithdrawAdjperAtt())
+	FASSERT_NOT_NEGATIVE(getExtraWithdrawAdjperAtt());
 }
 
 int CvUnit::getExtraUnnerve(bool bIgnoreCommanders) const
@@ -19003,7 +19003,7 @@ int CvUnit::getExtraUnnerve(bool bIgnoreCommanders) const
 void CvUnit::changeExtraUnnerve(int iChange)
 {
 	m_iExtraUnnerve += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraUnnerve())
+	FASSERT_NOT_NEGATIVE(getExtraUnnerve());
 }
 
 int CvUnit::getExtraEnclose(bool bIgnoreCommanders) const
@@ -19022,7 +19022,7 @@ int CvUnit::getExtraEnclose(bool bIgnoreCommanders) const
 void CvUnit::changeExtraEnclose(int iChange)
 {
 	m_iExtraEnclose += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraEnclose())
+	FASSERT_NOT_NEGATIVE(getExtraEnclose());
 }
 
 int CvUnit::getExtraLunge(bool bIgnoreCommanders) const
@@ -19041,7 +19041,7 @@ int CvUnit::getExtraLunge(bool bIgnoreCommanders) const
 void CvUnit::changeExtraLunge(int iChange)
 {
 	m_iExtraLunge += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraLunge())
+	FASSERT_NOT_NEGATIVE(getExtraLunge());
 }
 
 int CvUnit::getExtraDynamicDefense(bool bIgnoreCommanders) const
@@ -19060,7 +19060,7 @@ int CvUnit::getExtraDynamicDefense(bool bIgnoreCommanders) const
 void CvUnit::changeExtraDynamicDefense(int iChange)
 {
 	m_iExtraDynamicDefense += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraDynamicDefense())
+	FASSERT_NOT_NEGATIVE(getExtraDynamicDefense());
 }
 
 int CvUnit::getAnimalIgnoresBordersCount() const
@@ -19093,7 +19093,7 @@ bool CvUnit::mayOnslaught() const
 void CvUnit::changeOnslaughtCount(int iChange)
 {
 	m_iOnslaughtCount += iChange;
-	FASSERT_NOT_NEGATIVE(getOnslaughtCount())
+	FASSERT_NOT_NEGATIVE(getOnslaughtCount());
 }
 
 int CvUnit::getDealColdDamageCount() const
@@ -19139,7 +19139,7 @@ void CvUnit::changeColdImmuneCount(int iChange)
 //TB SubCombat Mod Begin
 int CvUnit::getSubCombatTypeCount(UnitCombatTypes eCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eCombatType);
 
@@ -19148,26 +19148,26 @@ int CvUnit::getSubCombatTypeCount(UnitCombatTypes eCombatType) const
 
 bool CvUnit::hasExtraSubCombatType(UnitCombatTypes eCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
 	return (getSubCombatTypeCount(eCombatType) > 0);
 }
 
 void CvUnit::changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
 
 	if (iChange != 0)
 	{
 		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eCombatType);
 
 		info->m_iSubCombatTypeCount += iChange;
-		FASSERT_NOT_NEGATIVE(info->m_iSubCombatTypeCount)
+		FASSERT_NOT_NEGATIVE(info->m_iSubCombatTypeCount);
 	}
 }
 
 int CvUnit::getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eCombatType);
 
@@ -19176,20 +19176,20 @@ int CvUnit::getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const
 
 bool CvUnit::hasRemovesUnitCombatType(UnitCombatTypes eCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
 	return (getRemovesUnitCombatTypeCount(eCombatType) > 0);
 }
 
 void CvUnit::changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
 
 	if (iChange != 0)
 	{
 		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eCombatType);
 
 		info->m_iRemovesUnitCombatTypeCount += iChange;
-		FASSERT_NOT_NEGATIVE(info->m_iRemovesUnitCombatTypeCount)
+		FASSERT_NOT_NEGATIVE(info->m_iRemovesUnitCombatTypeCount);
 	}
 }
 //TB SubCombat Mod End
@@ -19197,7 +19197,7 @@ void CvUnit::changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int i
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnit::getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -19206,13 +19206,13 @@ int CvUnit::getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const
 
 bool CvUnit::hasExtraCureAffliction(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 	return (getCureAfflictionCount(ePromotionLineType) > 0);
 }
 
 void CvUnit::changeCureAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -19239,7 +19239,7 @@ int CvUnit::getExtraFortitude(bool bIgnoreCommanders) const
 void CvUnit::changeExtraFortitude(int iChange)
 {
 	m_iExtraFortitude += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraFortitude())
+	FASSERT_NOT_NEGATIVE(getExtraFortitude());
 }
 
 int CvUnit::getExtraDodgeModifier (bool bIgnoreCommanders) const
@@ -19294,7 +19294,7 @@ int CvUnit::getExtraPowerShots(bool bIgnoreCommanders) const
 void CvUnit::changeExtraPowerShots(int iChange)
 {
 	m_iExtraPowerShots += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraPowerShots())
+	FASSERT_NOT_NEGATIVE(getExtraPowerShots());
 }
 
 int CvUnit::getExtraPowerShotCombatModifier(bool bIgnoreCommanders) const
@@ -19313,7 +19313,7 @@ int CvUnit::getExtraPowerShotCombatModifier(bool bIgnoreCommanders) const
 void CvUnit::changeExtraPowerShotCombatModifier(int iChange)
 {
 	m_iExtraPowerShotCombatModifier += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraPowerShotCombatModifier())
+	FASSERT_NOT_NEGATIVE(getExtraPowerShotCombatModifier());
 }
 
 int CvUnit::getExtraPowerShotPunctureModifier(bool bIgnoreCommanders) const
@@ -19332,7 +19332,7 @@ int CvUnit::getExtraPowerShotPunctureModifier(bool bIgnoreCommanders) const
 void CvUnit::changeExtraPowerShotPunctureModifier(int iChange)
 {
 	m_iExtraPowerShotPunctureModifier += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraPowerShotPunctureModifier())
+	FASSERT_NOT_NEGATIVE(getExtraPowerShotPunctureModifier());
 }
 
 int CvUnit::getExtraPowerShotPrecisionModifier(bool bIgnoreCommanders) const
@@ -19351,7 +19351,7 @@ int CvUnit::getExtraPowerShotPrecisionModifier(bool bIgnoreCommanders) const
 void CvUnit::changeExtraPowerShotPrecisionModifier(int iChange)
 {
 	m_iExtraPowerShotPrecisionModifier += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraPowerShotPrecisionModifier())
+	FASSERT_NOT_NEGATIVE(getExtraPowerShotPrecisionModifier());
 }
 
 int CvUnit::getExtraPowerShotCriticalModifier(bool bIgnoreCommanders) const
@@ -19370,7 +19370,7 @@ int CvUnit::getExtraPowerShotCriticalModifier(bool bIgnoreCommanders) const
 void CvUnit::changeExtraPowerShotCriticalModifier(int iChange)
 {
 	m_iExtraPowerShotCriticalModifier += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraPowerShotCriticalModifier())
+	FASSERT_NOT_NEGATIVE(getExtraPowerShotCriticalModifier());
 }
 
 int CvUnit::getExtraCriticalModifier(bool bIgnoreCommanders) const
@@ -19389,7 +19389,7 @@ int CvUnit::getExtraCriticalModifier(bool bIgnoreCommanders) const
 void CvUnit::changeExtraCriticalModifier(int iChange)
 {
 	m_iExtraCriticalModifier += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraCriticalModifier())
+	FASSERT_NOT_NEGATIVE(getExtraCriticalModifier());
 }
 
 int CvUnit::getExtraEndurance(bool bIgnoreCommanders) const
@@ -19408,7 +19408,7 @@ int CvUnit::getExtraEndurance(bool bIgnoreCommanders) const
 void CvUnit::changeExtraEndurance(int iChange)
 {
 	m_iExtraEndurance += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraEndurance())
+	FASSERT_NOT_NEGATIVE(getExtraEndurance());
 }
 
 int CvUnit::getExtraPoisonProbabilityModifier(bool bIgnoreCommanders) const
@@ -19427,7 +19427,7 @@ int CvUnit::getExtraPoisonProbabilityModifier(bool bIgnoreCommanders) const
 void CvUnit::changeExtraPoisonProbabilityModifier(int iChange)
 {
 	m_iExtraPoisonProbabilityModifier += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraPoisonProbabilityModifier())
+	FASSERT_NOT_NEGATIVE(getExtraPoisonProbabilityModifier());
 }
 
 //TB Combat Mods End
@@ -19447,7 +19447,7 @@ int CvUnit::getExtraCollateralDamage() const
 void CvUnit::changeExtraCollateralDamage(int iChange)
 {
 	m_iExtraCollateralDamage += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraCollateralDamage())
+	FASSERT_NOT_NEGATIVE(getExtraCollateralDamage());
 }
 
 int CvUnit::getExtraEnemyHeal() const
@@ -19464,7 +19464,7 @@ int CvUnit::getExtraEnemyHeal() const
 void CvUnit::changeExtraEnemyHeal(int iChange)
 {
 	m_iExtraEnemyHeal += iChange;
-	//FASSERT_NOT_NEGATIVE(getExtraEnemyHeal())
+	//FASSERT_NOT_NEGATIVE(getExtraEnemyHeal());
 }
 
 int CvUnit::getExtraNeutralHeal() const
@@ -19481,7 +19481,7 @@ int CvUnit::getExtraNeutralHeal() const
 void CvUnit::changeExtraNeutralHeal(int iChange)
 {
 	m_iExtraNeutralHeal += iChange;
-	//FASSERT_NOT_NEGATIVE(getExtraNeutralHeal())
+	//FASSERT_NOT_NEGATIVE(getExtraNeutralHeal());
 }
 
 int CvUnit::getExtraFriendlyHeal() const
@@ -19510,7 +19510,7 @@ int CvUnit::getSameTileHeal() const
 void CvUnit::changeSameTileHeal(int iChange)
 {
 	m_iSameTileHeal += iChange;
-	FASSERT_NOT_NEGATIVE(getSameTileHeal())
+	FASSERT_NOT_NEGATIVE(getSameTileHeal());
 }
 
 int CvUnit::getAdjacentTileHeal() const
@@ -19521,7 +19521,7 @@ int CvUnit::getAdjacentTileHeal() const
 void CvUnit::changeAdjacentTileHeal(int iChange)
 {
 	m_iAdjacentTileHeal += iChange;
-	FASSERT_NOT_NEGATIVE(getAdjacentTileHeal())
+	FASSERT_NOT_NEGATIVE(getAdjacentTileHeal());
 }
 
 int CvUnit::getExtraCombatPercent() const
@@ -20437,7 +20437,7 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 
 int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex);
 
 	if (!isCommander())
 	{
@@ -20453,7 +20453,7 @@ int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 
 void CvUnit::changeExtraDomainModifier(DomainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex);
 	m_aiExtraDomainModifier[eIndex] += iChange;
 }
 
@@ -20536,7 +20536,7 @@ void CvUnit::setScriptData(std::string szNewValue)
 
 int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -20546,28 +20546,28 @@ int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 
 bool CvUnit::isTerrainDoubleMove(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 	return getTerrainDoubleMoveCount(eIndex) > 0;
 }
 
 
 void CvUnit::changeTerrainDoubleMoveCount(TerrainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	if (iChange != 0)
 	{
 		TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo(eIndex);
 
 		info->m_iTerrainDoubleMoveCount += iChange;
-		FASSERT_NOT_NEGATIVE(info->m_iTerrainDoubleMoveCount)
+		FASSERT_NOT_NEGATIVE(info->m_iTerrainDoubleMoveCount);
 	}
 }
 
 
 int CvUnit::getFeatureDoubleMoveCount(FeatureTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -20577,27 +20577,27 @@ int CvUnit::getFeatureDoubleMoveCount(FeatureTypes eIndex) const
 
 bool CvUnit::isFeatureDoubleMove(FeatureTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 	return (getFeatureDoubleMoveCount(eIndex) > 0);
 }
 
 
 void CvUnit::changeFeatureDoubleMoveCount(FeatureTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	if (iChange != 0)
 	{
 		FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo(eIndex);
 
 		info->m_iFeatureDoubleMoveCount += iChange;
-		FASSERT_NOT_NEGATIVE(info->m_iFeatureDoubleMoveCount)
+		FASSERT_NOT_NEGATIVE(info->m_iFeatureDoubleMoveCount);
 	}
 }
 
 int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -20606,7 +20606,7 @@ int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20621,7 +20621,7 @@ void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -20630,7 +20630,7 @@ int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20645,27 +20645,26 @@ void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
 //get totals
 int CvUnit::terrainWorkPercent(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 	return m_pUnitInfo->getTerrainWorkRateModifierType(eIndex) + getExtraTerrainWorkPercent(eIndex);
 }
 
 int CvUnit::featureWorkPercent(FeatureTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 	return m_pUnitInfo->getFeatureWorkRateModifierType(eIndex) + getExtraFeatureWorkPercent(eIndex);
 }
 
 int CvUnit::buildWorkPercent(BuildTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
-
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex);
 	return m_pUnitInfo->getBuildWorkRateModifierType(eIndex) + getExtraWorkModForBuild(eIndex);
 }
 
 
 int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -20683,7 +20682,7 @@ int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraTerrainAttackPercent(TerrainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20701,7 +20700,7 @@ int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 	{
 		return 0;
 	}
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -20719,7 +20718,7 @@ int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraTerrainDefensePercent(TerrainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20733,7 +20732,7 @@ void CvUnit::changeExtraTerrainDefensePercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -20751,7 +20750,7 @@ int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraFeatureAttackPercent(FeatureTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20769,7 +20768,7 @@ int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 	{
 		return 0;
 	}
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -20787,7 +20786,7 @@ int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20801,7 +20800,7 @@ void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 
 int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -20819,7 +20818,7 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -20848,7 +20847,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), ePromotion);
 
 	if (ePromotion == NO_PROMOTION)
 	{
@@ -21926,7 +21925,7 @@ std::map<UnitCombatTypes, UnitCombatKeyedInfo>& CvUnit::getUnitCombatKeyedInfo()
 
 bool CvUnit::isHealsUnitCombat(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), eIndex);
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	return (info != NULL && (info->m_iHealUnitCombatTypeVolume > 0));
@@ -21934,7 +21933,7 @@ bool CvUnit::isHealsUnitCombat(UnitCombatTypes eIndex) const
 
 bool CvUnit::isHasUnitCombat(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), eIndex);
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	return (info != NULL && info->m_bHasUnitCombat);
@@ -22479,7 +22478,7 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 
 bool CvUnit::isHasPromotion(PromotionTypes eIndex) const
 {
-	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eIndex)
+	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eIndex);
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(eIndex);
 
 	return (info != NULL && info->m_bHasPromotion);
@@ -30021,7 +30020,7 @@ bool CvUnit::isCanMovePeaks() const
 void CvUnit::changeCanMovePeaksCount(int iChange)
 {
 	m_iCanMovePeaksCount += iChange;
-	FASSERT_NOT_NEGATIVE(m_iCanMovePeaksCount)
+	FASSERT_NOT_NEGATIVE(m_iCanMovePeaksCount);
 }
 
 // Koshling - enhanced mountaineering mode to differentiate between ability to move through
@@ -30034,7 +30033,7 @@ bool CvUnit::isCanLeadThroughPeaks() const
 void CvUnit::changeCanLeadThroughPeaksCount(int iChange)
 {
 	m_iCanLeadThroughPeaksCount += iChange;
-	FASSERT_NOT_NEGATIVE(m_iCanLeadThroughPeaksCount)
+	FASSERT_NOT_NEGATIVE(m_iCanLeadThroughPeaksCount);
 }
 
 
@@ -30779,13 +30778,13 @@ int CvUnit::getRandomMinExperienceTimes100() const
 
 bool CvUnit::isTerrainProtected(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 	return getTerrainProtectedCount(eIndex) > 0;
 }
 
 int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -30806,7 +30805,7 @@ int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders
 
 void CvUnit::changeTerrainProtected(TerrainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -30835,7 +30834,7 @@ void CvUnit::changeZoneOfControlCount(int iChange)
 		GC.getGame().toggleAnyoneHasUnitZoneOfControl();
 	}
 	//TB Combat Mod Debug
-	FASSERT_NOT_NEGATIVE(getZoneOfControlCount())
+	FASSERT_NOT_NEGATIVE(getZoneOfControlCount());
 }
 
 bool CvUnit::isAutoPromoting() const
@@ -31195,7 +31194,7 @@ int CvUnit::currentOvercome(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getAfflictionTurnCount(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -31204,7 +31203,7 @@ int CvUnit::getAfflictionTurnCount(PromotionLineTypes ePromotionLineType) const
 
 void CvUnit::changeAfflictionTurnCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -31216,7 +31215,7 @@ void CvUnit::changeAfflictionTurnCount(PromotionLineTypes ePromotionLineType, in
 
 void CvUnit::setAfflictionTurnCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -31264,7 +31263,7 @@ int CvUnit::aidVolume(const CvPlot* pPlot, PropertyTypes eProperty) const
 
 int CvUnit::getAfflictionHitCount(PromotionTypes ePromotionType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType);
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotionType);
 
@@ -31273,7 +31272,7 @@ int CvUnit::getAfflictionHitCount(PromotionTypes ePromotionType) const
 
 void CvUnit::changeAfflictionHitCount(PromotionTypes ePromotionType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType);
 
 	if (iChange != 0)
 	{
@@ -31285,7 +31284,7 @@ void CvUnit::changeAfflictionHitCount(PromotionTypes ePromotionType, int iChange
 
 void CvUnit::setAfflictionHitCount(PromotionTypes ePromotionType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType);
 
 	PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotionType, iChange != 0);
 
@@ -31387,7 +31386,7 @@ int CvUnit::getChancetoContract(PromotionLineTypes eAfflictionLine, int iCommuni
 
 int CvUnit::getUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -31396,7 +31395,7 @@ int CvUnit::getUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType) co
 
 void CvUnit::changeUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -31408,7 +31407,7 @@ void CvUnit::changeUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType
 
 void CvUnit::setUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -31472,7 +31471,7 @@ int CvUnit::getOvercomeChange(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -31492,7 +31491,7 @@ int CvUnit::getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType
 
 void CvUnit::changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -31504,7 +31503,7 @@ void CvUnit::changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLine
 
 void CvUnit::setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -31651,7 +31650,7 @@ int CvUnit::getExtraFrontSupportPercent(bool bIgnoreCommanders) const
 void CvUnit::changeExtraFrontSupportPercent(int iChange)
 {
 	m_iExtraFrontSupportPercent +=iChange;
-	FASSERT_NOT_NEGATIVE(getExtraFrontSupportPercent())
+	FASSERT_NOT_NEGATIVE(getExtraFrontSupportPercent());
 }
 
 int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders) const
@@ -31670,7 +31669,7 @@ int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders) const
 void CvUnit::changeExtraShortRangeSupportPercent(int iChange)
 {
 	m_iExtraShortRangeSupportPercent +=iChange;
-	FASSERT_NOT_NEGATIVE(getExtraShortRangeSupportPercent())
+	FASSERT_NOT_NEGATIVE(getExtraShortRangeSupportPercent());
 }
 
 int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders) const
@@ -31689,7 +31688,7 @@ int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders) const
 void CvUnit::changeExtraMediumRangeSupportPercent(int iChange)
 {
 	m_iExtraMediumRangeSupportPercent +=iChange;
-	FASSERT_NOT_NEGATIVE(getExtraMediumRangeSupportPercent())
+	FASSERT_NOT_NEGATIVE(getExtraMediumRangeSupportPercent());
 }
 
 int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders) const
@@ -31708,7 +31707,7 @@ int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders) const
 void CvUnit::changeExtraLongRangeSupportPercent(int iChange)
 {
 	m_iExtraLongRangeSupportPercent +=iChange;
-	FASSERT_NOT_NEGATIVE(getExtraLongRangeSupportPercent())
+	FASSERT_NOT_NEGATIVE(getExtraLongRangeSupportPercent());
 }
 
 int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders) const
@@ -31727,7 +31726,7 @@ int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders) const
 void CvUnit::changeExtraFlankSupportPercent(int iChange)
 {
 	m_iExtraFlankSupportPercent +=iChange;
-	FASSERT_NOT_NEGATIVE(getExtraFlankSupportPercent())
+	FASSERT_NOT_NEGATIVE(getExtraFlankSupportPercent());
 }
 
 int CvUnit::frontSupportPercentTotal() const
@@ -33220,7 +33219,7 @@ void CvUnit::ClearSupports()
 
 int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
@@ -33229,7 +33228,7 @@ int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 
 void CvUnit::changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	if (iChange != 0)
 	{
@@ -33241,7 +33240,7 @@ void CvUnit::changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iCh
 
 void CvUnit::setOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
 
@@ -33328,7 +33327,7 @@ void CvUnit::changeColdDamage(int iChange)
 	}
 	else
 	{
-		m_iColdDamage = (m_iColdDamage + iChange);
+		m_iColdDamage += iChange;
 	}
 }
 
@@ -33352,7 +33351,7 @@ int CvUnit::getCombatPowerShots() const
 void CvUnit::setCombatPowerShots(int iNewValue)
 {
 	m_iCombatPowerShots = iNewValue;
-	FASSERT_NOT_NEGATIVE(getCombatPowerShots())
+	FASSERT_NOT_NEGATIVE(getCombatPowerShots());
 }
 
 void CvUnit::changeCombatPowerShots(int iChange)
@@ -33368,7 +33367,7 @@ int CvUnit::getCombatKnockbacks() const
 void CvUnit::setCombatKnockbacks(int iNewValue)
 {
 	m_iCombatKnockbacks = iNewValue;
-	FASSERT_NOT_NEGATIVE(getCombatKnockbacks())
+	FASSERT_NOT_NEGATIVE(getCombatKnockbacks());
 }
 
 void CvUnit::changeCombatKnockbacks(int iChange)
@@ -33388,7 +33387,7 @@ int CvUnit::getCombatRepels() const
 void CvUnit::setCombatRepels(int iNewValue)
 {
 	m_iCombatRepels = iNewValue;
-	FASSERT_NOT_NEGATIVE(getCombatRepels())
+	FASSERT_NOT_NEGATIVE(getCombatRepels());
 }
 
 void CvUnit::changeCombatRepels(int iChange)
@@ -34197,7 +34196,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 int CvUnit::getPromotionFreeCount(PromotionTypes ePromotion) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotion);
 
@@ -34211,7 +34210,7 @@ bool CvUnit::isPromotionFree(PromotionTypes ePromotion) const
 
 void CvUnit::changePromotionFreeCount(PromotionTypes ePromotion, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	if (iChange != 0)
 	{
@@ -34223,7 +34222,7 @@ void CvUnit::changePromotionFreeCount(PromotionTypes ePromotion, int iChange)
 
 void CvUnit::setPromotionFreeCount(PromotionTypes ePromotion, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotion, iChange != 0);
 
@@ -34377,7 +34376,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eEquipment)
+	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eEquipment);
 
 	int iI;
 	CvPlot* pPlot = plot();
@@ -34571,15 +34570,14 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 void CvUnit::reEquip(PromotionTypes eEquipment)
 {
-	int iI;
 	bool bReplaced = false;
 
-	for (iI = 0; iI < GC.getNumPromotionInfos() && !bReplaced; iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos() && !bReplaced; iI++)
 	{
 		if (GC.getPromotionInfo((PromotionTypes)iI).isEquipment())
 		{
 			const PromotionTypes ePromoToReplace = ((PromotionTypes)iI);
-			if ((isHasPromotion(ePromoToReplace) && (GC.getPromotionInfo(ePromoToReplace).getPromotionLine() == GC.getPromotionInfo(eEquipment).getPromotionLine())))
+			if (isHasPromotion(ePromoToReplace) && GC.getPromotionInfo(ePromoToReplace).getPromotionLine() == GC.getPromotionInfo(eEquipment).getPromotionLine())
 			{
 				if (GC.getPromotionInfo(ePromoToReplace).getLinePriority() == GC.getPromotionInfo(eEquipment).getLinePriority())
 				{
@@ -34615,15 +34613,14 @@ void CvUnit::reEquip(PromotionTypes eEquipment)
 
 void CvUnit::statusUpdate(PromotionTypes eStatus)
 {
-	int iI;
 	bool bReplaced = false;
 
-	for (iI = 0; iI < GC.getNumPromotionInfos() && !bReplaced; iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos() && !bReplaced; iI++)
 	{
 		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
 		{
 			const PromotionTypes ePromoToReplace = ((PromotionTypes)iI);
-			if ((isHasPromotion(ePromoToReplace) && (GC.getPromotionInfo(ePromoToReplace).getPromotionLine() == GC.getPromotionInfo(eStatus).getPromotionLine())))
+			if (isHasPromotion(ePromoToReplace) && GC.getPromotionInfo(ePromoToReplace).getPromotionLine() == GC.getPromotionInfo(eStatus).getPromotionLine())
 			{
 				if (GC.getPromotionInfo(ePromoToReplace).getLinePriority() != GC.getPromotionInfo(eStatus).getLinePriority())
 				{
@@ -34668,7 +34665,7 @@ int CvUnit::flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -34686,7 +34683,7 @@ int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) con
 
 void CvUnit::changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34707,13 +34704,13 @@ int CvUnit::withdrawOnTerrainTotal(TerrainTypes eTerrainType) const
 
 	iAmount += getExtraWithdrawOnTerrainType(eTerrainType);
 
-	int iTotalAmount = std::max(0,iAmount);
+	int iTotalAmount = std::max(0, iAmount);
 	return iTotalAmount;
 }
 
 int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -34731,7 +34728,7 @@ int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraWithdrawOnTerrainType(TerrainTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34752,13 +34749,13 @@ int CvUnit::withdrawOnFeatureTotal(FeatureTypes eFeatureType) const
 
 	iAmount += getExtraWithdrawOnFeatureType(eFeatureType);
 
-	const int iTotalAmount = std::max(0,iAmount);
+	const int iTotalAmount = std::max(0, iAmount);
 	return iTotalAmount;
 }
 
 int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -34776,7 +34773,7 @@ int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraWithdrawOnFeatureType(FeatureTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34802,7 +34799,7 @@ int CvUnit::withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -34820,7 +34817,7 @@ int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34846,7 +34843,7 @@ int CvUnit::pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -34864,7 +34861,7 @@ int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34898,7 +34895,7 @@ int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 	{
 		return 0;
 	}
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -34916,7 +34913,7 @@ int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34941,12 +34938,12 @@ int CvUnit::knockbackVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 	iAmount += getExtraKnockbackVSUnitCombatType(eCombatType);
 
-	return std::max(0,iAmount);
+	return std::max(0, iAmount);
 }
 
 int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -34964,7 +34961,7 @@ int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -34990,7 +34987,7 @@ int CvUnit::punctureVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -35008,7 +35005,7 @@ int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -35034,7 +35031,7 @@ int CvUnit::armorVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -35052,7 +35049,7 @@ int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -35073,12 +35070,12 @@ int CvUnit::dodgeVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 	iAmount += getExtraDodgeVSUnitCombatType(eCombatType);
 
-	return std::max(0,iAmount);
+	return std::max(0, iAmount);
 }
 
 int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -35096,7 +35093,7 @@ int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -35117,12 +35114,12 @@ int CvUnit::precisionVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 	iAmount += getExtraPrecisionVSUnitCombatType(eCombatType);
 
-	return std::max(0,iAmount);
+	return std::max(0, iAmount);
 }
 
 int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -35139,7 +35136,7 @@ int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -35165,7 +35162,7 @@ int CvUnit::criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -35182,7 +35179,7 @@ int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -35203,12 +35200,12 @@ int CvUnit::roundStunVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 	iAmount += getExtraRoundStunVSUnitCombatType(eCombatType);
 
-	return std::max(0,iAmount);
+	return std::max(0, iAmount);
 }
 
 int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -35225,7 +35222,7 @@ int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -35256,7 +35253,7 @@ int CvUnit::getExtraRoundStunProb(bool bIgnoreCommanders) const
 void CvUnit::changeExtraRoundStunProb(int iChange)
 {
 	m_iExtraRoundStunProb +=iChange;
-	FASSERT_NOT_NEGATIVE(getExtraRoundStunProb())
+	FASSERT_NOT_NEGATIVE(getExtraRoundStunProb());
 }
 
 int CvUnit::roundStunProbTotal() const
@@ -35292,7 +35289,7 @@ int CvUnit::getCombatStuns() const
 void CvUnit::setCombatStuns(int iNewValue)
 {
 	m_iCombatStuns = iNewValue;
-	FASSERT_NOT_NEGATIVE(getCombatStuns())
+	FASSERT_NOT_NEGATIVE(getCombatStuns());
 }
 
 void CvUnit::changeCombatStuns(int iChange)
@@ -35545,10 +35542,9 @@ int CvUnit::criticalVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 bool CvUnit::canInflictCritical(PromotionTypes eCritical) const
 {
-	int iI;
 	if (GC.getPromotionLineInfo((PromotionLineTypes)GC.getPromotionInfo(eCritical).getPromotionLine()).getNumCriticalOriginCombatClassTypes() > 0)
 	{
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			if (isHasUnitCombat((UnitCombatTypes)iI) && GC.getPromotionLineInfo((PromotionLineTypes)GC.getPromotionInfo(eCritical).getPromotionLine()).isCriticalOriginCombatClassType(iI))
 			{
@@ -35566,7 +35562,7 @@ bool CvUnit::canInflictCritical(PromotionTypes eCritical) const
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnit::getAfflictionLineCount(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35575,13 +35571,13 @@ int CvUnit::getAfflictionLineCount(PromotionLineTypes ePromotionLineType) const
 
 bool CvUnit::hasAfflictionLine(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 	return (getAfflictionLineCount(ePromotionLineType) > 0);
 }
 
 void CvUnit::changeAfflictionLineCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -35753,7 +35749,7 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 
 int CvUnit::getAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35777,7 +35773,7 @@ int CvUnit::getAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineT
 
 void CvUnit::changeAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -35789,7 +35785,7 @@ void CvUnit::changeAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionL
 
 void CvUnit::setAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -35801,7 +35797,7 @@ void CvUnit::setAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLine
 
 bool CvUnit::hasAfflictOnAttackType(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35821,7 +35817,7 @@ bool CvUnit::hasAfflictOnAttackType(PromotionLineTypes ePromotionLineType) const
 
 int CvUnit::getAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35830,7 +35826,7 @@ int CvUnit::getAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType) c
 
 void CvUnit::changeAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -35843,7 +35839,7 @@ void CvUnit::changeAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineTyp
 
 void CvUnit::setAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -35855,7 +35851,7 @@ void CvUnit::setAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType, 
 
 int CvUnit::getAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLineType) const//
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35864,7 +35860,7 @@ int CvUnit::getAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLi
 
 bool CvUnit::isAfflictOnAttackTypeImmediate(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35885,7 +35881,7 @@ bool CvUnit::isAfflictOnAttackTypeImmediate(PromotionLineTypes ePromotionLineTyp
 
 void CvUnit::changeAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -35897,7 +35893,7 @@ void CvUnit::changeAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromoti
 
 void CvUnit::setAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -35909,7 +35905,7 @@ void CvUnit::setAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionL
 
 int CvUnit::getAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineType) const//
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35918,7 +35914,7 @@ int CvUnit::getAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineTy
 
 bool CvUnit::isAfflictOnAttackTypeMelee(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35939,7 +35935,7 @@ bool CvUnit::isAfflictOnAttackTypeMelee(PromotionLineTypes ePromotionLineType) c
 
 void CvUnit::changeAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -35951,7 +35947,7 @@ void CvUnit::changeAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLi
 
 void CvUnit::setAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -35963,7 +35959,7 @@ void CvUnit::setAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineT
 
 int CvUnit::getAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLineType) const//
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35972,7 +35968,7 @@ int CvUnit::getAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLin
 
 bool CvUnit::isAfflictOnAttackTypeDistance(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -35993,7 +35989,7 @@ bool CvUnit::isAfflictOnAttackTypeDistance(PromotionLineTypes ePromotionLineType
 
 void CvUnit::changeAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -36005,7 +36001,7 @@ void CvUnit::changeAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotio
 
 void CvUnit::setAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange!= 0);
 
@@ -36017,7 +36013,7 @@ void CvUnit::setAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLi
 //
 int CvUnit::getAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -36026,7 +36022,7 @@ int CvUnit::getAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLi
 
 bool CvUnit::isAfflictOnAttackTypeAttempted(PromotionLineTypes ePromotionLineType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
 	return info ? info->m_iAfflictOnAttackTypeAttemptedCount > 0 : false;
@@ -36034,7 +36030,7 @@ bool CvUnit::isAfflictOnAttackTypeAttempted(PromotionLineTypes ePromotionLineTyp
 
 void CvUnit::changeAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	if (iChange != 0)
 	{
@@ -36046,7 +36042,7 @@ void CvUnit::changeAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromoti
 
 void CvUnit::setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -36091,7 +36087,7 @@ void CvUnit::setHealUnitCombatCount()
 
 int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
@@ -36112,7 +36108,7 @@ int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
 
 void CvUnit::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	if (iChange != 0)
 	{
@@ -36126,7 +36122,7 @@ void CvUnit::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int
 
 void CvUnit::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
 
@@ -36140,7 +36136,7 @@ void CvUnit::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iC
 
 int CvUnit::getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
@@ -36161,7 +36157,7 @@ int CvUnit::getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) 
 
 void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	if (iChange != 0)
 	{
@@ -36175,7 +36171,7 @@ void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatT
 
 void CvUnit::setHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
 
@@ -36338,7 +36334,7 @@ int CvUnit::getRetrainsAvailable() const
 void CvUnit::setRetrainsAvailable(int iNewValue)
 {
 	m_iRetrainsAvailable = iNewValue;
-	FASSERT_NOT_NEGATIVE(getRetrainsAvailable())
+	FASSERT_NOT_NEGATIVE(getRetrainsAvailable());
 }
 
 void CvUnit::changeRetrainsAvailable(int iChange)
@@ -36874,19 +36870,19 @@ void CvUnit::changeExtraSize(int iChange)
 
 int CvUnit::qualityRank() const
 {
-	FASSERT_NOT_NEGATIVE(getQualityBaseTotal())
+	FASSERT_NOT_NEGATIVE(getQualityBaseTotal());
 	return (getQualityBaseTotal() + getExtraQuality());
 }
 
 int CvUnit::groupRank() const
 {
-	FASSERT_NOT_NEGATIVE(getGroupBaseTotal())
+	FASSERT_NOT_NEGATIVE(getGroupBaseTotal());
 	return (getGroupBaseTotal() + getExtraGroup());
 }
 
 int CvUnit::sizeRank() const
 {
-	FASSERT_NOT_NEGATIVE(getSizeBaseTotal())
+	FASSERT_NOT_NEGATIVE(getSizeBaseTotal());
 	return (getSizeBaseTotal() + getExtraSize());
 }
 
@@ -37483,7 +37479,7 @@ void CvUnit::changeSMCargoSpace(int iChange)
 	if (iChange != 0)
 	{
 		m_iSMCargoCapacity += iChange;
-		FASSERT_NOT_NEGATIVE(m_iSMCargoCapacity)
+		FASSERT_NOT_NEGATIVE(m_iSMCargoCapacity);
 		setInfoBarDirty(true);
 	}
 }
@@ -37555,7 +37551,7 @@ void CvUnit::setSMCargoCapacity()
 	m_iSMCargoCapacity = applySMRank(
 		SMcargoCapacityPreCheck(), getSizeMattersSpacialOffsetValue(), GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER()
 		);
-	FASSERT_NOT_NEGATIVE(m_iSMCargoCapacity)
+	FASSERT_NOT_NEGATIVE(m_iSMCargoCapacity);
 }
 
 int CvUnit::getExtraMaxHP() const
@@ -37611,7 +37607,7 @@ void CvUnit::setSMHPValue()
 			GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		)
 	);
-	FASSERT_NOT_NEGATIVE(m_iSMHPValue)
+	FASSERT_NOT_NEGATIVE(m_iSMHPValue);
 }
 
 int CvUnit::getPowerValueTotal() const
@@ -37623,7 +37619,7 @@ void CvUnit::setSMPowerValue(bool bForLoad)
 {
 	const int oldSMPowerValue = m_iSMPowerValue;
 	const int m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
-	FASSERT_NOT_NEGATIVE(m_iSMPowerValue)
+	FASSERT_NOT_NEGATIVE(m_iSMPowerValue);
 	if (!bForLoad)
 	{
 		const int iChange = m_iSMPowerValue - oldSMPowerValue;
@@ -37810,7 +37806,7 @@ void CvUnit::changeExtraBombardRate(int iChange)
 	{
 		setSMBombardRate();
 	}
-	FASSERT_NOT_NEGATIVE(getExtraBombardRate())
+	FASSERT_NOT_NEGATIVE(getExtraBombardRate());
 }
 
 void CvUnit::setExtraBombardRate(int iChange)
@@ -37861,7 +37857,7 @@ void CvUnit::setSMBombardRate()
 		GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 
 	// optional but most of these should be above or equal to 0.
-	FASSERT_NOT_NEGATIVE(m_iSMBombardRate)
+	FASSERT_NOT_NEGATIVE(m_iSMBombardRate);
 	m_iSMBombardRate = std::max(0, m_iSMBombardRate);
 }
 
@@ -37908,7 +37904,7 @@ void CvUnit::setSMAirBombBaseRate()
 		)
 	);
 	//optional but most of these should be above or equal to 0.
-	FASSERT_NOT_NEGATIVE(m_iSMAirBombBaseRate)
+	FASSERT_NOT_NEGATIVE(m_iSMAirBombBaseRate);
 	m_iSMAirBombBaseRate = std::max(0, m_iSMAirBombBaseRate);
 }
 
@@ -38003,7 +37999,7 @@ void CvUnit::setSMBaseWorkRate()
 		)
 	);
 	//optional but most of these should be above or equal to 0.
-	FASSERT_NOT_NEGATIVE(m_iSMBaseWorkRate)
+	FASSERT_NOT_NEGATIVE(m_iSMBaseWorkRate);
 	m_iSMBaseWorkRate = std::max(0, m_iSMBaseWorkRate);
 }
 
@@ -38069,7 +38065,7 @@ void CvUnit::setSMRevoltProtection()
 		)
 	);
 	// optional but most of these should be above or equal to 0.
-	FASSERT_NOT_NEGATIVE(m_iSMRevoltProtection)
+	FASSERT_NOT_NEGATIVE(m_iSMRevoltProtection);
 	m_iSMRevoltProtection = std::max(0, m_iSMRevoltProtection);
 }
 
@@ -38130,7 +38126,7 @@ int CvUnit::getExtraRBombardDamage() const
 void CvUnit::changeExtraRBombardDamage(int iChange)
 {
 	m_iExtraRBombardDamage += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraRBombardDamage())
+	FASSERT_NOT_NEGATIVE(getExtraRBombardDamage());
 }
 
 int CvUnit::getBaseRBombardDamage() const
@@ -38161,7 +38157,7 @@ void CvUnit::changeBaseRBombardDamage(int iChange, bool bAdding, UnitCombatTypes
 		}
 		m_iBaseRBombardDamage = iBestValue;
 	}
-	FASSERT_NOT_NEGATIVE(getBaseRBombardDamage())
+	FASSERT_NOT_NEGATIVE(getBaseRBombardDamage());
 }
 
 int CvUnit::rBombardDamageLimit() const
@@ -38197,7 +38193,7 @@ int CvUnit::getExtraRBombardDamageLimit() const
 void CvUnit::changeExtraRBombardDamageLimit(int iChange)
 {
 	m_iExtraRBombardDamageLimit += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraRBombardDamageLimit())
+	FASSERT_NOT_NEGATIVE(getExtraRBombardDamageLimit());
 }
 
 int CvUnit::getBaseRBombardDamageLimit() const
@@ -38228,7 +38224,7 @@ void CvUnit::changeBaseRBombardDamageLimit(int iChange, bool bAdding, UnitCombat
 		}
 		m_iBaseRBombardDamageLimit = iBestValue;
 	}
-	FASSERT_NOT_NEGATIVE(getBaseRBombardDamageLimit())
+	FASSERT_NOT_NEGATIVE(getBaseRBombardDamageLimit());
 }
 
 int CvUnit::rBombardDamageMaxUnits() const
@@ -38261,7 +38257,7 @@ int CvUnit::getExtraRBombardDamageMaxUnits() const
 void CvUnit::changeExtraRBombardDamageMaxUnits(int iChange)
 {
 	m_iExtraRBombardDamageMaxUnits += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraRBombardDamageMaxUnits())
+	FASSERT_NOT_NEGATIVE(getExtraRBombardDamageMaxUnits());
 }
 
 int CvUnit::getBaseRBombardDamageMaxUnits() const
@@ -38292,7 +38288,7 @@ void CvUnit::changeBaseRBombardDamageMaxUnits(int iChange, bool bAdding, UnitCom
 		}
 		m_iBaseRBombardDamageMaxUnits = iBestValue;
 	}
-	FASSERT_NOT_NEGATIVE(getBaseRBombardDamageMaxUnits())
+	FASSERT_NOT_NEGATIVE(getBaseRBombardDamageMaxUnits());
 }
 
 int CvUnit::getDCMBombRange() const
@@ -38346,7 +38342,7 @@ void CvUnit::changeBaseDCMBombRange(int iChange, bool bAdding, UnitCombatTypes e
 		}
 		m_iBaseDCMBombRange = iBestValue;
 	}
-	FASSERT_NOT_NEGATIVE(getBaseDCMBombRange())
+	FASSERT_NOT_NEGATIVE(getBaseDCMBombRange());
 }
 
 int CvUnit::getDCMBombAccuracy() const
@@ -38400,7 +38396,7 @@ void CvUnit::changeBaseDCMBombAccuracy(int iChange, bool bAdding, UnitCombatType
 		}
 		m_iBaseDCMBombAccuracy = iBestValue;
 	}
-	FASSERT_NOT_NEGATIVE(getBaseDCMBombAccuracy())
+	FASSERT_NOT_NEGATIVE(getBaseDCMBombAccuracy());
 }
 
 bool CvUnit::isRBombardDirect() const
@@ -38482,7 +38478,7 @@ bool CvUnit::hasNoSelfHeal() const
 void CvUnit::changeNoSelfHealCount(int iChange)
 {
 	m_iNoSelfHealCount += iChange;
-	FASSERT_NOT_NEGATIVE(getNoSelfHealCount())
+	FASSERT_NOT_NEGATIVE(getNoSelfHealCount());
 }
 
 int CvUnit::getSelfHealModifierTotal() const
@@ -38982,7 +38978,7 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 
 int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 
 	if (!isCommander())
 	{
@@ -38998,7 +38994,7 @@ int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 
 void CvUnit::changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	if (iChange != 0)
 	{
 		deleteVisibility();
@@ -39072,7 +39068,7 @@ int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbil
 
 int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 
 	if (!isCommander())
 	{
@@ -39088,7 +39084,7 @@ int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
 
 void CvUnit::changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	m_aiExtraInvisibilityIntensity[eIndex] += iChange;
 	setHasAnyInvisibility();
 }
@@ -39153,14 +39149,14 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 
 int CvUnit::getExtraVisibilityIntensityRangeType(InvisibleTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	return m_aiExtraVisibilityIntensityRange[eIndex];
 }
 
 
 void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	if (iChange != 0)
 	{
 		deleteVisibility();
@@ -39176,14 +39172,14 @@ int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) cons
 
 int CvUnit::getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	return m_aiExtraVisibilityIntensitySameTile[eIndex];
 }
 
 
 void CvUnit::changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	if (iChange != 0)
 	{
 		deleteVisibility();
@@ -39787,17 +39783,17 @@ void CvUnit::addVisibility()
 }
 bool CvUnit::isNegatesInvisible(InvisibleTypes eInvisible) const
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
 	return (getNegatesInvisibleCount(eInvisible) > 0 || isRevealed());
 }
 int CvUnit::getNegatesInvisibleCount(InvisibleTypes eInvisible) const
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
 	return m_aiNegatesInvisibleCount[eInvisible];
 }
 void CvUnit::changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
 	m_aiNegatesInvisibleCount[eInvisible] += iChange;
 	setHasAnyInvisibility();
 }
@@ -40456,7 +40452,7 @@ void CvUnit::changeTriggerBeforeAttackCount(int iChange)
 
 int CvUnit::getTrapSetWithPromotionCount(PromotionTypes ePromotion) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotion);
 
@@ -40465,13 +40461,13 @@ int CvUnit::getTrapSetWithPromotionCount(PromotionTypes ePromotion) const
 
 bool CvUnit::hasTrapSetWithPromotion(PromotionTypes ePromotion) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 	return (getTrapSetWithPromotionCount(ePromotion) > 0);
 }
 
 void CvUnit::changeTrapSetWithPromotionCount(PromotionTypes ePromotion, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	if (iChange != 0)
 	{
@@ -40484,7 +40480,7 @@ void CvUnit::changeTrapSetWithPromotionCount(PromotionTypes ePromotion, int iCha
 
 int CvUnit::getTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombat);
 
@@ -40493,13 +40489,13 @@ int CvUnit::getTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat) const
 
 bool CvUnit::hasTrapImmunityUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 	return (getTrapImmunityUnitCombatCount(eUnitCombat) > 0);
 }
 
 void CvUnit::changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	if (iChange != 0)
 	{
@@ -40511,7 +40507,7 @@ void CvUnit::changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int 
 
 int CvUnit::getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombat);
 
@@ -40520,13 +40516,13 @@ int CvUnit::getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const
 
 bool CvUnit::hasTargetUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 	return (getTargetUnitCombatCount(eUnitCombat) > 0);
 }
 
 void CvUnit::changeTargetUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	if (iChange != 0)
 	{
@@ -40547,7 +40543,7 @@ int CvUnit::trapDisableUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -40556,7 +40552,7 @@ int CvUnit::getExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -40583,7 +40579,7 @@ int CvUnit::trapAvoidanceUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -40592,7 +40588,7 @@ int CvUnit::getExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -40618,7 +40614,7 @@ int CvUnit::trapTriggerUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -40627,7 +40623,7 @@ int CvUnit::getExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	if (iChange != 0)
 	{
@@ -40882,7 +40878,7 @@ void CvUnit::makeWanted(const CvCity* pCity)
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnit::getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(eAfflictionLine);
 
@@ -40901,7 +40897,7 @@ int CvUnit::getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine)
 
 void CvUnit::changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine);
 
 	if (iChange != 0)
 	{
@@ -40913,7 +40909,7 @@ void CvUnit::changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionL
 
 void CvUnit::setDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iValue)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine)
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine);
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(eAfflictionLine, iValue != 0);
 
@@ -40954,7 +40950,7 @@ CvCity* CvUnit::getCityOfOrigin() const
 
 bool CvUnit::isPromotionFromTrait(PromotionTypes ePromotion) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotion);
 
@@ -40963,7 +40959,7 @@ bool CvUnit::isPromotionFromTrait(PromotionTypes ePromotion) const
 
 void CvUnit::setPromotionFromTrait(PromotionTypes ePromotion, bool iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
 
 	PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotion, iChange != 0);
 

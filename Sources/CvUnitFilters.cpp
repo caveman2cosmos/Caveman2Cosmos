@@ -156,7 +156,7 @@ void UnitFilterList::init()
 
 bool UnitFilterList::isFilterActive(UnitFilterTypes i) const
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i)
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i);
 	return m_apUnitFilters[i]->isActive();
 }
 
@@ -172,7 +172,7 @@ void UnitFilterList::setPlayer(const CvPlayer *pPlayer)
 
 bool UnitFilterList::setFilterActive(UnitFilterTypes i, bool bActive)
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i)
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i);
 	return m_apUnitFilters[i]->setActive(bActive);
 }
 

@@ -21815,7 +21815,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 	if (AI_bestCityBuild(pCity, &pBestPlot, &eBestBuild, NULL, this))
 	{
 		FAssertMsg(pBestPlot != NULL, "BestPlot is not assigned a valid value");
-		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
 			MissionTypes eMission;
 		if ((plot()->getWorkingCity() != pCity) || (GC.getBuildInfo(eBestBuild).getRoute() != NO_ROUTE))
@@ -21947,7 +21947,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 	}
 	if (pBestPlot != NULL)
 	{
-		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
 			FAssert(pBestPlot->getWorkingCity() != NULL);
 
@@ -22099,7 +22099,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 
 	if (pBestPlot != NULL)
 	{
-		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
 			CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
 
@@ -22260,7 +22260,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 	}
 	if (pBestPlot != NULL)
 	{
-		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
 			if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), (isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, pBestPlot))
 			{
@@ -22396,7 +22396,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 	}
 	if (pBestPlot != NULL)
 	{
-		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
 			if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), (isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, pBestPlot))
 			{
@@ -23072,8 +23072,8 @@ bool CvUnitAI::AI_improvePlot(CvPlot* pPlot, BuildTypes eBuild)
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(NO_BUILD, GC.getNumBuildInfos(), eBuild)
-		FAssert(pPlot != NULL);
+	FASSERT_BOUNDS(NO_BUILD, GC.getNumBuildInfos(), eBuild);
+	FAssert(pPlot != NULL);
 
 	if (eBuild != NO_BUILD)
 	{
@@ -23102,8 +23102,8 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) 
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
-		FAssert(pPlot != NULL);
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
+	FAssert(pPlot != NULL);
 
 	bool bBuildRoute = false;
 	bool bClearFeature = false;
@@ -28011,7 +28011,7 @@ bool CvUnitAI::AI_StrategicForts()
 	{
 		return false;
 	}
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
 		if (!atPlot(pBestPlot))
 		{

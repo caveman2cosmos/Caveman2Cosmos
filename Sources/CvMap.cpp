@@ -940,7 +940,7 @@ int CvMap::getLandPlots() const
 void CvMap::changeLandPlots(int iChange)
 {
 	m_iLandPlots += iChange;
-	FASSERT_NOT_NEGATIVE(getLandPlots())
+	FASSERT_NOT_NEGATIVE(getLandPlots());
 }
 
 
@@ -953,7 +953,7 @@ int CvMap::getOwnedPlots() const
 void CvMap::changeOwnedPlots(int iChange)
 {
 	m_iOwnedPlots += iChange;
-	FASSERT_NOT_NEGATIVE(getOwnedPlots())
+	FASSERT_NOT_NEGATIVE(getOwnedPlots());
 }
 
 
@@ -1013,31 +1013,31 @@ CustomMapOptionTypes CvMap::getCustomMapOption(int iOption) const
 
 int CvMap::getNumBonuses(BonusTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex);
 	return m_paiNumBonus[eIndex];
 }
 
 
 void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex);
 	m_paiNumBonus[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(m_paiNumBonus[eIndex])
+	FASSERT_NOT_NEGATIVE(m_paiNumBonus[eIndex]);
 }
 
 
 int CvMap::getNumBonusesOnLand(BonusTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex);
 	return m_paiNumBonusOnLand[eIndex];
 }
 
 
 void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex);
 	m_paiNumBonusOnLand[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumBonusesOnLand(eIndex))
+	FASSERT_NOT_NEGATIVE(getNumBonusesOnLand(eIndex));
 }
 
 
@@ -1470,7 +1470,7 @@ void CvMap::addViewport(int iXOffset, int iYOffset)
 /*
 void CvMap::deleteViewport(int iIndex)
 {
-	FASSERT_BOUNDS(0, (int)m_viewports.size(), iIndex)
+	FASSERT_BOUNDS(0, m_viewports.size(), iIndex);
 
 	if (m_iCurrentViewportIndex == iIndex)
 	{
@@ -1490,7 +1490,7 @@ void CvMap::deleteViewport(int iIndex)
 
 CvViewport* CvMap::getCurrentViewport() const
 {
-	FASSERT_BOUNDS(0, (int)m_viewports.size(), m_iCurrentViewportIndex)
+	FASSERT_BOUNDS(0, m_viewports.size(), m_iCurrentViewportIndex);
 	return m_viewports[m_iCurrentViewportIndex];
 }
 

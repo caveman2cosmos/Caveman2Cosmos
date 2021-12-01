@@ -114,7 +114,7 @@ void UnitGroupingList::setPlayer(const CvPlayer *pPlayer)
 
 bool UnitGroupingList::setActiveGrouping(UnitGroupingTypes eActiveGrouping)
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_GROUPING, eActiveGrouping)
+	FASSERT_BOUNDS(0, NUM_UNIT_GROUPING, eActiveGrouping);
 	const bool bChanged = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;
