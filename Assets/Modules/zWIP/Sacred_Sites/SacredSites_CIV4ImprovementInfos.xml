@@ -21,7 +21,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -110,7 +109,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<bNoFreshWater>1</bNoFreshWater>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -200,7 +198,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -286,7 +283,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -368,7 +364,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>30</iAdvancedStartCost>

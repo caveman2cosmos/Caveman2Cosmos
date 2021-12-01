@@ -4573,9 +4573,10 @@ def addFeatures():
 			# Other features
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 				for iI in xrange(GC.getNumFeatureInfos()):
-					if plot.canHaveFeature(iI):
-						if random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability():
-							plot.setFeatureType(iI, -1)
+					if (GC.getFeatureInfo(iI).getAppearanceProbability() > -1
+					and random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability()
+					and plot.canHaveFeature(iI)):
+						plot.setFeatureType(iI, -1)
 			# Forest and Jungle
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE and not plot.isPeak():
 				if pData[i] != WATER and tData[i] not in (DESERT, DUNES, SALT_FLATS, SCRUB, ICE):

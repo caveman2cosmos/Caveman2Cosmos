@@ -70,8 +70,6 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, "int (string) - returns the info index with the matching type string")
 		.def("getInfoTypeForStringWithHiddenAssert", &CyGlobalContext::getInfoTypeForStringWithHiddenAssert, "int (string) - returns the info index with the matching type string")
 
-		.def("getTypesEnum", &CyGlobalContext::getTypesEnum, "int (string) - returns the type enum from a type string")
-
 		.def("getNumPlayerColorInfos", &CyGlobalContext::getNumPlayerColorInfos, "int () - Returns number of PlayerColorInfos")
 		.def("getPlayerColorInfo", &CyGlobalContext::getPlayerColorInfo, python::return_value_policy<python::reference_existing_object>(), "PlayerColorInfo (int id)")
 
