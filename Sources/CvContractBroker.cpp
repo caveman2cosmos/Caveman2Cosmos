@@ -338,7 +338,7 @@ void CvContractBroker::finalizeTenderContracts()
 								tenderAllocations[iTenderAllocationKey] = 0;
 							}
 
-							FASSERT_NOT_NEGATIVE(iTendersAlreadyInProcess)
+							FASSERT_NOT_NEGATIVE(iTendersAlreadyInProcess);
 
 							if ( iTendersAlreadyInProcess <= 0 )
 							{

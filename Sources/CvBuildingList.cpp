@@ -110,7 +110,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, (int)m_aaiGroupedBuildingList.size(), iGroup)
+	FASSERT_BOUNDS(0, m_aaiGroupedBuildingList.size(), iGroup);
 	return m_aaiGroupedBuildingList[iGroup].size();
 }
 
@@ -120,8 +120,8 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
-	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return m_aaiGroupedBuildingList[iGroup][iPos];
 }
 
