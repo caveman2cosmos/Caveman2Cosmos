@@ -331,22 +331,22 @@ public:
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 
-	const IDValueMap<TechTypes, int*>& getTechYieldChanges100() const { return m_techYieldChanges; }
+	const IDValueMap<TechTypes, YieldArray>& getTechYieldChanges100() const { return m_techYieldChanges; }
 	const python::list cyGetTechYieldChanges100() const;
 
-	const IDValueMap<TechTypes, int*>& getTechYieldModifiers() const { return m_techYieldModifiers; }
+	const IDValueMap<TechTypes, YieldArray>& getTechYieldModifiers() const { return m_techYieldModifiers; }
 	const python::list cyGetTechYieldModifiers() const;
 
-	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
+	const IDValueMap<TechTypes, CommerceArray>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
-	const IDValueMap<TechTypes, int*>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
+	const IDValueMap<TechTypes, CommerceArray>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
 	const python::list cyGetTechCommerceModifiers() const;
 
-	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
+	const IDValueMap<TerrainTypes, YieldArray>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
 
-	const IDValueMap<PlotTypes, int*>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
+	const IDValueMap<PlotTypes, YieldArray>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
 	const python::list cyGetPlotYieldChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
@@ -816,12 +816,12 @@ private:
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
-	IDValueMap<TechTypes, int*> m_techYieldChanges;
-	IDValueMap<TechTypes, int*> m_techYieldModifiers;
-	IDValueMap<TechTypes, int*> m_techCommerceChanges;
-	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
-	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
-	IDValueMap<PlotTypes, int*> m_aPlotYieldChanges;
+	IDValueMap<TechTypes, YieldArray> m_techYieldChanges;
+	IDValueMap<TechTypes, YieldArray> m_techYieldModifiers;
+	IDValueMap<TechTypes, CommerceArray> m_techCommerceChanges;
+	IDValueMap<TechTypes, CommerceArray> m_techCommerceModifiers;
+	IDValueMap<TerrainTypes, YieldArray> m_aTerrainYieldChanges;
+	IDValueMap<PlotTypes, YieldArray> m_aPlotYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

@@ -159,7 +159,7 @@ public:
 	const CvWString getWorstEnemyName() const;
 	const wchar_t* getBestAttackUnitKey() const;
 	DllExport ArtStyleTypes getArtStyleType() const;
-	const TCHAR* getUnitButton(UnitTypes eUnit) const;
+	const char* getUnitButton(UnitTypes eUnit) const;
 
 	void doTurn();
 	void doTurnUnits();
@@ -1266,7 +1266,6 @@ public:
 	int calculateTaxRateUnhappiness() const;
 
 	int getReligionSpreadRate() const;
-	void setReligionSpreadRate(int iNewValue);
 	void changeReligionSpreadRate(int iChange);
 
 	int getDistantUnitSupportCostModifier() const;

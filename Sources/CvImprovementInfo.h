@@ -59,10 +59,9 @@ public:
 	ImprovementTypes getImprovementUpgrade() const	{ return m_iImprovementUpgrade; }
 	BonusTypes getBonusChange() const				{ return m_iBonusChange; }
 
-	const TCHAR* getArtDefineTag() const;
+	const char* getArtDefineTag() const;
 
 	int getPrereqNatureYield(int i) const;
-	int* getPrereqNatureYieldArray() const;
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
 	int getRiverSideYieldChange(int i) const;
@@ -90,7 +89,7 @@ public:
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
-	const TCHAR* getButton() const;
+	const char* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
 
 	int getHealthPercent() const;

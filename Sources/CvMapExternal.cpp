@@ -152,7 +152,7 @@ WorldSizeTypes CvMapExternal::getWorldSize()
 
 CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 {
-	FASSERT_BOUNDS(0, numPlots(), iIndex)
+	FASSERT_BOUNDS(0, numPlots(), iIndex);
 	CvPlot* result = m_proxiedMap->plotByIndex(iIndex);
 
 	if (result == NULL)

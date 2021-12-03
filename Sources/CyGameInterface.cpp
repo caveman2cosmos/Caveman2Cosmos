@@ -289,7 +289,7 @@ void CyGamePythonInterface()
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
-		.def("setModderGameOption", &CyGame::setModderGameOption, "void ()")
+		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 
 		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")

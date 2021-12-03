@@ -239,7 +239,7 @@ public:
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
 
-	void setName(TCHAR* szName);
+	void setName(const char* szName);
 	std::wstring getName() const;
 	int getIndexAfterLastDeal() const;
 	int getNumDeals() const;
@@ -247,9 +247,9 @@ public:
 	CyDeal* addDeal();
 	void deleteDeal(int iID);
 	CvRandom& getMapRand() const;
-	int getMapRandNum(int iNum, TCHAR* pszLog) const;
+	int getMapRandNum(int iNum, const char* pszLog) const;
 	CvRandom& getSorenRand() const;
-	int getSorenRandNum(int iNum, TCHAR* pszLog) const;
+	int getSorenRandNum(int iNum, const char* pszLog) const;
 	int calculateSyncChecksum() const;
 	int calculateOptionsChecksum() const;
 	bool GetWorldBuilderMode() const;				// remove once CvApp is exposed

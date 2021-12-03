@@ -512,9 +512,9 @@ public:
 	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
 	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
 	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
-#endif // OUTBREAKS_AND_AFFLICTIONS
 
-	int getPropertyValue(PropertyTypes eProperty);
+	int getPropertyValue(PropertyTypes eProperty) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
 	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
@@ -956,10 +956,10 @@ public:
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
 	int getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const;
-	void changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields);
+	void changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldArray& yields);
 
 	int getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const;
-	void changePlotYieldChanges(const PlotTypes ePlot, int* yields);
+	void changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields);
 
 	int getYieldChangeAt(const CvPlot* pPlot, const YieldTypes eYield) const;
 
@@ -1804,8 +1804,8 @@ protected:
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_unitProductionMod;
 
-	std::map<short, int*> m_terrainYieldChanges;
-	std::map<short, int*> m_plotYieldChanges;
+	std::map<short, YieldArray> m_terrainYieldChanges;
+	std::map<short, YieldArray> m_plotYieldChanges;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 
@@ -2092,7 +2092,7 @@ public:
 	int getPrioritorizedSpecialist() const;
 	void setPrioritorizedSpecialist(SpecialistTypes eSpecialist);
 
-	bool isSpecialistBanned(SpecialistTypes eSpecialist);
+	bool isSpecialistBanned(SpecialistTypes eSpecialist) const;
 	void banSpecialist(SpecialistTypes eSpecialist);
 	void removeSpecialistBan(SpecialistTypes eSpecialist);
 

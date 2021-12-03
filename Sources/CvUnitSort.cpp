@@ -137,7 +137,7 @@ UnitSortTypes UnitSortList::getActiveSort() const
 
 bool UnitSortList::setActiveSort(UnitSortTypes eActiveSort)
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_SORT, eActiveSort)
+	FASSERT_BOUNDS(0, NUM_UNIT_SORT, eActiveSort);
 	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;

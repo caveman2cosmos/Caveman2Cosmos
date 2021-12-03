@@ -1726,24 +1726,6 @@
 		<Russian>[NEWLINE]Êîëè÷åñòâî èãðîêîâ ïî óìîë÷àíèþ: %d1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ACTIVE_DEFENSE</Tag>
-		<English>[NEWLINE]Active Defense</English>
-		<French>[NEWLINE]Défense Active</French>
-		<German>[NEWLINE]Aktive Verteidigung</German>
-		<Italian>[NEWLINE]"Difesa Attiva"</Italian>
-		<Spanish>[NEWLINE]Defensa activa</Spanish>
-		<Polish>[NEWLINE]Aktywna Obrona</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AIR_BOMBING</Tag>
-		<English>[NEWLINE]Air Bombing</English>
-		<French>[NEWLINE]Bombardement Aérien</French>
-		<German>[NEWLINE]Luftbombardierung</German>
-		<Italian>[NEWLINE]"Bombardamento aereo"</Italian>
-		<Spanish>[NEWLINE]Bombardeo aéreo</Spanish>
-		<Polish>[NEWLINE]Bombardowanie z Powietrza</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-X = AI Autoplay</English>
 		<French>[NEWLINE]CTRL-SHIFT-X = Jeu automatique par l'IA pour x Tours</French>
@@ -1822,25 +1804,6 @@
 		<Polish>[NEWLINE]ALT-X = Edytuj kropki mapy!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AND_OPTIONS</Tag>
-		<English>[NEWLINE]C2C Options:</English>
-		<French>[NEWLINE]Options 'C2C':</French>
-		<German>[NEWLINE]C2C-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni di C2C:</Italian>
-		<Spanish>[NEWLINE]Opciones de C2C:</Spanish>
-		<Polish>[NEWLINE]Opcje 'C2C':</Polish>
-		<Russian>[NEWLINE]Îïöèè C2C:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT</Tag>
-		<English>[NEWLINE]Attack Support</English>
-		<French>[NEWLINE]Support d'Attaque</French>
-		<German>[NEWLINE]Angriffsunterstützung</German>
-		<Italian>[NEWLINE]"Attack Support"</Italian>
-		<Spanish>[NEWLINE]Soporte al ataque</Spanish>
-		<Polish>[NEWLINE]Wspomaganie Ataku</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-ALT-O = Game Options</English>
 		<French>[NEWLINE]CTRL-ALT-O = Options du Jeu</French>
@@ -1906,31 +1869,13 @@
 		<Polish>[NEWLINE]CTRL-X = Pokaż/Ukryj kropki mapy!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_DCM_OPTIONS</Tag>
-		<English>[NEWLINE]DCM Options:</English>
-		<French>[NEWLINE]Options DCM:</French>
-		<German>[NEWLINE]DCM-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni "DCM":</Italian>
-		<Spanish>[NEWLINE]Opciones de DCM:</Spanish>
-		<Polish>[NEWLINE]Opcje DCM:</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
-		<English>[NEWLINE]Spawn Emergency Defenders</English>
-		<French>[NEWLINE]Défenseurs d'urgence</French>
-		<German>[NEWLINE]Erzeuge Notfallverteidiger</German>
-		<Italian>[NEWLINE]Crea Difensori di Emergenza</Italian>
-		<Spanish>[NEWLINE]Llamada a defensores de emergencia</Spanish>
-		<Polish>[NEWLINE]Pobór Podczas Zagrożenia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_FIGHTER_ENGAGE</Tag>
-		<English>[NEWLINE]Fighter Engage</English>
-		<French>[NEWLINE]Engagement auto. des Chasseurs</French>
-		<German>[NEWLINE]Jägerangriff</German>
-		<Italian>[NEWLINE]"Ingaggio"</Italian>
-		<Spanish>[NEWLINE]Superioridad aérea</Spanish>
-		<Polish>[NEWLINE]Angażowanie Myśliwców</Polish>
+		<English>Spawn Emergency Defenders</English>
+		<French>Défenseurs d'urgence</French>
+		<German>Erzeuge Notfallverteidiger</German>
+		<Italian>Crea Difensori di Emergenza</Italian>
+		<Spanish>Llamada a defensores de emergencia</Spanish>
+		<Polish>Pobór Podczas Zagrożenia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_GAME_SHORTCUTS</Tag>
@@ -1942,39 +1887,13 @@
 		<Polish>[NEWLINE]Skróty w Grze:</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_IDW_ENABLED</Tag>
-		<English>[NEWLINE]IDW Influence</English>
-		<French>[NEWLINE]Influence 'IDW'</French>
-		<German>[NEWLINE]EbK-Beeinflussung</German>
-		<Italian>[NEWLINE]Influenza "IDW"</Italian>
-		<Spanish>[NEWLINE]Influencia de IDW</Spanish>
-		<Polish>[NEWLINE]Wpływ IDW</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_IDW_OPTIONS</Tag>
-		<English>[NEWLINE]IDW Options:</English>
-		<French>[NEWLINE]Options IDW:</French>
-		<German>[NEWLINE]IDW-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni "IDW":</Italian>
-		<Spanish>[NEWLINE]Opciones de IDW:</Spanish>
-		<Polish>[NEWLINE]Opcje IDW:</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INIT</Tag>
-		<English>[NEWLINE]Game Options:</English>
-		<French>[NEWLINE]Options du Jeu:</French>
-		<Spanish>[NEWLINE]Opciones de juego:</Spanish>
-		<Polish>[NEWLINE]Opcje Gry:</Polish>
-		<Russian>[NEWLINE]Îïöèè Revolution:</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP</Tag>
-		<English>[NEWLINE]CTRL-SHIFT-Q = This popup</English>
-		<French>[NEWLINE]CTRL-SHIFT-Q = Cette Fenêtre</French>
-		<German>[NEWLINE]STRG-UMSCHALT-Q = Dieses Fenster</German>
-		<Italian>[NEWLINE]CTRL-SHIFT-Q = Questo Popup</Italian>
-		<Spanish>[NEWLINE]CTRL-SHIFT-Q = Este cuadro</Spanish>
-		<Polish>[NEWLINE]CTRL-SHIFT-Q = To Okienko</Polish>
+		<English>Ctrl+Shift+Q = This popup</English>
+		<French>Ctrl+Shift+Q = Cette Fenêtre</French>
+		<German>Strg-Umschalt+Q = Dieses Fenster</German>
+		<Italian>Ctrl+Shift+Q = Questo Popup</Italian>
+		<Spanish>Ctrl+Shift+Q = Este cuadro</Spanish>
+		<Polish>Ctrl+Shift+Q = To Okienko</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED</Tag>
@@ -1986,76 +1905,13 @@
 		<Polish>[NEWLINE]Włączona Inkwizycja</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_OPTIONS</Tag>
-		<English>[NEWLINE]Inquisitions Options:</English>
-		<French>[NEWLINE]Options Inquisitions:</French>
-		<German>[NEWLINE]Inquisitions-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni "Inquisizioni":</Italian>
-		<Spanish>[NEWLINE]Opciones de inquisición:</Spanish>
-		<Polish>[NEWLINE]Opcje Inkwizycji:</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NONE</Tag>
-		<English>[NEWLINE]None</English>
-		<French>[NEWLINE]Aucun</French>
-		<German>[NEWLINE]Keine</German>
-		<Italian>[NEWLINE]"None"</Italian>
-		<Spanish>[NEWLINE]Ninguna</Spanish>
-		<Polish>[NEWLINE]Brak</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NO_BARBARIAN_INFLUENCE</Tag>
-		<English>[NEWLINE]No Barbarian Influence</English>
-		<French>[NEWLINE]Pas d'Influence Barbare</French>
-		<German>[NEWLINE]Keine Beeinflussung bei Kampf mit Barbaren</German>
-		<Italian>[NEWLINE]Nessuna Influenza Barbarica</Italian>
-		<Spanish>[NEWLINE]Sin influencia bárbara</Spanish>
-		<Polish>[NEWLINE]Brak Wpływu Barbarzyńców</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NO_NAVAL_INFLUENCE</Tag>
-		<English>[NEWLINE]No Naval Influence</English>
-		<French>[NEWLINE]Pas d'Influence Navale</French>
-		<German>[NEWLINE]Keine Beeinflussung auf Meeresfeldern</German>
-		<Italian>[NEWLINE]Nessuna Influenza Navale</Italian>
-		<Spanish>[NEWLINE]Sin influencia naval</Spanish>
-		<Polish>[NEWLINE]Brak Wpływu Marynarki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_OPP_FIRE</Tag>
-		<English>[NEWLINE]Opportunity Fire</English>
-		<French>[NEWLINE]Opportunité de Feu</French>
-		<German>[NEWLINE]Gelegenheitstreffer</German>
-		<Italian>[NEWLINE]"Fuoco di Opportunità"</Italian>
-		<Spanish>[NEWLINE]Fuego de oportunidad</Spanish>
-		<Polish>[NEWLINE]Ogień Zaporowy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE</Tag>
-		<English>[NEWLINE]Pillage Influence</English>
-		<French>[NEWLINE]Influence du Pillage</French>
-		<German>[NEWLINE]Beeinflussung durch Plünderung</German>
-		<Italian>[NEWLINE]Influenza da Saccheggio</Italian>
-		<Spanish>[NEWLINE]Influencia por saqueos</Spanish>
-		<Polish>[NEWLINE]Wpływ Plądrowania</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RANGE_BOMBARD</Tag>
-		<English>[NEWLINE]Ranged Bombard</English>
-		<French>[NEWLINE]Bombardements à distance</French>
-		<German>[NEWLINE]Fernbombardierung</German>
-		<Italian>[NEWLINE]"Bombardamento ad Area"</Italian>
-		<Spanish>[NEWLINE]Cañoneo de alcance</Spanish>
-		<Polish>[NEWLINE]Zasięg Bombardowania</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RESPAWN_HOLY_CITIES</Tag>
-		<English>[NEWLINE]Holy City Relocation</English>
-		<French>[NEWLINE]Relocalisation des Villes Saintes</French>
-		<German>[NEWLINE]Heilige Stadt versetzen</German>
-		<Italian>[NEWLINE]Riposizionamento Città Santa</Italian>
-		<Spanish>[NEWLINE]Reubicación de Ciudad Santa</Spanish>
-		<Polish>[NEWLINE]Obradzanie Swiętego Miasta</Polish>
+		<English>Pillage Influence</English>
+		<French>Influence du Pillage</French>
+		<German>Beeinflussung durch Plünderung</German>
+		<Italian>Influenza da Saccheggio</Italian>
+		<Spanish>Influencia por saqueos</Spanish>
+		<Polish>Wpływ Plądrowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT</Tag>
@@ -2070,42 +1926,6 @@
 		<French>[NEWLINE]SHIFT-F8 = Chargement Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F8 = Carga rápida</Spanish>
 		<Polish>[NEWLINE]SHIFT-F8 = Szybkie Wczytywanie!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_ASSASSINATE</Tag>
-		<English>[NEWLINE]Assassinate Mission</English>
-		<French>[NEWLINE]Missions d'Assassinat</French>
-		<German>[NEWLINE]Attentätermission</German>
-		<Italian>[NEWLINE]Missione "Assassinio"</Italian>
-		<Spanish>[NEWLINE]Misión de asesinato</Spanish>
-		<Polish>[NEWLINE]Misja Zabójstwa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_BRIBE</Tag>
-		<English>[NEWLINE]Bribe Mission</English>
-		<French>[NEWLINE]Missions de Corruption</French>
-		<German>[NEWLINE]Bestechungsmission</German>
-		<Italian>[NEWLINE]Missione "Corruzione"</Italian>
-		<Spanish>[NEWLINE]Misión de soborno</Spanish>
-		<Polish>[NEWLINE]Misja Przekupstwa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_ENABLED</Tag>
-		<English>[NEWLINE]Super Spies Enabled</English>
-		<French>[NEWLINE]'Super Spies' activé</French>
-		<German>[NEWLINE]Superspione Aktiviert</German>
-		<Italian>[NEWLINE]"Super Spie" attivato</Italian>
-		<Spanish>[NEWLINE]Activar Superespías</Spanish>
-		<Polish>[NEWLINE]Włączeni Super Szpiedzy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_OPTIONS</Tag>
-		<English>[NEWLINE]Super Spies Options:</English>
-		<French>[NEWLINE]Options 'Super Spies':</French>
-		<German>[NEWLINE]Superspion-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni "Super Spie":</Italian>
-		<Spanish>[NEWLINE]Opciones de Super Spies:</Spanish>
-		<Polish>[NEWLINE]Opcje Super Szpiegów:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_MAX_CIVS_IN_DLL</Tag>

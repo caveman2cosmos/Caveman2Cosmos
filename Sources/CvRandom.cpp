@@ -49,7 +49,7 @@ void CvRandom::reset(unsigned long ulSeed)
 }
 
 
-uint16_t CvRandom::get(uint16_t usNum, const TCHAR* pszLog)
+uint16_t CvRandom::get(uint16_t usNum, const char* pszLog)
 {
 
 /*************************************************************************************************/
@@ -65,7 +65,7 @@ uint16_t CvRandom::get(uint16_t usNum, const TCHAR* pszLog)
 		{
 			if (GC.getGame().getTurnSlice() > 0)
 			{
-				TCHAR szOut[1024];
+				char szOut[1024];
 				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGame().getActivePlayer());
 				//gDLL->messageControlLog(szOut);
 				logging::logMsg(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGame().getTurnSlice(), pszLog);

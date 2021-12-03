@@ -155,13 +155,13 @@ enum AssertScopeTypes
 	{ \
 		char acOut[256]; \
 		sprintf(acOut, "Index value (%d) is expected to be >= %d", index, lower); \
-		FAssertMsg(index >= lower, acOut); \
+		FAssertMsg((int64_t)index >= (int64_t)lower, acOut); \
 	} \
 	else if ((int64_t)index >= (int64_t)upper) \
 	{ \
 		char acOut[256]; \
 		sprintf(acOut, "Index value (%d) is expected to be < %d", index, upper); \
-		FAssertMsg(index < upper, acOut); \
+		FAssertMsg((int64_t)index < (int64_t)upper, acOut); \
 	}
 
 #define FASSERT_NOT_NEGATIVE(value) \
