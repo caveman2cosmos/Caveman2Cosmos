@@ -1155,9 +1155,9 @@ class TestCode:
 				aBonusHappinessChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aBonusHealthChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aExtraFreeBonuses = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
-				for iBonus, iHappiness in CvBuildingInfo.getBonusHappiness():
+				for iBonus, iHappiness in CvBuildingInfo.getBonusHappinessChanges():
 					aBonusHappinessChanges[BASE][iBonus] += iHappiness
-				for iBonus, iHealth in CvBuildingInfo.getBonusHealth():
+				for iBonus, iHealth in CvBuildingInfo.getBonusHealthChanges():
 					aBonusHealthChanges[BASE][iBonus] += iHealth
 				if CvBuildingInfo.getFreeBonus() != -1:
 					aExtraFreeBonuses[BASE][CvBuildingInfo.getFreeBonus()] += CvBuildingInfo.getNumFreeBonuses()
@@ -1168,9 +1168,9 @@ class TestCode:
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>
-					for iBonus, iHappiness in CvReplacedBuildingInfo.getBonusHappiness():
+					for iBonus, iHappiness in CvReplacedBuildingInfo.getBonusHappinessChanges():
 						aBonusHappinessChanges[REPLACED][iBonus] += iHappiness
-					for iBonus, iHealth in CvReplacedBuildingInfo.getBonusHealth():
+					for iBonus, iHealth in CvReplacedBuildingInfo.getBonusHealthChanges():
 						aBonusHealthChanges[REPLACED][iBonus] += iHealth
 					if CvReplacedBuildingInfo.getFreeBonus() != -1:
 						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getFreeBonus()] += CvReplacedBuildingInfo.getNumFreeBonuses()
@@ -1872,7 +1872,7 @@ class TestCode:
 			aUniqueReplacementBuildingsList = []
 			aBuildingHappinessModifierValues = []
 			for iAffectedBuilding, iHappiness in CvTraitInfo.getBuildingHappinessModifiers():
-				aBuildingHappinessModifierValues.append(CvTraitInfo.getBuildingHappinessModifier(i).value)
+				aBuildingHappinessModifierValues.append(iHappiness)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectedBuilding not in aSpecialBuildingsList:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
