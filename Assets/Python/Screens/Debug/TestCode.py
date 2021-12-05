@@ -1006,10 +1006,9 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Worker Speed Modifier "+str(aWorkerSpeedModifier[BASE])+"/"+str(aWorkerSpeedModifier[REPLACED]))
 
 				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
-				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges> - base
+				#<YieldChanges>, <YieldPerPopChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges> - base
 				aYieldChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aYieldPerPopChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
-				#aSeaPlotYieldChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aRiverPlotYieldChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aYieldModifiersList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aPowerYieldModifiersList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
@@ -1030,11 +1029,10 @@ class TestCode:
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges>
+					#<YieldChanges>, <YieldPerPopChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[REPLACED][iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
 						aYieldPerPopChangesList[REPLACED][iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
-						#aSeaPlotYieldChangesList[REPLACED][iYield] += CvReplacedBuildingInfo.getSeaPlotYieldChange(iYield)
 						aRiverPlotYieldChangesList[REPLACED][iYield] += CvReplacedBuildingInfo.getRiverPlotYieldChange(iYield)
 						aYieldModifiersList[REPLACED][iYield] += CvReplacedBuildingInfo.getYieldModifier(iYield)
 						aPowerYieldModifiersList[REPLACED][iYield] += CvReplacedBuildingInfo.getPowerYieldModifier(iYield)
@@ -1048,10 +1046,6 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Changes "+str(aYieldChangesList[BASE])+"/"+str(aYieldChangesList[REPLACED]))
 					if aYieldPerPopChangesList[BASE][iYield] < aYieldPerPopChangesList[REPLACED][iYield]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Yield Per pop Changes "+str(aYieldPerPopChangesList[BASE])+"/"+str(aYieldPerPopChangesList[REPLACED]))
-					'''
-					if aSeaPlotYieldChangesList[BASE][iYield] < aSeaPlotYieldChangesList[REPLACED][iYield]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" Sea plot Yield Changes "+str(aSeaPlotYieldChangesList[BASE])+"/"+str(aSeaPlotYieldChangesList[REPLACED]))
-					'''
 					if aRiverPlotYieldChangesList[BASE][iYield] < aRiverPlotYieldChangesList[REPLACED][iYield]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getYieldInfo(iYield).getType()+" River plot Yield Changes "+str(aRiverPlotYieldChangesList[BASE])+"/"+str(aRiverPlotYieldChangesList[REPLACED]))
 					if aYieldModifiersList[BASE][iYield] < aYieldModifiersList[REPLACED][iYield]:
@@ -1568,11 +1562,34 @@ class TestCode:
 						iYield = pTerrainYieldChanges.eYield
 						aTerrainYieldChanges[REPLACED][iTerrain][iYield] += pTerrainYieldChanges.value
 
-				#Terrain shouldn't be worse than replaced one!
+				#Building shouldn't be worse than replaced one!
 				for iTerrain in xrange(GC.getNumTerrainInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aTerrainYieldChanges[BASE][iTerrain][iYield] < aTerrainYieldChanges[REPLACED][iTerrain][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" "+GC.getYieldInfo(iYield).getType()+" Terrain Yields "+str(aTerrainYieldChanges[BASE][iTerrain])+"/"+str(aTerrainYieldChanges[REPLACED][iTerrain]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" "+GC.getYieldInfo(iYield).getType()+" Terrain Yields "+str(aTerrainYieldChanges[BASE][iTerrain])+"/"+str(aTerrainYieldChanges[REPLACED][iPlot]))
+							
+				#==============================================================================================================
+				#<PlotYieldChanges> - base
+				aPlotYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(PlotTypes.NUM_PLOT_TYPES)] for z in xrange(MAIN_ARRAY_SIZE)]
+				for pPlotYieldChanges in CvBuildingInfo.getPlotYieldChange():
+					iPlot = pPlotYieldChanges.iType
+					iYield = pPlotYieldChanges.iIndex
+					aPlotYieldChanges[BASE][iPlot][iYield] += pPlotYieldChanges.iValue
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<PlotYieldChanges>
+					for pPlotYieldChanges in CvReplacedBuildingInfo.getPlotYieldChange():
+						iPlot = pPlotYieldChanges.iType
+						iYield = pPlotYieldChanges.iIndex
+						aPlotYieldChanges[REPLACED][iPlot][iYield] += pPlotYieldChanges.iValue
+
+				#Building shouldn't be worse than replaced one!
+				for iPlot in xrange(PlotTypes.NUM_PLOT_TYPES):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aPlotYieldChanges[BASE][iPlot][iYield] < aPlotYieldChanges[REPLACED][iPlot][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getPlotInfo(iPlot).getType()+" "+GC.getYieldInfo(iYield).getType()+" Plot Yields "+str(aPlotYieldChanges[BASE][iPlot])+"/"+str(aPlotYieldChanges[REPLACED][iPlot]))
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base
