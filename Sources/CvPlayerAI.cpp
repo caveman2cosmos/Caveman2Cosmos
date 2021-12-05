@@ -6037,7 +6037,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 						if (gPlayerLogLevel > 2)
 						{
 							logBBAI(
-								"\tBuilding %S is modified.  We have %d of them, total value: %d", 
+								"\tBuilding %S is modified.  We have %d of them, total value: %d",
 								kLoopBuilding.getDescription(), iNumExisting, iTempValue
 							);
 						}

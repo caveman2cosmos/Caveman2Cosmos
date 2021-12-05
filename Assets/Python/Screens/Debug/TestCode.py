@@ -1567,7 +1567,7 @@ class TestCode:
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aTerrainYieldChanges[BASE][iTerrain][iYield] < aTerrainYieldChanges[REPLACED][iTerrain][iYield]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" "+GC.getYieldInfo(iYield).getType()+" Terrain Yields "+str(aTerrainYieldChanges[BASE][iTerrain])+"/"+str(aTerrainYieldChanges[REPLACED][iPlot]))
-							
+
 				#==============================================================================================================
 				#<PlotYieldChanges> - base
 				aPlotYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(PlotTypes.NUM_PLOT_TYPES)] for z in xrange(MAIN_ARRAY_SIZE)]

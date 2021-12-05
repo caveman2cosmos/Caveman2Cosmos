@@ -97,7 +97,7 @@ bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *
 		return pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0;
 	}
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
-	
+
 	foreach_(const PlotArray& pair, info.getPlotYieldChanges())
 	{
 		if (pair.second[m_eYield] > 0)
