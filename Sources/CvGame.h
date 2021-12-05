@@ -324,7 +324,6 @@ public:
 
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
-	void setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue);
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
 	void findMountainRanges();
