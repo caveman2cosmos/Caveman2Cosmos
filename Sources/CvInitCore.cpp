@@ -23,6 +23,9 @@ bool CvInitCore::bPathsSet;
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_TAGGED_FORMAT	0x00000002
 
+// Used to signal the BULL saved game format is used
+#define BUG_DLL_SAVE_FORMAT		64
+
 // Public Functions...
 
 CvInitCore::CvInitCore()

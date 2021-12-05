@@ -5109,12 +5109,6 @@ void CvDLLWidgetData::parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-
-/************************************************************************************************/
-/* Afforess: Rise of Mankind                    6/15/10                               	         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	// Show the active player's civ's current name when mousing over flag
 	CvWString szTempBuffer;
 	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationDescription());
@@ -5122,19 +5116,12 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	szBuffer.append(NEWLINE);
 
 	// BTS Version
-	float fVersion = GC.getDefineINT("CIV4_VERSION") / 100.0f;
+	const float fVersion = GC.getDefineINT("CIV4_VERSION") / 100.0f;
 	szTempBuffer.Format(SETCOLR L"Beyond the Sword %0.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), fVersion);
 	szBuffer.append(szTempBuffer);
 	szTempBuffer.Format(NEWLINE SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION"));
 	szBuffer.append(szTempBuffer);
-	CvWString szBULLETICON;
-	szBULLETICON.Format(NEWLINE L"%c", gDLL->getSymbolID(BULLET_CHAR));
-	szBuffer.append(szBULLETICON);
-	// BUG DLL version
-	szTempBuffer.Format(SETCOLR L"%s %s [Build %s]" ENDCOLR, TEXT_COLOR("COLOR_WHITE"), BUG_DLL_NAME, BUG_DLL_VERSION, BUG_DLL_BUILD);
-	szBuffer.append(szTempBuffer);
 
-// BUG - Version Info - end
 	if (GET_PLAYER(GC.getGame().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
 		// separator line
@@ -5150,10 +5137,6 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	GET_TEAM(GC.getGame().getActiveTeam()).getProperties()->buildDisplayString(szBuffer);
 	szBuffer.append(NEWLINE L"==============================" NEWLINE);
 	GC.getGame().getProperties()->buildDisplayString(szBuffer);
-
-/************************************************************************************************/
-/* Afforess                                    END                                              */
-/************************************************************************************************/
 }
 
 
