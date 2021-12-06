@@ -1,170 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<bNoLimit>1</bNoLimit>
+			<Type>BUILDING_COAL_DYNAMO</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STEAMPUNK_EMBASSY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<VicinityBonus>BONUS_COAL</VicinityBonus>
-			<FreeBonus>BONUS_STEAMPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<bNukeImmune>1</bNukeImmune>
-			<iCost>3930</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iConquestProb>100</iConquestProb>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iAsset>5</iAsset>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MUNICIP_COMP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUNICIP_COMP_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COMPUTING_ENGINE</ArtDefineTag>
-			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
+			<Description>TXT_KEY_BUILDING_COAL_DYNAMO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_COAL_DYNAMO_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_COAL_DYNAMO</ArtDefineTag>
+			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECHCOAL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_COPPER_WARES</Bonus>
+				<Bonus>BONUS_COAL</Bonus>
 			</PrereqBonuses>
-			<iCost>655</iCost>
+			<bPower>1</bPower>
+			<iCost>770</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHealth>-3</iHealth>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceModifiers>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<iPrereqPopulation>7</iPrereqPopulation>
+			<iHealth>-6</iHealth>
 			<iAsset>5</iAsset>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TR_WORKSHOP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TR_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TR_WORKSHOP_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TR_WORKSHOP</ArtDefineTag>
-			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_TIRES</Bonus>
-				<Bonus>BONUS_RUBBER</Bonus>
-			</PrereqBonuses>
-			<iCost>655</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<HealUnitCombatTypes>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>5</iHeal>
-				</HealUnitCombatType>
-			</HealUnitCombatTypes>
-			<iHealth>-2</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>6</iYield>
+				<iYield>9</iYield>
 			</YieldChanges>
-			<PowerYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>10</iYield>
-			</PowerYieldModifiers>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<iAsset>5</iAsset>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>25</iPropertyValue>
+				</Property>
+			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iPrereqPopulation>7</iPrereqPopulation>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PANOPTICON_PRISON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_PANOPTICON_PRISON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PANOPTICON_PRISON_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PANOPTICON_PRISON</ArtDefineTag>
-			<ObsoleteTech>TECH_CRYONICS</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<iCost>655</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iWarWearinessModifier>-30</iWarWearinessModifier>
-			<iHappiness>-2</iHappiness>
-			<iAsset>5</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>50</iCommerce>
-			</CommerceModifiers>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SPY</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-30</iAmountPerTurn>
+					<iAmountPerTurn>30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iPrereqPopulation>3</iPrereqPopulation>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_INDIAN_EMBASSY</Type>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
@@ -173,7 +73,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MADSCIENTIST_CASTLE</ArtDefineTag>
-			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -184,14 +83,14 @@
 			</PrereqBonuses>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>-15</iMaintenanceModifier>
+			<iMaintenanceModifier>-8</iMaintenanceModifier>
 			<iHealth>-3</iHealth>
 			<iHappiness>-3</iHappiness>
 			<iAsset>5</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>7</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -245,95 +144,138 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COAL_DYNAMO</Type>
+			<Type>BUILDING_MUNICIP_COMP</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_COAL_DYNAMO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COAL_DYNAMO_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COAL_DYNAMO</ArtDefineTag>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MUNICIP_COMP_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_COMPUTING_ENGINE</ArtDefineTag>
+			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_COAL</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
-			<bPower>1</bPower>
-			<iCost>770</iCost>
+			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHealth>-6</iHealth>
-			<iAsset>5</iAsset>
+			<iHealth>-3</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>9</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_POWER_LINES</BuildingType>
-			</PrereqInCityBuildings>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>25</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>30</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iPrereqPopulation>3</iPrereqPopulation>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<iPrereqPopulation>7</iPrereqPopulation>
+			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WOOD_DYNAMO</Type>
+			<Type>BUILDING_NEMO_ACADEMY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_WOOD_DYNAMO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WOOD_DYNAMO</ArtDefineTag>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NEMO_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEMO_ACADEMY</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_PRIME_TIMBER</Bonus>
-			</PrereqBonuses>
-			<bPower>1</bPower>
-			<iCost>770</iCost>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_NAVIGATION2</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
+			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
+			<bNukeImmune>1</bNukeImmune>
+			<iCost>3930</iCost>
+			<iHurryCostModifier>50</iHurryCostModifier>
+			<iConquestProb>100</iConquestProb>
+			<iAsset>6</iAsset>
+			<iPower>6</iPower>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<ConstructSound>AS2D_BUILD_NAVAL_ACADEMY</ConstructSound>
+			<DomainFreeExperiences>
+				<DomainFreeExperience>
+					<DomainType>DOMAIN_SEA</DomainType>
+					<iExperience>3</iExperience>
+				</DomainFreeExperience>
+			</DomainFreeExperiences>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
+			</PrereqInCityBuildings>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iPrereqPopulation>7</iPrereqPopulation>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PANOPTICON_PRISON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_PANOPTICON_PRISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PANOPTICON_PRISON_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_PANOPTICON_PRISON</ArtDefineTag>
+			<ObsoleteTech>TECH_CRYONICS</ObsoleteTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_STEAMPUNK</Bonus>
+			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHealth>-4</iHealth>
+			<iWarWearinessModifier>-30</iWarWearinessModifier>
+			<iHappiness>-2</iHappiness>
 			<iAsset>5</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>6</iYield>
-			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-4</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_POWER_LINES</BuildingType>
-			</PrereqInCityBuildings>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>25</iPropertyValue>
-				</Property>
-			</Properties>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SPY</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>15</iAmountPerTurn>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -345,8 +287,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_PEAT_DYNAMO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEAT_DYNAMO</ArtDefineTag>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -386,70 +333,134 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEMO_ACADEMY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
+			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
+			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_STEAMPUNK_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<VicinityBonus>BONUS_COAL</VicinityBonus>
+			<FreeBonus>BONUS_STEAMPUNK</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bNukeImmune>1</bNukeImmune>
+			<iCost>3930</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iConquestProb>100</iConquestProb>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<iAsset>5</iAsset>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TR_WORKSHOP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_TR_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TR_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEMO_ACADEMY</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NEMO_ACADEMY</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TR_WORKSHOP</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<FreePromotion>PROMOTION_NAVIGATION2</FreePromotion>
-			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
-			<bNukeImmune>1</bNukeImmune>
-			<iCost>3930</iCost>
-			<iHurryCostModifier>50</iHurryCostModifier>
-			<iConquestProb>100</iConquestProb>
-			<iAsset>6</iAsset>
-			<iPower>6</iPower>
+			<PrereqBonuses>
+				<Bonus>BONUS_TIRES</Bonus>
+				<Bonus>BONUS_RUBBER</Bonus>
+			</PrereqBonuses>
+			<iCost>655</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<iHealth>-2</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>6</iYield>
+			</YieldChanges>
+			<PowerYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
+			</PowerYieldModifiers>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
-			<ConstructSound>AS2D_BUILD_NAVAL_ACADEMY</ConstructSound>
-			<DomainFreeExperiences>
-				<DomainFreeExperience>
-					<DomainType>DOMAIN_SEA</DomainType>
-					<iExperience>3</iExperience>
-				</DomainFreeExperience>
-			</DomainFreeExperiences>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
-			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<iAsset>5</iAsset>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDIAN_EMBASSY</Type>
-			<BuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers>
+			<Type>BUILDING_WOOD_DYNAMO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_WOOD_DYNAMO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_WOOD_DYNAMO</ArtDefineTag>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_STEAMPUNK</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
+			</PrereqBonuses>
+			<bPower>1</bPower>
+			<iCost>770</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHealth>-4</iHealth>
+			<iAsset>5</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>6</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>25</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>15</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

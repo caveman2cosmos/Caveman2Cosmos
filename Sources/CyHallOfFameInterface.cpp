@@ -33,9 +33,9 @@ void CyHallOfFameInterface()
 
 		.def("getNumPlayers", &CyReplayInfo::getNumPlayers, "int ()")
 		.def("getPlayerScore", &CyReplayInfo::getPlayerScore, "int (int iPlayer, int iTurn)")
-		
+
 		.def("getNormalizedScore", &CyReplayInfo::getNormalizedScore, "int ()")
-		
+
 		.def("getReplayMessageTurn", &CyReplayInfo::getReplayMessageTurn, "int (int i)")
 		.def("getReplayMessageType", &CyReplayInfo::getReplayMessageType, "int (int i)")
 		.def("getReplayMessagePlotX", &CyReplayInfo::getReplayMessagePlotX, "int (int i)")
@@ -58,7 +58,7 @@ void CyHallOfFameInterface()
 
 		.def("getModName", &CyReplayInfo::getModName, "std::wstring ()")
 		;
-		
+
 	python::class_<CyHallOfFameInfo>("CyHallOfFameInfo")
 		.def("loadReplays", &CyHallOfFameInfo::loadReplays, "void ()")
 		.def("getNumGames", &CyHallOfFameInfo::getNumGames, "int ()")

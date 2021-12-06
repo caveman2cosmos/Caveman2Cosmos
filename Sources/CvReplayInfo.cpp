@@ -29,7 +29,7 @@ CvReplayInfo::CvReplayInfo()
 	, m_iStartYear(0)
 	, m_eCalendar(NO_CALENDAR)
 {
-	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2); 
+	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2);
 }
 
 CvReplayInfo::~CvReplayInfo()
@@ -50,7 +50,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		return;
 
 	const CvMap& map = GC.getMap();
-	
+
 	if (ePlayer == NO_PLAYER)
 	{
 		ePlayer = game.getActivePlayer();
@@ -158,7 +158,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 				pMsg->setText(game.getReplayMessageText(i));
 				pMsg->setPlot(game.getReplayMessagePlotX(i), game.getReplayMessagePlotY(i));
 				m_listReplayMessages.push_back(pMsg);
-			}	
+			}
 		}
 		else
 		{
@@ -169,16 +169,16 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 				pMsg->setText(game.getReplayMessageText(i));
 				pMsg->setPlot(game.getReplayMessagePlotX(i), game.getReplayMessagePlotY(i));
 				m_listReplayMessages.push_back(pMsg);
-			}	
+			}
 		}
 	}
 
 	m_iMapWidth = GC.getMap().getGridWidth();
 	m_iMapHeight = GC.getMap().getGridHeight();
-	
-	SAFE_DELETE(m_pcMinimapPixels);	
+
+	SAFE_DELETE(m_pcMinimapPixels);
 	m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
-	
+
 	void *ptexture = (void*)gDLL->getInterfaceIFace()->getMinimapBaseTexture();
 	if (ptexture)
 		memcpy((void*)m_pcMinimapPixels, ptexture, m_nMinimapSize);

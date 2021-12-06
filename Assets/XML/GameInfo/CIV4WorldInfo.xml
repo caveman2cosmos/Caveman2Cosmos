@@ -35,6 +35,7 @@
 			<iUnitNameModifier>50</iUnitNameModifier>
 			<iTargetNumCities>2</iTargetNumCities>
 			<iNumFreeBuildingBonuses>1</iNumFreeBuildingBonuses>
+			<iBuildingPrereqModifier>-120</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-75</iMaxConscriptModifier>
 			<iWarWearinessModifier>30</iWarWearinessModifier>
 			<iGridWidth>12</iGridWidth>
@@ -63,6 +64,7 @@
 			<iUnitNameModifier>40</iUnitNameModifier>
 			<iTargetNumCities>3</iTargetNumCities>
 			<iNumFreeBuildingBonuses>1</iNumFreeBuildingBonuses>
+			<iBuildingPrereqModifier>-80</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-50</iMaxConscriptModifier>
 			<iWarWearinessModifier>20</iWarWearinessModifier>
 			<iGridWidth>18</iGridWidth>
@@ -91,7 +93,7 @@
 			<iUnitNameModifier>30</iUnitNameModifier>
 			<iTargetNumCities>4</iTargetNumCities>
 			<iNumFreeBuildingBonuses>2</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>25</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>-40</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-25</iMaxConscriptModifier>
 			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iGridWidth>21</iGridWidth>
@@ -118,7 +120,6 @@
 			<iUnitNameModifier>20</iUnitNameModifier>
 			<iTargetNumCities>6</iTargetNumCities>
 			<iNumFreeBuildingBonuses>3</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>25</iBuildingPrereqModifier>
 			<iGridWidth>24</iGridWidth>
 			<iGridHeight>16</iGridHeight>
 			<iOceanMinAreaSize>14</iOceanMinAreaSize>
@@ -143,7 +144,7 @@
 			<iUnitNameModifier>10</iUnitNameModifier>
 			<iTargetNumCities>8</iTargetNumCities>
 			<iNumFreeBuildingBonuses>4</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>50</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>40</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>25</iMaxConscriptModifier>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iGridWidth>27</iGridWidth>
@@ -172,7 +173,7 @@
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>11</iTargetNumCities>
 			<iNumFreeBuildingBonuses>5</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>75</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>80</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>50</iMaxConscriptModifier>
 			<iWarWearinessModifier>-20</iWarWearinessModifier>
 			<iGridWidth>30</iGridWidth>
@@ -201,7 +202,7 @@
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>14</iTargetNumCities>
 			<iNumFreeBuildingBonuses>7</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>100</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>120</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>75</iMaxConscriptModifier>
 			<iWarWearinessModifier>-30</iWarWearinessModifier>
 			<iGridWidth>33</iGridWidth>
@@ -230,7 +231,7 @@
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>18</iTargetNumCities>
 			<iNumFreeBuildingBonuses>10</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>125</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>160</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>100</iMaxConscriptModifier>
 			<iWarWearinessModifier>-40</iWarWearinessModifier>
 			<iGridWidth>36</iGridWidth>

@@ -30,13 +30,13 @@ public:
 	GameObjectTypes getPayerType() const;
 
 	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
-	void buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit);
+	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const;
 	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	MissionTypes m_eMission;

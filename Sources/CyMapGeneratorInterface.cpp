@@ -10,8 +10,6 @@ void CyMapGeneratorPythonInterface()
 	OutputDebugString("Python Extension Module - CyMapGeneratorPythonInterface\n");
 
 	python::class_<CyMapGenerator>("CyMapGenerator")
-		.def("isNone", &CyMapGenerator::isNone, "bool () - valid CyMapGenerator() interface")
-
 		.def("doRiver", &CyMapGenerator::doRiver, "void (CyPlot* pStartPlot, int /*CardinalDirectionTypes*/ eCardinalDirection)")
 		.def("addFeatures", &CyMapGenerator::addFeatures, "void ()")
 		.def("addBonuses", &CyMapGenerator::addBonuses, "void ()")

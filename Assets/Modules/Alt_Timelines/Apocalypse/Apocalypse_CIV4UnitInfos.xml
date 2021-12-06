@@ -510,19 +510,9 @@
 				<BonusType>BONUS_OLIVE_OIL</BonusType>
 				<BonusType>BONUS_FISH_OIL</BonusType>
 				<BonusType>BONUS_GHEE_OIL</BonusType>
+				<BonusType>BONUS_WHALE_OIL</BonusType>
+				<BonusType>BONUS_KEROSENE</BonusType>
 			</PrereqBonuses>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WHALE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_KEROSENE</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<iCost>325</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>

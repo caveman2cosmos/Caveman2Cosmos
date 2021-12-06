@@ -7,6 +7,16 @@
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
+			<Type>SPECIALBUILDING_STORY</Type>
+			<bValid>0</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
+			<Type>SPECIALBUILDING_STORIES</Type>
+			<bValid>0</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_TEMPLE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_TEMPLE</Description>
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
@@ -74,6 +84,20 @@
 			<Type>SPECIALBUILDING_C2C_CULTURE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_C2C_CULTURE</Description>
 			<bValid>1</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_FOLKLORE_EXPLORATION</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_FOLKLORE_EXPLORATION</Description>
+			<TechPrereq>TECH_ORAL_TRADITION</TechPrereq>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_FOLKLORE_TAXONOMY</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_FOLKLORE_TAXONOMY</Description>
+			<TechPrereq>TECH_TAXONOMY</TechPrereq>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_CORPORATION_HQ</Type>

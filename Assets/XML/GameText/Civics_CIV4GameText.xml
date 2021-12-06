@@ -1,6 +1,688 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_ALLOWS_USE_OF_EXECUTIVES</Tag>
+		<English>[ICON_BULLET]Can train Units to Spread Corporations</English>
+		<French>[ICON_BULLET]Peut entraîner des Unités pour propager les Corporations</French>
+		<German>[ICON_BULLET]Kann Einheiten ausbilden, die neue Standorte für Kapitalgesellschaften erschließen können</German>
+		<Italian>[ICON_BULLET]Può costruire unità per diffondere le corporazioni</Italian>
+		<Spanish>[ICON_BULLET]Puede entrenar unidades para expandir las corporaciones</Spanish>
+		<Polish>[ICON_BULLET]Pozwala budować jednostki do rozszerzania Korporacji</Polish>
+		<Russian>[ICON_BULLET]Ìîæåò òðåíèðîâàòü îòðÿäû, ðàñïðîñòðàíÿþùèå êîðïîðàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_ALLOW_INQUISITONS</Tag>
+		<English>[ICON_BULLET]Inquisitor Units may purge non state [ICON_RELIGION] from cities where State [ICON_RELIGION] is present.</English>
+		<French>[ICON_BULLET]Les Inquisiteurs peuvent purger les [ICON_RELIGION] non officielles dans les Villes où la [ICON_RELIGION] d'Etat est présente.</French>
+		<German>[ICON_BULLET]Inquisitoren können nicht-staatliche [ICON_RELIGION] aus Städten eliminieren, in denen die Staats-[ICON_RELIGION] vorhanden ist.</German>
+		<Italian>[ICON_BULLET]Gli Inquisitori possono eradicare [ICON_RELIGION] diverse da quella di Stato nelle città dove è presente la [ICON_RELIGION] di Stato.</Italian>
+		<Spanish>[ICON_BULLET]Los Inquisidores pueden eliminar [ICON_RELIGION] no oficiales de ciudades donde la [ICON_RELIGION] oficial esté presente.</Spanish>
+		<Polish>[ICON_BULLET]Inkwizytorzy mogą wytępić nienarodową [ICON_RELIGION] z miast gdzie jest narodowa [ICON_RELIGION].</Polish>
+		<Russian>[ICON_BULLET]Èíêâèçèòîðû ìîãóò âûæå÷ü íåãîñóäàðñòâåííóþ [ICON_RELIGION] èç ãîðîäîâ ñ ãîñóäàðñòâåííîé [ICON_RELIGION].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_ANARCHY_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% Anarchy time from Civic changes.</English>
+		<French>[ICON_BULLET]%D1_Modifier%% Temps d'Anarchie du changement de doctrines.</French>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к продолжительности Анархии за смену парадигм.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BLOCKS_BUILDING</Tag>
+		<English>[ICON_BULLET]Disables construction of[SPACE]</English>
+		<French>[ICON_BULLET]Désactive l'utilisation de [SPACE]</French>
+		<German>[ICON_BULLET]Verhindert den Bau von[SPACE]</German>
+		<Italian>[ICON_BULLET]Disattiva la costruzione di[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Desactiva la construcción de[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]Dezaktywuje:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]Îòìåíÿåò ñòðîèòåëüñòâî[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BONUS_MINTED</Tag>
+		<English>[ICON_BULLET]%s1[ICON_GOLD] per city with access to</English>
+		<French>[ICON_BULLET]%s1[ICON_GOLD] par ville ayant accès à</French>
+		<German>[ICON_BULLET]%s1[ICON_GOLD] pro Stadt mit Zugang zu</German>
+		<Italian>[ICON_BULLET]%s1[ICON_GOLD] per goni città con accesso a</Italian>
+		<Spanish>[ICON_BULLET]%s1[ICON_GOLD] por ciudad con acceso a</Spanish>
+		<Polish>[ICON_BULLET]%s1[ICON_GOLD] na miasto z dostępem do</Polish>
+		<Russian>[ICON_BULLET]%s1[ICON_GOLD] çà ãîðîä ñ äîñòóïîì ê </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BOOSTS_DIPLOMACY</Tag>
+		<English>Improves Relations With:[SPACE]</English>
+		<French>Améliore les Relations avec:[SPACE]</French>
+		<German>Verbessert die Beziehungen zu:[SPACE]</German>
+		<Italian>Migliora le relazioni con [SPACE]</Italian>
+		<Spanish>Mejora las relaciones con:[SPACE]</Spanish>
+		<Polish>Polepsza stosunki z:[SPACE]</Polish>
+		<Russian>Óëó÷øàåò îòíîøåíèÿ ñ:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BOOSTS_DIPLOMACY_WITH_PLAYERS</Tag>
+		<English>Improves Relations With Players Using:[SPACE]</English>
+		<French>Améliore les Relations des Joueurs utilisant:[SPACE]</French>
+		<German>Verbessert die Beziehungen zu Spielern mit:[SPACE]</German>
+		<Italian>Migliora le relazioni con i giocatori che usano[SPACE]</Italian>
+		<Spanish>Mejora las relaciones con los jugadores que usen:[SPACE]</Spanish>
+		<Polish>Polepsza stosunki z graczami posiadającymi:[SPACE]</Polish>
+		<Russian>Улучшает отношения с игроками, если использует:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_COMMERCE_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2 from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change %F2 :[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change %F2 durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2 da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2 por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change %F2 z:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]%D1_Change %F2 от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_COMMERCE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Change%% %F2 from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%% %F2 :[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%% %F2 durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% %F2 da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% %F2 por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% %F2 z:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]%D1_Change%% %F2 от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_HAPPINESS_PREFIX</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp :[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp :[SPACE]</Polish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD</Tag>
+		<English>% Faster Construction of[SPACE]</English>
+		<French>% Construction plus rapide de[SPACE]</French>
+		<German>% schnellere Konstruktion von[SPACE]</German>
+		<Italian>% costruzione più veloce di[SPACE]</Italian>
+		<Spanish>% de aumento de velocidad de construcción de[SPACE]</Spanish>
+		<Polish>% szybciej:[SPACE]</Polish>
+		<Russian>% Ускоренное строительство[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW</Tag>
+		<English>% Slower Construction of[SPACE]</English>
+		<French>% Construction plus lente de[SPACE]</French>
+		<German>% langsamere Konstruktion von[SPACE]</German>
+		<Italian>% costruzione più lenta di[SPACE]</Italian>
+		<Spanish>% de disminución de velocidad de construcción de[SPACE]</Spanish>
+		<Polish>% wolniejsza budowa jeśli w mieście jest:[SPACE]</Polish>
+		<Russian>% Замедление строительства[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILD_MISSIONARIES</Tag>
+		<English>[ICON_BULLET]Can Build special units without [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Peut construire les Unités spéciales sans [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Spezialeinheiten möglich ohne [COLOR_BUILDING_TEXT]%s1:4_Building[COLOR_REVERT]</German>
+		<Spanish>[ICON_BULLET]Puede entrenar unidades especiales sin [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</Spanish>
+		<Polish>[ICON_BULLET]Umożliwia budowę jednostek specjalnych bez: [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET]Ìîæíî ñîçäàâàòü ìèññèîíåðîâ áåç êóëüòîâûõ ïîñòðîåê ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT])</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_CITY_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1%% City Defense in all Cities</English>
+		<French>[ICON_BULLET]%D1%% de Défense dans toutes les Villes</French>
+		<German>[ICON_BULLET]%D1%% Stadtverteidigung in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1%% difesa cittadina in tutte le città.</Italian>
+		<Spanish>[ICON_BULLET]%D1%% de bonificación defensiva en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1%% Obrany Miasta we wszystkich miastach.</Polish>
+		<Russian>[ICON_BULLET]%d1%% Ãîðîäñêàÿ çàùèòà âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_CITY_DISTANCE_BAD_MOD</Tag>
+		<English>[ICON_BULLET]%d1% to city distance instability penalty</English>
+		<French>[ICON_BULLET]%d1% de pénalité : Distance des Villes</French>
+		<German>[ICON_BULLET]%d1% Instabilitätsmalus durch die Entfernung zwischen den Städten</German>
+		<Italian>[ICON_BULLET]Variazione della penalità instabilità per distanza: %d1%</Italian>
+		<Spanish>[ICON_BULLET]%d1% a la penalización a la estabilidad por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]%d1% do kary niestabilności za odległość od miasta</Polish>
+		<Russian>[ICON_BULLET]+%s1% íåñòàáèëüíîñòè îò äàëüíîñòè ãîðîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_CITY_DISTANCE_GOOD_MOD</Tag>
+		<English>[ICON_BULLET]%d1% to city distance instability penalty</English>
+		<French>[ICON_BULLET]%d1% de pénalité : Distance des Villes</French>
+		<German>[ICON_BULLET]%d1% Instabilitätsmalus durch die Entfernung zwischen den Städten</German>
+		<Italian>[ICON_BULLET]Variazione della penalità instabilità per distanza: %d1%</Italian>
+		<Spanish>[ICON_BULLET]%d1% a la penalización a la estabilidad por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]%d1% do kary niestabilności za odległość od miasta</Polish>
+		<Russian>[ICON_BULLET]%s1% íåñòàáèëüíîñòè îò äàëüíîñòè ãîðîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_CITY_LIMIT</Tag>
+		<English>[ICON_BULLET]Can not settle more than %d1 cities</English>
+		<French>[ICON_BULLET]Ne peut fonder plus de %d1 villes</French>
+		<German>[ICON_BULLET]Eure Gesellschaftsform erlaubt es nicht, mehr als %d1 Städte zu gründen.</German>
+		<Italian>[ICON_BULLET]Non può fondare più di %d1 città</Italian>
+		<Spanish>[ICON_BULLET]No se [NUM1:puede:pueden] fundar más de %d1 [NUM1:ciudad:ciudades]</Spanish>
+		<Polish>[ICON_BULLET]Nie można założyć więcej niż %d1 miast</Polish>
+		<Russian>[ICON_BULLET]Íå ìîæåò ïîñåëèòüñÿ áîëüøå, ÷åì %d1 ãîðîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_CONSCRIPTION_CHANGE</Tag>
+		<English>[ICON_BULLET]You can [LINK=CONCEPT_DRAFT]Draft[\LINK] %D1_Num [NUM1:Unit:Units]</English>
+		<French>[ICON_BULLET]Vous pouvez [LINK=CONCEPT_DRAFT]Recruter[\LINK] %D1_Num [NUM1:Unité:Unités]</French>
+		<German>[ICON_BULLET][LINK=CONCEPT_DRAFT]Rekrutierung[\LINK]: %D1_Num [NUM1:Einheit:Einheiten]</German>
+		<Russian>[ICON_BULLET]Вы можете [LINK=CONCEPT_DRAFT]призвать[\LINK] %D1_Num [NUM1:Unit:Units]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_CORPORATION_TAXES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Tax Levy on Corporations</English>
+		<French>[ICON_BULLET]%D1_Mod%% de Taxes prélevées aux Corporations</French>
+		<German>[ICON_BULLET]%D1_Mod%% Unternehmenssteuern von Kapitalgesellschaften</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di tasse sulle corporazioni</Italian>
+		<Spanish>[ICON_BULLET]Impuesto del %D1_Mod%% a las corporaciones</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% podatków z Korporacji</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% íàëîãîâûé ñáîð â êîðïîðàöèÿõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_DISALLOW_INQUISITONS</Tag>
+		<English>[ICON_BULLET]Even if otherwise possible, Civic religious freedoms disables inquisitions.</English>
+		<French>[ICON_BULLET]Dans tous les cas, La Doctrine 'Liberté de Culte' rend les inquisitions impossibles.</French>
+		<German>[ICON_BULLET]Gesellschaftsformen mit religiöser Freiheit verhindern Inquisitionen, selbst wenn ansonsten alle Vorgaben erfüllt sind.</German>
+		<Italian>[ICON_BULLET]Anche se è possibile il contrario, le forme di governo che danno libertà religiosa impediscono le inquisizioni.</Italian>
+		<Spanish>[ICON_BULLET]Aunque sea posible, los principios que fomentan la libertad religiosa deshabilitan las inquisiciones.</Spanish>
+		<Polish>[ICON_BULLET]Uniemożliwia budowę Inkwizycji</Polish>
+		<Russian>[ICON_BULLET] Äàæå åñëè âîçìîæåí èíîé ïóòü, âñå æå èíñòèòóò âëàñòè îáåñïå÷èâàþùèé ðåëèãèîçíóþ ñâîáîäó äåëàåò èíêâèçèöèþ íåàêòèâíîé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_DISTANT_UNIT_SUPPLY_COST_MOD</Tag>
+		<English>[ICON_BULLET]%d1%% Increased Supply Cost for Distant Units</English>
+		<French>[ICON_BULLET]%d1%% Augmente le coût de Soutien des Unités distantes</French>
+		<German>[ICON_BULLET]%d1%% Erhöhte Versorgungskosten für weit entfernte Einheiten</German>
+		<Italian>[ICON_BULLET]%d1%% Costo di supporto aumentato per le unità distanti.</Italian>
+		<Spanish>[ICON_BULLET]El coste de abastecimiento de unidades aumenta un %d1%%</Spanish>
+		<Polish>[ICON_BULLET]%d1%% Podnosi koszt utrzymania dla jednostek dystansowych.</Polish>
+		<Russian>[ICON_BULLET]%d1%% óâåëè÷åííàÿ ñòîèìîñòü ïîñòàâêè äëÿ îòäàëåííûõ îòðÿäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_DISTANT_UNIT_SUPPLY_COST_MOD_DECREASE</Tag>
+		<English>[ICON_BULLET]%d1%% Decreased Supply Cost for Distant Units</English>
+		<French>[ICON_BULLET]%d1%% Diminue le coût de Soutien des Unités distantes</French>
+		<German>[ICON_BULLET]%d1%% Reduzierte Versorgungskosten für weit entfernte Einheiten</German>
+		<Italian>[ICON_BULLET]%d1%% Costo di supporto diminuito per le unità distanti.</Italian>
+		<Spanish>[ICON_BULLET]El coste de abastecimiento de unidades disminuye un %d1%%</Spanish>
+		<Polish>[ICON_BULLET]%d1%% Obniża koszt utrzymania dla jednostek dystansowych.</Polish>
+		<Russian>[ICON_BULLET]%d1%% óìåíüøåííàÿ ñòîèìîñòü ïîñòàâêè äëÿ îòäàëåííûõ åäèíèö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_ERA_ADVANCE_FREE_SPECIALIST</Tag>
+		<English>[ICON_BULLET]Gains a free %s1_Specialist Specialist in all cities with each advance in Era.</English>
+		<French>[ICON_BULLET]Reçoit un %s1_Specialist gratuit pour chaque avancée d'Ere.</French>
+		<Italian>[ICON_BULLET]Ottiene un %s1_Specialist gratuito con ogni avanzamento di Era.</Italian>
+		<Polish>[ICON_BULLET]Daje darmowego: %s1_Specialist przy każdej zmianie Ery.</Polish>
+		<Russian>[ICON_BULLET]Дает бесплатного специалиста %s1_Specialist с наступлением каждой новой Эры.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_FOREIGNER_ANGER</Tag>
+		<English>[ICON_BULLET]+%d1[ICON_UNHAPPY] per %d2% foreign [ICON_CULTURE]</English>
+		<French>[ICON_BULLET]+%d1[ICON_UNHAPPY] par %d2% étrangère [ICON_CULTURE]</French>
+		<German>[ICON_BULLET]+%d1[ICON_UNHAPPY] pro %d2% an fremder [ICON_CULTURE]</German>
+		<Italian>[ICON_BULLET]+%d1[ICON_UNHAPPY] per %d2% [ICON_CULTURE] straniera</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_UNHAPPY] por %d2%[ICON_CULTURE] extranjera</Spanish>
+		<Polish>[ICON_BULLET]+%d1[ICON_UNHAPPY] na %d2% zagranicznej [ICON_CULTURE]</Polish>
+		<Russian>[ICON_BULLET]+%d1[ICON_UNHAPPY] çà %d2% èíîñòðàííûé [ICON_CULTURE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_FOREIGN_TRADE_ROUTE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield in All Cities</English>
+		<French>[ICON_BULLET]%D1_Mod%% Les Routes commerciales étrangères sont réparties dans toutes les Villes</French>
+		<German>[ICON_BULLET]%D1_Mod%% Ertrag aus ausländischen Handelsrouten in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% resa delle rotte cittadine estere in tutte le città.</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de rutas comerciales internacionales en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% obca trasa handlowa we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% Èíîñòðàíûé äîõîä ñ òîðãîâûõ ïóòåé âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_FREEDOM_ANGER</Tag>
+		<English>[ICON_BULLET]Increases [ICON_UNHAPPY] equal to %d1%% population</English>
+		<Russian>[ICON_BULLET]Увеличивает [ICON_UNHAPPY] на %d1%% населения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_FREEDOM_HAPPINESS</Tag>
+		<English>[ICON_BULLET]Decreases [ICON_UNHAPPY] equal to %d1%% population</English>
+		<Russian>[ICON_BULLET][ICON_HAPPY] Ïîâûøåíèå äëÿ âñåõ öèâèëèçàöèé áåç %s1_CivicName</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_FROM_LANDMARK</Tag>
+		<English>[SPACE]from Landmarks</English>
+		<French>[SPACE]des Repères de terrain</French>
+		<German>[SPACE]von Landmarken</German>
+		<Italian>[SPACE]dalle Località</Italian>
+		<Spanish>[SPACE]por marcas</Spanish>
+		<Polish>[SPACE]od Punkty Orientacyjne</Polish>
+		<Russian>[SPACE]îò îðèåíòèðîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_HAPPINESS</Tag>
+		<English>[ICON_BULLET]+%d1_Change[ICON_HAPPY] In all cities</English>
+		<French>[ICON_BULLET]+%d1_Change[ICON_HAPPY] dans toutes les Villes</French>
+		<German>[ICON_BULLET]+%d1_Change[ICON_HAPPY] in allen Städten</German>
+		<Italian>[ICON_BULLET]+%d1_Change[ICON_HAPPY] in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]+%d1_Change[ICON_HAPPY] en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]+%d1_Change[ICON_HAPPY] we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]+%d1_Change [ICON_HAPPY] âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_HOME_AREA_MAINT</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Home Continent</English>
+		<French>[ICON_BULLET]Pas de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
+		<German>[ICON_BULLET]keine laufenden Kosten für Städte auf dem Heimatkontinent</German>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento per tutte le città sul continente natale</Italian>
+		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en todas las ciudades situadas en el continente natal</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów utrzymania dla miast na rdzennym kontynencie</Polish>
+		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå äëÿ âñåõ ãîðîäîâ íà äîìàøíåì êîíòèíåíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_HOME_AREA_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Home Continent</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Städte auf dem Heimatkontinent</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città sul continente natale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en todas las ciudades situadas en el continente natal</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania dla miast na rdzennym kontynencie</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå äëÿ âñåõ ãîðîäîâ íà äîìàøíåì êîíòèíåíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_HURTS_DIPLOMACY</Tag>
+		<English>Damages Relations With:[SPACE]</English>
+		<French>Déteriore les Relations Avec:[SPACE]</French>
+		<German>Schadet den Beziehungen zu:[SPACE]</German>
+		<Italian>Peggiora le relazioni con[SPACE]</Italian>
+		<Spanish>Daña las relaciones con:[SPACE]</Spanish>
+		<Polish>Pogarsza stosunki z:[SPACE]</Polish>
+		<Russian>Îòíîøåíèÿ óáûòêîâ ñ:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_HURTS_DIPLOMACY_WITH_PLAYERS</Tag>
+		<English>Damages Relations With Players Using:[SPACE]</English>
+		<French>Déteriore les Relations des Joueurs utilisant:[SPACE]</French>
+		<German>Schadet den Beziehungen zu Spielern mit:[SPACE]</German>
+		<Italian>Peggiora le relazioni con i giocatori che usano[SPACE]</Italian>
+		<Spanish>Daña las relaciones con los jugadores que usen:[SPACE]</Spanish>
+		<Polish>Pogarsza stosunki z graczami posiadającymi:[SPACE]</Polish>
+		<Russian>Ухудшаются отношения с игроками, при использовании:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_HAPPINESS</Tag>
+		<English>[ICON_BULLET]+%D1_Change% %F2 from[SPACE]</English>
+		<French>[ICON_BULLET]+%D1_Change% %F2 :[SPACE]</French>
+		<German>[ICON_BULLET]+%D1_Change% %F2 durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]+%D1_Change% %F2 da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]+%D1_Change% %F2 por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]+%D1_Change% %F2 z:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]+%D1_Change% %F2 от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_HEALTHPERCENT</Tag>
+		<English>[ICON_BULLET]+%s1_Change %F2 from[SPACE]</English>
+		<French>[ICON_BULLET]+%s1_Change %F2 :[SPACE]</French>
+		<German>[ICON_BULLET]+%s1_Change %F2 durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]+%s1_Change %F2 da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]+%s1_Change %F2 por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]+%s1_Change %F2 z:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]+%s1_Change %F2 от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_LANDMARK_HAPPINESS</Tag>
+		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_HAPPY] to nearby cities</English>
+		<French>[ICON_BULLET]Les Repères de terrain donnent +%d1 [ICON_HAPPY] aux Villes voisines</French>
+		<German>[ICON_BULLET]Landmarken geben +%d1 [ICON_HAPPY] in nahegelegenen Städten</German>
+		<Italian>[ICON_BULLET]Le località danno +%d1 [ICON_HAPPY] alle città vicine</Italian>
+		<Spanish>[ICON_BULLET]Las marcas dan +%d1[ICON_HAPPY] a las ciudades cercanas</Spanish>
+		<Polish>[ICON_BULLET]Punkty Orientacyjne dają +%d1 [ICON_HAPPY] do pobliskich miast</Polish>
+		<Russian>[ICON_BULLET]Îðèåíòèðû äàþò +%d1 [ICON_HAPPY] â ñîñåäíèå ãîðîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_LANDMARK_UNHAPPINESS</Tag>
+		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_UNHAPPY] to nearby cities</English>
+		<French>[ICON_BULLET]Les Repères de terrain donnent +%d1 [ICON_UNHAPPY] aux Villes voisines</French>
+		<German>[ICON_BULLET]Landmarken geben +%d1 [ICON_UNHAPPY] in nahegelegenen Städten</German>
+		<Italian>[ICON_BULLET]Le località danno +%d1 [ICON_UNHAPPY] alle città vicine</Italian>
+		<Spanish>[ICON_BULLET]Las marcas dan +%d1[ICON_UNHAPPY] a las ciudades cercanas</Spanish>
+		<Polish>[ICON_BULLET]Punkty Orientacyjne dają +%d1 [ICON_UNHAPPY] do pobliskich miast</Polish>
+		<Russian>[ICON_BULLET]Îðèåíòèðû äàþò +%d1 [ICON_UNHAPPY] â ñîñåäíèå ãîðîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_NON_STATE_REL_HAPPINESS_AMBIGUOUS</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_HappyOrUn per Non-State [ICON_RELIGION] in a City</English>
+		<French>[ICON_BULLET]%D1_Change %F2_HappyOrUn par [ICON_RELIGION] non officielle dans une ville</French>
+		<German>[ICON_BULLET]%D1_Change %F2_HappyOrUn je Non-State [ICON_RELIGION]-Religion in einer Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn per [ICON_RELIGION] non di stato in una città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn por cada Non-State [ICON_RELIGION] en cada ciudad</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change %F2_HappyOrUn na Nie-Państwową [ICON_RELIGION] w Mieście</Polish>
+		<Russian>[ICON_BULLET]%D1_Change %F2_HappyOrUn за любую негосударственную [ICON_RELIGION] в городе</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_NO_CAPITAL_ANGER</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHAPPY] In the Capital City</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] dans la Capitale</French>
+		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] in der Hauptstadt</German>
+		<Italian>[ICON_BULLET]Niente [ICON_UNHAPPY] nella capitale</Italian>
+		<Spanish>[ICON_BULLET]No [ICON_UNHAPPY] en la capital</Spanish>
+		<Polish>[ICON_BULLET]Brak [ICON_UNHAPPY] w Stolicy</Polish>
+		<Russian>[ICON_BULLET]Íåò [ICON_UNHAPPY] Â ñòîëèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_NO_LANDMARK_ANGER</Tag>
+		<English>[ICON_BULLET]Damaging or Removing Landmarks causes no [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]Endommager ou supprimer des repères de terrain n'engendre pas de [ICON_UNHAPPY]</French>
+		<German>[ICON_BULLET]Die Beschädigung oder Zerstörung von Landmarken erzeugt keine [ICON_UNHAPPY]</German>
+		<Italian>[ICON_BULLET]Danneggiare o rimuovere le località non causa [ICON_UNHAPPY]</Italian>
+		<Spanish>[ICON_BULLET]Dañar o eliminar marcas no causa [ICON_UNHAPPY]</Spanish>
+		<Polish>[ICON_BULLET]Uszkodzone lub Usunięte Punkty Orientacyjne nie powodują [ICON_UNHAPPY]</Polish>
+		<Russian>[ICON_BULLET]Ðàçðóøèòåëüíûå èëè Óäàëÿþùèå Îðèåíòèðû íå âûçûâàåò [ICON_UNHAPPY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_RELIGION_NO_SPREAD</Tag>
+		<English>[ICON_BULLET]No Religions will spread</English>
+		<French>[ICON_BULLET]Pas de propagation des Religions</French>
+		<German>[ICON_BULLET]Es werden keine Religionen verbreitet.</German>
+		<Italian>[ICON_BULLET]Nessuna religione si diffonderà</Italian>
+		<Spanish>[ICON_BULLET]No se difundirán religiones</Spanish>
+		<Polish>[ICON_BULLET]Brak religii do rozprzestrzenienia</Polish>
+		<Russian>[ICON_BULLET]Íèêàêèå ðåëèãèè íå ðàñïðîñòðàíÿþòñÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_RELIGION_SPREAD_RATE_FAST</Tag>
+		<English>[ICON_BULLET]Religions Spread %d1% Faster</English>
+		<French>[ICON_BULLET]Les Religions se propagent %d1% plus vite</French>
+		<German>[ICON_BULLET]Religionen verbreiten sich %d1% schneller.</German>
+		<Italian>[ICON_BULLET]Le religioni si diffondono il %d1% più velocemente</Italian>
+		<Spanish>[ICON_BULLET]Las religiones se difunden un %d1% más rápido</Spanish>
+		<Polish>[ICON_BULLET]Rozprzestrzenianie religii %d1% szybciej</Polish>
+		<Russian>[ICON_BULLET]Ðàñïðîñòðàíåíèå ðåëèãèé %d1% áûñòðåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_RELIGION_SPREAD_RATE_SLOW</Tag>
+		<English>[ICON_BULLET]Religions spread at %d1% of normal rate</English>
+		<French>[ICON_BULLET]Les Religions se propagent à %d1% du taux normal</French>
+		<German>[ICON_BULLET]Religionen verbreiten sich mit %d1% der normalen Geschwindigkeit.</German>
+		<Italian>[ICON_BULLET]Le religioni si diffondono al %d1% della normale velocità</Italian>
+		<Spanish>[ICON_BULLET]Las religiones se difunden al %d1% de la tasa normal</Spanish>
+		<Polish>[ICON_BULLET]Rozprzestrzenianie religii o %d1% do normalnej wartości</Polish>
+		<Russian>[ICON_BULLET]Ðàñïðîñòðàíåíèå ðåëèãèé ïðè %d1% íîðìàëüíîãî òåìïà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REL_BUILDING</Tag>
+		<English>[ICON_BULLET]Cities with %F1_RelIcon Construct Buildings %D2_Mod%% as fast</English>
+		<French>[ICON_BULLET]Les Villes avec %F1_RelIcon construisent des bâtiments %D2_Mod%% plus rapidement</French>
+		<Russian>[ICON_BULLET]Города с %F1_RelIcon быстрее строят здания на %D2_Mod%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REL_TRAIN</Tag>
+		<English>[ICON_BULLET]Cities with %F1_RelIcon Train Units %D2_Mod%% as fast</English>
+		<French>[ICON_BULLET]Les Villes avec %F1_RelIcon entraînent des unités %D2_Mod%% plus rapidement</French>
+		<Russian>[ICON_BULLET]Города с %F1_RelIcon быстрее обучают отряды на %D2_Mod%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_BAD_HOLY_CITY</Tag>
+		<English>[ICON_BULLET]%d1 instability penalty per turn if state religion holy city is owned by heathens</English>
+		<French>[ICON_BULLET]%d1 de pénalité par tour : la Ville Sainte de la Religion d'Etat est aux mains de païens.</French>
+		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde, wenn die Heilige Stadt der Staatsreligion von Heiden beherrscht wird</German>
+		<Italian>[ICON_BULLET]Penalità instabilità: %d1/turno se la Città Santa della [ICON_RELIGION] di Stato è controllata da infedeli</Italian>
+		<Spanish>[ICON_BULLET]Penalización a la estabilidad de %d1/turno si la Ciudad Santa de la religión oficial está en manos de infieles</Spanish>
+		<Polish>[ICON_BULLET]%d1 kara do stabilności na turę jeśli święte miasto religii narodowej jest w posiadaniu poganina</Polish>
+		<Russian>[ICON_BULLET]%D1 íåñòàáèëüíîñòè â õîä, åñëè ñâÿòîé ãîðîä òåêóùåé ãîñóäàðñòâåííîé ðåëèãèè â ëàïàõ ÿçû÷íèêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_BAD_RELIGION_MOD</Tag>
+		<English>[ICON_BULLET]+%s1% increase in instability penalties from non-state religions</English>
+		<French>[ICON_BULLET]+%s1% de pénalité : Instabilité liée aux Religions non officielles</French>
+		<German>[ICON_BULLET]+%s1% Steigerung der Instabilitätsmali durch nicht-staatliche Religionen</German>
+		<Italian>[ICON_BULLET]Penalità instabilità: +%s1% per [ICON_RELIGION] NON di Stato</Italian>
+		<Spanish>[ICON_BULLET]Aumento del +%s1% a las penalizaciones a la estabilidad por religiones no oficiales</Spanish>
+		<Polish>[ICON_BULLET]+%s1% zwiększa niestabilność z nienarodowych religii</Polish>
+		<Russian>[ICON_BULLET]+%s1% óâåëè÷åíèå íåñòàáèëüíîñòè îò íåãîñóäàðñòâåííûõ ðåëèãèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_DEMOCRACY</Tag>
+		<English>[ICON_BULLET]%D1% National Stability (Suffrage).</English>
+		<French>[ICON_BULLET]%D1% Stabilité Nationale (Suffrage Universel).</French>
+		<German>[ICON_BULLET]%D1% National Stabilität (Wahlrecht).</German>
+		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (democrazia).</Italian>
+		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (sufragio).</Spanish>
+		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Prawo Wyborcze).</Polish>
+		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ðàâíîïðàâèå).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_ENVIRONMENT</Tag>
+		<English>[ICON_BULLET]%D1% National Stability (Health and Safety).</English>
+		<French>[ICON_BULLET]%D1% Stabilité Nationale (Santé et Sécurité).</French>
+		<German>[ICON_BULLET]%D1% National Stabilität (Gesundheit und Sicherheit).</German>
+		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (salute e sicurezza).</Italian>
+		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (salud y seguridad).</Spanish>
+		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Zdrowie i Bezpieczeństwo).</Polish>
+		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Çäîðîâüå è Áåçîïàñòíîñòü).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_GOOD_HOLY_CITY</Tag>
+		<English>[ICON_BULLET]%d1 stability bonus per turn for owning state religion holy city</English>
+		<French>[ICON_BULLET]%d1 de bonus par tour : la Ville Sainte de la Religion d'Etat fait partie de notre Empire.</French>
+		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde für Besitz der Heiligen Stadt der Staatsreligion</German>
+		<Italian>[ICON_BULLET]Bonus stabilità %d1/turno per il controllo della Città Santa della [ICON_RELIGION] di Stato</Italian>
+		<Spanish>[ICON_BULLET]Bonificación a la estabilidad de %d1/turno si posees la Ciudad Santa de la religión oficial</Spanish>
+		<Polish>[ICON_BULLET]%d1 bonus stabilności na ture dla miast wyznających religie świętego miasta</Polish>
+		<Russian>[ICON_BULLET]%D1 ñòàáèëüíîñòè â õîä, åñëè âëàäååòå ñâÿòûì ãîðîäîì òåêóùåé ãîñóäàðñòâåííîé ðåëèãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_GOOD_RELIGION_MOD</Tag>
+		<English>[ICON_BULLET]+%s1% increase in stability bonuses from state religion</English>
+		<French>[ICON_BULLET]+%s1% de bonus : Stabilité liée à la Religion d'Etat</French>
+		<German>[ICON_BULLET]+%s1% Steigerung der Stabilitätsboni durch die Staatsreligion</German>
+		<Italian>[ICON_BULLET]Bonus stabilità: +%s1% per [ICON_RELIGION] di Stato</Italian>
+		<Spanish>[ICON_BULLET]Aumento del +%s1% a las bonificaciones a la estabilidad por la religión oficial</Spanish>
+		<Polish>[ICON_BULLET]+%s1% zwiększa bonus stabilności dla religii narodowej</Polish>
+		<Russian>[ICON_BULLET]+%s1% óâåëè÷åíèå ñòàáèëüíîñòè îò íåãîñóäàðñòâåííûõ ðåëèãèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_LOCAL_BONUS</Tag>
+		<English>[ICON_BULLET]%d1 local stability bonus per turn in each city</English>
+		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité locale pour la ville</French>
+		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde in jeder Stadt</German>
+		<Italian>[ICON_BULLET]Bonus Stabilità Locale: %d1/turno ogni città</Italian>
+		<Spanish>[ICON_BULLET]Bonificación a la estabilidad local de %d1/turno en la ciudad</Spanish>
+		<Polish>[ICON_BULLET]%d1 do lokalnego bonusu stabilności na turę w każdym mieście</Polish>
+		<Russian>[ICON_BULLET]%D1 ìåñòíîé ñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_LOCAL_PENALTY</Tag>
+		<English>[ICON_BULLET]%d1 local instability penalty per turn</English>
+		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité locale pour la ville</French>
+		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde in jeder Stadt</German>
+		<Italian>[ICON_BULLET]Penalità Instabilità Locale: %d1/turno ogni città</Italian>
+		<Spanish>[ICON_BULLET]Penalización a la estabilidad local de %d1/turno en la ciudad</Spanish>
+		<Polish>[ICON_BULLET]%d1 do lokalnej kary niestabilności na turę w każdym mieście</Polish>
+		<Russian>[ICON_BULLET]%D1 ìåñòíîé íåñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_NATIONAL_BONUS</Tag>
+		<English>[ICON_BULLET]%d1 national stability bonus per turn</English>
+		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité au niveau national</French>
+		<German>[ICON_BULLET]nationaler Stabilitätsbonus von %d1 pro Runde</German>
+		<Italian>[ICON_BULLET]Bonus Stabilità Nazionale: %d1/turno</Italian>
+		<Spanish>[ICON_BULLET]Bonificación a la estabilidad nacional de %d1/turno</Spanish>
+		<Polish>[ICON_BULLET]%d1 narodowy bonus do stabilności na turę</Polish>
+		<Russian>[ICON_BULLET]%D1 íàöèîíàëüíîé ñòàáèëüíîñòè â õîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_NATIONAL_PENALTY</Tag>
+		<English>[ICON_BULLET]%d1 national instability penalty per turn</English>
+		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité au niveau national</French>
+		<German>[ICON_BULLET]nationaler Instabilitätsmalus von %d1 pro Runde</German>
+		<Italian>[ICON_BULLET]Penalità Instabilità Nazionale: %d1/turno</Italian>
+		<Spanish>[ICON_BULLET]Penalización a la estabilidad nacional de %d1/turno</Spanish>
+		<Polish>[ICON_BULLET]%d1 do narodowej kary niestabilności na turę</Polish>
+		<Russian>[ICON_BULLET]%D1 íàöèîíàëüíîé íåñòàáèëüíîñòè â õîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_LABOR</Tag>
+		<English>[ICON_BULLET]%D1% National Stability (labor).</English>
+		<French>[ICON_BULLET]%D1% Stabilité Nationale (Travail).</French>
+		<German>[ICON_BULLET]%D1% National Stabilität (Arbeit).</German>
+		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (lavoro).</Italian>
+		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (trabajo)</Spanish>
+		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Praca).</Polish>
+		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ïðîôñîþçû).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_NATIONALITY_INCREASE_MOD</Tag>
+		<English>[ICON_BULLET]+%s1% Revolutionary sentiment (alienation)</English>
+		<French>[ICON_BULLET]+%s1% Climat Révolutionaire (Aliénation)</French>
+		<German>[ICON_BULLET]+%s1% Revolutionäre Stimmung (Entfremdung)</German>
+		<Italian>[ICON_BULLET]Spirito rivoluzionario: +%s1% (Alienazione)</Italian>
+		<Spanish>[ICON_BULLET]+%s1% al espíritu revolucionario (enajenación)</Spanish>
+		<Polish>[ICON_BULLET]+%s1% uczucie rewolucyjne (alienizacja)</Polish>
+		<Russian>[ICON_BULLET]+%s1% Ðåâîëþöèîííûå ÷óâñòâà (Îò÷óæäåííîñòü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_NATIONALITY_REDUCTION_MOD</Tag>
+		<English>[ICON_BULLET]%s1% Revolutionary sentiment (Patriotism).</English>
+		<French>[ICON_BULLET]%s1% Climat Révolutionaire (Patriotisme).</French>
+		<German>[ICON_BULLET]%s1% Revolutionäre Stimmung (Patriotismus).</German>
+		<Italian>[ICON_BULLET]Spirito rivoluzionario: %s1% (Patriottismo).</Italian>
+		<Spanish>[ICON_BULLET]-%s1% al espíritu revolucionario (patriotismo)</Spanish>
+		<Polish>[ICON_BULLET]%s1% uczucie rewolucyjne (Patriotyzm).</Polish>
+		<Russian>[ICON_BULLET]%s1% Ðåâîëþöèîííûå ÷óâñòâà (Ïàòðèîòèçì).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_RELIGION_FREEDOM</Tag>
+		<English>[ICON_BULLET]%D1% National Stability (religious freedom).</English>
+		<French>[ICON_BULLET]%D1% Stabilité Nationale (Liberté de Culte).</French>
+		<German>[ICON_BULLET]%D1% Nationale Stabilität (Religionsfreiheit).</German>
+		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (libertà religiosa).</Italian>
+		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (libertad religiosa)</Spanish>
+		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Wolność religilna).</Polish>
+		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ðåëèãèîçíàÿ ñâîáîäà).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_RELIGION_OPRESSION</Tag>
+		<English>[ICON_BULLET]%D1% National Stability (religious oppression).</English>
+		<French>[ICON_BULLET]%D1% Stabilité Nationale (Oppression religieuse).</French>
+		<German>[ICON_BULLET]%D1% National Stabilität (religiöse Unterdrückung).</German>
+		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (oppressione religiosa).</Italian>
+		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (opresión religiosa)</Spanish>
+		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Prześladowania religijne).</Polish>
+		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ðåëèãèîçíûå ãîíåíèÿ).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_SWITCH_TO_BONUS</Tag>
+		<English>[ICON_BULLET]%D1 one-time stability bonus for adopting civic</English>
+		<French>[ICON_BULLET]%D1 de bonus unique de Stabilité : Adoption de la Doctrine</French>
+		<German>[ICON_BULLET]einmaliger Stabilitätsbonus von %D1 durch die Übernahme der Gesellschaftsform</German>
+		<Italian>[ICON_BULLET]Bonus stabilità per variazione forma di governo (%D1 una tantum)</Italian>
+		<Spanish>[ICON_BULLET]Bonificación inmediata de %D1 a la estabilidad por adoptar el principio</Spanish>
+		<Polish>[ICON_BULLET]%d1 jednorazowy bonus do stabilności przy zmianie doktryny</Polish>
+		<Russian>[ICON_BULLET]%D1 îäíîðàçîâîé ñòàáèëüíîñòè â ñëó÷àå ïðèíÿòèÿ èíñòèòóòà âëàñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REV_SWITCH_TO_PENALTY</Tag>
+		<English>[ICON_BULLET]%D1 one-time instability penalty for adopting civic</English>
+		<French>[ICON_BULLET]%D1 de penalité unique pour Instabilité : Adoption de la Doctrine</French>
+		<German>[ICON_BULLET]einmaliger Instabilitätsmalus von %D1 durch die Übernahme der Gesellschaftsform</German>
+		<Italian>[ICON_BULLET]%Penalità instabilità per variazione forma di governo (%D1 una tantum)</Italian>
+		<Spanish>[ICON_BULLET]Penalización inmediata de %D1 a la estabilidad por adoptar el principio</Spanish>
+		<Polish>[ICON_BULLET]%d1 jednorazowa kara stabilności przy zmianie doktryny</Polish>
+		<Russian>[ICON_BULLET]%D1 îäíîðàçîâîé íåñòàáèëüíîñòè â ñëó÷àå ïðèíÿòèÿ èíñòèòóòà âëàñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_SOFT_CITY_LIMIT</Tag>
+		<English>[ICON_BULLET]Settling more than %d1 cities will cause %d2 unhappiness in every city for each one over that limit</English>
+		<French>[ICON_BULLET]La fondation de plus de %d1 villes causera %d2 de mécontentement dans chaque ville, et ce pour chaque dépassement</French>
+		<Italian>[ICON_BULLET]Fondare più di %d1 città causerà %d2 di infelicità in tutte le città, per ogni città sopra il limite</Italian>
+		<Spanish>[ICON_BULLET]Fundar más de %d1 [NUM1:ciudad:ciudades] causará %d2[ICON_UNHAPPY] en todas las ciudades por cada ciudad sobre dicho límite</Spanish>
+		<Polish>[ICON_BULLET]Zbudowanie więcej niż %d1 miast wywoła %d2 niezadowolenia dla każdego miasta powyżej limitu</Polish>
+		<Russian>[ICON_BULLET]Ïðåâûøåíèå ëèìèòà áîëåå ÷åì íà %d1 ãîðîäîâ äàñò %d2 íåñ÷àñòíûõ ãðàæäàí </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_SPECIALIST_COMMERCE_CHANGE</Tag>
+		<English>[ICON_BULLET]%s1_Change %F2 from[SPACE]</English>
+		<French>[ICON_BULLET]%s1_Change %F2 :[SPACE]</French>
+		<German>[ICON_BULLET]%s1_Change %F2 durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]%s1_Change %F2 da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%s1_Change %F2 por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]%s1_Change %F2 z:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]%s1_Change %F2 от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_STATE_REL_BUILDING</Tag>
+		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Construct Buildings %D1_Mod%% as fast</English>
+		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état construisent des bâtiments %D1_Mod%% plus rapidement</French>
+		<Russian>[ICON_BULLET]Города с государственной [ICON_RELIGION] быстрее строят здания на %D1_Mod%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_STATE_REL_TRAIN</Tag>
+		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Train Units %D1_Mod%% as fast</English>
+		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état entraînent des unités %D1_Mod%% plus rapidement</French>
+		<Russian>[ICON_BULLET]Города с государственной [ICON_RELIGION] быстрее обучают отряды на %D1_Mod%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_SUBSIDY</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Subsidy for Corporations</English>
+		<French>[ICON_BULLET]%D1_Mod%% de subventions pour les Corporations</French>
+		<German>[ICON_BULLET]%D1_Mod%% Subventionen für Kapitalgesellschaften</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di sussidi per le corporazioni</Italian>
+		<Spanish>[ICON_BULLET]Subvención del %D1_Mod%% a las corporaciones</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% dotacji dla Korporacji</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% ñóáñèäèÿ äëÿ êîðïîðàöèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_TAXATION_ANGER</Tag>
+		<English>[ICON_BULLET]Extra [ICON_UNHAPPY] In All Cities Per %d1% Tax Rate</English>
+		<French>[ICON_BULLET][ICON_UNHAPPY] supplémentaires dans toutes les Villes pour %d1% de taxes</French>
+		<German>[ICON_BULLET]Zusätzlich [ICON_UNHAPPY] in allen Städten pro %d1% Steuerrate</German>
+		<Italian>[ICON_BULLET]Extra [ICON_UNHAPPY] in tutte le città ogni %d1% di tasse</Italian>
+		<Spanish>[ICON_BULLET][ICON_UNHAPPY] extra en todas las ciudades por cada %d1% de impuestos</Spanish>
+		<Polish>[ICON_BULLET]Dodatkowe [ICON_UNHAPPY] we wszystkich miastach na każde %d1% podatków</Polish>
+		<Russian>[ICON_BULLET]Äîïîëíèòåëüíûé [ICON_UNHAPPY] IÂî âñåõ ãîðîäàõ çà %d1% íàëîãîâóþ ñòàâêó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_TERRAIN_YIELD_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%F2_Icon z:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_Icon от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_UNHAPPINESS</Tag>
+		<English>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] In all cities</English>
+		<French>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] dans toutes les Villes</French>
+		<German>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] in allen Städten</German>
+		<Spanish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]+%d1_Change [ICON_UNHAPPY] âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_UNIT_COMBAT_PRODUCTION_MOD</Tag>
+		<English>[SPACE]Trained %D1%% Faster</English>
+		<French>[SPACE]Entaînement %D1%% plus rapide</French>
+		<German>[SPACE]wurde %D1%% schneller ausgebildet</German>
+		<Italian>[SPACE]costruite il %D1%% più velocemente</Italian>
+		<Spanish>[SPACE]entrenadas un %D1%% más rápido</Spanish>
+		<Polish>[SPACE]buduje %D1%% szybciej</Polish>
+		<Russian>[SPACE]Îáó÷àåòñÿ %D1%% áûñòðåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_UNLOCKS_BUILDING</Tag>
+		<English>[ICON_BULLET]Allows construction of[SPACE]</English>
+		<French>[ICON_BULLET]Permet la construction de[SPACE]</French>
+		<German>[ICON_BULLET]Spezialgebäude/-effekte:[SPACE]</German>
+		<Italian>[ICON_BULLET]Permette la costruzione di[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Permite la construcción de[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]Pozwala zbudować:[SPACE]</Polish>
+		<Russian>[ICON_BULLET]Ïîçâîëÿåò ñòðîèòåëüñòâî[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_ABBR_AGRICULTURE</Tag>
 		<English>Agri.</English>
 		<German>Agrar</German>
@@ -413,26 +1095,6 @@
 		<Russian>В сельскохозяйственном секторе преобладают объединения крестьянских хозяйств.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_ALLOWS_USE_OF_EXECUTIVES</Tag>
-		<English>[ICON_BULLET]Can train Units to Spread Corporations</English>
-		<French>[ICON_BULLET]Peut entraîner des Unités pour propager les Corporations</French>
-		<German>[ICON_BULLET]Kann Einheiten ausbilden, die neue Standorte für Kapitalgesellschaften erschließen können</German>
-		<Italian>[ICON_BULLET]Può costruire unità per diffondere le corporazioni</Italian>
-		<Spanish>[ICON_BULLET]Puede entrenar unidades para expandir las corporaciones</Spanish>
-		<Polish>[ICON_BULLET]Pozwala budować jednostki do rozszerzania Korporacji</Polish>
-		<Russian>[ICON_BULLET]Ìîæåò òðåíèðîâàòü îòðÿäû, ðàñïðîñòðàíÿþùèå êîðïîðàöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_ALLOW_INQUISITONS</Tag>
-		<English>[ICON_BULLET]Inquisitor Units may purge non state [ICON_RELIGION] from cities where State [ICON_RELIGION] is present.</English>
-		<French>[ICON_BULLET]Les Inquisiteurs peuvent purger les [ICON_RELIGION] non officielles dans les Villes où la [ICON_RELIGION] d'Etat est présente.</French>
-		<German>[ICON_BULLET]Inquisitoren können nicht-staatliche [ICON_RELIGION] aus Städten eliminieren, in denen die Staats-[ICON_RELIGION] vorhanden ist.</German>
-		<Italian>[ICON_BULLET]Gli Inquisitori possono eradicare [ICON_RELIGION] diverse da quella di Stato nelle città dove è presente la [ICON_RELIGION] di Stato.</Italian>
-		<Spanish>[ICON_BULLET]Los Inquisidores pueden eliminar [ICON_RELIGION] no oficiales de ciudades donde la [ICON_RELIGION] oficial esté presente.</Spanish>
-		<Polish>[ICON_BULLET]Inkwizytorzy mogą wytępić nienarodową [ICON_RELIGION] z miast gdzie jest narodowa [ICON_RELIGION].</Polish>
-		<Russian>[ICON_BULLET]Èíêâèçèòîðû ìîãóò âûæå÷ü íåãîñóäàðñòâåííóþ [ICON_RELIGION] èç ãîðîäîâ ñ ãîñóäàðñòâåííîé [ICON_RELIGION].</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ANARCHISM</Tag>
 		<English>Anarchism</English>
 		<French>Anarchisme</French>
@@ -463,12 +1125,6 @@
 		<Russian>Неформальные объединения людей заменяют потребность в центральной власти.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_ANARCHY_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Modifier%% Anarchy time from Civic changes.</English>
-		<French>[ICON_BULLET]%D1_Modifier%% Temps d'Anarchie du changement de doctrines.</French>
-		<Russian>[ICON_BULLET]%D1_Modifier%% к продолжительности Анархии за смену парадигм.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ANTIRELIGION</Tag>
 		<English>Antireligion</English>
 		<French>Antireligion</French>
@@ -478,7 +1134,7 @@
 		<Tag>TXT_KEY_CIVIC_ANTIRELIGION_PEDIA</Tag>
 		<English>Antireligion is opposition to religion of any kind. The term has been used to describe opposition to organized religion, religious practices or religious institutions. This term has also been used to describe opposition to specific forms of supernatural worship or practice, whether organized or not.[PARAGRAPH:2]Opposition to religion also goes beyond the misotheistic spectrum. As such it is distinct from deity-specific positions such as atheism (the denial of belief in deities) and antitheism (an opposition to belief in deities), although "antireligionists" may also be atheists or antitheists.[PARAGRAPH:2]An early form of mass antireligion was expressed during the Enlightenment, as early as the 17th century. Baron d'Holbach's book Christianity Unveiled published in 1761, attacked not only Christianity but religion in general as an impediment to the moral advancement of humanity. According to historian Michael Burleigh, antireligion found its first mass expression of barbarity in revolutionary France as "organised irreligion, an 'anti-clerical' and self-styled 'non-religious' state" responded violently to religious influence over society.[PARAGRAPH:2]The Soviet Union adopted the political ideology of Marxism-Leninism and viewed religion as closely tied with foreign nationality. It thus directed varying degrees of antireligious efforts at varying faiths, depending on what threat they posed to the Soviet state, and their willingness to subordinate itself to political authority. These antireligious campaigns were directed at all faiths, including Christian, Islamic, Buddhist, Jewish, and Shamanist religions. In the 1930s, during the Stalinist period, the government destroyed church buildings or put them into secular use (as museums of religion and atheism, clubs or storage facilities), executed clergy, prohibited the publication of most religious material and persecuted some members of religious groups.[PARAGRAPH:2]The People's Republic of Albania had an objective for the eventual elimination of all religion in Albania with the goal of creating an atheist nation, which it declared it had achieved in 1967. In 1976, Albania implemented a constitutional ban on religious activity and propaganda. The government nationalised most property of religious institutions and used it for non-religious purposes, such as cultural centers for young people. Religious literature was banned. Many clergy and theists were tried, tortured, and executed. All foreign Roman Catholic clergy were expelled in 1946. Albania was the only country that ever officially banned religion.[PARAGRAPH:2]Authorities in the People's Republic of Romania aimed to move towards an atheistic society, in which religion would be considered as the ideology of the bourgeoisie; the régime also set to propagate among the laboring masses in science, politics and culture to help them fight superstition and mysticism, and initiated an anti-religious campaign aimed to reducing the influence of religion in society.[PARAGRAPH:2]The Khmer Rouge attempted to eliminate Cambodia's cultural heritage, including its religions, particularly Theravada Buddhism. Over the four years of Khmer Rouge rule, at least 1.5 million Cambodians were executed. Of there sixty thousand Buddhist monks that previously existed, only three thousand survived the Khmer Rouge horror.[PARAGRAPH:2]Christopher Hitchens was a well-known religious critic of the 20th and 21th century who maintained opposition to religion, arguing that free expression and scientific discovery should replace religion as the method of teaching ethics and defining human civilization.</English>
 		<French>L'antireligion est une opposition à toute religion. Le terme a été utilisé pour décrire l'opposition à la religion organisée, aux pratiques religieuses ou aux institutions religieuses. Ce terme a également été utilisé pour décrire l'opposition à des formes spécifiques de culte ou de pratique surnaturelle, qu'elles soient organisées ou non.[PARAGRAPH:2]L'opposition à la religion dépasse également le spectre misothéiste. En tant que tel, il est distinct des positions spécifiques aux divinités telles que l'athéisme (le déni de la croyance en des divinités) et l'antithéisme (une opposition à la croyance en des divinités), bien que les "antireligionists" puissent également être des athées ou des antithéistes.[PARAGRAPH:2]forme d'antireligion de masse a été exprimée pendant les Lumières, dès le 17ème siècle. Le livre du baron d'Holbach Christianity Unveiled publié en 1761, a attaqué non seulement le christianisme mais la religion en général comme un obstacle au progrès moral de l'humanité. Selon l'historien Michael Burleigh, l'antireligion a trouvé sa première expression de masse de barbarie dans la France révolutionnaire comme "irréligion organisée, un état" anti-clérical "et autoproclamé" non religieux "" a répondu violemment à l'influence religieuse sur la société.</French>
-		<Russian>Атеизм - в широком смысле - отвержение веры в существование богов; в более узком - убеждение в том, что богов не существует. В самом широком смысле атеизм - простое отсутствие веры в существование богов. Атеизм противоположен теизму, понимаемому в самом общем случае как вера в существование одного или нескольких богов. Атеизм часто понимается также как отрицание существования сверхъестественного вообще - богов, духов, других нематериальных существ и сил, загробной жизни и т. д. По отношению к религии атеизм - мировоззрение, отрицающее религию как веру в сверхъестественное.[PARAGRAPH:2]Для атеизма характерна убеждённость в самодостаточности естественного мира (природы) и в человеческом (не сверхъестественном) происхождении всех религий, в том числе религий откровения. Многие из тех, кто считает себя атеистом, скептически относятся ко всем сверхъестественным существам, явлениям и силам, указывая на отсутствие эмпирических свидетельств их существования. Другие приводят доводы в пользу атеизма, опираясь на философию, социологию или историю. Большая часть атеистов является сторонниками светских философий, таких как гуманизм и натурализм. Не существует единой идеологии или шаблона поведения, присущего всем атеистам.[PARAGRAPH:2]Термин «атеизм» появился как уничижительный эпитет, применявшийся к любому человеку или учению, находившемуся в конфликте с установившейся религией. И только позднее это слово стало означать определённую философскую позицию. С распространением свободы убеждений, свободы мысли и совести, научного скептицизма и критики религии этот термин стал приобретать более конкретное значение и начал использоваться атеистами для самообозначения.[PARAGRAPH:2]Раннее Форма массовой антирелигиозности была выражена еще во времена Просвещения, еще в 17 веке. Книга барона д’Ольбаха «Разоблаченное христианство», опубликованная в 1761 году, осудила не только христианство, но и религию в целом как препятствие на пути нравственного развития человечества. Согласно историку Майклу Берли, антирелигия нашла свое первое массовое выражение варварства в революционной Франции как «организованное безбожие, "антиклерикальное" и самозваное "нерелигиозное" государство», бурно отреагировавшее на религиозное влияние на общество.[PARAGRAPH:2]Советский Союз принял политическую идеологию марксизма-ленинизма и рассматривал религию как тесно связанную с иностранным гражданством. Таким образом, он направил различные степени антирелигиозных усилий на различные конфессии, в зависимости от того, какую угрозу они представляли Советскому государству, и их готовности подчиниться политической власти. Эти антирелигиозные кампании были направлены против всех конфессий, включая христианские, исламские, буддистские, иудейские и шаманские религии. В 30-е годы, в сталинский период, правительство разрушало церковные здания или использовало их в светских целях (в качестве музеев религии и атеизма, клубов или хранилищ), организовывало гонения на духовенство, запрещало публикацию большинства религиозных материалов и преследовало некоторых религиозных деятелей или групп.[PARAGRAPH:2]Народная Республика Албания преследовала цель окончательной ликвидации всех религий в Албании с целью создания атеистической нации, которую она объявила в 1967 году. В 1976 году Албания ввела конституционный запрет на религиозную деятельность и пропаганду. Правительство национализировало большую часть имущества религиозных учреждений и использовало его в нерелигиозных целях, таких как культурные центры для молодежи. Религиозная литература была запрещена. Многие священнослужители и теисты предстали перед судом, подвергались пыткам и казни. Все иностранные римско-католические священнослужители были высланы в 1946 году. Албания была единственной страной, которая когда-либо официально запрещала религию.[PARAGRAPH:2]Власти Румынской Народной Республики стремились продвигаться к атеистическому обществу, в котором религия считалась бы идеологией. буржуазии; Режим также начал пропагандировать среди трудящихся масс в науке, политике и культуре, чтобы помочь им бороться с суевериями и мистикой, и инициировал антирелигиозную кампанию, направленную на уменьшение влияния религии в обществе.[PARAGRAPH:2]Попытка красных кхмеров уничтожить культурное наследие Камбоджи, включая ее религии, в частности буддизм тхеравады. За четыре года правления красных кхмеров казнили не менее 1,5 миллиона камбоджийцев. Из шестидесяти тысяч буддийских монахов, которые существовали ранее, только три тысячи пережили ужас красных кхмеров.[PARAGRAPH:2]Кристофер Хитченс и Ричард Докинз были известными критиками религии на рубеже 20-го и 21-го века, поддерживавшие оппозицию религии, утверждая, что свобода выражения и научные достижения должны заменить религию как метод преподавания этики и определения путей человеческой цивилизации.</Russian>
+		<Russian>Атеизм - в широком смысле - отвержение веры в существование богов; в более узком - убеждение в том, что богов не существует. В самом широком смысле атеизм - простое отсутствие веры в существование богов. Атеизм противоположен теизму, понимаемому в самом общем случае как вера в существование одного или нескольких богов. Атеизм часто понимается также как отрицание существования сверхъестественного вообще - богов, духов, других нематериальных существ и сил, загробной жизни и т. д. По отношению к религии атеизм - мировоззрение, отрицающее религию как веру в сверхъестественное.[PARAGRAPH:2]Для атеизма характерна убеждённость в самодостаточности естественного мира (природы) и в человеческом (не сверхъестественном) происхождении всех религий, в том числе религий откровения. Многие из тех, кто считает себя атеистом, скептически относятся ко всем сверхъестественным существам, явлениям и силам, указывая на отсутствие эмпирических свидетельств их существования. Другие приводят доводы в пользу атеизма, опираясь на философию, социологию или историю. Большая часть атеистов является сторонниками светских философий, таких как гуманизм и натурализм. Не существует единой идеологии или шаблона поведения, присущего всем атеистам.[PARAGRAPH:2]Термин «атеизм» появился как уничижительный эпитет, применявшийся к любому человеку или учению, находившемуся в конфликте с установившейся религией. И только позднее это слово стало означать определённую философскую позицию. С распространением свободы убеждений, свободы мысли и совести, научного скептицизма и критики религии этот термин стал приобретать более конкретное значение и начал использоваться атеистами для самообозначения.[PARAGRAPH:2]Раннее Форма массовой антирелигиозности была выражена еще во времена Просвещения, еще в 17 веке. Книга барона д'Ольбаха «Разоблаченное христианство», опубликованная в 1761 году, осудила не только христианство, но и религию в целом как препятствие на пути нравственного развития человечества. Согласно историку Майклу Берли, антирелигия нашла свое первое массовое выражение варварства в революционной Франции как «организованное безбожие, "антиклерикальное" и самозваное "нерелигиозное" государство», бурно отреагировавшее на религиозное влияние на общество.[PARAGRAPH:2]Советский Союз принял политическую идеологию марксизма-ленинизма и рассматривал религию как тесно связанную с иностранным гражданством. Таким образом, он направил различные степени антирелигиозных усилий на различные конфессии, в зависимости от того, какую угрозу они представляли Советскому государству, и их готовности подчиниться политической власти. Эти антирелигиозные кампании были направлены против всех конфессий, включая христианские, исламские, буддистские, иудейские и шаманские религии. В 30-е годы, в сталинский период, правительство разрушало церковные здания или использовало их в светских целях (в качестве музеев религии и атеизма, клубов или хранилищ), организовывало гонения на духовенство, запрещало публикацию большинства религиозных материалов и преследовало некоторых религиозных деятелей или групп.[PARAGRAPH:2]Народная Республика Албания преследовала цель окончательной ликвидации всех религий в Албании с целью создания атеистической нации, которую она объявила в 1967 году. В 1976 году Албания ввела конституционный запрет на религиозную деятельность и пропаганду. Правительство национализировало большую часть имущества религиозных учреждений и использовало его в нерелигиозных целях, таких как культурные центры для молодежи. Религиозная литература была запрещена. Многие священнослужители и теисты предстали перед судом, подвергались пыткам и казни. Все иностранные римско-католические священнослужители были высланы в 1946 году. Албания была единственной страной, которая когда-либо официально запрещала религию.[PARAGRAPH:2]Власти Румынской Народной Республики стремились продвигаться к атеистическому обществу, в котором религия считалась бы идеологией. буржуазии; Режим также начал пропагандировать среди трудящихся масс в науке, политике и культуре, чтобы помочь им бороться с суевериями и мистикой, и инициировал антирелигиозную кампанию, направленную на уменьшение влияния религии в обществе.[PARAGRAPH:2]Попытка красных кхмеров уничтожить культурное наследие Камбоджи, включая ее религии, в частности буддизм тхеравады. За четыре года правления красных кхмеров казнили не менее 1,5 миллиона камбоджийцев. Из шестидесяти тысяч буддийских монахов, которые существовали ранее, только три тысячи пережили ужас красных кхмеров.[PARAGRAPH:2]Кристофер Хитченс и Ричард Докинз были известными критиками религии на рубеже 20-го и 21-го века, поддерживавшие оппозицию религии, утверждая, что свобода выражения и научные достижения должны заменить религию как метод преподавания этики и определения путей человеческой цивилизации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ANTIRELIGION_STRATEGY</Tag>
@@ -677,46 +1333,6 @@
 		<Russian>Генная инженерия в сочетании с кибернетическими улучшениями разделила общество на различные классы, основанные на умственных и физических способностях.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BLOCKS_BUILDING</Tag>
-		<English>[ICON_BULLET]Disables construction of[SPACE]</English>
-		<French>[ICON_BULLET]Désactive l'utilisation de [SPACE]</French>
-		<German>[ICON_BULLET]Verhindert den Bau von[SPACE]</German>
-		<Italian>[ICON_BULLET]Disattiva la costruzione di[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]Desactiva la construcción de[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]Dezaktywuje:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]Îòìåíÿåò ñòðîèòåëüñòâî[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BONUS_MINTED</Tag>
-		<English>[ICON_BULLET]%s1[ICON_GOLD] per city with access to</English>
-		<French>[ICON_BULLET]%s1[ICON_GOLD] par ville ayant accès à</French>
-		<German>[ICON_BULLET]%s1[ICON_GOLD] pro Stadt mit Zugang zu</German>
-		<Italian>[ICON_BULLET]%s1[ICON_GOLD] per goni città con accesso a</Italian>
-		<Spanish>[ICON_BULLET]%s1[ICON_GOLD] por ciudad con acceso a</Spanish>
-		<Polish>[ICON_BULLET]%s1[ICON_GOLD] na miasto z dostępem do</Polish>
-		<Russian>[ICON_BULLET]%s1[ICON_GOLD] çà ãîðîä ñ äîñòóïîì ê </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BOOSTS_DIPLOMACY</Tag>
-		<English>Improves Relations With:[SPACE]</English>
-		<French>Améliore les Relations avec:[SPACE]</French>
-		<German>Verbessert die Beziehungen zu:[SPACE]</German>
-		<Italian>Migliora le relazioni con [SPACE]</Italian>
-		<Spanish>Mejora las relaciones con:[SPACE]</Spanish>
-		<Polish>Polepsza stosunki z:[SPACE]</Polish>
-		<Russian>Óëó÷øàåò îòíîøåíèÿ ñ:[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BOOSTS_DIPLOMACY_WITH_PLAYERS</Tag>
-		<English>Improves Relations With Players Using:[SPACE]</English>
-		<French>Améliore les Relations des Joueurs utilisant:[SPACE]</French>
-		<German>Verbessert die Beziehungen zu Spielern mit:[SPACE]</German>
-		<Italian>Migliora le relazioni con i giocatori che usano[SPACE]</Italian>
-		<Spanish>Mejora las relaciones con los jugadores que usen:[SPACE]</Spanish>
-		<Polish>Polepsza stosunki z graczami posiadającymi:[SPACE]</Polish>
-		<Russian>Улучшает отношения с игроками, если использует:[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BORDERLESS</Tag>
 		<English>Borderless</English>
 		<French>Pas de frontières</French>
@@ -776,65 +1392,6 @@
 		<Spanish>Principio de Sociedad: Burguesía</Spanish>
 		<Polish>Ustrój społeczny: Burżuazja</Polish>
 		<Russian>Буржуазия увеличивает культуру во всех городах, и некоторые улучшения местности приносят больше золота. Уменьшает стоимость постройки некоторых зданий, и изменяет эффекты счастья от некоторых зданий.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BUILDING_COMMERCE_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2 from[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Change %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change %F2 durch die Modernisierung[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change %F2 da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2 por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change %F2 z:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change %F2 от[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BUILDING_COMMERCE_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Change%% %F2 from[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Change%% %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%% %F2 durch die Modernisierung[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% %F2 da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% %F2 por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% %F2 z:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change%% %F2 от[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BUILDING_HAPPINESS_PREFIX</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp :[SPACE]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD</Tag>
-		<English>% Faster Construction of[SPACE]</English>
-		<French>% Construction plus rapide de[SPACE]</French>
-		<German>% schnellere Konstruktion von[SPACE]</German>
-		<Italian>% costruzione più veloce di[SPACE]</Italian>
-		<Spanish>% de aumento de velocidad de construcción de[SPACE]</Spanish>
-		<Polish>% szybciej:[SPACE]</Polish>
-		<Russian>% Ускоренное строительство[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW</Tag>
-		<English>% Slower Construction of[SPACE]</English>
-		<French>% Construction plus lente de[SPACE]</French>
-		<German>% langsamere Konstruktion von[SPACE]</German>
-		<Italian>% costruzione più lenta di[SPACE]</Italian>
-		<Spanish>% de disminución de velocidad de construcción de[SPACE]</Spanish>
-		<Polish>% wolniejsza budowa jeśli w mieście jest:[SPACE]</Polish>
-		<Russian>% Замедление строительства[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_BUILD_MISSIONARIES</Tag>
-		<English>[ICON_BULLET]Can Build special units without [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Peut construire les Unités spéciales sans [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Spezialeinheiten möglich ohne [COLOR_BUILDING_TEXT]%s1:4_Building[COLOR_REVERT]</German>
-		<Spanish>[ICON_BULLET]Puede entrenar unidades especiales sin [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</Spanish>
-		<Polish>[ICON_BULLET]Umożliwia budowę jednostek specjalnych bez: [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET]Ìîæíî ñîçäàâàòü ìèññèîíåðîâ áåç êóëüòîâûõ ïîñòðîåê ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY</Tag>
@@ -1110,46 +1667,6 @@
 		<French>Les institutions religieuses assurent le sanctuaire et les soins de base aux personnes dans le besoin grâce aux dîmes prélevées auprès de la population pieuse.</French>
 		<Spanish>El principio de la Iglesia aumenta la salud de todas las ciudades en 1, y todos los monasterios de todas las religiones aumentarán la salud de las ciudades en 1. Las mejoras se actualizarán más rápido y las ciudades con la religión oficial podrán construir edificios más rápido.</Spanish>
 		<Russian>Религиозные учреждения обеспечивают убежище и базовую помощь нуждающимся людям благодаря десятинам, собираемым от набожного населения.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_CITY_DEFENSE_MOD</Tag>
-		<English>[ICON_BULLET]%D1%% City Defense in all Cities</English>
-		<French>[ICON_BULLET]%D1%% de Défense dans toutes les Villes</French>
-		<German>[ICON_BULLET]%D1%% Stadtverteidigung in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1%% difesa cittadina in tutte le città.</Italian>
-		<Spanish>[ICON_BULLET]%D1%% de bonificación defensiva en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]%D1%% Obrany Miasta we wszystkich miastach.</Polish>
-		<Russian>[ICON_BULLET]%d1%% Ãîðîäñêàÿ çàùèòà âî âñåõ ãîðîäàõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_CITY_DISTANCE_BAD_MOD</Tag>
-		<English>[ICON_BULLET]%d1% to city distance instability penalty</English>
-		<French>[ICON_BULLET]%d1% de pénalité : Distance des Villes</French>
-		<German>[ICON_BULLET]%d1% Instabilitätsmalus durch die Entfernung zwischen den Städten</German>
-		<Italian>[ICON_BULLET]Variazione della penalità instabilità per distanza: %d1%</Italian>
-		<Spanish>[ICON_BULLET]%d1% a la penalización a la estabilidad por distancia con la capital</Spanish>
-		<Polish>[ICON_BULLET]%d1% do kary niestabilności za odległość od miasta</Polish>
-		<Russian>[ICON_BULLET]+%s1% íåñòàáèëüíîñòè îò äàëüíîñòè ãîðîäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_CITY_DISTANCE_GOOD_MOD</Tag>
-		<English>[ICON_BULLET]%d1% to city distance instability penalty</English>
-		<French>[ICON_BULLET]%d1% de pénalité : Distance des Villes</French>
-		<German>[ICON_BULLET]%d1% Instabilitätsmalus durch die Entfernung zwischen den Städten</German>
-		<Italian>[ICON_BULLET]Variazione della penalità instabilità per distanza: %d1%</Italian>
-		<Spanish>[ICON_BULLET]%d1% a la penalización a la estabilidad por distancia con la capital</Spanish>
-		<Polish>[ICON_BULLET]%d1% do kary niestabilności za odległość od miasta</Polish>
-		<Russian>[ICON_BULLET]%s1% íåñòàáèëüíîñòè îò äàëüíîñòè ãîðîäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_CITY_LIMIT</Tag>
-		<English>[ICON_BULLET]Can not settle more than %d1 cities</English>
-		<French>[ICON_BULLET]Ne peut fonder plus de %d1 villes</French>
-		<German>[ICON_BULLET]Eure Gesellschaftsform erlaubt es nicht, mehr als %d1 Städte zu gründen.</German>
-		<Italian>[ICON_BULLET]Non può fondare più di %d1 città</Italian>
-		<Spanish>[ICON_BULLET]No se [NUM1:puede:pueden] fundar más de %d1 [NUM1:ciudad:ciudades]</Spanish>
-		<Polish>[ICON_BULLET]Nie można założyć więcej niż %d1 miast</Polish>
-		<Russian>[ICON_BULLET]Íå ìîæåò ïîñåëèòüñÿ áîëüøå, ÷åì %d1 ãîðîäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CITY_STATES</Tag>
@@ -1443,13 +1960,6 @@
 		<Russian>Повинность</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_CONSCRIPTION_CHANGE</Tag>
-		<English>[ICON_BULLET]You can [LINK=CONCEPT_DRAFT]Draft[\LINK] %D1_Num [NUM1:Unit:Units]</English>
-		<French>[ICON_BULLET]Vous pouvez [LINK=CONCEPT_DRAFT]Recruter[\LINK] %D1_Num [NUM1:Unité:Unités]</French>
-		<German>[ICON_BULLET][LINK=CONCEPT_DRAFT]Rekrutierung[\LINK]: %D1_Num [NUM1:Einheit:Einheiten]</German>
-		<Russian>[ICON_BULLET]Вы можете [LINK=CONCEPT_DRAFT]призвать[\LINK] %D1_Num [NUM1:Unit:Units]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_PEDIA</Tag>
 		<English>Conscription, sometimes called the draft, is the compulsory enlistment of people in a national service, most often a military service.[PARAGRAPH:2]Conscription dates back to antiquity and continues in some countries to the present day under various names. The modern system of near-universal national conscription for young men dates to the French Revolution in the 1790s, where it became the basis of a very large and powerful military. Most European nations later copied the system in peacetime, so that men at a certain age would serve 1-8 years on active duty and then transfer to the reserve force.[PARAGRAPH:2]Conscription is controversial for a range of reasons, including conscientious objection to military engagements on religious or philosophical grounds; political objection, for example to service for a disliked government or unpopular war; and ideological objection, for example, to a perceived violation of individual rights. Those conscripted may evade service, sometimes by leaving the country, and seeking asylum in another country.[PARAGRAPH:2]Some selection systems accommodate these attitudes by providing alternative service outside combat-operations roles or even outside the military, such as 'Siviilipalvelus' (alternative civil service) in Finland, Zivildienst (compulsory community service) in Austria and Switzerland. Many post-Soviet countries conscript male soldiers not only for armed forces but also for paramilitary organizations which are dedicated to police-like domestic only service (Internal Troops) or non-combat rescue duties (Civil defence troops) - none of which is considered alternative to the military conscription.[PARAGRAPH:2]As of the early 21st century, many states no longer conscript soldiers, relying instead upon professional militaries with volunteers enlisted to meet the demand for troops. The ability to rely on such an arrangement, however, presupposes some degree of predictability with regard to both war-fighting requirements and the scope of hostilities. Many states that have abolished conscription therefore still reserve the power to resume it during wartime or times of crisis.[PARAGRAPH:2]States involved in wars or interstate rivalries are most likely to implement conscription, whereas democracies are less likely than autocracies to implement conscription. Former British colonies are less likely to have conscription, as they are influenced by British anticonscription norms that can be traced back to the English Civil War.</English>
 		<French>La conscription, parfois appelée le projet, est l'enrôlement obligatoire des personnes dans un service national, le plus souvent un service militaire.[PARAGRAPH:2]La conscription remonte à l'Antiquité et se poursuit dans certains pays jusqu'à nos jours sous différents noms. Le système moderne de conscription nationale quasi universelle pour les jeunes hommes remonte à la Révolution française dans les années 1790, où il est devenu la base d'une armée très importante et puissante. La plupart des nations européennes ont ensuite copié le système en temps de paix, de sorte que les hommes à un certain âge purgeraient de 1 à 8 ans en service actif, puis seraient transférés dans la force de réserve.</French>
@@ -1534,16 +2044,6 @@
 		<Spanish>Tu pueblo traspasa el conocimiento a las siguientes generaciones a través del mercantilismo y el consumismo.</Spanish>
 		<Polish>Twoja nacja przekazuje wiedzę o komercjalizacji i konsumpcjoniźmie.</Polish>
 		<Russian>Ваучеры предоставляются тем, кто нуждается в поддержке, поскольку частные предприятия, специализирующиеся на предоставлении услуг здравоохранения, образования и занятости, повсеместно распространены.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_CORPORATION_TAXES</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Tax Levy on Corporations</English>
-		<French>[ICON_BULLET]%D1_Mod%% de Taxes prélevées aux Corporations</French>
-		<German>[ICON_BULLET]%D1_Mod%% Unternehmenssteuern von Kapitalgesellschaften</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di tasse sulle corporazioni</Italian>
-		<Spanish>[ICON_BULLET]Impuesto del %D1_Mod%% a las corporaciones</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% podatków z Korporacji</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% íàëîãîâûé ñáîð â êîðïîðàöèÿõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CORPORATISM</Tag>
@@ -1782,36 +2282,6 @@
 		<Russian>Благодаря использованию компьютерных сетей можно получить полностью цифровую валюту, которая позволяет осуществлять мгновенные транзакции.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_DISALLOW_INQUISITONS</Tag>
-		<English>[ICON_BULLET]Even if otherwise possible, Civic religious freedoms disables inquisitions.</English>
-		<French>[ICON_BULLET]Dans tous les cas, La Doctrine 'Liberté de Culte' rend les inquisitions impossibles.</French>
-		<German>[ICON_BULLET]Gesellschaftsformen mit religiöser Freiheit verhindern Inquisitionen, selbst wenn ansonsten alle Vorgaben erfüllt sind.</German>
-		<Italian>[ICON_BULLET]Anche se è possibile il contrario, le forme di governo che danno libertà religiosa impediscono le inquisizioni.</Italian>
-		<Spanish>[ICON_BULLET]Aunque sea posible, los principios que fomentan la libertad religiosa deshabilitan las inquisiciones.</Spanish>
-		<Polish>[ICON_BULLET]Uniemożliwia budowę Inkwizycji</Polish>
-		<Russian>[ICON_BULLET] Äàæå åñëè âîçìîæåí èíîé ïóòü, âñå æå èíñòèòóò âëàñòè îáåñïå÷èâàþùèé ðåëèãèîçíóþ ñâîáîäó äåëàåò èíêâèçèöèþ íåàêòèâíîé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_DISTANT_UNIT_SUPPLY_COST_MOD</Tag>
-		<English>[ICON_BULLET]%d1%% Increased Supply Cost for Distant Units</English>
-		<French>[ICON_BULLET]%d1%% Augmente le coût de Soutien des Unités distantes</French>
-		<German>[ICON_BULLET]%d1%% Erhöhte Versorgungskosten für weit entfernte Einheiten</German>
-		<Italian>[ICON_BULLET]%d1%% Costo di supporto aumentato per le unità distanti.</Italian>
-		<Spanish>[ICON_BULLET]El coste de abastecimiento de unidades aumenta un %d1%%</Spanish>
-		<Polish>[ICON_BULLET]%d1%% Podnosi koszt utrzymania dla jednostek dystansowych.</Polish>
-		<Russian>[ICON_BULLET]%d1%% óâåëè÷åííàÿ ñòîèìîñòü ïîñòàâêè äëÿ îòäàëåííûõ îòðÿäîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_DISTANT_UNIT_SUPPLY_COST_MOD_DECREASE</Tag>
-		<English>[ICON_BULLET]%d1%% Decreased Supply Cost for Distant Units</English>
-		<French>[ICON_BULLET]%d1%% Diminue le coût de Soutien des Unités distantes</French>
-		<German>[ICON_BULLET]%d1%% Reduzierte Versorgungskosten für weit entfernte Einheiten</German>
-		<Italian>[ICON_BULLET]%d1%% Costo di supporto diminuito per le unità distanti.</Italian>
-		<Spanish>[ICON_BULLET]El coste de abastecimiento de unidades disminuye un %d1%%</Spanish>
-		<Polish>[ICON_BULLET]%d1%% Obniża koszt utrzymania dla jednostek dystansowych.</Polish>
-		<Russian>[ICON_BULLET]%d1%% óìåíüøåííàÿ ñòîèìîñòü ïîñòàâêè äëÿ îòäàëåííûõ åäèíèö</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_CULT</Tag>
 		<English>Divine Cult</English>
 		<French>Culte Divin</French>
@@ -1947,14 +2417,6 @@
 		<English>The workforce is comprised almost exclusively of factory-built androids or lab-grown humanoids.</English>
 		<French>La main-d'oeuvre est composée presque exclusivement d'androïdes fabriqués en usine ou d'humanoïdes cultivés en laboratoire.</French>
 		<Russian>Рабочая сила состоит почти исключительно из заводских андроидов или выращенных в лаборатории гуманоидов.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_ERA_ADVANCE_FREE_SPECIALIST</Tag>
-		<English>[ICON_BULLET]Gains a free %s1_Specialist Specialist in all cities with each advance in Era.</English>
-		<French>[ICON_BULLET]Reçoit un %s1_Specialist gratuit pour chaque avancée d'Ere.</French>
-		<Italian>[ICON_BULLET]Ottiene un %s1_Specialist gratuito con ogni avanzamento di Era.</Italian>
-		<Polish>[ICON_BULLET]Daje darmowego: %s1_Specialist przy każdej zmianie Ery.</Polish>
-		<Russian>[ICON_BULLET]Дает бесплатного специалиста %s1_Specialist с наступлением каждой новой Эры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_EUDAIMONIA</Tag>
@@ -2096,36 +2558,6 @@
 		<Russian>Бесчисленные формы популярных верований и традиций существуют на месте организованных религий.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_FOREIGNER_ANGER</Tag>
-		<English>[ICON_BULLET]+%d1[ICON_UNHAPPY] per %d2% foreign [ICON_CULTURE]</English>
-		<French>[ICON_BULLET]+%d1[ICON_UNHAPPY] par %d2% étrangère [ICON_CULTURE]</French>
-		<German>[ICON_BULLET]+%d1[ICON_UNHAPPY] pro %d2% an fremder [ICON_CULTURE]</German>
-		<Italian>[ICON_BULLET]+%d1[ICON_UNHAPPY] per %d2% [ICON_CULTURE] straniera</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_UNHAPPY] por %d2%[ICON_CULTURE] extranjera</Spanish>
-		<Polish>[ICON_BULLET]+%d1[ICON_UNHAPPY] na %d2% zagranicznej [ICON_CULTURE]</Polish>
-		<Russian>[ICON_BULLET]+%d1[ICON_UNHAPPY] çà %d2% èíîñòðàííûé [ICON_CULTURE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_FOREIGN_TRADE_ROUTE_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield in All Cities</English>
-		<French>[ICON_BULLET]%D1_Mod%% Les Routes commerciales étrangères sont réparties dans toutes les Villes</French>
-		<German>[ICON_BULLET]%D1_Mod%% Ertrag aus ausländischen Handelsrouten in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% resa delle rotte cittadine estere in tutte le città.</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de rutas comerciales internacionales en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% obca trasa handlowa we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% Èíîñòðàíûé äîõîä ñ òîðãîâûõ ïóòåé âî âñåõ ãîðîäàõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_FREEDOM_ANGER</Tag>
-		<English>[ICON_BULLET]Increases [ICON_UNHAPPY] equal to %d1%% population</English>
-		<Russian>[ICON_BULLET]Увеличивает [ICON_UNHAPPY] на %d1%% населения</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_FREEDOM_HAPPINESS</Tag>
-		<English>[ICON_BULLET]Decreases [ICON_UNHAPPY] equal to %d1%% population</English>
-		<Russian>[ICON_BULLET][ICON_HAPPY] Ïîâûøåíèå äëÿ âñåõ öèâèëèçàöèé áåç %s1_CivicName</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_CHURCH</Tag>
 		<English>Free Church</English>
 		<French>Église Libre</French>
@@ -2176,16 +2608,6 @@
 		<English>The forces of supply and demand are free from any intervention.</English>
 		<French>Les forces de l'offre et de la demande sont libres de toute intervention.</French>
 		<Russian>Силы спроса и предложения свободны от любого государственного вмешательства.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_FROM_LANDMARK</Tag>
-		<English>[SPACE]from Landmarks</English>
-		<French>[SPACE]des Repères de terrain</French>
-		<German>[SPACE]von Landmarken</German>
-		<Italian>[SPACE]dalle Località</Italian>
-		<Spanish>[SPACE]por marcas</Spanish>
-		<Polish>[SPACE]od Punkty Orientacyjne</Polish>
-		<Russian>[SPACE]îò îðèåíòèðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GALACTIC_FEDERATION</Tag>
@@ -2394,36 +2816,6 @@
 		<Russian>Ремесленники и торговцы в рамках определенного ремесла или вида торговли объединились, чтобы защитить их общие интересы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_HAPPINESS</Tag>
-		<English>[ICON_BULLET]+%d1_Change[ICON_HAPPY] In all cities</English>
-		<French>[ICON_BULLET]+%d1_Change[ICON_HAPPY] dans toutes les Villes</French>
-		<German>[ICON_BULLET]+%d1_Change[ICON_HAPPY] in allen Städten</German>
-		<Italian>[ICON_BULLET]+%d1_Change[ICON_HAPPY] in tutte le città</Italian>
-		<Spanish>[ICON_BULLET]+%d1_Change[ICON_HAPPY] en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]+%d1_Change[ICON_HAPPY] we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]+%d1_Change [ICON_HAPPY] âî âñåõ ãîðîäàõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_HOME_AREA_MAINT</Tag>
-		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Home Continent</English>
-		<French>[ICON_BULLET]Pas de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
-		<German>[ICON_BULLET]keine laufenden Kosten für Städte auf dem Heimatkontinent</German>
-		<Italian>[ICON_BULLET]Nessun costo di mantenimento per tutte le città sul continente natale</Italian>
-		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en todas las ciudades situadas en el continente natal</Spanish>
-		<Polish>[ICON_BULLET]Brak kosztów utrzymania dla miast na rdzennym kontynencie</Polish>
-		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå äëÿ âñåõ ãîðîäîâ íà äîìàøíåì êîíòèíåíòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_HOME_AREA_MAINT_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Home Continent</English>
-		<French>[ICON_BULLET]%D1_Mod%% de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
-		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Städte auf dem Heimatkontinent</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città sul continente natale</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en todas las ciudades situadas en el continente natal</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania dla miast na rdzennym kontynencie</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå äëÿ âñåõ ãîðîäîâ íà äîìàøíåì êîíòèíåíòå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_HUNTER_GATHERING</Tag>
 		<English>Hunter-Gathering</English>
 		<French>Chasseurs-Cueilleurs</French>
@@ -2456,26 +2848,6 @@
 		<Spanish>Tu nación no posee ningún sistema agrícola.</Spanish>
 		<Polish>Uprawianie ziemi jeszcze nie zostało wymyślone.</Polish>
 		<Russian>Ваши люди промышляют исключительно охотой и собирательством.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_HURTS_DIPLOMACY</Tag>
-		<English>Damages Relations With:[SPACE]</English>
-		<French>Déteriore les Relations Avec:[SPACE]</French>
-		<German>Schadet den Beziehungen zu:[SPACE]</German>
-		<Italian>Peggiora le relazioni con[SPACE]</Italian>
-		<Spanish>Daña las relaciones con:[SPACE]</Spanish>
-		<Polish>Pogarsza stosunki z:[SPACE]</Polish>
-		<Russian>Îòíîøåíèÿ óáûòêîâ ñ:[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_HURTS_DIPLOMACY_WITH_PLAYERS</Tag>
-		<English>Damages Relations With Players Using:[SPACE]</English>
-		<French>Déteriore les Relations des Joueurs utilisant:[SPACE]</French>
-		<German>Schadet den Beziehungen zu Spielern mit:[SPACE]</German>
-		<Italian>Peggiora le relazioni con i giocatori che usano[SPACE]</Italian>
-		<Spanish>Daña las relaciones con los jugadores que usen:[SPACE]</Spanish>
-		<Polish>Pogarsza stosunki z graczami posiadającymi:[SPACE]</Polish>
-		<Russian>Ухудшаются отношения с игроками, при использовании:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_HYPERINTELLIGENT</Tag>
@@ -2545,26 +2917,6 @@
 		<English>A pure information society whose members can be physical, digital, or incorporeal.</English>
 		<French>Une pure société de l'information dont les membres peuvent être physiques, numériques ou incorporels.</French>
 		<Russian>Чистое информационное общество, члены которого могут быть физическими, цифровыми или нематериальными.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_HAPPINESS</Tag>
-		<English>[ICON_BULLET]+%D1_Change% %F2 from[SPACE]</English>
-		<French>[ICON_BULLET]+%D1_Change% %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]+%D1_Change% %F2 durch die Modernisierung[SPACE]</German>
-		<Italian>[ICON_BULLET]+%D1_Change% %F2 da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]+%D1_Change% %F2 por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]+%D1_Change% %F2 z:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]+%D1_Change% %F2 от[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_HEALTHPERCENT</Tag>
-		<English>[ICON_BULLET]+%s1_Change %F2 from[SPACE]</English>
-		<French>[ICON_BULLET]+%s1_Change %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]+%s1_Change %F2 durch die Modernisierung[SPACE]</German>
-		<Italian>[ICON_BULLET]+%s1_Change %F2 da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]+%s1_Change %F2 por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]+%s1_Change %F2 z:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]+%s1_Change %F2 от[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_INCENTIVIZED</Tag>
@@ -2819,26 +3171,6 @@
 		<Spanish>Los residuos se tiran en vertederos.</Spanish>
 		<Polish>Odpady składowane są na wysypiskach.</Polish>
 		<Russian>Хлам собирается и помещается в специальные места.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_LANDMARK_HAPPINESS</Tag>
-		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_HAPPY] to nearby cities</English>
-		<French>[ICON_BULLET]Les Repères de terrain donnent +%d1 [ICON_HAPPY] aux Villes voisines</French>
-		<German>[ICON_BULLET]Landmarken geben +%d1 [ICON_HAPPY] in nahegelegenen Städten</German>
-		<Italian>[ICON_BULLET]Le località danno +%d1 [ICON_HAPPY] alle città vicine</Italian>
-		<Spanish>[ICON_BULLET]Las marcas dan +%d1[ICON_HAPPY] a las ciudades cercanas</Spanish>
-		<Polish>[ICON_BULLET]Punkty Orientacyjne dają +%d1 [ICON_HAPPY] do pobliskich miast</Polish>
-		<Russian>[ICON_BULLET]Îðèåíòèðû äàþò +%d1 [ICON_HAPPY] â ñîñåäíèå ãîðîäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_LANDMARK_UNHAPPINESS</Tag>
-		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_UNHAPPY] to nearby cities</English>
-		<French>[ICON_BULLET]Les Repères de terrain donnent +%d1 [ICON_UNHAPPY] aux Villes voisines</French>
-		<German>[ICON_BULLET]Landmarken geben +%d1 [ICON_UNHAPPY] in nahegelegenen Städten</German>
-		<Italian>[ICON_BULLET]Le località danno +%d1 [ICON_UNHAPPY] alle città vicine</Italian>
-		<Spanish>[ICON_BULLET]Las marcas dan +%d1[ICON_UNHAPPY] a las ciudades cercanas</Spanish>
-		<Polish>[ICON_BULLET]Punkty Orientacyjne dają +%d1 [ICON_UNHAPPY] do pobliskich miast</Polish>
-		<Russian>[ICON_BULLET]Îðèåíòèðû äàþò +%d1 [ICON_UNHAPPY] â ñîñåäíèå ãîðîäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LEGISLATURE</Tag>
@@ -3330,36 +3662,6 @@
 		<Spanish>Tu pueblo conversa mediante gestos y gruñidos.</Spanish>
 		<Polish>Komunikowanie się za pomocą gestów i mimiki.</Polish>
 		<Russian>Отсутствие языка делает сложное общение почти невозможной задачей.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_NON_STATE_REL_HAPPINESS_AMBIGUOUS</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_HappyOrUn per Non-State [ICON_RELIGION] in a City</English>
-		<French>[ICON_BULLET]%D1_Change %F2_HappyOrUn par [ICON_RELIGION] non officielle dans une ville</French>
-		<German>[ICON_BULLET]%D1_Change %F2_HappyOrUn je Non-State [ICON_RELIGION]-Religion in einer Stadt</German>
-		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn per [ICON_RELIGION] non di stato in una città</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn por cada Non-State [ICON_RELIGION] en cada ciudad</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change %F2_HappyOrUn na Nie-Państwową [ICON_RELIGION] w Mieście</Polish>
-		<Russian>[ICON_BULLET]%D1_Change %F2_HappyOrUn за любую негосударственную [ICON_RELIGION] в городе</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_NO_CAPITAL_ANGER</Tag>
-		<English>[ICON_BULLET]No [ICON_UNHAPPY] In the Capital City</English>
-		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] dans la Capitale</French>
-		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] in der Hauptstadt</German>
-		<Italian>[ICON_BULLET]Niente [ICON_UNHAPPY] nella capitale</Italian>
-		<Spanish>[ICON_BULLET]No [ICON_UNHAPPY] en la capital</Spanish>
-		<Polish>[ICON_BULLET]Brak [ICON_UNHAPPY] w Stolicy</Polish>
-		<Russian>[ICON_BULLET]Íåò [ICON_UNHAPPY] Â ñòîëèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_NO_LANDMARK_ANGER</Tag>
-		<English>[ICON_BULLET]Damaging or Removing Landmarks causes no [ICON_UNHAPPY]</English>
-		<French>[ICON_BULLET]Endommager ou supprimer des repères de terrain n'engendre pas de [ICON_UNHAPPY]</French>
-		<German>[ICON_BULLET]Die Beschädigung oder Zerstörung von Landmarken erzeugt keine [ICON_UNHAPPY]</German>
-		<Italian>[ICON_BULLET]Danneggiare o rimuovere le località non causa [ICON_UNHAPPY]</Italian>
-		<Spanish>[ICON_BULLET]Dañar o eliminar marcas no causa [ICON_UNHAPPY]</Spanish>
-		<Polish>[ICON_BULLET]Uszkodzone lub Usunięte Punkty Orientacyjne nie powodują [ICON_UNHAPPY]</Polish>
-		<Russian>[ICON_BULLET]Ðàçðóøèòåëüíûå èëè Óäàëÿþùèå Îðèåíòèðû íå âûçûâàåò [ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_NO_SPEAK_SAME</Tag>
@@ -4086,36 +4388,6 @@
 		<Russian>В экономике сохраняются рыночные отношения, но государство оставляет за собой право частичного вмешательства в производстве и распределении товаров и услуг.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_RELIGION_NO_SPREAD</Tag>
-		<English>[ICON_BULLET]No Religions will spread</English>
-		<French>[ICON_BULLET]Pas de propagation des Religions</French>
-		<German>[ICON_BULLET]Es werden keine Religionen verbreitet.</German>
-		<Italian>[ICON_BULLET]Nessuna religione si diffonderà</Italian>
-		<Spanish>[ICON_BULLET]No se difundirán religiones</Spanish>
-		<Polish>[ICON_BULLET]Brak religii do rozprzestrzenienia</Polish>
-		<Russian>[ICON_BULLET]Íèêàêèå ðåëèãèè íå ðàñïðîñòðàíÿþòñÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_RELIGION_SPREAD_RATE_FAST</Tag>
-		<English>[ICON_BULLET]Religions Spread %d1% Faster</English>
-		<French>[ICON_BULLET]Les Religions se propagent %d1% plus vite</French>
-		<German>[ICON_BULLET]Religionen verbreiten sich %d1% schneller.</German>
-		<Italian>[ICON_BULLET]Le religioni si diffondono il %d1% più velocemente</Italian>
-		<Spanish>[ICON_BULLET]Las religiones se difunden un %d1% más rápido</Spanish>
-		<Polish>[ICON_BULLET]Rozprzestrzenianie religii %d1% szybciej</Polish>
-		<Russian>[ICON_BULLET]Ðàñïðîñòðàíåíèå ðåëèãèé %d1% áûñòðåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_RELIGION_SPREAD_RATE_SLOW</Tag>
-		<English>[ICON_BULLET]Religions spread at %d1% of normal rate</English>
-		<French>[ICON_BULLET]Les Religions se propagent à %d1% du taux normal</French>
-		<German>[ICON_BULLET]Religionen verbreiten sich mit %d1% der normalen Geschwindigkeit.</German>
-		<Italian>[ICON_BULLET]Le religioni si diffondono al %d1% della normale velocità</Italian>
-		<Spanish>[ICON_BULLET]Las religiones se difunden al %d1% de la tasa normal</Spanish>
-		<Polish>[ICON_BULLET]Rozprzestrzenianie religii o %d1% do normalnej wartości</Polish>
-		<Russian>[ICON_BULLET]Ðàñïðîñòðàíåíèå ðåëèãèé ïðè %d1% íîðìàëüíîãî òåìïà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS</Tag>
 		<English>Religious</English>
 		<French>Religieuse</French>
@@ -4143,18 +4415,6 @@
 		<Russian>Различные устные и письменные верования, доктрины, ритуалы и обычаи запоминаются населением, которое преданно передает их следующему поколению.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REL_BUILDING</Tag>
-		<English>[ICON_BULLET]Cities with %F1_RelIcon Construct Buildings %D2_Mod%% as fast</English>
-		<French>[ICON_BULLET]Les Villes avec %F1_RelIcon construisent des bâtiments %D2_Mod%% plus rapidement</French>
-		<Russian>[ICON_BULLET]Города с %F1_RelIcon быстрее строят здания на %D2_Mod%%</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REL_TRAIN</Tag>
-		<English>[ICON_BULLET]Cities with %F1_RelIcon Train Units %D2_Mod%% as fast</English>
-		<French>[ICON_BULLET]Les Villes avec %F1_RelIcon entraînent des unités %D2_Mod%% plus rapidement</French>
-		<Russian>[ICON_BULLET]Города с %F1_RelIcon быстрее обучают отряды на %D2_Mod%%</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
 		<English>Republic</English>
 		<French>République</French>
@@ -4179,176 +4439,6 @@
 		<English>Representatives who may or may not be elected and whose leadership is nonhereditary lead the nation.</English>
 		<French>Des représentants élus ou non et dont le leadership n'est pas héréditaire dirigent la nation.</French>
 		<Russian>Представители, которые могут быть или не быть избранными и чье руководство не является наследственным, возглавляют нацию.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_BAD_HOLY_CITY</Tag>
-		<English>[ICON_BULLET]%d1 instability penalty per turn if state religion holy city is owned by heathens</English>
-		<French>[ICON_BULLET]%d1 de pénalité par tour : la Ville Sainte de la Religion d'Etat est aux mains de païens.</French>
-		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde, wenn die Heilige Stadt der Staatsreligion von Heiden beherrscht wird</German>
-		<Italian>[ICON_BULLET]Penalità instabilità: %d1/turno se la Città Santa della [ICON_RELIGION] di Stato è controllata da infedeli</Italian>
-		<Spanish>[ICON_BULLET]Penalización a la estabilidad de %d1/turno si la Ciudad Santa de la religión oficial está en manos de infieles</Spanish>
-		<Polish>[ICON_BULLET]%d1 kara do stabilności na turę jeśli święte miasto religii narodowej jest w posiadaniu poganina</Polish>
-		<Russian>[ICON_BULLET]%D1 íåñòàáèëüíîñòè â õîä, åñëè ñâÿòîé ãîðîä òåêóùåé ãîñóäàðñòâåííîé ðåëèãèè â ëàïàõ ÿçû÷íèêîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_BAD_RELIGION_MOD</Tag>
-		<English>[ICON_BULLET]+%s1% increase in instability penalties from non-state religions</English>
-		<French>[ICON_BULLET]+%s1% de pénalité : Instabilité liée aux Religions non officielles</French>
-		<German>[ICON_BULLET]+%s1% Steigerung der Instabilitätsmali durch nicht-staatliche Religionen</German>
-		<Italian>[ICON_BULLET]Penalità instabilità: +%s1% per [ICON_RELIGION] NON di Stato</Italian>
-		<Spanish>[ICON_BULLET]Aumento del +%s1% a las penalizaciones a la estabilidad por religiones no oficiales</Spanish>
-		<Polish>[ICON_BULLET]+%s1% zwiększa niestabilność z nienarodowych religii</Polish>
-		<Russian>[ICON_BULLET]+%s1% óâåëè÷åíèå íåñòàáèëüíîñòè îò íåãîñóäàðñòâåííûõ ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_DEMOCRACY</Tag>
-		<English>[ICON_BULLET]%D1% National Stability (Suffrage).</English>
-		<French>[ICON_BULLET]%D1% Stabilité Nationale (Suffrage Universel).</French>
-		<German>[ICON_BULLET]%D1% National Stabilität (Wahlrecht).</German>
-		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (democrazia).</Italian>
-		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (sufragio).</Spanish>
-		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Prawo Wyborcze).</Polish>
-		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ðàâíîïðàâèå).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_ENVIRONMENT</Tag>
-		<English>[ICON_BULLET]%D1% National Stability (Health and Safety).</English>
-		<French>[ICON_BULLET]%D1% Stabilité Nationale (Santé et Sécurité).</French>
-		<German>[ICON_BULLET]%D1% National Stabilität (Gesundheit und Sicherheit).</German>
-		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (salute e sicurezza).</Italian>
-		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (salud y seguridad).</Spanish>
-		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Zdrowie i Bezpieczeństwo).</Polish>
-		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Çäîðîâüå è Áåçîïàñòíîñòü).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_GOOD_HOLY_CITY</Tag>
-		<English>[ICON_BULLET]%d1 stability bonus per turn for owning state religion holy city</English>
-		<French>[ICON_BULLET]%d1 de bonus par tour : la Ville Sainte de la Religion d'Etat fait partie de notre Empire.</French>
-		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde für Besitz der Heiligen Stadt der Staatsreligion</German>
-		<Italian>[ICON_BULLET]Bonus stabilità %d1/turno per il controllo della Città Santa della [ICON_RELIGION] di Stato</Italian>
-		<Spanish>[ICON_BULLET]Bonificación a la estabilidad de %d1/turno si posees la Ciudad Santa de la religión oficial</Spanish>
-		<Polish>[ICON_BULLET]%d1 bonus stabilności na ture dla miast wyznających religie świętego miasta</Polish>
-		<Russian>[ICON_BULLET]%D1 ñòàáèëüíîñòè â õîä, åñëè âëàäååòå ñâÿòûì ãîðîäîì òåêóùåé ãîñóäàðñòâåííîé ðåëèãèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_GOOD_RELIGION_MOD</Tag>
-		<English>[ICON_BULLET]+%s1% increase in stability bonuses from state religion</English>
-		<French>[ICON_BULLET]+%s1% de bonus : Stabilité liée à la Religion d'Etat</French>
-		<German>[ICON_BULLET]+%s1% Steigerung der Stabilitätsboni durch die Staatsreligion</German>
-		<Italian>[ICON_BULLET]Bonus stabilità: +%s1% per [ICON_RELIGION] di Stato</Italian>
-		<Spanish>[ICON_BULLET]Aumento del +%s1% a las bonificaciones a la estabilidad por la religión oficial</Spanish>
-		<Polish>[ICON_BULLET]+%s1% zwiększa bonus stabilności dla religii narodowej</Polish>
-		<Russian>[ICON_BULLET]+%s1% óâåëè÷åíèå ñòàáèëüíîñòè îò íåãîñóäàðñòâåííûõ ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_LOCAL_BONUS</Tag>
-		<English>[ICON_BULLET]%d1 local stability bonus per turn in each city</English>
-		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité locale pour la ville</French>
-		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Bonus Stabilità Locale: %d1/turno ogni città</Italian>
-		<Spanish>[ICON_BULLET]Bonificación a la estabilidad local de %d1/turno en la ciudad</Spanish>
-		<Polish>[ICON_BULLET]%d1 do lokalnego bonusu stabilności na turę w każdym mieście</Polish>
-		<Russian>[ICON_BULLET]%D1 ìåñòíîé ñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_LOCAL_PENALTY</Tag>
-		<English>[ICON_BULLET]%d1 local instability penalty per turn</English>
-		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité locale pour la ville</French>
-		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Penalità Instabilità Locale: %d1/turno ogni città</Italian>
-		<Spanish>[ICON_BULLET]Penalización a la estabilidad local de %d1/turno en la ciudad</Spanish>
-		<Polish>[ICON_BULLET]%d1 do lokalnej kary niestabilności na turę w każdym mieście</Polish>
-		<Russian>[ICON_BULLET]%D1 ìåñòíîé íåñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_NATIONAL_BONUS</Tag>
-		<English>[ICON_BULLET]%d1 national stability bonus per turn</English>
-		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité au niveau national</French>
-		<German>[ICON_BULLET]nationaler Stabilitätsbonus von %d1 pro Runde</German>
-		<Italian>[ICON_BULLET]Bonus Stabilità Nazionale: %d1/turno</Italian>
-		<Spanish>[ICON_BULLET]Bonificación a la estabilidad nacional de %d1/turno</Spanish>
-		<Polish>[ICON_BULLET]%d1 narodowy bonus do stabilności na turę</Polish>
-		<Russian>[ICON_BULLET]%D1 íàöèîíàëüíîé ñòàáèëüíîñòè â õîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_NATIONAL_PENALTY</Tag>
-		<English>[ICON_BULLET]%d1 national instability penalty per turn</English>
-		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité au niveau national</French>
-		<German>[ICON_BULLET]nationaler Instabilitätsmalus von %d1 pro Runde</German>
-		<Italian>[ICON_BULLET]Penalità Instabilità Nazionale: %d1/turno</Italian>
-		<Spanish>[ICON_BULLET]Penalización a la estabilidad nacional de %d1/turno</Spanish>
-		<Polish>[ICON_BULLET]%d1 do narodowej kary niestabilności na turę</Polish>
-		<Russian>[ICON_BULLET]%D1 íàöèîíàëüíîé íåñòàáèëüíîñòè â õîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_LABOR</Tag>
-		<English>[ICON_BULLET]%D1% National Stability (labor).</English>
-		<French>[ICON_BULLET]%D1% Stabilité Nationale (Travail).</French>
-		<German>[ICON_BULLET]%D1% National Stabilität (Arbeit).</German>
-		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (lavoro).</Italian>
-		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (trabajo)</Spanish>
-		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Praca).</Polish>
-		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ïðîôñîþçû).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_NATIONALITY_INCREASE_MOD</Tag>
-		<English>[ICON_BULLET]+%s1% Revolutionary sentiment (alienation)</English>
-		<French>[ICON_BULLET]+%s1% Climat Révolutionaire (Aliénation)</French>
-		<German>[ICON_BULLET]+%s1% Revolutionäre Stimmung (Entfremdung)</German>
-		<Italian>[ICON_BULLET]Spirito rivoluzionario: +%s1% (Alienazione)</Italian>
-		<Spanish>[ICON_BULLET]+%s1% al espíritu revolucionario (enajenación)</Spanish>
-		<Polish>[ICON_BULLET]+%s1% uczucie rewolucyjne (alienizacja)</Polish>
-		<Russian>[ICON_BULLET]+%s1% Ðåâîëþöèîííûå ÷óâñòâà (Îò÷óæäåííîñòü)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_NATIONALITY_REDUCTION_MOD</Tag>
-		<English>[ICON_BULLET]%s1% Revolutionary sentiment (Patriotism).</English>
-		<French>[ICON_BULLET]%s1% Climat Révolutionaire (Patriotisme).</French>
-		<German>[ICON_BULLET]%s1% Revolutionäre Stimmung (Patriotismus).</German>
-		<Italian>[ICON_BULLET]Spirito rivoluzionario: %s1% (Patriottismo).</Italian>
-		<Spanish>[ICON_BULLET]-%s1% al espíritu revolucionario (patriotismo)</Spanish>
-		<Polish>[ICON_BULLET]%s1% uczucie rewolucyjne (Patriotyzm).</Polish>
-		<Russian>[ICON_BULLET]%s1% Ðåâîëþöèîííûå ÷óâñòâà (Ïàòðèîòèçì).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_RELIGION_FREEDOM</Tag>
-		<English>[ICON_BULLET]%D1% National Stability (religious freedom).</English>
-		<French>[ICON_BULLET]%D1% Stabilité Nationale (Liberté de Culte).</French>
-		<German>[ICON_BULLET]%D1% Nationale Stabilität (Religionsfreiheit).</German>
-		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (libertà religiosa).</Italian>
-		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (libertad religiosa)</Spanish>
-		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Wolność religilna).</Polish>
-		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ðåëèãèîçíàÿ ñâîáîäà).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_RELIGION_OPRESSION</Tag>
-		<English>[ICON_BULLET]%D1% National Stability (religious oppression).</English>
-		<French>[ICON_BULLET]%D1% Stabilité Nationale (Oppression religieuse).</French>
-		<German>[ICON_BULLET]%D1% National Stabilität (religiöse Unterdrückung).</German>
-		<Italian>[ICON_BULLET]Stabilità Nazionale: %D1% (oppressione religiosa).</Italian>
-		<Spanish>[ICON_BULLET]%D1% a la estabilidad nacional (opresión religiosa)</Spanish>
-		<Polish>[ICON_BULLET]%d1% Stabilność Narodowa (Prześladowania religijne).</Polish>
-		<Russian>[ICON_BULLET]%D1% Íàöèîíàëüíîé ñòàáèëüíîñòè (Ðåëèãèîçíûå ãîíåíèÿ).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_SWITCH_TO_BONUS</Tag>
-		<English>[ICON_BULLET]%D1 one-time stability bonus for adopting civic</English>
-		<French>[ICON_BULLET]%D1 de bonus unique de Stabilité : Adoption de la Doctrine</French>
-		<German>[ICON_BULLET]einmaliger Stabilitätsbonus von %D1 durch die Übernahme der Gesellschaftsform</German>
-		<Italian>[ICON_BULLET]Bonus stabilità per variazione forma di governo (%D1 una tantum)</Italian>
-		<Spanish>[ICON_BULLET]Bonificación inmediata de %D1 a la estabilidad por adoptar el principio</Spanish>
-		<Polish>[ICON_BULLET]%d1 jednorazowy bonus do stabilności przy zmianie doktryny</Polish>
-		<Russian>[ICON_BULLET]%D1 îäíîðàçîâîé ñòàáèëüíîñòè â ñëó÷àå ïðèíÿòèÿ èíñòèòóòà âëàñòè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REV_SWITCH_TO_PENALTY</Tag>
-		<English>[ICON_BULLET]%D1 one-time instability penalty for adopting civic</English>
-		<French>[ICON_BULLET]%D1 de penalité unique pour Instabilité : Adoption de la Doctrine</French>
-		<German>[ICON_BULLET]einmaliger Instabilitätsmalus von %D1 durch die Übernahme der Gesellschaftsform</German>
-		<Italian>[ICON_BULLET]%Penalità instabilità per variazione forma di governo (%D1 una tantum)</Italian>
-		<Spanish>[ICON_BULLET]Penalización inmediata de %D1 a la estabilidad por adoptar el principio</Spanish>
-		<Polish>[ICON_BULLET]%d1 jednorazowa kara stabilności przy zmianie doktryny</Polish>
-		<Russian>[ICON_BULLET]%D1 îäíîðàçîâîé íåñòàáèëüíîñòè â ñëó÷àå ïðèíÿòèÿ èíñòèòóòà âëàñòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ROBOTIC</Tag>
@@ -4615,15 +4705,6 @@
 		<Russian>Народное единство поддерживается за счет внедрения конкретных идей и устремлений населения путем использования технологий и высокоразвитой социальной инженерии.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_SOFT_CITY_LIMIT</Tag>
-		<English>[ICON_BULLET]Settling more than %d1 cities will cause %d2 unhappiness in every city for each one over that limit</English>
-		<French>[ICON_BULLET]La fondation de plus de %d1 villes causera %d2 de mécontentement dans chaque ville, et ce pour chaque dépassement</French>
-		<Italian>[ICON_BULLET]Fondare più di %d1 città causerà %d2 di infelicità in tutte le città, per ogni città sopra il limite</Italian>
-		<Spanish>[ICON_BULLET]Fundar más de %d1 [NUM1:ciudad:ciudades] causará %d2[ICON_UNHAPPY] en todas las ciudades por cada ciudad sobre dicho límite</Spanish>
-		<Polish>[ICON_BULLET]Zbudowanie więcej niż %d1 miast wywoła %d2 niezadowolenia dla każdego miasta powyżej limitu</Polish>
-		<Russian>[ICON_BULLET]Ïðåâûøåíèå ëèìèòà áîëåå ÷åì íà %d1 ãîðîäîâ äàñò %d2 íåñ÷àñòíûõ ãðàæäàí </Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SOVEREIGNTY</Tag>
 		<English>Sovereignty</English>
 		<French>Souveraineté</French>
@@ -4653,16 +4734,6 @@
 		<Spanish>Hablamos el mismo idioma.</Spanish>
 		<Polish>Rozmawiamy w tym samym języku.</Polish>
 		<Russian>Мы говорим на одном языке.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_SPECIALIST_COMMERCE_CHANGE</Tag>
-		<English>[ICON_BULLET]%s1_Change %F2 from[SPACE]</English>
-		<French>[ICON_BULLET]%s1_Change %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]%s1_Change %F2 durch die Modernisierung[SPACE]</German>
-		<Italian>[ICON_BULLET]%s1_Change %F2 da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%s1_Change %F2 por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]%s1_Change %F2 z:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]%s1_Change %F2 от[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SPECIALIZED</Tag>
@@ -4763,18 +4834,6 @@
 		<Russian>Ваша земля обрабатывается через сеть колхозов и МТС.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_STATE_REL_BUILDING</Tag>
-		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Construct Buildings %D1_Mod%% as fast</English>
-		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état construisent des bâtiments %D1_Mod%% plus rapidement</French>
-		<Russian>[ICON_BULLET]Города с государственной [ICON_RELIGION] быстрее строят здания на %D1_Mod%%</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_STATE_REL_TRAIN</Tag>
-		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Train Units %D1_Mod%% as fast</English>
-		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état entraînent des unités %D1_Mod%% plus rapidement</French>
-		<Russian>[ICON_BULLET]Города с государственной [ICON_RELIGION] быстрее обучают отряды на %D1_Mod%%</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STRONGMAN</Tag>
 		<English>Strongman</English>
 		<French>Homme Fort</French>
@@ -4829,16 +4888,6 @@
 		<English>Institutions that provide social security are subsidized through the use of taxpayer money.</English>
 		<French>Les institutions qui assurent la sécurité sociale sont subventionnées par l'utilisation de l'argent des contribuables.</French>
 		<Russian>Учреждения, обеспечивающие социальное обеспечение, субсидируются за счет использования денег налогоплательщиков.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_SUBSIDY</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Subsidy for Corporations</English>
-		<French>[ICON_BULLET]%D1_Mod%% de subventions pour les Corporations</French>
-		<German>[ICON_BULLET]%D1_Mod%% Subventionen für Kapitalgesellschaften</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di sussidi per le corporazioni</Italian>
-		<Spanish>[ICON_BULLET]Subvención del %D1_Mod%% a las corporaciones</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% dotacji dla Korporacji</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% ñóáñèäèÿ äëÿ êîðïîðàöèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SUBSISTENCE</Tag>
@@ -4923,16 +4972,6 @@
 		<Russian>Благосостояния не существует, и угнетенные люди должны прибегать к грабежам или даже убийству, чтобы обеспечить себя и свои семьи необходимыми товарами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_TAXATION_ANGER</Tag>
-		<English>[ICON_BULLET]Extra [ICON_UNHAPPY] In All Cities Per %d1% Tax Rate</English>
-		<French>[ICON_BULLET][ICON_UNHAPPY] supplémentaires dans toutes les Villes pour %d1% de taxes</French>
-		<German>[ICON_BULLET]Zusätzlich [ICON_UNHAPPY] in allen Städten pro %d1% Steuerrate</German>
-		<Italian>[ICON_BULLET]Extra [ICON_UNHAPPY] in tutte le città ogni %d1% di tasse</Italian>
-		<Spanish>[ICON_BULLET][ICON_UNHAPPY] extra en todas las ciudades por cada %d1% de impuestos</Spanish>
-		<Polish>[ICON_BULLET]Dodatkowe [ICON_UNHAPPY] we wszystkich miastach na każde %d1% podatków</Polish>
-		<Russian>[ICON_BULLET]Äîïîëíèòåëüíûé [ICON_UNHAPPY] IÂî âñåõ ãîðîäàõ çà %d1% íàëîãîâóþ ñòàâêó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TECHNOCRACY</Tag>
 		<English>Technocracy</English>
 		<French>Technocratie</French>
@@ -4977,16 +5016,6 @@
 		<French>L'information est directement transmise dans l'esprit des autres.</French>
 		<Polish>Telepatia - ogólnie pojęta możliwość komunikacji pomiędzy formami życia bez użycia żadnych znanych człowiekowi zmysłów. Nazwa pochodzi od greckich słów tele (daleki) i patheia (uczucie). Podobnie jak w przypadku innych zjawisk parapsychologicznych istnieją liczne relacje świadków twierdzących, że zetknęli się z tym zjawiskiem lub potrafią je wywoływać, ale mimo wielu studiów, zjawisko nigdy nie przeszło pozytywnie testów naukowych w warunkach uniemożliwiających dokonywanie oszustw. Istnieje wiele proponowanych teorii na temat mechanizmu działania tego zjawiska, jednak żadna nie została jak na razie jednoznacznie potwierdzona.</Polish>
 		<Russian>Информация напрямую передается в умы других.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_TERRAIN_YIELD_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%F2_Icon z:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change%F2_Icon от[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY</Tag>
@@ -5188,25 +5217,6 @@
 		<Russian>Война как способ воспитания подрастающего поколения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_UNHAPPINESS</Tag>
-		<English>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] In all cities</English>
-		<French>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] dans toutes les Villes</French>
-		<German>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] in allen Städten</German>
-		<Spanish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]+%d1_Change [ICON_UNHAPPY] âî âñåõ ãîðîäàõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_UNIT_COMBAT_PRODUCTION_MOD</Tag>
-		<English>[SPACE]Trained %D1%% Faster</English>
-		<French>[SPACE]Entaînement %D1%% plus rapide</French>
-		<German>[SPACE]wurde %D1%% schneller ausgebildet</German>
-		<Italian>[SPACE]costruite il %D1%% più velocemente</Italian>
-		<Spanish>[SPACE]entrenadas un %D1%% más rápido</Spanish>
-		<Polish>[SPACE]buduje %D1%% szybciej</Polish>
-		<Russian>[SPACE]Îáó÷àåòñÿ %D1%% áûñòðåå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIVERSAL_EMPIRE</Tag>
 		<English>Universal Empire</English>
 		<French>Empire Universel</French>
@@ -5250,16 +5260,6 @@
 		<Spanish>Tu nación utiliza un Traductor universal para comunicarse en cualquier idioma.</Spanish>
 		<Polish>Twój naród wykorzystuje Translator Uniwersalny do komunikacji z innymi narodami.</Polish>
 		<Russian>Устройство позволяет почти в режиме реального времени общаться с кем-то, кто говорит на другом языке.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_UNLOCKS_BUILDING</Tag>
-		<English>[ICON_BULLET]Allows construction of[SPACE]</English>
-		<French>[ICON_BULLET]Permet la construction de[SPACE]</French>
-		<German>[ICON_BULLET]Spezialgebäude/-effekte:[SPACE]</German>
-		<Italian>[ICON_BULLET]Permette la costruzione di[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]Permite la construcción de[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]Pozwala zbudować:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]Ïîçâîëÿåò ñòðîèòåëüñòâî[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNORGANIZED</Tag>

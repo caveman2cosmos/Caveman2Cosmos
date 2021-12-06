@@ -31,7 +31,6 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextDropdown(screen, None, comboBox, "Advisors__EFAGlanceAttitudes")
 		self.addCheckbox(screen, left, "Advisors__EFAImprovedInfo")
 		self.addCheckbox(screen, left, "Advisors__EFADealTurnsLeft")
-		self.addCheckbox(screen, left, "MiscHover__TechTradeDenial")
 		self.addCheckbox(screen, left, "MiscHover__BonusTradeDenial")
 
 		self.addLabel(screen, center, "Technology_Advisor", "Technology [F6]:")

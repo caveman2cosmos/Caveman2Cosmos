@@ -1,11 +1,14 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfoUtil.h"
+#include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
 #include "CyPlayer.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
-#include "Win32.h"
 #include "SCyDebug.h"
+#include "IDValueMap.h"
+#include "Win32.h"
 
 
 void CyCityPythonInterface1(python::class_<CyCity>& x);
@@ -38,11 +41,70 @@ void CyHallOfFameInterface();
 void CyGameCoreUtilsPythonInterface();
 void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
+void CyBoolExprPythonInterface();
+void CyIntExprPythonInterface();
 
 
 DllExport void DLLPublishToPython()
 {
-	OutputDebugString("Publishing to Python: Start");
+	OutputDebugString("Publishing to Python: Start\n");
+
+	using namespace Cy::call_policy;
+
+	registerAllowPyIntAsType<TechTypes>();
+	registerAllowPyIntAsType<BuildingTypes>();
+	registerAllowPyIntAsType<MultiplayerOptionTypes>();
+	registerAllowPyIntAsType<CorporationTypes>();
+	registerAllowPyIntAsType<GameOptionTypes>();
+	registerAllowPyIntAsType<PlayerTypes>();
+	registerAllowPyIntAsType<ReligionTypes>();
+	registerAllowPyIntAsType<ImprovementTypes>();
+	registerAllowPyIntAsType<CivilizationTypes>();
+	registerAllowPyIntAsType<TeamTypes>();
+	registerAllowPyIntAsType<ProjectTypes>();
+	registerAllowPyIntAsType<SpecialUnitTypes>();
+	registerAllowPyIntAsType<CivicOptionTypes>();
+	registerAllowPyIntAsType<CivicTypes>();
+	registerAllowPyIntAsType<SpecialBuildingTypes>();
+	registerAllowPyIntAsType<ControlTypes>();
+	registerAllowPyIntAsType<ForceControlTypes>();
+	registerAllowPyIntAsType<EventTriggerTypes>();
+	registerAllowPyIntAsType<LeaderHeadTypes>();
+	registerAllowPyIntAsType<CultureLevelTypes>();
+	registerAllowPyIntAsType<ReplayMessageTypes>();
+	registerAllowPyIntAsType<ModderGameOptionTypes>();
+	registerAllowPyIntAsType<YieldTypes>();
+	registerAllowPyIntAsType<CultureLevelTypes>();
+	registerAllowPyIntAsType<CommerceTypes>();
+	registerAllowPyIntAsType<ColorTypes>();
+	registerAllowPyIntAsType<EraTypes>();
+	registerAllowPyIntAsType<ForceControlTypes>();
+	registerAllowPyIntAsType<BonusTypes>();
+	registerAllowPyIntAsType<HurryTypes>();
+	registerAllowPyIntAsType<MapTypes>();
+	registerAllowPyIntAsType<MapCategoryTypes>();
+	registerAllowPyIntAsType<UnitAITypes>();
+	registerAllowPyIntAsType<DomainTypes>();
+	registerAllowPyIntAsType<PropertyTypes>();
+	registerAllowPyIntAsType<ProcessTypes>();
+	registerAllowPyIntAsType<UnitCombatTypes>();
+	registerAllowPyIntAsType<UnitTypes>();
+	registerAllowPyIntAsType<VictoryTypes>();
+	registerAllowPyIntAsType<VoteTypes>();
+	registerAllowPyIntAsType<VoteSourceTypes>();
+
+	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<MapCategoryTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<TechTypes>, CovertToInteger>();
+
+	publishIDValueMapPythonInterface<IDValueMap<BonusTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<BuildingTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<ImprovementTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TechTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TerrainTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitCombatTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitTypes, int> >();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
@@ -63,34 +125,36 @@ DllExport void DLLPublishToPython()
 	CyGameCoreUtilsPythonInterface();
 	CyMessageControlInterface();
 	CyPropertiesPythonInterface();
-
+	CyBoolExprPythonInterface();
+	CyIntExprPythonInterface();
+	CvInfoUtil::publishPythonInterface();
 	SCyDebug::installInPython();
 
 	//
 	// large interfaces which can be split across files if need be
 	//
-	python::class_<CyCity> city ("CyCity");		// define city class
-	CyCityPythonInterface1(city);				// publish it's methods
-	CyCityPythonInterface2(city);				// publish it's methods
+	python::class_<CyCity> city("CyCity", python::no_init);			// define city class
+	CyCityPythonInterface1(city);									// publish it's methods
+	CyCityPythonInterface2(city);									// publish it's methods
 
-	python::class_<CyPlayer> player ("CyPlayer");	// define player class
-	CyPlayerPythonInterface1(player);				// publish it's methods
-	CyPlayerPythonInterface2(player);				// publish it's methods
-	CyPlayerPythonInterface3(player);				// publish it's methods
+	python::class_<CyPlayer> player("CyPlayer", python::no_init);	// define player class
+	CyPlayerPythonInterface1(player);								// publish it's methods
+	CyPlayerPythonInterface2(player);								// publish it's methods
+	CyPlayerPythonInterface3(player);								// publish it's methods
 
-	python::class_<CyUnit> unit ("CyUnit");		// define unit class
-	CyUnitPythonInterface1(unit);				// publish it's methods
+	python::class_<CyUnit> unit("CyUnit", python::no_init);			// define unit class
+	CyUnitPythonInterface1(unit);									// publish it's methods
 
-	python::class_<CyPlot> plot ("CyPlot");		// define plot class
-	CyPlotPythonInterface1(plot);				// publish it's methods
+	python::class_<CyPlot> plot("CyPlot", python::no_init);			// define plot class
+	CyPlotPythonInterface1(plot);									// publish it's methods
 
-	python::class_<CyGlobalContext> gc ("CyGlobalContext");	// define globals class 
-	CyGlobalContextPythonInterface1(gc);					// publish it's methods 
-	CyGlobalContextPythonInterface2(gc);					// publish it's methods
-	CyGlobalContextPythonInterface3(gc);					// publish it's methods
-	CyGlobalContextPythonInterface4(gc);					// publish it's methods 
-	
+	python::class_<CyGlobalContext> gc("CyGlobalContext");			// define globals class
+	CyGlobalContextPythonInterface1(gc);							// publish it's methods
+	CyGlobalContextPythonInterface2(gc);							// publish it's methods
+	CyGlobalContextPythonInterface3(gc);							// publish it's methods
+	CyGlobalContextPythonInterface4(gc);							// publish it's methods
+
 	Win32::pythonPublish();
 
-	OutputDebugString("Publishing to Python: End");
+	OutputDebugString("Publishing to Python: End\n");
 }

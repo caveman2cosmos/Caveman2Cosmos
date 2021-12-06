@@ -107,7 +107,7 @@ UnitSortList::UnitSortList(const CvPlayer *pPlayer, const CvCity *pCity)
 {
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
-	
+
 	m_apUnitSort[UNIT_SORT_NAME] = new UnitSortName();
 	m_apUnitSort[UNIT_SORT_COST] = new UnitSortCost(true);
 	m_apUnitSort[UNIT_SORT_STRENGTH] = new UnitSortStrength();
@@ -137,7 +137,7 @@ UnitSortTypes UnitSortList::getActiveSort() const
 
 bool UnitSortList::setActiveSort(UnitSortTypes eActiveSort)
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_SORT, eActiveSort)
+	FASSERT_BOUNDS(0, NUM_UNIT_SORT, eActiveSort);
 	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;

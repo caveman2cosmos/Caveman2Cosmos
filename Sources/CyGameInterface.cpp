@@ -78,9 +78,6 @@ void CyGamePythonInterface()
 		.def("isModem", &CyGame::isModem, "bool () - Using a modem? ")
 		.def("setModem", &CyGame::setModem, "void (bool bModem) - Use a modem! (or don't)")
 
-		.def("reviveActivePlayer", &CyGame::reviveActivePlayer, "void ()")
-		.def("revivePlayer", &CyGame::revivePlayer, "void ()")
-
 		.def("getGameTurn", &CyGame::getGameTurn, "int () - current game turn")
 		.def("setGameTurn", &CyGame::setGameTurn, "void (iNewValue) - set current game turn")
 		.def("getTurnYear", &CyGame::getTurnYear, "int (iGameTurn) - turn Time")
@@ -130,9 +127,6 @@ void CyGamePythonInterface()
 		.def("getInitLand", &CyGame::getInitLand)
 		.def("getInitTech", &CyGame::getInitTech)
 		.def("getInitWonders", &CyGame::getInitWonders)
-
-		.def("getLastNukeStrikePlot", &CyGame::getLastNukeStrikePlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("setLastNukeStrikePlot", &CyGame::setLastNukeStrikePlot, "void (CyPlot* pPlot)")
 
 		.def("getAIAutoPlay", &CyGame::getAIAutoPlay, "int (int iPlayer)")
 		.def("setAIAutoPlay", &CyGame::setAIAutoPlay, "void (int iPlayer, int iValue)")
@@ -265,7 +259,7 @@ void CyGamePythonInterface()
 		//.def("addPlayer", &CyGame::addPlayer, "void (int eNewPlayer, int eLeader, int eCiv, [bool bSetAlive = true]) - if bSetAlive = false new player isn't set to be alive and won't die if not given units or cities")
 		.def("changeHumanPlayer", &CyGame::changeHumanPlayer, "void ( int /*PlayerTypes*/ eOldHuman, int /*PlayerTypes*/ eNewHuman )" )
 		.def("addReplayMessage", &CyGame::addReplayMessage, "void (int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)" )
-		.def("log", &CyGame::log, "void log(str)")
+		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
@@ -295,7 +289,7 @@ void CyGamePythonInterface()
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
-		.def("setModderGameOption", &CyGame::setModderGameOption, "void ()")
+		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 
 		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")

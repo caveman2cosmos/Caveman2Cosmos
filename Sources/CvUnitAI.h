@@ -6,6 +6,7 @@
 #define CIV4_UNIT_AI_H
 
 #include "CvUnit.h"
+#include "GroupingParams.h"
 
 typedef enum
 {
@@ -27,6 +28,8 @@ class CvUnitAI : public CvUnit
 public:
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
+
+	CvUnitAI& operator=(const CvUnitAI& other);
 
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
@@ -103,6 +106,7 @@ protected:
 	void doUnitAIMove();
 
 	void AI_animalMove();
+	void AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
 	bool Worker_CanDefend();
@@ -171,54 +175,7 @@ protected:
 
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
-	struct GroupingParams
-	{
-		GroupingParams()
-			: eUnitAI(NO_UNITAI)
-			, iMaxGroup(-1)
-			, iMaxOwnUnitAI(-1)
-			, iMinUnitAI(-1)
-			, bIgnoreFaster(false)
-			, bIgnoreOwnUnitType(false)
-			, bStackOfDoom(false)
-			, bBiggerGroupOnly(false)
-			, bMergeWholeGroup(false)
-			, iMaxPath(MAX_INT)
-			, bAllowRegrouping(false)
-			, bWithCargoOnly(false)
-			, bInCityOnly(false)
-			, eIgnoreMissionAIType(NO_MISSIONAI)
-		{}
-		GroupingParams& withUnitAI(UnitAITypes unitAI) { eUnitAI = unitAI; return *this; }
-		GroupingParams& maxGroupSize(int maxGroup) { iMaxGroup = maxGroup; return *this; }
-		GroupingParams& maxOwnUnitAI(int maxOwnUnitAI) { iMaxOwnUnitAI = maxOwnUnitAI; return *this; }
-		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
-		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
-		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
-		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
-		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
-		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
-		GroupingParams& withCargoOnly(bool state = true) { bWithCargoOnly = state; return *this; }
-		GroupingParams& inCityOnly(bool state = true) { bInCityOnly = state; return *this; }
-		GroupingParams& ignoreMissionAIType(MissionAITypes ignoreMissionAIType) { eIgnoreMissionAIType = ignoreMissionAIType; return *this; }
 
-		UnitAITypes eUnitAI;
-		int iMaxGroup;
-		int iMaxOwnUnitAI;
-		int iMinUnitAI;
-		bool bIgnoreFaster;
-		bool bIgnoreOwnUnitType;
-		bool bStackOfDoom;
-		bool bBiggerGroupOnly;
-		bool bMergeWholeGroup;
-		int iMaxPath;
-		bool bAllowRegrouping;
-		bool bWithCargoOnly;
-		bool bInCityOnly;
-		MissionAITypes eIgnoreMissionAIType;
-	};
 
 
 	// Returns true if a group was joined or a mission was pushed...

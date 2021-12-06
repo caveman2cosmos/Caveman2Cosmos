@@ -308,21 +308,6 @@
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
 		</ControlInfo>
 		<ControlInfo>
-			<Type>CONTROL_BARE_MAP</Type>
-			<Description>TXT_KEY_ACTION_BARE_MAP</Description>
-			<Help>TXT_KEY_ACTION_BARE_MAP_HELP</Help>
-			<HotKey>KB_B</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>1</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<HotKeyAlt/>
-			<bAltDownAlt>0</bAltDownAlt>
-			<bShiftDownAlt>0</bShiftDownAlt>
-			<bCtrlDownAlt>0</bCtrlDownAlt>
-			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-		</ControlInfo>
-		<ControlInfo>
 			<Type>CONTROL_YIELDS</Type>
 			<Description>TXT_KEY_ACTION_YIELDS</Description>
 			<Help>TXT_KEY_ACTION_YIELDS_HELP</Help>
@@ -371,21 +356,6 @@
 			<Type>CONTROL_GLOBELAYER</Type>
 			<Description>TXT_KEY_GLOBE_VIEW</Description>
 			<Help>TXT_KEY_GLOBEVIEW_TOGGLE</Help>
-			<HotKey></HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<HotKeyAlt/>
-			<bAltDownAlt>0</bAltDownAlt>
-			<bShiftDownAlt>0</bShiftDownAlt>
-			<bCtrlDownAlt>0</bCtrlDownAlt>
-			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-		</ControlInfo>
-		<ControlInfo>
-			<Type>CONTROL_SCORES</Type>
-			<Description>TXT_KEY_ACTION_SCORES</Description>
-			<Help>TXT_KEY_ACTION_SCORES_HELP</Help>
 			<HotKey></HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>

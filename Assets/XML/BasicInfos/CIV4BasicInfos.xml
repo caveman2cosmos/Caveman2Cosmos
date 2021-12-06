@@ -74,7 +74,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_BUILDINGS</Type>
-			<Description>TXT_KEY_CONCEPT_BUILDINGS</Description>
+			<Description>TXT_KEY_WB_BUILDINGS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUILDINGS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>

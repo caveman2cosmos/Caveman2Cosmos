@@ -18,7 +18,7 @@ public:
 
 	DllExport static CvTeamAI& getTeam(TeamTypes eTeam)
 	{
-		FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+		FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 		return m_aTeams[eTeam];
 	}
 

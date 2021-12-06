@@ -205,7 +205,7 @@ class MapConstants:
 		self.northAttenuationRange	= .06
 		self.southAttenuationFactor = .80
 		self.southAttenuationRange	= .16
-		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps. 
+		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps.
 		self.eastAttenuationFactor	= .0
 		self.eastAttenuationRange	= .0
 		self.westAttenuationFactor	= .0
@@ -272,7 +272,7 @@ class MapConstants:
 		self.bEarthlike = False
 		self.bArchipelago = False
 		self.bWaterworld = False
-		self.bAttenuate = True 
+		self.bAttenuate = True
 		if not selectionID:
 			self.bDryland = True
 			self.bAttenuate = False
@@ -318,6 +318,8 @@ class MapConstants:
 		elif selectionID == 2:
 			wrapString = "Flat"
 			self.bWrapX = False
+		else:
+			wrapString = "None - we are just switching maps"
 
 		# New World Rules
 		selectionID = MAP.getCustomMapOption(4)
@@ -932,7 +934,7 @@ class SimplexNoise4D:
 		else:
 			k1 = 0
 		if Simplex[c][3] >= 3:
-			l1 = 1  
+			l1 = 1
 		else:
 			l1 = 0
 		# The number 2 in the "simplex" array is at the second largest coordinate.
@@ -1541,7 +1543,7 @@ class ClimateMap:
 				upLiftDest = value1
 			else:
 				upLiftDest = value2
-			value = cost + upLiftDest - upLiftSource 
+			value = cost + upLiftDest - upLiftSource
 			if cost < value:
 				cost = value
 			if boolGeostrophic:
@@ -4033,7 +4035,7 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 1:
 			return "Pangea"
 		if selectionID == 2:
-			return "Earthlike"
+			return "Continents"
 		if selectionID == 3:
 			return "Archipelago"
 		if selectionID == 4:
@@ -4571,9 +4573,10 @@ def addFeatures():
 			# Other features
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 				for iI in xrange(GC.getNumFeatureInfos()):
-					if plot.canHaveFeature(iI):
-						if random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability():
-							plot.setFeatureType(iI, -1)
+					if (GC.getFeatureInfo(iI).getAppearanceProbability() > -1
+					and random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability()
+					and plot.canHaveFeature(iI)):
+						plot.setFeatureType(iI, -1)
 			# Forest and Jungle
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE and not plot.isPeak():
 				if pData[i] != WATER and tData[i] not in (DESERT, DUNES, SALT_FLATS, SCRUB, ICE):

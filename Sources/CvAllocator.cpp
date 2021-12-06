@@ -1,5 +1,5 @@
 /*
-Partially base on MemTrack 
+Partially base on MemTrack
 from http://www.almostinfinite.com/memtrack.html
 
 Copyright (c) 2002, 2008 Curtis Bartley
@@ -240,7 +240,7 @@ namespace MemTrack
 		assert(node->myPrevNode == NULL);
 		assert(node->myNextNode == NULL);
 
-		// If we have at least one node in the list ...        
+		// If we have at least one node in the list ...
 		if (ourFirstNode != NULL)
 		{
 			// ... make the new node the first node's predecessor.
@@ -511,7 +511,7 @@ namespace MemTrack
 		pBlockHeader->~BlockHeader();
 		pBlockHeader = NULL;
 
-		// Free the memory block.    
+		// Free the memory block.
 		CvFree(pProlog);
 	}
 
@@ -869,17 +869,17 @@ namespace MemTrack
 			}
 		}
 
-		std::sort(diffs.rbegin(), diffs.rend());
+		algo::sort(diffs);
 
 		for (std::vector<MemInfoDiff>::const_iterator itr = diffs.begin(); itr != diffs.end(); ++itr)
 		{
 			itr->write(mem_log);
 		}
 
-		mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n") 
-			% "" 
-			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str() 
-			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks)) 
+		mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
+			% ""
+			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str()
+			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks))
 			% convertSize(static_cast<int>(static_cast<int64_t>(grandTotalSize) - static_cast<int64_t>(totalLastTurnSize))).c_str();
 
 		totalLastTurnBlocks = grandTotalNumBlocks;

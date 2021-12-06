@@ -163,6 +163,23 @@
 	<ElementType name="LocalSpecialistYieldChanges" content="eltOnly">
 		<element type="LocalSpecialistYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="TerrainYieldChange" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="YieldChanges"/>
+	</ElementType>
+	<ElementType name="TerrainYieldChanges" content="eltOnly">
+		<element type="TerrainYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PlotYieldChanges" content="eltOnly">
+		<element type="PlotYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PlotYieldChange" content="eltOnly">
+		<element type="PlotType"/>
+		<element type="Yields"/>
+	</ElementType>
+	<ElementType name="Yields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="LocalSpecialistCommerceChange" content="eltOnly">
 		<element type="SpecialistType"/>
 		<element type="CommerceChanges"/>
@@ -364,7 +381,6 @@
 	<ElementType name="bRiver" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPower" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bDirtyPower" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAreaCleanPower" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DiploVoteType" content="textOnly"/>
 	<ElementType name="bForceTeamVoteEligible" content="textOnly" dt:type="boolean"/>
@@ -495,9 +511,6 @@
 	<ElementType name="iHurryAngerModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bBorderObstacle" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
-	<ElementType name="SeaPlotYieldChanges" content="eltOnly">
-		<element type="iYield" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="RiverPlotYieldChanges" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -599,10 +612,6 @@
 	<ElementType name="bCommerce" content="textOnly" dt:type="boolean"/>
 	<ElementType name="CommerceFlexibles" content="eltOnly">
 		<element type="bCommerce" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="bCommerceChangeOriginalOwner" content="textOnly" dt:type="boolean"/>
-	<ElementType name="CommerceChangeOriginalOwners" content="eltOnly">
-		<element type="bCommerceChangeOriginalOwner" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="ConstructSound" content="textOnly"/>
 	<ElementType name="BonusType" content="textOnly"/>
@@ -799,7 +808,6 @@
 		<element type="bWater" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
 		<element type="bPower" minOccurs="0"/>
-		<element type="bDirtyPower" minOccurs="0"/>
 		<element type="bAreaCleanPower" minOccurs="0"/>
 		<element type="bOrbital" minOccurs="0"/>
 		<element type="bOrbitalInfrastructure" minOccurs="0"/>
@@ -923,7 +931,6 @@
 		<element type="iNoEntryDefenseLevel" minOccurs="0"/>
 		<element type="iNumUnitFullHeal" minOccurs="0"/>
 		<element type="iOccupationTimeModifier" minOccurs="0"/>
-		<element type="CommerceAttacks" minOccurs="0"/>
 		<element type="UnitCombatExtraStrengths" minOccurs="0"/>
 		<element type="ExtendsBuilding" minOccurs="0"/>
 		<element type="ObsoletesToBuilding" minOccurs="0"/>
@@ -933,7 +940,8 @@
 		<element type="BonusCommercePercentChanges" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="fVisibilityPriority" minOccurs="0"/>
-		<element type="SeaPlotYieldChanges" minOccurs="0"/>
+		<element type="TerrainYieldChange" minOccurs="0"/>
+		<element type="PlotYieldChanges" minOccurs="0"/>
 		<element type="RiverPlotYieldChanges" minOccurs="0"/>
 		<element type="GlobalSeaPlotYieldChanges" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
@@ -954,7 +962,6 @@
 		<element type="SpecialistCounts" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
 		<element type="CommerceFlexibles" minOccurs="0"/>
-		<element type="CommerceChangeOriginalOwners" minOccurs="0"/>
 		<element type="ConstructSound" minOccurs="0"/>
 		<element type="BonusHealthChanges" minOccurs="0"/>
 		<element type="BonusHappinessChanges" minOccurs="0"/>
@@ -1095,13 +1102,6 @@
 	<ElementType name="TechCommerce" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="TechCommerceChange" content="eltOnly">
-		<element type="PrereqTech"/>
-		<element type="TechCommerce"/>
-	</ElementType>
-	<ElementType name="TechCommerceChanges" content="eltOnly">
-		<element type="TechCommerceChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="TechYield" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1170,6 +1170,7 @@
 	</ElementType>
 	<ElementType name="bPrereqTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainType" content="textOnly"/>
+	<ElementType name="PlotType" content="textOnly"/>
 	<ElementType name="PrereqTerrain" content="eltOnly">
 		<element type="TerrainType"/>
 		<element type="bPrereqTerrain"/>
@@ -1180,13 +1181,8 @@
 	<ElementType name="PrereqAndTerrain" content="eltOnly">
 		<element type="PrereqTerrain" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereqImprovement" content="textOnly" dt:type="boolean"/>
-	<ElementType name="PrereqImprovement" content="eltOnly">
-		<element type="ImprovementType"/>
-		<element type="bPrereqImprovement"/>
-	</ElementType>
 	<ElementType name="PrereqOrImprovement" content="eltOnly">
-		<element type="PrereqImprovement" minOccurs="0" maxOccurs="*"/>
+		<element type="ImprovementType"/>
 	</ElementType>
 	<ElementType name="FeatureType" content="textOnly"/>
 	<ElementType name="bPrereqFeature" content="textOnly" dt:type="boolean"/>
@@ -1249,15 +1245,19 @@
 	<ElementType name="BonusCommercePercentChanges" content="eltOnly">
 		<element type="BonusCommercePercentChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="TechCommerceChange" content="eltOnly">
+		<element type="TechType"/>
+		<element type="CommercePercents"/>
+	</ElementType>
+	<ElementType name="TechCommerceChanges" content="eltOnly">
+		<element type="TechCommerceChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="BonusYieldChange" content="eltOnly">
 		<element type="BonusType"/>
 		<element type="YieldChanges"/>
 	</ElementType>
 	<ElementType name="BonusYieldChanges" content="eltOnly">
 		<element type="BonusYieldChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CommerceAttacks" content="eltOnly">
-		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="VicinityBonusYieldChanges" content="eltOnly">
 		<element type="BonusYieldChange" minOccurs="0" maxOccurs="*"/>

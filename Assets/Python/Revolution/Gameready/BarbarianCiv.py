@@ -63,7 +63,7 @@ class BarbarianCiv:
 		# Increase odds per barb city within reason.
 		fMod *= iNumCities ** .5
 		# Gamespeed factor
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		iRange = 16*iFactorGS
 		iEra = GAME.getCurrentEra()
 
@@ -602,7 +602,7 @@ class BarbarianCiv:
 		odds += 4*CyPlayer.getWondersScore() # 20 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
 		if odds < 512: return
 
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		if not GAME.getSorenRandNum(40*iFactorGS + odds, 'minor2major') < odds: return
 
 		iX = CyCity1.getX(); iY = CyCity1.getY()

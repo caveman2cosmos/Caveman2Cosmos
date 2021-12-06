@@ -265,10 +265,6 @@
 		<DefineName>BUG_UNIT_EXPERIENCE_MODIFIERS_HOVER</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>BUG_TECH_TRADE_DENIAL_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
 	<!-- Bonus -->
 	<Define>
 		<DefineName>BUG_BONUS_TRADE_DENIAL_HOVER</DefineName>
@@ -530,5 +526,13 @@
 		-->
 		<DefineName>ESTIMATED_EXTRA_WAR_EXPENSE_PERCENT</DefineName>
 		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_HAMMER_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 </Civ4Defines>

@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -31,42 +26,34 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DREAM_SIMULATION_CENTER</Type>
+			<Type>BUILDING_CYBER_INSECT_LAB</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CYBER_INSECT_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CYBER_INSECT_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DREAM_SIMULATION_CENTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CYBER_INSECT_LAB</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CYBERPUNK</Bonus>
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHealth>-15</iHealth>
-			<iHappiness>-5</iHappiness>
-			<iRevIdxLocal>25</iRevIdxLocal>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>20</iYield>
-			</YieldModifiers>
-			<CommerceModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceModifiers>
+			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>13</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DREAM_ARTIST</Type>
@@ -101,34 +88,78 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CYBER_INSECT_LAB</Type>
+			<Type>BUILDING_DREAM_PROPAGANDA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CYBER_INSECT_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CYBER_INSECT_LAB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DREAM_PROPAGANDA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DREAM_PROPAGANDA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CYBER_INSECT_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DREAM_PROPAGANDA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqBonuses>
+				<Bonus>BONUS_CYBERPUNK</Bonus>
+			</PrereqBonuses>
+			<iCost>5455</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHappiness>-3</iHappiness>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceModifiers>
+				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceModifiers>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
+			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
+			<iPrereqPopulation>3</iPrereqPopulation>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DREAM_SIMULATION_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DREAM_SIMULATION_CENTER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CYBERPUNK</Bonus>
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHealth>-15</iHealth>
+			<iHappiness>-5</iHappiness>
+			<iRevIdxLocal>25</iRevIdxLocal>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
-			</PrereqInCityBuildings>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldModifiers>
+			<CommerceModifiers>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceModifiers>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>3</iPrereqPopulation>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>13</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSECT_MANIPULATION_LAB</Type>
@@ -163,42 +194,6 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>3</iPrereqPopulation>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DREAM_PROPAGANDA</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_DREAM_PROPAGANDA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DREAM_PROPAGANDA_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DREAM_PROPAGANDA</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqBonuses>
-				<Bonus>BONUS_CYBERPUNK</Bonus>
-			</PrereqBonuses>
-			<iCost>5455</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHappiness>-3</iHappiness>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceModifiers>
-				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceModifiers>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
-			</PrereqInCityBuildings>
-			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>3</iPrereqPopulation>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

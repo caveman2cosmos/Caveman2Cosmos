@@ -18,7 +18,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_SANITIZE_WATER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SANITIZE_WATER</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -44,8 +43,12 @@
 			<Description>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>3</iYieldChange>
+			</YieldChanges>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>25</iPillageGold>
@@ -57,7 +60,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -87,7 +90,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -97,7 +100,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -107,7 +110,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -117,7 +120,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -127,7 +130,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -137,7 +140,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -147,7 +150,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -155,9 +158,9 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -187,6 +190,12 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
+					<TechYields>
+						<iYield>2</iYield>
+					</TechYields>
+				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Hunting Preserve -> Wildlife Sanctuary Era -->
@@ -203,7 +212,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -337,21 +345,7 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
-					<TechYields>
-						<iYield>2</iYield>
-					</TechYields>
-				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Hunting Camp -> Hunting Preserve Era -->
 		<ImprovementInfo>
@@ -367,7 +361,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -482,14 +475,6 @@
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_SCAVENGING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HUNTING_PRESERVE</ImprovementUpgrade>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Pasture -> Vertical Farm -->
 		<ImprovementInfo>
@@ -500,7 +485,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_PASTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PASTURE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PASTURE</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -521,7 +505,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -549,7 +533,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -559,7 +543,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -569,7 +553,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -603,14 +587,6 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_BARBED_WIRE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -629,7 +605,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_NOMADIC_HERD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_NOMADIC_HERD</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -667,7 +642,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -677,7 +652,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -687,7 +662,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -712,14 +687,6 @@
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_SCAVENGING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_PASTURE</ImprovementUpgrade>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Scavenging Camp -> Nomadic Herd OR Hunting Camp -->
 		<ImprovementInfo>
@@ -731,7 +698,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SCAVENGING_CAMP</ArtDefineTag>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>3</iPillageGold>
@@ -898,14 +864,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_HUNTER_GATHERER</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
@@ -921,7 +879,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
@@ -998,7 +955,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>20</iPillageGold>
@@ -1159,22 +1115,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Fruit Gathering Camp -> Fruit Picker -->
 		<ImprovementInfo>
@@ -1185,7 +1125,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>6</iPillageGold>
@@ -1336,11 +1275,10 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ORCHARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ORCHARD</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
@@ -1555,7 +1493,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>20</iPillageGold>
@@ -1580,14 +1517,6 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Grape Gathering Camp -> Grape Picker -->
@@ -1599,7 +1528,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAPE_GATHERING_CAMP</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>7</iPillageGold>
@@ -1638,9 +1566,8 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
@@ -1874,14 +1801,6 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_DERIVATIVES</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -1915,7 +1834,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>20</iPillageGold>
@@ -2106,24 +2024,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Plant Gathering Camp-> Plant Picking Camp -->
 		<ImprovementInfo>
@@ -2134,7 +2034,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>7</iPillageGold>
@@ -2342,7 +2241,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MUSHROOM_GATHERING_CAMP</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>20</iUpgradeTime>
 			<iPillageGold>7</iPillageGold>
@@ -2400,8 +2298,12 @@
 			<Description>TXT_KEY_IMPROVEMENT_SILK_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SILK_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>10</iPillageGold>
@@ -2484,7 +2386,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iAdvancedStartCost>50</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -2533,7 +2434,6 @@
 				<iYield>0</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<bPermanent>1</bPermanent>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -2655,7 +2555,6 @@
 				<iYieldChange>5</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_REFINING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_TAR_GATHERER</ImprovementPillage>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -2757,7 +2656,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>30</iUpgradeTime>
@@ -2822,7 +2720,6 @@
 				<iYield>0</iYield>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
 			<FeatureMakesValids>
@@ -3063,7 +2960,6 @@
 				<iYield>0</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
@@ -3185,7 +3081,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>
@@ -3234,14 +3129,12 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VERTICAL_FARM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>6</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FARM</ImprovementPillage>
 			<!-- Other improvements also can upgrade to Vertical Farm: Mushroom Gatherer, Orchard, Pasture, Plantation, Silk Farm, Winery -->
-			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -3673,8 +3566,8 @@
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>-2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3925,11 +3818,8 @@
 			<IrrigatedYieldChange>
 				<iYield>1</iYield>
 			</IrrigatedYieldChange>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<bRequiresIrrigation>1</bRequiresIrrigation>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -4094,12 +3984,6 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_CLOUD_PATTERNS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -4217,7 +4101,6 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>5</iAdvancedStartCost>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
@@ -4342,7 +4225,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<iDefenseModifier>5</iDefenseModifier>
 			<iUpgradeTime>3</iUpgradeTime>
@@ -4829,9 +4711,8 @@
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>5</iYieldChange>
+				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bPeakMakesValid>1</bPeakMakesValid>
 			<bPeakImprovement>1</bPeakImprovement>
 			<iAdvancedStartCost>50</iAdvancedStartCost>
@@ -4858,6 +4739,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5188,7 +5070,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bPeakImprovement>1</bPeakImprovement>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -5389,13 +5270,6 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_COAL_MINING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Core Mine | End -->
@@ -5412,7 +5286,6 @@
 				<iYieldChange>12</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_MODERN_MINE</ImprovementPillage>
@@ -5773,7 +5646,6 @@
 				<iYieldChange>10</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<iAdvancedStartCost>64</iAdvancedStartCost>
 			<iUpgradeTime>40</iUpgradeTime>
@@ -6094,7 +5966,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
 			<iUpgradeTime>30</iUpgradeTime>
@@ -6339,6 +6210,13 @@
 			<ImprovementUpgrade>IMPROVEMENT_MODERN_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_GEOLOGY</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -6443,7 +6321,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>20</iUpgradeTime>
@@ -6676,13 +6553,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_SHAFT_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -6778,8 +6648,8 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iAdvancedStartCost>36</iAdvancedStartCost>
 			<iUpgradeTime>40</iUpgradeTime>
@@ -7079,7 +6949,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -7175,7 +7044,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -7328,7 +7196,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverSideYieldChange>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>120</iAdvancedStartCost>
 			<iFeatureGrowth>64</iFeatureGrowth>
@@ -7505,7 +7372,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverSideYieldChange>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iFeatureGrowth>40</iFeatureGrowth>
@@ -7686,14 +7552,13 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<RiverSideYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverSideYieldChange>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
@@ -7742,7 +7607,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7893,8 +7758,8 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -7930,7 +7795,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7941,7 +7806,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7960,7 +7825,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7983,6 +7848,14 @@
 			<!-- Other improvements also can upgrade to Lumberjack: Fruit and Plant Picking Camps -->
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERMILL</ImprovementUpgrade>
 			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 					<TechYields>
@@ -8020,7 +7893,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -8094,9 +7966,8 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
-				<iYieldChange>11</iYieldChange>
+				<iYieldChange>13</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -8126,6 +7997,21 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_TOWN</ImprovementPillage>
 			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
 					<TechYields>
@@ -8245,10 +8131,9 @@
 			</PrereqNatureYields>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
-				<iYieldChange>9</iYieldChange>
+				<iYieldChange>4</iYieldChange>
+				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -8281,22 +8166,23 @@
 			<ImprovementUpgrade>IMPROVEMENT_SUBURBS</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ECONOMICS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8393,10 +8279,9 @@
 			</PrereqNatureYields>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
+				<iYieldChange>3</iYieldChange>
+				<iYieldChange>8</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iHealthPercent>-50</iHealthPercent>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
@@ -8430,24 +8315,16 @@
 			<ImprovementUpgrade>IMPROVEMENT_TOWN</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ENGINEERING</PrereqTech>
 					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
@@ -8543,9 +8420,8 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>5</iYieldChange>
+				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -8578,14 +8454,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_VILLAGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+					<PrereqTech>TECH_TRADE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8611,7 +8480,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -8642,31 +8510,6 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HAMLET</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_MASONRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Manufacturing Complex | End -->
 		<ImprovementInfo>
@@ -8680,10 +8523,9 @@
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
-				<iYieldChange>10</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>11</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -8861,10 +8703,9 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>9</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iUpgradeTime>35</iUpgradeTime>
@@ -8933,13 +8774,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -8948,14 +8782,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9045,7 +8871,6 @@
 				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -9114,13 +8939,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -9217,7 +9035,6 @@
 				<iYieldChange>9</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_WATERMILL</ImprovementPillage>
 			<bRiverSideMakesValid>1</bRiverSideMakesValid>
@@ -9259,7 +9076,6 @@
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiverSideMakesValid>1</bRiverSideMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -9307,7 +9123,6 @@
 				<iYieldChange>7</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_WINDMILL</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -9404,7 +9219,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<PrereqTech>TECH_WINDMILLS</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -9452,7 +9266,6 @@
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bPeakMakesValid>1</bPeakMakesValid>
 			<bPeakImprovement>1</bPeakImprovement>
 			<iAdvancedStartCost>50</iAdvancedStartCost>
@@ -9482,7 +9295,6 @@
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>35</iAdvancedStartCost>
@@ -9580,7 +9392,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverSideYieldChange>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
 			<iFeatureGrowth>64</iFeatureGrowth>
@@ -9680,7 +9491,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GROUNDWATER_WELL</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -9727,7 +9537,6 @@
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iPillageGold>8</iPillageGold>
@@ -9752,7 +9561,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresFeature>1</bRequiresFeature>
@@ -9820,7 +9628,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -9908,99 +9715,32 @@
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
 		</ImprovementInfo>
-		<!-- Moai Statues | Independent -->
+		<!-- Machu Picchu  | Independent -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_MOAI</Type>
+			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
 			<CreatingBuilds>
-				<CreatingBuild>BUILD_MOAI_STATUES</CreatingBuild>
+				<CreatingBuild>BUILD_MACHU_PICCHU</CreatingBuild>
 			</CreatingBuilds>
-			<Description>TXT_KEY_IMPROVEMENT_MOAI</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MOAI</ArtDefineTag>
+			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MACHU_PICCHU</ArtDefineTag>
+			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
+			<bPeakMakesValid>1</bPeakMakesValid>
+			<bPeakImprovement>1</bPeakImprovement>
 			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
-			<bNoFreshWater>1</bNoFreshWater>
-			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAirBombDefense>5</iAirBombDefense>
-			<iPillageGold>25</iPillageGold>
+			<bPermanent>1</bPermanent>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_MASONRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_SCULPTURE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ANCESTOR_WORSHIP</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ARCHEOLOGY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-			<iUniqueRange>2</iUniqueRange>
 		</ImprovementInfo>
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp | End - Information Lifestyle -->
@@ -10023,7 +9763,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverSideYieldChange>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresFeature>1</bRequiresFeature>
@@ -10172,14 +9911,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Desert Camp | End - Information Lifestyle -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10197,7 +9928,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresIrrigation>1</bRequiresIrrigation>
@@ -10322,14 +10052,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Wetlands Camp | End - Information Lifestyle -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10347,7 +10069,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -10430,14 +10151,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
 		<!-- Radar Watchtower | End -->
@@ -10451,7 +10164,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR_TOWER</ArtDefineTag>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementPillage>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iAirBombDefense>15</iAirBombDefense>
 			<iDefenseModifier>20</iDefenseModifier>
@@ -10542,7 +10254,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_STEEL</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>10</iAirBombDefense>
@@ -10636,7 +10347,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>40</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -10732,7 +10442,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iAirBombDefense>2</iAirBombDefense>
@@ -10823,6 +10532,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_COMMAND_BUNKER</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -10918,6 +10628,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -11015,6 +10726,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -11112,6 +10824,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -11143,6 +10856,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -11171,6 +10885,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -11263,6 +10978,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -11354,7 +11070,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_YOUNG_FOREST</ArtDefineTag>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11408,7 +11123,6 @@
 				<iYield>0</iYield>
 			</YieldChanges>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bActsAsCity>0</bActsAsCity>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -11425,7 +11139,6 @@
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11468,7 +11181,6 @@
 			<Description>TXT_KEY_BUILD_PLANT_SAVANNA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_SAVANNA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11511,7 +11223,6 @@
 			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
@@ -11561,7 +11272,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11586,7 +11296,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!-- <bOutsideBorders>1</bOutsideBorders> -->
@@ -11607,7 +11316,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PLAINS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11644,7 +11352,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11673,7 +11380,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11694,7 +11400,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11715,7 +11420,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11736,7 +11440,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11757,7 +11460,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11782,7 +11484,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11803,7 +11504,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11825,8 +11525,12 @@
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_SHIPS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>3</iYieldChange>
+			</YieldChanges>
 			<ImprovementPillage>IMPROVEMENT_WHALING_BOATS</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -11894,8 +11598,12 @@
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_BOATS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -11935,8 +11643,12 @@
 			<Description>TXT_KEY_IMPROVEMENT_FISHING_BOATS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
 			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -12070,7 +11782,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iUpgradeTime>2</iUpgradeTime>
 			<ImprovementUpgrade>IMPROVEMENT_FISHING_BOATS</ImprovementUpgrade>
@@ -12235,7 +11946,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -12278,7 +11988,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<FeatureMakesValids>
@@ -12302,7 +12011,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<FeatureMakesValids>
@@ -12312,6 +12020,29 @@
 				</FeatureMakesValid>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+			</FeatureMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</CreatingBuild>
+			</CreatingBuilds>
+			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<FeatureMakesValids>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -12327,7 +12058,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<FeatureMakesValids>
@@ -12347,12 +12077,30 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_REEF</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+			</FeatureMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_BEACON_GREAT_BARRIER_REEF</CreatingBuild>
+			</CreatingBuilds>
+			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
+			<PrereqTech>TECH_SAILING</PrereqTech>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<FeatureMakesValids>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -12374,7 +12122,6 @@
 				<iYield>0</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
@@ -12419,7 +12166,6 @@
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
@@ -12473,7 +12219,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
@@ -12569,10 +12314,9 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_EXTRACTION_FACILITY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>4</iYieldChange>
-				<iYieldChange>4</iYieldChange>
+				<iYieldChange>5</iYieldChange>
+				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementPillage>
 			<!-- Other improvements also can upgrade to Extraction Facility: Fishing Camp -->
@@ -12671,8 +12415,12 @@
 			<Description>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_OFFSHORE_PLATFORM</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
@@ -12728,14 +12476,6 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
@@ -12771,7 +12511,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -12898,7 +12637,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_PEDIA</Civilopedia>
 			<Help>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -12999,6 +12737,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
+			<bActsAsCity>1</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iDefenseModifier>50</iDefenseModifier>
@@ -13100,7 +12839,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_LAND_WORKED</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bGraphicalOnly>1</bGraphicalOnly>
@@ -13111,7 +12849,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_WATER_WORKED</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WATER_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WATER_WORKED</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bGraphicalOnly>1</bGraphicalOnly>
@@ -13122,7 +12859,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_RUINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
@@ -13134,7 +12870,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_RUINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS_ARCOLOGY</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
@@ -13146,7 +12881,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_GOODY_HUT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GOODY_HUT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GOODY_HUT</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<bGoody>1</bGoody>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iTilesPerGoody>40</iTilesPerGoody>
@@ -13212,7 +12946,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_GOODY_ISLAND</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GOODY_ISLAND_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GOODY_ISLAND</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<bGoody>1</bGoody>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -13237,6 +12970,7 @@
 			<Description>TXT_WORD_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_DUMMY</PrereqTech>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>

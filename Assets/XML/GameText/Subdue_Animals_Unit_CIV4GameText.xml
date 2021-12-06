@@ -586,6 +586,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Giraffe:Gefangenen Giraffe:Gefangenen Giraffe:Gefangene Giraffe:Gefangene Giraffen:Gefangenen Giraffen:Gefangenen Giraffen:Gefangenen Giraffen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Giraffa addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1681,6 +1686,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLABY</Tag>
 		<English>Subdued Wallaby</English>
 		<French>Wallaby (App.)</French>
+		<German>
+			<Text>Gefangenes Wallaby:Gefangenen Wallabys:Gefangenen Wallaby:Gefangene Wallaby:Gefangene Wallabys:Gefangenen Wallabys:Gefangenen Wallabys:Gefangenen Wallabys</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Wallaby addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1693,6 +1703,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO</Tag>
 		<English>Subdued Wallaroo</English>
 		<French>Wallaroo (App.)</French>
+		<German>
+			<Text>Gefangenes Bergkänguru:Gefangenen Bergkängurus:Gefangenen Bergkänguru:Gefangene Bergkänguru:Gefangene Bergkängurus:Gefangenen Bergkängurus:Gefangenen Bergkängurus:Gefangenen Bergkängurus</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Wallaroo addomesticato</Text>
 			<Gender>Male</Gender>

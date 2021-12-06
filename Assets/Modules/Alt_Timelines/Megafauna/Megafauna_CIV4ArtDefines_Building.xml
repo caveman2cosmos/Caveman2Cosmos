@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Building art path information -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<BuildingArtInfos>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BEAR_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/bear_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/BearTrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BIG_CAT_TRAINER_EFFECT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/bigcattrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BIG_CAT_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/Big_Cat_Trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_POLICE_CAT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/PoliceCat.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BISON_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/bison_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/BisonTrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DEER_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/deer_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/DeerTrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GIRAFFE_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/giraffe_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/GiraffeTrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MAMMOTH_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/mammoth_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>art/Pets/art/mammothtrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MAMMOTH_HERD</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/herd_mammoth.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MAPINGUARI_COMPOUND</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Units/Groundsloth.dds</Button>
+			<!--Button>Art/Interface/Buttons/Buildings/MapinguariCompound.dds</Button-->
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MAPINGUARI_GUARD</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Units/Groundsloth.dds</Button>
+			<!--Button>Art/Interface/Buttons/Buildings/MapinguariCompound.dds</Button-->
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RHINO_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/rhino_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/RhinoTrainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ZEBRA_HERD</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.70</fScale>
+			<fInterfaceScale>0.83</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/ZebraHerd/Stable.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/herd_zebra.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ZEBRA_TRAINER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Great_Wonders/zebra_trainer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ZEBRA_TRAINER_EFFECT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/ZebraTrainer.dds</Button>
+		</BuildingArtInfo>
+	</BuildingArtInfos>
+</Civ4ArtDefines>

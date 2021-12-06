@@ -4,6 +4,8 @@ EXPORTS
 ?getTerrainType@CvPlot@@QBE?AW4TerrainTypes@@XZ=?getTerrainTypeExternal@CvPlot@@QBE?AW4TerrainTypes@@XZ
 ?getFeatureType@CvPlot@@QBE?AW4FeatureTypes@@XZ=?getFeatureTypeExternal@CvPlot@@QBE?AW4FeatureTypes@@XZ
 ?isWater@CvPlot@@QBE_NXZ=?isWaterExternal@CvPlot@@QBE_NXZ
+?getVisibleImprovementState@CvPlot@@QAEXAAW4ImprovementTypes@@AA_N@Z=?getVisibleImprovementState@CvPlot@@QBEXAAW4ImprovementTypes@@AA_N@Z
+?getVisibleBonusState@CvPlot@@QAEXAAW4BonusTypes@@AA_N1@Z=?getVisibleBonusState@CvPlot@@QBEXAAW4BonusTypes@@AA_N1@Z
 ?getX@CvUnit@@QBEHXZ=?getViewportX@CvUnit@@QBEHXZ
 ?getY@CvUnit@@QBEHXZ=?getViewportY@CvUnit@@QBEHXZ
 ?plot@CvUnit@@QBEPAVCvPlot@@XZ=?plotExternal@CvUnit@@QBEPAVCvPlot@@XZ

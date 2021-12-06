@@ -99,8 +99,8 @@
 			<Civilopedia>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ANTIMATTER</ArtDefineTag>
-			<TechReveal>TECH_ACNP_PROPULSION</TechReveal>
-			<TechCityTrade>TECH_ACNP_PROPULSION</TechCityTrade>
+			<TechReveal>TECH_ANTIMATTER_PRODUCTION</TechReveal>
+			<TechCityTrade>TECH_ANTIMATTER_PRODUCTION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Automobiles -->
@@ -255,8 +255,8 @@
 			<Civilopedia>TXT_KEY_BONUS_BONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BONE</ArtDefineTag>
-			<TechReveal>TECH_COOKING</TechReveal>
-			<TechCityTrade>TECH_COOKING</TechCityTrade>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Books -->
@@ -1001,7 +1001,7 @@
 			<Type>BONUS_GEOGLYPH_PLANS</Type>
 			<Description>TXT_KEY_BONUS_GEOGLYPH_PLANS</Description>
 			<Civilopedia>TXT_KEY_BONUS_GEOGLYPH_PLANS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GEOGLYPH_PLANS</ArtDefineTag>
 			<TechReveal>TECH_MATHEMATICS</TechReveal>
 			<TechCityTrade>TECH_MATHEMATICS</TechCityTrade>
@@ -1102,7 +1102,7 @@
 			<Type>BONUS_HEAVY_WATER</Type>
 			<Description>TXT_KEY_BONUS_HEAVY_WATER</Description>
 			<Civilopedia>TXT_KEY_BONUS_HEAVY_WATER_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HEAVY_WATER</ArtDefineTag>
 			<TechReveal>TECH_QUANTUM_PHYSICS</TechReveal>
 			<TechCityTrade>TECH_QUANTUM_PHYSICS</TechCityTrade>
@@ -2200,7 +2200,7 @@
 			<Type>BONUS_NOK_SCULPTURES</Type>
 			<Description>TXT_KEY_BONUS_NOK_SCULPTURES</Description>
 			<Civilopedia>TXT_KEY_BONUS_NOK_SCULPTURES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NOK_SCULPTURES</ArtDefineTag>
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
 			<TechCityTrade>TECH_ORNAMENTATION</TechCityTrade>
@@ -2318,8 +2318,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SMART_MEDICINE</ArtDefineTag>
 			<TechReveal>TECH_SMART_DRUGS</TechReveal>
 			<TechCityTrade>TECH_SMART_DRUGS</TechCityTrade>
-			<iAITradeModifier>10</iAITradeModifier>
-			<iAIObjective>10</iAIObjective>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -2952,7 +2950,7 @@
 			<Type>BONUS_HIERACOSPHINX</Type>
 			<Description>TXT_KEY_BONUS_HIERACOSPHINX</Description>
 			<Civilopedia>TXT_KEY_BONUS_HIERACOSPHINX_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HIERACOSPHINX</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -2962,7 +2960,7 @@
 			<Type>BONUS_JACKALOPE</Type>
 			<Description>TXT_KEY_BONUS_JACKALOPE</Description>
 			<Civilopedia>TXT_KEY_BONUS_JACKALOPE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JACKALOPE</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -2972,7 +2970,7 @@
 			<Type>BONUS_PEGASUS</Type>
 			<Description>TXT_KEY_BONUS_PEGASUS</Description>
 			<Civilopedia>TXT_KEY_BONUS_PEGASUS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PEGASUS</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -2982,7 +2980,7 @@
 			<Type>BONUS_PHOENIX</Type>
 			<Description>TXT_KEY_BONUS_PHOENIX</Description>
 			<Civilopedia>TXT_KEY_BONUS_PHOENIX_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PHOENIX</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -2992,7 +2990,7 @@
 			<Type>BONUS_QILIN</Type>
 			<Description>TXT_KEY_BONUS_QILIN</Description>
 			<Civilopedia>TXT_KEY_BONUS_QILIN_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QILIN</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -3002,7 +3000,7 @@
 			<Type>BONUS_QUETZALCOATL</Type>
 			<Description>TXT_KEY_BONUS_QUETZALCOATL</Description>
 			<Civilopedia>TXT_KEY_BONUS_QUETZALCOATL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QUETZALCOATL</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -3012,7 +3010,7 @@
 			<Type>BONUS_RAINBOW_SERPENT</Type>
 			<Description>TXT_KEY_BONUS_RAINBOW_SERPENT</Description>
 			<Civilopedia>TXT_KEY_BONUS_RAINBOW_SERPENT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RAINBOW_SERPENT</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
@@ -3452,7 +3450,7 @@
 			<Type>BONUS_MITHRIL</Type>
 			<Description>TXT_KEY_BONUS_MITHRIL</Description>
 			<Civilopedia>TXT_KEY_BONUS_MITHRIL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MITHRIL</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
@@ -3472,7 +3470,7 @@
 			<Type>BONUS_ORICHALCUM</Type>
 			<Description>TXT_KEY_BONUS_ORICHALCUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_ORICHALCUM_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ORICHALCUM</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
@@ -3556,6 +3554,27 @@
 			<ArtDefineTag>ART_DEF_BONUS_WATERPROOF_CEMENT</ArtDefineTag>
 			<TechReveal>TECH_WATERPROOF_CONCRETE</TechReveal>
 			<TechCityTrade>TECH_WATERPROOF_CONCRETE</TechCityTrade>
+			<iPlacementOrder>-1</iPlacementOrder>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_THEREMIN</Type>
+			<Description>TXT_KEY_BONUS_THEREMIN</Description>
+			<Civilopedia>TXT_KEY_BONUS_THEREMIN_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_THEREMIN</ArtDefineTag>
+			<TechReveal>TECH_ELECTRONICS</TechReveal>
+			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
+			<iHappiness>1</iHappiness>
+			<iPlacementOrder>-1</iPlacementOrder>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_MACHU_PICCHU_PLANS</Type>
+			<Description>TXT_KEY_BONUS_MACHU_PICCHU_PLANS</Description>
+			<Civilopedia>TXT_KEY_BONUS_MACHU_PICCHU_PLANS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_MACHU_PICCHU_PLANS</ArtDefineTag>
+			<TechReveal>TECH_MOUNTAINEERING</TechReveal>
+			<TechCityTrade>TECH_MOUNTAINEERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	</BonusInfos>

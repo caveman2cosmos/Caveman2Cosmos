@@ -335,7 +335,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_EDISON</Type>
-			<Path>Art/Movies/Wonders/edisons workshop.bik</Path>
+			<Path>Art/Movies/Wonders/EDISONS_WORKSHOP.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_EINSTEIN</Type>
@@ -2742,6 +2742,10 @@
 			<Path>Art/Movies/national_wonders/NATIONAL_LEGAL_DATABASE.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_LIBRARY_SERVICE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NATIONAL_MINT</Type>
 			<Path>Art/Movies/national_wonders/NATIONAL_MINT.dds</Path>
 		</MovieArtInfo>
@@ -3090,10 +3094,6 @@
 			<Path>Art/Movies/special/CULTURAL_ACHIEVEMENT.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_ANIMATION_STUDIO</Type>
-			<Path>Art/Movies/special/ANIMATION_STUDIO.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ASTEROID_DEFLECTION_SYSTEM</Type>
 			<Path>Art/Movies/special/ASTEROID_DEFLECTION_SYSTEM.dds</Path>
 		</MovieArtInfo>
@@ -3420,6 +3420,54 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</Type>
 			<Path>Art/Movies/wonders/AZTEC_SACRIFICIAL_ALTAR_TLALOC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_AQUARIUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_PISCES</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_PISCES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_TAURUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_GEMINI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_SCORPIO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_CAPRICORN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_ARIES</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_ARIES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CANCER</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_CANCER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LEO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_LEO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_VIRGO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_LIBRA.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>
