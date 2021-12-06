@@ -23954,14 +23954,6 @@
 		<Spanish>Maravilla nacional</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_PROMOTION_UNITS</Tag>
-		<English>Available To</English>
-		<French>Disponible pour :</French>
-		<German>Verfügbar für</German>
-		<Italian>Disponibile a</Italian>
-		<Spanish>Disponible para</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RANGE</Tag>
 		<English>Range: %d1_Num</English>
 		<French>Portée : %d1_Num</French>
@@ -33412,6 +33404,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Mittlere Unterhaltskosten</German>
 		<Italian>Mantenimento medio</Italian>
 		<Spanish>Mantenimiento medio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VALID_FOR</Tag>
+		<English>Valid for:</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VALID_FOR_NOT</Tag>
+		<English>Invalid for:</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VASSAL_DEMAND_TRIBUTE</Tag>
