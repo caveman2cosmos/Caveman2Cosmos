@@ -35,10 +35,9 @@ class PediaPromotion:
 		CvThePromotionInfo = GC.getPromotionInfo(iThePromotion)
 		screen = self.main.screen()
 
-		iWidGen				= WidgetTypes.WIDGET_GENERAL
-		iWidJuToUnitCombat	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT
-		iPanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
-		iFontGame			= FontTypes.GAME_FONT
+		iWidGen			= WidgetTypes.WIDGET_GENERAL
+		iPanelBlue50	= PanelStyles.PANEL_STYLE_BLUE50
+		iFontGame		= FontTypes.GAME_FONT
 
 		enumGBS = self.main.enumGBS
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2 = self.main.aFontList
