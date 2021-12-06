@@ -741,30 +741,51 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	{
 		if (bShift)
 		{
-			bFirst = true;
-			for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+			// Handle Counter
+			const int iUnitID = pUnit->getID();
+			const uint16_t iDisplayCount = inspectUnitCombatCounters->getCount(iUnitID);
+			uint16_t iPotentialDisplays = 0;
+			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
+				if (pUnit->isHasUnitCombat((UnitCombatTypes)iI) && ++iPotentialDisplays > iDisplayCount)
 				{
-					const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
-					if (bFirst)
+					break;
+				}
+			}
+			if (iDisplayCount == iPotentialDisplays)
+			{
+				inspectUnitCombatCounters->setCount(iUnitID, 0);
+			}
+			else if (iDisplayCount > iPotentialDisplays)
+			{
+				inspectUnitCombatCounters->setCount(iUnitID, 1);
+			}
+			else
+			{
+				inspectUnitCombatCounters->setCount(iUnitID, iDisplayCount + 1);
+			}
+
+			// List Unit Combats
+			int iCount = 0;
+			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+			{
+				const UnitCombatTypes eUnitCombat = static_cast<UnitCombatTypes>(iI);
+
+				if (pUnit->isHasUnitCombat(eUnitCombat))
+				{
+					if (++iCount == iDisplayCount)
 					{
-						szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-						szString.append(szTempBuffer);
-						bFirst = false;
+						szString.append(DOUBLE_SEPARATOR);
+						szString.append(NEWLINE);
+						setUnitCombatHelp(szString, eUnitCombat, false, true);
+						szString.append(DOUBLE_SEPARATOR);
 					}
 					else
 					{
 						szString.append(NEWLINE);
-						szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-						szString.append(szTempBuffer);
+						szString.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
 					}
 				}
-			}
-			if (!bFirst)
-			{
-				szTempBuffer.Format(L")");
-				szString.append(szTempBuffer);
 			}
 		}
 		//Setup Combat Value Displays
@@ -13949,22 +13970,26 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ASSASSIN", iAssassinChange));
 	}
-	bool bWithoutWarning = GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING);
-	if (iStealthStrikesChange != 0 && bWithoutWarning)
+
+	if (GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", iStealthStrikesChange));
+		if (iStealthStrikesChange != 0)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", iStealthStrikesChange));
+		}
+		if (iStealthCombatModifierChange != 0)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", iStealthCombatModifierChange));
+		}
+		if (iStealthDefenseChange != 0)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE", iStealthDefenseChange));
+		}
 	}
-	if (iStealthCombatModifierChange != 0 && bWithoutWarning)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", iStealthCombatModifierChange));
-	}
-	if (iStealthDefenseChange != 0 && bWithoutWarning)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE", iStealthDefenseChange));
-	}
+
 	if (iDefenseOnlyChange != 0)
 	{
 		szBuffer.append(pcNewline);
@@ -20111,24 +20136,27 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INVESTIGATION", szTempBuffer.GetCString()));
 		}
 
-		bool bWithoutWarning = game.isOption(GAMEOPTION_WITHOUT_WARNING);
-		if (kUnit.getStealthStrikes() != 0 && bWithoutWarning)
+		if (game.isOption(GAMEOPTION_WITHOUT_WARNING))
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", kUnit.getStealthStrikes()));
+			if (kUnit.getStealthStrikes() != 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", kUnit.getStealthStrikes()));
+			}
+
+			if (kUnit.getStealthCombatModifier() != 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", kUnit.getStealthCombatModifier()));
+			}
+
+			if (kUnit.isStealthDefense())
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
+			}
 		}
 
-		if (kUnit.getStealthCombatModifier() != 0 && bWithoutWarning)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", kUnit.getStealthCombatModifier()));
-		}
-
-		if (kUnit.isStealthDefense() && bWithoutWarning)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
-		}
 
 		if (kUnit.isNoInvisibility() && game.isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
@@ -20193,6 +20221,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				if (++iCount == iDisplayCount)
 				{
 					szBuffer.append(DOUBLE_SEPARATOR);
+					szBuffer.append(NEWLINE);
 					setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
 					szBuffer.append(DOUBLE_SEPARATOR);
 				}
@@ -20220,17 +20249,40 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	{
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(DOUBLE_SEPARATOR);
-			setUnitCombatHelp(szBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), bCivilopediaText, true);
-			szBuffer.append(DOUBLE_SEPARATOR);
+			bool bFirst = true;
+			CvWStringBuffer szPeekBuffer;
+			setUnitCombatHelp(szPeekBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), true, true);
+			if (!szPeekBuffer.isEmpty())
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(DOUBLE_SEPARATOR);
+				szBuffer.append(NEWLINE);
+				szBuffer.append(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getUnitCombatType()).getDescription());
+				szBuffer.append(szPeekBuffer);
+				szBuffer.append(DOUBLE_SEPARATOR);
+				bFirst = false;
+				szPeekBuffer.clear();
+			}
 
 			foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 			{
 				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombat)))
 				{
-					setUnitCombatHelp(szBuffer, eSubCombat, bCivilopediaText, true);
-					szBuffer.append(DOUBLE_SEPARATOR);
+					setUnitCombatHelp(szPeekBuffer, eSubCombat, true, true);
+					if (!szPeekBuffer.isEmpty())
+					{
+						if (bFirst)
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(DOUBLE_SEPARATOR);
+							bFirst = false;
+						}
+						szBuffer.append(NEWLINE);
+						szBuffer.append(GC.getUnitCombatInfo(eSubCombat).getDescription());
+						szBuffer.append(szPeekBuffer);
+						szBuffer.append(DOUBLE_SEPARATOR);
+						szPeekBuffer.clear();
+					}
 				}
 			}
 		}
@@ -27762,11 +27814,12 @@ void CvGameTextMgr::setTraitHelp(CvWStringBuffer &szBuffer, TraitTypes eTrait)
 
 void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText, bool bFromUnit)
 {
-	int iI;
-	CvWString szTempBuffer;
 	const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
 
-	bool bFirstDisplay = true;
+	if (!bCivilopediaText)
+	{
+		szBuffer.append(info.getDescription());
+	}
 
 	if (info.getExcileChange() > 0)
 	{
@@ -27831,232 +27884,139 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	}
 	if (info.getVisibilityChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE", info.getVisibilityChange()));
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
 			if (info.getVisibilityIntensityChangeType((InvisibleTypes)iI) != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", info.getVisibilityIntensityChangeType((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
 		}
-		for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
 			if (info.getVisibilityIntensityRangeChangeType((InvisibleTypes)iI) != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE", info.getVisibilityIntensityRangeChangeType((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
 		}
-		for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
 			if (info.getVisibilityIntensitySameTileChangeType((InvisibleTypes)iI) != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_SAME_TILE_CHANGE", info.getVisibilityIntensitySameTileChangeType((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
 		}
-		for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
 			if (info.getInvisibilityIntensityChangeType((InvisibleTypes)iI) != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_INTENSITY_CHANGE", info.getInvisibilityIntensityChangeType((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
 		}
-		int iIntensity = 0;
-		for (iI = 0; iI < info.getNumInvisibleTerrainChanges(); iI++)
+		for (int iI = 0; iI < info.getNumInvisibleTerrainChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getInvisibleTerrainChange(iI).eInvisible);
-			TerrainTypes eTerrain = (info.getInvisibleTerrainChange(iI).eTerrain);
-			iIntensity = info.getInvisibleTerrainChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getInvisibleTerrainChange(iI).eInvisible;
+			TerrainTypes eTerrain = info.getInvisibleTerrainChange(iI).eTerrain;
+			const int iIntensity = info.getInvisibleTerrainChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getTerrainInfo(eTerrain).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumInvisibleFeatureChanges(); iI++)
+		for (int iI = 0; iI < info.getNumInvisibleFeatureChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getInvisibleFeatureChange(iI).eInvisible);
-			FeatureTypes eFeature = (info.getInvisibleFeatureChange(iI).eFeature);
-			iIntensity = info.getInvisibleFeatureChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getInvisibleFeatureChange(iI).eInvisible;
+			FeatureTypes eFeature = info.getInvisibleFeatureChange(iI).eFeature;
+			const int iIntensity = info.getInvisibleFeatureChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getFeatureInfo(eFeature).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumInvisibleImprovementChanges(); iI++)
+		for (int iI = 0; iI < info.getNumInvisibleImprovementChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getInvisibleImprovementChange(iI).eInvisible);
-			ImprovementTypes eImprovement = (info.getInvisibleImprovementChange(iI).eImprovement);
-			iIntensity = info.getInvisibleImprovementChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getInvisibleImprovementChange(iI).eInvisible;
+			ImprovementTypes eImprovement = info.getInvisibleImprovementChange(iI).eImprovement;
+			const int iIntensity = info.getInvisibleImprovementChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getImprovementInfo(eImprovement).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumVisibleTerrainChanges(); iI++)
+		for (int iI = 0; iI < info.getNumVisibleTerrainChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getVisibleTerrainChange(iI).eInvisible);
-			TerrainTypes eTerrain = (info.getVisibleTerrainChange(iI).eTerrain);
-			iIntensity = info.getVisibleTerrainChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getVisibleTerrainChange(iI).eInvisible;
+			TerrainTypes eTerrain = info.getVisibleTerrainChange(iI).eTerrain;
+			const int iIntensity = info.getVisibleTerrainChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getTerrainInfo(eTerrain).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumVisibleFeatureChanges(); iI++)
+		for (int iI = 0; iI < info.getNumVisibleFeatureChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getVisibleFeatureChange(iI).eInvisible);
-			FeatureTypes eFeature = (info.getVisibleFeatureChange(iI).eFeature);
-			iIntensity = info.getVisibleFeatureChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getVisibleFeatureChange(iI).eInvisible;
+			FeatureTypes eFeature = info.getVisibleFeatureChange(iI).eFeature;
+			const int iIntensity = info.getVisibleFeatureChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getFeatureInfo(eFeature).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumVisibleImprovementChanges(); iI++)
+		for (int iI = 0; iI < info.getNumVisibleImprovementChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getVisibleImprovementChange(iI).eInvisible);
-			ImprovementTypes eImprovement = (info.getVisibleImprovementChange(iI).eImprovement);
-			iIntensity = info.getVisibleImprovementChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getVisibleImprovementChange(iI).eInvisible;
+			ImprovementTypes eImprovement = info.getVisibleImprovementChange(iI).eImprovement;
+			const int iIntensity = info.getVisibleImprovementChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getImprovementInfo(eImprovement).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumVisibleTerrainRangeChanges(); iI++)
+		for (int iI = 0; iI < info.getNumVisibleTerrainRangeChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getVisibleTerrainRangeChange(iI).eInvisible);
-			TerrainTypes eTerrain = (info.getVisibleTerrainRangeChange(iI).eTerrain);
-			iIntensity = info.getVisibleTerrainRangeChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getVisibleTerrainRangeChange(iI).eInvisible;
+			TerrainTypes eTerrain = info.getVisibleTerrainRangeChange(iI).eTerrain;
+			const int iIntensity = info.getVisibleTerrainRangeChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getTerrainInfo(eTerrain).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumVisibleFeatureRangeChanges(); iI++)
+		for (int iI = 0; iI < info.getNumVisibleFeatureRangeChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getVisibleFeatureRangeChange(iI).eInvisible);
-			FeatureTypes eFeature = (info.getVisibleFeatureRangeChange(iI).eFeature);
-			iIntensity = info.getVisibleFeatureRangeChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getVisibleFeatureRangeChange(iI).eInvisible;
+			FeatureTypes eFeature = info.getVisibleFeatureRangeChange(iI).eFeature;
+			const int iIntensity = info.getVisibleFeatureRangeChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getFeatureInfo(eFeature).getTextKeyWide()));
 			}
 		}
-		iIntensity = 0;
-		for (iI = 0; iI < info.getNumVisibleImprovementRangeChanges(); iI++)
+		for (int iI = 0; iI < info.getNumVisibleImprovementRangeChanges(); iI++)
 		{
-			InvisibleTypes eInvisible = (info.getVisibleImprovementRangeChange(iI).eInvisible);
-			ImprovementTypes eImprovement = (info.getVisibleImprovementRangeChange(iI).eImprovement);
-			iIntensity = info.getVisibleImprovementRangeChange(iI).iIntensity;
+			InvisibleTypes eInvisible = info.getVisibleImprovementRangeChange(iI).eInvisible;
+			ImprovementTypes eImprovement = info.getVisibleImprovementRangeChange(iI).eImprovement;
+			const int iIntensity = info.getVisibleImprovementRangeChange(iI).iIntensity;
 			if (iIntensity != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getImprovementInfo(eImprovement).getTextKeyWide()));
 			}
@@ -28065,16 +28025,10 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
-		for (iI = 0; iI < GC.getNumPropertyInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 		{
 			if (info.getAidChange(iI) != 0)
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AID_CHANGE", info.getAidChange(iI), GC.getPropertyInfo((PropertyTypes)iI).getTextKeyWide()));
 			}
@@ -28084,134 +28038,67 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getMovesChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE", info.getMovesChange()));
 	}
 
 	if (info.getMoveDiscountChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT", info.getMoveDiscountChange()));
 	}
 
 	if (info.getAirRangeChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AIR_RANGE", info.getAirRangeChange()));
 	}
 
 	if (info.getInterceptChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
+		szBuffer.append(NEWLINE);
+
 		if (info.isSpy())
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY", info.getInterceptChange()));
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY_COUNTER", info.getInterceptChange() * 5));
 		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", info.getInterceptChange()));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", info.getInterceptChange()));
 	}
 
 	if (info.getEvasionChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION_SPY", info.getEvasionChange()));
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", info.getEvasionChange()));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", info.getEvasionChange()));
 	}
 
 	if (info.getWithdrawalChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESCAPE_SPY", info.getWithdrawalChange()));
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", info.getWithdrawalChange()));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", info.getWithdrawalChange()));
 	}
 
 	if (info.getCargoChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CARGO", info.getCargoChange()));
 	}
 
 	if (info.getSMCargoChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SM_CARGO", info.getSMCargoChange()));
 	}
 
 	if (info.getCollateralDamageChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_DAMAGE", info.getCollateralDamageChange()));
 	}
@@ -28222,67 +28109,31 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	{
 		if (info.getDCMBombRangeBase() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_RANGE", info.getDCMBombRangeBase()));
 		}
 		if (info.getDCMBombAccuracyBase() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_ACCURACY", info.getDCMBombAccuracyBase()));
 		}
 		if (info.getRBombardDamageBase() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE", info.getRBombardDamageBase()));
 		}
 		if (info.getRBombardDamageLimitBase() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_LIMIT", info.getRBombardDamageLimitBase()));
 		}
 		if (info.getRBombardDamageMaxUnitsBase() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_MAX_UNITS", info.getRBombardDamageMaxUnitsBase()));
 		}
 		if (info.isRBombardDirect() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RANGED_BOMBARD_DIRECT"));
 		}
@@ -28290,36 +28141,18 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getBombardRateChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BOMBARD", info.getBombardRateChange()));
 	}
 
 	if (info.getFirstStrikesChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKE", info.getFirstStrikesChange()));
 	}
 
 	if (info.getChanceFirstStrikesChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE", info.getChanceFirstStrikesChange()));
 	}
@@ -28337,62 +28170,29 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getEnemyHealChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE_SPY", info.getEnemyHealChange()));
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", info.getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_LANDS"));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", info.getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_LANDS"));
 	}
 
 	if (info.getNeutralHealChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY", info.getNeutralHealChange()));
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", info.getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS"));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", info.getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS"));
 	}
 
 	if (info.getFriendlyHealChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_SPY", info.getFriendlyHealChange()));
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", info.getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS"));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", info.getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS"));
 	}
 
 	if (info.getNumHealSupport() != 0)
@@ -28403,649 +28203,327 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getSameTileHealChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_SAME", info.getSameTileHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 	}
 
 	if (info.getAdjacentTileHealChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT", info.getAdjacentTileHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 	}
 
 	if (info.getCombatPercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH", info.getCombatPercent()));
 	}
 
 	if (info.getCombatModifierPerSizeMoreChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_MORE", info.getCombatModifierPerSizeMoreChange()));
 	}
 
 	if (info.getCombatModifierPerSizeLessChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_LESS", info.getCombatModifierPerSizeLessChange()));
 	}
 
 	if (info.getCombatModifierPerVolumeMoreChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_MORE", info.getCombatModifierPerVolumeMoreChange()));
 	}
 
 	if (info.getCombatModifierPerVolumeLessChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_LESS", info.getCombatModifierPerVolumeLessChange()));
 	}
 
 	if (info.getCityAttackPercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_ATTACK", info.getCityAttackPercent()));
 	}
 
 	if (info.getCityDefensePercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_DEFENSE", info.getCityDefensePercent()));
 	}
 
 	if (info.getHillsAttackPercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_HILLS_ATTACK", info.getHillsAttackPercent()));
 	}
 
 	if (info.getHillsDefensePercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_DEFENSE", info.getHillsDefensePercent()));
 	}
 
 	if (info.getHillsWorkPercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", info.getHillsWorkPercent()));
 	}
 
 	if (info.getWorkRatePercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK_RATE", info.getWorkRatePercent()));
 	}
 
 	if (info.getRevoltProtection() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_TEMP_REVOLT_PROTECTION", info.getRevoltProtection()));
 	}
 
 	if (info.getCollateralDamageProtection() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_PROTECTION", info.getCollateralDamageProtection()));
 	}
 
 	if (info.getPillageChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PILLAGE_CHANGE", info.getPillageChange()));
 	}
 
 	if (info.getUpgradeDiscount() != 0)
 	{
-		if (bFirstDisplay)
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_SPY", info.getUpgradeDiscount()));
 		}
 		else if (100 == info.getUpgradeDiscount())
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_FREE"));
 		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", info.getUpgradeDiscount()));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", info.getUpgradeDiscount()));
 	}
 
 	if (info.getExperiencePercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FASTER_EXPERIENCE", info.getExperiencePercent()));
 	}
 
 	if (info.getKamikazePercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_COMBAT_KAMIKAZE_MOD", -info.getKamikazePercent()));
 	}
 
 	if (info.getAirCombatLimitChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AIR_LIMIT_CHANGE", info.getAirCombatLimitChange()));
 	}
 
 	if (info.getCelebrityHappy() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CELEBRITY", info.getCelebrityHappy()));
 	}
 
 	if (info.getCollateralDamageLimitChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_LIMIT_CHANGE", info.getCollateralDamageLimitChange()));
 	}
 
 	if (info.getCollateralDamageMaxUnitsChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAX_UNITS_CHANGE", info.getCollateralDamageMaxUnitsChange()));
 	}
 
 	if (info.getCombatLimitChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COMBAT_LIMIT", info.getCombatLimitChange()));
 	}
 
 	if (info.getExtraDropRange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXTRA_DROP_RANGE", info.getExtraDropRange()));
 	}
 
 	if (info.getSurvivorChance() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SURVIVOR", info.getSurvivorChance()));
 	}
 
 	if (info.getVictoryAdjacentHeal())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_VICTORY_ADJACENT", info.getVictoryHeal(), info.getVictoryStackHeal(), info.getVictoryAdjacentHeal()));
 	}
 
 	if ((info.getVictoryHeal() != 0) && (info.getVictoryStackHeal() == 0))
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_HEAL", info.getVictoryHeal()));
 	}
 
 	if (info.getVictoryStackHeal() != 0 && info.getVictoryAdjacentHeal() == 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_VICTORY_STACK", info.getVictoryHeal(), info.getVictoryStackHeal()));
 	}
 
 	if (info.getAttackCombatModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_MODIFIER", info.getAttackCombatModifierChange()));
 	}
 
 	if (info.getDefenseCombatModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE_MODIFIER", info.getDefenseCombatModifierChange()));
 	}
 
 	if (info.getPursuitChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT", info.getPursuitChange()));
 	}
 
 	if (info.getEarlyWithdrawChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EARLY_WITHDRAW", info.getEarlyWithdrawChange()));
 	}
 
 	if (info.getVSBarbsChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VSBARBS", info.getVSBarbsChange()));
 	}
 
 	if (info.getReligiousCombatModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_RELIGIOUS_COMBAT_MODIFIER_SHORT", info.getReligiousCombatModifierChange()));
 	}
 
 	if (info.getArmorChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ARMOR", info.getArmorChange()));
 	}
 
 	if (info.getPunctureChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PUNCTURE", info.getPunctureChange()));
 	}
 
 	if (info.getDamageModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_MODIFIER", info.getDamageModifierChange()));
 	}
 
 	if (info.getUpkeepModifier() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", info.getUpkeepModifier()));
 	}
 
 	if (info.getExtraUpkeep100() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", CvWString::format(L"%.2f", info.getExtraUpkeep100() / 100.0).GetCString()));
 	}
 
 	if (info.getOverrunChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OVERRUN", info.getOverrunChange()));
 	}
 
 	if (info.getRepelChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL", info.getRepelChange()));
 	}
 
 	if (info.getFortRepelChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FORT_REPEL", info.getFortRepelChange()));
 	}
 
 	if (info.getRepelRetriesChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL_RETRIES", info.getRepelRetriesChange()));
 	}
 
 	if (info.getUnyieldingChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNYIELDING", info.getUnyieldingChange()));
 	}
 
 	if (info.getKnockbackChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK", info.getKnockbackChange()));
 	}
 
 	if (info.getKnockbackRetriesChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK_RETRIES", info.getKnockbackRetriesChange()));
 	}
 #ifdef BATTLEWORN
 	if (info.getStrAdjperAttChange() > 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RAMPAGE", info.getStrAdjperAttChange()));
 	}
 
 	if (info.getStrAdjperAttChange() < 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TIRES", info.getStrAdjperAttChange()));
 	}
 
 	if (info.getStrAdjperDefChange() > 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DETERMINATION", info.getStrAdjperDefChange()));
 	}
 
 	if (info.getStrAdjperDefChange() < 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEMORALIZATION", info.getStrAdjperDefChange()));
 	}
 
 	if (info.getWithdrawAdjperAttChange() > 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REFLEXES", info.getWithdrawAdjperAttChange()));
 	}
 
 	if (info.getWithdrawAdjperAttChange() < 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FRAYS", info.getWithdrawAdjperAttChange()));
 	}
@@ -29053,86 +28531,45 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getUnnerveChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNNERVE", info.getUnnerveChange()));
 	}
 
 	if (info.getEncloseChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENCLOSE", info.getEncloseChange()));
 	}
 
 	if (info.getLungeChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LUNGE", info.getLungeChange()));
 	}
 
 	if (info.getDynamicDefenseChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DYNAMIC_DEFENSE", info.getDynamicDefenseChange()));
 	}
 
-	int iStrengthChange = info.getStrengthChange();
-
-	if (iStrengthChange > 0)
 	{
-		if (bFirstDisplay)
+		const int iStrengthChange = info.getStrengthChange();
+
+		if (iStrengthChange > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTHEN", iStrengthChange));
 		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTHEN", iStrengthChange));
-	}
-
-	if (iStrengthChange < 0)
-	{
-		if (bFirstDisplay)
+		else if (iStrengthChange < 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAKEN", iStrengthChange));
 		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAKEN", iStrengthChange));
 	}
 
 	if (info.getFortitudeChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FORTITUDE_CHANGE", info.getFortitudeChange()));
 	}
@@ -29142,60 +28579,30 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	{
 		if (info.getFrontSupportPercentChange() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FRONT_SUPPORT_PERCENT_CHANGE", info.getFrontSupportPercentChange()));
 		}
 
 		if (info.getShortRangeSupportPercentChange() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SHORT_RANGE_SUPPORT_PERCENT_CHANGE", info.getShortRangeSupportPercentChange()));
 		}
 
 		if (info.getMediumRangeSupportPercentChange() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE", info.getMediumRangeSupportPercentChange()));
 		}
 
 		if (info.getLongRangeSupportPercentChange() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LONG_RANGE_SUPPORT_PERCENT_CHANGE", info.getLongRangeSupportPercentChange()));
 		}
 
 		if (info.getFlankSupportPercentChange() != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLANK_SUPPORT_PERCENT_CHANGE", info.getFlankSupportPercentChange()));
 		}
@@ -29203,341 +28610,175 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 #endif
 	if (info.getDodgeModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DODGE_MODIFIER", info.getDodgeModifierChange()));
 	}
 
 	if (info.getPrecisionModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PRECISION_MODIFIER", info.getPrecisionModifierChange()));
 	}
 
 	if (info.getPowerShotsChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOTS", info.getPowerShotsChange()));
 	}
 
 	if (info.getPowerShotCombatModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_COMBAT_MODIFIER", info.getPowerShotCombatModifierChange()));
 	}
 
 	if (info.getPowerShotPunctureModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_PUNCTURE_MODIFIER", info.getPowerShotPunctureModifierChange()));
 	}
 
 	if (info.getPowerShotPrecisionModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_PRECISION_MODIFIER", info.getPowerShotPrecisionModifierChange()));
 	}
 
 	if (info.getPowerShotCriticalModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_CRITICAL_MODIFIER", info.getPowerShotCriticalModifierChange()));
 	}
 
 	if (info.getCriticalModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_MODIFIER", info.getCriticalModifierChange()));
 	}
 
 	if (info.getEnduranceChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENDURANCE", info.getEnduranceChange()));
 	}
 
 	if (info.getRoundStunProbChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ROUND_STUN_PROB", info.getRoundStunProbChange()));
 	}
 
 	if (info.getPoisonProbabilityModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_PROB", info.getPoisonProbabilityModifierChange()));
 	}
 
 	if (info.getCaptureProbabilityModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CAPTURE_PROBABILITY_MODIFIER", info.getCaptureProbabilityModifierChange()));
 	}
 
 	if (info.getCaptureResistanceModifierChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CAPTURE_RESISTANCE_MODIFIER", info.getCaptureResistanceModifierChange()));
 	}
 
 	if (info.getPeaksWorkPercent() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", info.getPeaksWorkPercent()));
 	}
 
 	if (info.getBreakdownChanceChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_BREAKDOWN_CHANCE", info.getBreakdownChanceChange()));
 	}
 
 	if (info.getBreakdownDamageChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_BREAKDOWN_DAMAGE", info.getBreakdownDamageChange()));
 	}
 
 	if (info.getTauntChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_TAUNT", info.getTauntChange()));
 	}
 
 	if (info.getMaxHPChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAX_HP", info.getMaxHPChange()));
 	}
 
 	if (info.getStrengthModifier() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH_MODIFIER", info.getStrengthModifier()));
 	}
 
-	bool bWithoutWarning = GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING);
-	if (info.getStealthStrikesChange() != 0 && bWithoutWarning)
+	if (GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
-		if (bFirstDisplay)
+		if (info.getStealthStrikesChange() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", info.getStealthStrikesChange()));
 		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", info.getStealthStrikesChange()));
-	}
 
-	if (info.getStealthCombatModifierChange() != 0 && bWithoutWarning)
-	{
-		if (bFirstDisplay)
+		if (info.getStealthCombatModifierChange() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", info.getStealthCombatModifierChange()));
 		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", info.getStealthCombatModifierChange()));
-	}
 
-	if (info.getStealthDefenseChange() != 0 && bWithoutWarning)
-	{
-		if (bFirstDisplay)
+		if (info.getStealthDefenseChange() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE", info.getStealthDefenseChange()));
 		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE", info.getStealthDefenseChange()));
 	}
 
 	if (info.getDefenseOnlyChange() != 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE_ONLY_CHANGE", info.getDefenseOnlyChange()));
 	}
 
 	if (info.getNoInvisibilityChange() != 0 && GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_INVISIBILITY_CHANGE", info.getNoInvisibilityChange()));
 	}
 
 	if (info.getNoCaptureChange() > 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_CANNOT_CAPTURE"));
 	}
 	else if (info.getNoCaptureChange() < 0)
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_CANNOT_CAPTURE"));
 	}
 
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
 		if (info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI) != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
 		if (info.getWithdrawOnFeatureTypeChange((FeatureTypes)iI) != 0)
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", info.getWithdrawOnFeatureTypeChange((FeatureTypes)iI), CvWString(GC.getFeatureInfo((FeatureTypes)iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
 		}
@@ -29546,24 +28787,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	//booleans
 	if (info.isDefensiveVictoryMove())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DV_MOVE"));
 	}
 
 	if (info.isFreeDrop())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FREE_DROP"));
 
@@ -29573,348 +28802,183 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.isOffensiveVictoryMove())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OV_MOVE"));
 	}
 
 	if (info.isOneUp())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_ONEUP"));
 	}
 
 	if (info.isPillageEspionage())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESPIONAGE_PILLAGE"));
 	}
 
 	if (info.isPillageMarauder())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MARAUDER_PILLAGE"));
 	}
 
 	if (info.isPillageOnMove())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVING_PILLAGE"));
 	}
 
 	if (info.isPillageOnVictory())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_PILLAGE"));
 	}
 
 	if (info.isPillageResearch())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RESEARCH_PILLAGE"));
 	}
 
 	if (info.isBlitz())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLITZ"));
 	}
 
 	if (info.isAmphib())
 	{
-		if (bFirstDisplay)
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RADIATION_SPY"));
 		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
 	}
 
 	if (info.isRiver())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
 	}
 
 	if (info.isEnemyRoute())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_ROADS"));
 	}
 
 	if (info.isAlwaysHeal())
 	{
-		if (bFirstDisplay)
+		szBuffer.append(NEWLINE);
+
+		if (info.isSpy())
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		if(info.isSpy())
-		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LOYALTY_SPY"));
 		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
-		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
 	}
 
 	if (info.isHillsDoubleMove())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_MOVE"));
 	}
 
 	if (info.isImmuneToFirstStrikes())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IMMUNE_FIRST_STRIKES"));
 	}
 
 	if (info.isStampedeChange())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STAMPEDE"));
 	}
 
 	if (info.isRemoveStampede())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVE_STAMPEDE"));
 	}
 
 	if (info.getAnimalIgnoresBordersChange() != 0 && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ANIMAL_IGNORES_BORDERS", info.getAnimalIgnoresBordersChange()));
 	}
 
-	int iNoDefensiveBonusChange = info.getNoDefensiveBonusChange();
-	if (iNoDefensiveBonusChange != 0)
 	{
-		if (bFirstDisplay)
+		const int iNoDefensiveBonusChange = info.getNoDefensiveBonusChange();
+		if (iNoDefensiveBonusChange != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		szBuffer.append(NEWLINE);
-		if (iNoDefensiveBonusChange > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE", iNoDefensiveBonusChange));
-		}
-		else if (iNoDefensiveBonusChange < 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE", iNoDefensiveBonusChange));
+
+			if (iNoDefensiveBonusChange > 0)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE", iNoDefensiveBonusChange));
+			}
+			else if (iNoDefensiveBonusChange < 0)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE", iNoDefensiveBonusChange));
+			}
 		}
 	}
 
 	if (info.isOnslaughtChange())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ONSLAUGHT"));
 	}
 
 	if (info.isMakesDamageCold())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_COLD"));
 	}
 
 	if (info.isMakesDamageNotCold())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_NOT_COLD"));
 	}
 
 	if (info.isAddsColdImmunity())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY"));
 	}
 
 	if (info.isRemovesColdImmunity())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_COLD_IMMUNITY"));
 	}
 
 	if (info.isAttackOnlyCitiesAdd())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_ADD"));
 	}
 
 	if (info.isAttackOnlyCitiesSubtract())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_SUBTRACT"));
 	}
 
 	if (info.isIgnoreNoEntryLevelAdd())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_ADD"));
 	}
 
 	if (info.isIgnoreNoEntryLevelSubtract())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_SUBTRACT"));
 	}
@@ -29923,23 +28987,11 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	{
 		if (info.isIgnoreZoneofControlAdd())
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_ADD"));
 		}
 		if (info.isIgnoreZoneofControlSubtract())
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_SUBTRACT"));
 		}
@@ -29947,72 +28999,36 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.isFliesToMoveAdd())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_ADD"));
 	}
 
 	if (info.isFliesToMoveSubtract())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_SUBTRACT"));
 	}
 
 	if (info.isCannotMergeSplit() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CANNOT_MERGE_SPLIT"));
 	}
 
 	if (info.isCanMovePeaks())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS"));
 	}
 
 	if (info.isCanLeadThroughPeaks())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_LEAD_THROUGH_PEAKS"));
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && info.isZoneOfControl())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_ZONE_OF_CONTROL"));
 	}
@@ -30020,13 +29036,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	// Arrays
 	if (info.isAnyDomainModifierPercent())
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < NUM_DOMAIN_TYPES; ++iI)
+		for (int iI = 0; iI < NUM_DOMAIN_TYPES; ++iI)
 		{
 			if (info.getDomainModifierPercent(iI) != 0)
 			{
@@ -30040,16 +29050,10 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	// bool vector with delayed resolution
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
-		for (iI = 0; iI < info.getNumCureAfflictionChangeTypes(); ++iI)
+		for (int iI = 0; iI < info.getNumCureAfflictionChangeTypes(); ++iI)
 		{
 			if (info.isCureAfflictionChangeType(iI))
 			{
-				if (bFirstDisplay)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(info.getDescription());
-					bFirstDisplay = false;
-				}
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CURE_AFFLICTION", GC.getPromotionLineInfo((PromotionLineTypes)info.getCureAfflictionChangeType(iI)).getTextKeyWide()));
 			}
@@ -30057,46 +29061,28 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	}
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	for (iI = 0; iI < info.getNumTerrainIgnoreDamageChangeTypes(); ++iI)
+	for (int iI = 0; iI < info.getNumTerrainIgnoreDamageChangeTypes(); ++iI)
 	{
 		if (info.isTerrainIgnoreDamageChangeType(iI))
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)info.getTerrainIgnoreDamageChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
-	for (iI = 0; iI < info.getNumTerrainDoubleMoveChangeTypes(); ++iI)
+	for (int iI = 0; iI < info.getNumTerrainDoubleMoveChangeTypes(); ++iI)
 	{
 		if (info.isTerrainDoubleMoveChangeType(iI))
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getTerrainInfo((TerrainTypes)info.getTerrainDoubleMoveChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
-	for (iI = 0; iI < info.getNumFeatureDoubleMoveChangeTypes(); ++iI)
+	for (int iI = 0; iI < info.getNumFeatureDoubleMoveChangeTypes(); ++iI)
 	{
 		if (info.isFeatureDoubleMoveChangeType(iI))
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getFeatureInfo((FeatureTypes)info.getFeatureDoubleMoveChangeType(iI)).getTextKeyWide()));
 		}
@@ -30108,13 +29094,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	{
 		if (info.getNumAfflictionFortitudeChangeModifiers() > 0 )
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
-			for (iI = 0; iI < info.getNumAfflictionFortitudeChangeModifiers(); ++iI)
+			for (int iI = 0; iI < info.getNumAfflictionFortitudeChangeModifiers(); ++iI)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICTION_FORTITUDE_CHANGE_MODIFIER", info.getAfflictionFortitudeChangeModifier(iI).iModifier, GC.getPromotionLineInfo((PromotionLineTypes)info.getAfflictionFortitudeChangeModifier(iI).ePromotionLine).getTextKeyWide()));
@@ -30123,31 +29103,21 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 		if (info.getNumAfflictOnAttackChangeTypes() > 0 )
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
-			for (iI = 0; iI < info.getNumAfflictOnAttackChangeTypes(); ++iI)
+			for (int iI = 0; iI < info.getNumAfflictOnAttackChangeTypes(); ++iI)
 			{
 				if (info.getAfflictOnAttackChangeType(iI).eAfflictionLine != NO_PROMOTIONLINE)
 				{
+					szBuffer.append(NEWLINE);
+
 					if (info.getAfflictOnAttackChangeType(iI).iImmediate > 0)
 					{
-						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_IMMEDIATE", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
 					}
 					else if (info.getAfflictOnAttackChangeType(iI).iImmediate < 0)
 					{
-						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_NOT_IMMEDIATE", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
 					}
-					else
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
-					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
 				}
 			}
 		}
@@ -30155,16 +29125,10 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
 	//Traps
-	for (iI = 0; iI < info.getNumTrapImmunityUnitCombatTypes(); ++iI)
+	for (int iI = 0; iI < info.getNumTrapImmunityUnitCombatTypes(); ++iI)
 	{
 		if (info.isTrapImmunityUnitCombatType(iI))
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_IMMUNITY", GC.getUnitCombatInfo((UnitCombatTypes)info.getTrapImmunityUnitCombatType(iI)).getTextKeyWide()));
 		}
@@ -30172,13 +29136,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumTrapAvoidanceUnitCombatTypes() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumTrapAvoidanceUnitCombatTypes(); ++iI)
+		for (int iI = 0; iI < info.getNumTrapAvoidanceUnitCombatTypes(); ++iI)
 		{
 			if (info.getTrapAvoidanceUnitCombatType(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30190,13 +29148,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumTerrainAttackChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumTerrainAttackChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumTerrainAttackChangeModifiers(); ++iI)
 		{
 			if (info.getTerrainAttackChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
@@ -30208,13 +29160,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumTerrainDefenseChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumTerrainDefenseChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumTerrainDefenseChangeModifiers(); ++iI)
 		{
 			if (info.getTerrainDefenseChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
@@ -30226,13 +29172,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumTerrainWorkChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumTerrainWorkChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumTerrainWorkChangeModifiers(); ++iI)
 		{
 			if (info.getTerrainWorkChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
@@ -30244,13 +29184,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumBuildWorkChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumBuildWorkChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumBuildWorkChangeModifiers(); ++iI)
 		{
 			if (info.getBuildWorkChangeModifier(iI).eBuild != NO_BUILD)
 			{
@@ -30262,13 +29196,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumFeatureAttackChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumFeatureAttackChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumFeatureAttackChangeModifiers(); ++iI)
 		{
 			if (info.getFeatureAttackChangeModifier(iI).eFeature != NO_FEATURE)
 			{
@@ -30280,13 +29208,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumFeatureDefenseChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumFeatureDefenseChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumFeatureDefenseChangeModifiers(); ++iI)
 		{
 			if (info.getFeatureDefenseChangeModifier(iI).eFeature != NO_FEATURE)
 			{
@@ -30298,13 +29220,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumFeatureWorkChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumFeatureWorkChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumFeatureWorkChangeModifiers(); ++iI)
 		{
 			if (info.getFeatureWorkChangeModifier(iI).eFeature != NO_FEATURE)
 			{
@@ -30316,13 +29232,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumUnitCombatChangeModifiers() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumUnitCombatChangeModifiers(); ++iI)
+		for (int iI = 0; iI < info.getNumUnitCombatChangeModifiers(); ++iI)
 		{
 			if (info.getUnitCombatChangeModifier(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30334,13 +29244,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumFlankingStrengthbyUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumFlankingStrengthbyUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumFlankingStrengthbyUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getFlankingStrengthbyUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30352,13 +29256,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumWithdrawVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumWithdrawVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumWithdrawVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getWithdrawVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30368,23 +29266,14 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && info.getNumPursuitVSUnitCombatTypesChange() > 0)
 	{
-		if (info.getNumPursuitVSUnitCombatTypesChange() > 0 )
+		for (int iI = 0; iI < info.getNumPursuitVSUnitCombatTypesChange(); ++iI)
 		{
-			if (bFirstDisplay)
+			if (info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
-			for (iI = 0; iI < info.getNumPursuitVSUnitCombatTypesChange(); ++iI)
-			{
-				if (info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT_VERSUS", info.getPursuitVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
-				}
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT_VERSUS", info.getPursuitVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -30393,13 +29282,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	{
 		if (info.getNumRepelVSUnitCombatTypesChange() > 0 )
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
-			for (iI = 0; iI < info.getNumRepelVSUnitCombatTypesChange(); ++iI)
+			for (int iI = 0; iI < info.getNumRepelVSUnitCombatTypesChange(); ++iI)
 			{
 				if (info.getRepelVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 				{
@@ -30411,13 +29294,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 		if (info.getNumKnockbackVSUnitCombatTypesChange() > 0 )
 		{
-			if (bFirstDisplay)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(info.getDescription());
-				bFirstDisplay = false;
-			}
-			for (iI = 0; iI < info.getNumKnockbackVSUnitCombatTypesChange(); ++iI)
+			for (int iI = 0; iI < info.getNumKnockbackVSUnitCombatTypesChange(); ++iI)
 			{
 				if (info.getKnockbackVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 				{
@@ -30430,13 +29307,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumPunctureVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumPunctureVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumPunctureVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getPunctureVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30448,13 +29319,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumArmorVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumArmorVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumArmorVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getArmorVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30466,13 +29331,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumDodgeVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumDodgeVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumDodgeVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getDodgeVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30484,13 +29343,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumPrecisionVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumPrecisionVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumPrecisionVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getPrecisionVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30502,13 +29355,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumCriticalVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumCriticalVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumCriticalVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getCriticalVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30520,13 +29367,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getNumRoundStunVSUnitCombatTypesChange() > 0 )
 	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		for (iI = 0; iI < info.getNumRoundStunVSUnitCombatTypesChange(); ++iI)
+		for (int iI = 0; iI < info.getNumRoundStunVSUnitCombatTypesChange(); ++iI)
 		{
 			if (info.getRoundStunVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
@@ -30539,6 +29380,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getInsidiousnessChange() != 0)
 	{
+		CvWString szTempBuffer;
 		szBuffer.append(NEWLINE);
 		float fValue = (float)info.getInsidiousnessChange();
 		{
@@ -30549,6 +29391,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (info.getInvestigationChange() != 0)
 	{
+		CvWString szTempBuffer;
 		szBuffer.append(NEWLINE);
 		float fValue = (float)info.getInvestigationChange();
 		{
@@ -30558,15 +29401,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	}
 	//Propery Manipulators
 	if (info.getPropertyManipulators())
-	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
 		info.getPropertyManipulators()->buildDisplayString(szBuffer);
-	}
 }
 
 void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTypes eImprovement, FeatureTypes eFeature, bool bCivilopediaText)
@@ -31025,13 +29860,12 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 
 void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, bool bCivilopediaText)
 {
-	CvWString szTempBuffer;
-	CvWString szFirstBuffer;
-
 	if (NO_ROUTE == eRoute)
 	{
 		return;
 	}
+	CvWString szTempBuffer;
+	CvWString szFirstBuffer;
 
 	const int iMoveDenominator = GC.getMOVE_DENOMINATOR();
 
@@ -32471,13 +31305,16 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 			//May need to add the buttons here?  Not sure. We'll see how this goes.
 			if (iCurrentDisplay == iDisplayCount)
 			{
-				parseTraits(szBuffer, ((TraitTypes)iTrait), eCivilization);
+				parseTraits(szBuffer, (TraitTypes)iTrait, eCivilization);
+				if (iCurrentDisplay != iPotentialDisplays)
+				{
+					szBuffer.append(NEWLINE);
+				}
 			}
 			else
 			{
 				szBuffer.append(GC.getTraitInfo((TraitTypes)iTrait).getDescription());
 			}
-			//parseTraits(szBuffer, ((TraitTypes)iTrait), eCivilization, true);
 		}
 	}
 

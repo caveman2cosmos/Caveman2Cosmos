@@ -12637,6 +12637,60 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
+			<Type>UNIT_SUBDUED_VIPER_CHAIN</Type>
+			<Capture>UNIT_SUBDUED_VIPER_CHAIN</Capture>
+			<Combat>UNITCOMBAT_SUBDUED</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SUBDUED_VIPER_CHAIN</Description>
+			<Civilopedia>TXT_KEY_UNIT_VIPER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
+			<bMilitaryTrade>1</bMilitaryTrade>
+			<bOnlyDefensive>1</bOnlyDefensive>
+			<Buildings>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
+				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
+				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SNAKES</BuildingType>
+			</Buildings>
+			<iCost>-1</iCost>
+			<iMoves>1</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>2</iGroupSize>
+				<fMaxSpeed>1</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VIPER_CHAIN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_MALE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_SUBDUED_VULTURE</Type>
 			<Capture>UNIT_SUBDUED_VULTURE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
