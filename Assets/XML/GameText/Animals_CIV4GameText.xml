@@ -702,7 +702,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO</Tag>
-		<English>Nine-Banded Armadillo</English>
+		<English>Nine-banded Armadillo</English>
 		<French>Tatou à neuf bandes</French>
 		<German>
 			<Text>Neunbinden-Gürteltier:Neunbinden-Gürteltieres:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Neunbinden-Gürteltiere:Neunbinden-Gürteltiere:Neunbinden-Gürteltieren:Neunbinden-Gürteltiere</Text>
@@ -1440,7 +1440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH</Tag>
-		<English>Megatherium</English>
+		<English>Ground Sloth</English>
 		<French>Mégatherium</French>
 		<German>
 			<Text>Megatherium:Megatheriums:Megatherium:Megatherium:Megatherien:Megatherien:Megatherien:Megatherien</Text>
@@ -1620,7 +1620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
-		<English>Ring-Tailed Lemur</English>
+		<English>Ring-tailed Lemur</English>
 		<French>Lémur catta</French>
 		<German>
 			<Text>Katta:Kattas:Katta:Katta:Kattas:Kattas:Kattas:Kattas</Text>
@@ -2137,7 +2137,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION</Tag>
-		<English>Sealion</English>
+		<English>Sea Lion</English>
 		<French>Lion de mer</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
@@ -2231,7 +2231,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO</Tag>
-		<English>Subdued Armadillo</English>
+		<English>Subdued Nine-banded Armadillo</English>
 		<French>Tatou (App.)</French>
 		<German>
 			<Text>Gefangenes Neunbinden-Gürteltier:Gefangenen Neunbinden-Gürteltieres:Gefangenen Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltieren:Gefangenen Neunbinden-Gürteltiere</Text>
@@ -2265,7 +2265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR</Tag>
-		<English>Subdued Brazilian Tapir</English>
+		<English>Subdued Lowland Tapir</English>
 		<French>
 			<Text>Tapir du Brésil (App.)</Text>
 			<Gender>Male</Gender>
@@ -2281,7 +2281,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN</Tag>
-		<English>Subdued Caiman</English>
+		<English>Subdued Black Caiman</English>
 		<French>
 			<Text>Caïman (App.)</Text>
 			<Gender>Male</Gender>
@@ -2297,7 +2297,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
-		<English>Subdued Cuscus</English>
+		<English>Subdued Spotted Cuscus</English>
 		<French>Couscous (App.)</French>
 		<German>
 			<Text>Gefangener Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangene Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus</Text>
@@ -2343,7 +2343,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE</Tag>
-		<English>Subdued Dhole</English>
+		<English>Subdued Ussuri Dhole</English>
 		<French>Cuon d'Asie (App.)</French>
 		<German>
 			<Text>Gefangener Rothund:Gefangenen Rothundes:Gefangenen Rothund:Gefangenen Rothund:Gefangene Rothunde:Gefangenen Rothunde:Gefangenen Rothunden:Gefangenen Rothunde</Text>
@@ -2365,7 +2365,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Tag>
-		<English>Subdued Elasmotherium</English>
+		<English>Subdued Giant Rhinoceros</English>
 		<French>Elasmotherium (App.)</French>
 		<German>
 			<Text>Gefangenes Elasmotherium:Gefangenen Elasmotheriums:Gefangenen Elasmotherium:Gefangene Elasmotherium:Gefangene Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien</Text>
@@ -2636,7 +2636,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
-		<English>Subdued Tree Sloth</English>
+		<English>Subdued Three-toed Sloth</English>
 		<French>Paresseux (App.)</French>
 		<German>
 			<Text>Gefangenes Dreifinger-Faultier:Gefangenen Dreifinger-Faultiers:Gefangenen Dreifinger-Faultier:Gefangene Dreifinger-Faultier:Gefangene Dreifinger-Faultiere:Gefangenen Dreifinger-Faultiere:Gefangenen Dreifinger-Faultieren:Gefangenen Dreifinger-Faultiere</Text>
@@ -2896,7 +2896,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY</Tag>
-		<English>Ring-Tailed Wallaby</English>
+		<English>Ring-tailed Wallaby</English>
 		<French>
 			<Text>Wallaby</Text>
 			<Gender>Male</Gender>
