@@ -31,6 +31,13 @@ void CvTeamAI::freeStatics()
 	SAFE_DELETE_ARRAY(m_aTeams);
 }
 
+CvTeamAI& CvTeamAI::getTeam(TeamTypes eTeam)
+{
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	return m_aTeams[eTeam];
+}
+
+
 // Public Functions...
 
 CvTeamAI::CvTeamAI()
