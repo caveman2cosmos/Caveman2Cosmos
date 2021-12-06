@@ -2054,12 +2054,9 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	if (!bAerial) iRange++; // check one extra outer ring
 
 	int iFinalIntensity = 0;
-	const int iNumInvisibleTypes = aSeeInvisibleTypes.size();
 
-	for (int i = 0; i < iNumInvisibleTypes; i++)
+	foreach_(const InvisibleTypes eInvisible, aSeeInvisibleTypes)
 	{
-		const InvisibleTypes eInvisible = aSeeInvisibleTypes[i];
-
 		for (int dx = -iRange; dx <= iRange; dx++)
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
@@ -8596,15 +8593,7 @@ void CvPlot::updatePlotGroup()
 
 static bool PlotSetContains(CvPlot* pPlot, std::vector<CvPlot*>& set)
 {
-	for(int iJ = 0; iJ < (int)set.size(); iJ++)
-	{
-		if ( set[iJ] == pPlot )
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::container_contains(set, pPlot);
 }
 
 static void CalculateClosePlotGroupConnectSet(PlayerTypes ePlayer, CvPlot* pSeedPlot, std::vector<CvPlot*>& set, int iRange)
@@ -9724,11 +9713,10 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 						}
 					}
 				}
-				if (m_aBonusResult.size()>0)
+				if (!m_aBonusResult.empty())
 				{
-					int iPossible = (int)m_aBonusResult.size();
-					iPossible = std::max(iPossible, 100);
-					unsigned iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
+					const int iPossible = std::max((int)m_aBonusResult.size(), 100);
+					const uint32_t iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
 
 					if (iResult > m_aBonusResult.size())
 					{

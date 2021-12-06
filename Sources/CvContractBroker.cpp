@@ -198,10 +198,7 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 		}
 	}
 
-	{
-
-		m_workRequests.insert(insertAt, newRequest);
-	}
+	m_workRequests.insert(insertAt, newRequest);
 }
 
 //	Advertise a tender to build units

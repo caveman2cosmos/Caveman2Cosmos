@@ -8142,10 +8142,7 @@ void CvGame::clearReplayMessageMap()
 {
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		if (NULL != pMessage)
-		{
-			delete pMessage;
-		}
+		SAFE_DELETE(pMessage);
 	}
 	m_listReplayMessages.clear();
 }
@@ -8460,7 +8457,7 @@ void CvGame::read(FDataStreamBase* pStream)
 	{
 		clearReplayMessageMap();
 		ReplayMessageList::_Alloc::size_type iSize;
-		WRAPPER_READ(wrapper,"CvGame",&iSize);
+		WRAPPER_READ(wrapper, "CvGame", &iSize);
 		for (ReplayMessageList::_Alloc::size_type i = 0; i < iSize; i++)
 		{
 			CvReplayMessage* pMessage = new CvReplayMessage(0);
@@ -8589,10 +8586,9 @@ void CvGame::read(FDataStreamBase* pStream)
 
 void CvGame::write(FDataStreamBase* pStream)
 {
-	int iI;
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
-	uint uiFlag = GAME_SAVE_UI_FLAG_VALUE_AND_BASE;
+	uint32_t uiFlag = GAME_SAVE_UI_FLAG_VALUE_AND_BASE;
 
 	wrapper.AttachToStream(pStream);
 
@@ -8691,31 +8687,29 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_bGameStart);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_abTechCanFoundReligion);
 
-	for (iI=0;iI<GC.getNumReligionInfos();iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		WRAPPER_WRITE(wrapper, "CvGame", m_paHolyCity[iI].eOwner);
 		WRAPPER_WRITE(wrapper, "CvGame", m_paHolyCity[iI].iID);
 	}
 
-	for (iI=0;iI<GC.getNumCorporationInfos();iI++)
+	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		WRAPPER_WRITE(wrapper, "CvGame", m_paHeadquarters[iI].eOwner);
 		WRAPPER_WRITE(wrapper, "CvGame", m_paHeadquarters[iI].iID);
 	}
 
 	{
-		std::vector<CvWString>::iterator ws_it;
-
 		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aszDestroyedCities.size(), "DestroyedCityCount");
-		for (ws_it = m_aszDestroyedCities.begin(); ws_it != m_aszDestroyedCities.end(); ++ws_it)
+		foreach_(const CvWString& destroyedCityName, m_aszDestroyedCities)
 		{
-			WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvGame", *ws_it, "DestroyedCityName");
+			WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvGame", destroyedCityName, "DestroyedCityName");
 		}
 
 		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aszGreatPeopleBorn.size(), "GreatPeopleBornCount");
-		for (ws_it = m_aszGreatPeopleBorn.begin(); ws_it != m_aszGreatPeopleBorn.end(); ++ws_it)
+		foreach_(const CvWString& greatPersonName, m_aszGreatPeopleBorn)
 		{
-			WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvGame", *ws_it, "GreatPersonName");
+			WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvGame", greatPersonName, "GreatPersonName");
 		}
 	}
 
@@ -8728,11 +8722,9 @@ void CvGame::write(FDataStreamBase* pStream)
 
 	ReplayMessageList::_Alloc::size_type iSize = m_listReplayMessages.size();
 	WRAPPER_WRITE(wrapper, "CvGame", iSize);
-	ReplayMessageList::const_iterator it;
-	for (it = m_listReplayMessages.begin(); it != m_listReplayMessages.end(); ++it)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		const CvReplayMessage* pMessage = *it;
-		if (NULL != pMessage)
+		if (pMessage != NULL)
 		{
 			pMessage->write(*pStream);
 		}
@@ -8742,15 +8734,15 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_iNumSessions);
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aPlotExtraYields.size(), "PlotYieldCount");
-	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
+	foreach_(PlotExtraYield& pExtraYield, m_aPlotExtraYields)
 	{
-		(*it).write(pStream);
+		pExtraYield.write(pStream);
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aPlotExtraCosts.size(), "PlotExtraCostsCount");
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
+	foreach_(PlotExtraCost& pExtraCost, m_aPlotExtraCosts)
 	{
-		(*it).write(pStream);
+		pExtraCost.write(pStream);
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_mapVoteSourceReligions.size(), "VoteSourceReligionsCount");
@@ -8761,9 +8753,9 @@ void CvGame::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aeInactiveTriggers.size(), "InactiveTriggersCount");
-	for (std::vector<EventTriggerTypes>::iterator e_it = m_aeInactiveTriggers.begin(); e_it != m_aeInactiveTriggers.end(); ++e_it)
+	foreach_(const EventTriggerTypes eTrigger, m_aeInactiveTriggers)
 	{
-		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvGame", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, *e_it, "InactiveTrigger");
+		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvGame", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, eTrigger, "InactiveTrigger");
 	}
 
 	WRAPPER_WRITE(wrapper, "CvGame", m_iShrineBuildingCount);
@@ -8776,8 +8768,8 @@ void CvGame::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper,"CvGame",REMAPPED_CLASS_TYPE_BUILDINGS,GC.getNumBuildingInfos(), m_aiShrineBuilding);
-		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper,"CvGame",REMAPPED_CLASS_TYPE_RELIGIONS,GC.getNumBuildingInfos(), m_aiShrineReligion);
+		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_aiShrineBuilding);
+		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumBuildingInfos(), m_aiShrineReligion);
 	}
 	WRAPPER_WRITE(wrapper, "CvGame", m_iNumCultureVictoryCities);
 	WRAPPER_WRITE(wrapper, "CvGame", m_eCultureVictoryCultureLevel);
@@ -8788,7 +8780,6 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
-
 }
 
 void CvGame::writeReplay(FDataStreamBase& stream, PlayerTypes ePlayer)
@@ -9117,11 +9108,11 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 
 int CvGame::getPlotExtraCost(int iX, int iY) const
 {
-	foreach_(const PlotExtraCost& it, m_aPlotExtraCosts)
+	foreach_(const PlotExtraCost& pExtraCost, m_aPlotExtraCosts)
 	{
-		if (it.m_iX == iX && it.m_iY == iY)
+		if (pExtraCost.m_iX == iX && pExtraCost.m_iY == iY)
 		{
-			return it.m_iCost;
+			return pExtraCost.m_iCost;
 		}
 	}
 
@@ -9130,35 +9121,28 @@ int CvGame::getPlotExtraCost(int iX, int iY) const
 
 void CvGame::changePlotExtraCost(int iX, int iY, int iCost)
 {
-	bool bFound = false;
-
-	foreach_(PlotExtraCost& it, m_aPlotExtraCosts)
+	foreach_(PlotExtraCost& pExtraCost, m_aPlotExtraCosts)
 	{
-		if (it.m_iX == iX && it.m_iY == iY)
+		if (pExtraCost.m_iX == iX && pExtraCost.m_iY == iY)
 		{
-			it.m_iCost += iCost;
-			bFound = true;
-			break;
+			pExtraCost.m_iCost += iCost;
+			return;
 		}
 	}
-
-	if (!bFound)
-	{
-		PlotExtraCost kExtraCost;
-		kExtraCost.m_iX = iX;
-		kExtraCost.m_iY = iY;
-		kExtraCost.m_iCost = iCost;
-		m_aPlotExtraCosts.push_back(kExtraCost);
-	}
+	PlotExtraCost kExtraCost;
+	kExtraCost.m_iX = iX;
+	kExtraCost.m_iY = iY;
+	kExtraCost.m_iCost = iCost;
+	m_aPlotExtraCosts.push_back(kExtraCost);
 }
 
 void CvGame::removePlotExtraCost(int iX, int iY)
 {
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
+	foreach_(PlotExtraCost& pExtraCost, m_aPlotExtraCosts)
 	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
+		if (pExtraCost.m_iX == iX && pExtraCost.m_iY == iY)
 		{
-			m_aPlotExtraCosts.erase(it);
+			m_aPlotExtraCosts.erase(&pExtraCost);
 			break;
 		}
 	}
@@ -9178,7 +9162,7 @@ ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 
 void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce)
 {
-	FAssert(eReligion != NO_RELIGION);
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion);
 
 	m_mapVoteSourceReligions[eVoteSource] = eReligion;
 

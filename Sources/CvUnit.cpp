@@ -1458,31 +1458,31 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 	std::vector<CvUnit*> aCargoUnits;
 	pUnit->getCargoUnits(aCargoUnits);
 	pUnit->validateCargoUnits();
-	for (uint i = 0; i < aCargoUnits.size(); i++)
+	foreach_(CvUnit* pCargo, aCargoUnits)
 	{
 		// Check cargo types and capacity when upgrading transports
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			if (SMcargoSpaceAvailable(aCargoUnits[i]->getSpecialUnitType(), aCargoUnits[i]->getDomainType()) > aCargoUnits[i]->getCargoVolume())
+			if (SMcargoSpaceAvailable(pCargo->getSpecialUnitType(), pCargo->getDomainType()) > pCargo->getCargoVolume())
 			{
-				aCargoUnits[i]->setTransportUnit(NULL);
-				aCargoUnits[i]->setTransportUnit(this);
+				pCargo->setTransportUnit(NULL);
+				pCargo->setTransportUnit(this);
 			}
 			else
 			{
-				aCargoUnits[i]->setTransportUnit(NULL);
-				aCargoUnits[i]->jumpToNearestValidPlot();
+				pCargo->setTransportUnit(NULL);
+				pCargo->jumpToNearestValidPlot();
 			}
 		}
-		else if (cargoSpaceAvailable(aCargoUnits[i]->getSpecialUnitType(), aCargoUnits[i]->getDomainType()) > 0)
+		else if (cargoSpaceAvailable(pCargo->getSpecialUnitType(), pCargo->getDomainType()) > 0)
 		{
-			aCargoUnits[i]->setTransportUnit(NULL);
-			aCargoUnits[i]->setTransportUnit(this);
+			pCargo->setTransportUnit(NULL);
+			pCargo->setTransportUnit(this);
 		}
 		else
 		{
-			aCargoUnits[i]->setTransportUnit(NULL);
-			aCargoUnits[i]->jumpToNearestValidPlot();
+			pCargo->setTransportUnit(NULL);
+			pCargo->jumpToNearestValidPlot();
 		}
 	}
 	validateCargoUnits();
@@ -5441,9 +5441,9 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	int iCargoAssetValue = 0;
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	for (uint i = 0; i < aCargoUnits.size(); i++)
+	foreach_(CvUnit* pCargo, aCargoUnits)
 	{
-		iCargoAssetValue += std::max(1, aCargoUnits[i]->assetValueTotal()/100);
+		iCargoAssetValue += std::max(1, pCargo->assetValueTotal()/100);
 	}
 	iValue = iValue * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
@@ -7426,14 +7426,12 @@ void CvUnit::gift(bool bTestTransport)
 	}
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	if (aCargoUnits.size() > 0)
+	if (!aCargoUnits.empty())
 	{
 		validateCargoUnits();
 	}
-	for (uint i = 0; i < aCargoUnits.size(); i++)
-	{
-		aCargoUnits[i]->gift(false);
-	}
+	algo::for_each(aCargoUnits, bind(&CvUnit::gift, _1, false));
+
 	const PlayerTypes eNewOwner = plot()->getOwner();
 
 	FAssertMsg(eNewOwner != NO_PLAYER, "plot()->getOwner() is not expected to be equal with NO_PLAYER");
@@ -7812,13 +7810,12 @@ void CvUnit::unloadAll()
 
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	if (aCargoUnits.size() > 0)
+	if (!aCargoUnits.empty())
 	{
 		validateCargoUnits();
 	}
-	for (uint i = 0; i < aCargoUnits.size(); i++)
+	foreach_(CvUnit* pCargo, aCargoUnits)
 	{
-		CvUnit* pCargo = aCargoUnits[i];
 		if (pCargo->canUnload())
 		{
 			pCargo->setTransportUnit(NULL);
@@ -16083,9 +16080,9 @@ int CvUnit::getUnitAICargo(UnitAITypes eUnitAI) const
 
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	for (uint i = 0; i < aCargoUnits.size(); i++)
+	foreach_(CvUnit* pCargo, aCargoUnits)
 	{
-		if (aCargoUnits[i]->AI_getUnitAIType() == eUnitAI)
+		if (pCargo->AI_getUnitAIType() == eUnitAI)
 		{
 			++iCount;
 		}
@@ -17597,9 +17594,8 @@ void CvUnit::validateCargoUnits()
 				FErrorMsg("Load Volume is incorrect");//If this persists, then the problem is due to having a unit that's not sharing the same plot being loaded onto the transport.
 				std::vector<CvUnit*> aCargoUnits;
 				getCargoUnits(aCargoUnits);
-				for (uint i = 0; i < aCargoUnits.size(); i++)
+				foreach_(CvUnit* pCargo, aCargoUnits)
 				{
-					CvUnit* pCargo = aCargoUnits[i];
 					pCargo->setTransportUnit(NULL);
 					if (pCargo->plot() == plot())
 					{
@@ -17608,9 +17604,8 @@ void CvUnit::validateCargoUnits()
 				}
 				m_iSMCargo = 0;
 				iCount = 0;
-				for (uint i = 0; i < aCargoUnits.size(); i++)
+				foreach_(CvUnit* pCargo, aCargoUnits)
 				{
-					CvUnit* pCargo = aCargoUnits[i];
 					SMchangeCargo(pCargo->SMCargoVolume());
 					iCount++;
 				}

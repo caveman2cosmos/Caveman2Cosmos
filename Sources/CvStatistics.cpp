@@ -333,9 +333,9 @@ void CvStatistics::init()
 }
 void CvStatistics::uninit()
 {
-	for(int i=0;i<(int)m_PlayerRecords.size();i++)
+	foreach_(const CvPlayerRecord* pRecord, m_PlayerRecords)
 	{
-		SAFE_DELETE(m_PlayerRecords[i]);	// free memory - MT
+		SAFE_DELETE(pRecord);
 	}
 	m_PlayerRecords.clear();
 }
