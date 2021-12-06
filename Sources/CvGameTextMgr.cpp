@@ -31305,13 +31305,16 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 			//May need to add the buttons here?  Not sure. We'll see how this goes.
 			if (iCurrentDisplay == iDisplayCount)
 			{
-				parseTraits(szBuffer, ((TraitTypes)iTrait), eCivilization);
+				parseTraits(szBuffer, (TraitTypes)iTrait, eCivilization);
+				if (iCurrentDisplay != iPotentialDisplays)
+				{
+					szBuffer.append(NEWLINE);
+				}
 			}
 			else
 			{
 				szBuffer.append(GC.getTraitInfo((TraitTypes)iTrait).getDescription());
 			}
-			//parseTraits(szBuffer, ((TraitTypes)iTrait), eCivilization, true);
 		}
 	}
 
