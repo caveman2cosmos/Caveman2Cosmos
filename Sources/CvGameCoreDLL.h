@@ -4,6 +4,18 @@
 #define CvGameCoreDLL_h__
 
 //
+// Compiler warnings
+//
+#pragma warning( disable : 4510 ) // default constructor could not be generated
+#pragma warning( disable : 4511 ) // copy constructor could not be generated
+#pragma warning( disable : 4512 ) // assignment operator could not be generated
+
+//#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
+
+#pragma warning( push )
+#pragma warning( disable: 4100 ) // unreferenced formal parameter
+
+//
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer
 //
@@ -11,8 +23,6 @@
 //
 // WINDOWS
 //
-#pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
-
 //#ifdef __INTELLISENSE__
 //// #undef _MSC_VER
 //#define _MSC_VER 1310
@@ -282,15 +292,10 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
+#pragma warning( pop )
+
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
-
-//
-// Compiler warnings
-//
-#pragma warning( 3: 4100 ) // unreferenced formal parameter
-//#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
-#pragma warning( 3: 4702 ) // unreachable code
 
 //
 // Json

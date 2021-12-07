@@ -4453,7 +4453,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
 	int iDefault = 0;
-	int iTextDefault = -1;
 	bool bNoDuplicate = true;
 
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)

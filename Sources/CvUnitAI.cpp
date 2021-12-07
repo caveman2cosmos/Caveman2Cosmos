@@ -2278,9 +2278,9 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
-	bool bBuildFort = false;
-
 	// Super Forts begin *canal* *choke*
+	//bool bBuildFort = false;
+
 	//if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
 	//{
 	//	const CvPlayerAI &player = GET_PLAYER(getOwner());

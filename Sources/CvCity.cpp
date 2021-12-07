@@ -15730,7 +15730,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			int iFlags;
 
 			CvPlot* pRallyPlot = NULL;
-			if (iPlotIndex != (short)0xFFFF)
+			if (iPlotIndex != (const short)0xFFFF)
 			{
 				iFlags = MOVE_NO_ENEMY_TERRITORY;
 				pRallyPlot = GC.getMap().plotByIndex(iPlotIndex);
