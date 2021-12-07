@@ -993,8 +993,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	//Establish Promotion Pedia Help info
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		PromotionTypes ePromotion = (PromotionTypes)iI;
+		const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
 		GC.getPromotionInfo(ePromotion).setQualifiedUnitCombatTypes();
+		GC.getPromotionInfo(ePromotion).setDisqualifiedUnitCombatTypes();
 	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
@@ -2835,7 +2836,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 }
 
 
-DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
+bool CvXMLLoadUtility::LoadPlayerOptions()
 {
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -2865,7 +2866,7 @@ DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 	return true;
 }
 
-DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
+bool CvXMLLoadUtility::LoadGraphicOptions()
 {
 	if (!CreateFXml())
 		return false;

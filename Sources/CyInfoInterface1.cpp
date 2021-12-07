@@ -146,11 +146,15 @@ void CyInfoPythonInterface1()
 		.def("getUnitCombat", &CvPromotionInfo::getUnitCombat, "bool (int i)")
 		.def("getPromotionLine", &CvPromotionInfo::getPromotionLine, "int ()")
 
-		.def("isQualifiedUnitCombatType", &CvPromotionInfo::isQualifiedUnitCombatType, "bool (int i)")
-		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
+		.def("getNumQualifiedUnitCombatTypes", &CvPromotionInfo::getNumQualifiedUnitCombatTypes, "int ()")
+		.def("getQualifiedUnitCombatType", &CvPromotionInfo::getQualifiedUnitCombatType, "int (int i)")
+		.def("getNumDisqualifiedUnitCombatTypes", &CvPromotionInfo::getNumDisqualifiedUnitCombatTypes, "int ()")
+		.def("getDisqualifiedUnitCombatType", &CvPromotionInfo::getDisqualifiedUnitCombatType, "int (int i)")
 
+		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
 		.def("isEquipment", &CvPromotionInfo::isEquipment, "bool ()")
 		.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
+
 		.def("getAddsBuildType", &CvPromotionInfo::getAddsBuildType, "int (int i)")
 		.def("getNumAddsBuildTypes", &CvPromotionInfo::getNumAddsBuildTypes, "int ()")
 		;

@@ -543,9 +543,13 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 
 	case WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT:
-		parseUnitCombatHelp(widgetDataStruct, szBuffer, true);
+	{
+		if (widgetDataStruct.m_iData2 != 0)
+		{
+			GAMETEXT.setUnitCombatHelp(szBuffer, (UnitCombatTypes)widgetDataStruct.m_iData1);
+		}
 		break;
-
+	}
 	case WIDGET_PEDIA_JUMP_TO_IMPROVEMENT:
 		parseImprovementHelp(widgetDataStruct, szBuffer);
 		break;
@@ -5109,51 +5113,43 @@ void CvDLLWidgetData::parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	szBuffer.append(CvWString::format(SETCOLR L"%s\n", TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationDescription()));
 
-/************************************************************************************************/
-/* Afforess: Rise of Mankind                    6/15/10                               	         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// Show the active player's civ's current name when mousing over flag
-	CvWString szTempBuffer;
-	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationDescription());
-	szBuffer.append(szTempBuffer);
-	szBuffer.append(NEWLINE);
+	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
 
-	// BTS Version
-	float fVersion = GC.getDefineINT("CIV4_VERSION") / 100.0f;
-	szTempBuffer.Format(SETCOLR L"Beyond the Sword %0.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), fVersion);
-	szBuffer.append(szTempBuffer);
-	szTempBuffer.Format(NEWLINE SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION"));
-	szBuffer.append(szTempBuffer);
-	CvWString szBULLETICON;
-	szBULLETICON.Format(NEWLINE L"%c", gDLL->getSymbolID(BULLET_CHAR));
-	szBuffer.append(szBULLETICON);
-	// BUG DLL version
-	szTempBuffer.Format(SETCOLR L"%s %s [Build %s]" ENDCOLR, TEXT_COLOR("COLOR_WHITE"), BUG_DLL_NAME, BUG_DLL_VERSION, BUG_DLL_BUILD);
-	szBuffer.append(szTempBuffer);
-
-// BUG - Version Info - end
+	// Traits
 	if (GET_PLAYER(GC.getGame().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
-		// separator line
 		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		szBuffer.append(NEWLINE);
 		GAMETEXT.parsePlayerTraits(szBuffer, GET_PLAYER(GC.getGame().getActivePlayer()).getID());
 	}
 
-	// Player properties
-	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	GET_PLAYER(GC.getGame().getActivePlayer()).getProperties()->buildDisplayString(szBuffer);
-	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	GET_TEAM(GC.getGame().getActiveTeam()).getProperties()->buildDisplayString(szBuffer);
-	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	GC.getGame().getProperties()->buildDisplayString(szBuffer);
+	// Properties
+	CvWStringBuffer szPeekBuffer;
+	GET_PLAYER(GC.getGame().getActivePlayer()).getProperties()->buildDisplayString(szPeekBuffer);
 
-/************************************************************************************************/
-/* Afforess                                    END                                              */
-/************************************************************************************************/
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+	GET_TEAM(GC.getGame().getActiveTeam()).getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+	GC.getGame().getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
 }
 
 
@@ -5913,14 +5909,6 @@ void CvDLLWidgetData::parseTraitHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 void CvDLLWidgetData::parseEventHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	GAMETEXT.setEventHelp(szBuffer, (EventTypes)widgetDataStruct.m_iData1, widgetDataStruct.m_iData2, GC.getGame().getActivePlayer());
-}
-
-void CvDLLWidgetData::parseUnitCombatHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bCivilopediaText)
-{
-	if (widgetDataStruct.m_iData2 != 0)
-	{
-		GAMETEXT.setUnitCombatHelp(szBuffer, (UnitCombatTypes)widgetDataStruct.m_iData1, bCivilopediaText);
-	}
 }
 
 void CvDLLWidgetData::parseImprovementHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)

@@ -1605,6 +1605,8 @@ class Pedia:
 					self.tooltip.handle(screen, GC.getBuildInfo(ID).getDescription())
 				elif "RELIGION" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
+				elif "COMBAT" in szSplit:
+					self.tooltip.handle(screen, CyGameTextMgr().getUnitCombatHelp(ID, False))
 				elif "CONCEPT" in szSplit:
 					self.tooltip.handle(screen, GC.getConceptInfo(ID).getDescription())
 				elif "CONCEPT_NEW" in szSplit:
@@ -1731,6 +1733,8 @@ class Pedia:
 				self.pediaJump(self.PEDIA_SPECIAL, "Build", ID)
 			elif "RELIGION" in szSplit:
 				self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", ID)
+			elif "COMBAT" in szSplit:
+				self.pediaJump(self.PEDIA_SPECIAL, "UnitCombat", ID)
 			elif "CONCEPT" in szSplit:
 				self.pediaJump(self.PEDIA_CONCEPTS, "", ID)
 			elif "CONCEPT_NEW" in szSplit:

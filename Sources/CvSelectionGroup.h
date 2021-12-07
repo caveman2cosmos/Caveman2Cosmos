@@ -82,8 +82,7 @@ public:
 	void autoMission();
 	void updateMission();
 
-	DllExport CvPlot* _lastMissionPlot();
-	CvPlot* lastMissionPlot() const;
+	DllExport CvPlot* lastMissionPlot() const;
 
 	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;
 	bool startMission();
@@ -100,8 +99,7 @@ public:
 
 	bool isHuman() const;
 
-	DllExport bool _isBusy();
-	bool isBusy() const;
+	DllExport bool isBusy() const;
 
 	bool isCargoBusy() const;
 	int baseMoves() const;
@@ -110,21 +108,14 @@ public:
 	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
-	DllExport bool _canAllMove();
-	bool canAllMove() const;
+	DllExport bool canAllMove() const;
+	DllExport bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const;
+	DllExport bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;
 	bool hasMoved() const;
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
-
-	DllExport bool _canMoveInto(CvPlot* pPlot, bool bAttack = false);
-	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const;
-
-	DllExport bool _canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
-	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
-
 	bool canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false) const;
-
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canFight() const;
 	bool canDefend() const;

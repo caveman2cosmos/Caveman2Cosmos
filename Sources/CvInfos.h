@@ -1063,6 +1063,10 @@ public:
 	bool isQualifiedUnitCombatType(int i) const;
 	void setQualifiedUnitCombatTypes();
 
+	int getDisqualifiedUnitCombatType(int i) const;
+	int getNumDisqualifiedUnitCombatTypes() const;
+	void setDisqualifiedUnitCombatTypes();
+
 	bool hasNegativeEffects() const;
 
 protected:
@@ -1405,6 +1409,7 @@ protected:
 
 	//Pediahelp
 	std::vector<int> m_aiQualifiedUnitCombatTypes;
+	std::vector<int> m_disqualifiedUnitCombatTypes;
 
 };
 

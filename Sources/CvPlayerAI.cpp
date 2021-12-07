@@ -6037,7 +6037,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 						if (gPlayerLogLevel > 2)
 						{
 							logBBAI(
-								"\tBuilding %S is modified.  We have %d of them, total value: %d", 
+								"\tBuilding %S is modified.  We have %d of them, total value: %d",
 								kLoopBuilding.getDescription(), iNumExisting, iTempValue
 							);
 						}
@@ -9947,7 +9947,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 
 DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 {
-	FAssert(pCity->getOwner() == getID());
+	FAssert(pCity->getOwner() == getID()); // I can only sell cities that I own.
 
 	if (pCity->getLiberationPlayer(false) == ePlayer)
 	{
@@ -9956,39 +9956,30 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 	if (pCity->getID() == getCapitalCity()->getID())
 	{
-		return DENIAL_JOKING;
+		return DENIAL_JOKING; // Toffer - Hmm, maybe this should be before the liberation "No Denial"?
 	}
 
-	if (atWar(getTeam(), GET_PLAYER(ePlayer).getTeam()))
+	if (isHuman() || atWar(getTeam(), GET_PLAYER(ePlayer).getTeam()))
 	{
 		return NO_DENIAL;
 	}
 
-	if (!(GET_PLAYER(ePlayer).isHuman()) && GET_PLAYER(ePlayer).AI_isFinancialTrouble())
+	if (GET_PLAYER(ePlayer).AI_isFinancialTrouble())
 	{
 		return DENIAL_MYSTERY;
 	}
-
-	if (!(GET_PLAYER(ePlayer).isHuman()))
 	{
 		const CvCity* pNearestCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), ePlayer, NO_TEAM, true, false, NO_TEAM, NO_DIRECTION, pCity);
-		if ((pNearestCity == NULL) || (plotDistance(pCity->getX(), pCity->getY(), pNearestCity->getX(), pNearestCity->getY()) > 18))
+
+		if (pNearestCity == NULL || plotDistance(pCity->getX(), pCity->getY(), pNearestCity->getX(), pNearestCity->getY()) > 18)
 		{
 			return DENIAL_NO_GAIN;
 		}
 	}
 
-	if (isHuman())
+	if (getNumCities() > 1 && AI_ourCityValue(pCity) < 600 * getCurrentEra())
 	{
 		return NO_DENIAL;
-	}
-
-	if (AI_ourCityValue(pCity) < (600 * getCurrentEra()))
-	{
-		if (getNumCities() > 1)
-		{
-			return NO_DENIAL;
-		}
 	}
 
 	if (GET_PLAYER(ePlayer).getTeam() != getTeam())
@@ -10000,7 +9991,6 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 	{
 		return DENIAL_TOO_MUCH;
 	}
-
 	return NO_DENIAL;
 }
 

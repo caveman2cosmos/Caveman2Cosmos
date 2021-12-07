@@ -5655,7 +5655,6 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		case TRADE_FREE_TRADE_ZONE:
 		{
 			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
-			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY)
 			&& getTeam() != GET_PLAYER(eWhoTo).getTeam()
 			&& !atWar(getTeam(), GET_PLAYER(eWhoTo).getTeam())
 			&& GET_TEAM(getTeam()).canSignOpenBorders(GET_PLAYER(eWhoTo).getTeam())
@@ -5709,119 +5708,98 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 
 DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 {
-	CvCity* pCity;
-
 	switch (item.m_eItemType)
 	{
-	case TRADE_TECHNOLOGIES:
-		return GET_TEAM(getTeam()).AI_techTrade(((TechTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_TECHNOLOGIES:
+			return GET_TEAM(getTeam()).AI_techTrade(((TechTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_RESOURCES:
-		return AI_bonusTrade(((BonusTypes)(item.m_iData)), eWhoTo);
-		break;
+		case TRADE_RESOURCES:
+			return AI_bonusTrade(((BonusTypes)(item.m_iData)), eWhoTo);
 
-	case TRADE_CITIES:
-		pCity = getCity(item.m_iData);
-		if (pCity != NULL)
+		case TRADE_CITIES:
 		{
-			return AI_cityTrade(pCity, eWhoTo);
+			CvCity* pCity = getCity(item.m_iData);
+			if (pCity != NULL)
+			{
+				return AI_cityTrade(pCity, eWhoTo);
+			}
+			break;
 		}
-		break;
+		case TRADE_MAPS:
+			return GET_TEAM(getTeam()).AI_mapTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_GOLD:
-	case TRADE_GOLD_PER_TURN:
-		break;
+		case TRADE_SURRENDER:
+			return GET_TEAM(getTeam()).AI_surrenderTrade(GET_PLAYER(eWhoTo).getTeam(), 140);
 
-	case TRADE_MAPS:
-		return GET_TEAM(getTeam()).AI_mapTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_VASSAL:
+			return GET_TEAM(getTeam()).AI_vassalTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_SURRENDER:
-		return GET_TEAM(getTeam()).AI_surrenderTrade(GET_PLAYER(eWhoTo).getTeam(), 140);
-		break;
+		case TRADE_PEACE:
+			return GET_TEAM(getTeam()).AI_makePeaceTrade(((TeamTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_VASSAL:
-		return GET_TEAM(getTeam()).AI_vassalTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_WAR:
+			return GET_TEAM(getTeam()).AI_declareWarTrade(((TeamTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_PEACE:
-		return GET_TEAM(getTeam()).AI_makePeaceTrade(((TeamTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_EMBARGO:
+			return AI_stopTradingTrade(((TeamTypes)(item.m_iData)), eWhoTo);
 
-	case TRADE_WAR:
-		return GET_TEAM(getTeam()).AI_declareWarTrade(((TeamTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_CIVIC:
+			return AI_civicTrade(((CivicTypes)(item.m_iData)), eWhoTo);
 
-	case TRADE_EMBARGO:
-		return AI_stopTradingTrade(((TeamTypes)(item.m_iData)), eWhoTo);
-		break;
+		case TRADE_RELIGION:
+			return AI_religionTrade(((ReligionTypes)(item.m_iData)), eWhoTo);
 
-	case TRADE_CIVIC:
-		return AI_civicTrade(((CivicTypes)(item.m_iData)), eWhoTo);
-		break;
+		case TRADE_OPEN_BORDERS:
+			return GET_TEAM(getTeam()).AI_openBordersTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_RELIGION:
-		return AI_religionTrade(((ReligionTypes)(item.m_iData)), eWhoTo);
-		break;
+		case TRADE_DEFENSIVE_PACT:
+			return GET_TEAM(getTeam()).AI_defensivePactTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_OPEN_BORDERS:
-		return GET_TEAM(getTeam()).AI_openBordersTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_PERMANENT_ALLIANCE:
+			return GET_TEAM(getTeam()).AI_permanentAllianceTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_DEFENSIVE_PACT:
-		return GET_TEAM(getTeam()).AI_defensivePactTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_RITE_OF_PASSAGE:
+			return GET_TEAM(getTeam()).AI_LimitedBordersTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_PERMANENT_ALLIANCE:
-		return GET_TEAM(getTeam()).AI_permanentAllianceTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_FREE_TRADE_ZONE:
+			return GET_TEAM(getTeam()).AI_FreeTradeAgreement(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_PEACE_TREATY:
-		break;
-
-	case TRADE_RITE_OF_PASSAGE:
-		return GET_TEAM(getTeam()).AI_LimitedBordersTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
-	case TRADE_FREE_TRADE_ZONE:
-		return GET_TEAM(getTeam()).AI_FreeTradeAgreement(GET_PLAYER(eWhoTo).getTeam());
-		break;
-	case TRADE_WORKER:
+		case TRADE_WORKER:
 		{
 			CvUnit* pUnit = getUnit(item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_workerTrade(pUnit, eWhoTo);
 			}
+			break;
 		}
-		break;
-	case TRADE_MILITARY_UNIT:
+		case TRADE_MILITARY_UNIT:
 		{
 			CvUnit* pUnit = getUnit(item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_militaryUnitTrade(pUnit, eWhoTo);
 			}
+			break;
 		}
-		break;
-	case TRADE_EMBASSY:
-		return GET_TEAM(getTeam()).AI_embassyTrade(GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_EMBASSY:
+			return GET_TEAM(getTeam()).AI_embassyTrade(GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_CONTACT:
-		return GET_TEAM(getTeam()).AI_contactTrade(((TeamTypes)item.m_iData), GET_PLAYER(eWhoTo).getTeam());
-		break;
+		case TRADE_CONTACT:
+			return GET_TEAM(getTeam()).AI_contactTrade(((TeamTypes)item.m_iData), GET_PLAYER(eWhoTo).getTeam());
 
-	case TRADE_CORPORATION:
-		return AI_corporationTrade(((CorporationTypes)(item.m_iData)), eWhoTo);
-		break;
-	case TRADE_PLEDGE_VOTE:
-		break;
-	case TRADE_SECRETARY_GENERAL_VOTE:
-		return AI_secretaryGeneralTrade(((VoteSourceTypes)(item.m_iData)), eWhoTo);
-		break;
+		case TRADE_CORPORATION:
+			return AI_corporationTrade(((CorporationTypes)(item.m_iData)), eWhoTo);
+
+		case TRADE_SECRETARY_GENERAL_VOTE:
+			return AI_secretaryGeneralTrade(((VoteSourceTypes)(item.m_iData)), eWhoTo);
+
+		case TRADE_GOLD:
+		case TRADE_GOLD_PER_TURN:
+		case TRADE_PEACE_TREATY:
+		case TRADE_PLEDGE_VOTE:
+			break;
 	}
-
 	return NO_DENIAL;
 }
 

@@ -3701,22 +3701,6 @@ bool CvPromotionInfo::isFreetoUnitCombat(int i) const
 	return algo::contains(m_aiFreetoUnitCombats, i);
 }
 
-int CvPromotionInfo::getNotOnUnitCombatType(int i) const
-{
-	return m_aiNotOnUnitCombatTypes[i];
-}
-
-int CvPromotionInfo::getNumNotOnUnitCombatTypes() const
-{
-	return (int)m_aiNotOnUnitCombatTypes.size();
-}
-
-bool CvPromotionInfo::isNotOnUnitCombatType(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiNotOnUnitCombatTypes, i);
-}
-
 int CvPromotionInfo::getNotOnDomainType(int i) const
 {
 	return m_aiNotOnDomainTypes[i];
@@ -4727,22 +4711,74 @@ void CvPromotionInfo::setQualifiedUnitCombatTypes()
 			m_aiQualifiedUnitCombatTypes.push_back(iI);
 		}
 	}
-	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+	const PromotionLineTypes ePromotionLine = getPromotionLine();
+
+	if (ePromotionLine > -1)
 	{
-		const PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
-		if (getPromotionLine() == ePromotionLine)
+		for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumUnitCombatPrereqTypes(); iI++)
 		{
-			for (int iJ = 0; iJ < GC.getPromotionLineInfo(ePromotionLine).getNumUnitCombatPrereqTypes(); iJ++)
+			const int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getUnitCombatPrereqType(iI);
+
+			if (!isQualifiedUnitCombatType(iUnitCombat))
 			{
-				const int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getUnitCombatPrereqType(iJ);
-				if (!isQualifiedUnitCombatType(iUnitCombat))
-				{
-					m_aiQualifiedUnitCombatTypes.push_back(iUnitCombat);
-				}
+				m_aiQualifiedUnitCombatTypes.push_back(iUnitCombat);
 			}
 		}
 	}
 }
+
+int CvPromotionInfo::getNotOnUnitCombatType(int i) const
+{
+	return m_aiNotOnUnitCombatTypes[i];
+}
+
+int CvPromotionInfo::getNumNotOnUnitCombatTypes() const
+{
+	return (int)m_aiNotOnUnitCombatTypes.size();
+}
+
+bool CvPromotionInfo::isNotOnUnitCombatType(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
+	return algo::contains(m_aiNotOnUnitCombatTypes, i);
+}
+
+int CvPromotionInfo::getDisqualifiedUnitCombatType(int i) const
+{
+	return m_disqualifiedUnitCombatTypes[i];
+}
+
+int CvPromotionInfo::getNumDisqualifiedUnitCombatTypes() const
+{
+	return (int)m_disqualifiedUnitCombatTypes.size();
+}
+
+void CvPromotionInfo::setDisqualifiedUnitCombatTypes()
+{
+	m_disqualifiedUnitCombatTypes.clear();
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	{
+		if (isNotOnUnitCombatType(iI))
+		{
+			m_disqualifiedUnitCombatTypes.push_back(iI);
+		}
+	}
+	const PromotionLineTypes ePromotionLine = getPromotionLine();
+
+	if (ePromotionLine > -1)
+	{
+		for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumNotOnUnitCombatTypes(); iI++)
+		{
+			const int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getNotOnUnitCombatType(iI);
+
+			if (!isNotOnUnitCombatType(iUnitCombat))
+			{
+				m_disqualifiedUnitCombatTypes.push_back(iUnitCombat);
+			}
+		}
+	}
+}
+
 //TB Combat Mods End  TB SubCombat Mod end
 
 bool CvPromotionInfo::hasNegativeEffects() const

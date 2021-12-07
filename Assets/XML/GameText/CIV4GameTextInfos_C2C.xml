@@ -103,6 +103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
 		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
+		<German>[SPACE](wird dann zu [LINK=%s1]%s2[\LINK])</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES</Tag>

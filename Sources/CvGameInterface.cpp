@@ -656,7 +656,7 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 		return;
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
 	{
@@ -918,7 +918,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 
 
 // Returns true if unit was cycled...
-bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit = NULL;

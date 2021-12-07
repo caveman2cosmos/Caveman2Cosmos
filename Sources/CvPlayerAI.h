@@ -58,9 +58,9 @@ public:
 		{
 			currentUseCounter = 0;
 
-			for(int i = 0; i < PLOT_DANGER_CACHE_SIZE; i++)
+			foreach_(plotDangerCacheEntry& entry, entries)
 			{
-				entries[i].iLastUseCount = 0;
+				entry.iLastUseCount = 0;
 			}
 		}
 	}
