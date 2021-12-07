@@ -13251,8 +13251,6 @@ bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) c
 		// Checks for differing domains, transport status, amnesty game setting
 		|| canUnitCoexistWithArrivingUnit(attacker)
 		;
-
-	return false;
 }
 
 bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
@@ -28156,27 +28154,23 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb4(int iX, int iY)
 {
-	CvCity* pCity;
 	CvUnit* pUnit;
-	CvPlot* pPlot;
 	CvWString szBuffer;
-	bool bSuccess = false;
-	int iDamage, iCount;
-	int iUnitDamage;
-	bool bNoTarget = true;
+	bool bSuccess = false, bNoTarget = true;
+	int iDamage, iUnitDamage;
 
 	if (!canAirBomb4At(plot(), iX, iY))
 	{
 		return false;
 	}
-	pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
 	}
 
-	pCity = pPlot->getPlotCity();
-	iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
+	CvCity* pCity = pPlot->getPlotCity();
+	int iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
 	iCount = (GC.getGame().getSorenRandNum(iCount, "Choose ship") + 1);
 	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 	while (iCount > 0)
@@ -31069,8 +31063,6 @@ bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 					NotifyEntity(MISSION_CURE);
 				}
 				break;
-
-				return true;
 			}
 		}
 	}

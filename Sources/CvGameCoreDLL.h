@@ -290,6 +290,7 @@ namespace python = boost::python;
 //
 #pragma warning( 3: 4100 ) // unreferenced formal parameter
 //#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
+#pragma warning( 3: 4702 ) // unreachable code
 
 //
 // Json

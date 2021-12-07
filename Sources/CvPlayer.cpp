@@ -4554,7 +4554,7 @@ bool CvPlayer::hasBusyUnit() const
 	PROFILE_FUNC();
 
 	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups()
-	| filtered(CvSelectionGroup::fn::isBusy()))
+	| filtered(bind(CvSelectionGroup::isBusy, _1)))
 	{
 		if (pLoopSelectionGroup->getNumUnits() == 0)
 		{
@@ -7545,7 +7545,7 @@ void CvPlayer::removeBuilding(BuildingTypes building)
 {
 	if (building != NO_BUILDING)
 	{
-		foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::getNumRealBuilding(building) > 0))
+		foreach_(CvCity* pLoopCity, cities() | filtered(bind(CvCity::getNumRealBuilding, _1, building) > 0))
 		{
 			pLoopCity->setNumRealBuilding(building, 0);
 			break;

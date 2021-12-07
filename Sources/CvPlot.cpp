@@ -3383,7 +3383,7 @@ int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, Dom
 
 CvUnit* CvPlot::getSelectedUnit() const
 {
-	foreach_(CvUnit* unit, units() | filtered(CvUnit::fn::IsSelected()))
+	foreach_(CvUnit* unit, units() | filtered(bind(CvUnit::IsSelected, _1)))
 	{
 		return unit;
 	}
@@ -13159,7 +13159,7 @@ bool CvPlot::isInUnitZoneOfControl(PlayerTypes ePlayer) const
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
 		foreach_(const CvUnit* pLoopUnit, pAdjacentPlot->units()
-		| filtered(CvUnit::fn::isZoneOfControl()))
+		| filtered(bind(CvUnit::isZoneOfControl, _1)))
 		{
 			return GET_TEAM(pLoopUnit->getTeam()).isAtWar(GET_PLAYER(ePlayer).getTeam());
 		}
