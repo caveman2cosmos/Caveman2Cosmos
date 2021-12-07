@@ -600,11 +600,6 @@ void CvSelectionGroup::updateMission()
 	}
 }
 
-CvPlot* CvSelectionGroup::_lastMissionPlot()
-{
-	return lastMissionPlot();
-}
-
 CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
 	CvUnit* pTargetUnit;
@@ -3054,11 +3049,6 @@ bool CvSelectionGroup::isHuman() const
 	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHuman() : true;
 }
 
-bool CvSelectionGroup::_isBusy()
-{
-	return isBusy();
-}
-
 bool CvSelectionGroup::isBusy() const
 {
 	return getMissionTimer() > 0 || algo::any_of(units(), CvUnit::fn::isCombat());
@@ -3174,11 +3164,6 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 	}
 }
 
-bool CvSelectionGroup::_canAllMove()
-{
-	return canAllMove();
-}
-
 bool CvSelectionGroup::canAllMove() const
 {
 	return getNumUnits() > 0
@@ -3228,11 +3213,6 @@ bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool b
 		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
-bool CvSelectionGroup::_canMoveInto(CvPlot* pPlot, bool bAttack)
-{
-	return canMoveInto(pPlot, bAttack);
-}
-
 bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
 {
 	return canMoveIntoWithWar(pPlot, bAttack, false);
@@ -3242,11 +3222,6 @@ bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack, boo
 {
 	return getNumUnits() > 0
 		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
-}
-
-bool CvSelectionGroup::_canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
-{
-	return canMoveOrAttackInto(pPlot, bDeclareWar);
 }
 
 bool CvSelectionGroup::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
