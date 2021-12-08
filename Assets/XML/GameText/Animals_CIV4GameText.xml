@@ -702,7 +702,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO</Tag>
-		<English>Nine-Banded Armadillo</English>
+		<English>Nine-banded Armadillo</English>
 		<French>Tatou à neuf bandes</French>
 		<German>
 			<Text>Neunbinden-Gürteltier:Neunbinden-Gürteltieres:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Neunbinden-Gürteltiere:Neunbinden-Gürteltiere:Neunbinden-Gürteltieren:Neunbinden-Gürteltiere</Text>
@@ -1440,7 +1440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH</Tag>
-		<English>Megatherium</English>
+		<English>Ground Sloth</English>
 		<French>Mégatherium</French>
 		<German>
 			<Text>Megatherium:Megatheriums:Megatherium:Megatherium:Megatherien:Megatherien:Megatherien:Megatherien</Text>
@@ -1620,7 +1620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
-		<English>Ring-Tailed Lemur</English>
+		<English>Ring-tailed Lemur</English>
 		<French>Lémur catta</French>
 		<German>
 			<Text>Katta:Kattas:Katta:Katta:Kattas:Kattas:Kattas:Kattas</Text>
@@ -2137,7 +2137,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION</Tag>
-		<English>Sealion</English>
+		<English>Sea Lion</English>
 		<French>Lion de mer</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
@@ -2231,7 +2231,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO</Tag>
-		<English>Subdued Armadillo</English>
+		<English>Subdued Nine-banded Armadillo</English>
 		<French>Tatou (App.)</French>
 		<German>
 			<Text>Gefangenes Neunbinden-Gürteltier:Gefangenen Neunbinden-Gürteltieres:Gefangenen Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltieren:Gefangenen Neunbinden-Gürteltiere</Text>
@@ -2265,7 +2265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR</Tag>
-		<English>Subdued Brazilian Tapir</English>
+		<English>Subdued Lowland Tapir</English>
 		<French>
 			<Text>Tapir du Brésil (App.)</Text>
 			<Gender>Male</Gender>
@@ -2281,7 +2281,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN</Tag>
-		<English>Subdued Caiman</English>
+		<English>Subdued Black Caiman</English>
 		<French>
 			<Text>Caïman (App.)</Text>
 			<Gender>Male</Gender>
@@ -2297,7 +2297,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
-		<English>Subdued Cuscus</English>
+		<English>Subdued Spotted Cuscus</English>
 		<French>Couscous (App.)</French>
 		<German>
 			<Text>Gefangener Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangene Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus</Text>
@@ -2343,7 +2343,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE</Tag>
-		<English>Subdued Dhole</English>
+		<English>Subdued Ussuri Dhole</English>
 		<French>Cuon d'Asie (App.)</French>
 		<German>
 			<Text>Gefangener Rothund:Gefangenen Rothundes:Gefangenen Rothund:Gefangenen Rothund:Gefangene Rothunde:Gefangenen Rothunde:Gefangenen Rothunden:Gefangenen Rothunde</Text>
@@ -2365,7 +2365,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Tag>
-		<English>Subdued Elasmotherium</English>
+		<English>Subdued Giant Rhinoceros</English>
 		<French>Elasmotherium (App.)</French>
 		<German>
 			<Text>Gefangenes Elasmotherium:Gefangenen Elasmotheriums:Gefangenen Elasmotherium:Gefangene Elasmotherium:Gefangene Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien</Text>
@@ -2636,7 +2636,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
-		<English>Subdued Tree Sloth</English>
+		<English>Subdued Three-toed Sloth</English>
 		<French>Paresseux (App.)</French>
 		<German>
 			<Text>Gefangenes Dreifinger-Faultier:Gefangenen Dreifinger-Faultiers:Gefangenen Dreifinger-Faultier:Gefangene Dreifinger-Faultier:Gefangene Dreifinger-Faultiere:Gefangenen Dreifinger-Faultiere:Gefangenen Dreifinger-Faultieren:Gefangenen Dreifinger-Faultiere</Text>
@@ -2896,7 +2896,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY</Tag>
-		<English>Ring-Tailed Wallaby</English>
+		<English>Ring-tailed Wallaby</English>
 		<French>
 			<Text>Wallaby</Text>
 			<Gender>Male</Gender>
@@ -2974,7 +2974,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALRUS_PEDIA</Tag>
 		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous circumpolar distribution in the Arctic Ocean and sub-Arctic seas of the Northern Hemisphere. The walrus is the only living species in the Odobenidae family and Odobenus genus. It is subdivided into three subspecies: the Atlantic walrus (O. rosmarus rosmarus) which lives in the Atlantic Ocean, the Pacific walrus (O. rosmarus divergens) which lives in the Pacific Ocean, and O. rosmarus laptevi, which lives in the Laptev Sea.[PARAGRAPH:2]The walrus is easily recognized by its prominent tusks, whiskers and great bulk. Adult Pacific males can weigh more than 1,700 kilograms (3,700 lb) and, among pinnipeds, are exceeded in size only by the two species of elephant seals. It resides primarily in shallow oceanic shelf habitat, spending a significant proportion of its life on sea ice in pursuit of its preferred diet of benthic bivalve mollusks. It is a relatively long-lived, social animal and is considered a keystone species in Arctic marine ecosystems.[PARAGRAPH:2]The walrus has played a prominent role in the cultures of many indigenous Arctic peoples, who have hunted the walrus for its meat, fat, skin, tusks and bone. In the 19th and early 20th centuries, the walrus was the object of heavy commercial exploitation for blubber and ivory and its numbers declined rapidly. Its global population has since rebounded, though the Atlantic and Laptev populations remain fragmented and at historically depressed levels.</English>
-		<German>Beim Walross (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[NEWLINE]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern. Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.[NEWLINE]Das Walross hat für den Menschen schon immer eine bedeutende Rolle gespielt. Die arktischen Völker verwendeten praktisch alle Körperteile eines erlegten Walrosses, sei es als Nahrung oder als Material zum Heizen (Tran), zum Hüttenbau (Knochen und Stoßzähne) oder zur Herstellung von Booten und Kleidung (Haut). Durch skrupellose intensive Bejagung mit modernen Waffen zur Gewinnung des Elfenbeins, aber auch durch die Verschmutzung des Lebensraums insbesondere durch Ölunglücke wurden die Populationen stark dezimiert. Nachdem vor allem die USA und Russland eine Reihe von Schutzmaßnahmen starteten, hat sich der Bestand aber wieder etwas erholt.</German>
+		<German>Beim Walross (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[NEWLINE]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern. Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.</German>
 		<Polish>Mors (koń morski, łac. Odobenus rosmarus) gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, ciosów i kości.[PARAGRAPH:2]Morsy występują na wodach przybrzeżnych Arktyki, wzdłuż wybrzeży Ameryki Północnej i Rosji. Mors najbardziej lubi płytkie wody w pobliżu pływających pól lodowych, więc można go również zobaczyć jak pływa na krach lodowych.[PARAGRAPH:2]TMors ma ciężkie ciało osiągające długość od 2,5 do 4,2 m, osłonięte grubą na 3,5 cm niemal nagą (słabo owłosioną), pofałdowaną skórą. Masa ciała mieści się w przedziale od 400 do 1700 kg; samce są większe od samic. Morsy z Oceanu Spokojnego są większe od występujących w Atlantyku. Barwa skóry od jasnobrązowej do cynamonowobrązowej, podczas wygrzewania się na słońcu kolor zmienia się na różowy wskutek rozszerzania się naczyń krwionośnych. Na brzuchu i piersiach skóra jest ciemniejsza. Morsy żyjące w Oceanie Spokojnym mają więcej wąsów czuciowych od tych z Atlantyku. Wszystkie kończyny morsa są przekształcone w płetwy. Przednie kończyny są większe od tylnych i stanowią główny narząd ruchu. U młodych morsów dostrzega się rzadkie owłosienie skóry, dorosłe mają skórę bardzo słabo owłosioną. Na górnej wardze występują liczne włosy czuciowe. W uzębieniu wyróżniają się górne kły obecne u samców i u samic, szczególnie silnie rozwinięte u samców, mogą dorastać do metra długości, ale przeciętna ich długość wynosi ok. 50 cm. Masa największych kłów przekracza 5 kg. Kły morsów mają budowę podobną do ciosów słoni.[PARAGRAPH:2]Mors nie jest gatunkiem zagrożonym wyginięciem, ale liczebność jest poważnie obniżona w wyniku dawnych polowań. Nadal prowadzone jest kłusownictwo dla ich ciosów, odkąd zdobywanie kości słoniowej jest nielegalne. Głównym naturalnym wrogiem morsów jest orka i rzadko niedźwiedź polarny, który tylko w wyjątkowych sytuacjach jest zdolny upolować młodego bądź schorowanego morsa.</Polish>
 	</TEXT>
 	<TEXT>

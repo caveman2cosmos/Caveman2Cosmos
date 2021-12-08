@@ -993,8 +993,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	//Establish Promotion Pedia Help info
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		PromotionTypes ePromotion = (PromotionTypes)iI;
+		const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
 		GC.getPromotionInfo(ePromotion).setQualifiedUnitCombatTypes();
+		GC.getPromotionInfo(ePromotion).setDisqualifiedUnitCombatTypes();
 	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{

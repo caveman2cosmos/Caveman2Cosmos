@@ -89,11 +89,12 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<!-- @SAVEBREAK DELETE -->
 			<Type>GAMEOPTION_ADVANCED_ECONOMY</Type>
 			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY</Description>
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 			<EnforcesGameOptionOnTypes>
 				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
 			</EnforcesGameOptionOnTypes>
