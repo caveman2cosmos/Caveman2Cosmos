@@ -849,7 +849,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 }
@@ -1178,7 +1178,7 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			return launchConfirmAmbushPopup(pPopup, info);
 		}
-		default: FAssert(false);
+		default: FErrorMsg("error");
 	}
 	return false;
 }
@@ -1538,7 +1538,7 @@ bool CvDLLButtonPopup::launchChangeReligionPopup(CvPopup* pPopup, CvPopupInfo &i
 
 	if (NO_RELIGION == eReligion)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return (false);
 	}
 
@@ -1608,7 +1608,7 @@ bool CvDLLButtonPopup::launchDiploVotePopup(CvPopup* pPopup, CvPopupInfo &info)
 	VoteTriggeredData* pVoteTriggered = GC.getGame().getVoteTriggered(info.getData1());
 	if (NULL == pVoteTriggered)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return false;
 	}
 
@@ -1681,7 +1681,7 @@ bool CvDLLButtonPopup::launchRazeCityPopup(CvPopup* pPopup, CvPopupInfo &info)
 	CvCity* pNewCity = player.getCity(info.getData1());
 	if (NULL == pNewCity)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return (false);
 	}
 
@@ -1734,7 +1734,7 @@ bool CvDLLButtonPopup::launchDisbandCityPopup(CvPopup* pPopup, CvPopupInfo &info
 	CvCity* pNewCity = player.getCity(info.getData1());
 	if (NULL == pNewCity)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return (false);
 	}
 

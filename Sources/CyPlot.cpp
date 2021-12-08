@@ -570,7 +570,7 @@ int CyPlot::getInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*Invisible
 
 bool CyPlot::isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const
 {
-	return m_pPlot ? m_pPlot->isInvisibleVisible((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : -1;
+	return m_pPlot ? m_pPlot->isInvisibleVisible((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : false;
 }
 
 void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity)

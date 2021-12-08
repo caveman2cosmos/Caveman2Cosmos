@@ -3,8 +3,8 @@
 #ifndef flatten_range_h__
 #define flatten_range_h__
 
-#include <boost155/range/adaptors.hpp>
-#include <boost155/range/iterator_range.hpp>
+//#include <boost155/range/adaptors.hpp>
+//#include <boost155/range/iterator_range.hpp>
 
 template <typename OuterIterator> class flattening_iterator
 {

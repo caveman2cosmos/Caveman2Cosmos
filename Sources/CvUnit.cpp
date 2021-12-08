@@ -2058,7 +2058,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 	int iTotalStrength = iOurStrength + iTheirStrength;
 	if (0 == iTotalStrength)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return;
 	}
 
@@ -5794,7 +5794,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -5917,7 +5917,7 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -6272,7 +6272,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -7244,7 +7244,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -13079,7 +13079,7 @@ BuildTypes CvUnit::getBuildType() const
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 	}
@@ -13251,8 +13251,6 @@ bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) c
 		// Checks for differing domains, transport status, amnesty game setting
 		|| canUnitCoexistWithArrivingUnit(attacker)
 		;
-
-	return false;
 }
 
 bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
@@ -28156,27 +28154,23 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb4(int iX, int iY)
 {
-	CvCity* pCity;
 	CvUnit* pUnit;
-	CvPlot* pPlot;
 	CvWString szBuffer;
-	bool bSuccess = false;
-	int iDamage, iCount;
-	int iUnitDamage;
-	bool bNoTarget = true;
+	bool bSuccess = false, bNoTarget = true;
+	int iDamage, iUnitDamage;
 
 	if (!canAirBomb4At(plot(), iX, iY))
 	{
 		return false;
 	}
-	pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
 	}
 
-	pCity = pPlot->getPlotCity();
-	iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
+	CvCity* pCity = pPlot->getPlotCity();
+	int iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
 	iCount = (GC.getGame().getSorenRandNum(iCount, "Choose ship") + 1);
 	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 	while (iCount > 0)
@@ -31069,8 +31063,6 @@ bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 					NotifyEntity(MISSION_CURE);
 				}
 				break;
-
-				return true;
 			}
 		}
 	}

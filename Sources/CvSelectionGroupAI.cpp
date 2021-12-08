@@ -159,7 +159,7 @@ bool CvSelectionGroupAI::AI_update()
 		iTempHack++;
 		if (iTempHack > 90 && iTempHack < 100)
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
@@ -181,7 +181,7 @@ bool CvSelectionGroupAI::AI_update()
 		}
 		if (iTempHack >= 100)
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
@@ -987,7 +987,7 @@ bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
