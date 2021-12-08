@@ -1652,6 +1652,8 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" GlobalBuildingCostModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in GlobalBuildingCostModifiers in "+CvBuildingInfo.getType())
 
 			#<GlobalBuildingProductionModifiers>
 			for iAffectedBuilding, iGlobalProductionModifier in CvBuildingInfo.getGlobalBuildingProductionModifiers():
@@ -1667,6 +1669,8 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" GlobalBuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in GlobalBuildingProductionModifiers in "+CvBuildingInfo.getType())
 
 			#<BuildingHappinessChanges>
 			for iAffectedBuilding, iHappiness in CvBuildingInfo.getBuildingHappinessChanges():
@@ -1697,6 +1701,8 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in BuildingProductionModifiers in "+CvBuildingInfo.getType())
 
 			#<ImprovementFreeSpecialists> - building references improvements, those potentially can upgrade
 			aImprovementUnlistedUpgrades = []
@@ -1799,6 +1805,8 @@ class TestCode:
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
 					aBuildingList.append(iBuilding)
+					if GC.getBuildingInfo(iBuilding).getProductionCost() < 1:
+						self.log(GC.getBuildingInfo(iBuilding).getType()+" has no cost so shouldn't be listed in BuildingProductionModifiers in "+CvCivicInfo.getType())
 
 			if len(aBuildingList) > 0:
 				#Analyze list of Buildings
@@ -1874,6 +1882,8 @@ class TestCode:
 					iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in BuildingProductionModifierTypes in "+CvTraitInfo.getType())
 			#Get unique unlisted replacements
 			for i in xrange(len(aReplacementBuildingsList)):
 				iBuilding = GC.getInfoTypeForString(aReplacementBuildingsList[i])
