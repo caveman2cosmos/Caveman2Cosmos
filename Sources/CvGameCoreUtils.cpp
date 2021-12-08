@@ -4222,7 +4222,7 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 	}
 
 	return iTurnMonth;

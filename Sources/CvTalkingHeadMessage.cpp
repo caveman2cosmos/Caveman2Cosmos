@@ -226,7 +226,7 @@ int CvTalkingHeadMessage::getExpireTurn()
 		iExpireTurn = GC.getGame().getGameTurn() - 1;
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 	return (iExpireTurn);

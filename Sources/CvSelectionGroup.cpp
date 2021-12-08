@@ -699,7 +699,7 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 
@@ -1233,7 +1233,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
 			if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 			{
@@ -1470,7 +1470,7 @@ bool CvSelectionGroup::startMission()
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 
@@ -1982,7 +1982,7 @@ bool CvSelectionGroup::startMission()
 
 					default:
 						// AIAndy: Assumed to be an outcome mission
-						// FAssert(false);
+						// FErrorMsg("error");
 						if (pLoopUnit->doOutcomeMission(headMissionQueueNode()->m_data.eMissionType))
 						{
 							bAction = true;
@@ -2309,7 +2309,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		case MISSION_SENTRY_LAND_UNITS:
 #endif
 // BUG - Sentry Actions - end
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 
 		case MISSION_AIRLIFT:
@@ -2373,7 +2373,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 /************************************************************************************************/
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 	}
@@ -2437,7 +2437,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_SENTRY_LAND_UNITS:
 #endif
 // BUG - Sentry Actions - end
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 
 			case MISSION_AIRLIFT:
@@ -2507,7 +2507,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 			default:
 				// AIAndy: Assumed to be an outcome mission
-				// FAssert(false);
+				// FErrorMsg("error");
 				bDone = true;
 				break;
 			}
@@ -5161,7 +5161,7 @@ CvPlot* CvSelectionGroup::getPathFirstPlot() const
 		pNode = pNode->m_pParent;
 	}
 
-	FAssert(false);
+	FErrorMsg("error");
 
 	return NULL;
 #else
@@ -5209,7 +5209,7 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 		}
 	}
 
-	FAssert(false);
+	FErrorMsg("error");
 
 	return NULL;
 #else

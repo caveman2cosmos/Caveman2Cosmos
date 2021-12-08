@@ -1393,7 +1393,7 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 												}
 												else
 												{
-													FAssert(false);
+													FErrorMsg("error");
 												}
 											}
 											continue;

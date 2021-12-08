@@ -1822,7 +1822,7 @@ void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfo
 		{
 			CvString szType;
 			GetChildXmlValByName(szType, L"Type");
-			int iIndex = GC.getInfoTypeForString(szType, true);
+			const int iIndex = GC.getInfoTypeForString(szType, true);
 
 			if (-1 == iIndex)
 			{
@@ -1830,7 +1830,7 @@ void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfo
 
 				if (NULL == pClassInfo)
 				{
-					FAssert(false);
+					FErrorMsg("error");
 					break;
 				}
 

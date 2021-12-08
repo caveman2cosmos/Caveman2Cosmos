@@ -237,7 +237,7 @@ bool CvUnitAI::AI_update()
 			}
 			else
 			{
-				FAssert(false);
+				FErrorMsg("error");
 			}
 			break;
 		}
@@ -283,8 +283,8 @@ bool CvUnitAI::AI_update()
 			case NUM_DOMAIN_TYPES:
 			default:
 			{
-				FAssert(false)
-					break;
+				FErrorMsg("error");
+				break;
 			}
 			}
 			// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
@@ -377,7 +377,7 @@ bool CvUnitAI::AI_update()
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 		}
@@ -681,7 +681,7 @@ void CvUnitAI::doUnitAIMove()
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 }
@@ -981,7 +981,7 @@ int CvUnitAI::AI_groupFirstVal() const
 		return 1;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -4647,7 +4647,7 @@ void CvUnitAI::AI_counterMove()
 	// Should never have group lead by counter unit
 	if (getGroup()->getNumUnits() > 1 && getGroup()->getHeadUnitAI() == AI_getUnitAIType() && plot()->isCity() && plot()->getOwner() == getOwner())
 	{
-		//FAssert(false); // just interested in when this happens, not a problem
+		//FErrorMsg("error"); // just interested in when this happens, not a problem
 		getGroup()->AI_separate(); // will change group
 		return;
 	}
@@ -6876,7 +6876,7 @@ void CvUnitAI::AI_spyMove()
 			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 
@@ -15444,7 +15444,7 @@ bool CvUnitAI::AI_switchHurry()
 		}
 		//This should always be true because just because the city can't hurry doesn't mean it hasn't successfully made its determination for this function.
 		//Thus return true was moved outside of canHurry but kept within the check that ensures that the production building chosen is the next to be built confirmation.
-		FAssert(false);
+		FErrorMsg("error");
 	}
 
 	return false;
@@ -22801,7 +22801,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 		}
 		else
 		{
-			FAssert(false);
+			FErrorMsg("error");
 		}
 	}
 	return false;
@@ -23753,7 +23753,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 																							// for first node in path so m_iData2 (turns) incremented
 												if (atPlot(pBestPlot))
 												{
-													//FAssert(false);
+													//FErrorMsg("error");
 													pBestPlot = getGroup()->getPathFirstPlot();
 													FAssert(!atPlot(pBestPlot));
 												}
@@ -24057,7 +24057,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 
 												if (pBestPlot == NULL || atPlot(pBestPlot))
 												{
-													//FAssert(false);
+													//FErrorMsg("error");
 													pBestPlot = pBestPickupPlot;
 												}
 											}
@@ -26622,7 +26622,7 @@ bool CvUnitAI::AI_plotValid(const CvPlot* pPlot) const
 		break;
 
 	case DOMAIN_AIR:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 
 	case DOMAIN_LAND:
@@ -26637,7 +26637,7 @@ bool CvUnitAI::AI_plotValid(const CvPlot* pPlot) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 	return false;
@@ -27214,7 +27214,7 @@ int CvUnitAI::AI_calculatePlotWorkersNeeded(const CvPlot* pPlot, BuildTypes eBui
 
 	if (iWorkRate <= 0)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return 1;
 	}
 	const int iBuildTime = pPlot->getBuildTime(eBuild) - pPlot->getBuildProgress(eBuild);

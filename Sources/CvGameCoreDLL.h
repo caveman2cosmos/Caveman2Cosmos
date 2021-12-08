@@ -6,14 +6,20 @@
 //
 // Compiler warnings
 //
+//#pragma warning( 3: 4127 ) // conditional expression is constant
+
 #pragma warning( disable : 4510 ) // default constructor could not be generated
 #pragma warning( disable : 4511 ) // copy constructor could not be generated
 #pragma warning( disable : 4512 ) // assignment operator could not be generated
+#pragma warning( disable : 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
 
 //#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
 
 #pragma warning( push )
 #pragma warning( disable: 4100 ) // unreferenced formal parameter
+#pragma warning( disable: 4121 ) // alignment of a member was sensitive to packing
+#pragma warning( disable: 4127 ) // conditional expression is constant
+#pragma warning( disable: 4610 ) // struct/class can never be instantiated - user defined constructor required
 
 //
 // includes (pch) for gamecore dll files
@@ -231,18 +237,22 @@ const std::string getModDir();
 #include <boost155/function.hpp>
 #include <boost155/array.hpp>
 #include <boost155/utility.hpp>
+#include <boost155/utility/enable_if.hpp>
 #include <boost155/foreach.hpp>
 #include <boost155/functional.hpp>
 #include <boost155/detail/algorithm.hpp>
+#include <boost155/type_traits.hpp>
 
 // Ranges
 #include <boost155/range.hpp>
+#include <boost155/range/adaptors.hpp>
 #include <boost155/range/adaptor/filtered.hpp>
 #include <boost155/range/adaptor/transformed.hpp>
 #include <boost155/range/any_range.hpp>
 #include <boost155/range/algorithm.hpp>
 #include <boost155/range/algorithm_ext/push_back.hpp>
 #include <boost155/range/numeric.hpp>
+#include <boost155/range/iterator_range.hpp>
 
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
@@ -267,9 +277,12 @@ using bst::bind;
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
 #include <boost/python/object.hpp>
+#include <boost/python/object/iterator_core.hpp>
 #include <boost/python/def.hpp>
+#include <boost/python/def_visitor.hpp>
 #include <boost/python/enum.hpp>
 #include <boost/python/manage_new_object.hpp>
+#include <boost/python/overloads.hpp>
 #include <boost/python/return_value_policy.hpp>
 #include <boost/python/to_python_converter.hpp>
 #include <boost/python/suite/indexing/container_utils.hpp>
