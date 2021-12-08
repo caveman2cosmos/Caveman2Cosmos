@@ -49,7 +49,14 @@ CvArtInfo##name * CvArtFileMgr::get##name##ArtInfo( const char *szArtDefineTag )
 		char msg[256]; \
 		sprintf(msg, "ArtInfo: '%s' was not found", szArtDefineTag); \
 		FErrorMsg(msg); \
-		return NULL; \
+		if ( 0 == strcmp(szArtDefineTag, "ERROR") ) \
+		{ \
+			return NULL; \
+		} \
+		else \
+		{ \
+			return get##name##ArtInfo( "ERROR" ); \
+		} \
 	} \
 	return it->second; \
 } \
