@@ -1688,15 +1688,17 @@ class Pedia:
 						screen.show("IndexLetters")
 					self.bIndex = True
 					self.nIndexLists = self.pediaIndex.interfaceScreen()
+
 			elif szSplit[1] == "Header":
-				if szFlag == "MOUSE_RBUTTONUP":
+
+				if bAlt or bCtrl or bShift:
+					self.welcomeMessage(screen, "Credit")
+
+				elif szFlag == "MOUSE_RBUTTONUP":
 					import _misc
 					_misc.LaunchDefaultBrowser("https://forums.civfanatics.com/forums/civ4-caveman-2-cosmos.449/")
 				else:
-					if bAlt or bCtrl or bShift:
-						self.welcomeMessage(screen, "Credit")
-					else:
-						self.welcomeMessage(screen)
+					self.welcomeMessage(screen)
 
 		elif "JumpTo" in szSplit:
 			if "UNIT" in szSplit:
