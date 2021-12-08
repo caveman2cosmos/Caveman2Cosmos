@@ -1179,12 +1179,10 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	logging::logMsg("xml.log", "SetGlobalActionInfo\n");
 	int i=0;					//loop counter
 
-	if(!(NUM_INTERFACEMODE_TYPES > 0))
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "NUM_INTERFACE_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
+	STATIC_ASSERT(NUM_INTERFACEMODE_TYPES > 0, value_should_be_greater_than_zero);
+	STATIC_ASSERT(NUM_CONTROL_TYPES > 0, value_should_be_greater_than_zero);
+	STATIC_ASSERT(NUM_COMMAND_TYPES > 0, value_should_be_greater_than_zero);
+
 	if(!(GC.getNumBuildInfos() > 0))
 	{
 		char	szMessage[1024];
@@ -1209,22 +1207,10 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		sprintf( szMessage, "GC.getNumBuildingInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(NUM_CONTROL_TYPES > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "NUM_CONTROL_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
 	if(!(GC.getNumAutomateInfos() > 0) )
 	{
 		char	szMessage[1024];
 		sprintf( szMessage, "GC.getNumAutomateInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-	if(!(NUM_COMMAND_TYPES > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "NUM_COMMAND_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 	if(!(GC.getNumMissionInfos() > 0) )

@@ -18191,7 +18191,7 @@ const TCHAR* CvCity::getCityBillboardProductionIcon() const
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 		}
 		}
 		return szIcon;
@@ -20698,7 +20698,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), kBuilding.getDescription());
 					else
 					{
-						FAssert(false);
+						FErrorMsg("error");
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_RESOURCES", kBuilding.getDescription(), getNameKey(), kBuilding.getDescription());
 					}
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, kBuilding.getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);

@@ -7508,29 +7508,26 @@ void CvUnitAI::AI_attackSeaMove()
 			int iBlockaders = GET_PLAYER(getOwner()).AI_getWaterDanger(plot(), (iBlockadeRange + 1));
 			//bool bBreakBlockade = (iAttackers > (iBlockaders + 2) || iAttackers >= 2*iBlockaders);
 
-			if (true)
-			{
-				const int iMaxRange = iBlockadeRange - 1;
-				if (gUnitLogLevel > 2) logBBAI("	  Not enough attack fleet found in %S, searching for more in a %d-tile radius", pCity->getName().GetCString(), iMaxRange);
+			const int iMaxRange = iBlockadeRange - 1;
+			if (gUnitLogLevel > 2) logBBAI("	  Not enough attack fleet found in %S, searching for more in a %d-tile radius", pCity->getName().GetCString(), iMaxRange);
 
-				foreach_(const CvPlot * pLoopPlot, plot()->rect(iMaxRange, iMaxRange))
+			foreach_(const CvPlot* pLoopPlot, plot()->rect(iMaxRange, iMaxRange))
+			{
+				if (pLoopPlot->isWater())
 				{
-					if (pLoopPlot->isWater())
+					if (pLoopPlot->getBlockadedCount(getTeam()) > 0)
 					{
-						if (pLoopPlot->getBlockadedCount(getTeam()) > 0)
-						{
-							iAttackers += pLoopPlot->plotCount(PUF_isUnitAIType, UNITAI_ATTACK_SEA, -1, NULL, NO_PLAYER, getTeam(), PUF_isGroupHead, -1, -1);
-						}
+						iAttackers += pLoopPlot->plotCount(PUF_isUnitAIType, UNITAI_ATTACK_SEA, -1, NULL, NO_PLAYER, getTeam(), PUF_isGroupHead, -1, -1);
 					}
 				}
 			}
 			//bBreakBlockade = (iAttackers > (iBlockaders + 2) || iAttackers >= 2*iBlockaders);
 
 			//if (bBreakBlockade)
-			if (iAttackers > (iBlockaders + 2) || iAttackers >= 2 * iBlockaders)
+			if (iAttackers > iBlockaders + 2 || iAttackers >= 2 * iBlockaders)
 			{
 				if (gUnitLogLevel > 2) logBBAI("	  Found %d attackers and %d blockaders, proceeding to break blockade", iAttackers, iBlockaders);
-				if (true) /* (iAttackers > GC.getGame().getSorenRandNum(2*iBlockaders + 1, "AI - Break blockade")) */
+				//if (iAttackers > GC.getGame().getSorenRandNum(2*iBlockaders + 1, "AI - Break blockade"))
 				{
 					// BBAI TODO: Make odds scale by # of blockaders vs number of attackers
 					if (baseMoves() >= iBlockadeRange)

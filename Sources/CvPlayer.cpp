@@ -1352,7 +1352,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			//TB Traits end
 		}
 
-		FAssertMsg((0 < NUM_DOMAIN_TYPES),  "NUM_DOMAIN_TYPES is not greater than zero but an array is being allocated in CvCity::reset");
+		STATIC_ASSERT(NUM_DOMAIN_TYPES > 0, value_should_be_greater_than_zero);
 		m_paiNationalDomainFreeExperience = new int[NUM_DOMAIN_TYPES];
 		m_paiNationalDomainProductionModifier = new int[NUM_DOMAIN_TYPES];
 		for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
