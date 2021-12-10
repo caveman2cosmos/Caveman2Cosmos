@@ -79,7 +79,6 @@ public:
 	void doPediaTraitJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaMain(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaPromotionJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaUnitCombatJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaImprovementJump(CvWidgetDataStruct &widgetDataStruct, bool bData2 = false);
 	void doPediaRouteJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaCivicJump(CvWidgetDataStruct &widgetDataStruct);
