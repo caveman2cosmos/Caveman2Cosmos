@@ -268,7 +268,7 @@ class Pedia:
 		import SevoPediaRoute
 		import PediaBuilding
 		import PediaPromotion
-		import SevoPediaUnitChart
+		import PediaUnitCombat
 		import PediaBonus
 		import PediaFeature
 		import PediaImprovement
@@ -287,7 +287,7 @@ class Pedia:
 		self.mapScreenFunctions = {
 			PEDIA_TECHS				: PediaTech.PediaTech(self, H_BOT_ROW),
 			PEDIA_UNITS_0			: PediaUnit.PediaUnit(self, H_BOT_ROW),
-			szCatUnitCombat			: SevoPediaUnitChart.SevoPediaUnitChart(self),
+			szCatUnitCombat			: PediaUnitCombat.PediaUnitCombat(self, H_BOT_ROW),
 			PEDIA_PROMOTIONS		: PediaPromotion.PediaPromotion(self, H_BOT_ROW),
 			PEDIA_BUILDINGS_0		: PediaBuilding.PediaBuilding(self, H_BOT_ROW),
 			szCatProjects			: PediaProject.PediaProject(self, H_BOT_ROW),
