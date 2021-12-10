@@ -2062,7 +2062,7 @@ int CvCity::findCommerceRateRank(CommerceTypes eCommerce) const
 }
 
 
-bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
+bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
@@ -2331,7 +2331,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!plot()->canTrain(eUnit, bContinue, bTestVisible))
+	if (!plot()->canTrain(eUnit, bTestVisible))
 	{
 		return false;
 	}
@@ -2341,7 +2341,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!isPlotTrainable(eUnit, bContinue, bTestVisible))
+	if (!isPlotTrainable(eUnit, bTestVisible))
 	{
 		return false;
 	}
@@ -4252,17 +4252,14 @@ void CvCity::hurry(HurryTypes eHurry)
 		return;
 	}
 
-	bool bWhip = (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0);
-	bool bBuy = (GC.getHurryInfo(eHurry).getGoldPerProduction() > 0);
-
-	if (bBuy)
+	if (const bool bBuy = (GC.getHurryInfo(eHurry).getGoldPerProduction() > 0))
 	{
 		iHurryGold = getHurryGold(eHurry);
 		GET_PLAYER(getOwner()).changeHurriedCount(1);
 		GET_PLAYER(getOwner()).changeGold(-iHurryGold);
 	}
 
-	if (bWhip)
+	if (const bool bWhip = (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0))
 	{
 		iHurryPopulation = hurryPopulation(eHurry);
 		iHurryAngerLength = hurryAngerLength(eHurry);
@@ -5857,7 +5854,7 @@ int CvCity::getRevRequestPercentAnger(int iExtra) const
 	return iAngerPercent;
 }
 
-int CvCity::getRevIndexPercentAnger(int iExtra) const
+int CvCity::getRevIndexPercentAnger() const
 {
 	const int iLocalAdjust = std::min(getLocalRevIndex() * 5, 100);
 
@@ -5970,7 +5967,7 @@ int CvCity::unhappyLevel(int iExtra) const
 		iAngerPercent += getDefyResolutionPercentAnger(iExtra);
 		iAngerPercent += getWarWearinessPercentAnger();
 		iAngerPercent += getRevRequestPercentAnger(iExtra);
-		iAngerPercent += getRevIndexPercentAnger(iExtra);
+		iAngerPercent += getRevIndexPercentAnger();
 
 		for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 		{
@@ -15786,17 +15783,13 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				}
 				if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_2))
 				{
-					CvPlot* pPlot = plot();
-					if (pPlot != NULL)
+					if (pUnit->canSleep())
 					{
-						if (pUnit->canSleep(pPlot))
-						{
-							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
-						}
-						else if (pUnit->canFortify(pPlot))
-						{
-							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
-						}
+						pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
+					}
+					else if (pUnit->canFortify())
+					{
+						pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
 					}
 				}
 			}

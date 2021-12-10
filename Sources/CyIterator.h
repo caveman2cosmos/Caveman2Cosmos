@@ -3,8 +3,8 @@
 #ifndef CyIterator_h__
 #define CyIterator_h__
 
-//#include <boost/python/object/iterator_core.hpp>
-//#include <boost/python/def_visitor.hpp>
+#include <boost/python/object/iterator_core.hpp>
+#include <boost/python/def_visitor.hpp>
 
 
 const struct CovertToInteger
