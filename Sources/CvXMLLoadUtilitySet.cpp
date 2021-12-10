@@ -999,7 +999,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eUnit = (UnitTypes)iI;
+		UnitTypes eUnit = static_cast<UnitTypes>(iI);
 		GC.getUnitInfo(eUnit).setQualifiedPromotionTypes();
 		GC.getUnitInfo(eUnit).setCanAnimalIgnores();
 	}

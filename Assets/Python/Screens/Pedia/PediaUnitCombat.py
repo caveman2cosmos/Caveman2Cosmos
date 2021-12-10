@@ -81,7 +81,7 @@ class PediaUnitCombat:
 
 			unitInfo = GC.getUnitInfo(iUnit)
 
-			if iTheUnitCombat == unitInfo.getUnitCombatType() or unitInfo.isSubCombatType(iTheUnitCombat):
+			if unitInfo.hasUnitCombat(iTheUnitCombat):
 
 				szName = unitInfo.getDescription()
 

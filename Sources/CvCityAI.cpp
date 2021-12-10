@@ -13252,12 +13252,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bLandWar = bDefense || pArea->getAreaAIType(eTeam) == AREAAI_OFFENSIVE || pArea->getAreaAIType(eTeam) == AREAAI_MASSING;
 	const bool bDanger = AI_isDanger();
 
-	std::vector<bool> cityHasVicinityBonus;
-
-	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-	{
-		cityHasVicinityBonus.push_back(hasBonus((BonusTypes)iJ) && (hasVicinityBonus((BonusTypes)iJ) || hasRawVicinityBonus((BonusTypes)iJ)));
-	}
 	logBBAI(
 		"      City %S CalculateAllBuildingValues for flags %08lx (already has %08lx)",
 		getName().GetCString(), iFocusFlags, cachedBuildingValues->m_iCachedFlags

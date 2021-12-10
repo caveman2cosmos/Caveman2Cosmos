@@ -2297,15 +2297,10 @@ TechTypes CvPromotionInfo::getTechPrereq() const
 		{
 			return m_iTechPrereq;
 		}
-		else
-		{
-			return GC.getPromotionLineInfo(getPromotionLine()).getPrereqTech();
-		}
+		return GC.getPromotionLineInfo(getPromotionLine()).getPrereqTech();
 	}
-	else
-	{   //Sets up the Tech Prereq on the Promotion Definition as a potential override to the Line Tech Prereq
-		return m_iTechPrereq;
-	}
+	// Sets up the Tech Prereq on the Promotion Definition as a potential override to the Line Tech Prereq
+	return m_iTechPrereq;
 }
 
 int CvPromotionInfo::getStateReligionPrereq() const
@@ -2769,15 +2764,10 @@ TechTypes CvPromotionInfo::getObsoleteTech() const
 		{
 			return m_iObsoleteTech;
 		}
-		else
-		{
-			return GC.getPromotionLineInfo(getPromotionLine()).getObsoleteTech();
-		}
+		return GC.getPromotionLineInfo(getPromotionLine()).getObsoleteTech();
 	}
-	else
-	{   //Sets up the Tech Prereq on the Promotion Definition as a potential override to the Line Tech Obsoletion
-		return m_iObsoleteTech;
-	}
+	//Sets up the Tech Prereq on the Promotion Definition as a potential override to the Line Tech Obsoletion
+	return m_iObsoleteTech;
 }
 
 int CvPromotionInfo::getControlPoints() const
@@ -4760,6 +4750,14 @@ void CvPromotionInfo::setDisqualifiedUnitCombatTypes()
 	{
 		if (isNotOnUnitCombatType(iI))
 		{
+			if (isQualifiedUnitCombatType(iI))
+			{
+				std::vector<int>::iterator itr = find(m_aiQualifiedUnitCombatTypes.begin(), m_aiQualifiedUnitCombatTypes.end(), iI);
+				if (itr != m_aiQualifiedUnitCombatTypes.end())
+				{
+					m_aiQualifiedUnitCombatTypes.erase(itr);
+				}
+			}
 			m_disqualifiedUnitCombatTypes.push_back(iI);
 		}
 	}
@@ -4773,6 +4771,14 @@ void CvPromotionInfo::setDisqualifiedUnitCombatTypes()
 
 			if (!isNotOnUnitCombatType(iUnitCombat))
 			{
+				if (isQualifiedUnitCombatType(iUnitCombat))
+				{
+					std::vector<int>::iterator itr = find(m_aiQualifiedUnitCombatTypes.begin(), m_aiQualifiedUnitCombatTypes.end(), iI);
+					if (itr != m_aiQualifiedUnitCombatTypes.end())
+					{
+						m_aiQualifiedUnitCombatTypes.erase(itr);
+					}
+				}
 				m_disqualifiedUnitCombatTypes.push_back(iUnitCombat);
 			}
 		}
