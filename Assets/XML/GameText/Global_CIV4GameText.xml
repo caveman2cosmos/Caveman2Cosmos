@@ -23562,60 +23562,6 @@
 		<Russian>Ýòî çäàíèå - ÷àñòü îðáèòàëüíîé èíôðàñòðóêòóðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_CITY</Tag>
-		<English>Butcher Animal in the City</English>
-		<French>Abattre l'Animal dans la ville</French>
-		<Italian>Macella nimale in città</Italian>
-		<Spanish>Descuartizar animal en la ciudad</Spanish>
-		<Polish>Zabij zwierzę w mieście</Polish>
-		<Russian>Ìÿñíèê â ãîðîäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_CITY_MESSAGE</Tag>
-		<English>Our %s1 has been butchered in our city</English>
-		<French>Notre %s1 a été abattu dans les règles de l'art dans notre ville</French>
-		<Italian>La nostra unità %s1 è stata macellata professionalmente in città</Italian>
-		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] sido descuartizad[NUM1:o:a:os:as] por profesionales en nuestra ciudad</Spanish>
-		<Polish>Nasza jednostka %s1 została wysłana do rzeźni w naszym mieście</Polish>
-		<Russian>Íàø %s1 áûë ïðîôåññèîíàëüíî çàáèò â íàøåì ãîðîäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY</Tag>
-		<English>Butcher Animal in Friendly Lands</English>
-		<French>Abattre l'Animal dans notre territoire</French>
-		<Italian>Macella animale nel nostro territorio</Italian>
-		<Spanish>Descuartizar animal en territorio propio</Spanish>
-		<Polish>Zabij na swoim terytorium</Polish>
-		<Russian>Ìÿñíèê â äðóæåñòâåííûõ çåìëÿõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY_MESSAGE</Tag>
-		<English>Our %s1 has been butchered in our cultural land</English>
-		<French>Notre %s1 a été abattu à l'intérieur de nos frontières</French>
-		<Italian>La nostra unità %s1 è stata macellata sul nostro territorio</Italian>
-		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] sido descuartizad[NUM1:o:a:os:as] dentro de nuestras fronteras</Spanish>
-		<Polish>Nasza jednostka %s1 została zabita w naszych granicach kulturowych</Polish>
-		<Russian>Íàø %s1 áûë çàáèò íà íàøåé êóëüòóðíîé çåìëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_NEUTRAL</Tag>
-		<English>Butcher Animal in the Wilds</English>
-		<French>Abattre l'Animal dans la nature</French>
-		<Italian>Macella animale nella natura</Italian>
-		<Spanish>Descuartizar animal en territorio salvaje</Spanish>
-		<Polish>Zabij w dziczy</Polish>
-		<Russian>Ìÿñíèê â äåáðÿõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_NEUTRAL_MESSAGE</Tag>
-		<English>Our %s1 has been butchered in the wilds</English>
-		<French>Notre %s1 a été abattu dans la nature</French>
-		<Italian>La nostra unità %s1 è stata macellata lontana da casa</Italian>
-		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] sido descuartizad[NUM1:o:a:os:as] en territorio salvaje</Spanish>
-		<Polish>Nasza jednostka %s1 została zabita w dziczy</Polish>
-		<Russian>Íàø %s1 áûë çàáèò â äåáðÿõ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BONUS_SPAWNED</Tag>
 		<English>New resource</English>
 		<French>Nouvelle ressource</French>

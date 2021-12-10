@@ -45144,6 +45144,19 @@
 								</Not>
 							</PlotCondition>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_ARCHER</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 				<Action>
@@ -45168,6 +45181,32 @@
 								</Not>
 							</PlotCondition>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_AXEMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_AXEMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 				<Action>
@@ -45181,6 +45220,32 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_SPEARMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_SPEARMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<UnitType>UNIT_SPEARMAN</UnitType>
 							<bUnitToCity>
@@ -45325,9 +45390,23 @@
 							</PlotCondition>
 							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_TUTOR_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesTutor</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<!-- <Action>
+				<Action>
 					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -45345,7 +45424,7 @@
 							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
-				</Action> -->
+				</Action>
 				<Action>
 					<MissionType>MISSION_SELL_CAPTIVE</MissionType>
 					<ActionOutcomes>
@@ -45411,6 +45490,48 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
@@ -45786,6 +45907,48 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>50</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>15</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>50</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>15</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>

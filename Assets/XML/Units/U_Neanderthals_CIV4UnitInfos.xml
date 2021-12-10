@@ -3696,6 +3696,48 @@
 								</iYield>
 							</Yields>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 			</Actions>
