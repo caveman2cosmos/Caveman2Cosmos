@@ -44,7 +44,6 @@ class Index:
 		if not self.nIndexLists: # Initialize Index
 			iWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
 			iWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
-			iWidJuToUnitCombat	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT
 			iWidJuToPromotion	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
 			iWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 			iWidJuToProject		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT
@@ -64,7 +63,7 @@ class Index:
 			aWorkList = [
 				(GC.getNumTechInfos, GC.getTechInfo, iWidJuToTech),
 				(GC.getNumUnitInfos, GC.getUnitInfo, iWidJuToUnit),
-				(GC.getNumUnitCombatInfos, GC.getUnitCombatInfo, iWidJuToUnitCombat),
+				(GC.getNumUnitCombatInfos, GC.getUnitCombatInfo, "UnitCombats"),
 				(GC.getNumPromotionInfos, GC.getPromotionInfo, iWidJuToPromotion),
 				(GC.getNumBuildingInfos, GC.getBuildingInfo, iWidJuToBuilding),
 				(GC.getNumProjectInfos, GC.getProjectInfo, iWidJuToProject),
@@ -117,17 +116,20 @@ class Index:
 			iLimit = len(aList) / nLists
 			iList = 0
 
-			i = 0
 			do = screen.appendListBoxStringNoUpdate
 			iIconSize = self.iIconSize
+			i = 0
 			for szName, WIDGET, iType, path in aList:
+
 				if WIDGET == "Builds":
 					iOffset = 100000
 					WIDGET = iWidJuToRoute
+				elif WIDGET == "UnitCombats":
+					iOffset = 100000
+					WIDGET = iWidJuToUnit
 				else:
 					iOffset = 0
-#				if path.find(" ") != -1:
-#					print path
+
 				BUTTON = '<img=%s size=%d></img> %s' %(path, iIconSize, szFont + szName)
 				if (szName[:1] != szLetter):
 					if i >= iLimit:

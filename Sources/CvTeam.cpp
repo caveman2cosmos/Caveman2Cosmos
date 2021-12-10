@@ -2243,7 +2243,7 @@ int CvTeam::getCurrentMasterPower(bool bIncludeVassals) const
 			}
 		}
 	}
-	FAssert(false); // Should never get here
+	FErrorMsg("error"); // Should never get here
 	return 0;
 }
 
@@ -3065,7 +3065,7 @@ int CvTeam::getAliveCount() const
 	return m_iAliveCount;
 }
 
-int CvTeam::isAlive() const
+bool CvTeam::isAlive() const
 {
 	return m_iAliveCount > 0;
 }

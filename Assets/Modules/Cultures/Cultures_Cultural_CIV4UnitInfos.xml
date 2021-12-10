@@ -26006,7 +26006,7 @@
 			<iCost>100</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>15</iCombat>
+			<iCombat>10</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iPursuit>60</iPursuit>

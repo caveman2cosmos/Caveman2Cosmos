@@ -600,11 +600,6 @@ void CvSelectionGroup::updateMission()
 	}
 }
 
-CvPlot* CvSelectionGroup::_lastMissionPlot()
-{
-	return lastMissionPlot();
-}
-
 CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
 	CvUnit* pTargetUnit;
@@ -704,7 +699,7 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 
@@ -1238,7 +1233,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
 			if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 			{
@@ -1475,7 +1470,7 @@ bool CvSelectionGroup::startMission()
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 
@@ -1987,7 +1982,7 @@ bool CvSelectionGroup::startMission()
 
 					default:
 						// AIAndy: Assumed to be an outcome mission
-						// FAssert(false);
+						// FErrorMsg("error");
 						if (pLoopUnit->doOutcomeMission(headMissionQueueNode()->m_data.eMissionType))
 						{
 							bAction = true;
@@ -2314,7 +2309,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		case MISSION_SENTRY_LAND_UNITS:
 #endif
 // BUG - Sentry Actions - end
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 
 		case MISSION_AIRLIFT:
@@ -2378,7 +2373,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 /************************************************************************************************/
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 	}
@@ -2442,7 +2437,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_SENTRY_LAND_UNITS:
 #endif
 // BUG - Sentry Actions - end
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 
 			case MISSION_AIRLIFT:
@@ -2512,7 +2507,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 			default:
 				// AIAndy: Assumed to be an outcome mission
-				// FAssert(false);
+				// FErrorMsg("error");
 				bDone = true;
 				break;
 			}
@@ -3054,11 +3049,6 @@ bool CvSelectionGroup::isHuman() const
 	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHuman() : true;
 }
 
-bool CvSelectionGroup::_isBusy()
-{
-	return isBusy();
-}
-
 bool CvSelectionGroup::isBusy() const
 {
 	return getMissionTimer() > 0 || algo::any_of(units(), CvUnit::fn::isCombat());
@@ -3174,11 +3164,6 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 	}
 }
 
-bool CvSelectionGroup::_canAllMove()
-{
-	return canAllMove();
-}
-
 bool CvSelectionGroup::canAllMove() const
 {
 	return getNumUnits() > 0
@@ -3228,11 +3213,6 @@ bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool b
 		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
-bool CvSelectionGroup::_canMoveInto(CvPlot* pPlot, bool bAttack)
-{
-	return canMoveInto(pPlot, bAttack);
-}
-
 bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
 {
 	return canMoveIntoWithWar(pPlot, bAttack, false);
@@ -3242,11 +3222,6 @@ bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack, boo
 {
 	return getNumUnits() > 0
 		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
-}
-
-bool CvSelectionGroup::_canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
-{
-	return canMoveOrAttackInto(pPlot, bDeclareWar);
 }
 
 bool CvSelectionGroup::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
@@ -5186,7 +5161,7 @@ CvPlot* CvSelectionGroup::getPathFirstPlot() const
 		pNode = pNode->m_pParent;
 	}
 
-	FAssert(false);
+	FErrorMsg("error");
 
 	return NULL;
 #else
@@ -5234,7 +5209,7 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 		}
 	}
 
-	FAssert(false);
+	FErrorMsg("error");
 
 	return NULL;
 #else
