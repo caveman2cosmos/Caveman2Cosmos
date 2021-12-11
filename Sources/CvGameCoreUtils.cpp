@@ -467,7 +467,7 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 		return true;
 	}
 
-	return algo::contains(info.getPrereqAndTechs(), eTech);
+	return algo::any_of_equal(info.getPrereqAndTechs(), eTech);
 }
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
@@ -475,7 +475,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
 	if (info.getPrereqAndTech() == eTech
-	|| algo::contains(info.getPrereqAndTechs(), eTech))
+	|| algo::any_of_equal(info.getPrereqAndTechs(), eTech))
 	{
 		return true;
 	}

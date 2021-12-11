@@ -407,7 +407,7 @@ bool isMapCategory(const T1& source1, const T2& source2)
 	}
 	foreach_(const MapCategoryTypes eMapCategory, mapCategories1)
 	{
-		if (algo::contains(mapCategories2, eMapCategory))
+		if (algo::any_of_equal(mapCategories2, eMapCategory))
 			return true;
 	}
 	return false;

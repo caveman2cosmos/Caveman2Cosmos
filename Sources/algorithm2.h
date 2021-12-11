@@ -4,6 +4,11 @@
 #define algorithm2_h__
 
 #include "flatten_range.h"
+#include <boost155/algorithm/cxx11/all_of.hpp>
+#include <boost155/algorithm/cxx11/any_of.hpp>
+#include <boost155/algorithm/cxx11/copy_if.hpp>
+#include <boost155/algorithm/cxx11/find_if_not.hpp>
+#include <boost155/algorithm/cxx11/none_of.hpp>
 
 // We wrap some existing range algorithms here to make them easier to use without auto keyword.
 // Instead of returning the complicated iterator type we return an optional of a value for direct use.
@@ -256,9 +261,9 @@ namespace map_fun_details {
 	};
 
 namespace algo {
-	// Bring in boost range algorithms we want
+	/// Bring in boost range algorithms we want
 
-	// Mutating
+	/// Mutating
 	using bst::copy;
 	using bst::copy_backward;
 	using bst::fill;
@@ -290,9 +295,13 @@ namespace algo {
 	using bst::unique;
 	using bst::unique_copy;
 
-	// Non mutating
+	/// Non mutating
 	//using bst::adjacent_find;
 	//using bst::binary_search;
+	using bst::algorithm::all_of;
+	using bst::algorithm::all_of_equal;
+	using bst::algorithm::any_of;
+	using bst::algorithm::any_of_equal;
 	using bst::count;
 	using bst::count_if;
 	using bst::equal;
@@ -313,196 +322,27 @@ namespace algo {
 	DECLARE_OPT_RANGE_ALGO(bst::range::min_element, min_element);
 	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::min_element, min_element);
 	using bst::mismatch;
+	using bst::algorithm::none_of;
+	using bst::algorithm::none_of_equal;
 	using bst::search;
 	using bst::search_n;
 	using bst::upper_bound;
-	using bst::container_contains;
 
-	// Set algorithms
+	/// Set algorithms
 	using bst::includes;
 	using bst::set_union;
 	using bst::set_intersection;
 	using bst::set_difference;
 	using bst::set_symmetric_difference;
-	// Numeric algorithms;
+
+	/// Numeric algorithms;
 	using bst::accumulate;
 	using bst::adjacent_difference;
 	using bst::inner_product;
 	using bst::partial_sum;
 
-	// Other
+	/// Other
 	using bst::push_back;
-
-	// Custom
-	// FUNCTION TEMPLATE contains
-	// test if an element exists in a range
-	template< class _Range, class Item_ >
-	bool contains(const _Range& rng, const Item_& item) {
-		return container_contains(rng, item);
-	}
-
-	// FUNCTION TEMPLATE getKeyValue
-	// find the corresponding value for key
-	//template <typename Key_, typename Value_>
-	//Value_ getKeyValue(const IDValueMap<Key_, Value_>& map, Key_ key) {
-	//	foreach_(const std::pair<Key_, Value_>& pair, map)
-	//		if (pair.first == key)
-	//			return pair.second;
-	//	return 0;
-	//}
-
-	// FUNCTION TEMPLATE all_of
-	// test if all elements are true
-	template< class _Range >
-	bool all_of(const _Range& rng) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (!*_First) {
-				return false;
-			}
-		}
-		return true;
-	}
-	// FUNCTION TEMPLATE all_of
-	// test if all elements satisfy _Pred
-	template< class _Range, class _Pr >
-	bool all_of(const _Range& rng, _Pr& _Pred) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (!_Pred(*_First)) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	// FUNCTION TEMPLATE any_of
-	// test if any element satisfies _Pred
-	template< class _Range>
-	bool any_of(const _Range& rng) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (*_First) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	// FUNCTION TEMPLATE any_of
-	// test if any element satisfies _Pred
-	template< class _Range, class _Pr>
-	bool any_of(const _Range& rng, _Pr& _Pred) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (_Pred(*_First)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	// FUNCTION TEMPLATE none_of
-	// test if no elements satisfy _Pred
-	template< class _Range>
-	bool none_of(const _Range& rng) {
-		return !any_of(rng);
-	}
-
-	// FUNCTION TEMPLATE none_of
-	// test if no elements satisfy _Pred
-	template< class _Range, class _Pr>
-	bool none_of(const _Range& rng, _Pr& _Pred) {
-		return !any_of(rng, _Pred);
-	}
-
-	// FUNCTION TEMPLATE count_all
-	// return number of items in a range, specialized for ranges with random_access_traversal_tag
-	template< class _Range >
-	typename bst::enable_if<
-		typename bst::is_convertible<
-			typename bst::iterator_category_to_traversal<typename bst::range_iterator<_Range>::type::iterator_category>::type,
-			bst::random_access_traversal_tag
-		>,
-		size_t
-	>::type
-	count_all(const _Range& rng) {
-		return bst::size(rng);
-	}
-
-	template < class _Range >
-	typename bst::disable_if<
-		typename bst::is_convertible<
-			typename bst::iterator_category_to_traversal<typename bst::range_iterator<_Range>::type::iterator_category>::type,
-			bst::random_access_traversal_tag
-		>,
-		size_t
-	>::type
-	count_all(const _Range& rng) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng), _Last = bst::end(rng);
-		size_t size = 0;
-		for (; _First != _Last; ++_First, ++size) {}
-		return size;
-	}
-}
-
-namespace std {
-//	// FUNCTION TEMPLATE all_of
-//	template <class _InIt, class _Pr>
-//	bool all_of(_InIt _First, _InIt _Last, _Pr _Pred) { // test if all elements satisfy _Pred
-//		for (; _First != _Last; ++_First) {
-//			if (!_Pred(*_First)) {
-//				return false;
-//			}
-//		}
-//
-//		return true;
-//	}
-//
-//	// FUNCTION TEMPLATE any_of
-//	template <class _InIt, class _Pr>
-//	bool any_of(_InIt _First, const _InIt _Last, _Pr _Pred) { // test if any element satisfies _Pred
-//
-//		for (; _First != _Last; ++_First) {
-//			if (_Pred(*_First)) {
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-//
-//	// FUNCTION TEMPLATE none_of
-//	template <class _InIt, class _Pr>
-//	bool none_of(_InIt _First, const _InIt _Last, _Pr _Pred) { // test if no elements satisfy _Pred
-//		for (; _First != _Last; ++_First) {
-//			if (_Pred(*_First)) {
-//				return false;
-//			}
-//		}
-//
-//		return true;
-//	}
-//
-//	// FUNCTION TEMPLATE copy_if
-//	template <class _InIt, class _OutIt, class _Pr>
-//	_OutIt copy_if(_InIt _First, _InIt _Last, _OutIt _Dest, _Pr _Pred) { // copy each satisfying _Pred
-//		for (; _First != _Last; ++_First) {
-//			if (_Pred(*_First)) {
-//				*_Dest = *_First;
-//				++_Dest;
-//			}
-//		}
-//		return _Dest;
-//	}
 }
 
 #endif // algorithm2_h__

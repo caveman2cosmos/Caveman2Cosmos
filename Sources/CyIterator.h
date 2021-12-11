@@ -95,7 +95,7 @@ public:
 
 	static bool contains(Container& container, typename Container::value_type item)
 	{
-		return algo::contains(container, item);
+		return algo::any_of_equal(container, item);
 	}
 
 	typedef CyIterator<typename Container::iterator, Converter>  python_iterator;

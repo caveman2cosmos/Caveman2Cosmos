@@ -10710,7 +10710,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		// Extra Happiness by Bonuses
 		foreach_(const BonusModifier2& pair, kTrait.getBonusHappinessChanges())
 		{
-			if (!algo::container_contains(iIterationValues, pair.second))
+			if (algo::none_of_equal(iIterationValues, pair.second))
 			{
 				iIterationValues.push_back(pair.second);
 			}
@@ -11238,7 +11238,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getUnitCombatFreeExperience(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				if (!algo::container_contains(iIterationValues, iCurrentModifier))
+				if (algo::none_of_equal(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getUnitCombatFreeExperience(iI).iModifier);
 				}
@@ -11369,7 +11369,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			iCurrentModifier = kTrait.getUnitCombatProductionModifier(iI).iModifier;
 			if (iCurrentModifier != 0)
 			{
-				if (!algo::container_contains(iIterationValues, iCurrentModifier))
+				if (algo::none_of_equal(iIterationValues, iCurrentModifier))
 				{
 					iIterationValues.push_back(kTrait.getUnitCombatProductionModifier(iI).iModifier);
 				}
@@ -11842,7 +11842,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		foreach_(const ImprovementModifier& pair, kTrait.getImprovementUpgradeModifiers())
 		{
-			if (!algo::container_contains(iIterationValues, pair.second))
+			if (algo::none_of_equal(iIterationValues, pair.second))
 			{
 				iIterationValues.push_back(pair.second);
 			}
@@ -11879,7 +11879,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		foreach_(const BuildModifier2& pair, kTrait.getBuildWorkerSpeedModifiers())
 		{
-			if (!algo::container_contains(iIterationValues, pair.second))
+			if (algo::none_of_equal(iIterationValues, pair.second))
 			{
 				iIterationValues.push_back(pair.second);
 			}
@@ -11917,7 +11917,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 				// Tech Research Modifier
 		foreach_(const TechModifier& pair, kTrait.getTechResearchModifiers())
 		{
-			if (!algo::container_contains(iIterationValues, pair.second))
+			if (algo::none_of_equal(iIterationValues, pair.second))
 			{
 				iIterationValues.push_back(pair.second);
 			}
@@ -17419,7 +17419,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 					bFirst = false;
 					continue;
 				}
-				if (algo::contains(kUnit.getPrereqAndTechs(), eTech))
+				if (algo::any_of_equal(kUnit.getPrereqAndTechs(), eTech))
 				{
 					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_TRAIN").c_str());
 					szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), kUnit.getDescription());
@@ -17441,7 +17441,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 					if (!bPlayerContext || !(playerAct->canConstruct(eLoopBuilding, false, true)))
 					{
 						if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == eTech
-						|| algo::contains(GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs(), eTech))
+						|| algo::any_of_equal(GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs(), eTech))
 						{
 							szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_CONSTRUCT").c_str());
 							szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -17701,7 +17701,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		TechTypes tTech = (TechTypes)iI;
-		if (algo::contains(kUnit.getPrereqAndTechs(), tTech))
+		if (algo::any_of_equal(kUnit.getPrereqAndTechs(), tTech))
 		{
 			if (GC.getTechInfo(tTech).getGridX() > iX)
 			{
@@ -26138,7 +26138,7 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 			{
 				if (kActivePlayer.isActiveCorporation((CorporationTypes)iCorp) || (bTradingPlayer && GET_PLAYER(eTradingPlayer).isActiveCorporation((CorporationTypes)iCorp)))
 				{
-					if (algo::container_contains(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
+					if (algo::any_of_equal(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
 					{
 						if (algo::any_of(kActivePlayer.cities(), bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))
 
@@ -26631,7 +26631,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 			{
 				foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 				{
-					if (algo::contains(kLoopCorporation.getPrereqBonuses(), eBonus))
+					if (algo::any_of_equal(kLoopCorporation.getPrereqBonuses(), eBonus))
 					{
 						bCompeting = true;
 						break;
@@ -27634,8 +27634,8 @@ void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, Tec
 		}
 		if (!bTechAlreadyAccessible)
 		{
-			if (algo::contains(GC.getTechInfo((TechTypes)iI).getPrereqOrTechs(), eTech)
-			||  algo::contains(GC.getTechInfo((TechTypes)iI).getPrereqAndTechs(), eTech))
+			if (algo::any_of_equal(GC.getTechInfo((TechTypes)iI).getPrereqOrTechs(), eTech)
+			||  algo::any_of_equal(GC.getTechInfo((TechTypes)iI).getPrereqAndTechs(), eTech))
 			{
 				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes) iI).getDescription());
 				setListHelp(szBuffer, gDLL->getText("TXT_KEY_MISC_LEADS_TO").c_str(), szTempBuffer, L", ", bFirst);

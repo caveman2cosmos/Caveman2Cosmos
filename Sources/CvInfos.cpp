@@ -3624,7 +3624,7 @@ int CvPromotionInfo::getNumSubCombatChangeTypes() const
 bool CvPromotionInfo::isSubCombatChangeType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiSubCombatChangeTypes, i);
+	return algo::any_of_equal(m_aiSubCombatChangeTypes, i);
 }
 
 int CvPromotionInfo::getRemovesUnitCombatType(int i) const
@@ -3640,7 +3640,7 @@ int CvPromotionInfo::getNumRemovesUnitCombatTypes() const
 bool CvPromotionInfo::isRemovesUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiRemovesUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiRemovesUnitCombatTypes, i);
 }
 
 int CvPromotionInfo::getOnGameOption(int i) const
@@ -3656,7 +3656,7 @@ int CvPromotionInfo::getNumOnGameOptions() const
 bool CvPromotionInfo::isOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiOnGameOptions, i);
+	return algo::any_of_equal(m_aiOnGameOptions, i);
 }
 
 int CvPromotionInfo::getNotOnGameOption(int i) const
@@ -3672,7 +3672,7 @@ int CvPromotionInfo::getNumNotOnGameOptions() const
 bool CvPromotionInfo::isNotOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiNotOnGameOptions, i);
+	return algo::any_of_equal(m_aiNotOnGameOptions, i);
 }
 
 int CvPromotionInfo::getFreetoUnitCombat(int i) const
@@ -3688,7 +3688,7 @@ int CvPromotionInfo::getNumFreetoUnitCombats() const
 bool CvPromotionInfo::isFreetoUnitCombat(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiFreetoUnitCombats, i);
+	return algo::any_of_equal(m_aiFreetoUnitCombats, i);
 }
 
 int CvPromotionInfo::getNotOnDomainType(int i) const
@@ -3704,7 +3704,7 @@ int CvPromotionInfo::getNumNotOnDomainTypes() const
 bool CvPromotionInfo::isNotOnDomainType(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i);
-	return algo::contains(m_aiNotOnDomainTypes, i);
+	return algo::any_of_equal(m_aiNotOnDomainTypes, i);
 }
 
 int CvPromotionInfo::getNoAutoEquiptoCombatClassType(int i) const
@@ -3720,7 +3720,7 @@ int CvPromotionInfo::getNumNoAutoEquiptoCombatClassTypes() const
 bool CvPromotionInfo::isNoAutoEquiptoCombatClassType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiNoAutoEquiptoCombatClassTypes, i);
+	return algo::any_of_equal(m_aiNoAutoEquiptoCombatClassTypes, i);
 }
 
 //int CvPromotionInfo::getAIWeightbyUnitCombatType(int i) const
@@ -3747,7 +3747,7 @@ int CvPromotionInfo::getNumCureAfflictionChangeTypes() const
 
 bool CvPromotionInfo::isCureAfflictionChangeType(int i) const
 {
-	return algo::contains(m_aiCureAfflictionChangeTypes, i);
+	return algo::any_of_equal(m_aiCureAfflictionChangeTypes, i);
 }
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
@@ -3763,7 +3763,7 @@ int CvPromotionInfo::getNumPrereqBonusTypes() const
 
 bool CvPromotionInfo::isPrereqBonusType(int i) const
 {
-	return algo::contains(m_aiPrereqBonusTypes, i);
+	return algo::any_of_equal(m_aiPrereqBonusTypes, i);
 }
 
 int CvPromotionInfo::getAddsBuildType(int i) const
@@ -3778,7 +3778,7 @@ int CvPromotionInfo::getNumAddsBuildTypes() const
 
 bool CvPromotionInfo::isAddsBuildType(int i) const
 {
-	return algo::contains(m_aiAddsBuildTypes, i);
+	return algo::any_of_equal(m_aiAddsBuildTypes, i);
 }
 
 int CvPromotionInfo::getNegatesInvisibilityType(int i) const
@@ -3793,7 +3793,7 @@ int CvPromotionInfo::getNumNegatesInvisibilityTypes() const
 
 bool CvPromotionInfo::isNegatesInvisibilityType(int i) const
 {
-	return algo::contains(m_aiNegatesInvisibilityTypes, i);
+	return algo::any_of_equal(m_aiNegatesInvisibilityTypes, i);
 }
 
 int CvPromotionInfo::getPrereqTerrainType(int i) const
@@ -3808,7 +3808,7 @@ int CvPromotionInfo::getNumPrereqTerrainTypes() const
 
 bool CvPromotionInfo::isPrereqTerrainType(int i) const
 {
-	return algo::contains(m_aiPrereqTerrainTypes, i);
+	return algo::any_of_equal(m_aiPrereqTerrainTypes, i);
 }
 
 int CvPromotionInfo::getPrereqFeatureType(int i) const
@@ -3823,7 +3823,7 @@ int CvPromotionInfo::getNumPrereqFeatureTypes() const
 
 bool CvPromotionInfo::isPrereqFeatureType(int i) const
 {
-	return algo::contains(m_aiPrereqFeatureTypes, i);
+	return algo::any_of_equal(m_aiPrereqFeatureTypes, i);
 }
 
 int CvPromotionInfo::getPrereqImprovementType(int i) const
@@ -3838,7 +3838,7 @@ int CvPromotionInfo::getNumPrereqImprovementTypes() const
 
 bool CvPromotionInfo::isPrereqImprovementType(int i) const
 {
-	return algo::contains(m_aiPrereqImprovementTypes, i);
+	return algo::any_of_equal(m_aiPrereqImprovementTypes, i);
 }
 
 int CvPromotionInfo::getPrereqPlotBonusType(int i) const
@@ -3853,7 +3853,7 @@ int CvPromotionInfo::getNumPrereqPlotBonusTypes() const
 
 bool CvPromotionInfo::isPrereqPlotBonusType(int i) const
 {
-	return algo::contains(m_aiPrereqPlotBonusTypes, i);
+	return algo::any_of_equal(m_aiPrereqPlotBonusTypes, i);
 }
 
 int CvPromotionInfo::getPrereqLocalBuildingType(int i) const
@@ -3868,7 +3868,7 @@ int CvPromotionInfo::getNumPrereqLocalBuildingTypes() const
 
 bool CvPromotionInfo::isPrereqLocalBuildingType(int i) const
 {
-	return algo::contains(m_aiPrereqLocalBuildingTypes, i);
+	return algo::any_of_equal(m_aiPrereqLocalBuildingTypes, i);
 }
 
 int CvPromotionInfo::getTrapSetWithPromotionType(int i) const
@@ -3883,7 +3883,7 @@ int CvPromotionInfo::getNumTrapSetWithPromotionTypes() const
 
 bool CvPromotionInfo::isTrapSetWithPromotionType(int i) const
 {
-	return algo::contains(m_aiTrapSetWithPromotionTypes, i);
+	return algo::any_of_equal(m_aiTrapSetWithPromotionTypes, i);
 }
 
 int CvPromotionInfo::getTrapImmunityUnitCombatType(int i) const
@@ -3898,7 +3898,7 @@ int CvPromotionInfo::getNumTrapImmunityUnitCombatTypes() const
 
 bool CvPromotionInfo::isTrapImmunityUnitCombatType(int i) const
 {
-	return algo::contains(m_aiTrapImmunityUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiTrapImmunityUnitCombatTypes, i);
 }
 
 int CvPromotionInfo::getTargetUnitCombatType(int i) const
@@ -3913,7 +3913,7 @@ int CvPromotionInfo::getNumTargetUnitCombatTypes() const
 
 bool CvPromotionInfo::isTargetUnitCombatType(int i) const
 {
-	return algo::contains(m_aiTargetUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiTargetUnitCombatTypes, i);
 }
 
 // int vectors utilizing pairing without delayed resolution
@@ -4688,7 +4688,7 @@ int CvPromotionInfo::getNumQualifiedUnitCombatTypes() const
 bool CvPromotionInfo::isQualifiedUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiQualifiedUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiQualifiedUnitCombatTypes, i);
 }
 
 void CvPromotionInfo::setQualifiedUnitCombatTypes()
@@ -4730,7 +4730,7 @@ int CvPromotionInfo::getNumNotOnUnitCombatTypes() const
 bool CvPromotionInfo::isNotOnUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiNotOnUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiNotOnUnitCombatTypes, i);
 }
 
 int CvPromotionInfo::getDisqualifiedUnitCombatType(int i) const
@@ -11493,7 +11493,7 @@ int CvCivilizationInfo::getCivilizationBuilding(int i) const
 }
 bool CvCivilizationInfo::isCivilizationBuilding(int i) const
 {
-	return algo::contains(m_aiCivilizationBuildings, i);
+	return algo::any_of_equal(m_aiCivilizationBuildings, i);
 }
 
 bool CvCivilizationInfo::isCivilizationFreeTechs(int i) const
@@ -13121,7 +13121,7 @@ int CvBuildInfo::getNumPrereqBonusTypes() const
 
 bool CvBuildInfo::isPrereqBonusType(int i) const
 {
-	return algo::contains(m_aiPrereqBonusTypes, i);
+	return algo::any_of_equal(m_aiPrereqBonusTypes, i);
 }
 
 int CvBuildInfo::getNumTerrainStructs() const
@@ -21530,7 +21530,7 @@ int CvTraitInfo::getNumNotOnGameOptions() const
 bool CvTraitInfo::isNotOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiNotOnGameOptions, i);
+	return algo::any_of_equal(m_aiNotOnGameOptions, i);
 }
 
 int CvTraitInfo::getOnGameOption(int i) const
@@ -21546,7 +21546,7 @@ int CvTraitInfo::getNumOnGameOptions() const
 bool CvTraitInfo::isOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiOnGameOptions, i);
+	return algo::any_of_equal(m_aiOnGameOptions, i);
 }
 
 bool CvTraitInfo::isValidTrait(bool bGameStart) const
@@ -28533,7 +28533,7 @@ int CvEventTriggerInfo::getNumNotOnGameOptions() const
 bool CvEventTriggerInfo::isNotOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiNotOnGameOptions, i);
+	return algo::any_of_equal(m_aiNotOnGameOptions, i);
 }
 
 int CvEventTriggerInfo::getOnGameOption(int i) const
@@ -28549,7 +28549,7 @@ int CvEventTriggerInfo::getNumOnGameOptions() const
 bool CvEventTriggerInfo::isOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiOnGameOptions, i);
+	return algo::any_of_equal(m_aiOnGameOptions, i);
 }
 
 void CvEventTriggerInfo::getCheckSum(uint32_t& iSum) const
@@ -32535,7 +32535,7 @@ int CvPromotionLineInfo::getNumUnitCombatPrereqTypes() const
 bool CvPromotionLineInfo::isUnitCombatPrereqType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiUnitCombatPrereqTypes, i);
+	return algo::any_of_equal(m_aiUnitCombatPrereqTypes, i);
 }
 
 int CvPromotionLineInfo::getNotOnUnitCombatType(int i) const
@@ -32551,7 +32551,7 @@ int CvPromotionLineInfo::getNumNotOnUnitCombatTypes() const
 bool CvPromotionLineInfo::isNotOnUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiNotOnUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiNotOnUnitCombatTypes, i);
 }
 
 int CvPromotionLineInfo::getNotOnDomainType(int i) const
@@ -32567,7 +32567,7 @@ int CvPromotionLineInfo::getNumNotOnDomainTypes() const
 bool CvPromotionLineInfo::isNotOnDomainType(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i);
-	return algo::contains(m_aiNotOnDomainTypes, i);
+	return algo::any_of_equal(m_aiNotOnDomainTypes, i);
 }
 
 int CvPromotionLineInfo::getOnGameOption(int i) const
@@ -32583,7 +32583,7 @@ int CvPromotionLineInfo::getNumOnGameOptions() const
 bool CvPromotionLineInfo::isOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiOnGameOptions, i);
+	return algo::any_of_equal(m_aiOnGameOptions, i);
 }
 
 int CvPromotionLineInfo::getNotOnGameOption(int i) const
@@ -32599,7 +32599,7 @@ int CvPromotionLineInfo::getNumNotOnGameOptions() const
 bool CvPromotionLineInfo::isNotOnGameOption(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), i);
-	return algo::contains(m_aiNotOnGameOptions, i);
+	return algo::any_of_equal(m_aiNotOnGameOptions, i);
 }
 
 int CvPromotionLineInfo::getCriticalOriginCombatClassType(int i) const
@@ -32615,7 +32615,7 @@ int CvPromotionLineInfo::getNumCriticalOriginCombatClassTypes() const
 bool CvPromotionLineInfo::isCriticalOriginCombatClassType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiCriticalOriginCombatClassTypes, i);
+	return algo::any_of_equal(m_aiCriticalOriginCombatClassTypes, i);
 }
 
 // int vector utilizing pairing without delayed resolution
@@ -32748,7 +32748,7 @@ int CvPromotionLineInfo::getNumPromotions() const
 bool CvPromotionLineInfo::isPromotion(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
-	return algo::contains(m_aiPromotions, i);
+	return algo::any_of_equal(m_aiPromotions, i);
 }
 void CvPromotionLineInfo::setPromotions()
 {
@@ -32776,7 +32776,7 @@ int CvPromotionLineInfo::getNumBuildings() const
 bool CvPromotionLineInfo::isBuilding(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
-	return algo::contains(m_aiBuildings, i);
+	return algo::any_of_equal(m_aiBuildings, i);
 }
 void CvPromotionLineInfo::setBuildings()
 {
@@ -34094,7 +34094,7 @@ int CvUnitCombatInfo::getNumCureAfflictionChangeTypes() const
 
 bool CvUnitCombatInfo::isCureAfflictionChangeType(int i) const
 {
-	return algo::contains(m_aiCureAfflictionChangeTypes, i);
+	return algo::any_of_equal(m_aiCureAfflictionChangeTypes, i);
 }
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
@@ -34110,7 +34110,7 @@ int CvUnitCombatInfo::getNumTerrainIgnoreDamageChangeTypes() const
 
 bool CvUnitCombatInfo::isTerrainIgnoreDamageChangeType(int i) const
 {
-	return algo::contains(m_aiTerrainIgnoreDamageChangeTypes, i);
+	return algo::any_of_equal(m_aiTerrainIgnoreDamageChangeTypes, i);
 }
 
 int CvUnitCombatInfo::getTerrainDoubleMoveChangeType(int i) const
@@ -34125,7 +34125,7 @@ int CvUnitCombatInfo::getNumTerrainDoubleMoveChangeTypes() const
 
 bool CvUnitCombatInfo::isTerrainDoubleMoveChangeType(int i) const
 {
-	return algo::contains(m_aiTerrainDoubleMoveChangeTypes, i);
+	return algo::any_of_equal(m_aiTerrainDoubleMoveChangeTypes, i);
 }
 
 int CvUnitCombatInfo::getFeatureDoubleMoveChangeType(int i) const
@@ -34140,7 +34140,7 @@ int CvUnitCombatInfo::getNumFeatureDoubleMoveChangeTypes() const
 
 bool CvUnitCombatInfo::isFeatureDoubleMoveChangeType(int i) const
 {
-	return algo::contains(m_aiFeatureDoubleMoveChangeTypes, i);
+	return algo::any_of_equal(m_aiFeatureDoubleMoveChangeTypes, i);
 }
 int CvUnitCombatInfo::getOnGameOption(int i) const
 {
@@ -34154,7 +34154,7 @@ int CvUnitCombatInfo::getNumOnGameOptions() const
 
 bool CvUnitCombatInfo::isOnGameOption(int i) const
 {
-	return algo::contains(m_aiOnGameOptions, i);
+	return algo::any_of_equal(m_aiOnGameOptions, i);
 }
 
 int CvUnitCombatInfo::getNotOnGameOption(int i) const
@@ -34169,7 +34169,7 @@ int CvUnitCombatInfo::getNumNotOnGameOptions() const
 
 bool CvUnitCombatInfo::isNotOnGameOption(int i) const
 {
-	return algo::contains(m_aiNotOnGameOptions, i);
+	return algo::any_of_equal(m_aiNotOnGameOptions, i);
 }
 
 int CvUnitCombatInfo::getGGptsforUnitType(int i) const
@@ -34184,7 +34184,7 @@ int CvUnitCombatInfo::getNumGGptsforUnitTypes() const
 
 bool CvUnitCombatInfo::isGGptsforUnitType(int i) const
 {
-	return algo::contains(m_aiGGptsforUnitTypes, i);
+	return algo::any_of_equal(m_aiGGptsforUnitTypes, i);
 }
 
 int CvUnitCombatInfo::getDefaultStatusType(int i) const
@@ -34199,7 +34199,7 @@ int CvUnitCombatInfo::getNumDefaultStatusTypes() const
 
 bool CvUnitCombatInfo::isDefaultStatusType(int i) const
 {
-	return algo::contains(m_aiDefaultStatusTypes, i);
+	return algo::any_of_equal(m_aiDefaultStatusTypes, i);
 }
 
 int CvUnitCombatInfo::getTrapImmunityUnitCombatType(int i) const
@@ -34214,7 +34214,7 @@ int CvUnitCombatInfo::getNumTrapImmunityUnitCombatTypes() const
 
 bool CvUnitCombatInfo::isTrapImmunityUnitCombatType(int i) const
 {
-	return algo::contains(m_aiTrapImmunityUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiTrapImmunityUnitCombatTypes, i);
 }
 
 // int vector utilizing pairing without delayed resolution

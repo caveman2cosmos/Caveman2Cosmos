@@ -1202,7 +1202,7 @@ short CvUnitInfo::getNumBuilds() const
 }
 bool CvUnitInfo::hasBuild(BuildTypes e) const
 {
-	return algo::contains(m_workerBuilds, e);
+	return algo::any_of_equal(m_workerBuilds, e);
 }
 
 int CvUnitInfo::getNumPrereqAndBuildings() const
@@ -1215,11 +1215,11 @@ int CvUnitInfo::getPrereqAndBuilding(int i) const
 }
 bool CvUnitInfo::isPrereqAndBuilding(int i) const
 {
-	return algo::contains(m_aiPrereqAndBuildings, i);
+	return algo::any_of_equal(m_aiPrereqAndBuildings, i);
 }
 bool CvUnitInfo::isPrereqOrBuilding(int i) const
 {
-	return algo::contains(m_aiPrereqOrBuildings, i);
+	return algo::any_of_equal(m_aiPrereqOrBuildings, i);
 }
 
 //Struct Vector
@@ -1233,7 +1233,7 @@ int CvUnitInfo::getNumTargetUnits() const
 }
 bool CvUnitInfo::isTargetUnit(int i) const
 {
-	return algo::contains(m_aiTargetUnit, i);
+	return algo::any_of_equal(m_aiTargetUnit, i);
 }
 
 
@@ -1247,7 +1247,7 @@ int CvUnitInfo::getNumDefendAgainstUnits() const
 }
 bool CvUnitInfo::isDefendAgainstUnit(int i) const
 {
-	return algo::contains(m_aiDefendAgainstUnit, i);
+	return algo::any_of_equal(m_aiDefendAgainstUnit, i);
 }
 
 
@@ -1261,7 +1261,7 @@ short CvUnitInfo::getNumSupersedingUnits() const
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
-	return algo::contains(m_aiSupersedingUnits, i);
+	return algo::any_of_equal(m_aiSupersedingUnits, i);
 }
 
 
@@ -1275,7 +1275,7 @@ int CvUnitInfo::getNumUnitUpgrades() const
 }
 bool CvUnitInfo::isUnitUpgrade(int i) const
 {
-	return algo::contains(m_aiUnitUpgrades, i);
+	return algo::any_of_equal(m_aiUnitUpgrades, i);
 }
 
 
@@ -1286,7 +1286,7 @@ std::vector<int> CvUnitInfo::getUnitUpgradeChain() const
 void CvUnitInfo::addUnitToUpgradeChain(int i)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i);
-	if (!algo::contains(m_aiUnitUpgradeChain, i))
+	if (algo::none_of_equal(m_aiUnitUpgradeChain, i))
 	{
 		m_aiUnitUpgradeChain.push_back(i);
 	}
@@ -1444,7 +1444,7 @@ int CvUnitInfo::getBuildings(int i) const
 bool CvUnitInfo::getHasBuilding(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
-	return algo::contains(m_pbBuildings, i);
+	return algo::any_of_equal(m_pbBuildings, i);
 }
 
 int CvUnitInfo::getNumBuildings() const
@@ -2593,7 +2593,7 @@ int CvUnitInfo::getNumSubCombatTypes() const
 bool CvUnitInfo::isSubCombatType(UnitCombatTypes e) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), e);
-	return algo::contains(m_aiSubCombatTypes, e);
+	return algo::any_of_equal(m_aiSubCombatTypes, e);
 }
 
 const std::vector<UnitCombatTypes>& CvUnitInfo::getSubCombatTypes() const
@@ -2614,7 +2614,7 @@ int CvUnitInfo::getNumCureAfflictionTypes() const
 bool CvUnitInfo::isCureAfflictionType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), i);
-	return algo::contains(m_aiCureAfflictionTypes, i);
+	return algo::any_of_equal(m_aiCureAfflictionTypes, i);
 }
 
 int CvUnitInfo::getHealAsType(int i) const
@@ -2630,7 +2630,7 @@ int CvUnitInfo::getNumHealAsTypes() const
 bool CvUnitInfo::isHealAsType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiHealAsTypes, i);
+	return algo::any_of_equal(m_aiHealAsTypes, i);
 }
 
 void CvUnitInfo::setHealAsTypes()
@@ -2648,13 +2648,13 @@ void CvUnitInfo::setHealAsTypes()
 bool CvUnitInfo::isTerrainImpassableType(TerrainTypes e) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), e);
-	return algo::contains(m_vTerrainImpassableTypes, e);
+	return algo::any_of_equal(m_vTerrainImpassableTypes, e);
 }
 
 bool CvUnitInfo::isFeatureImpassableType(FeatureTypes e) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), e);
-	return algo::contains(m_vFeatureImpassableTypes, e);
+	return algo::any_of_equal(m_vFeatureImpassableTypes, e);
 }
 
 int CvUnitInfo::getTrapSetWithPromotionType(int i) const
@@ -2670,7 +2670,7 @@ int CvUnitInfo::getNumTrapSetWithPromotionTypes() const
 bool CvUnitInfo::isTrapSetWithPromotionType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
-	return algo::contains(m_aiTrapSetWithPromotionTypes, i);
+	return algo::any_of_equal(m_aiTrapSetWithPromotionTypes, i);
 }
 
 int CvUnitInfo::getTrapImmunityUnitCombatType(int i) const
@@ -2686,7 +2686,7 @@ int CvUnitInfo::getNumTrapImmunityUnitCombatTypes() const
 bool CvUnitInfo::isTrapImmunityUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiTrapImmunityUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiTrapImmunityUnitCombatTypes, i);
 }
 //struct vectors
 int CvUnitInfo::getNumAfflictionFortitudeModifiers() const
@@ -6279,7 +6279,7 @@ int CvUnitInfo::getNumQualifiedPromotionTypes() const
 bool CvUnitInfo::isQualifiedPromotionType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
-	return algo::contains(m_aiQualifiedPromotionTypes, i);
+	return algo::any_of_equal(m_aiQualifiedPromotionTypes, i);
 }
 
 bool CvUnitInfo::setQualifiedPromotionType(const int iPromo, std::vector<int>& checklist)
