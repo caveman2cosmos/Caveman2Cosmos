@@ -4510,7 +4510,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<BonusType>BONUS_HAWAIIAN</BonusType>
-			<iCost>770</iCost>
+			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -6259,7 +6259,7 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<iCost>790</iCost>
+			<iCost>787</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>26</iCombat>
@@ -16081,7 +16081,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>670</iCost>
+			<iCost>668</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>26</iCombat>
@@ -21356,7 +21356,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_HIGHWAYMAN</UnitType>
 			</UnitUpgrades>
-			<iCost>235</iCost>
+			<iCost>230</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>8</iCombat>
@@ -23029,7 +23029,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_HIGHWAYMAN</UnitType>
 			</UnitUpgrades>
-			<iCost>235</iCost>
+			<iCost>230</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>8</iCombat>
@@ -24281,7 +24281,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
-			<iCost>790</iCost>
+			<iCost>787</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -24465,7 +24465,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
-			<iCost>790</iCost>
+			<iCost>787</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -45307,7 +45307,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
-			<iCost>790</iCost>
+			<iCost>787</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>

@@ -2720,7 +2720,7 @@ class TestCode:
 				iTechLoc = self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[0]
 				
 				if CvUnitInfo.getProductionCost() < 0.75*aBaseCostList[iTechLoc] and CvUnitInfo.getMaxGlobalInstances() == -1:
-					self.log(CvUnitInfo.getType()+" is way too cheap, actual cost/min cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(0.75*aBaseCostList[iTechLoc]))
+					self.log(CvUnitInfo.getType()+" is way too cheap, actual cost/min cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(1+(0.75*aBaseCostList[iTechLoc])))
 					
 				if CvUnitInfo.getProductionCost() > 1.25*aBaseCostList[iTechLoc] and CvUnitInfo.getMaxGlobalInstances() == -1:
 					self.log(CvUnitInfo.getType()+" is way too expensive, actual cost/max cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(1.25*aBaseCostList[iTechLoc]))

@@ -2053,7 +2053,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>4320</iCost>
+			<iCost>1350</iCost>
 			<iBaseUpkeep>1500</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
@@ -24096,7 +24096,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
-			<iCost>5200</iCost>
+			<iCost>4968</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>160</iCombat>
@@ -24186,7 +24186,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
-			<iCost>10200</iCost>
+			<iCost>9756</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>360</iCombat>
@@ -25441,7 +25441,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>390</iCost>
+			<iCost>387</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>18</iCombat>
@@ -25544,7 +25544,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<iCost>570</iCost>
+			<iCost>568</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
@@ -25653,7 +25653,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
-			<iCost>1240</iCost>
+			<iCost>1237</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>60</iCombat>
@@ -25758,7 +25758,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOTUBES</BonusType>
 			</PrereqBonuses>
-			<iCost>5400</iCost>
+			<iCost>5393</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>200</iCombat>
@@ -46243,7 +46243,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>390</iCost>
+			<iCost>387</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
