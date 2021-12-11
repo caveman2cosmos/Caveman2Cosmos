@@ -269,7 +269,7 @@
 		<Italian>*Suggerimento del BUG Team*: Cliccare sul pulsante con la pergamena nella schermata del Consigliere Interno ti permetterà di personalizzarlo in base al tuo stile di gioco.</Italian>
 		<Spanish>*Consejo de BUG*: Pinchando en el botón de Scroll dentro del Consejero de Interior te permite personalizarlo para adaptarlo a tu estilo de juego.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Klikanie na pasku przewijania na ekranie Doradcy ds Wewnętrznych pozwoli ci dostosowywać go w zależności od stylu gry.</Polish>
-		<Russian>*BUG Hint*: нажав на кнопку "Прокрутка" на экране Главного советника, вы сможете настроить его под свой стиль игры.</Russian>
+		<Russian>*BUG Hint*: нажав на кнопку «Прокрутка» на экране Главного советника, вы сможете настроить его под свой стиль игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_7</Tag>
@@ -342,7 +342,7 @@
 		<Italian>C2C: Nell'era preistorica ci sono alcuni "edifici" che non richiedono la tecnologia Costruzione di ripari. Tra questi edifici ci sono Erbe selvatiche e Carcasse; essi rappresentano la raccolta di risorse da parte della tua città.</Italian>
 		<Spanish>C2C: En la Prehistoria hay algunos 'edificios' que no requieren la tecnología de la Construcción de refugios para construirse, entre ellos los Arbustos de bayas, las Hierbas salvajes y la Carroña. Estos representa la necesidad de recolectar o rebuscar recursos de tu ciudad.</Spanish>
 		<Polish>C2C: W erze prehistorycznej są pewne 'Budynki' które nie wymagają technologi Budowy Szałasów. Są to budynki: Krzak z Jagodami, Dzikie Zioła oraz Padlina. Ponieważ są to "budynki", które odzwierciedlają łowiecko-zbieracki tryb życia.</Polish>
-		<Russian>C2C: В доисторической эпохе есть некоторые "Здания", для строительства которых не требуется технология Укрытий. К ним относятся такие здания, как Ягодные кустарники, Дикоросы и Падаль. Они автоматически строятся в ваших городах при наличии определенных товаров или ресурсов.</Russian>
+		<Russian>C2C: В доисторической эпохе есть некоторые «Здания», для строительства которых не требуется технология Укрытий. К ним относятся такие здания, как Ягодные кустарники, Дикоросы и Падаль. Они автоматически строятся в ваших городах при наличии определенных товаров или ресурсов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_16</Tag>
@@ -369,7 +369,7 @@
 		<Italian>C2C: Ci sono alcune tecnologie legate a timeline alternative in C2C, come l'Addomesticazione della megafauna. Anche se gli uomini non hanno mai addomesticato Mammut e Megateri, ora puoi farlo in C2C costruendo le relative meraviglie!</Italian>
 		<Spanish>C2C: Hay algunas tecnologías sobre historia alternativa en C2C, como por ejemplo la Domesticación de mastodontes. Aunque los humanos no llegaron a domesticar mamuts o megaterios, ¡ahora puedes hacerlo en C2C si construyes la maravilla adecuada!</Spanish>
 		<Polish>C2C: W C2C są możliwe alternatywne linie czasu. Człowiek nigdy nie udomowił mamutów czy kopalnych leniwców - teraz jest to możliwe po wybudowaniu odpowiednich cudów!</Polish>
-		<Russian>C2C: В данном моде есть несколько альтернативных технологий, таких как "Приручение мегафауны". В то время как в реальности люди никогда не одомашнивали мамонтов или гигантских наземных ленивцев (иначе Megatherium), теперь у вас появляется такая возможность в C2C, если вы построите соответствующие Чудеса!</Russian>
+		<Russian>C2C: В данном моде есть несколько альтернативных технологий, таких как «Приручение мегафауны». В то время как в реальности люди никогда не одомашнивали мамонтов или гигантских наземных ленивцев (иначе Megatherium), теперь у вас появляется такая возможность в C2C, если вы построите соответствующие Чудеса!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_19</Tag>
@@ -768,7 +768,7 @@
 		<German>Tipp... Beim Abschluss von Verträgen über Offene Grenzen ist Vorsicht geboten, um die eigenen Interessen nicht ungewollt zu gefährden. Der vermeintliche Freund kann durchaus darauf aus sein, Informationen zu sammeln, die er dann meistbietend weiterverkaufen kann.</German>
 		<Italian>Attento a firmare accordi per il diritto di passaggio, accertati che il tuo "amico" non stia facendo rilevamenti per poi venderti al più alto offerente!</Italian>
 		<Spanish>Id con cuidado al firmar acuerdos de apertura de fronteras. Aseguraos de que vuestro "amigo" no esté analizando vuestras tierras para vendérselas al mejor postor.</Spanish>
-		<Russian>Будьте осторожны при подписании соглашений об открытых границах - убедитесь, что ваш "друг" не исследует вашу территорию в целях продажи конкурентам карты вашей страны по самой высокой цене!</Russian>
+		<Russian>Будьте осторожны при подписании соглашений об открытых границах - убедитесь, что ваш «друг» не исследует вашу территорию в целях продажи конкурентам карты вашей страны по самой высокой цене!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_15</Tag>
@@ -2962,7 +2962,7 @@
 		<Italian>Caveman2Cosmos: Enhanced Tech Conquest ti permette di ottenere informazioni su nuove tecnologie quando conquisti le città nemiche. Se la città conquistata è abbastanza grande, potresti ottenere tecnologie gratis.</Italian>
 		<Spanish>Caveman2Cosmos: La Conquista de tecnologías mejorada te permite obtener conocimientos sobre nuevas tecnologías al conquistar ciudades enemigas. Si la ciudad invadida es lo suficientemente grande, incluso podrías obtener tecnologías completas gratis.</Spanish>
 		<Polish>Caveman2Cosmos: Ulepszone Zdobywanie Technologii pozwala teraz przejąć pewne informacje o technologiach ze zdobytego miasta. Jeśli miasto jest wystarczająco duże możesz otrzymać nawet darmową technologię.</Polish>
-		<Russian>Caveman2Cosmos: опция "Расширенный захват технологий" позволяет вам получать информацию о новых технологиях при завоевании вражеских городов. Если завоеванный город достаточно велик, вы можете даже получить бесплатные технологии.</Russian>
+		<Russian>Caveman2Cosmos: опция «Расширенный захват технологий» позволяет вам получать информацию о новых технологиях при завоевании вражеских городов. Если завоеванный город достаточно велик, вы можете даже получить бесплатные технологии.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_37</Tag>

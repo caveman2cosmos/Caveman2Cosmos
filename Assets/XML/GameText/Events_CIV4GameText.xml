@@ -1100,7 +1100,7 @@
 		<Italian>Il popolo marinaro %s1_civ_adjective ha completato l'impresa dell'Armatore!</Italian>
 		<Spanish>Los %s1:3_civ_adjective han hecho gala de su pericia naval completando la misión El capitán del puerto.</Spanish>
 		<Polish>Marynarze i stoczniowcy %s1_civ_adjective spełnili warunki zadania "Władca Mórz"!</Polish>
-		<Russian>До нас дошли вести, что %s1_civ_adjective завершили квест "Владыка морей"!</Russian>
+		<Russian>До нас дошли вести, что %s1_civ_adjective завершили квест «Владыка морей»!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARDY_CROPS</Tag>
@@ -1128,7 +1128,7 @@
 		<French>Les chefs religieux de %s1_civ_adjective empire font pression contre le dernier BestSeller 'Harry Potter'.</French>
 		<Spanish>Los líderes religiosos del imperio %s1_civ_adjective han formado un grupo de presión contra la última novela superventas de 'Harry Potter'.</Spanish>
 		<Polish>Przywódcy religijni w imperium %s1_civ_adjective lobbują rząd do sabotowania wydania serii książek 'Harry Potter'.</Polish>
-		<Russian>Религиозные лидеры в державе %s1_civ_adjective пролоббировали новейший бестселлерный роман "Гарри Поттер".</Russian>
+		<Russian>Религиозные лидеры в державе %s1_civ_adjective пролоббировали новейший бестселлерный роман «Гарри Поттер».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HEALING_PLANT</Tag>
@@ -2871,7 +2871,7 @@
 		<Italian>[PARAGRAPH:1]Per completare questa impresa, devi costruire un totale di %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue varie città. Puoi costruire [COLOR_POSITIVE_TEXT]qualundue combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale.[COLOR_REVERT][PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata.[PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima, o se la vostra civilizzazione costruisce o acquisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás construir un total de %d1 [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y/o [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] en varias de tus ciudades. Puedes construir [COLOR_POSITIVE_TEXT]cualquier combinación de Centrales hidroeléctricas y Centrales nucleares, todas se añadirán al total.[COLOR_REVERT][PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás la misión si una civilización rival la completa primero, o si tu civilización construye o toma el control directo de la [COLOR_NEGATIVE_TEXT]Presa de las Tres Gargantas[COLOR_REVERT] antes de cumplir las condiciones.</Spanish>
 		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wybudować %d1 [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] i/lub [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] w różnych miastach. Dopuszczalne są [COLOR_POSITIVE_TEXT]wszystkie kombinacje.[COLOR_REVERT][PARAGRAPH:1]Dostaniesz dodatkową premię jeśli będziesz używać doktryny [COLOR_POSITIVE_TEXT]Ochrona Środowiska[COLOR_REVERT], kiedy zadanie zostanie zakończone.[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed wybudowaniem lub przejęciem [COLOR_NEGATIVE_TEXT]Zapory Trzech Przełomów[COLOR_REVERT].</Polish>
-		<Russian>[PARAGRAPH:1]Для успешного завершения этого квеста, вы должны построить в общей сложности %d1 [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT] и/или [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] в ваших разных городах. Вам разрешено строить [COLOR_POSITIVE_TEXT]любую комбинацию ГЭС и АЭС в общей сложности.[COLOR_REVERT] [PARAGRAPH:1]Вы получите дополнительную награду, если ваша цивилизация использует экономическую парадигму [COLOR_POSITIVE_TEXT]Охрана природы[COLOR_REVERT] после завершения задания. [PARAGRAPH:1]Задание будет провалено, если конкурирующая цивилизация завершит его первой, или если ваша цивилизация построит или получит прямой контроль над [COLOR_NEGATIVE_TEXT]Плотиной "Три ущелья"[COLOR_REVERT] прежде, чем будут выполнены условия.</Russian>
+		<Russian>[PARAGRAPH:1]Для успешного завершения этого квеста, вы должны построить в общей сложности %d1 [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT] и/или [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] в ваших разных городах. Вам разрешено строить [COLOR_POSITIVE_TEXT]любую комбинацию ГЭС и АЭС в общей сложности.[COLOR_REVERT] [PARAGRAPH:1]Вы получите дополнительную награду, если ваша цивилизация использует экономическую парадигму [COLOR_POSITIVE_TEXT]Охрана природы[COLOR_REVERT] после завершения задания. [PARAGRAPH:1]Задание будет провалено, если конкурирующая цивилизация завершит его первой, или если ваша цивилизация построит или получит прямой контроль над [COLOR_NEGATIVE_TEXT]Плотиной «Три ущелья»[COLOR_REVERT] прежде, чем будут выполнены условия.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANCIENTOLYMPICS_1</Tag>
@@ -4295,7 +4295,7 @@
 		<French>"Le vote obligatoire est tout aussi sensé que de recourir à la peine de mort pour ceux qui réalisent une tentative de suicide," prétendent les militants des droits civils. "Vous ne pouvez pas forcer les gens à être libre! Vous pouvez seulement leur donner le choix. D'ailleurs, si tous ces oubliés qui ne peuvent être dérangés de leur pied d'estale votaient, qui éliraient-ils ? Je frémis rien qu'en y pensant."</French>
 		<Spanish>"El sufragio obligatorio tiene el mismo sentido que castigar con la pena de muerte por un intento de suicidio", aseguran activistas de derechos humanos. "¡No puedes forzar a la gente a ser libre! Solo puedes darles la posibilidad de elegir. Por otra parte, si todos aquellos vagos que no se molestan en mover el trasero una vez cada pocos años votaran, ¿quién saldría elegido? Me estremezco solo de pensarlo."</Spanish>
 		<Polish>Obowiązkowe głosowanie robi wokoło tak dużo jak zamysł kary śmierci dla niedoszłego samobójcy, mówi obrońca praw obywatelskich. "Nie możesz zmusić ludzi do bycia wolnym! Możesz tylko dać im wybór. Poza tym, co z tymi których nie obchodzi to wszystko na kogo by zagłosowali? Drżę myśleć."</Polish>
-		<Russian>"В обязательном голосовании столько же смысла, сколько и в смертной казни за попытку самоубийства", - утверждают правозащитники. - "Вы не можете принудить людей быть свободными! Вы можете только дать им выбор. Допустим, вы даже заставили раз в несколько лет правонарушителей оторвать свои задницы с уютных кресел. Кого бы они избрали? Об этом страшно даже подумать".</Russian>
+		<Russian>«В обязательном голосовании столько же смысла, сколько и в смертной казни за попытку самоубийства», - утверждают правозащитники. - «Вы не можете принудить людей быть свободными! Вы можете только дать им выбор. Допустим, вы даже заставили раз в несколько лет правонарушителей оторвать свои задницы с уютных кресел. Кого бы они избрали? Об этом страшно даже подумать».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COMPULSORY_DEM_2</Tag>
@@ -4303,7 +4303,7 @@
 		<French>"Ce n'est pas du tout contradictoire," affirme un célèbre commentateur politique. "Le fait est que, si tout le monde ne vote pas, le résultat n'est pas vraiment représentatif. Certains groupes - commme ces vieux fous de la gachette - votent plus souvent que d'autres. C'est pour cela que l'on se retrouve avec de si piètres politiciens."</French>
 		<Spanish>"No es algo contradictorio en absoluto," razona un célebre analista político. "El tema es el siguiente: si no votan todos, el resultado no es representativo en realidad. Algunos grupos (como esos viejos chiflados del gatillo) van a votar con más frecuencia que otros. Por este motivo siempre acabamos teniendo estos terribles políticos."</Spanish>
 		<Polish>To nie jest sprzeczne w ogóle, twierdzi znany komentator polityczny. "Faktem jest, jeśli nie wszyscy głosują, wynik nie jest prawdziwie reprezentatywny. Niektóre grupy - jak w przypadku starszych - głosujących częściej niż inne. Dlatego zawsze skończymy z takimi strasznymi politykami."</Polish>
-		<Russian>"В этом нет ничего зазорного", - утверждает известный политический комментатор. "Дело в том, что результат не является действительно репрезентативным, если голосует только часть избирателей. Некоторые группы - например, пенсионеры - голосуют чаще, чем другие. Вот почему мы всегда сталкиваемся с такими ужасными политиками".</Russian>
+		<Russian>«В этом нет ничего зазорного», - утверждает известный политический комментатор. «Дело в том, что результат не является действительно репрезентативным, если голосует только часть избирателей. Некоторые группы - например, пенсионеры - голосуют чаще, чем другие. Вот почему мы всегда сталкиваемся с такими ужасными политиками».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COMPULSORY_DEM_3</Tag>
@@ -4311,7 +4311,7 @@
 		<French>"Cela soulève une question intéressante," dit votre conseiller politique. "Pourquoi avons-nous besoin d'élections, de toute façon? Il me semble qu'il serait beaucoup plus simple si vous avez juste à décider ce qui doit être, et le réalisez. Ce serait un gain de temps pour tout le monde, non?"</French>
 		<Spanish>"Esto saca a la luz una interesante cuestión," dice tu consejero de Interior. "¿Para qué necesitamos elecciones, de cualquier forma? Me parece que sería mucho más simple que usted decidiera qué es lo correcto, y lo llevara a cabo. ¿No nos ahorraría un montón de tiempo a todos?"</Spanish>
 		<Polish>To bardzo ciekawa kwestia, mówi Twój główny doradca ds. Polityki. "Po co nam wybory? Wydaje się o wiele prostsze jeśli podejmujesz decyzje co jest dobre a co nie. Nie zaoszczędzi to wszystkim sporo czasu?"</Polish>
-		<Russian>"Это поднимает интересную проблему", - говорит ваш главный политический советник. - "В любом случае, к чему нам выборы? Мне кажется, было бы намного проще, если бы вы просто решили за других, что правильно, и сделали это. Разве это не бы не сэкономило всем уйму времени?"</Russian>
+		<Russian>«Это поднимает интересную проблему», - говорит ваш главный политический советник. - «В любом случае, к чему нам выборы? Мне кажется, было бы намного проще, если бы вы просто решили за других, что правильно, и сделали это. Разве это не бы не сэкономило всем уйму времени?»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONTINUE</Tag>
@@ -4722,7 +4722,7 @@
 		<Italian>È inaccettabile. Il traditore la deve pagare!</Italian>
 		<Spanish>Inaceptable. El traidor debe sufrir un "accidente".</Spanish>
 		<Polish>Nie do zaakceptowania. "Wypadek" - to jest to co powinno spotkać zdrajcę!</Polish>
-		<Russian>Это немыслимо. Нужно организовать предателю небольшую "аварию"!</Russian>
+		<Russian>Это немыслимо. Нужно организовать предателю небольшую «аварию»!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DELAY</Tag>
@@ -5730,7 +5730,7 @@
 		<Italian>La nostra nazionale di calcio ha perso la finale mondiale contro la nazionale %s1:2_civ_adjective. Vi sono stati dei morti durante i disordini del dopo partita, tra cui alcuni giocatori dell'altra squadra. Il loro governo ci ritiene responsabili della violenza e minaccia una azione militare se il loro "onore nazionale" non sarà soddisfatto. La rabbia sta montando da entrambe le parti.</Italian>
 		<Spanish>Nuestra selección nacional de fútbol perdió recientemente un partido del campeonato frente a la selección %s1:2_civ_adjective. Hubo varios muertos durante los disturbios de después del partido, incluyendo algunos jugadores del otro equipo. Su gobierno nos está haciendo responsables de la violencia y amenaza con una acción militar si su "honor nacional" no queda satisfecho. La tensión está creciendo en ambos bandos.</Spanish>
 		<Polish>Nasza narodowa drużyna przegrała mecz z drużyną %s1_civ_adjective w walce o mistrzostwo. Kilkanaście osób zostało zabitych w zamieszkach po meczu, wliczając w to graczy z przeciwnej drużyny. Ich rząd odpowiedzialnością za to obarczył nas i zagroził akcją militarną, jeżeli nic z tym nie zrobimy. Emocje biorą górę po obu stronach.</Polish>
-		<Russian>Наша национальная сборная по футболу недавно проиграла финальный матч на Чемпионате мира команде %s1_civ_adjective. В ходе вспыхнувших беспорядков после игры погбло несколько человек, включая нескольких игроков другой команды. Их правительство возлагает на нас ответственность за насилие и угрожает военными действиями, если не будет удовлетворена их "национальная гордость". Эмоции НАКАЛЯЮТСЯ с обеих сторон.</Russian>
+		<Russian>Наша национальная сборная по футболу недавно проиграла финальный матч на Чемпионате мира команде %s1_civ_adjective. В ходе вспыхнувших беспорядков после игры погбло несколько человек, включая нескольких игроков другой команды. Их правительство возлагает на нас ответственность за насилие и угрожает военными действиями, если не будет удовлетворена их «национальная гордость». Эмоции НАКАЛЯЮТСЯ с обеих сторон.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUTBOL_WAR_1</Tag>
@@ -6345,7 +6345,7 @@
 		<French>"J'ai Presque aimé le Livre, jusqu'au chapitre où Harry invoque des démons," indique votre Conseiller Religieux. "Maintenant c'est juste un Erreur. Nous devons apporter une peu de Sens à ce débat, et pour ce faire je suggère d'ôter ce livre des étals, et de le brûler, tout simplement."</French>
 		<Spanish>"Estaba disfrutando del libro, hasta llegar a la parte en la que Harry invoca a demonios malignos para cumplir su cometido," comenta tu consejero de Religión. "Pero esto es simplemente un error. Necesitamos que se recobre el sentido acerca de este debate, me refiero a que deberíamos quitar este libro de las estanterías, echarle sal a fondo, y quemarlo."</Spanish>
 		<Polish>Bardzo cieszyły mnie książki o Harrym dopóki nie natrafiłem na część w której Harry przyzywa demony by mu służyły mówi doradca ds. Religii. "To złe. Musimy wywołać dużą debatę by usunąć tę książkę z półek a nawet spalić."</Polish>
-		<Russian>"Мне очень понравилась книга, пока я не добрался до той главы, где Гарри призывает злобных демонов, чтобы те исполняли его приказы", - уверяет ваш главный религиозный советник. "Подобное чтиво просто недопустимо. Нам нужно вернуться к главному вопросу обсуждения, под чем я подразумеваю, что нам следует удалить эту книгу с полок магазинов и библиотек, а уже напечатанные экземпляры - сжечь".</Russian>
+		<Russian>«Мне очень понравилась книга, пока я не добрался до той главы, где Гарри призывает злобных демонов, чтобы те исполняли его приказы», - уверяет ваш главный религиозный советник. «Подобное чтиво просто недопустимо. Нам нужно вернуться к главному вопросу обсуждения, под чем я подразумеваю, что нам следует удалить эту книгу с полок магазинов и библиотек, а уже напечатанные экземпляры - сжечь».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HARRY_POTTER_2</Tag>
@@ -6353,7 +6353,7 @@
 		<French>Votre conseiller des affaires internes n'est pas du même avis, "Allez, ce livre est une fantaisie! Et très bien écrit! Je souhaiterai que le Gouvernement publié un décret pour nos enseignants et libraires, pour que les enfants puissent se régaler de bons livres sans que ces fanatiques religieux tels que les fidèls de [CT_STATE_RELIGION] s'en mêlent."</French>
 		<Spanish>Tu Ministro del Interior discrepa: "¡Venga ya, el libro es de fantasía! Y es una buena lectura. Me gustaría que el gobierno emitiera una declaración de apoyo hacia nuestros profesores y libreros, para que los niños puedan disfrutar de la buena literatura sin intromisiones de fanáticos religiosos, como los seguidores de [CT_STATE_RELIGION]."</Spanish>
 		<Polish>Twój doradca ds. Religii nie zgadza się, "Daj spokój ta książka jest świetna! I diabelnie dobrze się ją czyta. Chciałbym by nasz rząd polecał tę książkę nauczycielom; oraz bibliotekom; by dzieci miały leszy dostęp do niej bez wpływu fanatyków naszej religii."</Polish>
-		<Russian>Ваш главный советник не согласен с коллегой: "Да ладно вам, это всего лишь подростковое фэнтези! И это чертовски хорошее чтиво. Я бы хотел, чтобы правительство выступило с заявлением о поддержке наших учителей и библиотекарей, чтобы дети могли наслаждаться хорошими книгами без вмешательства религиозных деятелей, так и последователей [CT_STATE_RELIGION]".</Russian>
+		<Russian>Ваш главный советник не согласен с коллегой: «Да ладно вам, это всего лишь подростковое фэнтези! И это чертовски хорошее чтиво. Я бы хотел, чтобы правительство выступило с заявлением о поддержке наших учителей и библиотекарей, чтобы дети могли наслаждаться хорошими книгами без вмешательства религиозных деятелей, так и последователей [CT_STATE_RELIGION]».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HEALING_PLANT</Tag>
@@ -6505,7 +6505,7 @@
 		<Italian>Voglio che questo "Gentiluomo" sia accolto dalle nostre armi!</Italian>
 		<Spanish>¡Quiero ver a este "Caballero de la fortuna" balanceándose sobre una verga!</Spanish>
 		<Polish>Chcę dorwać tego pirata w swoje ręce!</Polish>
-		<Russian>Я хочу, чтобы эти "Джентльмены удачи" убирались восвояси!</Russian>
+		<Russian>Я хочу, чтобы эти «Джентльмены удачи» убирались восвояси!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HENRY_MORGAN_HELP_1</Tag>
@@ -7367,7 +7367,7 @@
 		<Italian>Ascoltate questi saggi "economisti" e cercate di impedire il declino del debito pubblico, usando il tesoro.</Italian>
 		<Spanish>Escucha a esos "economistas" quejicas e intenta contrarrestrar el descenso del consumo interno con nuestro tesoro.</Spanish>
 		<Polish>Wysłuchajcie ekonomistów i postarajmy się nadrobić braki na rynku wewnętrznym zamówieniami rządowymi.</Polish>
-		<Russian>Выслушайте этих плаксивых "экономистов" и постарайтесь компенсировать снижение потребительских расходов из нашей казны.</Russian>
+		<Russian>Выслушайте этих плаксивых «экономистов» и постарайтесь компенсировать снижение потребительских расходов из нашей казны.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LAWYER_LITIGATION</Tag>
@@ -7392,7 +7392,7 @@
 		<French>Le Ministre des Finances, votre frère, rejette ces demandes. "Ce que le peuple ne réalise pas, c'est que Vous savez ce qui est bon pour eux. La seule alternative, c'est l'Anarchie! Je dis: continuez votre parcours. Et exécutez ces tarés pour trahison."</French>
 		<Spanish>El Ministro de Economía, que es tu hermano, rechaza sus demandas. "Lo que esta gente no quiere creer es que tú eres el que sabe qué es lo mejor para ellos. ¡La alternativa es la anarquía! Opino que continúes en el cargo. Y ejecuta a estos tarados por traición."</Spanish>
 		<Polish>Minister Finansów, który myśli, że jest Twoim bratem, odrzuca żądania. "Co Ci ludzie nie uświadamiają sobie, że wiesz, co jest dla nich najlepsze?. Alternatywą jest anarchia! Mówię, że trzeba trzymać się kursu, i aresztować tych idiotów za zdradę."</Polish>
-		<Russian>Министр финансов, который также является вашим братом, отклоняет иск. "Эти люди сами не знают, чего хотят. Альтернатива этому - анархия! Я настаиваю на прежнем курсе. А потакание этим глупостям равносильно измене".</Russian>
+		<Russian>Министр финансов, который также является вашим братом, отклоняет иск. «Эти люди сами не знают, чего хотят. Альтернатива этому - анархия! Я настаиваю на прежнем курсе. А потакание этим глупостям равносильно измене».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LESS_DICTATOR_2</Tag>
@@ -7400,7 +7400,7 @@
 		<French>"Vous pourriez peut-être donner un peu plus de liberté politique à votre peuple," suggère votre chef de cabinet, votre sœur en l'occurrence. "est-ce vraiment dangereux de permettre à tous de discuter des idées? Nous devrions même avoir un vrai parti d'opposition. Un qui ne soit pas composé de vos marionnettes, je veux dire."</French>
 		<Spanish>"Quizás se deba otorgar al pueblo mayores libertades políticas," reflexiona tu consejera de Presidencia, que es tu hermana. "¿Realmente es tan perjudicial permitir el debate público de las ideas? Podríamos llegar a tener un auténtico partido opositor. Uno que no esté lleno de títeres tuyos, quiero decir."</Spanish>
 		<Polish>Być może ludzie powinni otrzymać więcej swobody politycznej, sugeruje Szef Sztabu, który jest Twoją siostrą. "Czy to sprawi problem umożliwienie publicznej dyskusji o pomysłach? Można nawet mieć realną opozycję, która nie będzie Twoją laleczką, mam na myśli."</Polish>
-		<Russian>"Возможно, людям могут быть даны некоторые политические свободы", - размышляет глава Центризбиркома, являющаяся вашей сестрой. "Действительно ли гласность может причинить такой вред? У нас может быть даже настоящая оппозиционная партия. Я имею в виду не ту, что состоит из послушных болванчиков на зарплате".</Russian>
+		<Russian>«Возможно, людям могут быть даны некоторые политические свободы», - размышляет глава Центризбиркома, являющаяся вашей сестрой. «Действительно ли гласность может причинить такой вред? У нас может быть даже настоящая оппозиционная партия. Я имею в виду не ту, что состоит из послушных болванчиков на зарплате».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LEVITTOWN</Tag>
@@ -8832,7 +8832,7 @@
 		<Italian>Eccellente -- questo prolungherà la durata utile della nostra più vecchia apparecchiatura. Applicate questa "armatura reattiva" ai nostri carri armati più vecchi immediatamente.</Italian>
 		<Spanish>Excelente, esto ampliará la vida útil de nuestro equipo más viejo. Aplicad esta "armadura reactiva" a nuestros tanques más antiguos inmediatamente.</Spanish>
 		<Polish>Doskonale -- to przedłuży życie naszego starego sprzętu. Uzbrój stare czołgi "pancerzem reaktywnym".</Polish>
-		<Russian>Отлично -- это продлит срок службы всех старых образцов вооружений. Установите эту "динамическую броню" на все наши устаревшие танки.</Russian>
+		<Russian>Отлично -- это продлит срок службы всех старых образцов вооружений. Установите эту «динамическую броню» на все наши устаревшие танки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_RECRUITMENT_DRIVE</Tag>
@@ -9217,7 +9217,7 @@
 		<Italian>Il tesoro serve a scopi precisi, non per "conservazione"!</Italian>
 		<Spanish>¡El tesoro está para cosas importantes, no para la "conservación"!</Spanish>
 		<Polish>Środki ze skarbca są przeznaczone na poważne cele, a nie na zachowanie wymierających gatunków!</Polish>
-		<Russian>Казна предназначена для более серьезных целей, а не только для "хранения"!</Russian>
+		<Russian>Казна предназначена для более серьезных целей, а не только для «хранения»!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SILVER_RAIN_1</Tag>
@@ -11259,7 +11259,7 @@
 		<French>Les chefs religieux font pression sur votre gouvernement pour interdire le dernier Roman de la série 'Harry Potter'.</French>
 		<Spanish>Los líderes religiosos presionan a tu gobierno para que se censure la última novela de la serie de fantasía 'Harry Potter'.</Spanish>
 		<Polish>Przywódcy religijni lobbują twój rząd do sabotowania wydania serii książek 'Harry Potter'.</Polish>
-		<Russian>Религиозные лидеры лоббировали ваше правительство, требуя запрета романа "Гарри Поттер" и одноименного сериала фэнтези.</Russian>
+		<Russian>Религиозные лидеры лоббировали ваше правительство, требуя запрета романа «Гарри Поттер» и одноименного сериала фэнтези.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HENRY_MORGAN</Tag>
@@ -11475,7 +11475,7 @@
 		<English>The 'Iditarod' dog sled race organizers would like it to be held in %s2_city this year.</English>
 		<French>Les organisateurs de la course de chien de traineaux 'Iditarod' aimeraient choisir la ville de %s2_city pour cette année.</French>
 		<Polish>"Iditarod' to zawody psich zaprzęg jakie od tego roku będą organizowane w mieście %s2_city.</Polish>
-		<Russian>Организаторы бегов на собачьих упряжках "Айдитарод" хотели бы, чтобы в этом году они проводились в %s2_city.</Russian>
+		<Russian>Организаторы бегов на собачьих упряжках «Айдитарод» хотели бы, чтобы в этом году они проводились в %s2_city.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ILLYRIAN_PIRATES</Tag>
@@ -11622,10 +11622,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LESS_DICTATOR</Tag>
 		<English>While effusively praising your leadership and bowing repeatedly, a delegation of concerned citizens has humbly requested that the government take a more "modernistic" view in the future.</English>
-		<French>Tout en louant votre leadership et en s'inclinant à plusieurs reprises, une délégation de citoyens concernés a humblement demandé que le gouvernement adopte une approche plus "moderniste" pour l'avenir.</French>
+		<French>Tout en louant votre leadership et en s'inclinant à plusieurs reprises, une délégation de citoyens concernés a humblement demandé que le gouvernement adopte une approche plus «moderniste» pour l'avenir.</French>
 		<Spanish>Mientras alaban efusivamente tu liderazgo y hacen reiteradas reverencias, una delegación de ciudadanos preocupados han solicitado humildemente una política más "progresista" por parte del gobierno en el futuro.</Spanish>
 		<Polish>Podczas gdy wylewnie chwalą swojego Pana i kłaniają się wielokrotnie, delegacja zaniepokojonych obywateli składa pokornie wniosek, aby rząd podjął bardziej modernistyczne"" spojrzenie w przyszłość"</Polish>
-		<Russian>Высоко оценивая ваше руководство и беспрерывно кланяясь, делегация заинтересованных граждан смиренно просила правительство придерживаться более "модернистского" взгляда на будущее.</Russian>
+		<Russian>Высоко оценивая ваше руководство и беспрерывно кланяясь, делегация заинтересованных граждан смиренно просила правительство придерживаться более «модернистского» взгляда на будущее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LITERACY_1</Tag>
@@ -12458,7 +12458,7 @@
 		<Italian>I comandanti di uno dei nostri reggimenti di paracadutisti d'élite hanno preso il controllo dei servizi governativi a %s2_city. Dicono che il governo è troppo debole per sconfiggere il nemico %s1_civ_adjective e che abbiamo bisogno "di una mano forte" che ci guidi alla vittoria.</Italian>
 		<Spanish>Los comandantes de uno de nuestros regimientos de paracaidistas de élite han tomado el control de las oficinas gubernamentales en %s2_city. Dicen que el gobierno es demasiado débil para derrotar a los enemigos %s1:3_civ_adjective, y que necesitamos una "mano de hierro" que nos dirija a la victoria.</Spanish>
 		<Polish>Generałowie z naszych elitarnych pułków spadochroniarzy przejęli kontrolę nad biurami rządu w mieście %s2_city. Twierdzą, że rząd jest zbyt słaby, aby pokonać wrogą armię %s1_civ_adjective, i że potrzebujemy teraz rządów "silnej ręki", które poprowadzą nas do zwycięstwa.</Polish>
-		<Russian>Командиры одного из наших элитных полков ВДВ захватили контроль над правительственными учреждениями в городе %s2_city. Они утверждают, что нынешнее правительство слишком слабо, чтобы победить врага %s1_civ_adjective, и что нам нужна "сильная рука", чтобы вести нас к победе.</Russian>
+		<Russian>Командиры одного из наших элитных полков ВДВ захватили контроль над правительственными учреждениями в городе %s2_city. Они утверждают, что нынешнее правительство слишком слабо, чтобы победить врага %s1_civ_adjective, и что нам нужна «сильная рука», чтобы вести нас к победе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_THOROUGHBRED_1</Tag>
@@ -12621,7 +12621,7 @@
 		<Italian>La nostra agenzia spaziale propone la costruzione di sonde spaziali robotiche per effettuare "un grande giro" del sistema solare. Le sonde visiteranno ogni pianeta ed esploreranno lo spazio interstellare locale. L'agenzia spaziale chiede un grande aumento nei finanziamenti per perseguire questo programma.</Italian>
 		<Spanish>Nuestra agencia espacial propone la construcción de sondas espaciales robóticas para realizar una "gran visita" al Sistema Solar. Las sondas visitarán cada planeta y explorarán el espacio interestelar local. La agencia espacial pide un gran aumento de sus fondos para proseguir con este programa.</Spanish>
 		<Polish>Nasza agencja kosmiczna proponuje budowę automatycznych sond do "wielkiej wyprawy" po systemie słonecznym. Sondy odwiedzą każdą planetę i zbadają lokalną przestrzeń. Agencja kosmiczna prosi o spore zwiększenie dofinansowania na ten program.</Polish>
-		<Russian>Наше космическое агентство предлагает создать автоматические зонды для проведения "большого тура" по Солнечной системе. Зонды посетят каждую планету и исследуют местное межзвездное пространство. Космическое агентство настаивает на значительном увеличении финансирования для реализации этой программы.</Russian>
+		<Russian>Наше космическое агентство предлагает создать автоматические зонды для проведения «большого тура» по Солнечной системе. Зонды посетят каждую планету и исследуют местное межзвездное пространство. Космическое агентство настаивает на значительном увеличении финансирования для реализации этой программы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WARSHIPS_1</Tag>
@@ -12800,7 +12800,7 @@
 		<Italian>Costruisci una nuova base nascosta, quindi sposta tutti i progetti di ricerca lì e apri la vecchia base come attrazione turistica. Costruisci alcuni artifatti alieni radioattivi e fai in modo che il pubblico "veda" che non abbiamo niente da nascondere.</Italian>
 		<Spanish>Construid una nueva base principal camuflada, trasladad allí todos los proyectos de investigación y, posteriormente, abrid al público la antigua base como atracción turística. Colocad algunos "artefactos radiactivos alienígenas" de pega y dejad que el público "vea" que no tenemos nada que ocultar.</Spanish>
 		<Polish>Zbudować nową ukrytą bazę i przenieść tam wszystkie projekty badawcze, a następnie udostępnić starą bazę jako atrakcję turystyczną. Stworzyć w niej kilka fałszywych radioaktywnych artefaktów obcych i pokazać ludziom, że nie mamy niczego do ukrycia.</Polish>
-		<Russian>Постройте новую замаскированную основную базу, перенесите туда все исследовательские проекты, а затем откройте старую базу как туристическую достопримечательность. Изотовьте несколько поддельных радиоактивных инопланетных артефактов и дайте общественности их "увидеть", якобы нам нечего скрывать.</Russian>
+		<Russian>Постройте новую замаскированную основную базу, перенесите туда все исследовательские проекты, а затем откройте старую базу как туристическую достопримечательность. Изотовьте несколько поддельных радиоактивных инопланетных артефактов и дайте общественности их «увидеть», якобы нам нечего скрывать.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_UNHAPPY</Tag>
@@ -12894,7 +12894,7 @@
 		<French>Le maire de la ville s'approche et vous conseille: "Nous devrions utiliser cette énergie pour permettre aux citoyens de ma Ville de se chauffer. Pourquoi la gaspiller?"</French>
 		<Spanish>El alcalde de tu ciudad se aproxima y te comenta: "Deberíamos utilizar esta energía para mantener a los ciudadanos de mi adorable ciudad en un ambiente cálido. ¿Por qué desperdiciarla?"</Spanish>
 		<Polish>Burmistrz Twojego miasta zwraca się do Ciebie, "Powinniśmy skorzystać z tej energii by uszczęśliwić naszych obywateli. Dlaczego ma się zmarnnować?"</Polish>
-		<Russian>Мэр вашего города подходит к вам и начинает: "Мы должны использовать эту энергию для обогрева жилых домов моего прекрасного города".</Russian>
+		<Russian>Мэр вашего города подходит к вам и начинает: «Мы должны использовать эту энергию для обогрева жилых домов моего прекрасного города».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_UNLIMITED_POWER_2</Tag>
@@ -13036,7 +13036,7 @@
 		<Italian>Non possiamo sprecare le risorse sui progetti frivoli! Dovremmo smettere di sovvenzionare questo programma spaziale inutile ed usare i soldi per una "guerra" contro la povertà.</Italian>
 		<Spanish>¡No podemos perder recursos en proyectos frívolos! Debemos cortar la financiación para este inútil programa espacial y utilizar el dinero para una "guerra" contra la pobreza.</Spanish>
 		<Polish>Nie możemy marnować surowców na ten projekt! Powinniśmy ograniczyć finansowanie tego bezsensownego programu kosmicznego i przeznaczyć pieniądze na walkę z ubóstwem.</Polish>
-		<Russian>Мы не можем тратить ресурсы на легкомысленные проекты! Нам стоит сократить финансирование этой бесполезной космической программы и использовать эти деньги для "войны" с бедностью.</Russian>
+		<Russian>Мы не можем тратить ресурсы на легкомысленные проекты! Нам стоит сократить финансирование этой бесполезной космической программы и использовать эти деньги для «войны» с бедностью.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WARSHIPS_1</Tag>
@@ -13342,7 +13342,7 @@
 		<Italian>Il Ministero del Tesoro %s1_civ_adjective ha annunciato una nuova "politica dei soldi facili". Gli analisti temono il nuovo aumento dell'inflazione.</Italian>
 		<Spanish>El Ministro de Economía %s1_civ_adjective ha anunciado una nueva política de "dinero fácil". Los analistas temen un nuevo aumento de la inflación.</Spanish>
 		<Polish>Skarb Państwa %s1_civ_adjective został zasilony "łatwymi pieniędzmi". Analitycy obawiają się wysokiej inflacji.</Polish>
-		<Russian>Казначейство державы %s1_civ_adjective объявило о новой политике "легких денег". Аналитики опасаются нового витка инфляции.</Russian>
+		<Russian>Казначейство державы %s1_civ_adjective объявило о новой политике «легких денег». Аналитики опасаются нового витка инфляции.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_FIAT_MONEY_2</Tag>
@@ -13451,7 +13451,7 @@
 		<Italian>Le trattative proseguono nella città di %s2_city. I capi del sindacato promettono di continuare lo sciopero "finché sarà necessario".</Italian>
 		<Spanish>Las negociaciones sindicales se prolongan en %s2_city. Los líderes de los sindicatos prometen seguir con la huelga "todo el tiempo que haga falta."</Spanish>
 		<Polish>W mieście %s2_city trwają negocjacje z pracownikami. Władze związkowe zarzekają się, że będą kontynuować strajk "do skutku".</Polish>
-		<Russian>В городе %s2_city ведутся долгие и трудные переговоры. Профсоюзные лидеры обещают продолжать забастовку "столько, сколько потребуется".</Russian>
+		<Russian>В городе %s2_city ведутся долгие и трудные переговоры. Профсоюзные лидеры обещают продолжать забастовку «столько, сколько потребуется».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_MALACCAN_PIRATES</Tag>
@@ -13641,7 +13641,7 @@
 		<Italian>Il governo %s1_civ_adjective ha tagliato drammaticamente i fondi alla sua agenzia spaziale ed userà i soldi risparmiati per costituire un fondo per la sua nuova "guerra contro la povertà".</Italian>
 		<Spanish>El gobierno %s1_civ_adjective ha recortado drásticamente la financiación para su agencia espacial, y utilizará el ahorro para financiar su nueva "guerra contra la pobreza".</Spanish>
 		<Polish>Rząd s1_civ_adjective drastycznie obcina finansowanie agencji kosmicznej, i zaoszczędzone pieniądze użyje w nowej "Walce z Ubóstwem".</Polish>
-		<Russian>Правительство %s1_civ_adjective резко сокращает финансирование своего Аэрокосмического агентства и использует сэкономленные средства для финансирования своей новой "Войны с бедностью".</Russian>
+		<Russian>Правительство %s1_civ_adjective резко сокращает финансирование своего Аэрокосмического агентства и использует сэкономленные средства для финансирования своей новой «Войны с бедностью».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_YIELD_CHANGE_BUILDING</Tag>

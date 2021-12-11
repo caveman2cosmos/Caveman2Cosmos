@@ -42,7 +42,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
-		<Russian>Òîòåì "Ñîáàêà"</Russian>
+		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
@@ -62,7 +62,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
-		<Russian>Òîòåì "Ðàáîòíèê"</Russian>
+		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
