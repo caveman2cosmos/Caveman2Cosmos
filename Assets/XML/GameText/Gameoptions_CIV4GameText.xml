@@ -199,7 +199,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Tag>
 		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs. If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
 		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures. Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
-		<Russian>С подключением этой опции, варварские города со временем могут образовать новые малые цивилизации. Если вы играете с опцией «Начать за малую цивилизацию», то это изменит правила перехода в основную цивилизацию. Достижения и их случайность определяет, когда вы сделаетесь главной цивилизацией.</Russian>
+		<Russian>С подключением этой опции, варварские города со временем могут образовать новые малые цивилизации. Если вы играете с опцией "Начать за малую цивилизацию", то это изменит правила перехода в основную цивилизацию. Достижения и их случайность определяет, когда вы сделаетесь главной цивилизацией.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
@@ -377,7 +377,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_DANGEROUS_WILDLIFE_HELP</Tag>
 		<English>All animals can spawn not only within borders, but on improved tiles too.[NEWLINE]Your civilians are tasty - protect them within your borders too.[NEWLINE]This option is polar opposite of "Keep Animals Out" - Dangerous Wildlife disables it.</English>
 		<French>Tous les animaux peuvent apparaître non seulement à l'intérieur des frontières, mais aussi sur des cases aménagées.[NEWLINE]Vos civils sont savoureux - protégez-les également à l'intérieur de vos frontières.[NEWLINE]Cette option est à l'opposé de "Animaux restent dehors" - Faune dangereuse la désactive.</French>
-		<Russian>Все животные могут появляться не только в пределах границ, но и на улучшенных клетках.[NEWLINE] Ваши мирные жители - отныне желанное лакомство, защищайте их и в своих границах.[NEWLINE] Этот параметр полярно противоположен «Keep Animals Out» - Dangerous Wildlife отключает его.</Russian>
+		<Russian>Все животные могут появляться не только в пределах границ, но и на улучшенных клетках.[NEWLINE] Ваши мирные жители - отныне желанное лакомство, защищайте их и в своих границах.[NEWLINE] Этот параметр полярно противоположен "Keep Animals Out" - Dangerous Wildlife отключает его.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS</Tag>
@@ -707,7 +707,7 @@
 		<German>Die 8 Felder rings um eine Stadt können niemals durch kulturellen Einfluss übernommen werden.</German>
 		<Spanish>No se podrán conquistar las 8 casillas alrededor de una ciudad mediante la influencia cultural.</Spanish>
 		<Polish>8 pól wokół miasta jest nienaruszalne przez granice kulturalne wroga.</Polish>
-		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.[NEWLINE]Данная настройка не работает с опцией «Города стартуют с 1 клетки».</Russian>
+		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.[NEWLINE]Данная настройка не работает с опцией "Города стартуют с 1 клетки".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES</Tag>
@@ -971,7 +971,7 @@ Only affects SmartMap if terrain options is:
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Tag>
 		<English>Keeps Win For Losing and Tech Diffusion benefits from being delivered to Human players while continuing to enable them for AI players.</English>
 		<French>Les avantages de la Diffusion des Technologies ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
-		<Russian>Отключает правила «Поощрение отстающим» и «Утечка технологий» для живых игроков, продолжая использовать их для игроков ИИ.</Russian>
+		<Russian>Отключает правила "Поощрение отстающим" и "Утечка технологий" для живых игроков, продолжая использовать их для игроков ИИ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
@@ -1080,7 +1080,7 @@ Only affects SmartMap if terrain options is:
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Tag>
 		<English>Keeps NPC players from being in an eternal 'at war' state with each other. Thus barbs don't attack animals. Beast team animals don't attack Creature team animals. And so on.</English>
 		<German>Diese Option verhindert, dass sich Computergegner in einem ewigen Kriegszustand miteinander befinden. Dadurch attackieren Barbaren keine Tiere und Tiere keine Barbaren mehr, usw.</German>
-		<French>Empêche les joueurs PNJ d'être dans un état éternel de «guerre» entre eux. Ainsi, les barbares n'attaquent pas les animaux. Les animaux de l'équipe "bêtes" n'attaquent pas les animaux de l'équipe "Créature". Etc.</French>
+		<French>Empêche les joueurs PNJ d'être dans un état éternel de "guerre" entre eux. Ainsi, les barbares n'attaquent pas les animaux. Les animaux de l'équipe "bêtes" n'attaquent pas les animaux de l'équipe "Créature". Etc.</French>
 		<Russian>Óäåðæèâàåò êîìïüþòåðíûõ èãðîêîâ îò âå÷íîãî ñîñòîÿíèÿ âîéíû äðóã ñ äðóãîì. Òàêèì îáðàçîì, âàðâàðû íå íàïàäàþò íà æèâîòíûõ. Õèùíèêè íå íàïàäàþò íà òðàâîÿäíûõ. È òàê äàëåå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1297,7 +1297,7 @@ Only affects SmartMap if terrain options is:
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
 		<Spanish>Se desactiva el componente Revolution: no habrá civilizaciones rebeldes que intenten independizarse de un imperio si sus necesidades no son satisfechas.</Spanish>
 		<Polish>Wyłącza mod Rewolucje: nowe cywilizacje nie będą się odłączać od cywilizacji macierzystej.</Polish>
-		<Russian>Включает сабмод «Revolution»: новые мятежные фракции будут пытаться отколоться от державы, если не будут удовлетворены их требования. ВНИМАНИЕ: эта опция делает ИИ менее сложным. Мод «Revolution» не поддерживался и не обновлялся должным образом в C2C.</Russian>
+		<Russian>Включает сабмод "Revolution": новые мятежные фракции будут пытаться отколоться от державы, если не будут удовлетворены их требования. ВНИМАНИЕ: эта опция делает ИИ менее сложным. Мод "Revolution" не поддерживался и не обновлялся должным образом в C2C.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RUTHLESS_AI</Tag>
@@ -1591,7 +1591,7 @@ Only affects SmartMap if terrain options is:
 		<English>Enables Ambush and Assassination attacks and Stealth Combat factors (Stealth Strikes and Stealth Combat Modifiers) which come into play when an unseen unit attacks or when a unit attacks another on the same tile, which Ambush and Assassination commands allow.</English>
 		<German>Diese Mod aktiviert Hinterhalte, Attentate und Modifikatoren durch Tarnung, die dann eine Rolle spielen, wenn eine unsichtbare Einheit angreift.</German>
 		<French>Active les attaques d'embuscade et d'assassinat et les facteurs de combat furtif (frappes furtives et modificateurs de combat furtif) qui entrent en jeu lorsqu'une unité invisible attaque ou lorsqu'une unité en attaque une autre sur la même tuile, ce que les commandes d'embuscade et d'assassinat permettent.</French>
-		<Russian>Включает атаки «Засада» и «Убийство» и факторы «Стелс-битва» («Удары невидимкой» и «Модификаторы стелс-боя»), которые вступают в игру, когда скрытый отряд атакует или когда один отряд атакует другой на той же клетке, что позволяют команды «Засада» и «Убийство».</Russian>
+		<Russian>Включает атаки "Засада" и "Убийство" и факторы "Стелс-битва" ("Удары невидимкой" и "Модификаторы стелс-боя"), которые вступают в игру, когда скрытый отряд атакует или когда один отряд атакует другой на той же клетке, что позволяют команды "Засада" и "Убийство".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Tag>

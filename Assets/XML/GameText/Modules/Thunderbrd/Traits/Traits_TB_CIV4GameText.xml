@@ -6409,9 +6409,9 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Tag>
 		<English>Military focused with a 'Hold your ground' ideal.</English>
-		<French>Militaire concentré avec un idéal «Tenez votre terrain».</French>
+		<French>Militaire concentré avec un idéal "Tenez votre terrain".</French>
 		<German>Defensive Anführer haben kein großes Interesse an Angriffskriegen, sie nutzen ihr Militär hauptsächlich zur Sicherung ihrer eigenen Landesgrenzen.</German>
-		<Russian>Âîåííûå ñôîêóñèðîâàíû íà ïðèíöèïå: «Íè ïÿäè ðîäíîé çåìëè âðàãó íå îòäàäèì!»</Russian>
+		<Russian>Âîåííûå ñôîêóñèðîâàíû íà ïðèíöèïå: "Íè ïÿäè ðîäíîé çåìëè âðàãó íå îòäàäèì!"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC</Tag>
@@ -14202,7 +14202,7 @@ Nachteile:
 	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
 	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)</German>
 		<Russian>Ïîëîæèòåëüíàÿ ÷åðòà
-«Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð».
+"Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð".
 Ýòîò ëèäåð ñèëüíî ñîñðåäîòî÷åí íà ýôôåêòèâíîì îáó÷åíèè îñíîâàì âîéíû è ïðîäâèãàåò áîåâóþ êóëüòóðó ïî âñåé ñâîåé èìïåðèè.
 Îñíîâíûå ïðåèìóùåñòâà:
 [ICON_BULLET] Áîëüøîå ñíèæåíèå óñòàëîñòè îò âîéíû. Âàø íàðîä ïîääåðæèâàåò èäåþ, ÷òî âîéíà ïîìîæåò èì äîñòè÷ü ñâîèõ öåëåé ëè÷íî.
@@ -14266,7 +14266,7 @@ Nachteile:
 	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
 	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 		<Russian>Ïîëîæèòåëüíàÿ ÷åðòà
-«Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð».
+"Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð".
 Ýòîò ëèäåð ñèëüíî ñîñðåäîòî÷åí íà ýôôåêòèâíîì îáó÷åíèè îñíîâàì âîéíû è ïðîäâèãàåò áîåâóþ êóëüòóðó ïî âñåé ñâîåé èìïåðèè.
 Îñíîâíûå ïðåèìóùåñòâà:
 [ICON_BULLET] Áîëüøîå ñíèæåíèå óñòàëîñòè îò âîéíû. Âàø íàðîä ïîääåðæèâàåò èäåþ, ÷òî âîéíà ïîìîæåò èì äîñòè÷ü ñâîèõ öåëåé ëè÷íî.
@@ -14331,7 +14331,7 @@ Nachteile:
 	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
 	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 		<Russian>Ïîëîæèòåëüíàÿ ÷åðòà
-«Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð».
+"Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð".
 Ýòîò ëèäåð ñèëüíî ñîñðåäîòî÷åí íà ýôôåêòèâíîì îáó÷åíèè îñíîâàì âîéíû è ïðîäâèãàåò áîåâóþ êóëüòóðó ïî âñåé ñâîåé èìïåðèè.
 Îñíîâíûå ïðåèìóùåñòâà:
 [ICON_BULLET] Áîëüøîå ñíèæåíèå óñòàëîñòè îò âîéíû. Âàø íàðîä ïîääåðæèâàåò èäåþ, ÷òî âîéíà ïîìîæåò èì äîñòè÷ü ñâîèõ öåëåé ëè÷íî.
@@ -14391,7 +14391,7 @@ Nachteile:
 	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
 	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 		<Russian>Ïîëîæèòåëüíàÿ ÷åðòà
-«Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð».
+"Âîéíà - ýòî ïóòü ìèðà. Òîëüêî áóäó÷è ñèëüíåå âñåõ îñòàëüíûõ, ìû ìîæåì îáðåñòè ìèð".
 Ýòîò ëèäåð ñèëüíî ñîñðåäîòî÷åí íà ýôôåêòèâíîì îáó÷åíèè îñíîâàì âîéíû è ïðîäâèãàåò áîåâóþ êóëüòóðó ïî âñåé ñâîåé èìïåðèè.
 Îñíîâíûå ïðåèìóùåñòâà:
 [ICON_BULLET] Áîëüøîå ñíèæåíèå óñòàëîñòè îò âîéíû. Âàø íàðîä ïîääåðæèâàåò èäåþ, ÷òî âîéíà ïîìîæåò èì äîñòè÷ü ñâîèõ öåëåé ëè÷íî.

@@ -5,7 +5,7 @@
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
-		<Russian>Òîòåì «Ìåäâåäü»</Russian>
+		<Russian>Òîòåì "Ìåäâåäü"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Tag>
@@ -18,7 +18,7 @@
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
-		<Russian>Òîòåì «Áèçîí»</Russian>
+		<Russian>Òîòåì "Áèçîí"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Tag>
@@ -36,7 +36,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Sztandar Wojskowy (Wielkie Koty)</Polish>
-		<Russian>Òîòåì «Êîøêà»</Russian>
+		<Russian>Òîòåì "Êîøêà"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Tag>
@@ -51,7 +51,7 @@
 		<English>Military Standard (Deer)</English>
 		<French>Standards Militaires (Cervidés)</French>
 		<Polish>Sztandar Wojskowy (Deer)</Polish>
-		<Russian>Òîòåì «Îëåíü»</Russian>
+		<Russian>Òîòåì "Îëåíü"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Tag>
@@ -63,7 +63,7 @@
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
 		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
-		<Russian>Òîòåì «Æèðàô»</Russian>
+		<Russian>Òîòåì "Æèðàô"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Tag>
@@ -75,7 +75,7 @@
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
 		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
-		<Russian>Òîòåì «Íîñîðîã»</Russian>
+		<Russian>Òîòåì "Íîñîðîã"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Tag>
@@ -87,7 +87,7 @@
 		<English>Military Standard (Zebra)</English>
 		<French>Standards Militaires (Zèbres)</French>
 		<Polish>Sztandar Wojskowy (Zebra)</Polish>
-		<Russian>Òîòåì «Çåáðà»</Russian>
+		<Russian>Òîòåì "Çåáðà"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA_HELP</Tag>

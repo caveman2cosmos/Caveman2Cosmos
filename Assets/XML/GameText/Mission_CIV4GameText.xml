@@ -479,7 +479,7 @@
 		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5%% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out at 5 rounds. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
 		<French>L'unité s'installe et profite du terrain pour mieux résister aux attaques ennemies. Une unité obtient un bonus défensif cumulatif de 5%% (plus sa capacité de retranchement) pour chaque tour où elle est fortifiée, plafonnant à 5 tours. Notez qu'avec le mode de combat cache-cache, les unités fortifiées perdent automatiquement toute invisibilité.</French>
 		<German>Einheit in Befestigungsmodus versetzen zur besseren Verteidigung im Falle eines Angriffs. Pro befestigter Runde erhält die Einheit einen zusätzlichen Verteidigungsbonus von 5%%, bis zu einem Maximum von 25%%. Befestigte Einheiten verlieren im "Versteckspiel" jegliche Unsichtbarkeit.</German>
-		<Russian>Отряд «окапывается» для лучшего противодействия вражеской атаке. Он получает накопительный 5%-ный защитный бонус (плюс способность «Окапывание») за каждый ход, пока отряд стоит на месте в течении 5 ходов. Обратите внимание, что в игровом режиме «Прятки» укрепленные отряды автоматически теряют всякую скрытность и маскировку.</Russian>
+		<Russian>Отряд "окапывается" для лучшего противодействия вражеской атаке. Он получает накопительный 5%-ный защитный бонус (плюс способность "Окапывание") за каждый ход, пока отряд стоит на месте в течении 5 ходов. Обратите внимание, что в игровом режиме "Прятки" укрепленные отряды автоматически теряют всякую скрытность и маскировку.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GOTO</Tag>

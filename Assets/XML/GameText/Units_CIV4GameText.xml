@@ -2378,7 +2378,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Bombowiec</Polish>
-		<Russian>A-10 «Òàíäåðáîëò»</Russian>
+		<Russian>A-10 "Òàíäåðáîëò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_A10_BOMBER_PEDIA</Tag>
@@ -3132,7 +3132,7 @@
 		<Tag>TXT_KEY_UNIT_ANIMA_REPAIR_CLOUD_PEDIA</Tag>
 		<English>The time has finally arrived where the formless begins to trump form. Where the meek shall inherit the Earth. The miniature minds of many add into a massive mind of one. This particular Anima Cloud is tasked to find and repair all manner of biological and technological systems, repairing flesh and silicon at mind-numbing speeds by recombinating at the sub-molecular level. The cloud simply extends to coat the injured and 'flesh' out whatever happens to be missing or dysfunctional. Humans live in terror of that which they have created has now created. But at least this particular swarm is entirely benevolent. Not all such submolecular forces will prove to be so kind.</English>
 		<Polish>W teorii są to mechanizmy bardzo małe (kilka nanometrów) służące do celów medycznych, tudzież bojowych. Mogą działać jak Chmura Naprawcza (reperować struktury budynków i pojazdów). Specjaliści od Nanotechnologii często krytykują pomysły pisarzy gatunków Cyberpunk czy Wojennej Fantastyki że Nanoboty ( popularna nazwa Nanomaszyn) mogą być używane do celów przestępczych lub wojny, choć inni specjaliści twierdzą że: "Armia i Ulica znajdą zastosowanie do wszystkiego". Obecnie najbardziej prawdopodobne jest zastosowanie Inżynierów z książek naukowych Dexlera. są to Nanomaszyny stworzone z Białek, min kultur E-coli.</Polish>
-		<Russian>Наконец пришло время, когда бесформенное начинает диктовать условия форме, где малые наследуют Землю, а меньшие умы многих превосходят один сверхразум. Именно этому Облаку Анима поручено находить и восстанавливать всевозможные биологические и технологические системы, восстанавливая плоть и кремний с невероятной скоростью путем рекомбинации на субмолекулярном уровне. Облако просто простирается, чтобы покрыть раненых и «размять» то, что, как оказалось, отсутствует или недееспособно. Люди живут в ужасе от того, что они создали. Но, по крайней мере, этот особый рой совершенно доброжелателен. Не все такие субмолекулярные силы окажутся такими благими.</Russian>
+		<Russian>Наконец пришло время, когда бесформенное начинает диктовать условия форме, где малые наследуют Землю, а меньшие умы многих превосходят один сверхразум. Именно этому Облаку Анима поручено находить и восстанавливать всевозможные биологические и технологические системы, восстанавливая плоть и кремний с невероятной скоростью путем рекомбинации на субмолекулярном уровне. Облако просто простирается, чтобы покрыть раненых и "размять" то, что, как оказалось, отсутствует или недееспособно. Люди живут в ужасе от того, что они создали. Но, по крайней мере, этот особый рой совершенно доброжелателен. Не все такие субмолекулярные силы окажутся такими благими.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTEATER</Tag>
@@ -3996,7 +3996,7 @@
 		<Tag>TXT_KEY_UNIT_AUTOM_INFANTRY_PEDIA</Tag>
 		<English>Automated Infantry are the second 'generation' of autonomous military (after the Walker Robot). They are armed with coilguns.</English>
 		<Polish>Automatyczna Piechota to druga generacja autonomicznej piechoty. Wyposażona jest w broń Gaussa.</Polish>
-		<Russian>Автопехота - это второе «поколение» автономных вооруженных сил (после робота-разведчика). Они вооружены гаусс-пушками.</Russian>
+		<Russian>Автопехота - это второе "поколение" автономных вооруженных сил (после робота-разведчика). Они вооружены гаусс-пушками.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUTO_ELECTRICIAN</Tag>
@@ -4125,7 +4125,7 @@
 		<English>Supersonic Bomber</English>
 		<French>Bombardier Supersonique</French>
 		<Polish>Naddźwiękowy Bombowiec</Polish>
-		<Russian>B-1 «Ëàíñåð»</Russian>
+		<Russian>B-1 "Ëàíñåð"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B1_LANCER_PEDIA</Tag>
@@ -4137,7 +4137,7 @@
 		<English>Jet Bomber</English>
 		<French>Bombardier à réaction</French>
 		<Polish>Bombowiec Odrzutowy</Polish>
-		<Russian>B-52 «Ñòðàòîôîðòðåññ»</Russian>
+		<Russian>B-52 "Ñòðàòîôîðòðåññ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B52_BOMBER_PEDIA</Tag>
@@ -4993,7 +4993,7 @@
 		<Tag>TXT_KEY_UNIT_BLEEDER_PEDIA</Tag>
 		<English>The Genetic Soldiers were organized to cope with terrorist incidents specifically involving weapons of mass destruction typified in nuclear, biological and chemical warfare. Its members were strengthened through gene therapy, having either been injected with the "soldier genes", or otherwise having their nucleotide alignment rearranged to resemble Perfect DNA. Many also underwent VR training, guided by the Force XXI concept, but had little or no actual field experience.</English>
 		<Polish>Sterowiec Ciśnieniowy</Polish>
-		<Russian>Генно-модифицированные солдаты предназначены для борьбы с местным и международным терроризмом, в частности с применением оружия массового уничтожения, типичного для ядерной, биологической и химической войны. Его члены были усилены с помощью генной терапии, либо им были введены «гены солдата», либо их нуклеотидное выравнивание изменилось иным образом, чтобы оно стало напоминанием совершенной ДНК. Многие также прошли обучение виртуальной реальности, руководствуясь концепцией Force XXI, но практически не имели практического опыта.</Russian>
+		<Russian>Генно-модифицированные солдаты предназначены для борьбы с местным и международным терроризмом, в частности с применением оружия массового уничтожения, типичного для ядерной, биологической и химической войны. Его члены были усилены с помощью генной терапии, либо им были введены "гены солдата", либо их нуклеотидное выравнивание изменилось иным образом, чтобы оно стало напоминанием совершенной ДНК. Многие также прошли обучение виртуальной реальности, руководствуясь концепцией Force XXI, но практически не имели практического опыта.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP</Tag>
@@ -5637,7 +5637,7 @@
 		<Tag>TXT_KEY_UNIT_CANIS_SUPERIOR_PEDIA</Tag>
 		<English>Canis Superior, commonly referred to as a "K-9 dog" (which is a homophone of canine), is a dog that is trained specifically to assist police and other law-enforcement personnel in their work.</English>
 		<Polish>Pies Tropiący jest specjalnie tresowany towarzyszenia policjantom w pracy.</Polish>
-		<Russian>Canis Superior, которую обычно называют «собакой К-9» (которая является гомофоном собаки), является специально обученным псом для оказания помощи полиции и другим сотрудникам правоохранительных органов в их работе.</Russian>
+		<Russian>Canis Superior, которую обычно называют "собакой К-9" (которая является гомофоном собаки), является специально обученным псом для оказания помощи полиции и другим сотрудникам правоохранительных органов в их работе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANNON_PEDIA</Tag>
@@ -6423,7 +6423,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY_PEDIA</Tag>
 		<English>Years of secret experimentation with "discarded" IVF foetuses has led us to this. We can now reliably enhance the genetic makeup of a pre-born human... so as to better suit our purposes. Forget cloning (because we can't do that yet...) - we will enhance each human killing machine individually for you.</English>
-		<Russian>К этому нас привели годы тайных экспериментов с «выброшенными» плодами ЭКО. Теперь мы можем надежно улучшить генетический состав еще не рожденного человека... дабы тот лучше соответствовал нашим целям. Забудьте о клонировании (потому что мы пока не можем этого сделать...) - мы улучшим каждую машину для убийства людей индивидуально для вас.</Russian>
+		<Russian>К этому нас привели годы тайных экспериментов с "выброшенными" плодами ЭКО. Теперь мы можем надежно улучшить генетический состав еще не рожденного человека... дабы тот лучше соответствовал нашим целям. Забудьте о клонировании (потому что мы пока не можем этого сделать...) - мы улучшим каждую машину для убийства людей индивидуально для вас.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULALONGKORN</Tag>
@@ -6559,7 +6559,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLONE_INFANTRY_PEDIA</Tag>
 		<English>Now that cloning is a mainstream technology, it was only a matter of time before the mad scientists of the 'defence' sector got their hands on it. At first activists were up in arms about people bred in labs purely as killing machines. However, the clones themselves pointed out that they are not automatons, even going so far as to claim that the military was their chosen profession. Of course, not everyone was convinced, but - what can you do?</English>
-		<Russian>Теперь, когда клонирование стало основной технологией, это было лишь вопросом времени, когда сумасшедшие ученые из «оборонного» сектора овладели ею. Поначалу активисты негодовали по поводу людей, выращенных в лабораториях в качестве машин для убийства. Однако сами клоны указали, что они не автоматы, даже заявив, что они выбрали профессию военного. Конечно, не всех убедили, но - что поделаешь?</Russian>
+		<Russian>Теперь, когда клонирование стало основной технологией, это было лишь вопросом времени, когда сумасшедшие ученые из "оборонного" сектора овладели ею. Поначалу активисты негодовали по поводу людей, выращенных в лабораториях в качестве машин для убийства. Однако сами клоны указали, что они не автоматы, даже заявив, что они выбрали профессию военного. Конечно, не всех убедили, но - что поделаешь?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN</Tag>
@@ -7557,7 +7557,7 @@
 		<Tag>TXT_KEY_UNIT_DREADNOUGHT_SHIP_PEDIA</Tag>
 		<English>The dreadnought was the predominant type of 20th-century battleship. The first of the kind, the Royal Navy's Dreadnought had such an impact when launched in 1906 that battleships built after her were referred to as 'dreadnoughts', and earlier battleships became known as pre-dreadnoughts. Her design had two revolutionary features; an 'all-big-gun' armament scheme and steam turbine propulsion. The arrival of the dreadnoughts renewed the naval arms race, principally between Britain and Germany but reflected worldwide, as the new class of warships became a crucial symbol of national power.[PARAGRAPH:2]The concept of an all-big-gun ship had been in development for several years before Dreadnought's construction. The Imperial Japanese Navy had begun work on an all-big-gun battleship in 1904, but finished the ship as a pre-dreadnought; the United States Navy was also building all-big-gun battleships. Technical development continued rapidly through the dreadnought era. Successive designs increased rapidly in size and made use of improvements in armament, armor, and propulsion. Within ten years, new battleships outclassed Dreadnought herself. These more powerful vessels were known as 'super-dreadnoughts'. Most of the dreadnoughts were scrapped after the end of World War I under the terms of the Washington Naval Treaty, but many of the newer super-dreadnoughts continued serving through World War II.[PARAGRAPH:2]While dreadnought building consumed vast resources in the early 20th century, there was only one pitched battle between dreadnought fleets. At the Battle of Jutland, the British and German navies clashed with no decisive result. The term 'dreadnought' gradually dropped from use after World War I, as all battleships shared dreadnought characteristics; it can also be used to describe battlecruisers, the other type of ship resulting from the dreadnought revolution.</English>
 		<Polish>HMS Dreadnought? pancernik brytyjski o przełomowej konstrukcji, który wszedł do służby w 1906 roku i zarazem szósty okręt Royal Navy noszący tę nazwę. "Dreadnought" tak mocno zaznaczył się w rozwoju okrętów, że od jego nazwy pochodzi określenie rodzaju pancerników? drednotów. Wszystkie okręty, które były oparte na wcześniejszych projektach, stały się po jego wejściu do służby przestarzałe i są obecnie określane jako przeddrednoty. Jego wejście do służby było jedną z głównych przesłanek, które dały początek nowemu wyścigowi zbrojeń morskich pomiędzy ówczesnymi potęgami militarnymi (Wielką Brytanią i Niemcami), co w konsekwencji było jedną z przyczyn wybuchu I wojny światowej. "Dreadnought" był pierwszym pancernikiem, który miał liczną artylerię główną ujednoliconego kalibru, w przeciwieństwie do bezpośrednio poprzedzających go pancerników, które miały kilka dział dużego kalibru i kilka lub kilkanaście dział drugiego? mniejszego głównego kalibru oraz artylerię średnią. Był także pierwszym dużym okrętem napędzanym przez turbiny parowe, co sprawiło, że w momencie ukończenia budowy był najszybszym pancernikiem na świecie.</Polish>
-		<Russian>Дредноут был преобладающим типом линкоров 20 века. Первый в своем роде дредноут Королевского флота оказал такое влияние, когда был спущен на воду в 1906 году, что построенные после него линкоры стали называть «дредноутами», а более ранние линкоры стали известны как дредноуты. Ее дизайн имел две революционные особенности; схема вооружения «все-большая пушка» и паровая турбина. Прибытие дредноутов возобновило гонку военно-морских вооружений, в основном между Великобританией и Германией, но отразившуюся во всем мире, поскольку новый класс военных кораблей стал решающим символом национальной мощи.[PARAGRAPH:2]Концепция корабля с мощными орудиями большого калибра на борту разрабатывалась за несколько лет до постройки Дредноута. Императорский флот Японии начал работы над линкором с большой артиллерией в 1904 году, но закончил его как дредноут; ВМС Соединенных Штатов также строили крупнокалиберные линкоры. Техническое развитие быстро продолжалось в эпоху дредноутов. Последовательные конструкции быстро увеличивались в размерах и включали улучшения в вооружении, броне и силовой установке. В течение десяти лет новые линкоры превзошли саму Дредноут. Эти более мощные суда были известны как «супер-дредноуты». Большинство дредноутов было списано после окончания Первой мировой войны в соответствии с положениями Вашингтонского военно-морского договора, но многие из более новых супердредноутов продолжали служить во время Второй мировой войны.[PARAGRAPH:2]В то время как в начале 20 века строительство дредноутов потребляло огромные ресурсы, между флотами дредноутов было только одно крупное сражение. В Ютландской битве британские и немецкие флоты столкнулись без решающего результата. Термин «дредноут» постепенно исчез из употребления после Первой мировой войны, поскольку все линкоры имели общие характеристики дредноутов; его также можно использовать для описания линейных крейсеров, другого типа кораблей, возникшего в результате революции дредноутов.</Russian>
+		<Russian>Дредноут был преобладающим типом линкоров 20 века. Первый в своем роде дредноут Королевского флота оказал такое влияние, когда был спущен на воду в 1906 году, что построенные после него линкоры стали называть "дредноутами", а более ранние линкоры стали известны как дредноуты. Ее дизайн имел две революционные особенности; схема вооружения "все-большая пушка" и паровая турбина. Прибытие дредноутов возобновило гонку военно-морских вооружений, в основном между Великобританией и Германией, но отразившуюся во всем мире, поскольку новый класс военных кораблей стал решающим символом национальной мощи.[PARAGRAPH:2]Концепция корабля с мощными орудиями большого калибра на борту разрабатывалась за несколько лет до постройки Дредноута. Императорский флот Японии начал работы над линкором с большой артиллерией в 1904 году, но закончил его как дредноут; ВМС Соединенных Штатов также строили крупнокалиберные линкоры. Техническое развитие быстро продолжалось в эпоху дредноутов. Последовательные конструкции быстро увеличивались в размерах и включали улучшения в вооружении, броне и силовой установке. В течение десяти лет новые линкоры превзошли саму Дредноут. Эти более мощные суда были известны как "супер-дредноуты". Большинство дредноутов было списано после окончания Первой мировой войны в соответствии с положениями Вашингтонского военно-морского договора, но многие из более новых супердредноутов продолжали служить во время Второй мировой войны.[PARAGRAPH:2]В то время как в начале 20 века строительство дредноутов потребляло огромные ресурсы, между флотами дредноутов было только одно крупное сражение. В Ютландской битве британские и немецкие флоты столкнулись без решающего результата. Термин "дредноут" постепенно исчез из употребления после Первой мировой войны, поскольку все линкоры имели общие характеристики дредноутов; его также можно использовать для описания линейных крейсеров, другого типа кораблей, возникшего в результате революции дредноутов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER</Tag>
@@ -7653,7 +7653,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Śmigłowiec Desantowy</Polish>
-		<Russian>Âåðòîëåò «Êàðàòåëü»</Russian>
+		<Russian>Âåðòîëåò "Êàðàòåëü"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
@@ -7740,7 +7740,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Myśliwiec P-59</Polish>
-		<Russian>P-59 «Ýéðêîìåò»</Russian>
+		<Russian>P-59 "Ýéðêîìåò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLYSTEALTH</Tag>
@@ -8744,7 +8744,7 @@
 		<English>Jet Interceptor</English>
 		<French>Intercepteur à réaction</French>
 		<Polish>Odrzutowiec Przechwytujący</Polish>
-		<Russian>F-104 «Ñòàðôàéòåð»</Russian>
+		<Russian>F-104 "Ñòàðôàéòåð"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F104_STARFIGHTER_PEDIA</Tag>
@@ -8756,7 +8756,7 @@
 		<English>Jet Fighter</English>
 		<French>Chasseur à réaction</French>
 		<Polish>Myśliwiec Odrzutowy</Polish>
-		<Russian>F-111 «Òðóáêîçóá»</Russian>
+		<Russian>F-111 "Òðóáêîçóá"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F111_AARDVARK_PEDIA</Tag>
@@ -8766,7 +8766,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F14_TOMCAT</Tag>
 		<English>F14 Tomcat</English>
-		<Russian>F-14 «Òîìêýò»</Russian>
+		<Russian>F-14 "Òîìêýò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F14_TOMCAT_PEDIA</Tag>
@@ -8781,7 +8781,7 @@
 		<Italian>F18 Hornet</Italian>
 		<Spanish>F18 Hornet</Spanish>
 		<Polish>Współczesny Myśliwiec Pokładowy</Polish>
-		<Russian>F-18 «Õîðíåò»</Russian>
+		<Russian>F-18 "Õîðíåò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F18_HORNET_PEDIA</Tag>
@@ -8795,7 +8795,7 @@
 		<English>Stealth Interceptor</English>
 		<French>Intercepteur furtif</French>
 		<Polish>Niewykrywalny Myśliwiec Przechwytujący</Polish>
-		<Russian>F-22 «Ðàïòîð»</Russian>
+		<Russian>F-22 "Ðàïòîð"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F22_RAPTOR_PEDIA</Tag>
@@ -8811,7 +8811,7 @@
 		<Italian>F4 Phantom</Italian>
 		<Spanish>F4 Phantom</Spanish>
 		<Polish>Pokładowy Myśliwiec Odrzutowy</Polish>
-		<Russian>F-4 «Ôàíòîì» II</Russian>
+		<Russian>F-4 "Ôàíòîì" II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F4_PHANTOM_PEDIA</Tag>
@@ -9455,7 +9455,7 @@
 		<English>Directly related to it's cousin the Tactical Fusi, the Fusion Nova (a.k.a. The Island Sinker) uses fusion implosions to destroy areas of target rich environments. Unlike the Tactical Fusi, this weapon has a larger implosion radius, sinking any city and its improvements or surrounding guardian units. Due to the intensity of this weapon, the number able to be made is much smaller than that of the Tactical Fusi.</English>
 		<German>Genau wie die taktische Fusionsbombe nutzt die Nova-Fusionsbombe (auch Inselversenker genannt) Fusionsimplosionen, um Bereiche voller potenzieller Ziele zu vernichten. Als Weiterentwicklung der taktischen Fusionsbombe hat sie allerdings einen größeren Implosionsradius, der es ihr ermöglicht, eine Stadt samt all ihrer Geländemodernisierungen und aller Einheiten im Umfeld komplett im Meer zu versenken. Da diese Waffe so unglaublich verheerend ist, können nur sehr wenige Nova-Fusionsbomben zur gleichen Zeit unterhalten werden.</German>
 		<Italian>Direttamente imparentata con la bomba a fusione tattica, la bomba a fusione Nova (a.k.a. Affondatrice di isole) usa le implosioni a fusione per distruggere aree con ricchi miglioramenti. A differenza della bomba a fusione tattica, quest'arma ha un raggio di implosione più ampio, affondano in acqua ogni città, relativi miglioramenti e le unità difensive. A causa della potenza di quest'arma, ne possono essere costruite un numero minore rispetto alla bomba a fusione tattica.</Italian>
-		<Russian>Непосредственно связанный со своим близким родичем - ОТР «Нова» (или «Island Sinker») использует реакцию ядерного синтеза для опустошения участков областей со множеством целей. В отличие от оперативно тактической ракеты «Фьюжн», это оружие имеет больший радиус поражения, накрывая взрывной волной любой город и его окрестности вместе с его гарнизоном. Из-за дороговизны технологии изготовления этого оружия, его доступное количество намного меньше, чем у «Фьюжн».</Russian>
+		<Russian>Непосредственно связанный со своим близким родичем - ОТР "Нова" (или "Island Sinker") использует реакцию ядерного синтеза для опустошения участков областей со множеством целей. В отличие от оперативно тактической ракеты "Фьюжн", это оружие имеет больший радиус поражения, накрывая взрывной волной любой город и его окрестности вместе с его гарнизоном. Из-за дороговизны технологии изготовления этого оружия, его доступное количество намного меньше, чем у "Фьюжн".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_NUKE</Tag>
@@ -9477,7 +9477,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Taktyczna Bomba Fuzyjna</Polish>
-		<Russian>Ðàêåòà «Ôüþæí»</Russian>
+		<Russian>Ðàêåòà "Ôüþæí"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_NUKE_PEDIA</Tag>
@@ -9485,7 +9485,7 @@
 		<German>Die taktische Fusionsbombe ist ein Implosivkörper, der seine Energie nicht aus Kernspaltung, sondern aus Kernfusion bezieht. Es handelt sich um eine Weiterentwicklung der herkömmlichen Kernwaffen, die ohne die lästigen Nebenprodukte wie die atomare Verseuchung und den radioaktiven Fallout auskommt. Die Bombe implodiert, anstatt zu explodieren, und zerstört dabei alles in ihrem Wirkungsbereich. Jegliche Art von Materie, seien es Häuser, Einheiten, Menschen, Tiere, Pflanzen, ja selbst der Erdboden, wird auf die Größe eines Tennisballs komprimiert, sodass nach einem Einschlag nichts als das reine Grundwasser zurückbleibt. Die taktische Fusionsbombe ist deshalb nicht nur zur Kriegsführung geeignet, sie kann auch genutzt werden, um neue Wasserwege zu erschaffen und ansonsten unnützes Land zu entfernen.</German>
 		<Italian>La bomba a fusione tattica è la prima delle più moderne e grandi risorse con cui dare una bella sorpresa a quella speciale civiltà. Questo nuovo tipo di bomba rende obsoleta la necessità di grandi esplosioni, includendo le radiazioni del fallout delle comuni bombe atomiche. Al contrario, la bomba usa il potere dell'implosione, forzando tutto ciò che è all'interno del suo raggio esplosivo in un grumo delle dimensioni di una palla da baseball. A causa della grande intensità di quest'arma, solo poche sono state costruite. Questa è una grande arma anche per costruire un canale e dare accesso all'acqua a quell'inutile città di terra. ATTENZIONE: cerca di mantenere molti alleati, se non vuoi che il tuo impero diventi un grande lago!.</Italian>
 		<Polish>The Tactical Fusi (short for Fusion) is the first in the latest and greatest way to give that special civilization a good surprise. This new type of bomb obsoletes the need for messy explosions including the all-elusive radiation fallout from nuclear bombs. Instead, this bomb expands upon the power of implosions, forcing everything within it's radius into a ball of mush the size of a baseball. Due to the pure intensity of this weapon, only so many may be made to try and keep the pothole count down. This is also a great weapon to make a canal or give that useless, landlocked city some water access. WARNING: try to keep as many civs allied at a time so your country won't end up as a big lake.</Polish>
-		<Russian>Оперативно-тактическая термоядерная ракета (сокращенно «Фьюжн») - это первый и наилучший способ преподнести хороший сюрприз зазнавшемуся конкуренту. Этот новый тип бомб устраняет необходимость в грязных взрывах, включая всеохватывающие радиационные выбросы от ядерных бомб. Вместо этого эта ракета порождает чистую взрывную волну необычайной мощности, обращая все в пределах своего радиуса действия в шарики размером с бейсбольный мяч. Из-за чистой силы этого оружия, только очень немногие могут попытаться уменьшить количество ударных кратеров. Также это отличное оружие для сооружения рукотворных проливов, дав шанс захудалому, не имеющему выхода к морю городу доступ к воде. [COLOR_NEGATIVE_TEXT]ВНИМАНИЕ:[COLOR_REVERT] старайтесь поддерживать отношения с как можно большим числом союзных цивилизаций, чтобы ваша страна однажды не превратилась в большое озеро.</Russian>
+		<Russian>Оперативно-тактическая термоядерная ракета (сокращенно "Фьюжн") - это первый и наилучший способ преподнести хороший сюрприз зазнавшемуся конкуренту. Этот новый тип бомб устраняет необходимость в грязных взрывах, включая всеохватывающие радиационные выбросы от ядерных бомб. Вместо этого эта ракета порождает чистую взрывную волну необычайной мощности, обращая все в пределах своего радиуса действия в шарики размером с бейсбольный мяч. Из-за чистой силы этого оружия, только очень немногие могут попытаться уменьшить количество ударных кратеров. Также это отличное оружие для сооружения рукотворных проливов, дав шанс захудалому, не имеющему выхода к морю городу доступ к воде. [COLOR_NEGATIVE_TEXT]ВНИМАНИЕ:[COLOR_REVERT] старайтесь поддерживать отношения с как можно большим числом союзных цивилизаций, чтобы ваша страна однажды не превратилась в большое озеро.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_SUBMARINE</Tag>
@@ -9892,7 +9892,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Òàíê «Ïàíòåðà»</Russian>
+		<Russian>Òàíê "Ïàíòåðà"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERMAN_PANZER_PEDIA</Tag>
@@ -10503,7 +10503,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Helikopter</Polish>
-		<Russian>AH-64 «Àïà÷»</Russian>
+		<Russian>AH-64 "Àïà÷"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUNSHIP_PEDIA</Tag>
@@ -10659,7 +10659,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HALFTRACK_PEDIA</Tag>
 		<English>An anti-aircraft vehicle, also known as a self-propelled anti-aircraft gun (SPAAG) or self-propelled air defense system (SPAD), is a mobile vehicle with a dedicated anti-aircraft capability. The Russian equivalent of SPAAG is ZSU, for zenitnaya samokhodnaya ustanovka, ("anti-aircraft self-propelled mount"). Specific weapon systems used include machine guns, autocannons, larger guns, or missiles, and some mount both guns and longer-ranged missiles (Pantsir-S1). Platforms used include both trucks and heavier combat vehicles such as APCs and tanks, which add protection from aircraft, artillery, and small arms fire for front line deployment. Anti-aircraft guns are usually mounted in a quickly-traversing turret with a high rate of elevation, for tracking fast-moving aircraft. They are often in dual or quadruple mounts, allowing a high rate of fire. Today, missiles (generally mounted on similar turrets) have largely supplanted anti-aircraft guns.</English>
-		<Russian>Зенитный комплекс, также известный как самоходная зенитная установка (ЗСУ) или самоходная система противовоздушной обороны (ССПВО), представляет собой мобильную машину со специальным зенитным потенциалом. Американский аналог ЗСУ - SPAD, что означает «самоходная противовоздушная система». Конкретные используемые системы вооружения включают пулеметы, автопушки, более крупные орудия или ракеты, а на некоторых устанавливаются как орудия, так и ракеты большей дальности (Панцирь-С1). Используемые платформы включают как грузовики, так и более тяжелые боевые машины, такие как БТР и танки, которые обеспечивают дополнительную защиту от огня самолетов, артиллерии и стрелкового оружия для развертывания на передовой. Зенитные орудия обычно устанавливаются в быстроходной башне с большой скоростью возвышения для отслеживания быстро движущихся самолетов. Они часто бывают двойными или четверными, что обеспечивает высокую скорострельность. Сегодня ракеты (обычно устанавливаемые на аналогичные башни) в значительной степени вытеснили зенитные орудия.</Russian>
+		<Russian>Зенитный комплекс, также известный как самоходная зенитная установка (ЗСУ) или самоходная система противовоздушной обороны (ССПВО), представляет собой мобильную машину со специальным зенитным потенциалом. Американский аналог ЗСУ - SPAD, что означает "самоходная противовоздушная система". Конкретные используемые системы вооружения включают пулеметы, автопушки, более крупные орудия или ракеты, а на некоторых устанавливаются как орудия, так и ракеты большей дальности (Панцирь-С1). Используемые платформы включают как грузовики, так и более тяжелые боевые машины, такие как БТР и танки, которые обеспечивают дополнительную защиту от огня самолетов, артиллерии и стрелкового оружия для развертывания на передовой. Зенитные орудия обычно устанавливаются в быстроходной башне с большой скоростью возвышения для отслеживания быстро движущихся самолетов. Они часто бывают двойными или четверными, что обеспечивает высокую скорострельность. Сегодня ракеты (обычно устанавливаемые на аналогичные башни) в значительной степени вытеснили зенитные орудия.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAMILCAR</Tag>
@@ -12151,7 +12151,7 @@
 		<Tag>TXT_KEY_UNIT_IVAN_IV_PEDIA</Tag>
 		<English>Ivan IV, known as Ivan the Terrible, was the Grand Prince of Moscow, the Czar of Russia from 1547 until his death in 1584. Contrary to popular belief, the epithet "Grozny" (terrible) is associated with might, power and strictness, rather than poor performance, horror or cruelty. Some authors more accurately translate it into modern English as Ivan the Awesome. Ivan was intelligent, devout, and impulsive; given to rages, and according to the suspicions of some, probably had episodic outbreaks of mental illness. One notable outburst resulted in the death of his groomed and chosen heir Ivan Ivanovich resulting in the passing of the Tsardom to a less than ideal younger son the mentally retarded Feodor I of Russia. His long reign saw the conquest of the Khanates of Kazan, Astrakhan, and Siberia, transforming Russia into a multiethnic and multiconfessional state spanning almost 1 billion acres.</English>
 		<Polish>Iwan IV wstąpił na tron w wieku 16 lat. W 1555 r. przeprowadził gruntowną reformę systemu prawnego państwa i usprawnił jego administrację. Ofiarami tej reformy byli bojarzy, którzy zostali wysiedleni na wyznaczone tereny zwane ziemszczyzną i prześladowani. Prowadził niezwykle agresywną politykę wobec swoich sąsiadów. Za jego panowania Rosja zdobyła Kazań, Astrachań i zachodnią Syberię, doprowadził też do nawiązania kontaktów handlowych z Anglią. W 1552 zaanektował Chanat Kazański, w 1554 roku Astrachański a w 1582 roku przyłączył Chanat Syberyjski. Uderzył też na państwo zakonu kawalerów mieczowych w Inflantach zdobywając w 1558 roku Dorpat i Narwę, rozpoczynając wojny inflanckie. Kontynuował ekspansję Rosji na wschodnie ziemie Wielkiego Księstwa Litewskiego. W czasie wojny litewsko-rosyjskiej 1558-1570 zdobył w 1563 roku Połock, rozkazując utopić w Dźwinie wszystkich tamtejszych Żydów. W 1582 roku zawarł rozejm w Jamie Zapolskim z królem Polski, Stefanem Batorym, kończący wojnę o Inflanty toczoną z państwem polsko-litewskim. Iwan IV zasłynął jako człowiek okrutny. Począwszy od 1560 roku z jego polecenia stracono tysiące ludzi, w 1581 roku w napadzie szału zamordował drugiego syna, Iwana. Czynami tymi zapracował na przydomek "Groźny". Po śmierci Iwana IV tron objął jego trzeci syn, Fiodor I. Iwan IV był władcą o rozległych zainteresowaniach intelektualnych. Sięgał po pióro, i to nie tylko gwoli polemik ze swymi przeciwnikami, skoro przypisuje się mu autorstwo utworów liturgicznych i udział w redagowaniu kronik. Car popierał rozwój sztuki, zwłaszcza architektury i malarstwa. W okresie jego rządów pojawił się w Rosji druk. Był siedmiokrotnie żonaty; trzy z jego żon zmarły za jego życia, z trzema się rozwiódł, ostatnia, Maria Nagoj, przeżyła go. Iwan IV doprowadził swoją represyjną polityką do politycznego i gospodarczego kryzysu państwa. W 1565 roku wprowadził opriczninę, czyli carską policję, odpowiedzialną za liczne masakry ludności i rabunki; zlikwidował ją w 1572 roku widząc, że wymknęła mu się spod kontroli. Rezultatem działania opriczniny była śmierć ok. 100 tys. ludzi. Do jego niewątpliwych zasług należą reforma armii na wzór zachodni i utworzenie zbioru praw, tzw. Carski Sudiebnik. Zmarł w 1584 roku podczas rozgrywania partii szachów, co zostało udokumentowane przez przebywającego wówczas w Moskwie posła angielskiego.</Polish>
-		<Russian>Иван IV, известный как Иван Грозный, был великим князем московским, царем всея Руси с 1547 года до своей смерти в 1584 году. Вопреки распространенному мнению, эпитет «Грозный» (страшный) связан с мощью, силой и строгостью, а не с самодурством, ужасом или жестокостью. Некоторые авторы более точно переводят его на современный английский как «Иван Великолепный». Иван был умным, набожным и в то же время крайне импульсивным; приведенный в ярость, и согласно некоторым догадкам, вероятно, имел эпизодические вспышки психического заболевания. Одна заметная вспышка привела к гибели его любимца и избранного им наследника Ивана Ивановича, что привело к передаче Царства менее способному младшему сыну - умственно отсталому Федору I в России. Его долгое правление привело к завоеванию Казанских, Астраханских и Сибирских ханств, превратив Россию в многонациональное и многоконфессиональное государство, охватывающее почти 1 млрд. акров.</Russian>
+		<Russian>Иван IV, известный как Иван Грозный, был великим князем московским, царем всея Руси с 1547 года до своей смерти в 1584 году. Вопреки распространенному мнению, эпитет "Грозный" (страшный) связан с мощью, силой и строгостью, а не с самодурством, ужасом или жестокостью. Некоторые авторы более точно переводят его на современный английский как "Иван Великолепный". Иван был умным, набожным и в то же время крайне импульсивным; приведенный в ярость, и согласно некоторым догадкам, вероятно, имел эпизодические вспышки психического заболевания. Одна заметная вспышка привела к гибели его любимца и избранного им наследника Ивана Ивановича, что привело к передаче Царства менее способному младшему сыну - умственно отсталому Федору I в России. Его долгое правление привело к завоеванию Казанских, Астраханских и Сибирских ханств, превратив Россию в многонациональное и многоконфессиональное государство, охватывающее почти 1 млрд. акров.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IWIA_BATTALION</Tag>
@@ -12406,7 +12406,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Współczesny Myśliwiec Odrzutowy</Polish>
-		<Russian>F-16 «Ôàéòèíã Ôàëêîí»</Russian>
+		<Russian>F-16 "Ôàéòèíã Ôàëêîí"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JET_FIGHTER_PEDIA</Tag>
@@ -16031,7 +16031,7 @@
 		<Tag>TXT_KEY_UNIT_NANITE_CLOUD_PEDIA</Tag>
 		<English>Nanotechnology ("nanotech") is the manipulation of matter on an atomic, molecular, and supramolecular scale. The earliest, widespread description of nanotechnology referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as molecular nanotechnology. A more generalized description of nanotechnology was subsequently established by the National Nanotechnology Initiative, which defines nanotechnology as the manipulation of matter with at least one dimension sized from 1 to 100 nanometers. This definition reflects the fact that quantum mechanical effects are important at this quantum-realm scale, and so the definition shifted from a particular technological goal to a research category inclusive of all types of research and technologies that deal with the special properties of matter that occur below the given size threshold</English>
 		<Polish>W teorii są to mechanizmy bardzo małe (kilka nanometrów) służące do celów medycznych, tudzież bojowych. Mogą działać jak Chmura Naprawcza (reperować struktury budynków i pojazdów). Specjaliści od Nanotechnologii często krytykują pomysły pisarzy gatunków Cyberpunk czy Wojennej Fantastyki że Nanoboty ( popularna nazwa Nanomaszyn) mogą być używane do celów przestępczych lub wojny, choć inni specjaliści twierdzą że: "Armia i Ulica znajdą zastosowanie do wszystkiego". Obecnie najbardziej prawdopodobne jest zastosowanie Inżynierów z książek naukowych Dexlera. są to Nanomaszyny stworzone z Białek, min kultur E-coli.</Polish>
-		<Russian>Нанотехнология («нанотех») - это манипулирование веществом в атомном, молекулярном и супрамолекулярном масштабе. Самое раннее, широко распространенное описание нанотехнологий относится к конкретной технологической цели точного манипулирования атомами и молекулами для изготовления макромасштабных продуктов, также называемой сейчас молекулярной нанотехнологией. Более обобщенное описание нанотехнологий было впоследствии установлено Национальной инициативой по нанотехнологиям, которая определяет нанотехнологию как манипулирование веществом, имеющим по меньшей мере один размер размером от 1 до 100 нанометров. Это определение отражает тот факт, что квантово-механические эффекты важны в этом масштабе квантовой области, и поэтому определение перешло от конкретной технологической цели к категории исследований, включающей все виды исследований и технологий, которые имеют дело с особыми свойствами материи, которые происходят ниже заданного порога размера.</Russian>
+		<Russian>Нанотехнология ("нанотех") - это манипулирование веществом в атомном, молекулярном и супрамолекулярном масштабе. Самое раннее, широко распространенное описание нанотехнологий относится к конкретной технологической цели точного манипулирования атомами и молекулами для изготовления макромасштабных продуктов, также называемой сейчас молекулярной нанотехнологией. Более обобщенное описание нанотехнологий было впоследствии установлено Национальной инициативой по нанотехнологиям, которая определяет нанотехнологию как манипулирование веществом, имеющим по меньшей мере один размер размером от 1 до 100 нанометров. Это определение отражает тот факт, что квантово-механические эффекты важны в этом масштабе квантовой области, и поэтому определение перешло от конкретной технологической цели к категории исследований, включающей все виды исследований и технологий, которые имеют дело с особыми свойствами материи, которые происходят ниже заданного порога размера.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD</Tag>
@@ -16044,7 +16044,7 @@
 		<Tag>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD_PEDIA</Tag>
 		<English>The time has finally arrived where the formless begins to trump form. Where the meek shall inherit the Earth. The miniature minds of many add into a massive mind of one. This particular Nanite Cloud is tasked to find and repair all manner of biological and technological systems, repairing flesh and silicon at mind numbing speeds by recombinating at the molecular level. The cloud simply extends to coat the injured and 'flesh' out whatever happens to be missing or disfunctional. Humans live in terror of that which they have created has now created. But at least this particular swarm is entirely benevolent. Not all such microscopic forces will prove to be so kind.</English>
 		<Polish>W teorii są to mechanizmy bardzo małe (kilka nanometrów) służące do celów medycznych, tudzież bojowych. Mogą działać jak Chmura Naprawcza (reperować struktury budynków i pojazdów). Specjaliści od Nanotechnologii często krytykują pomysły pisarzy gatunków Cyberpunk czy Wojennej Fantastyki że Nanoboty ( popularna nazwa Nanomaszyn) mogą być używane do celów przestępczych lub wojny, choć inni specjaliści twierdzą że: "Armia i Ulica znajdą zastosowanie do wszystkiego". Obecnie najbardziej prawdopodobne jest zastosowanie Inżynierów z książek naukowych Dexlera. są to Nanomaszyny stworzone z Białek, min kultur E-coli.</Polish>
-		<Russian>Наконец пришло время, когда бесформенное начинает диктовать условия форме, когда малые унаследуют Землю, а миниатюрные умы многих превосходят единый сверхразум. Этому конкретному Облаку Нанитов поручено находить и восстанавливать всевозможные биологические и технологические системы, восстанавливая плоть и кремний с невероятной скоростью, рекомбинируя на молекулярном уровне. Облако просто простирается, чтобы покрыть раненых и «измазать» все, что случается отсутствующим или неработающим. Люди живут в ужасе от того, что они создали. Но, по крайней мере, этот особый рой совершенно доброжелателен. Далеко не все подобные микроскопические силы окажутся такими благими.</Russian>
+		<Russian>Наконец пришло время, когда бесформенное начинает диктовать условия форме, когда малые унаследуют Землю, а миниатюрные умы многих превосходят единый сверхразум. Этому конкретному Облаку Нанитов поручено находить и восстанавливать всевозможные биологические и технологические системы, восстанавливая плоть и кремний с невероятной скоростью, рекомбинируя на молекулярном уровне. Облако просто простирается, чтобы покрыть раненых и "измазать" все, что случается отсутствующим или неработающим. Люди живут в ужасе от того, что они создали. Но, по крайней мере, этот особый рой совершенно доброжелателен. Далеко не все подобные микроскопические силы окажутся такими благими.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANITE_SPY</Tag>
@@ -16554,7 +16554,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NLOS_CANNON_PEDIA</Tag>
 		<English>The XM1203 Non-Line-of-Sight Cannon (NLOS Cannon) was a mobile 155 mm cannon intended to provide improved responsiveness and lethality to the "unit of action" (UA) commander as part of the US Army's Future Combat Systems project. This self-propelled armored artillery piece provided networked, extended-range targeting, and precision attack of point and area targets in support of other combat units with a suite of munitions that include special purpose capabilities. The Non-Line-of-Sight Cannon provided sustained fire for close support and destructive fire for tactical standoff engagement. The NLOS Cannon used technology from the canceled XM2001 Crusader.</English>
-		<Russian>Пушка XM1203 Non-Line-of-Sight Cannon (САУ NLOS) является самоходной 155-мм гаубицей, предназначенной для обеспечения повышенной точности и летальности «боевого расчета» (АЕ) в рамках проекта «Боевые Системы Будущего» армии США. Эта самоходная артиллерийская установка обеспечивала сетевое целеуказание с увеличенной дальностью и высокоточную атаку точечных и площадных целей в поддержку других боевых единиц с помощью набора боеприпасов, которые включают средства специального назначения. Пушка вне зоны видимости обеспечивала непрерывный огонь для непосредственной поддержки и разрушительный огонь для тактического противостояния. Для САУ NLOS использовалась технология устаревшей гаубицы XM2001 Crusader.</Russian>
+		<Russian>Пушка XM1203 Non-Line-of-Sight Cannon (САУ NLOS) является самоходной 155-мм гаубицей, предназначенной для обеспечения повышенной точности и летальности "боевого расчета" (АЕ) в рамках проекта "Боевые Системы Будущего" армии США. Эта самоходная артиллерийская установка обеспечивала сетевое целеуказание с увеличенной дальностью и высокоточную атаку точечных и площадных целей в поддержку других боевых единиц с помощью набора боеприпасов, которые включают средства специального назначения. Пушка вне зоны видимости обеспечивала непрерывный огонь для непосредственной поддержки и разрушительный огонь для тактического противостояния. Для САУ NLOS использовалась технология устаревшей гаубицы XM2001 Crusader.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NOBLE</Tag>
@@ -17211,7 +17211,7 @@
 		<English>Propeller Fighter</English>
 		<French>Chasseur à Hélices</French>
 		<Polish>Myśliwiec Śmigłowy</Polish>
-		<Russian>P-51 «Ìóñòàíã»</Russian>
+		<Russian>P-51 "Ìóñòàíã"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_P51_MUSTANG_PEDIA</Tag>
@@ -17971,7 +17971,7 @@
 		<English>Codenamed The Plague Bringer, this missile is beyond the BBM, perfect for weakening a few enemies within one nuke. Using the latest in Genetic manipulation, these new viruses not only make people sick, killing them at an extremely accelerated rate, but can spread like a wild fire. The new and improved smog also contains concentrated sulphuric acid vapours to easily take down anything from a tank to a battleship. If the viral entities enter water, it will become polluted, killing all sea life and plugging up all natural vents such as oil deposits. WARNING: Viral clouds are subject to wind will spread to other plots and could cause the entire planet to be consumed by this virus if not taken care of immediately.</English>
 		<German>Diese Rakete, die den Codenamen Pestbringer trägt, ist noch verheerender als die BBM. Sie ist perfekt dafür geeignet, den Gegner mit einem einzigen Schlag schwer zu schwächen. Die neuen Viren an Bord dieser Rakete nutzen die neuesten Erkenntnisse in der Genmanipulation. Sie lassen die Menschen nicht nur erkranken und extrem schnell sterben, sie verbreiten sich auch noch wie ein Lauffeuer. Der neue, verbesserte Nebel enthält konzentrierte Schwefelsäuredämpfe, die alles vom Panzer bis zum Schlachtschiff zerlegen. Wenn die Viren ins Wasser geraten, wird es verseucht, wodurch alle Tiere sterben und alle natürlichen Rohstoffvorkommen, wie Ölquellen, vernichtet werden. ACHTUNG: Die Virenwolken können vom Wind abgetrieben werden und damit auch Gebiete befallen, die eigentlich nicht zerstört werden sollten. Mit dieser Waffe kann leicht der ganze Planet entvölkert werden, wenn den Viren nicht schnell Einhalt geboten wird.</German>
 		<Italian>Con il nome in codice Plague Bringer, questo missile è oltre la MMB, perfetto per indebolire alcuni nemici con una sola bomba. Usano i più recenti ritrovati nella manipolazione genetica, questi virus non solo fanno ammalare le persone (uccidendole a un ritmo molto veloce), ma possono diffondersi come un fuoco incontrollato. Il nuovo smo contiene vapori di acido solforico concentrato per distruggere facilmente tutto, da un carro armato a una corazzata. Se i virus entrano in acqua essa viene contaminata, uccidendo la vita marina e distruggendo le correnti marine e i depositi petroliferi. ATTENZIONE: Le nuvole virali sono soggette ai venti e possono espandersi ad altre caselle, facendo consumare tutto il pianeta da questo virus se non vengono presi provvedimenti immediati.</Italian>
-		<Russian>Эта ракета, получившая кодовое название «Вестник чумы», по своим возможностям выходит далеко за рамки обычных биоракет и идеально подходит для ослабления нескольких врагов путем подрыва одной-единственной «грязной бомбы». Используя генетические манипуляции, искусственные вирусы, содержащиеся в ней, это оружие поражает людей невиданными прежде заболеваниями, убивая их с чрезвычайно высокой скоростью, но и могут распространяться со скоростью лесного пожара. Новый улучшенный смог также содержит концентрированные пары серной кислоты, которые быстро выводит из строя все что угодно - от танка до линкора. Если вирусные частицы попадают в воду, она загрязняется, уничтожая всю морскую жизнь и закупоривая все естественные каналы, такие как нефтяные отложения. [COLOR_NEGATIVE_TEXT]ПРЕДУПРЕЖДЕНИЕ:[COLOR_REVERT] инфекционные облака подвержены воздействию ветра и могут распространиться на соседние участки и это может привести к тому, что впоследствии будет уничтожено все живое на целых континентах, если не заблаговременно не позаботиться о дезинфекции.</Russian>
+		<Russian>Эта ракета, получившая кодовое название "Вестник чумы", по своим возможностям выходит далеко за рамки обычных биоракет и идеально подходит для ослабления нескольких врагов путем подрыва одной-единственной "грязной бомбы". Используя генетические манипуляции, искусственные вирусы, содержащиеся в ней, это оружие поражает людей невиданными прежде заболеваниями, убивая их с чрезвычайно высокой скоростью, но и могут распространяться со скоростью лесного пожара. Новый улучшенный смог также содержит концентрированные пары серной кислоты, которые быстро выводит из строя все что угодно - от танка до линкора. Если вирусные частицы попадают в воду, она загрязняется, уничтожая всю морскую жизнь и закупоривая все естественные каналы, такие как нефтяные отложения. [COLOR_NEGATIVE_TEXT]ПРЕДУПРЕЖДЕНИЕ:[COLOR_REVERT] инфекционные облака подвержены воздействию ветра и могут распространиться на соседние участки и это может привести к тому, что впоследствии будет уничтожено все живое на целых континентах, если не заблаговременно не позаботиться о дезинфекции.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POISON_NUKE</Tag>
@@ -18064,7 +18064,7 @@
 		<Tag>TXT_KEY_UNIT_POLICE_DOG_PEDIA</Tag>
 		<English>Police Dog, commonly referred to as a "K-9 dog" (which is a homophone of canine), is a dog that is trained specifically to assist police and other law-enforcement personnel in their work.</English>
 		<Polish>Pies policyjny jest specjalnie tresowany towarzyszenia policjantom w pracy.</Polish>
-		<Russian>Полицейская собака, обычно называемая «собакой К-9» (которая является омофоном собаки), - это собака, специально обученная для оказания помощи полиции и другим сотрудникам правоохранительных органов в их работе.</Russian>
+		<Russian>Полицейская собака, обычно называемая "собакой К-9" (которая является омофоном собаки), - это собака, специально обученная для оказания помощи полиции и другим сотрудникам правоохранительных органов в их работе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLICE_HELICOPTER</Tag>
@@ -18089,7 +18089,7 @@
 		<English>Battle Armor, or their lighter Power Armor variety, are armored infantry. Battle armor's improved resilience, atmospheric containment, and firepower make it more effective than standard infantry in a variety of roles, but much more expensive. Battle armor first evolved from Exoskeletons during the Star League in the early twenty-eighth century, but did not come to prominence on the battlefield until Clan Wolf debuted the Elemental in the mid-twenty-ninth century. Inner Sphere armies began deploying battle armor in the mid-thirty-first century. These battlesuits were based off of Clan battle armor captured or salvaged during Operation REVIVAL.</English>
 		<Italian>Unità per il controllo dei riottosi.</Italian>
 		<Polish>Jednostka przeznaczona do tłumienia zamieszek</Polish>
-		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции «Возрождение».</Russian>
+		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции "Возрождение".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMAREI</Tag>
@@ -18182,7 +18182,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POWER_ARMORED_INFANTRY_PEDIA</Tag>
 		<English>Battle Armor, or their lighter Power Armor variety, are armored infantry. Battle armor's improved resilience, atmospheric containment, and firepower make it more effective than standard infantry in a variety of roles, but much more expensive. Battle armor first evolved from Exoskeletons during the Star League in the early twenty-eighth century, but did not come to prominence on the battlefield until Clan Wolf debuted the Elemental in the mid-twenty-ninth century. Inner Sphere armies began deploying battle armor in the mid-thirty-first century. These battlesuits were based off of Clan battle armor captured or salvaged during Operation REVIVAL.</English>
-		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции «Возрождение».</Russian>
+		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции "Возрождение".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POYA_LONGSPEARS</Tag>
@@ -18723,7 +18723,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RA_FIST_PEDIA</Tag>
 		<English>Ra is the ancient Egyptian solar deity. By the Fifth Dynasty (2494 to 2345 BCE) he had become a major god in ancient Egyptian religion, identified primarily with the midday sun. In later Egyptian dynastic times, Ra was merged with the god Horus, as Ra-Horakhty ("Ra, who is Horus of the Two Horizons"). He was believed to rule in all parts of the created world: the sky, the earth, and the underworld. He was associated with the falcon or hawk. When in the New Kingdom the god Amun rose to prominence he was fused with Ra as Amun-Ra. During the Amarna Period, Akhenaten suppressed the cult of Ra in favour of another solar deity, the Aten, the deified solar disc, but after the death of Akhenaten the cult of Ra was restored.</English>
-		<Russian>Ра - древнеегипетское солнечное божество. Во времена Пятой династии (2494–2345 гг. до н.э.) он стал главным богом древнеегипетской религии, отождествляемой в первую очередь с полуденным солнцем. В более поздние египетские династические времена Ра был объединен с богом Гором, как Ра-Хорахти («Ра, который есть Гор двух горизонтов»). Считалось, что он правил всеми частями сотворенного мира: небом, землей и подземным миром. Он был связан с соколом или ястребом. Когда в Новом Царстве бог Амон приобрел известность, он слился с Ра как Амон-Ра. В период Амарны Эхнатон подавил культ Ра в пользу другого солнечного божества, Атона, обожествленного солнечного диска, однако после смерти Эхнатона культ Ра был восстановлен.</Russian>
+		<Russian>Ра - древнеегипетское солнечное божество. Во времена Пятой династии (2494–2345 гг. до н.э.) он стал главным богом древнеегипетской религии, отождествляемой в первую очередь с полуденным солнцем. В более поздние египетские династические времена Ра был объединен с богом Гором, как Ра-Хорахти ("Ра, который есть Гор двух горизонтов"). Считалось, что он правил всеми частями сотворенного мира: небом, землей и подземным миром. Он был связан с соколом или ястребом. Когда в Новом Царстве бог Амон приобрел известность, он слился с Ра как Амон-Ра. В период Амарны Эхнатон подавил культ Ра в пользу другого солнечного божества, Атона, обожествленного солнечного диска, однако после смерти Эхнатона культ Ра был восстановлен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RA_KNIGHT</Tag>
@@ -19166,7 +19166,7 @@
 		<English>The term "Praetorian" derived from the tent of the commanding general or praetor of a Roman army in the field - the praetorium. It was a habit of many Roman generals to choose from the ranks a private force of soldiers to act as bodyguards of the tent or the person. They consisted of both infantry and cavalry. In time, this cohort came to be known as the cohors praetoria, and various notable figures possessed one, including Julius Caesar, Mark Antony and Augustus (Octavian). As Caesar discovered with the Legio X Equestris, a powerful unit more dangerous than its fellow legions was desirable in the field. When Augustus became the first ruler of the Roman Empire in 27 BC, he decided such a formation was useful not only on the battlefield but in politics also. Thus, from the ranks of the legions throughout the provinces, Augustus recruited the Praetorian Guard.</English>
 		<German>Die römischen Legionen bildeten die Streitmächte, welche die Gebiete des entstehenden römischen Imperiums eroberten und über fünf Jahrhunderte lang hielten. Sie wurden in den ersten Kriegen der römischen Republik entwickelt und in den drei punischen Kriegen gegen Karthago perfektioniert. Jede Legion bestand aus 6000 Männern, welche in 60 kleinere Gruppen zu je 100 Mann unterteilt waren, den "Centurien". Beim Angriff war eine Legion seinerzeit kaum aufzuhalten, allerdings besaß sie Schwächen in der Verteidigung. Der Bedeutungsverlust der Legion als Militäreinheit wurde durch die Vernichtung der römischen Armee des Imperators Valens durch gotische Reiterhorden im 4. Jahrhundert beschleunigt. Der Ausdruck "Prätorianer" leitet sich vom Namen des Feldzelts des befehlshabenden Legaten einer Armee ab - dem "Praetorium". Viele römische Generäle hielten sich eine Leibwache von Soldaten aus den Rängen zum Schutz des Zelts und der eigenen Person. Diese erlesenen Truppen bestanden sowohl aus Infanterie als auch aus Kavallerie. Eine solche "Kohorte" zum Schutz des Praetoriums und des Feldherrn wurde als "cohors praetoria" bezeichnet und von vielen angesehenen Führern verwendet, darunter Julius Cäsar, Marcus Antonius und Augustus Cäsar (Octavian). Wie Julius Cäsar mit der "Legio X Equestris" feststellte, waren diese Einheiten im Feld sehr nützlich, da sie sich als kraftvoller und mächtiger als die regulären Legionen erwiesen. Als Augustus im Jahr 27 v.Chr. Herrscher über das römische Imperium wurde, entschied er, eine derartige Eliteeinheit nicht nur in Krieg, sondern auch in der Tagespolitik nutzbringend einzusetzen. Und so rekrutierte Augustus aus den besten Kriegern seiner Armeen in allen Provinzen die "Prätorianische Garde".</German>
 		<Polish>Pretorianie byli strażą przyboczną cesarzy w starożytnym Rzymie. Pretorianie stali się gwardią cesarską, którą dowodził prefekt pretorianów (później dwóch prefektów). Mieli oni duży wpływ na politykę wewnętrzną Rzymu. Wielokrotnie sami decydowali o wyborze cesarza. W 193 r. wystawili nawet cesarski tytuł na sprzedaż, który kupił Didiusz Julianus. Po klęsce zadanej przez Konstantyna Maksencjuszowi w 312 r. ich koszary w Rzymie zostały zburzone, a pretorianie zostali wcieleni do różnych legionów.</Polish>
-		<Russian>Ðèìñêèå ëåãèîíû, ñîçäàííûå âî âðåìÿ ðàííèõ âîéí Ðåñïóáëèêè è ïðîøåäøèå èñïûòàíèå òðåìÿ Ïóíè÷åñêèìè âîéíàìè ñ Êàðôàãåíîì, áûëè òîé âîåííîé ñèëîé, êîòîðàÿ ïîä÷èíÿëà è óäåðæèâàëà Ðèìñêóþ èìïåðèþ â òå÷åíèå ïÿòè âåêîâ. Êàæäûé ëåãèîí ñîñòîÿë èç 6000 ÷åëîâåê è äåëèëñÿ íà áîëåå ìåëêèå ãðóïïû ïî 60 ÷åëîâåê (öåíòóðèè). Îñòàíîâèòü ëåãèîí âî âðåìÿ àòàêè áûëî íåâîçìîæíî, íî åãî îáîðîíèòåëüíûå ñâîéñòâà óñòóïàëè íàñòóïàòåëüíûì. Ëåãèîí êàê âîåííîå ïîäðàçäåëåíèå ïðåêðàòèë ñâîþ äåÿòåëüíîñòü âñêîðå ïîñëå òîãî, êàê âåñòãîòû â 4 âåêå óíè÷òîæèëè àðìèþ èìïåðàòîðà Âàëåíòà.[PARAGRAPH:1]Òåðìèí «ïðåòîðèàíñêèé» ïîøåë îò íàçâàíèÿ "ïðåòîðèé" (ïðåòîðèóì) - øàòåð ëåãàòà ëåãèîíà, ðàñïîëîæåííûé â ïîëå. Â äóõå ìíîãèõ ðèìñêèõ ïîëêîâîäöåâ áûëî íàáèðàòü èç âîéñê ëè÷íóþ àðìèþ òåëîõðàíèòåëåé è ñòðàæåé øàòðà. Ýòà èçáðàííàÿ àðìèÿ ñîñòîÿëà êàê èç ïåõîòû, òàê è èç êàâàëåðèè. Ñî âðåìåíåì ýòà êîãîðòà ñòàëà èçâåñòíà êàê êîãîðòà ïðåòîðèåâ; ê íåé ïðèíàäëåæàëè ìíîãèå èçâåñòíûå ëè÷íîñòè, òàêèå êàê Þëèé Öåçàðü, Ìàðê Àíòîíèé è Àâãóñò Öåçàðü (Îêòàâèàí). Íà ïðèìåðå Äåñÿòîãî Ëåãèîíà Þëèé Öåçàðü ïîíÿë, ÷òî íåîáõîäèìà íîâàÿ ìîùíàÿ áîåâàÿ åäèíèöà, áîëåå îïàñíàÿ, ÷åì ïðåäàííûå åìó ëåãèîíû. Êîãäà Àâãóñò â 27 ã. äî í.ý. íà÷àë ïðàâèòü Ðèìñêîé èìïåðèåé, îí ïðèøåë ê âûâîäó, ÷òî ïîäîáíîå îáðàçîâàíèå áóäåò àêòóàëüíî íå òîëüêî â áèòâàõ, íî è â ïîëèòèêå. È òîãäà Àâãóñò íàáðàë èç "öâåòà" ëåãèîíîâ, â îñíîâíîì èç èòàëèêîâ, ïðåòîðèàíñêóþ ãâàðäèþ. </Russian>
+		<Russian>Ðèìñêèå ëåãèîíû, ñîçäàííûå âî âðåìÿ ðàííèõ âîéí Ðåñïóáëèêè è ïðîøåäøèå èñïûòàíèå òðåìÿ Ïóíè÷åñêèìè âîéíàìè ñ Êàðôàãåíîì, áûëè òîé âîåííîé ñèëîé, êîòîðàÿ ïîä÷èíÿëà è óäåðæèâàëà Ðèìñêóþ èìïåðèþ â òå÷åíèå ïÿòè âåêîâ. Êàæäûé ëåãèîí ñîñòîÿë èç 6000 ÷åëîâåê è äåëèëñÿ íà áîëåå ìåëêèå ãðóïïû ïî 60 ÷åëîâåê (öåíòóðèè). Îñòàíîâèòü ëåãèîí âî âðåìÿ àòàêè áûëî íåâîçìîæíî, íî åãî îáîðîíèòåëüíûå ñâîéñòâà óñòóïàëè íàñòóïàòåëüíûì. Ëåãèîí êàê âîåííîå ïîäðàçäåëåíèå ïðåêðàòèë ñâîþ äåÿòåëüíîñòü âñêîðå ïîñëå òîãî, êàê âåñòãîòû â 4 âåêå óíè÷òîæèëè àðìèþ èìïåðàòîðà Âàëåíòà.[PARAGRAPH:1]Òåðìèí "ïðåòîðèàíñêèé" ïîøåë îò íàçâàíèÿ "ïðåòîðèé" (ïðåòîðèóì) - øàòåð ëåãàòà ëåãèîíà, ðàñïîëîæåííûé â ïîëå. Â äóõå ìíîãèõ ðèìñêèõ ïîëêîâîäöåâ áûëî íàáèðàòü èç âîéñê ëè÷íóþ àðìèþ òåëîõðàíèòåëåé è ñòðàæåé øàòðà. Ýòà èçáðàííàÿ àðìèÿ ñîñòîÿëà êàê èç ïåõîòû, òàê è èç êàâàëåðèè. Ñî âðåìåíåì ýòà êîãîðòà ñòàëà èçâåñòíà êàê êîãîðòà ïðåòîðèåâ; ê íåé ïðèíàäëåæàëè ìíîãèå èçâåñòíûå ëè÷íîñòè, òàêèå êàê Þëèé Öåçàðü, Ìàðê Àíòîíèé è Àâãóñò Öåçàðü (Îêòàâèàí). Íà ïðèìåðå Äåñÿòîãî Ëåãèîíà Þëèé Öåçàðü ïîíÿë, ÷òî íåîáõîäèìà íîâàÿ ìîùíàÿ áîåâàÿ åäèíèöà, áîëåå îïàñíàÿ, ÷åì ïðåäàííûå åìó ëåãèîíû. Êîãäà Àâãóñò â 27 ã. äî í.ý. íà÷àë ïðàâèòü Ðèìñêîé èìïåðèåé, îí ïðèøåë ê âûâîäó, ÷òî ïîäîáíîå îáðàçîâàíèå áóäåò àêòóàëüíî íå òîëüêî â áèòâàõ, íî è â ïîëèòèêå. È òîãäà Àâãóñò íàáðàë èç "öâåòà" ëåãèîíîâ, â îñíîâíîì èç èòàëèêîâ, ïðåòîðèàíñêóþ ãâàðäèþ. </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROMULUS</Tag>
@@ -20981,7 +20981,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Samolot SR-71 Blackbird</Polish>
-		<Russian>SR-71 «×åðíûé äðîçä»</Russian>
+		<Russian>SR-71 "×åðíûé äðîçä"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SR71_PEDIA</Tag>
@@ -21222,7 +21222,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Okręt M80 Stiletto</Polish>
-		<Russian>M80 «Ñòèëåò»</Russian>
+		<Russian>M80 "Ñòèëåò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STILETTO_BOAT_PEDIA</Tag>
@@ -21347,7 +21347,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Współczesny Myśliwiec Przechwytujący</Polish>
-		<Russian>F-15 «Èãë»</Russian>
+		<Russian>F-15 "Èãë"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STRIKE_FIGHTER_PEDIA</Tag>
@@ -21643,7 +21643,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM_PEDIA</Tag>
 		<English>Underwater habitats are underwater structures in which people can live for extended periods and carry out most of the basic human functions of a 24-hour day, such as working, resting, eating, attending to personal hygiene, and sleeping. In this context 'habitat' is generally used in a narrow sense to mean the interior and immediate exterior of the structure and its fixtures, but not its surrounding marine environment. Most early underwater habitats lacked regenerative systems for air, water, food, electricity, and other resources. However, recently some new underwater habitats allow for these resources to be delivered using pipes, or generated within the habitat, rather than manually delivered.</English>
-		<Russian>Подводная среда обитания - это подводные сооружения, в которых люди могут жить в течение длительного времени и выполнять большинство основных человеческих функций 24-часового дня, таких как работа, отдых, прием пищи, соблюдение личной гигиены и сон. В этом контексте «среда обитания» обычно используется в узком смысле для обозначения внутренней и непосредственной внешней части конструкции и ее приспособлений, но не окружающей морской среды. В большинстве ранних подводных местообитаний отсутствовали системы регенерации воздуха, воды, пищи, электричества и других ресурсов. Однако в последнее время некоторые новые подводные среды обитания позволяют доставлять эти ресурсы с помощью труб или генерировать в среде обитания, а не доставлять вручную.</Russian>
+		<Russian>Подводная среда обитания - это подводные сооружения, в которых люди могут жить в течение длительного времени и выполнять большинство основных человеческих функций 24-часового дня, таких как работа, отдых, прием пищи, соблюдение личной гигиены и сон. В этом контексте "среда обитания" обычно используется в узком смысле для обозначения внутренней и непосредственной внешней части конструкции и ее приспособлений, но не окружающей морской среды. В большинстве ранних подводных местообитаний отсутствовали системы регенерации воздуха, воды, пищи, электричества и других ресурсов. Однако в последнее время некоторые новые подводные среды обитания позволяют доставлять эти ресурсы с помощью труб или генерировать в среде обитания, а не доставлять вручную.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBOTEI</Tag>
@@ -22691,7 +22691,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOUCAN_PEDIA</Tag>
 		<English>Toucans are members of the family Ramphastidae of near passerine birds from the Neotropics. The Ramphastidae family is most closely related to the American barbets. They are brightly marked and have large, often colorful bills. The family includes five genera and about forty different species. The name of this bird group is derived from the Tupi word tukana, via Portuguese. Toucans range in size from the Lettered Aracari (Pteroglossus inscriptus), at 130 g (4.6 oz) and 29 cm (11.5 inches), to the Toco Toucan (Ramphastos toco), at 680 g (1.5 lb) and 63 cm (29 inches). Their bodies are short (of comparable size to a crow's) and compact. The tail is rounded and varies in length, from half the length to the whole length of the body. The neck is short and thick. The wings are small, as they are forest-dwelling birds who only need to travel short distances, and are often of about the same span as the bill-tip-to-tail-tip measurements of the bird. The legs of a toucan are strong and rather short. Their toes are arranged in pairs with the first and fourth toes turned backward. The majority of toucans do not show any sexual dimorphism in their coloration, the genus Selenidera being the most notable exception to this rule (hence their common name, "dichromatic toucanets"). However, the bills of female toucans are usually shorter, deeper and sometimes straighter, giving more of a "blocky" impression compared to male bills. The feathers in the genus containing the largest toucans are generally black, with touches of white, yellow, and scarlet. The underparts of the araçaris (smaller toucans) are yellow, crossed by one or more black or red bands. The toucanets have mostly green plumage with blue markings. The colorful and large bill, which in some large species measures more than half the length of the body, is the hallmark of toucans. Despite its size, the toucan's bill is very light, being composed of bone struts filled with spongy tissue of keratin between them. The bill has forward-facing serrations resembling teeth, which historically led naturalists to believe that toucans captured fish and were primarily carnivorous; today it is known that they eat mostly fruit. Researchers have discovered that the large bill of the toucan is a highly efficient thermoregulation system, though its size may still be advantageous in other ways. It does aid in their feeding behavior (as they sit in one spot and reach for all fruit in range, thereby reducing energy expenditure), and it has also been theorized that the bill may intimidate smaller birds, so that the toucan may plunder nests undisturbed (see Diet below). Also, the beak allows the bird to reach deep into tree-holes to access food unavailable to other birds, and also to ransack suspended nests built by smaller birds. However, as there is no sexual dimorphism in coloration it is unlikely to be a sexual signal. A toucan's tongue is long (up to 14 - 15 cm, or 6 inches), narrow, grey, and singularly frayed on each side, adding to its sensitivity as an organ of taste. A structural complex probably unique to toucans involves the modification of several tail vertebrae. The rear three vertebrae are fused and attached to the spine by a ball and socket joint. Because of this, toucans may snap their tail forwards until it touches the head. This is the posture in which they sleep, often appearing simply as a ball of feathers, with the tip of the tail sticking out over the head.Toucans are arboreal and typically lay 2 - 4 white eggs in their nests. They make their nests in tree hollows and holes excavated by other animals such as woodpeckers, the toucan bill has very limited use as an excavation tool. When the eggs hatch, the young emerge completely naked, without any down. Toucans are resident breeders and do not migrate. Toucans are usually found in pairs or small flocks. They sometimes fence with their bills and wrestle, which scientists hypothesize they do to establish dominance hierarchies. Toucans are native to Southern Mexico, Central and South America, and the Caribbean region. They generally live in tropical and sub-tropical regions. They make their nests in tree hollows and holes excavated by other animals such as woodpeckers the toucan bill has very limited use as an excavation tool.</English>
-		<French>Toucan est le nom vernaculaire de 12 espèces (soit en tout, 23 taxons) d'oiseaux de l'ordre des Piciformes et de la famille des Ramphastidés, proches des araçaris et des toucanets qui, dans le langage courant, sont aussi appelés « toucans ».[PARAGRAPH:2]Son long bec très léger et vascularisé lui permet de réguler sa température. Le toucan régule sa température grâce à son bec. Glenn Tattersall, de la Brock University (Canada), a trouvé un rôle à cet appendice qui représente près de la moitié de la surface corporelle de ces oiseaux. En les filmant en infrarouge, dès que la température dépasse 16°C, le bec du toucan s'échauffe jusqu'à une dizaine de degrés supplémentaire. Dans cet organe richement vascularisé, c'est le sang qui joue le rôle de liquide de refroidissement. Les vaisseaux, contractés pour éviter la déperdition de chaleur lorsqu'il fait froid, sont dilatés et irradient de la chaleur vers l'extérieur quand la température ambiante augmente. Comme dans les oreilles de l'éléphant, à la différence que la climatisation du toucan est quatre fois plus efficace que celle du pachyderme.</French>
+		<French>Toucan est le nom vernaculaire de 12 espèces (soit en tout, 23 taxons) d'oiseaux de l'ordre des Piciformes et de la famille des Ramphastidés, proches des araçaris et des toucanets qui, dans le langage courant, sont aussi appelés " toucans ".[PARAGRAPH:2]Son long bec très léger et vascularisé lui permet de réguler sa température. Le toucan régule sa température grâce à son bec. Glenn Tattersall, de la Brock University (Canada), a trouvé un rôle à cet appendice qui représente près de la moitié de la surface corporelle de ces oiseaux. En les filmant en infrarouge, dès que la température dépasse 16°C, le bec du toucan s'échauffe jusqu'à une dizaine de degrés supplémentaire. Dans cet organe richement vascularisé, c'est le sang qui joue le rôle de liquide de refroidissement. Les vaisseaux, contractés pour éviter la déperdition de chaleur lorsqu'il fait froid, sont dilatés et irradient de la chaleur vers l'extérieur quand la température ambiante augmente. Comme dans les oreilles de l'éléphant, à la différence que la climatisation du toucan est quatre fois plus efficace que celle du pachyderme.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOWN_WATCHMEN</Tag>
@@ -23261,7 +23261,7 @@
 		<English>The Y.A.M. or You Are Mine is the latest and greatest in thought scanning and uploading technology. On impact, the missile sends out a computer virus that is uploaded to nearby personell's minds, making them resistless to your control. Those who are under direct control of the enemy's leader will be forced to self-terminate in your favor, declaring the cities it lands on an open city. WARNING: Even though the city may turn, only the units with the strongest mind set may resist self-termination.</English>
 		<German>Die DIM (Deins Ist Meins) ist eine fortgeschrittene Anwendung von Gedankenkontrolle. Beim Einschlag setzt die Rakete einen Computervirus frei, der alle Truppen in der Nähe befällt und sich direkt in ihre Gehirne hochlädt, was sie zu willenlosen Sklaven macht. Die Truppen unter feindlicher Kontrolle begehen Selbstmord zu Gunsten des Angreifers, wodurch eine angegriffene Stadt zu einer freien Stadt wird. ACHTUNG: Selbst wenn die Stadt die Seiten wechselt, kann es passieren, dass psychisch starke Einheiten dem Selbstmordbefehl widerstehen.</German>
 		<Italian>La Y.A.M. (o You Are Mine) è la migliore e più recente tecnologia sulla scansione e upload del pensiero. all'impatto, il missile rilascia un virus che viene caricato nelle menti delle persone vicine, rendendole impotenti al tuo controllo. Coloro che sono sotto il diretto controllo del leader nemico saranno forzati a a consegnarsi nelle tue mani, dichiarando la città dove atterrra una città aperta. ATTENZIONE: Anche se la città potrebbe rivoltarsi, solo le unità più forti possono resistere all'auto-distruzione.</Italian>
-		<Russian>«Захватчик» - новейшая технология сканирования и загрузки. Во время нанесения удара ракета рассылает компьютерный вирус, который загружается в сети местных вооруженных сил, что делает их податливыми к вашему контролю. Те, кто находится под прямым контролем вражеского лидера, будут вынуждены самоликвидироваться в вашу пользу, объявив открытыми города, где приземлится «Захватчик». [COLOR_NEGATIVE_TEXT]ВНИМАНИЕ:[COLOR_REVERT] даже если в случае измены горожан, некоторые отряды с самой сильной волей и интеллектом все же смогут противостоять самоуничтожению.</Russian>
+		<Russian>"Захватчик" - новейшая технология сканирования и загрузки. Во время нанесения удара ракета рассылает компьютерный вирус, который загружается в сети местных вооруженных сил, что делает их податливыми к вашему контролю. Те, кто находится под прямым контролем вражеского лидера, будут вынуждены самоликвидироваться в вашу пользу, объявив открытыми города, где приземлится "Захватчик". [COLOR_NEGATIVE_TEXT]ВНИМАНИЕ:[COLOR_REVERT] даже если в случае измены горожан, некоторые отряды с самой сильной волей и интеллектом все же смогут противостоять самоуничтожению.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TURTLE_SHIP</Tag>
@@ -23521,7 +23521,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rakiet V1</Polish>
-		<Russian>Ðàêåòà «Ôàó-1»</Russian>
+		<Russian>Ðàêåòà "Ôàó-1"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_V1_PEDIA</Tag>
@@ -23763,13 +23763,13 @@
 		<Tag>TXT_KEY_UNIT_WALKER_MECH_PEDIA</Tag>
 		<English>Medium 'Mechs weigh between 40 and 55 tons and are very versatile. Some, such as the Hellspawn, have significant electronics payloads and are used as scout 'Mechs; others like the Hunchback carry powerful weapons and can serve as front-line or fire support units. In the BattleTech universe, the medium 'Mech is the workhorse 'Mech of most armies. Those that max out the engine can serve as useful recon units.</English>
 		<German>Mechwalker sind Eliteinfanterieeinheiten der Zukunft. Es handelt sich dabei um riesige, metallene, mit Waffen gespickte Roboter, die entweder aus der Ferne oder durch einen im Inneren des gepanzerten Exoskeletts sitzenden Soldaten gesteuert werden.</German>
-		<Russian>Средние мехи весят от 40 до 55 тонн и очень универсальны. Некоторые из них, такие как Hellspawn, имеют значительные электронные компоненты и используются в качестве роботов-разведчиков; другие, такие как «Горбун», несут мощное вооружение и могут служить в качестве передовых или огневой поддержки. Во вселенной BattleTech средний «механоид» - это мех «рабочей лошадки» большинства армий. Те, у кого наиболее мощные двигатели, могут служить полезными разведывательными единицами.</Russian>
+		<Russian>Средние мехи весят от 40 до 55 тонн и очень универсальны. Некоторые из них, такие как Hellspawn, имеют значительные электронные компоненты и используются в качестве роботов-разведчиков; другие, такие как "Горбун", несут мощное вооружение и могут служить в качестве передовых или огневой поддержки. Во вселенной BattleTech средний "механоид" - это мех "рабочей лошадки" большинства армий. Те, у кого наиболее мощные двигатели, могут служить полезными разведывательными единицами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER_PEDIA</Tag>
 		<English>A walker was any vehicle, usually military, that used legs as its primary method of locomotion rather than the more common repulsors, wheels, or treads. The term could also refer to especially large droids with legs (usually combat droids), though such droids were usually referred to using more specific terminology (such as "spider droid").</English>
 		<Polish>Artyleria Walker jest jednostka artylerii pasuje do walki w erze Transhuman. Za pomocą potężnychelektromagnetyczne serwa przenieść na każdy teren i jego obrzędy posiadają więcej zakres i ognia niż inne jednostki.</Polish>
-		<Russian>Шагоход - это любое транспортное средство, обычно военное, использующее ноги-опоры качестве основного метода передвижения, а не более распространенные репульсоры, колеса или гусеницы. Этот термин также может относиться к особенно большим дроидам с ногами (обычно боевым дроидам), хотя такие дроиды обычно упоминаются с использованием более конкретной терминологии (например, «дроид-паук»).</Russian>
+		<Russian>Шагоход - это любое транспортное средство, обычно военное, использующее ноги-опоры качестве основного метода передвижения, а не более распространенные репульсоры, колеса или гусеницы. Этот термин также может относиться к особенно большим дроидам с ногами (обычно боевым дроидам), хотя такие дроиды обычно упоминаются с использованием более конкретной терминологии (например, "дроид-паук").</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_HUNTERS</Tag>
