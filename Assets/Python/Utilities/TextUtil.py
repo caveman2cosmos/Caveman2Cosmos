@@ -1,6 +1,8 @@
 
 from CvPythonExtensions import *
 
+CyIF = CyInterface()
+
 ############
 # Encoding #
 ############
