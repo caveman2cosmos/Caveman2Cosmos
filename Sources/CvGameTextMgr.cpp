@@ -22896,8 +22896,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		foreach_(const ReligionModifier& pair, kBuilding.getReligionChanges())
 		{
-			szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_SPREADS_RELIGION", GC.getReligionInfo(pair.first).getChar()).c_str());
-			szBuffer.append(szTempBuffer);
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_SPREADS_RELIGION", GC.getReligionInfo(pair.first).getChar(), pair.second));
 		}
 
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
