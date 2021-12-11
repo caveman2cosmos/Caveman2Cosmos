@@ -114,7 +114,7 @@ class PediaUnit:
 		screen.enableSelect(szName, False)
 
 		import TextUtil
-		
+
 		if CvTheUnitInfo.getDomainType() == DomainTypes.DOMAIN_AIR:
 			iType = CvTheUnitInfo.getTotalModifiedAirCombatStrength100()
 		else: iType = CvTheUnitInfo.getTotalModifiedCombatStrength100()

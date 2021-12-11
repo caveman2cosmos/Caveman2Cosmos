@@ -15,6 +15,9 @@ from CvPythonExtensions import *
 class PediaUnitCombat:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
+
 		self.main = parent
 
 		self.H_PEDIA_PAGE = H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -97,7 +100,9 @@ class PediaUnitCombat:
 				else:
 					szCost = str(unitInfo.getProductionCost())
 
-				aList.append((iUnit, szName, szStrength, szMoves, szCost))
+				szTechXGrid = str(self.HF.checkUnitTechRequirementLocation(unitInfo)[0])
+
+				aList.append((iUnit, szName, szStrength, szMoves, szCost, szTechXGrid))
 
 		if aList:
 			screen.addPanel(aName(), "", "", True, True, X_COL_2, Y_TOP_ROW_1, W_COL_2, H_PEDIA_PAGE, ePnlBlue50)
@@ -105,20 +110,22 @@ class PediaUnitCombat:
 			screen.addPanel(Pnl, "", "", True, True, X_COL_2 + 5, Y_TOP_ROW_1 + 6, W_COL_2 - 16, H_PEDIA_PAGE - 12, ePnlBlue50)
 			screen.setStyle(Pnl, "Panel_Black50_Style")
 			Tbl = aName()
-			screen.addTableControlGFC(Tbl, 4, X_COL_2 + 6, Y_TOP_ROW_1 + 13, W_COL_2 - 6, H_PEDIA_PAGE - 26, True, False, 32, 32, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC(Tbl, 5, X_COL_2 + 6, Y_TOP_ROW_1 + 13, W_COL_2 - 6, H_PEDIA_PAGE - 26, True, False, 32, 32, TableStyles.TABLE_STYLE_EMPTY)
 			screen.enableSort(Tbl)
 			iTableWidth = W_COL_2 - 16
 			iColWidth = iTableWidth / 2
 			screen.setTableColumnHeader(Tbl, 0, "", iColWidth)
 			iColWidth = iTableWidth - iColWidth
-			screen.setTableColumnHeader(Tbl, 1, u"%c" % CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR), iColWidth * 2 / 7)
-			screen.setTableColumnHeader(Tbl, 2, u"%c" % CyGame().getSymbolID(FontSymbols.MOVES_CHAR), iColWidth * 2 / 7)
-			screen.setTableColumnHeader(Tbl, 3, u"%c" % GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), iColWidth * 3 / 7)
+			screen.setTableColumnHeader(Tbl, 1, u"%c" % CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR), iColWidth * 2 / 10)
+			screen.setTableColumnHeader(Tbl, 2, u"%c" % CyGame().getSymbolID(FontSymbols.MOVES_CHAR), iColWidth * 2 / 10)
+			screen.setTableColumnHeader(Tbl, 3, u"%c" % GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), iColWidth * 3 / 10)
+			screen.setTableColumnHeader(Tbl, 4, u"%c" % GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar(), iColWidth * 3 / 10)
 
-			for iUnit, szName, szStrength, szMoves, szCost in aList:
+			for iUnit, szName, szStrength, szMoves, szCost, szTechXGrid in aList:
 				iRow = screen.appendTableRow(Tbl)
 				screen.setTableText(Tbl, 0, iRow, szfont2 + szName, "", WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, iUnit, 1, 1<<0)
 				screen.setTableInt(Tbl, 1, iRow, szfont2 + szStrength, "", eWidGen, 1, 2, 1<<0)
 				screen.setTableInt(Tbl, 2, iRow, szfont2 + szMoves, "", eWidGen, -1, -1, 1<<0)
 				screen.setTableInt(Tbl, 3, iRow, szfont2 + szCost, "", eWidGen, -1, -1, 1<<0)
+				screen.setTableInt(Tbl, 4, iRow, szfont2 + szTechXGrid, "", eWidGen, -1, -1, 1<<0)
 

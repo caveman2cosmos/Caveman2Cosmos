@@ -271,7 +271,7 @@ void CyInfoPythonInterface1()
 		.def("getTotalModifiedCombatStrength100", &CvUnitInfo::getTotalModifiedCombatStrength100, "int ()")
 		.def("getTotalModifiedAirCombatStrength100", &CvUnitInfo::getTotalModifiedAirCombatStrength100, "int ()")
 		//TB Combat Mods End  TB SubCombat Mod end
-		
+
 		.def("getMapCategories", &CvUnitInfo::getMapCategories, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getTrainCondition", &CvUnitInfo::getTrainCondition, python::return_value_policy<python::reference_existing_object>())
