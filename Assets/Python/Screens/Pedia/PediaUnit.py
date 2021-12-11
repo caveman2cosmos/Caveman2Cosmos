@@ -100,7 +100,7 @@ class PediaUnit:
 			Txt = "JumpTo|COMBAT" + str(iCombatType)
 			self.main.aWidgetBucket.append(Txt)
 		else:
-			Txt = aName();
+			Txt = aName()
 		screen.setText(Txt, "", szfontEdge + szText, 1<<0, X_COL_1, 0, 0, eFontTitle, eWidGen, iCombatType, 0)
 
 		Pnl = aName()
