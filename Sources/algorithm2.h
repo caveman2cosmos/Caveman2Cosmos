@@ -10,10 +10,10 @@
 #include <boost155/algorithm/cxx11/find_if_not.hpp>
 #include <boost155/algorithm/cxx11/none_of.hpp>
 
-// We wrap some existing range algorithms here to make them easier to use without auto keyword.
-// Instead of returning the complicated iterator type we return an optional of a value for direct use.
+/// We wrap some existing range algorithms here to make them easier to use without auto keyword.
+/// Instead of returning the complicated iterator type we return an optional of a value for direct use.
 
-// Declare a bst::optional version of an existing algorithm (e.g. bst::find)
+/// Declare a bst::optional version of an existing algorithm (e.g. bst::find)
 #define DECLARE_OPT_RANGE_ALGO(src_algo_name_, opt_algo_name_) \
 	template< class Range_ > \
 	bst::optional<typename bst::range_value<Range_>::type> opt_algo_name_(Range_ rng) \
@@ -26,7 +26,7 @@
 		return *itr; \
 	}
 
-// Declare a bst::optional version of an existing algorithm that takes a single argument (e.g. bst::find_if)
+/// Declare a bst::optional version of an existing algorithm that takes a single argument (e.g. bst::find_if)
 #define DECLARE_OPT_RANGE_ALGO_ARG(src_algo_name_, opt_algo_name_) \
 	template< class Range_, class Arg_ > \
 	bst::optional<typename bst::range_value<Range_>::type> opt_algo_name_(Range_& rng, Arg_& arg) \
@@ -75,7 +75,7 @@ namespace detail {
 		return logical_not<O, D>(static_cast<const D&>(f));
 	}
 
-	// relational operators
+	/// relational operators
 #define DEFINE_ALGO_FUNCTOR_FUNCTOR_OPERATOR( op, name ) \
 	template < class ObjType_, class Derived1_, class Derived2_ > \
 	struct name : algo_functor< ObjType_, bool, name<ObjType_, Derived1_, Derived2_> > \
@@ -141,27 +141,27 @@ namespace detail {
 
 }
 
-//
-// Declares a functor that will can be used in range adaptors, and algorithms.
-// e.g.
-// class CvUnit {
-//     ...
-//     struct algo
-//     {
-//         DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getID);
-//     };
-//     ...
-// };
-//
-// Results in usage like:
-//   CvUnit::fn::getID()
-//
-// The functors generated can be combined using comparison and boolean operators
-// defined above like so:
-//   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
-// or
-//   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
-//
+///
+/// Declares a functor that will can be used in range adaptors, and algorithms.
+/// e.g.
+/// class CvUnit {
+///     ...
+///     struct algo
+///     {
+///         DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getID);
+///     };
+///     ...
+/// };
+///
+/// Results in usage like:
+///   CvUnit::fn::getID()
+///
+/// The functors generated can be combined using comparison and boolean operators
+/// defined above like so:
+///   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
+/// or
+///   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
+///
 namespace map_fun_details {
 
 	template < class Ty_, class Enable_ = void >
@@ -266,6 +266,7 @@ namespace algo {
 	/// Mutating
 	using bst::copy;
 	using bst::copy_backward;
+	using bst::algorithm::copy_if;
 	using bst::fill;
 	using bst::fill_n;
 	using bst::generate;
@@ -313,6 +314,7 @@ namespace algo {
 	//using bst::find_first_of;
 	//using bst::find_if;
 	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::find_if, find_if);
+	using bst::algorithm::find_if_not;
 	using bst::lexicographical_compare;
 	using bst::lower_bound;
 	//using bst::max_element;
