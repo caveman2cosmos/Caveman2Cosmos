@@ -4940,7 +4940,7 @@
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iCost>6500</iCost>
+			<iCost>8817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -5190,7 +5190,7 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
-			<iCost>7000</iCost>
+			<iCost>12342</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -5490,7 +5490,7 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
-			<iCost>7500</iCost>
+			<iCost>14817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -5807,7 +5807,7 @@
 				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
-			<iCost>8000</iCost>
+			<iCost>18267</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

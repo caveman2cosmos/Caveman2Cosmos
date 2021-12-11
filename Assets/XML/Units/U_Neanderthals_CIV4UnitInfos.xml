@@ -53,7 +53,7 @@
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>15</iCost>
+			<iCost>19</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
