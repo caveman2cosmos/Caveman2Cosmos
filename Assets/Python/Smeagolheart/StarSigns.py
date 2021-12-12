@@ -35,7 +35,6 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 
 	iPromotion = GC.getInfoTypeForString(aStarSignList[iChance])
 	CyUnit.setHasPromotion(iPromotion, True)
-	print ("Promo=" + str(iPromotion), CyUnit.isHasPromotion(iPromotion))
 
 	if iPlayer == GAME.getActivePlayer() and GAME.isFinalInitialized():
 		CyCity = CyUnit.plot().getPlotCity()
