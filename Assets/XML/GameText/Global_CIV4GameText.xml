@@ -15788,18 +15788,6 @@
 		<Polish>Ponieważ Twoja jednostka nie spełnia już pewnych wytycznych, jednostka: %s1_Unit traci: %s2_Promotion</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_CAN_RETRAIN</Tag>
-		<English>Due to the Era this unit was last trained or upgraded, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
-		<French>En raison de l'ère durant laquelle votre unité a été formée ou améliorée, votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent en sélectionner une nouvelle.</French>
-		<Russian>В связи с устареванием прежней специализации отряда в новой Эре, ваш %s1_Unit утратил свою квалификацию %s2_Promotion и теперь может выбирать новую.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_NO_RETRAIN</Tag>
-		<English>Due to the Era this unit was last trained or upgraded, your %s1_Unit has lost its %s2_Promotion promotion.</English>
-		<French>En raison de l'ère durant laquelle votre unité a été formée ou améliorée, votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
-		<Russian>В связи с устареванием прежней специализации отряда в новой Эре, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN</Tag>
 		<English>Since your unit is no longer located on the proper prerequisite Feature, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
 		<French>Comme elle ne se trouve plus sur le caractéristique de terrain requis, votre unité '%s1_Unit' a perdu sa promotion %s2_Promotion et peut en choisir une autre.</French>
@@ -15834,34 +15822,6 @@
 		<Italian>Dato che una delle sue abilità è incompatibile con la tua unità %s1_Unit, essa ha perso la promozione %s2_Promotion.</Italian>
 		<Polish>Jedna z promocji jest niekompatybilna z Twoją jednostką: %s1_Unit straciła więc promocję: %s2_Promotion</Polish>
 		<Russian>Ваш %s1_Unit утратил свою квалификацию %s2_Promotion, поскольку одна из его способностей оказалась несовместимой после переобучения отряда.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN</Tag>
-		<English>Due to the promotion no longer existing in the game, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
-		<French>Comme la promotion n'existe plus dans le jeu, votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent choisir une nouvelle promotion.</French>
-		<Italian>Dato che la promozione non esiste più nel gioco, la tua unità %s1_Unit ha perso la promozione %s2_Promotion e può ora selezionare una nuova promozione.</Italian>
-		<Polish>Ponieważ ta promocja nie funkcjonuje już w grze, Twoja jednostka: %s1_Unit straciła promocję: %s2_Promotion i może teraz wybrać nową promocję</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_NO_RETRAIN</Tag>
-		<English>Due to the promotion no longer existing in the game, your %s1_Unit has lost its %s2_Promotion promotion.</English>
-		<French>Comme la promotion n'existe plus dans le jeu, Votre %s1_Unit a rendu sa promotion %s2_Promotion obsolète.</French>
-		<Italian>Dato che la promozione non esiste più nel gioco, la tua unità %s1_Unit ha perso la promozione %s2_Promotion.</Italian>
-		<Polish>Z powodu tego, że promocja nie funkcjonuje już w grze, Twoja jednostka: %s1_Unit straciła promocję: %s2_Promotion</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_CAN_RETRAIN</Tag>
-		<English>Since your unit no longer has any unit combat class definitions, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
-		<French>N'ayant plus de définition de classe de combat, votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent choisir une nouvelle promotion.</French>
-		<Italian>Dato che ha cambiato la propria classe di combattimento, la tua unità %s1_Unit ha perso la promozione %s2_Promotion e può ora selezionare una nuova promozione.</Italian>
-		<Polish>Ponieważ Twoja jednostka nie posiada już żadnej definicji klasy bojowej, jednostka: %s1_Unit traci: %s2_Promotion i może teraz wybrać nową promocję</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_NO_RETRAIN</Tag>
-		<English>Since your unit no longer has any unit combat class definitions, your %s1_Unit has lost its %s2_Promotion promotion.</English>
-		<French>N'ayant plus de définition de classe de combat, votre %s1_Unit a rendu sa promotion %s2_Promotion obsolète.</French>
-		<Italian>Dato che ha cambiato la propria classe di combattimento, la tua unità %s1_Unit ha perso la promozione %s2_Promotion.</Italian>
-		<Polish>Ponieważ Twoja jednostka nie posiada już żadnej definicji klasy bojowej, jednostka: %s1_Unit traci: %s2_Promotion</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN</Tag>

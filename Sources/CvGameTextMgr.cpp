@@ -23771,36 +23771,19 @@ void CvGameTextMgr::setFreePromoBuildingHelp(const PromotionTypes ePromo, CvWStr
 {
 	if (ePromo != NO_PROMOTION)
 	{
-		const CvPromotionInfo& promo = GC.getPromotionInfo(ePromo);
 		bool bFirst = true;
+		const CvPromotionInfo& promo = GC.getPromotionInfo(ePromo);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide()));
 
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
 		{
-			const UnitCombatTypes eUnitCombat = static_cast<UnitCombatTypes>(iI);
-			bool bPromoLine = false;
-			if (promo.getPromotionLine() != NO_PROMOTIONLINE)
-			{
-				const CvPromotionLineInfo& promoLine = GC.getPromotionLineInfo(promo.getPromotionLine());
-
-				for (int iJ = 0; iJ < promoLine.getNumUnitCombatPrereqTypes(); iJ++)
-				{
-					if (promoLine.getUnitCombatPrereqType(iJ) == eUnitCombat)
-					{
-						bPromoLine = true;
-						break;
-					}
-				}
-			}
-			if (bPromoLine || promo.getUnitCombat(iI))
-			{
-				CvWString szFirstBuffer;
-				CvWString szTempBuffer;
-				szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo(eUnitCombat).getDescription());
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-				bFirst = false;
-			}
+			const UnitCombatTypes eUnitCombat = (UnitCombatTypes)promo.getQualifiedUnitCombatType(iI);
+			CvWString szFirstBuffer;
+			CvWString szTempBuffer;
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo(eUnitCombat).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
 		}
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END"));
 	}
