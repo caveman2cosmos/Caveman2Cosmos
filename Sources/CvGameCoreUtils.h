@@ -214,7 +214,6 @@ DllExport CvCity* getCity(IDInfo city);
 DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
 int getTechScore(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);

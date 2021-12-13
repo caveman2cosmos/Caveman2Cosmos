@@ -1388,7 +1388,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>3200</iCost>
+			<iCost>2406</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>28</iAirRange>

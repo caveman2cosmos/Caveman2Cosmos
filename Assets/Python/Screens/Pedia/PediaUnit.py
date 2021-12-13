@@ -100,7 +100,7 @@ class PediaUnit:
 			Txt = "JumpTo|COMBAT" + str(iCombatType)
 			self.main.aWidgetBucket.append(Txt)
 		else:
-			Txt = aName();
+			Txt = aName()
 		screen.setText(Txt, "", szfontEdge + szText, 1<<0, X_COL_1, 0, 0, eFontTitle, eWidGen, iCombatType, 0)
 
 		Pnl = aName()
@@ -113,17 +113,17 @@ class PediaUnit:
 		screen.addListBoxGFC(szName, "", self.X_STATS, self.Y_STATS, self.W_STATS, self.H_STATS, TableStyles.TABLE_STYLE_EMPTY)
 		screen.enableSelect(szName, False)
 
-		szText = ""
-		iType = CvTheUnitInfo.getCombat()
+		import TextUtil
+
+		if CvTheUnitInfo.getDomainType() == DomainTypes.DOMAIN_AIR:
+			iType = CvTheUnitInfo.getTotalModifiedAirCombatStrength100()
+		else: iType = CvTheUnitInfo.getTotalModifiedCombatStrength100()
+
 		if iType > 0:
-			szText = "%d " %iType
-		iType = CvTheUnitInfo.getAirCombat()
-		if iType > 0:
-			if szText:
-				szText += "/ "
-			szText += "%d (Air) " %iType
-		if szText:
-			szText += unichr(8855)
+			szText = TextUtil.floatToString(iType / 100.0) + " " + unichr(8855)
+		else: szText = ""
+
+
 		iType = CvTheUnitInfo.getMoves()
 		if iType > 0:
 			szTemp = "%d" %iType + unichr(8856)

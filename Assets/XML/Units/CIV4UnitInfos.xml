@@ -46,7 +46,7 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_HEAVY_WATER</BonusType>
 			</PrereqBonuses>
-			<iCost>1750</iCost>
+			<iCost>1681</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>1</iNukeRange>
@@ -109,7 +109,7 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_HEAVY_WATER</BonusType>
 			</PrereqBonuses>
-			<iCost>1405</iCost>
+			<iCost>1350</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>1</iNukeRange>
@@ -172,7 +172,7 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_HEAVY_WATER</BonusType>
 			</PrereqBonuses>
-			<iCost>2360</iCost>
+			<iCost>1843</iCost>
 			<iAdvancedStartCost>150</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -232,7 +232,7 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_HEAVY_WATER</BonusType>
 			</PrereqBonuses>
-			<iCost>1750</iCost>
+			<iCost>1681</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>4</iAirRange>
@@ -290,7 +290,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<iCost>1665</iCost>
+			<iCost>1600</iCost>
 			<iAdvancedStartCost>150</iAdvancedStartCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -350,7 +350,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<iCost>2085</iCost>
+			<iCost>2006</iCost>
 			<iAdvancedStartCost>150</iAdvancedStartCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -612,7 +612,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_FUSION</PrereqTech>
-			<iCost>4200</iCost>
+			<iCost>4056</iCost>
 			<iAdvancedStartCost>500</iAdvancedStartCost>
 			<iBaseUpkeep>21</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -677,7 +677,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
-			<iCost>7700</iCost>
+			<iCost>7381</iCost>
 			<iAdvancedStartCost>500</iAdvancedStartCost>
 			<iBaseUpkeep>33</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -736,7 +736,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<iCost>5400</iCost>
+			<iCost>5181</iCost>
 			<iAdvancedStartCost>1000</iAdvancedStartCost>
 			<iBaseUpkeep>26</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -859,7 +859,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>760</iCost>
+			<iCost>811</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>3</iAirRange>
@@ -931,7 +931,7 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>2865</iCost>
+			<iCost>2006</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>4</iAirRange>
