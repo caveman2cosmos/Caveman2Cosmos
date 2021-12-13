@@ -405,7 +405,7 @@ void CvCityAI::AI_assignWorkingPlots()
 		{
 			if (!AI_removeWorstCitizen())
 			{
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 			}
 		}
@@ -1300,7 +1300,7 @@ void CvCityAI::AI_chooseProduction()
 					if (iBestDefenseValue > 0)
 					{
 						UnitTypes eBestAttackAircraft = NO_UNIT;
-						int iBestAirValue = player.AI_bestCityUnitAIValue(UNITAI_ATTACK_AIR, this, &eBestAttackAircraft);
+						//int iBestAirValue = player.AI_bestCityUnitAIValue(UNITAI_ATTACK_AIR, this, &eBestAttackAircraft);
 
 						int iAircraftHave = player.AI_getNumAIUnits(UNITAI_ATTACK_AIR) + player.AI_getNumAIUnits(UNITAI_DEFENSE_AIR) + player.AI_getNumAIUnits(UNITAI_MISSILE_AIR);
 						int iAircraftNeed = (2 + player.getNumCities() * (3 * GC.getUnitInfo(eBestAttackAircraft).getAirCombat())) / (2 * std::max(1, GC.getGame().getBestLandUnitCombat()));
@@ -2859,7 +2859,7 @@ void CvCityAI::AI_chooseProduction()
 		case AREAAI_NEUTRAL:
 			break;
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 		}
 	}
 
@@ -6496,7 +6496,6 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 		{
 			if (pair.second[eYield] != 0)
 			{
-				int iCount = 0;
 				foreach_(const CvPlot * plotX, plots(NUM_CITY_PLOTS))
 				{
 					if (plotX->getPlotType() == pair.first && canWork(plotX))
@@ -6510,7 +6509,6 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 		{
 			if (pair.second[eYield] != 0)
 			{
-				int iCount = 0;
 				foreach_(const CvPlot * plotX, plots(NUM_CITY_PLOTS))
 				{
 					if (plotX->getTerrainType() == pair.first && canWork(plotX))
@@ -6702,7 +6700,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject) const
 				}
 				default:
 				{
-					FAssert(false);
+					FErrorMsg("error");
 					break;
 				}
 				}
@@ -11919,7 +11917,7 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 
@@ -12556,7 +12554,7 @@ bool CvCityAI::AI_isEmphasizeAvoidUnhealthyCitizens() const
 //	Koshling  - this method is unused!!
 bool CvCityAI::AI_buildCaravan()
 {
-	FAssert(false);
+	FErrorMsg("error");
 
 	int iAveProduction = 0;
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
@@ -13167,7 +13165,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bMetAnyCiv = team.hasMetAnyCiv(true);
 	const bool bAtWar = team.isAtWar();
 	const bool bWarPlan = team.getAnyWarPlanCount(true) > 0;
-	const bool bCleanPower = pArea->isCleanPower(eTeam);
+	//const bool bCleanPower = pArea->isCleanPower(eTeam);
 	const bool bDevelopingCity = isDevelopingCity();
 	const bool bCapital = isCapital();
 	const bool bCanPopRush = kOwner.canPopRush();
@@ -13254,12 +13252,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bLandWar = bDefense || pArea->getAreaAIType(eTeam) == AREAAI_OFFENSIVE || pArea->getAreaAIType(eTeam) == AREAAI_MASSING;
 	const bool bDanger = AI_isDanger();
 
-	std::vector<bool> cityHasVicinityBonus;
-
-	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-	{
-		cityHasVicinityBonus.push_back(hasBonus((BonusTypes)iJ) && (hasVicinityBonus((BonusTypes)iJ) || hasRawVicinityBonus((BonusTypes)iJ)));
-	}
 	logBBAI(
 		"      City %S CalculateAllBuildingValues for flags %08lx (already has %08lx)",
 		getName().GetCString(), iFocusFlags, cachedBuildingValues->m_iCachedFlags
@@ -13273,7 +13265,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	cachedBuildingValues->m_iCachedFlags |= iFocusFlags;
 
 	std::set<BuildingTypes> buildingsToCalculate;
-	const int iNumReligions = GC.getNumReligionInfos();
 	const int iNumBuildings = GC.getNumBuildingInfos();
 	{
 		PROFILE("CvCityAI::CalculateAllBuildingValues.PreLoop");
@@ -15700,13 +15691,12 @@ int CvCityAI::worstWorkedPlotValue() const
 
 bool CvCityAI::AI_establishSeeInvisibleCoverage()
 {
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 
 	if (pPlot != NULL)
 	{
 		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
-			UnitTypes eBestUnit = NO_UNIT;
 			const InvisibleTypes eVisible = (InvisibleTypes)iI;
 			CvUnitSelectionCriteria criteria;
 			criteria.m_eVisibility = eVisible;

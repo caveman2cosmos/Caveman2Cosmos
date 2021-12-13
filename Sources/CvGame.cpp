@@ -9705,7 +9705,7 @@ void CvGame::doVoteResults()
 								szBuffer += NEWLINE + gDLL->getText("TXT_KEY_POPUP_VOTES_YES_NO", GET_PLAYER((PlayerTypes)iJ).getNameKey(), L"TXT_KEY_POPUP_YES", GET_PLAYER((PlayerTypes)iJ).getVotes(eVote, eVoteSource));
 								break;
 							default:
-								FAssert(false);
+								FErrorMsg("error");
 								break;
 							}
 						}

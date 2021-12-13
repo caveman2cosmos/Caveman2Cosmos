@@ -2094,10 +2094,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HAWKING</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -6040,10 +6036,6 @@
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MONGOL_GER</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HAWKING</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>

@@ -1741,7 +1741,7 @@
 			<Type>PROMOTION_COMBAT6</Type>
 			<Description>TXT_KEY_PROMOTION_COMBAT6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_COMBAT5</PromotionPrereqOr1>
+			<PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
 			<!--TB SubCombat Mod begin TB Override Mod begin-->
 			<PromotionLine>PROMOTIONLINE_COMBAT</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -8841,7 +8841,7 @@
 			<Type>PROMOTION_SPHINX</Type>
 			<Description>TXT_KEY_PROMOTION_SPHINX</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_COMBAT6</PromotionPrereqOr1>
+			<PromotionPrereq>PROMOTION_COMBAT6</PromotionPrereq>
 			<iUpgradeDiscount>50</iUpgradeDiscount>
 			<UnitCombats>
 				<UnitCombat>

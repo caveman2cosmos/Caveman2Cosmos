@@ -43,6 +43,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
+		self.main.addTestCode(screen, self.checkUnitCosts, "Unit - check costs", "Check if unit costs are within sane limits")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
@@ -1652,6 +1653,8 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" GlobalBuildingCostModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in GlobalBuildingCostModifiers in "+CvBuildingInfo.getType())
 
 			#<GlobalBuildingProductionModifiers>
 			for iAffectedBuilding, iGlobalProductionModifier in CvBuildingInfo.getGlobalBuildingProductionModifiers():
@@ -1667,6 +1670,8 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" GlobalBuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in GlobalBuildingProductionModifiers in "+CvBuildingInfo.getType())
 
 			#<BuildingHappinessChanges>
 			for iAffectedBuilding, iHappiness in CvBuildingInfo.getBuildingHappinessChanges():
@@ -1697,6 +1702,8 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in BuildingProductionModifiers in "+CvBuildingInfo.getType())
 
 			#<ImprovementFreeSpecialists> - building references improvements, those potentially can upgrade
 			aImprovementUnlistedUpgrades = []
@@ -1799,6 +1806,8 @@ class TestCode:
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
 					aBuildingList.append(iBuilding)
+					if GC.getBuildingInfo(iBuilding).getProductionCost() < 1:
+						self.log(GC.getBuildingInfo(iBuilding).getType()+" has no cost so shouldn't be listed in BuildingProductionModifiers in "+CvCivicInfo.getType())
 
 			if len(aBuildingList) > 0:
 				#Analyze list of Buildings
@@ -1874,6 +1883,8 @@ class TestCode:
 					iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if CvAffectedBuildingInfo.getProductionCost() < 1:
+					self.log(CvAffectedBuildingInfo.getType()+" has no cost so shouldn't be listed in BuildingProductionModifierTypes in "+CvTraitInfo.getType())
 			#Get unique unlisted replacements
 			for i in xrange(len(aReplacementBuildingsList)):
 				iBuilding = GC.getInfoTypeForString(aReplacementBuildingsList[i])
@@ -2667,6 +2678,55 @@ class TestCode:
 
 			if CvProjectInfo.getProductionCost() != 8*aBaseCostList[iTechLoc]:
 				self.log(CvProjectInfo.getType()+" should have Cost of "+str(8*aBaseCostList[iTechLoc]))
+
+	#Unit - Check if Units have sane costs
+	def checkUnitCosts(self):
+		aBaseCostList = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 111, 118, 125, 132, 139, 146, 153, 160, 168, 176, 184, 192, 200, 208, 216, 225, 234, 243, 252, 261, 270, 280, 290, 300, 310, 320, 332, 344, 356, 368, 380, 395, 410, 425, 440, 455, 475, 495, 515, 535, 555, 580, 605, 630, 655, 680, 710, 740, 770, 800, 830, 870, 910, 950, 990, 1030, 1080, 1130, 1180, 1230, 1280, 1345, 1410, 1475, 1540, 1605, 1685, 1765, 1845, 1925, 2005, 2105, 2205, 2305, 2405, 2505, 2625, 2745, 2865, 2985, 3105, 3245, 3385, 3525, 3665, 3805, 3975, 4145, 4315, 4485, 4655, 4855, 5055, 5255, 5455, 5655, 5905, 6155, 6405, 6655, 6905, 7205, 7505, 7805, 8105, 8405, 8755, 9105, 9455, 9805, 10155, 10555, 10955, 11355, 11755, 12155, 12655, 13155, 13655, 14155, 14655, 15255, 15855, 16455, 17055, 17655, 18355, 19055, 19755, 20455, 21155, 21955, 22755, 23555, 24355, 25155, 26055, 26955, 27855, 28755, 29655, 30655] #Unit cost depend on most advanced tech to unlock.
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+
+			bAndSpaceRequirement = False
+			for iBuilding in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
+				if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in GC.getBuildingInfo(CvUnitInfo.getPrereqAndBuilding(iBuilding)).getMapCategories():
+					bAndSpaceRequirement = True
+					break
+			bOrSpaceRequirement = False
+			if CvUnitInfo.getPrereqOrBuildingsNum() > 0:
+				bOrSpaceRequirement = True
+				for iBuilding in xrange(CvUnitInfo.getPrereqOrBuildingsNum()):
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in GC.getBuildingInfo(CvUnitInfo.getPrereqOrBuilding(iBuilding)).getMapCategories():
+						bOrSpaceRequirement = False
+						break
+
+			aBuildingGOMReqList = []
+			for i in range(2):
+				aBuildingGOMReqList.append([])
+			self.HF.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
+
+			bGOMAndSpaceRequirement = False
+			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]).getMapCategories():
+					bGOMAndSpaceRequirement = True
+					break
+			bGOMOrSpaceRequirement = False
+			if len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR]) > 0:
+				bGOMOrSpaceRequirement = True
+				for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]).getMapCategories():
+						bGOMOrSpaceRequirement = False
+						break
+
+			if CvUnitInfo.getProductionCost() > 0 and GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvUnitInfo.getMapCategories() and bAndSpaceRequirement + bOrSpaceRequirement + bGOMAndSpaceRequirement + bGOMOrSpaceRequirement == 0:
+				iTechLoc = self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+
+				if CvUnitInfo.getProductionCost() < 0.75*aBaseCostList[iTechLoc] and CvUnitInfo.getMaxGlobalInstances() == -1:
+					self.log(CvUnitInfo.getType()+" is way too cheap, actual cost/min cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(1+(0.75*aBaseCostList[iTechLoc])))
+
+				if CvUnitInfo.getProductionCost() > 1.25*aBaseCostList[iTechLoc] and CvUnitInfo.getMaxGlobalInstances() == -1:
+					self.log(CvUnitInfo.getType()+" is way too expensive, actual cost/max cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(1.25*aBaseCostList[iTechLoc]))
+
+				if CvUnitInfo.getProductionCost() != 4*aBaseCostList[iTechLoc] and CvUnitInfo.getMaxGlobalInstances() != -1:
+					self.log(CvUnitInfo.getType()+" is global unit and should have 4x cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(4*aBaseCostList[iTechLoc]))
 
 	#Unit - check unit upgrades
 	def checkUnitUpgrades(self):

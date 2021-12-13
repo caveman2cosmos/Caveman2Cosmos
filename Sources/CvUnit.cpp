@@ -2058,7 +2058,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 	int iTotalStrength = iOurStrength + iTheirStrength;
 	if (0 == iTotalStrength)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return;
 	}
 
@@ -5794,7 +5794,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -5917,7 +5917,7 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -6272,7 +6272,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -7244,7 +7244,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -13079,7 +13079,7 @@ BuildTypes CvUnit::getBuildType() const
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 	}
@@ -13251,8 +13251,6 @@ bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) c
 		// Checks for differing domains, transport status, amnesty game setting
 		|| canUnitCoexistWithArrivingUnit(attacker)
 		;
-
-	return false;
 }
 
 bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
@@ -20849,19 +20847,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), ePromotion);
 
-	if (ePromotion == NO_PROMOTION)
-	{
-		return false;
-	}
-
-	if (!bIgnoreHas && isHasPromotion(ePromotion))
+	if (ePromotion == NO_PROMOTION || !bIgnoreHas && isHasPromotion(ePromotion))
 	{
 		return false;
 	}
 
 	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 
-	if (kPromotion.isStatus() && !bForStatus)
+	if (!bForStatus && kPromotion.isStatus())
 	{
 		return false;
 	}
@@ -20875,14 +20868,15 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
+
 	//TB Combat Mod begin
-	if (kPromotion.isEquipment() && !bEquip)
+	if (!bEquip && kPromotion.isEquipment())
 	{
 		return false;
 	}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (kPromotion.isAffliction() && !bAfflict)
+	if (!bAfflict && kPromotion.isAffliction())
 	{
 		return false;
 	}
@@ -20925,12 +20919,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 	const CvPlot* pPlot = plot();
-	if (!isMapCategory(*pPlot, kPromotion))
-	{
-		return false;
-	}
-
-	if (!isMapCategory(*m_pUnitInfo, kPromotion))
+	if (!isMapCategory(*pPlot, kPromotion) || !isMapCategory(*m_pUnitInfo, kPromotion))
 	{
 		return false;
 	}
@@ -20948,24 +20937,11 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
 		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
 
-		if (ePromotionPrerequisite1 != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite1)
-		&& (ePromotionPrerequisite2 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite2)))
+		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
+		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
+		&&  (ePromotionPrerequisite2 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite2)))
 		{
 			return false;
-		}
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-		if (!kPromotion.isAffliction())
-#endif // OUTBREAKS_AND_AFFLICTIONS
-		{
-			if (kPromotion.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))
-			{
-				return false;
-			}
-			if (ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).getPrereqTech() != NO_TECH
-			&& !GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
-			{
-				return false;
-			}
 		}
 	}
 
@@ -20991,33 +20967,6 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	// TB SubCombat Mod Begin
-	// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
-	// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
-	// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-	if (!kPromotion.isForOffset() && !kPromotion.isZeroesXP())
-	{
-		bool bHasPrereq = false;
-		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
-		{
-			if (it->second.m_bHasUnitCombat)
-			{
-				if (kPromotion.getUnitCombat((int)it->first)
-				||
-					ePromotionLine != NO_PROMOTIONLINE
-				&&	GC.getPromotionLineInfo(ePromotionLine).isUnitCombatPrereqType((int)it->first))
-				{
-					bHasPrereq = true;
-					break;
-				}
-			}
-		}
-		if (!bHasPrereq)
-		{
-			return false;
-		}
-	}
-
 	{
 		const int iMinEraInt = kPromotion.getMinEraType();
 		const int iMaxEraInt = kPromotion.getMaxEraType();
@@ -21039,38 +20988,12 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	if (ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).getNumNotOnUnitCombatTypes() > 0)
+	for (int iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
 	{
-		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
-		for (int iI = 0; iI < kPromotionLine.getNumNotOnUnitCombatTypes(); iI++)
+		//If we have the unitcombat the promotion will give us already
+		if (isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
 		{
-			if (isHasUnitCombat((UnitCombatTypes)kPromotionLine.getNotOnUnitCombatType(iI)))
-			{
-				return false;
-			}
-		}
-	}
-
-	if (kPromotion.getNumNotOnUnitCombatTypes() > 0)
-	{
-		for (int iI = 0; iI < kPromotion.getNumNotOnUnitCombatTypes(); iI++)
-		{
-			if (isHasUnitCombat((UnitCombatTypes)kPromotion.getNotOnUnitCombatType(iI)))
-			{
-				return false;
-			}
-		}
-	}
-
-	if (kPromotion.getNumSubCombatChangeTypes() > 0)
-	{
-		for (int iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
-		{
-			//If we have the unitcombat the promotion will give us already
-			if (isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -21343,342 +21266,278 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 {
-	if (!bKeepCheck && !::isPromotionValid(ePromotion, getUnitType(), true))
+	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
+
+	if (!bKeepCheck) // If the unit got the promo then these checks have already passed.
 	{
-		return false;
-	}
-
-	const CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
-
-	// Disable S&D modifying promos if option is not on:
-	if	( !GC.getGame().isOption(GAMEOPTION_SAD)
-		&& (
-				promotionInfo.getUnnerveChange() != 0
-			||	promotionInfo.getEncloseChange() != 0
-			||	promotionInfo.getLungeChange() != 0
-			||	promotionInfo.getDynamicDefenseChange() != 0
-			)
-		)
-		return false;
-
-	//Disable via NotOnGameOption tag:
-	for (int iI = 0; iI < promotionInfo.getNumNotOnGameOptions(); iI++)
-	{
-		if (GC.getGame().isOption((GameOptionTypes)promotionInfo.getNotOnGameOption(iI)))
+		if (m_pUnitInfo->isSpy() && !GC.isSS_ENABLED())
 		{
 			return false;
 		}
-	}
-	for (int iI = 0; iI < promotionInfo.getNumOnGameOptions(); iI++)
-	{
-		if (!GC.getGame().isOption((GameOptionTypes)promotionInfo.getOnGameOption(iI)))
-		{
-			return false;
-		}
-	}
 
-	if (promotionInfo.getPromotionLine() != NO_PROMOTIONLINE)
-	{
-		for (int iI = 0; iI < GC.getPromotionLineInfo(promotionInfo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
+		//Disable via NotOnGameOption tag:
+		for (int iI = 0; iI < promo.getNumNotOnGameOptions(); iI++)
 		{
-			if (GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promotionInfo.getPromotionLine()).getNotOnGameOption(iI)))
+			if (GC.getGame().isOption((GameOptionTypes)promo.getNotOnGameOption(iI)))
 			{
 				return false;
 			}
 		}
-		for (int iI = 0; iI < GC.getPromotionLineInfo(promotionInfo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
+		for (int iI = 0; iI < promo.getNumOnGameOptions(); iI++)
 		{
-			if (!GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promotionInfo.getPromotionLine()).getNotOnGameOption(iI)))
+			if (!GC.getGame().isOption((GameOptionTypes)promo.getOnGameOption(iI)))
 			{
 				return false;
 			}
 		}
-	}
-
-	// SUPER_SPIES
-	if (isSpy())
-	{
-		if (promotionInfo.getAttackCombatModifierChange() != false ||
-			promotionInfo.getDefenseCombatModifierChange() != false ||
-			promotionInfo.getPursuitChange() != 0 ||
-			promotionInfo.getEarlyWithdrawChange() != 0 ||
-			promotionInfo.getVSBarbsChange() != 0 ||
-			promotionInfo.getReligiousCombatModifierChange() != 0 ||
-			promotionInfo.getArmorChange() != 0 ||
-			promotionInfo.getPunctureChange() != 0 ||
-			promotionInfo.getDamageModifierChange() != 0 ||
-			promotionInfo.getOverrunChange() != 0 ||
-			promotionInfo.getRepelChange() != 0 ||
-			promotionInfo.getFortRepelChange() != 0 ||
-			promotionInfo.getRepelRetriesChange() != 0 ||
-			promotionInfo.getUnyieldingChange() != 0 ||
-			promotionInfo.getKnockbackChange() != 0 ||
-			promotionInfo.getKnockbackRetriesChange() != 0 ||
-#ifdef BATTLEWORN
-			promotionInfo.getStrAdjperRndChange() != 0 ||
-			promotionInfo.getStrAdjperAttChange() != 0 ||
-			promotionInfo.getStrAdjperDefChange() != 0 ||
-			promotionInfo.getWithdrawAdjperAttChange() != 0 ||
-#endif // BATTLEWORN
-			promotionInfo.getUnnerveChange() != 0 ||
-			promotionInfo.getEncloseChange() != 0 ||
-			promotionInfo.getLungeChange() != 0 ||
-			promotionInfo.getDynamicDefenseChange() != 0 ||
-#ifdef STRENGTH_IN_NUMBERS
-			promotionInfo.getFrontSupportPercentChange() != 0 ||
-			promotionInfo.getShortRangeSupportPercentChange() != 0 ||
-			promotionInfo.getMediumRangeSupportPercentChange() != 0 ||
-			promotionInfo.getLongRangeSupportPercentChange() != 0 ||
-			promotionInfo.getFlankSupportPercentChange() != 0 ||
-#endif
-			promotionInfo.getDodgeModifierChange() != 0 ||
-			promotionInfo.getPrecisionModifierChange() != 0 ||
-			promotionInfo.getPowerShotsChange() != 0 ||
-			promotionInfo.getPowerShotCombatModifierChange() != 0 ||
-			promotionInfo.getPowerShotPunctureModifierChange() != 0 ||
-			promotionInfo.getPowerShotPrecisionModifierChange() != 0 ||
-			promotionInfo.getPowerShotCriticalModifierChange() != 0 ||
-			promotionInfo.getCriticalModifierChange() != 0 ||
-			promotionInfo.getRoundStunProbChange() != 0 ||
-			promotionInfo.getPoisonProbabilityModifierChange() != 0 ||
-			promotionInfo.getCaptureProbabilityModifierChange() != 0 ||
-			promotionInfo.getQualityChange() != 0 ||
-			promotionInfo.isStampedeChange() != false ||
-			promotionInfo.isRemoveStampede() != false ||
-			promotionInfo.isOnslaughtChange() != false ||
-			promotionInfo.isMakesDamageCold() != false ||
-			promotionInfo.isMakesDamageNotCold() != false ||
-			promotionInfo.getNumFlankingStrikesbyUnitCombatTypesChange() != 0 ||
-			promotionInfo.getNumWithdrawVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumPursuitVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumRepelVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumKnockbackVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumPunctureVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumArmorVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumDodgeVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumPrecisionVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumCriticalVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumRoundStunVSUnitCombatChangeTypes() != 0 ||
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-			promotionInfo.getNumAfflictOnAttackChangeTypes() != 0 ||
-#endif
-			promotionInfo.getNumHealUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getCombatModifierPerSizeMoreChange() != 0 ||
-			promotionInfo.getCombatModifierPerSizeLessChange() != 0 ||
-			promotionInfo.getCombatModifierPerVolumeMoreChange() != 0 ||
-			promotionInfo.getCombatModifierPerVolumeLessChange() != 0)
+		if (promo.getPromotionLine() != NO_PROMOTIONLINE)
 		{
-			return false;
+			for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
+			{
+				if (GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
+				{
+					return false;
+				}
+			}
+			for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
+			{
+				if (!GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
+				{
+					return false;
+				}
+			}
 		}
-#ifdef STRENGTH_IN_NUMBERS
-		if (
-			!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
-		&& (
-				promotionInfo.getFrontSupportPercentChange() != 0
-			||	promotionInfo.getShortRangeSupportPercentChange() != 0
-			||	promotionInfo.getMediumRangeSupportPercentChange() != 0
-			||	promotionInfo.getLongRangeSupportPercentChange() != 0
-			||	promotionInfo.getFlankSupportPercentChange() != 0
-			)
-		) return false;
-#endif
+	}
+	// Very few reasons to deny a unit promotions that are specifically set to be a free for it.
+	if (m_pUnitInfo->getFreePromotions(ePromotion) || GET_PLAYER(getOwner()).isFreePromotion(getUnitType(), ePromotion))
+	{
 		return true;
 	}
-	// ! SUPER_SPIES
 
-	//TB Note: changing the rule that completely bans such promotions but adding to these situations an automatic msg
-//	if (noDefensiveBonus() &&
-		//(
-		//		promotionInfo.getDefenseCombatModifierChange() != 0
-		//	||	promotionInfo.getFortRepelChange() != 0
-		//	||	promotionInfo.getRepelChange() != 0
-		//	||	promotionInfo.getRepelRetriesChange() != 0
-#ifdef BATTLEWORN
-		//	||	promotionInfo.getStrAdjperDefChange() != 0
-#endif // BATTLEWORN
-		//	||	promotionInfo.getHillsDefensePercent() != 0
-		//	||	promotionInfo.isAnyTerrainDefensePercent()
-		//	||	promotionInfo.isAnyFeatureDefensePercent()
-		//	||	promotionInfo.getCityDefensePercent() != 0
-		//	)
-		//)
-		//return false;
+	if (m_pUnitInfo->getUnitCombatType() == NO_UNITCOMBAT)
+	{
+		return false;
+	}
+	if (
+		(
+				m_pUnitInfo->getCollateralDamage() == 0
+			||	m_pUnitInfo->getCollateralDamageLimit() == 0
+			||	m_pUnitInfo->getCollateralDamageMaxUnits() == 0
+		)
+		&& promo.getCollateralDamageChange() != 0)
+	{
+		return false;
+	}
+
+	if (promo.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(promo.getTechPrereq())
+	||  promo.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(promo.getObsoleteTech()))
+	{
+		return false;
+	}
+	{
+		const PromotionLineTypes ePromotionLine = promo.getPromotionLine();
+
+		if (ePromotionLine != NO_PROMOTIONLINE
+		&& GC.getPromotionLineInfo(ePromotionLine).getPrereqTech() != NO_TECH
+		&& !GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
+		{
+			return false;
+		}
+	}
+	{
+		// Toffer - Promotionline is factored in for the (dis)qualified caches.
+		for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
+		{
+			if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
+			{
+				return false;
+			}
+		}
+		// TB SubCombat Mod Begin
+		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
+		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
+		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
+		if (!bKeepCheck && !promo.isForOffset() && !promo.isZeroesXP())
+		{
+			bool bValid = false;
+
+			for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+			{
+				if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
+				{
+					bValid = true;
+					break;
+				}
+			}
+			if (!bValid)
+			{
+				return false;
+			}
+		}
+	}
+
+	if (isSpy())
+	{
+		return true;
+	}
+
+	if (m_pUnitInfo->getInterceptionProbability() == 0 && promo.getInterceptChange() != 0)
+	{
+		return false;
+	}
 
 // TB Combat Mods
 	// Conditionally disabled the maximum withdrawal cap, only if pursuit is NOT in play
 	if (!bKeepCheck && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT)
 
-	&& promotionInfo.getWithdrawalChange() > 0
-	&& promotionInfo.getWithdrawalChange() + m_pUnitInfo->getWithdrawalProbability() + getExtraWithdrawal(true) > GC.getDefineINT("MAX_WITHDRAWAL_PROBABILITY"))
+	&& promo.getWithdrawalChange() > 0
+	&& promo.getWithdrawalChange() + m_pUnitInfo->getWithdrawalProbability() + getExtraWithdrawal(true) > GC.getDefineINT("MAX_WITHDRAWAL_PROBABILITY"))
 	{
 		return false;
 	}
 	//Disable Looter Promos for units that cannot pillage
-	if (promotionInfo.getPillageChange() > 0 && !m_pUnitInfo->isPillage())
+	if (promo.getPillageChange() > 0 && !m_pUnitInfo->isPillage())
 	{
 		return false;
 	}
 
-	// Disable AnimalIgnoresBorders for non-animals
-/* Actually changed my mind on this due to wanting to allow promos that may have this ability as well.
-	if (promotionInfo.isAnimalIgnoresBordersChange() && !isAnimal())
-	{
-		return false;
-	}
-*/
 
 #ifdef STRENGTH_IN_NUMBERS
 	// Disable Strength In Numbers modifying promos if option is not on
 	if (
 		!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
 	&& (
-			promotionInfo.getFrontSupportPercentChange() != 0
-		||	promotionInfo.getShortRangeSupportPercentChange() != 0
-		||	promotionInfo.getMediumRangeSupportPercentChange() != 0
-		||	promotionInfo.getLongRangeSupportPercentChange() != 0
-		||	promotionInfo.getFlankSupportPercentChange() != 0
+			promo.getFrontSupportPercentChange() != 0
+		||	promo.getShortRangeSupportPercentChange() != 0
+		||	promo.getMediumRangeSupportPercentChange() != 0
+		||	promo.getLongRangeSupportPercentChange() != 0
+		||	promo.getFlankSupportPercentChange() != 0
 		)
 	) return false;
 #endif
-	// Taken out of CvGameCoreUtils so that it could be looking at the final compiled max movement rather than just the unit base movement.
-/*
-	if (maxMoves() < 2 && promotionInfo.isBlitz())
-	{
-		return false;
-	}
-*/
-// ! TB Combat Mods
 
 	//Check for combat values on no strength units
 	if (getDomainType() != DOMAIN_AIR && baseCombatStr() < 1 && m_iBaseCombat < 1 && !isCommander())
 	{
-		if (promotionInfo.getInterceptChange() != 0 ||
-			promotionInfo.getEvasionChange() != 0 ||
-			promotionInfo.getWithdrawalChange() != 0 ||
-			promotionInfo.getCollateralDamageChange() != 0 ||
-			promotionInfo.getBombardRateChange() != 0 ||
-			promotionInfo.getFirstStrikesChange() != 0 ||
-			promotionInfo.getChanceFirstStrikesChange() != 0 ||
-			promotionInfo.getCombatPercent() != 0 ||
-			promotionInfo.getCityAttackPercent() != 0 ||
-			promotionInfo.getCityDefensePercent() != 0 ||
-			promotionInfo.getHillsAttackPercent() != 0 ||
-			promotionInfo.getHillsDefensePercent() != 0 ||
-			promotionInfo.getCollateralDamageProtection() != 0 ||
-			promotionInfo.getKamikazePercent() != 0 ||
-			promotionInfo.getAirCombatLimitChange() != 0 ||
-			promotionInfo.getCollateralDamageLimitChange() != 0 ||
-			promotionInfo.getCollateralDamageMaxUnitsChange() != 0 ||
-			promotionInfo.getCombatLimitChange() != 0 ||
-			promotionInfo.isDefensiveVictoryMove() != false ||
-			promotionInfo.isOffensiveVictoryMove() != false ||
-			promotionInfo.isBlitz() != false ||
-			promotionInfo.isAmphib() != false ||
-			promotionInfo.isRiver() != false ||
-			promotionInfo.isAlwaysHeal() != false ||
-			promotionInfo.isImmuneToFirstStrikes() != false ||
-			promotionInfo.isAnyTerrainAttackPercent() != false ||
-			promotionInfo.isAnyTerrainDefensePercent() != false ||
-			promotionInfo.isAnyFeatureAttackPercent() != false ||
-			promotionInfo.isAnyFeatureDefensePercent() != false ||
-			promotionInfo.isAnyUnitCombatModifierPercent() != false ||
-			promotionInfo.isAnyDomainModifierPercent() != false ||
-			promotionInfo.getAttackCombatModifierChange() != false ||
-			promotionInfo.getDefenseCombatModifierChange() != false ||
-			promotionInfo.getPursuitChange() != 0 ||
-			promotionInfo.getEarlyWithdrawChange() != 0 ||
-			promotionInfo.getVSBarbsChange() != 0 ||
-			promotionInfo.getArmorChange() != 0 ||
-			promotionInfo.getPunctureChange() != 0 ||
-			promotionInfo.getDamageModifierChange() != 0 ||
-			promotionInfo.getOverrunChange() != 0 ||
-			promotionInfo.getRepelChange() != 0 ||
-			promotionInfo.getFortRepelChange() != 0 ||
-			promotionInfo.getRepelRetriesChange() != 0 ||
-			promotionInfo.getUnyieldingChange() != 0 ||
-			promotionInfo.getKnockbackChange() != 0 ||
-			promotionInfo.getKnockbackRetriesChange() != 0 ||
+		if (promo.getInterceptChange() != 0 ||
+			promo.getEvasionChange() != 0 ||
+			promo.getWithdrawalChange() != 0 ||
+			promo.getCollateralDamageChange() != 0 ||
+			promo.getBombardRateChange() != 0 ||
+			promo.getFirstStrikesChange() != 0 ||
+			promo.getChanceFirstStrikesChange() != 0 ||
+			promo.getCombatPercent() != 0 ||
+			promo.getCityAttackPercent() != 0 ||
+			promo.getCityDefensePercent() != 0 ||
+			promo.getHillsAttackPercent() != 0 ||
+			promo.getHillsDefensePercent() != 0 ||
+			promo.getCollateralDamageProtection() != 0 ||
+			promo.getKamikazePercent() != 0 ||
+			promo.getAirCombatLimitChange() != 0 ||
+			promo.getCollateralDamageLimitChange() != 0 ||
+			promo.getCollateralDamageMaxUnitsChange() != 0 ||
+			promo.getCombatLimitChange() != 0 ||
+			promo.isDefensiveVictoryMove() != false ||
+			promo.isOffensiveVictoryMove() != false ||
+			promo.isBlitz() != false ||
+			promo.isAmphib() != false ||
+			promo.isRiver() != false ||
+			promo.isAlwaysHeal() != false ||
+			promo.isImmuneToFirstStrikes() != false ||
+			promo.isAnyTerrainAttackPercent() != false ||
+			promo.isAnyTerrainDefensePercent() != false ||
+			promo.isAnyFeatureAttackPercent() != false ||
+			promo.isAnyFeatureDefensePercent() != false ||
+			promo.isAnyUnitCombatModifierPercent() != false ||
+			promo.isAnyDomainModifierPercent() != false ||
+			promo.getAttackCombatModifierChange() != false ||
+			promo.getDefenseCombatModifierChange() != false ||
+			promo.getPursuitChange() != 0 ||
+			promo.getEarlyWithdrawChange() != 0 ||
+			promo.getVSBarbsChange() != 0 ||
+			promo.getArmorChange() != 0 ||
+			promo.getPunctureChange() != 0 ||
+			promo.getDamageModifierChange() != 0 ||
+			promo.getOverrunChange() != 0 ||
+			promo.getRepelChange() != 0 ||
+			promo.getFortRepelChange() != 0 ||
+			promo.getRepelRetriesChange() != 0 ||
+			promo.getUnyieldingChange() != 0 ||
+			promo.getKnockbackChange() != 0 ||
+			promo.getKnockbackRetriesChange() != 0 ||
 #ifdef BATTLEWORN
-			promotionInfo.getStrAdjperRndChange() != 0 ||
-			promotionInfo.getStrAdjperAttChange() != 0 ||
-			promotionInfo.getStrAdjperDefChange() != 0 ||
-			promotionInfo.getWithdrawAdjperAttChange() != 0 ||
+			promo.getStrAdjperRndChange() != 0 ||
+			promo.getStrAdjperAttChange() != 0 ||
+			promo.getStrAdjperDefChange() != 0 ||
+			promo.getWithdrawAdjperAttChange() != 0 ||
 #endif // BATTLEWORN
-			promotionInfo.getUnnerveChange() != 0 ||
-			promotionInfo.getEncloseChange() != 0 ||
-			promotionInfo.getLungeChange() != 0 ||
-			promotionInfo.getDynamicDefenseChange() != 0 ||
+			promo.getUnnerveChange() != 0 ||
+			promo.getEncloseChange() != 0 ||
+			promo.getLungeChange() != 0 ||
+			promo.getDynamicDefenseChange() != 0 ||
 #ifdef STRENGTH_IN_NUMBERS
-			promotionInfo.getFrontSupportPercentChange() != 0 ||
-			promotionInfo.getShortRangeSupportPercentChange() != 0 ||
-			promotionInfo.getMediumRangeSupportPercentChange() != 0 ||
-			promotionInfo.getLongRangeSupportPercentChange() != 0 ||
-			promotionInfo.getFlankSupportPercentChange() != 0 ||
+			promo.getFrontSupportPercentChange() != 0 ||
+			promo.getShortRangeSupportPercentChange() != 0 ||
+			promo.getMediumRangeSupportPercentChange() != 0 ||
+			promo.getLongRangeSupportPercentChange() != 0 ||
+			promo.getFlankSupportPercentChange() != 0 ||
 #endif
-			promotionInfo.getDodgeModifierChange() != 0 ||
-			promotionInfo.getPrecisionModifierChange() != 0 ||
-			promotionInfo.getPowerShotsChange() != 0 ||
-			promotionInfo.getPowerShotCombatModifierChange() != 0 ||
-			promotionInfo.getPowerShotPunctureModifierChange() != 0 ||
-			promotionInfo.getPowerShotPrecisionModifierChange() != 0 ||
-			promotionInfo.getPowerShotCriticalModifierChange() != 0 ||
-			promotionInfo.getCriticalModifierChange() != 0 ||
-			promotionInfo.getRoundStunProbChange() != 0 ||
-			promotionInfo.getPoisonProbabilityModifierChange() != 0 ||
-			promotionInfo.getCaptureProbabilityModifierChange() != 0 ||
-			promotionInfo.getQualityChange() != 0 ||
-			promotionInfo.isStampedeChange() != false ||
-			promotionInfo.isRemoveStampede() != false ||
-			promotionInfo.isOnslaughtChange() != false ||
-			promotionInfo.isMakesDamageCold() != false ||
-			promotionInfo.isMakesDamageNotCold() != false ||
-			promotionInfo.getNumFlankingStrikesbyUnitCombatTypesChange() != 0 ||
-			promotionInfo.getNumWithdrawVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumPursuitVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumRepelVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumKnockbackVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumPunctureVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumArmorVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumDodgeVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumPrecisionVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumCriticalVSUnitCombatChangeTypes() != 0 ||
-			promotionInfo.getNumRoundStunVSUnitCombatChangeTypes() != 0 ||
+			promo.getDodgeModifierChange() != 0 ||
+			promo.getPrecisionModifierChange() != 0 ||
+			promo.getPowerShotsChange() != 0 ||
+			promo.getPowerShotCombatModifierChange() != 0 ||
+			promo.getPowerShotPunctureModifierChange() != 0 ||
+			promo.getPowerShotPrecisionModifierChange() != 0 ||
+			promo.getPowerShotCriticalModifierChange() != 0 ||
+			promo.getCriticalModifierChange() != 0 ||
+			promo.getRoundStunProbChange() != 0 ||
+			promo.getPoisonProbabilityModifierChange() != 0 ||
+			promo.getCaptureProbabilityModifierChange() != 0 ||
+			promo.getQualityChange() != 0 ||
+			promo.isStampedeChange() != false ||
+			promo.isRemoveStampede() != false ||
+			promo.isOnslaughtChange() != false ||
+			promo.isMakesDamageCold() != false ||
+			promo.isMakesDamageNotCold() != false ||
+			promo.getNumFlankingStrikesbyUnitCombatTypesChange() != 0 ||
+			promo.getNumWithdrawVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumPursuitVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumRepelVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumKnockbackVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumPunctureVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumArmorVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumDodgeVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumPrecisionVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumCriticalVSUnitCombatChangeTypes() != 0 ||
+			promo.getNumRoundStunVSUnitCombatChangeTypes() != 0 ||
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-			promotionInfo.getNumAfflictOnAttackChangeTypes() != 0 ||
+			promo.getNumAfflictOnAttackChangeTypes() != 0 ||
 #endif
-			promotionInfo.getCombatModifierPerSizeMoreChange() != 0 ||
-			promotionInfo.getCombatModifierPerSizeLessChange() != 0 ||
-			promotionInfo.getCombatModifierPerVolumeMoreChange() != 0 ||
-			promotionInfo.getCombatModifierPerVolumeLessChange() != 0)
+			promo.getCombatModifierPerSizeMoreChange() != 0 ||
+			promo.getCombatModifierPerSizeLessChange() != 0 ||
+			promo.getCombatModifierPerVolumeMoreChange() != 0 ||
+			promo.getCombatModifierPerVolumeLessChange() != 0)
 		{
 			return false;
 		}
 	}
 
-	if (isCommander() && (promotionInfo.getGroupChange() != 0 || promotionInfo.getQualityChange() != 0))
+	if (isCommander() && (promo.getGroupChange() != 0 || promo.getQualityChange() != 0))
 	{
 		return false;
 	}
 
 	if (!bKeepCheck)
 	{
-		if (promotionInfo.getInterceptChange() + maxInterceptionProbability(true) > GC.getDefineINT("MAX_INTERCEPTION_PROBABILITY"))
-		{
-			return false;
-		}
-
-		if (promotionInfo.getEvasionChange() + evasionProbability(true) > GC.getDefineINT("MAX_EVASION_PROBABILITY"))
-		{
-			return false;
-		}
-
-		if (promotionInfo.getQualityChange() > 0 && getExperience() >= experienceNeeded(1))
+		if (promo.getInterceptChange() + maxInterceptionProbability(true) > GC.getDefineINT("MAX_INTERCEPTION_PROBABILITY")
+		||	promo.getEvasionChange() + evasionProbability(true) > GC.getDefineINT("MAX_EVASION_PROBABILITY")
+		||	promo.getQualityChange() > 0 && getExperience() >= experienceNeeded(1))
 		{
 			return false;
 		}
 	}
 
-	if (isBlendIntoCity() && promotionInfo.getCityDefensePercent() != 0)
+	if (isBlendIntoCity() && promo.getCityDefensePercent() != 0)
 	{
 		return false;
 	}
@@ -21695,18 +21554,10 @@ bool CvUnit::canAcquirePromotionAny() const
 	//of this function.  A check through reveals I never utilize this function in the processing of those features anyhow and it is only used for
 	//its original purpose of making sure the unit still has something it can select when taking a skill-based promo.
 
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = GC.getNumPromotionInfos() - 1; iI > -1; iI--)
 	{
-		PromotionTypes ePromotion = (PromotionTypes)iI;
-/*
-		bool bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
-		bool bAfflict = GC.getPromotionInfo(ePromotion).isAffliction();
-		bool bPromote = false;
-		if (!bEquip && !bAfflict)
-		{
-			bPromote = true;
-		}
-*/
+		const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
+
 		PromotionRequirements::flags promoFlags = PromotionRequirements::Promote;
 
 		if (GC.getPromotionInfo(ePromotion).isLeader())
@@ -21718,7 +21569,6 @@ bool CvUnit::canAcquirePromotionAny() const
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -28156,27 +28006,23 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb4(int iX, int iY)
 {
-	CvCity* pCity;
 	CvUnit* pUnit;
-	CvPlot* pPlot;
 	CvWString szBuffer;
-	bool bSuccess = false;
-	int iDamage, iCount;
-	int iUnitDamage;
-	bool bNoTarget = true;
+	bool bSuccess = false, bNoTarget = true;
+	int iDamage, iUnitDamage;
 
 	if (!canAirBomb4At(plot(), iX, iY))
 	{
 		return false;
 	}
-	pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
 	}
 
-	pCity = pPlot->getPlotCity();
-	iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
+	CvCity* pCity = pPlot->getPlotCity();
+	int iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
 	iCount = (GC.getGame().getSorenRandNum(iCount, "Choose ship") + 1);
 	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 	while (iCount > 0)
@@ -31069,8 +30915,6 @@ bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 					NotifyEntity(MISSION_CURE);
 				}
 				break;
-
-				return true;
 			}
 		}
 	}
@@ -33477,14 +33321,19 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 {
 	PROFILE_FUNC();
 
-	int iI;
+	if (ePromotion == NO_PROMOTION)
+	{
+		FErrorMsg("Invalid promotion");
+		return false;
+	}
 	bool bPromo = false;
 
-	bool bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
+	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
+
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	bool bAfflict = GC.getPromotionInfo(ePromotion).isAffliction();
+	const bool bAfflict = promo.isAffliction();
 #endif
-	if (bEquip
+	if (promo.isEquipment()
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		|| bAfflict
 #endif
@@ -33497,700 +33346,450 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		bPromo = true;
 	}
 
-	bool bIsFreePromotion = (isPromotionFree(ePromotion));
+	const bool bIsFreePromotion = (
+		bAssertFree
+		||
+		isPromotionFree(ePromotion)
+		||
+		GET_PLAYER(getOwner()).isFreePromotion(getUnitCombatType(), ePromotion)
+		||
+		promo.isZeroesXP()
+		||
+		promo.isForOffset()
+	);
 
-	if (GET_PLAYER(getOwner()).isFreePromotion(getUnitCombatType(), ePromotion))
+	if (promo.isRBombardPrereq() && !canRBombard(true))
 	{
-		bIsFreePromotion = true;
-	}
-	if (bAssertFree || GC.getPromotionInfo(ePromotion).isZeroesXP() || GC.getPromotionInfo(ePromotion).isForOffset())
-	{
-		bIsFreePromotion = true;
-	}
-
-	if ( ePromotion == NO_PROMOTION )
-	{
-		if (bPromo && !bIsFreePromotion)
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-			}
-		}
-		else
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-			}
-		}
-		return false;
-	}
-
-	if (!isPromotionValid(ePromotion, true))
-	{
-		if (bPromo && !bIsFreePromotion)
-		{
-			if (bMessageOnFalse)
-			{
-
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-			}
-		}
-		else
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-			}
-		}
-		return false;
-	}
-
-	if (GC.getPromotionInfo(ePromotion).isRBombardPrereq() && !canRBombard(true))
-	{
-		if (bPromo && !bIsFreePromotion)
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-			}
-		}
-		else
-		{
-			if (bMessageOnFalse)
-			{
-
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-			}
-		}
-		return false;
-	}
-
-	if (GC.getPromotionInfo(ePromotion).isCargoPrereq() && !isCarrier())
-	{
-		if (bPromo && !bIsFreePromotion)
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-			}
-		}
-		else
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-			}
-		}
-		return false;
-	}
-
-	PromotionTypes eQualifyPromo;
-	bool bbypass = true;
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-	PromotionTypes ePromotionPrerequisite = (PromotionTypes)kPromotion.getPrereqPromotion();
-	PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-	PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	bool bAfflictk = kPromotion.isAffliction();
-#endif
-	//bool bEquipk = kPromotion.isEquipment();
-
-	if (!bIsFreePromotion)
-	{
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-		if (!bAfflictk)
-#endif
-		{
-			if (ePromotionPrerequisite != NO_PROMOTION)
-			{
-				const CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
-				bbypass = false;
-				if (m_pUnitInfo->getFreePromotions((int)ePromotion))
-				{
-					bbypass = true;
-				}
-				if (!bbypass)
-				{
-					if (isHasPromotion(ePromotionPrerequisite))
-					{
-						bbypass = true;
-					}
-					//	No need to check other line promotions if we have this one of for non-equip/afflication lines
-					//	where having a larger one would anyway imply having this one
-					else if (kPrereq.getPromotionLine() != NO_PROMOTIONLINE && !kPrereq.isEquipment()
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-						&& !kPrereq.isAffliction()
-#endif
-						)
-					{
-						for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-						{
-							eQualifyPromo = ((PromotionTypes)iI);
-							const CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
-							if (isHasPromotion(eQualifyPromo) && kQualifier.getPromotionLine() != NO_PROMOTIONLINE)
-							{
-								if (kQualifier.getPromotionLine() == kPrereq.getPromotionLine())
-								{
-									if (kQualifier.getLinePriority() > kPrereq.getLinePriority())
-									{
-										bbypass = true;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			if (!bbypass)//then we DON'T have a prereq that's been removed thanks to the override mechanism.
-			{
-				if (bPromo && !isPromotionFree(ePromotion))
-				{
-					if (bMessageOnFalse)
-					{
-						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-					}
-				}
-				else
-				{
-					if (bMessageOnFalse)
-					{
-						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-					}
-				}
-				return false;
-			}
-			if (ePromotionPrerequisite1 != NO_PROMOTION)
-			{
-				const CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
-				bbypass = false;
-				if (m_pUnitInfo->getFreePromotions((int)ePromotion))
-				{
-					bbypass = true;
-				}
-				if (!bbypass)
-				{
-					if (isHasPromotion(ePromotionPrerequisite1))
-					{
-						bbypass = true;
-					}
-					else if (kPrereq1.getPromotionLine() != NO_PROMOTIONLINE && !kPrereq1.isEquipment()
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-						&& !kPrereq1.isAffliction()
-#endif
-						)
-					{
-						for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-						{
-							eQualifyPromo = ((PromotionTypes)iI);
-							const CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
-							if (isHasPromotion(eQualifyPromo) && kQualifier.getPromotionLine() != NO_PROMOTIONLINE)
-							{
-								if (kQualifier.getPromotionLine() == kPrereq1.getPromotionLine())
-								{
-									if (kQualifier.getLinePriority() > kPrereq1.getLinePriority())
-									{
-										bbypass = true;
-									}
-								}
-							}
-						}
-					}
-					if (!bbypass && ePromotionPrerequisite2 != NO_PROMOTION)
-					{
-						const CvPromotionInfo& kPrereq2 = GC.getPromotionInfo(ePromotionPrerequisite2);
-						if (isHasPromotion(ePromotionPrerequisite2))
-						{
-							bbypass = true;
-						}
-						else if (kPrereq2.getPromotionLine() != NO_PROMOTIONLINE && !kPrereq2.isEquipment()
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-							&& !kPrereq2.isAffliction()
-#endif
-							)
-						{
-							for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-							{
-								eQualifyPromo = ((PromotionTypes)iI);
-								const CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
-								if (isHasPromotion(eQualifyPromo) && kQualifier.getPromotionLine() != NO_PROMOTIONLINE)
-								{
-									if (kQualifier.getPromotionLine() == kPrereq2.getPromotionLine())
-									{
-										if (kQualifier.getLinePriority() > kPrereq2.getLinePriority())
-										{
-											bbypass = true;
-										}
-									}
-								}
-							}
-						}
-					}
-					if (!bbypass)//then we DON'T have a prereq that's been removed thanks to the override mechanism.
-					{
-						if (bPromo && !isPromotionFree(ePromotion))
-						{
-							if (bMessageOnFalse)
-							{
-								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-							}
-						}
-						else
-						{
-							if (bMessageOnFalse)
-							{
-								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-							}
-						}
-						return false;
-					}
-				}
-			}
-		}
-	}
-
-	//int iMinEraInt = kPromotion.getMinEraType();
-	int iMaxEraInt = kPromotion.getMaxEraType();
-	int iEra = -1;
-	bool bFail = false;
-	if (/*iMinEraInt > NO_ERA || */iMaxEraInt > NO_ERA)
-	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra() != NO_ERA && isHasUnitCombat((UnitCombatTypes)iI))
-			{
-				iEra = (int)GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra();
-			}
-		}
-		//if (iEra > -1 && iMinEraInt > NO_ERA && iMinEraInt > iEra)
-		//{
-		//	bFail = true;
-		//}
-		if (iEra > -1 && iMaxEraInt > NO_ERA && iMaxEraInt < iEra)
-		{
-			bFail = true;
-		}
-		if (bFail)
-		{
-			if (bPromo && !isPromotionFree(ePromotion))
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-		}
-	}
-
-	if (GC.getPromotionInfo(ePromotion).getObsoleteTech() != NO_TECH)
-	{// TB Debug: was
-		//if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(ePromotion).getTechPrereq()))
-		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(ePromotion).getObsoleteTech()))
+		if (bMessageOnFalse)
 		{
 			if (bPromo && !bIsFreePromotion)
 			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+				);
 			}
 			else
 			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-	}
-
-
-	if (getUnitCombatType() == NO_UNITCOMBAT)
-	{
-		if (bPromo && !bIsFreePromotion)
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-			}
-		}
-		else
-		{
-			if (bMessageOnFalse)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
 			}
 		}
 		return false;
 	}
 
-	// TB SubCombat Mod Begin - Original code:
-//	if (!GC.getPromotionInfo(ePromotion).getUnitCombat(getUnitCombatType()))
-//	{
-//		return false;
-//	}
-// New Code:
-	//if (!bIsFreePromotion)
-	//{
-	bool bIsUnitSpecific = false;
-	if (m_pUnitInfo->getFreePromotions((int)ePromotion))
+	if (promo.isCargoPrereq() && !isCarrier())
 	{
-		bIsUnitSpecific = true;
-	}
-	if (NO_UNIT != getUnitType())
-	{
-		if (GET_PLAYER(getOwner()).isFreePromotion(getUnitType(), ePromotion))
+		if (bMessageOnFalse)
 		{
-			bIsUnitSpecific = true;
+			if (bPromo && !bIsFreePromotion)
+			{
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+				);
+			}
+			else
+			{
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_NO_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
+			}
 		}
+		return false;
 	}
-	if (!bIsUnitSpecific)
-	{
-		bbypass = false;
-		bool bHasPrereq = false;
 
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	if (promo.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(promo.getObsoleteTech()))
+	{
+		if (bMessageOnFalse)
 		{
-			if (GC.getPromotionInfo(ePromotion).getUnitCombat(iI))
+			if (bPromo && !bIsFreePromotion)
 			{
-				bHasPrereq = true;
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+				);
 			}
-			if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE)
+			else
 			{
-				if (GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isUnitCombatPrereqType(iI))
-				{
-					bHasPrereq = true;
-				}
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_NO_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
 			}
-			if (isHasUnitCombat((UnitCombatTypes)iI))
+		}
+		return false;
+	}
+
+	if (promo.isNotOnDomainType(getDomainType())
+	||  promo.getPromotionLine() != NO_PROMOTIONLINE
+	&&  GC.getPromotionLineInfo(promo.getPromotionLine()).isNotOnDomainType(getDomainType()))
+	{
+		if (bMessageOnFalse)
+		{
+			if (bPromo && !bIsFreePromotion)
 			{
-				if (GC.getPromotionInfo(ePromotion).getUnitCombat(iI))
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_CAN_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+				);
+			}
+			else
+			{
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_NO_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
+			}
+		}
+		return false;
+	}
+
+	if (!promo.isPlotPrereqsKeepAfter())
+	{
+		bool bValid = true;
+		{
+			const TerrainTypes eTerrain = plot()->getTerrainType();
+
+			for (int iI = 0; iI < promo.getNumPrereqTerrainTypes(); iI++)
+			{
+				const TerrainTypes ePrereqTerrain = (TerrainTypes)promo.getPrereqTerrainType(iI);
+				if (ePrereqTerrain != NO_TERRAIN)
 				{
-					bbypass = true;
-					break;
-				}
-				if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE)
-				{
-					if (GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isUnitCombatPrereqType(iI))
+					bValid = false;
+					if (ePrereqTerrain == GC.getTERRAIN_PEAK())
 					{
-						bbypass = true;
+						if (plot()->isAsPeak())
+						{
+							bValid = true;
+							break;
+						}
+					}
+					else if (ePrereqTerrain == GC.getTERRAIN_HILL())
+					{
+						if (plot()->isHills())
+						{
+							bValid = true;
+							break;
+						}
+					}
+					else if (ePrereqTerrain == eTerrain)
+					{
+						bValid = true;
 						break;
 					}
 				}
 			}
-		}
-
-		if (!bbypass && bHasPrereq)
-		{
-			if (bPromo && !isPromotionFree(ePromotion))
+			if (!bValid)
 			{
 				if (bMessageOnFalse)
 				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (isHasUnitCombat((UnitCombatTypes)iI) &&
-				((GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE &&
-				GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isNotOnUnitCombatType(iI))
-				|| GC.getPromotionInfo(ePromotion).isNotOnUnitCombatType(iI)))
-			{
-				if (bPromo && !bIsFreePromotion)
-				{
-					if (bMessageOnFalse)
+					if (bPromo && !bIsFreePromotion)
 					{
-						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+						);
 					}
-				}
-				else
-				{
-					if (bMessageOnFalse)
+					else
 					{
-						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
 					}
 				}
 				return false;
 			}
 		}
+		{
+			const FeatureTypes eFeature = plot()->getFeatureType();
+
+			for (int iI = 0; iI < promo.getNumPrereqFeatureTypes(); iI++)
+			{
+				const FeatureTypes ePrereqFeature = (FeatureTypes)promo.getPrereqFeatureType(iI);
+
+				if (ePrereqFeature != NO_FEATURE)
+				{
+					if (eFeature == ePrereqFeature)
+					{
+						bValid = true;
+						break;
+					}
+					else bValid = false;
+				}
+			}
+			if (!bValid)
+			{
+				if (bMessageOnFalse)
+				{
+					if (bPromo && !bIsFreePromotion)
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+						);
+					}
+					else
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_NO_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
+					}
+				}
+				return false;
+			}
+		}
+		{
+			const BonusTypes eBonus = plot()->getBonusType(getTeam());
+
+			for (int iI = 0; iI < promo.getNumPrereqPlotBonusTypes(); iI++)
+			{
+				const BonusTypes ePrereqBonus = (BonusTypes)promo.getPrereqPlotBonusType(iI);
+				if (ePrereqBonus != NO_BONUS)
+				{
+					bValid = false;
+					if (eBonus == ePrereqBonus)
+					{
+						bValid = true;
+						break;
+					}
+				}
+			}
+			if (!bValid)
+			{
+				if (bMessageOnFalse)
+				{
+					if (bPromo && !bIsFreePromotion)
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+						);
+					}
+					else
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_NO_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
+					}
+				}
+				return false;
+			}
+		}
+		{
+			//Improvements and buildings are OR statements between all of them.
+			bValid = false;
+			bool bRequire = false;
+			const ImprovementTypes eImprovement = plot()->getImprovementType();
+
+			for (int iI = 0; iI < promo.getNumPrereqImprovementTypes(); iI++)
+			{
+				const ImprovementTypes ePrereqImprovement = (ImprovementTypes)promo.getPrereqImprovementType(iI);
+
+				if (ePrereqImprovement != NO_IMPROVEMENT)
+				{
+					bRequire = true;
+					if (ePrereqImprovement == GC.getIMPROVEMENT_CITY())
+					{
+						if (plot()->isCity(true))
+						{
+							bValid = true;
+							break;
+						}
+					}
+					if (eImprovement == ePrereqImprovement)
+					{
+						bValid = true;
+						break;
+					}
+				}
+			}
+			const int iNumPrereqLocalBuilding = promo.getNumPrereqLocalBuildingTypes();
+
+			if (!bValid && iNumPrereqLocalBuilding > 0)
+			{
+				bRequire = true;
+				for (int iI = 0; iI < iNumPrereqLocalBuilding; iI++)
+				{
+					if (plot()->isCity(false))
+					{
+						const CvCity* pCity = plot()->getPlotCity();
+						if (pCity->getNumActiveBuilding((BuildingTypes)promo.getPrereqLocalBuildingType(iI)) > 0)
+						{
+							bValid = true;
+							break;
+						}
+					}
+				}
+			}
+			if (bRequire && !bValid)
+			{
+				if (bMessageOnFalse)
+				{
+					if (bPromo && !bIsFreePromotion)
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_CAN_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+						);
+					}
+					else
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_NO_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
+					}
+				}
+				return false;
+			}
+			//Improvements and buildings are OR statements between all of them.
+		}
 	}
 
-	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
+	if (!bIsFreePromotion)
 	{
-		if (getDomainType() == ((DomainTypes)iI) &&
-			(((GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE &&
-			GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isNotOnDomainType(iI))
-			|| GC.getPromotionInfo(ePromotion).isNotOnDomainType(iI))))
-		{
-			if (bPromo && !bIsFreePromotion)
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-	}
-	//}
-	//TB SubCombat Mod End
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	//Note: Commented out for now as its causing some issues.  This may be optionalized at a later date.
-	//if (GC.getPromotionInfo(ePromotion).getStateReligionPrereq() != NO_RELIGION)
-	//{
-	//	if (GET_PLAYER(getOwner()).getStateReligion() != GC.getPromotionInfo(ePromotion).getStateReligionPrereq())
-	//	{
-	//		return false;
-	//	}
-	//}
-
-	bool bNeedForBypass = false;
-	bool bBypass = false;
-	if (!kPromotion.isPlotPrereqsKeepAfter())
-	{
-		const TerrainTypes eTerrain = plot()->getTerrainType();
-		for (iI = 0; iI < kPromotion.getNumPrereqTerrainTypes(); iI++)
-		{
-			const TerrainTypes ePrereqTerrain = (TerrainTypes)kPromotion.getPrereqTerrainType(iI);
-			if (ePrereqTerrain != NO_TERRAIN)
-			{
-				bNeedForBypass = true;
-				if (ePrereqTerrain == GC.getTERRAIN_PEAK())
-				{
-					if (plot()->isAsPeak())
-					{
-						bBypass = true;
-					}
-				}
-				else if (ePrereqTerrain == GC.getTERRAIN_HILL())
-				{
-					if (plot()->isHills())
-					{
-						bBypass = true;
-					}
-				}
-				else if (ePrereqTerrain == eTerrain)
-				{
-					bBypass = true;
-				}
-			}
-		}
-		if (bNeedForBypass && !bBypass)
-		{
-			if (bPromo && !bIsFreePromotion)
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-
-		bNeedForBypass = false;
-		bBypass = false;
-		const FeatureTypes eFeature = plot()->getFeatureType();
-		for (iI = 0; iI < kPromotion.getNumPrereqFeatureTypes(); iI++)
-		{
-			const FeatureTypes ePrereqFeature = (FeatureTypes)kPromotion.getPrereqFeatureType(iI);
-			if (ePrereqFeature != NO_FEATURE)
-			{
-				bNeedForBypass = true;
-				if (eFeature == ePrereqFeature)
-				{
-					bBypass = true;
-				}
-			}
-		}
-		if (bNeedForBypass && !bBypass)
-		{
-			if (bPromo && !bIsFreePromotion)
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-
-		bNeedForBypass = false;
-		bBypass = false;
-		const ImprovementTypes eImprovement = plot()->getImprovementType();
-		for (iI = 0; iI < kPromotion.getNumPrereqImprovementTypes(); iI++)
-		{
-			const ImprovementTypes ePrereqImprovement = (ImprovementTypes)kPromotion.getPrereqImprovementType(iI);
-			if (ePrereqImprovement != NO_IMPROVEMENT)
-			{
-				bNeedForBypass = true;
-				if (ePrereqImprovement == GC.getIMPROVEMENT_CITY())
-				{
-					if (plot()->isCity(true))
-					{
-						bBypass = true;
-					}
-				}
-				if (eImprovement == ePrereqImprovement)
-				{
-					bBypass = true;
-				}
-			}
-		}
-		const int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingTypes();
-		if (iNumPrereqLocalBuilding > 0)
-		{
-			bNeedForBypass = true;
-			for (iI = 0; iI < iNumPrereqLocalBuilding; iI++)
-			{
-				if (plot()->isCity(false))
-				{
-					const CvCity* pCity = plot()->getPlotCity();
-					if (pCity->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingType(iI)) > 0)
-					{
-						bBypass = true;
-					}
-				}
-			}
-		}
-		if (bNeedForBypass && !bBypass)
-		{
-			if (bPromo && !bIsFreePromotion)
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-		//Improvements and buildings is an OR statement between all of them.
-
-		bNeedForBypass = false;
-		bBypass = false;
-		const BonusTypes eBonus = plot()->getBonusType(getTeam());
-		for (iI = 0; iI < kPromotion.getNumPrereqPlotBonusTypes(); iI++)
-		{
-			const BonusTypes ePrereqBonus = (BonusTypes)kPromotion.getPrereqPlotBonusType(iI);
-			if (ePrereqBonus != NO_BONUS)
-			{
-				bNeedForBypass = true;
-				if (eBonus == ePrereqBonus)
-				{
-					bBypass = true;
-				}
-			}
-		}
-		if (bNeedForBypass && !bBypass)
-		{
-			if (bPromo && !bIsFreePromotion)
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
-				}
-			}
-			else
-			{
-				if (bMessageOnFalse)
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-				}
-			}
-			return false;
-		}
-	}
-
-	if (GC.getPromotionInfo(ePromotion).isEquipment() && !bEquip)
-	{
-		return false;
-	}
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (GC.getPromotionInfo(ePromotion).isAffliction() && !bAfflict)
-	{
-		return false;
-	}
+		if (!bAfflict)
 #endif
+		{
+			const PromotionTypes ePromotionPrerequisite = (PromotionTypes)promo.getPrereqPromotion();
+			const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)promo.getPrereqOrPromotion1();
+			const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)promo.getPrereqOrPromotion2();
+
+			if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite)
+			|| (ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
+			&& (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
+			&& (ePromotionPrerequisite2 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite2)))
+			{
+				if (bMessageOnFalse)
+				{
+					if (bPromo && !isPromotionFree(ePromotion))
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+						);
+					}
+					else
+					{
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN",
+								getNameKey(), promo.getDescription()
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
+					}
+				}
+				return false;
+			}
+		}
+		if (!isPromotionValid(ePromotion, true))
+		{
+			if (bMessageOnFalse)
+			{
+				if (bPromo && !bIsFreePromotion)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN",
+							getNameKey(), promo.getDescription()
+						),
+						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN",
+							getNameKey(), promo.getDescription()
+						),
+						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+					);
+				}
+			}
+			return false;
+		}
+	}
 	return true;
 }
 
@@ -34206,18 +33805,6 @@ int CvUnit::getPromotionFreeCount(PromotionTypes ePromotion) const
 bool CvUnit::isPromotionFree(PromotionTypes ePromotion) const
 {
 	return (getPromotionFreeCount(ePromotion) > 0);
-}
-
-void CvUnit::changePromotionFreeCount(PromotionTypes ePromotion, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion);
-
-	if (iChange != 0)
-	{
-		PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotion);
-
-		info->m_iPromotionFreeCount += iChange;
-	}
 }
 
 void CvUnit::setPromotionFreeCount(PromotionTypes ePromotion, int iChange)
@@ -34378,189 +33965,91 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eEquipment);
 
-	int iI;
-	CvPlot* pPlot = plot();
-	CvCity* pCity = pPlot->getPlotCity();
-
-	if (eEquipment == NO_PROMOTION)
+	if (eEquipment == NO_PROMOTION
+	|| getUnitCombatType() == NO_UNITCOMBAT
+	|| isHasPromotion(eEquipment))
 	{
 		return false;
 	}
 
-	if (!GC.getPromotionInfo(eEquipment).isEquipment())
+	if (!isPromotionValid(eEquipment))
 	{
 		return false;
 	}
+	const CvPromotionInfo& equipment = GC.getPromotionInfo(eEquipment);
 
-	if (isHasPromotion(eEquipment))
+	if (!equipment.isEquipment())
 	{
 		return false;
 	}
-
-	if (getUnitCombatType() == NO_UNITCOMBAT)
-	{
-		return false;
-	}
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (!pCity->isFreePromotion(eEquipment))
 	{
 		return false;
 	}
 
-	bool bbypass = false;
-	for (iI = 0; iI < GC.getNumPromotionInfos() && !bbypass; iI++)
+	if (equipment.getPromotionLine() != NO_PROMOTIONLINE)
 	{
-		if (GC.getPromotionInfo((PromotionTypes)iI).isEquipment())
+		bool bValid = false;
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			const PromotionTypes ePromoToReplace = ((PromotionTypes)iI);
-			if (GC.getPromotionInfo(ePromoToReplace).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE)
+			const PromotionTypes ePromoToReplace = static_cast<PromotionTypes>(iI);
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(ePromoToReplace);
+
+			if (promoX.isEquipment()
+			&&  promoX.getPromotionLine() == equipment.getPromotionLine()
+			&&  isHasPromotion(ePromoToReplace)
+			&&  equipment.getLinePriority() >= promoX.getLinePriority())
 			{
-				if (isHasPromotion(ePromoToReplace) && (GC.getPromotionInfo(ePromoToReplace).getPromotionLine() == GC.getPromotionInfo(eEquipment).getPromotionLine()))
-				{
-					if (GC.getPromotionInfo(eEquipment).getLinePriority() >= GC.getPromotionInfo(ePromoToReplace).getLinePriority())
-					{
-						bbypass = true;
-					}
-				}
+				bValid = true;
+				break;
 			}
 		}
-	}
-	if (!bbypass)
-	{
-		return false;
-	}
-
-	bbypass = true;
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eEquipment);
-	const PromotionTypes ePromotionPrerequisite = (PromotionTypes)kPromotion.getPrereqPromotion();
-	const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-	const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
-
-	if (ePromotionPrerequisite != NO_PROMOTION)
-	{
-		//const CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
-		bbypass = false;
-		if (isHasPromotion(ePromotionPrerequisite))
-		{
-			bbypass = true;
-		}
-	}
-	if (!bbypass)//then we DON'T have a prereq that's been removed thanks to the override mechanism.
-	{
-		return false;
-	}
-	if (ePromotionPrerequisite1 != NO_PROMOTION)
-	{
-		//const CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
-		bbypass = false;
-		if (isHasPromotion(ePromotionPrerequisite1))
-		{
-			bbypass = true;
-		}
-
-		if (!bbypass && ePromotionPrerequisite2 != NO_PROMOTION)
-		{
-			//const CvPromotionInfo& kPrereq2 = GC.getPromotionInfo(ePromotionPrerequisite2);
-			if (isHasPromotion(ePromotionPrerequisite2))
-			{
-				bbypass = true;
-			}
-		}
-
-		if (!bbypass)//then we DON'T have a prereq that's been removed thanks to the override mechanism.
+		if (!bValid)
 		{
 			return false;
 		}
 	}
 
-	for (iI = 0; iI < GC.getPromotionInfo(eEquipment).getNumPrereqBonusTypes(); iI++)
 	{
-		const BonusTypes ePrereqBonus = (BonusTypes)GC.getPromotionInfo(eEquipment).getPrereqBonusType(iI);
+		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)equipment.getPrereqPromotion();
+
+		if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite))
+		{
+			return false;
+		}
+	}
+	{
+		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)equipment.getPrereqOrPromotion1();
+		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)equipment.getPrereqOrPromotion2();
+
+		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
+		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
+		&&  (ePromotionPrerequisite2 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite2)))
+		{
+			return false;
+		}
+	}
+
+	for (int iI = 0; iI < equipment.getNumPrereqBonusTypes(); iI++)
+	{
+		const BonusTypes ePrereqBonus = (BonusTypes)equipment.getPrereqBonusType(iI);
 		if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 		{
 			return false;
 		}
 	}
 
-	if (GC.getPromotionInfo(eEquipment).getTechPrereq() != NO_TECH)
-	{
-		if (!GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(eEquipment).getTechPrereq()))
-		{
-			return false;
-		}
-	}
-
-	if (GC.getPromotionInfo(eEquipment).getObsoleteTech() != NO_TECH)
-	{
-		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(eEquipment).getObsoleteTech()))
-		{
-			return false;
-		}
-	}
-
-	bbypass = false;
-
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (isHasUnitCombat((UnitCombatTypes)iI))
-		{
-			const UnitCombatTypes ePrereq = (UnitCombatTypes)iI;
-			if (GC.getPromotionInfo(eEquipment).getUnitCombat(ePrereq))
-			{
-				bbypass = true;
-				break;
-			}
-			if (GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE)
-			{
-				if (GC.getPromotionLineInfo(GC.getPromotionInfo(eEquipment).getPromotionLine()).isUnitCombatPrereqType(ePrereq))
-				{
-					bbypass = true;
-					break;
-				}
-			}
-		}
-	}
-
-	if (!bbypass)
+	if (equipment.isNotOnDomainType(getDomainType())
+	||  equipment.getPromotionLine() != NO_PROMOTIONLINE
+	&&  GC.getPromotionLineInfo(equipment.getPromotionLine()).isNotOnDomainType(getDomainType()))
 	{
 		return false;
 	}
 
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (isHasUnitCombat((UnitCombatTypes)iI) &&
-			((GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE &&
-			GC.getPromotionLineInfo(GC.getPromotionInfo(eEquipment).getPromotionLine()).isNotOnUnitCombatType(iI))
-			|| GC.getPromotionInfo(eEquipment).isNotOnUnitCombatType(iI)))
-		{
-			return false;
-		}
-	}
-
-	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
-	{
-		if (getDomainType() == ((DomainTypes)iI) &&
-			(GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE &&
-			GC.getPromotionLineInfo(GC.getPromotionInfo(eEquipment).getPromotionLine()).isNotOnDomainType(iI)))
-		{
-			return false;
-		}
-		if (getDomainType() == ((DomainTypes)iI) &&
-			(GC.getPromotionInfo(eEquipment).isNotOnDomainType(iI)))
-		{
-			return false;
-		}
-	}
-
-	if (GC.getPromotionInfo(eEquipment).getStateReligionPrereq() != NO_RELIGION)
-	{
-		if (GET_PLAYER(getOwner()).getStateReligion() != GC.getPromotionInfo(eEquipment).getStateReligionPrereq())
-		{
-			return false;
-		}
-	}
-
-	if (!isPromotionValid(eEquipment))
+	if (equipment.getStateReligionPrereq() != NO_RELIGION
+	&& GET_PLAYER(getOwner()).getStateReligion() != equipment.getStateReligionPrereq())
 	{
 		return false;
 	}

@@ -643,7 +643,8 @@ def updateRevolutionIndices( argsList ) :
 	RevData.updateCityVal( pCity, 'RevIdxHistory', RevDefs.initRevIdxHistory() )
 
 	if newOwner.isRebel():
-		if newOwner.getNumCities() > 1 and RevData.revObjectGetVal(newOwner, 'CapitalName') == CvUtil.convertToStr(pCity.getName()):
+		import TextUtil
+		if newOwner.getNumCities() > 1 and RevData.revObjectGetVal(newOwner, 'CapitalName') == TextUtil.convertToStr(pCity.getName()):
 			# Rebel has captured their instigator city, make this their capital
 			print "[REV] Rebel %s have captured their instigator city, %s!  Moving capital." %(newOwner.getCivilizationDescription(0), pCity.getName())
 			if newOwner.isHuman():

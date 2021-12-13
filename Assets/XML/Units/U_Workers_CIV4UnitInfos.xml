@@ -1634,7 +1634,7 @@
 			</Builds>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
 			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
-			<iCost>650</iCost>
+			<iCost>848</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>350</iWorkRate>
@@ -1995,7 +1995,7 @@
 				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<iCost>48</iCost>
+			<iCost>61</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>
@@ -2109,7 +2109,7 @@
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -2251,7 +2251,7 @@
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
-			<iCost>132</iCost>
+			<iCost>233</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>200</iWorkRate>
@@ -2398,7 +2398,7 @@
 				<BuildType>BUILD_SANITIZE_WATER</BuildType>
 			</Builds>
 			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-			<iCost>396</iCost>
+			<iCost>492</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iWorkRate>300</iWorkRate>
@@ -2505,7 +2505,7 @@
 				<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 			</Builds>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
-			<iCost>1200</iCost>
+			<iCost>1729</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iWorkRate>500</iWorkRate>

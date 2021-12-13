@@ -29,7 +29,7 @@ public:
 	void addTeam(TeamTypes eTeam);
 	void shareItems(TeamTypes eTeam);
 	void shareCounters(TeamTypes eTeam);
-	//Team Project (5)
+
 	void processBuilding(BuildingTypes eBuilding, int iChange, bool bReligiouslyDisabling = false);
 
 	void doTurn();
@@ -132,7 +132,7 @@ public:
 	void changeNumMembers(int iChange);
 
 	int getAliveCount() const;
-	int isAlive() const;
+	bool isAlive() const;
 	void changeAliveCount(int iChange);
 
 	int isEverAlive() const;
