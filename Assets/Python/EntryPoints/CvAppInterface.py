@@ -25,16 +25,6 @@ def initBUG():
 	import BugInit
 	BugInit.init()
 
-	# Matt: todo - temp, delete later
-	GC = CyGlobalContext()
-	for i in range(GC.getNumBuildingInfos()):
-		CvBuildingInfo = GC.getBuildingInfo(i)
-		print CvBuildingInfo.getType()
-		#for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
-		#	print str(iTech) + ", " + str(iHappiness)
-		for iTech in CvBuildingInfo.getPrereqAndTechs():
-			print str(iTech)
-
 # don't make this an event - Moose
 def init():
 	import sys
