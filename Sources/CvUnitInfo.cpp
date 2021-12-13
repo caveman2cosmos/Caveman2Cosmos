@@ -6266,16 +6266,6 @@ void CvUnitInfo::setSM()
 	}
 }
 
-int CvUnitInfo::getQualifiedPromotionType(int i) const
-{
-	return m_aiQualifiedPromotionTypes[i];
-}
-
-int CvUnitInfo::getNumQualifiedPromotionTypes() const
-{
-	return (int)m_aiQualifiedPromotionTypes.size();
-}
-
 bool CvUnitInfo::isQualifiedPromotionType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);

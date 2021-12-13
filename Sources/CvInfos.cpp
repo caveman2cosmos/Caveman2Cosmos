@@ -32532,12 +32532,6 @@ int CvPromotionLineInfo::getNumUnitCombatPrereqTypes() const
 	return (int)m_aiUnitCombatPrereqTypes.size();
 }
 
-bool CvPromotionLineInfo::isUnitCombatPrereqType(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::any_of_equal(m_aiUnitCombatPrereqTypes, i);
-}
-
 int CvPromotionLineInfo::getNotOnUnitCombatType(int i) const
 {
 	return m_aiNotOnUnitCombatTypes[i];

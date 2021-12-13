@@ -233,174 +233,16 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 	return (pFirstUnit->getID() < pSecondUnit->getID());
 }
 
-/*************************************************************************************************/
-/** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
-/** BEGIN                                                                       v?.?             */
-/*************************************************************************************************/
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
-{
-	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
-	// RevolutionDCM - super spies
-	// Disable spy promotions mechanism
-	if (kUnit.isSpy() && !GC.isSS_ENABLED())
-	{
-		return false;
-	}
-	// RevolutionDCM - end
-
-	if (kUnit.getFreePromotions(ePromotion))
-	{
-		return true;
-	}
-
-	if (kUnit.getUnitCombatType() == NO_UNITCOMBAT)
-	{
-		return false;
-	}
-
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-
-	if (!bLeader && kPromotion.isLeader())
-	{
-		return false;
-	}
-// TB SubCombat Mod Begin - Unnecessary and create bugs in SubCombat:
-//	if (!(kPromotion.getUnitCombat(kUnit.getUnitCombatType())))
-//	{
-//		return false;
-//	}
-	//TB SubCombat Mod End
-/************************************************************************************************/
-/* SUPER_SPIES                             04/05/08                                Faichele     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original code
-	if (kUnit.isOnlyDefensive())
-	{
-		if ((kPromotion.getCityAttackPercent() != 0) ||
-			  (kPromotion.getWithdrawalChange() != 0) ||
-			  (kPromotion.getCollateralDamageChange() != 0) ||
-			  (kPromotion.isBlitz()) ||
-			  (kPromotion.isAmphib()) ||
-			  (kPromotion.isRiver()) ||
-			  (kPromotion.getHillsAttackPercent() != 0))
-		{
-			return false;
-		}
-	}
-*/
-	//TSHEEP Override for Spy promotions
-	//if (kUnit.isOnlyDefensive())
-	if (kUnit.isOnlyDefensive() && !kUnit.isSpy())//TSHEEP End
-	{
-		if ((kPromotion.getCityAttackPercent() != 0) ||
-		//TB Combat Mod begin
-			  ((!GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))&&(kPromotion.getWithdrawalChange() != 0)) ||
-			  //TB Combat Mod end
-			  (kPromotion.getCollateralDamageChange() != 0) ||
-			  (kPromotion.isBlitz()) ||
-			  (kPromotion.isAmphib()) ||
-			  (kPromotion.isRiver()) ||
-			  //TB Combat Mod begin
-			  (kPromotion.isRemoveStampede()) ||
-			  (kPromotion.isStampedeChange()) ||
-			  (kPromotion.isOnslaughtChange()) ||
-			  (kPromotion.getKnockbackChange()) ||
-			  //TB Combat Mod end
-			  (kPromotion.getHillsAttackPercent() != 0))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* SUPER_SPIES                             END                                                  */
-/************************************************************************************************/
-
-	//if (kUnit.isIgnoreTerrainCost())
-	//{
-	//	if (kPromotion.getMoveDiscountChange() != 0)
-	//	{
-	//		return false;
-	//	}
-	//}
-
-	//ls612: Remove this filter, it was causing wierd things to happen.
-	//if (kUnit.getMoves() == 1)
-	//{
-	//	if (kPromotion.isBlitz())
-	//	{
-	//		return false;
-	//	}
-	//}
-
-	if ((kUnit.getCollateralDamage() == 0) || (kUnit.getCollateralDamageLimit() == 0) || (kUnit.getCollateralDamageMaxUnits() == 0))
-	{
-		if (kPromotion.getCollateralDamageChange() != 0)
-		{
-			return false;
-		}
-	}
-
-	if (kUnit.getInterceptionProbability() == 0 && !kUnit.isSpy())
-	{
-		if (kPromotion.getInterceptChange() != 0)
-		{
-			return false;
-		}
-	}
-
-	if (NO_PROMOTION != kPromotion.getPrereqPromotion())
-	{
-		if (!isPromotionValid((PromotionTypes)kPromotion.getPrereqPromotion(), eUnit, bLeader))
-		{
-			return false;
-		}
-	}
-
-	const PromotionTypes ePrereq1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-	const PromotionTypes ePrereq2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
-	if (NO_PROMOTION != ePrereq1 || NO_PROMOTION != ePrereq2)
-	{
-		bool bValid = false;
-		if (!bValid)
-		{
-			if (NO_PROMOTION != ePrereq1 && isPromotionValid(ePrereq1, eUnit, bLeader))
-			{
-				bValid = true;
-			}
-		}
-
-		if (!bValid)
-		{
-			if (NO_PROMOTION != ePrereq2 && isPromotionValid(ePrereq2, eUnit, bLeader))
-			{
-				bValid = true;
-			}
-		}
-
-		if (!bValid)
-		{
-			return false;
-		}
-	}
-
-	return true;
-}
-/*************************************************************************************************/
-/** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
-/** END                                                                                          */
-/*************************************************************************************************/
 
 int getTechScore(TechTypes eTech)
 {
-	return (GC.getTechInfo(eTech).getEra() + 1);
+	return 1 + GC.getTechInfo(eTech).getEra();
 }
 
 int getWonderScore(BuildingTypes eWonder)
 {
-	return isLimitedWonder(eWonder) ? 5 : 0;
+	return isLimitedWonder(eWonder) ? 6 : 1;
 }
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount)
@@ -416,10 +258,7 @@ ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCou
 	{
 		return finalImprovementUpgrade(GC.getImprovementInfo(eImprovement).getImprovementUpgrade(), (iCount + 1));
 	}
-	else
-	{
-		return eImprovement;
-	}
+	return eImprovement;
 }
 
 int getWorldSizeMaxConscript(CivicTypes eCivic)
@@ -441,7 +280,6 @@ bool isReligionTech(TechTypes eTech)
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -454,7 +292,6 @@ bool isCorporationTech(TechTypes eTech)
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -466,7 +303,6 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 	{
 		return true;
 	}
-
 	return algo::any_of_equal(info.getPrereqAndTechs(), eTech);
 }
 
