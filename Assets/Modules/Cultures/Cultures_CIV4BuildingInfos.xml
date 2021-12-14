@@ -4275,7 +4275,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -7072,10 +7072,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2730</iCost>
 			<CommerceChanges>
@@ -13115,7 +13116,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
