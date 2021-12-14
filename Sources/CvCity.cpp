@@ -13524,7 +13524,7 @@ bool CvCity::isCorporationBonus(BonusTypes eBonus) const
 	{
 		if (GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iCorp)
 		&& isHasCorporation((CorporationTypes)iCorp)
-		&& algo::contains(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
+		&& algo::any_of_equal(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
 		{
 			return true;
 		}
@@ -14860,7 +14860,7 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 bool CvCity::isFreeBuilding(const short iIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex);
-	return algo::contains(m_vFreeBuildings, iIndex);
+	return algo::any_of_equal(m_vFreeBuildings, iIndex);
 }
 
 void CvCity::checkFreeBuildings()
@@ -18763,7 +18763,7 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 
 bool CvCity::isEventOccured(EventTypes eEvent) const
 {
-	return algo::contains(m_aEventsOccured, eEvent);
+	return algo::any_of_equal(m_aEventsOccured, eEvent);
 }
 
 void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)
@@ -21183,7 +21183,7 @@ void CvCity::setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValu
 bool CvCity::isDisabledBuilding(const short iIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex);
-	return algo::contains(m_vDisabledBuildings, iIndex);
+	return algo::any_of_equal(m_vDisabledBuildings, iIndex);
 }
 
 

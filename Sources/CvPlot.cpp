@@ -1162,7 +1162,7 @@ void CvPlot::updateMinimapColor()
 
 bool CvPlot::unitHere(const CvUnit* pUnit) const
 {
-	return algo::contains(units(), pUnit);
+	return algo::any_of_equal(units(), pUnit);
 }
 
 CvUnit* CvPlot::getPreferredCenterUnit() const
@@ -13521,7 +13521,7 @@ void CvPlot::unitGameStateCorrections()
 bool CvPlot::isMapCategoryType(MapCategoryTypes eMapCategory) const
 {
 	const std::vector<MapCategoryTypes>& plotMapCategories = getMapCategories();
-	return plotMapCategories.empty() || algo::contains(plotMapCategories, eMapCategory);
+	return plotMapCategories.empty() || algo::any_of_equal(plotMapCategories, eMapCategory);
 }
 
 const std::vector<MapCategoryTypes>& CvPlot::getMapCategories() const
