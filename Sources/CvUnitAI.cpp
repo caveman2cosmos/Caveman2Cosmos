@@ -30665,7 +30665,7 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 	int iValue = 0;
 	int iBestValue = 0;
 
-	CvPlot* pPlot = getGroup()->plot();
+	const CvPlot* pPlot = getGroup()->plot();
 	if (pPlot == NULL)
 	{
 		return false;
@@ -31221,17 +31221,17 @@ bool CvUnitAI::AI_groupSelectStatus()
 bool CvUnitAI::AI_InvestigatorFulfillment()
 {
 	const int iMinimumDedicated = 1;
-	CvPlayerAI& player = GET_PLAYER(getOwner());
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
 
 	bool bDedicate = false;
 
 	int iBestValue = 0;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 	//CvCity* pBestCity = NULL;
 
 	foreach_(const CvCity * pLoopCity, player.cities())
 	{
-		CvPlot* pLoopPlot = pLoopCity->plot();
+		const CvPlot* pLoopPlot = pLoopCity->plot();
 		bool bAtPlot = atPlot(pLoopPlot);
 		int iDedicated = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);
 		int iDedicatedNeeded = iMinimumDedicated - iDedicated;
@@ -31290,7 +31290,7 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 			int iPathTurns = 0;
 			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
 			{
-				CvPlot* endTurnPlot = getPathEndTurnPlot();
+				const CvPlot* endTurnPlot = getPathEndTurnPlot();
 				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INVESTIGATOR_RESPONSE, pBestPlot);
 			}
 		}
@@ -31432,7 +31432,7 @@ void CvUnitAI::setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd)
 
 bool CvUnitAI::isWaitingOnUnitAI(int iIndex) const
 {
-	return !isHuman() && algo::contains(m_aiWaitingOnUnitAITypes, iIndex);
+	return !isHuman() && algo::any_of_equal(m_aiWaitingOnUnitAITypes, iIndex);
 }
 
 bool CvUnitAI::isWaitingOnUnitAIAny() const

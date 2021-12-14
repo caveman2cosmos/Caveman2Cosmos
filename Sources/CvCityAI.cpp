@@ -5128,9 +5128,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 						foreach_(const UnitCombatModifier2 & modifier, kBuilding.getUnitCombatExtraStrength())
 						{
-							const int iValidUnitCount = algo::count_all(
-								plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam())
-								| filtered(CvUnit::fn::getUnitCombatType() == modifier.first)
+							const int iValidUnitCount = algo::count_if(
+								plot()->units(),
+								bind(CvUnit::getTeam, _1) == getTeam() &&
+								bind(CvUnit::getUnitCombatType, _1) == modifier.first
 							);
 							iValue += iValidUnitCount * modifier.second / 6;
 						}
@@ -13301,7 +13302,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				for (int iJ = 0; iJ < iNumBuildings; iJ++)
 				{
 					const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
-					if (!algo::contains(buildingsToCalculate, eType) && getNumRealBuilding(eType) == 0)
+					if (algo::none_of_equal(buildingsToCalculate, eType) && getNumRealBuilding(eType) == 0)
 					{
 						// check if this building enables the construct condition of another building
 						bool bEnablesCondition = GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding) || GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding);
@@ -13467,7 +13468,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								if (pLoopUnit->getUnitCombatType() == modifier.first
 									//TB - May cause some unexpected imbalance though it could also imbalance to bypass... a place to watch
-									|| algo::contains(pLoopUnit->getUnitInfo().getSubCombatTypes(), modifier.first))
+									|| algo::any_of_equal(pLoopUnit->getUnitInfo().getSubCombatTypes(), modifier.first))
 								{
 									iValue += modifier.second / 6;
 								}

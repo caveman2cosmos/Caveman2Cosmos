@@ -2404,12 +2404,12 @@ namespace {
 
 	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bind(unitsAtWar, ourTeam, _1)));
+		return plot != ignorePlot && algo::any_of(plot->units(), bind(unitsAtWar, ourTeam, _1));
 	}
 
 	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return algo::any_of(plot->adjacent() | filtered(bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
+		return algo::any_of(plot->adjacent(), bind(plotHasEnemy, ourTeam, ignorePlot, _1));
 	}
 
 	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
@@ -6140,7 +6140,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 	{
 		if (pPlot->getFeatureType() != NO_FEATURE)
 		{
-			if (algo::contains(m_pUnitInfo->getImpassableFeatures(), pPlot->getFeatureType()))
+			if (algo::any_of_equal(m_pUnitInfo->getImpassableFeatures(), pPlot->getFeatureType()))
 			{
 				const TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
 				if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -6168,7 +6168,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				}
 			}
 		}
-		if (algo::contains(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
+		if (algo::any_of_equal(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
 		{
 			const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -7644,7 +7644,7 @@ bool CvUnit::shouldLoadOnMove(const CvPlot* pPlot) const
 		break;
 	}
 
-	if (algo::contains(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
+	if (algo::any_of_equal(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
 	{
 		const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 		if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -15699,12 +15699,12 @@ bool CvUnit::hasCombatType(UnitCombatTypes eCombatType) const
 		return true;
 	}
 	// AIAndy: This could be removed if the unit type sub combat types get added to the extra sub combat type counts
-	return algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
+	return algo::any_of_equal(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
 }
 
 bool CvUnit::hasSubCombatType(UnitCombatTypes eCombatType) const
 {
-	bool bSubCombat = algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);
+	const bool bSubCombat = algo::any_of_equal(m_pUnitInfo->getSubCombatTypes(), eCombatType);
 
 	if ((bSubCombat || hasExtraSubCombatType(eCombatType)) && m_pUnitInfo->getUnitCombatType() != eCombatType && !hasRemovesUnitCombatType(eCombatType))
 	{
