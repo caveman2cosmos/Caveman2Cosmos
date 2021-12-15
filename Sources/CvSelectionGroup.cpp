@@ -4734,7 +4734,7 @@ bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 		std::vector<CvSelectionGroup*> aCargoGroups;
 		foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 		{
-			if (!algo::contains(aCargoGroups, pCargoUnit->getGroup()))
+			if (algo::none_of_equal(aCargoGroups, pCargoUnit->getGroup()))
 			{
 				aCargoGroups.push_back(pCargoUnit->getGroup());
 			}
@@ -5631,7 +5631,7 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 
 bool CvSelectionGroup::containsUnit(const CvUnit* pUnit) const
 {
-	return algo::contains(units(), pUnit);
+	return algo::any_of_equal(units(), pUnit);
 }
 
 void CvSelectionGroup::removeUnit(CvUnit* pUnit)

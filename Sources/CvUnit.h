@@ -715,6 +715,9 @@ public:
 	int healTurns(const CvPlot* pPlot) const;
 	int healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const;
 	void doHeal();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	void doAffliction(const bool bHeal);
+#endif
 
 	bool canAirlift(const CvPlot* pPlot) const;
 	bool canAirliftAt(const CvPlot* pPlot, int iX, int iY) const;
@@ -1170,7 +1173,6 @@ public:
 
 	int getFortifyTurns() const;
 	void setFortifyTurns(int iNewValue);
-	void changeFortifyTurns(int iChange);
 
 	int getBlitzCount() const;
 	bool isBlitz() const;

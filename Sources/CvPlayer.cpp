@@ -14901,7 +14901,7 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 	PROFILE_FUNC();
 
 	// AIAndy: Consider using a set for efficient testing
-	if (GET_TEAM(getTeam()).isHasTech(eTech) || algo::contains(rootPath, eTech))
+	if (GET_TEAM(getTeam()).isHasTech(eTech) || algo::any_of_equal(rootPath, eTech))
 	{
 		//	We have this tech, no reason to add this to the pre-reqs
 		return;
@@ -17673,7 +17673,7 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 
 			if (pPlot->getFeatureType() != NO_FEATURE)
 			{
-				if (algo::contains(GC.getUnitInfo(eUnit).getImpassableFeatures(), pPlot->getFeatureType()))
+				if (algo::any_of_equal(GC.getUnitInfo(eUnit).getImpassableFeatures(), pPlot->getFeatureType()))
 				{
 					const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(pPlot->getFeatureType());
 					if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -17684,7 +17684,7 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 			}
 			else
 			{
-				if (algo::contains(GC.getUnitInfo(eUnit).getImpassableTerrains(), pPlot->getTerrainType()))
+				if (algo::any_of_equal(GC.getUnitInfo(eUnit).getImpassableTerrains(), pPlot->getTerrainType()))
 				{
 					const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(pPlot->getTerrainType());
 					if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -18134,8 +18134,8 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 
 			if (GET_TEAM(getTeam()).isHasTech(eTechLoop))
 			{
-				if (algo::contains(GC.getTechInfo(eTechLoop).getPrereqOrTechs(), eTech)
-				||  algo::contains(GC.getTechInfo(eTechLoop).getPrereqAndTechs(), eTech))
+				if (algo::any_of_equal(GC.getTechInfo(eTechLoop).getPrereqOrTechs(), eTech)
+				||  algo::any_of_equal(GC.getTechInfo(eTechLoop).getPrereqAndTechs(), eTech))
 				{
 					return -1;
 				}
@@ -18146,7 +18146,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		foreach_(const CvUnit* pLoopUnit, units())
 		{
 			if (pLoopUnit->getUnitInfo().getPrereqAndTech() == eTech
-			|| algo::contains(pLoopUnit->getUnitInfo().getPrereqAndTechs(), eTech))
+			|| algo::any_of_equal(pLoopUnit->getUnitInfo().getPrereqAndTechs(), eTech))
 			{
 				return -1;
 			}
@@ -18163,7 +18163,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 				if (pLoopCity->getNumRealBuilding(eBuilding) > 0)
 				{
 					if (GC.getBuildingInfo(eBuilding).getPrereqAndTech() == eTech
-					|| algo::contains(GC.getBuildingInfo(eBuilding).getPrereqAndTechs(), eTech))
+					|| algo::any_of_equal(GC.getBuildingInfo(eBuilding).getPrereqAndTechs(), eTech))
 					{
 						return -1;
 					}
@@ -20916,7 +20916,7 @@ const EventTriggeredData* CvPlayer::getEventOccured(EventTypes eEvent, bool bInc
 
 bool CvPlayer::isTriggerFired(EventTriggerTypes eEventTrigger) const
 {
-	return algo::contains(m_triggersFired, eEventTrigger);
+	return algo::any_of_equal(m_triggersFired, eEventTrigger);
 }
 
 void CvPlayer::resetEventOccured(EventTypes eEvent, bool bAnnounce)
@@ -27384,8 +27384,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kBuilding.getPrereqAndBonus() == eBonus
 			|| kBuilding.getPrereqVicinityBonus() == eBonus
-			|| algo::contains(kBuilding.getPrereqOrBonuses(), eBonus)
-			|| algo::contains(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
+			|| algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus)
+			|| algo::any_of_equal(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}
@@ -27401,8 +27401,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kUnit.getPrereqAndBonus() == eBonus
 			|| kUnit.getPrereqVicinityBonus() == eBonus
-			|| algo::contains(kUnit.getPrereqOrBonuses(), eBonus)
-			|| algo::contains(kUnit.getPrereqOrVicinityBonuses(), eBonus))
+			|| algo::any_of_equal(kUnit.getPrereqOrBonuses(), eBonus)
+			|| algo::any_of_equal(kUnit.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}

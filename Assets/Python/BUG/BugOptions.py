@@ -250,9 +250,10 @@ class IniFile(object):
 
 	def setInt(self, section, key, value):
 		if isinstance(value, types.StringTypes):
-			print "StringTypes"
+
 			if value.isdigit():
 				value = int(value)
+
 		if isinstance(value, int):
 			return self.setValue(section, key, value)
 
@@ -277,7 +278,6 @@ class IniFile(object):
 
 class Options(object):
 	"""Manages maps of Options and IniFiles, each indexed by a unique string ID."""
-	VERSION = 1
 
 	def __init__(self):
 		"""Initializes empty dictionaries of Options and IniFiles."""
@@ -286,53 +286,12 @@ class Options(object):
 		self.options = {}
 		self.loaded = True
 
-	def initUserSettings(self):
-		print "Options.initUserSettings - starting"
-		self.versionFilePath = SP.userSettingsDir + "\\version.txt"
-
-		# if not os.path.isdir(SP.userSettingsDir):
-		# 	# if there is no UserSettings directory at all then just create it and the version file
-		# 	print "Options.initUserSettings - UserSettings directory " + SP.userSettingsDir + " not found, creating it"
-		# 	SP.initUserSettingsDir()
-		# 	self._writeVersionFile()
-		if not os.path.isfile(self.versionFilePath):
-			# if theres no version file then we better check if we need to fix up or
-			# clear existing settings
-			print "Options.initUserSettings - version file " + self.versionFilePath + " not found, creating it"
-
-			mainini = IniFile("test", "BUG Main Interface.ini")
-			if mainini.fileExists():
-				mainini.read()
-				testValue = mainini.getInt("Main", "Unit Icon Size", default=None)
-				# if the test value doesn't exist at all then we need to clear the user settings so they will get
-				# recreated from scratch (legacy settings upgrade)
-				if not testValue:
-					print "Options.initUserSettings - test value not found in BUG Main Interface.ini, resetting UserSettings directory"
-					userSettingsBackupDir = SP.modDir + "\\UserSettings_" + time.strftime("%Y%m%d-%H%M%S")
-					os.rename(SP.userSettingsDir, userSettingsBackupDir)
-					SP.initUserSettingsDir()
-			else:
-				print "Options.initUserSettings - BUG Main Interface.ini not found, new settings will be created"
-
-			self._writeVersionFile()
-		else:
-			# settings exist, load them normally
-			file = open(self.versionFilePath, 'r')
-			version = int(file.read().strip())
-			file.close()
-
-			print "Options.initUserSettings - version file " + self.versionFilePath + " found, version " + str(version) + " User Settings detected"
-			# Add version upgrade code here
-			if version != Options.VERSION:
-				# Only have one version that is valid so far, so throw if we get something different
-				raise "Unexpected settings version!"
-
 	def getFile(self, id):
 		"""Returns the IniFile with the given ID."""
-		if (id in self.files):
+		if id in self.files:
 			return self.files[id]
-		else:
-			raise BugUtil.ConfigError("Missing file: %s", id)
+
+		raise BugUtil.ConfigError("Missing file: %s", id)
 
 	def addFile(self, file):
 		"""Adds the given IniFile to the dictionary."""
@@ -352,31 +311,24 @@ class Options(object):
 			file.read()
 		self.loaded = True
 
-	def _writeVersionFile(self):
-		file = open(self.versionFilePath, 'w')
-		file.write(str(Options.VERSION))
-		file.close()
-
 	def write(self):
 		"""Writes each IniFile that is dirty."""
 		if self.isLoaded():
 			for file in self.files.itervalues():
 				file.write()
-		self._writeVersionFile()
 
 	def findOption(self, id):
 		"""Returns the Option with the given ID or returns None of not found."""
-		if (id in self.options):
+		if id in self.options:
 			return self.options[id]
-		else:
-			return None
+		return None
 
 	def getOption(self, id):
 		"""Returns the Option with the given ID or raises an error if not found."""
 		if (id in self.options):
 			return self.options[id]
-		else:
-			raise BugUtil.ConfigError("Missing option: %s", id)
+
+		raise BugUtil.ConfigError("Missing option: %s", id)
 
 	def addOption(self, option):
 		"""Adds an Option to the dictionary if its ID doesn't clash."""
@@ -409,8 +361,6 @@ class Options(object):
 # The singleton Options object that holds all Option and IniFile objects.
 
 g_options = Options()
-def initUserSettings():
-	g_options.initUserSettings()
 
 def getOptions(fileID=None):
 	if fileID is None:
@@ -496,8 +446,7 @@ class AbstractOption(object):
 	def getDefaultGetterName(self):
 		if self.isBoolean():
 			return "is" + self.getTrimmedID()
-		else:
-			return "get" + self.getTrimmedID()
+		return "get" + self.getTrimmedID()
 
 	def getDefaultComparerName(self):
 		if self.isBoolean():
@@ -544,18 +493,18 @@ class AbstractOption(object):
 			return self.createColorGetterFunction(values)
 		if values is not None:
 			return self.createComparerFunction(values)
-		else:
-			def get(*args):
-				return self.getValue(*args)
-			return get
+
+		def get(*args):
+			return self.getValue(*args)
+		return get
 
 	def createColorGetterFunction(self, values=None):
 		if values is not None:
 			return self.createColorComparerFunction(values)
-		else:
-			def get(*args):
-				return self.getColor(*args)
-			return get
+
+		def get(*args):
+			return self.getColor(*args)
+		return get
 
 	def createComparer(self, name, values):
 		if not name:
@@ -568,37 +517,37 @@ class AbstractOption(object):
 		if values is None:
 			BugUtil.warn("BugOptions - createComparerFunction() requires one or more values")
 			return None
-		else:
-			if isinstance(values, (types.TupleType, types.ListType)):
-				if len(values) == 1:
-					return self.createComparerFunction(values[0])
-				else:
-					def contains(*args):
-						return self.getValue(*args) in values
-					return contains
-			else:
-				value = self.asType(values)
-				def equals(*args):
-					return self.getValue(*args) == value
-				return equals
+
+		if isinstance(values, (types.TupleType, types.ListType)):
+			if len(values) == 1:
+				return self.createComparerFunction(values[0])
+
+			def contains(*args):
+				return self.getValue(*args) in values
+			return contains
+
+		value = self.asType(values)
+		def equals(*args):
+			return self.getValue(*args) == value
+		return equals
 
 	def createColorComparerFunction(self, values):
 		if values is None:
 			BugUtil.warn("BugOptions - createColorComparerFunction() requires one or more values")
 			return None
-		else:
-			if isinstance(values, (types.TupleType, types.ListType)):
-				if len(values) == 1:
-					return self.createColorComparerFunction(values[0])
-				else:
-					def contains(*args):
-						return self.getColor(*args) in values
-					return contains
-			else:
-				value = self.asType(values)
-				def equals(*args):
-					return self.getColor(*args) == value
-				return equals
+
+		if isinstance(values, (types.TupleType, types.ListType)):
+			if len(values) == 1:
+				return self.createColorComparerFunction(values[0])
+
+			def contains(*args):
+				return self.getColor(*args) in values
+			return contains
+
+		value = self.asType(values)
+		def equals(*args):
+			return self.getColor(*args) == value
+		return equals
 
 	def createSetter(self, name=None, fixedValue=None):
 		if not name:
@@ -637,14 +586,14 @@ class AbstractOption(object):
 	def getRealValue(self, *args):
 		if self.hasValue():
 			return TYPE_MAP[self.getType()](self.getRawValue())
-		else:
-			return self.getDefault()
+
+		return self.getDefault()
 
 	def getValue(self, *args):
 		if not self.getAndOptionValue():
 			if self.isBoolean():
 				return False
-			elif self.isColor():
+			if self.isColor():
 				return -1
 			return None
 		return self.getRealValue(*args)
@@ -686,7 +635,8 @@ class AbstractOption(object):
 		"""
 		if self.isColor() or self.isString():
 			return ColorUtil.keyToType(self.getValue(*args))
-		elif self.isInt():
+
+		if self.isInt():
 			return self.getValue(*args)
 		return -1
 
@@ -763,12 +713,12 @@ class BaseOption(AbstractOption):
 
 
 	def getTitle(self):
-		if (not self.translated):
+		if not self.translated:
 			self.translate()
 		return self.title
 
 	def getTooltip(self):
-		if (not self.translated):
+		if not self.translated:
 			self.translate()
 		return self.tooltip
 
@@ -798,8 +748,7 @@ class BaseOption(AbstractOption):
 		if self.dirtyBits is None:
 			self.dirtyBits = []
 		if isinstance(bit, types.StringTypes):
-			self.dirtyBits.extend(map(lambda b: getattr(InterfaceDirtyBits, b + "_DIRTY_BIT"),
-									  bit.replace(",", " ").split()))
+			self.dirtyBits.extend(map(lambda b: getattr(InterfaceDirtyBits, b + "_DIRTY_BIT"), bit.replace(",", " ").split()))
 		else:
 			self.dirtyBits.append(bit)
 
@@ -959,10 +908,12 @@ class BaseListOption(BaseOption):
 		if self.isStringList():
 			if not self.translated:
 				self.translate()
-		elif self.isColorList():
-			return ColorUtil.getColorDisplayNames()
 		else:
+			if self.isColorList():
+				return ColorUtil.getColorDisplayNames()
+
 			self.buildDisplayValues()
+
 		return self.displayValues
 
 	def buildDisplayValues(self):
@@ -996,10 +947,11 @@ class BaseListOption(BaseOption):
 		value = self.getRealValue(*args)
 		if self.isStringList():
 			return value
-		elif self.isColorList():
+
+		if self.isColorList():
 			return ColorUtil.keyToIndex(value)
-		else:
-			return self.findClosestIndex(value)
+
+		return self.findClosestIndex(value)
 
 	def findClosestIndex(self, value):
 		index = -1
@@ -1092,28 +1044,28 @@ class IniMixin(object):
 	def hasValue(self, *args):
 		if args:
 			return self.file.exists(self.section, self.key % args)
-		else:
-			return self.file.exists(self.section, self.key)
+
+		return self.file.exists(self.section, self.key)
 
 	def getRawValue(self, *args):
 		if args:
 			return self.file.getRawValue(self.section, self.key % args)
-		else:
-			return self.file.getRawValue(self.section, self.key)
+
+		return self.file.getRawValue(self.section, self.key)
 
 	def getRealValue(self, *args):
 		if args:
 			return TYPE_GETTER_MAP[self.type](self.file, self.section, self.key % args, self.default)
-		else:
-			return TYPE_GETTER_MAP[self.type](self.file, self.section, self.key, self.default)
+
+		return TYPE_GETTER_MAP[self.type](self.file, self.section, self.key, self.default)
 
 	def _setValue(self, value, *args):
 		"""Sets the actual value in the INI file."""
 		BugUtil.debug("BugOptions - setting %s to %r", self.getID(), value)
 		if args:
 			return TYPE_SETTER_MAP[self.type](self.file, self.section, self.key % args, value)
-		else:
-			return TYPE_SETTER_MAP[self.type](self.file, self.section, self.key, value)
+
+		return TYPE_SETTER_MAP[self.type](self.file, self.section, self.key, value)
 
 class IniOption(IniMixin, BaseOption):
 

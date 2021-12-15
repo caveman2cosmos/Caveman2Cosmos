@@ -689,7 +689,7 @@ short CvBuildingInfo::getNumPrereqInCityBuildings() const
 
 bool CvBuildingInfo::isPrereqInCityBuilding(const int i) const
 {
-	return algo::contains(m_aiPrereqInCityBuildings, i);
+	return algo::any_of_equal(m_aiPrereqInCityBuildings, i);
 }
 
 
@@ -1306,7 +1306,7 @@ int CvBuildingInfo::getNumUnitCombatRetrainTypes() const
 bool CvBuildingInfo::isUnitCombatRetrainType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiUnitCombatRetrainTypes, i);
+	return algo::any_of_equal(m_aiUnitCombatRetrainTypes, i);
 }
 
 int CvBuildingInfo::getMayDamageAttackingUnitCombatType(int i) const
@@ -1322,7 +1322,7 @@ int CvBuildingInfo::getNumMayDamageAttackingUnitCombatTypes() const
 bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiMayDamageAttackingUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiMayDamageAttackingUnitCombatTypes, i);
 }
 
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
@@ -1548,7 +1548,7 @@ namespace CvBuildingInternal
 			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 			{
 				if (loopBuilding->getPrereqAndBonus() == eFreeBonus
-				|| algo::contains(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
+				|| algo::any_of_equal(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
 				{
 					return true;
 				}
@@ -4514,7 +4514,7 @@ void CvBuildingInfo::setNotShowInCity()
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
 {
-	return algo::contains(m_vPrereqOrBuilding, i);
+	return algo::any_of_equal(m_vPrereqOrBuilding, i);
 }
 
 int CvBuildingInfo::getPrereqOrBuilding(const int i) const
@@ -4537,7 +4537,7 @@ short CvBuildingInfo::getNumReplacementBuilding() const
 
 void CvBuildingInfo::setReplacedBuilding(const int i)
 {
-	if (!algo::contains(m_vReplacedBuilding, i))
+	if (algo::none_of_equal(m_vReplacedBuilding, i))
 	{
 		m_vReplacedBuilding.push_back(i);
 	}

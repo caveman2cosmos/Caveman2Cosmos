@@ -1833,7 +1833,8 @@ void CvUnit::doTurn()
 
 	if (isSpy() && isIntruding() && !isCargo())
 	{
-		TeamTypes eTeam = plot()->getTeam();
+		const TeamTypes eTeam = plot()->getTeam();
+
 		if (NO_TEAM != eTeam)
 		{
 			if (GET_TEAM(getTeam()).isOpenBorders(eTeam))
@@ -1866,64 +1867,15 @@ void CvUnit::doTurn()
 		}
 	}
 
-	bool bHasMoved = hasMoved();
-	bool bHeal = ((bHasMoved && isAlwaysHeal()) || !bHasMoved);
+	const bool bHasMoved = hasMoved();
+	const bool bHeal = ((bHasMoved && isAlwaysHeal()) || !bHasMoved);
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
-		//TB Combat Mod begin
-		PromotionTypes ePromotion;
-		PromotionLineTypes eAfflictionLine;
-		CvWString szBuffer;
-		for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-		{
-			eAfflictionLine = ((PromotionLineTypes)iI);
-			if (GC.getPromotionLineInfo(eAfflictionLine).isAffliction())
-			{
-				bool bHasAffliction = hasAfflictionLine(eAfflictionLine);
-				if (bHasAffliction)
-				{
-					changeAfflictionTurnCount((eAfflictionLine), 1);
-					for (int iJ = 0; iJ < GC.getPromotionLineInfo(eAfflictionLine).getNumPromotions(); iJ++)
-					{
-						//Update Afflictions
-						ePromotion = (PromotionTypes)GC.getPromotionLineInfo(eAfflictionLine).getPromotion(iJ);
-
-						if (isHasPromotion(ePromotion))
-						{
-							changeAfflictionHitCount((ePromotion), 1);
-							updateAfflictionHits(ePromotion);
-							if (GC.getPromotionInfo(ePromotion).isParalyze())
-							{
-								changeImmobileTimer(1);
-							}
-						}
-					}
-				}
-				//Update Afflictions
-				int iToleranceDecay = GC.getPromotionLineInfo(eAfflictionLine).getToleranceDecay();
-				if (!bHasAffliction && getUnitAfflictionTolerance(eAfflictionLine) > 0 && iToleranceDecay != 0)
-				{
-					changeUnitAfflictionTolerance(eAfflictionLine, -iToleranceDecay);
-				}
-
-				int iCommunicableExposure = getTotalCommunicableExposure(eAfflictionLine);
-				if (iCommunicableExposure > 0)//sure we have access to communicable source?  Maybe included in checkcontract huh?
-				{
-					if (checkContractDisease(eAfflictionLine, iCommunicableExposure))
-					{
-						afflict(eAfflictionLine);
-					}
-				}
-				if (bHeal && bHasAffliction)
-				{
-					doOvercomeAttempt(eAfflictionLine);
-				}
-			}
-		}
+		doAffliction(bHeal);
 	}
-#endif // OUTBREAKS_AND_AFFLICTIONS
+#endif
 
 	if (bHeal && isHurt())
 	{
@@ -1932,7 +1884,7 @@ void CvUnit::doTurn()
 
 	if (!bHasMoved && !isCargo())
 	{
-		changeFortifyTurns(1);
+		setFortifyTurns(getFortifyTurns() + 1);
 	}
 
 	if (isCanRespawn())
@@ -1945,23 +1897,17 @@ void CvUnit::doTurn()
 		setSurvivor(false);
 	}
 
-	if (isSpy() && m_iSleepTimer > 0)
+	if (isSpy() && m_iSleepTimer > 0 && getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
 	{
-		if (getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
-		{
-			getGroup()->setActivityType(ACTIVITY_AWAKE);
-			m_iSleepTimer = 0;
-		}
+		getGroup()->setActivityType(ACTIVITY_AWAKE);
+		m_iSleepTimer = 0;
 	}
 
-	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover())
+	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover() && getDesiredDiscoveryTech() == getDiscoveryTech())
 	{
-		if (getDesiredDiscoveryTech() == getDiscoveryTech())
-		{
-			getGroup()->setActivityType(ACTIVITY_AWAKE);
-			setDesiredDiscoveryTech(NO_TECH);
-			discover();
-		}
+		getGroup()->setActivityType(ACTIVITY_AWAKE);
+		setDesiredDiscoveryTech(NO_TECH);
+		discover();
 	}
 
 	changeImmobileTimer(-1);
@@ -2404,12 +2350,12 @@ namespace {
 
 	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bind(unitsAtWar, ourTeam, _1)));
+		return plot != ignorePlot && algo::any_of(plot->units(), bind(unitsAtWar, ourTeam, _1));
 	}
 
 	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return algo::any_of(plot->adjacent() | filtered(bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
+		return algo::any_of(plot->adjacent(), bind(plotHasEnemy, ourTeam, ignorePlot, _1));
 	}
 
 	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
@@ -6140,7 +6086,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 	{
 		if (pPlot->getFeatureType() != NO_FEATURE)
 		{
-			if (algo::contains(m_pUnitInfo->getImpassableFeatures(), pPlot->getFeatureType()))
+			if (algo::any_of_equal(m_pUnitInfo->getImpassableFeatures(), pPlot->getFeatureType()))
 			{
 				const TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
 				if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -6168,7 +6114,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				}
 			}
 		}
-		if (algo::contains(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
+		if (algo::any_of_equal(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
 		{
 			const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -7644,7 +7590,7 @@ bool CvUnit::shouldLoadOnMove(const CvPlot* pPlot) const
 		break;
 	}
 
-	if (algo::contains(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
+	if (algo::any_of_equal(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
 	{
 		const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 		if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -8487,6 +8433,63 @@ void CvUnit::doHeal()
 	//TB Combat Mod end
 }
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+void CvUnit::doAffliction(const bool bHeal)
+{
+	for (int iI = GC.getNumPromotionLineInfos() - 1; iI > -1; iI--)
+	{
+		const PromotionLineTypes ePromoLine = static_cast<PromotionLineTypes>(iI);
+		const CvPromotionLineInfo& promoLine = GC.getPromotionLineInfo(ePromoLine);
+
+		if (promoLine.isAffliction())
+		{
+			const bool bHasAffliction = hasAfflictionLine(ePromoLine);
+
+			if (bHasAffliction)
+			{
+				changeAfflictionTurnCount(ePromoLine, 1);
+
+				for (int iJ = 0; iJ < promoLine.getNumPromotions(); iJ++)
+				{
+					//Update Afflictions
+					const PromotionTypes ePromotion = (PromotionTypes)promoLine.getPromotion(iJ);
+
+					if (isHasPromotion(ePromotion))
+					{
+						changeAfflictionHitCount(ePromotion, 1);
+						updateAfflictionHits(ePromotion);
+
+						if (GC.getPromotionInfo(ePromotion).isParalyze())
+						{
+							changeImmobileTimer(1);
+						}
+					}
+				}
+			}
+			//Update Afflictions
+			const int iToleranceDecay = promoLine.getToleranceDecay();
+
+			if (!bHasAffliction && getUnitAfflictionTolerance(ePromoLine) > 0 && iToleranceDecay != 0)
+			{
+				changeUnitAfflictionTolerance(ePromoLine, -iToleranceDecay);
+			}
+
+			int iCommunicableExposure = getTotalCommunicableExposure(ePromoLine);
+			if (iCommunicableExposure > 0)//sure we have access to communicable source?  Maybe included in checkcontract huh?
+			{
+				if (checkContractDisease(ePromoLine, iCommunicableExposure))
+				{
+					afflict(ePromoLine);
+				}
+			}
+			if (bHeal && bHasAffliction)
+			{
+				doOvercomeAttempt(ePromoLine);
+			}
+		}
+	}
+}
+#endif
 
 bool CvUnit::canAirlift(const CvPlot* pPlot) const
 {
@@ -11773,12 +11776,8 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 		szCityName = pClosestCity->getName();
 	}
 
-	CvWString szBuffer;
-	{
-
-		szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
-	}
+	CvWString szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
+	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
 
 	//TSHEEP Enable Loyalty Promotion
 	//if (GC.getGame().getSorenRandNum(100, "Spy Reveal identity") < GC.getDefineINT("ESPIONAGE_SPY_REVEAL_IDENTITY_PERCENT"))
@@ -11788,15 +11787,17 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 		{
 			kTargetPlayer.AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 		}
-
-
 		AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
 	}
 	else
 	{
-
-		szBuffer = gDLL->getText(szFormatNoReveal.GetCString(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
-		AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
+		AddDLLMessage(
+			eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(),
+			gDLL->getText(
+				szFormatNoReveal.GetCString(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString()
+			),
+			"AS2D_EXPOSE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true
+		);
 	}
 
 	if (plot()->isActiveVisible(false))
@@ -11805,50 +11806,51 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 	}
 
 	//TSHEEP - Give xp to spy who catches spy
-	CvUnit* pCounterUnit;
-
-	pCounterUnit = plot()->plotCheck(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, kTargetPlayer.getTeam());
-
-	if(NULL != pCounterUnit)
 	{
-		pCounterUnit->changeExperience(1);
-		//RevolutionDCM - just ensure that promotion readiness is tested
-		//	Koshling - testing promotion readiness here is uneccessary since CvUnit::doTurn
-		//	will do it.  It is alo now dangerous to do it here (or indeed anywhere but controlled
-		//	places) becaue it is not thread-safe and needs to run strictly on the main thread
-		//pCounterUnit->testPromotionReady();
+		CvUnit* pCounterUnit = plot()->plotCheck(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, kTargetPlayer.getTeam());
+
+		if (NULL != pCounterUnit)
+		{
+			pCounterUnit->changeExperience(1);
+		}
 	}
-	//TSHEEP End
 
 	//TSHEEP Implement Escape Promotion
-	if(GC.getGame().getSorenRandNum(100, "Spy Reveal identity") < withdrawalProbability())
+	if (GC.getGame().getSorenRandNum(100, "Spy Reveal identity") < withdrawalProbability())
 	{
 		setFortifyTurns(0);
 		setMadeAttack(true);
 		finishMoves();
 
 		CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
+
 		if (NULL != pCapital)
 		{
 			//GC.getGame().logOOSSpecial(21, getID(), pCapital->getX(), pCapital->getY());
 			setXY(pCapital->getX(), pCapital->getY(), false, false, false);
 		}
-
 		{
 
 			szFormatReveal = "TXT_KEY_SPY_ESCAPED_REVEAL";
 			szFormatNoReveal = "TXT_KEY_SPY_ESCAPED";
-			szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
-			szBuffer = gDLL->getText(szFormatNoReveal.GetCString(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
-			AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					szFormatReveal.GetCString(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(),
+					getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString()
+				),
+				"AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true
+			);
+			AddDLLMessage(
+				eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					szFormatNoReveal.GetCString(),
+					getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString()
+				),
+				"AS2D_EXPOSE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true
+			);
 		}
-
 		changeExperience(1);
-		//	Koshling - testing promotion readiness here is uneccessary since CvUnit::doTurn
-		//	will do it.  It is alo now dangerous to do it here (or indeed anywhere but controlled
-		//	places) becaue it is not thread-safe and needs to run strictly on the main thread
-		//testPromotionReady();
 
 		return true;
 	}
@@ -15035,8 +15037,7 @@ int CvUnit::fortifyRepelModifier() const
 
 int CvUnit::experienceNeeded(int iLvlOffset) const
 {
-	int iLevel = getLevel() + iLvlOffset;
-	int iExperienceNeeded = calcBaseExpNeeded(iLevel, getOwner());
+	int iExperienceNeeded = calcBaseExpNeeded(getLevel() + iLvlOffset, getOwner());
 
 	if (isCommander())
 	{
@@ -15699,12 +15700,12 @@ bool CvUnit::hasCombatType(UnitCombatTypes eCombatType) const
 		return true;
 	}
 	// AIAndy: This could be removed if the unit type sub combat types get added to the extra sub combat type counts
-	return algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
+	return algo::any_of_equal(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
 }
 
 bool CvUnit::hasSubCombatType(UnitCombatTypes eCombatType) const
 {
-	bool bSubCombat = algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);
+	const bool bSubCombat = algo::any_of_equal(m_pUnitInfo->getSubCombatTypes(), eCombatType);
 
 	if ((bSubCombat || hasExtraSubCombatType(eCombatType)) && m_pUnitInfo->getUnitCombatType() != eCombatType && !hasRemovesUnitCombatType(eCombatType))
 	{
@@ -17692,7 +17693,9 @@ int CvUnit::getFortifyTurns() const
 
 void CvUnit::setFortifyTurns(int iNewValue)
 {
-	if (iNewValue >= GC.getDefineINT("MAX_FORTIFY_TURNS"))
+	const int iMaxFortify = GC.getDefineINT("MAX_FORTIFY_TURNS");
+
+	if (iNewValue >= iMaxFortify)
 	{
 		if (getSleepType() == MISSION_BUILDUP && getBuildUpType() == NO_PROMOTIONLINE || getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 		{
@@ -17702,13 +17705,15 @@ void CvUnit::setFortifyTurns(int iNewValue)
 			setInfoBarDirty(true);
 			return;
 		}
-		else if (getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
+
+		if (getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 		{
 			setBuildUp(true);
 			PromotionLineTypes ePromotionLine = getBuildUpType();
 			for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 			{
-				PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+				const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+
 				if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 				{
 					setHasPromotion(ePromotion, true, true, false, false);
@@ -17721,45 +17726,31 @@ void CvUnit::setFortifyTurns(int iNewValue)
 				{
 					for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 					{
-						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1)
+						const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
+						&& GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true) < 10)
 						{
-							int iValue = GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true);
-							if (iValue < 10)
-							{
-								clearBuildups();
-								m_iFortifyTurns = 0;
-								getGroup()->setActivityType(ACTIVITY_AWAKE);
-								setInfoBarDirty(true);
-								break;
-								return;
-							}
+							clearBuildups();
+							getGroup()->setActivityType(ACTIVITY_AWAKE);
+							break;
 						}
 					}
-					m_iFortifyTurns = 5;
+					m_iFortifyTurns = iMaxFortify;
 				}
-				else
-				{
-					m_iFortifyTurns = iNewValue;
-				}
+				else m_iFortifyTurns = iNewValue;
 			}
 			setInfoBarDirty(true);
 			return;
 		}
 	}
 
-	iNewValue = range(iNewValue, 0, GC.getDefineINT("MAX_FORTIFY_TURNS"));
-
-	if (iNewValue == 0 && isBuildUp())
-	{
-		clearBuildups();
-		m_iFortifyTurns = 0;
-		setInfoBarDirty(true);
-		return;
-	}
+	iNewValue = range(iNewValue, 0, iMaxFortify);
 
 	if (iNewValue != m_iFortifyTurns)
 	{
+		m_iFortifyTurns = iNewValue;
+		setInfoBarDirty(true);
+
 		if (iNewValue > 0)
 		{
 			if (getSleepType() == MISSION_BUILDUP)
@@ -17770,7 +17761,8 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					PromotionLineTypes ePromotionLine = getBuildUpType();
 					for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 					{
-						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+						const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+
 						if (!isHasPromotion(ePromotion)
 						&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp)
 						&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
@@ -17781,32 +17773,21 @@ void CvUnit::setFortifyTurns(int iNewValue)
 				}
 				else if (getBuildUpType() == NO_PROMOTIONLINE)
 				{
-					iNewValue = 0;
 					clearBuildups();
 					getGroup()->setActivityType(ACTIVITY_AWAKE);
-					setInfoBarDirty(true);
 				}
 			}
 			else if (getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 			{
 				clearBuildups();
-				iNewValue = 0;
 				getGroup()->setActivityType(ACTIVITY_AWAKE);
-				setInfoBarDirty(true);
 			}
 		}
-		else
+		else if (isBuildUp())
 		{
-			iNewValue = 0;
+			clearBuildups();
 		}
-		m_iFortifyTurns = iNewValue;
-		setInfoBarDirty(true);
 	}
-}
-
-void CvUnit::changeFortifyTurns(int iChange)
-{
-	setFortifyTurns(getFortifyTurns() + iChange);
 }
 
 int CvUnit::getBlitzCount() const
@@ -17816,13 +17797,13 @@ int CvUnit::getBlitzCount() const
 
 bool CvUnit::isBlitz() const
 {
-	return (getBlitzCount() > 0);
+	return m_iBlitzCount > 0;
 }
 
 void CvUnit::changeBlitzCount(int iChange)
 {
 	m_iBlitzCount += iChange;
-	FASSERT_NOT_NEGATIVE(getBlitzCount());
+	FASSERT_NOT_NEGATIVE(m_iBlitzCount);
 }
 
 int CvUnit::getAmphibCount() const
@@ -21318,16 +21299,6 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	{
 		return false;
 	}
-	if (
-		(
-				m_pUnitInfo->getCollateralDamage() == 0
-			||	m_pUnitInfo->getCollateralDamageLimit() == 0
-			||	m_pUnitInfo->getCollateralDamageMaxUnits() == 0
-		)
-		&& promo.getCollateralDamageChange() != 0)
-	{
-		return false;
-	}
 
 	if (promo.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(promo.getTechPrereq())
 	||  promo.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(promo.getObsoleteTech()))
@@ -21357,7 +21328,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
 		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
 		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-		if (!bKeepCheck && !promo.isForOffset() && !promo.isZeroesXP())
+		if (!promo.isForOffset() && !promo.isZeroesXP())
 		{
 			bool bValid = false;
 
@@ -21381,148 +21352,18 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		return true;
 	}
 
-	if (m_pUnitInfo->getInterceptionProbability() == 0 && promo.getInterceptChange() != 0)
-	{
-		return false;
-	}
-
-// TB Combat Mods
-	// Conditionally disabled the maximum withdrawal cap, only if pursuit is NOT in play
-	if (!bKeepCheck && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT)
-
-	&& promo.getWithdrawalChange() > 0
-	&& promo.getWithdrawalChange() + m_pUnitInfo->getWithdrawalProbability() + getExtraWithdrawal(true) > GC.getDefineINT("MAX_WITHDRAWAL_PROBABILITY"))
-	{
-		return false;
-	}
 	//Disable Looter Promos for units that cannot pillage
 	if (promo.getPillageChange() > 0 && !m_pUnitInfo->isPillage())
 	{
 		return false;
 	}
 
-
-#ifdef STRENGTH_IN_NUMBERS
-	// Disable Strength In Numbers modifying promos if option is not on
-	if (
-		!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
-	&& (
-			promo.getFrontSupportPercentChange() != 0
-		||	promo.getShortRangeSupportPercentChange() != 0
-		||	promo.getMediumRangeSupportPercentChange() != 0
-		||	promo.getLongRangeSupportPercentChange() != 0
-		||	promo.getFlankSupportPercentChange() != 0
-		)
-	) return false;
-#endif
-
-	//Check for combat values on no strength units
-	if (getDomainType() != DOMAIN_AIR && baseCombatStr() < 1 && m_iBaseCombat < 1 && !isCommander())
+	if (isCommander() && (promo.getGroupChange() != 0 || promo.getQualityChange() != 0))
 	{
-		if (promo.getInterceptChange() != 0 ||
-			promo.getEvasionChange() != 0 ||
-			promo.getWithdrawalChange() != 0 ||
-			promo.getCollateralDamageChange() != 0 ||
-			promo.getBombardRateChange() != 0 ||
-			promo.getFirstStrikesChange() != 0 ||
-			promo.getChanceFirstStrikesChange() != 0 ||
-			promo.getCombatPercent() != 0 ||
-			promo.getCityAttackPercent() != 0 ||
-			promo.getCityDefensePercent() != 0 ||
-			promo.getHillsAttackPercent() != 0 ||
-			promo.getHillsDefensePercent() != 0 ||
-			promo.getCollateralDamageProtection() != 0 ||
-			promo.getKamikazePercent() != 0 ||
-			promo.getAirCombatLimitChange() != 0 ||
-			promo.getCollateralDamageLimitChange() != 0 ||
-			promo.getCollateralDamageMaxUnitsChange() != 0 ||
-			promo.getCombatLimitChange() != 0 ||
-			promo.isDefensiveVictoryMove() != false ||
-			promo.isOffensiveVictoryMove() != false ||
-			promo.isBlitz() != false ||
-			promo.isAmphib() != false ||
-			promo.isRiver() != false ||
-			promo.isAlwaysHeal() != false ||
-			promo.isImmuneToFirstStrikes() != false ||
-			promo.isAnyTerrainAttackPercent() != false ||
-			promo.isAnyTerrainDefensePercent() != false ||
-			promo.isAnyFeatureAttackPercent() != false ||
-			promo.isAnyFeatureDefensePercent() != false ||
-			promo.isAnyUnitCombatModifierPercent() != false ||
-			promo.isAnyDomainModifierPercent() != false ||
-			promo.getAttackCombatModifierChange() != false ||
-			promo.getDefenseCombatModifierChange() != false ||
-			promo.getPursuitChange() != 0 ||
-			promo.getEarlyWithdrawChange() != 0 ||
-			promo.getVSBarbsChange() != 0 ||
-			promo.getArmorChange() != 0 ||
-			promo.getPunctureChange() != 0 ||
-			promo.getDamageModifierChange() != 0 ||
-			promo.getOverrunChange() != 0 ||
-			promo.getRepelChange() != 0 ||
-			promo.getFortRepelChange() != 0 ||
-			promo.getRepelRetriesChange() != 0 ||
-			promo.getUnyieldingChange() != 0 ||
-			promo.getKnockbackChange() != 0 ||
-			promo.getKnockbackRetriesChange() != 0 ||
-#ifdef BATTLEWORN
-			promo.getStrAdjperRndChange() != 0 ||
-			promo.getStrAdjperAttChange() != 0 ||
-			promo.getStrAdjperDefChange() != 0 ||
-			promo.getWithdrawAdjperAttChange() != 0 ||
-#endif // BATTLEWORN
-			promo.getUnnerveChange() != 0 ||
-			promo.getEncloseChange() != 0 ||
-			promo.getLungeChange() != 0 ||
-			promo.getDynamicDefenseChange() != 0 ||
-#ifdef STRENGTH_IN_NUMBERS
-			promo.getFrontSupportPercentChange() != 0 ||
-			promo.getShortRangeSupportPercentChange() != 0 ||
-			promo.getMediumRangeSupportPercentChange() != 0 ||
-			promo.getLongRangeSupportPercentChange() != 0 ||
-			promo.getFlankSupportPercentChange() != 0 ||
-#endif
-			promo.getDodgeModifierChange() != 0 ||
-			promo.getPrecisionModifierChange() != 0 ||
-			promo.getPowerShotsChange() != 0 ||
-			promo.getPowerShotCombatModifierChange() != 0 ||
-			promo.getPowerShotPunctureModifierChange() != 0 ||
-			promo.getPowerShotPrecisionModifierChange() != 0 ||
-			promo.getPowerShotCriticalModifierChange() != 0 ||
-			promo.getCriticalModifierChange() != 0 ||
-			promo.getRoundStunProbChange() != 0 ||
-			promo.getPoisonProbabilityModifierChange() != 0 ||
-			promo.getCaptureProbabilityModifierChange() != 0 ||
-			promo.getQualityChange() != 0 ||
-			promo.isStampedeChange() != false ||
-			promo.isRemoveStampede() != false ||
-			promo.isOnslaughtChange() != false ||
-			promo.isMakesDamageCold() != false ||
-			promo.isMakesDamageNotCold() != false ||
-			promo.getNumFlankingStrikesbyUnitCombatTypesChange() != 0 ||
-			promo.getNumWithdrawVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumPursuitVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumRepelVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumKnockbackVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumPunctureVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumArmorVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumDodgeVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumPrecisionVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumCriticalVSUnitCombatChangeTypes() != 0 ||
-			promo.getNumRoundStunVSUnitCombatChangeTypes() != 0 ||
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-			promo.getNumAfflictOnAttackChangeTypes() != 0 ||
-#endif
-			promo.getCombatModifierPerSizeMoreChange() != 0 ||
-			promo.getCombatModifierPerSizeLessChange() != 0 ||
-			promo.getCombatModifierPerVolumeMoreChange() != 0 ||
-			promo.getCombatModifierPerVolumeLessChange() != 0)
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (isCommander() && (promo.getGroupChange() != 0 || promo.getQualityChange() != 0))
+	if (isBlendIntoCity() && promo.getCityDefensePercent() != 0)
 	{
 		return false;
 	}
@@ -21535,11 +21376,6 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		{
 			return false;
 		}
-	}
-
-	if (isBlendIntoCity() && promo.getCityDefensePercent() != 0)
-	{
-		return false;
 	}
 
 	return true;
