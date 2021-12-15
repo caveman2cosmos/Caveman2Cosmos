@@ -3359,10 +3359,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				}
 			}
 			// BUG - Fortify/Sleep All Action - start
-			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FORTIFY ||
-				//GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ESCAPE ||
-				//GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ESTABLISH ||
-				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_SLEEP)
+			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FORTIFY
+			|| GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_SLEEP)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_SAME_UNITS_TYPE"));
 			}

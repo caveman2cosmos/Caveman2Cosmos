@@ -630,8 +630,6 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 		case MISSION_SKIP:
 		case MISSION_SLEEP:
 		case MISSION_FORTIFY:
-		//case MISSION_ESTABLISH:
-		//case MISSION_ESCAPE:
 		case MISSION_BUILDUP:
 		case MISSION_AUTO_BUILDUP:
 		case MISSION_HEAL_BUILDUP:
@@ -786,22 +784,6 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			{
 				return true;
 			}
-			break;
-
-		case MISSION_ESTABLISH:
-			//if (pLoopUnit->canEstablish(pPlot))
-			//{
-			//	return true;
-			//}
-			return false;
-			break;
-
-		case MISSION_ESCAPE:
-			//if (pLoopUnit->canEscape(pPlot))
-			//{
-			//	return true;
-			//}
-			return false;
 			break;
 
 		case MISSION_BUILDUP:
@@ -1331,18 +1313,6 @@ bool CvSelectionGroup::startMission()
 			bDelete = true;
 			break;
 
-		case MISSION_ESTABLISH:
-			setActivityType(ACTIVITY_SLEEP, /*MISSION_ESTABLISH*/MISSION_SLEEP);
-			bNotify = true;
-			bDelete = true;
-			break;
-
-		case MISSION_ESCAPE:
-			setActivityType(ACTIVITY_SLEEP, /*MISSION_ESCAPE*/MISSION_SLEEP);
-			bNotify = true;
-			bDelete = true;
-			break;
-
 		case MISSION_BUILDUP:
 			setActivityType(ACTIVITY_SLEEP, MISSION_BUILDUP);
 			bNotify = true;
@@ -1597,8 +1567,6 @@ bool CvSelectionGroup::startMission()
 					case MISSION_SKIP:
 					case MISSION_SLEEP:
 					case MISSION_FORTIFY:
-					//case MISSION_ESTABLISH:
-					//case MISSION_ESCAPE:
 					case MISSION_BUILDUP:
 					case MISSION_AUTO_BUILDUP:
 					case MISSION_HEAL_BUILDUP:
@@ -2292,8 +2260,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		case MISSION_SKIP:
 		case MISSION_SLEEP:
 		case MISSION_FORTIFY:
-		//case MISSION_ESTABLISH:
-		//case MISSION_ESCAPE:
 		case MISSION_BUILDUP:
 		case MISSION_AUTO_BUILDUP:
 		case MISSION_HEAL_BUILDUP:
@@ -2420,8 +2386,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_SKIP:
 			case MISSION_SLEEP:
 			case MISSION_FORTIFY:
-			//case MISSION_ESTABLISH:
-			//case MISSION_ESCAPE:
 			case MISSION_BUILDUP:
 			case MISSION_AUTO_BUILDUP:
 			case MISSION_HEAL_BUILDUP:
@@ -4892,11 +4856,9 @@ ActivityTypes CvSelectionGroup::getActivityType() const
 
 void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType)
 {
-	MissionTypes eMission = NO_MISSION;
-
 	FAssert(getOwner() != NO_PLAYER);
 
-	const ActivityTypes eOldActivity = getActivityType();
+	const ActivityTypes eOldActivity = m_eActivityType;
 
 	if (eOldActivity != eNewValue)
 	{
@@ -4906,19 +4868,6 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 		}
 		setBlockading(false);
 
-		//Clear Buildups
-		if ((eOldActivity == ACTIVITY_SLEEP || eOldActivity == ACTIVITY_HEAL) && eNewValue == ACTIVITY_AWAKE)
-		{
-			foreach_(CvUnit* pLoopUnit, units())
-			{
-				if (pLoopUnit->isBuildUp())
-				{
-					pLoopUnit->setFortifyTurns(0);
-				}
-			}
-		}
-		// Toffer - Value of m_eActivityType should not change again before this function is completed.
-		//	So it's safe to use eNewValue throughout this function from this point.
 		m_eActivityType = eNewValue;
 
 		if (eNewValue == ACTIVITY_INTERCEPT)
@@ -4937,140 +4886,26 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 					pLoopUnit->NotifyEntity(MISSION_IDLE);
 					if (pLoopUnit->isDead()) continue;
 
-					//determine proper Sleep type
-					if (!isHuman() || (eNewValue == ACTIVITY_SLEEP || eNewValue == ACTIVITY_HEAL) && eSleepType != NO_MISSION)
+					// Determine proper Sleep type
+					if (!isHuman() || eSleepType != NO_MISSION && (eNewValue == ACTIVITY_SLEEP || eNewValue == ACTIVITY_HEAL))
 					{
-						eMission = MISSION_SLEEP;
-						if (eSleepType == MISSION_BUILDUP || eSleepType == MISSION_AUTO_BUILDUP|| eSleepType == MISSION_HEAL_BUILDUP|| eSleepType == NO_MISSION)
+						MissionTypes eMission = MISSION_SLEEP;
+
+						if (
+							pLoopUnit->isBuildUpable()
+						&&	(
+									eSleepType == MISSION_BUILDUP
+								||	eSleepType == MISSION_AUTO_BUILDUP
+								||	eSleepType == MISSION_HEAL_BUILDUP
+								||	eSleepType == NO_MISSION
+							)
+						) pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, eSleepType);
+
+						if (eMission == MISSION_SLEEP && pLoopUnit->isFortifyable())
 						{
-							if (pLoopUnit->isBuildUpable())
-							{
-								if (pLoopUnit->getBuildUpType() == NO_PROMOTIONLINE)
-								{
-									pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, false, eSleepType);
-								}
-								if (isHuman() && eSleepType != MISSION_AUTO_BUILDUP && eSleepType != MISSION_HEAL_BUILDUP)
-								{
-									eMission = MISSION_BUILDUP;
-								}
-								else
-								{
-									//Then find out if the set check came up with a good buildup
-									if (pLoopUnit->getBuildUpType() != NO_PROMOTIONLINE)
-									{
-										eMission = MISSION_BUILDUP;
-									}//and if not...
-									//else if (pLoopUnit->isEstablishable())
-									//{
-									//	eMission = MISSION_ESTABLISH;
-									//}
-									else if (pLoopUnit->isFortifyable())
-									{
-										eMission = MISSION_FORTIFY;
-									}
-									//else if (pLoopUnit->isEscapable())
-									//{
-									//	eMission = MISSION_ESCAPE;
-									//}
-									else
-									{
-										eMission = MISSION_SLEEP;
-									}
-								}
-							}
-							//else if (pLoopUnit->isEstablishable())
-							//{
-							//	eMission = MISSION_ESTABLISH;
-							//}
-							else if (pLoopUnit->isFortifyable())
-							{
-								eMission = MISSION_FORTIFY;
-							}
-							//else if (pLoopUnit->isEscapable())
-							//{
-							//	eMission = MISSION_ESCAPE;
-							//}
-							else
-							{
-								eMission = MISSION_SLEEP;
-							}
-						}
-						//else if (eSleepType == MISSION_ESTABLISH)
-						//{
-						//	if (pLoopUnit->isEstablishable())
-						//	{
-						//		eMission = MISSION_ESTABLISH;
-						//	}
-						//	else if (pLoopUnit->isFortifyable())
-						//	{
-						//		eMission = MISSION_FORTIFY;
-						//	}
-						//	else if (pLoopUnit->isEscapable())
-						//	{
-						//		eMission = MISSION_ESCAPE;
-						//	}
-						//	else
-						//	{
-						//		eMission = MISSION_SLEEP;
-						//	}
-						//}
-						//else if (eSleepType == MISSION_ESCAPE)
-						//{
-						//	if (pLoopUnit->isEscapable())
-						//	{
-						//		eMission = MISSION_ESCAPE;
-						//	}
-						//	else if (pLoopUnit->isEstablishable())
-						//	{
-						//		eMission = MISSION_ESTABLISH;
-						//	}
-						//	else if (pLoopUnit->isFortifyable())
-						//	{
-						//		eMission = MISSION_FORTIFY;
-						//	}
-						//	else
-						//	{
-						//		eMission = MISSION_SLEEP;
-						//	}
-						//}
-						else if (eSleepType == MISSION_FORTIFY)
-						{
-							if (pLoopUnit->isFortifyable())
-							{
-								eMission = MISSION_FORTIFY;
-							}
-							//else if (pLoopUnit->isEstablishable())
-							//{
-							//	eMission = MISSION_ESTABLISH;
-							//}
-							//else if (pLoopUnit->isEscapable())
-							//{
-							//	eMission = MISSION_ESCAPE;
-							//}
-							else
-							{
-								eMission = MISSION_SLEEP;
-							}
-						}
-						else
-						{
-							eMission = MISSION_SLEEP;
+							eMission = MISSION_FORTIFY;
 						}
 						pLoopUnit->setSleepType(eMission);
-					}
-					if (pLoopUnit->getSleepType() != MISSION_BUILDUP && pLoopUnit->getBuildUpType() != NO_PROMOTIONLINE)
-					{
-						PromotionLineTypes ePromotionLine = pLoopUnit->getBuildUpType();
-						for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
-						{
-							PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-							if (pLoopUnit->isHasPromotion(ePromotion))
-							{
-								pLoopUnit->setHasPromotion(ePromotion, false, true, false, false);
-							}
-						}
-						pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, true);
-						pLoopUnit->setFortifyTurns(0);
 					}
 				}
 			}

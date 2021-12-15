@@ -494,6 +494,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		{
 			setHasAnyInvisibility();
 		}
+		establishBuildups();
+
 		CvEventReporter::getInstance().unitCreated(this);
 	}
 }
@@ -533,6 +535,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iCombatTimer = 0;
 	m_iCombatFirstStrikes = 0;
 	m_iFortifyTurns = 0;
+	m_iBuildUpTurns = 0;
 	m_iBlitzCount = 0;
 	m_iRBombardForceAbilityCount = 0;
 	m_iAmphibCount = 0;
@@ -765,7 +768,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iHiddenNationalityCount = 0;
 	m_bHasHNCapturePromotion = false;
 	m_bHasAnyInvisibility = false;
-	m_bHasAnyInvisibilityAbility = false;
 	m_bRevealed = false;
 	m_shadowUnit.reset();
 	m_eDesiredDiscoveryTech = NO_TECH;
@@ -917,6 +919,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_iCombatTimer = other.m_iCombatTimer;
 	m_iCombatFirstStrikes = other.m_iCombatFirstStrikes;
 	m_iFortifyTurns = other.m_iFortifyTurns;
+	m_iBuildUpTurns = other.m_iBuildUpTurns;
 	m_iBlitzCount = other.m_iBlitzCount;
 	m_iRBombardForceAbilityCount = other.m_iRBombardForceAbilityCount;
 	m_iAmphibCount = other.m_iAmphibCount;
@@ -1124,7 +1127,6 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_iHiddenNationalityCount = other.m_iHiddenNationalityCount;
 	m_bHasHNCapturePromotion = other.m_bHasHNCapturePromotion;
 	m_bHasAnyInvisibility = other.m_bHasAnyInvisibility;
-	m_bHasAnyInvisibilityAbility = other.m_bHasAnyInvisibilityAbility;
 	m_bRevealed = other.m_bRevealed;
 	m_shadowUnit = other.m_shadowUnit;
 	m_eDesiredDiscoveryTech = other.m_eDesiredDiscoveryTech;
@@ -1882,9 +1884,14 @@ void CvUnit::doTurn()
 		doHeal();
 	}
 
-	if (!bHasMoved && !isCargo())
+	if (!bHasMoved)
 	{
 		setFortifyTurns(getFortifyTurns() + 1);
+
+		if (isBuildUp())
+		{
+			incrementBuildUp();
+		}
 	}
 
 	if (isCanRespawn())
@@ -5190,14 +5197,6 @@ bool CvUnit::isActionRecommended(int iAction) const
 			return true;
 		}
 	}
-	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_ESTABLISH)
-	{
-		if (pPlot->isCity(true, getTeam())
-		&& (hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0))
-		{
-			return true;
-		}
-	}
 #ifdef _MOD_SENTRY
 	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL || GC.getActionInfo(iAction).getMissionType() == MISSION_SENTRY_WHILE_HEAL)
 #else
@@ -6890,23 +6889,18 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 		}
 	}
 
-	bool bValid = true;
 	if (pBestPlot != NULL)
 	{
 		//GC.getGame().logOOSSpecial(17, getID(), pBestPlot->getX(), pBestPlot->getY());
 		setXY(pBestPlot->getX(), pBestPlot->getY());
-	}
-	else if (bKill)
-	{
-		kill(false);
-		bValid = false;
-	}
-	else
-	{
-		bValid = false;
+		return true;
 	}
 
-	return bValid;
+	if (bKill)
+	{
+		kill(false);
+	}
+	return false;
 }
 
 
@@ -6920,7 +6914,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 	if (!isGroupHead())
 	{
 		return false;
-		}
+	}
 	/************************************************************************************************/
 	/* Afforess	                  Start		 02/14/10                                               */
 	/*                                                                                              */
@@ -7786,100 +7780,38 @@ bool CvUnit::canHold(const CvPlot* pPlot) const
 
 bool CvUnit::canSleep(const CvPlot* pPlot) const
 {
-	if (isFortifyable())
+	if (isFortifyable() || isWaiting())
 	{
 		return false;
 	}
-
-	if (isWaiting())
-	{
-		return false;
-	}
-
 	return true;
 }
 
 
 bool CvUnit::canFortify(const CvPlot* pPlot) const
 {
-	if (!isFortifyable())
+	if (!isFortifyable() || isWaiting())
 	{
 		return false;
 	}
-
-	if (isWaiting())
-	{
-		return false;
-	}
-
 	return true;
-}
-
-
-bool CvUnit::canEstablish(const CvPlot* pPlot) const
-{
-	//if (!isEstablishable())
-	//{
-	//	return false;
-	//}
-
-	//if (isWaiting())
-	//{
-	//	return false;
-	//}
-
-	//return true;
-	return false;
-}
-
-bool CvUnit::canEscape(const CvPlot* pPlot) const
-{
-	//if (!isEscapable())
-	//{
-	//	return false;
-	//}
-
-	//if (isWaiting())
-	//{
-	//	return false;
-	//}
-
-	//return true;
-	return false;
 }
 
 bool CvUnit::canBuildUp(const CvPlot* pPlot) const
 {
-	if (!isBuildUpable())
+	if (!isBuildUpable() || isWaiting())
 	{
 		return false;
 	}
-
-	if (isWaiting())
-	{
-		return false;
-	}
-
 	return true;
 }
 
 bool CvUnit::canAirPatrol(const CvPlot* pPlot) const
 {
-	if (getDomainType() != DOMAIN_AIR)
+	if (getDomainType() != DOMAIN_AIR || !canAirDefend(pPlot) || isWaiting())
 	{
 		return false;
 	}
-
-	if (!canAirDefend(pPlot))
-	{
-		return false;
-	}
-
-	if (isWaiting())
-	{
-		return false;
-	}
-
 	return true;
 }
 
@@ -7922,7 +7854,7 @@ void CvUnit::airCircle(bool bStart)
 		return;
 	}
 
-	if ((getDomainType() != DOMAIN_AIR) || (maxInterceptionProbability() == 0))
+	if (getDomainType() != DOMAIN_AIR || maxInterceptionProbability() == 0)
 	{
 		return;
 	}
@@ -7943,52 +7875,20 @@ void CvUnit::airCircle(bool bStart)
 
 bool CvUnit::canHeal(const CvPlot* pPlot) const
 {
-	if (!isHurt())
+	if (!isHurt() || isWaiting() || healTurns(pPlot) == 0)
 	{
 		return false;
 	}
-
-	if (isWaiting())
-	{
-		return false;
-	}
-
-/*************************************************************************************************/
-/* UNOFFICIAL_PATCH                       06/30/10                           LunarMongoose       */
-/*                                                                                               */
-/* Bugfix                                                                                        */
-/*************************************************************************************************/
-/* original bts code
-	if (healRate(pPlot) <= 0)
-	{
-		return false;
-	}
-*/
-	// Mongoose FeatureDamageFix
-	if (healTurns(pPlot) == 0)
-	{
-		return false;
-	}
-/*************************************************************************************************/
-/* UNOFFICIAL_PATCH                         END                                                  */
-/*************************************************************************************************/
-
 	return true;
 }
 
 
 bool CvUnit::canSentry(const CvPlot* pPlot) const
 {
-	if (!canDefend(pPlot))
+	if (!canDefend(pPlot) || isWaiting())
 	{
 		return false;
 	}
-
-	if (isWaiting())
-	{
-		return false;
-	}
-
 	return true;
 }
 
@@ -9002,22 +8902,12 @@ bool CvUnit::paradrop(int iX, int iY)
 	changeMoves(GC.getMOVE_DENOMINATOR() / 2);
 	setMadeAttack(true);
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Implement bFreeDrop                                                              **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
 	if (isFreeDrop() == true)
 	{
 		changeMoves(-(GC.getMOVE_DENOMINATOR() / 2));
 		setMadeAttack(false);
 	}
 
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 	//GC.getGame().logOOSSpecial(19, getID(), pPlot->getX(), pPlot->getY());
 	setXY(pPlot->getX(), pPlot->getY());
 
@@ -9026,18 +8916,12 @@ bool CvUnit::paradrop(int iX, int iY)
 	{
 		return true;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 09/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP))
 	{
 		 setExperience100(getExperience100() + 5, -1);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	//play paradrop animation by itself
 	addMission(CvAirMissionDefinition(MISSION_PARADROP, pPlot, this));
 
@@ -11199,17 +11083,14 @@ bool CvUnit::trade()
 			finishMoves();
 			return true;
 		}
-		else
+		changeExperience100(10);
+		GET_PLAYER(getOwner()).changeGold(getTradeGold(plot()));
+		finishMoves();
+		if (pCapital != NULL)
 		{
-			changeExperience100(10);
-			GET_PLAYER(getOwner()).changeGold(getTradeGold(plot()));
-			finishMoves();
-			if (pCapital != NULL)
-			{
-				setXY(pCapital->getX(), pCapital->getY(), false, true, true, false, false);
-			}
-			return true;
+			setXY(pCapital->getX(), pCapital->getY(), false, true, true, false, false);
 		}
+		return true;
 	}
 
 	GET_PLAYER(getOwner()).changeGold(getTradeGold(plot()));
@@ -11431,7 +11312,6 @@ bool CvUnit::infiltrate()
 			}
 			else
 			{
-				finishMoves();
 				kill(true, NO_PLAYER, true);
 			}
 		}
@@ -11686,12 +11566,11 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 			return false;
 		}
 
-		bool bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));
+		const bool bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));
 
 		if (GET_PLAYER(getOwner()).doEspionageMission(eMission, eTargetPlayer, plot(), iData, this, (bCaught && !isAlwaysHeal())))
 		{
-			//	If it died in the mission (e.g. - nuke and blew itself up) then nothing else
-			//	needs doing
+			// If it died in the mission (e.g. - nuke and blew itself up) then nothing else needs doing
 			if (!isDelayedDeath())
 			{
 				if (plot()->isActiveVisible(false))
@@ -12933,7 +12812,7 @@ bool CvUnit::canMove() const
 
 bool CvUnit::hasMoved()	const
 {
-	return (getMoves() > 0);
+	return getMoves() > 0;
 }
 
 
@@ -13011,8 +12890,6 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_SKIP:
 		case MISSION_SLEEP:
 		case MISSION_FORTIFY:
-		//case MISSION_ESTABLISH:
-		//case MISSION_ESCAPE:
 		case MISSION_BUILDUP:
 		case MISSION_AUTO_BUILDUP:
 		case MISSION_HEAL_BUILDUP:
@@ -14959,33 +14836,6 @@ bool CvUnit::isFortifyable() const
 	return true;
 }
 
-bool CvUnit::isEstablishable() const
-{
-	//if ((!hasHealUnitCombat() && (getSameTileHeal() < 1) && (getAdjacentTileHeal() < 1)) || ((getDomainType() != DOMAIN_LAND) && (getDomainType() != DOMAIN_IMMOBILE)))
-	//{
-	//	return false;
-	//}
-
-	//return true;
-	return false;
-}
-
-bool CvUnit::isEscapable() const
-{
-	//if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) || !GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
-	//{
-	//	return false;
-	//}
-	//int iWithdraw = m_pUnitInfo->getWithdrawalProbability() + getExtraWithdrawal();
-	//if ((iWithdraw < 1) || ((getDomainType() != DOMAIN_LAND) && (getDomainType() != DOMAIN_IMMOBILE)))
-	//{
-	//	return false;
-	//}
-
-	//return true;
-	return false;
-}
-
 bool CvUnit::isBuildUpable() const
 {
 	if (isDelayedDeath() || isDead())
@@ -15002,27 +14852,9 @@ int CvUnit::fortifyModifier() const
 	{
 		return 0;
 	}
-	if (getSleepType() != MISSION_FORTIFY)
-	{
-		return 0;
-	}
-
-	return (getFortifyTurns() * (GC.getFORTIFY_MODIFIER_PER_TURN()));
+	return range(getFortifyTurns(), 0, GC.getDefineINT("MAX_FORTIFY_TURNS")) * GC.getFORTIFY_MODIFIER_PER_TURN();
 }
 
-
-int CvUnit::buildupLevel() const
-{
-	if (!isBuildUpable())
-	{
-		return 0;
-	}
-	if (getSleepType() != MISSION_BUILDUP)
-	{
-		return 0;
-	}
-	return (getFortifyTurns());
-}
 
 int CvUnit::fortifyRepelModifier() const
 {
@@ -15030,8 +14862,7 @@ int CvUnit::fortifyRepelModifier() const
 	{
 		return 0;
 	}
-
-	return (getFortifyTurns() * fortRepelTotal());
+	return getFortifyTurns() * fortRepelTotal();
 }
 //TB Combat Mods end
 
@@ -15191,22 +15022,12 @@ bool CvUnit::ignoreTerrainCost() const
 
 bool CvUnit::isNeverInvisible() const
 {
-	return (!alwaysInvisible() && ((getInvisibleType() == NO_INVISIBLE) && !hasAnyInvisibilityType()));
+	return !alwaysInvisible() && getInvisibleType() == NO_INVISIBLE && !hasAnyInvisibilityType();
 }
 
 int CvUnit::getNoInvisibilityCount() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
-	{
-		return 0;
-	}
-
-	if (!isSpy() && isFortifyable() && (getSleepType() == MISSION_FORTIFY))
-	{
-		return getFortifyTurns() + m_iNoInvisibilityCount;
-	}
-
-	return m_iNoInvisibilityCount;
+	return GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK) * m_iNoInvisibilityCount;
 }
 
 void CvUnit::changeNoInvisibilityCount(int iChange)
@@ -15249,45 +15070,30 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 
 	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		if (getInvisibleType() == NO_INVISIBLE)
-		{
-			return false;
-		}
+		return getInvisibleType() != NO_INVISIBLE && !plot()->isInvisibleVisible(eTeam, getInvisibleType());
 	}
 
-	bool bInvisible = false;
-	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	if (!hasAnyInvisibilityType())
 	{
-		if (!hasAnyInvisibilityType())
-		{
-			return false;
-		}
-
-		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
-		{
-			InvisibleTypes eInvisible = ((InvisibleTypes)iI);
-			if (hasInvisibilityType(eInvisible))
-			{
-				if (plot()->isInvisibleVisible(eTeam, eInvisible))
-				{
-					if (plot()->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam) < invisibilityIntensityTotal(eInvisible))
-					{
-						bInvisible = true;
-					}
-				}
-				else
-				{
-					bInvisible = true;
-				}
-			}
-		}
+		return false;
 	}
-	else
+
+	for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
 	{
-		bInvisible = !(plot()->isInvisibleVisible(eTeam, getInvisibleType()));
-	}
+		const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
 
-	return bInvisible;
+		if (hasInvisibilityType(eInvisible)
+		&&	(
+				!plot()->isInvisibleVisible(eTeam, eInvisible)
+				||
+				plot()->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam) < invisibilityIntensityTotal(eInvisible)
+			)
+		)
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 
@@ -15296,18 +15102,12 @@ bool CvUnit::isNukeImmune() const
 	return m_pUnitInfo->isNukeImmune();
 }
 
-/************************************************************************************************/
-/* REVDCM_OC                              02/16/10                                phungus420    */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+
 bool CvUnit::isInquisitor() const
 {
 	return m_pUnitInfo->isInquisitor();
 }
-/************************************************************************************************/
-/* REVDCM_OC                               END                                                  */
-/************************************************************************************************/
+
 
 int CvUnit::maxInterceptionProbability(bool bIgnoreCommanders) const
 {
@@ -15321,10 +15121,7 @@ int CvUnit::currInterceptionProbability() const
 	{
 		return maxInterceptionProbability();
 	}
-	else
-	{
-		return maxInterceptionProbability() * getHP() / getMaxHP();
-	}
+	return maxInterceptionProbability() * getHP() / getMaxHP();
 }
 
 
@@ -17695,55 +17492,6 @@ void CvUnit::setFortifyTurns(int iNewValue)
 {
 	const int iMaxFortify = GC.getDefineINT("MAX_FORTIFY_TURNS");
 
-	if (iNewValue >= iMaxFortify)
-	{
-		if (getSleepType() == MISSION_BUILDUP && getBuildUpType() == NO_PROMOTIONLINE || getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
-		{
-			clearBuildups();
-			getGroup()->setActivityType(ACTIVITY_AWAKE);
-			m_iFortifyTurns = 0;
-			setInfoBarDirty(true);
-			return;
-		}
-
-		if (getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
-		{
-			setBuildUp(true);
-			PromotionLineTypes ePromotionLine = getBuildUpType();
-			for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
-			{
-				const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-
-				if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
-				{
-					setHasPromotion(ePromotion, true, true, false, false);
-					m_iFortifyTurns = iNewValue;
-				}
-			}
-			if (!isHuman())
-			{
-				if (iNewValue >= 11)
-				{
-					for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
-					{
-						const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
-						&& GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true) < 10)
-						{
-							clearBuildups();
-							getGroup()->setActivityType(ACTIVITY_AWAKE);
-							break;
-						}
-					}
-					m_iFortifyTurns = iMaxFortify;
-				}
-				else m_iFortifyTurns = iNewValue;
-			}
-			setInfoBarDirty(true);
-			return;
-		}
-	}
-
 	iNewValue = range(iNewValue, 0, iMaxFortify);
 
 	if (iNewValue != m_iFortifyTurns)
@@ -17751,39 +17499,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 		m_iFortifyTurns = iNewValue;
 		setInfoBarDirty(true);
 
-		if (iNewValue > 0)
-		{
-			if (getSleepType() == MISSION_BUILDUP)
-			{
-				if (getBuildUpType() != NO_PROMOTIONLINE)
-				{
-					setBuildUp(true);
-					PromotionLineTypes ePromotionLine = getBuildUpType();
-					for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
-					{
-						const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-
-						if (!isHasPromotion(ePromotion)
-						&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp)
-						&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
-						{
-							setHasPromotion(ePromotion, true, true, false, false);
-						}
-					}
-				}
-				else if (getBuildUpType() == NO_PROMOTIONLINE)
-				{
-					clearBuildups();
-					getGroup()->setActivityType(ACTIVITY_AWAKE);
-				}
-			}
-			else if (getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
-			{
-				clearBuildups();
-				getGroup()->setActivityType(ACTIVITY_AWAKE);
-			}
-		}
-		else if (isBuildUp())
+		if (iNewValue == 0 && isBuildUp())
 		{
 			clearBuildups();
 		}
@@ -20839,13 +20555,13 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-	if (!bForFree && kPromotion.getStateReligionPrereq() != NO_RELIGION
+	if (kPromotion.getStateReligionPrereq() != NO_RELIGION
 	&& GET_PLAYER(getOwner()).getStateReligion() != kPromotion.getStateReligionPrereq())
 	{
 		return false;
 	}
 
-	if (!isPromotionValid(ePromotion))
+	if (!isPromotionValid(ePromotion, bForFree))
 	{
 		return false;
 	}
@@ -20928,23 +20644,21 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 	if (kPromotion.isEquipment())
 	{
-		if (pPlot->isCity(false, getTeam()))
-		{
-			const CvCity* pCity = pPlot->getPlotCity();
-
-			for (int iI = 0; iI < kPromotion.getNumPrereqBonusTypes(); iI++)
-			{
-				const BonusTypes ePrereqBonus = ((BonusTypes)kPromotion.getPrereqBonusType(iI));
-				if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
-				{
-					return false;
-				}
-			}
-		}
-		else
+		if (!pPlot->isCity(false, getTeam()))
 		{
 			//TB will be replacing this when units can carry and transport equipments without owning them as promos
 			return false;
+		}
+		const CvCity* pCity = pPlot->getPlotCity();
+
+		for (int iI = 0; iI < kPromotion.getNumPrereqBonusTypes(); iI++)
+		{
+			const BonusTypes ePrereqBonus = ((BonusTypes)kPromotion.getPrereqBonusType(iI));
+
+			if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
+			{
+				return false;
+			}
 		}
 	}
 
@@ -21245,7 +20959,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	return true;
 }
 
-bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
+bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepCheck) const
 {
 	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 
@@ -21299,13 +21013,16 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	{
 		return false;
 	}
-
-	if (promo.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(promo.getTechPrereq())
-	||  promo.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(promo.getObsoleteTech()))
+	if (promo.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(promo.getObsoleteTech()))
 	{
 		return false;
 	}
+	if (!bFree)
 	{
+		if (promo.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(promo.getTechPrereq()))
+		{
+			return false;
+		}
 		const PromotionLineTypes ePromotionLine = promo.getPromotionLine();
 
 		if (ePromotionLine != NO_PROMOTIONLINE
@@ -24507,7 +24224,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 			m_aExtraVisibleImprovementRanges[iI].iIntensity = iType3;
 		}
 	}
-	WRAPPER_READ(wrapper, "CvUnit", &m_bHasAnyInvisibilityAbility);
+	// SAVEBREAK - Toffer - Remove
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_bHasAnyInvisibilityAbility, SAVE_VALUE_TYPE_INT);
+	// ! SAVEBREAK
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraInsidiousness);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraInvestigation);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_pPlayerInvestigated);
@@ -24562,6 +24281,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iBuildUpTurns);
 
 	//bool bWorker = false;
 	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
@@ -24637,6 +24357,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 			m_movementCharacteristicsHash ^= GC.getUnitCombatInfo((UnitCombatTypes)iI).getZobristValue();
 		}
 	}
+	establishBuildups();
 }
 
 
@@ -25411,7 +25132,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 		}
 	}
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_bHasAnyInvisibilityAbility);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraInsidiousness);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraInvestigation);
 	WRAPPER_WRITE(wrapper, "CvUnit", (int)m_pPlayerInvestigated);
@@ -25456,6 +25176,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iBuildUpTurns);
 
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
 
@@ -33596,35 +33317,36 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				return false;
 			}
 		}
-		if (!isPromotionValid(ePromotion, true))
+	}
+
+	if (!isPromotionValid(ePromotion, bIsFreePromotion, true))
+	{
+		if (bMessageOnFalse)
 		{
-			if (bMessageOnFalse)
+			if (bPromo && !bIsFreePromotion)
 			{
-				if (bPromo && !bIsFreePromotion)
-				{
-					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText(
-							"TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN",
-							getNameKey(), promo.getDescription()
-						),
-						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
-					);
-				}
-				else
-				{
-					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText(
-							"TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN",
-							getNameKey(), promo.getDescription()
-						),
-						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
-					);
-				}
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+				);
 			}
-			return false;
+			else
+			{
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN",
+						getNameKey(), promo.getDescription()
+					),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
+			}
 		}
+		return false;
 	}
 	return true;
 }
@@ -37870,17 +37592,17 @@ void CvUnit::establishBuildups()
 		it->second.m_bValidBuildUp = false;
 	}
 
-	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+	for (int iI = GC.getNumPromotionLineInfos() - 1; iI > -1; iI--)
 	{
-		const PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
+		const PromotionLineTypes ePromotionLine = static_cast<PromotionLineTypes>(iI);
 		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 		if (kPromotionLine.isBuildUp())
 		{
 			for (int iJ = 0; iJ < kPromotionLine.getNumPromotions(); iJ++)
 			{
 				const PromotionTypes ePromotion = (PromotionTypes)kPromotionLine.getPromotion(iJ);
-				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
-					&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
+				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+				&& canAcquirePromotion(ePromotion, PromotionRequirements::IgnoreHas | PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLine);
 
@@ -37898,29 +37620,35 @@ PromotionLineTypes CvUnit::getBuildUpType() const
 	return m_eCurrentBuildUpType;
 }
 
-void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, MissionTypes eSleepType)
+void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSleepType)
 {
-	if (ePromotionLine != NO_PROMOTIONLINE || bRemove)
+	if (isHuman())
 	{
-		m_eCurrentBuildUpType = ePromotionLine;
-
-		if (m_eCurrentBuildUpType != NO_PROMOTIONLINE)
+		// Buildup chosen
+		if (ePromotionLine != NO_PROMOTIONLINE)
 		{
-			setBuildUp(true);
+			if (m_eCurrentBuildUpType != ePromotionLine)
+			{
+				if (m_iBuildUpTurns > 0)
+				{
+					clearBuildups();
+				}
+				m_bIsBuildUp = true;
+				m_eCurrentBuildUpType = ePromotionLine;
+			}
+			return;
 		}
-		return;
+		// Choose buildup popup
+		if (eSleepType != MISSION_AUTO_BUILDUP && eSleepType != MISSION_HEAL_BUILDUP)
+		{
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_BUILDUP);
+			pInfo->setData1(getID());
+			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner());
+			return;
+		}
 	}
 
-	if (isHuman() && eSleepType != MISSION_AUTO_BUILDUP && eSleepType != MISSION_HEAL_BUILDUP)
-	{
-		setFortifyTurns(0);
-		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_BUILDUP);
-		pInfo->setData1(getID());
-		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner());
-		return;
-	}
-
-	const PromotionLineTypes eOldBuildUpType = getBuildUpType();
+	// AI buildup evaluation
 	const bool bCanHeal = hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0;
 	const bool bMustHeal = getDamage() > 0;
 	int iBestValue = 0;
@@ -37942,7 +37670,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 					const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 
 					if (kPromotion.getLinePriority() == 1
-						&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
+					&& canAcquirePromotion(ePromotion, PromotionRequirements::IgnoreHas | PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 					{
 						int iValue = 0;
 						if (bCanHeal)
@@ -37970,26 +37698,29 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 		}
 		if (eAssignPromotionLine == NO_PROMOTIONLINE && isBuildUpable())
 		{
+			FErrorMsg("This shouldn't happen");
+			// Try again
 			establishBuildups();
-			(
-				isBuildUpable()
-				?
-				setBuildUpType(NO_PROMOTIONLINE, false, MISSION_AUTO_BUILDUP)
-				:
-				setBuildUpType(NO_PROMOTIONLINE, true)
-			);
+
+			if (isBuildUpable())
+			{
+				setBuildUpType(NO_PROMOTIONLINE, MISSION_AUTO_BUILDUP);
+			}
 			return;
 		}
 
-		if (eOldBuildUpType != eAssignPromotionLine)
+		if (eAssignPromotionLine != m_eCurrentBuildUpType)
 		{
-			setFortifyTurns(0);
-		}
-		m_eCurrentBuildUpType = eAssignPromotionLine;
+			if (m_iBuildUpTurns > 0)
+			{
+				clearBuildups();
+			}
+			m_eCurrentBuildUpType = eAssignPromotionLine;
 
-		if (m_eCurrentBuildUpType != NO_PROMOTIONLINE)
-		{
-			setBuildUp(true);
+			if (m_eCurrentBuildUpType != NO_PROMOTIONLINE)
+			{
+				m_bIsBuildUp = true;
+			}
 		}
 		return;
 	}
@@ -38006,7 +37737,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 			{
 				const PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
 				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
-				&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
+				&& canAcquirePromotion(ePromotion, PromotionRequirements::IgnoreHas | PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					const int iValue = std::max(1, GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));
 
@@ -38021,25 +37752,29 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 	}
 	if (eAssignPromotionLine == NO_PROMOTIONLINE && isBuildUpable())
 	{
+		FErrorMsg("This shouldn't happen");
+		// Try again
 		establishBuildups();
-		(
-			isBuildUpable()
-			?
-			setBuildUpType(NO_PROMOTIONLINE, false, MISSION_AUTO_BUILDUP)
-			:
-			setBuildUpType(NO_PROMOTIONLINE, true)
-		);
+
+		if (isBuildUpable())
+		{
+			setBuildUpType(NO_PROMOTIONLINE, MISSION_AUTO_BUILDUP);
+		}
 		return;
 	}
-	if (eOldBuildUpType != eAssignPromotionLine)
-	{
-		setFortifyTurns(0);
-	}
-	m_eCurrentBuildUpType = eAssignPromotionLine;
 
-	if (m_eCurrentBuildUpType != NO_PROMOTIONLINE)
+	if (eAssignPromotionLine != m_eCurrentBuildUpType)
 	{
-		setBuildUp(true);
+		if (m_iBuildUpTurns > 0)
+		{
+			clearBuildups();
+		}
+		m_eCurrentBuildUpType = eAssignPromotionLine;
+
+		if (m_eCurrentBuildUpType != NO_PROMOTIONLINE)
+		{
+			m_bIsBuildUp = true;
+		}
 	}
 }
 
@@ -38060,9 +37795,54 @@ void CvUnit::clearBuildups()
 			}
 		}
 	}
-	setBuildUpType(NO_PROMOTIONLINE, true);
+	m_iBuildUpTurns = 0;
+	m_eCurrentBuildUpType = NO_PROMOTIONLINE;
 	setSleepType(NO_MISSION);
-	setBuildUp(false);
+	m_bIsBuildUp = false;
+	setInfoBarDirty(true);
+}
+
+void CvUnit::incrementBuildUp()
+{
+	if (getBuildUpType() == NO_PROMOTIONLINE)
+	{
+		FErrorMsg("Units build up status corrupted")
+		clearBuildups();
+		getGroup()->setActivityType(ACTIVITY_AWAKE);
+		return;
+	}
+	m_iBuildUpTurns++;
+
+	const PromotionLineTypes ePromotionLine = getBuildUpType();
+
+	// AI units will reconsider its buildup on regular intervals.
+	if (!isHuman() && 0 == (m_iBuildUpTurns % 11))
+	{
+		for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
+		{
+			const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+
+			if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
+			&& GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true) < 10)
+			{
+				clearBuildups();
+				getGroup()->setActivityType(ACTIVITY_AWAKE);
+				return;
+			}
+		}
+	}
+
+	for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
+	{
+		const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
+
+		if (!isHasPromotion(ePromotion)
+		&& GC.getPromotionInfo(ePromotion).getLinePriority() <= m_iBuildUpTurns
+		&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
+		{
+			setHasPromotion(ePromotion, true, true, false, false);
+		}
+	}
 }
 
 bool CvUnit::isInhibitMerge() const
@@ -38088,11 +37868,6 @@ void CvUnit::setInhibitSplit(bool bNewValue)
 bool CvUnit::isBuildUp() const
 {
 	return m_bIsBuildUp;
-}
-
-void CvUnit::setBuildUp(bool bNewValue)
-{
-	m_bIsBuildUp = bNewValue;
 }
 
 void CvUnit::setSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit)
@@ -38330,36 +38105,21 @@ void CvUnit::changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChan
 
 bool CvUnit::hasAnyInvisibilityType(bool bAbilityCheck) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK)
+	&& (m_pUnitInfo->isNoInvisibility() || getNoInvisibilityCount() > 0))
 	{
-		if (m_pUnitInfo->isNoInvisibility() || getNoInvisibilityCount() > 0)
-		{
-			return false;
-		}
-	}
-	if (bAbilityCheck)
-	{
-		return m_bHasAnyInvisibilityAbility;
+		return false;
 	}
 	return m_bHasAnyInvisibility;
 }
 
-bool CvUnit::hasInvisibilityType(InvisibleTypes eInvisibleType, bool bAbilityCheck) const
+bool CvUnit::hasInvisibilityType(InvisibleTypes eInvisibleType) const
 {
-	return (invisibilityIntensityTotal(eInvisibleType, bAbilityCheck) > 0);
+	return !isNegatesInvisible(eInvisibleType) && !m_pUnitInfo->isNoInvisibility() && getNoInvisibilityCount() < 1;
 }
 
 int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbilityCheck) const
 {
-	if (isNegatesInvisible(eInvisibleType) && !bAbilityCheck)
-	{
-		return 0;
-	}
-	if (m_pUnitInfo->isNoInvisibility() || getNoInvisibilityCount() > 0)
-	{
-		return 0;
-	}
-
 	int iAmount = m_pUnitInfo->getInvisibilityIntensityType(eInvisibleType);
 	iAmount += getExtraInvisibilityIntensityType(eInvisibleType);
 
@@ -38416,21 +38176,15 @@ void CvUnit::changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iCh
 
 void CvUnit::setHasAnyInvisibility()
 {
-	bool bResult = false;
-	bool bResultAbility = false;
-	for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+	for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
 	{
 		if (hasInvisibilityType((InvisibleTypes)iI))
 		{
-			bResult = true;
-		}
-		if (hasInvisibilityType((InvisibleTypes)iI, true))
-		{
-			bResultAbility = true;
+			m_bHasAnyInvisibility = true;
+			return;
 		}
 	}
-	m_bHasAnyInvisibility = bResult;
-	m_bHasAnyInvisibilityAbility = bResultAbility;
+	m_bHasAnyInvisibility = false;
 }
 
 bool CvUnit::hasVisibilityRangeType(InvisibleTypes eInvisibleType) const
@@ -39125,20 +38879,18 @@ void CvUnit::changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange)
 
 bool CvUnit::hasInvisibleAbility() const
 {
-	bool bAnswer = false;
-
 	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
 		if ((InvisibleTypes)m_pUnitInfo->getInvisibleType() != NO_INVISIBLE)
 		{
-			bAnswer = true;
+			return true;
 		}
 	}
 	else if (hasAnyInvisibilityType(true))
 	{
-		bAnswer = true;
+		return true;
 	}
-	return bAnswer;
+	return false;
 }
 
 bool CvUnit::isCriminal() const

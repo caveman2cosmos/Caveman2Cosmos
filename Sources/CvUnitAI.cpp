@@ -31025,7 +31025,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 						for (int iN = 0; iN < kPromotion.getNumNegatesInvisibilityTypes(); iN++)
 						{
 							InvisibleTypes invsibleType = (InvisibleTypes)kPromotion.getNegatesInvisibilityType(iN);
-							if (pUnit->getInvisibleType() == invsibleType || pUnit->hasInvisibilityType(invsibleType, false))
+							if (pUnit->getInvisibleType() == invsibleType || pUnit->hasInvisibilityType(invsibleType))
 							{
 								iTemp++;
 							}
