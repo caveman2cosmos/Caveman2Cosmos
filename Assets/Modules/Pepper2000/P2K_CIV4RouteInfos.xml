@@ -26,10 +26,7 @@
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
-			<BonusType>BONUS_COPPER_WARES</BonusType>
-			<PrereqOrBonuses>
-				<BonusType>BONUS_PLASTIC</BonusType>
-			</PrereqOrBonuses>
+			<BonusType>BONUS_PLASTIC</BonusType>
 			<Yields>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
