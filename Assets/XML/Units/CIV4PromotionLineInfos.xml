@@ -2119,29 +2119,6 @@
 			<bBuildUp>1</bBuildUp>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_BUILD_UP_FORTIFY</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Description>
-			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY_HELP</Help>
-			<Button>Art/Buttons/Promotions/Fortify1BuildUp.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_AIR</DomainType>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
-			<bBuildUp>1</bBuildUp>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS</Description>
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS_HELP</Help>

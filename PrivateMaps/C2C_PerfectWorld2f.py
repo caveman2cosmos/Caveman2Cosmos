@@ -3773,13 +3773,6 @@ class RiverMap :
 						print lineString2
 				lineString1 = " "
 				print lineString1
-class EuropeMap :
-		def __init__(self):
-				return
-		def initialize(self):
-				self.europeMap = array('i')
-				for i in range(mc.width*mc.height):
-						self.europeMap.append(0)
 
 
 class BonusPlacer:
@@ -3788,15 +3781,15 @@ class BonusPlacer:
 
 
 	def AddBonuses(self):
-		gc = CyGlobalContext()
-		gameMap = CyMap()
-		gameMap.recalculateAreas()
+		GC = CyGlobalContext()
+		GC.getMap().recalculateAreas()
+
 		self.AssignBonusAreas()
-		numBonuses = gc.getNumBonusInfos()
+		numBonuses = GC.getNumBonusInfos()
 
 		orderSet = {}
 		for i in range(numBonuses):  #Check which placement orders are used, discard -1
-			bonusInfo = gc.getBonusInfo(self.bonusList[i].eBonus)
+			bonusInfo = GC.getBonusInfo(self.bonusList[i].eBonus)
 			porder = bonusInfo.getPlacementOrder()
 			if porder >= 0:
 				orderSet[porder] = 1
@@ -3811,7 +3804,7 @@ class BonusPlacer:
 		for order in porderList:
 			placementList = []
 			for i in range(numBonuses):
-				bonusInfo = gc.getBonusInfo(self.bonusList[i].eBonus)
+				bonusInfo = GC.getBonusInfo(self.bonusList[i].eBonus)
 				if bonusInfo.getPlacementOrder() == order:
 					for n in range(self.bonusList[i].desiredBonusCount):
 						placementList.append(self.bonusList[i].eBonus)
@@ -3835,7 +3828,7 @@ class BonusPlacer:
 		#now report resources that simply could not be placed
 		for i in range(numBonuses):
 			bonus = self.bonusList[i]
-			bonusInfo = gc.getBonusInfo(bonus.eBonus)
+			bonusInfo = GC.getBonusInfo(bonus.eBonus)
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
 				print "No room at all found for %(bt)s!!!" % {"bt":bonusInfo.getType()}
 			print "Placed %(cb)d, desired %(db)d for %(bt)s" % {"cb":bonus.currentBonusCount, "db":bonus.desiredBonusCount, "bt":bonusInfo.getType()}
@@ -4114,6 +4107,10 @@ class BonusPlacer:
 			if plot.isFlatlands():
 				if not bonusInfo.isFlatlands():
 					return False
+
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
+
 		if bonusInfo.isNoRiverSide():
 			if plot.isRiverSide():
 				return False
@@ -5134,7 +5131,7 @@ hm = HeightMap()
 cm = ClimateMap()
 sm = SmallMaps()
 rm = RiverMap()
-em = EuropeMap()
+
 ###############################################################################
 #functions that civ is looking for
 ###############################################################################
@@ -5961,7 +5958,6 @@ def createIce():
 
 def addBonuses():
 		bp.AddBonuses()
-		return
 
 def assignStartingPlots():
 		spf.SetStartingPlots()

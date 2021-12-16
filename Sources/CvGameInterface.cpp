@@ -1176,7 +1176,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			{
 				CvMessageControl::getInstance().sendAutoMission(pHeadSelectedUnit->getID());
 			}
-			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || /*iData2 == MISSION_ESTABLISH || iData2 == MISSION_ESCAPE ||*/ iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
+			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
 			{
 				const UnitTypes eUnit = pHeadSelectedUnit->getUnitType();
 

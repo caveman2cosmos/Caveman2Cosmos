@@ -2904,12 +2904,16 @@
 		<Russian>[COLOR_NEGATIVE_TEXT]Âû óæå âûáðàëè âàøó ñâîáîäíóþ òåõíîëîãèþ(è)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHOOSE_BUILDUP</Tag>
+		<Tag>TXT_KEY_BUILDUP_CHOOSE</Tag>
 		<English>Select a Build Up Promotion Line for your [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</English>
 		<French>Choisissez une Spécialisation à suivre pour votre [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</French>
 		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
 		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
 		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
+		<English>Disband current build-up!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_ESPIONAGE_MISSION</Tag>
@@ -19266,13 +19270,6 @@
 		<Spanish>[ICON_BULLET]No habrá inflación</Spanish>
 		<Polish>[ICON_BULLET]Brak Inflacji</Polish>
 		<Russian>[ICON_BULLET]Íåò èíôëÿöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NO_INVISIBILITY</Tag>
-		<English>[ICON_BULLET]Never Invisible</English>
-		<French>[ICON_BULLET]Jamais Invisible</French>
-		<German>[ICON_BULLET]Diese Einheit ist niemals unsichtbar.</German>
-		<Russian>[ICON_BULLET]Всегда видим</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NO_NON_OWNED_CITY</Tag>

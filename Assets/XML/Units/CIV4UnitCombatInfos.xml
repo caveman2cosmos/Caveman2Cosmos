@@ -663,8 +663,6 @@
 			<bForMilitary>1</bForMilitary>
 			<DefaultStatusTypes>
 				<DefaultStatusType>PROMOTION_STANDOUT_STATUS</DefaultStatusType>
-				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS</DefaultStatusType>
-				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS_SM</DefaultStatusType>
 			</DefaultStatusTypes>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
 			<VisibilityIntensityChangeTypes>
@@ -931,8 +929,6 @@
 			<Description>TXT_KEY_UNITCOMBAT_LAW_ENFORCEMENT</Description>
 			<DefaultStatusTypes>
 				<DefaultStatusType>PROMOTION_STANDOUT_STATUS</DefaultStatusType>
-				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS</DefaultStatusType>
-				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS_SM</DefaultStatusType>
 			</DefaultStatusTypes>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
 			<iNoInvisibilityChange>1</iNoInvisibilityChange>
@@ -6641,8 +6637,6 @@
 			<Description>TXT_KEY_UNITCOMBAT_NAVAL_COMBATANT</Description>
 			<DefaultStatusTypes>
 				<DefaultStatusType>PROMOTION_STANDOUT_STATUS</DefaultStatusType>
-				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS</DefaultStatusType>
-				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS_SM</DefaultStatusType>
 			</DefaultStatusTypes>
 			<GGptsforUnitTypes>
 				<UnitType>UNIT_GREAT_ADMIRAL</UnitType>
