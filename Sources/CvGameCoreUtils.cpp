@@ -4130,8 +4130,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_SKIP: szString = L"MISSION_SKIP"; break;
 	case MISSION_SLEEP: szString = L"MISSION_SLEEP"; break;
 	case MISSION_FORTIFY: szString = L"MISSION_FORTIFY"; break;
-	//case MISSION_ESTABLISH: szString = L"MISSION_ESTABLISH"; break;
-	//case MISSION_ESCAPE: szString = L"MISSION_ESCAPE"; break;
 	case MISSION_BUILDUP: szString = L"MISSION_BUILDUP"; break;
 	case MISSION_PLUNDER: szString = L"MISSION_PLUNDER"; break;
 	case MISSION_AIRPATROL: szString = L"MISSION_AIRPATROL"; break;
@@ -4194,8 +4192,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_LAWYER_REMOVE_CORPORATIONS: szString = L"MISSION_LAWYER_REMOVE_CORPORATIONS"; break;
 	case MISSION_JOIN_CITY_POPULATION: szString = L"MISSION_JOIN_CITY_POPULATION"; break;
 	case MISSION_CURE: szString = L"MISSION_CURE"; break;
-	case MISSION_ESTABLISH: szString = L"MISSION_ESTABLISH"; break;
-	case MISSION_ESCAPE: szString = L"MISSION_ESCAPE"; break;
 	case MISSION_AUTO_BUILDUP: szString = L"MISSION_AUTO_BUILDUP"; break;
 	case MISSION_HEAL_BUILDUP: szString = L"MISSION_HEAL_BUILDUP"; break;
 	case MISSION_AMBUSH: szString = L"MISSION_AMBUSH"; break;

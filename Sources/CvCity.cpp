@@ -23421,9 +23421,14 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 {
 	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
 	{
-		if (freePromoType.ePromotion != NO_PROMOTION &&
-			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
-				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
+		if (
+			freePromoType.ePromotion != NO_PROMOTION
+		&& (
+				GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)
+				||
+				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
+			)
+		)
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
 				//freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))

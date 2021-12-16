@@ -699,8 +699,6 @@ public:
 	bool canHold(const CvPlot* pPlot) const;
 	bool canSleep(const CvPlot* pPlot) const;
 	bool canFortify(const CvPlot* pPlot) const;
-	bool canEstablish(const CvPlot* pPlot) const;
-	bool canEscape(const CvPlot* pPlot) const;
 	bool canBuildUp(const CvPlot* pPlot) const;
 	bool canAirPatrol(const CvPlot* pPlot) const;
 	void airCircle(bool bStart);
@@ -958,13 +956,11 @@ public:
 
 	bool isAutomated() const;
 	bool isFortifyable() const;
-	bool isEstablishable() const;
-	bool isEscapable() const;
+
 	bool isBuildUpable() const;
 	int fortifyModifier() const;
 	//int establishModifier() const;
 	//int escapeModifier() const;
-	int buildupLevel() const;
 	//TB Combat Mods begin
 	int fortifyRepelModifier() const;
 	//TB Combat Mods End
@@ -1624,7 +1620,7 @@ public:
 	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;
-	bool isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck = false) const;
+	bool isPromotionValid(PromotionTypes ePromotion, bool bFree = false, bool bKeepCheck = false) const;
 	bool isHealsUnitCombat(UnitCombatTypes eIndex) const;
 	bool isHasUnitCombat(UnitCombatTypes eIndex) const;
 	void processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo = false);
@@ -1820,6 +1816,7 @@ protected:
 	int m_iCombatFirstStrikes;
 	int m_iCombatDamage;
 	int m_iFortifyTurns;
+	int m_iBuildUpTurns;
 	int m_iBlitzCount;
 	int m_iRBombardForceAbilityCount;
 	int m_iAmphibCount;
@@ -1937,7 +1934,6 @@ protected:
 	int m_iHiddenNationalityCount;
 	bool m_bIsArmed;
 	bool m_bHasAnyInvisibility;
-	bool m_bHasAnyInvisibilityAbility;
 	bool m_bRevealed;
 #ifdef STRENGTH_IN_NUMBERS
 	IDInfo afIUnit;
@@ -2761,14 +2757,14 @@ public:
 	void setSleepType(MissionTypes eSleepType);
 	void establishBuildups();
 	PromotionLineTypes getBuildUpType() const;
-	void setBuildUpType(PromotionLineTypes ePromotionLine = NO_PROMOTIONLINE, bool bRemove = false, MissionTypes eSleepType = NO_MISSION);
+	void setBuildUpType(PromotionLineTypes ePromotionLine = NO_PROMOTIONLINE, MissionTypes eSleepType = NO_MISSION);
 	void clearBuildups();
+	void incrementBuildUp();
 	bool isInhibitMerge() const;
 	void setInhibitMerge(bool bNewValue);
 	bool isInhibitSplit() const;
 	void setInhibitSplit(bool bNewValue);
 	bool isBuildUp() const;
-	void setBuildUp(bool bNewValue);
 	void setSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 	bool isHiddenNationality() const;
 	void doHNCapture();
@@ -2803,7 +2799,7 @@ public:
 	void changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 
 	bool hasAnyInvisibilityType(bool bAbilityCheck = false) const;
-	bool hasInvisibilityType(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
+	bool hasInvisibilityType(InvisibleTypes eInvisibleType) const;
 	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
 	int getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iChange);
