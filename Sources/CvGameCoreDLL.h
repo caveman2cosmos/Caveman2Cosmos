@@ -13,7 +13,7 @@
 #pragma warning( disable : 4512 ) // assignment operator could not be generated
 #pragma warning( disable : 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
 
-//#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
+#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
 
 #pragma warning( push )
 #pragma warning( disable: 4100 ) // unreferenced formal parameter
@@ -277,12 +277,9 @@ using bst::bind;
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
 #include <boost/python/object.hpp>
-#include <boost/python/object/iterator_core.hpp>
 #include <boost/python/def.hpp>
-#include <boost/python/def_visitor.hpp>
 #include <boost/python/enum.hpp>
 #include <boost/python/manage_new_object.hpp>
-#include <boost/python/overloads.hpp>
 #include <boost/python/return_value_policy.hpp>
 #include <boost/python/to_python_converter.hpp>
 #include <boost/python/suite/indexing/container_utils.hpp>
