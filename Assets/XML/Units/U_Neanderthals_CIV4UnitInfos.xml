@@ -3459,7 +3459,7 @@
 			<Capture>UNIT_CAPTIVE_NEANDERTHAL</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>

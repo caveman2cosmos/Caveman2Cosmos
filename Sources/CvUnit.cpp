@@ -12008,7 +12008,8 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	{
 		if (iLeaderUnitId >= 0)
 		{
-			CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
+			const CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
+
 			if (pWarlord && NO_UNIT != pWarlord->getUnitType())
 			{
 				return (pWarlord->getUnitInfo().getLeaderPromotion() == ePromotion);
