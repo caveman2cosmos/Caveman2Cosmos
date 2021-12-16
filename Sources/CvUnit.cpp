@@ -12016,12 +12016,10 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 		}
 		return false;
 	}
-	else
+
+	if (!isPromotionReady())
 	{
-		if (!isPromotionReady())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return true;
@@ -20549,14 +20547,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 
-	if (!bForStatus && kPromotion.isStatus())
+	if (!bForStatus && promo.isStatus())
 	{
 		return false;
 	}
-	if (kPromotion.getStateReligionPrereq() != NO_RELIGION
-	&& GET_PLAYER(getOwner()).getStateReligion() != kPromotion.getStateReligionPrereq())
+
+	if (promo.getStateReligionPrereq() != NO_RELIGION && GET_PLAYER(getOwner()).getStateReligion() != promo.getStateReligionPrereq())
 	{
 		return false;
 	}
@@ -20567,13 +20565,13 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	}
 
 	//TB Combat Mod begin
-	if (!bEquip && kPromotion.isEquipment())
+	if (!bEquip && promo.isEquipment())
 	{
 		return false;
 	}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (!bAfflict && kPromotion.isAffliction())
+	if (!bAfflict && promo.isAffliction())
 	{
 		return false;
 	}
@@ -20581,17 +20579,17 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 	//TB Debug Note: If the promotion being evaluated for is the sort you get from a leader as it attaches to the unit that then qualifies you for other
 	//promotions, and the check being called here is not for that specific purpose, then return false for that promotion.
-	if (!bForLeader && kPromotion.isLeader())
+	if (!bForLeader && promo.isLeader())
 	{
 		return false;
 	}
 
-	if (!bForOffset && kPromotion.isForOffset())
+	if (!bForOffset && promo.isForOffset())
 	{
 		return false;
 	}
 
-	if (kPromotion.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(kPromotion.getObsoleteTech()))
+	if (promo.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(promo.getObsoleteTech()))
 	{
 		return false;
 	}
@@ -20602,37 +20600,35 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	if (kPromotion.getReplacesUnitCombat() != NO_UNITCOMBAT && !isHasUnitCombat(kPromotion.getReplacesUnitCombat()))
+	if (promo.getReplacesUnitCombat() != NO_UNITCOMBAT && !isHasUnitCombat(promo.getReplacesUnitCombat()))
 	{
 		return false;
 	}
 
-	if (getLevel() < kPromotion.getLevelPrereq() && !bForOffset)
+	if (getLevel() < promo.getLevelPrereq() && !bForOffset)
 	{
 		return false;
 	}
-	if (kPromotion.isRBombardPrereq() && !canRBombard(true))
+	if (promo.isRBombardPrereq() && !canRBombard(true))
 	{
 		return false;
 	}
 	const CvPlot* pPlot = plot();
-	if (!isMapCategory(*pPlot, kPromotion) || !isMapCategory(*m_pUnitInfo, kPromotion))
+	if (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo))
 	{
 		return false;
 	}
-
-	const PromotionLineTypes ePromotionLine = kPromotion.getPromotionLine();
 	//TB Combat Mods Begin
 	if (!bForFree || bForBuildUp)
 	{
-		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)kPromotion.getPrereqPromotion();
+		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)promo.getPrereqPromotion();
 
 		if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite))
 		{
 			return false;
 		}
-		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
+		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)promo.getPrereqOrPromotion1();
+		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)promo.getPrereqOrPromotion2();
 
 		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
 		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
@@ -20642,7 +20638,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	if (kPromotion.isEquipment())
+	if (promo.isEquipment())
 	{
 		if (!pPlot->isCity(false, getTeam()))
 		{
@@ -20651,9 +20647,9 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 		const CvCity* pCity = pPlot->getPlotCity();
 
-		for (int iI = 0; iI < kPromotion.getNumPrereqBonusTypes(); iI++)
+		for (int iI = 0; iI < promo.getNumPrereqBonusTypes(); iI++)
 		{
-			const BonusTypes ePrereqBonus = ((BonusTypes)kPromotion.getPrereqBonusType(iI));
+			const BonusTypes ePrereqBonus = ((BonusTypes)promo.getPrereqBonusType(iI));
 
 			if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 			{
@@ -20663,8 +20659,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	}
 
 	{
-		const int iMinEraInt = kPromotion.getMinEraType();
-		const int iMaxEraInt = kPromotion.getMaxEraType();
+		const int iMinEraInt = promo.getMinEraType();
+		const int iMaxEraInt = promo.getMaxEraType();
 		if (iMinEraInt > NO_ERA || iMaxEraInt > NO_ERA)
 		{
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -20683,17 +20679,24 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	for (int iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+	for (int iI = 0; iI < promo.getNumSubCombatChangeTypes(); iI++)
 	{
 		//If we have the unitcombat the promotion will give us already
-		if (isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+		if (isHasUnitCombat((UnitCombatTypes)promo.getSubCombatChangeType(iI)))
 		{
 			return false;
 		}
 	}
+	const PromotionLineTypes ePromotionLine = promo.getPromotionLine();
+
+	if (bForBuildUp && (ePromotionLine == NO_PROMOTIONLINE || !GC.getPromotionLineInfo(ePromotionLine).isBuildUp())
+	|| !bForBuildUp && ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).isBuildUp())
+	{
+		return false;
+	}
 
 	if (
-		kPromotion.isNotOnDomainType((int)getDomainType())
+		promo.isNotOnDomainType((int)getDomainType())
 	||
 		ePromotionLine != NO_PROMOTIONLINE
 	&&	GC.getPromotionLineInfo(ePromotionLine).isNotOnDomainType((int)getDomainType())
@@ -20705,14 +20708,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	if (ePromotionLine != NO_PROMOTIONLINE
 		&& (
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-			kPromotion.isAffliction() ||
+			promo.isAffliction() ||
 #endif // OUTBREAKS_AND_AFFLICTIONS
-			kPromotion.isEquipment()))
+			promo.isEquipment()))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
 			if (GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine() == ePromotionLine && isHasPromotion((PromotionTypes)iI)
-			&& GC.getPromotionInfo((PromotionTypes)iI).getLinePriority() > kPromotion.getLinePriority())
+			&& GC.getPromotionInfo((PromotionTypes)iI).getLinePriority() > promo.getLinePriority())
 			{
 				return false;
 			}
@@ -20721,14 +20724,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	//TB SubCombat Mod End
 
 	// Must have the next less promotionline priority unless this is an affliction, equipment, or BuildUp or Status.
-	if (ePromotionLine != NO_PROMOTIONLINE && !bAfflict && !bEquip && !kPromotion.isCritical() && !bForBuildUp && !bForStatus && kPromotion.getLinePriority() > 1)
+	if (ePromotionLine != NO_PROMOTIONLINE && !bAfflict && !bEquip && !promo.isCritical() && !bForBuildUp && !bForStatus && promo.getLinePriority() > 1)
 	{
-		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
-		const int numPromotions = kPromotionLine.getNumPromotions();
+		const CvPromotionLineInfo& promoLine = GC.getPromotionLineInfo(ePromotionLine);
+		const int numPromotions = promoLine.getNumPromotions();
 		for (int iJ = 0; iJ < numPromotions; iJ++)
 		{
-			const PromotionTypes ePrereq = (PromotionTypes)kPromotionLine.getPromotion(iJ);
-			if (GC.getPromotionInfo(ePrereq).getLinePriority() == kPromotion.getLinePriority() - 1 && !isHasPromotion(ePrereq))
+			const PromotionTypes ePrereq = (PromotionTypes)promoLine.getPromotion(iJ);
+			if (GC.getPromotionInfo(ePrereq).getLinePriority() == promo.getLinePriority() - 1 && !isHasPromotion(ePrereq))
 			{
 				return false;
 			}
@@ -20738,7 +20741,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	//	However, you can set multiple promos with the same iLinePriority that cannot be swapped out for each other.
 	if (bForStatus)
 	{
-		bool bPrereqFound = ePromotionLine == NO_PROMOTIONLINE || kPromotion.getLinePriority() != 1;
+		bool bPrereqFound = ePromotionLine == NO_PROMOTIONLINE || promo.getLinePriority() != 1;
 
 		if (!bPrereqFound)
 		{
@@ -20751,11 +20754,11 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 					const CvPromotionInfo& kPrereqPromotion = GC.getPromotionInfo(ePrereq);
 					if (kPrereqPromotion.getPromotionLine() == ePromotionLine)
 					{
-						if (kPrereqPromotion.getLinePriority() == kPromotion.getLinePriority())
+						if (kPrereqPromotion.getLinePriority() == promo.getLinePriority())
 						{
 							return false;
 						}
-						if (kPromotion.getLinePriority() == 1)
+						if (promo.getLinePriority() == 1)
 						{
 							// This establishes all Status Promos with an iLinePriority of 1 as being the status that erases any of the statuses.
 							bPrereqFound = true;
@@ -20776,58 +20779,42 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	if (isHuman() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		if (
-			kPromotion.getSMSpecialCargoPrereq() != NO_SPECIALUNIT
-		&&	kPromotion.getSMSpecialCargoPrereq() != getSMSpecialCargo()
+			promo.getSMSpecialCargoPrereq() != NO_SPECIALUNIT
+		&&	promo.getSMSpecialCargoPrereq() != getSMSpecialCargo()
 		||
-			kPromotion.getSMNotSpecialCargoPrereq() != NO_SPECIALUNIT
-		&&	kPromotion.getSMNotSpecialCargoPrereq() != SMnotSpecialCargo()
+			promo.getSMNotSpecialCargoPrereq() != NO_SPECIALUNIT
+		&&	promo.getSMNotSpecialCargoPrereq() != SMnotSpecialCargo()
 		||
-			kPromotion.isCargoPrereq() && SMcargoSpace() < 1
+			promo.isCargoPrereq() && SMcargoSpace() < 1
 		) return false;
 	}
 	else if (
-		kPromotion.getSpecialCargoPrereq() != NO_SPECIALUNIT
-	&&	kPromotion.getSpecialCargoPrereq() != getSpecialCargo()
-	||	kPromotion.isCargoPrereq() && cargoSpace() < 1
+		promo.getSpecialCargoPrereq() != NO_SPECIALUNIT
+	&&	promo.getSpecialCargoPrereq() != getSpecialCargo()
+	||	promo.isCargoPrereq() && cargoSpace() < 1
 	) return false;
 
-
-	if (bForBuildUp)
+	if (!bForFree)
 	{
-		if (ePromotionLine == NO_PROMOTIONLINE || !GC.getPromotionLineInfo(ePromotionLine).isBuildUp())
+		if (promo.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(promo.getTechPrereq()))
 		{
 			return false;
 		}
-
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-		if (!kPromotion.isAffliction())
-#endif // OUTBREAKS_AND_AFFLICTIONS
+		if (ePromotionLine != NO_PROMOTIONLINE
+		&&
+			GC.getPromotionLineInfo(ePromotionLine).getPrereqTech() != NO_TECH
+		&&
+			!GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
 		{
-			if (kPromotion.getTechPrereq() != NO_TECH
-			&& !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))
-			{
-				return false;
-			}
-			if (ePromotionLine != NO_PROMOTIONLINE
-			&&
-				GC.getPromotionLineInfo(ePromotionLine).getPrereqTech() != NO_TECH
-			&&
-				!GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
-			{
-				return false;
-			}
+			return false;
 		}
-	}
-	else if (ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).isBuildUp())
-	{
-		return false;
 	}
 
 	bool bValid = true;
 
-	for (int iI = 0; iI < kPromotion.getNumPrereqTerrainTypes(); iI++)
+	for (int iI = 0; iI < promo.getNumPrereqTerrainTypes(); iI++)
 	{
-		const TerrainTypes ePrereqTerrain = (TerrainTypes)kPromotion.getPrereqTerrainType(iI);
+		const TerrainTypes ePrereqTerrain = (TerrainTypes)promo.getPrereqTerrainType(iI);
 
 		if (ePrereqTerrain != NO_TERRAIN)
 		{
@@ -20861,9 +20848,9 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	for (int iI = 0; iI < kPromotion.getNumPrereqFeatureTypes(); iI++)
+	for (int iI = 0; iI < promo.getNumPrereqFeatureTypes(); iI++)
 	{
-		const FeatureTypes ePrereqFeature = (FeatureTypes)kPromotion.getPrereqFeatureType(iI);
+		const FeatureTypes ePrereqFeature = (FeatureTypes)promo.getPrereqFeatureType(iI);
 
 		if (ePrereqFeature != NO_FEATURE)
 		{
@@ -20884,9 +20871,9 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		bool bFirst = true;
 
-		for (int iI = 0; iI < kPromotion.getNumPrereqImprovementTypes(); iI++)
+		for (int iI = 0; iI < promo.getNumPrereqImprovementTypes(); iI++)
 		{
-			ImprovementTypes ePrereqImprovement = (ImprovementTypes)kPromotion.getPrereqImprovementType(iI);
+			ImprovementTypes ePrereqImprovement = (ImprovementTypes)promo.getPrereqImprovementType(iI);
 			if (ePrereqImprovement != NO_IMPROVEMENT)
 			{
 				bFirst = false;
@@ -20905,7 +20892,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 		if (bFirst || !bValid)
 		{
-			const int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingTypes();
+			const int iNumPrereqLocalBuilding = promo.getNumPrereqLocalBuildingTypes();
 			if (iNumPrereqLocalBuilding > 0)
 			{
 				bValid = false;
@@ -20913,7 +20900,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 				{
 					if (plot()->isCity(false)
 
-					&& pPlot->getPlotCity()->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingType(iI)) > 0)
+					&& pPlot->getPlotCity()->getNumActiveBuilding((BuildingTypes)promo.getPrereqLocalBuildingType(iI)) > 0)
 					{
 						bValid = true;
 						break;
@@ -20927,9 +20914,9 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	for (int iI = 0; iI < kPromotion.getNumPrereqPlotBonusTypes(); iI++)
+	for (int iI = 0; iI < promo.getNumPrereqPlotBonusTypes(); iI++)
 	{
-		const BonusTypes ePrereqBonus = (BonusTypes)kPromotion.getPrereqPlotBonusType(iI);
+		const BonusTypes ePrereqBonus = (BonusTypes)promo.getPrereqPlotBonusType(iI);
 
 		if (ePrereqBonus != NO_BONUS)
 		{
@@ -20946,12 +20933,12 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	if (kPromotion.isPrereqNormInvisible() && !hasInvisibleAbility())
+	if (promo.isPrereqNormInvisible() && !hasInvisibleAbility())
 	{
 		return false;
 	}
 
-	if (!bForOffset && kPromotion.getQualityChange() > 0 && getRetrainsAvailable() > 0)
+	if (!bForOffset && promo.getQualityChange() > 0 && getRetrainsAvailable() > 0)
 	{
 		return false;
 	}
