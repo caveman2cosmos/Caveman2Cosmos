@@ -12008,7 +12008,8 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	{
 		if (iLeaderUnitId >= 0)
 		{
-			CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
+			const CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
+
 			if (pWarlord && NO_UNIT != pWarlord->getUnitType())
 			{
 				return (pWarlord->getUnitInfo().getLeaderPromotion() == ePromotion);
@@ -12681,7 +12682,7 @@ UnitTypes CvUnit::getCaptureUnitType() const
 
 UnitCombatTypes CvUnit::getUnitCombatType() const
 {
-	return ((UnitCombatTypes)(m_pUnitInfo->getUnitCombatType()));
+	return (UnitCombatTypes) m_pUnitInfo->getUnitCombatType();
 }
 
 
@@ -14503,48 +14504,21 @@ bool CvUnit::canSiege(TeamTypes eTeam) const
 
 int CvUnit::airMaxCombatStr(const CvUnit* pOther) const
 {
-	int iModifier;
-	int iCombat;
-
 	if (airBaseCombatStr() == 0)
 	{
 		return 0;
 	}
-
-	iModifier = getExtraCombatPercent();
-
-	if (getKamikazePercent() != 0)
-	{
-		iModifier += getKamikazePercent();
-	}
-
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						8/16/08		DanF5771 & jdog5000	*/
-/* 																			*/
-/* 	Bugfix																	*/
-/********************************************************************************/
-/* original BTS code
-	if (getExtraCombatPercent() != 0)
-	{
-		iModifier += getExtraCombatPercent();
-	}
-*/
-	// ExtraCombatPercent already counted above
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
+	int iModifier = getExtraCombatPercent() + getKamikazePercent();
 
 	if (NULL != pOther)
 	{
-		//TB SubCombat Mod Begin
 		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOther->m_unitCombatKeyedInfo.begin(), end = pOther->m_unitCombatKeyedInfo.end(); it != end; ++it)
 		{
-			if(it->second.m_bHasUnitCombat)
+			if (it->second.m_bHasUnitCombat)
 			{
 				iModifier += unitCombatModifier(it->first);
 			}
 		}
-		//TB SubCombat Mod End
 
 		iModifier += domainModifier(pOther->getDomainType());
 
@@ -14552,24 +14526,14 @@ int CvUnit::airMaxCombatStr(const CvUnit* pOther) const
 		{
 			iModifier += animalCombatModifier();
 		}
-//TB Combat Mods Begin
+
 		if (pOther->isHominid())
 		{
 			iModifier += vsBarbsModifier();
 		}
-//TB Combat Mods End
 	}
 
-	if (iModifier > 0)
-	{
-		iCombat = (airBaseCombatStr() * (iModifier + 100));
-	}
-	else
-	{
-		iCombat = ((airBaseCombatStr() * 10000) / (100 - iModifier));
-	}
-
-	return std::max(1, iCombat);
+	return std::max(1, getModifiedIntValue(100 * airBaseCombatStr(), iModifier));
 }
 
 
@@ -32644,13 +32608,19 @@ void CvUnit::checkPromotionObsoletion()
 
 	if (isCommander())
 	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 		{
-			if (isHasUnitCombat((UnitCombatTypes)iI) &&
-				(GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() > -10 ||
-				GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase() > -10))
+			const UnitCombatTypes eUnitCombatX = static_cast<UnitCombatTypes>(iI);
+			if (
+				isHasUnitCombat(eUnitCombatX)
+			&&	(
+					GC.getUnitCombatInfo(eUnitCombatX).getGroupBase() > -10
+					||
+					GC.getUnitCombatInfo(eUnitCombatX).getQualityBase() > -10
+				)
+			)
 			{
-				setHasUnitCombat((UnitCombatTypes)iI, false);
+				setHasUnitCombat(eUnitCombatX, false);
 			}
 		}
 	}
@@ -32658,42 +32628,38 @@ void CvUnit::checkPromotionObsoletion()
 	while (bContinue)
 	{
 		bool bRemovalMade = false;
-		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		for (int iI = GC.getNumPromotionInfos() - 1; iI > -1; iI--)
 		{
-			PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
+			const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
 			const CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
-			bool bPromo = !promotionInfo.isEquipment()
+			bool bPromo =
+			(
+				!promotionInfo.isEquipment()
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 				&& !promotionInfo.isAffliction()
 #endif
-			;
+			);
 			bool bPromotionFree = isPromotionFree(ePromotion);
-			if (isHasPromotion(ePromotion))
-			{
-				if (!canKeepPromotion(ePromotion, bPromotionFree, true))
-				{
-					if (bPromo && !bPromotionFree)
-					{
-						//	The retrain mechanism relies on knowing if a promotion was free or not, but in
-						//	saves from older versions we don't have that information, and many promotions that
-						//	actually were free will not be flagged as such.  In such cases you'll get to retrain
-						//	things you really shouldn't, but we don't allow more total retrains than your level
 
-						changeRetrainsAvailable(1);
-						setHasPromotion(ePromotion, false, false);
-						bRemovalMade = true;
-					}
-					if (bPromotionFree)
-					{
-						setHasPromotion(ePromotion, false, true);
-						bRemovalMade = true;
-					}
+			if (isHasPromotion(ePromotion) && !canKeepPromotion(ePromotion, bPromotionFree, true))
+			{
+				if (bPromotionFree)
+				{
+					setHasPromotion(ePromotion, false, true);
+					bRemovalMade = true;
+				}
+				else if (bPromo)
+				{
+					//	The retrain mechanism relies on knowing if a promotion was free or not, but in
+					//	saves from older versions we don't have that information, and many promotions that
+					//	actually were free will not be flagged as such.  In such cases you'll get to retrain
+					//	things you really shouldn't, but we don't allow more total retrains than your level
+
+					changeRetrainsAvailable(1);
+					setHasPromotion(ePromotion, false, false);
+					bRemovalMade = true;
 				}
 			}
-			//	Koshling - testing promotion readiness here is uneccessary since CvUnit::doTurn
-			//	will do it.  It is alo now dangerous to do it here (or indeed anywhere but controlled
-			//	places) becaue it is not thread-safe and needs to run strictly on the main thread
-			//testPromotionReady();
 		}
 		if (!bRemovalMade)
 		{
@@ -35248,7 +35214,7 @@ void CvUnit::doSetUnitCombats()
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra() == eEra)
 		{
-			setHasUnitCombat((UnitCombatTypes)iI,true,false);
+			setHasUnitCombat((UnitCombatTypes)iI, true, false);
 			break;
 		}
 	}
@@ -35320,26 +35286,20 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 		{
 			if (it->second.m_bHasUnitCombat)
 			{
-				if (eTrait != NO_TRAIT)
-				{
-					if (GC.getTraitInfo(eTrait).isFreePromotionUnitCombats((int)ePromotion, it->first))
-					{
-						setHasPromotion(ePromotion, false, true, false, false, true);
-					}
-				}
-				else
+				if (eTrait == NO_TRAIT)
 				{
 					for (int iK = 0; iK < numTraitInfos; iK++)
 					{
-						if (!pPlayer.hasTrait((TraitTypes)iK))
+						if (!pPlayer.hasTrait((TraitTypes)iK) && GC.getTraitInfo((TraitTypes)iK).isFreePromotionUnitCombats((int)ePromotion, it->first))
 						{
-							if (GC.getTraitInfo((TraitTypes)iK).isFreePromotionUnitCombats((int)ePromotion, it->first))
-							{
-								setHasPromotion(ePromotion, false, true, false, false, true);
-								return;
-							}
+							setHasPromotion(ePromotion, false, true, false, false, true);
+							return;
 						}
 					}
+				}
+				else if (GC.getTraitInfo(eTrait).isFreePromotionUnitCombats((int)ePromotion, it->first))
+				{
+					setHasPromotion(ePromotion, false, true, false, false, true);
 				}
 			}
 		}
@@ -37588,7 +37548,7 @@ void CvUnit::establishBuildups()
 			for (int iJ = 0; iJ < kPromotionLine.getNumPromotions(); iJ++)
 			{
 				const PromotionTypes ePromotion = (PromotionTypes)kPromotionLine.getPromotion(iJ);
-				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
 				&& canAcquirePromotion(ePromotion, PromotionRequirements::IgnoreHas | PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLine);

@@ -2109,6 +2109,7 @@
 			<Type>UNIT_NANITE_SPY</Type>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NANITE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
@@ -44957,7 +44958,7 @@
 			<Capture>UNIT_CAPTIVE_MILITARY</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
