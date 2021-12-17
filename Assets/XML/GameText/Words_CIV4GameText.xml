@@ -143,4 +143,8 @@
 		<Polish>Z</Polish>
 		<Russian>Ñ</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_SPOT</Tag>
+		<English>Spot</English>
+	</TEXT>
 </Civ4GameText>

@@ -630,12 +630,24 @@
 		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_BULLET_S1</Tag>
+		<English>[ICON_BULLET]%s1</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
 		<English>[ICON_BULLET]%s1 %F2 from %s3</English>
 		<French>[ICON_BULLET]%s1 %F2 en raison de %s3</French>
 		<German>[ICON_BULLET]%s1 %F2 durch %s3</German>
 		<Italian>[ICON_BULLET]%s1 %F2 [NUM3:da:dai] %s3</Italian>
 		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
+		<English>[ICON_BULLET]%s1:[SPACE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
+		<English>%s1:[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>

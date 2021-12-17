@@ -675,44 +675,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	}
 
 
-	//TB Temp
-	//if (pUnit->getMaxHP() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_HP", pUnit->getMaxHP()));
-	//}
-	//if (pUnit->assetValueTotal() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_ASSET", pUnit->assetValueTotal()));
-	//}
-	//if (pUnit->powerValueTotal() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_POWER", pUnit->powerValueTotal()));
-	//}
-	//if (pUnit->SMcargoSpace() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_CARGO_SPACE", pUnit->SMcargoSpace()));
-	//}
-	//if (pUnit->SMCargoVolume() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_CARGO_VOLUME", pUnit->SMCargoVolume()));
-	//}
-	//if (pUnit->bombardRate() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_BOMBARD_RATE", pUnit->bombardRate()));
-	//}
-	//if (pUnit->airBombCurrRate() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_AIR_BOMBARD_RATE", pUnit->airBombCurrRate()));
-	//}
-	//TB SubCombat Mod begin
-
 	for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
 		if (pUnit->isHasPromotion((PromotionTypes)iI) && !pUnit->isPromotionOverriden((PromotionTypes)iI))
@@ -3122,6 +3084,26 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 				else
 				{
+					bool bFirst = true;
+
+					for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
+					{
+						const int iSpotIntensity = pUnit->visibilityIntensityTotal((InvisibleTypes)iJ);
+						if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+						{
+							if (bFirst)
+							{
+								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_BULLET_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+								bFirst = false;
+							}
+							else
+							{
+								szString.append(L", ");
+							}
+							szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+						}
+					}
 					bFirst = true;
 					for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 					{
@@ -3399,6 +3381,11 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	}
 	if (bNormalView)
 	{
+		if (pUnit->getBuildUpType() != NO_PROMOTIONLINE)
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText("TXT_BULLET_S1", GC.getPromotionLineInfo(pUnit->getBuildUpType()).getDescription()));
+		}
 		//Outcome Missions
 		CvOutcomeListMerged mergedList;
 		mergedList.addOutcomeList(pUnit->getUnitInfo().getKillOutcomeList());
@@ -3414,19 +3401,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 		if (!mergedList.isEmpty())
 		{
-			//if (gDLL->getInterfaceIFace()->headSelectionListNode())
+			CvUnit* pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+
+			if (pSelectedUnit && mergedList.isPossible(*pSelectedUnit))
 			{
-				CvUnit* pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-				if (pSelectedUnit)
-				{
-					if (mergedList.isPossible(*pSelectedUnit))
-					{
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_ANIMAL_ON_KILL"));
-						szString.append(":");
-						mergedList.buildDisplayString(szString, *pSelectedUnit);
-					}
-				}
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_ANIMAL_ON_KILL"));
+				szString.append(":");
+				mergedList.buildDisplayString(szString, *pSelectedUnit);
 			}
 		}
 	}
@@ -7999,7 +7981,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	const TeamTypes ePlotTeam = pPlot->getTeam();
 	const CvTeamAI* plotTeam = ePlotTeam > -1 ? &GET_TEAM(ePlotTeam) : NULL;
 
-	if (bCtrl && (gDLL->getChtLvl() > 0 || bDebug))
+	if (bCtrl && bDebug)
 	{
 		if (pPlot->getOwner() != NO_PLAYER)
 		{
@@ -8366,10 +8348,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				for (int iK = 0; iK < MAX_TEAMS; iK++)
 				{
 					TeamTypes eTeam = (TeamTypes)iK;
-					const int iVisibilityIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
-					if (iVisibilityIntensity > 0)
+					const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
+					if (iSpotIntensity != 0)
 					{
-						szString.append(CvWString::format(L"InvisibleType: %s, TeamID:%d, Int:%d", GC.getInvisibleInfo(eInvisible).getTextKeyWide(), iK, iVisibilityIntensity));
+						szString.append(CvWString::format(L"InvisibleType: %s, TeamID:%d, Int:%d", GC.getInvisibleInfo(eInvisible).getTextKeyWide(), iK, iSpotIntensity));
 						szString.append(NEWLINE);
 					}
 				}
@@ -8379,7 +8361,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		}
 		return;
 	}
-	else if (bShift && !bAlt && (gDLL->getChtLvl() > 0 || bDebug))
+	else if (bShift && !bAlt && bDebug)
 	{
 		szString.append(CvWString::format(L"\n%s - Lat %d, Long %d",
 			GC.getTerrainInfo(pPlot->getTerrainType()).getDescription(), pPlot->getLatitude(), pPlot->getLongitude()));
@@ -8529,7 +8511,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::DefensiveBonuses));
 		szString.append(szTempBuffer);
 	}
-	else if (!bShift && bAlt && (gDLL->getChtLvl() > 0 || bDebug))
+	else if (!bShift && bAlt && bDebug)
 	{
 		if (pPlot->isOwned())
 		{
@@ -8782,7 +8764,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 	}
-	else if (bShift && bAlt && (gDLL->getChtLvl() > 0 || bDebug))
+	else if (bShift && bAlt && bDebug)
 	{
 		CvCity*	pCity = pPlot->getWorkingCity();
 		if (pCity != NULL)
@@ -9041,6 +9023,36 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
+		szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
+		szString.append(NEWLINE);
+
+		if (bAlt && !bShift && !bCtrl)
+		{
+			bool bFirst = true;
+
+			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
+			{
+				const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity((InvisibleTypes)iJ, eActiveTeam);
+
+				if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+				{
+					if (bFirst)
+					{
+						szString.append(gDLL->getText("TXT_KEY_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+						bFirst = false;
+					}
+					else
+					{
+						szString.append(L", ");
+					}
+					szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+				}
+			}
+			if (!bFirst)
+			{
+				szString.append(NEWLINE);
+			}
+		}
 		const int iDefenseModifier = pPlot->defenseModifier(eRevealOwner != NO_PLAYER ? GET_PLAYER(eRevealOwner).getTeam() : NO_TEAM, true, true);
 		if (iDefenseModifier != 0)
 		{
@@ -14952,8 +14964,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	//Hide and Seek
 	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		int iVisibilityIntensityChange = 0;
-		int iVisibilityIntensityRangeChange = 0;
+		int iSpotIntensityChange = 0;
+		int iSpotIntensityRangeChange = 0;
 		int iInvisibilityIntensityChange = 0;
 		int iInvisibleTerrainChange = 0;
 		int iInvisibleFeatureChange = 0;
@@ -14968,27 +14980,27 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		{
 			for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 			{
-				iVisibilityIntensityChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityChangeType(iI);
-				iVisibilityIntensityRangeChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityRangeChangeType(iI);
+				iSpotIntensityChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityChangeType(iI);
+				iSpotIntensityRangeChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityRangeChangeType(iI);
 				iInvisibilityIntensityChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getInvisibilityIntensityChangeType(iI);
 			}
-			if (iVisibilityIntensityChange != 0)
+			if (iSpotIntensityChange != 0)
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", iVisibilityIntensityChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", iSpotIntensityChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
-			if (iVisibilityIntensityRangeChange != 0)
+			if (iSpotIntensityRangeChange != 0)
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE", iVisibilityIntensityRangeChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE", iSpotIntensityRangeChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
 			if (iInvisibilityIntensityChange != 0)
 			{
 				szBuffer.append(pcNewline);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_INTENSITY_CHANGE", iInvisibilityIntensityChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
-			iVisibilityIntensityChange = 0;
-			iVisibilityIntensityRangeChange = 0;
+			iSpotIntensityChange = 0;
+			iSpotIntensityRangeChange = 0;
 			iInvisibilityIntensityChange = 0;
 			for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
 			{
@@ -19292,21 +19304,24 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 		else
 		{
-			bFirst = true;
-			for (int iI = 0; iI < GC.getNumInvisibleInfos(); ++iI)
+			bool bFirst = true;
+
+			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 			{
-				if (kUnit.getVisibilityIntensityType(iI) != 0)
+				const int iSpotIntensity = kUnit.getVisibilityIntensityType(iJ);
+				if (iSpotIntensity != 0)
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_BULLET_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
 						bFirst = false;
 					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE", kUnit.getVisibilityIntensityType(iI), GC.getInvisibleInfo((InvisibleTypes) iI).getChar()));
+					else
+					{
+						szBuffer.append(L", ");
+					}
+					szBuffer.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
 				}
 			}
 			bFirst = true;
@@ -27687,12 +27702,24 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+		bool bFirst = true;
+
+		for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 		{
-			if (info.getVisibilityIntensityChangeType((InvisibleTypes)iI) != 0)
+			const int iSpotIntensity = info.getVisibilityIntensityChangeType((InvisibleTypes)iJ);
+			if (iSpotIntensity != 0)
 			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", info.getVisibilityIntensityChangeType((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
+				if (bFirst)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_BULLET_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+					bFirst = false;
+				}
+				else
+				{
+					szBuffer.append(L", ");
+				}
+				szBuffer.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
 			}
 		}
 		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)

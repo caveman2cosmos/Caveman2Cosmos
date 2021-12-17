@@ -1095,6 +1095,7 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_CITY_GARRISON1</PromotionType>

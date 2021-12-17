@@ -573,9 +573,9 @@ bool CyPlot::isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ 
 	return m_pPlot ? m_pPlot->isInvisibleVisible((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : false;
 }
 
-void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity)
+void CyPlot::changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChange)
 {
-	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
+	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) iTeam, (InvisibleTypes) iInvisible, iChange);
 }
 
 python::list CyPlot::units() const
