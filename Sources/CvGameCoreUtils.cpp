@@ -1517,13 +1517,13 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 bool PUF_isVisible(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false));
+	return !pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false);
 }
 
 bool PUF_isVisibleDebug(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true));
+	return !pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true);
 }
 
 bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)

@@ -1189,50 +1189,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	dflIUnit = other.dflIUnit;
 	dflIIUnit = other.dflIIUnit;
 #endif // STRENGTH_IN_NUMBERS
-/*
-	if (other.m_aiExtraDomainModifier == nullptr)
-		m_aiExtraDomainModifier = nullptr;
-	else
-	{
-		m_aiExtraDomainModifier = new int[NUM_DOMAIN_TYPES];
-		memcpy(m_aiExtraDomainModifier, other.m_aiExtraDomainModifier, NUM_DOMAIN_TYPES * sizeof(int));
-	}
-	if (other.m_aiExtraVisibilityIntensity == nullptr)
-		m_aiExtraVisibilityIntensity = nullptr;
-	else
-	{
-		m_aiExtraVisibilityIntensity = new int[GC.getNumInvisibleInfos()];
-		memcpy(m_aiExtraVisibilityIntensity, other.m_aiExtraVisibilityIntensity, GC.getNumInvisibleInfos() * sizeof(int));
-	}
-	if (other.m_aiExtraInvisibilityIntensity == nullptr)
-		m_aiExtraInvisibilityIntensity = nullptr;
-	else
-	{
-		m_aiExtraInvisibilityIntensity = new int[GC.getNumInvisibleInfos()];
-		memcpy(m_aiExtraInvisibilityIntensity, other.m_aiExtraInvisibilityIntensity, GC.getNumInvisibleInfos() * sizeof(int));
-	}
-	if (other.m_aiExtraVisibilityIntensityRange == nullptr)
-		m_aiExtraVisibilityIntensityRange = nullptr;
-	else
-	{
-		m_aiExtraVisibilityIntensityRange = new int[GC.getNumInvisibleInfos()];
-		memcpy(m_aiExtraVisibilityIntensityRange, other.m_aiExtraVisibilityIntensityRange, GC.getNumInvisibleInfos() * sizeof(int));
-	}
-	if (other.m_aiExtraVisibilityIntensitySameTile == nullptr)
-		m_aiExtraVisibilityIntensitySameTile = nullptr;
-	else
-	{
-		m_aiExtraVisibilityIntensitySameTile = new int[GC.getNumInvisibleInfos()];
-		memcpy(m_aiExtraVisibilityIntensitySameTile, other.m_aiExtraVisibilityIntensitySameTile, GC.getNumInvisibleInfos() * sizeof(int));
-	}
-	if (other.m_aiNegatesInvisibleCount == nullptr)
-		m_aiNegatesInvisibleCount = nullptr;
-	else
-	{
-		m_aiNegatesInvisibleCount = new int[GC.getNumInvisibleInfos()];
-		memcpy(m_aiNegatesInvisibleCount, other.m_aiNegatesInvisibleCount, GC.getNumInvisibleInfos() * sizeof(int));
-	}
-*/
+
 	m_aExtraInvisibleTerrains = other.m_aExtraInvisibleTerrains;
 	m_aExtraInvisibleFeatures = other.m_aExtraInvisibleFeatures;
 	m_aExtraInvisibleImprovements = other.m_aExtraInvisibleImprovements;
@@ -12734,21 +12691,17 @@ bool CvUnit::isHuman() const
 
 int CvUnit::visibilityRange(const CvPlot* pPlot) const
 {
-	// Super Forts begin *vision*
-	if ( pPlot == NULL )
+	if (pPlot == NULL)
 	{
 		pPlot = plot();
 	}
 
 	int iImprovementVisibilityChange = 0;
-	if(pPlot->getImprovementType() != NO_IMPROVEMENT)
+	if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 	{
 		iImprovementVisibilityChange = GC.getImprovementInfo(pPlot->getImprovementType()).getVisibilityChange();
 	}
 	return std::min(GC.getMAX_UNIT_VISIBILITY_RANGE(), GC.getUNIT_VISIBILITY_RANGE() + getExtraVisibilityRange() + iImprovementVisibilityChange);
-	// Super Forts end
-	/* Original
-	return (GC.getDefineINT("UNIT_VISIBILITY_RANGE") + getExtraVisibilityRange()); */
 }
 
 
@@ -14917,7 +14870,7 @@ bool CvUnit::isRanged() const
 
 bool CvUnit::alwaysInvisible() const
 {
-	return (m_pUnitInfo->isInvisible() || (getAlwaysInvisibleCount() > 0));
+	return m_pUnitInfo->isInvisible() || getAlwaysInvisibleCount() > 0;
 }
 
 
@@ -14984,6 +14937,7 @@ int CvUnit::getNoInvisibilityCount() const
 void CvUnit::changeNoInvisibilityCount(int iChange)
 {
 	m_iNoInvisibilityCount += iChange;
+	setHasAnyInvisibility();
 }
 
 
@@ -15024,24 +14978,22 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 		return getInvisibleType() != NO_INVISIBLE && !plot()->isInvisibleVisible(eTeam, getInvisibleType());
 	}
 
-	if (!hasAnyInvisibilityType())
+	if (hasAnyInvisibilityType())
 	{
-		return false;
-	}
-
-	for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
-	{
-		const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
-
-		if (hasInvisibilityType(eInvisible)
-		&&	(
-				!plot()->isInvisibleVisible(eTeam, eInvisible)
-				||
-				plot()->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam) < invisibilityIntensityTotal(eInvisible)
-			)
-		)
+		for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
 		{
-			return true;
+			const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
+
+			if (hasInvisibilityType(eInvisible) && plot()->isInvisibleVisible(eTeam, eInvisible))
+			{
+				const int iIntensity = invisibilityIntensityTotal(eInvisible);
+
+				if ((iIntensity > 0 || GC.getInvisibleInfo(eInvisible).isIntrinsic())
+				&& plot()->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam) < iIntensity)
+				{
+					return true;
+				}
+			}
 		}
 	}
 	return false;
@@ -19369,27 +19321,7 @@ void CvUnit::setFacingDirection(DirectionTypes eFacingDirection)
 {
 	if (eFacingDirection != m_eFacingDirection)
 	{
-		if (m_pUnitInfo->isLineOfSight() && plot() != NULL)
-		{
-			//remove old fog
-			plot()->changeAdjacentSight(getTeam(), visibilityRange(plot()), false, this, true);
-			changeDebugCount(-1);
-
-			//change direction
-			m_eFacingDirection = eFacingDirection;
-
-			//clear new fog
-			plot()->changeAdjacentSight(getTeam(), visibilityRange(plot()), true, this, true);
-			changeDebugCount(1);
-
-			gDLL->getInterfaceIFace()->setDirty(ColoredPlots_DIRTY_BIT, true);
-		}
-		else
-		{
-			m_eFacingDirection = eFacingDirection;
-		}
-
-		//update formation
+		m_eFacingDirection = eFacingDirection;
 		NotifyEntity(NO_MISSION);
 	}
 }
@@ -37892,19 +37824,71 @@ void CvUnit::changeUpgradeAnywhereCount(int iChange)
 	m_iUpgradeAnywhereCount += iChange;
 }
 
-bool CvUnit::hasVisibilityType(InvisibleTypes eInvisibleType) const
+void CvUnit::updateSpotIntensity(const InvisibleTypes eInvisibleType, const bool bSameTile)
 {
-	return (visibilityIntensityTotal(eInvisibleType) > 0);
+	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	{
+		return;
+	}
+	std::vector<InvisibleTypes> aSeeInvisibleTypes;
+
+	if (eInvisibleType == NO_INVISIBLE)
+	{
+		for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
+		{
+			aSeeInvisibleTypes.push_back(static_cast<InvisibleTypes>(iI));
+		}
+	}
+	else aSeeInvisibleTypes.push_back(eInvisibleType);
+
+	const bool bAerial = getDomainType() == DOMAIN_AIR;
+
+	const int iRange = bSameTile ? 0 : visibilityRange(plot());
+
+	for (int i = aSeeInvisibleTypes.size() - 1; i > -1; i--)
+	{
+		const InvisibleTypes eInvisible = aSeeInvisibleTypes[i];
+
+		for (int dx = -iRange; dx <= iRange; dx++)
+		{
+			for (int dy = -iRange; dy <= iRange; dy++)
+			{
+				if (bAerial || plot()->canSeeDisplacementPlot(getTeam(), dx, dy, dx, dy, true, abs(dx) == iRange || abs(dy) == iRange))
+				{
+					CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
+
+					if (NULL != pPlot)
+					{
+						const int iDistance = std::max(abs(dx), abs(dy));
+
+						if (iDistance > 0)
+						{
+							pPlot->setSpotIntensity(
+								getTeam(), eInvisible, getID(),
+								visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - visibilityIntensityRangeTotal(eInvisible))
+							);
+						}
+						else
+						{
+							pPlot->setSpotIntensity(
+								getTeam(), eInvisible, getID(),
+								visibilityIntensityTotal(eInvisible) + visibilityIntensitySameTileTotal(eInvisible)
+							);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 {
-	int iAmount = m_pUnitInfo->getVisibilityIntensityType(eInvisibleType);
-
-	iAmount += getExtraVisibilityIntensityType(eInvisibleType);
-
-	const TerrainTypes eTerrain = plot()->getTerrainType();
-	iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
+	int iAmount = (
+		m_pUnitInfo->getVisibilityIntensityType(eInvisibleType)
+		+ getExtraVisibilityIntensityType(eInvisibleType)
+		+ extraVisibleTerrain(eInvisibleType, plot()->getTerrainType())
+	);
 
 	if (plot()->isAsPeak())
 	{
@@ -37928,7 +37912,7 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 	{
 		iAmount += extraVisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
 	}
-	return std::max(0, iAmount);
+	return iAmount;
 }
 
 int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
@@ -37952,20 +37936,9 @@ void CvUnit::changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChan
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	if (iChange != 0)
 	{
-		deleteVisibility();
 		m_aiExtraVisibilityIntensity[eIndex] += iChange;
-		addVisibility();
+		updateSpotIntensity(eIndex);
 	}
-}
-
-bool CvUnit::hasAnyInvisibilityType(bool bAbilityCheck) const
-{
-	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK)
-	&& (m_pUnitInfo->isNoInvisibility() || getNoInvisibilityCount() > 0))
-	{
-		return false;
-	}
-	return m_bHasAnyInvisibility;
 }
 
 bool CvUnit::hasInvisibilityType(InvisibleTypes eInvisibleType) const
@@ -37973,37 +37946,37 @@ bool CvUnit::hasInvisibilityType(InvisibleTypes eInvisibleType) const
 	return !isNegatesInvisible(eInvisibleType) && !m_pUnitInfo->isNoInvisibility() && getNoInvisibilityCount() < 1;
 }
 
-int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbilityCheck) const
+int CvUnit::invisibilityIntensityTotal(InvisibleTypes eType) const
 {
-	int iAmount = m_pUnitInfo->getInvisibilityIntensityType(eInvisibleType);
-	iAmount += getExtraInvisibilityIntensityType(eInvisibleType);
-
-	const TerrainTypes eTerrain = plot()->getTerrainType();
-	iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
+	int iAmount = (
+		m_pUnitInfo->getInvisibilityIntensityType(eType)
+		+ getExtraInvisibilityIntensityType(eType)
+		+ extraInvisibleTerrain(eType, plot()->getTerrainType())
+	);
 
 	if (plot()->isAsPeak())
 	{
-		iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
+		iAmount += extraInvisibleTerrain(eType, GC.getTERRAIN_PEAK());
 	}
 	else if (plot()->isHills())
 	{
-		iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
+		iAmount += extraInvisibleTerrain(eType, GC.getTERRAIN_HILL());
 	}
 	const FeatureTypes eFeature = plot()->getFeatureType();
 	if (eFeature != NO_FEATURE)
 	{
-		iAmount += extraInvisibleFeature(eInvisibleType, eFeature);
+		iAmount += extraInvisibleFeature(eType, eFeature);
 	}
 	const ImprovementTypes eImprovement = plot()->getImprovementType();
 	if (eImprovement != NO_IMPROVEMENT)
 	{
-		iAmount += extraInvisibleImprovement(eInvisibleType, eImprovement);
+		iAmount += extraInvisibleImprovement(eType, eImprovement);
 	}
 	if (plot()->isCity(true))
 	{
-		iAmount += extraInvisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
+		iAmount += extraInvisibleImprovement(eType, GC.getIMPROVEMENT_CITY());
 	}
-	return std::max(0,iAmount);
+	return iAmount;
 }
 
 int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
@@ -38026,14 +37999,23 @@ void CvUnit::changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iCh
 {
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	m_aiExtraInvisibilityIntensity[eIndex] += iChange;
-	setHasAnyInvisibility();
+}
+
+bool CvUnit::hasAnyInvisibilityType() const
+{
+	return m_bHasAnyInvisibility;
 }
 
 void CvUnit::setHasAnyInvisibility()
 {
+	if (m_pUnitInfo->isNoInvisibility() || getNoInvisibilityCount() > 0)
+	{
+		m_bHasAnyInvisibility = false;
+		return;
+	}
 	for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
 	{
-		if (hasInvisibilityType((InvisibleTypes)iI))
+		if (!isNegatesInvisible((InvisibleTypes)iI))
 		{
 			m_bHasAnyInvisibility = true;
 			return;
@@ -38042,19 +38024,13 @@ void CvUnit::setHasAnyInvisibility()
 	m_bHasAnyInvisibility = false;
 }
 
-bool CvUnit::hasVisibilityRangeType(InvisibleTypes eInvisibleType) const
-{
-	return (visibilityIntensityRangeTotal(eInvisibleType) > 0);
-}
-
 int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 {
-	int iAmount = m_pUnitInfo->getVisibilityIntensityRangeType(eInvisibleType);
-
-	iAmount += getExtraVisibilityIntensityRangeType(eInvisibleType);
-
-	const TerrainTypes eTerrain = plot()->getTerrainType();
-	iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
+	int iAmount = (
+		m_pUnitInfo->getVisibilityIntensityRangeType(eInvisibleType)
+		+ getExtraVisibilityIntensityRangeType(eInvisibleType)
+		+ extraVisibleTerrainRange(eInvisibleType, plot()->getTerrainType())
+	);
 
 	if (plot()->isAsPeak())
 	{
@@ -38078,7 +38054,7 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 	{
 		iAmount += extraVisibleImprovementRange(eInvisibleType, GC.getIMPROVEMENT_CITY());
 	}
-	return iAmount;
+	return std::max(0, iAmount);
 }
 
 int CvUnit::getExtraVisibilityIntensityRangeType(InvisibleTypes eIndex) const
@@ -38093,9 +38069,8 @@ void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int 
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	if (iChange != 0)
 	{
-		deleteVisibility();
 		m_aiExtraVisibilityIntensityRange[eIndex] += iChange;
-		addVisibility();
+		updateSpotIntensity(eIndex);
 	}
 }
 
@@ -38116,9 +38091,8 @@ void CvUnit::changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, i
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
 	if (iChange != 0)
 	{
-		deleteVisibility();
 		m_aiExtraVisibilityIntensitySameTile[eIndex] += iChange;
-		addVisibility();
+		updateSpotIntensity(eIndex, true);
 	}
 }
 
@@ -38288,12 +38262,8 @@ void CvUnit::changeExtraVisibleTerrain(InvisibleTypes eInvisible, TerrainTypes e
 	{
 		return;
 	}
-	else
-	{
-		deleteVisibility();
-	}
 	bool bFound = false;
-	int iSize = getNumExtraVisibleTerrains();
+	const int iSize = getNumExtraVisibleTerrains();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (m_aExtraVisibleTerrains[iI].eInvisible == eInvisible && m_aExtraVisibleTerrains[iI].eTerrain == eTerrain)
@@ -38309,17 +38279,12 @@ void CvUnit::changeExtraVisibleTerrain(InvisibleTypes eInvisible, TerrainTypes e
 	}
 	if (!bFound)
 	{
-		const int iISize = iSize;
-		iSize++;
-		m_aExtraVisibleTerrains.resize(iSize);
-		m_aExtraVisibleTerrains[iISize].eInvisible = eInvisible;
-		m_aExtraVisibleTerrains[iISize].eTerrain = eTerrain;
-		m_aExtraVisibleTerrains[iISize].iIntensity = iChange;
+		m_aExtraVisibleTerrains.resize(iSize + 1);
+		m_aExtraVisibleTerrains[iSize].eInvisible = eInvisible;
+		m_aExtraVisibleTerrains[iSize].eTerrain = eTerrain;
+		m_aExtraVisibleTerrains[iSize].iIntensity = iChange;
 	}
-	if (iChange != 0)
-	{
-		addVisibility();
-	}
+	updateSpotIntensity(eInvisible);
 }
 
 int CvUnit::extraVisibleTerrain(InvisibleTypes eInvisible, TerrainTypes eTerrain) const
@@ -38350,12 +38315,8 @@ void CvUnit::changeExtraVisibleFeature(InvisibleTypes eInvisible, FeatureTypes e
 	{
 		return;
 	}
-	else
-	{
-		deleteVisibility();
-	}
+	const int iSize = getNumExtraVisibleFeatures();
 	bool bFound = false;
-	int iSize = getNumExtraVisibleFeatures();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (m_aExtraVisibleFeatures[iI].eInvisible == eInvisible && m_aExtraVisibleFeatures[iI].eFeature == eFeature)
@@ -38371,17 +38332,12 @@ void CvUnit::changeExtraVisibleFeature(InvisibleTypes eInvisible, FeatureTypes e
 	}
 	if (!bFound)
 	{
-		const int iISize = iSize;
-		iSize++;
-		m_aExtraVisibleFeatures.resize(iSize);
-		m_aExtraVisibleFeatures[iISize].eInvisible = eInvisible;
-		m_aExtraVisibleFeatures[iISize].eFeature = eFeature;
-		m_aExtraVisibleFeatures[iISize].iIntensity = iChange;
+		m_aExtraVisibleFeatures.resize(iSize + 1);
+		m_aExtraVisibleFeatures[iSize].eInvisible = eInvisible;
+		m_aExtraVisibleFeatures[iSize].eFeature = eFeature;
+		m_aExtraVisibleFeatures[iSize].iIntensity = iChange;
 	}
-	if (iChange != 0)
-	{
-		addVisibility();
-	}
+	updateSpotIntensity(eInvisible);
 }
 
 int CvUnit::extraVisibleFeature(InvisibleTypes eInvisible, FeatureTypes eFeature) const
@@ -38412,12 +38368,8 @@ void CvUnit::changeExtraVisibleImprovement(InvisibleTypes eInvisible, Improvemen
 	{
 		return;
 	}
-	else
-	{
-		deleteVisibility();
-	}
+	const int iSize = getNumExtraVisibleImprovements();
 	bool bFound = false;
-	int iSize = getNumExtraVisibleImprovements();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (m_aExtraVisibleImprovements[iI].eInvisible == eInvisible && m_aExtraVisibleImprovements[iI].eImprovement == eImprovement)
@@ -38433,17 +38385,12 @@ void CvUnit::changeExtraVisibleImprovement(InvisibleTypes eInvisible, Improvemen
 	}
 	if (!bFound)
 	{
-		const int iISize = iSize;
-		iSize++;
-		m_aExtraVisibleImprovements.resize(iSize);
-		m_aExtraVisibleImprovements[iISize].eInvisible = eInvisible;
-		m_aExtraVisibleImprovements[iISize].eImprovement = eImprovement;
-		m_aExtraVisibleImprovements[iISize].iIntensity = iChange;
+		m_aExtraVisibleImprovements.resize(iSize + 1);
+		m_aExtraVisibleImprovements[iSize].eInvisible = eInvisible;
+		m_aExtraVisibleImprovements[iSize].eImprovement = eImprovement;
+		m_aExtraVisibleImprovements[iSize].iIntensity = iChange;
 	}
-	if (iChange != 0)
-	{
-		addVisibility();
-	}
+	updateSpotIntensity(eInvisible);
 }
 
 int CvUnit::extraVisibleImprovement(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const
@@ -38474,12 +38421,8 @@ void CvUnit::changeExtraVisibleTerrainRange(InvisibleTypes eInvisible, TerrainTy
 	{
 		return;
 	}
-	else
-	{
-		deleteVisibility();
-	}
+	const int iSize = getNumExtraVisibleTerrainRanges();
 	bool bFound = false;
-	int iSize = getNumExtraVisibleTerrainRanges();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (m_aExtraVisibleTerrainRanges[iI].eInvisible == eInvisible && m_aExtraVisibleTerrainRanges[iI].eTerrain == eTerrain)
@@ -38495,17 +38438,12 @@ void CvUnit::changeExtraVisibleTerrainRange(InvisibleTypes eInvisible, TerrainTy
 	}
 	if (!bFound)
 	{
-		const int iISize = iSize;
-		iSize++;
-		m_aExtraVisibleTerrainRanges.resize(iSize);
-		m_aExtraVisibleTerrainRanges[iISize].eInvisible = eInvisible;
-		m_aExtraVisibleTerrainRanges[iISize].eTerrain = eTerrain;
-		m_aExtraVisibleTerrainRanges[iISize].iIntensity = iChange;
+		m_aExtraVisibleTerrainRanges.resize(iSize + 1);
+		m_aExtraVisibleTerrainRanges[iSize].eInvisible = eInvisible;
+		m_aExtraVisibleTerrainRanges[iSize].eTerrain = eTerrain;
+		m_aExtraVisibleTerrainRanges[iSize].iIntensity = iChange;
 	}
-	if (iChange != 0)
-	{
-		addVisibility();
-	}
+	updateSpotIntensity(eInvisible);
 }
 
 int CvUnit::extraVisibleTerrainRange(InvisibleTypes eInvisible, TerrainTypes eTerrain) const
@@ -38536,12 +38474,8 @@ void CvUnit::changeExtraVisibleFeatureRange(InvisibleTypes eInvisible, FeatureTy
 	{
 		return;
 	}
-	else
-	{
-		deleteVisibility();
-	}
+	const int iSize = getNumExtraVisibleFeatureRanges();
 	bool bFound = false;
-	int iSize = getNumExtraVisibleFeatureRanges();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (m_aExtraVisibleFeatureRanges[iI].eInvisible == eInvisible && m_aExtraVisibleFeatureRanges[iI].eFeature == eFeature)
@@ -38557,17 +38491,12 @@ void CvUnit::changeExtraVisibleFeatureRange(InvisibleTypes eInvisible, FeatureTy
 	}
 	if (!bFound)
 	{
-		const int iISize = iSize;
-		iSize++;
-		m_aExtraVisibleFeatureRanges.resize(iSize);
-		m_aExtraVisibleFeatureRanges[iISize].eInvisible = eInvisible;
-		m_aExtraVisibleFeatureRanges[iISize].eFeature = eFeature;
-		m_aExtraVisibleFeatureRanges[iISize].iIntensity = iChange;
+		m_aExtraVisibleFeatureRanges.resize(iSize + 1);
+		m_aExtraVisibleFeatureRanges[iSize].eInvisible = eInvisible;
+		m_aExtraVisibleFeatureRanges[iSize].eFeature = eFeature;
+		m_aExtraVisibleFeatureRanges[iSize].iIntensity = iChange;
 	}
-	if (iChange != 0)
-	{
-		addVisibility();
-	}
+	updateSpotIntensity(eInvisible);
 }
 
 int CvUnit::extraVisibleFeatureRange(InvisibleTypes eInvisible, FeatureTypes eFeature) const
@@ -38598,12 +38527,8 @@ void CvUnit::changeExtraVisibleImprovementRange(InvisibleTypes eInvisible, Impro
 	{
 		return;
 	}
-	else
-	{
-		deleteVisibility();
-	}
+	const int iSize = getNumExtraVisibleImprovementRanges();
 	bool bFound = false;
-	int iSize = getNumExtraVisibleImprovementRanges();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (m_aExtraVisibleImprovementRanges[iI].eInvisible == eInvisible && m_aExtraVisibleImprovementRanges[iI].eImprovement == eImprovement)
@@ -38619,17 +38544,12 @@ void CvUnit::changeExtraVisibleImprovementRange(InvisibleTypes eInvisible, Impro
 	}
 	if (!bFound)
 	{
-		const int iISize = iSize;
-		iSize++;
-		m_aExtraVisibleImprovementRanges.resize(iSize);
-		m_aExtraVisibleImprovementRanges[iISize].eInvisible = eInvisible;
-		m_aExtraVisibleImprovementRanges[iISize].eImprovement = eImprovement;
-		m_aExtraVisibleImprovementRanges[iISize].iIntensity = iChange;
+		m_aExtraVisibleImprovementRanges.resize(iSize + 1);
+		m_aExtraVisibleImprovementRanges[iSize].eInvisible = eInvisible;
+		m_aExtraVisibleImprovementRanges[iSize].eImprovement = eImprovement;
+		m_aExtraVisibleImprovementRanges[iSize].iIntensity = iChange;
 	}
-	if (iChange != 0)
-	{
-		addVisibility();
-	}
+	updateSpotIntensity(eInvisible);
 }
 
 int CvUnit::extraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const
@@ -38698,23 +38618,6 @@ int CvUnit::extraAidChange(PropertyTypes eProperty) const
 }
 #endif
 
-void CvUnit::deleteVisibility()
-{
-	if (plot() != NULL)
-	{
-		plot()->changeAdjacentSight(getTeam(), visibilityRange(plot()), false, this, true);
-		changeDebugCount(-1);
-	}
-}
-
-void CvUnit::addVisibility()
-{
-	if (plot() != NULL)
-	{
-		plot()->changeAdjacentSight(getTeam(), visibilityRange(plot()), true, this, true);
-		changeDebugCount(1);
-	}
-}
 bool CvUnit::isNegatesInvisible(InvisibleTypes eInvisible) const
 {
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
@@ -38734,27 +38637,22 @@ void CvUnit::changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange)
 
 bool CvUnit::hasInvisibleAbility() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		if ((InvisibleTypes)m_pUnitInfo->getInvisibleType() != NO_INVISIBLE)
-		{
-			return true;
-		}
+		return hasAnyInvisibilityType();
 	}
-	else if (hasAnyInvisibilityType(true))
+
+	if ((InvisibleTypes)m_pUnitInfo->getInvisibleType() != NO_INVISIBLE)
 	{
 		return true;
 	}
+
 	return false;
 }
 
 bool CvUnit::isCriminal() const
 {
-	if (getInsidiousnessTotal(true) > 0)
-	{
-		return true;
-	}
-	return false;
+	return getInsidiousnessTotal(true) > 0;
 }
 
 int CvUnit::getInsidiousnessTotal(bool bCriminalCheck) const

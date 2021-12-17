@@ -29391,7 +29391,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			{
 				for (int i = 0; i < GC.getNumInvisibleInfos(); i++)
 				{
-					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i, false);
+					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i);
 				}
 			}
 		}
@@ -30372,7 +30372,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			{
 				for (int i = 0; i < GC.getNumInvisibleInfos(); i++)
 				{
-					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i, false);
+					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i);
 				}
 			}
 		}
@@ -34175,7 +34175,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			{
 				for (int i = 0; i < GC.getNumInvisibleInfos(); i++)
 				{
-					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i, false);
+					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i);
 				}
 			}
 		}
@@ -35225,7 +35225,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			{
 				for (int i = 0; i < GC.getNumInvisibleInfos(); i++)
 				{
-					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i, false);
+					iInvisFactor += pUnit->invisibilityIntensityTotal((InvisibleTypes)i);
 				}
 			}
 		}

@@ -161,7 +161,7 @@ public:
 
 	int getInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
 	bool isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
-	void changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity);
+	void changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChange);
 
 	python::list units() const;
 	int getNumUnits() const;

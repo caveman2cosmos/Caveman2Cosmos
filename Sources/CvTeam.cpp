@@ -762,7 +762,7 @@ void CvTeam::addTeam(TeamTypes eTeam)
 		{
 			if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 			{
-				pLoopPlot->changeInvisibleVisibilityCount(getID(), ((InvisibleTypes)iJ), pLoopPlot->getInvisibleVisibilityCount(eTeam, (InvisibleTypes)iJ), 0);
+				pLoopPlot->changeInvisibleVisibilityCount(getID(), (InvisibleTypes)iJ, pLoopPlot->getInvisibleVisibilityCount(eTeam, (InvisibleTypes)iJ));
 			}
 			else
 			{
@@ -772,7 +772,7 @@ void CvTeam::addTeam(TeamTypes eTeam)
 					if (pLoopPlot->getPlotTeamVisibilityIntensity(iK).eInvisibility == eInvisible &&
 						pLoopPlot->getPlotTeamVisibilityIntensity(iK).eTeam == eTeam)
 					{
-						pLoopPlot->changeInvisibleVisibilityCount(getID(), eInvisible, pLoopPlot->getPlotTeamVisibilityIntensity(iK).iCount, pLoopPlot->getPlotTeamVisibilityIntensity(iK).iIntensity);
+						pLoopPlot->changeInvisibleVisibilityCount(getID(), eInvisible, pLoopPlot->getPlotTeamVisibilityIntensity(iK).iCount);
 					}
 				}
 			}

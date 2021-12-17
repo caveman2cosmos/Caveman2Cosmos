@@ -37225,8 +37225,9 @@ void CvIdeaInfo::getCheckSum(uint32_t& iSum) const
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CvInvisibleInfo::CvInvisibleInfo() :
-m_iChar(0),
-m_iFontButtonIndex(0)
+ m_iChar(0)
+,m_iFontButtonIndex(0)
+,m_bIntrinsic(false)
 {
 }
 
@@ -37242,6 +37243,7 @@ bool CvInvisibleInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iFontButtonIndex, L"FontButtonIndex");
+	pXML->GetOptionalChildXmlValByName(&m_bIntrinsic, L"bIntrinsic");
 
 	return true;
 }
@@ -37252,30 +37254,18 @@ void CvInvisibleInfo::copyNonDefaults(const CvInvisibleInfo* pClassInfo)
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
-	if (getFontButtonIndex() == iDefault) m_iFontButtonIndex = pClassInfo->getFontButtonIndex();
-
+	if (m_iFontButtonIndex == iDefault) m_iFontButtonIndex = pClassInfo->getFontButtonIndex();
+	if (m_bIntrinsic == iDefault) m_bIntrinsic = pClassInfo->isIntrinsic();
 }
 
 void CvInvisibleInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iChar);
 	CheckSum(iSum, m_iFontButtonIndex);
-}
-
-int CvInvisibleInfo::getChar() const
-{
-	return m_iChar;
+	CheckSum(iSum, m_bIntrinsic);
 }
 
 void CvInvisibleInfo::setChar(int i)
 {
 	m_iChar = i;
 }
-
-int CvInvisibleInfo::getFontButtonIndex() const
-{
-	return m_iFontButtonIndex;
-}
-
-
-
