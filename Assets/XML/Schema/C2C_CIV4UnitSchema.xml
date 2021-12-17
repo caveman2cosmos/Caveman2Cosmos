@@ -362,6 +362,7 @@
 	<ElementType name="iDefenseOnlyChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoInvisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="FontButtonIndex" content="textOnly" dt:type="int"/>
+	<ElementType name="bIntrinsic" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTrapDamageMax" content="textOnly" dt:type="int"/>
 	<ElementType name="iTrapDamageMin" content="textOnly" dt:type="int"/>
 	<ElementType name="iTrapComplexity" content="textOnly" dt:type="int"/>
