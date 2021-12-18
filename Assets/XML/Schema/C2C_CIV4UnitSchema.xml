@@ -362,6 +362,7 @@
 	<ElementType name="iDefenseOnlyChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoInvisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="FontButtonIndex" content="textOnly" dt:type="int"/>
+	<ElementType name="bIntrinsic" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTrapDamageMax" content="textOnly" dt:type="int"/>
 	<ElementType name="iTrapDamageMin" content="textOnly" dt:type="int"/>
 	<ElementType name="iTrapComplexity" content="textOnly" dt:type="int"/>
@@ -3113,6 +3114,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="FontButtonIndex" minOccurs="0"/>
+		<element type="bIntrinsic" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Civ4InvisibleInfos" content="eltOnly">
 		<element type="InvisibleInfos" minOccurs="0"/>
