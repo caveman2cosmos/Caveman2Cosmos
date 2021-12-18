@@ -2016,6 +2016,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	int iUnitID = 0;
 	//fill invisible types
 	std::vector<InvisibleTypes> aSeeInvisibleTypes;
+
 	if (NULL != pUnit)
 	{
 		iUnitID = pUnit->getID();
@@ -2025,7 +2026,6 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 			{
 				aSeeInvisibleTypes.push_back((InvisibleTypes)iI);
 			}
-			aSeeInvisibleTypes.push_back(NO_INVISIBLE);
 		}
 		else
 		{
@@ -2033,12 +2033,10 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 			{
 				aSeeInvisibleTypes.push_back(pUnit->getSeeInvisibleType(i));
 			}
-			if (aSeeInvisibleTypes.empty())
-			{
-				aSeeInvisibleTypes.push_back(NO_INVISIBLE);
-			}
 		}
 	}
+	aSeeInvisibleTypes.push_back(NO_INVISIBLE);
+
 	const bool bAerial = (pUnit != NULL && pUnit->getDomainType() == DOMAIN_AIR);
 
 	if (!bAerial)
@@ -2063,20 +2061,18 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 					{
 						int iFinalIntensity = 0;
 
-						if (bHideSeek && pUnit != NULL)
+						if (bIncrement && bHideSeek && eInvisible != NO_INVISIBLE && pUnit != NULL)
 						{
-							if (eInvisible != NO_INVISIBLE)
+							const int iDistance = std::max(abs(dx), abs(dy));
+
+							if (iDistance > 0)
 							{
-								const int iDistance = std::max(abs(dx), abs(dy));
+								const int iSpotRange = pUnit->visibilityIntensityRangeTotal(eInvisible);
 
-								if (iDistance > 0)
-								{
-									const int iSpotRange = pUnit->visibilityIntensityRangeTotal(eInvisible);
-
-									iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - iSpotRange);
-								}
-								else iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) + pUnit->visibilityIntensitySameTileTotal(eInvisible);
+								iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - iSpotRange);
 							}
+							else iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) + pUnit->visibilityIntensitySameTileTotal(eInvisible);
+
 						}
 						pPlot->changeVisibilityCount(eTeam, (bIncrement ? 1 : -1), eInvisible, bUpdatePlotGroups, iFinalIntensity, iUnitID);
 					}
@@ -10184,7 +10180,7 @@ int CvPlot::getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisib
 
 
 // Is plot within sight range of a eTeam owned unit with any ability to spot eInvisible
-bool CvPlot::isInvisibleVisible(TeamTypes eTeam, InvisibleTypes eInvisible)	const
+bool CvPlot::isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible)	const
 {
 	return getInvisibleVisibilityCount(eTeam, eInvisible) > 0;
 }
@@ -10224,7 +10220,7 @@ void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iU
 	{
 		return;
 	}
-	bool bRelevant = isInvisibleVisible(eTeam, eInvisible) || iIntensity != 0;
+	bool bRelevant = isSpotterInSight(eTeam, eInvisible) && iIntensity != 0;
 	const int iSize = getNumPlotTeamVisibilityIntensity();
 
 	for (int iI = 0; iI < iSize; iI++)
@@ -10233,13 +10229,16 @@ void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iU
 		&& getPlotTeamVisibilityIntensity(iI).eTeam == eTeam
 		&& getPlotTeamVisibilityIntensity(iI).iUnitID == iUnitID)
 		{
-			if (!bRelevant)
+
+			if (bRelevant)
 			{
-				m_aPlotTeamVisibilityIntensity.erase(m_aPlotTeamVisibilityIntensity.begin()+iI);
+				getPlotTeamVisibilityIntensity(iI).iIntensity = iIntensity;
 			}
 			else
 			{
-				getPlotTeamVisibilityIntensity(iI).iIntensity = iIntensity;
+				FAssertMsg(iIntensity == 0, "Spot intensity set to non-zero value on plot no unit is spotting on...");
+
+				m_aPlotTeamVisibilityIntensity.erase(m_aPlotTeamVisibilityIntensity.begin()+iI);
 			}
 			bRelevant = false;
 			break;

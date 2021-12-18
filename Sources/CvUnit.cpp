@@ -14975,7 +14975,7 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 
 	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		return getInvisibleType() != NO_INVISIBLE && !plot()->isInvisibleVisible(eTeam, getInvisibleType());
+		return getInvisibleType() != NO_INVISIBLE && !plot()->isSpotterInSight(eTeam, getInvisibleType());
 	}
 
 	if (hasAnyInvisibilityType())
@@ -14984,7 +14984,7 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 		{
 			const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
 
-			if (hasInvisibilityType(eInvisible) && plot()->isInvisibleVisible(eTeam, eInvisible))
+			if (hasInvisibilityType(eInvisible) && plot()->isSpotterInSight(eTeam, eInvisible))
 			{
 				const int iIntensity = invisibilityIntensityTotal(eInvisible);
 
@@ -37824,6 +37824,7 @@ void CvUnit::changeUpgradeAnywhereCount(int iChange)
 	m_iUpgradeAnywhereCount += iChange;
 }
 
+// Only used when unit spot stats change, not when the sight area of this unit change.
 void CvUnit::updateSpotIntensity(const InvisibleTypes eInvisibleType, const bool bSameTile)
 {
 	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
