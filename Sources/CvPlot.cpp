@@ -12389,7 +12389,7 @@ float CvPlot::getAqueductSourceWeight() const
 	{
 		return 1.0f;
 	}
-	else if (isHills())
+	if (isHills())
 	{
 		return 0.67f;
 	}
