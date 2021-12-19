@@ -243,7 +243,6 @@ public:
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
 	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
 	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
-	bool shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups);
 
@@ -856,15 +855,13 @@ public:
 	//void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups);
 
 	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const;
-	bool isInvisibleVisible(TeamTypes eTeam, InvisibleTypes eInvisible) const;
-	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange, int iIntensity, int iUnitID = 0);
+	bool isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible) const;
+	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange);
+	void setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iUnitID, int iIntensity);
 
 	int getNumPlotTeamVisibilityIntensity() const;
 	PlotTeamVisibilityIntensity& getPlotTeamVisibilityIntensity(int iIndex);
-	int getNumPlotTeamVisibilityIntensityCount(InvisibleTypes eInvisibility, TeamTypes eTeam, int iIntensity) const;
-	bool hasPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam, int iIntensity) const;
 	int getHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam) const;
-	//void setHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam);
 
 	static void	NextCachePathEpoch();
 	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
@@ -1056,7 +1053,6 @@ protected:
 
 	char** m_apaiCultureRangeCities;
 	short** m_apaiInvisibleVisibilityCount;
-	//short** m_apaiCachedHighestTeamInvisibilityIntensity;
 
 /* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
 	This is a count of mountain leader units in the plot for each team.

@@ -69,6 +69,7 @@
 			<Type>INVISIBLE_SIZE</Type>
 			<Description>TXT_KEY_INVISIBLE_SIZE</Description>
 			<FontButtonIndex>12</FontButtonIndex>
+			<bIntrinsic>1</bIntrinsic>
 		</InvisibleInfo>
 		<InvisibleInfo>
 			<Type>INVISIBLE_NAVAL_DISGUISE</Type>

@@ -8201,7 +8201,20 @@
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iVisibilityChange>1</iVisibilityChange>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,10</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8211,8 +8224,20 @@
 			<PromotionPrereq>PROMOTION_HUNTING_SIGHT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iVisibilityChange>1</iVisibilityChange>
-			<iCombatPercent>10</iCombatPercent>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry2.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,10</Button>
 			<UnitCombats>
 				<UnitCombat>

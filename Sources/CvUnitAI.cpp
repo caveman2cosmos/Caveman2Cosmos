@@ -16602,7 +16602,7 @@ bool CvUnitAI::AI_hide()
 				for (int iI = 0; iI < MAX_TEAMS; iI++)
 				{
 					if (GET_TEAM((TeamTypes)iI).isAlive()
-					&& plotX->isInvisibleVisible((TeamTypes)iI, getInvisibleType()))
+					&& plotX->isSpotterInSight((TeamTypes)iI, getInvisibleType()))
 					{
 						bValid = false;
 						break;

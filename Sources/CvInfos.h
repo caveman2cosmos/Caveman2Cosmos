@@ -9196,13 +9196,17 @@ public:
 	void copyNonDefaults(const CvInvisibleInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
-	int getChar() const;
 	void setChar(int i);
-	int getFontButtonIndex() const;
+	int getChar() const { return m_iChar; }
 
-protected:
+	int getFontButtonIndex() const { return m_iFontButtonIndex; }
+
+	bool isIntrinsic() const { return m_bIntrinsic; }
+
+private:
 	int m_iChar;
 	int m_iFontButtonIndex;
+	bool m_bIntrinsic;
 };
 
 class CvUnitAIInfo : public CvInfoBase { };

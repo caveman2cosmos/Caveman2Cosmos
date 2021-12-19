@@ -506,6 +506,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	const bool bCtrl = gDLL->ctrlKey();
 	const bool bAlt = gDLL->altKey();
 
+	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
+
 	//In this case, these views mean, in addition to debugging info displays from bShift and bAlt:
 	// bShift = Combat Class Modifiers - will need to disable ones that don't have anything to display.
 	// bCtrl = On unit base help: Prerequisite and Production Info, Here on Compiled Units: CombatInfo (Prereq and Production info should be standardly available, thus normal view)
@@ -674,44 +676,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		szString.append(szTempBuffer);
 	}
 
-
-	//TB Temp
-	//if (pUnit->getMaxHP() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_HP", pUnit->getMaxHP()));
-	//}
-	//if (pUnit->assetValueTotal() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_ASSET", pUnit->assetValueTotal()));
-	//}
-	//if (pUnit->powerValueTotal() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_POWER", pUnit->powerValueTotal()));
-	//}
-	//if (pUnit->SMcargoSpace() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_CARGO_SPACE", pUnit->SMcargoSpace()));
-	//}
-	//if (pUnit->SMCargoVolume() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_CARGO_VOLUME", pUnit->SMCargoVolume()));
-	//}
-	//if (pUnit->bombardRate() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_BOMBARD_RATE", pUnit->bombardRate()));
-	//}
-	//if (pUnit->airBombCurrRate() != 0)
-	//{
-	//	szString.append(NEWLINE);
-	//	szString.append(gDLL->getText("TXT_KEY_TEMP_AIR_BOMBARD_RATE", pUnit->airBombCurrRate()));
-	//}
-	//TB SubCombat Mod begin
 
 	for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
@@ -3103,7 +3067,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBLE_ALL"));
 				}
 
-				if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+				if (!bHideSeek)
 				{
 					if (pUnit->getInvisibleType() != NO_INVISIBLE)
 					{
@@ -3120,23 +3084,25 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						}
 					}
 				}
-				else
+				else // GAMEOPTION_HIDE_AND_SEEK
 				{
-					bFirst = true;
-					for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+					bool bFirst = true;
+					for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 					{
-						if (pUnit->visibilityIntensityTotal((InvisibleTypes)iI) != 0)
+						const int iSpotIntensity = pUnit->visibilityIntensityTotal((InvisibleTypes)iJ);
+						if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
 						{
-							if (!bFirst)
-							{
-								szString.append(gDLL->getText("TXT_KEY_COMMA"));
-							}
 							if (bFirst)
 							{
 								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_BULLET_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
 								bFirst = false;
 							}
-							szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE", pUnit->visibilityIntensityTotal((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes) iI).getChar()));
+							else
+							{
+								szString.append(L", ");
+							}
+							szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
 						}
 					}
 					bFirst = true;
@@ -3399,6 +3365,11 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	}
 	if (bNormalView)
 	{
+		if (pUnit->getBuildUpType() != NO_PROMOTIONLINE)
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText("TXT_BULLET_S1", GC.getPromotionLineInfo(pUnit->getBuildUpType()).getDescription()));
+		}
 		//Outcome Missions
 		CvOutcomeListMerged mergedList;
 		mergedList.addOutcomeList(pUnit->getUnitInfo().getKillOutcomeList());
@@ -3414,19 +3385,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 		if (!mergedList.isEmpty())
 		{
-			//if (gDLL->getInterfaceIFace()->headSelectionListNode())
+			CvUnit* pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+
+			if (pSelectedUnit && mergedList.isPossible(*pSelectedUnit))
 			{
-				CvUnit* pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-				if (pSelectedUnit)
-				{
-					if (mergedList.isPossible(*pSelectedUnit))
-					{
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_ANIMAL_ON_KILL"));
-						szString.append(":");
-						mergedList.buildDisplayString(szString, *pSelectedUnit);
-					}
-				}
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_ANIMAL_ON_KILL"));
+				szString.append(":");
+				mergedList.buildDisplayString(szString, *pSelectedUnit);
 			}
 		}
 	}
@@ -7999,7 +7965,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	const TeamTypes ePlotTeam = pPlot->getTeam();
 	const CvTeamAI* plotTeam = ePlotTeam > -1 ? &GET_TEAM(ePlotTeam) : NULL;
 
-	if (bCtrl && (gDLL->getChtLvl() > 0 || bDebug))
+	if (bCtrl && bDebug)
 	{
 		if (pPlot->getOwner() != NO_PLAYER)
 		{
@@ -8366,10 +8332,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				for (int iK = 0; iK < MAX_TEAMS; iK++)
 				{
 					TeamTypes eTeam = (TeamTypes)iK;
-					const int iVisibilityIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
-					if (iVisibilityIntensity > 0)
+					const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
+					if (iSpotIntensity != 0)
 					{
-						szString.append(CvWString::format(L"InvisibleType: %s, TeamID:%d, Int:%d", GC.getInvisibleInfo(eInvisible).getTextKeyWide(), iK, iVisibilityIntensity));
+						szString.append(CvWString::format(L"InvisibleType: %s, TeamID:%d, Int:%d", GC.getInvisibleInfo(eInvisible).getTextKeyWide(), iK, iSpotIntensity));
 						szString.append(NEWLINE);
 					}
 				}
@@ -8379,7 +8345,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		}
 		return;
 	}
-	else if (bShift && !bAlt && (gDLL->getChtLvl() > 0 || bDebug))
+	else if (bShift && !bAlt && bDebug)
 	{
 		szString.append(CvWString::format(L"\n%s - Lat %d, Long %d",
 			GC.getTerrainInfo(pPlot->getTerrainType()).getDescription(), pPlot->getLatitude(), pPlot->getLongitude()));
@@ -8529,7 +8495,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::DefensiveBonuses));
 		szString.append(szTempBuffer);
 	}
-	else if (!bShift && bAlt && (gDLL->getChtLvl() > 0 || bDebug))
+	else if (!bShift && bAlt && bDebug)
 	{
 		if (pPlot->isOwned())
 		{
@@ -8782,7 +8748,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 	}
-	else if (bShift && bAlt && (gDLL->getChtLvl() > 0 || bDebug))
+	else if (bShift && bAlt && bDebug)
 	{
 		CvCity*	pCity = pPlot->getWorkingCity();
 		if (pCity != NULL)
@@ -9041,6 +9007,39 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
+		szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
+		szString.append(NEWLINE);
+
+		if (bAlt && !bShift && !bCtrl)
+		{
+			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			{
+				bool bFirst = true;
+
+				for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
+				{
+					const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity((InvisibleTypes)iJ, eActiveTeam);
+
+					if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+					{
+						if (bFirst)
+						{
+							szString.append(gDLL->getText("TXT_KEY_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+							bFirst = false;
+						}
+						else
+						{
+							szString.append(L", ");
+						}
+						szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+					}
+				}
+				if (!bFirst)
+				{
+					szString.append(NEWLINE);
+				}
+			}
+		}
 		const int iDefenseModifier = pPlot->defenseModifier(eRevealOwner != NO_PLAYER ? GET_PLAYER(eRevealOwner).getTeam() : NO_TEAM, true, true);
 		if (iDefenseModifier != 0)
 		{
@@ -12426,290 +12425,281 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 {
 	PROFILE_FUNC();
 
-	CvWString szText, szText2;
-	CvWString szTempBuffer;
-	int iI, iJ, iK;
-
 	if (NO_PROMOTION == ePromotion)
 	{
 		return;
 	}
-	CvPromotionInfo &kPromotion = GC.getPromotionInfo(ePromotion);
+	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
 
-	//for (iI = 0; iI < kPromotion.getNumAIWeightbyUnitCombatTypes(); iI++)
-	//{
-	//	if (kPromotion.getAIWeightbyUnitCombatType(iI).iModifier != 0)
-	//	{
-	//		szBuffer.append(pcNewline);
-	//		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TEMP_UCAIWEIGHT", GC.getUnitCombatInfo(kPromotion.getAIWeightbyUnitCombatType(iI).eUnitCombat).getText(), kPromotion.getAIWeightbyUnitCombatType(iI).iModifier));
-	//	}
-	//}
+	CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
+	const int iLinePriority = promo.getLinePriority();
+	const PromotionLineTypes ePromoLine = promo.getPromotionLine();
+	const CvPromotionLineInfo& promoLine = GC.getPromotionLineInfo(ePromoLine);
+
+	// If this is not the display for the hover help on the actual promotion action button
+	// then we want to accrue stats from all implied promotions earlier in the same line into the help text
 	std::vector<PromotionTypes>	linePromotionsOwned;
-
-	//	If this is not the display for the hover help on the actual promotion action button
-	//	then we want to accrue stats from all implied promotions earlier in the same line into
-	//	the help text
 	linePromotionsOwned.push_back(ePromotion);
-	if ( bAccrueLines )
+
+	bool bIsNoSpreadonBattle = false;
+	bool bIsNoSpreadUnitProximity = false;
+	bool bIsNoSpreadUnittoCity = false;
+	bool bIsNoSpreadCitytoUnit = false;
+
+	if (ePromoLine != NO_PROMOTIONLINE)
 	{
-		//	Afflication, equipment and status promos don't accrue values from lower elements of the same line
-		if ( GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE &&
-			 !GC.getPromotionInfo(ePromotion).isEquipment() &&
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-			 !GC.getPromotionInfo(ePromotion).isAffliction() &&
-#endif
-			 !GC.getPromotionInfo(ePromotion).isStatus())
+		if (bAccrueLines)
 		{
-			for( iI = 0; iI < GC.getNumPromotionInfos(); iI++ )
+			//	Afflication, equipment and status promos don't accrue values from lower elements of the same line
+			if (!promo.isEquipment()
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+			&&  !promo.isAffliction()
+#endif
+			&&  !promo.isStatus())
 			{
-				if ( GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine() == GC.getPromotionInfo(ePromotion).getPromotionLine() &&
-					 GC.getPromotionInfo((PromotionTypes)iI).getLinePriority() < GC.getPromotionInfo(ePromotion).getLinePriority() )
+				for (int iI = GC.getNumPromotionInfos() - 1; iI > -1; iI--)
 				{
-					linePromotionsOwned.push_back((PromotionTypes)iI);
+					if (GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine() == ePromoLine
+					&&  GC.getPromotionInfo((PromotionTypes)iI).getLinePriority() < iLinePriority)
+					{
+						linePromotionsOwned.push_back((PromotionTypes)iI);
+					}
 				}
 			}
 		}
-	}
-
-	//TB Promotion Line Mod begin
-	if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE)
-	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", GC.getPromotionLineInfo((PromotionLineTypes)kPromotion.getPromotionLine()).getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", promoLine.getDescription()));
+
+		if (iLinePriority > 0)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE_PRIORITY", iLinePriority));
+		}
+
+		if (promoLine.isNoSpreadonBattle())
+		{
+			bIsNoSpreadonBattle = true;
+		}
+		if (promoLine.isNoSpreadUnitProximity())
+		{
+			bIsNoSpreadUnitProximity = true;
+		}
+		if (promoLine.isNoSpreadUnittoCity())
+		{
+			bIsNoSpreadUnittoCity = true;
+		}
+		if (promoLine.isNoSpreadCitytoUnit())
+		{
+			bIsNoSpreadCitytoUnit = true;
+		}
 	}
 
-	if (GC.getPromotionInfo(ePromotion).getLinePriority() > 0)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE_PRIORITY",kPromotion.getLinePriority()));
-	}
+	bool bIsBlitz = false;
+	bool bIsAmphib = false;
+	bool bIsRiver = false;
+	bool bIsEnemyRoute = false;
+	bool bIsStatus = false;
+	bool bIsPrereqNormInvisible = false;
+	bool bIsNoSelfHeal = false;
+	bool bIsAlwaysHeal = false;
+	bool bIsHillsDoubleMove = false;
+	bool bIsCanMovePeaks = false;
+	bool bIsCanLeadThroughPeaks = false;
+	bool bIsAttackOnlyCitiesAdd = false;
+	bool bIsAttackOnlyCitiesSubtract = false;
+	bool bIsIgnoreNoEntryLevelAdd = false;
+	bool bIsIgnoreNoEntryLevelSubtract = false;
+	bool bIsIgnoreZoneofControlAdd = false;
+	bool bIsIgnoreZoneofControlSubtract = false;
+	bool bIsFliesToMoveAdd = false;
+	bool bIsFliesToMoveSubtract = false;
+	bool bIsZoneOfControl = false;
+	bool bIsImmuneToFirstStrikes = false;
+	bool bIsStampedeChange = false;
+	bool bIsRemoveStampede = false;
+	bool bIsOnslaughtChange = false;
+	bool bIsParalyze = false;
+	bool bIsMakesDamageCold = false;
+	bool bIsMakesDamageNotCold = false;
+	bool bIsAddsColdImmunity = false;
+	bool bIsRemovesColdImmunity = false;
+	bool bIsCritical = false;
+	bool bIsDefensiveVictoryMove = false;
+	bool bIsFreeDrop = false;
+	bool bIsOffensiveVictoryMove = false;
+	bool bIsOneUp = false;
+	bool bIsPillageEspionage = false;
+	bool bIsPillageMarauder = false;
+	bool bIsPillageOnMove = false;
+	bool bIsPillageOnVictory = false;
+	bool bIsPillageResearch = false;
 
-	//bools
-	bool	bIsBlitz = false;
-	bool	bIsAmphib = false;
-	bool	bIsRiver = false;
-	bool	bIsEnemyRoute = false;
-	bool	bIsStatus = false;
-	bool	bIsPrereqNormInvisible = false;
-	bool	bIsNoSelfHeal = false;
-	bool	bIsAlwaysHeal = false;
-	bool	bIsHillsDoubleMove = false;
-	bool	bIsCanMovePeaks = false;
-	bool	bIsCanLeadThroughPeaks = false;
-	bool	bIsAttackOnlyCitiesAdd = false;
-	bool	bIsAttackOnlyCitiesSubtract = false;
-	bool	bIsIgnoreNoEntryLevelAdd = false;
-	bool	bIsIgnoreNoEntryLevelSubtract = false;
-	bool	bIsIgnoreZoneofControlAdd = false;
-	bool	bIsIgnoreZoneofControlSubtract = false;
-	bool	bIsFliesToMoveAdd = false;
-	bool	bIsFliesToMoveSubtract = false;
-	bool	bIsZoneOfControl = false;
-	bool	bIsImmuneToFirstStrikes = false;
-	bool	bIsStampedeChange = false;
-	bool	bIsRemoveStampede = false;
-	bool	bIsOnslaughtChange = false;
-	bool	bIsParalyze = false;
-	bool	bIsNoSpreadonBattle = false;
-	bool	bIsNoSpreadUnitProximity = false;
-	bool	bIsNoSpreadUnittoCity = false;
-	bool	bIsNoSpreadCitytoUnit = false;
-	bool	bIsMakesDamageCold = false;
-	bool	bIsMakesDamageNotCold = false;
-	bool	bIsAddsColdImmunity = false;
-	bool	bIsRemovesColdImmunity = false;
-	bool	bIsCritical = false;
-	bool	bIsDefensiveVictoryMove = false;
-	bool	bIsFreeDrop = false;
-	bool	bIsOffensiveVictoryMove = false;
-	bool	bIsOneUp = false;
-	bool	bIsPillageEspionage = false;
-	bool	bIsPillageMarauder = false;
-	bool	bIsPillageOnMove = false;
-	bool	bIsPillageOnVictory = false;
-	bool	bIsPillageResearch = false;
-
-	for( iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
+	for (int iI = linePromotionsOwned.size() - 1; iI > -1; iI--)
 	{
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isBlitz() )
+		const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iI]);
+
+		if (promoX.isBlitz())
 		{
 			bIsBlitz = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isAmphib() )
+		if (promoX.isAmphib())
 		{
 			bIsAmphib = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isRiver() )
+		if (promoX.isRiver())
 		{
 			bIsRiver = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isEnemyRoute() )
+		if (promoX.isEnemyRoute())
 		{
 			bIsEnemyRoute = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isStatus() )
+		if (promoX.isStatus())
 		{
 			bIsStatus = true;
 		}
-		if (GC.getPromotionInfo(linePromotionsOwned[iI]).isPrereqNormInvisible())
+		if (promoX.isPrereqNormInvisible())
 		{
 			bIsPrereqNormInvisible = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isNoSelfHeal() )
+		if (promoX.isNoSelfHeal())
 		{
 			bIsNoSelfHeal = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isAlwaysHeal() )
+		if (promoX.isAlwaysHeal())
 		{
 			bIsAlwaysHeal = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isHillsDoubleMove() )
+		if (promoX.isHillsDoubleMove())
 		{
 			bIsHillsDoubleMove = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isCanMovePeaks() )
+		if (promoX.isCanMovePeaks())
 		{
 			bIsCanMovePeaks = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isCanLeadThroughPeaks() )
+		if (promoX.isCanLeadThroughPeaks())
 		{
 			bIsCanLeadThroughPeaks = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isAttackOnlyCitiesAdd() )
+		if (promoX.isAttackOnlyCitiesAdd())
 		{
 			bIsAttackOnlyCitiesAdd = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isAttackOnlyCitiesSubtract() )
+		if (promoX.isAttackOnlyCitiesSubtract())
 		{
 			bIsAttackOnlyCitiesSubtract = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreNoEntryLevelAdd() )
+		if (promoX.isIgnoreNoEntryLevelAdd())
 		{
 			bIsIgnoreNoEntryLevelAdd = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreNoEntryLevelSubtract() )
+		if (promoX.isIgnoreNoEntryLevelSubtract())
 		{
 			bIsIgnoreNoEntryLevelSubtract = true;
 		}
 		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 		{
-			if (GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreZoneofControlAdd())
+			if (promoX.isIgnoreZoneofControlAdd())
 			{
 				bIsIgnoreZoneofControlAdd = true;
 			}
-			if (GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreZoneofControlSubtract())
+			if (promoX.isIgnoreZoneofControlSubtract())
 			{
 				bIsIgnoreZoneofControlSubtract = true;
 			}
-			if (GC.getPromotionInfo(linePromotionsOwned[iI]).isZoneOfControl())
+			if (promoX.isZoneOfControl())
 			{
 				bIsZoneOfControl = true;
 			}
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isFliesToMoveAdd() )
+		if (promoX.isFliesToMoveAdd())
 		{
 			bIsFliesToMoveAdd = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isFliesToMoveSubtract() )
+		if (promoX.isFliesToMoveSubtract())
 		{
 			bIsFliesToMoveSubtract = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isImmuneToFirstStrikes() )
+		if (promoX.isImmuneToFirstStrikes())
 		{
 			bIsImmuneToFirstStrikes = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isStampedeChange() )
+		if (promoX.isStampedeChange())
 		{
 			bIsStampedeChange = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isRemoveStampede() )
+		if (promoX.isRemoveStampede())
 		{
 			bIsRemoveStampede = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isOnslaughtChange() )
+		if (promoX.isOnslaughtChange())
 		{
 			bIsOnslaughtChange = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isParalyze() )
+		if (promoX.isParalyze())
 		{
 			bIsParalyze = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isMakesDamageCold() )
+		if (promoX.isMakesDamageCold())
 		{
 			bIsMakesDamageCold = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isMakesDamageNotCold() )
+		if (promoX.isMakesDamageNotCold())
 		{
 			bIsMakesDamageNotCold = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isAddsColdImmunity() )
+		if (promoX.isAddsColdImmunity())
 		{
 			bIsAddsColdImmunity = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isRemovesColdImmunity() )
+		if (promoX.isRemovesColdImmunity())
 		{
 			bIsRemovesColdImmunity = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isCritical() )
+		if (promoX.isCritical())
 		{
 			bIsCritical = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isDefensiveVictoryMove() )
+		if (promoX.isDefensiveVictoryMove())
 		{
 			bIsDefensiveVictoryMove = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isFreeDrop() )
+		if (promoX.isFreeDrop())
 		{
 			bIsFreeDrop = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isOffensiveVictoryMove() )
+		if (promoX.isOffensiveVictoryMove())
 		{
 			bIsOffensiveVictoryMove = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isOneUp() )
+		if (promoX.isOneUp())
 		{
 			bIsOneUp = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageEspionage() )
+		if (promoX.isPillageEspionage())
 		{
 			bIsPillageEspionage = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageMarauder() )
+		if (promoX.isPillageMarauder())
 		{
 			bIsPillageMarauder = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageOnMove() )
+		if (promoX.isPillageOnMove())
 		{
 			bIsPillageOnMove = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageOnVictory() )
+		if (promoX.isPillageOnVictory())
 		{
 			bIsPillageOnVictory = true;
 		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageResearch() )
+		if (promoX.isPillageResearch())
 		{
 			bIsPillageResearch = true;
 		}
-		if (GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine() != NO_PROMOTIONLINE)
-		{
-			if ( GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).isNoSpreadonBattle() )
-			{
-				bIsNoSpreadonBattle = true;
-			}
-			if ( GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).isNoSpreadUnitProximity() )
-			{
-				bIsNoSpreadUnitProximity = true;
-			}
-			if ( GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).isNoSpreadUnittoCity() )
-			{
-				bIsNoSpreadUnittoCity = true;
-			}
-			if ( GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).isNoSpreadCitytoUnit() )
-			{
-				bIsNoSpreadCitytoUnit = true;
-			}
-		}
 	}
+
+
 	if (bIsBlitz)
 	{
 		szBuffer.append(pcNewline);
@@ -12717,8 +12707,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	if (bIsAmphib)
 	{
-		//TSHEEP Display Spy Messages Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RADIATION_SPY"));
@@ -12728,10 +12717,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
-		//TSHEEP End
 	}
+
 	if (bIsRiver)
 	{
 		szBuffer.append(pcNewline);
@@ -12754,8 +12741,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	if (bIsAlwaysHeal)
 	{
-		//TSHEEP Display Spy Messages Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LOYALTY_SPY"));
@@ -12765,9 +12751,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
-		//TSHEEP End
 	}
 	if (bIsHillsDoubleMove)
 	{
@@ -12779,8 +12762,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS"));
 	}
-	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
-	//	mountains, and ability to lead a stack through mountains
 	if (bIsCanLeadThroughPeaks)
 	{
 		szBuffer.append(pcNewline);
@@ -12947,22 +12928,21 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PREREQ_NORM_INVISIBLE"));
 	}
 
-	//independant bools
-	if (GC.getPromotionInfo(ePromotion).isEquipment())
+
+	if (promo.isEquipment())
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EQUIPMENT"));
 	}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (GC.getPromotionInfo(ePromotion).isAffliction())
+	if (promo.isAffliction())
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICTION"));
 	}
 #endif
 
-	//int
 	int	iGetControlPoints = 0;
 	int	iGetCommandRange = 0;
 	int	iExcileChange = 0;
@@ -13102,186 +13082,182 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iIsAnimalIgnoresBordersChange = 0;
 	int iNoDefensiveBonusChange = 0;
 
-	bool bDefWarning = false;
-
-
-	for (iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
+	for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 	{
-		const CvPromotionInfo& promo = GC.getPromotionInfo(linePromotionsOwned[iI]);
+		const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iI]);
 
-		iGetControlPoints += promo.getControlPoints();
-		iGetCommandRange += promo.getCommandRange();
-		iExcileChange += promo.getExcileChange();
-		iPassageChange += promo.getPassageChange();
-		iNoNonOwnedCityEntryChange += promo.getNoNonOwnedCityEntryChange();
-		iBarbCoExistChange += promo.getBarbCoExistChange();
-		iBlendIntoCityChange += promo.getBlendIntoCityChange();
-		iUpgradeAnywhereChange += promo.getUpgradeAnywhereChange();
-		iMovesChange += promo.getMovesChange();
-		iMoveDiscountChange += promo.getMoveDiscountChange();
-		iAirRangeChange += promo.getAirRangeChange();
-		iInterceptChange += promo.getInterceptChange();
-		iEvasionChange += promo.getEvasionChange();
-		iWithdrawalChange += promo.getWithdrawalChange();
-		iAttackCombatModifierChange += promo.getAttackCombatModifierChange();
-		iDefenseCombatModifierChange += promo.getDefenseCombatModifierChange();
-		iCombatModifierPerSizeMore += promo.getCombatModifierPerSizeMoreChange();
-		iCombatModifierPerSizeLess += promo.getCombatModifierPerSizeLessChange();
-		iCombatModifierPerVolumeMore += promo.getCombatModifierPerVolumeMoreChange();
-		iCombatModifierPerVolumeLess += promo.getCombatModifierPerVolumeLessChange();
-		iPursuitChange += promo.getPursuitChange();
-		iEarlyWithdrawChange += promo.getEarlyWithdrawChange();
-		iVSBarbsChange += promo.getVSBarbsChange();
-		iReligiousCombatModifierChange += promo.getReligiousCombatModifierChange();
-		iArmorChange += promo.getArmorChange();
-		iPunctureChange += promo.getPunctureChange();
-		iDamageModifierChange += promo.getDamageModifierChange();
-		iUpkeepModifier += promo.getUpkeepModifier();
-		iExtraUpkeep100 += promo.getExtraUpkeep100();
-		iOverrunChange += promo.getOverrunChange();
-		iRepelChange += promo.getRepelChange();
-		iFortRepelChange += promo.getFortRepelChange();
-		iRepelRetriesChange += promo.getRepelRetriesChange();
-		iUnyieldingChange += promo.getUnyieldingChange();
-		iKnockbackChange += promo.getKnockbackChange();
-		iKnockbackRetriesChange += promo.getKnockbackRetriesChange();
-		iRoundStunProbChange += promo.getRoundStunProbChange();
-		iPoisonProbabilityModifierChange += promo.getPoisonProbabilityModifierChange();
+		iGetControlPoints += promoX.getControlPoints();
+		iGetCommandRange += promoX.getCommandRange();
+		iExcileChange += promoX.getExcileChange();
+		iPassageChange += promoX.getPassageChange();
+		iNoNonOwnedCityEntryChange += promoX.getNoNonOwnedCityEntryChange();
+		iBarbCoExistChange += promoX.getBarbCoExistChange();
+		iBlendIntoCityChange += promoX.getBlendIntoCityChange();
+		iUpgradeAnywhereChange += promoX.getUpgradeAnywhereChange();
+		iMovesChange += promoX.getMovesChange();
+		iMoveDiscountChange += promoX.getMoveDiscountChange();
+		iAirRangeChange += promoX.getAirRangeChange();
+		iInterceptChange += promoX.getInterceptChange();
+		iEvasionChange += promoX.getEvasionChange();
+		iWithdrawalChange += promoX.getWithdrawalChange();
+		iAttackCombatModifierChange += promoX.getAttackCombatModifierChange();
+		iDefenseCombatModifierChange += promoX.getDefenseCombatModifierChange();
+		iCombatModifierPerSizeMore += promoX.getCombatModifierPerSizeMoreChange();
+		iCombatModifierPerSizeLess += promoX.getCombatModifierPerSizeLessChange();
+		iCombatModifierPerVolumeMore += promoX.getCombatModifierPerVolumeMoreChange();
+		iCombatModifierPerVolumeLess += promoX.getCombatModifierPerVolumeLessChange();
+		iPursuitChange += promoX.getPursuitChange();
+		iEarlyWithdrawChange += promoX.getEarlyWithdrawChange();
+		iVSBarbsChange += promoX.getVSBarbsChange();
+		iReligiousCombatModifierChange += promoX.getReligiousCombatModifierChange();
+		iArmorChange += promoX.getArmorChange();
+		iPunctureChange += promoX.getPunctureChange();
+		iDamageModifierChange += promoX.getDamageModifierChange();
+		iUpkeepModifier += promoX.getUpkeepModifier();
+		iExtraUpkeep100 += promoX.getExtraUpkeep100();
+		iOverrunChange += promoX.getOverrunChange();
+		iRepelChange += promoX.getRepelChange();
+		iFortRepelChange += promoX.getFortRepelChange();
+		iRepelRetriesChange += promoX.getRepelRetriesChange();
+		iUnyieldingChange += promoX.getUnyieldingChange();
+		iKnockbackChange += promoX.getKnockbackChange();
+		iKnockbackRetriesChange += promoX.getKnockbackRetriesChange();
+		iRoundStunProbChange += promoX.getRoundStunProbChange();
+		iPoisonProbabilityModifierChange += promoX.getPoisonProbabilityModifierChange();
 #ifdef BATTLEWORN
-		iStrAdjperRndChange += promo.getStrAdjperRndChange();
-		iStrAdjperAttChange += promo.getStrAdjperAttChange();
-		iStrAdjperDefChange += promo.getStrAdjperDefChange();
-		iWithdrawAdjperAttChange += promo.getWithdrawAdjperAttChange();
+		iStrAdjperRndChange += promoX.getStrAdjperRndChange();
+		iStrAdjperAttChange += promoX.getStrAdjperAttChange();
+		iStrAdjperDefChange += promoX.getStrAdjperDefChange();
+		iWithdrawAdjperAttChange += promoX.getWithdrawAdjperAttChange();
 #endif
 		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
-			iUnnerveChange += promo.getUnnerveChange();
-			iEncloseChange += promo.getEncloseChange();
-			iLungeChange += promo.getLungeChange();
-			iDynamicDefenseChange += promo.getDynamicDefenseChange();
+			iUnnerveChange += promoX.getUnnerveChange();
+			iEncloseChange += promoX.getEncloseChange();
+			iLungeChange += promoX.getLungeChange();
+			iDynamicDefenseChange += promoX.getDynamicDefenseChange();
 		}
-		iStrengthChange += promo.getStrengthChange();
-		iFortitudeChange += promo.getFortitudeChange();
-		iDamageperTurn += promo.getDamageperTurn();
-		iStrAdjperTurn += promo.getStrAdjperTurn();
-		iWeakenperTurn += promo.getWeakenperTurn();
+		iStrengthChange += promoX.getStrengthChange();
+		iFortitudeChange += promoX.getFortitudeChange();
+		iDamageperTurn += promoX.getDamageperTurn();
+		iStrAdjperTurn += promoX.getStrAdjperTurn();
+		iWeakenperTurn += promoX.getWeakenperTurn();
 #ifdef STRENGTH_IN_NUMBERS
 		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
-			iFrontSupportPercentChange += promo.getFrontSupportPercentChange();
-			iShortRangeSupportPercentChange += promo.getShortRangeSupportPercentChange();
-			iMediumRangeSupportPercentChange += promo.getMediumRangeSupportPercentChange();
-			iLongRangeSupportPercentChange += promo.getLongRangeSupportPercentChange();
-			iFlankSupportPercentChange += promo.getFlankSupportPercentChange();
+			iFrontSupportPercentChange += promoX.getFrontSupportPercentChange();
+			iShortRangeSupportPercentChange += promoX.getShortRangeSupportPercentChange();
+			iMediumRangeSupportPercentChange += promoX.getMediumRangeSupportPercentChange();
+			iLongRangeSupportPercentChange += promoX.getLongRangeSupportPercentChange();
+			iFlankSupportPercentChange += promoX.getFlankSupportPercentChange();
 		}
 #endif
-		iDodgeModifierChange += promo.getDodgeModifierChange();
-		iPrecisionModifierChange += promo.getPrecisionModifierChange();
-		iPowerShotsChange += promo.getPowerShotsChange();
-		iPowerShotCombatModifierChange += promo.getPowerShotCombatModifierChange();
-		iPowerShotPunctureModifierChange += promo.getPowerShotPunctureModifierChange();
-		iPowerShotPrecisionModifierChange += promo.getPowerShotPrecisionModifierChange();
-		iPowerShotCriticalModifierChange += promo.getPowerShotCriticalModifierChange();
-		iCriticalModifierChange += promo.getCriticalModifierChange();
-		iEnduranceChange += promo.getEnduranceChange();
-		iInsidiousnessChange += promo.getInsidiousnessChange();
-		iInvestigationChange += promo.getInvestigationChange();
-		iAssassinChange += promo.getAssassinChange();
-		iStealthStrikesChange += promo.getStealthStrikesChange();
-		iStealthCombatModifierChange += promo.getStealthCombatModifierChange();
-		iStealthDefenseChange += promo.getStealthDefenseChange();
-		iDefenseOnlyChange += promo.getDefenseOnlyChange();
-		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+		iDodgeModifierChange += promoX.getDodgeModifierChange();
+		iPrecisionModifierChange += promoX.getPrecisionModifierChange();
+		iPowerShotsChange += promoX.getPowerShotsChange();
+		iPowerShotCombatModifierChange += promoX.getPowerShotCombatModifierChange();
+		iPowerShotPunctureModifierChange += promoX.getPowerShotPunctureModifierChange();
+		iPowerShotPrecisionModifierChange += promoX.getPowerShotPrecisionModifierChange();
+		iPowerShotCriticalModifierChange += promoX.getPowerShotCriticalModifierChange();
+		iCriticalModifierChange += promoX.getCriticalModifierChange();
+		iEnduranceChange += promoX.getEnduranceChange();
+		iInsidiousnessChange += promoX.getInsidiousnessChange();
+		iInvestigationChange += promoX.getInvestigationChange();
+		iAssassinChange += promoX.getAssassinChange();
+		iStealthStrikesChange += promoX.getStealthStrikesChange();
+		iStealthCombatModifierChange += promoX.getStealthCombatModifierChange();
+		iStealthDefenseChange += promoX.getStealthDefenseChange();
+		iDefenseOnlyChange += promoX.getDefenseOnlyChange();
+		if (bHideSeek)
 		{
-			iNoInvisibilityChange += promo.getNoInvisibilityChange();
+			iNoInvisibilityChange += promoX.getNoInvisibilityChange();
 		}
-		iTrapDamageMin += promo.getTrapDamageMin();
-		iTrapDamageMax += promo.getTrapDamageMax();
-		iTrapComplexity += promo.getTrapComplexity();
-		iTrapNumTriggers += promo.getNumTriggers();
-		iTrapTriggerBeforeAttackChange += promo.getTriggerBeforeAttackChange();
-		iVisibilityChange += promo.getVisibilityChange();
-		iCaptureProbabilityModifierChange += promo.getCaptureProbabilityModifierChange();
-		iCaptureResistanceModifierChange += promo.getCaptureResistanceModifierChange();
-		iBreakdownChanceChange += promo.getBreakdownChanceChange();
-		iBreakdownDamageChange += promo.getBreakdownDamageChange();
-		iTauntChange += promo.getTauntChange();
-		iMaxHPChange += promo.getMaxHPChange();
-		iStrengthModifier += promo.getStrengthModifier();
-		iAirCombatLimitChange += promo.getAirCombatLimitChange();
-		iCelebrityHappy += promo.getCelebrityHappy();
-		iCollateralDamageLimitChange += promo.getCollateralDamageLimitChange();
-		iCollateralDamageMaxUnitsChange += promo.getCollateralDamageMaxUnitsChange();
-		iCombatLimitChange += promo.getCombatLimitChange();
-		iExtraDropRange += promo.getExtraDropRange();
-		iSurvivorChance += promo.getSurvivorChance();
-		iSelfHealModifier += promo.getSelfHealModifier();
-		iHealSupport += promo.getNumHealSupport();
-		iVictoryAdjacentHeal += promo.getVictoryAdjacentHeal();
-		iVictoryHeal += promo.getVictoryHeal();
-		iVictoryStackHeal += promo.getVictoryStackHeal();
-		iCargoChange += promo.getCargoChange();
-		iCollateralDamageChange += promo.getCollateralDamageChange();
-		iBombardRateChange += promo.getBombardRateChange();
+		iTrapDamageMin += promoX.getTrapDamageMin();
+		iTrapDamageMax += promoX.getTrapDamageMax();
+		iTrapComplexity += promoX.getTrapComplexity();
+		iTrapNumTriggers += promoX.getNumTriggers();
+		iTrapTriggerBeforeAttackChange += promoX.getTriggerBeforeAttackChange();
+		iVisibilityChange += promoX.getVisibilityChange();
+		iCaptureProbabilityModifierChange += promoX.getCaptureProbabilityModifierChange();
+		iCaptureResistanceModifierChange += promoX.getCaptureResistanceModifierChange();
+		iBreakdownChanceChange += promoX.getBreakdownChanceChange();
+		iBreakdownDamageChange += promoX.getBreakdownDamageChange();
+		iTauntChange += promoX.getTauntChange();
+		iMaxHPChange += promoX.getMaxHPChange();
+		iStrengthModifier += promoX.getStrengthModifier();
+		iAirCombatLimitChange += promoX.getAirCombatLimitChange();
+		iCelebrityHappy += promoX.getCelebrityHappy();
+		iCollateralDamageLimitChange += promoX.getCollateralDamageLimitChange();
+		iCollateralDamageMaxUnitsChange += promoX.getCollateralDamageMaxUnitsChange();
+		iCombatLimitChange += promoX.getCombatLimitChange();
+		iExtraDropRange += promoX.getExtraDropRange();
+		iSurvivorChance += promoX.getSurvivorChance();
+		iSelfHealModifier += promoX.getSelfHealModifier();
+		iHealSupport += promoX.getNumHealSupport();
+		iVictoryAdjacentHeal += promoX.getVictoryAdjacentHeal();
+		iVictoryHeal += promoX.getVictoryHeal();
+		iVictoryStackHeal += promoX.getVictoryStackHeal();
+		iCargoChange += promoX.getCargoChange();
+		iCollateralDamageChange += promoX.getCollateralDamageChange();
+		iBombardRateChange += promoX.getBombardRateChange();
 		if(GC.isDCM_RANGE_BOMBARD())
 		{
-			iDCMBombRangeChange += promo.getDCMBombRangeChange();
-			iDCMBombAccuracyChange += promo.getDCMBombAccuracyChange();
-			iRBombardDamageChange += promo.getRBombardDamageChange();
-			iRBombardDamageLimitChange += promo.getRBombardDamageLimitChange();
-			iRBombardDamageMaxUnitsChange += promo.getRBombardDamageMaxUnitsChange();
+			iDCMBombRangeChange += promoX.getDCMBombRangeChange();
+			iDCMBombAccuracyChange += promoX.getDCMBombAccuracyChange();
+			iRBombardDamageChange += promoX.getRBombardDamageChange();
+			iRBombardDamageLimitChange += promoX.getRBombardDamageLimitChange();
+			iRBombardDamageMaxUnitsChange += promoX.getRBombardDamageMaxUnitsChange();
 		}
-		iFirstStrikesChange += promo.getFirstStrikesChange();
-		iChanceFirstStrikesChange += promo.getChanceFirstStrikesChange();
-		iEnemyHealChange += promo.getEnemyHealChange();
-		iNeutralHealChange += promo.getNeutralHealChange();
-		iFriendlyHealChange += promo.getFriendlyHealChange();
-		iSameTileHealChange += promo.getSameTileHealChange();
-		iAdjacentTileHealChange += promo.getAdjacentTileHealChange();
-		iCombatPercent += promo.getCombatPercent();
-		iCityAttackPercent += promo.getCityAttackPercent();
-		iCityDefensePercent += promo.getCityDefensePercent();
-		iHillsAttackPercent += promo.getHillsAttackPercent();
-		iHillsDefensePercent += promo.getHillsDefensePercent();
-		iWorkRate += promo.getWorkRatePercent();
-		iHillsWorkPercent += promo.getHillsWorkPercent();
-		iPeaksWorkPercent += promo.getPeaksWorkPercent();
-		iRevoltProtection += promo.getRevoltProtection();
-		iCollateralDamageProtection += promo.getCollateralDamageProtection();
-		iPillageChange += promo.getPillageChange();
-		iUpgradeDiscount += promo.getUpgradeDiscount();
-		iExperiencePercent += promo.getExperiencePercent();
-		iKamikazePercent += promo.getKamikazePercent();
+		iFirstStrikesChange += promoX.getFirstStrikesChange();
+		iChanceFirstStrikesChange += promoX.getChanceFirstStrikesChange();
+		iEnemyHealChange += promoX.getEnemyHealChange();
+		iNeutralHealChange += promoX.getNeutralHealChange();
+		iFriendlyHealChange += promoX.getFriendlyHealChange();
+		iSameTileHealChange += promoX.getSameTileHealChange();
+		iAdjacentTileHealChange += promoX.getAdjacentTileHealChange();
+		iCombatPercent += promoX.getCombatPercent();
+		iCityAttackPercent += promoX.getCityAttackPercent();
+		iCityDefensePercent += promoX.getCityDefensePercent();
+		iHillsAttackPercent += promoX.getHillsAttackPercent();
+		iHillsDefensePercent += promoX.getHillsDefensePercent();
+		iWorkRate += promoX.getWorkRatePercent();
+		iHillsWorkPercent += promoX.getHillsWorkPercent();
+		iPeaksWorkPercent += promoX.getPeaksWorkPercent();
+		iRevoltProtection += promoX.getRevoltProtection();
+		iCollateralDamageProtection += promoX.getCollateralDamageProtection();
+		iPillageChange += promoX.getPillageChange();
+		iUpgradeDiscount += promoX.getUpgradeDiscount();
+		iExperiencePercent += promoX.getExperiencePercent();
+		iKamikazePercent += promoX.getKamikazePercent();
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-		if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+		if (ePromoLine != NO_PROMOTIONLINE && GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
-			if (promo.getPromotionLine() != NO_PROMOTIONLINE)
-			{
-				iOvercomeProbability += GC.getPromotionLineInfo(promo.getPromotionLine()).getOvercomeProbability();
-				iOvercomeProbability += (GC.getPromotionLineInfo(promo.getPromotionLine()).getWorsenedOvercomeIncrementModifier() * (promo.getLinePriority() - 1));
-				iOvercomeAdjperTurn += GC.getPromotionLineInfo(promo.getPromotionLine()).getOvercomeAdjperTurn();
-				iCommunicability += GC.getPromotionLineInfo(promo.getPromotionLine()).getCommunicability();
-				iCommunicability += ((promo.getLinePriority() - 1) * GC.getPromotionLineInfo(promo.getPromotionLine()).getWorsenedCommunicabilityIncrementModifier());
-				iWorseningProbability += ((promo.getLinePriority() -1) * GC.getPromotionLineInfo(promo.getPromotionLine()).getWorseningProbabilityIncrementModifier());
-				iToleranceBuildup += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceBuildup();
-				iToleranceDecay += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceDecay();
-			}
+			iOvercomeProbability += promoLine.getOvercomeProbability();
+			iOvercomeProbability += promoLine.getWorsenedOvercomeIncrementModifier() * (promoX.getLinePriority() - 1);
+			iOvercomeAdjperTurn += promoLine.getOvercomeAdjperTurn();
+			iCommunicability += promoLine.getCommunicability();
+			iCommunicability += promoLine.getWorsenedCommunicabilityIncrementModifier() * (promoX.getLinePriority() -1);
+			iWorseningProbability += promoLine.getWorseningProbabilityIncrementModifier() * (promoX.getLinePriority() -1);
+			iToleranceBuildup += promoLine.getToleranceBuildup();
+			iToleranceDecay += promoLine.getToleranceDecay();
 		}
 #endif // OUTBREAKS_AND_AFFLICTIONS
-		iHiddenNationality += promo.getHiddenNationalityChange();
-		iIsAnimalIgnoresBordersChange += promo.getAnimalIgnoresBordersChange();
-		iNoDefensiveBonusChange += promo.getNoDefensiveBonusChange();
-
-		if (iDefenseCombatModifierChange > 0 ||
-			iRepelChange > 0 ||
-			iFortRepelChange > 0 ||
-			iRepelRetriesChange > 0 ||
-			iStrAdjperDefChange > 0 ||
-			iHillsDefensePercent > 0)
-		{
-			bDefWarning = true;
-		}
+		iHiddenNationality += promoX.getHiddenNationalityChange();
+		iIsAnimalIgnoresBordersChange += promoX.getAnimalIgnoresBordersChange();
+		iNoDefensiveBonusChange += promoX.getNoDefensiveBonusChange();
 	}
+	bool bDefWarning = (
+		iDefenseCombatModifierChange > 0
+		|| iRepelChange > 0
+		|| iFortRepelChange > 0
+		|| iRepelRetriesChange > 0
+		|| iStrAdjperDefChange > 0
+		|| iHillsDefensePercent > 0
+		|| iCityDefensePercent != 0
+	);
+
+	CvWString szText, szText2;
+	CvWString szTempBuffer;
 
 	if (iGetControlPoints > 0)
 	{
@@ -13370,8 +13346,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	if (iInterceptChange != 0)
 	{
-		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY", iInterceptChange));
@@ -13383,14 +13358,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", iInterceptChange));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", GC.getPromotionInfo(ePromotion).getInterceptChange()));
-		//TSHEEP End
 	}
 	if (iEvasionChange != 0)
 	{
-		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION_SPY", iEvasionChange));
@@ -13400,14 +13371,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", iEvasionChange));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", GC.getPromotionInfo(ePromotion).getEvasionChange()));
-		//TSHEEP End
 	}
 	if (iWithdrawalChange != 0)
 	{
-		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESCAPE_SPY", iWithdrawalChange));
@@ -13417,9 +13384,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", iWithdrawalChange));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", GC.getPromotionInfo(ePromotion).getWithdrawalChange()));
-		//TSHEEP End
 	}
 	if (iAttackCombatModifierChange != 0)
 	{
@@ -13761,19 +13725,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iInsidiousnessChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		float fValue = (float)iInsidiousnessChange;
-		{
-			szTempBuffer.Format(L"%.1f", fValue/10);
-		}
+		szTempBuffer.Format(L"%.1f", iInsidiousnessChange / 10.0);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSIDIOUSNESS", szTempBuffer.GetCString()));
 	}
 	if (iInvestigationChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		float fValue = (float)iInvestigationChange;
-		{
-			szTempBuffer.Format(L"%.1f", fValue/10);
-		}
+		szTempBuffer.Format(L"%.1f", iInvestigationChange / 10.0f);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INVESTIGATION", szTempBuffer.GetCString()));
 	}
 	if (iAssassinChange != 0)
@@ -14004,8 +13962,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	if (iEnemyHealChange != 0)
 	{
-		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if(promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE_SPY", iEnemyHealChange));
@@ -14015,14 +13972,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", iEnemyHealChange) + gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_LANDS"));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", GC.getPromotionInfo(ePromotion).getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_LANDS"));
-		//TSHEEP End
 	}
 	if (iNeutralHealChange != 0)
 	{
-		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY", iNeutralHealChange));
@@ -14032,14 +13985,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", iNeutralHealChange) + gDLL->getText("TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS"));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", GC.getPromotionInfo(ePromotion).getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS"));
-		//TSHEEP End
 	}
 	if (iFriendlyHealChange != 0)
 	{
-		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_SPY", iFriendlyHealChange));
@@ -14049,9 +13998,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", iFriendlyHealChange) + gDLL->getText("TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS"));
 		}
-		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA", GC.getPromotionInfo(ePromotion).getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS"));
-		//TSHEEP End
 	}
 	if (iSameTileHealChange != 0)
 	{
@@ -14075,7 +14021,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	if (iCityDefensePercent != 0)
 	{
-		bDefWarning = true;
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_DEFENSE", iCityDefensePercent));
 	}
@@ -14122,7 +14067,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iUpgradeDiscount != 0)
 	{
 		//TSHEEP Display Spy Promotions Differently
-		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
+		if (promo.getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_SPY", iUpgradeDiscount));
@@ -14137,17 +14082,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", iUpgradeDiscount));
 		}
-		/*if (100 == GC.getPromotionInfo(ePromotion).getUpgradeDiscount())
-		{
-			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_FREE"));
-		}
-		else
-		{
-			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", GC.getPromotionInfo(ePromotion).getUpgradeDiscount()));
-		}*/
-		//TSHEEP End
 	}
 	if (iExperiencePercent != 0)
 	{
@@ -14187,73 +14121,70 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE", iNoDefensiveBonusChange));
 	}
 
-
-	//references
-	DomainTypes	eDomainCargoChange = NO_DOMAIN;
-	SpecialUnitTypes eSpecialCargoChange = NO_SPECIALUNIT;
-	SpecialUnitTypes eNotSpecialCargoChange = NO_SPECIALUNIT;
-	SpecialUnitTypes eSpecialUnit = NO_SPECIALUNIT;
-	for( iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
-	{
-		eDomainCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getDomainCargoChange();
-		if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSpecialCargoChange();
-		}
-		else
-		{
-			eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMSpecialCargoChange();
-			eNotSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMNotSpecialCargoChange();
-		}
-		eSpecialUnit = GC.getPromotionInfo(linePromotionsOwned[iI]).setSpecialUnit();
-	}
-	if (eDomainCargoChange != NO_DOMAIN)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOMAIN_CARGO_CHANGE", GC.getDomainInfo(eDomainCargoChange).getTextKeyWide()));
-	}
 	if (bIsImmuneToFirstStrikes)
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IMMUNE_FIRST_STRIKES"));
 	}
-	if (eSpecialCargoChange != NO_SPECIALUNIT)
+
+	//references
 	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SPECIAL_CARGO_CHANGE", GC.getSpecialUnitInfo(eSpecialCargoChange).getTextKeyWide()));
-	}
-	if (eNotSpecialCargoChange != NO_SPECIALUNIT)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO", GC.getSpecialUnitInfo(eNotSpecialCargoChange).getTextKeyWide()));
-	}
-	if (eSpecialUnit != NO_SPECIALUNIT)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_SPECIAL_UNIT", GC.getSpecialUnitInfo(eSpecialUnit).getTextKeyWide()));
+		DomainTypes	eDomainCargoChange = NO_DOMAIN;
+		SpecialUnitTypes eSpecialCargoChange = NO_SPECIALUNIT;
+		SpecialUnitTypes eNotSpecialCargoChange = NO_SPECIALUNIT;
+		SpecialUnitTypes eSpecialUnit = NO_SPECIALUNIT;
+		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
+		{
+			eDomainCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getDomainCargoChange();
+			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			{
+				eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSpecialCargoChange();
+			}
+			else
+			{
+				eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMSpecialCargoChange();
+				eNotSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMNotSpecialCargoChange();
+			}
+			eSpecialUnit = GC.getPromotionInfo(linePromotionsOwned[iI]).setSpecialUnit();
+		}
+		if (eDomainCargoChange != NO_DOMAIN)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOMAIN_CARGO_CHANGE", GC.getDomainInfo(eDomainCargoChange).getTextKeyWide()));
+		}
+		if (eSpecialCargoChange != NO_SPECIALUNIT)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SPECIAL_CARGO_CHANGE", GC.getSpecialUnitInfo(eSpecialCargoChange).getTextKeyWide()));
+		}
+		if (eNotSpecialCargoChange != NO_SPECIALUNIT)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO", GC.getSpecialUnitInfo(eNotSpecialCargoChange).getTextKeyWide()));
+		}
+		if (eSpecialUnit != NO_SPECIALUNIT)
+		{
+			szBuffer.append(pcNewline);
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_SPECIAL_UNIT", GC.getSpecialUnitInfo(eSpecialUnit).getTextKeyWide()));
+		}
 	}
 
 	//Vectors
 
 	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE))
 	{
-		std::vector<bool>	abIsIgnoreTerrainDamage;
+		bool* abIsIgnoreTerrainDamage = new bool[GC.getNumTerrainInfos()]();
 
-		abIsIgnoreTerrainDamage.resize(GC.getNumTerrainInfos(), false);
+		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
+		{
+			const TerrainTypes eTerrainX = (TerrainTypes) GC.getPromotionInfo(linePromotionsOwned[iI]).getIgnoreTerrainDamage();
 
-		for( iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
-		{
-			if ( GC.getPromotionInfo(linePromotionsOwned[iI]).getIgnoreTerrainDamage() != NO_TERRAIN )
-			{
-				abIsIgnoreTerrainDamage[GC.getPromotionInfo(linePromotionsOwned[iI]).getIgnoreTerrainDamage()] = true;
-			}
-		}
-		for( iI = 0; iI < GC.getNumTerrainInfos(); iI++ )
-		{
-			if (abIsIgnoreTerrainDamage[iI])
+			if (eTerrainX != NO_TERRAIN && !abIsIgnoreTerrainDamage[eTerrainX])
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)iI).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo(eTerrainX).getDescription()));
+
+				abIsIgnoreTerrainDamage[eTerrainX] = true;
 			}
 		}
 	}
@@ -14265,19 +14196,19 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	std::vector<int> iImmediate;
 	std::vector<int> iProbability;
 
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumAfflictOnAttackChangeTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumAfflictOnAttackChangeTypes(); ++iI)
 		{
-			aAfflictions.push_back((PromotionLineTypes)GC.getPromotionInfo(ePromotion).getAfflictOnAttackChangeType(iI).eAfflictionLine);
-			iMelee.push_back(GC.getPromotionInfo(ePromotion).getAfflictOnAttackChangeType(iI).iMelee);
-			iDistance.push_back(GC.getPromotionInfo(ePromotion).getAfflictOnAttackChangeType(iI).iDistance);
-			iImmediate.push_back(GC.getPromotionInfo(ePromotion).getAfflictOnAttackChangeType(iI).iImmediate);
-			iProbability.push_back(GC.getPromotionInfo(ePromotion).getAfflictOnAttackChangeType(iI).iProbabilityChange);
+			aAfflictions.push_back((PromotionLineTypes)promo.getAfflictOnAttackChangeType(iI).eAfflictionLine);
+			iMelee.push_back(promo.getAfflictOnAttackChangeType(iI).iMelee);
+			iDistance.push_back(promo.getAfflictOnAttackChangeType(iI).iDistance);
+			iImmediate.push_back(promo.getAfflictOnAttackChangeType(iI).iImmediate);
+			iProbability.push_back(promo.getAfflictOnAttackChangeType(iI).iProbabilityChange);
 		}
 	}
 
-	for( iI = 0; iI < (int)aAfflictions.size(); iI++ )
+	for (int iI = 0; iI < (int)aAfflictions.size(); iI++ )
 	{
 		if (iImmediate[iI] > 0)
 		{
@@ -14324,7 +14255,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		{
 			for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumCureAfflictionChangeTypes(); ++iI)
 			{
-				aAfflictions.push_back((PromotionLineTypes)GC.getPromotionInfo(ePromotion).getCureAfflictionChangeType(iI));
+				aAfflictions.push_back((PromotionLineTypes)promo.getCureAfflictionChangeType(iI));
 			}
 		}
 
@@ -14341,8 +14272,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		{
 			for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumAfflictionFortitudeChangeModifiers(); ++iI)
 			{
-				aAfflictions.push_back((PromotionLineTypes)GC.getPromotionInfo(ePromotion).getAfflictionFortitudeChangeModifier(iI).ePromotionLine);
-				afflictionModifier.push_back(GC.getPromotionInfo(ePromotion).getAfflictionFortitudeChangeModifier(iI).iModifier);
+				aAfflictions.push_back((PromotionLineTypes)promo.getAfflictionFortitudeChangeModifier(iI).ePromotionLine);
+				afflictionModifier.push_back(promo.getAfflictionFortitudeChangeModifier(iI).iModifier);
 			}
 		}
 
@@ -14354,154 +14285,188 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	std::vector<UnitCombatTypes> aUnitCombats;
 
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(ePromotion).getNumSubCombatChangeTypes(); ++iI)
+		bool* unitCombats = new bool[GC.getNumUnitCombatInfos()]();
+
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 		{
-			aUnitCombats.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getSubCombatChangeType(iI));
-		}
-	}
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
 
-	for( iI = 0; iI < (int)aUnitCombats.size(); iI++ )
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SUB_COMBAT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
-	}
-
-	aUnitCombats.clear();
-
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
-	{
-		for (iI = 0; iI < GC.getPromotionInfo(ePromotion).getNumRemovesUnitCombatTypes(); ++iI)
-		{
-			aUnitCombats.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getRemovesUnitCombatType(iI));
-		}
-	}
-
-	for( iI = 0; iI < (int)aUnitCombats.size(); iI++ )
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_COMBAT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
-	}
-
-
-	std::vector<PromotionTypes> aTrapSetWithPromotionType;
-	aTrapSetWithPromotionType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
-	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumTrapSetWithPromotionTypes(); ++iI)
-		{
-			aTrapSetWithPromotionType.push_back((PromotionTypes)GC.getPromotionInfo(ePromotion).getTrapSetWithPromotionType(iI));
-		}
-	}
-
-	for( iI = 0; iI < (int)aTrapSetWithPromotionType.size(); iI++ )
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_PROMOTION_SET", GC.getPromotionInfo(aTrapSetWithPromotionType[iI]).getTextKeyWide()));
-	}
-
-	std::vector<UnitCombatTypes> aTrapImmunityUnitCombatType;
-	aTrapImmunityUnitCombatType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
-	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumTrapImmunityUnitCombatTypes(); ++iI)
-		{
-			aTrapImmunityUnitCombatType.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getTrapImmunityUnitCombatType(iI));
-		}
-	}
-
-	for( iI = 0; iI < (int)aTrapImmunityUnitCombatType.size(); iI++ )
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_IMMUNITY", GC.getUnitCombatInfo(aTrapImmunityUnitCombatType[iI]).getTextKeyWide()));
-	}
-
-	std::vector<UnitCombatTypes> aTargetUnitCombatType;
-	aTargetUnitCombatType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
-	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumTargetUnitCombatTypes(); iI++)
-		{
-			aTargetUnitCombatType.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getTargetUnitCombatType(iI));
-		}
-	}
-
-	for( iI = 0; iI < (int)aTargetUnitCombatType.size(); iI++ )
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TARGET_UNITCOMBAT", GC.getUnitCombatInfo(aTargetUnitCombatType[iI]).getTextKeyWide()));
-	}
-
-	std::vector<UnitCombatTypes> eUnitCombat;
-	std::vector<int> iHeal;
-	std::vector<int> iAdjacentHeal;
-
-	bool bFirst = true;
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
-	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumHealUnitCombatChangeTypes(); ++iI)
-		{
-			bFirst = true;
-			for(iK = 0; iK < (int)eUnitCombat.size(); iK++ )
+			for (int iI = 0; iI < promoX.getNumSubCombatChangeTypes(); ++iI)
 			{
-				if (eUnitCombat[iK] == (UnitCombatTypes)GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).eUnitCombat)
+				const UnitCombatTypes eUnitCombatX = (UnitCombatTypes)promoX.getSubCombatChangeType(iI);
+
+				if (eUnitCombatX != NO_UNITCOMBAT && !unitCombats[eUnitCombatX])
 				{
-					bFirst = false;
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SUB_COMBAT", GC.getUnitCombatInfo(eUnitCombatX).getDescription()));
+					unitCombats[eUnitCombatX] = true;
 				}
 			}
-			if (bFirst)
+		}
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumSubCombatChangeTypes(); ++iI)
 			{
-				eUnitCombat.push_back((UnitCombatTypes)GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).eUnitCombat);
-				iHeal.push_back(GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).iHeal);
-				iAdjacentHeal.push_back(GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).iAdjacentHeal);
+				unitCombats[(UnitCombatTypes)promoX.getSubCombatChangeType(iI)] = false;
 			}
-			else
+		}
+
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumRemovesUnitCombatTypes(); ++iI)
 			{
-				for(iK = 0; iK < (int)eUnitCombat.size(); iK++ )
+				const UnitCombatTypes eUnitCombatX = (UnitCombatTypes)promoX.getRemovesUnitCombatType(iI);
+
+				if (eUnitCombatX != NO_UNITCOMBAT && !unitCombats[eUnitCombatX])
 				{
-					if (eUnitCombat[iK] == (UnitCombatTypes)GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).eUnitCombat)
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_COMBAT", GC.getUnitCombatInfo(eUnitCombatX).getDescription()));
+					unitCombats[eUnitCombatX] = true;
+				}
+			}
+		}
+	}
+
+	{
+		bool* trapSetWithPromo = new bool[GC.getNumPromotionInfos()]();
+
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumTrapSetWithPromotionTypes(); ++iI)
+			{
+				const PromotionTypes ePromoX = (PromotionTypes)promoX.getTrapSetWithPromotionType(iI);
+
+				if (ePromoX != NO_PROMOTION && !trapSetWithPromo[ePromoX])
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_PROMOTION_SET", GC.getPromotionInfo(ePromoX).getTextKeyWide()));
+					trapSetWithPromo[ePromoX] = true;
+				}
+			}
+		}
+	}
+	{
+		bool* unitCombats = new bool[GC.getNumUnitCombatInfos()]();
+
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumTrapImmunityUnitCombatTypes(); ++iI)
+			{
+				const UnitCombatTypes eUnitCombatX = (UnitCombatTypes)promoX.getTrapImmunityUnitCombatType(iI);
+
+				if (eUnitCombatX != NO_UNITCOMBAT && !unitCombats[eUnitCombatX])
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_IMMUNITY", GC.getUnitCombatInfo(eUnitCombatX).getTextKeyWide()));
+					unitCombats[eUnitCombatX] = true;
+				}
+			}
+		}
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumSubCombatChangeTypes(); ++iI)
+			{
+				unitCombats[(UnitCombatTypes)promoX.getSubCombatChangeType(iI)] = false;
+			}
+		}
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumTargetUnitCombatTypes(); ++iI)
+			{
+				const UnitCombatTypes eUnitCombatX = (UnitCombatTypes)promoX.getTargetUnitCombatType(iI);
+
+				if (eUnitCombatX != NO_UNITCOMBAT && !unitCombats[eUnitCombatX])
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TARGET_UNITCOMBAT", GC.getUnitCombatInfo(eUnitCombatX).getTextKeyWide()));
+					unitCombats[eUnitCombatX] = true;
+				}
+			}
+		}
+	}
+
+	{
+		std::vector<UnitCombatTypes> eUnitCombat;
+		std::vector<int> iHeal;
+		std::vector<int> iAdjacentHeal;
+
+		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		{
+			const CvPromotionInfo& promoX = GC.getPromotionInfo(linePromotionsOwned[iJ]);
+
+			for (int iI = 0; iI < promoX.getNumHealUnitCombatChangeTypes(); ++iI)
+			{
+				bool bFirst = true;
+				for (int iK = 0; iK < (int)eUnitCombat.size(); iK++ )
+				{
+					if (eUnitCombat[iK] == (UnitCombatTypes)promoX.getHealUnitCombatChangeType(iI).eUnitCombat)
 					{
-						iHeal[iK] += GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).iHeal;
-						iAdjacentHeal[iK] += GC.getPromotionInfo(linePromotionsOwned[iJ]).getHealUnitCombatChangeType(iI).iAdjacentHeal;
+						bFirst = false;
+					}
+				}
+				if (bFirst)
+				{
+					eUnitCombat.push_back((UnitCombatTypes)promoX.getHealUnitCombatChangeType(iI).eUnitCombat);
+					iHeal.push_back(promoX.getHealUnitCombatChangeType(iI).iHeal);
+					iAdjacentHeal.push_back(promoX.getHealUnitCombatChangeType(iI).iAdjacentHeal);
+				}
+				else
+				{
+					for (int iK = 0; iK < (int)eUnitCombat.size(); iK++ )
+					{
+						if (eUnitCombat[iK] == (UnitCombatTypes)promoX.getHealUnitCombatChangeType(iI).eUnitCombat)
+						{
+							iHeal[iK] += promoX.getHealUnitCombatChangeType(iI).iHeal;
+							iAdjacentHeal[iK] += promoX.getHealUnitCombatChangeType(iI).iAdjacentHeal;
+						}
 					}
 				}
 			}
 		}
-	}
 
-	for( iI = 0; iI < (int)eUnitCombat.size(); iI++ )
-	{
-		if (iHeal[iI] > 0)
+		for (int iI = 0; iI < (int)eUnitCombat.size(); iI++ )
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+			if (iHeal[iI] > 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+			}
+			if (iAdjacentHeal[iI] > 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iAdjacentHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+			}
 		}
-		if (iAdjacentHeal[iI] > 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iAdjacentHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
-		}
+		eUnitCombat.clear();
+		iHeal.clear();
+		iAdjacentHeal.clear();
 	}
-
-	eUnitCombat.clear();
-	iHeal.clear();
-	iAdjacentHeal.clear();
-
 
 	std::vector<BuildTypes> aAddsBuildTypes;
 	aAddsBuildTypes.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumAddsBuildTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumAddsBuildTypes(); ++iI)
 		{
-			aAddsBuildTypes.push_back((BuildTypes)GC.getPromotionInfo(ePromotion).getAddsBuildType(iI));
+			aAddsBuildTypes.push_back((BuildTypes)promo.getAddsBuildType(iI));
 		}
 	}
 
-	for( iI = 0; iI < (int)aAddsBuildTypes.size(); iI++ )
+	for (int iI = 0; iI < (int)aAddsBuildTypes.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_BUILD_TYPE", GC.getBuildInfo(aAddsBuildTypes[iI]).getTextKeyWide()));
@@ -14509,15 +14474,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	std::vector<InvisibleTypes> aNegatesInvisibilityType;
 	aNegatesInvisibilityType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumNegatesInvisibilityTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumNegatesInvisibilityTypes(); ++iI)
 		{
-			aNegatesInvisibilityType.push_back((InvisibleTypes)GC.getPromotionInfo(ePromotion).getNegatesInvisibilityType(iI));
+			aNegatesInvisibilityType.push_back((InvisibleTypes)promo.getNegatesInvisibilityType(iI));
 		}
 	}
 
-	for( iI = 0; iI < (int)aNegatesInvisibilityType.size(); iI++ )
+	for(int iI = 0; iI < (int)aNegatesInvisibilityType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_NEGATES_VEIL", GC.getInvisibleInfo(aNegatesInvisibilityType[iI]).getChar()));
@@ -14525,15 +14490,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	std::vector<TerrainTypes> aPrereqTerrainType;
 	aPrereqTerrainType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqTerrainTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqTerrainTypes(); ++iI)
 		{
-			aPrereqTerrainType.push_back((TerrainTypes)GC.getPromotionInfo(ePromotion).getPrereqTerrainType(iI));
+			aPrereqTerrainType.push_back((TerrainTypes)promo.getPrereqTerrainType(iI));
 		}
 	}
 
-	for( iI = 0; iI < (int)aPrereqTerrainType.size(); iI++ )
+	for(int iI = 0; iI < (int)aPrereqTerrainType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TERRAIN_PREREQ", GC.getTerrainInfo(aPrereqTerrainType[iI]).getTextKeyWide()));
@@ -14541,11 +14506,11 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	std::vector<FeatureTypes> aPrereqFeatureType;
 	aPrereqFeatureType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqFeatureTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqFeatureTypes(); ++iI)
 		{
-			aPrereqFeatureType.push_back((FeatureTypes)GC.getPromotionInfo(ePromotion).getPrereqFeatureType(iI));
+			aPrereqFeatureType.push_back((FeatureTypes)promo.getPrereqFeatureType(iI));
 		}
 	}
 
@@ -14557,23 +14522,23 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	std::vector<ImprovementTypes> aPrereqImprovementType;
 	aPrereqImprovementType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqImprovementTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqImprovementTypes(); ++iI)
 		{
-			aPrereqImprovementType.push_back((ImprovementTypes)GC.getPromotionInfo(ePromotion).getPrereqImprovementType(iI));
+			aPrereqImprovementType.push_back((ImprovementTypes)promo.getPrereqImprovementType(iI));
 		}
 	}
 
-	for( iI = 0; iI < (int)aPrereqImprovementType.size(); iI++ )
+	for(int iI = 0; iI < (int)aPrereqImprovementType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IMPROVEMENT_PREREQ", GC.getImprovementInfo(aPrereqImprovementType[iI]).getTextKeyWide()));
 	}
 
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqLocalBuildingTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqLocalBuildingTypes(); ++iI)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BUILDING_PREREQ", GC.getBuildingInfo((BuildingTypes)GC.getPromotionInfo(linePromotionsOwned[iJ]).getPrereqLocalBuildingType(iI)).getTextKeyWide()));
@@ -14582,15 +14547,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	std::vector<BonusTypes> aPrereqPlotBonusType;
 	aPrereqPlotBonusType.clear();
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+	for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{
-		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqPlotBonusTypes(); ++iI)
+		for (int iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqPlotBonusTypes(); ++iI)
 		{
-			aPrereqPlotBonusType.push_back((BonusTypes)GC.getPromotionInfo(ePromotion).getPrereqPlotBonusType(iI));
+			aPrereqPlotBonusType.push_back((BonusTypes)promo.getPrereqPlotBonusType(iI));
 		}
 	}
 
-	for( iI = 0; iI < (int)aPrereqPlotBonusType.size(); iI++ )
+	for(int iI = 0; iI < (int)aPrereqPlotBonusType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BONUS_PREREQ", GC.getBonusInfo(aPrereqPlotBonusType[iI]).getTextKeyWide()));
@@ -14602,9 +14567,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iTerrainDefensePercent = 0;
 	int iTerrainWorkPercent = 0;
 	int iWithdrawOnTerrain = 0;
-	for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
 	{
-		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
 			if ( GC.getPromotionInfo(linePromotionsOwned[iJ]).getTerrainDoubleMove(iI) )
 			{
@@ -14654,9 +14619,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int iFeatureDefensePercent = 0;
 	int iFeatureWorkPercent = 0;
 	int iWithdrawOnFeature = 0;
-	for (iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 	{
-		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
 			if ( GC.getPromotionInfo(linePromotionsOwned[iJ]).getFeatureDoubleMove(iI) )
 			{
@@ -14702,9 +14667,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	//Builds
 	int iBuildWorkPercent = 0;
-	for (iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 	{
-		for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+		for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 		{
 			iBuildWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getBuildWorkRateModifierChangeType(iI);
 		}
@@ -14717,10 +14682,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 
 	//Domains
-	for (iI = 0; iI < NUM_DOMAIN_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_DOMAIN_TYPES; ++iI)
 	{
 		int iDomainModifierPercent = 0;
-		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
 			iDomainModifierPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getDomainModifierPercent(iI);
 		}
@@ -14750,9 +14715,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int iPrecisionVS = 0;
 	int iCriticalVS = 0;
 	int iRoundStunVS = 0;
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
 			iDisable += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTrapDisableUnitCombatType(iI);
 			iAvoid += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTrapAvoidanceUnitCombatType(iI);
@@ -14905,13 +14870,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	//Techs
 	int	iTechContractChanceChange = 0;
 	int	iTechOvercomeChange = 0;
-	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE)
+		if (ePromoLine != NO_PROMOTIONLINE)
 		{
-			if (GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isTechContractChanceChange(iI))
+			if (GC.getPromotionLineInfo(ePromoLine).isTechContractChanceChange(iI))
 			{
-				for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+				for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 				{
 					iTechContractChanceChange += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iJ]).getPromotionLine()).getTechContractChanceChange(iI);
 				}
@@ -14928,9 +14893,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				iTechContractChanceChange = 0;
 			}
 
-			if (GC.getPromotionLineInfo((PromotionLineTypes)GC.getPromotionInfo(ePromotion).getPromotionLine()).isTechOvercomeChange(iI))
+			if (GC.getPromotionLineInfo(ePromoLine).isTechOvercomeChange(iI))
 			{
-				for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+				for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 				{
 					iTechOvercomeChange += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iJ]).getPromotionLine()).getTechOvercomeChange(iI);
 				}
@@ -14950,10 +14915,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 
 	//Hide and Seek
-	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	if (bHideSeek)
 	{
-		int iVisibilityIntensityChange = 0;
-		int iVisibilityIntensityRangeChange = 0;
+		int iSpotIntensityChange = 0;
+		int iSpotIntensityRangeChange = 0;
 		int iInvisibilityIntensityChange = 0;
 		int iInvisibleTerrainChange = 0;
 		int iInvisibleFeatureChange = 0;
@@ -14964,35 +14929,35 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		int iVisibleTerrainRangeChange = 0;
 		int iVisibleFeatureRangeChange = 0;
 		int iVisibleImprovementRangeChange = 0;
-		for (iI = 0; iI < GC.getNumInvisibleInfos(); ++iI)
+		for (int iI = 0; iI < GC.getNumInvisibleInfos(); ++iI)
 		{
-			for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+			for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 			{
-				iVisibilityIntensityChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityChangeType(iI);
-				iVisibilityIntensityRangeChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityRangeChangeType(iI);
+				iSpotIntensityChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityChangeType(iI);
+				iSpotIntensityRangeChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getVisibilityIntensityRangeChangeType(iI);
 				iInvisibilityIntensityChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getInvisibilityIntensityChangeType(iI);
 			}
-			if (iVisibilityIntensityChange != 0)
+			if (iSpotIntensityChange != 0)
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", iVisibilityIntensityChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", iSpotIntensityChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
-			if (iVisibilityIntensityRangeChange != 0)
+			if (iSpotIntensityRangeChange != 0)
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE", iVisibilityIntensityRangeChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE", iSpotIntensityRangeChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
 			if (iInvisibilityIntensityChange != 0)
 			{
 				szBuffer.append(pcNewline);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_INTENSITY_CHANGE", iInvisibilityIntensityChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
 			}
-			iVisibilityIntensityChange = 0;
-			iVisibilityIntensityRangeChange = 0;
+			iSpotIntensityChange = 0;
+			iSpotIntensityRangeChange = 0;
 			iInvisibilityIntensityChange = 0;
-			for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+			for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
 			{
-				for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+				for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 				{
 					for (int iL = 0; iL < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumInvisibleTerrainChanges(); iL++)
 					{
@@ -15038,9 +15003,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				iVisibleTerrainChange = 0;
 				iVisibleTerrainRangeChange = 0;
 			}
-			for (iK = 0; iK < GC.getNumFeatureInfos(); iK++)
+			for (int iK = 0; iK < GC.getNumFeatureInfos(); iK++)
 			{
-				for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+				for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 				{
 					for (int iL = 0; iL < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumInvisibleFeatureChanges(); iL++)
 					{
@@ -15086,9 +15051,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				iVisibleFeatureChange = 0;
 				iVisibleFeatureRangeChange = 0;
 			}
-			for (iK = 0; iK < GC.getNumImprovementInfos(); iK++)
+			for (int iK = 0; iK < GC.getNumImprovementInfos(); iK++)
 			{
-				for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
+				for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 				{
 					for (int iL = 0; iL < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumInvisibleImprovementChanges(); iL++)
 					{
@@ -15138,14 +15103,14 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 
 	// AIAndy: Help display for increasing specific outcomes
-	for (iI = 0; iI < GC.getNumOutcomeInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumOutcomeInfos(); iI++)
 	{
 		const CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
 
 		int iExtraChancePromotion = 0;
-		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
+		for(int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
-			for (iK = 0; iK < kOutcome.getNumExtraChancePromotions(); iK++)
+			for (int iK = 0; iK < kOutcome.getNumExtraChancePromotions(); iK++)
 			{
 				if (kOutcome.getExtraChancePromotion(iK) == linePromotionsOwned[iJ])
 				{
@@ -15161,15 +15126,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 
 	//	This bit won't look terribly pretty - needs a little more work
-	for( iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
+	for(int iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
 	{
 		GC.getPromotionInfo(linePromotionsOwned[iI]).getPropertyManipulators()->buildDisplayString(szBuffer);
 	}
 
-	if (GC.getPromotionInfo(ePromotion).getLevelPrereq() > 0)
+	if (promo.getLevelPrereq() > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LEVEL_PREREQ", GC.getPromotionInfo(ePromotion).getLevelPrereq()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LEVEL_PREREQ", promo.getLevelPrereq()));
 	}
 
 	if (bDefWarning)
@@ -15178,10 +15143,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEF_WARN"));
 	}
 
-	if (GC.getPromotionInfo(ePromotion).getHelp()[0] != '\0')
+	if (promo.getHelp()[0] != '\0')
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(GC.getPromotionInfo(ePromotion).getHelp());
+		szBuffer.append(promo.getHelp());
 	}
 }
 
@@ -19292,21 +19257,24 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 		else
 		{
-			bFirst = true;
-			for (int iI = 0; iI < GC.getNumInvisibleInfos(); ++iI)
+			bool bFirst = true;
+
+			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 			{
-				if (kUnit.getVisibilityIntensityType(iI) != 0)
+				const int iSpotIntensity = kUnit.getVisibilityIntensityType(iJ);
+				if (iSpotIntensity != 0)
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_BULLET_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
 						bFirst = false;
 					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE", kUnit.getVisibilityIntensityType(iI), GC.getInvisibleInfo((InvisibleTypes) iI).getChar()));
+					else
+					{
+						szBuffer.append(L", ");
+					}
+					szBuffer.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
 				}
 			}
 			bFirst = true;
@@ -27547,24 +27515,19 @@ void CvGameTextMgr::setPromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes e
 {
 	CvUnit*	pUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-
-	//	Hide overridden promotions if there is a selected unit and this is not a pedia request
-	if ( GC.getIsInPedia() || pUnit == NULL || !pUnit->isPromotionOverriden(ePromotion) )
+	// Hide overridden promotions if there is a selected unit and this is not a pedia request
+	if (GC.getIsInPedia() || pUnit == NULL || !pUnit->isPromotionOverriden(ePromotion))
 	{
 		if (!bCivilopediaBodyText)
 		{
-			CvWString szTempBuffer;
-
 			if (NO_PROMOTION == ePromotion)
 			{
 				return;
 			}
-			const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
-
-			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), promo.getDescription());
+			CvWString szTempBuffer;
+			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getPromotionInfo(ePromotion).getDescription());
 			szBuffer.append(szTempBuffer);
 		}
-
 		parsePromotionHelpInternal(szBuffer, ePromotion, NEWLINE, !GC.getIsInPedia());
 	}
 }
@@ -27687,12 +27650,24 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 	{
-		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+		bool bFirst = true;
+
+		for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 		{
-			if (info.getVisibilityIntensityChangeType((InvisibleTypes)iI) != 0)
+			const int iSpotIntensity = info.getVisibilityIntensityChangeType((InvisibleTypes)iJ);
+			if (iSpotIntensity != 0)
 			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE", info.getVisibilityIntensityChangeType((InvisibleTypes)iI), GC.getInvisibleInfo((InvisibleTypes)iI).getChar()));
+				if (bFirst)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_BULLET_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+					bFirst = false;
+				}
+				else
+				{
+					szBuffer.append(L", ");
+				}
+				szBuffer.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
 			}
 		}
 		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
