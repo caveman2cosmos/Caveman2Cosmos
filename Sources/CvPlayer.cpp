@@ -14945,7 +14945,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 
-	if (GET_TEAM(getTeam()).isHasTech(eTech))
+	if (eTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eTech))
 	{
 		//	We have this tech, no reason to add this to the pre-reqs
 		//	Base case return 0, we know it...
