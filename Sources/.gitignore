@@ -366,4 +366,4 @@ temp_files/
 
 #IntelliJ
 
-idea/
+.idea/
