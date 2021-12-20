@@ -11036,7 +11036,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 							&& GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
 							&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
 						{
-							iValue -= 1000;
+							iValue += 1000;
 						}
 						if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
 						{
