@@ -10867,16 +10867,11 @@ bool CvCityAI::AI_checkIrrigationSpread(const CvPlot* pPlot) const
 
 void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const
 {
-	if (plotInfo != NULL)
-	{
-		plotInfo->yieldValue = 0;
-		plotInfo->currentBuild = NO_BUILD;
-	}
-	else
-	{
-		return;
-	}
 
+	if (plotInfo == NULL) return;
+
+	plotInfo->yieldValue = 0;
+	plotInfo->currentBuild = NO_BUILD;
 	bool bWorked = false;
 	bool bHasBonusImprovement = false;
 	bool bEmphasizeIrrigation = false;
@@ -10928,8 +10923,8 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 	{
 		int iValue = 0;
 		int iBestTempBuildValue = 0;
-		bool bIgnoreFeature = false;
-		bool bValid = false;
+
+
 		const ImprovementTypes ePotentialImprovement = (ImprovementTypes)iI;
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
 		BuildTypes eBestTempBuild = NO_BUILD;
@@ -10941,7 +10936,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 		// if current improvement is same as potential improvement we dont need to reevaluate
 		if (ePotentialImprovement == eCurrentPlotImprovement) continue;
 		// if more than 1 build can build this improvement, find fastest
-		if (potentialImprovementInfo.getNumBuildTypes() > 1) {
+		if (potentialImprovementInfo.getNumBuildTypes() >= 1) {
 			foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 			{
 				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
@@ -10960,7 +10955,8 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 		// if we cannot build any of the valid builds for the improvement, skip to next improvement
 		if (eBestTempBuild == NO_BUILD) continue;
 
-		bValid = true;
+		bool bIgnoreFeature = false;
+		bool bValid = true;
 		if (eFeature != NO_FEATURE && GC.getBuildInfo(eBestTempBuild).isFeatureRemove(eFeature))
 		{
 			bIgnoreFeature = true;
@@ -11048,7 +11044,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 			}
 			iValue = iValue + (iFoodPriority * aiFinalYields[YIELD_FOOD]) + (iProductionPriority + aiFinalYields[YIELD_PRODUCTION]) + (iCommercePriority * aiFinalYields[YIELD_COMMERCE]);
 		}
-		if (iValue > iBestTempBuildValue)
+		if (iValue >= iBestTempBuildValue)
 		{
 			plotInfo->yieldValue = iValue;
 			plotInfo->currentBuild = eBestTempBuild;
