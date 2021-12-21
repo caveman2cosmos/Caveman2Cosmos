@@ -202,10 +202,10 @@ void CvCityAI::AI_reset()
 void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	CvWString aiType = "CvCityAI";
+	// CvWString aiType = "CvCityAI";
 
 
-	logAIJson(aiType,this->getName(), function,  message);
+	// logAIJson(aiType, this->getName(), function, message);
 
 }
 
