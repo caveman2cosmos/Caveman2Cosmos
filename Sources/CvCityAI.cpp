@@ -205,7 +205,7 @@ void CvCityAI::SendLog(CvWString function, CvWString message) const
 	CvWString aiType = "CvCityAI";
 
 
-	logAIJson(aiType,this->getName(), function,  message);
+	logAIJson(aiType, this->getName(), function, message);
 
 }
 
