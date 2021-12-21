@@ -11044,7 +11044,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 			}
 			iValue = iValue + (iFoodPriority * aiFinalYields[YIELD_FOOD]) + (iProductionPriority + aiFinalYields[YIELD_PRODUCTION]) + (iCommercePriority * aiFinalYields[YIELD_COMMERCE]);
 		}
-		if (iValue >= iBestTempBuildValue)
+		if (iValue >= plotInfo->yieldValue)
 		{
 			plotInfo->yieldValue = iValue;
 			plotInfo->currentBuild = eBestTempBuild;
