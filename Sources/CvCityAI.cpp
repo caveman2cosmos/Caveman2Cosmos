@@ -202,10 +202,10 @@ void CvCityAI::AI_reset()
 void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	//CvWString aiType = "CvCityAI";
+	CvWString aiType = "CvCityAI";
 
 
-	//logAIJson(aiType,this->getName(), function,  message);
+	logAIJson(aiType,this->getName(), function,  message);
 
 }
 
@@ -10930,7 +10930,7 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 		BuildTypes eBestTempBuild = NO_BUILD;
 
 		// check if improvement is a fort or watchtower, then its a no.
-		if (!potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() == 0) continue;
+		if (potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() != 0) continue;
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
 		// if current improvement is same as potential improvement we dont need to reevaluate
