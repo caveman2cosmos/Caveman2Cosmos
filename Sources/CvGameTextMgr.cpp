@@ -4044,13 +4044,6 @@ namespace {
 bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, bool bAssassinate)
 {
 	PROFILE_FUNC();
-
-	if (gDLL->altKey() && (gDLL->getChtLvl() > 0))
-	{
-		setPlotHelp(szString, pPlot);
-		return true;
-	}
-
 	//Note that due to the large amount of extra content added to this function (setCombatPlotHelp), this should never be used in any function that needs to be called repeatedly (e.g. hundreds of times) quickly.
 	//It is fine for a human player mouse-over (which is what it is used for).
 
@@ -9010,34 +9003,37 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
 		szString.append(NEWLINE);
 
-		if (bAlt && !bShift && !bCtrl)
+		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
-			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			bool bFirst = true;
+
+			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 			{
-				bool bFirst = true;
+				const InvisibleTypes eTypeX = static_cast<InvisibleTypes>(iJ);
 
-				for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
+				if (!pPlot->isSpotterInSight(eActiveTeam, eTypeX))
 				{
-					const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity((InvisibleTypes)iJ, eActiveTeam);
+					continue;
+				}
+				const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eTypeX, eActiveTeam);
 
-					if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+				if (iSpotIntensity > 0 || GC.getInvisibleInfo(eTypeX).isIntrinsic())
+				{
+					if (bFirst)
 					{
-						if (bFirst)
-						{
-							szString.append(gDLL->getText("TXT_KEY_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
-							bFirst = false;
-						}
-						else
-						{
-							szString.append(L", ");
-						}
-						szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+						szString.append(gDLL->getText("TXT_KEY_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+						bFirst = false;
 					}
+					else
+					{
+						szString.append(L", ");
+					}
+					szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo(eTypeX).getChar()));
 				}
-				if (!bFirst)
-				{
-					szString.append(NEWLINE);
-				}
+			}
+			if (!bFirst)
+			{
+				szString.append(NEWLINE);
 			}
 		}
 		const int iDefenseModifier = pPlot->defenseModifier(eRevealOwner != NO_PLAYER ? GET_PLAYER(eRevealOwner).getTeam() : NO_TEAM, true, true);
@@ -12433,7 +12429,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 	const int iLinePriority = promo.getLinePriority();
 	const PromotionLineTypes ePromoLine = promo.getPromotionLine();
-	const CvPromotionLineInfo& promoLine = GC.getPromotionLineInfo(ePromoLine);
+	const CvPromotionLineInfo* promoLine = ePromoLine != NO_PROMOTIONLINE ? &GC.getPromotionLineInfo(ePromoLine) : NULL;
 
 	// If this is not the display for the hover help on the actual promotion action button
 	// then we want to accrue stats from all implied promotions earlier in the same line into the help text
@@ -12467,7 +12463,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			}
 		}
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", promoLine.getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", promoLine->getDescription()));
 
 		if (iLinePriority > 0)
 		{
@@ -12475,19 +12471,19 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE_PRIORITY", iLinePriority));
 		}
 
-		if (promoLine.isNoSpreadonBattle())
+		if (promoLine->isNoSpreadonBattle())
 		{
 			bIsNoSpreadonBattle = true;
 		}
-		if (promoLine.isNoSpreadUnitProximity())
+		if (promoLine->isNoSpreadUnitProximity())
 		{
 			bIsNoSpreadUnitProximity = true;
 		}
-		if (promoLine.isNoSpreadUnittoCity())
+		if (promoLine->isNoSpreadUnittoCity())
 		{
 			bIsNoSpreadUnittoCity = true;
 		}
-		if (promoLine.isNoSpreadCitytoUnit())
+		if (promoLine->isNoSpreadCitytoUnit())
 		{
 			bIsNoSpreadCitytoUnit = true;
 		}
@@ -13231,14 +13227,14 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (ePromoLine != NO_PROMOTIONLINE && GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
-			iOvercomeProbability += promoLine.getOvercomeProbability();
-			iOvercomeProbability += promoLine.getWorsenedOvercomeIncrementModifier() * (promoX.getLinePriority() - 1);
-			iOvercomeAdjperTurn += promoLine.getOvercomeAdjperTurn();
-			iCommunicability += promoLine.getCommunicability();
-			iCommunicability += promoLine.getWorsenedCommunicabilityIncrementModifier() * (promoX.getLinePriority() -1);
-			iWorseningProbability += promoLine.getWorseningProbabilityIncrementModifier() * (promoX.getLinePriority() -1);
-			iToleranceBuildup += promoLine.getToleranceBuildup();
-			iToleranceDecay += promoLine.getToleranceDecay();
+			iOvercomeProbability += promoLine->getOvercomeProbability();
+			iOvercomeProbability += promoLine->getWorsenedOvercomeIncrementModifier() * (promoX.getLinePriority() - 1);
+			iOvercomeAdjperTurn += promoLine->getOvercomeAdjperTurn();
+			iCommunicability += promoLine->getCommunicability();
+			iCommunicability += promoLine->getWorsenedCommunicabilityIncrementModifier() * (promoX.getLinePriority() -1);
+			iWorseningProbability += promoLine->getWorseningProbabilityIncrementModifier() * (promoX.getLinePriority() -1);
+			iToleranceBuildup += promoLine->getToleranceBuildup();
+			iToleranceDecay += promoLine->getToleranceDecay();
 		}
 #endif // OUTBREAKS_AND_AFFLICTIONS
 		iHiddenNationality += promoX.getHiddenNationalityChange();
