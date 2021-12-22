@@ -3135,6 +3135,7 @@
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FARM</ImprovementPillage>
 			<!-- Other improvements also can upgrade to Vertical Farm: Mushroom Gatherer, Orchard, Pasture, Plantation, Silk Farm, Winery -->
+			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -3819,7 +3820,9 @@
 				<iYield>1</iYield>
 			</IrrigatedYieldChange>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
+			<bRequiresIrrigation>1</bRequiresIrrigation>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>

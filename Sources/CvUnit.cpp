@@ -14984,8 +14984,12 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 		{
 			const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
 
-			if (hasInvisibilityType(eInvisible) && plot()->isSpotterInSight(eTeam, eInvisible))
+			if (hasInvisibilityType(eInvisible))
 			{
+				if (!plot()->isSpotterInSight(eTeam, eInvisible))
+				{
+					return true;
+				}
 				const int iIntensity = invisibilityIntensityTotal(eInvisible);
 
 				if ((iIntensity > 0 || GC.getInvisibleInfo(eInvisible).isIntrinsic())
@@ -20496,10 +20500,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 		const CvCity* pCity = pPlot->getPlotCity();
 
-		for (int iI = 0; iI < promo.getNumPrereqBonusTypes(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, promo.getPrereqBonuses())
 		{
-			const BonusTypes ePrereqBonus = ((BonusTypes)promo.getPrereqBonusType(iI));
-
 			if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 			{
 				return false;
@@ -33409,9 +33411,8 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 		}
 	}
 
-	for (int iI = 0; iI < equipment.getNumPrereqBonusTypes(); iI++)
+	foreach_(const BonusTypes ePrereqBonus, equipment.getPrereqBonuses())
 	{
-		const BonusTypes ePrereqBonus = (BonusTypes)equipment.getPrereqBonusType(iI);
 		if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 		{
 			return false;
@@ -38075,15 +38076,10 @@ void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int 
 	}
 }
 
-int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const
+int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eType) const
 {
-	return getExtraVisibilityIntensitySameTileType(eInvisibleType);
-}
-
-int CvUnit::getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
-	return m_aiExtraVisibilityIntensitySameTile[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eType);
+	return m_aiExtraVisibilityIntensitySameTile[eType];
 }
 
 

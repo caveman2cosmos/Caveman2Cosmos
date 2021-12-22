@@ -270,7 +270,7 @@ private:
 	void setCityPlotYieldValueString(CvWStringBuffer& szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood = false) const;
 	void setYieldValueString(CvWStringBuffer& szString, int iValue, bool bActive = false, bool bMakeWhitespace = false) const;
 
-	void setFreePromoBuildingHelp(const PromotionTypes ePromo, CvWStringBuffer &szBuffer);
+	void setFreePromoBuildingHelp(const PromotionTypes ePromo, bool bApplyToVisitingUnits, CvWStringBuffer &szBuffer);
 };
 
 // Singleton Accessor

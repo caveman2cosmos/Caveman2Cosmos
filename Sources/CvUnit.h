@@ -2811,7 +2811,6 @@ public:
 	void changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int iChange);
 
 	int visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const;
-	int getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, int iChange);
 
 	int getNumExtraInvisibleTerrains() const;
