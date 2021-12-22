@@ -38076,15 +38076,10 @@ void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int 
 	}
 }
 
-int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const
+int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eType) const
 {
-	return getExtraVisibilityIntensitySameTileType(eInvisibleType);
-}
-
-int CvUnit::getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
-	return m_aiExtraVisibilityIntensitySameTile[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eType);
+	return m_aiExtraVisibilityIntensitySameTile[eType];
 }
 
 

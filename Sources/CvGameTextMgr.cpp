@@ -4044,13 +4044,6 @@ namespace {
 bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, bool bAssassinate)
 {
 	PROFILE_FUNC();
-
-	if (gDLL->altKey() && (gDLL->getChtLvl() > 0))
-	{
-		setPlotHelp(szString, pPlot);
-		return true;
-	}
-
 	//Note that due to the large amount of extra content added to this function (setCombatPlotHelp), this should never be used in any function that needs to be called repeatedly (e.g. hundreds of times) quickly.
 	//It is fine for a human player mouse-over (which is what it is used for).
 
@@ -9010,34 +9003,37 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
 		szString.append(NEWLINE);
 
-		if (bAlt && !bShift && !bCtrl)
+		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
-			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			bool bFirst = true;
+
+			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 			{
-				bool bFirst = true;
+				const InvisibleTypes eTypeX = static_cast<InvisibleTypes>(iJ);
 
-				for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
+				if (!pPlot->isSpotterInSight(eActiveTeam, eTypeX))
 				{
-					const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity((InvisibleTypes)iJ, eActiveTeam);
+					continue;
+				}
+				const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eTypeX, eActiveTeam);
 
-					if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+				if (iSpotIntensity > 0 || GC.getInvisibleInfo(eTypeX).isIntrinsic())
+				{
+					if (bFirst)
 					{
-						if (bFirst)
-						{
-							szString.append(gDLL->getText("TXT_KEY_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
-							bFirst = false;
-						}
-						else
-						{
-							szString.append(L", ");
-						}
-						szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+						szString.append(gDLL->getText("TXT_KEY_S1_COLON_SPACE", L"TXT_WORD_SPOT"));
+						bFirst = false;
 					}
+					else
+					{
+						szString.append(L", ");
+					}
+					szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo(eTypeX).getChar()));
 				}
-				if (!bFirst)
-				{
-					szString.append(NEWLINE);
-				}
+			}
+			if (!bFirst)
+			{
+				szString.append(NEWLINE);
 			}
 		}
 		const int iDefenseModifier = pPlot->defenseModifier(eRevealOwner != NO_PLAYER ? GET_PLAYER(eRevealOwner).getTeam() : NO_TEAM, true, true);
