@@ -27784,16 +27784,6 @@ void CvPlayer::setHandicap(int iNewVal)
 
 bool CvPlayer::canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestEra, bool bTestVisible) const
 {
-/*
-	foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
-	{
-		if (canBuild(pPlot, eBuild, bTestEra, bTestVisible))
-		{
-			return true;
-		}
-	}
-	return false;
-*/
 	return algo::any_of(GC.getImprovementInfo(eImprovement).getBuildTypes(),
 		bind(CvPlayer::canBuild, this, pPlot, _1, bTestEra, bTestVisible, true)
 	);
