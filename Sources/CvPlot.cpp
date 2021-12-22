@@ -2361,15 +2361,11 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 
 bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const
 {
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 	{
-		const BuildTypes eBuild = ((BuildTypes)iI);
-		if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
+		if (GET_TEAM(eTeam).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 		{
-			if (GET_TEAM(eTeam).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	return false;
@@ -11160,14 +11156,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 		int iType3 = 0;
 		int iType4 = 0;
 
-		for (iI = 0; iI < iSize; iI++)
+		for (int iI = 0; iI < iSize; iI++)
 		{
 			WRAPPER_READ(wrapper, "CvPlot", &iType1);
 			WRAPPER_READ(wrapper, "CvPlot", &iType2);
 			WRAPPER_READ(wrapper, "CvPlot", &iType3);
 			WRAPPER_READ(wrapper, "CvPlot", &iType4);
-			m_aPlotTeamVisibilityIntensity[iI].eInvisibility = ((InvisibleTypes)iType1);
-			m_aPlotTeamVisibilityIntensity[iI].eTeam = ((TeamTypes)iType2);
+			m_aPlotTeamVisibilityIntensity[iI].eInvisibility = (InvisibleTypes)iType1;
+			m_aPlotTeamVisibilityIntensity[iI].eTeam = (TeamTypes)iType2;
 			m_aPlotTeamVisibilityIntensity[iI].iUnitID = iType3;
 			m_aPlotTeamVisibilityIntensity[iI].iIntensity = iType4;
 		}
@@ -11532,7 +11528,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", iSize);
 	if (iSize > 0)
 	{
-		for (iI = 0; iI < (uint)iSize; iI++)
+		for (int iI = 0; iI < (uint)iSize; iI++)
 		{
 			iType1 = (int)m_aPlotTeamVisibilityIntensity[iI].eInvisibility;
 			iType2 = (int)m_aPlotTeamVisibilityIntensity[iI].eTeam;

@@ -14436,7 +14436,7 @@ const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	CvBonusInfo::getTrad
 			for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 			{
 				const BuildTypes eBuild = static_cast<BuildTypes>(iJ);
-				const ImprovementTypes eImp = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+				const ImprovementTypes eImp = GC.getBuildInfo(eBuild).getImprovement();
 
 				if( eImp != NO_IMPROVEMENT && GC.getImprovementInfo(eImp).isImprovementBonusTrade(eBonus) )
 				{
