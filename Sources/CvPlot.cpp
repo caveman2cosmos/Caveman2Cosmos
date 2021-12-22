@@ -2729,7 +2729,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
-	if (info.getNumPlaceBonusTypes() > 0)
+	if (!info.getPlaceBonusTypes().empty())
 	{
 		if (getBonusType() != NO_BONUS)
 		{
@@ -2737,10 +2737,8 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 
 		bool bInvalid = true;
-		for (int iI = 0; iI < info.getNumPlaceBonusTypes(); iI++)
+		foreach_(const PlaceBonusTypes& obj, info.getPlaceBonusTypes())
 		{
-			const PlaceBonusTypes& obj = info.getPlaceBonusType(iI);
-
 			bInvalid =
 			(
 				obj.bRequiresAccess && !GET_PLAYER(getOwner()).hasBonus(obj.eBonus)
@@ -2767,9 +2765,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
-	for (int iI = 0; iI < info.getNumPrereqBonusTypes(); iI++)
+	foreach_(const BonusTypes ePrereqBonus, info.getPrereqBonuses())
 	{
-		if (!isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)info.getPrereqBonusType(iI)))
+		if (!isAdjacentPlotGroupConnectedBonus(ePlayer, ePrereqBonus))
 		{
 			return false;
 		}
@@ -2791,9 +2789,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 
 		// Unique range between improvements within same improvement line (e.g. forts)
-		if (GC.getImprovementInfo(eImprovement).getUniqueRange() > 0)
+		const int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange();
+		if (iUniqueRange > 0)
 		{
-			const int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange();
 			foreach_(const CvPlot* pLoopPlot, rect(iUniqueRange, iUniqueRange))
 			{
 				if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT
@@ -2941,11 +2939,11 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 	}
 
 	const TerrainTypes eTerrain = getTerrainType();
-	for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
+	foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
 	{
-		if (kBuild.getTerrainStruct(iI).eTerrain == eTerrain)
+		if (kTerrainStruct.eTerrain == eTerrain)
 		{
-			iTime += kBuild.getTerrainStruct(iI).iTime;
+			iTime += kTerrainStruct.iTime;
 			break;
 		}
 	}
@@ -9542,16 +9540,16 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 			m_paiBuildProgress[eBuild] = 0;
 
 			//TB Bonus Placement
-			if (GC.getBuildInfo(eBuild).getNumPlaceBonusTypes() > 0)
+			if (!GC.getBuildInfo(eBuild).getPlaceBonusTypes().empty())
 			{
 				std::vector<int> m_aBonusResult;
 				m_aBonusResult.clear();
 				bool bAccessFound = false;
-				for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumPlaceBonusTypes(); iI++)
+				foreach_(const PlaceBonusTypes& obj, GC.getBuildInfo(eBuild).getPlaceBonusTypes())
 				{
-					BonusTypes eBonus = GC.getBuildInfo(eBuild).getPlaceBonusType(iI).eBonus;
+					const BonusTypes eBonus = obj.eBonus;
 					bAccessFound = false;
-					if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).bRequiresAccess)
+					if (obj.bRequiresAccess)
 					{
 						if (GET_PLAYER(getOwner()).hasBonus(eBonus))
 						{
@@ -9565,10 +9563,10 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					//Check MapCategoryType
 					if (bAccessFound)
 					{
-						if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMapCategory != NO_MAPCATEGORY)
+						if (obj.ePrereqMapCategory != NO_MAPCATEGORY)
 						{
 							bAccessFound = false;
-							if (isMapCategoryType(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMapCategory))
+							if (isMapCategoryType(obj.ePrereqMapCategory))
 							{
 								bAccessFound = true;
 							}
@@ -9576,10 +9574,10 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					}
 					if (bAccessFound)
 					{
-						if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTerrain != NO_TERRAIN)
+						if (obj.ePrereqTerrain != NO_TERRAIN)
 						{
 							bAccessFound = false;
-							if (getTerrainType() == GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTerrain)
+							if (getTerrainType() == obj.ePrereqTerrain)
 							{
 								bAccessFound = true;
 							}
@@ -9587,10 +9585,10 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					}
 					if (bAccessFound)
 					{
-						if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTech != NO_TECH)
+						if (obj.ePrereqTech != NO_TECH)
 						{
 							bAccessFound = false;
-							if (GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTech))
+							if (GET_TEAM(getTeam()).isHasTech(obj.ePrereqTech))
 							{
 								bAccessFound = true;
 							}
@@ -9598,10 +9596,10 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					}
 					if (bAccessFound)
 					{
-						if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqFeature != NO_FEATURE)
+						if (obj.ePrereqFeature != NO_FEATURE)
 						{
 							bAccessFound = false;
-							if (getFeatureType() == GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqFeature)
+							if (getFeatureType() == obj.ePrereqFeature)
 							{
 								bAccessFound = true;
 							}
@@ -9610,16 +9608,16 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					if (bAccessFound)
 					{
 						bAccessFound = false;
-						if(canHaveBonus(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).eBonus))
+						if(canHaveBonus(obj.eBonus))
 						{
 							bAccessFound = true;
 						}
 					}
 					if (bAccessFound)
 					{
-						for (int iK = 0; iK < GC.getBuildInfo(eBuild).getPlaceBonusType(iI).iProbability; iK++)
+						for (int iK = 0; iK < obj.iProbability; iK++)
 						{
-							m_aBonusResult.push_back((int)GC.getBuildInfo(eBuild).getPlaceBonusType(iI).eBonus);
+							m_aBonusResult.push_back((int)obj.eBonus);
 						}
 					}
 				}
@@ -9650,7 +9648,6 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				}
 				else
 				{
-
 					if ( isInViewport() )
 					{
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLACED_BONUS_FAIL");
@@ -9686,7 +9683,6 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					if (iProduction > 0)
 					{
 						pCity->changeFeatureProduction(iProduction);
-
 
 						if ( isInViewport() )
 						{

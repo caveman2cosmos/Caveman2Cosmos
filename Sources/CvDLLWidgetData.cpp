@@ -2868,9 +2868,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						}
 					}
 
-					for (int i = 0; i < GC.getBuildInfo(eBuild).getNumPrereqBonusTypes(); i++)
+					foreach_(const BonusTypes prereqBonus, GC.getBuildInfo(eBuild).getPrereqBonuses())
 					{
-						BonusTypes prereqBonus = ((BonusTypes)GC.getBuildInfo(eBuild).getPrereqBonusType(i));
 						if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), prereqBonus)))
 						{
 							szBuffer.append(NEWLINE);
@@ -2959,14 +2958,14 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 						// Check terrain prereqs against current plot
-						for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
+						foreach_(const TerrainStructs& kTerrainStruct, GC.getBuildInfo(eBuild).getTerrainStructs())
 						{
-							const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
+							const TerrainTypes eTerrain = kTerrainStruct.eTerrain;
 							if (eTerrain == pMissionPlot->getTerrainType()
 								|| eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
 								|| eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 							{
-								const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
+								const TechTypes terrainTechRequired = kTerrainStruct.ePrereqTech;
 
 								// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
 								// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
