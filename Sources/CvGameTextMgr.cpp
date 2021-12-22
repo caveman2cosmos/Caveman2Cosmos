@@ -9188,55 +9188,54 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, eActiveTeam, true))
 					{
-						for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+						foreach_(const BuildTypes& eBuild, improvement.getBuildTypes())
 						{
-							if (GC.getBuildInfo((BuildTypes) iI).getImprovement() == (ImprovementTypes)iJ)
+							const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
+
+							const TechTypes eObsoleteTech = kBuild.getObsoleteTech();
+
+							if (eObsoleteTech != NO_TECH && GET_TEAM(eActiveTeam).isHasTech(eObsoleteTech))
 							{
-								const TechTypes eObsoleteTech = GC.getBuildInfo((BuildTypes) iI).getObsoleteTech();
-
-								if (eObsoleteTech != NO_TECH && GET_TEAM(eActiveTeam).isHasTech(eObsoleteTech))
+								if (GC.getTechInfo(eObsoleteTech).getGridX() > iMostRecentX)
 								{
-									if (GC.getTechInfo(eObsoleteTech).getGridX() > iMostRecentX)
-									{
-										iMostRecentX = GC.getTechInfo(eObsoleteTech).getGridX();
-										eMostRecentObsoletingTech = eObsoleteTech;
-									}
-									continue;
+									iMostRecentX = GC.getTechInfo(eObsoleteTech).getGridX();
+									eMostRecentObsoletingTech = eObsoleteTech;
 								}
-								const TechTypes eTechPrereq = GC.getBuildInfo((BuildTypes) iI).getTechPrereq();
+								continue;
+							}
+							const TechTypes eTechPrereq = kBuild.getTechPrereq();
 
-								if (eTechPrereq == NO_TECH || GET_TEAM(eActiveTeam).isHasTech(eTechPrereq))
+							if (eTechPrereq == NO_TECH || GET_TEAM(eActiveTeam).isHasTech(eTechPrereq))
+							{
+								if (!bKnowsValid)
 								{
-									if (!bKnowsValid)
+									szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES", improvement.getTextKeyWide()));
+									bKnowsValid = true;
+								}
+								else
+								{
+									szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES_OR", improvement.getTextKeyWide()));
+								}
+								for (int iK = 0; iK < NUM_YIELD_TYPES; iK++)
+								{
+									const int iYieldChange = improvement.getImprovementBonusYield(eBonus, iK) + improvement.getYieldChange(iK);
+									if (iYieldChange != 0)
 									{
-										szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES", improvement.getTextKeyWide()));
-										bKnowsValid = true;
-									}
-									else
-									{
-										szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES_OR", improvement.getTextKeyWide()));
-									}
-									for (int iK = 0; iK < NUM_YIELD_TYPES; iK++)
-									{
-										const int iYieldChange = improvement.getImprovementBonusYield(eBonus, iK) + improvement.getYieldChange(iK);
-										if (iYieldChange != 0)
-										{
-											iYieldChange > 0 ?
-												szTempBuffer.Format(L"+%d%c", iYieldChange, GC.getYieldInfo((YieldTypes)iK).getChar())
-												:
-												szTempBuffer.Format(L"%d%c", iYieldChange, GC.getYieldInfo((YieldTypes)iK).getChar());
+										iYieldChange > 0 ?
+											szTempBuffer.Format(L"+%d%c", iYieldChange, GC.getYieldInfo((YieldTypes)iK).getChar())
+											:
+											szTempBuffer.Format(L"%d%c", iYieldChange, GC.getYieldInfo((YieldTypes)iK).getChar());
 
-											setListHelp(szString, L"\n", szTempBuffer, L", ", true);
-											szString.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", improvement.getTextKeyWide()));
-										}
+										setListHelp(szString, L"\n", szTempBuffer, L", ", true);
+										szString.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", improvement.getTextKeyWide()));
 									}
-									break;
 								}
-								if (GET_PLAYER(GC.getGame().getActivePlayer()).canEverResearch(eTechPrereq) && iClosestX > GC.getTechInfo(eTechPrereq).getGridX())
-								{
-									iClosestX = GC.getTechInfo(eTechPrereq).getGridX();
-									eClosestUnlockingTech = eTechPrereq;
-								}
+								break;
+							}
+							if (GET_PLAYER(GC.getGame().getActivePlayer()).canEverResearch(eTechPrereq) && iClosestX > GC.getTechInfo(eTechPrereq).getGridX())
+							{
+								iClosestX = GC.getTechInfo(eTechPrereq).getGridX();
+								eClosestUnlockingTech = eTechPrereq;
 							}
 						}
 					}
@@ -29298,16 +29297,14 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	foreach_(const BuildTypes& eBuild, info.getBuildTypes())
 	{
-		const CvBuildInfo& build = GC.getBuildInfo((BuildTypes)iI);
-		if (build.getImprovement() == eImprovement)
+		const CvBuildInfo& build = GC.getBuildInfo(eBuild);
+
+		foreach_(const BonusTypes ePrereqBonus, build.getPrereqBonuses())
 		{
-			foreach_(const BonusTypes ePrereqBonus, build.getPrereqBonuses())
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_REQUIRES_BONUS", build.getTextKeyWide(), GC.getBonusInfo(ePrereqBonus).getTextKeyWide()));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_REQUIRES_BONUS", build.getTextKeyWide(), GC.getBonusInfo(ePrereqBonus).getTextKeyWide()));
 		}
 	}
 
@@ -29585,16 +29582,15 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 			CvCity* pCity = NULL;
 			int iBestProduction = 0;
 
-			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+			foreach_(const BuildTypes& eBuild, info.getBuildTypes())
 			{
-				const CvBuildInfo& build = GC.getBuildInfo((BuildTypes)iI);
+				const CvBuildInfo& build = GC.getBuildInfo(eBuild);
 
-				if (build.getImprovement() == eImprovement
-				&& GET_TEAM(eTeam).isHasTech(build.getTechPrereq()))
+				if (GET_TEAM(eTeam).isHasTech(build.getTechPrereq()))
 				{
 					if (build.isFeatureRemove(eFeature))
 					{
-						const int iProduction = pPlot->getFeatureProduction((BuildTypes)iI, eTeam, &pCity);
+						const int iProduction = pPlot->getFeatureProduction(eBuild, eTeam, &pCity);
 
 						if (iProduction >= iBestProduction && iProduction != -1)
 						{
