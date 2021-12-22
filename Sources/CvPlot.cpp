@@ -11528,7 +11528,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", iSize);
 	if (iSize > 0)
 	{
-		for (int iI = 0; iI < (uint)iSize; iI++)
+		for (int iI = 0; iI < iSize; iI++)
 		{
 			iType1 = (int)m_aPlotTeamVisibilityIntensity[iI].eInvisibility;
 			iType2 = (int)m_aPlotTeamVisibilityIntensity[iI].eTeam;
