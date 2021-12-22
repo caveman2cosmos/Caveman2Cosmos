@@ -409,7 +409,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END</Tag>
-		<English>[SPACE]built or ending turn in the City</English>
+		<English>[SPACE]built in the City</English>
+		<French>[SPACE]construit dans la ville</French>
+		<German>, die in der Stadt gebaut werden</German>
+		<Italian>[SPACE]costruito in città</Italian>
+		<Spanish>[SPACE]entrenada en la ciudad</Spanish>
+		<Polish>[SPACE]wyszkolone w tym mieście</Polish>
+		<Russian>[SPACE]Ïîñòðîéêà â ãîðîäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START</Tag>
