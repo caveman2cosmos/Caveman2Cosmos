@@ -21185,9 +21185,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (!bRelDisabled)
 	{
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion(), szBuffer);
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_2(), szBuffer);
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_3(), szBuffer);
+		const bool bVisit = kBuilding.isApplyFreePromotionOnMove();
+		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion(), bVisit, szBuffer);
+		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_2(), bVisit, szBuffer);
+		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_3(), bVisit, szBuffer);
 	}
 
 	if (kBuilding.isProvidesFreshWater())
@@ -22067,25 +22068,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 			else
 			{
-				setFreePromoBuildingHelp(ePromo, szBuffer);
+				setFreePromoBuildingHelp(ePromo, kBuilding.isApplyFreePromotionOnMove(), szBuffer);
 			}
-			//if (GC.getBuildingInfo(eBuilding).isFreePromoType(iI))
-			//{
-			//	bFirst = true;
-			//	szBuffer.append(NEWLINE);
-			//	szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START", CvWString(GC.getPromotionInfo((PromotionTypes)kBuilding.getFreePromoType(iI)).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)kBuilding.getFreePromoType(iI)).getTextKeyWide()));
-			//	for (int iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
-			//	{
-			//		if (GC.getPromotionInfo((PromotionTypes)kBuilding.getFreePromoType(iI)).getUnitCombat(iJ))
-			//		{
-			//			szFirstBuffer.clear();
-			//			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iJ).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iJ).getDescription());
-			//			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-			//			bFirst = false;
-			//		}
-			//	}
-			//	szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END"));
-			//}
 		}
 
 		if (kBuilding.getNumUnitCombatProdModifiers() > 0)
@@ -23541,7 +23525,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 }
 
 
-void CvGameTextMgr::setFreePromoBuildingHelp(const PromotionTypes ePromo, CvWStringBuffer &szBuffer)
+void CvGameTextMgr::setFreePromoBuildingHelp(const PromotionTypes ePromo, bool bApplyToVisitingUnits, CvWStringBuffer &szBuffer)
 {
 	if (ePromo != NO_PROMOTION)
 	{
@@ -23559,7 +23543,11 @@ void CvGameTextMgr::setFreePromoBuildingHelp(const PromotionTypes ePromo, CvWStr
 			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 			bFirst = false;
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END"));
+		if (bApplyToVisitingUnits)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_1"));
+		}
+		else szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_0"));
 	}
 }
 
