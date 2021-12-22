@@ -116,6 +116,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvImprovementInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
 	bool m_bPeakMakesValid;

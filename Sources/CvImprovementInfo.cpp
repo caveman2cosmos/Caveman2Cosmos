@@ -535,6 +535,17 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	return m_iHighestCost;
 //}
 
+void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+{
+	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
+	{
+		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
+		{
+			m_improvementBuildTypes.push_back((BuildTypes)i);
+		}
+	}
+}
+
 void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
@@ -580,7 +591,6 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
-	CheckSumC(iSum, m_improvementBuildTypes);
 
 	// Arrays
 
@@ -786,8 +796,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
-
 	// initialize the boolean list to the correct size and all the booleans to false
 	FAssertMsg(GC.getNumRouteInfos() > 0, "the number of route infos is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"RouteYieldChanges"))
@@ -987,7 +995,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
 	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
-	GC.copyNonDefaultDelayedResolutionVector(m_improvementBuildTypes, pClassInfo->getBuildTypes());
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{

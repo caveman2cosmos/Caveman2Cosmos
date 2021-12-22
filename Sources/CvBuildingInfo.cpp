@@ -1618,10 +1618,10 @@ namespace CvBuildingInternal
 }
 
 
-void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
+void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 {
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, eThis);
-	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
+	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)eThis);
+	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)eThis);
 }
 
 
