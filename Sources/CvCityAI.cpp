@@ -202,10 +202,10 @@ void CvCityAI::AI_reset()
 void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	//CvWString aiType = "CvCityAI";
+	// CvWString aiType = "CvCityAI";
 
 
-	//logAIJson(aiType,this->getName(), function,  message);
+	// logAIJson(aiType, this->getName(), function, message);
 
 }
 
@@ -413,15 +413,15 @@ void CvCityAI::AI_assignWorkingPlots()
 		// extraSpecialists() is less than extraPopulation()
 		FASSERT_NOT_NEGATIVE(extraSpecialists());
 
-			// do we have population unassigned
-			while (extraPopulation() > 0)
+		// do we have population unassigned
+		while (extraPopulation() > 0)
+		{
+			// (AI_addBestCitizen now handles forced specialist logic)
+			if (!AI_addBestCitizen(/*bWorkers*/ true, /*bSpecialists*/ true))
 			{
-				// (AI_addBestCitizen now handles forced specialist logic)
-				if (!AI_addBestCitizen(/*bWorkers*/ true, /*bSpecialists*/ true))
-				{
-					break;
-				}
+				break;
 			}
+		}
 
 		// if we still have population to assign, assign specialists
 		while (extraSpecialists() > 0)
@@ -10867,16 +10867,11 @@ bool CvCityAI::AI_checkIrrigationSpread(const CvPlot* pPlot) const
 
 void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const
 {
-	if (plotInfo != NULL)
-	{
-		plotInfo->yieldValue = 0;
-		plotInfo->currentBuild = NO_BUILD;
-	}
-	else
-	{
-		return;
-	}
 
+	if (plotInfo == NULL) return;
+
+	plotInfo->yieldValue = 0;
+	plotInfo->currentBuild = NO_BUILD;
 	bool bWorked = false;
 	bool bHasBonusImprovement = false;
 	bool bEmphasizeIrrigation = false;
@@ -10922,30 +10917,26 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 
 
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
-	//int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
+	int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
+		int iValue = 0;
+		int iBestTempBuildValue = 0;
+
+
 		const ImprovementTypes ePotentialImprovement = (ImprovementTypes)iI;
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
-
-		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
-
 		BuildTypes eBestTempBuild = NO_BUILD;
 
-		bool bIgnoreFeature = false;
-		bool bValid = false;
-
-		if (ePotentialImprovement == eCurrentPlotImprovement)
-		{
-			bValid = true;
-		}
-		//check if improvement is a fort or watchtower, then its a no.
-		else if (!potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() == 0)
-		{
-			int iValue = 0;
-			int iBestTempBuildValue = 0;
-			if (potentialImprovementInfo.getNumBuildTypes() > 1) continue;
+		// check if improvement is a fort or watchtower, then its a no.
+		if (potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() != 0) continue;
+		// check if improvement can be built by team
+		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
+		// if current improvement is same as potential improvement we dont need to reevaluate
+		if (ePotentialImprovement == eCurrentPlotImprovement) continue;
+		// if more than 1 build can build this improvement, find fastest
+		if (potentialImprovementInfo.getNumBuildTypes() >= 1) {
 			foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 			{
 				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
@@ -10959,112 +10950,104 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 						eBestTempBuild = eBuildType;
 					}
 				}
-				if (eBestTempBuild != NO_BUILD)
+			}
+		}
+		// if we cannot build any of the valid builds for the improvement, skip to next improvement
+		if (eBestTempBuild == NO_BUILD) continue;
+
+		bool bIgnoreFeature = false;
+		bool bValid = true;
+		if (eFeature != NO_FEATURE && GC.getBuildInfo(eBestTempBuild).isFeatureRemove(eFeature))
+		{
+			bIgnoreFeature = true;
+
+			if (eNonObsoleteBonus == NO_BONUS && currentFeature->getYieldChange(YIELD_PRODUCTION) > 0)
+			{
+				if (bLeaveForest)
 				{
-					SendLog("eBestTempBuild", "eBestTempBuildType");
-					SendLog("eBestTempBuild", GC.getBuildInfo(eBestTempBuild).getType());
-					SendLog("eBestTempBuild plotIndex", CvWString::format(L"%lld", pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
+					bValid = false;
+				}
+				else if (healthRate() < 0 && currentFeature->getHealthPercent() > 0)
+				{
+					bValid = false;
+				}
+				else if (GET_PLAYER(getOwner()).getFeatureHappiness(eFeature) > 0)
+				{
+					bValid = false;
 				}
 			}
-			if (eBestTempBuild == NO_BUILD) continue;
+		}
 
-			SendLog("eBestTempBuild", "after eBestTempbuild is checked for No build");
-			SendLog("eBestTempBuild", GC.getBuildInfo(eBestTempBuild).getType());
+		if (!bValid) continue;
 
-			bValid = true;
-			if (eFeature != NO_FEATURE && GC.getBuildInfo(eBestTempBuild).isFeatureRemove(eFeature))
+		const ImprovementTypes ePotentialFinalImprovement = ePotentialImprovement == NO_IMPROVEMENT ? ePotentialImprovement : GET_TEAM(getTeam()).finalImprovementUpgrade(ePotentialImprovement);
+		const CvImprovementInfo* potentialFinalImprovementInfo = ePotentialFinalImprovement == ePotentialImprovement ? &potentialImprovementInfo : &GC.getImprovementInfo(ePotentialImprovement);
+
+
+		if (eNonObsoleteBonus != NO_BONUS)
+		{
+			if (!bHasBonusImprovement)
 			{
-				bIgnoreFeature = true;
-
-				if (eNonObsoleteBonus == NO_BONUS && currentFeature->getYieldChange(YIELD_PRODUCTION) > 0)
+				if (potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
 				{
-					if (bLeaveForest)
+					if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
 					{
-						bValid = false;
+						iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
+						iValue += 200;
 					}
-					else if (healthRate() < 0 && currentFeature->getHealthPercent() > 0)
+					//reduced value for temporary solutions
+					else if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo(eNonObsoleteBonus).getTechCityTrade()))
 					{
-						bValid = false;
-					}
-					else if (GET_PLAYER(getOwner()).getFeatureHappiness(eFeature) > 0)
-					{
-						bValid = false;
-					}
-				}
-			}
-
-			if (!bValid) continue;
-
-			const ImprovementTypes ePotentialFinalImprovement = ePotentialImprovement == NO_IMPROVEMENT ? ePotentialImprovement : GET_TEAM(getTeam()).finalImprovementUpgrade(ePotentialImprovement);
-			const CvImprovementInfo* potentialFinalImprovementInfo = ePotentialFinalImprovement == ePotentialImprovement ? &potentialImprovementInfo : &GC.getImprovementInfo(ePotentialImprovement);
-
-
-			if (eNonObsoleteBonus != NO_BONUS)
-			{
-				if (!bHasBonusImprovement)
-				{
-					if (potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
-					{
-						if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
-						{
-							iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-							iValue += 200;
-						}
-						//reduced value for temporary solutions
-						else if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo(eNonObsoleteBonus).getTechCityTrade()))
-						{
-							iValue++;
-						}
-						else
-						{
-							iValue += 10 * GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus);
-							iValue += 150;
-						}
-
-						if (eBestBuild != NO_BUILD &&
-							(GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT ||
-								!GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
-						{
-							//Always prefer improvements which connect bonuses.
-							eBestBuild = NO_BUILD;
-							iBestValue = 0;
-						}
+						iValue++;
 					}
 					else
 					{
-						if (eBestBuild != NO_BUILD
-							&& GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
-							&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
-						{
-							iValue -= 1000;
-						}
-						if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
-						{
-							//very small incentive to build improvements that could later connect the bonus resource
-							iValue++;
-						}
+						iValue += 10 * GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus);
+						iValue += 150;
+					}
+
+					if (eBestBuild != NO_BUILD &&
+						(GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT ||
+							!GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
+					{
+						//Always prefer improvements which connect bonuses.
+						eBestBuild = NO_BUILD;
+						iBestValue = 0;
 					}
 				}
-				else if (!potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
+				else
 				{
-					iValue -= 1000;
+					if (eBestBuild != NO_BUILD && GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT
+						&& GC.getImprovementInfo(GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus))
+					{
+						iValue += 1000;
+					}
+					if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
+					{
+						//very small incentive to build improvements that could later connect the bonus resource
+						iValue++;
+					}
 				}
 			}
-			if (iValue >= 0)
+			else if (!potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
 			{
-				int aiFinalYields[NUM_YIELD_TYPES];
-				for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
-				{
-					aiFinalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
-					aiFinalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
-				}
-				iValue = iValue + (iFoodPriority * aiFinalYields[YIELD_FOOD]) + (iProductionPriority + aiFinalYields[YIELD_PRODUCTION]) + (iCommercePriority * aiFinalYields[YIELD_COMMERCE]);
+				iValue -= 1000;
 			}
-			if (iValue > iBestTempBuildValue)
+		}
+		if (iValue >= 0)
+		{
+			int aiFinalYields[NUM_YIELD_TYPES];
+			for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
 			{
-				plotInfo->yieldValue = iValue;
-				plotInfo->currentBuild = eBestTempBuild;
+				aiFinalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
+				aiFinalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
 			}
+			iValue = iValue + (iFoodPriority * aiFinalYields[YIELD_FOOD]) + (iProductionPriority + aiFinalYields[YIELD_PRODUCTION]) + (iCommercePriority * aiFinalYields[YIELD_COMMERCE]);
+		}
+		if (iValue >= plotInfo->yieldValue)
+		{
+			plotInfo->yieldValue = iValue;
+			plotInfo->currentBuild = eBestTempBuild;
 		}
 
 	}

@@ -27032,29 +27032,28 @@ void CvGameTextMgr::buildWaterWorkString(CvWStringBuffer &szBuffer, TechTypes eT
 
 void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, int iImprovement, bool bList, bool bPlayerContext)
 {
-	bool bTechFound;
-	int iJ;
+	const bool bIsTeam = (GC.getGame().getActiveTeam() != NO_TEAM);
 
-	bool bIsTeam = (GC.getGame().getActiveTeam() != NO_TEAM);
-
-	bTechFound = false;
+	bool bTechFound = false;
 
 	if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == NO_TECH)
 	{
 		if (GC.getBuildInfo((BuildTypes)iImprovement).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo((BuildTypes)iImprovement).getRoute()).isSeaTunnel())
 		{
-			for (iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+			for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 			{
 				if (GC.getBuildInfo((BuildTypes)iImprovement).getFeatureTech(iJ) == eTech)
 				{
 					bTechFound = true;
+					break;
 				}
 			}
-			for (iJ = 0; iJ < GC.getBuildInfo((BuildTypes)iImprovement).getNumTerrainStructs(); iJ++)
+			foreach_(const TerrainStructs& kTerrainStruct, GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStructs())
 			{
-				if (GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStruct(iJ).ePrereqTech == eTech)
+				if (kTerrainStruct.ePrereqTech == eTech)
 				{
 					bTechFound = true;
+					break;
 				}
 			}
 		}
@@ -29304,10 +29303,10 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		const CvBuildInfo& build = GC.getBuildInfo((BuildTypes)iI);
 		if (build.getImprovement() == eImprovement)
 		{
-			for (int iJ = 0; iJ < build.getNumPrereqBonusTypes(); iJ++)
+			foreach_(const BonusTypes ePrereqBonus, build.getPrereqBonuses())
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_REQUIRES_BONUS", build.getTextKeyWide(), GC.getBonusInfo((BonusTypes)build.getPrereqBonusType(iJ)).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_REQUIRES_BONUS", build.getTextKeyWide(), GC.getBonusInfo(ePrereqBonus).getTextKeyWide()));
 			}
 		}
 	}
