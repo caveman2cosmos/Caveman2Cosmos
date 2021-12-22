@@ -17491,17 +17491,12 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				{
 					if (pPlot->getFeatureType() != NO_FEATURE)
 					{
-						for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+						foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 						{
-							const ImprovementTypes eLoopImprovement = GC.getBuildInfo((BuildTypes)iI).getImprovement();
-
-							if (eImprovement == eLoopImprovement)
+							if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()) && canBuild(pPlot, eBuild))
 							{
-								if (GC.getBuildInfo((BuildTypes)iI).isFeatureRemove(pPlot->getFeatureType()) && canBuild(pPlot, (BuildTypes)iI))
-								{
-									pPlot->setFeatureType(NO_FEATURE);
-									break;
-								}
+								pPlot->setFeatureType(NO_FEATURE);
+								break;
 							}
 						}
 					}
@@ -18044,17 +18039,14 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 
 			bool bValid = false;
 
-			for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+			foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 			{
-				const CvBuildInfo& kBuild = GC.getBuildInfo((BuildTypes)iI);
-				const ImprovementTypes eLoopImprovement = kBuild.getImprovement();
-
-				if (eImprovement == eLoopImprovement && canBuild(pPlot, (BuildTypes)iI))
+				if (canBuild(pPlot, eBuild))
 				{
 					bValid = true;
 
 					const FeatureTypes eFeature = pPlot->getFeatureType();
-					if (NO_FEATURE != eFeature && kBuild.isFeatureRemove(eFeature))
+					if (NO_FEATURE != eFeature && GC.getBuildInfo(eBuild).isFeatureRemove(eFeature))
 					{
 						iCost += GC.getFeatureInfo(eFeature).getAdvancedStartRemoveCost();
 					}
@@ -18085,19 +18077,16 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 	}
 
 	// Tech requirement
-	for (int iBuildLoop = 0; iBuildLoop < GC.getNumBuildInfos(); iBuildLoop++)
+	foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 	{
-		if (GC.getBuildInfo((BuildTypes) iBuildLoop).getImprovement() == eImprovement)
+		if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 		{
-			if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq()))
-			{
-				return -1;
-			}
-			if (GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech() != NO_TECH
-			&& GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech()))
-			{
-				return -1;
-			}
+			return -1;
+		}
+		if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH
+		&& GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
+		{
+			return -1;
 		}
 	}
 	return iCost;
@@ -27795,17 +27784,19 @@ void CvPlayer::setHandicap(int iNewVal)
 
 bool CvPlayer::canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestEra, bool bTestVisible) const
 {
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+/*
+	foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 	{
-		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() == eImprovement)
+		if (canBuild(pPlot, eBuild, bTestEra, bTestVisible))
 		{
-			if (canBuild(pPlot, (BuildTypes)iI, bTestEra, bTestVisible))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	return false;
+*/
+	return algo::any_of(GC.getImprovementInfo(eImprovement).getBuildTypes(),
+		bind(CvPlayer::canBuild, this, pPlot, _1, bTestEra, bTestVisible, true)
+	);
 }
 
 bool CvPlayer::isModderOption(ModderOptionTypes eIndex) const
