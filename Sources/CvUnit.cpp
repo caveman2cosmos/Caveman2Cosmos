@@ -14984,8 +14984,12 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 		{
 			const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
 
-			if (hasInvisibilityType(eInvisible) && plot()->isSpotterInSight(eTeam, eInvisible))
+			if (hasInvisibilityType(eInvisible))
 			{
+				if (!plot()->isSpotterInSight(eTeam, eInvisible))
+				{
+					return true;
+				}
 				const int iIntensity = invisibilityIntensityTotal(eInvisible);
 
 				if ((iIntensity > 0 || GC.getInvisibleInfo(eInvisible).isIntrinsic())

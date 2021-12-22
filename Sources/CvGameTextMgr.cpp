@@ -12433,7 +12433,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 	const int iLinePriority = promo.getLinePriority();
 	const PromotionLineTypes ePromoLine = promo.getPromotionLine();
-	const CvPromotionLineInfo& promoLine = GC.getPromotionLineInfo(ePromoLine);
+	const CvPromotionLineInfo* promoLine = ePromoLine != NO_PROMOTIONLINE ? &GC.getPromotionLineInfo(ePromoLine) : NULL;
 
 	// If this is not the display for the hover help on the actual promotion action button
 	// then we want to accrue stats from all implied promotions earlier in the same line into the help text
@@ -12467,7 +12467,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			}
 		}
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", promoLine.getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", promoLine->getDescription()));
 
 		if (iLinePriority > 0)
 		{
@@ -12475,19 +12475,19 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE_PRIORITY", iLinePriority));
 		}
 
-		if (promoLine.isNoSpreadonBattle())
+		if (promoLine->isNoSpreadonBattle())
 		{
 			bIsNoSpreadonBattle = true;
 		}
-		if (promoLine.isNoSpreadUnitProximity())
+		if (promoLine->isNoSpreadUnitProximity())
 		{
 			bIsNoSpreadUnitProximity = true;
 		}
-		if (promoLine.isNoSpreadUnittoCity())
+		if (promoLine->isNoSpreadUnittoCity())
 		{
 			bIsNoSpreadUnittoCity = true;
 		}
-		if (promoLine.isNoSpreadCitytoUnit())
+		if (promoLine->isNoSpreadCitytoUnit())
 		{
 			bIsNoSpreadCitytoUnit = true;
 		}
@@ -13231,14 +13231,14 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (ePromoLine != NO_PROMOTIONLINE && GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
-			iOvercomeProbability += promoLine.getOvercomeProbability();
-			iOvercomeProbability += promoLine.getWorsenedOvercomeIncrementModifier() * (promoX.getLinePriority() - 1);
-			iOvercomeAdjperTurn += promoLine.getOvercomeAdjperTurn();
-			iCommunicability += promoLine.getCommunicability();
-			iCommunicability += promoLine.getWorsenedCommunicabilityIncrementModifier() * (promoX.getLinePriority() -1);
-			iWorseningProbability += promoLine.getWorseningProbabilityIncrementModifier() * (promoX.getLinePriority() -1);
-			iToleranceBuildup += promoLine.getToleranceBuildup();
-			iToleranceDecay += promoLine.getToleranceDecay();
+			iOvercomeProbability += promoLine->getOvercomeProbability();
+			iOvercomeProbability += promoLine->getWorsenedOvercomeIncrementModifier() * (promoX.getLinePriority() - 1);
+			iOvercomeAdjperTurn += promoLine->getOvercomeAdjperTurn();
+			iCommunicability += promoLine->getCommunicability();
+			iCommunicability += promoLine->getWorsenedCommunicabilityIncrementModifier() * (promoX.getLinePriority() -1);
+			iWorseningProbability += promoLine->getWorseningProbabilityIncrementModifier() * (promoX.getLinePriority() -1);
+			iToleranceBuildup += promoLine->getToleranceBuildup();
+			iToleranceDecay += promoLine->getToleranceDecay();
 		}
 #endif // OUTBREAKS_AND_AFFLICTIONS
 		iHiddenNationality += promoX.getHiddenNationalityChange();
