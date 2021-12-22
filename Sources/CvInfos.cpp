@@ -3751,21 +3751,6 @@ bool CvPromotionInfo::isCureAfflictionChangeType(int i) const
 }
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-int CvPromotionInfo::getPrereqBonusType(int i) const
-{
-	return m_aiPrereqBonusTypes[i];
-}
-
-int CvPromotionInfo::getNumPrereqBonusTypes() const
-{
-	return (int)m_aiPrereqBonusTypes.size();
-}
-
-bool CvPromotionInfo::isPrereqBonusType(int i) const
-{
-	return algo::any_of_equal(m_aiPrereqBonusTypes, i);
-}
-
 int CvPromotionInfo::getAddsBuildType(int i) const
 {
 	return m_aiAddsBuildTypes[i];
@@ -13107,42 +13092,6 @@ bool CvBuildInfo::isFeatureRemove(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_pabFeatureRemove ? m_pabFeatureRemove[i] : false;
-}
-
-int CvBuildInfo::getPrereqBonusType(int i) const
-{
-	return m_aiPrereqBonusTypes[i];
-}
-
-int CvBuildInfo::getNumPrereqBonusTypes() const
-{
-	return (int)m_aiPrereqBonusTypes.size();
-}
-
-bool CvBuildInfo::isPrereqBonusType(int i) const
-{
-	return algo::any_of_equal(m_aiPrereqBonusTypes, i);
-}
-
-int CvBuildInfo::getNumTerrainStructs() const
-{
-	return (int)m_aTerrainStructs.size();
-}
-
-const TerrainStructs& CvBuildInfo::getTerrainStruct(int iIndex) const
-{
-	FASSERT_BOUNDS(0, getNumTerrainStructs(), iIndex);
-	return m_aTerrainStructs[iIndex];
-}
-
-int CvBuildInfo::getNumPlaceBonusTypes() const
-{
-	return (int)m_aPlaceBonusTypes.size();
-}
-
-const PlaceBonusTypes& CvBuildInfo::getPlaceBonusType(int iIndex) const
-{
-	return m_aPlaceBonusTypes[iIndex];
 }
 
 bool CvBuildInfo::read(CvXMLLoadUtility* pXML)

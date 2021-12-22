@@ -20496,10 +20496,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 		const CvCity* pCity = pPlot->getPlotCity();
 
-		for (int iI = 0; iI < promo.getNumPrereqBonusTypes(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, promo.getPrereqBonuses())
 		{
-			const BonusTypes ePrereqBonus = ((BonusTypes)promo.getPrereqBonusType(iI));
-
 			if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 			{
 				return false;
@@ -33409,9 +33407,8 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 		}
 	}
 
-	for (int iI = 0; iI < equipment.getNumPrereqBonusTypes(); iI++)
+	foreach_(const BonusTypes ePrereqBonus, equipment.getPrereqBonuses())
 	{
-		const BonusTypes ePrereqBonus = (BonusTypes)equipment.getPrereqBonusType(iI);
 		if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 		{
 			return false;
