@@ -408,8 +408,18 @@
 		<Russian>Дает бесплатно [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] в каждом городе на одном материке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END</Tag>
-		<English>[SPACE]built or ending turn in the City</English>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_0</Tag>
+		<English>[SPACE]built in the City</English>
+		<French>[SPACE]construit dans la ville</French>
+		<German>, die in der Stadt gebaut werden</German>
+		<Italian>[SPACE]costruito in città</Italian>
+		<Spanish>[SPACE]entrenada en la ciudad</Spanish>
+		<Polish>[SPACE]wyszkolone w tym mieście</Polish>
+		<Russian>[SPACE]Ïîñòðîéêà â ãîðîäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_1</Tag>
+		<English>[SPACE]built or ending its turn in the City</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START</Tag>

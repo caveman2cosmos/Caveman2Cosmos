@@ -507,7 +507,7 @@ public:
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
-	void doPostLoadCaching(BuildingTypes eThis);
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
 	void setNotShowInCity();
