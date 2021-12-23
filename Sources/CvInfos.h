@@ -85,6 +85,7 @@ public:
 	virtual void copyNonDefaultsReadPass2(CvInfoBase*, CvXMLLoadUtility*, bool = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
 	virtual void getCheckSum(uint32_t&) const { }
+	virtual void doPostLoadCaching(uint32_t) { }
 	virtual const wchar_t* getExtraHoverText() const { return L""; }
 
 protected:
