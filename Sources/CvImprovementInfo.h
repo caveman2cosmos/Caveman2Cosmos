@@ -83,10 +83,7 @@ public:
 	bool isImprovementBonusTrade(int i) const;
 	int getImprovementBonusDiscoverRand(int i) const;
 
-	int getNumBuildTypes() const { return m_improvementBuildTypes.size(); };
 	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
-	BuildTypes getImprovementBuildType(int iIndex) const;
-
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
 	const char* getButton() const;

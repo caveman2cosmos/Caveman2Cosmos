@@ -10936,19 +10936,18 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 		// if current improvement is same as potential improvement we dont need to reevaluate
 		if (ePotentialImprovement == eCurrentPlotImprovement) continue;
 		// if more than 1 build can build this improvement, find fastest
-		if (potentialImprovementInfo.getNumBuildTypes() >= 1) {
-			foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
-			{
-				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
-					&& GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
-				{
-					int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
+		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
+		{
+			FAssert(GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement);
 
-					if (iSpeedValue > iBestTempBuildValue)
-					{
-						iBestTempBuildValue = iSpeedValue;
-						eBestTempBuild = eBuildType;
-					}
+			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
+			{
+				int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
+
+				if (iSpeedValue > iBestTempBuildValue)
+				{
+					iBestTempBuildValue = iSpeedValue;
+					eBestTempBuild = eBuildType;
 				}
 			}
 		}

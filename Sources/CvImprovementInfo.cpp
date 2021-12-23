@@ -93,7 +93,6 @@ CvImprovementInfo::~CvImprovementInfo()
 	GC.removeDelayedResolution((int*)&m_iImprovementPillage);
 	GC.removeDelayedResolution((int*)&m_iImprovementUpgrade);
 	GC.removeDelayedResolution((int*)&m_iBonusChange);
-	GC.removeDelayedResolutionVector(m_improvementBuildTypes);
 	GC.removeDelayedResolutionVector(m_aiAlternativeImprovementUpgradeTypes);
 	GC.removeDelayedResolutionVector(m_aiFeatureChangeTypes);
 }
@@ -146,11 +145,6 @@ int CvImprovementInfo::getPillageGold() const
 bool CvImprovementInfo::isOutsideBorders() const
 {
 	return m_bOutsideBorders;
-}
-
-BuildTypes CvImprovementInfo::getImprovementBuildType(int iIndex) const
-{
-	return m_improvementBuildTypes[iIndex];
 }
 
 // Super Forts begin *XML*
@@ -518,7 +512,7 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	int iHighestCost = 0;
 //	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 //	{
-//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
 //		{
 //			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
 //			{
