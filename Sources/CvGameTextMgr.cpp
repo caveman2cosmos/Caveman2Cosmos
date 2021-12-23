@@ -10665,11 +10665,19 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-		//	Golden Age Commerce
-		setCommerceChangeHelp(szHelpString, gDLL->getText("TXT_KEY_GOLDEN_AGE_YIELD").GetCString(),L": ", L"", kTrait.getGoldenAgeCommerceChangesArray(), false, true);
+		// Golden Age Commerce
+		int* aList = kTrait.getGoldenAgeCommerceChangesArray();
+		if (aList)
+		{
+			listCommerceChange(szHelpString, CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_GOLDEN_AGE_YIELD").c_str()), L"", aList);
+		}
 
-		//	Specialist Base Commerce
-		setCommerceChangeHelp(szHelpString, L"", L"", gDLL->getText("TXT_KEY_CIVICHELP_PER_SPECIALIST").GetCString(), kTrait.getSpecialistExtraCommerceArray(), false, true);
+		// Specialist Base Commerce
+		aList = kTrait.getSpecialistExtraCommerceArray();
+		if (aList)
+		{
+			listCommerceChange(szHelpString, CvWString::format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR)), gDLL->getText("TXT_KEY_CIVICHELP_PER_SPECIALIST").GetCString(), aList);
+		}
 
 		//Individual Base specialist commerce changes
 		if (kTrait.isAnySpecialistCommerceChanges())
@@ -10681,8 +10689,12 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-		//	Capital % Commerce Modifiers
-		setCommerceChangeHelp(szHelpString, L"", L"", gDLL->getText("TXT_KEY_CIVICHELP_IN_CAPITAL").GetCString(), kTrait.getCapitalCommerceModifierArray(), true);
+		// Capital % Commerce Modifiers
+		aList = kTrait.getCapitalCommerceModifierArray();
+		if (aList)
+		{
+			listCommerceChange(szHelpString, CvWString::format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR)), gDLL->getText("TXT_KEY_CIVICHELP_IN_CAPITAL").GetCString(), aList, true);
+		}
 
 		// Non-State Religion Commerce
 		if (kTrait.isNonStateReligionCommerce() != 0)
@@ -16306,7 +16318,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	setCommerceChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVICHELP_IN_ALL_CITIES").GetCString(), kCivic.getCommerceModifierArray(), true);
 
 	//	Capital Commerce Modifiers
-	setCommerceChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVICHELP_IN_CAPITAL").GetCString(), kCivic.getCapitalCommerceModifierArray(), true);
+	{
+		int* aList = kCivic.getCapitalCommerceModifierArray();
+		if (aList)
+		{
+			listCommerceChange(szHelpText, CvWString::format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR)), gDLL->getText("TXT_KEY_CIVICHELP_IN_CAPITAL").GetCString(), aList, true);
+		}
+	}
 
 	//	Specialist Commerce
 	setCommerceChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVICHELP_PER_SPECIALIST").GetCString(), kCivic.getSpecialistExtraCommerceArray());
@@ -25646,6 +25664,32 @@ bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const
 		}
 	}
 	return bStarted; // added
+}
+
+
+void CvGameTextMgr::listCommerceChange(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szEnd, const int* aList, bool bPercent)
+{
+	bool bStarted = false;
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+	{
+		if (aList[iI] != 0)
+		{
+			if (bStarted)
+			{
+				szBuffer.append(L", ");
+			}
+			else
+			{
+				szBuffer.append(szStart);
+				bStarted = true;
+			}
+			szBuffer.append(CvWString::format(L"%s%d%s%c", (aList[iI] > 0) ? L"+" : L"", aList[iI], (bPercent) ? L"%" : L"", GC.getCommerceInfo((CommerceTypes)iI).getChar()));
+		}
+	}
+	if (bStarted)
+	{
+		szBuffer.append(szEnd);
+	}
 }
 
 void CvGameTextMgr::setCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent, bool bNewLine)
