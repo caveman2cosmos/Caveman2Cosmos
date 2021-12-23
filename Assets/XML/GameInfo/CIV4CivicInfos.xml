@@ -5549,6 +5549,7 @@
 				<iCommerce>-3</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CapitalCommerceModifiers>
+			<BonusCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>

@@ -16313,10 +16313,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
-		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDINGHELP_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
-		setCommerceChangeHelp(szHelpText, L"", L"", szFirstBuffer, kCivic.getBonusCommerceModifierArray(iI), true);
+		int* aList = kCivic.getBonusCommerceModifierArray(iI);
+		if (aList)
+		{
+			listCommerceChange(szHelpText, CvWString::format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR)), gDLL->getText("TXT_KEY_BUILDINGHELP_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide()), aList, true);
+		}
 	}
 
 	if (bCivilopediaText || GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
@@ -22374,18 +22377,26 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				if (kBuilding.getBonusCommerceModifierArray(iI) != NULL )
+				int* aList = kBuilding.getBonusCommerceModifierArray(iI);
+				if (aList)
 				{
+					CvWString szStart;
 					if (bFirst)
 					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
+						szStart.Format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
-					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+					else szStart = L", ";
 
-					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDINGHELP_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
-					setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusCommerceModifierArray(iI), true, false);
+					listCommerceChange(
+						szBuffer, szStart,
+						gDLL->getText(
+							"TXT_KEY_BUILDINGHELP_WITH_BONUS",
+							CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(),
+							GC.getBonusInfo((BonusTypes)iI).getTextKeyWide(), true
+						),
+						aList
+					);
 				}
 			}
 		}
