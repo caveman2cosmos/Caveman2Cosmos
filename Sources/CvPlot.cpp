@@ -10162,7 +10162,7 @@ int CvPlot::getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisib
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
 
-	if (NULL == m_apaiInvisibleVisibilityCount 
+	if (NULL == m_apaiInvisibleVisibilityCount
 	||  NULL == m_apaiInvisibleVisibilityCount[eTeam])
 	{
 		return 0;

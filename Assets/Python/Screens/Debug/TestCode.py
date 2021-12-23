@@ -3415,7 +3415,7 @@ class TestCode:
 			aUnlockedBuildingsTechLoc[self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]] += 1
 			if self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0] != 999: #If it obsoletes
 				aObsoletedBuildingsTechLoc[self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]] += 1
-				
+
 		for i in xrange(iTotalTechTreeLength):
 			iTotalActiveBuildings = iTotalActiveBuildings + aUnlockedBuildingsTechLoc[i] - aObsoletedBuildingsTechLoc[i]
 			self.log("XGrid: "+str(i)+" Unlocked: "+str(aUnlockedBuildingsTechLoc[i])+" Obsoleted: "+str(aObsoletedBuildingsTechLoc[i])+" Available buildings: "+str(iTotalActiveBuildings))
