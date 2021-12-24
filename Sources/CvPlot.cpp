@@ -11479,7 +11479,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", iPlayersWithDanger);
 	if ( iPlayersWithDanger > 0 )
 	{
-		for (int iI= 0; iI < MAX_PLAYERS; iI++ )
+		for (uint iI= 0; iI < MAX_PLAYERS; iI++ )
 		{
 			if ( getDangerCount((PlayerTypes)iI) > 0 )
 			{
