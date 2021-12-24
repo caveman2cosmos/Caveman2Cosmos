@@ -2762,6 +2762,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Tag>
 		<English>Tamed Javan Rhinoceros</English>
 		<French>Rhinocéros de Java dompté</French>
+		<German>
+			<Text>Gezähmtes Java-Nashorn:Gezähmten Java-Nashorns:Gezähmten Java-Nashorn:Gezähmte Java-Nashorn:Gezähmte Java-Nashörner:Gezähmten Java-Nashörner:Gezähmten Java-Nashörnern:Gezähmten Java-Nashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Nosorożec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (äîì.)</Russian>
 	</TEXT>
@@ -2769,6 +2774,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Tag>
 		<English>Tamed Malayan Tapir</English>
 		<French>Tapir Malais (dompté)</French>
+		<German>
+			<Text>Gezähmter Schabrackentapir:Gezähmten Schabrackentapirs:Gezähmten Schabrackentapir:Gezähmten Schabrackentapir:Gezähmte Schabrackentapire:Gezähmten Schabrackentapire:Gezähmten Schabrackentapiren:Gezähmten Schabrackentapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Malayan Tapir</Polish>
 		<Russian>Ìàëàéñêèé òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -2780,6 +2790,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gezähmter Bergtapir:Gezähmten Bergtapirs:Gezähmten Bergtapir:Gezähmten Bergtapir:Gezähmte Bergtapire:Gezähmten Bergtapire:Gezähmten Bergtapiren:Gezähmten Bergtapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Mountain Tapir</Polish>
 		<Russian>Ãîðíûé òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -2787,6 +2802,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Tag>
 		<English>Tamed White Rhinoceros</English>
 		<French>Rhinocéros Blanc dompté</French>
+		<German>
+			<Text>Gezähmtes Breitmaulnashorn:Gezähmten Breitmaulnashorns:Gezähmten Breitmaulnashorn:Gezähmte Breitmaulnashorn:Gezähmte Breitmaulnashörner:Gezähmten Breitmaulnashörner:Gezähmten Breitmaulnashörnern:Gezähmten Breitmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Nosorożec Biały</Polish>
 		<Russian>Áåëûé íîñîðîã (äîì.)</Russian>
 	</TEXT>

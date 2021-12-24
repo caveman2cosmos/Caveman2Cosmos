@@ -166,7 +166,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_WITH_BONUS</Tag>
 		<English>[SPACE]with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>[SPACE]avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
-		<German>[SPACE]mit [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
+		<German>[SPACE]durch [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
 		<Spanish>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
 		<Russian>[SPACE]с [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
