@@ -172,10 +172,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
 		<English>Technocultural Bonuses</English>
+		<German>Technokulturboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
+		<German>Güter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
@@ -189,6 +191,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
 		<English>Unique Bonuses</English>
+		<German>Spezialboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
