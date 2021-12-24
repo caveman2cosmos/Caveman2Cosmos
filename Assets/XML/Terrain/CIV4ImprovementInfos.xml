@@ -1,9 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Notes:
-	- Terraforming and Feature changing "improvements", indicated by a corresponding FeatureChange
-	or TerrainChange tag in the Civ4CreatingBuilds, don't get placed as improvements ingame. The entry here
-	only controls allowing/disallowing by current plot, e.g. FeatureMakesValids or TerrainMakesValids.
-	- Ordering of entries roughly mimics that of CIV4CreatingBuilds
+	- Ordering of entries roughly mimics that of CIV4BuildInfos
 	- SUBMERGED_TOWN unlocks the ability to build at lower depths with tech advancement.
 -->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
@@ -12,9 +9,6 @@
 		<!-- Sanitize Water (Graphical) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SANITIZE_WATER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SANITIZE_WATER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SANITIZE_WATER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SANITIZE_WATER</ArtDefineTag>
@@ -37,9 +31,6 @@
 		<!-- Wildlife Sanctuary | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WILDLIFE_SANCTUARY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WILDLIFE_SANCTUARY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
@@ -201,9 +192,6 @@
 		<!-- Hunting Preserve -> Wildlife Sanctuary Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HUNTING_PRESERVE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HUNTING_PRESERVE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HUNTING_PRESERVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
@@ -350,9 +338,6 @@
 		<!-- Hunting Camp -> Hunting Preserve Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HUNTING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HUNTING_CAMP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HUNTING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
@@ -479,9 +464,6 @@
 		<!-- Pasture -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PASTURE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PASTURE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PASTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PASTURE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PASTURE</ArtDefineTag>
@@ -599,9 +581,6 @@
 		<!-- Nomadic Herd -> Pasture -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_NOMADIC_HERD</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_NOMADIC_HERD_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_NOMADIC_HERD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_NOMADIC_HERD</ArtDefineTag>
@@ -691,9 +670,6 @@
 		<!-- Scavenging Camp -> Nomadic Herd OR Hunting Camp -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SCAVENGING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SCAVENGING_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SCAVENGING_CAMP</ArtDefineTag>
@@ -868,9 +844,6 @@
 		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WINERY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WINERY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WINERY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINERY</ArtDefineTag>
@@ -944,9 +917,6 @@
 		<!-- Fruit Picker -> Winery -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FRUIT_PICKING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FRUIT_PICKING_CAMP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_PICKING_CAMP</ArtDefineTag>
@@ -1119,9 +1089,6 @@
 		<!-- Fruit Gathering Camp -> Fruit Picker -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FRUIT_GATHERING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FRUIT_GATHERING_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
@@ -1268,9 +1235,6 @@
 		<!-- Orchard -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ORCHARD</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ORCHARD</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ORCHARD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ORCHARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ORCHARD</ArtDefineTag>
@@ -1482,9 +1446,6 @@
 		<!-- Grape Picker -> Orchard -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_GRAPE_PICKING_CAMP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAPE_PICKING_CAMP</ArtDefineTag>
@@ -1522,9 +1483,6 @@
 		<!-- Grape Gathering Camp -> Grape Picker -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GRAPE_GATHERING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_GRAPE_GATHERING_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAPE_GATHERING_CAMP</ArtDefineTag>
@@ -1557,9 +1515,6 @@
 		<!-- Plantation -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANTATION</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLANTATION</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PLANTATION</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANTATION_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
@@ -1823,9 +1778,6 @@
 		<!-- Plant Picking Camp -> Plantation -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_PICKING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLANT_PICKING_CAMP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PLANT_PICKING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_PICKING_CAMP</ArtDefineTag>
@@ -2028,9 +1980,6 @@
 		<!-- Plant Gathering Camp-> Plant Picking Camp -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_GATHERING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLANT_GATHERING_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
@@ -2234,10 +2183,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MUSHROOM_GATHERER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MUSHROOM_GATHERER</CreatingBuild>
-				<CreatingBuild>BUILD_MUSHROOM_GATHERER_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MUSHROOM_GATHERING_CAMP</ArtDefineTag>
@@ -2292,9 +2237,6 @@
 		<!-- Silk Farm -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SILK_FARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SILK_FARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SILK_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SILK_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
@@ -2376,9 +2318,6 @@
 		<!-- Geothermal Factory | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GEOTHERMAL_FACTORY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_GEOTHERMAL_FACTORY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
@@ -2423,9 +2362,6 @@
 		<!-- Archaeological Site | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ARCHEOLOGICAL_SITE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ARCHEOLOGICAL_SITE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARCHEOLOGICAL_SITE</ArtDefineTag>
@@ -2544,9 +2480,6 @@
 		<!-- Hydrocarbon Well* | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYDROCARBON_WELL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HYDROCARBON_WELL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDROCARBON_WELL</ArtDefineTag>
@@ -2645,10 +2578,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TAR_GATHERER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TAR_GATHERER</CreatingBuild>
-				<CreatingBuild>BUILD_TAR_GATHERER_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TAR_GATHERER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TAR_GATHERER</ArtDefineTag>
@@ -2708,9 +2637,6 @@
 		<!-- Nature Preserve* | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_NATURE_PRESERVE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_NATURE_PRESERVE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_NATURE_PRESERVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NATURE_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
@@ -2948,9 +2874,6 @@
 		<!-- Fossil Digsite* | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FOSSIL_DIG_SITE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FOSSIL_DIG_SITE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOSSIL_DIG_SITE</ArtDefineTag>
@@ -3069,10 +2992,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SALT_GATHERER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SALT_GATHERER</CreatingBuild>
-				<CreatingBuild>BUILD_SALT_GATHERER_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
@@ -3121,9 +3040,6 @@
 		<!-- Vertical Farm | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_VERTICAL_FARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_VERTICAL_FARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VERTICAL_FARM</ArtDefineTag>
@@ -3804,9 +3720,6 @@
 		<!-- Farm -> Vertical Farm Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FARM</ArtDefineTag>
@@ -4094,10 +4007,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SEED_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SEED_CAMP</CreatingBuild>
-				<CreatingBuild>BUILD_SEED_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SEED_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEED_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEED_CAMP</ArtDefineTag>
@@ -4215,10 +4124,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SEASONAL_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SEASONAL_CAMP</CreatingBuild>
-				<CreatingBuild>BUILD_SEASONAL_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEASONAL_CAMP</ArtDefineTag>
@@ -4705,9 +4610,6 @@
 		<!-- Mountain Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MOUNTAIN_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MOUNTAIN_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MOUNT_MINE</ArtDefineTag>
@@ -5063,9 +4965,6 @@
 		<!-- Early Mountain Mine -> Mountain Mine -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_EARLY_MOUNTAIN_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_EARLY_MOUNTAIN_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
@@ -5278,9 +5177,6 @@
 		<!-- Core Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CORE_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_CORE_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_CORE_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CORE_MINE</ArtDefineTag>
@@ -5637,9 +5533,6 @@
 		<!-- Modern Mine -> Core Mine Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MODERN_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MODERN_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MODERN_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MODERN_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MODERN_MINE</ArtDefineTag>
@@ -5958,9 +5851,6 @@
 		<!-- Shaft Mine -> Modern Mine Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SHAFT_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SHAFT_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SHAFT_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SHAFT_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SHAFT_MINE</ArtDefineTag>
@@ -6313,9 +6203,6 @@
 		<!-- Mine -> Shaft Mine Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MINE</ArtDefineTag>
@@ -6642,9 +6529,6 @@
 		<!-- Quarry -> Core Mine Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_QUARRY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_QUARRY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_QUARRY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_QUARRY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_QUARRY</ArtDefineTag>
@@ -6942,9 +6826,6 @@
 		<!-- Early Quarry -> Quarry -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_EARLY_QUARRY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_EARLY_QUARRY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_QUARRY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
@@ -7036,10 +6917,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_STONE_TOOLS_WORKSHOP</CreatingBuild>
-				<CreatingBuild>BUILD_STONE_TOOLS_WORKSHOP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
@@ -7182,9 +7059,6 @@
 		<!-- Hybrid Forest | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYBRID_FOREST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HYBRID_FOREST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HYBRID_FOREST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYBRID_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYBRID_FOREST</ArtDefineTag>
@@ -7358,9 +7232,6 @@
 		<!-- Treefarm -> Hybrid Forest Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TREEFARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TREEFARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TREEFARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TREEFARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TREEFARM</ArtDefineTag>
@@ -7546,9 +7417,6 @@
 		<!-- Lumbermill -> Treefarm Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUMBERMILL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUMBERMILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUMBERMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUMBERMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LUMBERMILL</ArtDefineTag>
@@ -7752,9 +7620,6 @@
 		<!-- Lumberjack -> Lumbermill Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUMBERJACK</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUMBERJACK</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUMBERJACK</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUMBERYARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LUMBERJACK</ArtDefineTag>
@@ -7886,9 +7751,6 @@
 		<!-- Wood Gatherer-> Lumberjack -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WOOD_GATHERER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WOOD_GATHERER_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WOOD_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUMBERYARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOOD_GATHERER</ArtDefineTag>
@@ -7957,9 +7819,6 @@
 		<!-- Suburb | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUBURBS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SUBURBS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SUBURBS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
@@ -8123,9 +7982,6 @@
 		<!-- Town -> Suburb Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TOWN</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TOWN</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TOWN</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TOWN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
@@ -8271,9 +8127,6 @@
 		<!-- Village -> Town Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_VILLAGE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_VILLAGE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_VILLAGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VILLAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VILLAGE</ArtDefineTag>
@@ -8411,9 +8264,6 @@
 		<!-- Hamlet -> Village Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HAMLET</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HAMLET</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HAMLET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HAMLET_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HAMLET</ArtDefineTag>
@@ -8469,9 +8319,6 @@
 		<!-- Cottage -> Hamlet Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COTTAGE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COTTAGE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COTTAGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COTTAGE</ArtDefineTag>
@@ -8517,9 +8364,6 @@
 		<!-- Manufacturing Complex | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MANUFACTURING_COMPLEX</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MANUFACTURING_COMPLEX</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MANUFACTURING_COMPLEX</ArtDefineTag>
@@ -8697,9 +8541,6 @@
 		<!-- Factory -> Manufacturing Complex Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FACTORY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FACTORY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
@@ -8864,9 +8705,6 @@
 		<!-- Workshop -> Factory -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WORKSHOP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WORKSHOP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WORKSHOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WORKSHOP</ArtDefineTag>
@@ -9027,9 +8865,6 @@
 		<!-- Hydro Dam | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYDRO_DAM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HYDRO_DAM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HYDRO_DAM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDRO_DAM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_DAM</ArtDefineTag>
@@ -9068,9 +8903,6 @@
 		<!-- Watermill -> Hydro Dam Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WATERMILL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WATERMILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WATERMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WATERMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WATERMILL</ArtDefineTag>
@@ -9115,9 +8947,6 @@
 		<!-- Modern Windmill | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MODERN_WINDMILL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MODERN_WINDMILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MODERNWINDMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MODERN_WINDMILL</ArtDefineTag>
@@ -9211,9 +9040,6 @@
 		<!-- Windmill -> Modern Windmill Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WINDMILL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WINDMILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WINDMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDMILL</ArtDefineTag>
@@ -9257,9 +9083,6 @@
 		<!-- Radio Tower | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_RADIO_TOWER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_RADIO_TOWER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_RADIO_TOWER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADIO_TOWER</ArtDefineTag>
@@ -9287,9 +9110,6 @@
 		<!-- Solar Panels | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_PANELS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SOLAR_PANELS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_PANELS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_PANELS</ArtDefineTag>
@@ -9378,9 +9198,6 @@
 		<!-- Forest Preserve | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FOREST_PRESERVE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FOREST_PRESERVE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
@@ -9488,9 +9305,6 @@
 		<!-- Groundwater Well | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GROUNDWATER_WELL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_GROUNDWATER_WELL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GROUNDWATER_WELL</ArtDefineTag>
@@ -9529,9 +9343,6 @@
 		<!-- Peat Cutter | Independent - Information Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PEAT_CUTTER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PEAT_CUTTER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PEAT_CUTTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PEAT_CUTTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PEAT_CUTTER</ArtDefineTag>
@@ -9553,9 +9364,6 @@
 		<!-- Thatch Cutter | End - Information Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_THATCH_CUTTER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_THATCH_CUTTER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_THATCH_CUTTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_THATCH_CUTTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_THATCH_CUTTER</ArtDefineTag>
@@ -9620,9 +9428,6 @@
 		<!-- Geoglyph | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GEOGLYPH</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_GEOGLYPH</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_GEOGLYPH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOGLYPH</ArtDefineTag>
@@ -9721,9 +9526,6 @@
 		<!-- Machu Picchu  | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MACHU_PICCHU</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MACHU_PICCHU</ArtDefineTag>
@@ -9750,10 +9552,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_JUNGLE_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_JUNGLE_CAMP</CreatingBuild>
-				<CreatingBuild>BUILD_JUNGLE_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_JUNGLE_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JUNGLE_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JUNGLE_CAMP</ArtDefineTag>
@@ -9919,10 +9717,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_DESERT_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_DESERT_CAMP</CreatingBuild>
-				<CreatingBuild>BUILD_DESERT_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_DESERT_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DESERT_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DESERT_CAMP</ArtDefineTag>
@@ -10060,10 +9854,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WETLANDS_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WETLANDS_CAMP</CreatingBuild>
-				<CreatingBuild>BUILD_WETLANDS_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WETLANDS_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WETLANDS_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WETLANDS_CAMP</ArtDefineTag>
@@ -10159,9 +9949,6 @@
 		<!-- Radar Watchtower | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_RADAR_TOWER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_RADAR_TOWER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_RADAR_TOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR_TOWER</ArtDefineTag>
@@ -10250,9 +10037,6 @@
 		<!-- Steel Watchtower -> Radar Watchtower -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STEEL_WATCHTOWER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_STEEL_WATCHTOWER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</ArtDefineTag>
@@ -10343,9 +10127,6 @@
 		<!-- Stone Watchtower -> Steel Watchtower -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_WATCHTOWER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_STONE_WATCHTOWER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</ArtDefineTag>
@@ -10437,10 +10218,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WOODEN_WATCHTOWER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WOODEN_WATCHTOWER</CreatingBuild>
-				<CreatingBuild>BUILD_WOODEN_WATCHTOWER_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
@@ -10529,9 +10306,6 @@
 		<!-- Command Center | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COMMAND_CENTER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COMMAND_CENTER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
@@ -10625,9 +10399,6 @@
 		<!-- Bunker -> Command Center -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COMMAND_BUNKER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COMMAND_BUNKER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
@@ -10723,9 +10494,6 @@
 		<!-- Fort -> Bunker -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FORT</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FORT</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FORT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
@@ -10821,9 +10589,6 @@
 		<!-- Fortified Cave w/Cache -> Fort -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FORTIFIED_CAVE_WITH_CACHE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
@@ -10852,10 +10617,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FORTIFIED_CAVE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FORTIFIED_CAVE</CreatingBuild>
-				<CreatingBuild>BUILD_FORTIFIED_CAVE_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE</ArtDefineTag>
@@ -10881,10 +10642,6 @@
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WOODEN_PALISADE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WOODEN_PALISADE</CreatingBuild>
-				<CreatingBuild>BUILD_WOODEN_PALISADE_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
@@ -10975,9 +10732,6 @@
 		<!-- Abatis -> Palisade -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ABATIS_THORN_HEDGE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ABATIS_THORN_HEDGE_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
@@ -11066,9 +10820,6 @@
 		<!-- Plant Forest -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_YOUNG_FOREST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_YOUNG_FOREST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_FEATURE_FOREST_YOUNG</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_YOUNG_FOREST</ArtDefineTag>
@@ -11113,9 +10864,6 @@
 		<!-- Grow Forest (special case of FeatureChange handled in CvEventManager.py; has 'fake' YieldChanges) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GROW_FOREST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_GROW_FOREST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_GROW_FOREST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GROW_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GROW_FOREST</ArtDefineTag>
@@ -11136,9 +10884,6 @@
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_BAMBOO</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLANT_BAMBOO</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
@@ -11178,9 +10923,6 @@
 		<!-- Plant Savanna -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_SAVANNA</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLANT_SAVANNA</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_PLANT_SAVANNA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_SAVANNA</ArtDefineTag>
@@ -11220,9 +10962,6 @@
 		<!-- Plant Jungle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_JUNGLE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLANT_JUNGLE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</ArtDefineTag>
@@ -11269,9 +11008,6 @@
 		<!-- Terraform Lush -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_LUSH</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_LUSH</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
@@ -11293,9 +11029,6 @@
 		<!-- Terraform Grass -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_GRASS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_GRASS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
@@ -11313,9 +11046,6 @@
 		<!-- Terraform Plains -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_PLAINS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_PLAINS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PLAINS</ArtDefineTag>
@@ -11349,9 +11079,6 @@
 		<!-- Terraform Rocky -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_ROCKY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_ROCKY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11377,9 +11104,6 @@
 		<!-- Terraform Muddy -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MUDDY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_MUDDY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
@@ -11397,9 +11121,6 @@
 		<!-- Terraform Taiga -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_TAIGA</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_TAIGA</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11417,9 +11138,6 @@
 		<!-- Terraform Tundra -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_TUNDRA</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_TUNDRA</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11437,9 +11155,6 @@
 		<!-- Terraform Permafrost -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_PERMAFROST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_PERMAFROST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11457,9 +11172,6 @@
 		<!-- Terraform Scrub -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_SCRUB</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_SCRUB</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11481,9 +11193,6 @@
 		<!-- Terraform Desert -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_DESERT</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_DESERT</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11501,9 +11210,6 @@
 		<!-- Terraform Dunes -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_DUNES</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_DUNES</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11522,9 +11228,6 @@
 		<!-- Whaling Ships -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WHALING_SHIPS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WHALING_SHIPS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_SHIPS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
@@ -11595,9 +11298,6 @@
 		<!-- Whaling Boats -> Whaling Ships -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WHALING_BOATS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_WHALING_BOATS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_BOATS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
@@ -11640,9 +11340,6 @@
 		<!-- Fishing Boats | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FISHING_BOATS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FISHING_BOATS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FISHING_BOATS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
@@ -11772,10 +11469,6 @@
 		<!-- Kill Switchpoint: Rudder -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FISHING_CAMP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_FISHING_CAMP</CreatingBuild>
-				<CreatingBuild>BUILD_FISHING_CAMP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
@@ -11935,10 +11628,6 @@
 		<!-- Kill Switchpoint: Rudder -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HARVEST_KELP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HARVEST_KELP</CreatingBuild>
-				<CreatingBuild>BUILD_HARVEST_KELP_KILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HARVEST_KELP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HARVEST_KELP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HARVEST_KELP</ArtDefineTag>
@@ -11984,9 +11673,6 @@
 		<!-- Lighthouses -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LIGHTHOUSE_CORAL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LIGHTHOUSE_CORAL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
@@ -12007,9 +11693,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LIGHTHOUSE_REEF</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LIGHTHOUSE_REEF</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
@@ -12030,9 +11713,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
@@ -12054,9 +11734,6 @@
 		<!-- Beacons -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BEACON_CORAL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BEACON_CORAL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_CORAL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
@@ -12073,9 +11750,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BEACON_REEF</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BEACON_REEF</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
@@ -12092,9 +11766,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BEACON_GREAT_BARRIER_REEF</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
@@ -12112,9 +11783,6 @@
 		<!-- Marine Preserve -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MARINE_PRESERVE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MARINE_PRESERVE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
@@ -12158,9 +11826,6 @@
 		<!-- Tidal Harness -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TIDAL_HARNESS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TIDAL_HARNESS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIDAL_HARNESS</ArtDefineTag>
@@ -12211,9 +11876,6 @@
 		<!-- Sea Windmill -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SEA_MILL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SEA_MILL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SEA_MILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_MILL</ArtDefineTag>
@@ -12309,9 +11971,6 @@
 		<!-- Extraction Facility | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_EXTRACTION_FACILITY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_EXTRACTION_FACILITY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_EXTRACTION_FACILITY</ArtDefineTag>
@@ -12412,9 +12071,6 @@
 		<!-- Offshore Platform -> Extraction Facility -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_OFFSHORE_PLATFORM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_OFFSHORE_PLATFORM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_OFFSHORE_PLATFORM</ArtDefineTag>
@@ -12503,9 +12159,6 @@
 		<!-- Submerged Town -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUBMERGED_TOWN</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SUBMERGED_TOWN</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUBMERGED_TOWN</ArtDefineTag>
@@ -12633,9 +12286,6 @@
 		<!-- Sea Air Defense -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_AQUATIC_ANTI_AIR_DEFENSE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_PEDIA</Civilopedia>
 			<Help>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
@@ -12733,9 +12383,6 @@
 		<!-- Sea Fort -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_AQUATIC_FORCEFIELD</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_AQUATIC_FORCEFIELD</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
