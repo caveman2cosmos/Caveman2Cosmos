@@ -214,7 +214,6 @@ DllExport CvCity* getCity(IDInfo city);
 DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
 int getTechScore(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
@@ -407,7 +406,7 @@ bool isMapCategory(const T1& source1, const T2& source2)
 	}
 	foreach_(const MapCategoryTypes eMapCategory, mapCategories1)
 	{
-		if (algo::contains(mapCategories2, eMapCategory))
+		if (algo::any_of_equal(mapCategories2, eMapCategory))
 			return true;
 	}
 	return false;

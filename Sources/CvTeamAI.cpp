@@ -31,10 +31,10 @@ void CvTeamAI::freeStatics()
 	SAFE_DELETE_ARRAY(m_aTeams);
 }
 
-// inlined for performance reasons
-DllExport CvTeamAI& CvTeamAI::getTeamNonInl(TeamTypes eTeam)
+CvTeamAI& CvTeamAI::getTeam(TeamTypes eTeam)
 {
-	return getTeam(eTeam);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	return m_aTeams[eTeam];
 }
 
 
@@ -1032,7 +1032,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 		iValue *= 1;
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -1350,7 +1350,7 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -2587,7 +2587,7 @@ int CvTeamAI::AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -2681,7 +2681,7 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -2731,7 +2731,7 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 		iValue /= 100;
@@ -4581,7 +4581,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eLoopUnit = (UnitTypes)iI;
+		const UnitTypes eLoopUnit = (UnitTypes)iI;
 
 		if (isTechRequiredForUnit((eTech), eLoopUnit))
 		{
@@ -4708,7 +4708,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 					break;
 
 				default:
-					FAssert(false);//This assert was thrown - audit to see what AI may be missing from the above.
+					FErrorMsg("error"); // This assert was thrown - audit to see what AI may be missing from the above.
 					break;
 				}
 

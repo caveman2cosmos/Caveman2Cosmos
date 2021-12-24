@@ -699,8 +699,6 @@ public:
 	bool canHold(const CvPlot* pPlot) const;
 	bool canSleep(const CvPlot* pPlot) const;
 	bool canFortify(const CvPlot* pPlot) const;
-	bool canEstablish(const CvPlot* pPlot) const;
-	bool canEscape(const CvPlot* pPlot) const;
 	bool canBuildUp(const CvPlot* pPlot) const;
 	bool canAirPatrol(const CvPlot* pPlot) const;
 	void airCircle(bool bStart);
@@ -715,6 +713,9 @@ public:
 	int healTurns(const CvPlot* pPlot) const;
 	int healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const;
 	void doHeal();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	void doAffliction(const bool bHeal);
+#endif
 
 	bool canAirlift(const CvPlot* pPlot) const;
 	bool canAirliftAt(const CvPlot* pPlot, int iX, int iY) const;
@@ -955,13 +956,11 @@ public:
 
 	bool isAutomated() const;
 	bool isFortifyable() const;
-	bool isEstablishable() const;
-	bool isEscapable() const;
+
 	bool isBuildUpable() const;
 	int fortifyModifier() const;
 	//int establishModifier() const;
 	//int escapeModifier() const;
-	int buildupLevel() const;
 	//TB Combat Mods begin
 	int fortifyRepelModifier() const;
 	//TB Combat Mods End
@@ -1170,7 +1169,6 @@ public:
 
 	int getFortifyTurns() const;
 	void setFortifyTurns(int iNewValue);
-	void changeFortifyTurns(int iChange);
 
 	int getBlitzCount() const;
 	bool isBlitz() const;
@@ -1622,7 +1620,7 @@ public:
 	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;
-	bool isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck = false) const;
+	bool isPromotionValid(PromotionTypes ePromotion, bool bFree = false, bool bKeepCheck = false) const;
 	bool isHealsUnitCombat(UnitCombatTypes eIndex) const;
 	bool isHasUnitCombat(UnitCombatTypes eIndex) const;
 	void processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo = false);
@@ -1818,6 +1816,7 @@ protected:
 	int m_iCombatFirstStrikes;
 	int m_iCombatDamage;
 	int m_iFortifyTurns;
+	int m_iBuildUpTurns;
 	int m_iBlitzCount;
 	int m_iRBombardForceAbilityCount;
 	int m_iAmphibCount;
@@ -1935,7 +1934,6 @@ protected:
 	int m_iHiddenNationalityCount;
 	bool m_bIsArmed;
 	bool m_bHasAnyInvisibility;
-	bool m_bHasAnyInvisibilityAbility;
 	bool m_bRevealed;
 #ifdef STRENGTH_IN_NUMBERS
 	IDInfo afIUnit;
@@ -2353,7 +2351,6 @@ public:
 	bool canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree = false, bool bMessageOnFalse = false) const;
 	bool isPromotionFree(PromotionTypes ePromotion) const;
 	int getPromotionFreeCount(PromotionTypes ePromotion) const;
-	void changePromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void setPromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void checkFreetoCombatClass();
 	//TB Combat Mods end
@@ -2760,14 +2757,14 @@ public:
 	void setSleepType(MissionTypes eSleepType);
 	void establishBuildups();
 	PromotionLineTypes getBuildUpType() const;
-	void setBuildUpType(PromotionLineTypes ePromotionLine = NO_PROMOTIONLINE, bool bRemove = false, MissionTypes eSleepType = NO_MISSION);
+	void setBuildUpType(PromotionLineTypes ePromotionLine = NO_PROMOTIONLINE, MissionTypes eSleepType = NO_MISSION);
 	void clearBuildups();
+	void incrementBuildUp();
 	bool isInhibitMerge() const;
 	void setInhibitMerge(bool bNewValue);
 	bool isInhibitSplit() const;
 	void setInhibitSplit(bool bNewValue);
 	bool isBuildUp() const;
-	void setBuildUp(bool bNewValue);
 	void setSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 	bool isHiddenNationality() const;
 	void doHNCapture();
@@ -2796,26 +2793,24 @@ public:
 	bool isUpgradeAnywhere() const;
 	void changeUpgradeAnywhereCount(int iChange);
 
-	bool hasVisibilityType(InvisibleTypes eInvisibleType) const;
+	void updateSpotIntensity(const InvisibleTypes eInvisibleType = NO_INVISIBLE, const bool bSameTile = false);
 	int visibilityIntensityTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraVisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 
-	bool hasAnyInvisibilityType(bool bAbilityCheck = false) const;
-	bool hasInvisibilityType(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
-	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
+	bool hasAnyInvisibilityType() const;
+	bool hasInvisibilityType(InvisibleTypes eInvisibleType) const;
+	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 	void setHasAnyInvisibility();
 
 	//These need text displays on the unit
-	bool hasVisibilityRangeType(InvisibleTypes eInvisibleType) const;
 	int visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraVisibilityIntensityRangeType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int iChange);
 
 	int visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const;
-	int getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, int iChange);
 
 	int getNumExtraInvisibleTerrains() const;
@@ -2869,9 +2864,6 @@ public:
 	void changeExtraAidChange(PropertyTypes eProperty, int iChange);
 	int extraAidChange(PropertyTypes eProperty) const;
 #endif
-	void deleteVisibility();
-	void addVisibility();
-
 	bool isNegatesInvisible(InvisibleTypes eInvisible) const;
 	int getNegatesInvisibleCount(InvisibleTypes eInvisible) const;
 	void changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange);

@@ -185,7 +185,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (algo::contains(m_aaiGroupedBuildingList[i], m_eSelectedBuilding))
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedBuilding))
 				return i;
 		}
 		m_eSelectedBuilding = NO_BUILDING;
@@ -208,7 +208,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (algo::contains(m_aaiGroupedBuildingList[i], m_eSelectedWonder))
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedWonder))
 				return i;
 		}
 		m_eSelectedWonder = NO_BUILDING;

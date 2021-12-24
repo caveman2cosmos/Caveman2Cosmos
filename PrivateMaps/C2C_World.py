@@ -3044,7 +3044,7 @@ class BonusPlacer:
 			for indeXML in aList:
 				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount):
 					placementList.append(indeXML)
-			if len(placementList) > 0:
+			if placementList:
 				shuffle(placementList)
 				for indeXML in placementList:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)

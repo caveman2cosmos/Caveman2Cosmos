@@ -754,32 +754,38 @@ void CvTeam::addTeam(TeamTypes eTeam)
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* plotX = GC.getMap().plotByIndex(iI);
 
-		pLoopPlot->changeVisibilityCount(getID(), pLoopPlot->getVisibilityCount(eTeam), NO_INVISIBLE, false);
+		plotX->changeVisibilityCount(getID(), plotX->getVisibilityCount(eTeam), NO_INVISIBLE, false);
 
 		for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 		{
-			if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iJ);
+
+			plotX->changeInvisibleVisibilityCount(getID(), eInvisible, plotX->getInvisibleVisibilityCount(eTeam, eInvisible));
+
+			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 			{
-				pLoopPlot->changeInvisibleVisibilityCount(getID(), ((InvisibleTypes)iJ), pLoopPlot->getInvisibleVisibilityCount(eTeam, (InvisibleTypes)iJ), 0);
-			}
-			else
-			{
-				InvisibleTypes eInvisible = (InvisibleTypes) iJ;
-				for (int iK = 0; iK < pLoopPlot->getNumPlotTeamVisibilityIntensity(); iK++)
+				for (int iK = 0; iK < plotX->getNumPlotTeamVisibilityIntensity(); iK++)
 				{
-					if (pLoopPlot->getPlotTeamVisibilityIntensity(iK).eInvisibility == eInvisible &&
-						pLoopPlot->getPlotTeamVisibilityIntensity(iK).eTeam == eTeam)
+					if (plotX->getPlotTeamVisibilityIntensity(iK).eInvisibility == eInvisible
+					&&  plotX->getPlotTeamVisibilityIntensity(iK).eTeam == eTeam)
 					{
-						pLoopPlot->changeInvisibleVisibilityCount(getID(), eInvisible, pLoopPlot->getPlotTeamVisibilityIntensity(iK).iCount, pLoopPlot->getPlotTeamVisibilityIntensity(iK).iIntensity);
+						if (plotX->getPlotTeamVisibilityIntensity(iK).iIntensity > plotX->getHighestPlotTeamVisibilityIntensity(eInvisible, getID()))
+						{
+							plotX->setSpotIntensity(
+								getID(), eInvisible,
+								plotX->getPlotTeamVisibilityIntensity(iK).iUnitID,
+								plotX->getPlotTeamVisibilityIntensity(iK).iIntensity
+							);
+						}
 					}
 				}
 			}
 		}
-		if (pLoopPlot->isRevealed(eTeam, false))
+		if (plotX->isRevealed(eTeam, false))
 		{
-			pLoopPlot->setRevealed(getID(), true, false, eTeam, false);
+			plotX->setRevealed(getID(), true, false, eTeam, false);
 		}
 	}
 	GC.getGame().updatePlotGroups();
@@ -2243,7 +2249,7 @@ int CvTeam::getCurrentMasterPower(bool bIncludeVassals) const
 			}
 		}
 	}
-	FAssert(false); // Should never get here
+	FErrorMsg("error"); // Should never get here
 	return 0;
 }
 
@@ -3065,7 +3071,7 @@ int CvTeam::getAliveCount() const
 	return m_iAliveCount;
 }
 
-int CvTeam::isAlive() const
+bool CvTeam::isAlive() const
 {
 	return m_iAliveCount > 0;
 }
@@ -5570,7 +5576,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 bool CvTeam::isNoTradeTech(const short iTech) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), iTech);
-	return algo::contains(m_vNoTradeTech, iTech);
+	return algo::any_of_equal(m_vNoTradeTech, iTech);
 }
 
 

@@ -600,11 +600,6 @@ void CvSelectionGroup::updateMission()
 	}
 }
 
-CvPlot* CvSelectionGroup::_lastMissionPlot()
-{
-	return lastMissionPlot();
-}
-
 CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
 	CvUnit* pTargetUnit;
@@ -635,8 +630,6 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 		case MISSION_SKIP:
 		case MISSION_SLEEP:
 		case MISSION_FORTIFY:
-		//case MISSION_ESTABLISH:
-		//case MISSION_ESCAPE:
 		case MISSION_BUILDUP:
 		case MISSION_AUTO_BUILDUP:
 		case MISSION_HEAL_BUILDUP:
@@ -704,7 +697,7 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 
@@ -791,22 +784,6 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			{
 				return true;
 			}
-			break;
-
-		case MISSION_ESTABLISH:
-			//if (pLoopUnit->canEstablish(pPlot))
-			//{
-			//	return true;
-			//}
-			return false;
-			break;
-
-		case MISSION_ESCAPE:
-			//if (pLoopUnit->canEscape(pPlot))
-			//{
-			//	return true;
-			//}
-			return false;
 			break;
 
 		case MISSION_BUILDUP:
@@ -1238,7 +1215,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
 			if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 			{
@@ -1332,18 +1309,6 @@ bool CvSelectionGroup::startMission()
 
 		case MISSION_FORTIFY:
 			setActivityType(ACTIVITY_SLEEP, MISSION_FORTIFY);
-			bNotify = true;
-			bDelete = true;
-			break;
-
-		case MISSION_ESTABLISH:
-			setActivityType(ACTIVITY_SLEEP, /*MISSION_ESTABLISH*/MISSION_SLEEP);
-			bNotify = true;
-			bDelete = true;
-			break;
-
-		case MISSION_ESCAPE:
-			setActivityType(ACTIVITY_SLEEP, /*MISSION_ESCAPE*/MISSION_SLEEP);
 			bNotify = true;
 			bDelete = true;
 			break;
@@ -1475,7 +1440,7 @@ bool CvSelectionGroup::startMission()
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 
@@ -1602,8 +1567,6 @@ bool CvSelectionGroup::startMission()
 					case MISSION_SKIP:
 					case MISSION_SLEEP:
 					case MISSION_FORTIFY:
-					//case MISSION_ESTABLISH:
-					//case MISSION_ESCAPE:
 					case MISSION_BUILDUP:
 					case MISSION_AUTO_BUILDUP:
 					case MISSION_HEAL_BUILDUP:
@@ -1987,7 +1950,7 @@ bool CvSelectionGroup::startMission()
 
 					default:
 						// AIAndy: Assumed to be an outcome mission
-						// FAssert(false);
+						// FErrorMsg("error");
 						if (pLoopUnit->doOutcomeMission(headMissionQueueNode()->m_data.eMissionType))
 						{
 							bAction = true;
@@ -2297,8 +2260,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		case MISSION_SKIP:
 		case MISSION_SLEEP:
 		case MISSION_FORTIFY:
-		//case MISSION_ESTABLISH:
-		//case MISSION_ESCAPE:
 		case MISSION_BUILDUP:
 		case MISSION_AUTO_BUILDUP:
 		case MISSION_HEAL_BUILDUP:
@@ -2314,7 +2275,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		case MISSION_SENTRY_LAND_UNITS:
 #endif
 // BUG - Sentry Actions - end
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 
 		case MISSION_AIRLIFT:
@@ -2378,7 +2339,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 /************************************************************************************************/
 		default:
 			// AIAndy: Assumed to be an outcome mission
-			// FAssert(false);
+			// FErrorMsg("error");
 			break;
 		}
 	}
@@ -2425,8 +2386,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_SKIP:
 			case MISSION_SLEEP:
 			case MISSION_FORTIFY:
-			//case MISSION_ESTABLISH:
-			//case MISSION_ESCAPE:
 			case MISSION_BUILDUP:
 			case MISSION_AUTO_BUILDUP:
 			case MISSION_HEAL_BUILDUP:
@@ -2442,7 +2401,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_SENTRY_LAND_UNITS:
 #endif
 // BUG - Sentry Actions - end
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 
 			case MISSION_AIRLIFT:
@@ -2512,7 +2471,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 			default:
 				// AIAndy: Assumed to be an outcome mission
-				// FAssert(false);
+				// FErrorMsg("error");
 				bDone = true;
 				break;
 			}
@@ -3054,11 +3013,6 @@ bool CvSelectionGroup::isHuman() const
 	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHuman() : true;
 }
 
-bool CvSelectionGroup::_isBusy()
-{
-	return isBusy();
-}
-
 bool CvSelectionGroup::isBusy() const
 {
 	return getMissionTimer() > 0 || algo::any_of(units(), CvUnit::fn::isCombat());
@@ -3174,11 +3128,6 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 	}
 }
 
-bool CvSelectionGroup::_canAllMove()
-{
-	return canAllMove();
-}
-
 bool CvSelectionGroup::canAllMove() const
 {
 	return getNumUnits() > 0
@@ -3228,11 +3177,6 @@ bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool b
 		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
-bool CvSelectionGroup::_canMoveInto(CvPlot* pPlot, bool bAttack)
-{
-	return canMoveInto(pPlot, bAttack);
-}
-
 bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
 {
 	return canMoveIntoWithWar(pPlot, bAttack, false);
@@ -3242,11 +3186,6 @@ bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack, boo
 {
 	return getNumUnits() > 0
 		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
-}
-
-bool CvSelectionGroup::_canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
-{
-	return canMoveOrAttackInto(pPlot, bDeclareWar);
 }
 
 bool CvSelectionGroup::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
@@ -4759,7 +4698,7 @@ bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 		std::vector<CvSelectionGroup*> aCargoGroups;
 		foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 		{
-			if (!algo::contains(aCargoGroups, pCargoUnit->getGroup()))
+			if (algo::none_of_equal(aCargoGroups, pCargoUnit->getGroup()))
 			{
 				aCargoGroups.push_back(pCargoUnit->getGroup());
 			}
@@ -4917,11 +4856,9 @@ ActivityTypes CvSelectionGroup::getActivityType() const
 
 void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType)
 {
-	MissionTypes eMission = NO_MISSION;
-
 	FAssert(getOwner() != NO_PLAYER);
 
-	const ActivityTypes eOldActivity = getActivityType();
+	const ActivityTypes eOldActivity = m_eActivityType;
 
 	if (eOldActivity != eNewValue)
 	{
@@ -4931,19 +4868,6 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 		}
 		setBlockading(false);
 
-		//Clear Buildups
-		if ((eOldActivity == ACTIVITY_SLEEP || eOldActivity == ACTIVITY_HEAL) && eNewValue == ACTIVITY_AWAKE)
-		{
-			foreach_(CvUnit* pLoopUnit, units())
-			{
-				if (pLoopUnit->isBuildUp())
-				{
-					pLoopUnit->setFortifyTurns(0);
-				}
-			}
-		}
-		// Toffer - Value of m_eActivityType should not change again before this function is completed.
-		//	So it's safe to use eNewValue throughout this function from this point.
 		m_eActivityType = eNewValue;
 
 		if (eNewValue == ACTIVITY_INTERCEPT)
@@ -4962,140 +4886,26 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 					pLoopUnit->NotifyEntity(MISSION_IDLE);
 					if (pLoopUnit->isDead()) continue;
 
-					//determine proper Sleep type
-					if (!isHuman() || (eNewValue == ACTIVITY_SLEEP || eNewValue == ACTIVITY_HEAL) && eSleepType != NO_MISSION)
+					// Determine proper Sleep type
+					if (!isHuman() || eSleepType != NO_MISSION && (eNewValue == ACTIVITY_SLEEP || eNewValue == ACTIVITY_HEAL))
 					{
-						eMission = MISSION_SLEEP;
-						if (eSleepType == MISSION_BUILDUP || eSleepType == MISSION_AUTO_BUILDUP|| eSleepType == MISSION_HEAL_BUILDUP|| eSleepType == NO_MISSION)
+						MissionTypes eMission = MISSION_SLEEP;
+
+						if (
+							pLoopUnit->isBuildUpable()
+						&&	(
+									eSleepType == MISSION_BUILDUP
+								||	eSleepType == MISSION_AUTO_BUILDUP
+								||	eSleepType == MISSION_HEAL_BUILDUP
+								||	eSleepType == NO_MISSION
+							)
+						) pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, eSleepType);
+
+						if (eMission == MISSION_SLEEP && pLoopUnit->isFortifyable())
 						{
-							if (pLoopUnit->isBuildUpable())
-							{
-								if (pLoopUnit->getBuildUpType() == NO_PROMOTIONLINE)
-								{
-									pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, false, eSleepType);
-								}
-								if (isHuman() && eSleepType != MISSION_AUTO_BUILDUP && eSleepType != MISSION_HEAL_BUILDUP)
-								{
-									eMission = MISSION_BUILDUP;
-								}
-								else
-								{
-									//Then find out if the set check came up with a good buildup
-									if (pLoopUnit->getBuildUpType() != NO_PROMOTIONLINE)
-									{
-										eMission = MISSION_BUILDUP;
-									}//and if not...
-									//else if (pLoopUnit->isEstablishable())
-									//{
-									//	eMission = MISSION_ESTABLISH;
-									//}
-									else if (pLoopUnit->isFortifyable())
-									{
-										eMission = MISSION_FORTIFY;
-									}
-									//else if (pLoopUnit->isEscapable())
-									//{
-									//	eMission = MISSION_ESCAPE;
-									//}
-									else
-									{
-										eMission = MISSION_SLEEP;
-									}
-								}
-							}
-							//else if (pLoopUnit->isEstablishable())
-							//{
-							//	eMission = MISSION_ESTABLISH;
-							//}
-							else if (pLoopUnit->isFortifyable())
-							{
-								eMission = MISSION_FORTIFY;
-							}
-							//else if (pLoopUnit->isEscapable())
-							//{
-							//	eMission = MISSION_ESCAPE;
-							//}
-							else
-							{
-								eMission = MISSION_SLEEP;
-							}
-						}
-						//else if (eSleepType == MISSION_ESTABLISH)
-						//{
-						//	if (pLoopUnit->isEstablishable())
-						//	{
-						//		eMission = MISSION_ESTABLISH;
-						//	}
-						//	else if (pLoopUnit->isFortifyable())
-						//	{
-						//		eMission = MISSION_FORTIFY;
-						//	}
-						//	else if (pLoopUnit->isEscapable())
-						//	{
-						//		eMission = MISSION_ESCAPE;
-						//	}
-						//	else
-						//	{
-						//		eMission = MISSION_SLEEP;
-						//	}
-						//}
-						//else if (eSleepType == MISSION_ESCAPE)
-						//{
-						//	if (pLoopUnit->isEscapable())
-						//	{
-						//		eMission = MISSION_ESCAPE;
-						//	}
-						//	else if (pLoopUnit->isEstablishable())
-						//	{
-						//		eMission = MISSION_ESTABLISH;
-						//	}
-						//	else if (pLoopUnit->isFortifyable())
-						//	{
-						//		eMission = MISSION_FORTIFY;
-						//	}
-						//	else
-						//	{
-						//		eMission = MISSION_SLEEP;
-						//	}
-						//}
-						else if (eSleepType == MISSION_FORTIFY)
-						{
-							if (pLoopUnit->isFortifyable())
-							{
-								eMission = MISSION_FORTIFY;
-							}
-							//else if (pLoopUnit->isEstablishable())
-							//{
-							//	eMission = MISSION_ESTABLISH;
-							//}
-							//else if (pLoopUnit->isEscapable())
-							//{
-							//	eMission = MISSION_ESCAPE;
-							//}
-							else
-							{
-								eMission = MISSION_SLEEP;
-							}
-						}
-						else
-						{
-							eMission = MISSION_SLEEP;
+							eMission = MISSION_FORTIFY;
 						}
 						pLoopUnit->setSleepType(eMission);
-					}
-					if (pLoopUnit->getSleepType() != MISSION_BUILDUP && pLoopUnit->getBuildUpType() != NO_PROMOTIONLINE)
-					{
-						PromotionLineTypes ePromotionLine = pLoopUnit->getBuildUpType();
-						for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
-						{
-							PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-							if (pLoopUnit->isHasPromotion(ePromotion))
-							{
-								pLoopUnit->setHasPromotion(ePromotion, false, true, false, false);
-							}
-						}
-						pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, true);
-						pLoopUnit->setFortifyTurns(0);
 					}
 				}
 			}
@@ -5186,7 +4996,7 @@ CvPlot* CvSelectionGroup::getPathFirstPlot() const
 		pNode = pNode->m_pParent;
 	}
 
-	FAssert(false);
+	FErrorMsg("error");
 
 	return NULL;
 #else
@@ -5234,7 +5044,7 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 		}
 	}
 
-	FAssert(false);
+	FErrorMsg("error");
 
 	return NULL;
 #else
@@ -5656,7 +5466,7 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 
 bool CvSelectionGroup::containsUnit(const CvUnit* pUnit) const
 {
-	return algo::contains(units(), pUnit);
+	return algo::any_of_equal(units(), pUnit);
 }
 
 void CvSelectionGroup::removeUnit(CvUnit* pUnit)

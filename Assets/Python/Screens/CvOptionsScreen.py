@@ -3,8 +3,8 @@
 
 # For Input see CvOptionsScreenCallbackInterface in Python\EntryPoints\
 
-import CvUtil
 from CvPythonExtensions import *
+import TextUtil
 
 # globals
 gc = CyGlobalContext()
@@ -51,7 +51,7 @@ class CvOptionsScreen:
 
 	# Used by Callback Interface to get user defined profile names from editbox
 	def setProfileEditCtrlText(self, szProfileName):
-		szWideProfName = CvUtil.convertToUnicode(szProfileName)
+		szWideProfName = TextUtil.convertToUnicode(szProfileName)
 		self.getTabControl().setText("ProfileNameEditBox", szWideProfName)
 	def getProfileEditCtrlText(self):
 		return self.getTabControl().getText("ProfileNameEditBox")
@@ -177,7 +177,7 @@ class CvOptionsScreen:
 		# Custom Music Path Editbox
 		szEditBoxDesc = ""
 		if (UserProfile.getMusicPath() != ""):
-			szEditBoxDesc = CvUtil.convertToUnicode(UserProfile.getMusicPath())
+			szEditBoxDesc = TextUtil.convertToUnicode(UserProfile.getMusicPath())
 		self.getTabControl().setText("CustomMusicEditBox", szEditBoxDesc)
 
 		#################### CLOCK ####################
@@ -200,7 +200,7 @@ class CvOptionsScreen:
 		#################### PROFILE ####################
 
 		# Profile Name Editbox
-		self.getTabControl().setText("ProfileNameEditBox", CvUtil.convertToUnicode(UserProfile.getProfileName()))
+		self.getTabControl().setText("ProfileNameEditBox", TextUtil.convertToUnicode(UserProfile.getProfileName()))
 
 		aszDropdownElements = ()
 		for iProfileLoop in range(UserProfile.getNumProfileFiles()):
@@ -718,7 +718,7 @@ class CvOptionsScreen:
 		szOptionDesc = localText.getText("TXT_KEY_OPTIONS_CUSTOM_MUSIC", ())
 		szCallbackFunction = "handleCustomMusicPathCheckboxInput"
 		self.szCustomMusicCheckboxName = "CustomMusicPathCheckbox"
-		szWidgetName = CvUtil.convertToStr(self.szCustomMusicCheckboxName)
+		szWidgetName = TextUtil.convertToStr(self.szCustomMusicCheckboxName)
 		bUseCustomMusicPath = false
 		if (UserProfile.getMusicPath() != ""):
 			bUseCustomMusicPath = true
@@ -736,7 +736,7 @@ class CvOptionsScreen:
 		# Edit Box
 		szEditBoxDesc = u""
 		if (UserProfile.getMusicPath() != ""):
-			szEditBoxDesc = CvUtil.convertToUnicode(UserProfile.getMusicPath())
+			szEditBoxDesc = TextUtil.convertToUnicode(UserProfile.getMusicPath())
 		szWidgetName = "CustomMusicEditBox"
 		szCallbackFunction = "DummyCallback"
 
@@ -880,7 +880,7 @@ class CvOptionsScreen:
 		szEditBoxDesc = UserProfile.getProfileName()
 		szCallbackFunction = "DummyCallback"
 		szWidgetName = "ProfileNameEditBox"
-		szWideEditBoxDesc = CvUtil.convertToUnicode(szEditBoxDesc)
+		szWideEditBoxDesc = TextUtil.convertToUnicode(szEditBoxDesc)
 		tab.attachEdit("ProfilePanelVBox", szWidgetName, szWideEditBoxDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
 
 		# New Profile Button

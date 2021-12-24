@@ -5687,7 +5687,7 @@ void CvGame::setName(const char* szName)
 
 bool CvGame::isDestroyedCityName(CvWString& szName) const
 {
-	return algo::contains(m_aszDestroyedCities, szName);
+	return algo::any_of_equal(m_aszDestroyedCities, szName);
 }
 
 void CvGame::addDestroyedCityName(const CvWString& szName)
@@ -5698,7 +5698,7 @@ void CvGame::addDestroyedCityName(const CvWString& szName)
 
 bool CvGame::isGreatPersonBorn(CvWString& szName) const
 {
-	return algo::contains(m_aszGreatPeopleBorn, szName);
+	return algo::any_of_equal(m_aszGreatPeopleBorn, szName);
 }
 
 void CvGame::addGreatPersonBornName(const CvWString& szName)
@@ -9032,7 +9032,7 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 
 	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation1).getPrereqBonuses())
 	{
-		if (algo::contains(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), eBonus))
+		if (algo::any_of_equal(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), eBonus))
 		{
 			return true;
 		}
@@ -9705,7 +9705,7 @@ void CvGame::doVoteResults()
 								szBuffer += NEWLINE + gDLL->getText("TXT_KEY_POPUP_VOTES_YES_NO", GET_PLAYER((PlayerTypes)iJ).getNameKey(), L"TXT_KEY_POPUP_YES", GET_PLAYER((PlayerTypes)iJ).getVotes(eVote, eVoteSource));
 								break;
 							default:
-								FAssert(false);
+								FErrorMsg("error");
 								break;
 							}
 						}
@@ -9857,7 +9857,7 @@ void CvGame::doVoteSelection()
 
 bool CvGame::isEventActive(EventTriggerTypes eTrigger) const
 {
-	return !algo::contains(m_aeInactiveTriggers, eTrigger);
+	return algo::none_of_equal(m_aeInactiveTriggers, eTrigger);
 }
 
 void CvGame::initEvents()

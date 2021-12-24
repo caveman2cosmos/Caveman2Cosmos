@@ -374,7 +374,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue )
 		}
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -427,7 +427,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue 
 		}
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
