@@ -39,13 +39,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 	switch (widgetDataStruct.m_eWidgetType)
 	{
 	case WIDGET_PLOT_LIST:
-		parsePlotListHelp(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_PLOT_LIST_SHIFT:
-		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CTRL_SHIFT", (GC.getMAX_PLOT_LIST_SIZE() - 1)));
-		break;
-
 	case WIDGET_CITY_SCROLL:
 		break;
 
@@ -666,22 +660,13 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	{
 
 	case WIDGET_PLOT_LIST:
-		doPlotList(widgetDataStruct);
-		break;
-
 	case WIDGET_PLOT_LIST_SHIFT:
-		gDLL->getInterfaceIFace()->changePlotListColumn(widgetDataStruct.m_iData1 * (gDLL->ctrlKey() ? (GC.getMAX_PLOT_LIST_SIZE() - 1) : 1));
 		break;
 
 	case WIDGET_CITY_SCROLL:
-		if ( widgetDataStruct.m_iData1 > 0 )
-		{
+		if (widgetDataStruct.m_iData1 > 0)
 			GC.getGame().doControl(CONTROL_NEXTCITY);
-		}
-		else
-		{
-			GC.getGame().doControl(CONTROL_PREVCITY);
-		}
+		else GC.getGame().doControl(CONTROL_PREVCITY);
 		break;
 
 	case WIDGET_LIBERATE_CITY:
@@ -1126,31 +1111,6 @@ bool CvDLLWidgetData::isLink(const CvWidgetDataStruct &widgetDataStruct) const
 		break;
 	}
 	return (bLink);
-}
-
-
-void CvDLLWidgetData::doPlotList(CvWidgetDataStruct &widgetDataStruct)
-{
-	PROFILE_FUNC();
-
-	const int iUnitIndex = widgetDataStruct.m_iData1 + gDLL->getInterfaceIFace()->getPlotListColumn() - gDLL->getInterfaceIFace()->getPlotListOffset();
-
-	CvUnit* pUnit = gDLL->getInterfaceIFace()->getInterfacePlotUnit(gDLL->getInterfaceIFace()->getSelectionPlot(), iUnitIndex);
-
-	if (pUnit != NULL)
-	{
-		if (pUnit->getOwner() == GC.getGame().getActivePlayer())
-		{
-			const bool bWasCityScreenUp = gDLL->getInterfaceIFace()->isCityScreenUp();
-
-			gDLL->getInterfaceIFace()->selectGroup(pUnit, gDLL->shiftKey(), gDLL->ctrlKey(), gDLL->altKey());
-
-			if (bWasCityScreenUp)
-			{
-				gDLL->getInterfaceIFace()->lookAtSelectionPlot();
-			}
-		}
-	}
 }
 
 

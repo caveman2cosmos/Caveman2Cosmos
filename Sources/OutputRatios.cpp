@@ -30,9 +30,9 @@ void OutputRatios::reset()
 }
 void OutputRatios::WeightOutputs(const int foodWeight, const int productionWeight, const int commerceWeight)
 {
-	food_ratio *= foodWeight;
+	food_ratio       *= foodWeight;
 	production_ratio *= productionWeight;
-	commerce_ratio *= commerceWeight;
+	commerce_ratio   *= commerceWeight;
 }
 void OutputRatios::WeightFood(const int foodWeight)
 {

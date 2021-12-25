@@ -4479,7 +4479,7 @@ void CvChecksum::add(uint8_t b)
 #include "CyArgsList.h"
 
 void AddDLLMessage(
-	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound,
+	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound,
 	InterfaceMessageTypes eType, LPCSTR pszIcon, ColorTypes eFlashColor,
 	int iFlashX, int iFlashY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
 {
