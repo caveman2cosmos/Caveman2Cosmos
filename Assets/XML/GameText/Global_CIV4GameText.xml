@@ -13472,7 +13472,7 @@
 		<Tag>TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT</Tag>
 		<English>[ICON_BULLET]Can [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Aménagement possible : [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Ermöglicht die Modernisierung [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
+		<German>[ICON_BULLET]neuer Befehl: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Se puede [COLOR_HIGHLIGHT_TEXT]%s1:2_ImpName[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -14305,7 +14305,7 @@
 		<Tag>TXT_KEY_MISC_ENABLES</Tag>
 		<English>[ICON_BULLET]Enables[SPACE]</English>
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
-		<German>[ICON_BULLET]Ermöglicht:[SPACE]</German>
+		<German>[ICON_BULLET]neue Beförderungen:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
@@ -16380,7 +16380,7 @@
 		<Tag>TXT_KEY_MISC_REVEALS</Tag>
 		<English>[ICON_BULLET]Reveals[SPACE]</English>
 		<French>[ICON_BULLET]Révèle :[SPACE]</French>
-		<German>[ICON_BULLET]Zeigt:[SPACE]</German>
+		<German>[ICON_BULLET]neue Ressourcen:[SPACE]</German>
 		<Italian>[ICON_BULLET]Rivela[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Revela[SPACE]</Spanish>
 	</TEXT>
@@ -22696,26 +22696,28 @@
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s2]%s1_Text[\LINK] in City Vicinity, or manufactured locally (No need for improvement)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] à proximité de la ville, ou fabriqué localement (Pas besoin d'aménagement)[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s2]%s1_Text[\LINK] (hergestellt oder vorhanden im Stadtradius)[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]benötigt [LINK=%s2]%s1_Text[\LINK] (hergestellt oder vorhanden im Stadtradius) (keine Ausbauten erforderlich)[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s2]%s1_Text[\LINK] в городском радиусе или изготовлено на месте (нет необходимости в улучшении)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
+		<German>[COLOR_WARNING_TEXT]benötigte Rohstoffe oder Güter im Stadtradius (keine Ausbauten erforderlich):[SPACE]</German>
 		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_VICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s2]%s1_Text[\LINK] in city and in city vicinity, or manufactured locally.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] en ville, à proximité de la ville, ou fabriqué localement.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s2]%s1_Text[\LINK] (hergestellt oder abgebaut im Stadtradius)[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]benötigt [LINK=%s2]%s1_Text[\LINK] (hergestellt oder abgebaut im Stadtradius)[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò [LINK=%s2]%s1_Text[\LINK] в городском радиусе[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:[SPACE]</English>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:[SPACE]</French>
+		<German>[COLOR_WARNING_TEXT]benötigte Rohstoffe oder Güter im Stadtradius:[SPACE]</German>
 		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì îõâàò ãîðîäñêîé ãðàíèöåé:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -25374,7 +25376,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
 		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
-		<German>[ICON_BULLET]Erlaubt die Aufwertung von %s1 zu %s2.</German>
+		<German>[ICON_BULLET]neue Modernisierung: %s1 -> %s2</German>
 		<Italian>[ICON_BULLET]Permette a %s1 di migliorare in %s2.</Italian>
 		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
 		<Polish>[ICON_BULLET]Umożliwia ulepszenie %s1 do %s2.</Polish>
@@ -30662,7 +30664,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_WITH</Tag>
 		<English>[SPACE]with[SPACE]</English>
 		<French>[SPACE]avec[SPACE]</French>
-		<German>[SPACE]mit[SPACE]</German>
+		<German>[SPACE]durch[SPACE]</German>
 		<Italian>[SPACE]con[SPACE]</Italian>
 		<Spanish>[SPACE]con[SPACE]</Spanish>
 		<Polish>[SPACE]z[SPACE]</Polish>

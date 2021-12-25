@@ -99,7 +99,6 @@ public:
 	void setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city);
 	bool setBuildingAdditionalHappinessHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted = false);
 	void setYieldChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent = false, bool bNewLine = true);
-	void setCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent = false, bool bNewLine = true);
 	void listCommerceChange(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szEnd, const int* aList, bool bPercent = false);
 	void setYieldPerPopChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent = false, bool bNewLine = true);
 	void setCommerceTimes100ChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bNewLine = false, bool bStarted = false);

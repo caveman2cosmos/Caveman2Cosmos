@@ -11172,9 +11172,9 @@ void CvRiverModelInfo::copyNonDefaults(const CvRiverModelInfo* pClassInfo)
 
 	if (getTextureIndex() == iDefault) m_iTextureIndex = pClassInfo->getTextureIndex();
 
-	if (getDeltaString() == cDefault) strcpy (m_szDeltaString, (LPCTSTR) CvString::format("%s", pClassInfo->getDeltaString()));
-	if (getConnectString() == cDefault) strcpy (m_szConnectString, (LPCTSTR) CvString::format("%s", pClassInfo->getConnectString()));
-	if (getRotateString() == cDefault) strcpy (m_szRotateString, (LPCTSTR) CvString::format("%s", pClassInfo->getRotateString()));
+	if (getDeltaString() == cDefault) strcpy(m_szDeltaString, (const char*) CvString::format("%s", pClassInfo->getDeltaString()));
+	if (getConnectString() == cDefault) strcpy(m_szConnectString, (const char*) CvString::format("%s", pClassInfo->getConnectString()));
+	if (getRotateString() == cDefault) strcpy(m_szRotateString, (const char*) CvString::format("%s", pClassInfo->getRotateString()));
 }
 
 //======================================================================================================
@@ -11285,9 +11285,9 @@ void CvRouteModelInfo::copyNonDefaults(const CvRouteModelInfo* pClassInfo)
 
 	if (getRouteType() == iTextDefault) m_eRouteType = pClassInfo->getRouteType();
 
-	if (getConnectString() == cDefault) strcpy (m_szConnectString, (LPCTSTR) CvString::format("%s", pClassInfo->getConnectString()));
-	if (getModelConnectString() == cDefault) strcpy (m_szModelConnectString, (LPCTSTR) CvString::format("%s", pClassInfo->getModelConnectString()));
-	if (getRotateString() == cDefault) strcpy (m_szRotateString, (LPCTSTR) CvString::format("%s", pClassInfo->getRotateString()));
+	if (getConnectString() == cDefault) strcpy(m_szConnectString, (const char*) CvString::format("%s", pClassInfo->getConnectString()));
+	if (getModelConnectString() == cDefault) strcpy(m_szModelConnectString, (const char*) CvString::format("%s", pClassInfo->getModelConnectString()));
+	if (getRotateString() == cDefault) strcpy(m_szRotateString, (const char*) CvString::format("%s", pClassInfo->getRotateString()));
 }
 
 //======================================================================================================

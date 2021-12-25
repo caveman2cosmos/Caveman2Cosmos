@@ -23,7 +23,6 @@ public:
 	DllExport bool isLink(const CvWidgetDataStruct &widgetDataStruct) const;
 
 	//	Actions to be executed
-	void doPlotList(CvWidgetDataStruct &widgetDataStruct);
 	void doLiberateCity();
 	void doRenameCity();
 	void doRenameUnit();

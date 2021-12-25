@@ -20,6 +20,7 @@
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
+#include "OutputRatios.h"
 #include <time.h>
 #include <sstream>
 
@@ -117,13 +118,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_statsReporter(NULL)
 	, m_diplomacyScreen(NULL)
 	, m_mpDiplomacyScreen(NULL)
-	//, m_pathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_interfacePathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_stepFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_routeFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_borderFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_areaFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_plotGroupFinders(bst::array<FAStar*, NUM_MAPS>())
 	, m_aiPlotDirectionX(NULL)
 	, m_aiPlotDirectionY(NULL)
 	, m_aiPlotCardinalDirectionX(NULL)
@@ -423,6 +417,8 @@ void cvInternalGlobals::init()
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
 	CyGlobalContext::initStatics();
+
+	OutputRatios::readDefaultWeightsFromIniFile();
 
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);

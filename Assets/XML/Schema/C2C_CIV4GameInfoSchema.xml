@@ -1000,6 +1000,13 @@
 	<ElementType name="TradeYieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="BonusCommerceModifier" content="eltOnly">
+		<element type="BonusType"/>
+		<element type="CommerceModifiers"/>
+	</ElementType>
+	<ElementType name="BonusCommerceModifiers" content="eltOnly">
+		<element type="BonusCommerceModifier" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="CommerceModifiers" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
@@ -1244,6 +1251,7 @@
 		<element type="TradeYieldModifiers" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 		<element type="CapitalCommerceModifiers" minOccurs="0"/>
+		<element type="BonusCommerceModifiers" minOccurs="0"/>
 		<element type="SpecialistExtraCommerces" minOccurs="0"/>
 		<element type="Hurrys" minOccurs="0"/>
 		<element type="SpecialBuildingNotRequireds" minOccurs="0"/>
