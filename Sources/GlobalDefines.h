@@ -295,6 +295,14 @@
 	DO(DiploCommentTypes, AI_DIPLOCOMMENT_DECLARE_WAR) \
 	DO(DiploCommentTypes, AI_DIPLOCOMMENT_FIRST_CONTACT) \
 	DO(EraTypes, C2C_ERA_ATOMIC) \
+	DO(FlavorTypes, FLAVOR_MILITARY) \
+	DO(FlavorTypes, FLAVOR_RELIGION) \
+	DO(FlavorTypes, FLAVOR_PRODUCTION) \
+	DO(FlavorTypes, FLAVOR_GOLD) \
+	DO(FlavorTypes, FLAVOR_SCIENCE) \
+	DO(FlavorTypes, FLAVOR_CULTURE) \
+	DO(FlavorTypes, FLAVOR_GROWTH) \
+	DO(FlavorTypes, FLAVOR_ESPIONAGE) \
 	DO(ImprovementTypes, IMPROVEMENT_CITY) \
 	DO(ImprovementTypes, IMPROVEMENT_CITY_RUINS) \
 	DO(MapCategoryTypes, MAPCATEGORY_EARTH) \

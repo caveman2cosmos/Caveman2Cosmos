@@ -4783,6 +4783,7 @@ public:
 	// Arrays
 	bool hasTrait(int i) const;
 
+	int* getFlavorValues() const { return m_piFlavorValue; }
 	int getFlavorValue(int i) const;
 	int getContactRand(int i) const;
 	int getContactDelay(int i) const;

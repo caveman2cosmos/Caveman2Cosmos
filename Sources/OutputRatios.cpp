@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLIniParserIFaceBase.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvPlayer.h"
 #include "OutputRatios.h"
 
 #include <algorithm>
@@ -8,10 +11,9 @@
 YieldArray OutputRatios::default_weight = { 18, 10, 6 };
 
 OutputRatios::OutputRatios()
-	: food_ratio(default_weight[YIELD_FOOD])
-	, production_ratio(default_weight[YIELD_PRODUCTION])
-	, commerce_ratio(default_weight[YIELD_COMMERCE])
-{}
+{
+	reset();
+}
 OutputRatios::OutputRatios(const int food, const int production, const int commerce)
 {
 	const int totalOutput = std::max(1, food + production + commerce);
@@ -19,6 +21,12 @@ OutputRatios::OutputRatios(const int food, const int production, const int comme
 	food_ratio = 100 - ((food * 100) / totalOutput);
 	production_ratio = 100 - ((production * 100) / totalOutput);
 	commerce_ratio = 100 - ((commerce * 100) / totalOutput);
+}
+void OutputRatios::reset()
+{
+	food_ratio       = default_weight[YIELD_FOOD];
+	production_ratio = default_weight[YIELD_PRODUCTION];
+	commerce_ratio   = default_weight[YIELD_COMMERCE];
 }
 void OutputRatios::WeightOutputs(const int foodWeight, const int productionWeight, const int commerceWeight)
 {
@@ -42,6 +50,24 @@ void OutputRatios::WeightCommerce(const int commerceWeight)
 int OutputRatios::CalculateOutputValue(const int food, const int production, const int commerce) const
 {
 	return (food_ratio * food) + (production_ratio * production) + (commerce_ratio * commerce);
+}
+
+void OutputRatios::addLeaderFlavorWeight(const CvPlayer& player)
+{
+	if (const int* flavors = GC.getLeaderHeadInfo(player.getPersonalityType()).getFlavorValues())
+	{
+		const int foodFlavor = flavors[GC.getFLAVOR_GROWTH()];
+		if (foodFlavor != 0)
+			food_ratio *= foodFlavor;
+
+		const int productionFlavor = flavors[GC.getFLAVOR_PRODUCTION()];
+		if (productionFlavor != 0)
+			production_ratio *= productionFlavor;
+
+		const int commerceFlavor = flavors[GC.getFLAVOR_SCIENCE()];
+		if (commerceFlavor != 0)
+			commerce_ratio *= commerceFlavor;
+	}
 }
 
 void OutputRatios::readDefaultWeightsFromIniFile()
