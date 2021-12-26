@@ -288,6 +288,9 @@
     <ClCompile Include="CvUnitList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CvUnitSelectionCriteria.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CvUnitSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -824,6 +827,9 @@
     <ClInclude Include="CvUnitList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClCompile Include="CvUnitSelectionCriteria.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
     <ClInclude Include="CvUnitSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
