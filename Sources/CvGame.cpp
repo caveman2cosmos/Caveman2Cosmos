@@ -6016,7 +6016,6 @@ void enumSpawnPlots(const CvSpawnInfo& spawnInfo, std::vector<CvPlot*>* plots)
 				if (!pPlot->isAsPeak())
 				{
 					bValid = algo::any_of_equal(spawnInfo.getBonuses(), pPlot->getBonusType());
-					//BonusTypes bonusType = pPlot->getBonusType();
 
 					if (!bValid)
 					{
@@ -6032,11 +6031,6 @@ void enumSpawnPlots(const CvSpawnInfo& spawnInfo, std::vector<CvPlot*>* plots)
 						else
 						{
 							if (algo::any_of_equal(spawnInfo.getFeatures(), featureType))
-							{
-								bValid = true;
-							}
-
-							if (bValid)
 							{
 								bValid = spawnInfo.getFeatureTerrain().empty()
 									|| algo::any_of_equal(spawnInfo.getFeatureTerrain(), terrainType);
