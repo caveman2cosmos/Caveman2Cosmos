@@ -47,15 +47,7 @@ public:
 	typename Converter::return_type next()
 	{
 		if (m_cur == m_end)
-		{
-				OutputDebugString("Py iteration complete - throw stop_iteration_error\n");
-			try {
-				python::objects::stop_iteration_error();
-			}
-			catch (const python::error_already_set&) {
-				OutputDebugString("exception caught: error_already_set\n");
-			}
-		}
+			python::objects::stop_iteration_error();
 		return Converter::convert(*m_cur++);
 	}
 
