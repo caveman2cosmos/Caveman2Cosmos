@@ -48,13 +48,12 @@ public:
 	{
 		if (m_cur == m_end)
 		{
-				OutputDebugString("Py iterator end - throw stop_iteration_error\n");
+				OutputDebugString("Py iteration complete - throw stop_iteration_error\n");
 			try {
 				python::objects::stop_iteration_error();
 			}
 			catch (const python::error_already_set&) {
-				FErrorMsg("error");
-				OutputDebugString("error from python\n");
+				OutputDebugString("exception caught: error_already_set\n");
 			}
 		}
 		return Converter::convert(*m_cur++);
