@@ -2649,17 +2649,13 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo);
 
-	int	getNumBonuses() const;
-	int	getNumTerrains() const;
-	int	getNumFeatures() const;
-	int	getNumFeatureTerrains() const;
-	int	getNumSpawnGroup() const;
+	const std::vector<BonusTypes>&   getBonuses() const        { return m_bonusTypes; }
+	const std::vector<TerrainTypes>& getTerrain() const        { return m_terrainTypes; }
+	const std::vector<FeatureTypes>& getFeatures() const       { return m_featureTypes; }
+	const std::vector<TerrainTypes>& getFeatureTerrain() const { return m_featureTerrainTypes; }
+	const std::vector<UnitTypes>&    getSpawnGroups() const    { return m_spawnGroup; }
+
 	PlayerTypes getPlayer() const;
-	BonusTypes getBonus(int index) const;
-	TerrainTypes getTerrain(int index) const;
-	FeatureTypes getFeature(int index) const;
-	TerrainTypes getFeatureTerrain(int index) const;
-	UnitTypes getSpawnGroup(int index) const;
 	int getTurnRate() const;
 	int getGlobalTurnRate() const;
 	int getMaxLocalDensity() const;

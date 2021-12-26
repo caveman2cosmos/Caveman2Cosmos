@@ -419,6 +419,7 @@ public:
 
 	int getNumUnitInfos() const;
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
+	const std::vector<CvUnitInfo*>& getUnitInfos() const { return m_paUnitInfo; }
 
 	int getNumSpawnInfos() const;
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
