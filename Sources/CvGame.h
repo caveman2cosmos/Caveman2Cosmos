@@ -642,10 +642,6 @@ public:
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
 	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
-	int getPlotExtraCost(int iX, int iY) const;
-	void changePlotExtraCost(int iX, int iY, int iCost);
-	void removePlotExtraCost(int iX, int iY);
-
 	ReligionTypes getVoteSourceReligion(VoteSourceTypes eVoteSource) const;
 	void setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce = false);
 
@@ -831,7 +827,6 @@ protected:
 	int m_iNumSessions;
 
 	std::vector<PlotExtraYield> m_aPlotExtraYields;
-	std::vector<PlotExtraCost> m_aPlotExtraCosts;
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 

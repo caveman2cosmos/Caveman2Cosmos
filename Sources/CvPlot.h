@@ -301,8 +301,6 @@ public:
 	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const;
 	static void flushMovementCostCache();
 
-	int getExtraMovePathCost() const;
-	void changeExtraMovePathCost(int iChange);
 	//	Koshling - count of mountain leaders present per team maintained for efficiency of movement calculations
 	// TB: This was not working properly so has been changed to a plotcount method.
 	int getHasMountainLeader(TeamTypes eTeam) const;
