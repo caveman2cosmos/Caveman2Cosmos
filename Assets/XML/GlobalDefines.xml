@@ -109,7 +109,7 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -1738,11 +1738,11 @@
 	</Define>
 	<Define>
 		<DefineName>AI_BASE_FOOD_WEIGHT</DefineName>
-		<iDefineIntVal>18</iDefineIntVal>
+		<iDefineIntVal>16</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>AI_BASE_PRODUCTION_WEIGHT</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>12</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>AI_BASE_COMMERCE_WEIGHT</DefineName>
