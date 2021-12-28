@@ -12,7 +12,6 @@
 #include "CvDate.h"
 #include "CvAllocator.h"
 
-class CvDeal;
 class CvCity;
 class CvPlot;
 class CvReplayMessage;
