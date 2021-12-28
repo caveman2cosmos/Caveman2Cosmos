@@ -487,7 +487,7 @@ public:
 
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 
-	bool isNewCityFree(const CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject) const;
 
 	const BoolExpr* getConstructCondition() const;
 

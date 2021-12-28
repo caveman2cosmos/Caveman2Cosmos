@@ -18,6 +18,7 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvViewport.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvImprovementInfo.h"

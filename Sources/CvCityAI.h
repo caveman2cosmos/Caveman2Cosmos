@@ -36,6 +36,7 @@
 
 class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
 class CvArea;
+class CvUnitSelectionCriteria;
 
 //	Koshling - add caching to yield calculations
 #ifdef YIELD_VALUE_CACHING

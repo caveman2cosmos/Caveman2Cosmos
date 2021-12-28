@@ -18,6 +18,7 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
@@ -8473,7 +8474,7 @@ void CvCityAI::AI_updateBestBuild()
 	// that you can call it several times to adjust the ratio
 	// (i.e a city has food preference, call it 2nd time around with 2,1,1, and the value of food will double)
 
-	ratios.WeightOutputs(18, 10, 6);
+	ratios.WeightOutputs(GC.getAI_BASE_FOOD_WEIGHT(), GC.getAI_BASE_PRODUCTION_WEIGHT(), GC.getAI_BASE_COMMERCE_WEIGHT());
 
 	if (getPopulation() < (GET_PLAYER(getOwner()).getCurrentEra() + 1) * 4)
 	{

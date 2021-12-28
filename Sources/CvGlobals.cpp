@@ -20,7 +20,6 @@
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
-#include "OutputRatios.h"
 #include <time.h>
 #include <sstream>
 
@@ -417,8 +416,6 @@ void cvInternalGlobals::init()
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
 	CyGlobalContext::initStatics();
-
-	OutputRatios::readDefaultWeightsFromIniFile();
 
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);

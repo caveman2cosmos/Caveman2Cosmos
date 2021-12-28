@@ -253,36 +253,6 @@ void PlotExtraYield::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-void PlotExtraCost::read(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_READ_OBJECT_START(wrapper);
-
-	WRAPPER_READ(wrapper, "PlotExtraCost",&m_iX);
-	WRAPPER_READ(wrapper, "PlotExtraCost",&m_iY);
-	WRAPPER_READ(wrapper, "PlotExtraCost",&m_iCost);
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-}
-
-void PlotExtraCost::write(FDataStreamBase* pStream)
-{
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-	wrapper.AttachToStream(pStream);
-
-	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE(wrapper, "PlotExtraCost", m_iX);
-	WRAPPER_WRITE(wrapper, "PlotExtraCost", m_iY);
-	WRAPPER_WRITE(wrapper, "PlotExtraCost", m_iCost);
-
-	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
-
 void BuildingYieldChange::read(FDataStreamBase* pStream)
 {
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();

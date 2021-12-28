@@ -7737,61 +7737,6 @@ const BoolExpr* CvSpawnInfo::getSpawnCondition() const
 	return m_pExprSpawnCondition;
 }
 
-int	CvSpawnInfo::getNumBonuses() const
-{
-	return m_bonusTypes.size();
-}
-
-int	CvSpawnInfo::getNumTerrains() const
-{
-	return m_terrainTypes.size();
-}
-
-int	CvSpawnInfo::getNumFeatures() const
-{
-	return m_featureTypes.size();
-}
-
-int	CvSpawnInfo::getNumFeatureTerrains() const
-{
-	return m_featureTerrainTypes.size();
-}
-
-int	CvSpawnInfo::getNumSpawnGroup() const
-{
-	return m_spawnGroup.size();
-}
-
-BonusTypes CvSpawnInfo::getBonus(int index) const
-{
-	FASSERT_BOUNDS(0, getNumBonuses(), index);
-	return m_bonusTypes[index];
-}
-
-TerrainTypes CvSpawnInfo::getTerrain(int index) const
-{
-	FASSERT_BOUNDS(0, getNumTerrains(), index);
-	return m_terrainTypes[index];
-}
-
-FeatureTypes CvSpawnInfo::getFeature(int index) const
-{
-	FASSERT_BOUNDS(0, getNumFeatures(), index);
-	return m_featureTypes[index];
-}
-
-TerrainTypes CvSpawnInfo::getFeatureTerrain(int index) const
-{
-	FASSERT_BOUNDS(0, getNumFeatureTerrains(), index);
-	return m_featureTerrainTypes[index];
-}
-
-UnitTypes CvSpawnInfo::getSpawnGroup(int index) const
-{
-	FASSERT_BOUNDS(0, getNumSpawnGroup(), index);
-	return m_spawnGroup[index];
-}
-
 int CvSpawnInfo::getTurnRate() const
 {
 	return m_iTurns;

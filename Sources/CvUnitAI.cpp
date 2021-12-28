@@ -20,6 +20,7 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnitAI.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
