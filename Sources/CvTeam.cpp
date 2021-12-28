@@ -587,18 +587,16 @@ void CvTeam::addTeam(TeamTypes eTeam)
 	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
 	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
 
-	CvDeal* pLoopDeal;
-	int iLoop;
-	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
 	{
-		if (GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID() && GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eTeam
-		||  GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eTeam   && GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID())
+		if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == getID() && GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == eTeam
+		||  GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == eTeam   && GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == getID())
 		{
 			bool bValid = true;
 
-			if (pLoopDeal->getFirstTrades() != NULL)
+			if (pLoopDeal.getFirstTrades() != NULL)
 			{
-				for (pNode = pLoopDeal->getFirstTrades()->head(); pNode; pNode = pLoopDeal->getFirstTrades()->next(pNode))
+				for (pNode = pLoopDeal.getFirstTrades()->head(); pNode; pNode = pLoopDeal.getFirstTrades()->next(pNode))
 				{
 					if(pNode->m_data.m_eItemType == TRADE_OPEN_BORDERS
 					|| pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT
@@ -613,9 +611,9 @@ void CvTeam::addTeam(TeamTypes eTeam)
 					}
 				}
 			}
-			if (bValid && pLoopDeal->getSecondTrades() != NULL)
+			if (bValid && pLoopDeal.getSecondTrades() != NULL)
 			{
-				for (pNode = pLoopDeal->getSecondTrades()->head(); pNode; pNode = pLoopDeal->getSecondTrades()->next(pNode))
+				for (pNode = pLoopDeal.getSecondTrades()->head(); pNode; pNode = pLoopDeal.getSecondTrades()->next(pNode))
 				{
 					if(pNode->m_data.m_eItemType == TRADE_OPEN_BORDERS
 					|| pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT
@@ -632,7 +630,7 @@ void CvTeam::addTeam(TeamTypes eTeam)
 			}
 			if (!bValid)
 			{
-				pLoopDeal->kill();
+				pLoopDeal.kill();
 			}
 		}
 	}
@@ -1256,14 +1254,12 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 		{
 			logBBAI("  Team %d (%S) declares war on team %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), eTeam);
 		}
-		CvDeal* pLoopDeal;
-		int iLoop;
-		for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+		foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
 		{
-			if (GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID() && GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eTeam
-			||  GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eTeam && GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID())
+			if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == getID() && GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == eTeam
+			||  GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == eTeam && GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == getID())
 			{
-				pLoopDeal->kill();
+				pLoopDeal.kill();
 			}
 		}
 		const bool bInFull = (!teamFoe.isNPC() || teamFoe.isBarbarian()) && (!isNPC() || isBarbarian());
@@ -4092,20 +4088,17 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 		{
 			m_bCapitulated = bCapitulated;
 
-			CvDeal* pLoopDeal;
-			int iLoop;
 			CLLNode<TradeData>* pNode;
-			bool bValid;
 
-			for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+			foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
 			{
-				if ((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID()) || (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID()))
+				if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == getID() || GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == getID())
 				{
-					bValid = true;
+					bool bValid = true;
 
-					if (pLoopDeal->getFirstTrades() != NULL)
+					if (pLoopDeal.getFirstTrades() != NULL)
 					{
-						for (pNode = pLoopDeal->getFirstTrades()->head(); pNode; pNode = pLoopDeal->getFirstTrades()->next(pNode))
+						for (pNode = pLoopDeal.getFirstTrades()->head(); pNode; pNode = pLoopDeal.getFirstTrades()->next(pNode))
 						{
 							if ((pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT) ||
 								(pNode->m_data.m_eItemType == TRADE_PEACE_TREATY))
@@ -4116,9 +4109,9 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 						}
 					}
 
-					if (bValid && pLoopDeal->getSecondTrades() != NULL)
+					if (bValid && pLoopDeal.getSecondTrades() != NULL)
 					{
-						for (pNode = pLoopDeal->getSecondTrades()->head(); pNode; pNode = pLoopDeal->getSecondTrades()->next(pNode))
+						for (pNode = pLoopDeal.getSecondTrades()->head(); pNode; pNode = pLoopDeal.getSecondTrades()->next(pNode))
 						{
 							if ((pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT) ||
 								(pNode->m_data.m_eItemType == TRADE_PEACE_TREATY))
@@ -4131,7 +4124,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 
 					if (!bValid)
 					{
-						pLoopDeal->kill();
+						pLoopDeal.kill();
 					}
 				}
 			}
@@ -4348,21 +4341,18 @@ void CvTeam::assignVassal(TeamTypes eVassal, bool bSurrender) const
 
 void CvTeam::freeVassal(TeamTypes eVassal) const
 {
-	CvDeal* pLoopDeal;
-	int iLoop;
 	CLLNode<TradeData>* pNode;
-	bool bValid;
 
-	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
 	{
-		bValid = true;
+		bool bValid = true;
 
-		if ((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eVassal) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID()))
+		if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == eVassal && GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == getID())
 		{
 
-			if (pLoopDeal->getFirstTrades() != NULL)
+			if (pLoopDeal.getFirstTrades() != NULL)
 			{
-				for (pNode = pLoopDeal->getFirstTrades()->head(); pNode; pNode = pLoopDeal->getFirstTrades()->next(pNode))
+				for (pNode = pLoopDeal.getFirstTrades()->head(); pNode; pNode = pLoopDeal.getFirstTrades()->next(pNode))
 				{
 					if ((pNode->m_data.m_eItemType == TRADE_VASSAL) ||
 						(pNode->m_data.m_eItemType == TRADE_SURRENDER))
@@ -4375,11 +4365,11 @@ void CvTeam::freeVassal(TeamTypes eVassal) const
 
 		if (bValid)
 		{
-			if ((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID()) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eVassal))
+			if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == getID() && GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == eVassal)
 			{
-				if (pLoopDeal->getSecondTrades() != NULL)
+				if (pLoopDeal.getSecondTrades() != NULL)
 				{
-					for (pNode = pLoopDeal->getSecondTrades()->head(); pNode; pNode = pLoopDeal->getSecondTrades()->next(pNode))
+					for (pNode = pLoopDeal.getSecondTrades()->head(); pNode; pNode = pLoopDeal.getSecondTrades()->next(pNode))
 					{
 						if ((pNode->m_data.m_eItemType == TRADE_VASSAL) ||
 							(pNode->m_data.m_eItemType == TRADE_SURRENDER))
@@ -4393,7 +4383,7 @@ void CvTeam::freeVassal(TeamTypes eVassal) const
 
 		if (!bValid)
 		{
-			pLoopDeal->kill();
+			pLoopDeal.kill();
 		}
 	}
 }
@@ -6084,18 +6074,15 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 void CvTeam::cancelDefensivePacts()
 {
 	CLLNode<TradeData>* pNode;
-	CvDeal* pLoopDeal;
-	bool bCancelDeal;
-	int iLoop;
 
-	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
 	{
-		bCancelDeal = false;
+		bool bCancelDeal = false;
 
-		if ((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID()) ||
-			(GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID()))
+		if ((GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == getID()) ||
+			(GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == getID()))
 		{
-			for (pNode = pLoopDeal->headFirstTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextFirstTradesNode(pNode))
+			for (pNode = pLoopDeal.headFirstTradesNode(); (pNode != NULL); pNode = pLoopDeal.nextFirstTradesNode(pNode))
 			{
 				if (pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT)
 				{
@@ -6106,7 +6093,7 @@ void CvTeam::cancelDefensivePacts()
 
 			if (!bCancelDeal)
 			{
-				for (pNode = pLoopDeal->headSecondTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextSecondTradesNode(pNode))
+				for (pNode = pLoopDeal.headSecondTradesNode(); (pNode != NULL); pNode = pLoopDeal.nextSecondTradesNode(pNode))
 				{
 					if (pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT)
 					{
@@ -6119,7 +6106,7 @@ void CvTeam::cancelDefensivePacts()
 
 		if (bCancelDeal)
 		{
-			pLoopDeal->kill();
+			pLoopDeal.kill();
 		}
 	}
 }

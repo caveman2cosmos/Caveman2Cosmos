@@ -5,7 +5,7 @@
 #ifndef CIV4_GAME_H
 #define CIV4_GAME_H
 
-//#include "CvDeal.h"
+#include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"
 #include "CvPropertySolver.h"
@@ -563,9 +563,7 @@ public:
 	DllExport CvDeal* getDeal(int iID);
 	CvDeal* addDeal();
 	void deleteDeal(int iID);
-	// iteration
-	CvDeal* firstDeal(int *pIterIdx, bool bRev=false) const;
-	CvDeal* nextDeal(int *pIterIdx, bool bRev=false) const;
+	FFreeListTrashArray<CvDeal>::Range_t deals() const { return m_deals.range(); }
 
 	VoteSelectionData* getVoteSelection(int iID) const;
 	VoteSelectionData* addVoteSelection(VoteSourceTypes eVoteSource);
@@ -662,7 +660,7 @@ public:
 
 	bool pythonIsBonusIgnoreLatitudes() const;
 
-	inline bool isRecalculatingModifiers() { return m_bRecalculatingModifiers; }
+	inline bool isRecalculatingModifiers() const { return m_bRecalculatingModifiers; }
 
 	DllExport void getGlobeLayers(std::vector<CvGlobeLayerData>& aLayers) const;
 	DllExport void startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>& aFlyoutItems) const;
@@ -709,13 +707,8 @@ public:
 	void recalculateModifiers();
 
 protected:
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	MapTypes m_eCurrentMap;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+
 	CvString m_gameId;
 	int m_iElapsedGameTurns;
 	int m_iStartTurn;

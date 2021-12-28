@@ -32607,18 +32607,15 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 void CvGameTextMgr::getActiveDealsString(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer)
 {
-	int iIndex;
-	CvDeal* pDeal = GC.getGame().firstDeal(&iIndex);
-	while (NULL != pDeal)
+	foreach_(CvDeal& kDeal, GC.getGame().deals())
 	{
-		if ((pDeal->getFirstPlayer() == eThisPlayer && pDeal->getSecondPlayer() == eOtherPlayer)
-			|| (pDeal->getFirstPlayer() == eOtherPlayer && pDeal->getSecondPlayer() == eThisPlayer))
+		if ((kDeal.getFirstPlayer() == eThisPlayer && kDeal.getSecondPlayer() == eOtherPlayer)
+		|| (kDeal.getFirstPlayer() == eOtherPlayer && kDeal.getSecondPlayer() == eThisPlayer))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(BULLET_CHAR)));
-			getDealString(szBuffer, *pDeal, eThisPlayer);
+			getDealString(szBuffer, kDeal, eThisPlayer);
 		}
-		pDeal = GC.getGame().nextDeal(&iIndex);
 	}
 }
 
