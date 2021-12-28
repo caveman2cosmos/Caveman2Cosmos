@@ -1165,7 +1165,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		}
 		case TRADE_FREE_TRADE_ZONE:
 		{
-			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
+			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 			{
 				if (trade.m_iData == 0)
 				{
@@ -1214,7 +1214,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -1360,7 +1360,7 @@ void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToP
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}

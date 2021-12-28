@@ -132,9 +132,9 @@
 			<Description>TXT_KEY_PROJECT_SS_COCKPIT</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_COCKPIT_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_INTERACTIVE_GLASS</TechPrereq>
+			<TechPrereq>TECH_MOLECULAR_SCANNING</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
-			<iCost>33160</iCost>
+			<iCost>57640</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -161,9 +161,9 @@
 			<Description>TXT_KEY_PROJECT_SS_LIFE_SUPPORT</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_LIFE_SUPPORT_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</TechPrereq>
+			<TechPrereq>TECH_EXTRATERRESTRIAL_AGRICULTURE</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
-			<iCost>25960</iCost>
+			<iCost>62440</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -190,9 +190,9 @@
 			<Description>TXT_KEY_PROJECT_SS_STASIS_CHAMBER</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_STASIS_CHAMBER_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_CRYONICS</TechPrereq>
+			<TechPrereq>TECH_NANOTROIDS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
-			<iCost>43640</iCost>
+			<iCost>62440</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -213,9 +213,9 @@
 			<Description>TXT_KEY_PROJECT_SS_DOCKING_BAY</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_DOCKING_BAY_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_COMMERCIAL_SPACEFLIGHT</TechPrereq>
+			<TechPrereq>TECH_NANOMORPHICS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
-			<iCost>19240</iCost>
+			<iCost>53240</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -242,9 +242,9 @@
 			<Description>TXT_KEY_PROJECT_SS_ENGINE</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_ENGINE_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_MASS_DRIVER</TechPrereq>
+			<TechPrereq>TECH_NUCLEAR_PULSE_PROPULSION</TechPrereq>
 			<iMaxTeamInstances>2</iMaxTeamInstances>
-			<iCost>27080</iCost>
+			<iCost>62440</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -272,9 +272,9 @@
 			<Description>TXT_KEY_PROJECT_SS_CASING</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_CASING_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_SUPERSTRONG_ALLOYS</TechPrereq>
+			<TechPrereq>TECH_NANOSHIELDING</TechPrereq>
 			<iMaxTeamInstances>5</iMaxTeamInstances>
-			<iCost>33160</iCost>
+			<iCost>55240</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -308,9 +308,9 @@
 			<Description>TXT_KEY_PROJECT_SS_THRUSTERS</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_THRUSTERS_PEDIA</Civilopedia>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_FUSION</TechPrereq>
+			<TechPrereq>TECH_SOLAR_ORDNANCE</TechPrereq>
 			<iMaxTeamInstances>5</iMaxTeamInstances>
-			<iCost>25960</iCost>
+			<iCost>60040</iCost>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -409,6 +409,7 @@
 			<Description>TXT_KEY_PROJECT_ITER</Description>
 			<Civilopedia>TXT_KEY_PROJECT_ITER_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CONTROLLED_PLASMA</TechPrereq>
+			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>18440</iCost>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_FUSION_PLANT</EveryoneSpecialBuilding>

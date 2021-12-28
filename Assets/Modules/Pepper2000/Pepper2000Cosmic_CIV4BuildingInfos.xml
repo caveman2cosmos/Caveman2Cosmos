@@ -32,6 +32,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_CIVILIZATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>2853</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -85,7 +88,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -275,7 +278,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -315,12 +318,6 @@
 				<iCommerce>500</iCommerce>
 				<iCommerce>500</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -404,7 +401,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -464,10 +461,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ARCHETYPAL_VECTOR_SPACES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ARCHETYPAL_VECTOR_SPACES</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -528,7 +525,7 @@
 					<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>50</iYield>
+						<iYield>5000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -723,7 +720,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -851,7 +848,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -881,7 +878,7 @@
 				<iYield>3</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-3</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
 				<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
@@ -915,7 +912,7 @@
 				<iYield>6</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-3</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -942,15 +939,15 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SLOAN_GREAT_WALL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CFA2_GREAT_WALL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<TechYieldChanges>
@@ -959,7 +956,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -992,7 +989,7 @@
 				<iYield>9</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-3</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1057,6 +1054,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAMMA_RAY_BURST_CANNON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_STAR_CANNON</ObsoletesToBuilding>
 			<iCost>3075</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1179,6 +1178,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUIDED_PLANETARY_EVOLUTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
+			</TechTypes>
 			<iCost>2634</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1220,12 +1222,6 @@
 				<iYield>1000</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1281,7 +1277,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -1365,7 +1361,7 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1428,7 +1424,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</Type>
@@ -1460,6 +1456,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_CULTURE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>2853</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1483,6 +1482,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_DYSON_SPHERES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>3075</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1519,16 +1521,16 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_METAVERSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_METAVERSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -1569,6 +1571,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_GOVERNMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>2853</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1580,7 +1585,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
@@ -1700,15 +1705,15 @@
 			<iHappiness>1</iHappiness>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_METAVERSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_METAVERSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -1756,40 +1761,40 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MULTIVERSE_TRAVERSAL</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_MULTIVERSE_TRAVERSAL</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_INTERGROUP_TRAVEL</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_INTERCLUSTER_TRAVEL</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_INTERCLUSTER_TRAVEL</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_QUANTUM_RAMJET</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_HORIZON_BREAKING</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_REACTIONLESS_DRIVE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_REACTIONLESS_DRIVE</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1818,10 +1823,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NONSTANDARD_MATHEMATICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_NONSTANDARD_MATHEMATICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1836,6 +1841,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_TERRAFORMING_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
+			</TechTypes>
 			<iCost>2634</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1956,19 +1964,19 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_TRANSDIMENSIONAL_COMMERCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_TRANSDIMENSIONAL_COMMERCE</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
 			</PrereqInCityBuildings>
@@ -1993,10 +2001,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_METAVERSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_METAVERSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -2178,7 +2186,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -2242,14 +2250,14 @@
 					<PrereqTech>TECH_ZERO_POINT_ENERGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -2392,7 +2400,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -2576,7 +2584,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -2662,7 +2670,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -2701,12 +2709,6 @@
 				<iCommerce>1500</iCommerce>
 				<iCommerce>1500</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -2912,10 +2914,10 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_METAVERSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_METAVERSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -2967,14 +2969,14 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_TESSERACT_CONSTRUCTION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -3020,7 +3022,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -3122,7 +3124,7 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -3188,7 +3190,7 @@
 				<iYield>20</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
 			</PrereqInCityBuildings>
@@ -3290,6 +3292,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

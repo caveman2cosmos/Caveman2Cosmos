@@ -43,7 +43,7 @@
 				<iYield>50</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CO2_REMOVAL</BuildingType>
 			</PrereqInCityBuildings>
@@ -163,19 +163,19 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LAUNCH_ARCOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_COLONY_ARCOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -267,10 +267,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_OPTRONICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_OPTRONICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -337,7 +337,7 @@
 				<iYield>50</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -454,6 +454,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEUTERIUM_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -466,6 +469,7 @@
 				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
@@ -537,6 +541,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_GOVERNING_COUNCIL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -755,7 +762,7 @@
 				<iYield>50</iYield>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
@@ -808,13 +815,13 @@
 			<iHealth>5</iHealth>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_THERMAL_NEGATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
@@ -949,6 +956,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TRADE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

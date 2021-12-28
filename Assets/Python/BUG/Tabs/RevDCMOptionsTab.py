@@ -28,6 +28,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			self.addLabel(screen, left, "RevDCM__RevDCMInterface", TRNSLTR.getText("TXT_KEY_REVDCMTAB_INTERFACE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "interfaceOptions")
 			self.addCheckbox(screen, col1, "RevDCM__RevDCMHiddenAttitude")
+			self.addCheckbox(screen, col2, "RevDCM__DYNAMIC_CIV_NAMES")
 
 			screen.attachHSeparator(left, left + "SepInterface1")
 			screen.attachHSeparator(right, right + "SepInterface2")

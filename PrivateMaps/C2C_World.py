@@ -3044,7 +3044,7 @@ class BonusPlacer:
 			for indeXML in aList:
 				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount):
 					placementList.append(indeXML)
-			if len(placementList) > 0:
+			if placementList:
 				shuffle(placementList)
 				for indeXML in placementList:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
@@ -4035,7 +4035,7 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 1:
 			return "Pangea"
 		if selectionID == 2:
-			return "Earthlike"
+			return "Continents"
 		if selectionID == 3:
 			return "Archipelago"
 		if selectionID == 4:
@@ -4573,9 +4573,10 @@ def addFeatures():
 			# Other features
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 				for iI in xrange(GC.getNumFeatureInfos()):
-					if plot.canHaveFeature(iI):
-						if random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability():
-							plot.setFeatureType(iI, -1)
+					if (GC.getFeatureInfo(iI).getAppearanceProbability() > -1
+					and random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability()
+					and plot.canHaveFeature(iI)):
+						plot.setFeatureType(iI, -1)
 			# Forest and Jungle
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE and not plot.isPeak():
 				if pData[i] != WATER and tData[i] not in (DESERT, DUNES, SALT_FLATS, SCRUB, ICE):

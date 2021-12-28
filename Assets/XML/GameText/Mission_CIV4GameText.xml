@@ -399,20 +399,6 @@
 		<Spanish>Hace que el gran personaje descubra automáticamente una tecnología, consumiéndose en el proceso.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESCAPE</Tag>
-		<English>Plan Escape Routes</English>
-		<French>Prévoir des échapatoires</French>
-		<Polish>Plan dróg ucieczek</Polish>
-		<Russian>Составить схему эвакуации</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESCAPE_HELP</Tag>
-		<English>The unit maps out its surroundings and forms plans for escape in case it comes under attack. A unit gets a 4%% bonus to its Withdrawal Probability for each turn it is Planning Escape Routes, to a maximum bonus of 20%%.</English>
-		<French>L'unité cartographie ses environs et prépare des plans d'évasion en cas d'attaque. Une unité obtient un bonus de 4%% au chances de retraite pour chaque tour dépensé, avec un bonus maximum de 20%%.</French>
-		<Polish>Jednostka sprawdza okoliczny teren i opracowuje plany alternatywnej ucieczki. Jednostka otrzymuje bonus 4% do szansy na Ucieczkę z pola bitwy (max 20%)</Polish>
-		<Russian>Подразделение составляет карту окрестностей и планы отступления в случае нападения. Отряд получает бонус 4%% к вероятности отступить за каждый ход, а с планированием путей эвакуации обретается максимальный бонус в 20%%.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_ESPIONAGE_SLEEP</Tag>
 		<English>Gather Intel</English>
 		<French>Récolte d'Infos</French>
@@ -431,20 +417,6 @@
 		<Spanish>Esta unidad recopilará información y no se activará hasta que alcance la máxima bonificación por espionaje.</Spanish>
 		<Polish>Jednostka będzie zbierać dane i nie obudzi się dopóki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
 		<Russian>Этот юнит соберет сведения и не проснется, пока не достигает максимального бонуса шпионажа</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESTABLISH</Tag>
-		<English>Establish Base of Operations</English>
-		<French>Établir une Base d'Opérations</French>
-		<Polish>Utwórz Bazę Operacji</Polish>
-		<Russian>Создать базу операций</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESTABLISH_HELP</Tag>
-		<English>The unit establishes a base of operations for healing and repair support. A unit that heals gets a 2%% bonus to any type of healing support abilities it already has for each turn it is Establishing Operations, to a maximum bonus of 10%%.</English>
-		<Polish>Jednostka utworzyła bazę operacyjna dla wsparcia medycznego i naprawczego. Za każdą turę przebywania w bazie, jednostka dostaje bonus 2% do leczenia/naprawy (max 10%).</Polish>
-		<French>L'unité établit une base d'opérations pour le soutien de guérison et de réparation. Une unité qui soigne obtient un bonus de 2%% pour tout type de capacités de soutien de guérison qu'elle a déjà pour chaque tour où elle établit des opérations, jusqu'à un bonus maximum de 10%%.</French>
-		<Russian>Подразделение создает базу для операций по лечению и восстановлению. Исцеляющий отряд получает бонус 2%% на каждый ход к любому типу навыков исцеления, уже изученным им, а также операции по установлению, с максимальным бонусом в 10%%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FENGAGE</Tag>
@@ -498,6 +470,74 @@
 		<Spanish>Selecciona una ciudad a la que enviar la unidad. No es necesario que dicha ciudad se encuentre dentro de la Vista parcial actual.</Spanish>
 		<Polish>Wybierz miasto do którego się ma udać jednostka. Miasto nie musi znajdować się na bieżącym Viewporcie.</Polish>
 		<Russian>Выберите город, куда вы намерены отправить этот отряд. Города не должны быть внутри текущего видового экрана.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
+		<English>Travel to Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Travel to Distant Cosmos</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Tag>
+		<English>Travel to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Travel to Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Travel to Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MARS</Tag>
+		<English>Travel to Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Travel to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MOON</Tag>
+		<English>Travel to Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Tag>
+		<English>Travel to Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Tag>
+		<English>Travel to Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Travel to Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Travel to Earth Underground</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Tag>
+		<English>Travel to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Travel to Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Tag>
+		<English>Travel to Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Tag>
+		<English>Travel to Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Travel to Virgo Superscluster</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER</Tag>
@@ -1113,4 +1153,72 @@
 		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
 		<Russian>Позволяет выбрать желательную технологию для обнаружения. Юнит будет спать, пока эта технология не становится доступной, чтобы исследовать, и затем будет потреблять ее исследование.</Russian>
 	</TEXT>
-</Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>
+		<English>Transfer unit to Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Transfer unit to Distant Cosmos</English>
+	</TEXT>
+<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
+		<English>Transfer unit to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Transfer unit to Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Tag>
+		<English>Transfer unit to Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Transfer unit to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Tag>
+		<English>Transfer unit to Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Tag>
+		<English>Transfer unit to Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Tag>
+		<English>Transfer unit to Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Transfer unit to Earth Underground</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Tag>
+		<English>Transfer unit to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Transfer unit to Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Tag>
+		<English>Transfer unit to Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Tag>
+		<English>Transfer unit to Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Transfer unit to Virgo Superscluster</English>
+	</TEXT>
+	</Civ4GameText>

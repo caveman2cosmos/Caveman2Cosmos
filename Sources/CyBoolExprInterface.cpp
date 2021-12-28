@@ -17,23 +17,23 @@ void CyBoolExprPythonInterface()
 		.value("BOOLEXPR_OR", BOOLEXPR_OR)
 	;
 
-	python::class_<BoolExpr>("CyBoolExpr")
+	python::class_<BoolExpr, boost::noncopyable>("CyBoolExpr", python::no_init)
 		.def("getType", &BoolExpr::getType)
 	;
 
-	python::class_<BoolExprHas, python::bases<BoolExpr> >("CyBoolExprHas")
+	python::class_<BoolExprHas, python::bases<BoolExpr> >("CyBoolExprHas", python::no_init)
 		.def("getType", &BoolExprHas::getType)
 		.def("getGOMType", &BoolExprHas::getGOMType)
 		.def("getID", &BoolExprHas::getID)
 	;
 
-	python::class_<BoolExprAnd, python::bases<BoolExpr> >("CyBoolExprAnd")
+	python::class_<BoolExprAnd, python::bases<BoolExpr> >("CyBoolExprAnd", python::no_init)
 		.def("getType", &BoolExprAnd::getType)
 		.def("getFirstExpr", &BoolExprAnd::getFirstExpr, python::return_value_policy<python::reference_existing_object>())
 		.def("getSecondExpr", &BoolExprAnd::getSecondExpr, python::return_value_policy<python::reference_existing_object>())
 	;
 
-	python::class_<BoolExprOr, python::bases<BoolExpr> >("CyBoolExprOr")
+	python::class_<BoolExprOr, python::bases<BoolExpr> >("CyBoolExprOr", python::no_init)
 		.def("getType", &BoolExprOr::getType)
 		.def("getFirstExpr", &BoolExprOr::getFirstExpr, python::return_value_policy<python::reference_existing_object>())
 		.def("getSecondExpr", &BoolExprOr::getSecondExpr, python::return_value_policy<python::reference_existing_object>())

@@ -23,6 +23,9 @@ bool CvInitCore::bPathsSet;
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_TAGGED_FORMAT	0x00000002
 
+// Used to signal the BULL saved game format is used
+#define BUG_DLL_SAVE_FORMAT		64
+
 // Public Functions...
 
 CvInitCore::CvInitCore()
@@ -549,7 +552,7 @@ void CvInitCore::reopenInactiveSlots()
 
 void CvInitCore::resetGame()
 {
-	OutputDebugString("Reseting Game: Start");
+	OutputDebugString("Reseting Game: Start\n");
 
 	// Descriptive strings about game and map
 	m_eType = GAME_NONE;
@@ -614,12 +617,12 @@ void CvInitCore::resetGame()
 	// Temp vars
 	m_szTemp.clear();
 
-	OutputDebugString("Reseting Game: End");
+	OutputDebugString("Reseting Game: End\n");
 }
 
 void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType)
 {
-	OutputDebugString("Reseting Game with Source: Start");
+	OutputDebugString("Reseting Game with Source: Start\n");
 
 	FAssertMsg(pSource, "Passed null pointer to CvInitCore::resetGame");
 	FAssertMsg(!bClear || !bSaveGameType, "Should not be clearing data while trying to preserve gametype info in CvInitCore::resetGame");
@@ -686,7 +689,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setMapRandSeed(pSource->getMapRandSeed());
 	}
 
-	OutputDebugString("Reseting Game with Source: End");
+	OutputDebugString("Reseting Game with Source: End\n");
 }
 
 void CvInitCore::resetPlayers()
@@ -2054,15 +2057,13 @@ void CvInitCore::setPathNames()
 	exePath = new CvString();
 	exeName = new CvString();
 
-	TCHAR pathBuffer[4096];
-	DWORD result;
-	TCHAR* pos;
+	char pathBuffer[4096];
 
-	result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
-	pos = strchr(pathBuffer, '\\');
+	DWORD result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
+	char* pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
 	{
-		TCHAR* next = strchr(pos + 1, '\\');
+		char* next = strchr(pos + 1, '\\');
 		if (!next)
 		{
 			*pos = 0;
@@ -2076,7 +2077,7 @@ void CvInitCore::setPathNames()
 	pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
 	{
-		TCHAR* next = strchr(pos + 1, '\\');
+		char* next = strchr(pos + 1, '\\');
 		if (!next)
 		{
 			*pos = 0;

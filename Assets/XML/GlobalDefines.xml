@@ -109,7 +109,7 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -378,11 +378,11 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_CITY_GROWTH_THRESHOLD</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>124</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CITY_GROWTH_MULTIPLIER</DefineName>
-		<iDefineIntVal>24</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FOOD_CONSUMPTION_PER_POPULATION</DefineName>
@@ -394,7 +394,7 @@
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
@@ -910,7 +910,7 @@
 	</Define>
 	<Define>
 		<DefineName>UNIT_PRODUCTION_PERCENT_SM</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PROJECT_PRODUCTION_PERCENT</DefineName>
@@ -953,6 +953,11 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Toffer - Perhaps make this a handicap tag,
+			AI has strong combat mod against barbs on high difficulty,
+			so why not allow NPC to be more on par with tech leader on high difficulty.
+			This can never give barbs techs that no other player has, it just determines how fast they catch up.
+		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
@@ -1730,5 +1735,17 @@
 	<Define>
 		<DefineName>ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_FOOD_WEIGHT</DefineName>
+		<iDefineIntVal>16</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_PRODUCTION_WEIGHT</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_COMMERCE_WEIGHT</DefineName>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 </Civ4Defines>

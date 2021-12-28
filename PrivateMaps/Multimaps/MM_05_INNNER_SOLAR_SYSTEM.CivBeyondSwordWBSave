@@ -20286,31 +20286,26 @@ BeginPlot
 	x=42, y=1
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=42, y=2
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=42, y=3
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=42, y=4
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=42, y=5
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=42, y=6
@@ -20772,31 +20767,26 @@ BeginPlot
 	x=43, y=1
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=43, y=2
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=43, y=3
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=43, y=4
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=43, y=5
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=43, y=6
@@ -21257,32 +21247,27 @@ BeginPlot
 	x=44, y=1
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=44, y=2
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=44, y=3
 	StartingPlot
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=44, y=4
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=44, y=5
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=44, y=6
@@ -21743,31 +21728,26 @@ BeginPlot
 	x=45, y=1
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=45, y=2
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=45, y=3
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=45, y=4
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=45, y=5
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=45, y=6
@@ -22231,31 +22211,26 @@ BeginPlot
 	x=46, y=1
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=46, y=2
 	TerrainType=TERRAIN_SUN
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=46, y=3
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=46, y=4
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=46, y=5
 	TerrainType=TERRAIN_INNER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=46, y=6

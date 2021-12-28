@@ -5,7 +5,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import Popup as PyPopup
 import math
 # --------- Revolution mod -------------
 import RevDefs
@@ -644,7 +643,8 @@ def updateRevolutionIndices( argsList ) :
 	RevData.updateCityVal( pCity, 'RevIdxHistory', RevDefs.initRevIdxHistory() )
 
 	if newOwner.isRebel():
-		if newOwner.getNumCities() > 1 and RevData.revObjectGetVal(newOwner, 'CapitalName') == CvUtil.convertToStr(pCity.getName()):
+		import TextUtil
+		if newOwner.getNumCities() > 1 and RevData.revObjectGetVal(newOwner, 'CapitalName') == TextUtil.convertToStr(pCity.getName()):
 			# Rebel has captured their instigator city, make this their capital
 			print "[REV] Rebel %s have captured their instigator city, %s!  Moving capital." %(newOwner.getCivilizationDescription(0), pCity.getName())
 			if newOwner.isHuman():
@@ -1012,28 +1012,29 @@ def checkForAssimilation():
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup(RevDefs.assimilationPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-				if centerPopups: popup.setPosition(3*caesiumpasx,3*caesiumpasy)
-				# Additions by Caesium et al
+				popup = CyPopup(RevDefs.assimilationPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+				if centerPopups:
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
+				# ! Additions by Caesium et al
 				bodStr = TRNSLTR.getText("TXT_KEY_REV_ASSIM_POPUP", ()) %(szCiv, szCiv)
 				if bRiskWar:
 					bodStr += '\n\n' + TRNSLTR.getText("TXT_KEY_REV_ASSIM_POPUP_REBEL", ())%(CyPlayerML.getCivilizationDescription(0))
-				popup.setBodyString(bodStr)
+				popup.setBodyString(bodStr, 1<<0)
 				popup.addSeparator()
 				popup.addButton(TRNSLTR.getText("TXT_KEY_REV_BUTTON_ACCEPT",()))
 				popup.addButton(TRNSLTR.getText("TXT_KEY_REV_BUTTON_MAYBE_LATER",()))
 				popup.addButton(TRNSLTR.getText("TXT_KEY_REV_BUTTON_NEVER",()))
 				popup.setUserData((iPlayerX, CyPlayerDominant.getID(), bRiskWar))
-				popup.launch(bCreateOkButton = False)
+				popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 			else:
 				if bRiskWar:
 					# Assimilating a rebel involves potential war declaration, attitude issues
 					CyPlayerML.AI_changeAttitudeExtra(CyPlayerDominant.getID(), CyPlayerML.AI_getAttitudeExtra(iPlayerX))
 					print "	Revolt - The %s (motherland of the rebel %s) is considering attacking the %s over the assimilation"%(CyPlayerML.getCivilizationDescription(0),szCiv,CyPlayerDominant.getCivilizationDescription(0))
-					[iOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds(CyPlayerML, CyPlayerDominant, CyCity0.area(), False, True, True )
+					[iOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds(CyPlayerML, CyPlayerDominant, CyCity0.area(), False, True, True)
 					if attackerTeam.canDeclareWar(victimTeam.getID()) and iOdds > GAME.getSorenRandNum(100, 'Revolution: War'):
 						print "  Revolt - Rebel motherland takes exception to assimilation, team %d declare war on team %d"%(attackerTeam.getID(), victimTeam.getID())
-						attackerTeam.declareWar( victimTeam.getID(), True, WarPlanTypes.NO_WARPLAN )
+						attackerTeam.declareWar(victimTeam.getID(), True, WarPlanTypes.NO_WARPLAN)
 
 				CyPlayerDominant.assimilatePlayer(iPlayerX)
 

@@ -502,7 +502,7 @@
 					<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -936,10 +936,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -1090,7 +1090,7 @@
 					<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1271,16 +1271,16 @@
 			<iHappiness>6</iHappiness>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ARCHETYPAL_VECTOR_SPACES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ARCHETYPAL_VECTOR_SPACES</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_OMEGA_POINT</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>

@@ -540,7 +540,7 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex) const
 {
 	//Fuyu: Catching Civ4lerts mess-ups
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	if (eIndex < 0 || eIndex >= MAX_TEAMS)
 	{
 #ifdef _DEBUG
@@ -714,9 +714,9 @@ void CyTeam::changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int 
 	m_pTeam->changeImprovementYieldChange((ImprovementTypes)eIndex1, (YieldTypes)eIndex2, iChange);
 }
 
-int CyTeam::getBuildingYieldChange(int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const
+int CyTeam::getBuildingCommerceTechChange(int eIndex, int eBuilding) const
 {
-	return m_pTeam->getBuildingYieldChange((BuildingTypes)eIndex1, (YieldTypes)eIndex2);
+	return m_pTeam->getBuildingCommerceTechChange((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
 }
 
 int CyTeam::getVictoryCountdown(int /*VictoryTypes*/ eVictory) const

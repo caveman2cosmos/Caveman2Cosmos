@@ -21,6 +21,7 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitSelectionCriteria.h"
 
 // Public Functions...
 
@@ -720,9 +721,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		break;
 
-	case BUTTONPOPUP_SAVE_INFO_LOST:
-		break;
-
 	case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			if (1 == pPopupReturn->getButtonClicked())
@@ -852,7 +850,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 }
@@ -1125,10 +1123,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			return launchGetSaveFormatPopup(pPopup, info);
 		}
-		case BUTTONPOPUP_SAVE_INFO_LOST:
-		{
-			return launchGetSaveInfoLostPopup(pPopup, info);
-		}
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			return launchModifierRecalculationPopup(pPopup, info);
@@ -1185,7 +1179,7 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			return launchConfirmAmbushPopup(pPopup, info);
 		}
-		default: FAssert(false);
+		default: FErrorMsg("error");
 	}
 	return false;
 }
@@ -1367,26 +1361,26 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		// Work out statistics about the spread of the building scores so we can see if any are highly recommended
 		float average;
-		int minScore, maxScore;
+		int64_t minScore, maxScore;
 		CvCity::ScoredBuilding::averageMinMax(bestBuildings, average, minScore, maxScore);
 
 		bestBuildings.resize(std::min<int>(5, bestBuildings.size()));
 
-		float cutOff = average + (maxScore - average) * 0.75f;
+		const float cutOff = average + (maxScore - average) * 0.75f;
 		for(size_t idx = 0; idx < bestBuildings.size(); ++idx)
 		{
-			BuildingTypes building = bestBuildings[idx].building;
-			AdvisorTypes advisor = (AdvisorTypes)(GC.getBuildingInfo(building).getAdvisorType());
+			const BuildingTypes building = bestBuildings[idx].building;
+			const AdvisorTypes advisor = (AdvisorTypes)GC.getBuildingInfo(building).getAdvisorType();
 			if (bestBuildings[idx].score > cutOff && advisor != NO_ADVISOR)
 			{
 				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
+				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			}
 			else
 			{
 				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
+				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
 				// CvWString szBuildingText = CvWString::format(L"%s (%d)", GC.getBuildingInfo(building).getDescription(), iTurns);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			}
@@ -1479,7 +1473,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 
 		// Sort the projects by turns to complete
-		std::sort(projects.begin(), projects.end());
+		algo::sort(projects);
 
 		// Lets only keep 5 (probably there will never be this many projects)
 		projects.resize(std::min<int>(5, projects.size()));
@@ -1545,7 +1539,7 @@ bool CvDLLButtonPopup::launchChangeReligionPopup(CvPopup* pPopup, CvPopupInfo &i
 
 	if (NO_RELIGION == eReligion)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return (false);
 	}
 
@@ -1615,7 +1609,7 @@ bool CvDLLButtonPopup::launchDiploVotePopup(CvPopup* pPopup, CvPopupInfo &info)
 	VoteTriggeredData* pVoteTriggered = GC.getGame().getVoteTriggered(info.getData1());
 	if (NULL == pVoteTriggered)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return false;
 	}
 
@@ -1688,7 +1682,7 @@ bool CvDLLButtonPopup::launchRazeCityPopup(CvPopup* pPopup, CvPopupInfo &info)
 	CvCity* pNewCity = player.getCity(info.getData1());
 	if (NULL == pNewCity)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return (false);
 	}
 
@@ -1741,7 +1735,7 @@ bool CvDLLButtonPopup::launchDisbandCityPopup(CvPopup* pPopup, CvPopupInfo &info
 	CvCity* pNewCity = player.getCity(info.getData1());
 	if (NULL == pNewCity)
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return (false);
 	}
 
@@ -2902,18 +2896,6 @@ bool CvDLLButtonPopup::launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &in
 	return true;
 }
 
-bool CvDLLButtonPopup::launchGetSaveInfoLostPopup(CvPopup* pPopup, CvPopupInfo &info)
-{
-	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_NON_FATAL_FORMAT_LOAD_ERROR");
-
-	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szBuffer);
-
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, info.getText());
-
-	gDLL->getInterfaceIFace()->popupLaunch(pPopup);
-	return true;
-}
-
 bool CvDLLButtonPopup::launchModifierRecalculationPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_MODIFIER_RECALCULATION");
@@ -3149,7 +3131,7 @@ bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &in
 		return false;
 	}
 
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_BUILDUP", pUnit->getNameKey()));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_BUILDUP_CHOOSE", pUnit->getNameKey()));
 
 	bool bSelected = false;
 	for (std::map<PromotionLineTypes, PromotionLineKeyedInfo>::const_iterator it = pUnit->getPromotionLineKeyedInfo().begin(), end = pUnit->getPromotionLineKeyedInfo().end(); it != end; ++it)
@@ -3183,9 +3165,13 @@ bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &in
 		return false;
 	}
 
-	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_NEVER_MIND"), NULL, 0, WIDGET_GENERAL);
+	if (pUnit->isBuildUp())
+	{
+		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_BUILDUP_DISBAND"), NULL, 0, WIDGET_GENERAL);
+	}
+	else gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_NEVER_MIND"), NULL, 0, WIDGET_GENERAL);
 
-	gDLL->getInterfaceIFace()->popupLaunch(pPopup, true, POPUPSTATE_QUEUED);
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_QUEUED);
 
 	return true;
 }

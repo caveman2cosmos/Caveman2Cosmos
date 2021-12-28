@@ -59,10 +59,9 @@ public:
 	ImprovementTypes getImprovementUpgrade() const	{ return m_iImprovementUpgrade; }
 	BonusTypes getBonusChange() const				{ return m_iBonusChange; }
 
-	const TCHAR* getArtDefineTag() const;
+	const char* getArtDefineTag() const;
 
 	int getPrereqNatureYield(int i) const;
-	int* getPrereqNatureYieldArray() const;
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
 	int getRiverSideYieldChange(int i) const;
@@ -84,13 +83,10 @@ public:
 	bool isImprovementBonusTrade(int i) const;
 	int getImprovementBonusDiscoverRand(int i) const;
 
-	int getNumBuildTypes() const { return m_improvementBuildTypes.size(); };
 	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
-	BuildTypes getImprovementBuildType(int iIndex) const;
-
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
-	const TCHAR* getButton() const;
+	const char* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
 
 	int getHealthPercent() const;
@@ -117,6 +113,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvImprovementInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
 	bool m_bPeakMakesValid;

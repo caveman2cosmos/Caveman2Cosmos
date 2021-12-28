@@ -42,7 +42,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_TRIBE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRIBALISM</ForceObsoleteTech>
+			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
 			<UnitMeshGroups>
@@ -105,7 +105,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -505,7 +505,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
 			</SupersedingUnits>
@@ -592,7 +592,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_WRITING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_WRITING</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
 			</SupersedingUnits>
@@ -1179,7 +1179,7 @@
 				<UnitType>UNIT_TRACKER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -1269,7 +1269,7 @@
 				<UnitType>UNIT_HUNTER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -1402,7 +1402,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -1502,7 +1502,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_FEUDALISM</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WARDEN</Type>
@@ -1598,7 +1598,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GAME_HUNTER</Type>
@@ -1694,7 +1694,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BIG_GAME_HUNTER</Type>
@@ -1829,7 +1829,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>125</iCost>
+			<iCost>133</iCost>
 			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -1895,7 +1895,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>440</iCost>
+			<iCost>473</iCost>
 			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -1967,7 +1967,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>760</iCost>
+			<iCost>811</iCost>
 			<iBaseUpkeep>1000</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>500</iEspionagePoints>
@@ -2053,7 +2053,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>4320</iCost>
+			<iCost>1350</iCost>
 			<iBaseUpkeep>1500</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
@@ -2109,6 +2109,7 @@
 			<Type>UNIT_NANITE_SPY</Type>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NANITE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
@@ -2154,7 +2155,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>3800</iCost>
+			<iCost>4092</iCost>
 			<iBaseUpkeep>10000</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>20</iDropRange>
@@ -2229,7 +2230,7 @@
 				<BuildingType>BUILDING_SPY_TRAINING_FACILITY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
-			<iCost>300</iCost>
+			<iCost>531</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -5123,7 +5124,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<iCost>150</iCost>
+			<iCost>233</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -5195,11 +5196,11 @@
 				<UnitType>UNIT_CLUBMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
 			</SupersedingUnits>
-			<iCost>3</iCost>
+			<iCost>4</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -5284,8 +5285,8 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL</UnitType>
 			</SupersedingUnits>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<iCost>17</iCost>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
+			<iCost>19</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -5380,8 +5381,8 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</SupersedingUnits>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<iCost>26</iCost>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
+			<iCost>31</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -5469,7 +5470,7 @@
 				<UnitType>UNIT_OBSIDIAN_SWORDSMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_STONE_MACEMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_STONE_MACEMAN</UnitType>
 			</SupersedingUnits>
@@ -5859,7 +5860,7 @@
 				<UnitType>UNIT_OBSIDIAN_AXEMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
 			</SupersedingUnits>
@@ -6631,6 +6632,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CRUSADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRUSADER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_CRUSADER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -6670,10 +6672,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CRUSADE</BuildingType>
-			</PrereqAndBuildings>
+			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
+			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
+			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -6774,11 +6777,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
 			</SupersedingUnits>
-			<iCost>35</iCost>
+			<iCost>38</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -6865,11 +6868,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
 			</SupersedingUnits>
-			<iCost>39</iCost>
+			<iCost>43</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -6965,7 +6968,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<iCost>52</iCost>
+			<iCost>56</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -7069,7 +7072,7 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>110</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -7237,7 +7240,7 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>175</iCost>
+			<iCost>190</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -7320,7 +7323,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
-			<iCost>240</iCost>
+			<iCost>259</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
@@ -7400,7 +7403,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>95</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7475,7 +7478,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>145</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7550,7 +7553,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>250</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7635,7 +7638,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>180</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7723,7 +7726,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>195</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7811,7 +7814,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7899,7 +7902,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>340</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7989,7 +7992,7 @@
 				<UnitType>UNIT_SLINGER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_STONE_THROWER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_BINDING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_BINDING</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_STONE_THROWER</UnitType>
 			</SupersedingUnits>
@@ -8092,7 +8095,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
 			</SupersedingUnits>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>23</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -8190,11 +8193,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
-			<iCost>50</iCost>
+			<iCost>52</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -8299,48 +8302,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_OIL_LAMPS</PrereqTech>
-			<!--
-				BonusType>BONUS_ALCOHOL</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_TAR</BonusType>
 				<BonusType>BONUS_OLIVE_OIL</BonusType>
 				<BonusType>BONUS_FISH_OIL</BonusType>
 				<BonusType>BONUS_GHEE_OIL</BonusType>
 				<BonusType>BONUS_WHALE_OIL</BonusType>
 				<BonusType>BONUS_KEROSENE</BonusType>
-				</PrereqBonuses
-			-->
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WHALE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_KEROSENE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALCOHOL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_TAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OLIVE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FISH_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GHEE_OIL</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -8907,22 +8877,14 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
+			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
+				<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>920</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9029,18 +8991,10 @@
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1140</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9145,18 +9099,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1400</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9662,7 +9608,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
-			<iCost>340</iCost>
+			<iCost>342</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>20</iCombat>
@@ -9753,7 +9699,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
-			<iCost>400</iCost>
+			<iCost>402</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>26</iCombat>
@@ -10727,18 +10673,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>975</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -10833,18 +10771,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1500</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -11058,18 +10988,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1230</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -11140,18 +11062,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1475</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -14257,6 +14171,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
@@ -14264,14 +14179,6 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SIEGE_WORKSHOP</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -14395,6 +14302,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -14406,10 +14314,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_SULPHUR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -15701,9 +15605,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_COMPOSITES</PrereqTech>
+			<PrereqTech>TECH_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
@@ -17516,11 +17420,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>82</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -19550,9 +19455,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -19656,9 +19561,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -22637,7 +22542,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<BonusType>BONUS_MECHS</BonusType>
 			<iCost>5200</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -24192,7 +24097,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
-			<iCost>5200</iCost>
+			<iCost>4968</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>160</iCombat>
@@ -24282,7 +24187,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
-			<iCost>10200</iCost>
+			<iCost>9756</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>360</iCombat>
@@ -24743,7 +24648,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
-			<ForceObsoleteTech>TECH_ASTRONAUTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ASTRONAUTICS</ObsoleteTech>
 			<iCost>530</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -24935,14 +24840,15 @@
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRAINED_DOG</UnitType>
 			</UnitUpgrades>
-			<iCost>46</iCost>
+			<iCost>70</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25049,7 +24955,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARDDOG</UnitType>
 			</UnitUpgrades>
-			<iCost>110</iCost>
+			<iCost>163</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25155,7 +25061,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_DOG</UnitType>
 			</UnitUpgrades>
-			<iCost>215</iCost>
+			<iCost>319</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25268,7 +25174,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_CANIS_SUPERIOR</UnitType>
 			</UnitUpgrades>
-			<iCost>400</iCost>
+			<iCost>601</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25402,7 +25308,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
 			</PrereqAndBuildings>
-			<iCost>2600</iCost>
+			<iCost>3942</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25536,7 +25442,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>390</iCost>
+			<iCost>387</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>18</iCombat>
@@ -25639,7 +25545,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<iCost>570</iCost>
+			<iCost>568</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
@@ -25748,7 +25654,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
-			<iCost>1240</iCost>
+			<iCost>1237</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>60</iCombat>
@@ -25853,7 +25759,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOTUBES</BonusType>
 			</PrereqBonuses>
-			<iCost>5400</iCost>
+			<iCost>5393</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>200</iCombat>
@@ -25985,10 +25891,16 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
+				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
@@ -26110,10 +26022,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TOWN_WATCHMEN</UnitType>
@@ -26256,10 +26173,14 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
-			<ObsoleteTech>TECH_WARRANTS_AND_DECREES</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_PATROLS</UnitType>
@@ -26378,7 +26299,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
-			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -26396,6 +26316,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARD</UnitType>
@@ -26537,10 +26461,12 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_WARRANTS_AND_DECREES</PrereqTech>
-			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CITY_GUARD</UnitType>
@@ -26681,19 +26607,13 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SHERIFF</UnitType>
 			</UnitUpgrades>
@@ -26823,23 +26743,15 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_RIOTPOLICE</UnitType>
 			</UnitUpgrades>
@@ -26978,22 +26890,14 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_FORENSICS</ObsoleteTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_APC</UnitType>
 			</UnitUpgrades>
@@ -27122,7 +27026,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -27145,16 +27052,6 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_POLICE_STATION</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_POLICE_PRECINCT</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<UnitUpgrades>
@@ -27296,10 +27193,10 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
-			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -27438,7 +27335,6 @@
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
-			<ObsoleteTech>TECH_TERRA_COMPUTER</ObsoleteTech>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -27592,6 +27488,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FORENSICS</PrereqTech>
+			<PrereqBonuses>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
+				<BonusType>BONUS_BIOFUEL</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -27622,16 +27522,6 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_RADIOS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_PETROLEUM_PRODUCTS</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_BIOFUEL</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<PrereqAndBuildings>
@@ -28127,7 +28017,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
 				<InvisibilityIntensityType>
@@ -28295,6 +28185,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_THEFT</PrereqTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
@@ -28486,7 +28377,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<iCost>68</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -28651,19 +28542,15 @@
 			<bStealPlans>1</bStealPlans>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BANDITS_HIDEOUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LOCKSMITH</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
+				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ASSASSIN</UnitType>
 			</UnitUpgrades>
@@ -28833,19 +28720,15 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BANDITS_HIDEOUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LOCKSMITH</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
+				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SCOUNDREL</UnitType>
 				<UnitType>UNIT_PARTISAN</UnitType>
@@ -29049,15 +28932,8 @@
 			<TechTypes>
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_LABOR_UNIONS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_LABOR_UNIONS</ObsoleteTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -29265,19 +29141,11 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
-			<ForceObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -29490,19 +29358,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_STREET_GANG</UnitType>
 			</UnitUpgrades>
@@ -29748,7 +29608,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_CONSUMERISM</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CONSUMERISM</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MOB_STOREFRONT</BuildingType>
 			</PrereqAndBuildings>
@@ -29923,7 +29783,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<TrainCondition>
 				<And>
@@ -30124,7 +29984,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<TrainCondition>
 				<And>
@@ -30330,7 +30190,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
-			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<TrainCondition>
 				<And>
@@ -30352,9 +30212,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
 			</UnitUpgrades>
@@ -30526,24 +30387,18 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
-			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_CELLPHONES</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_PERSONAL_ELECTRONICS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<PrereqAndBuildings>
@@ -30958,7 +30813,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MERCENARY_CAMP</BuildingType>
 			</PrereqAndBuildings>
@@ -31077,19 +30932,11 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
-			<ForceObsoleteTech>TECH_GUERRILLA_WARFARE</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_GUERRILLA_WARFARE</ObsoleteTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -31284,7 +31131,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MERCENARY_STABLES</BuildingType>
@@ -31449,19 +31296,14 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
-			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
+			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTLAW</UnitType>
 			</UnitUpgrades>
@@ -31658,23 +31500,15 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
-			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SALOON</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_MOBSTER_CAR</UnitType>
 			</UnitUpgrades>
@@ -31866,7 +31700,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
-			<ForceObsoleteTech>TECH_CODE_OF_LAWS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CODE_OF_LAWS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POISONCRAFTERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -31992,7 +31826,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POISONCRAFTERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -32200,7 +32034,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ASSASSINS_DEN</BuildingType>
 			</PrereqAndBuildings>
@@ -32393,19 +32227,14 @@
 			<TechTypes>
 				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_MILITARY_SCIENCE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
+				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
+				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SNIPER</UnitType>
 			</UnitUpgrades>
@@ -32564,23 +32393,16 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			<ForceObsoleteTech>TECH_LASER</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LASER</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
+				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
@@ -32720,19 +32542,11 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<ForceObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REBEL_CAMP</BuildingType>
 			</PrereqAndBuildings>
@@ -32943,23 +32757,15 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_LASER</PrereqTech>
-			<ForceObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
 			</UnitUpgrades>
@@ -33130,22 +32936,14 @@
 			<TechTypes>
 				<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIVOUAC_GROUNDS</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
 				<UnitType>UNIT_SPECIAL_INFANTRY</UnitType>
@@ -33973,6 +33771,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
@@ -34139,7 +33938,7 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<LeaderPromotion>PROMOTION_LORDSHIP</LeaderPromotion>
 			<iLeaderExperience>6</iLeaderExperience>
-			<ForceObsoleteTech>TECH_VASSALAGE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_VASSALAGE</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LORD</Type>
@@ -34192,7 +33991,7 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<LeaderPromotion>PROMOTION_LORDSHIP</LeaderPromotion>
 			<iLeaderExperience>15</iLeaderExperience>
-			<ForceObsoleteTech>TECH_LEADERSHIP</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LEADERSHIP</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WARLORD_VASSAL</Type>
@@ -34245,7 +34044,7 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<LeaderPromotion>PROMOTION_LORDSHIP</LeaderPromotion>
 			<iLeaderExperience>10</iLeaderExperience>
-			<ForceObsoleteTech>TECH_CHIVALRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CHIVALRY</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VICEROY</Type>
@@ -34461,9 +34260,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -34666,7 +34465,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_HERALDRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -34787,7 +34586,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_LEADERSHIP</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LEADERSHIP</ObsoleteTech>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SMITHING</PrereqTech>
@@ -34913,10 +34712,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_MILITARY_SCIENCE</ForceObsoleteTech>
-			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -35051,7 +34850,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -35726,7 +35525,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
-			<iCost>9800</iCost>
+			<iCost>10617</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -38281,9 +38080,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_CARRIAGE</BuildingType>
+				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<BonusType>BONUS_WOOD</BonusType>
 			<PrereqBonuses>
@@ -38299,7 +38101,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>98</iCost>
+			<iCost>105</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38376,9 +38178,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCIENT_VETERINARIAN</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>
@@ -38473,7 +38277,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<BonusType>BONUS_TOOLS</BonusType>
-			<iCost>155</iCost>
+			<iCost>169</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38559,16 +38363,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORSE_TRAINER</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<iCost>330</iCost>
@@ -38663,15 +38463,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WATCHMAKERS_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_TOOLS</BonusType>
 			</PrereqBonuses>
-			<iCost>250</iCost>
+			<iCost>268</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38759,23 +38560,19 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORSE_TRAINER</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
-			<iCost>575</iCost>
+			<iCost>578</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
@@ -38870,9 +38667,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PARTS_MAKER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_PARTS_PLANT</BuildingType>
+				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -38886,7 +38690,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>475</iCost>
+			<iCost>511</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38963,9 +38767,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -38979,7 +38784,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>590</iCost>
+			<iCost>623</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -39055,9 +38860,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -39152,9 +38958,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -39180,7 +38987,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>750</iCost>
+			<iCost>811</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -39258,9 +39065,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -39361,9 +39169,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_POWER_TOOLS</BonusType>
 			<PrereqBonuses>
@@ -39389,7 +39198,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>830</iCost>
+			<iCost>961</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -39467,9 +39276,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
@@ -39559,10 +39369,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_COMPUTERS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -39686,7 +39498,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>1400</iCost>
+			<iCost>1654</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -39773,7 +39585,8 @@
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_PARTS</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -39789,16 +39602,10 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_COMPUTERS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-					</Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_PARTS</ID>
+					</Has>
 				</And>
 			</TrainCondition>
 			<iCost>1180</iCost>
@@ -39873,13 +39680,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MICROPROCESSOR</PrereqTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_PERSONAL_ELECTRONICS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_FIREARMS</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -39887,16 +39697,10 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_MICROCHIPS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-					</Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FIREARMS</ID>
+					</Has>
 				</And>
 			</TrainCondition>
 			<iCost>1540</iCost>
@@ -40497,9 +40301,10 @@
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEALER</UnitType>
 				<UnitType>UNIT_SHEPHERD</UnitType>
@@ -40602,9 +40407,13 @@
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
@@ -40709,9 +40518,13 @@
 				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_SOAP</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_APOTHECARY</UnitType>
 			</UnitUpgrades>
@@ -40812,9 +40625,11 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SCROLLS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_PHARMACY</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>
 			</UnitUpgrades>
@@ -40915,6 +40730,8 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SURGEON</UnitType>
@@ -41013,9 +40830,11 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDIC</UnitType>
 			</UnitUpgrades>
@@ -41115,9 +40934,10 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE</UnitType>
 				<UnitType>UNIT_MEDICAL_LAB_TECH</UnitType>
@@ -41231,9 +41051,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE_II</UnitType>
 			</UnitUpgrades>
@@ -41356,9 +41177,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
 			</UnitUpgrades>
@@ -41473,9 +41295,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41602,9 +41425,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41726,9 +41550,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -41832,17 +41657,22 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<PrereqTech>TECH_SKYROADS</PrereqTech>
+			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
+				<PrereqTech>TECH_SKYROADS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
+				<BuildingType>BUILDING_REJUVENATION_TANK</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_STATION</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41876,14 +41706,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HYPOSPRAYS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_REJUVENATION_TANK</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SKYROAD_STATION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -42243,9 +42065,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FERTILITY_CLINIC</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
@@ -42625,10 +42448,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_FIREARMS</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FIREARMS</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>380</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -42771,10 +42596,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_AMMUNITION</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_AMMUNITION</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>525</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -42913,10 +42740,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_AMMUNITION</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_AMMUNITION</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>900</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -43280,7 +43109,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_BARD</UnitType>
 			</UnitUpgrades>
-			<iCost>12</iCost>
+			<iCost>16</iCost>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43382,6 +43211,15 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_ENTERTAINER</UnitType>
 			</UnitUpgrades>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
@@ -43389,7 +43227,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
-			<iCost>120</iCost>
+			<iCost>151</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -43488,7 +43326,16 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
-			<iCost>200</iCost>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
+			<iCost>250</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>5</iAsset>
@@ -43585,7 +43432,16 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<iCost>700</iCost>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+			</Buildings>
+			<iCost>886</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>8</iAsset>
@@ -43698,7 +43554,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -43711,7 +43567,7 @@
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>40</iCost>
+			<iCost>47</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseFoodChange>30</iBaseFoodChange>
@@ -43780,7 +43636,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
 			</PrereqAndBuildings>
@@ -43796,7 +43652,7 @@
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>90</iCost>
+			<iCost>115</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iBaseFoodChange>72</iBaseFoodChange>
@@ -43874,6 +43730,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>
@@ -44020,7 +43877,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_ENGINEERING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -44032,7 +43889,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>40</iCost>
+			<iCost>47</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
@@ -44121,7 +43978,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_ENGINEERING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
 			</PrereqAndBuildings>
@@ -44136,7 +43993,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>90</iCost>
+			<iCost>115</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iBaseTrade>30</iBaseTrade>
@@ -44233,10 +44090,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<PrereqAndBuildings>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -44433,7 +44291,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_TRACKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
@@ -44556,7 +44414,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_HUNTER</Type>
@@ -44656,7 +44514,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_RANGER</Type>
@@ -44763,7 +44621,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_FEUDALISM</ForceObsoleteTech>
+			<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_WARDEN</Type>
@@ -44873,7 +44731,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_GAME_HUNTER</Type>
@@ -44983,7 +44841,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_BIG_GAME_HUNTER</Type>
@@ -45100,7 +44958,7 @@
 			<Capture>UNIT_CAPTIVE_MILITARY</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
@@ -45287,6 +45145,19 @@
 								</Not>
 							</PlotCondition>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_ARCHER</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 				<Action>
@@ -45311,6 +45182,32 @@
 								</Not>
 							</PlotCondition>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_AXEMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_AXEMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 				<Action>
@@ -45324,6 +45221,32 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_SPEARMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_SPEARMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<UnitType>UNIT_SPEARMAN</UnitType>
 							<bUnitToCity>
@@ -45468,9 +45391,23 @@
 							</PlotCondition>
 							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_TUTOR_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesTutor</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<!-- <Action>
+				<Action>
 					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -45488,7 +45425,7 @@
 							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
-				</Action> -->
+				</Action>
 				<Action>
 					<MissionType>MISSION_SELL_CAPTIVE</MissionType>
 					<ActionOutcomes>
@@ -45554,6 +45491,48 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
@@ -45948,6 +45927,48 @@
 								</iYield>
 							</Yields>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>50</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>15</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>50</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>15</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 			</Actions>
@@ -46143,6 +46164,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ALAMUT</BuildingType>
 			</PrereqAndBuildings>
@@ -46222,7 +46244,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>390</iCost>
+			<iCost>387</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
@@ -46530,8 +46552,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>
 			</PrereqAndBuildings>
@@ -46689,6 +46714,205 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_SPARTACUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Combat>UNITCOMBAT_HERO</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_HAMMER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EPIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SPARTACUS</Description>
+			<Civilopedia>TXT_KEY_UNIT_SPARTACUS_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SPARTACUS_HELP</Help>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_RESERVE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>1</iMoves>
+			<iCombat>9</iCombat>
+			<iXPValueAttack>6</iXPValueAttack>
+			<iXPValueDefense>3</iXPValueDefense>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<iAsset>5</iAsset>
+			<iPower>5</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SPARTACUS</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>3</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_GLADIATOR</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_HEROIC</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_GLADIATOR</Type>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Combat>UNITCOMBAT_MELEE</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_AXE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_POLEARM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_BOLA</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SHIELD_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EPIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_GLADIATOR</Description>
+			<Civilopedia>TXT_KEY_UNIT_GLADIATOR_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<UnitUpgrades>
+				<UnitType>UNIT_MACEMAN</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_RESERVE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_SETTLED_GLADIATOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<Buildings>
+				<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
+			</Buildings>
+			<iCost>-1</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>1</iMoves>
+			<iCombat>9</iCombat>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<iAsset>2</iAsset>
+			<iPower>5</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>3</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>3</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_GLADIATOR</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_DRILL1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

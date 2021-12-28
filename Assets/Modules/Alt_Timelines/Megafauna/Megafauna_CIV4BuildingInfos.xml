@@ -13,7 +13,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
@@ -139,7 +139,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
@@ -184,7 +184,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
@@ -314,7 +314,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<iCost>624</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
@@ -341,21 +340,22 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REDPANDA</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAR_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -363,8 +363,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -384,7 +384,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_BEAR_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
@@ -435,10 +434,10 @@
 			<iPower>2</iPower>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_TOURISM</TechType>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -454,23 +453,24 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
-				<BuildingType>BUILDING_LION_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BENGALTIGER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SIBERIAN_TIGER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_TIGER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SABRETOOTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_CAVE_LION_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_LYNX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PANTHER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SNOW_LEOPARD_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_LION</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BENGALTIGER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SIBERIAN_TIGER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_TIGER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CAVE_LION</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_JAGUAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_LYNX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PANTHER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SNOW_LEOPARD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CHEETAH</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_CAT_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -495,7 +495,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BISON_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -522,16 +521,22 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BISON</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
+				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -539,7 +544,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -557,7 +562,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -598,7 +602,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEER_RIDER</MovieDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -626,14 +629,19 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
-				<BuildingType>BUILDING_DEER_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_DEER_HERD</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Help>
@@ -642,8 +650,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -660,11 +668,11 @@
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iMinLatitude>45</iMinLatitude>
 			<FreeBuilding>BUILDING_DEER_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -701,7 +709,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GIRAFFE_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -728,21 +735,24 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIRAFFE_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -760,10 +770,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iMaxLatitude>45</iMaxLatitude>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
@@ -794,6 +804,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_HERD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -818,6 +829,12 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
@@ -843,7 +860,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAMMOTH_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -889,11 +905,16 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -903,12 +924,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
 			<bNeverCapture>1</bNeverCapture>
 			<iAsset>2</iAsset>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -924,7 +945,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -988,9 +1008,6 @@
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -1022,7 +1039,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT</ArtDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1060,7 +1076,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1086,16 +1101,19 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
-				<BuildingType>BUILDING_RHINO_TAXONOMY_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
+				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RHINO_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Help>
@@ -1104,7 +1122,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -1122,7 +1140,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1171,6 +1188,12 @@
 			</MapCategoryTypes>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -1194,7 +1217,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZEBRA_RIDER</MovieDefineTag>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1217,11 +1239,16 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Help>
@@ -1230,7 +1257,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -1248,11 +1275,11 @@
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iMaxLatitude>45</iMaxLatitude>
 			<FreeBuilding>BUILDING_ZEBRA_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iAsset>4</iAsset>

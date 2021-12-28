@@ -110,7 +110,7 @@ int CvUnitList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, (int)m_aaiGroupedUnitList.size(), iGroup)
+	FASSERT_BOUNDS(0, m_aaiGroupedUnitList.size(), iGroup);
 	return m_aaiGroupedUnitList[iGroup]->size();
 }
 
@@ -120,8 +120,8 @@ UnitTypes CvUnitList::getUnitType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
-	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return (*m_aaiGroupedUnitList[iGroup])[iPos];
 }
 
@@ -177,7 +177,7 @@ void CvUnitList::doSort()
 	UnitSortListWrapper* pWrapper = new UnitSortListWrapper(&m_UnitSort);
 	for (unsigned int i=0; i<m_aaiGroupedUnitList.size(); i++)
 	{
-		std::stable_sort(m_aaiGroupedUnitList[i]->begin(), m_aaiGroupedUnitList[i]->end(), *pWrapper);
+		algo::stable_sort(*m_aaiGroupedUnitList[i], *pWrapper);
 	}
 	delete pWrapper;
 	m_bSortingValid = true;
@@ -190,7 +190,7 @@ int CvUnitList::getSelectionRow()
 
 	for (unsigned int i=0; i<m_aaiGroupedUnitList.size(); i++)
 	{
-		if (std::find(m_aaiGroupedUnitList[i]->begin(), m_aaiGroupedUnitList[i]->end(), m_eSelectedUnit) != m_aaiGroupedUnitList[i]->end())
+		if (algo::any_of_equal(*m_aaiGroupedUnitList[i], m_eSelectedUnit))
 			return i;
 	}
 

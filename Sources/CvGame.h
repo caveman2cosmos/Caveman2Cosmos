@@ -94,7 +94,7 @@ public:
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
 	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
-	DllExport bool cyclePlotUnits(CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
+	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;
 
 	DllExport void selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const;
@@ -324,7 +324,6 @@ public:
 
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
-	void setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue);
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
 	void findMountainRanges();
@@ -641,10 +640,6 @@ public:
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
 	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
-	int getPlotExtraCost(int iX, int iY) const;
-	void changePlotExtraCost(int iX, int iY, int iCost);
-	void removePlotExtraCost(int iX, int iY);
-
 	ReligionTypes getVoteSourceReligion(VoteSourceTypes eVoteSource) const;
 	void setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce = false);
 
@@ -825,7 +820,6 @@ protected:
 	int m_iNumSessions;
 
 	std::vector<PlotExtraYield> m_aPlotExtraYields;
-	std::vector<PlotExtraCost> m_aPlotExtraCosts;
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 

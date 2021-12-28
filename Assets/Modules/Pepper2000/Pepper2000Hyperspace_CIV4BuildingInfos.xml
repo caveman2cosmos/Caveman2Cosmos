@@ -22,6 +22,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_11_DIMENSIONAL_FACTORY</Type>
@@ -46,6 +47,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_5D_ARTIFICIAL_GRAVITY</Type>
@@ -70,6 +72,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALTERNATE_HISTORY</Type>
@@ -94,6 +97,7 @@
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>5</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCESTOR_RESURRECTION</Type>
@@ -119,6 +123,7 @@
 				<BuildingType>BUILDING_HYPERPLANET</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</Type>
@@ -140,6 +145,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSCIOUS_UNIVERSE</Type>
@@ -162,6 +168,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_AC</Type>
@@ -219,6 +226,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EKPYROTIC_UNIVERSE</Type>
@@ -242,6 +250,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_CANNON</Type>
@@ -350,6 +359,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSFINITE_STRUCTURES</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAME_OF_LIFE</Type>
@@ -368,10 +378,11 @@
 				<iCommerce>200</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENESIS_COLONY</Type>
@@ -422,6 +433,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ESCHER_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Type>
@@ -444,6 +456,7 @@
 				<BuildingType>BUILDING_HYPERPLANET</BuildingType>
 				<BuildingType>BUILDING_TRANSFINITE_STRUCTURES</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERFACTORY</Type>
@@ -470,7 +483,7 @@
 					<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -499,22 +512,23 @@
 					<PrereqTech>TECH_TRANSFINITE_STRUCTURES</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_TRANSFINITE_COMPUTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_TRANSFINITE_COMPUTATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_COMMERCIAL_CENTER</Type>
@@ -566,6 +580,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_EXPORTER</Type>
@@ -586,14 +601,14 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_QUANTONIUM_CRYSTAL</BonusType>
-					<CommerceModifiers>
-						<iCommerce>30</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>3000</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Type>
@@ -614,11 +629,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_IMPORTER</Type>
@@ -811,10 +827,10 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUBDIMENSIONAL_UNIVERSE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SUBDIMENSIONAL_UNIVERSE</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
@@ -843,6 +859,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POINCARE_DODECAHEDRAL_SPACE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAVERSE_EDUCATION</Type>
@@ -971,6 +988,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Type>
@@ -997,6 +1015,7 @@
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OPEN_FRW_UNIVERSE</Type>
@@ -1024,7 +1043,7 @@
 					<PrereqTech>TECH_PARAMETER_TUNING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>20</iYield>
+						<iYield>2000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1077,6 +1096,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POINCARE_DODECAHEDRAL_SPACE</Type>
@@ -1097,6 +1117,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_GRAPH_MANIFESTATION</Type>
@@ -1119,6 +1140,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSFINITE_STRUCTURES</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Type>
@@ -1146,6 +1168,7 @@
 				<BuildingType>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</BuildingType>
 				<BuildingType>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</Type>
@@ -1170,6 +1193,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PICARD_HORN</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESIDENTIAL_PORTAL</Type>
@@ -1237,6 +1261,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SIMULATED_CIVILIZATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_GOVERNANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_EXPERIMENTAL_COSMOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>1945</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1250,6 +1277,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_UNIVERSE</Type>
@@ -1270,47 +1298,47 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SIMULATION_AWARENESS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SIMULATION_AWARENESS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>2000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_DIRECTED_COSMIC_EVOLUTION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_DIRECTED_COSMIC_EVOLUTION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>20</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_OMEGA_POINT</TechType>
+					<CommercePercents>
+						<iCommercePercent>2000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ASCENSION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ASCENSION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ALPHA_POINT</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>2000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_UNIVERSAL_SINGULARITY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_UNIVERSAL_SINGULARITY</TechType>
+					<CommercePercents>
+						<iCommercePercent>1000</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iWorkableRadius>3</iWorkableRadius>
@@ -1319,6 +1347,7 @@
 				<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
 				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TESSERACT_ASSEMBLER</Type>
@@ -1345,6 +1374,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_TESSERACT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TESSERACT_HOMES</Type>
@@ -1354,6 +1384,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TESSERACT_HOMES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TESSERACT_CONSTRUCTION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
+			</TechTypes>
 			<iCost>1713</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1370,6 +1403,7 @@
 				<BuildingType>BUILDING_RESIDENTIAL_PORTAL</BuildingType>
 				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_TRAP</Type>
@@ -1415,6 +1449,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POINCARE_DODECAHEDRAL_SPACE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSFINITE_STRUCTURES</Type>
@@ -1436,6 +1471,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSFINITE_SUPERCOMPUTER</Type>
@@ -1464,6 +1500,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSE</Type>
@@ -1497,6 +1534,7 @@
 				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
 				<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YOTTAVERSE</Type>
@@ -1526,6 +1564,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_11_DIMENSIONAL_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

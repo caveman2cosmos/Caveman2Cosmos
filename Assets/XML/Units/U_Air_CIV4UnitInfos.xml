@@ -267,9 +267,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -439,10 +440,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -545,9 +547,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -966,14 +969,9 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AIRCRAFT</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_AIRCRAFT</BonusType>
+			</PrereqBonuses>
 			<iCost>1353</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1053,9 +1051,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -1154,9 +1153,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -1388,7 +1388,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>3200</iCost>
+			<iCost>2406</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>28</iAirRange>
@@ -2011,9 +2011,10 @@
 			<Civilopedia>TXT_KEY_UNIT_FIGHTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
@@ -2141,9 +2142,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -2266,9 +2268,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -2382,9 +2385,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -2498,10 +2502,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -2698,9 +2703,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_WAR_SIMULATIONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_STEALTH</PrereqTech>

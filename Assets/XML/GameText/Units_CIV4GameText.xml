@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
-		<English>Hurry Production (with overflow)</English>
-		<French>Accélérer la Production (avec gaspillage)</French>
-		<Russian>Ускорить производство (с избытком)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN</Tag>
 		<English>Hurry Production (with overflow)</English>
 		<French>Accélérer la Production (avec gaspillage)</French>
@@ -20,10 +14,6 @@
 		<Italian>L'attuale produzione cittadina è stata affrettata dalla tua unità.</Italian>
 		<Polish>Obecna produkcja w mieście została przyspieszona przez jednostk.</Polish>
 		<Russian>Текущее производство в городе было ускорено караваном.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Tag>
-		<English>Current city production has been hurried</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_AUTO_PROMOTION_GROUPING</Tag>
@@ -5551,7 +5541,7 @@
 		<Tag>TXT_KEY_UNIT_CAMEL_PEDIA</Tag>
 		<English>Camels are even-toed ungulates within the genus Camelus. The dromedary, one-humped or Arabian camel has a single hump, and the Bactrian camel has two humps. They are native to the dry and desert areas of western Asia and East Africa, and central and east Asia, respectively.</English>
 		<French>Les chameaux sont des ongulés de type Camélidés. Le dromadaire, une bosse ou le chameau arabe à une bosse simple, et le chameau de Bactriane à deux bosses. Elles sont indigènes des régions sèches et du désert de l'Asie et de l'Afrique de l'Est occidentales, et centrale et en Asie de l'Est, respectivement.</French>
-		<German>Kamele sind gleichmäßig-even-toed ungulates innerhalb der Klasse Camelus. Der Dromedary, one-humped, oder arabisches Kamel hat einen einzelnen Hump, und das Bactrian Kamel hat zwei Humps. Sie sind in das trockene und Wüste Bereiche von Westasien und von Ostafrika und zentrale und Ostasien, beziehungsweise gebürtig.</German>
+		<German>[COLOR_UNIT_TEXT]Kamele[COLOR_REVERT] sind Paarhufer und unterscheiden sich in die Altweltkamele (mit einem oder zwei Höckern) und die höckerlosen Neuweltkamele. Es gibt auch mehrere Hybridformen.[NEWLINE]Alle Kamele besitzen lange Beine und einen langen Hals sowie einen kleinen Kopf. Die Neuweltkamele sind jedoch deutlich kleiner und leichter als ihre höckerigen Verwandten. Kamele sind Schwielensohler, sie bilden keine Hufschalen, sondern die breite Sohlenfläche besteht aus einem elastischen Bindegewebspolster. Im Gegensatz zu anderen Paarhufern bewegen sie sich im Passgang fort. Reiter kommen daher ins Schaukeln, was den Tieren den Beinamen "Wüstenschiff" gibt. Altweltkamele kommen ursprünglich vermutlich aus Asien, Neuweltkamele sind vor allem in den Bergregionen Südamerikas zu Hause. Kamele sind gut an extreme Lebensbedingungen angepasst und können u.a. durch die besondere Form ihrer Nieren lange ohne Wasser überleben. Altweltkamele speichern zusätzlich Fett in ihren Höckern. Die Ernährung besteht vorwiegend aus Gräsern. Kamelmännchen bilden Harems mit mehreren Weibchen und dem Nachwuchs, heranwachsende Männchen leben in Junggesellengruppen.[NEWLINE]Kamele wurden bereits im letzten Jahrtausend v.Chr. domestiziert. An ihrer Nutzung als Last- und Zugtiere sowie Woll-, Milch- und Fleischlieferanten hat sich seit damals nichts geändert. Lamas und Alpakas sind Zuchtformen aus Guanakos und möglicherweise Vikunjas. Von den Altweltkamelen gibt es nur noch wenige Trampeltiere in freier Wildbahn.</German>
 		<Italian>I cammelli sono ungulati uniforme-piantati all'interno del genere Camelus. Il dromedary, one-humped o il cammello arabo ha un singolo hump ed il cammello di Bactrian ha due humps. Sono natali regioni del deserto ed asciutte dell'Asia e dell'Africa orientale occidentali ed in Asia centrale ed orientale, rispettivamente.</Italian>
 		<Spanish>Los camellos son ungulates uniforme-tocados con la punta del pie dentro del género Camelus. El dromedario, one-humped o el camello árabe tiene una sola chepa, y el camello de Bactrian tiene dos chepas. Son nativas las áreas secas y del desierto de Asia occidental y de África del este, y central y del este a la Asia, respectivamente.</Spanish>
 		<Polish>Wielbłąd (Camelus) - rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe. Od pozostałych przedstawicieli rodziny różni je obecność charakterystycznego garbu lub garbów na grzbiecie, będących miejscem odkładania zapasów tłuszczu. Wielbłąd potrafi w nim zgromadzić nawet do 45 kg tłuszczu, co ma związek z drugą charakterystyczną cechą wielbłądów - ich odpornością na długotrwały brak wody.</Polish>
@@ -6974,6 +6964,10 @@
 		</Spanish>
 		<Polish>Krzyżowiec</Polish>
 		<Russian>Êðåñòîíîñåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CRUSADER_HELP</Tag>
+		<English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_PEDIA</Tag>
@@ -21368,12 +21362,6 @@
 		<Russian>Àôð. ïîïóãàé (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - African Grey Parrot [SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure [SPACE][SPACE] * Feather Worker and Parrots</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets gris d'Afrique, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Papuga Żako [SPACE][SPACE] * Mity Nieba i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
 		<English>Subdued African Penguin</English>
 		<French>Pingouin d'Afrique (App.)</French>
@@ -21386,12 +21374,6 @@
 		<Russian>Àôð. ïèíãâèí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - African Penguin [SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds [SPACE][SPACE] * Bird Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoires des pingouins d'Afrique, Mythes de la Mer, cage à oiseaux et enclos</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Przylądkowy [SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków [SPACE][SPACE] * Klatkę dla ptaków</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
 		<English>Subdued Moon Bear</English>
 		<French>Ours Lune (App.)</French>
@@ -21402,13 +21384,6 @@
 		</Italian>
 		<Polish>Poskromiony Niedźwiedź Himalajski</Polish>
 		<Russian>Áåëîãðóäûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Moon Bear [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Lune, Mythe des Ours, Cages et Enclos à Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Himalajski [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèò [COLOR_REVERT] Ìèôû, Ñêàçû è Ðàññêàçû î Áåëîãðóäîì ìåäâåäå[NEWLINE][ICON_BULLET]Ìèôû î ìåäâåäÿõ[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ìåäâåäÿìè </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL</Tag>
@@ -21427,12 +21402,6 @@
 		<Russian>Ñèïóõà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Barn Owl [SPACE][SPACE] * Myths of Sky, Owls and Birds [SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes effraies, Mythes du ciel, des Chouettes, des oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Płomykówka Zwyczajna [SPACE][SPACE] * Mity Nieba, Sów i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
 		<English>Subdued Barred Owl</English>
 		<French>
@@ -21442,12 +21411,6 @@
 		</French>
 		<Polish>Poskromiony Puszczyk</Polish>
 		<Russian>Ñû÷ (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Barred Owl, Birds and Owls [SPACE][SPACE] * Myth of Sky; Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes rayées, Oiseaux et Mythes du Ciel; Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] [SPACE][SPACE] * Mit, Opowieść i Historie - Puszczyk, Ptaków i Sów [SPACE][SPACE] * Mity Nieba, Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
@@ -21462,23 +21425,11 @@
 		<Russian>×åðíûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Black Bear [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours noirs, Mythes des Ours, Cages et Enclos des Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] [SPACE][SPACE] * Mit, Opowieść i Historie - Baribal [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
 		<English>Subdued Blue-footed Booby</English>
 		<French>Fou à pieds bleus (App.)</French>
 		<Polish>Poskromiony Głuptak Niebieskonogi</Polish>
 		<Russian>Îëóøà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Blue-footed Booby and Sea Bird [SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Fous à pieds bleus et des oiseaux marins, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Głuptak Niebieskonogi i Ptaków Morskich [SPACE][SPACE] * Mity Nieba i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
@@ -21493,12 +21444,6 @@
 		<Russian>Áóðûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Brown Bear [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours bruns, Mythes des Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Brunatny [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
 		<English>Subdued Cave Bear</English>
 		<French>Ours des cavernes (App.)</French>
@@ -21511,30 +21456,11 @@
 		<Russian>Ïåùåðíûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Cave Bear and Bear [SPACE][SPACE] * Master Hunter, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maître Chasseur, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Jaskiniowy i Niedźwiedź [SPACE][SPACE] * Mistrz Łowiectwa [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_EMU_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Emu [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds [SPACE][SPACE] * Bird Cage and Enclosure [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]: [SPACE][SPACE] * Mythes, Histoire(s) des Emeus [SPACE][SPACE] * Mythes du Sky, des Oiseaux [SPACE][SPACE] * Cage et Enclos d'oiseaux [SPACE][SPACE] * Troupeaux d'Autruches et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:' [SPACE][SPACE] * Mit, Opowieść i Historie - Emu [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Emu[NEWLINE][ICON_BULLET]Myths of Sky, Flightless Birds and Birds[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ïòèöàìè[NEWLINE][ICON_BULLET]Ratite Flock and Feather Worker</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
 		<English>Subdued Galapagos Penguin</English>
 		<French>Pingouin des Galapagos (App.)</French>
 		<Polish>Poskromiony Pingwin Równikowy</Polish>
 		<Russian>Î÷êîâûé ïèíãâèí (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Galapagos Penguin [SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds [SPACE][SPACE] * Bird Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins des Galapagos, Mythes de la Mer, des Oiseaux, Cage et Enclos d'oiseaux</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Równikowy [SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków [SPACE][SPACE] * Klatkę dla ptaków</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
@@ -21549,18 +21475,6 @@
 		<Russian>Ãðèçëè (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Grizzly Bear [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Grizzlys, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Grizzly [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Haast's Eagle, Raptors and Birds [SPACE][SPACE] * Myths of Sky, Phoenix and Paleolithic Bird [SPACE][SPACE] * Bird Cage, Enclosure, Master Hunter [SPACE][SPACE] * Hawking Hut and Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Aigles de Haast, Rapaces et Oiseaux, Mythe du Ciel, du Phénix et de L'oiseau Paléolithique, Cages et Enclos à Oiseaux, Maître Chasseur, Hutte du Fauconnier et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Orła Haasta, Raptors i Ptaków [SPACE][SPACE] * Mity Nieba, Phoenix i Paleolithic Bird [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Mistrz Łowiectwa, Chatę Jastrzębia i Warsztat Piórarza</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Tag>
 		<English>Subdued Harpy Eagle</English>
 		<French>
@@ -21570,24 +21484,6 @@
 		</French>
 		<Polish>Poskromiona Harpia Wielka</Polish>
 		<Russian>Ãàðïèÿ (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Harpy Eagle [SPACE][SPACE] * Myths of Sky and Birds [SPACE][SPACE] * Bird Cage and Enclosure [SPACE][SPACE] * Feather Worker and Parrots</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Harpies féroces, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Harpia Wielka [SPACE][SPACE] * Mity Nieba i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Hawk, Raptors and Birds [SPACE][SPACE] * Myths of Sky, Falcon Hut, Falconer [SPACE][SPACE] * Bird Cage, Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Faucons, Rapaces et Oiseaux, Mythe du Ciel, Fauconnier, Cages pour Oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Jastrzębia, Ptaków Drapieżnych i Ptaków [SPACE][SPACE] * Mity Nieba, Chatka Sokołów i Sokolnika [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_OSTRICH_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Ostrich [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds [SPACE][SPACE] * Bird Cage and Enclosure [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Autruches, Mythe du Ciel, des Oiseaux, Cages pour Oiseaux, Troupeau d'autruches et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Strusia [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
@@ -21602,12 +21498,6 @@
 		<Russian>Ãèãàíòñêàÿ ïàíäà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Panda Bear [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Panda, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Panda [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT</Tag>
 		<English>Subdued Parrot</English>
 		<French>Perroquet (App.)</French>
@@ -21615,14 +21505,8 @@
 		<Russian>Ïîïóãàé (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Parrot [SPACE][SPACE] * Myths of Sky and Birds [SPACE][SPACE] * Bird Cage and Enclosure [SPACE][SPACE] * Feather Worker and Parrots</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets, Mythes du ciel et des Oiseaux, Cages pour Oiseaux, Atelier des plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Papuga [SPACE][SPACE] * Mity Nieba i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
-		<English>Subdued Polarbear</English>
+		<English>Subdued Polar Bear</English>
 		<French>Ours polaire (App.)</French>
 		<Italian>
 			<Text>Orso polare addomesticato</Text>
@@ -21633,12 +21517,6 @@
 		<Russian>Áåëûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_POLAR_BEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Polar Bear [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Polaire, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Polarny [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN</Tag>
 		<English>Subdued Raven</English>
 		<French>Corbeau (App.)</French>
@@ -21646,23 +21524,11 @@
 		<Russian>Âîðîí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Raven [SPACE][SPACE] * Myths of Sky, Scavengers and Birds [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Corbeaux, Mythe du Ciel, Charognards et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Wrona [SPACE][SPACE] * Mity Nieba, Padlinożerców i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Tag>
 		<English>Subdued Razorbill</English>
 		<French>Pingouin torda (App.)</French>
 		<Polish>Poskromiona Alka</Polish>
 		<Russian>Ãàãàðêà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Razorbill [SPACE][SPACE] * Myths of Sky, Sea, Sea Birds and Birds [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins torda, Mythe du Ciel, Mer Oiseaux marins et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Alka [SPACE][SPACE] * Mity Nieba, Morza, Morskich Ptaków i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
@@ -21677,18 +21543,6 @@
 		<Russian>Êðàñíàÿ ïàíäà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Red Panda [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pandsa roux, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Panda Czerwona [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Rhea [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds [SPACE][SPACE] * Bird Cage and Enclosure [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Nandou, Mythe du Ciel, des Oiseaux, Cage et Enclos d'oiseaux, Troupeau d'autruches et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Nandu [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
 		<English>Subdued Steller's Sea Eagle</English>
 		<French>Pigargue empereur (App.)</French>
@@ -21696,23 +21550,11 @@
 		<Russian>Îðëàí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Steller's Sea Eagle, Raptors and Birds [SPACE][SPACE] * Myths of Sky and Pheonix, Falcon Hut and Falconer [SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pigargues empereurs, Rapaces et Oiseaux, Mythe du Ciel et Phénix, Hutte du Fauconnier, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Bielik Olbrzymi, Ptaków Drapieżnych i Ptaków [SPACE][SPACE] * Mity Nieba i Feniksa, Chatka Sokołów i Sokolnika [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Tag>
 		<English>Subdued Secretary Bird</English>
 		<French>Messager sagittaire (App.)</French>
 		<Polish>Poskromiony Sekretarz</Polish>
 		<Russian>Ïòèöà-ñåêðåòàðü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Secretary Bird [SPACE][SPACE] * Myths of Sky and Birds [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Messagers sagittaires, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Sekretarz [SPACE][SPACE] * Mity Nieba i Ptaków [SPACE][SPACE] * Klatkę dla ptaków [SPACE][SPACE] * Warsztat Piórarza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
@@ -21727,12 +21569,6 @@
 		<Russian>Ãóáà÷ (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Sloth Bear [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours lippu, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Wargacz [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
 		<English>Subdued Spectacled Bear</English>
 		<French>Ours à lunettes (App.)</French>
@@ -21745,12 +21581,6 @@
 		<Russian>Î÷êîâûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLED_BEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Spectacled Bear [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours à lunettes, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Andyjski [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
 		<English>Subdued Sun Bear</English>
 		<French>Ours malais (App.)</French>
@@ -21761,12 +21591,6 @@
 		</Italian>
 		<Polish>Poskromiony Niedźwiedź Malajski</Polish>
 		<Russian>Ìàëàéñêèé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SUN_BEAR_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Sun Bear [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours malais, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Malajski [SPACE][SPACE] * Mity - Niedźwiedzie [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBMARINE</Tag>

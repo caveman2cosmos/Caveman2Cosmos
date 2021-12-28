@@ -185,7 +185,6 @@ public:
 
 	bool bugInitCalled() const;
 	bool viewportsEnabled() const;
-	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	CvMapInfo& getMapInfo(MapTypes eMap) const;
 
@@ -206,13 +205,13 @@ public:
 	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
 	CMessageControl& getMessageControl() const 	{ return *m_messageControl; }
 	CvDropMgr& getDropMgr() const 				{ return *m_dropMgr; }
-	FAStar& getPathFinder() const 				{ return *m_pathFinder; }
-	FAStar& getInterfacePathFinder() const 		{ return *m_interfacePathFinder; }
-	FAStar& getStepFinder() const 				{ return *m_stepFinder; }
-	FAStar& getRouteFinder() const 				{ return *m_routeFinder; }
-	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
-	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
-	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
+	FAStar& getPathFinder() const;
+	FAStar& getInterfacePathFinder() const;
+	FAStar& getStepFinder() const;
+	FAStar& getRouteFinder() const;
+	FAStar& getBorderFinder() const;
+	FAStar& getAreaFinder() const;
+	FAStar& getPlotGroupFinder() const;
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e) const;
@@ -392,6 +391,7 @@ public:
 
 	int getNumTraitInfos() const;
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
+	const std::vector<CvTraitInfo*>& getTraitInfos() const { return m_paTraitInfo; }
 
 	int getNumCursorInfos() const;
 	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const;
@@ -419,6 +419,7 @@ public:
 
 	int getNumUnitInfos() const;
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
+	const std::vector<CvUnitInfo*>& getUnitInfos() const { return m_paUnitInfo; }
 
 	int getNumSpawnInfos() const;
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
@@ -492,6 +493,7 @@ private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
 public:
+	void registerPlotTypes();
 	void registerUnitAIs();
 	void registerAIScales();
 	void registerGameObjects();
@@ -558,6 +560,7 @@ public:
 
 	int getNumBuildingInfos() const;
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
+	const std::vector<CvBuildingInfo*>& getBuildingInfos() const { return m_paBuildingInfo; }
 
 	int getNumSpecialBuildingInfos() const;
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
@@ -632,14 +635,6 @@ public:
 	int getNumUnitArtStyleTypeInfos() const;
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
-	//
-	// Global Types
-	// All type strings are upper case and are kept in this hash map for fast lookup
-	// The other functions are kept for convenience when enumerating, but most are not used
-	//
-	int getTypesEnum(const char* szType) const;				// use this when searching for a type
-	void setTypesEnum(const char* szType, int iEnum);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -713,14 +708,15 @@ public:
 	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
 
 	// ***** EXPOSED TO PYTHON *****
-	bool getDefineBOOL(const char * szName) const;
-	int getDefineINT(const char * szName) const;
-	float getDefineFLOAT(const char * szName) const;
-	const char * getDefineSTRING(const char * szName) const;
 
-	void setDefineINT( const char * szName, int iValue, bool bUpdate = true);
-	void setDefineFLOAT( const char * szName, float fValue, bool bUpdate = true );
-	void setDefineSTRING( const char * szName, const char * szValue, bool bUpdate = true );
+	bool getDefineBOOL(const char* szName, bool bDefault = false) const;
+	int getDefineINT(const char* szName, int iDefault = 0) const;
+	float getDefineFLOAT(const char* szName, float fDefault = 0.0f) const;
+	const char* getDefineSTRING(const char* szName, const char* szDefault = "") const;
+
+	void setDefineINT(const char* szName, int iValue, bool bUpdate = true);
+	void setDefineFLOAT(const char* szName, float fValue, bool bUpdate = true);
+	void setDefineSTRING(const char* szName, const char* szValue, bool bUpdate = true);
 
 	float getPLOT_SIZE() const;
 
@@ -792,6 +788,8 @@ public:
 	void deleteInfoArrays();
 
 protected:
+	void doPostLoadCaching();
+
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;
@@ -817,6 +815,8 @@ protected:
 	CvPortal* m_portal;
 	CvStatsReporter * m_statsReporter;
 	CvInterface* m_interface;
+	CvDiplomacyScreen* m_diplomacyScreen;
+	CMPDiplomacyScreen* m_mpDiplomacyScreen;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -827,16 +827,13 @@ protected:
 /***** Parallel Maps - End *****/
 /*******************************/
 
-	CvDiplomacyScreen* m_diplomacyScreen;
-	CMPDiplomacyScreen* m_mpDiplomacyScreen;
-
-	FAStar* m_pathFinder;
-	FAStar* m_interfacePathFinder;
-	FAStar* m_stepFinder;
-	FAStar* m_routeFinder;
-	FAStar* m_borderFinder;
-	FAStar* m_areaFinder;
-	FAStar* m_plotGroupFinder;
+	bst::array<FAStar*, NUM_MAPS> m_pathFinders;
+	bst::array<FAStar*, NUM_MAPS> m_interfacePathFinders;
+	bst::array<FAStar*, NUM_MAPS> m_stepFinders;
+	bst::array<FAStar*, NUM_MAPS> m_routeFinders;
+	bst::array<FAStar*, NUM_MAPS> m_borderFinders;
+	bst::array<FAStar*, NUM_MAPS> m_areaFinders;
+	bst::array<FAStar*, NUM_MAPS> m_plotGroupFinders;
 
 	int* m_aiPlotDirectionX;	// [NUM_DIRECTION_TYPES];
 	int* m_aiPlotDirectionY;	// [NUM_DIRECTION_TYPES];
@@ -1059,10 +1056,6 @@ protected:
 	// GLOBAL TYPES
 	//////////////////////////////////////////////////////////////////////////
 
-	// all type strings are upper case and are kept in this hash map for fast lookup, Moose
-	typedef stdext::hash_map<std::string /* type string */, int /*enum value */> TypesMap;
-	TypesMap m_typesMap;
-
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
@@ -1114,9 +1107,6 @@ protected:
 	const char* m_szAlternateProfilSampleName;
 	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
-
-public:
-	int getDefineINT( const char * szName, const int iDefault ) const;
 
 // BBAI Options
 public:
@@ -1803,7 +1793,7 @@ public:
 	DllExport int getTypesEnum(const char* szType) const				// use this when searching for a type
 	{
 		PROXY_TRACK("getTypesEnum");
-		return gGlobals->getTypesEnum(szType);
+		return gGlobals->getInfoTypeForString(szType);
 	}
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
@@ -2238,35 +2228,5 @@ inline CvGlobals& CvGlobals::getInstance()
 {
 	return gGlobalsProxy;
 }
-
-#endif
-
-/**********************************************************************
-
-File:		BugMod.h
-Author:		EmperorFool
-Created:	2009-01-22
-
-Defines common constants and functions for use throughout the BUG Mod.
-
-		Copyright (c) 2009 The BUG Mod. All rights reserved.
-
-**********************************************************************/
-
-#pragma once
-
-#ifndef BUG_MOD_H
-#define BUG_MOD_H
-
-// Increment this by 1 each time you commit new/changed functions/constants in the Python API.
-#define BUG_DLL_API_VERSION		6
-
-// Used to signal the BULL saved game format is used
-#define BUG_DLL_SAVE_FORMAT		64
-
-// These are display-only values, and the version should be changed for each release.
-#define BUG_DLL_NAME			L"BULL"
-#define BUG_DLL_VERSION			L"1.3"
-#define BUG_DLL_BUILD			L"219"
 
 #endif

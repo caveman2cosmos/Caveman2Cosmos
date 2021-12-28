@@ -17,7 +17,6 @@ struct OrderData;
 class CyCity
 {
 public:
-	CyCity();
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
 
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
@@ -247,14 +246,14 @@ public:
 	void setOccupationTimer(int iNewValue);
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
-	void setNeverLost(int iNewValue);
+	void setNeverLost(bool bNewValue);
 
 	bool isBombarded() const;
-	void setBombarded(int iNewValue);
+	void setBombarded(bool bNewValue);
 	bool isDrafted() const;
-	void setDrafted(int iNewValue);
+	void setDrafted(bool bNewValue);
 	bool isAirliftTargeted() const;
-	void setAirliftTargeted(int iNewValue);
+	void setAirliftTargeted(bool bNewValue);
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
 	bool isProductionAutomated() const;
@@ -270,7 +269,6 @@ public:
 	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
@@ -319,6 +317,7 @@ public:
 	int getNumPopulationEmployed() const;
 
 	int getBonusCommercePercentChanges(int eIndex, int eBuilding) const;
+	int getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const;
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);

@@ -869,7 +869,7 @@ namespace MemTrack
 			}
 		}
 
-		std::sort(diffs.rbegin(), diffs.rend());
+		algo::sort(diffs);
 
 		for (std::vector<MemInfoDiff>::const_iterator itr = diffs.begin(); itr != diffs.end(); ++itr)
 		{

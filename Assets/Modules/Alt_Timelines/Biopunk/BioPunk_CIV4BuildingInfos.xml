@@ -87,7 +87,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
@@ -114,7 +114,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BIOPUNK</Bonus>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>3665</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>2</iHappiness>
@@ -125,7 +129,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>7</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
@@ -164,7 +168,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
@@ -244,7 +248,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>7</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>

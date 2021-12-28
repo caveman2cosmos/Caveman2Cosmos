@@ -51,7 +51,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_RETRY_DESC</Tag>
-		<English>The password you entered was incorrect.  Please try again.</English>
+		<English>The password you entered was incorrect. Please try again.</English>
 		<French>Saisissez le mot de passe requis pour cette civilisation.</French>
 		<German>Geben Sie das für diese Zivilisation erforderliche Kennwort ein.</German>
 		<Italian>Inserisci la password necessaria per questa civiltà.</Italian>
@@ -78,7 +78,7 @@
 		<English>Load</English>
 		<French>Charger</French>
 		<German>Laden</German>
-		<Italian>Imbarca</Italian>
+		<Italian>Carica</Italian>
 		<Spanish>Embarcar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -126,7 +126,7 @@
 		<English>BUDDY REQUEST</English>
 		<French>REQUETE D'AMI</French>
 		<German>FREUNDESANFRAGE</German>
-		<Italian>RICHIESTA AMICO</Italian>
+		<Italian>RICHIESTA AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
 	</TEXT>
 	<TEXT>
@@ -142,7 +142,7 @@
 		<English>BUDDY REQUEST</English>
 		<French>REQUETE D'AMI</French>
 		<German>FREUNDESANFRAGE</German>
-		<Italian>RICHIESTA AMICO</Italian>
+		<Italian>RICHIESTA AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
 	</TEXT>
 	<TEXT>
@@ -158,16 +158,16 @@
 		<English>Buddy Request</English>
 		<French>Requête d'ami</French>
 		<German>Freundesanfrage</German>
-		<Italian>Richiesta amico</Italian>
+		<Italian>Richiesta amicizia</Italian>
 		<Spanish>Solicitud de amigo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_MEMBER_AS_BUDDYHELP</Tag>
-		<English>To directly chat with a member, they must first be added to your buddy list.  Do you want to add %s1_Name as a buddy now?</English>
+		<English>To directly chat with a member, they must first be added to your buddy list. Do you want to add %s1_Name as a buddy now?</English>
 		<French>Pour discuter directement avec un membre, vous devez d'abord l'ajouter à votre liste d'amis. Voulez-vous ajouter %s1_Name à votre liste d'amis ?</French>
 		<German>Wenn Sie direkt mit anderen Mitgliedern chatten wollen, müssen Sie diese in Ihre Freundesliste aufnehmen. Wollen Sie [COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzufügen?</German>
-		<Italian>Per chattare direttamente con un membro, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name come amico?</Italian>
-		<Spanish>Para charlar directamente con un miembro, primero debes agregarlo a tu lista de amigos.  ¿Quieres agregar a %s1_Name como amigo?</Spanish>
+		<Italian>Per chattare direttamente con qualcuno, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name come amico?</Italian>
+		<Spanish>Para charlar directamente con un miembro, primero debes agregarlo a tu lista de amigos. ¿Quieres agregar a %s1_Name como amigo?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADDRESS_REQUIRED_DESC</Tag>
@@ -190,7 +190,7 @@
 		<English>Advanced Start Base Points:</English>
 		<French>Points de base du démarrage avancé :</French>
 		<German>Basispunkte für Fortgeschrittenen Start:</German>
-		<Italian>Punti iniziali Avvio avanzato:</Italian>
+		<Italian>Punti iniziali avvio avanzato:</Italian>
 		<Spanish>Puntos base del Inicio avanzado:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -198,7 +198,7 @@
 		<English>Gold you receive at the start to purchase cities, units, and improvements.</English>
 		<French>Or que vous recevez au démarrage pour acheter des villes, des unités et des améliorations.</French>
 		<German>Gold, das Sie am Anfang erhalten, um Städte, Einheiten und Modernisierungen zu kaufen.</German>
-		<Italian>L'oro che ricevi all'inizio per acquistare città, unità e miglioramenti.</Italian>
+		<Italian>L'oro che ricevi a inizio gioco per acquistare città, unità e miglioramenti.</Italian>
 		<Spanish>El oro que recibes al inicio para comprar ciudades, unidades y mejoras.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -230,7 +230,7 @@
 		<English>The Username you entered is not valid.</English>
 		<French>Le nom d'utilisateur spécifié est incorrect.</French>
 		<German>Der angegebene Benutzername ist ungültig.</German>
-		<Italian>Lo username inserito non è valido.</Italian>
+		<Italian>La username inserita non è valido.</Italian>
 		<Spanish>El nombre de usuario introducido no es válido.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -238,7 +238,7 @@
 		<English>Username not found</English>
 		<French>Nom d'utilisateur introuvable</French>
 		<German>Benutzername nicht gefunden</German>
-		<Italian>Username non trovato</Italian>
+		<Italian>Username non trovata</Italian>
 		<Spanish>No se ha encontrado nombre de usuario</Spanish>
 	</TEXT>
 	<TEXT>
@@ -299,18 +299,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_MULTIPLE_PROFILES_DESC</Tag>
-		<English>Multiple matching profiles were found.  Please refine your search criteria.</English>
+		<English>Multiple matching profiles were found. Please refine your search criteria.</English>
 		<French>Plusieurs profils correspondants ont été trouvés. Affinez vos critères de recherche.</French>
 		<German>Es wurden mehrere übereinstimmende Profile gefunden. Geben Sie bitte weitere Suchkriterien an.</German>
-		<Italian>Trovati risultati multipli. Modifica il tuo criterio di ricerca.</Italian>
-		<Spanish>Se han encontrado varios perfiles que coinciden.  Hay que reducir los criterios de búsqueda.</Spanish>
+		<Italian>Trovati più risultati. Modifica il tuo criterio di ricerca.</Italian>
+		<Spanish>Se han encontrado varios perfiles que coinciden. Hay que reducir los criterios de búsqueda.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_MULTIPLE_PROFILES_TITLE</Tag>
 		<English>Multiple matches found</English>
-		<French>Plusieurs amis ont été trouvés.</French>
+		<French>Plusieurs amis ont été trouvés</French>
 		<German>Mehrfache Übereinstimmungen gefunden</German>
-		<Italian>Trovati risultati multipli</Italian>
+		<Italian>Trovati più risultati</Italian>
 		<Spanish>Halladas varias coincidencias</Spanish>
 	</TEXT>
 	<TEXT>
@@ -502,7 +502,7 @@
 		<English>The address attempted was invalid.</English>
 		<French>L'adresse de connexion est incorrecte.</French>
 		<German>Die angefragte Adresse ist ungültig.</German>
-		<Italian>L'indirizzo inserito non è risultato valido.</Italian>
+		<Italian>L'indirizzo inserito non è valido.</Italian>
 		<Spanish>La dirección probada no era válida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -779,9 +779,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOWNLOAD_STATUS_TAG</Tag>
-		<English>Download:  %d1_Recv / %d2_Total bytes</English>
-		<French>Téléchargement:  %d1_Recv / %d2_Total octets</French>
-		<German>Download:  %d1_Recv / %d2_Total Bytes</German>
+		<English>Download: %d1_Recv / %d2_Total bytes</English>
+		<French>Téléchargement: %d1_Recv / %d2_Total octets</French>
+		<German>Download: %d1_Recv / %d2_Total Bytes</German>
 		<Italian>Download: %d1_Recv / %d2_Total byte</Italian>
 		<Spanish>Descarga: %d1_Recv / %d2_Total bytes</Spanish>
 	</TEXT>
@@ -819,11 +819,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DROP_VOTE_HEADER_CORRECTED</Tag>
-		<English>We are waiting for %s1_Names to reconnect to the game.  If you would like to stop waiting, please vote on how to proceed.</English>
-		<French>Nous attendons que %s1_Names se reconnecte à la partie.  Si vous voulez mettre fin à l'attente, demandez un vote sur la poursuite des opérations.</French>
-		<German>Warten auf erneute Spielverbindung von %s1_Names.  Wählen Sie, wie Sie fortfahren wollen, wenn Sie nicht länger warten wollen.</German>
-		<Italian>Stiamo aspettando che %s1_Names si riconnettano alla partita.  Se vuoi smettere di aspettare, vota su come procedere.</Italian>
-		<Spanish>Esperando que se reanude la conexión a la partida de %s1_Names.  Si no quieres seguir esperando, vota acerca de cómo proceder.</Spanish>
+		<English>We are waiting for %s1_Names to reconnect to the game. If you would like to stop waiting, please vote on how to proceed.</English>
+		<French>Nous attendons que %s1_Names se reconnecte à la partie. Si vous voulez mettre fin à l'attente, demandez un vote sur la poursuite des opérations.</French>
+		<German>Warten auf erneute Spielverbindung von %s1_Names. Wählen Sie, wie Sie fortfahren wollen, wenn Sie nicht länger warten wollen.</German>
+		<Italian>Stiamo aspettando che %s1_Names si riconnettano alla partita. Se vuoi smettere di aspettare, vota su come procedere.</Italian>
+		<Spanish>Esperando que se reanude la conexión a la partida de %s1_Names. Si no quieres seguir esperando, vota acerca de cómo proceder.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DROP_VOTE_OUTSTANDING_TITLE</Tag>
@@ -1235,11 +1235,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_DESC</Tag>
-		<English>You have selected an unusable voice capture device.  Voice capture disabled.</English>
+		<English>You have selected an unusable voice capture device. Voice capture disabled.</English>
+		<German>Es wurde ein ungeeignetes Gerät zur Sprachaufzeichnung ausgewählt. Sprachaufzeichnungen wurden deaktiviert.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_TITLE</Tag>
 		<English>Invalid Device</English>
+		<German>Unzulässiges Gerät</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_LOGIN_DESC</Tag>
@@ -1259,11 +1261,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_PLAYBACK_DESC</Tag>
-		<English>You have selected an unusable voice playback device.  Voice playback disabled.</English>
+		<English>You have selected an unusable voice playback device. Voice playback disabled.</English>
+		<German>Es wurde ein ungeeignetes Gerät zur Sprachwiedergabe ausgewählt. Die Sprachwiedergabe wurde deaktiviert.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_PLAYBACK_TITLE</Tag>
 		<English>Invalid Device</English>
+		<German>Unzulässiges Gerät</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_FAILURE_DESC</Tag>
@@ -1442,11 +1446,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_TIMEOUT_DESC</Tag>
-		<English>Our login attempt has timed out.  The authentication server may be down.</English>
+		<English>Our login attempt has timed out. The authentication server may be down.</English>
 		<French>Temps écoulé pour la tentative de connexion. Le serveur d'authentification est peut-être HS.</French>
 		<German>Bei unserem Login-Versuch ist die Zeit abgelaufen. Der Authentifizierungsserver ist vielleicht nicht erreichbar.</German>
 		<Italian>Tentativo di login scaduto. Il server di autenticazione potrebbe essere disattivato.</Italian>
-		<Spanish>Agotado el tiempo de inicio de sesión.  Puede que el servidor de autenticación no esté disponible.</Spanish>
+		<Spanish>Agotado el tiempo de inicio de sesión. Puede que el servidor de autenticación no esté disponible.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_TIMEOUT_TITLE</Tag>
@@ -1671,11 +1675,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FILETRANSFER_INPROGRESS_DESC</Tag>
-		<English>Please wait.  Game data transfers are in progress.</English>
+		<English>Please wait. Game data transfers are in progress.</English>
 		<French>Patientez... Transfert des données du jeu en cours.</French>
 		<German>Bitte warten. Spieldaten werden übertragen.</German>
 		<Italian>Attendere, trasferimento dei dati di gioco in corso.</Italian>
-		<Spanish>Un momento.  Hay en curso transferencias de datos de la partida.</Spanish>
+		<Spanish>Un momento. Hay en curso transferencias de datos de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FILETRANSFER_INPROGRESS_TITLE</Tag>
@@ -2075,7 +2079,7 @@
 		<French>Echec de l'hébergement de la partie. Vérifiez vos connexions réseau.</French>
 		<German>Spiel-Hosting fehlgeschlagen. Prüfen Sie die Netzwerkverbindungen.</German>
 		<Italian>Host della partita fallito. Controlla le connessione di rete.</Italian>
-		<Spanish>No se ha podido alojar la partida.  Comprueba la conexión de red.</Spanish>
+		<Spanish>No se ha podido alojar la partida. Comprueba la conexión de red.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NETWORK_ADDRESS</Tag>
@@ -2346,11 +2350,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM_TOOLTIP</Tag>
-		<English>A choice will be made at random.  Selecting this option proves you are tough.</English>
+		<English>A choice will be made at random. Selecting this option proves you are tough.</English>
 		<French>Un choix sera fait aléatoirement. Le choix de cette option prouve que vous avez du cran.</French>
 		<German>Es wird eine zufällige Wahl getroffen. Diese Option eignet sich nur für echte Draufgänger!</German>
 		<Italian>Verrà eseguita una scelta casuale. Scegliendo questa opzione, dimostri di essere un duro.</Italian>
-		<Spanish>La elección se realizará al azar.  Con esta decisión se demuestra tu dureza.</Spanish>
+		<Spanish>La elección se realizará al azar. Con esta decisión se demuestra tu dureza.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_REFRESH_LIST</Tag>
@@ -2615,11 +2619,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_NAME_TAG</Tag>
-		<English>Map Name:  %s1_Name</English>
+		<English>Map Name: %s1_Name</English>
 		<French>Nom de la carte : %s1_Name</French>
-		<German>Kartenname:  %s1_Name</German>
-		<Italian>Nome mappa:  %s1_Name</Italian>
-		<Spanish>Nombre del mapa:  %s1_Name</Spanish>
+		<German>Kartenname: %s1_Name</German>
+		<Italian>Nome mappa: %s1_Name</Italian>
+		<Spanish>Nombre del mapa: %s1_Name</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_RECV</Tag>
@@ -2729,11 +2733,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_SOCKET_ERROR_DESC</Tag>
-		<English>The network socket encountered an error.  Disconnected from game browsing server.</English>
+		<English>The network socket encountered an error. Disconnected from game browsing server.</English>
 		<French>Erreur du socket réseau. Déconnexion du navigateur pour les parties Internet.</French>
 		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Die Verbindung zum Spieleserver wurde getrennt.</German>
 		<Italian>Il socket di rete ha rilevato un errore. Disconnesso dal server per la ricerca delle partite.</Italian>
-		<Spanish>El socket de red ha encontrado un error.  Desconectado del servidor de búsqueda de partidas.</Spanish>
+		<Spanish>El socket de red ha encontrado un error. Desconectado del servidor de búsqueda de partidas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_SOCKET_ERROR_TITLE</Tag>
@@ -3223,11 +3227,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_AVAILABLE_INFO</Tag>
-		<English>An update is available.  Would you like to get it?</English>
+		<English>An update is available. Would you like to get it?</English>
 		<French>Une mise à jour est disponible. Voulez-vous la télécharger ?</French>
 		<German>Es ist ein Update verfügbar. Wollen Sie es herunterladen?</German>
 		<Italian>È disponibile una patch... vuoi scaricarla?</Italian>
-		<Spanish>Hay disponible una actualización.  ¿Quieres obtenerla?</Spanish>
+		<Spanish>Hay disponible una actualización. ¿Quieres obtenerla?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_AVAILABLE_TITLEBAR</Tag>
@@ -3327,11 +3331,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_OVERFLOW_DESC</Tag>
-		<English>Our computer could not handle the rate that the data was sent!  Verify your network speed is correct in game options.</English>
+		<English>Our computer could not handle the rate that the data was sent! Verify your network speed is correct in game options.</English>
 		<French>Notre ordinateur n'a pas pu tenir le rythme auquel les données ont été envoyées ! Vérifiez que votre vitesse réseau est correcte dans les options de jeu.</French>
 		<German>Unser Computer kam nicht mit der Datenübertragungsrate zurecht! Bitte die Netzwerkgeschwindigkeit in den Spieloptionen überprüfen.</German>
-		<Italian>Il nostro computer non potrebbe gestire la velocità di invio dei dati!  Verifica la velocità di rete nelle opzioni del gioco.</Italian>
-		<Spanish>El ordenador no ha soportado la tasa a la que se enviaban los datos.  Comprueba en las opciones de partida si la velocidad de red es correcta.</Spanish>
+		<Italian>Il nostro computer non potrebbe gestire la velocità di invio dei dati! Verifica la velocità di rete nelle opzioni del gioco.</Italian>
+		<Spanish>El ordenador no ha soportado la tasa a la que se enviaban los datos. Comprueba en las opciones de partida si la velocidad de red es correcta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_PARSE_DESC</Tag>
@@ -3471,9 +3475,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_NAME_TAG</Tag>
-		<English>Patch Name:  %s1_Name</English>
-		<French>Nom du patch :  %s1_Name</French>
-		<German>Patch-Name:  %s1_Name</German>
+		<English>Patch Name: %s1_Name</English>
+		<French>Nom du patch : %s1_Name</French>
+		<German>Patch-Name: %s1_Name</German>
 		<Italian>Nome patch: %s1_Name</Italian>
 		<Spanish>Nombre del parche: %s1_Name</Spanish>
 	</TEXT>
@@ -3543,11 +3547,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEACE_ERROR</Tag>
-		<English>When trading for a peace treaty, only one player may offer items to another player.  Only gifts may be offered as payment for ending war, no trades can be made.</English>
+		<English>When trading for a peace treaty, only one player may offer items to another player. Only gifts may be offered as payment for ending war, no trades can be made.</English>
 		<French>Lors de la négociation d'un traité de paix, seul l'un des joueurs peut offrir quelque chose à l'autre. Pour faire la paix, seuls les présents sont possibles, aucun échange ne peut être conclu.</French>
 		<German>Beim Aushandeln eines Friedensvertrags bietet der anfragende Spieler dem anderen Spieler eine Gegenleistung an. Es findet kein beidseitiger Handel statt und es können ausschließlich Schenkungen angeboten werden.</German>
 		<Italian>Quando tratti la pace, solo un giocatore può offrirla a un altro. Come pagamento per il termine di una guerra, sono accettati solamente dei doni e non sono permesse azioni commerciali.</Italian>
-		<Spanish>Al realizar un intercambio para alcanzar un tratado de paz, solo uno de los jugadores puede ofrecerle cosas al otro.  Solo se pueden ofrecer regalos como pago para poner fin a la guerra, no se pueden realizar intercambios.</Spanish>
+		<Spanish>Al realizar un intercambio para alcanzar un tratado de paz, solo uno de los jugadores puede ofrecerle cosas al otro. Solo se pueden ofrecer regalos como pago para poner fin a la guerra, no se pueden realizar intercambios.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEER_CONNECT_FAILURE_DESC</Tag>
@@ -3740,11 +3744,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_LAUNCHING_DESC</Tag>
-		<English>The chosen game is currently launching.  Unable to connect at this time.</English>
+		<English>The chosen game is currently launching. Unable to connect at this time.</English>
 		<French>La partie choisie est en cours de lancement. Connexion impossible pour l'instant.</French>
 		<German>Das gewählte Spiel wird zurzeit gestartet. Ein Verbindungsaufbau ist gegenwärtig nicht möglich.</German>
 		<Italian>La partita scelta è in avvio. Impossibile connettersi in questo momento.</Italian>
-		<Spanish>La partida elegida se está iniciando.  No es posible conectarse en este momento.</Spanish>
+		<Spanish>La partida elegida se está iniciando. No es posible conectarse en este momento.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_LAUNCHING_TITLE</Tag>
@@ -3836,11 +3840,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEND_MAP_WAIT</Tag>
-		<English>Sending map to clients.  Please wait...</English>
+		<English>Sending map to clients. Please wait...</English>
 		<French>Envoi de la carte aux clients. Veuillez patienter...</French>
 		<German>Karte wird an Clients gesendet. Bitte warten ...</German>
-		<Italian>Invio della mappa ai client in corso.  Attendere...</Italian>
-		<Spanish>Enviando el mapa a los clientes.  Un momento...</Spanish>
+		<Italian>Invio della mappa ai client in corso. Attendere...</Italian>
+		<Spanish>Enviando el mapa a los clientes. Un momento...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SENT_BUDDY_REQUEST_DESC</Tag>
@@ -3900,11 +3904,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SOCKET_ERROR_DESC</Tag>
-		<English>The network socket encountered an error and was closed.  Disconnected.</English>
+		<English>The network socket encountered an error and was closed. Disconnected.</English>
 		<French>Erreur du socket réseau. Fermeture et déconnexion.</French>
 		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Das Socket wurde geschlossen und die Verbindung getrennt.</German>
 		<Italian>Il socket di rete ha rilevato un errore ed è stato chiuso. Disconnesso.</Italian>
-		<Spanish>El socket de red ha encontrado un problema y se ha cerrado.  Desconectado.</Spanish>
+		<Spanish>El socket de red ha encontrado un problema y se ha cerrado. Desconectado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SOCKET_ERROR_TITLE</Tag>
@@ -4004,11 +4008,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_CHAT_STRING</Tag>
-		<English>[%s1_Plyr1 to %s2_Plyr2]:  %s3_ChatMsg</English>
-		<French>[%s1_Plyr1 à %s2_Plyr2]:  %s3_ChatMsg</French>
-		<German>[%s1_Plyr1 an %s2_Plyr2]:  %s3_ChatMsg</German>
-		<Italian>[%s1_Plyr1 a %s2_Plyr2]:  %s3_ChatMsg</Italian>
-		<Spanish>[%s1_Plyr1 a %s2_Plyr2]:  %s3_ChatMsg</Spanish>
+		<English>[%s1_Plyr1 to %s2_Plyr2]: %s3_ChatMsg</English>
+		<French>[%s1_Plyr1 à %s2_Plyr2]: %s3_ChatMsg</French>
+		<German>[%s1_Plyr1 an %s2_Plyr2]: %s3_ChatMsg</German>
+		<Italian>[%s1_Plyr1 a %s2_Plyr2]: %s3_ChatMsg</Italian>
+		<Spanish>[%s1_Plyr1 a %s2_Plyr2]: %s3_ChatMsg</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_ERROR_PASSWORD_MISMATCH</Tag>
@@ -4389,6 +4393,7 @@
 		<German>Gebäude</German>
 		<Italian>Edifici</Italian>
 		<Spanish>Edificios</Spanish>
+		<Russian>Çäàíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CHANGE_ALL_PLOTS</Tag>

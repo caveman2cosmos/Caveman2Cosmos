@@ -99,8 +99,8 @@
 			<Civilopedia>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ANTIMATTER</ArtDefineTag>
-			<TechReveal>TECH_ACNP_PROPULSION</TechReveal>
-			<TechCityTrade>TECH_ACNP_PROPULSION</TechCityTrade>
+			<TechReveal>TECH_ANTIMATTER_PRODUCTION</TechReveal>
+			<TechCityTrade>TECH_ANTIMATTER_PRODUCTION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Automobiles -->
@@ -2318,8 +2318,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SMART_MEDICINE</ArtDefineTag>
 			<TechReveal>TECH_SMART_DRUGS</TechReveal>
 			<TechCityTrade>TECH_SMART_DRUGS</TechCityTrade>
-			<iAITradeModifier>10</iAITradeModifier>
-			<iAIObjective>10</iAIObjective>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>

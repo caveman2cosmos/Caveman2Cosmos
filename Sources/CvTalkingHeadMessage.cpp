@@ -4,7 +4,7 @@
 #include "CvTalkingHeadMessage.h"
 #include "CvViewport.h"
 
-CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
+CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, const char* pszSound, InterfaceMessageTypes eType, const char* pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
 	m_iTurn(iMessageTurn),
 	m_szDescription(pszDesc),
 	m_szSound(pszSound),
@@ -89,7 +89,7 @@ const CvString& CvTalkingHeadMessage::getIcon() const
 	return (m_szIcon);
 }
 
-void CvTalkingHeadMessage::setIcon(LPCTSTR pszIcon)
+void CvTalkingHeadMessage::setIcon(const char* pszIcon)
 {
 	m_szIcon = pszIcon;
 }
@@ -199,7 +199,7 @@ void CvTalkingHeadMessage::setTarget(ChatTargetTypes eType)
 	m_eTarget = eType;
 }
 
-int CvTalkingHeadMessage::getExpireTurn()
+int CvTalkingHeadMessage::getExpireTurn() const
 {
 	int iExpireTurn = getTurn();
 	switch (m_eMessageType)
@@ -226,7 +226,7 @@ int CvTalkingHeadMessage::getExpireTurn()
 		iExpireTurn = GC.getGame().getGameTurn() - 1;
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 	return (iExpireTurn);

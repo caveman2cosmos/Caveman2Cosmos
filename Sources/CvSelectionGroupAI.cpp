@@ -84,7 +84,7 @@ namespace {
 		foreach_(CvUnit* unit, group->units() | filtered(predicateFn))
 		{
 			unit->joinGroup(NULL);
-			FAssertMsg(!algo::contains(group->units(), unit), "Failed to remove unit from group");
+			FAssertMsg(algo::none_of_equal(group->units(), unit), "Failed to remove unit from group");
 			if (unit->plot()->getTeam() == group->getTeam())
 			{
 				unit->getGroup()->pushMission(MISSION_SKIP);
@@ -159,14 +159,14 @@ bool CvSelectionGroupAI::AI_update()
 		iTempHack++;
 		if (iTempHack > 90 && iTempHack < 100)
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
 				//if (GC.getLogging())
 				//{
 					int iPass = iTempHack - 90;
-					TCHAR szOut[1024];
+					char szOut[1024];
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf
@@ -181,13 +181,13 @@ bool CvSelectionGroupAI::AI_update()
 		}
 		if (iTempHack >= 100)
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
 				if (GC.getLogging())
 				{
-					TCHAR szOut[1024];
+					char szOut[1024];
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf
@@ -987,7 +987,7 @@ bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 

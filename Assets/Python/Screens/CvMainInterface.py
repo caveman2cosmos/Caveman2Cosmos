@@ -6,6 +6,7 @@ import CvScreensInterface as UP
 import HandleInputUtil
 import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
+import TextUtil
 import RevInstances
 #import ParallelMaps
 # globals
@@ -74,7 +75,8 @@ class CvMainInterface:
 		# Help Text
 		self.bHelpTextFullY = False
 		self.bTooltip = False
-		self.bUpdateUnitTT = 0
+		self.bLockPlotHelp = False
+		self.plotHelpUnitID = -1
 		self.dataTT = []
 		self.bPlotHelpBan = False
 		self.xMouseNoPlotHelp = -1
@@ -1197,15 +1199,6 @@ class CvMainInterface:
 				ACEM.exitCityDemolish(screen)
 
 		if self.bTooltip:
-			if self.bUpdateUnitTT:
-				dataTT = self.dataTT
-				if dataTT[3]:
-					szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
-					self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
-				elif not GC.getMap().isMidSwitch():
-					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
-					self.updateTooltip(screen, szTxt)
-				self.bUpdateUnitTT = False
 			# Tooltip sometimes get stuck...
 			POINT = Win32.getCursorPos()
 			xDiff = POINT.x - self.xMouseTT
@@ -1215,6 +1208,7 @@ class CvMainInterface:
 			if yDiff < 0:
 				yDiff = -yDiff
 			if xDiff > 256 and yDiff > 256 or xDiff + yDiff > 384:
+				print "[WARN] Tooltip got stuck!"
 				self.hideTooltip(screen)
 
 		if IFT not in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
@@ -1386,10 +1380,11 @@ class CvMainInterface:
 			if CyIF.isFocused():
 				screen.hide("PlotHelp")
 
-			elif not self.bPlotHelpBan and not self.bTooltip:
-				if self.iInterfaceType not in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
-					self.updatePlotHelp(screen)
+			elif not self.bPlotHelpBan and not self.bTooltip and self.iInterfaceType not in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
+				self.updatePlotHelp(screen)
+
 			CyIF.setDirty(InterfaceDirtyBits.Help_DIRTY_BIT, False)
+
 		# Tooltip
 		if self.bTooltip and self.bLockedTT:
 			POINT = Win32.getCursorPos()
@@ -1496,6 +1491,8 @@ class CvMainInterface:
 				print "Unit deselected"
 				self.AtUnit = None
 				screen.deleteWidget("UnitButtons")
+				if self.dataTT:
+					self.hideTooltip(screen)
 
 		# Check City Screen
 		IFT = CyIF.getShowInterface()
@@ -2672,7 +2669,7 @@ class CvMainInterface:
 									szRightBuffer += "<color=255,0,0>"
 								else:
 									szRightBuffer += "<color=150,255,200>"
-								szRightBuffer += self.floatToString(iTradeProfit / 100.0) + iconYieldList[eYield]
+								szRightBuffer += TextUtil.floatToString(iTradeProfit / 100.0) + iconYieldList[eYield]
 					if not bYieldView:
 						aList.append([szLeftBuffer, szRightBuffer, iRoute])
 
@@ -2963,8 +2960,8 @@ class CvMainInterface:
 		iRow = 0
 		y = -2
 		for szName, i, CvBuildingInfo in aBuildingList:
-			iBuilt = CyCity.getNumRealBuilding(i)
-			if iBuilt:
+
+			if CyCity.getNumRealBuilding(i):
 				szStat = ""
 
 				if CyCity.getNumActiveBuilding(i) > 0:
@@ -2987,12 +2984,12 @@ class CvMainInterface:
 							szStat += str(-iHappiness) + iconUnhappy
 
 					for j in xrange(YieldTypes.NUM_YIELD_TYPES):
-						iYield = iBuilt * (CvBuildingInfo.getYieldChange(j) +  CyCity.getBuildingYieldChange(i, j) + CyTeam.getBuildingYieldChange(i, j))
+						iYield = CyCity.getBaseYieldRateFromBuilding100(j, i) / 100
 						if iYield:
 							szStat += str(iYield) + iconYieldList[j]
 							self.yields.addBuilding(j, iYield)
 				for j in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-					iCommerce = CyCity.getBuildingCommerceByBuilding(j, i) / iBuilt + CyCity.getBonusCommercePercentChanges(j, i) / 100
+					iCommerce = CyCity.getBuildingCommerceByBuilding(j, i) + (CyCity.getBonusCommercePercentChanges(j, i) + CyTeam.getBuildingCommerceTechChange(j, i)) / 100
 					# AIAndy: display maintenance as negative gold
 					if j == CommerceTypes.COMMERCE_GOLD:
 						iCommerceChange = CvBuildingInfo.getCommerceChange(j)
@@ -3010,7 +3007,7 @@ class CvMainInterface:
 				else:
 					screen.attachPanelAt(ScPnl, ROW, "", "", True, False, ePanelBlack, 0, y-4, w, h1, eWidGen, 1, 1)
 
-				szName = self.evalTextWidth(wName, uFont2, szName)
+				szName = TextUtil.evalTextWidth(wName, uFont2, szName)
 				screen.setTextAt(ID % i, ROW, szName, 1<<0, 4, 0, 0, eFontGame, eWidGen, 1, 1)
 				if szStat:
 					screen.setLabelAt("", ROW, uFont2+szStat, 1<<1, w-6, 2, 0, eFontGame, eWidGen, 1, 1)
@@ -3125,16 +3122,9 @@ class CvMainInterface:
 			#Corporations
 			for i in xrange(self.iNumCorporationInfos):
 				if CyCity.isHasCorporation(i):
-					n = 0
-					while True:
-						iPrereq = GC.getCorporationInfo(i).getPrereqBonuses(n)
-						if iPrereq > -1:
-							if iPrereq == iBonus:
-								szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())
-								break
-						else:
-							break
-						n += 1
+					for eBonus in GC.getCorporationInfo(i).getPrereqBonuses():
+						if eBonus == iBonus:
+							szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())
 			screen.appendTableRow(ID)
 			screen.setTableText(ID, 0, iRow, szLeftBuffer, "", iWidget, iBonus, -1, 1<<0)
 			screen.setTableText(ID, 1, iRow, szRightBuffer, "", iWidget, iBonus, -1, 1<<1)
@@ -3232,7 +3222,7 @@ class CvMainInterface:
 			ROW = "QueueRow" + szRow
 			screen.attachPanelAt(ScPnl, ROW, "", "", True, False, ePanelSTD, -2, y-2, w-18, dy, eWidGen, 1, 1)
 
-			szTxt1 = self.evalTextWidth(w - 80, uFont, szTxt1)
+			szTxt1 = TextUtil.evalTextWidth(w - 80, uFont, szTxt1)
 
 			screen.setTextAt(szName, ROW, szTxt1, 1<<0, 4, -2, 0, eFontGame, eWidGen, 1, 1)
 			if szTxt2:
@@ -3951,9 +3941,9 @@ class CvMainInterface:
 						if CyUnit.isHurt():
 							fPercentHP = float(CyUnit.getHP()) / CyUnit.getMaxHP()
 							fStrength = strengthBase * fPercentHP
-							szTxt2 += self.floatToString(fStrength) + "/"
+							szTxt2 += TextUtil.floatToString(fStrength) + "/"
 
-						szTxt2 += self.floatToString(strengthBase) + self.iconStrength
+						szTxt2 += TextUtil.floatToString(strengthBase) + self.iconStrength
 
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 0, iRow, "<font=1>" + szTxt1, "", eWidGen, 0, 0, 1<<0)
@@ -3966,7 +3956,7 @@ class CvMainInterface:
 					if not iMovesLeft:
 						szTxt2 = "0/"
 					elif iMovesLeft < iBaseMoves * fMoveDenominator:
-						szTxt2 = self.floatToString(iMovesLeft / fMoveDenominator) + "/"
+						szTxt2 = TextUtil.floatToString(iMovesLeft / fMoveDenominator) + "/"
 					else:
 						szTxt2 = ""
 					szTxt2 += str(iBaseMoves) + self.iconMoves
@@ -3993,7 +3983,7 @@ class CvMainInterface:
 						screen.setTableText(unitTable, 0, iRow, "<font=1>" + szXP, "", eWidGen, 0, 0, 1<<0)
 						iRow += 1
 						iNeedXP = CyUnit.experienceNeeded()
-						szXP = self.floatToString(fXP) + "/" + str(iNeedXP)
+						szXP = TextUtil.floatToString(fXP) + "/" + str(iNeedXP)
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 0, iRow, "<font=1>" + szXP, "", eWidGen, 0, 0, 1<<0)
 						iRow += 1
@@ -4521,7 +4511,7 @@ class CvMainInterface:
 													fPowerRatio = 1.0 / fPowerRatio
 												else:
 													fPowerRatio = 99.0
-											szTxt = self.floatToString(fPowerRatio, iPowerDecimals) + iconStrength
+											szTxt = TextUtil.floatToString(fPowerRatio, iPowerDecimals) + iconStrength
 											if iPowerColorHigh >= 0 and fPowerRatio >= iPowerRatioHigh:
 												szTxt = TRNSLTR.changeTextColor(szTxt, iPowerColorHigh)
 											elif iPowerColorLow >= 0 and fPowerRatio <= iPowerRatioLow:
@@ -4875,64 +4865,6 @@ class CvMainInterface:
 		szFOV = self.aFontList[6] + "FoV: %i" %(iFoV)
 		screen.setLabel("FoVSliderText", "", szFOV, 1<<1, self.iX_FoVSlider - 4, self.iY_FoVSlider + 6, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 
-	#####################
-	# Utility Functions #
-	#####################
-	def floatToString(self, fFloat, iMaxDecimal=2):
-		if not fFloat: return ""
-		i = iMaxDecimal
-		szRaw = str(fFloat)
-		index = szRaw.find(".")
-		if index == -1:
-			return szRaw
-		elif index + i > len(szRaw)-1:
-			i = len(szRaw) - 1 - index
-		while True:
-			if not i:
-				return szRaw[:index]
-			elif szRaw[index + i] != "0":
-				iRange = index + i + 1
-				break
-			i -= 1
-		szString = ""
-		for index in xrange(iRange):
-			szString += szRaw[index]
-		return szString
-
-	def evalTextWidth(self, iMax, uFont, szTxt):
-		print "evalTextWidth: " + szTxt
-		iWidth = CyIF.determineWidth(uFont + szTxt)
-		#print ("iMax", iMax)
-		#print ("iWidth", iWidth)
-		if iWidth > iMax:
-			iChange = iCrop = len(szTxt)/2
-			iChange = iCrop/2
-			iMaxCrop = 0
-			bLast = False
-			while True:
-				#print ("iCrop", iCrop)
-				#print szTxt[:iCrop]
-				iWidth = CyIF.determineWidth(uFont + szTxt[:iCrop])
-				#print ("iWidth", iWidth)
-				#print ("iChange", iChange)
-				if iWidth > iMax:
-					iCrop -= iChange
-				else:
-					if iCrop > iMaxCrop:
-						iMaxCrop = iCrop
-					iCrop += iChange
-				if iChange:
-					if iChange == 3:
-						iChange = 2
-					elif iChange == 1:
-						if bLast:
-							iChange = 0
-						bLast = True # I'm not sure if the extra step is necessary...
-					else:
-						iChange /= 2
-				else:
-					return uFont + szTxt[:iMaxCrop] + "."
-		return uFont + szTxt
 
 	#######################
 	# Help Text Functions #
@@ -4940,19 +4872,25 @@ class CvMainInterface:
 	# Plot help
 	def updatePlotHelp(self, screen, uFont=None):
 		POINT = Win32.getCursorPos()
-		xMouse = POINT.x
-		if xMouse < 40 or xMouse > self.xRes - 40:
+
+		if self.bLockPlotHelp:
+
+			plot = CyIF.getMouseOverPlot()
+			if plot:
+				unit = CyIF.getInterfacePlotUnit(plot, 0)
+				if unit and unit.getID() == self.plotHelpUnitID:
+					return
+			self.bLockPlotHelp = False
+
+		if POINT.x < 40 or POINT.x > self.xRes - 40 or POINT.y > self.yBotBar or POINT.y < 60:
 			screen.hide("PlotHelp")
 			return
-		yMouse = POINT.y
-		yBotBar = self.yBotBar
-		if yMouse > yBotBar or yMouse < 60:
-			screen.hide("PlotHelp")
-			return
+
 		szPlotHelp = CyIF.getHelpString()
 		if not szPlotHelp:
 			screen.hide("PlotHelp")
 			return
+
 		if szPlotHelp == self.szPlotHelp:
 			screen.moveToFront("PlotHelp")
 			screen.show("PlotHelp")
@@ -4962,13 +4900,20 @@ class CvMainInterface:
 			szPlotHelp = szPlotHelp[1:]
 		if not uFont:
 			uFont=self.aFontList[5]
-		pyTT.makeTooltip(screen, -12, yBotBar + 8, szPlotHelp, uFont, "PlotHelp")
+		pyTT.makeTooltip(screen, -12, self.yBotBar + 8, szPlotHelp, uFont, "PlotHelp")
+
+		# if shift pressed for plot help with unit on.
+		plot = CyIF.getMouseOverPlot()
+		if plot and self.InputData.getModifierKeys()[2]:
+			unit = CyIF.getInterfacePlotUnit(plot, 0)
+			if unit:
+				self.bLockPlotHelp = True
+				self.plotHelpUnitID = unit.getID()
 
 
 	# Tooltip
 	def hideTooltip(self, screen):
 		self.bTooltip = False
-		self.bUpdateUnitTT = False
 		self.bLockedTT = False
 		self.dataTT = []
 		screen.hide("Tooltip")
@@ -5149,7 +5094,6 @@ class CvMainInterface:
 				dataTT = self.dataTT
 				if dataTT:
 					if bCtrl != dataTT[0] or bShift != dataTT[1] or bAlt != dataTT[2]:
-						self.bUpdateUnitTT = False
 						if dataTT[3]:
 							szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
 							self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
@@ -5166,10 +5110,10 @@ class CvMainInterface:
 			if iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT
 				if dataTT:
-					self.bUpdateUnitTT = True
 					dataTT[0] = bCtrl
 					dataTT[1] = bShift
 					dataTT[2] = bAlt
+				if iData == 49: self.bLockPlotHelp = False
 			return 0
 
 		szSplit = NAME.split("|")
@@ -5245,6 +5189,7 @@ class CvMainInterface:
 						iCount = self.aUnitPromoCountMap[iType]
 						if iCount > 1:
 							szTxt = "<color=144,255,72>" + TRNSLTR.getText("TXT_KEY_IN_STACK", (iCount,)) + "</color>\n"
+					print (NAME, iType, ID)
 					szTxt += CyGameTextMgr().getPromotionHelp(iType, False)
 					self.updateTooltip(screen, szTxt)
 
@@ -5292,7 +5237,7 @@ class CvMainInterface:
 					szTxt = CyGameTextMgr().getBuildingHelp(ID, True, CyCity, False, False, True)
 					self.updateTooltip(screen, szTxt)
 				else:
-					aList = [TRNSLTR.getText("TXT_KEY_CONCEPT_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
+					aList = [TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
 					self.updateTooltip(screen, aList[ID])
 
 			elif BASE == "BonusList":
@@ -5516,7 +5461,7 @@ class CvMainInterface:
 							dy = 22
 						else:
 							dy = 20
-						szTxt = self.evalTextWidth(w - 80, uFont, szTxt)
+						szTxt = TextUtil.evalTextWidth(w - 80, uFont, szTxt)
 						iNode = 0
 						szRow = str(InCity.QueueIndex)
 						self.InCity.QueueIndex += 1

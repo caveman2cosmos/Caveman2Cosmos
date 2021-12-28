@@ -96,14 +96,28 @@ bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *
 	{
 		return pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0;
 	}
-	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	return buildingInfo.getYieldChange(m_eYield) > 0
-		|| buildingInfo.getYieldPerPopChange(m_eYield) > 0
-		|| buildingInfo.getYieldModifier(m_eYield) > 0
-		|| buildingInfo.getAreaYieldModifier(m_eYield) > 0
-		|| buildingInfo.getGlobalYieldModifier(m_eYield) > 0
-		|| buildingInfo.getGlobalSeaPlotYieldChange(m_eYield) > 0
-		|| buildingInfo.getSeaPlotYieldChange(m_eYield) > 0;
+	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+
+	foreach_(const PlotArray& pair, info.getPlotYieldChanges())
+	{
+		if (pair.second[m_eYield] > 0)
+		{
+			return true;
+		}
+	}
+	foreach_(const TerrainArray& pair, info.getTerrainYieldChanges())
+	{
+		if (pair.second[m_eYield] > 0)
+		{
+			return true;
+		}
+	}
+	return info.getYieldChange(m_eYield) > 0
+		|| info.getYieldPerPopChange(m_eYield) > 0
+		|| info.getYieldModifier(m_eYield) > 0
+		|| info.getAreaYieldModifier(m_eYield) > 0
+		|| info.getGlobalYieldModifier(m_eYield) > 0
+		|| info.getGlobalSeaPlotYieldChange(m_eYield) > 0;
 }
 
 bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
@@ -186,7 +200,7 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
 		|| !buildingInfo.getFreePromoTypes().empty()
 		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
-		|| buildingInfo.isAnyUnitCombatFreeExperience()
+		|| !buildingInfo.getUnitCombatFreeExperience().empty()
 		|| buildingInfo.isAnyDomainFreeExperience();
 }
 

@@ -23,7 +23,7 @@ CvOutcomeList::~CvOutcomeList()
 
 CvOutcome* CvOutcomeList::getOutcome(int index) const
 {
-	FASSERT_BOUNDS(0, getNumOutcomes(), index)
+	FASSERT_BOUNDS(0, getNumOutcomes(), index);
 	return m_aOutcome[index];
 }
 
@@ -102,11 +102,8 @@ void CvOutcomeList::clear()
 
 void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, OutcomeTypes eOutcome)
 {
-	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
-	const int iNumReplaced = kInfo.getNumReplaceOutcomes();
-	for (int j=0; j<iNumReplaced; j++)
+	foreach_(const OutcomeTypes eReplOutcome, GC.getOutcomeInfo(eOutcome).getReplaceOutcomes())
 	{
-		const OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
 		aeReplacedOutcomes.insert(eReplOutcome);
 		insertReplaceOutcomesRecursive(aeReplacedOutcomes, eReplOutcome);
 	}

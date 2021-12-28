@@ -155,7 +155,7 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 	}
 	catch (const xercesc::XMLException & toCatch)
 	{
-		OutputDebugString("XMLPlatformUtils::Initialize Faild");
+		OutputDebugString("XMLPlatformUtils::Initialize Faild\n");
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		logging::logMsg("xml.log", message);
 		gDLL->MessageBox(message, "Error");
@@ -223,7 +223,7 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 //	Searches the InfoClass for the pszVal and returns the location if a match is found.
 //	returns -1 if no match is found
 //------------------------------------------------------------------------------------------------------
-int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
+int CvXMLLoadUtility::GetInfoClass(const char* pszVal)
 {
 	const int idx = GC.getInfoTypeForString(pszVal, false);
 
@@ -245,14 +245,14 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   LoadCivXml(FXml* pFXml, TCHAR* szFilename)
+//  FUNCTION:   LoadCivXml(const char* szFilename)
 //
 //  PURPOSE :   Gets the full pathname for the xml file from the FileManager .
 //				If it is succesful we return true
 //				from the function and a valid FXml pointer to the pFXml parameter.
 //
 //------------------------------------------------------------------------------------------------------
-bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
+bool CvXMLLoadUtility::LoadCivXml(const char* szFilename)
 {
 	char szLog[8192];
 	sprintf(szLog, "LoadCivXml (%s)", szFilename);
@@ -369,7 +369,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 //  PURPOSE :   create a hot key from a description and return it
 //
 //------------------------------------------------------------------------------------------------------
-CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const TCHAR* pszHotKey, bool bShift, bool bAlt, bool bCtrl)
+CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const char* pszHotKey, bool bShift, bool bAlt, bool bCtrl)
 {
 	// Delete <COLOR:140,255,40,255>Shift+Delete</COLOR>
 	CvWString szHotKey;
@@ -433,12 +433,12 @@ bool CvXMLLoadUtility::SetStringList(CvString** ppszStringArray, int* piSize)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
+//  FUNCTION:   CreateKeyStringFromKBCode(const char* pszHotKey)
 //
 //  PURPOSE :   Create a keyboard string from a KB code, Delete would be returned for KB_DELETE
 //
 //------------------------------------------------------------------------------------------------------
-CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
+CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const char* pszHotKey)
 {
 	// SPEEDUP
 	PROFILE("CreateKeyStringFromKBCode");
@@ -447,7 +447,7 @@ CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
 
 	struct CvKeyBoardMapping
 	{
-		TCHAR szDefineString[25];
+		char szDefineString[25];
 		CvWString szKeyString;
 	};
 

@@ -194,9 +194,14 @@
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
+    <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvValueService.cpp" />
+    <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="OutputRatios.cpp" />
+    <ClCompile Include="PlotInfo.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
@@ -279,6 +284,7 @@
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
     <ClCompile Include="CvUnitList.cpp" />
+    <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvUnitSort.cpp" />
     <ClCompile Include="CvViewport.cpp" />
     <ClCompile Include="CvXMLLoadUtility.cpp" />
@@ -350,9 +356,13 @@
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
+    <ClInclude Include="CvSettlerAI.h" />
+    <ClInclude Include="CvValueService.h" />
+    <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
+    <ClInclude Include="GroupingParams.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
@@ -401,6 +411,8 @@
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="nullptr_t.h" />
+    <ClInclude Include="OutputRatios.h" />
+    <ClInclude Include="PlotInfo.h" />
     <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
@@ -419,7 +431,9 @@
     <ClInclude Include="CvGlobals.h" />
     <ClInclude Include="CvHallOfFameInfo.h" />
     <ClInclude Include="CvInfoReplacements.h" />
+    <ClInclude Include="CvInfoClassTraits.h" />
     <ClInclude Include="CvInfos.h" />
+    <ClInclude Include="CvInfoUtil.h" />
     <ClInclude Include="CvInfoWater.h" />
     <ClInclude Include="CvInitCore.h" />
     <ClInclude Include="CvMap.h" />
@@ -459,6 +473,7 @@
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />
     <ClInclude Include="CvUnitList.h" />
+    <ClInclude Include="CvUnitSelectionCriteria.h" />
     <ClInclude Include="CvUnitSort.h" />
     <ClInclude Include="CvXMLLoadUtility.h" />
     <ClInclude Include="CvXMLLoadUtilityModTools.h" />
@@ -473,6 +488,7 @@
     <ClInclude Include="CyGameTextMgr.h" />
     <ClInclude Include="CyGlobalContext.h" />
     <ClInclude Include="CyHallOfFameInfo.h" />
+    <ClInclude Include="CyIterator.h" />
     <ClInclude Include="CyMap.h" />
     <ClInclude Include="CyMapGenerator.h" />
     <ClInclude Include="CyMessageControl.h" />
@@ -503,6 +519,7 @@
     <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="cpp.hint" />
     <None Include="CvGameCoreDLL.def" />
     <None Include="fbuild.bff" />

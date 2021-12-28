@@ -57,25 +57,25 @@ CvProperties::CvProperties(CvPlot* pPlot)
 
 PropertyTypes CvProperties::getProperty(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
+	FASSERT_BOUNDS(0, m_aiProperty.size(), index);
 	return m_aiProperty[index].prop;
 }
 
 int CvProperties::getValue(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
+	FASSERT_BOUNDS(0, m_aiProperty.size(), index);
 	return m_aiProperty[index].value;
 }
 
 PropertyTypes CvProperties::getChangeProperty(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
+	FASSERT_BOUNDS(0, m_aiPropertyChange.size(), index);
 	return m_aiPropertyChange[index].prop;
 }
 
 int CvProperties::getChange(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
+	FASSERT_BOUNDS(0, m_aiPropertyChange.size(), index);
 	return m_aiPropertyChange[index].value;
 }
 
@@ -97,10 +97,8 @@ int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 int CvProperties::getValueByProperty(PropertyTypes eProp) const
 {
 	const int index = getPositionByProperty(eProp);
-	if (index < 0)
-		return 0;
-	else
-		return getValue(index);
+
+	return index < 0 ? 0 : getValue(index);
 }
 
 int CvProperties::getChangeByProperty(PropertyTypes eProp) const
@@ -145,7 +143,7 @@ void CvProperties::setValue(int index, int iVal)
 	//CvString szBuffer;
 	//szBuffer.format("SetValue, index %i, iValue %i.", index, iVal);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
+	FASSERT_BOUNDS(0, m_aiProperty.size(), index);
 	const int iOldVal = m_aiProperty[index].value;
 	if (iOldVal != iVal)
 	{
@@ -160,7 +158,7 @@ void CvProperties::setValue(int index, int iVal)
 
 void CvProperties::setChange(int index, int iVal)
 {
-	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
+	FASSERT_BOUNDS(0, m_aiPropertyChange.size(), index);
 	m_aiPropertyChange[index].value = iVal;
 }
 
@@ -171,17 +169,16 @@ void CvProperties::setValueByProperty(PropertyTypes eProp, int iVal)
 	//szBuffer.format("SetValueByProperty, eProp %i, iValue %i.", eProp, iVal);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
 	const int index = getPositionByProperty(eProp);
-	if (index < 0)
+	if (index >= 0)
 	{
-		if (iVal != 0)
-		{
-			m_aiProperty.push_back(PropertyValue(eProp,iVal));
-			if (m_pGameObject)
-				m_pGameObject->eventPropertyChanged(eProp, iVal);
-		}
-	}
-	else
 		setValue(index, iVal);
+	}
+	else if (iVal != 0)
+	{
+		m_aiProperty.push_back(PropertyValue(eProp,iVal));
+		if (m_pGameObject)
+			m_pGameObject->eventPropertyChanged(eProp, iVal);
+	}
 }
 
 void CvProperties::changeValue(int index, int iChange)

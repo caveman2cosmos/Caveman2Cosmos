@@ -129,6 +129,7 @@ public:
 
 	void setHumanDisabled(bool newVal);
 	bool isHumanDisabled() const;
+	bool isNormalAI() const;
 
 	DllExport bool isHuman() const;
 	DllExport void updateHuman();
@@ -158,7 +159,7 @@ public:
 	const CvWString getWorstEnemyName() const;
 	const wchar_t* getBestAttackUnitKey() const;
 	DllExport ArtStyleTypes getArtStyleType() const;
-	const TCHAR* getUnitButton(UnitTypes eUnit) const;
+	const char* getUnitButton(UnitTypes eUnit) const;
 
 	void doTurn();
 	void doTurnUnits();
@@ -274,6 +275,8 @@ public:
 	int getProductionModifier(UnitTypes eUnit) const;
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
+
+	int64_t getBaseUnitCost100(const UnitTypes eUnit) const;
 
 	int getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra = 0) const;
 	void removeBuilding(BuildingTypes building);
@@ -604,7 +607,6 @@ public:
 	void changeMaxConscript(int iChange);
 
 	int getOverflowResearch() const;
-	void setOverflowResearch(int iNewValue);
 	void changeOverflowResearch(int iChange);
 
 	int getNoUnhealthyPopulationCount() const;
@@ -1089,9 +1091,7 @@ public:
 	DllExport int getNumUnits() const;
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
-	CvUnit& addUnitCopy(CvUnit& unit);
 	void deleteUnit(int iID);
-	void deleteUnit(int iID, MapTypes eMap);
 
 	// selection groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_iterator, firstSelectionGroup, nextSelectionGroup);
@@ -1252,9 +1252,6 @@ public:
 	int getForceAllTradeRoutes() const;
 	void changeForceAllTradeRoutes(int iChange);
 
-	int getWorldTradeRoutes() const;
-	void changeWorldTradeRoutes(int iChange);
-
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
 
@@ -1269,7 +1266,6 @@ public:
 	int calculateTaxRateUnhappiness() const;
 
 	int getReligionSpreadRate() const;
-	void setReligionSpreadRate(int iNewValue);
 	void changeReligionSpreadRate(int iChange);
 
 	int getDistantUnitSupportCostModifier() const;
@@ -1521,7 +1517,6 @@ protected:
 	int m_iCivilizationHealth;
 	int m_iNoCapitalUnhappiness;
 	int m_iProjectHealth;
-	int m_iWorldTradeRoutes;
 	int m_iForceAllTradeRoutes;
 	int m_iProjectHappiness;
 	int m_iWorldHealth;
@@ -1703,10 +1698,9 @@ public:
 	virtual void AI_setExtraGoldTarget(int iNewValue) = 0;
 	virtual int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const = 0;
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
-protected:
 
-	int m_iStartingX;
-	int m_iStartingY;
+protected:
+	bst::array<XYCoords, NUM_MAPS> m_startingCoords;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
@@ -2349,18 +2343,7 @@ private:
 
 	std::vector<civcSwitchInstance> m_civicSwitchHistory;
 
-	static CRITICAL_SECTION	c_canConstructCacheSection;
-	static CRITICAL_SECTION	c_allCitiesPropertySection;
-	static CRITICAL_SECTION	c_buildingProcessingSection;
-	static CRITICAL_SECTION	c_GroupCycleSection;
 	static bool m_staticsInitialized;
-
-	bool m_bUpdatesDeferred;
-	bool m_bGoldenAgeStarted; // Used to defer reporting in update-deferred sections
-
-	void reportGoldenAgeStart();
-	void deferUpdates();
-	void resumeUpdates();
 
 protected:
 	void constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const;

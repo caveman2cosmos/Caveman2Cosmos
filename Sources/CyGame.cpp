@@ -899,7 +899,7 @@ void CyGame::setScriptData(std::string szNewValue)
 	m_pGame.setScriptData(szNewValue);
 }
 
-void CyGame::setName(TCHAR* szNewValue)
+void CyGame::setName(const char* szNewValue)
 {
 	m_pGame.setName(szNewValue);
 }
@@ -939,7 +939,7 @@ CvRandom& CyGame::getMapRand() const
 	return (m_pGame.getMapRand());
 }
 
-int CyGame::getMapRandNum(int iNum, TCHAR* pszLog) const
+int CyGame::getMapRandNum(int iNum, const char* pszLog) const
 {
 	return m_pGame.getMapRandNum(iNum, pszLog);
 }
@@ -949,7 +949,7 @@ CvRandom& CyGame::getSorenRand() const
 	return (m_pGame.getSorenRand());
 }
 
-int CyGame::getSorenRandNum(int iNum, TCHAR* pszLog) const
+int CyGame::getSorenRandNum(int iNum, const char* pszLog) const
 {
 	return m_pGame.getSorenRandNum(iNum, pszLog);
 }
@@ -1076,11 +1076,6 @@ int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
-}
-
-void CyGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	m_pGame.changePlotExtraCost(iX, iY, iCost);
 }
 
 bool CyGame::isCivEverActive(CivilizationTypes eCivilization) const

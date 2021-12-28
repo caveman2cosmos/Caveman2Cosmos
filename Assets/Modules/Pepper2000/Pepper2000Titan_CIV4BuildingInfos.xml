@@ -51,15 +51,15 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MINING_PLANET</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
@@ -97,6 +97,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_AMMONIA_ERUPTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>1452</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

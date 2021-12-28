@@ -4,6 +4,24 @@
 #define CvGameCoreDLL_h__
 
 //
+// Compiler warnings
+//
+//#pragma warning( 3: 4127 ) // conditional expression is constant
+
+#pragma warning( disable : 4510 ) // default constructor could not be generated
+#pragma warning( disable : 4511 ) // copy constructor could not be generated
+#pragma warning( disable : 4512 ) // assignment operator could not be generated
+#pragma warning( disable : 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
+
+#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
+
+#pragma warning( push )
+#pragma warning( disable: 4100 ) // unreferenced formal parameter
+#pragma warning( disable: 4121 ) // alignment of a member was sensitive to packing
+#pragma warning( disable: 4127 ) // conditional expression is constant
+#pragma warning( disable: 4610 ) // struct/class can never be instantiated - user defined constructor required
+
+//
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer
 //
@@ -11,8 +29,6 @@
 //
 // WINDOWS
 //
-#pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
-
 //#ifdef __INTELLISENSE__
 //// #undef _MSC_VER
 //#define _MSC_VER 1310
@@ -223,9 +239,7 @@ const std::string getModDir();
 #include <boost155/utility.hpp>
 #include <boost155/foreach.hpp>
 #include <boost155/functional.hpp>
-
-
-// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
+#include <boost155/detail/algorithm.hpp>
 
 // Ranges
 #include <boost155/range.hpp>
@@ -237,8 +251,8 @@ const std::string getModDir();
 #include <boost155/range/numeric.hpp>
 
 // Make boost foreach look nice enough to actually use
-#define foreach_			BOOST_155_FOREACH
-#define reverse_foreach_	BOOST_155_REVERSE_FOREACH
+#define foreach_		 BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
 
 // Alias our latest boost version
 namespace bst = boost155;
@@ -264,6 +278,7 @@ using bst::bind;
 #include <boost/python/manage_new_object.hpp>
 #include <boost/python/return_value_policy.hpp>
 #include <boost/python/to_python_converter.hpp>
+#include <boost/python/suite/indexing/container_utils.hpp>
 namespace python = boost::python;
 #endif
 
@@ -283,14 +298,10 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
+#pragma warning( pop )
+
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
-
-//
-// Compiler warnings
-//
-#pragma warning( 3: 4100 ) // unreferenced formal parameter
-//#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
 
 //
 // Json

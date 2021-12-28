@@ -98,7 +98,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_ARMORED_CAVALRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BEARKNIGHT</Type>
@@ -346,7 +346,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_MAMMOTH_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -360,7 +360,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -472,9 +472,9 @@
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
-			<iCost>190</iCost>
+			<iCost>130</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -838,6 +838,9 @@
 				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -851,10 +854,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_IRON_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -1045,6 +1044,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -1122,14 +1122,15 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SPEAR_MAKING</ForceObsoleteTech>
-			<iCost>100</iCost>
+			<ObsoleteTech>TECH_SPEAR_MAKING</ObsoleteTech>
+			<iCost>62</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -1207,14 +1208,15 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
-			<iCost>110</iCost>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
+			<iCost>70</iCost>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -1291,15 +1293,16 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
-			<iCost>140</iCost>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
+			<iCost>92</iCost>
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1377,9 +1380,10 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -1388,8 +1392,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_PIKE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
-			<iCost>275</iCost>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
+			<iCost>182</iCost>
 			<iBaseUpkeep>18</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -1467,15 +1471,16 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
-			<iCost>480</iCost>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
+			<iCost>315</iCost>
 			<iBaseUpkeep>25</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
@@ -1602,7 +1607,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_ARMORED_CAVALRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_RHINO</Type>
@@ -1675,7 +1680,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_ARCHER</Type>
@@ -1908,18 +1913,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>630</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>27</iCombat>
@@ -2220,18 +2217,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SULPHUR</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_SULPHUR</BonusType>
+			</PrereqBonuses>
 			<iCost>475</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>21</iCombat>
@@ -2678,8 +2667,12 @@
 			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BARRACKS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BARRACKS</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -2801,8 +2794,11 @@
 			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GARRISON</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>

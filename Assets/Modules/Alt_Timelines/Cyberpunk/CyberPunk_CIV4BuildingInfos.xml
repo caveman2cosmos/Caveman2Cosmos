@@ -108,7 +108,7 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
@@ -145,10 +145,10 @@
 				<iYield>20</iYield>
 			</YieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>3</iPrereqPopulation>

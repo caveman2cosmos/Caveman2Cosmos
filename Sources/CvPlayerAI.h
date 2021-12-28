@@ -58,9 +58,9 @@ public:
 		{
 			currentUseCounter = 0;
 
-			for(int i = 0; i < PLOT_DANGER_CACHE_SIZE; i++)
+			foreach_(plotDangerCacheEntry& entry, entries)
 			{
-				entries[i].iLastUseCount = 0;
+				entry.iLastUseCount = 0;
 			}
 		}
 	}
@@ -81,7 +81,7 @@ public:
 	// inlined for performance reasons
 	static CvPlayerAI& getPlayer(PlayerTypes ePlayer)
 	{
-		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 		return m_aPlayers[ePlayer];
 	}
 
@@ -217,9 +217,10 @@ public:
 	bool AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirInventory, CLinkList<TradeData>* pOurInventory, CLinkList<TradeData>* pTheirCounter, CLinkList<TradeData>* pOurCounter) const;
 
 	int AI_maxGoldTrade(PlayerTypes ePlayer) const;
-
 	int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const;
-	int AI_goldPerTurnTradeVal(int iGoldPerTurn) const;
+
+	int AI_getGoldValue(const int iGold) const;
+	int AI_getGoldFromValue(const int iValue) const;
 
 	int AI_bonusVal(BonusTypes eBonus, int iChange = 1, bool bForTrade = false) const;
 	int AI_baseBonusVal(BonusTypes eBonus, bool bForTrade = false) const;
@@ -596,7 +597,6 @@ protected:
 
 	void AI_doCounter();
 	void AI_doMilitary();
-	void AI_doResearch();
 public:
 	void AI_doCivics();
 protected:

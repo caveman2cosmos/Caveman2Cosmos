@@ -229,8 +229,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_GOLD_ORE</BonusType>
 				<BonusType>BONUS_SILVER_ORE</BonusType>
-				<BonusType>BONUS_GEMSTONE</BonusType>
 				<BonusType>BONUS_PEARLS</BonusType>
+				<BonusType>BONUS_DIAMOND</BonusType>
+				<BonusType>BONUS_RUBIES</BonusType>
+				<BonusType>BONUS_SAPPHIRES</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -281,12 +283,6 @@
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -341,12 +337,6 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>0</iHealth>
 			<iHappiness>2</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -382,7 +372,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PIG</BonusType>
 				<BonusType>BONUS_COW</BonusType>
-				<BonusType>BONUS_SALT</BonusType>
+				<BonusType>BONUS_SHEEP</BonusType>
 				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
 			</PrereqBonuses>
@@ -398,12 +388,6 @@
 			<YieldsProduced>
 				<iYieldProduced>175</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>-1</iHealth>
 			<iHappiness>0</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -605,12 +589,6 @@
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>0</iHealth>
 			<iHappiness>2</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -661,12 +639,6 @@
 			<YieldsProduced>
 				<iYieldProduced>200</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>-1</iHealth>
 			<iHappiness>0</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -701,7 +673,6 @@
 			<iTGAIndex>16</iTGAIndex>
 			<PrereqBonuses>
 				<BonusType>BONUS_COFFEE</BonusType>
-				<BonusType>BONUS_SALT</BonusType>
 				<BonusType>BONUS_SUGAR</BonusType>
 				<BonusType>BONUS_SPICES</BonusType>
 				<BonusType>BONUS_TEA</BonusType>
@@ -720,12 +691,6 @@
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>-1</iHealth>
 			<iHappiness>3</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -854,12 +819,6 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -914,12 +873,6 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -973,12 +926,6 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iFreeXP>0</iFreeXP>
@@ -1033,12 +980,6 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<CompetingCorporations>
-				<CompetingCorporation>
-					<CorporationType>CORPORATION_1</CorporationType>
-					<bCompeting>0</bCompeting>
-				</CompetingCorporation>
-			</CompetingCorporations>
 			<iHealth>0</iHealth>
 			<iHappiness>-2</iHappiness>
 			<iFreeXP>2</iFreeXP>

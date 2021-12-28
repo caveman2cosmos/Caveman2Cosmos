@@ -110,7 +110,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, (int)m_aaiGroupedBuildingList.size(), iGroup)
+	FASSERT_BOUNDS(0, m_aaiGroupedBuildingList.size(), iGroup);
 	return m_aaiGroupedBuildingList[iGroup].size();
 }
 
@@ -120,8 +120,8 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
-	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return m_aaiGroupedBuildingList[iGroup][iPos];
 }
 
@@ -173,7 +173,7 @@ void CvBuildingList::doSort()
 	std::auto_ptr<BuildingSortListWrapper> pWrapper(new BuildingSortListWrapper(&m_BuildingSort));
 	for (GroupedBuildingVector::iterator itr = m_aaiGroupedBuildingList.begin(); itr != m_aaiGroupedBuildingList.end(); ++itr)
 	{
-		std::stable_sort(itr->begin(), itr->end(), *pWrapper);
+		algo::stable_sort(*itr, *pWrapper);
 		pWrapper->deleteCache();
 	}
 	m_bSortingValid = true;
@@ -185,7 +185,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedBuilding) != m_aaiGroupedBuildingList[i].end())
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedBuilding))
 				return i;
 		}
 		m_eSelectedBuilding = NO_BUILDING;
@@ -208,7 +208,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedWonder) != m_aaiGroupedBuildingList[i].end())
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedWonder))
 				return i;
 		}
 		m_eSelectedWonder = NO_BUILDING;

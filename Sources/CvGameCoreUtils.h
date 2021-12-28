@@ -214,7 +214,6 @@ DllExport CvCity* getCity(IDInfo city);
 DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
 int getTechScore(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
@@ -388,7 +387,7 @@ bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherD
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();
 
-void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
+void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound = NULL,
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
 		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
 
@@ -407,7 +406,7 @@ bool isMapCategory(const T1& source1, const T2& source2)
 	}
 	foreach_(const MapCategoryTypes eMapCategory, mapCategories1)
 	{
-		if (algo::contains(mapCategories2, eMapCategory))
+		if (algo::any_of_equal(mapCategories2, eMapCategory))
 			return true;
 	}
 	return false;
@@ -430,4 +429,7 @@ protected:
 	DWORD sum;
 };
 
+// Toffer
+void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumberCutDecimals = false, int iNumDecimals = 2);
+// ! Toffer
 #endif

@@ -59,7 +59,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_RAFT</UnitType>
 			</SupersedingUnits>
@@ -173,7 +173,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 			</SupersedingUnits>
@@ -1201,7 +1201,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
 			</SupersedingUnits>
@@ -3939,7 +3939,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
 			</SupersedingUnits>
@@ -4052,7 +4052,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -4431,9 +4431,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
+			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NAVIGATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -5193,18 +5193,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALUMINUM_WARES</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
+			</PrereqBonuses>
 			<iCost>3285</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>6</iBaseUpkeep>
@@ -5483,7 +5475,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
-			<iCost>1290</iCost>
+			<iCost>1287</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>6</iMoves>
@@ -5758,7 +5750,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_URANIUM</BonusType>
@@ -6340,7 +6332,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
-			<iCost>1300</iCost>
+			<iCost>1237</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -6457,7 +6449,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
-			<iCost>1660</iCost>
+			<iCost>1600</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -6574,7 +6566,7 @@
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>1920</iCost>
+			<iCost>1843</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>6</iMoves>
@@ -6694,7 +6686,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iCost>7100</iCost>
+			<iCost>6818</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>8</iMoves>
@@ -8041,18 +8033,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALUMINUM_WARES</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
+			</PrereqBonuses>
 			<iCost>2308</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>4</iBaseUpkeep>
@@ -8301,7 +8285,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>
@@ -8316,7 +8300,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>95</iCost>
+			<iCost>133</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -8429,7 +8413,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_CHEMISTRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
@@ -8444,7 +8428,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>250</iCost>
+			<iCost>308</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8519,7 +8503,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SUBMARINE_WARFARE</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
@@ -8534,7 +8518,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>300</iCost>
+			<iCost>372</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -8605,7 +8589,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_CONGLOMERATES</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 			<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -8621,7 +8605,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>620</iCost>
+			<iCost>773</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8709,7 +8693,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>740</iCost>
+			<iCost>923</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8793,10 +8777,22 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HOSPITAL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HEALTHCARE_MEGACOMPLEX</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -8918,9 +8914,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>

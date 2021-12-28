@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
@@ -6,6 +7,7 @@
 #include "CyPlot.h"
 #include "CyUnit.h"
 #include "SCyDebug.h"
+#include "IDValueMap.h"
 #include "Win32.h"
 
 
@@ -40,6 +42,7 @@ void CyGameCoreUtilsPythonInterface();
 void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 void CyBoolExprPythonInterface();
+void CyIntExprPythonInterface();
 
 
 DllExport void DLLPublishToPython()
@@ -54,9 +57,6 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<CorporationTypes>();
 	registerAllowPyIntAsType<GameOptionTypes>();
 	registerAllowPyIntAsType<PlayerTypes>();
-	registerAllowPyIntAsType<VictoryTypes>();
-	registerAllowPyIntAsType<VoteTypes>();
-	registerAllowPyIntAsType<VoteSourceTypes>();
 	registerAllowPyIntAsType<ReligionTypes>();
 	registerAllowPyIntAsType<ImprovementTypes>();
 	registerAllowPyIntAsType<CivilizationTypes>();
@@ -73,7 +73,6 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<CultureLevelTypes>();
 	registerAllowPyIntAsType<ReplayMessageTypes>();
 	registerAllowPyIntAsType<ModderGameOptionTypes>();
-	registerAllowPyIntAsType<UnitTypes>();
 	registerAllowPyIntAsType<YieldTypes>();
 	registerAllowPyIntAsType<CultureLevelTypes>();
 	registerAllowPyIntAsType<CommerceTypes>();
@@ -83,10 +82,29 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<BonusTypes>();
 	registerAllowPyIntAsType<HurryTypes>();
 	registerAllowPyIntAsType<MapTypes>();
+	registerAllowPyIntAsType<MapCategoryTypes>();
 	registerAllowPyIntAsType<UnitAITypes>();
 	registerAllowPyIntAsType<DomainTypes>();
 	registerAllowPyIntAsType<PropertyTypes>();
 	registerAllowPyIntAsType<ProcessTypes>();
+	registerAllowPyIntAsType<UnitCombatTypes>();
+	registerAllowPyIntAsType<UnitTypes>();
+	registerAllowPyIntAsType<VictoryTypes>();
+	registerAllowPyIntAsType<VoteTypes>();
+	registerAllowPyIntAsType<VoteSourceTypes>();
+
+	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<MapCategoryTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<TechTypes>, CovertToInteger>();
+
+	publishIDValueMapPythonInterface<IDValueMap<BonusTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<BuildingTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<ImprovementTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TechTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TerrainTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitCombatTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitTypes, int> >();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
@@ -108,32 +126,33 @@ DllExport void DLLPublishToPython()
 	CyMessageControlInterface();
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
-
+	CyIntExprPythonInterface();
+	CvInfoUtil::publishPythonInterface();
 	SCyDebug::installInPython();
 
 	//
 	// large interfaces which can be split across files if need be
 	//
-	python::class_<CyCity> city ("CyCity");		// define city class
-	CyCityPythonInterface1(city);				// publish it's methods
-	CyCityPythonInterface2(city);				// publish it's methods
+	python::class_<CyCity> city("CyCity", python::no_init);			// define city class
+	CyCityPythonInterface1(city);									// publish it's methods
+	CyCityPythonInterface2(city);									// publish it's methods
 
-	python::class_<CyPlayer> player ("CyPlayer");	// define player class
-	CyPlayerPythonInterface1(player);				// publish it's methods
-	CyPlayerPythonInterface2(player);				// publish it's methods
-	CyPlayerPythonInterface3(player);				// publish it's methods
+	python::class_<CyPlayer> player("CyPlayer", python::no_init);	// define player class
+	CyPlayerPythonInterface1(player);								// publish it's methods
+	CyPlayerPythonInterface2(player);								// publish it's methods
+	CyPlayerPythonInterface3(player);								// publish it's methods
 
-	python::class_<CyUnit> unit ("CyUnit");		// define unit class
-	CyUnitPythonInterface1(unit);				// publish it's methods
+	python::class_<CyUnit> unit("CyUnit", python::no_init);			// define unit class
+	CyUnitPythonInterface1(unit);									// publish it's methods
 
-	python::class_<CyPlot> plot ("CyPlot");		// define plot class
-	CyPlotPythonInterface1(plot);				// publish it's methods
+	python::class_<CyPlot> plot("CyPlot", python::no_init);			// define plot class
+	CyPlotPythonInterface1(plot);									// publish it's methods
 
-	python::class_<CyGlobalContext> gc ("CyGlobalContext");	// define globals class
-	CyGlobalContextPythonInterface1(gc);					// publish it's methods
-	CyGlobalContextPythonInterface2(gc);					// publish it's methods
-	CyGlobalContextPythonInterface3(gc);					// publish it's methods
-	CyGlobalContextPythonInterface4(gc);					// publish it's methods
+	python::class_<CyGlobalContext> gc("CyGlobalContext");			// define globals class
+	CyGlobalContextPythonInterface1(gc);							// publish it's methods
+	CyGlobalContextPythonInterface2(gc);							// publish it's methods
+	CyGlobalContextPythonInterface3(gc);							// publish it's methods
+	CyGlobalContextPythonInterface4(gc);							// publish it's methods
 
 	Win32::pythonPublish();
 
