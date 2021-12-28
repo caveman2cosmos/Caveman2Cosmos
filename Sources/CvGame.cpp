@@ -640,7 +640,6 @@ void CvGame::uninit()
 	SAFE_DELETE(m_pReplayInfo);
 
 	m_aPlotExtraYields.clear();
-	m_aPlotExtraCosts.clear();
 	m_mapVoteSourceReligions.clear();
 	m_aeInactiveTriggers.clear();
 
@@ -8454,17 +8453,12 @@ void CvGame::read(FDataStreamBase* pStream)
 		}
 	}
 
+#ifndef BREAK_SAVES
 	{
-		unsigned int iSize;
-		m_aPlotExtraCosts.clear();
+		uint32_t iSize;
 		WRAPPER_READ_DECORATED(wrapper,"CvGame",&iSize,"PlotExtraCostsCount");
-		for (unsigned int i = 0; i < iSize; ++i)
-		{
-			PlotExtraCost kPlotCost;
-			kPlotCost.read(pStream);
-			m_aPlotExtraCosts.push_back(kPlotCost);
-		}
 	}
+#endif
 
 	{
 		unsigned int iSize;
@@ -8709,13 +8703,12 @@ void CvGame::write(FDataStreamBase* pStream)
 	{
 		(*it).write(pStream);
 	}
-
-	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aPlotExtraCosts.size(), "PlotExtraCostsCount");
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
+#ifndef BREAK_SAVES
 	{
-		(*it).write(pStream);
+		uint32_t iSize = 0;
+		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", iSize, "PlotExtraCostsCount");
 	}
-
+#endif
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_mapVoteSourceReligions.size(), "VoteSourceReligionsCount");
 	for (stdext::hash_map<VoteSourceTypes, ReligionTypes>::iterator it = m_mapVoteSourceReligions.begin(); it != m_mapVoteSourceReligions.end(); ++it)
 	{
@@ -9077,55 +9070,6 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 	}
 }
 */
-
-int CvGame::getPlotExtraCost(int iX, int iY) const
-{
-	foreach_(const PlotExtraCost& it, m_aPlotExtraCosts)
-	{
-		if (it.m_iX == iX && it.m_iY == iY)
-		{
-			return it.m_iCost;
-		}
-	}
-
-	return 0;
-}
-
-void CvGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	bool bFound = false;
-
-	foreach_(PlotExtraCost& it, m_aPlotExtraCosts)
-	{
-		if (it.m_iX == iX && it.m_iY == iY)
-		{
-			it.m_iCost += iCost;
-			bFound = true;
-			break;
-		}
-	}
-
-	if (!bFound)
-	{
-		PlotExtraCost kExtraCost;
-		kExtraCost.m_iX = iX;
-		kExtraCost.m_iY = iY;
-		kExtraCost.m_iCost = iCost;
-		m_aPlotExtraCosts.push_back(kExtraCost);
-	}
-}
-
-void CvGame::removePlotExtraCost(int iX, int iY)
-{
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
-	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
-		{
-			m_aPlotExtraCosts.erase(it);
-			break;
-		}
-	}
-}
 
 ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 {

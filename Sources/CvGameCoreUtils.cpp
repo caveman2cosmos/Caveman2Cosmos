@@ -2456,10 +2456,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
-				}
 			}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
@@ -3120,10 +3116,6 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
-				}
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 				}
 			}
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
