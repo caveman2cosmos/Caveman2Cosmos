@@ -1396,17 +1396,17 @@ void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes e
 {
 	CLLNode<TradeData>* pNode;
 
-	foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
+	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if (&pLoopDeal != this)
+		if (&kLoopDeal != this)
 		{
 			bool bValid = true;
 
-			if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == eFromTeam
-			&&  GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == eToTeam
-			&& pLoopDeal.getFirstTrades())
+			if (GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == eFromTeam
+			&&  GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == eToTeam
+			&& kLoopDeal.getFirstTrades())
 			{
-				for (pNode = pLoopDeal.getFirstTrades()->head(); pNode; pNode = pLoopDeal.getFirstTrades()->next(pNode))
+				for (pNode = kLoopDeal.getFirstTrades()->head(); pNode; pNode = kLoopDeal.getFirstTrades()->next(pNode))
 				{
 					if (pNode->m_data.m_eItemType == eItem)
 					{
@@ -1416,11 +1416,11 @@ void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes e
 				}
 			}
 			if (bValid
-			&& GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == eToTeam
-			&& GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == eFromTeam
-			&& pLoopDeal.getSecondTrades())
+			&& GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == eToTeam
+			&& GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == eFromTeam
+			&& kLoopDeal.getSecondTrades())
 			{
-				for (pNode = pLoopDeal.getSecondTrades()->head(); pNode; pNode = pLoopDeal.getSecondTrades()->next(pNode))
+				for (pNode = kLoopDeal.getSecondTrades()->head(); pNode; pNode = kLoopDeal.getSecondTrades()->next(pNode))
 				{
 					if (pNode->m_data.m_eItemType == eItem)
 					{
@@ -1431,7 +1431,7 @@ void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes e
 			}
 			if (!bValid)
 			{
-				pLoopDeal.kill(false);
+				kLoopDeal.kill(false);
 			}
 		}
 	}

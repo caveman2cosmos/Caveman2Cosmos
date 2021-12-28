@@ -10093,23 +10093,23 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 		iValue *= 3;
 	}
 
-	foreach_(CvDeal& pLoopDeal, GC.getGame().deals())
+	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if (pLoopDeal.isCancelable(getID()) && !pLoopDeal.isPeaceDeal())
+		if (kLoopDeal.isCancelable(getID()) && !kLoopDeal.isPeaceDeal())
 		{
-			if (GET_PLAYER(pLoopDeal.getFirstPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
+			if (GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
 			{
-				if (pLoopDeal.getLengthSecondTrades() > 0)
+				if (kLoopDeal.getLengthSecondTrades() > 0)
 				{
-					iValue += (GET_PLAYER(pLoopDeal.getFirstPlayer()).AI_dealVal(pLoopDeal.getSecondPlayer(), pLoopDeal.getSecondTrades()) * ((pLoopDeal.getLengthFirstTrades() == 0) ? 2 : 1));
+					iValue += (GET_PLAYER(kLoopDeal.getFirstPlayer()).AI_dealVal(kLoopDeal.getSecondPlayer(), kLoopDeal.getSecondTrades()) * ((kLoopDeal.getLengthFirstTrades() == 0) ? 2 : 1));
 				}
 			}
 
-			if (GET_PLAYER(pLoopDeal.getSecondPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
+			if (GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
 			{
-				if (pLoopDeal.getLengthFirstTrades() > 0)
+				if (kLoopDeal.getLengthFirstTrades() > 0)
 				{
-					iValue += (GET_PLAYER(pLoopDeal.getSecondPlayer()).AI_dealVal(pLoopDeal.getFirstPlayer(), pLoopDeal.getFirstTrades()) * ((pLoopDeal.getLengthSecondTrades() == 0) ? 2 : 1));
+					iValue += (GET_PLAYER(kLoopDeal.getSecondPlayer()).AI_dealVal(kLoopDeal.getFirstPlayer(), kLoopDeal.getFirstTrades()) * ((kLoopDeal.getLengthSecondTrades() == 0) ? 2 : 1));
 				}
 			}
 		}
@@ -18386,7 +18386,7 @@ void CvPlayerAI::AI_doDiplo()
 									}
 								}
 							}
-							else if (!AI_considerOffer(((PlayerTypes)iI), pLoopDeal->getFirstTrades(), pLoopDeal->getSecondTrades(), -1))
+							else if (!AI_considerOffer((PlayerTypes)iI, kLoopDeal.getFirstTrades(), kLoopDeal.getSecondTrades(), -1))
 							{
 								bCancelDeal = true;
 							}
@@ -18401,7 +18401,7 @@ void CvPlayerAI::AI_doDiplo()
 
 								for (pNode = kLoopDeal.headFirstTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextFirstTradesNode(pNode))
 								{
-									if (pLoopDeal->getFirstPlayer() == getID())
+									if (kLoopDeal.getFirstPlayer() == getID())
 									{
 										ourList.insertAtEnd(pNode->m_data);
 									}
@@ -18448,7 +18448,7 @@ void CvPlayerAI::AI_doDiplo()
 									}
 								}
 							}
-							pLoopDeal->kill(); // XXX test this for AI...
+							kLoopDeal.kill(); // XXX test this for AI...
 						}
 					}
 				}

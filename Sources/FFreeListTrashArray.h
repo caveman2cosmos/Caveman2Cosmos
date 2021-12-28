@@ -75,17 +75,11 @@ public:
 	// iterate from the current position and return the prev item found or NULL when done
 	T* prevIter(int* pIterIdx) const;
 
-	typedef const iterator const_iterator;
-
-	iterator begin() { return iterator(this); }
-	iterator end() { return iterator(); }
-
-	const_iterator begin() const { return const_iterator(this); }
-	const_iterator end() const { return const_iterator(); }
+	iterator begin() const { return iterator(this); }
+	iterator end() const { return iterator(); }
 
 	typedef bst::iterator_range<iterator> Range_t;
-
-	Range_t range() const { return Range_t(*this); }
+	Range_t range() const { return Range_t(begin(), end()); }
 
 	// Returns the iIndex after the last iIndex in the array containing an element
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
