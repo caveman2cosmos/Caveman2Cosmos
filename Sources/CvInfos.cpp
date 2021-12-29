@@ -13018,7 +13018,7 @@ bool CvBuildInfo::isKill() const
 TechTypes CvBuildInfo::getFeatureTech(FeatureTypes e) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), e);
-	return m_paiFeatureTech ? m_paiFeatureTech[e] : -1;
+	return m_paiFeatureTech ? (TechTypes)m_paiFeatureTech[e] : NO_TECH;
 }
 
 int CvBuildInfo::getFeatureTime(FeatureTypes e) const
