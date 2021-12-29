@@ -9968,7 +9968,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 #else
 	return AI_yieldValueInternal(piYields, piCommerceYields, bAvoidGrowth, bRemove, bIgnoreFood, bIgnoreGrowth, bIgnoreStarvation, bWorkerOptimization);
 #endif
-		}
+}
 
 
 int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization) const
@@ -10852,31 +10852,14 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 		if (!bValid) continue;
 
-		const ImprovementTypes ePotentialFinalImprovement = ePotentialImprovement == NO_IMPROVEMENT ? ePotentialImprovement : GET_TEAM(getTeam()).finalImprovementUpgrade(ePotentialImprovement);
-		const CvImprovementInfo* potentialFinalImprovementInfo = ePotentialFinalImprovement == ePotentialImprovement ? &potentialImprovementInfo : &GC.getImprovementInfo(ePotentialFinalImprovement);
-
 		// if plot has a bonus
 		if (eNonObsoleteBonus != NO_BONUS)
 		{
 			// if plot is not improved with improvement that gives bonus
-			if (potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
+			if (potentialImprovementInfo.isImprovementBonusMakesValid(eNonObsoleteBonus))
 			{
-				if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
-				{
-					iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-					iValue += 10000;
-				}
-
-				//reduced value for temporary solutions
-				else if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo(eNonObsoleteBonus).getTechCityTrade()))
-				{
-					iValue++;
-				}
-				else
-				{
-					iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-					iValue += 5000;
-				}
+				iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
+				iValue += 10000;
 			}
 		}
 
@@ -12837,7 +12820,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		{
 			return true;
 		}
-			}
+	}
 	if ((iFocusFlags & BUILDINGFOCUS_HAPPY) != 0)
 	{
 		foreach_(const TechModifier & modifier, kBuilding.getTechHappinessChanges())
@@ -12957,7 +12940,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		return true;
 	}
 	return false;
-		}
+}
 
 
 void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
@@ -13380,7 +13363,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					iValue += areaBorderObstacleValue;
 				}
 				valuesCache->Accumulate(BUILDINGFOCUSINDEX_DEFENSE, iValue);
-				}
+			}
 			valuesCache->Accumulate(BUILDINGFOCUSINDEX_ESPIONAGE, kBuilding.getEspionageDefenseModifier() / 8);
 
 			if (!isNoUnhappiness())
@@ -13831,11 +13814,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						}
 #endif // ONGOING_TRAINING
 					}
-				}
+					}
 
 				iValue += kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8);
 
-				iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
+					iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, false);
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, true);
 				}
@@ -14527,8 +14510,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				// Flavor calculation is non-linear and cannot be calculated in the caching, it is calculated post-cache retrieval.
 			}
 			}
-			}
 		}
+	}
 
 int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const
 {
