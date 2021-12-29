@@ -331,7 +331,7 @@ protected:
 	void AI_getCurrentPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
 	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
 	                         iDesiredFoodChange) const;
-	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
+	void AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
 	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
 	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
 
