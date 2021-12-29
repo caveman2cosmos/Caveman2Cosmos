@@ -117,13 +117,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_statsReporter(NULL)
 	, m_diplomacyScreen(NULL)
 	, m_mpDiplomacyScreen(NULL)
-	//, m_pathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_interfacePathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_stepFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_routeFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_borderFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_areaFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_plotGroupFinders(bst::array<FAStar*, NUM_MAPS>())
 	, m_aiPlotDirectionX(NULL)
 	, m_aiPlotDirectionY(NULL)
 	, m_aiPlotCardinalDirectionX(NULL)
@@ -3100,8 +3093,11 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 
 void cvInternalGlobals::doPostLoadCaching()
 {
-	for (int i = 0, num = getNumBuildingInfos(); i < num; i++)
+	foreach_(std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
-		m_paBuildingInfo[i]->doPostLoadCaching(static_cast<BuildingTypes>(i));
+		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
+		{
+			(*infoVector)[i]->doPostLoadCaching(i);
+		}
 	}
 }

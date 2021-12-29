@@ -1078,11 +1078,6 @@ void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
 }
 
-void CyGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	m_pGame.changePlotExtraCost(iX, iY, iCost);
-}
-
 bool CyGame::isCivEverActive(CivilizationTypes eCivilization) const
 {
 	return m_pGame.isCivEverActive(eCivilization);

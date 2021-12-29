@@ -1517,13 +1517,13 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 bool PUF_isVisible(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false));
+	return !pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false);
 }
 
 bool PUF_isVisibleDebug(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true));
+	return !pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true);
 }
 
 bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -2456,10 +2456,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
-				}
 			}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
@@ -3120,10 +3116,6 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
-				}
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 				}
 			}
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
@@ -4479,7 +4471,7 @@ void CvChecksum::add(uint8_t b)
 #include "CyArgsList.h"
 
 void AddDLLMessage(
-	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound,
+	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound,
 	InterfaceMessageTypes eType, LPCSTR pszIcon, ColorTypes eFlashColor,
 	int iFlashX, int iFlashY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
 {

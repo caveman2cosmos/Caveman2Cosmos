@@ -4,7 +4,6 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
-#include "CvDeal.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -307,11 +306,11 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	if (!isOption(GAMEOPTION_GREAT_COMMANDERS))
 	{
-		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		foreach_(CvUnitInfo* info, GC.getUnitInfos())
 		{
-			if (GC.getUnitInfo((UnitTypes)iI).isGreatGeneral())
+			if (info->isGreatGeneral())
 			{
-				GC.getUnitInfo((UnitTypes)iI).setPowerValue(GC.getUnitInfo((UnitTypes)iI).getPowerValue() / 10);
+				info->setPowerValue(info->getPowerValue() / 10);
 			}
 		}
 	}
@@ -319,13 +318,12 @@ void CvGame::init(HandicapTypes eHandicap)
 	if (isOption(GAMEOPTION_UNITED_NATIONS))
 	{
 		//Find the diplomatic victory
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		foreach_(const CvBuildingInfo* info, GC.getBuildingInfos())
 		{
-			const CvBuildingInfo& info = GC.getBuildingInfo((BuildingTypes) iI);
-			if (info.getVictoryPrereq() != NO_VICTORY && info.getVoteSourceType() != NO_VOTESOURCE)
+			if (info->getVictoryPrereq() != NO_VICTORY && info->getVoteSourceType() != NO_VOTESOURCE)
 			{
-				m_bDiploVictoryEnabled = isVictoryValid((VictoryTypes) info.getVictoryPrereq());
-				setVictoryValid((VictoryTypes) info.getVictoryPrereq(), true);
+				m_bDiploVictoryEnabled = isVictoryValid((VictoryTypes) info->getVictoryPrereq());
+				setVictoryValid((VictoryTypes) info->getVictoryPrereq(), true);
 				break;
 			}
 		}
@@ -641,7 +639,6 @@ void CvGame::uninit()
 	SAFE_DELETE(m_pReplayInfo);
 
 	m_aPlotExtraYields.clear();
-	m_aPlotExtraCosts.clear();
 	m_mapVoteSourceReligions.clear();
 	m_aeInactiveTriggers.clear();
 
@@ -2548,7 +2545,7 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 		{
 			gDLL->getInterfaceIFace()->clearSelectionList();
 		}
-		const bool bGroup = bShift ? gDLL->getInterfaceIFace()->mirrorsSelectionGroup() : true;
+		const bool bGroup = !bShift || gDLL->getInterfaceIFace()->mirrorsSelectionGroup();
 
 		const CvPlot* pUnitPlot = pUnit->plot();
 
@@ -2645,11 +2642,7 @@ void CvGame::implementDeal(PlayerTypes eWho, PlayerTypes eOtherWho, CLinkList<Tr
 
 void CvGame::verifyDeals()
 {
-	int iLoop;
-	for (CvDeal* pLoopDeal = firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = nextDeal(&iLoop))
-	{
-		pLoopDeal->verify();
-	}
+	algo::for_each(GC.getGame().deals(), bind(&CvDeal::verify, _1));
 }
 
 
@@ -5889,19 +5882,12 @@ void CvGame::doDeals()
 {
 	verifyDeals();
 
-	int iLoop;
-	for (CvDeal* pLoopDeal = firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = nextDeal(&iLoop))
-	{
-		pLoopDeal->doTurn();
-	}
+	algo::for_each(GC.getGame().deals(), bind(&CvDeal::doTurn, _1));
 }
 
 //Enumerates all currently possible spawn plots for a spawning rule, for use in a thread, local density is not checked
-void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
+void enumSpawnPlots(const CvSpawnInfo& spawnInfo, std::vector<CvPlot*>* plots)
 {
-	const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
-	//logging::logMsg("C2C.log", "Spawn thread start for %s\n", spawnInfo.getType());
-
 	if (spawnInfo.getRateOverride() == 0)
 	{
 		return;
@@ -5947,7 +5933,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 	}
 	const CvUnitInfo& unitInfo = GC.getUnitInfo(spawnInfo.getUnitType());
 
-	const bool bNoTerrainFeatureBonus = spawnInfo.getNumTerrains() == 0 && spawnInfo.getNumFeatures() == 0 && spawnInfo.getNumBonuses() == 0 && !spawnInfo.getPeaks();
+	const bool bNoTerrainFeatureBonus = spawnInfo.getTerrain().empty() && spawnInfo.getFeatures().empty() && spawnInfo.getBonuses().empty() && !spawnInfo.getPeaks();
 	const bool bHills = spawnInfo.getHills();
 	const bool bFlatLand = spawnInfo.getFlatlands();
 	const bool bFreshWaterOnly = spawnInfo.getFreshWaterOnly();
@@ -6019,16 +6005,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			{
 				if (!pPlot->isAsPeak())
 				{
-					bValid = false;
-					BonusTypes bonusType = pPlot->getBonusType();
-					for (int k = 0; k < spawnInfo.getNumBonuses(); k++)
-					{
-						if (spawnInfo.getBonus(k) == bonusType)
-						{
-							bValid = true;
-							break;
-						}
-					}
+					bValid = algo::any_of_equal(spawnInfo.getBonuses(), pPlot->getBonusType());
 
 					if (!bValid)
 					{
@@ -6036,38 +6013,17 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 						const TerrainTypes terrainType = pPlot->getTerrainType();
 						if (featureType == NO_FEATURE)
 						{
-							for(int k = 0; k < spawnInfo.getNumTerrains(); k++)
+							if (algo::any_of_equal(spawnInfo.getTerrain(), terrainType))
 							{
-								if (spawnInfo.getTerrain(k) == terrainType)
-								{
-									bValid = true;
-									break;
-								}
+								bValid = true;
 							}
 						}
 						else
 						{
-							for (int k = 0; k < spawnInfo.getNumFeatures(); k++)
+							if (algo::any_of_equal(spawnInfo.getFeatures(), featureType))
 							{
-								if (spawnInfo.getFeature(k) == featureType)
-								{
-									bValid = true;
-									break;
-								}
-							}
-
-							if (bValid)
-							{
-								bValid = spawnInfo.getNumFeatureTerrains() == 0;
-
-								for (int k = 0; k < spawnInfo.getNumFeatureTerrains(); k++)
-								{
-									if (spawnInfo.getFeatureTerrain(k) == terrainType)
-									{
-										bValid = true;
-										break;
-									}
-								}
+								bValid = spawnInfo.getFeatureTerrain().empty()
+									|| algo::any_of_equal(spawnInfo.getFeatureTerrain(), terrainType);
 							}
 						}
 					}
@@ -6136,17 +6092,16 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		//I think for the sake of speed and data efficiency we can get away with a singular player reference rather than
 		//making it possible to specify more than one on a spawn info.
 
-		if (spawnInfo.getPlayer() != ePlayer || spawnInfo.getRateOverride() == 0 || bSizeMatters && spawnInfo.getNumSpawnGroup() > 1)
+		if (spawnInfo.getPlayer() != ePlayer || spawnInfo.getRateOverride() == 0 || bSizeMatters && spawnInfo.getSpawnGroups().size() > 1)
 		{
 			continue;
 		}
 
 		std::vector<CvPlot*> validPlots;
 
-		enumSpawnPlots(j, &validPlots);
+		enumSpawnPlots(spawnInfo, &validPlots);
 
 		const int iPlotNum = validPlots.size();
-		logging::logMsg("C2C.log", "Spawn thread finished and joined for %s, found %d valid plots.", spawnInfo.getType(), iPlotNum);
 
 		if (iPlotNum == 0)
 		{
@@ -6348,15 +6303,13 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 					// Spawn unit group
 					if (!bSizeMatters)
 					{
-						for (int k = 0; k < spawnInfo.getNumSpawnGroup(); k++)
+						foreach_(const UnitTypes& spawnGroup, spawnInfo.getSpawnGroups())
 						{
-							kUnit = GC.getUnitInfo(spawnInfo.getSpawnGroup(k));
-
-							pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getSpawnGroup(k), pPlot->getX(), pPlot->getY(), kUnit.getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
+							pUnit = GET_PLAYER(ePlayer).initUnit(spawnGroup, pPlot->getX(), pPlot->getY(), GC.getUnitInfo(spawnGroup).getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 							FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 							pUnit->finishMoves();
 							spawnCount++;
-							areaPopulationMap[iArea][spawnInfo.getSpawnGroup(k)]++;
+							areaPopulationMap[iArea][spawnGroup]++;
 						}
 					}
 				}
@@ -7869,18 +7822,6 @@ void CvGame::deleteDeal(int iID)
 	gDLL->getInterfaceIFace()->setDirty(Foreign_Screen_DIRTY_BIT, true);
 }
 
-CvDeal* CvGame::firstDeal(int *pIterIdx, bool bRev) const
-{
-	return !bRev ? m_deals.beginIter(pIterIdx) : m_deals.endIter(pIterIdx);
-}
-
-
-CvDeal* CvGame::nextDeal(int *pIterIdx, bool bRev) const
-{
-	return !bRev ? m_deals.nextIter(pIterIdx) : m_deals.prevIter(pIterIdx);
-}
-
-
 CvRandom& CvGame::getMapRand()
 {
 	return m_mapRand;
@@ -8491,17 +8432,12 @@ void CvGame::read(FDataStreamBase* pStream)
 		}
 	}
 
+#ifndef BREAK_SAVES
 	{
-		unsigned int iSize;
-		m_aPlotExtraCosts.clear();
+		uint32_t iSize;
 		WRAPPER_READ_DECORATED(wrapper,"CvGame",&iSize,"PlotExtraCostsCount");
-		for (unsigned int i = 0; i < iSize; ++i)
-		{
-			PlotExtraCost kPlotCost;
-			kPlotCost.read(pStream);
-			m_aPlotExtraCosts.push_back(kPlotCost);
-		}
 	}
+#endif
 
 	{
 		unsigned int iSize;
@@ -8746,13 +8682,12 @@ void CvGame::write(FDataStreamBase* pStream)
 	{
 		(*it).write(pStream);
 	}
-
-	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aPlotExtraCosts.size(), "PlotExtraCostsCount");
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
+#ifndef BREAK_SAVES
 	{
-		(*it).write(pStream);
+		uint32_t iSize = 0;
+		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", iSize, "PlotExtraCostsCount");
 	}
-
+#endif
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_mapVoteSourceReligions.size(), "VoteSourceReligionsCount");
 	for (stdext::hash_map<VoteSourceTypes, ReligionTypes>::iterator it = m_mapVoteSourceReligions.begin(); it != m_mapVoteSourceReligions.end(); ++it)
 	{
@@ -9114,55 +9049,6 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 	}
 }
 */
-
-int CvGame::getPlotExtraCost(int iX, int iY) const
-{
-	foreach_(const PlotExtraCost& it, m_aPlotExtraCosts)
-	{
-		if (it.m_iX == iX && it.m_iY == iY)
-		{
-			return it.m_iCost;
-		}
-	}
-
-	return 0;
-}
-
-void CvGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	bool bFound = false;
-
-	foreach_(PlotExtraCost& it, m_aPlotExtraCosts)
-	{
-		if (it.m_iX == iX && it.m_iY == iY)
-		{
-			it.m_iCost += iCost;
-			bFound = true;
-			break;
-		}
-	}
-
-	if (!bFound)
-	{
-		PlotExtraCost kExtraCost;
-		kExtraCost.m_iX = iX;
-		kExtraCost.m_iY = iY;
-		kExtraCost.m_iCost = iCost;
-		m_aPlotExtraCosts.push_back(kExtraCost);
-	}
-}
-
-void CvGame::removePlotExtraCost(int iX, int iY)
-{
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
-	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
-		{
-			m_aPlotExtraCosts.erase(it);
-			break;
-		}
-	}
-}
 
 ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 {

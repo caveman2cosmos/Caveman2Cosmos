@@ -2793,26 +2793,24 @@ public:
 	bool isUpgradeAnywhere() const;
 	void changeUpgradeAnywhereCount(int iChange);
 
-	bool hasVisibilityType(InvisibleTypes eInvisibleType) const;
+	void updateSpotIntensity(const InvisibleTypes eInvisibleType = NO_INVISIBLE, const bool bSameTile = false);
 	int visibilityIntensityTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraVisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 
-	bool hasAnyInvisibilityType(bool bAbilityCheck = false) const;
+	bool hasAnyInvisibilityType() const;
 	bool hasInvisibilityType(InvisibleTypes eInvisibleType) const;
-	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
+	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 	void setHasAnyInvisibility();
 
 	//These need text displays on the unit
-	bool hasVisibilityRangeType(InvisibleTypes eInvisibleType) const;
 	int visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraVisibilityIntensityRangeType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int iChange);
 
 	int visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const;
-	int getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, int iChange);
 
 	int getNumExtraInvisibleTerrains() const;
@@ -2866,9 +2864,6 @@ public:
 	void changeExtraAidChange(PropertyTypes eProperty, int iChange);
 	int extraAidChange(PropertyTypes eProperty) const;
 #endif
-	void deleteVisibility();
-	void addVisibility();
-
 	bool isNegatesInvisible(InvisibleTypes eInvisible) const;
 	int getNegatesInvisibleCount(InvisibleTypes eInvisible) const;
 	void changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange);

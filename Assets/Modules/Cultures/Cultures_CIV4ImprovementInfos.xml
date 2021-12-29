@@ -3,9 +3,6 @@
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MOAI</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MOAI_STATUES</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MOAI</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MOAI</ArtDefineTag>

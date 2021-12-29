@@ -18,6 +18,7 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvViewport.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvImprovementInfo.h"
@@ -4046,8 +4047,8 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 
 	pStartPlot->enableCenterUnitRecalc(false);
 	pPlot->enableCenterUnitRecalc(false);
-	int iX = pPlot->getX();
-	int iY = pPlot->getY();
+	const int iX = pPlot->getX();
+	const int iY = pPlot->getY();
 
 	m_bIsMidMove = true;
 
@@ -4057,9 +4058,8 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 #endif
 // BUG - Sentry Actions - end
 
-	for(safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
+	foreach_(CvUnit* pLoopUnit, units_safe())
 	{
-		CvUnit* pLoopUnit = *itr;
 		if (pLoopUnit->at(iX,iY))
 		{
 			continue;
@@ -4108,7 +4108,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 				if (GC.iStuckUnitCount > 5)
 				{
 					FErrorMsg("Unit Stuck in Loop!");
-					CvUnit* pHeadUnit = getHeadUnit();
+					const CvUnit* pHeadUnit = getHeadUnit();
 					if (NULL != pHeadUnit)
 					{
 						char szOut[1024];
@@ -4199,7 +4199,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 
 		if ( (iFlags & MOVE_WITH_CAUTION) && !canDefend() )
 		{
-			CvPlot*	endTurnPlot = getPathEndTurnPlot();
+			const CvPlot* endTurnPlot = getPathEndTurnPlot();
 
 			//	If the next plot we'd go to has a danger count above a threshold
 			//	consider it not safe and abort so we can reconsider
@@ -4227,7 +4227,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 	}
 
 	bool bForce = false;
-	MissionAITypes eMissionAI = AI_getMissionAIType();
+	const MissionAITypes eMissionAI = AI_getMissionAIType();
 
 	/*** Dexy - Fixed Borders START ****/
 	if (eMissionAI == MISSIONAI_BLOCKADE || eMissionAI == MISSIONAI_PILLAGE || eMissionAI == MISSIONAI_CLAIM_TERRITORY)
@@ -4243,9 +4243,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 		return false;
 	}
 
-	bool bEndMove = false;
-	if(pPathPlot == pDestPlot)
-		bEndMove = true;
+	const bool bEndMove = (pPathPlot == pDestPlot);
 
 	groupMove(pPathPlot, iFlags & MOVE_THROUGH_ENEMY, NULL, bEndMove);
 

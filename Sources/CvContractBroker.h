@@ -3,9 +3,10 @@
 #ifndef CvContractBroker_h__
 #define CvContractBroker_h__
 
+#include "CvUnitSelectionCriteria.h"
+
 class CvCity;
 class CvUnit;
-class CvUnitSelectionCriteria;
 
 //	Define this to have cities advertise units needs and tender for the business of building them
 #define	USE_UNIT_TENDERING

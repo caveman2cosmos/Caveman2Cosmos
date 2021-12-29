@@ -85,6 +85,7 @@ public:
 	virtual void copyNonDefaultsReadPass2(CvInfoBase*, CvXMLLoadUtility*, bool = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
 	virtual void getCheckSum(uint32_t&) const { }
+	virtual void doPostLoadCaching(uint32_t) { }
 	virtual const wchar_t* getExtraHoverText() const { return L""; }
 
 protected:
@@ -882,9 +883,7 @@ public:
 	bool isCureAfflictionChangeType(int i) const;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	int getPrereqBonusType(int i) const;
-	int getNumPrereqBonusTypes() const;
-	bool isPrereqBonusType(int i) const;
+	const std::vector<BonusTypes>& getPrereqBonuses() const { return m_aiPrereqBonusTypes; }
 
 	int getAddsBuildType(int i) const;
 	int getNumAddsBuildTypes() const;
@@ -1351,7 +1350,7 @@ protected:
 	std::vector<int> m_aiNotOnDomainTypes;
 	std::vector<int> m_aiNoAutoEquiptoCombatClassTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
-	std::vector<int> m_aiPrereqBonusTypes;
+	std::vector<BonusTypes> m_aiPrereqBonusTypes;
 	std::vector<int> m_aiAddsBuildTypes;
 	std::vector<int> m_aiNegatesInvisibilityTypes;
 	std::vector<int> m_aiPrereqTerrainTypes;
@@ -2650,17 +2649,13 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo);
 
-	int	getNumBonuses() const;
-	int	getNumTerrains() const;
-	int	getNumFeatures() const;
-	int	getNumFeatureTerrains() const;
-	int	getNumSpawnGroup() const;
+	const std::vector<BonusTypes>&   getBonuses() const        { return m_bonusTypes; }
+	const std::vector<TerrainTypes>& getTerrain() const        { return m_terrainTypes; }
+	const std::vector<FeatureTypes>& getFeatures() const       { return m_featureTypes; }
+	const std::vector<TerrainTypes>& getFeatureTerrain() const { return m_featureTerrainTypes; }
+	const std::vector<UnitTypes>&    getSpawnGroups() const    { return m_spawnGroup; }
+
 	PlayerTypes getPlayer() const;
-	BonusTypes getBonus(int index) const;
-	TerrainTypes getTerrain(int index) const;
-	FeatureTypes getFeature(int index) const;
-	TerrainTypes getFeatureTerrain(int index) const;
-	UnitTypes getSpawnGroup(int index) const;
 	int getTurnRate() const;
 	int getGlobalTurnRate() const;
 	int getMaxLocalDensity() const;
@@ -3868,25 +3863,15 @@ public:
 
 	// Arrays
 
-	int getFeatureTech(int i) const;
-	int getFeatureTime(int i) const;
-	int getFeatureProduction(int i) const;
+	TechTypes getFeatureTech(FeatureTypes e) const;
+	int getFeatureTime(FeatureTypes e) const;
+	int getFeatureProduction(FeatureTypes e) const;
+	bool isFeatureRemove(FeatureTypes e) const;
 
-	bool isFeatureRemove(int i) const;
-
-	// Vectors
-	int getPrereqBonusType(int i) const;
-	int getNumPrereqBonusTypes() const;
-	bool isPrereqBonusType(int i) const;
-
-	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
-
-	//Struct Vector with delayed resolution
-	int getNumTerrainStructs() const;
-	const TerrainStructs& getTerrainStruct(int iIndex) const;
-
-	int getNumPlaceBonusTypes() const;
-	const PlaceBonusTypes& getPlaceBonusType(int iIndex) const;
+	const std::vector<BonusTypes>& getPrereqBonuses() const			{ return m_aiPrereqBonusTypes; }
+	const std::vector<MapCategoryTypes>& getMapCategories() const	{ return m_aeMapCategoryTypes; }
+	const std::vector<TerrainStructs>& getTerrainStructs() const	{ return m_aTerrainStructs; }
+	const std::vector<PlaceBonusTypes>& getPlaceBonusTypes() const	{ return m_aPlaceBonusTypes; }
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvBuildInfo* pClassInfo);
@@ -3918,7 +3903,7 @@ protected:
 	bool* m_pabFeatureRemove;
 	bool* m_pabNoTechCanRemoveWithNoProductionGain;
 
-	std::vector<int> m_aiPrereqBonusTypes;
+	std::vector<BonusTypes> m_aiPrereqBonusTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 
 	std::vector<TerrainStructs> m_aTerrainStructs;
@@ -9196,13 +9181,17 @@ public:
 	void copyNonDefaults(const CvInvisibleInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
-	int getChar() const;
 	void setChar(int i);
-	int getFontButtonIndex() const;
+	int getChar() const { return m_iChar; }
 
-protected:
+	int getFontButtonIndex() const { return m_iFontButtonIndex; }
+
+	bool isIntrinsic() const { return m_bIntrinsic; }
+
+private:
 	int m_iChar;
 	int m_iFontButtonIndex;
+	bool m_bIntrinsic;
 };
 
 class CvUnitAIInfo : public CvInfoBase { };

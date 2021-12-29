@@ -40,24 +40,20 @@
 #include <boost155/function.hpp>
 #include <boost155/array.hpp>
 #include <boost155/utility.hpp>
-#include <boost155/utility/enable_if.hpp>
 #include <boost155/foreach.hpp>
 #include <boost155/functional.hpp>
 #include <boost155/detail/algorithm.hpp>
-#include <boost155/type_traits.hpp>
 
 //
-// Boost Ranges
+// Boost Range
 //
 #include <boost155/range.hpp>
-#include <boost155/range/adaptors.hpp>
 #include <boost155/range/adaptor/filtered.hpp>
 #include <boost155/range/adaptor/transformed.hpp>
 #include <boost155/range/any_range.hpp>
 #include <boost155/range/algorithm.hpp>
 #include <boost155/range/algorithm_ext/push_back.hpp>
 #include <boost155/range/numeric.hpp>
-#include <boost155/range/iterator_range.hpp>
 
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
@@ -310,7 +306,6 @@ const std::string getModDir();
 //
 // Our code
 //
-#include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
 #include "algorithm2.h"
