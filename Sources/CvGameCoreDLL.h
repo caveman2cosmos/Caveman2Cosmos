@@ -27,6 +27,70 @@
 //
 
 //
+// Boost
+//
+#define BOOST_155_USE_WINDOWS_H
+#define BOOST_155_ALL_NO_LIB
+#include <boost155/scoped_ptr.hpp>
+#include <boost155/scoped_array.hpp>
+#include <boost155/shared_ptr.hpp>
+#include <boost155/shared_array.hpp>
+#include <boost155/lambda/lambda.hpp>
+#include <boost155/bind.hpp>
+#include <boost155/optional.hpp>
+#include <boost155/algorithm/string.hpp>
+#include <boost155/format.hpp>
+#include <boost155/function.hpp>
+#include <boost155/array.hpp>
+#include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+#include <boost155/functional.hpp>
+#include <boost155/detail/algorithm.hpp>
+
+//
+// Boost Range
+//
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+#include <boost155/range/algorithm_ext/push_back.hpp>
+#include <boost155/range/numeric.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_		 BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
+
+// Alias our latest boost version
+namespace bst = boost155;
+
+// Bring range adaptors into global namespace
+using namespace bst::adaptors;
+
+// Bring bind into global namespace
+using bst::bind;
+
+//
+// Boost Python
+//
+#ifndef __INTELLISENSE__
+#define BOOST_BIND_NO_PLACEHOLDERS // Disable the boost 1.32 placeholders, we won't be using them
+#include <boost/python/detail/wrap_python.hpp>
+#include <boost/python/list.hpp>
+#include <boost/python/tuple.hpp>
+#include <boost/python/class.hpp>
+#include <boost/python/object.hpp>
+#include <boost/python/def.hpp>
+#include <boost/python/enum.hpp>
+#include <boost/python/manage_new_object.hpp>
+#include <boost/python/return_value_policy.hpp>
+#include <boost/python/to_python_converter.hpp>
+#include <boost/python/suite/indexing/container_utils.hpp>
+namespace python = boost::python;
+#endif
+
+//
 // WINDOWS
 //
 //#ifdef __INTELLISENSE__
@@ -208,79 +272,6 @@ int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
 // ! Toffer
 
 const std::string getModDir();
-
-//
-// Python
-//
-#ifdef _DEBUG
-  #undef _DEBUG
-  #include "Python.h"
-  #define _DEBUG
-#else
-  #include "Python.h"
-#endif
-
-//
-// Boost
-//
-#define BOOST_155_USE_WINDOWS_H
-#define BOOST_155_ALL_NO_LIB
-#include <boost155/scoped_ptr.hpp>
-#include <boost155/scoped_array.hpp>
-#include <boost155/shared_ptr.hpp>
-#include <boost155/shared_array.hpp>
-#include <boost155/lambda/lambda.hpp>
-#include <boost155/bind.hpp>
-#include <boost155/optional.hpp>
-#include <boost155/algorithm/string.hpp>
-#include <boost155/format.hpp>
-#include <boost155/function.hpp>
-#include <boost155/array.hpp>
-#include <boost155/utility.hpp>
-#include <boost155/foreach.hpp>
-#include <boost155/functional.hpp>
-#include <boost155/detail/algorithm.hpp>
-
-// Ranges
-#include <boost155/range.hpp>
-#include <boost155/range/adaptor/filtered.hpp>
-#include <boost155/range/adaptor/transformed.hpp>
-#include <boost155/range/any_range.hpp>
-#include <boost155/range/algorithm.hpp>
-#include <boost155/range/algorithm_ext/push_back.hpp>
-#include <boost155/range/numeric.hpp>
-
-// Make boost foreach look nice enough to actually use
-#define foreach_		 BOOST_155_FOREACH
-#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
-
-// Alias our latest boost version
-namespace bst = boost155;
-
-// Bring range adaptors into global namespace
-using namespace bst::adaptors;
-
-// Bring bind into global namespace
-using bst::bind;
-
-//
-// Boost Python
-//
-#ifndef __INTELLISENSE__
-// Disable the boost 1.32 placeholders, we won't be using them
-#define BOOST_BIND_NO_PLACEHOLDERS
-#include <boost/python/list.hpp>
-#include <boost/python/tuple.hpp>
-#include <boost/python/class.hpp>
-#include <boost/python/object.hpp>
-#include <boost/python/def.hpp>
-#include <boost/python/enum.hpp>
-#include <boost/python/manage_new_object.hpp>
-#include <boost/python/return_value_policy.hpp>
-#include <boost/python/to_python_converter.hpp>
-#include <boost/python/suite/indexing/container_utils.hpp>
-namespace python = boost::python;
-#endif
 
 //
 // Xercesc
