@@ -16991,7 +16991,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 	//	Build farm, irrigation, etc...
 	for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 	{
-		buildImprovementString(szBuffer, eTech, iI, true, bPlayerContext);
+		buildImprovementString(szBuffer, eTech, (BuildTypes)iI, true, bPlayerContext);
 	}
 
 	//	Extra moves for certain domains...
@@ -27030,25 +27030,26 @@ void CvGameTextMgr::buildWaterWorkString(CvWStringBuffer &szBuffer, TechTypes eT
 	}
 }
 
-void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, int iImprovement, bool bList, bool bPlayerContext)
+void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, BuildTypes eBuild, bool bList, bool bPlayerContext)
 {
+	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 	const bool bIsTeam = (GC.getGame().getActiveTeam() != NO_TEAM);
 
 	bool bTechFound = false;
 
-	if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == NO_TECH)
+	if (kBuild.getTechPrereq() == NO_TECH)
 	{
-		if (GC.getBuildInfo((BuildTypes)iImprovement).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo((BuildTypes)iImprovement).getRoute()).isSeaTunnel())
+		if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
 		{
 			for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 			{
-				if (GC.getBuildInfo((BuildTypes)iImprovement).getFeatureTech(iJ) == eTech)
+				if (kBuild.getFeatureTech((FeatureTypes)iJ) == eTech)
 				{
 					bTechFound = true;
 					break;
 				}
 			}
-			foreach_(const TerrainStructs& kTerrainStruct, GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStructs())
+			foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
 			{
 				if (kTerrainStruct.ePrereqTech == eTech)
 				{
@@ -27060,13 +27061,11 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 	}
 	else
 	{
-		if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == eTech)
+		if (kBuild.getTechPrereq() == eTech)
 		{
 			bTechFound = true;
 		}
 	}
-
-
 
 	if (bTechFound)
 	{
@@ -27076,28 +27075,28 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 		}
 		if (bIsTeam)
 		{
-			if (GC.getBuildInfo((BuildTypes)iImprovement).getObsoleteTech() != NO_TECH)
+			if (kBuild.getObsoleteTech() != NO_TECH)
 			{
-				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(GC.getBuildInfo((BuildTypes)iImprovement).getObsoleteTech()))
+				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(kBuild.getObsoleteTech()))
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildInfo((BuildTypes)iImprovement).getType()).GetCString(), GC.getBuildInfo((BuildTypes)iImprovement).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(kBuild.getType()).c_str(), kBuild.getTextKeyWide()));
 				}
 				else
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
 				}
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
 			}
 		}
 		else
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
 		}
 	}
-	foreach_(const MapCategoryTypes eMapCategory, GC.getBuildInfo((BuildTypes)iImprovement).getMapCategories())
+	foreach_(const MapCategoryTypes eMapCategory, kBuild.getMapCategories())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));

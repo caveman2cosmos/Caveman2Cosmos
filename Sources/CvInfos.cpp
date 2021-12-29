@@ -13070,28 +13070,28 @@ bool CvBuildInfo::isKill() const
 
 // Arrays
 
-int CvBuildInfo::getFeatureTech(int i) const
+TechTypes CvBuildInfo::getFeatureTech(FeatureTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
-	return m_paiFeatureTech ? m_paiFeatureTech[i] : -1;
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), e);
+	return m_paiFeatureTech ? m_paiFeatureTech[e] : -1;
 }
 
-int CvBuildInfo::getFeatureTime(int i) const
+int CvBuildInfo::getFeatureTime(FeatureTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
-	return m_paiFeatureTime ? m_paiFeatureTime[i] : 0;
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), e);
+	return m_paiFeatureTime ? m_paiFeatureTime[e] : 0;
 }
 
-int CvBuildInfo::getFeatureProduction(int i) const
+int CvBuildInfo::getFeatureProduction(FeatureTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
-	return m_paiFeatureProduction ? m_paiFeatureProduction[i] : 0;
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), e);
+	return m_paiFeatureProduction ? m_paiFeatureProduction[e] : 0;
 }
 
-bool CvBuildInfo::isFeatureRemove(int i) const
+bool CvBuildInfo::isFeatureRemove(FeatureTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
-	return m_pabFeatureRemove ? m_pabFeatureRemove[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), e);
+	return m_pabFeatureRemove ? m_pabFeatureRemove[e] : false;
 }
 
 bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
@@ -13214,10 +13214,10 @@ void CvBuildInfo::copyNonDefaults(const CvBuildInfo* pClassInfo)
 	{
 		if ( m_paiFeatureTech[i] == iTextDefault )
 		{
-			m_paiFeatureTech[i] = pClassInfo->getFeatureTech(i);
-			m_paiFeatureTime[i] = pClassInfo->getFeatureTime(i);
-			m_paiFeatureProduction[i] = pClassInfo->getFeatureProduction(i);
-			m_pabFeatureRemove[i] = pClassInfo->isFeatureRemove(i);
+			m_paiFeatureTech[i] = pClassInfo->getFeatureTech((FeatureTypes)i);
+			m_paiFeatureTime[i] = pClassInfo->getFeatureTime((FeatureTypes)i);
+			m_paiFeatureProduction[i] = pClassInfo->getFeatureProduction((FeatureTypes)i);
+			m_pabFeatureRemove[i] = pClassInfo->isFeatureRemove((FeatureTypes)i);
 			m_pabNoTechCanRemoveWithNoProductionGain[i] = pClassInfo->isNoTechCanRemoveWithNoProductionGain(i);
 		}
 	}

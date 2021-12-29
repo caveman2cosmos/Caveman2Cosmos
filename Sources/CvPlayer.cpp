@@ -5718,7 +5718,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 		case TRADE_CITIES:
 		{
-			CvCity* pCity = getCity(item.m_iData);
+			const CvCity* pCity = getCity(item.m_iData);
 			if (pCity != NULL)
 			{
 				return AI_cityTrade(pCity, eWhoTo);
@@ -5766,7 +5766,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 		case TRADE_WORKER:
 		{
-			CvUnit* pUnit = getUnit(item.m_iData);
+			const CvUnit* pUnit = getUnit(item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_workerTrade(pUnit, eWhoTo);
@@ -5775,7 +5775,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		}
 		case TRADE_MILITARY_UNIT:
 		{
-			CvUnit* pUnit = getUnit(item.m_iData);
+			const CvUnit* pUnit = getUnit(item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_militaryUnitTrade(pUnit, eWhoTo);
@@ -7760,21 +7760,21 @@ bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eBuild, bo
 
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
-	FeatureTypes plotFeature = pPlot->getFeatureType();
 	// false if must but can't remove feature without prod gain, OR feature/terrain tech req is several eras past us. Allow 1 era past for UI feedback!
 	if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
 	{
+		const FeatureTypes plotFeature = pPlot->getFeatureType();
 		if (plotFeature != NO_FEATURE)
 		{
 			// if feature requires tech we don't have...
-			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getFeatureTech(plotFeature)))
+			if (!GET_TEAM(getTeam()).isHasTech(kBuild.getFeatureTech(plotFeature)))
 			{
 				// if feature is not removed, or is removed but can do so without prod gain...
 				if (!kBuild.isFeatureRemove(plotFeature)
 					|| kBuild.isFeatureRemove(plotFeature) && !kBuild.isNoTechCanRemoveWithNoProductionGain(plotFeature))
 				{
 					// if bTests are true, delay returning false by a few eras
-					if (!bTestEra && !bTestVisible || getCurrentEra() + 3 < GC.getTechInfo((TechTypes)kBuild.getFeatureTech(plotFeature)).getEra())
+					if (!bTestEra && !bTestVisible || getCurrentEra() + 3 < GC.getTechInfo(kBuild.getFeatureTech(plotFeature)).getEra())
 					{
 						return false;
 					}

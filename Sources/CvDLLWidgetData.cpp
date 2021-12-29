@@ -2927,12 +2927,12 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						// Check feature prereqs against current plot
 						if (ePlotFeature != NO_FEATURE)
 						{
-							featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+							featureTechRequired = GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
 							if (featureTechRequired != NO_TECH)
 							{
 								// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
-								if (GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
-									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)))
+								if (GC.getBuildInfo(eBuild).getTechPrereq() != featureTechRequired
+									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(featureTechRequired))
 								{
 									// If the base never obsoletes OR we don't have the tech which obsoletes it
 									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
@@ -5661,7 +5661,7 @@ void CvDLLWidgetData::parseWaterWorkHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 void CvDLLWidgetData::parseBuildHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	GAMETEXT.buildImprovementString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)), widgetDataStruct.m_iData2);
+	GAMETEXT.buildImprovementString(szBuffer, (TechTypes)widgetDataStruct.m_iData1, (BuildTypes)widgetDataStruct.m_iData2);
 }
 
 void CvDLLWidgetData::parseDomainExtraMovesHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)

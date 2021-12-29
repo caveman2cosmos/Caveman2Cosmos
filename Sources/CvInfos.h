@@ -3866,11 +3866,10 @@ public:
 
 	// Arrays
 
-	int getFeatureTech(int i) const;
-	int getFeatureTime(int i) const;
-	int getFeatureProduction(int i) const;
-
-	bool isFeatureRemove(int i) const;
+	TechTypes getFeatureTech(FeatureTypes e) const;
+	int getFeatureTime(FeatureTypes e) const;
+	int getFeatureProduction(FeatureTypes e) const;
+	bool isFeatureRemove(FeatureTypes e) const;
 
 	const std::vector<BonusTypes>& getPrereqBonuses() const			{ return m_aiPrereqBonusTypes; }
 	const std::vector<MapCategoryTypes>& getMapCategories() const	{ return m_aeMapCategoryTypes; }
