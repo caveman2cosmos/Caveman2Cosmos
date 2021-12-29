@@ -19698,7 +19698,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 				}
 
-				DomainTypes eDomain = (DomainTypes)kUnit.getDomainType();
+				const DomainTypes eDomain = kUnit.getDomainType();
 				iExperience = pCity->getDomainFreeExperience(eDomain);
 				if (iExperience != 0)
 				{
@@ -19744,7 +19744,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 				}
 				const UnitCombatTypes eCombatType = (UnitCombatTypes)kUnit.getUnitCombatType();
-				const DomainTypes eDomainType = (DomainTypes)kUnit.getDomainType();
+				const DomainTypes eDomainType = kUnit.getDomainType();
 				//Display sources you could have if you constructed them first
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{

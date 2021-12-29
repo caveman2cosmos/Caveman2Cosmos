@@ -2318,28 +2318,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		}
 	}
 
-	CLinkList<IDInfo> oldUnits;
-	CLLNode<IDInfo>* pUnitNode = pCityPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		oldUnits.insertAtEnd(pUnitNode->m_data);
-		pUnitNode = pCityPlot->nextUnitNode(pUnitNode);
-	}
-
-	pUnitNode = oldUnits.head();
-
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = oldUnits.next(pUnitNode);
-
-		if (pLoopUnit && pLoopUnit->getTeam() != getTeam()
-		&& pLoopUnit->getDomainType() == DOMAIN_IMMOBILE)
-		{
-			pLoopUnit->kill(false, getID());
-		}
-	}
+	algo::for_each(pCityPlot->units_safe()
+		| filtered(bind(CvUnit::getTeam, _1) != getTeam() && bind(CvUnit::getDomainType, _1) == DOMAIN_IMMOBILE)
+		, bind(CvUnit::kill, _1, false, getID(), true)
+	);
 	const PlayerTypes eOldOwner = pOldCity->getOwner();
 	const PlayerTypes eOriginalOwner = pOldCity->getOriginalOwner();
 	const int iX = pOldCity->getX();
