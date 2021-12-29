@@ -5160,7 +5160,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		bool bIsFeatureRemove = false;
 		for (int iK = 0; iK < GC.getNumBuildInfos(); iK++)
 		{
-			if (GC.getBuildInfo((BuildTypes)iK).getFeatureTech(iJ) == eTech)
+			if (GC.getBuildInfo((BuildTypes)iK).getFeatureTech((FeatureTypes)iJ) == eTech)
 			{
 				bIsFeatureRemove = true;
 				break;

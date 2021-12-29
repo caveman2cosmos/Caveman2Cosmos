@@ -3005,7 +3005,7 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 		return 0;
 	}
 
-	if (!GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(getFeatureType())))
+	if (!GET_TEAM(eTeam).isHasTech(GC.getBuildInfo(eBuild).getFeatureTech(getFeatureType())))
 	{
 		return 0;
 	}
@@ -3431,19 +3431,7 @@ void CvPlot::doImprovementCulture()
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
 		{
-			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-			bool bDefenderFound = false;
-			while (pUnitNode != NULL)
-			{
-				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-				if (pLoopUnit->getOwner() == eOwner && pLoopUnit->canDefend(this))
-				{
-					bDefenderFound = true;
-					break;
-				}
-				pUnitNode = nextUnitNode(pUnitNode);
-			}
+			const bool bDefenderFound = algo::any_of(units(), bind(CvUnit::getOwner, _1) == eOwner && bind(CvUnit::canDefend, _1, this));
 			if (!bDefenderFound)
 			{
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", improvement.getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
