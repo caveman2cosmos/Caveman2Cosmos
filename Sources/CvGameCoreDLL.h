@@ -58,9 +58,13 @@
 #include <boost155/range/algorithm_ext/push_back.hpp>
 #include <boost155/range/numeric.hpp>
 
+#ifdef __INTELLISENSE__
+#define foreach_(item, rng) item;
+#else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
 #define reverse_foreach_ BOOST_155_REVERSE_FOREACH
+#endif
 
 // Alias our latest boost version
 namespace bst = boost155;
