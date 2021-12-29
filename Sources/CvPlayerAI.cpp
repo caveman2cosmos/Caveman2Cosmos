@@ -5130,7 +5130,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		bool bIsFeatureRemove = false;
 		for (int iK = 0; iK < GC.getNumBuildInfos(); iK++)
 		{
-			if (GC.getBuildInfo((BuildTypes)iK).getFeatureTech(iJ) == eTech)
+			if (GC.getBuildInfo((BuildTypes)iK).getFeatureTech((FeatureTypes)iJ) == eTech)
 			{
 				bIsFeatureRemove = true;
 				break;
@@ -10013,21 +10013,16 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const
 {
-	CvDeal* pLoopDeal;
-	int iModifier;
-	int iValue;
-	int iLoop;
-
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 	FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on ourselves");
 	FAssertMsg(eTradeTeam != getTeam(), "shouldn't call this function on ourselves");
 	FAssertMsg(GET_TEAM(eTradeTeam).isAlive(), "GET_TEAM(eWarTeam).isAlive is expected to be true");
 	FAssertMsg(!atWar(eTradeTeam, GET_PLAYER(ePlayer).getTeam()), "eTeam should be at peace with eWarTeam");
 
-	iValue = (50 + (GC.getGame().getGameTurn() / 2));
+	int iValue = (50 + (GC.getGame().getGameTurn() / 2));
 	iValue += (GET_TEAM(eTradeTeam).getNumCities() * 5);
 
-	iModifier = 0;
+	int iModifier = 0;
 
 	switch (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getAttitude(eTradeTeam))
 	{
@@ -10068,23 +10063,23 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 		iValue *= 3;
 	}
 
-	for(pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if (pLoopDeal->isCancelable(getID()) && !(pLoopDeal->isPeaceDeal()))
+		if (kLoopDeal.isCancelable(getID()) && !kLoopDeal.isPeaceDeal())
 		{
-			if (GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
+			if (GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
 			{
-				if (pLoopDeal->getLengthSecondTrades() > 0)
+				if (kLoopDeal.getLengthSecondTrades() > 0)
 				{
-					iValue += (GET_PLAYER(pLoopDeal->getFirstPlayer()).AI_dealVal(pLoopDeal->getSecondPlayer(), pLoopDeal->getSecondTrades()) * ((pLoopDeal->getLengthFirstTrades() == 0) ? 2 : 1));
+					iValue += (GET_PLAYER(kLoopDeal.getFirstPlayer()).AI_dealVal(kLoopDeal.getSecondPlayer(), kLoopDeal.getSecondTrades()) * ((kLoopDeal.getLengthFirstTrades() == 0) ? 2 : 1));
 				}
 			}
 
-			if (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
+			if (GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == GET_PLAYER(ePlayer).getTeam())
 			{
-				if (pLoopDeal->getLengthFirstTrades() > 0)
+				if (kLoopDeal.getLengthFirstTrades() > 0)
 				{
-					iValue += (GET_PLAYER(pLoopDeal->getSecondPlayer()).AI_dealVal(pLoopDeal->getFirstPlayer(), pLoopDeal->getFirstTrades()) * ((pLoopDeal->getLengthSecondTrades() == 0) ? 2 : 1));
+					iValue += (GET_PLAYER(kLoopDeal.getSecondPlayer()).AI_dealVal(kLoopDeal.getFirstPlayer(), kLoopDeal.getFirstTrades()) * ((kLoopDeal.getLengthSecondTrades() == 0) ? 2 : 1));
 				}
 			}
 		}
@@ -10110,10 +10105,6 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 
 DenialTypes CvPlayerAI::AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes ePlayer) const
 {
-	AttitudeTypes eAttitude;
-	AttitudeTypes eAttitudeThem;
-	int iI;
-
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 	FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on ourselves");
 	FAssertMsg(eTradeTeam != getTeam(), "shouldn't call this function on ourselves");
@@ -10135,9 +10126,9 @@ DenialTypes CvPlayerAI::AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes eP
 		return DENIAL_POWER_THEM;
 	}
 
-	eAttitude = GET_TEAM(getTeam()).AI_getAttitude(GET_PLAYER(ePlayer).getTeam());
+	const AttitudeTypes eAttitude = GET_TEAM(getTeam()).AI_getAttitude(GET_PLAYER(ePlayer).getTeam());
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -10151,9 +10142,9 @@ DenialTypes CvPlayerAI::AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes eP
 		}
 	}
 
-	eAttitudeThem = GET_TEAM(getTeam()).AI_getAttitude(eTradeTeam);
+	const AttitudeTypes eAttitudeThem = GET_TEAM(getTeam()).AI_getAttitude(eTradeTeam);
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -10195,7 +10186,7 @@ int CvPlayerAI::AI_civicTradeVal(CivicTypes eCivic, PlayerTypes ePlayer) const
 {
 	int iValue = (2 * (getTotalPopulation() + GET_PLAYER(ePlayer).getTotalPopulation())); // XXX
 
-	CivicTypes eBestCivic = GET_PLAYER(ePlayer).AI_bestCivic((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType()));
+	const CivicTypes eBestCivic = GET_PLAYER(ePlayer).AI_bestCivic((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType()));
 
 	if (eBestCivic != NO_CIVIC && eBestCivic != eCivic)
 	{
@@ -18319,18 +18310,18 @@ void CvPlayerAI::AI_doDiplo()
 			{
 				PROFILE("CvPlayerAI::AI_doDiplo.Existing");
 
-				for (CvDeal* pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+				foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 				{
-					if (pLoopDeal->isCancelable(getID())
-					&& GC.getGame().getGameTurn() - pLoopDeal->getInitialGameTurn() >= getTreatyLength() * 2)
+					if (kLoopDeal.isCancelable(getID())
+					&& GC.getGame().getGameTurn() - kLoopDeal.getInitialGameTurn() >= getTreatyLength() * 2)
 					{
 						bool bCancelDeal = false;
 
-						if (pLoopDeal->getFirstPlayer() == getID() && pLoopDeal->getSecondPlayer() == (PlayerTypes)iI)
+						if (kLoopDeal.getFirstPlayer() == getID() && kLoopDeal.getSecondPlayer() == (PlayerTypes)iI)
 						{
 							if (!GET_PLAYER((PlayerTypes)iI).isHuman())
 							{
-								for (pNode = pLoopDeal->getFirstTrades()->head(); pNode; pNode = pLoopDeal->getFirstTrades()->next(pNode))
+								for (pNode = kLoopDeal.getFirstTrades()->head(); pNode; pNode = kLoopDeal.getFirstTrades()->next(pNode))
 								{
 									if (getTradeDenial((PlayerTypes)iI, pNode->m_data) != NO_DENIAL)
 									{
@@ -18339,16 +18330,16 @@ void CvPlayerAI::AI_doDiplo()
 									}
 								}
 							}
-							else if (!AI_considerOffer((PlayerTypes)iI, pLoopDeal->getSecondTrades(), pLoopDeal->getFirstTrades(), -1))
+							else if (!AI_considerOffer((PlayerTypes)iI, kLoopDeal.getSecondTrades(), kLoopDeal.getFirstTrades(), -1))
 							{
 								bCancelDeal = true;
 							}
 						}
-						else if (pLoopDeal->getFirstPlayer() == (PlayerTypes)iI && pLoopDeal->getSecondPlayer() == getID())
+						else if (kLoopDeal.getFirstPlayer() == (PlayerTypes)iI && kLoopDeal.getSecondPlayer() == getID())
 						{
 							if (!GET_PLAYER((PlayerTypes)iI).isHuman())
 							{
-								for (pNode = pLoopDeal->getSecondTrades()->head(); pNode; pNode = pLoopDeal->getSecondTrades()->next(pNode))
+								for (pNode = kLoopDeal.getSecondTrades()->head(); pNode; pNode = kLoopDeal.getSecondTrades()->next(pNode))
 								{
 									if (getTradeDenial(((PlayerTypes)iI), pNode->m_data) != NO_DENIAL)
 									{
@@ -18357,7 +18348,7 @@ void CvPlayerAI::AI_doDiplo()
 									}
 								}
 							}
-							else if (!AI_considerOffer(((PlayerTypes)iI), pLoopDeal->getFirstTrades(), pLoopDeal->getSecondTrades(), -1))
+							else if (!AI_considerOffer((PlayerTypes)iI, kLoopDeal.getFirstTrades(), kLoopDeal.getSecondTrades(), -1))
 							{
 								bCancelDeal = true;
 							}
@@ -18370,18 +18361,18 @@ void CvPlayerAI::AI_doDiplo()
 								ourList.clear();
 								theirList.clear();
 
-								for (pNode = pLoopDeal->headFirstTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextFirstTradesNode(pNode))
+								for (pNode = kLoopDeal.headFirstTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextFirstTradesNode(pNode))
 								{
-									if (pLoopDeal->getFirstPlayer() == getID())
+									if (kLoopDeal.getFirstPlayer() == getID())
 									{
 										ourList.insertAtEnd(pNode->m_data);
 									}
 									else theirList.insertAtEnd(pNode->m_data);
 								}
 
-								for (pNode = pLoopDeal->headSecondTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextSecondTradesNode(pNode))
+								for (pNode = kLoopDeal.headSecondTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextSecondTradesNode(pNode))
 								{
-									if (pLoopDeal->getSecondPlayer() == getID())
+									if (kLoopDeal.getSecondPlayer() == getID())
 									{
 										ourList.insertAtEnd(pNode->m_data);
 									}
@@ -18391,7 +18382,7 @@ void CvPlayerAI::AI_doDiplo()
 								pDiplo = new CvDiploParameters(getID());
 								FAssertMsg(pDiplo != NULL, "pDiplo must be valid");
 
-								if (pLoopDeal->isVassalDeal())
+								if (kLoopDeal.isVassalDeal())
 								{
 									pDiplo->setDiploComment((DiploCommentTypes)GC.getInfoTypeForString("AI_DIPLOCOMMENT_NO_VASSAL"));
 									pDiplo->setAIContact(true);
@@ -18409,7 +18400,7 @@ void CvPlayerAI::AI_doDiplo()
 								abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()] = true;
 							}
 
-							if (pLoopDeal->isEmbassy())
+							if (kLoopDeal.isEmbassy())
 							{
 								for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 								{
@@ -18419,7 +18410,7 @@ void CvPlayerAI::AI_doDiplo()
 									}
 								}
 							}
-							pLoopDeal->kill(); // XXX test this for AI...
+							kLoopDeal.kill(); // XXX test this for AI...
 						}
 					}
 				}
