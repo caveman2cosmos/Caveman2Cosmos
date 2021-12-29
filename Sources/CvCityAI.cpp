@@ -18,6 +18,7 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
@@ -8473,7 +8474,7 @@ void CvCityAI::AI_updateBestBuild()
 	// that you can call it several times to adjust the ratio
 	// (i.e a city has food preference, call it 2nd time around with 2,1,1, and the value of food will double)
 
-	ratios.WeightOutputs(18, 10, 6);
+	ratios.WeightOutputs(GC.getAI_BASE_FOOD_WEIGHT(), GC.getAI_BASE_PRODUCTION_WEIGHT(), GC.getAI_BASE_COMMERCE_WEIGHT());
 
 	if (getPopulation() < (GET_PLAYER(getOwner()).getCurrentEra() + 1) * 4)
 	{
@@ -10935,19 +10936,18 @@ void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int 
 		// if current improvement is same as potential improvement we dont need to reevaluate
 		if (ePotentialImprovement == eCurrentPlotImprovement) continue;
 		// if more than 1 build can build this improvement, find fastest
-		if (potentialImprovementInfo.getNumBuildTypes() >= 1) {
-			foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
-			{
-				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
-					&& GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
-				{
-					int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
+		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
+		{
+			FAssert(GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement);
 
-					if (iSpeedValue > iBestTempBuildValue)
-					{
-						iBestTempBuildValue = iSpeedValue;
-						eBestTempBuild = eBuildType;
-					}
+			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
+			{
+				int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
+
+				if (iSpeedValue > iBestTempBuildValue)
+				{
+					iBestTempBuildValue = iSpeedValue;
+					eBestTempBuild = eBuildType;
 				}
 			}
 		}

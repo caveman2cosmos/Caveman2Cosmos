@@ -2361,15 +2361,11 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 
 bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const
 {
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 	{
-		const BuildTypes eBuild = ((BuildTypes)iI);
-		if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
+		if (GET_TEAM(eTeam).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 		{
-			if (GET_TEAM(eTeam).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	return false;
@@ -3855,7 +3851,7 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 
 	if (!bHelp)
 	{
-		CvCity* pCity = getPlotCity();
+		const CvCity* pCity = getPlotCity();
 
 		if (pCity != NULL)
 		{
@@ -4042,22 +4038,10 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 
 	if (!pUnit->isHuman())
 	{
-
 		(*m_resultHashMap)[iResultKeyHash] = iResult;
 	}
 
 	return iResult;
-}
-
-int CvPlot::getExtraMovePathCost() const
-{
-	return GC.getGame().getPlotExtraCost(getX(), getY());
-}
-
-
-void CvPlot::changeExtraMovePathCost(int iChange)
-{
-	GC.getGame().changePlotExtraCost(getX(), getY(), iChange);
 }
 
 int	CvPlot::getHasMountainLeader(TeamTypes eTeam) const
@@ -10154,7 +10138,7 @@ int CvPlot::getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisib
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
 
-	if (NULL == m_apaiInvisibleVisibilityCount 
+	if (NULL == m_apaiInvisibleVisibilityCount
 	||  NULL == m_apaiInvisibleVisibilityCount[eTeam])
 	{
 		return 0;
@@ -11148,14 +11132,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 		int iType3 = 0;
 		int iType4 = 0;
 
-		for (iI = 0; iI < iSize; iI++)
+		for (int iI = 0; iI < iSize; iI++)
 		{
 			WRAPPER_READ(wrapper, "CvPlot", &iType1);
 			WRAPPER_READ(wrapper, "CvPlot", &iType2);
 			WRAPPER_READ(wrapper, "CvPlot", &iType3);
 			WRAPPER_READ(wrapper, "CvPlot", &iType4);
-			m_aPlotTeamVisibilityIntensity[iI].eInvisibility = ((InvisibleTypes)iType1);
-			m_aPlotTeamVisibilityIntensity[iI].eTeam = ((TeamTypes)iType2);
+			m_aPlotTeamVisibilityIntensity[iI].eInvisibility = (InvisibleTypes)iType1;
+			m_aPlotTeamVisibilityIntensity[iI].eTeam = (TeamTypes)iType2;
 			m_aPlotTeamVisibilityIntensity[iI].iUnitID = iType3;
 			m_aPlotTeamVisibilityIntensity[iI].iIntensity = iType4;
 		}
@@ -11203,8 +11187,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 //
 void CvPlot::write(FDataStreamBase* pStream)
 {
-	uint iI;
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -11285,12 +11267,12 @@ void CvPlot::write(FDataStreamBase* pStream)
 	{
 		int	buffer[MAX_PLAYERS];
 
-		for (iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			buffer[iI] = 0;
 		}
 
-		for (iI = 0; iI < m_aiCulture.size(); iI++)
+		for (uint iI = 0; iI < m_aiCulture.size(); iI++)
 		{
 			buffer[m_aiCulture[iI].first] = m_aiCulture[iI].second;
 		}
@@ -11447,7 +11429,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	else
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
-		for (iI=0; iI < MAX_PLAYERS; ++iI)
+		for (int iI=0; iI < MAX_PLAYERS; ++iI)
 		{
 			if (NULL == m_apaiCultureRangeCities[iI])
 			{
@@ -11463,7 +11445,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	//	Write out plot danger counts for all players that have any here
 	int	iPlayersWithDanger = 0;
-	for( iI= 0; iI < MAX_PLAYERS; iI++ )
+	for (int iI= 0; iI < MAX_PLAYERS; iI++ )
 	{
 		if ( getDangerCount((PlayerTypes)iI) > 0 )
 		{
@@ -11473,7 +11455,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", iPlayersWithDanger);
 	if ( iPlayersWithDanger > 0 )
 	{
-		for( iI= 0; iI < MAX_PLAYERS; iI++ )
+		for (uint iI= 0; iI < MAX_PLAYERS; iI++ )
 		{
 			if ( getDangerCount((PlayerTypes)iI) > 0 )
 			{
@@ -11490,7 +11472,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	else
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
-		for (iI=0; iI < MAX_TEAMS; ++iI)
+		for (int iI=0; iI < MAX_TEAMS; ++iI)
 		{
 			if (NULL == m_apaiInvisibleVisibilityCount[iI])
 			{
@@ -11513,24 +11495,19 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementCurrentValue);
 
 	int iSize = (int)m_aPlotTeamVisibilityIntensity.size();
-	int iType1 = 0;
-	int iType2 = 0;
-	int iType3 = 0;
-	int iType4 = 0;
+
 	WRAPPER_WRITE(wrapper, "CvPlot", iSize);
-	if (iSize > 0)
+
+	for (int iI = 0; iI < iSize; iI++)
 	{
-		for (iI = 0; iI < (uint)iSize; iI++)
-		{
-			iType1 = (int)m_aPlotTeamVisibilityIntensity[iI].eInvisibility;
-			iType2 = (int)m_aPlotTeamVisibilityIntensity[iI].eTeam;
-			iType3 = m_aPlotTeamVisibilityIntensity[iI].iUnitID;
-			iType4 = m_aPlotTeamVisibilityIntensity[iI].iIntensity;
-			WRAPPER_WRITE(wrapper, "CvPlot", iType1);
-			WRAPPER_WRITE(wrapper, "CvPlot", iType2);
-			WRAPPER_WRITE(wrapper, "CvPlot", iType3);
-			WRAPPER_WRITE(wrapper, "CvPlot", iType4);
-		}
+		int iType1 = (int)m_aPlotTeamVisibilityIntensity[iI].eInvisibility;
+		int iType2 = (int)m_aPlotTeamVisibilityIntensity[iI].eTeam;
+		int iType3 = m_aPlotTeamVisibilityIntensity[iI].iUnitID;
+		int iType4 = m_aPlotTeamVisibilityIntensity[iI].iIntensity;
+		WRAPPER_WRITE(wrapper, "CvPlot", iType1);
+		WRAPPER_WRITE(wrapper, "CvPlot", iType2);
+		WRAPPER_WRITE(wrapper, "CvPlot", iType3);
+		WRAPPER_WRITE(wrapper, "CvPlot", iType4);
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
 

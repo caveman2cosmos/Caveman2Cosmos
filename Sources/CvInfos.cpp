@@ -7737,61 +7737,6 @@ const BoolExpr* CvSpawnInfo::getSpawnCondition() const
 	return m_pExprSpawnCondition;
 }
 
-int	CvSpawnInfo::getNumBonuses() const
-{
-	return m_bonusTypes.size();
-}
-
-int	CvSpawnInfo::getNumTerrains() const
-{
-	return m_terrainTypes.size();
-}
-
-int	CvSpawnInfo::getNumFeatures() const
-{
-	return m_featureTypes.size();
-}
-
-int	CvSpawnInfo::getNumFeatureTerrains() const
-{
-	return m_featureTerrainTypes.size();
-}
-
-int	CvSpawnInfo::getNumSpawnGroup() const
-{
-	return m_spawnGroup.size();
-}
-
-BonusTypes CvSpawnInfo::getBonus(int index) const
-{
-	FASSERT_BOUNDS(0, getNumBonuses(), index);
-	return m_bonusTypes[index];
-}
-
-TerrainTypes CvSpawnInfo::getTerrain(int index) const
-{
-	FASSERT_BOUNDS(0, getNumTerrains(), index);
-	return m_terrainTypes[index];
-}
-
-FeatureTypes CvSpawnInfo::getFeature(int index) const
-{
-	FASSERT_BOUNDS(0, getNumFeatures(), index);
-	return m_featureTypes[index];
-}
-
-TerrainTypes CvSpawnInfo::getFeatureTerrain(int index) const
-{
-	FASSERT_BOUNDS(0, getNumFeatureTerrains(), index);
-	return m_featureTerrainTypes[index];
-}
-
-UnitTypes CvSpawnInfo::getSpawnGroup(int index) const
-{
-	FASSERT_BOUNDS(0, getNumSpawnGroup(), index);
-	return m_spawnGroup[index];
-}
-
 int CvSpawnInfo::getTurnRate() const
 {
 	return m_iTurns;
@@ -11172,9 +11117,9 @@ void CvRiverModelInfo::copyNonDefaults(const CvRiverModelInfo* pClassInfo)
 
 	if (getTextureIndex() == iDefault) m_iTextureIndex = pClassInfo->getTextureIndex();
 
-	if (getDeltaString() == cDefault) strcpy (m_szDeltaString, (LPCTSTR) CvString::format("%s", pClassInfo->getDeltaString()));
-	if (getConnectString() == cDefault) strcpy (m_szConnectString, (LPCTSTR) CvString::format("%s", pClassInfo->getConnectString()));
-	if (getRotateString() == cDefault) strcpy (m_szRotateString, (LPCTSTR) CvString::format("%s", pClassInfo->getRotateString()));
+	if (getDeltaString() == cDefault) strcpy(m_szDeltaString, (const char*) CvString::format("%s", pClassInfo->getDeltaString()));
+	if (getConnectString() == cDefault) strcpy(m_szConnectString, (const char*) CvString::format("%s", pClassInfo->getConnectString()));
+	if (getRotateString() == cDefault) strcpy(m_szRotateString, (const char*) CvString::format("%s", pClassInfo->getRotateString()));
 }
 
 //======================================================================================================
@@ -11285,9 +11230,9 @@ void CvRouteModelInfo::copyNonDefaults(const CvRouteModelInfo* pClassInfo)
 
 	if (getRouteType() == iTextDefault) m_eRouteType = pClassInfo->getRouteType();
 
-	if (getConnectString() == cDefault) strcpy (m_szConnectString, (LPCTSTR) CvString::format("%s", pClassInfo->getConnectString()));
-	if (getModelConnectString() == cDefault) strcpy (m_szModelConnectString, (LPCTSTR) CvString::format("%s", pClassInfo->getModelConnectString()));
-	if (getRotateString() == cDefault) strcpy (m_szRotateString, (LPCTSTR) CvString::format("%s", pClassInfo->getRotateString()));
+	if (getConnectString() == cDefault) strcpy(m_szConnectString, (const char*) CvString::format("%s", pClassInfo->getConnectString()));
+	if (getModelConnectString() == cDefault) strcpy(m_szModelConnectString, (const char*) CvString::format("%s", pClassInfo->getModelConnectString()));
+	if (getRotateString() == cDefault) strcpy(m_szRotateString, (const char*) CvString::format("%s", pClassInfo->getRotateString()));
 }
 
 //======================================================================================================
@@ -13110,10 +13055,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTime, L"iTime");
 	pXML->GetOptionalChildXmlValByName(&m_iCost, L"iCost");
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
-
+	pXML->GetOptionalTypeEnum(m_iObsoleteTech, L"ObsoleteTech");
 	pXML->GetOptionalTypeEnum(m_iImprovement, L"ImprovementType");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"RouteType");
 	m_iRoute = pXML->GetInfoClass(szTextVal);
@@ -14436,7 +14378,7 @@ const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	CvBonusInfo::getTrad
 			for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 			{
 				const BuildTypes eBuild = static_cast<BuildTypes>(iJ);
-				const ImprovementTypes eImp = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+				const ImprovementTypes eImp = GC.getBuildInfo(eBuild).getImprovement();
 
 				if( eImp != NO_IMPROVEMENT && GC.getImprovementInfo(eImp).isImprovementBonusTrade(eBonus) )
 				{

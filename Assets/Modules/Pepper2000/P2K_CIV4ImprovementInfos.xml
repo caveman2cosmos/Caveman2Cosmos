@@ -3,9 +3,6 @@
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_STATION_LV1</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SPACE_STATION_LV1</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV1</ArtDefineTag>
@@ -29,9 +26,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_STATION_LV2</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SPACE_STATION_LV2</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV2</ArtDefineTag>
@@ -56,9 +50,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_STATION_LV3</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SPACE_STATION_LV3</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV3</ArtDefineTag>
@@ -81,9 +72,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_ARCOLOGY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUNAR_ARCOLOGY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LUNAR_ARCOLOGY</ArtDefineTag>
@@ -133,9 +121,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_VENUS_SURFACE_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_VENUS_SURFACE_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VENUS_SURFACE_MINE</ArtDefineTag>
@@ -181,9 +166,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_VENUS_AERIAL_FARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_VENUS_AERIAL_FARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VENUS_AERIAL_FARM</ArtDefineTag>
@@ -211,9 +193,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MARTIAN_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MARTIAN_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARTIAN_MINE</ArtDefineTag>
@@ -290,9 +269,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MARTIAN_FARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MARTIAN_FARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARTIAN_FARM</ArtDefineTag>
@@ -328,9 +304,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MOON</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_MOON</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
@@ -363,9 +336,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MARS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_MARS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MARS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
@@ -406,9 +376,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_NEUTRON_STAR</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_NEUTRON_STAR</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_NEUTRON_STAR</ArtDefineTag>
@@ -431,9 +398,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_HYPERSPACE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_HYPERSPACE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_HYPERSPACE</ArtDefineTag>
@@ -458,9 +422,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_PAST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_PAST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_PAST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PAST</ArtDefineTag>
@@ -485,9 +446,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_FUTURE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_FUTURE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_FUTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_FUTURE</ArtDefineTag>
@@ -512,9 +470,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_BRANESPACE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORM_BRANESPACE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_BRANESPACE</ArtDefineTag>
@@ -539,9 +494,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLACE_ASTEROID</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLACE_ASTEROID</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_ASTEROID</ArtDefineTag>
@@ -574,9 +526,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLACE_GALAXY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PLACE_GALAXY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_GALAXY</ArtDefineTag>
@@ -601,9 +550,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_SOLAR_ARRAY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SPACE_SOLAR_ARRAY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_SOLAR_PANELS</ArtDefineTag>
@@ -651,9 +597,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_CONCENTRATOR</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SOLAR_CONCENTRATOR</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_CONCENTRATOR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_SOLAR_PANELS</ArtDefineTag>
@@ -693,9 +636,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MERCURY_SOLAR_ARRAY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MERCURY_SOLAR_ARRAY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MERCURY_SOLAR_ARRAY</ArtDefineTag>
@@ -717,9 +657,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MERCURY_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MERCURY_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MERCURY_COLONY</ArtDefineTag>
@@ -741,9 +678,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ASTEROID_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ASTEROID_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ASTEROID_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ASTEROID_MINE</ArtDefineTag>
@@ -818,9 +752,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BLUE_SUPERGIANT_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</ArtDefineTag>
@@ -841,9 +772,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_NEUTRON_STAR_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_NEUTRON_STAR_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_NEUTRON_STAR_COLONY</ArtDefineTag>
@@ -864,9 +792,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BIOTIC_NEUTRON_STAR</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BIOTIC_NEUTRON_STAR</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BIOTIC_NEUTRON_STAR</ArtDefineTag>
@@ -887,9 +812,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_TRADING_POST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SOLAR_TRADING_POST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_TRADING_POST</ArtDefineTag>
@@ -928,9 +850,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUN_SCOOP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SUN_SCOOP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SUN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUN_SCOOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUN_SCOOP</ArtDefineTag>
@@ -951,9 +870,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_SCOOP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_JOVIAN_SCOOP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_SCOOP</ArtDefineTag>
@@ -986,9 +902,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_FLOATING_CITY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_JOVIAN_FLOATING_CITY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_FLOATING_CITY</ArtDefineTag>
@@ -1021,9 +934,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_LUNAR_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_JOVIAN_LUNAR_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_LUNAR_BASE</ArtDefineTag>
@@ -1089,9 +999,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_JOVIAN_LUNAR_ARCOLOGY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</ArtDefineTag>
@@ -1156,9 +1063,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_DISTANT_PAST_CITY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_DISTANT_PAST_CITY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DISTANT_PAST_CITY</ArtDefineTag>
@@ -1179,9 +1083,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_DISTANT_FUTURE_CITY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_DISTANT_FUTURE_CITY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DISTANT_FUTURE_CITY</ArtDefineTag>
@@ -1202,9 +1103,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PARATERRAFORMED_ASTEROID</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PARATERRAFORMED_ASTEROID</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PARATERRAFORMED_ASTEROID</ArtDefineTag>
@@ -1257,9 +1155,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BRANE_FACTORY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BRANE_FACTORY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BRANE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BRANE_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BRANE_FACTORY</ArtDefineTag>
@@ -1280,9 +1175,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BRANE_FARM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BRANE_FARM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BRANE_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BRANE_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BRANE_FARM</ArtDefineTag>
@@ -1303,9 +1195,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPIRITUAL_REALM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SPIRITUAL_REALM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPIRITUAL_REALM</ArtDefineTag>
@@ -1336,9 +1225,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_TRADING_POST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERSTELLAR_TRADING_POST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_TRADING_POST</ArtDefineTag>
@@ -1385,9 +1271,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUPERNOVA_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SUPERNOVA_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUPERNOVA_MINE</ArtDefineTag>
@@ -1425,9 +1308,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERGALACTIC_RESEARCH_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</ArtDefineTag>
@@ -1499,9 +1379,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COSMIC_EXPANSION_NODE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COSMIC_EXPANSION_NODE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COSMIC_EXPANSION_NODE</ArtDefineTag>
@@ -1521,9 +1398,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TRUE_VACUUM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TRUE_VACUUM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TRUE_VACUUM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TRUE_VACUUM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TRUE_VACUUM</ArtDefineTag>
@@ -1543,9 +1417,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_DYSON_SPHERE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_DYSON_SPHERE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DYSON_SPHERE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DYSON_SPHERE</ArtDefineTag>
@@ -1611,9 +1482,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERSTELLAR_RESEARCH_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</ArtDefineTag>
@@ -1703,9 +1571,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORMED_PLANET</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TERRAFORMED_PLANET</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORMED_PLANET</ArtDefineTag>
@@ -1789,9 +1654,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ARTIFICIAL_PLANET</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ARTIFICIAL_PLANET</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARTIFICIAL_PLANET</ArtDefineTag>
@@ -1823,9 +1685,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STAR_SCOOP</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_STAR_SCOOP</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STAR_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_STAR_SCOOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STAR_SCOOP</ArtDefineTag>
@@ -1865,9 +1724,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BIOTIC_GALAXY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_BIOTIC_GALAXY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BIOTIC_GALAXY</ArtDefineTag>
@@ -1941,9 +1797,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HELIOFORMED_BROWN_DWARF</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</ArtDefineTag>
@@ -1981,9 +1834,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_DISTANT_RESEARCH_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_DISTANT_RESEARCH_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DISTANT_RESEARCH_BASE</ArtDefineTag>
@@ -2025,9 +1875,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_CISLUNAR_EXPANSION_MODULE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</ArtDefineTag>
@@ -2057,9 +1904,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SATELLITE_STATION</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SATELLITE_STATION</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SATELLITE_STATION</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SATELLITE_STATION_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SATELLITE_STATION</ArtDefineTag>
@@ -2099,9 +1943,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ARCOLOGY_MOON</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ARCOLOGY_MOON</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARCOLOGY_MOON</ArtDefineTag>
@@ -2130,9 +1971,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERSTELLAR_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_COLONY</ArtDefineTag>
@@ -2178,9 +2016,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERGALACTIC_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERGALACTIC_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_COLONY</ArtDefineTag>
@@ -2220,9 +2055,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUPERCLUSTER_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SUPERCLUSTER_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUPERCLUSTER_COLONY</ArtDefineTag>
@@ -2242,9 +2074,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_OBSERVABLE_UNIVERSE_COLONY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</ArtDefineTag>
@@ -2264,9 +2093,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PARALLEL_UNIVERSE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PARALLEL_UNIVERSE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PARALLEL_UNIVERSE</ArtDefineTag>
@@ -2308,9 +2134,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TIME_MANIFOLD</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TIME_MANIFOLD</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIME_MANIFOLD</ArtDefineTag>
@@ -2334,9 +2157,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CISLUNAR_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_CISLUNAR_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_BASE</ArtDefineTag>
@@ -2364,12 +2184,10 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_SYSTEM_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_SOLAR_SYSTEM_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>
@@ -2401,9 +2219,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERSTELLAR_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_BASE</ArtDefineTag>
@@ -2443,9 +2258,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERGALACTIC_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_INTERGALACTIC_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_BASE</ArtDefineTag>
@@ -2489,9 +2301,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYPERSPACE_BUNKER</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_HYPERSPACE_BUNKER</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYPERSPACE_BUNKER</ArtDefineTag>
@@ -2531,9 +2340,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_BASE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUNAR_BASE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
@@ -2576,9 +2382,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_OUTPOST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUNAR_OUTPOST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
@@ -2622,9 +2425,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_HABITATION_COMPLEX</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUNAR_HABITATION_COMPLEX</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
@@ -2666,9 +2466,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_MINE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUNAR_MINE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
@@ -2761,9 +2558,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_MINING_OUTPOST</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LUNAR_MINING_OUTPOST</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
@@ -2840,9 +2634,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_SMALL</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_HABITAT_SMALL</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_SMALL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_SMALL</ArtDefineTag>
@@ -2915,9 +2706,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_HABITAT_MEDIUM</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_MEDIUM</ArtDefineTag>
@@ -3001,9 +2789,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_LARGE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_HABITAT_LARGE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_LARGE</ArtDefineTag>
@@ -3087,9 +2872,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_HUGE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_HABITAT_HUGE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_HUGE</ArtDefineTag>
@@ -3209,9 +2991,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HYDROPONICS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_HYDROPONICS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
@@ -3333,9 +3112,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_MANUFACTORY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_MANUFACTORY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDTRAP</ArtDefineTag>
@@ -3441,9 +3217,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_EXTRACTION_FACILITY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
@@ -3556,9 +3329,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_SOLAR_ARRAY</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_COLONY_SOLAR_ARRAY</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_PANELS</ArtDefineTag>
@@ -3657,9 +3427,6 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LISTENING_NODE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_LISTENING_NODE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LISTENING_NODE</ArtDefineTag>

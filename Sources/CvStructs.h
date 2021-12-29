@@ -668,22 +668,6 @@ struct PlotExtraYield
 	void write(FDataStreamBase* pStream);
 };
 
-struct PlotExtraCost
-{
-	int m_iX;
-	int m_iY;
-	int m_iCost;
-
-	PlotExtraCost()
-		: m_iX(0)
-		, m_iY(0)
-		, m_iCost(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
 typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
 struct BuildingYieldChange

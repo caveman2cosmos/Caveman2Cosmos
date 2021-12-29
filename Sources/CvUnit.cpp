@@ -17,6 +17,7 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvViewport.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
@@ -14984,8 +14985,12 @@ bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 		{
 			const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
 
-			if (hasInvisibilityType(eInvisible) && plot()->isSpotterInSight(eTeam, eInvisible))
+			if (hasInvisibilityType(eInvisible))
 			{
+				if (!plot()->isSpotterInSight(eTeam, eInvisible))
+				{
+					return true;
+				}
 				const int iIntensity = invisibilityIntensityTotal(eInvisible);
 
 				if ((iIntensity > 0 || GC.getInvisibleInfo(eInvisible).isIntrinsic())
@@ -38072,15 +38077,10 @@ void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int 
 	}
 }
 
-int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const
+int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eType) const
 {
-	return getExtraVisibilityIntensitySameTileType(eInvisibleType);
-}
-
-int CvUnit::getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex);
-	return m_aiExtraVisibilityIntensitySameTile[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eType);
+	return m_aiExtraVisibilityIntensitySameTile[eType];
 }
 
 
