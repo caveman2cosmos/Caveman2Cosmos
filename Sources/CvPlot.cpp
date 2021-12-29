@@ -521,37 +521,10 @@ void CvPlot::updateGraphicEra()
 
 void CvPlot::erase()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvCity* pCity;
-	CvUnit* pLoopUnit;
-	CLinkList<IDInfo> oldUnits;
-
-	// kill units
-	oldUnits.clear();
-
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		oldUnits.insertAtEnd(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-	}
-
-	pUnitNode = oldUnits.head();
-
-	while (pUnitNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = oldUnits.next(pUnitNode);
-
-		if (pLoopUnit != NULL)
-		{
-			pLoopUnit->kill(false, NO_PLAYER, true);
-		}
-	}
+	algo::for_each(units_safe(), bind(CvUnit::kill, _1, false, NO_PLAYER, true));
 
 	// kill cities
-	pCity = getPlotCity();
+	CvCity* pCity = getPlotCity();
 	if (pCity != NULL)
 	{
 		pCity->kill(false);
@@ -1367,8 +1340,6 @@ void CvPlot::verifyUnitValidPlot()
 
 void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 {
-	CLinkList<IDInfo> oldUnits;
-
 	GC.getGame().changeNukesExploded(1);
 
 	foreach_(CvPlot* plotX, rect(iRange, iRange))
@@ -1382,24 +1353,10 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 			plotX->setImprovementType(NO_IMPROVEMENT);
 			plotX->setFeatureType((FeatureTypes)GC.getDefineINT("NUKE_FEATURE"));
 		}
-		oldUnits.clear();
 
-		CLLNode<IDInfo>* pUnitNode = plotX->headUnitNode();
-
-		while (pUnitNode != NULL)
+		foreach_(CvUnit* pLoopUnit, plotX->units_safe())
 		{
-			oldUnits.insertAtEnd(pUnitNode->m_data);
-			pUnitNode = plotX->nextUnitNode(pUnitNode);
-		}
-
-		pUnitNode = oldUnits.head();
-
-		while (pUnitNode != NULL)
-		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = oldUnits.next(pUnitNode);
-
-			if (pLoopUnit != NULL && pLoopUnit != pNukeUnit && !pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
+			if (pLoopUnit != pNukeUnit && !pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
 			{
 				int iNukeDamage =
 				(
@@ -1487,8 +1444,8 @@ bool CvPlot::isConnectedToCapital(PlayerTypes ePlayer) const
 
 int CvPlot::getPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const
 {
-	FAssertMsg(ePlayer != NO_PLAYER, "Player is not assigned a valid value");
-	FAssertMsg(eBonus != NO_BONUS, "Bonus is not assigned a valid value");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 
 	const CvPlotGroup* pPlotGroup = getPlotGroup(ePlayer);
 
@@ -2044,10 +2001,8 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		iRange++; // check one extra outer ring
 	}
 
-	for (int i = aSeeInvisibleTypes.size() - 1; i > -1; i--)
+	foreach_(const InvisibleTypes eInvisible, aSeeInvisibleTypes)
 	{
-		const InvisibleTypes eInvisible = aSeeInvisibleTypes[i];
-
 		for (int dx = -iRange; dx <= iRange; dx++)
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)

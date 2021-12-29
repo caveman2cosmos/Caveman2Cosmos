@@ -2318,28 +2318,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		}
 	}
 
-	CLinkList<IDInfo> oldUnits;
-	CLLNode<IDInfo>* pUnitNode = pCityPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		oldUnits.insertAtEnd(pUnitNode->m_data);
-		pUnitNode = pCityPlot->nextUnitNode(pUnitNode);
-	}
-
-	pUnitNode = oldUnits.head();
-
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = oldUnits.next(pUnitNode);
-
-		if (pLoopUnit && pLoopUnit->getTeam() != getTeam()
-		&& pLoopUnit->getDomainType() == DOMAIN_IMMOBILE)
-		{
-			pLoopUnit->kill(false, getID());
-		}
-	}
+	algo::for_each(pCityPlot->units_safe()
+		| filtered(bind(CvUnit::getTeam, _1) != getTeam() && bind(CvUnit::getDomainType, _1) == DOMAIN_IMMOBILE)
+		, bind(CvUnit::kill, _1, false, getID(), true)
+	);
 	const PlayerTypes eOldOwner = pOldCity->getOwner();
 	const PlayerTypes eOriginalOwner = pOldCity->getOriginalOwner();
 	const int iX = pOldCity->getX();
@@ -5845,19 +5827,16 @@ bool CvPlayer::hasBonus(BonusTypes eBonus) const
 int CvPlayer::getNumTradeBonusImports(PlayerTypes ePlayer) const
 {
 	CLLNode<TradeData>* pNode;
-	CvDeal* pLoopDeal;
-	int iCount;
-	int iLoop;
 
 	FAssert(ePlayer != getID());
 
-	iCount = 0;
+	int iCount = 0;
 
-	for(pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(const CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if ((pLoopDeal->getFirstPlayer() == getID()) && (pLoopDeal->getSecondPlayer() == ePlayer))
+		if (kLoopDeal.getFirstPlayer() == getID() && kLoopDeal.getSecondPlayer() == ePlayer)
 		{
-			for (pNode = pLoopDeal->headSecondTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextSecondTradesNode(pNode))
+			for (pNode = kLoopDeal.headSecondTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextSecondTradesNode(pNode))
 			{
 				if (pNode->m_data.m_eItemType == TRADE_RESOURCES)
 				{
@@ -5866,9 +5845,9 @@ int CvPlayer::getNumTradeBonusImports(PlayerTypes ePlayer) const
 			}
 		}
 
-		if ((pLoopDeal->getFirstPlayer() == ePlayer) && (pLoopDeal->getSecondPlayer() == getID()))
+		if (kLoopDeal.getFirstPlayer() == ePlayer && kLoopDeal.getSecondPlayer() == getID())
 		{
-			for (pNode = pLoopDeal->headFirstTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextFirstTradesNode(pNode))
+			for (pNode = kLoopDeal.headFirstTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextFirstTradesNode(pNode))
 			{
 				if (pNode->m_data.m_eItemType == TRADE_RESOURCES)
 				{
@@ -5884,30 +5863,28 @@ int CvPlayer::getNumTradeBonusImports(PlayerTypes ePlayer) const
 
 bool CvPlayer::isTradingWithTeam(TeamTypes eTeam, bool bIncludeCancelable) const
 {
-	int iLoop;
-
 	if (eTeam == getTeam())
 	{
 		return false;
 	}
 
-	for (CvDeal* pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if (bIncludeCancelable || pLoopDeal->isCancelable(getID()))
+		if (bIncludeCancelable || kLoopDeal.isCancelable(getID()))
 		{
-			if (!pLoopDeal->isPeaceDeal())
+			if (!kLoopDeal.isPeaceDeal())
 			{
-				if ((pLoopDeal->getFirstPlayer() == getID()) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eTeam))
+				if (kLoopDeal.getFirstPlayer() == getID() && GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == eTeam)
 				{
-					if (pLoopDeal->getLengthFirstTrades() > 0)
+					if (kLoopDeal.getLengthFirstTrades() > 0)
 					{
 						return true;
 					}
 				}
 
-				if ((pLoopDeal->getSecondPlayer() == getID()) && (GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eTeam))
+				if (kLoopDeal.getSecondPlayer() == getID() && GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == eTeam)
 				{
-					if (pLoopDeal->getLengthSecondTrades() > 0)
+					if (kLoopDeal.getLengthSecondTrades() > 0)
 					{
 						return true;
 					}
@@ -5948,19 +5925,16 @@ bool CvPlayer::canStopTradingWithTeam(TeamTypes eTeam, bool bContinueNotTrading)
 
 void CvPlayer::stopTradingWithTeam(TeamTypes eTeam)
 {
-	CvDeal* pLoopDeal;
-	int iLoop;
-
 	FAssert(eTeam != getTeam());
 
-	for(pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if (pLoopDeal->isCancelable(getID()) && !(pLoopDeal->isPeaceDeal()))
+		if (kLoopDeal.isCancelable(getID()) && !kLoopDeal.isPeaceDeal())
 		{
-			if (((pLoopDeal->getFirstPlayer() == getID()) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eTeam)) ||
-				  ((pLoopDeal->getSecondPlayer() == getID()) && (GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eTeam)))
+			if (((kLoopDeal.getFirstPlayer() == getID()) && (GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == eTeam)) ||
+				  ((kLoopDeal.getSecondPlayer() == getID()) && (GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == eTeam)))
 			{
-				pLoopDeal->kill();
+				kLoopDeal.kill();
 			}
 		}
 	}
@@ -5978,16 +5952,10 @@ void CvPlayer::stopTradingWithTeam(TeamTypes eTeam)
 
 void CvPlayer::killAllDeals()
 {
-	CvDeal* pLoopDeal;
-	int iLoop;
-
-	for(pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
-	{
-		if ((pLoopDeal->getFirstPlayer() == getID()) || (pLoopDeal->getSecondPlayer() == getID()))
-		{
-			pLoopDeal->kill();
-		}
-	}
+	algo::for_each(GC.getGame().deals()
+		| filtered(bind(CvDeal::getFirstPlayer, _1) == getID() || bind(CvDeal::getSecondPlayer, _1) == getID())
+		, bind(CvDeal::kill, _1, true)
+	);
 }
 
 
@@ -26162,19 +26130,16 @@ bool CvPlayer::isTradingMilitaryBonus(PlayerTypes ePlayer) const
 int CvPlayer::getNumTradeImportsByBonus(PlayerTypes ePlayer, BonusTypes eBonus) const
 {
 	CLLNode<TradeData>* pNode;
-	CvDeal* pLoopDeal;
-	int iCount;
-	int iLoop;
 
 	FAssert(ePlayer != getID());
 
-	iCount = 0;
+	int iCount = 0;
 
-	for(pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(const CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if ((pLoopDeal->getFirstPlayer() == getID()) && (pLoopDeal->getSecondPlayer() == ePlayer))
+		if ((kLoopDeal.getFirstPlayer() == getID()) && (kLoopDeal.getSecondPlayer() == ePlayer))
 		{
-			for (pNode = pLoopDeal->headSecondTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextSecondTradesNode(pNode))
+			for (pNode = kLoopDeal.headSecondTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextSecondTradesNode(pNode))
 			{
 				if (pNode->m_data.m_eItemType == TRADE_RESOURCES)
 				{
@@ -26186,9 +26151,9 @@ int CvPlayer::getNumTradeImportsByBonus(PlayerTypes ePlayer, BonusTypes eBonus) 
 			}
 		}
 
-		if ((pLoopDeal->getFirstPlayer() == ePlayer) && (pLoopDeal->getSecondPlayer() == getID()))
+		if ((kLoopDeal.getFirstPlayer() == ePlayer) && (kLoopDeal.getSecondPlayer() == getID()))
 		{
-			for (pNode = pLoopDeal->headFirstTradesNode(); (pNode != NULL); pNode = pLoopDeal->nextFirstTradesNode(pNode))
+			for (pNode = kLoopDeal.headFirstTradesNode(); (pNode != NULL); pNode = kLoopDeal.nextFirstTradesNode(pNode))
 			{
 				if (pNode->m_data.m_eItemType == TRADE_RESOURCES)
 				{

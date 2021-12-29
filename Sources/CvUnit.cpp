@@ -12635,7 +12635,7 @@ UnitCombatTypes CvUnit::getUnitCombatType() const
 
 DomainTypes CvUnit::getDomainType() const
 {
-	return ((DomainTypes)(m_pUnitInfo->getDomainType()));
+	return m_pUnitInfo->getDomainType();
 }
 
 
@@ -16221,28 +16221,11 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			}
 			///TB: This next portion is to reset the plot list of the new plot before moving on after units may (probably were) have been destroyed in combat there.
 			//This might be necessary for the trap segment below, to rerun this.
-			CLinkList<IDInfo> oldUnits;
-			oldUnits.clear();
-
-			CLLNode<IDInfo>* pUnitNode = pNewPlot->headUnitNode();
-
-			while (pUnitNode != NULL)
-			{
-				oldUnits.insertAtEnd(pUnitNode->m_data);
-				pUnitNode = pNewPlot->nextUnitNode(pUnitNode);
-			}
-
-			pUnitNode = oldUnits.head();
-
 			if (!bInit && pOldPlot != NULL)
 			{
-				while (pUnitNode != NULL)
+				foreach_(CvUnit* unitX, pNewPlot->units_safe())
 				{
-					CvUnit* unitX = ::getUnit(pUnitNode->m_data);
-					pUnitNode = oldUnits.next(pUnitNode);
-
-					if (unitX != NULL && pOldPlot != NULL
-					&& (isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam()))
+					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam()))
 					&& !unitX->canCoexistWithAttacker(*this))
 					{
 						if (unitX->isArmedTrap())

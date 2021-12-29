@@ -19698,7 +19698,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 				}
 
-				DomainTypes eDomain = (DomainTypes)kUnit.getDomainType();
+				const DomainTypes eDomain = kUnit.getDomainType();
 				iExperience = pCity->getDomainFreeExperience(eDomain);
 				if (iExperience != 0)
 				{
@@ -19744,7 +19744,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 				}
 				const UnitCombatTypes eCombatType = (UnitCombatTypes)kUnit.getUnitCombatType();
-				const DomainTypes eDomainType = (DomainTypes)kUnit.getDomainType();
+				const DomainTypes eDomainType = kUnit.getDomainType();
 				//Display sources you could have if you constructed them first
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
@@ -31241,18 +31241,15 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 void CvGameTextMgr::getActiveDealsString(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer)
 {
-	int iIndex;
-	CvDeal* pDeal = GC.getGame().firstDeal(&iIndex);
-	while (NULL != pDeal)
+	foreach_(CvDeal& kDeal, GC.getGame().deals())
 	{
-		if ((pDeal->getFirstPlayer() == eThisPlayer && pDeal->getSecondPlayer() == eOtherPlayer)
-			|| (pDeal->getFirstPlayer() == eOtherPlayer && pDeal->getSecondPlayer() == eThisPlayer))
+		if ((kDeal.getFirstPlayer() == eThisPlayer && kDeal.getSecondPlayer() == eOtherPlayer)
+		|| (kDeal.getFirstPlayer() == eOtherPlayer && kDeal.getSecondPlayer() == eThisPlayer))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(BULLET_CHAR)));
-			getDealString(szBuffer, *pDeal, eThisPlayer);
+			getDealString(szBuffer, kDeal, eThisPlayer);
 		}
-		pDeal = GC.getGame().nextDeal(&iIndex);
 	}
 }
 
