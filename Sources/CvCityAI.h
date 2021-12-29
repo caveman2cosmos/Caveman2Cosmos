@@ -409,7 +409,7 @@ private:
 	bool AI_establishSeeInvisibleCoverage();
 	bool AI_establishInvestigatorCoverage();
 	bool AI_isNegativePropertyUnit(UnitTypes eUnit) const;
-	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria) const;
 
 	//	The cache itself
 	BuildingValueCache* cachedBuildingValues;

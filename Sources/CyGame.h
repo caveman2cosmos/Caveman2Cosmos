@@ -280,7 +280,6 @@ public:
 	int getCultureThreshold(CultureLevelTypes eLevel) const;
 
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
-	void changePlotExtraCost(int iX, int iY, int iExtraCost);
 
 	bool isCivEverActive(CivilizationTypes eCivilization) const;
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;

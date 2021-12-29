@@ -4,6 +4,7 @@
 #define CIV4_GROUP_H
 
 #include "LinkedList.h"
+#include "copy_iterator.h"
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "idinfo_iterator_base.h"
