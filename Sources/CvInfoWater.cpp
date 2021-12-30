@@ -13,7 +13,6 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvXMLLoadUtility.h"
 
@@ -162,11 +161,6 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvWaterPlaneInfo::copyNonDefaults(CvWaterPlaneInfo* pClassInfo)
-{
-	// This is a bogus CopyNonDefault. Modders/Users should set the XML completely with all tags
-}
-
 //======================================================================================================
 //					CvTerrainPlaneInfo
 //======================================================================================================
@@ -295,12 +289,11 @@ bool CvTerrainPlaneInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo)
+void CvTerrainPlaneInfo::copyNonDefaults(const CvTerrainPlaneInfo* pClassInfo)
 {
-	bool bDefault = false;
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const float fDefault = 0.0f;
+	const CvString cDefault = CvString::format("").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -391,11 +384,10 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
+void CvCameraOverlayInfo::copyNonDefaults(const CvCameraOverlayInfo* pClassInfo)
 {
-	bool bDefault = false;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const CvString cDefault = CvString::format("").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 

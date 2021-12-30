@@ -1,10 +1,13 @@
 #pragma once
 #ifndef CV_IMPROVEMENTINFO_H
 #define CV_IMPROVEMENTINFO_H
+
+#include "CvInfos.h"
 #include <vector>
 
-#include "CvGameCoreDLL.h"
-#include "CvInfos.h"
+class CvArtInfoImprovement;
+class CvXMLLoadUtility;
+
 class CvImprovementInfo :
 	public CvInfoBase
 {

@@ -551,7 +551,7 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 		}
 	}
 
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
@@ -1330,7 +1330,7 @@ void CvMap::beforeSwitch()
 				pLoopUnit->destroyEntity();
 			}
 			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities()
-			| filtered(bind(&CvCity::getEntity, _1) != nullptr))
+			| filtered(bind(CvCity::getEntity, _1) != nullptr))
 			{
 				pLoopCity->removeEntity();
 				pLoopCity->destroyEntity();
