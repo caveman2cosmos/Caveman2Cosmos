@@ -23,14 +23,6 @@
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 
-#ifdef __INTELLISENSE__
-#pragma warning disable 258
-#pragma warning disable 276
-#pragma warning disable 65
-#pragma warning disable 135
-#endif
-
-
 //	KOSHLING MOD - calculate all possible building focuses at once
 //	to avoid multiple looping - need to know how many options there
 //	are.  Note that I am also ASSUMING only one flag is passed at a
@@ -210,10 +202,10 @@ void CvCityAI::AI_reset()
 void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	// CvWString aiType = "CvCityAI";
+	CvWString aiType = "CvCityAI";
 
 
-	// logAIJson(aiType, this->getName(), function, message);
+	logAIJson(aiType, this->getName(), function, message);
 
 }
 
@@ -8397,9 +8389,9 @@ void CvCityAI::AI_updateBestBuild()
 		ratios.WeightFood(2);
 	}
 
-	SendLog("ratios", CvWString::format(L"%lld %lld %lld", ratios.food_ratio, ratios.production_ratio, ratios.commerce_ratio));
-
 	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
+
+
 
 	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++) // start at 1, 0 is the plot of the city
 	{
@@ -8409,14 +8401,9 @@ void CvCityAI::AI_updateBestBuild()
 		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
 		AI_findBestImprovementForPlot(loopedPlot, &optimalYieldList[iPlotCounter], ratios);
-		if (optimalYieldList[iPlotCounter].currentBuild != NO_BUILD)
-		{
-			if (m_aiBestBuildValue[iPlotCounter] <= optimalYieldList[iPlotCounter].yieldValue)
-			{
-				m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
-				m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
-			}
-		}
+
+		m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
+		m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
 	}
 }
 
@@ -10745,6 +10732,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	bool bWorked = false;
 	bool bHasBonusImprovement = false;
 	bool bEmphasizeIrrigation = false;
+	int plotValue = 0;
 	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
 
 	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
@@ -10789,18 +10777,19 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
-		int iValue = 0;
+		eBestBuild = NO_BUILD;
+		plotValue = 0;
 		int iBestTempBuildValue = 0;
-
 
 		const ImprovementTypes ePotentialImprovement = (ImprovementTypes)iI;
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
+		const CvTerrainInfo terrain = GC.getTerrainInfo(pPlot->getTerrainType());
 
 		// if improvement is NO_IMPROVEMENT, do not evaluate
 		if (ePotentialImprovement == NO_IMPROVEMENT) continue;
 
 		// check if improvement is a fort or watchtower, then its a no.
-		if (potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() != 0) continue;
+		if (potentialImprovementInfo.isActsAsCity() || potentialImprovementInfo.getVisibilityChange() > 0) continue;
 
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
@@ -10808,9 +10797,6 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			const CvBuildInfo build = GC.getBuildInfo(eBuildType);
-			FAssert(build.getImprovement() == ePotentialImprovement);
-
 			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
 			{
 				int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
@@ -10853,19 +10839,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		if (!bValid) continue;
 
 		// if plot has a bonus
-		if (eNonObsoleteBonus != NO_BONUS)
-		{
-			// if plot is not improved with improvement that gives bonus
-			if (potentialImprovementInfo.isImprovementBonusMakesValid(eNonObsoleteBonus))
-			{
-				iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-				iValue += 20000;
-			}
-		}
-		else
-		{
-			continue;
-		}
+
 
 		int finalYields[NUM_YIELD_TYPES];
 		for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
@@ -10873,12 +10847,24 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 			finalYields[yieldCounter] = 0;
 			finalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
 			finalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
+			plotInfo->yields[yieldCounter] = finalYields[yieldCounter];
 		}
-		iValue = iValue + ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
+		plotValue = plotValue + ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
 
-		if (iValue >= plotInfo->yieldValue)
+		if (eNonObsoleteBonus != NO_BONUS)
 		{
-			plotInfo->yieldValue = iValue;
+			// if plot is not improved with improvement that gives bonus
+			if (potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
+			{
+				plotValue = plotValue * 3;
+			}
+			else {
+				plotValue = plotValue / 3;
+			}
+		}
+		if (plotValue >= plotInfo->yieldValue)
+		{
+			plotInfo->yieldValue = plotValue;
 			plotInfo->currentBuild = eBestBuild;
 		}
 
