@@ -1191,12 +1191,12 @@ public:
 	// Fill the kEffectNames array with references to effects in the CIV4EffectInfos.xml to have a
 	// city play a given set of effects. This is called whenever the interface updates the city billboard
 	// or when the zoom level changes
-	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const TCHAR*>& kEffectNames);
+	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const char*>& kEffectNames);
 
 
 	// Billboard appearance controls
 	DllExport void getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kTextColor) const;
-	DllExport const TCHAR* getCityBillboardProductionIcon() const;
+	DllExport const char* getCityBillboardProductionIcon() const;
 	DllExport bool getFoodBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport bool getProductionBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport NiColorA getBarBackgroundColor() const;

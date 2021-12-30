@@ -231,7 +231,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	{
 		if (gDLL->getChtLvl() > 0)
 		{
-			TCHAR szOut[1024];
+			char szOut[1024];
 			sprintf(szOut, "Player %d City %d built at %d:%d\n", eOwner, iID, iX, iY);
 			gDLL->messageControlLog(szOut);
 		}
@@ -16070,9 +16070,9 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 	if (bFinish)
 	{
-		LPCSTR szIcon = NULL;
+		const char* szIcon = NULL;
 		wchar_t szBuffer[1024];
-		TCHAR szSound[1024];
+		char szSound[1024];
 		if (eTrainUnit != NO_UNIT)
 		{
 			swprintf(szBuffer, gDLL->getText(isLimitedUnit(eTrainUnit) ? "TXT_KEY_MISC_TRAINED_UNIT_IN_LIMITED" : "TXT_KEY_MISC_TRAINED_UNIT_IN", GC.getUnitInfo(eTrainUnit).getTextKeyWide(), getNameKey()).GetCString());
@@ -18045,7 +18045,7 @@ static int natGetDeterministicRandom(int iMin, int iMax, int iSeedX, int iSeedY)
 	return (rand() % (iMax - iMin)) + iMin;
 }
 
-void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const TCHAR*>& kEffectNames)
+void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const char*>& kEffectNames)
 {
 	if (isOccupation() && isVisible(getTeam(), false) == true)
 	{
@@ -18082,7 +18082,7 @@ void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const TCHAR*
 			kRand.init(iSeed);
 
 			// fireworks
-			const TCHAR* szFireworkEffects[] =
+			const char* szFireworkEffects[] =
 			{ "FIREWORKS_RED_LARGE_SLOW",
 				"FIREWORKS_RED_SMALL_FAST",
 				"FIREWORKS_GREEN_LARGE_SLOW",
@@ -18094,7 +18094,7 @@ void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const TCHAR*
 				"FIREWORKS_BLUE_LARGE_SLOW",
 				"FIREWORKS_BLUE_SMALL_FAST" };
 
-			int iNumEffects = sizeof(szFireworkEffects) / sizeof(TCHAR*);
+			int iNumEffects = sizeof(szFireworkEffects) / sizeof(char*);
 			for (int i = 0; i < (iNumEffects < 3 ? iNumEffects : 3); i++)
 			{
 				kEffectNames.push_back(szFireworkEffects[kRand.get(iNumEffects)]);
@@ -18147,14 +18147,14 @@ void CvCity::getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kText
 	}
 }
 
-const TCHAR* CvCity::getCityBillboardProductionIcon() const
+const char* CvCity::getCityBillboardProductionIcon() const
 {
 	if (canBeSelected() && isProduction())
 	{
 		bst::optional<OrderData> nextOrder = getHeadOrder();
 		FAssert(nextOrder);
 
-		const TCHAR* szIcon = NULL;
+		const char* szIcon = NULL;
 		switch (nextOrder->eOrderType)
 		{
 		case ORDER_TRAIN:

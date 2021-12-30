@@ -240,11 +240,11 @@ public:
 	PropertyTypes getPropertySpawnProperty() const;
 	PromotionLineTypes getPromotionLineType() const;
 
-	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
-	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; }
-	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
-	const TCHAR* getButton() const;
-	const TCHAR* getMovie() const;
+	const char* getConstructSound() const			{ return m_szConstructSound; }
+	const char* getArtDefineTag() const				{ return m_szArtDefineTag; }
+	const char* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
+	const char* getButton() const;
+	const char* getMovie() const;
 	const CvArtInfoBuilding* getArtInfo() const;
 	const CvArtInfoMovie* getMovieInfo() const;
 

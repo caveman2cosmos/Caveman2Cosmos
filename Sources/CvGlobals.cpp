@@ -2370,7 +2370,7 @@ CvString& cvInternalGlobals::getFootstepAudioTags(int i) const
 	return m_paszFootstepAudioTags ? m_paszFootstepAudioTags[i] : *emptyString;
 }
 
-void cvInternalGlobals::setCurrentXMLFile(const TCHAR* szFileName)
+void cvInternalGlobals::setCurrentXMLFile(const char* szFileName)
 {
 	m_szCurrentXMLFile = szFileName;
 }

@@ -361,7 +361,7 @@ bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pGroup, int iFl
 
 int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack);
 
-bool isPickableName(const TCHAR* szName);
+bool isPickableName(const char* szName);
 
 DllExport int* shuffle(int iNum, CvRandom& rand);
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
