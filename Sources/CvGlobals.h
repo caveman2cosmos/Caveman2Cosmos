@@ -259,7 +259,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
-		foreach_(T type, vector)
+		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);

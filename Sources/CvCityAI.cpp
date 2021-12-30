@@ -23,6 +23,14 @@
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 
+
+#pragma warning disable 258
+#pragma warning disable 276
+#pragma warning disable 65
+#pragma warning disable 135
+#endif
+
+
 //	KOSHLING MOD - calculate all possible building focuses at once
 //	to avoid multiple looping - need to know how many options there
 //	are.  Note that I am also ASSUMING only one flag is passed at a
