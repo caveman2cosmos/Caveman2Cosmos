@@ -5,17 +5,18 @@
 #ifndef CIV4_CITY_H
 #define CIV4_CITY_H
 
-//#include "CvDLLEntity.h"
 #include "LinkedList.h"
+#include "CvDLLEntity.h"
+#include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
-#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
-class CvDLLEntity;
 class CvPlot;
 class CvPlotGroup;
+class CvUnit;
 class CvUnitSelectionCriteria;
 
 // BUG - start

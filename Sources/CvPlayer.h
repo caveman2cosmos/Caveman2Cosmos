@@ -5,10 +5,9 @@
 #ifndef CIV4_PLAYER_H
 #define CIV4_PLAYER_H
 
+#include "copy_iterator.h"
 #include "CvBuildLists.h"
 #include "CvCityAI.h"
-#include "CvPlotGroup.h"
-#include "LinkedList.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
@@ -18,6 +17,8 @@
 #include "CvTalkingHeadMessage.h"
 #include "CvUnitList.h"
 #include "CvUnitAI.h"
+#include "index_iterator_base.h"
+#include "LinkedList.h"
 
 class CvArea;
 class CvDiploParameters;

@@ -338,7 +338,7 @@ const std::string getModDir();
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
-#include "CvInfos.h"
+//#include "CvInfos.h"
 //#include "CvInfoWater.h"
 #include "CvViewport.h"
 #include "FProfiler.h"
