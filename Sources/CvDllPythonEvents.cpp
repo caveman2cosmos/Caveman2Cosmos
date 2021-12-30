@@ -1,10 +1,13 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvDllPythonEvents.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
+#include "CvTeamAI.h"
 #include "CvUnit.h"
 
 
