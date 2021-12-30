@@ -59,7 +59,7 @@
 #include <boost155/range/numeric.hpp>
 
 #ifdef __INTELLISENSE__
-#define foreach_(item, rng) item();
+#define foreach_(item, rng) item;
 #else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
@@ -78,7 +78,7 @@ using bst::bind;
 //
 // Boost Python
 //
-//#ifndef __INTELLISENSE__
+#ifndef __INTELLISENSE__
 #define BOOST_BIND_NO_PLACEHOLDERS // Disable the boost 1.32 placeholders, we won't be using them
 #include <boost/python/detail/wrap_python.hpp>
 #include <boost/python/list.hpp>
@@ -92,7 +92,7 @@ using bst::bind;
 #include <boost/python/to_python_converter.hpp>
 #include <boost/python/suite/indexing/container_utils.hpp>
 namespace python = boost::python;
-//#endif
+#endif
 
 //
 // WINDOWS

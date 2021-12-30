@@ -3,6 +3,7 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvDLLFAStarIFaceBase.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
