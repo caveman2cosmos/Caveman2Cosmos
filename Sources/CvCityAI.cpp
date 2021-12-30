@@ -10728,6 +10728,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 {
 
 	if (plotInfo == NULL) return;
+	if (pPlot == NULL) return;
 
 	plotInfo->yieldValue = 0;
 	plotInfo->currentBuild = NO_BUILD;
