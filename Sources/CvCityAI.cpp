@@ -10734,13 +10734,11 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	bool bWorked = false;
 	bool bHasBonusImprovement = false;
 	bool bEmphasizeIrrigation = false;
-	int plotValue = 0;
 	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
 
 	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
 	BonusTypes eNonObsoleteBonus = NO_BONUS;
 	int iBestValue = 0;
-	BuildTypes eBestBuild = NO_BUILD;
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
 	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
@@ -10779,8 +10777,8 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
-		eBestBuild = NO_BUILD;
-		plotValue = 0;
+		BuildTypes eBestBuild = NO_BUILD;
+		int plotValue = 0;
 		int iBestTempBuildValue = 0;
 
 		const ImprovementTypes ePotentialImprovement = (ImprovementTypes)iI;
