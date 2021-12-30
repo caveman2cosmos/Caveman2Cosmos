@@ -13,6 +13,7 @@
 #include "CvDate.h"
 #include "CvAllocator.h"
 
+class CvArtInfoBuilding;
 class CvCity;
 class CvPlot;
 class CvReplayMessage;
