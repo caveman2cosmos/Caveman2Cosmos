@@ -7408,7 +7408,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 	// By definition, global religion percent is 100, so we don't need a variable for it.
 	// Note: This detects whether the TEAM has the holy city.
 
-	for (iK = 0; iK < GC.getNumReligionInfos(); iK++)
+	for (int iK = 0; iK < GC.getNumReligionInfos(); iK++)
 	{
 		if (hasHolyCity((ReligionTypes)iK))
 		{
@@ -7442,7 +7442,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 
 	// Get the power history sums
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{

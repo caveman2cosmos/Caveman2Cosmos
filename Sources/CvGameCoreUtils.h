@@ -9,11 +9,9 @@
 #include "CvGlobals.h"
 
 class CvInfoBase;
-class CvInternalGlobals;
 class CvCity;
 //class CvMap;
 class CvPathGeneratorBase;
-class CvPlot;
 class CvSelectionGroup;
 class CvUnit;
 class CvRandom;

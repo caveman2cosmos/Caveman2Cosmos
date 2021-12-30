@@ -10,7 +10,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
-#include "CvGame.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"

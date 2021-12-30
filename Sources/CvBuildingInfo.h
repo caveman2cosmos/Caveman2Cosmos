@@ -11,18 +11,17 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#include "CvInfoUtil.h"
-#include "CvPython.h"
+#include "CvInfos.h"
+//#include "CvInfoUtil.h"
+//#include "CvPython.h"
 #include "IDValuemap.h"
 
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
 class CvHotkeyInfo;
-class CvProperties;
-class CvPropertyManipulators;
 class CvXMLLoadUtility;
-//struct CvInfoUtil;
+struct CvInfoUtil;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
