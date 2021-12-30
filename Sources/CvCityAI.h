@@ -35,9 +35,6 @@
 
 #define BUILDINGFOCUS_CONSIDER_ANY			(1 << 20)
 
-
-#define foreach_		 BOOST_155_FOREACH
-
 class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
 class CvArea;
 class CvUnitSelectionCriteria;

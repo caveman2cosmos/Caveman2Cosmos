@@ -8,6 +8,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvInfoWater.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
 #include "CvXMLLoadUtilitySetMod.h"

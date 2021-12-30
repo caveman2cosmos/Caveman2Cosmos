@@ -8,15 +8,18 @@
 #include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
 #include "CvAllocator.h"
 
+class CvArtInfoBuilding;
 class CvCity;
 class CvPlot;
 class CvReplayMessage;
 class CvReplayInfo;
 class CvUnit;
+class CvUnitCombatInfo;
 
 //	Max number of barbarian units in existence for a spawn of a new one to be allowed
 //	This allows a 'space' for 'real' barbarians to be built before we use up the entire

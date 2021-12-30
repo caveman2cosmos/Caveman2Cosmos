@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 
 CvBonusInfo* SCvInternalGlobals::getBonusInfoByType(const std::string& szType)
 {

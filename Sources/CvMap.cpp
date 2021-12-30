@@ -563,13 +563,10 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 
 				if (pLoopPlot->area() == pArea)
 				{
-					//iDist = GC.getMap().calculatePathDistance(pStartingPlot, pLoopPlot);
 					const int iDist = stepDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
 					if (iDist != -1)
 					{
-					    //int iCrowDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					    //iDist = std::min(iDist,  iCrowDistance * 2);
 						if (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist())
 						{
 							pLoopPlot->setMinOriginalStartDist(iDist);
@@ -763,7 +760,7 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 				if (
 					(!bSameArea || pLoopCity->area() == plot(iX, iY)->area() || bCoastalOnly && pLoopCity->waterArea() == plot(iX, iY)->area())
 				&&
-					(!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+					(!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(getWorldSize()).getOceanMinAreaSize()))
 				&&
 					(eTeamAtWarWith == NO_TEAM || atWar(player.getTeam(), eTeamAtWarWith))
 				&&
@@ -1061,7 +1058,7 @@ int CvMap::getNumAreas() const
 
 int CvMap::getNumLandAreas() const
 {
-	return algo::count_if(GC.getMap().areas(), !CvArea::fn::isWater());
+	return algo::count_if(areas(), !bind(CvArea::isWater, _1));
 }
 
 
@@ -1129,7 +1126,7 @@ int CvMap::calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, con
 
 	// Super Forts begin *canal* *choke*
 	// 1 must be added because 0 is already being used as the default value for iInfo in GeneratePath()
-	const int iInvalidPlot = (pInvalidPlot == NULL) ? 0 : GC.getMap().plotNum(pInvalidPlot->getX(), pInvalidPlot->getY()) + 1;
+	const int iInvalidPlot = (pInvalidPlot == NULL) ? 0 : plotNum(pInvalidPlot->getX(), pInvalidPlot->getY()) + 1;
 
 	if (gDLL->getFAStarIFace()->GeneratePath(&GC.getStepFinder(), pSource->getX(), pSource->getY(), pDest->getX(), pDest->getY(), false, iInvalidPlot, true))
 	// Super Forts end
@@ -1179,15 +1176,12 @@ void CvMap::invalidateIsActivePlayerNoDangerCache()
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* pLoopPlot = plotByIndex(iI);
 
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->setIsActivePlayerNoDangerCache(false);
-			pLoopPlot->setIsActivePlayerHasDangerCache(false);
-			pLoopPlot->CachePathValidityResult(NULL,false,false);
-			pLoopPlot->CachePathValidityResult(NULL,true,false);
-		}
+		pLoopPlot->setIsActivePlayerNoDangerCache(false);
+		pLoopPlot->setIsActivePlayerHasDangerCache(false);
+		pLoopPlot->CachePathValidityResult(NULL,false,false);
+		pLoopPlot->CachePathValidityResult(NULL,true,false);
 	}
 }
 
@@ -1198,12 +1192,7 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->setIsTeamBorderCache(eTeam, false);
-		}
+		plotByIndex(iI)->setIsTeamBorderCache(eTeam, false);
 	}
 }
 /************************************************************************************************/
@@ -1309,7 +1298,7 @@ void CvMap::beforeSwitch()
 	m_bSwitchInProgress = true;
 
 #ifdef THE_GREAT_WALL
-	if (GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
+	if (getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
 	{
 		GC.getGame().processGreatWall(false);
 	}
@@ -1439,7 +1428,7 @@ void CvMap::afterSwitch()
 	GC.reprocessSigns();
 
 #ifdef THE_GREAT_WALL
-	if (GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
+	if (getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
 	{
 		GC.getGame().processGreatWall(true);
 	}
@@ -1451,7 +1440,7 @@ void CvMap::afterSwitch()
 	m_bSwitchInProgress = false;
 }
 
-const std::vector<CvViewport*> CvMap::getViewports() const
+const std::vector<CvViewport*>& CvMap::getViewports() const
 {
 	return m_viewports;
 }

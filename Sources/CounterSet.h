@@ -12,7 +12,7 @@ class CounterSet
 
 	void assign(const int ID, const uint16_t iValue);
 
-	uint16_t safeCoercion(const int iValue);
+	static uint16_t safeCoercion(const int iValue);
 
   public:
 	CounterSet();
