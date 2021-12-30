@@ -675,7 +675,7 @@ public:
 	CvString& getFootstepAudioTags(int i) const;
 
 	const CvString& getCurrentXMLFile() const;
-	void setCurrentXMLFile(const TCHAR* szFileName);
+	void setCurrentXMLFile(const char* szFileName);
 
 	//
 	///////////////// BEGIN global defines

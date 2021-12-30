@@ -78,7 +78,7 @@ using bst::bind;
 //
 // Boost Python
 //
-#ifndef __INTELLISENSE__
+//#ifndef __INTELLISENSE__
 #define BOOST_BIND_NO_PLACEHOLDERS // Disable the boost 1.32 placeholders, we won't be using them
 #include <boost/python/detail/wrap_python.hpp>
 #include <boost/python/list.hpp>
@@ -92,7 +92,7 @@ using bst::bind;
 #include <boost/python/to_python_converter.hpp>
 #include <boost/python/suite/indexing/container_utils.hpp>
 namespace python = boost::python;
-#endif
+//#endif
 
 //
 // WINDOWS

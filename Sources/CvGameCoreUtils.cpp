@@ -3934,7 +3934,7 @@ int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack)
 }
 
 
-bool isPickableName(const TCHAR* szName)
+bool isPickableName(const char* szName)
 {
 	return !szName || _tcsicmp(&szName[_tcslen(szName)-6], "NOPICK");
 }

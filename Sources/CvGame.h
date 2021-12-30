@@ -544,7 +544,7 @@ public:
 	void castVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes ePlayerVote);
 
 	DllExport const CvWString & getName();
-	void setName(const TCHAR* szName);
+	void setName(const char* szName);
 
 	// Script data needs to be a narrow string for pickling in Python
 	std::string getScriptData() const;
