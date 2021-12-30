@@ -27,6 +27,9 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#ifdef USE_OLD_PATH_GENERATOR
+#include "FAStarNode.h"
+#endif
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;

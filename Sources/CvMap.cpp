@@ -29,6 +29,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "FAStarNode.h"
 #include <direct.h> // for getcwd()
 #include <stdlib.h> // for MAX_PATH
 

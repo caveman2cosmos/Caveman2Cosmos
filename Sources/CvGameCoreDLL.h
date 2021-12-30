@@ -59,7 +59,7 @@
 #include <boost155/range/numeric.hpp>
 
 #ifdef __INTELLISENSE__
-#define foreach_(item, rng) item;
+#define foreach_(item, rng) for (item; ; )
 #else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
@@ -330,9 +330,9 @@ const std::string getModDir();
 #include "CvStructs.h"
 
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvDLLEngineIFaceBase.h"
+//#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
-#include "CvDLLInterfaceIFaceBase.h"
+//#include "CvDLLInterfaceIFaceBase.h"
 
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"

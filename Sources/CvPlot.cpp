@@ -27,6 +27,7 @@
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "FAStarNode.h"
 
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
@@ -4184,17 +4185,11 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
 	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
 	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
-	FAStarNode* pNode;
-
-	int iPathDistance = -1;
 	gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pTargetPlot->getX(), pTargetPlot->getY(), false, 0, true);
 
-	pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+	const FAStarNode* pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
 
-	if (pNode != NULL)
-	{
-		iPathDistance = pNode->m_iData1;
-	}
+	const int iPathDistance = pNode ? pNode->m_iData1 : -1;
 
 	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
 
