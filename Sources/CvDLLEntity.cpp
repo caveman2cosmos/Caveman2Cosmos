@@ -2,6 +2,8 @@
 #include "CvCity.h"
 #include "CvDLLEntity.h"
 #include "CvDLLEntityIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
 #include "CvUnit.h"
 
 static int g_numEntitiesCreated = 0;
@@ -58,7 +60,7 @@ void CvDLLEntity::destroyEntity()
 
 bool CvDLLEntity::IsSelected() const
 {
-	return (!CvUnit::isRealEntity(getEntity())) ? false : gDLL->getEntityIFace()->IsSelected(getEntity());
+	return CvUnit::isRealEntity(getEntity()) && gDLL->getEntityIFace()->IsSelected(getEntity());
 }
 
 void CvDLLEntity::PlayAnimation(AnimationTypes eAnim, float fSpeed, bool bQueue, int iLayer, float fStartPct, float fEndPct)

@@ -24,8 +24,11 @@
 #include "CvSelectionGroup.h"
 #include "CvUnit.h"
 #include "CvViewport.h"
+#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include <direct.h> // for getcwd()
 #include <stdlib.h> // for MAX_PATH
 

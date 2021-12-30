@@ -1,9 +1,7 @@
-//
-// Python wrapper class for CvGame
-//
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
@@ -13,6 +11,10 @@
 #include "CyPlot.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
+
+//
+// Python wrapper class for CvGame
+//
 
 CyGame::CyGame() : m_pGame(GC.getGame()) {}
 

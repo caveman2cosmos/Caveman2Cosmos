@@ -26,7 +26,7 @@
 #include "CvDLLFlagEntityIFaceBase.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 

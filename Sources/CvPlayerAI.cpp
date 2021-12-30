@@ -200,8 +200,6 @@ void CvPlayerAI::AI_uninit()
 
 void CvPlayerAI::AI_reset(bool bConstructor)
 {
-	int iI;
-
 	AI_uninit();
 
 	m_iPeaceWeight = 0;

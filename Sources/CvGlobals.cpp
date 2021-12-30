@@ -3,9 +3,9 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
-#include "CvDLLFAStarIFaceBase.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvInitCore.h"
@@ -19,9 +19,11 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
-#include "CvImprovementInfo.h"
 #include <time.h>
 #include <sstream>
 

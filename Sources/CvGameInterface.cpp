@@ -5,6 +5,7 @@
 #include "CvGame.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
@@ -15,8 +16,10 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 void CvGame::updateColoredPlots()
 {

@@ -313,7 +313,6 @@ const std::string getModDir();
 //
 // Our code
 //
-#include "index_iterator_base.h"
 #include "logging.h"
 #include "algorithm2.h"
 #include "scoring.h"

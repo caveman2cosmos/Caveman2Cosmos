@@ -17,6 +17,9 @@
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
 

@@ -6,11 +6,9 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-//#include <bitset>
 #include "copy_iterator.h"
 #include "CvGameObject.h"
 #include "CvProperties.h"
-//#include "CvUnit.h"
 #include "idinfo_iterator_base.h"
 
 #include "CvPlotPaging.h"

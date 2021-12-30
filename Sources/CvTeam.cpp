@@ -9,7 +9,6 @@
 #include "CvDiploParameters.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
-#include "CvGameObject.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvInfos.h"
@@ -21,6 +20,9 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 // Public Functions...
 #pragma warning( disable : 4355 )
