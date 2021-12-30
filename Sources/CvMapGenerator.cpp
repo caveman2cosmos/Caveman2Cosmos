@@ -3,6 +3,8 @@
 #include "CvFractal.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
+#include "CvInfos.h"
 #include "CvMap.h"
 #include "CvMapGenerator.h"
 #include "CvPlot.h"

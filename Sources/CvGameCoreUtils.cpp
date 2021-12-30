@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
@@ -3956,7 +3957,7 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 		piShuffle[iI] = iI;
 	}
 
-	for (iI = 0; iI < iNum; iI++)
+	for (int iI = 0; iI < iNum; iI++)
 	{
 		const int iJ = iI + rand.get(iNum - iI, NULL);
 

@@ -37,6 +37,7 @@ DECLARE_FLAGS(ProductionCalc::flags);
 
 
 class CvCity : public CvDLLEntity
+	, bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 public:
 	CvCity();
@@ -53,8 +54,8 @@ public:
 
 private:
 	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvCity(const CvCity&);
-	CvCity& operator=(const CvCity&);
+	//CvCity(const CvCity&);
+	//CvCity& operator=(const CvCity&);
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
 protected:
