@@ -8397,6 +8397,8 @@ void CvCityAI::AI_updateBestBuild()
 		ratios.WeightFood(2);
 	}
 
+	SendLog("ratios", CvWString::format(L"%lld %lld %lld", ratios.food_ratio, ratios.production_ratio, ratios.commerce_ratio));
+
 	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
 
 	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++) // start at 1, 0 is the plot of the city
@@ -8407,14 +8409,13 @@ void CvCityAI::AI_updateBestBuild()
 		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
 		AI_findBestImprovementForPlot(loopedPlot, &optimalYieldList[iPlotCounter], ratios);
-	}
-
-	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
-	{
-		if (((m_aiBestBuildValue[iPlotCounter] * 130) / 100) <= optimalYieldList[iPlotCounter].yieldValue)
+		if (optimalYieldList[iPlotCounter].currentBuild != NO_BUILD)
 		{
-			m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
-			m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
+			if (m_aiBestBuildValue[iPlotCounter] <= optimalYieldList[iPlotCounter].yieldValue)
+			{
+				m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
+				m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
+			}
 		}
 	}
 }
@@ -10779,14 +10780,12 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	}
 
 
-	if (!bHasBonusImprovement)
-	{
-		bEmphasizeIrrigation = AI_checkIrrigationSpread(pPlot);
-	}
-
-
+	//if (!bHasBonusImprovement)
+	//{
+	//	bEmphasizeIrrigation = AI_checkIrrigationSpread(pPlot);
+	//}
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
-	int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
+	// int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
@@ -10809,7 +10808,8 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			FAssert(GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement);
+			const CvBuildInfo build = GC.getBuildInfo(eBuildType);
+			FAssert(build.getImprovement() == ePotentialImprovement);
 
 			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
 			{
@@ -10859,13 +10859,18 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 			if (potentialImprovementInfo.isImprovementBonusMakesValid(eNonObsoleteBonus))
 			{
 				iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-				iValue += 10000;
+				iValue += 20000;
 			}
+		}
+		else
+		{
+			continue;
 		}
 
 		int finalYields[NUM_YIELD_TYPES];
 		for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
 		{
+			finalYields[yieldCounter] = 0;
 			finalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
 			finalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
 		}
@@ -13814,14 +13819,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						}
 #endif // ONGOING_TRAINING
 					}
-					}
+				}
 
 				iValue += kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8);
 
-					iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
+				iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, false);
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, true);
-				}
+			}
 			{
 				PROFILE("CalculateAllBuildingValues.Maintenance");
 
@@ -14509,9 +14514,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				valuesCache->AccumulateToAny(kBuilding.getAIWeight(), false);
 				// Flavor calculation is non-linear and cannot be calculated in the caching, it is calculated post-cache retrieval.
 			}
-			}
 		}
 	}
+}
 
 int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const
 {
