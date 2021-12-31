@@ -12,11 +12,11 @@
 //-----------------------------------------------------------------------------
 //
 
+#include "CvArea.h"
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
 #include "CvUnitAI.h"
 
-class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
@@ -75,7 +75,7 @@ private:
 public:
 	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
-	const std::vector<CvViewport*> getViewports() const;
+	const std::vector<CvViewport*>& getViewports() const;
 
 	const char* getMapScript() const;
 

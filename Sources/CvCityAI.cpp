@@ -23,12 +23,6 @@
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 
-#ifdef __INTELLISENSE__
-#pragma warning disable 258
-#pragma warning disable 276
-#pragma warning disable 65
-#pragma warning disable 135
-#endif
 
 
 //	KOSHLING MOD - calculate all possible building focuses at once
@@ -210,10 +204,10 @@ void CvCityAI::AI_reset()
 void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	// CvWString aiType = "CvCityAI";
+	CvWString aiType = "CvCityAI";
 
 
-	// logAIJson(aiType, this->getName(), function, message);
+	logAIJson(aiType, this->getName(), function, message);
 
 }
 
@@ -8399,6 +8393,8 @@ void CvCityAI::AI_updateBestBuild()
 
 	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
 
+
+
 	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++) // start at 1, 0 is the plot of the city
 	{
 		optimalYieldList[iPlotCounter].index = iPlotCounter;
@@ -8407,15 +8403,9 @@ void CvCityAI::AI_updateBestBuild()
 		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
 		AI_findBestImprovementForPlot(loopedPlot, &optimalYieldList[iPlotCounter], ratios);
-	}
 
-	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
-	{
-		if (((m_aiBestBuildValue[iPlotCounter] * 130) / 100) <= optimalYieldList[iPlotCounter].yieldValue)
-		{
-			m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
-			m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
-		}
+		m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
+		m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
 	}
 }
 
@@ -10738,6 +10728,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 {
 
 	if (plotInfo == NULL) return;
+	if (pPlot == NULL) return;
 
 	plotInfo->yieldValue = 0;
 	plotInfo->currentBuild = NO_BUILD;
@@ -10749,7 +10740,6 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
 	BonusTypes eNonObsoleteBonus = NO_BONUS;
 	int iBestValue = 0;
-	BuildTypes eBestBuild = NO_BUILD;
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
 	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
@@ -10779,29 +10769,28 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	}
 
 
-	if (!bHasBonusImprovement)
-	{
-		bEmphasizeIrrigation = AI_checkIrrigationSpread(pPlot);
-	}
-
-
+	//if (!bHasBonusImprovement)
+	//{
+	//	bEmphasizeIrrigation = AI_checkIrrigationSpread(pPlot);
+	//}
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
-	int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
+	// int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
-		int iValue = 0;
+		BuildTypes eBestBuild = NO_BUILD;
+		int plotValue = 0;
 		int iBestTempBuildValue = 0;
-
 
 		const ImprovementTypes ePotentialImprovement = (ImprovementTypes)iI;
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
+		const CvTerrainInfo terrain = GC.getTerrainInfo(pPlot->getTerrainType());
 
 		// if improvement is NO_IMPROVEMENT, do not evaluate
 		if (ePotentialImprovement == NO_IMPROVEMENT) continue;
 
 		// check if improvement is a fort or watchtower, then its a no.
-		if (potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() != 0) continue;
+		if (potentialImprovementInfo.isActsAsCity() || potentialImprovementInfo.getVisibilityChange() > 0) continue;
 
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
@@ -10809,8 +10798,6 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			FAssert(GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement);
-
 			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
 			{
 				int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
@@ -10853,27 +10840,32 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		if (!bValid) continue;
 
 		// if plot has a bonus
-		if (eNonObsoleteBonus != NO_BONUS)
-		{
-			// if plot is not improved with improvement that gives bonus
-			if (potentialImprovementInfo.isImprovementBonusMakesValid(eNonObsoleteBonus))
-			{
-				iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-				iValue += 10000;
-			}
-		}
+
 
 		int finalYields[NUM_YIELD_TYPES];
 		for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
 		{
+			finalYields[yieldCounter] = 0;
 			finalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
 			finalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
+			plotInfo->yields[yieldCounter] = finalYields[yieldCounter];
 		}
-		iValue = iValue + ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
+		plotValue = plotValue + ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
 
-		if (iValue >= plotInfo->yieldValue)
+		if (eNonObsoleteBonus != NO_BONUS)
 		{
-			plotInfo->yieldValue = iValue;
+			// if plot is not improved with improvement that gives bonus
+			if (potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
+			{
+				plotValue = plotValue * 3;
+			}
+			else {
+				plotValue = plotValue / 3;
+			}
+		}
+		if (plotValue >= plotInfo->yieldValue)
+		{
+			plotInfo->yieldValue = plotValue;
 			plotInfo->currentBuild = eBestBuild;
 		}
 
@@ -13814,14 +13806,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						}
 #endif // ONGOING_TRAINING
 					}
-					}
+				}
 
 				iValue += kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8);
 
-					iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
+				iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, false);
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, true);
-				}
+			}
 			{
 				PROFILE("CalculateAllBuildingValues.Maintenance");
 
@@ -14509,9 +14501,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				valuesCache->AccumulateToAny(kBuilding.getAIWeight(), false);
 				// Flavor calculation is non-linear and cannot be calculated in the caching, it is calculated post-cache retrieval.
 			}
-			}
 		}
 	}
+}
 
 int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const
 {

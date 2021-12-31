@@ -9,12 +9,11 @@
 //#include <bitset>
 #include "copy_iterator.h"
 #include "CvGameObject.h"
-#include "CvUnit.h"
+#include "CvProperties.h"
+//#include "CvUnit.h"
 #include "idinfo_iterator_base.h"
 
 #include "CvPlotPaging.h"
-
-class CvSelectionGroup;
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -26,11 +25,13 @@ class CvRiver;
 class CvCity;
 class CvPlotGroup;
 class CvFeature;
+class CvSelectionGroup;
 class CvUnit;
 class CvSymbol;
 class CvFlagEntity;
 class CvPathGeneratorPlotInfo;
 class CvPathPlotInfoStore;
+enum UnitValueFlags;
 
 typedef bool (*ConstPlotUnitFunc)( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
 typedef bool (*PlotUnitFunc)(CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);

@@ -5,17 +5,18 @@
 #ifndef CIV4_CITY_H
 #define CIV4_CITY_H
 
-//#include "CvDLLEntity.h"
 #include "LinkedList.h"
+#include "CvDLLEntity.h"
+#include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
-#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
-class CvDLLEntity;
 class CvPlot;
 class CvPlotGroup;
+class CvUnit;
 class CvUnitSelectionCriteria;
 
 // BUG - start
@@ -37,6 +38,7 @@ DECLARE_FLAGS(ProductionCalc::flags);
 
 
 class CvCity : public CvDLLEntity
+	, bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 public:
 	CvCity();
@@ -53,8 +55,8 @@ public:
 
 private:
 	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvCity(const CvCity&);
-	CvCity& operator=(const CvCity&);
+	//CvCity(const CvCity&);
+	//CvCity& operator=(const CvCity&);
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
 protected:
