@@ -10734,8 +10734,6 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	plotInfo->currentBuild = NO_BUILD;
 	bool bWorked = false;
 	bool bHasBonusImprovement = false;
-	bool bEmphasizeIrrigation = false;
-	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
 
 	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
 	BonusTypes eNonObsoleteBonus = NO_BONUS;
@@ -10767,6 +10765,8 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		plotInfo->currentBuild = eForcedBuild;
 		return;
 	}
+	bool bEmphasizeIrrigation = false;
+	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
 
 
 	//if (!bHasBonusImprovement)
@@ -10778,16 +10778,8 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
-		BuildTypes eBestBuild = NO_BUILD;
-		int plotValue = 0;
-		int iBestTempBuildValue = 0;
-
-		const ImprovementTypes ePotentialImprovement = (ImprovementTypes)iI;
+		const ImprovementTypes ePotentialImprovement = static_cast<ImprovementTypes>(iI);
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
-		const CvTerrainInfo terrain = GC.getTerrainInfo(pPlot->getTerrainType());
-
-		// if improvement is NO_IMPROVEMENT, do not evaluate
-		if (ePotentialImprovement == NO_IMPROVEMENT) continue;
 
 		// check if improvement is a fort or watchtower, then its a no.
 		if (potentialImprovementInfo.isActsAsCity() || potentialImprovementInfo.getVisibilityChange() > 0) continue;
@@ -10795,17 +10787,19 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
 
+		BuildTypes eBestBuild = NO_BUILD;
+		int iBestTempBuildValue = 0;
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
 			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
 			{
-				int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
+				const int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
 
 				if (iSpeedValue > iBestTempBuildValue)
 				{
 					iBestTempBuildValue = iSpeedValue;
-					eBestBuild = BuildTypes(eBuildType);
+					eBestBuild = eBuildType;
 				}
 			}
 		}
@@ -10850,7 +10844,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 			finalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
 			plotInfo->yields[yieldCounter] = finalYields[yieldCounter];
 		}
-		plotValue = plotValue + ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
+		int plotValue = ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
 
 		if (eNonObsoleteBonus != NO_BONUS)
 		{
