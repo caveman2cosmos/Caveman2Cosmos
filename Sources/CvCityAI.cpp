@@ -10726,25 +10726,23 @@ bool CvCityAI::AI_checkIrrigationSpread(const CvPlot* pPlot) const
 
 void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plotInfo, OutputRatios& ratios) const
 {
-
 	if (plotInfo == NULL) return;
 	if (pPlot == NULL) return;
 
 	plotInfo->yieldValue = 0;
 	plotInfo->currentBuild = NO_BUILD;
-	bool bWorked = false;
-	bool bHasBonusImprovement = false;
 
-	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
-	BonusTypes eNonObsoleteBonus = NO_BONUS;
-	int iBestValue = 0;
+	//const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
+	//int iBestValue = 0;
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
 	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
 
 	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 
-
+	BonusTypes eNonObsoleteBonus = NO_BONUS;
+	bool bHasBonusImprovement = false;
+	bool bWorked = false;
 	pPlot->getVisibleBonusState(eNonObsoleteBonus, bHasBonusImprovement, bWorked);
 
 	if (bHasBonusImprovement)
@@ -10765,18 +10763,15 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		plotInfo->currentBuild = eForcedBuild;
 		return;
 	}
-	bool bEmphasizeIrrigation = false;
-	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
+	const bool bLeaveForest = player.isOption(PLAYEROPTION_LEAVE_FORESTS);
 
+	//bool bEmphasizeIrrigation = !bHasBonusImprovement && AI_checkIrrigationSpread(pPlot);
 
-	//if (!bHasBonusImprovement)
-	//{
-	//	bEmphasizeIrrigation = AI_checkIrrigationSpread(pPlot);
-	//}
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
 	// int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	for (int iI = GC.getNumImprovementInfos() - 1; iI > -1; iI--)
 	{
 		const ImprovementTypes ePotentialImprovement = static_cast<ImprovementTypes>(iI);
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
@@ -10792,7 +10787,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
+			if (player.canBuild(pPlot, eBuildType, false, false, false))
 			{
 				const int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
 
@@ -10824,7 +10819,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 				{
 					bValid = false;
 				}
-				else if (GET_PLAYER(getOwner()).getFeatureHappiness(eFeature) > 0)
+				else if (player.getFeatureHappiness(eFeature) > 0)
 				{
 					bValid = false;
 				}
