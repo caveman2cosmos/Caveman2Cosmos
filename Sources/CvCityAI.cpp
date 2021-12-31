@@ -8386,15 +8386,7 @@ void CvCityAI::AI_updateBestBuild()
 
 	ratios.WeightOutputs(GC.getAI_BASE_FOOD_WEIGHT(), GC.getAI_BASE_PRODUCTION_WEIGHT(), GC.getAI_BASE_COMMERCE_WEIGHT());
 
-	if (getPopulation() < (GET_PLAYER(getOwner()).getCurrentEra() + 1) * 4)
-	{
-		// if city is smaller than 4 times the current era double food value
-		ratios.WeightFood(2);
-	}
-
 	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
-
-
 
 	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++) // start at 1, 0 is the plot of the city
 	{
