@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
+#include "CvEnums.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -36,6 +37,7 @@
 
 class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
 class CvArea;
+class CvUnitSelectionCriteria;
 
 //	Koshling - add caching to yield calculations
 #ifdef YIELD_VALUE_CACHING
@@ -327,10 +329,8 @@ protected:
 
 	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const;
 
-	void AI_getCurrentPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
-	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
-	                         iDesiredFoodChange) const;
-	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
+	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList) const;
+	void AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plotInfo, OutputRatios& ratios) const;
 	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
 	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
 
@@ -408,7 +408,7 @@ private:
 	bool AI_establishSeeInvisibleCoverage();
 	bool AI_establishInvestigatorCoverage();
 	bool AI_isNegativePropertyUnit(UnitTypes eUnit) const;
-	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria) const;
 
 	//	The cache itself
 	BuildingValueCache* cachedBuildingValues;

@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
@@ -12,8 +13,9 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
-#include "CheckSum.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CheckSum.h"
+#include "FAStarNode.h"
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
 #define PATH_RIVER_WEIGHT										(100)
@@ -2456,10 +2458,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
-				}
 			}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
@@ -3120,10 +3118,6 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
-				}
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 				}
 			}
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
@@ -3942,7 +3936,7 @@ int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack)
 }
 
 
-bool isPickableName(const TCHAR* szName)
+bool isPickableName(const char* szName)
 {
 	return !szName || _tcsicmp(&szName[_tcslen(szName)-6], "NOPICK");
 }
@@ -3964,7 +3958,7 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 		piShuffle[iI] = iI;
 	}
 
-	for (iI = 0; iI < iNum; iI++)
+	for (int iI = 0; iI < iNum; iI++)
 	{
 		const int iJ = iI + rand.get(iNum - iI, NULL);
 
@@ -4479,7 +4473,7 @@ void CvChecksum::add(uint8_t b)
 #include "CyArgsList.h"
 
 void AddDLLMessage(
-	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound,
+	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound,
 	InterfaceMessageTypes eType, LPCSTR pszIcon, ColorTypes eFlashColor,
 	int iFlashX, int iFlashY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
 {

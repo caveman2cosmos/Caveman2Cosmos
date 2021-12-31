@@ -2,8 +2,10 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvInitCore.h"
@@ -17,9 +19,11 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
-#include "CvImprovementInfo.h"
 #include <time.h>
 #include <sstream>
 
@@ -117,13 +121,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_statsReporter(NULL)
 	, m_diplomacyScreen(NULL)
 	, m_mpDiplomacyScreen(NULL)
-	//, m_pathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_interfacePathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_stepFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_routeFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_borderFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_areaFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_plotGroupFinders(bst::array<FAStar*, NUM_MAPS>())
 	, m_aiPlotDirectionX(NULL)
 	, m_aiPlotDirectionY(NULL)
 	, m_aiPlotCardinalDirectionX(NULL)
@@ -2376,7 +2373,7 @@ CvString& cvInternalGlobals::getFootstepAudioTags(int i) const
 	return m_paszFootstepAudioTags ? m_paszFootstepAudioTags[i] : *emptyString;
 }
 
-void cvInternalGlobals::setCurrentXMLFile(const TCHAR* szFileName)
+void cvInternalGlobals::setCurrentXMLFile(const char* szFileName)
 {
 	m_szCurrentXMLFile = szFileName;
 }

@@ -109,7 +109,7 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -1735,5 +1735,17 @@
 	<Define>
 		<DefineName>ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_FOOD_WEIGHT</DefineName>
+		<iDefineIntVal>16</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_PRODUCTION_WEIGHT</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_COMMERCE_WEIGHT</DefineName>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 </Civ4Defines>

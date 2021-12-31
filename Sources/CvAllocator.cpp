@@ -130,7 +130,7 @@ void CvFreeArray(void* p)
 	if (gDLL)
 	{
 #ifdef _DEBUG
-		memset(p, 0xFA, gDLL->memSize(p));
+		// memset(p, 0xFA, gDLL->memSize(p));
 #endif
 		gDLL->delMemArray(p, __FILE__, __LINE__);
 	}

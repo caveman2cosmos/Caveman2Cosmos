@@ -161,7 +161,6 @@ inline void CLinkList<tVARTYPE>::insertAtBeginning(const tVARTYPE& val)
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
 {
-
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
 	CLLNode<tVARTYPE>* pNode = new CLLNode<tVARTYPE>(val);
@@ -186,7 +185,6 @@ inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
 	if ((pThisNode == NULL) || (pThisNode->m_pPrev == NULL))
@@ -210,7 +208,6 @@ inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVART
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
 	if ((pThisNode == NULL) || (pThisNode->m_pNext == NULL))
@@ -224,7 +221,7 @@ inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTY
 	pThisNode->m_pNext->m_pPrev = pNode;
 	pNode->m_pNext              = pThisNode->m_pNext;
 	pThisNode->m_pNext          = pNode;
-	pNode->m_pPrev			        = pThisNode;
+	pNode->m_pPrev			    = pThisNode;
 
 	m_iLength++;
 }

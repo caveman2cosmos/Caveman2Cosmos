@@ -3,12 +3,12 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
-#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPathGenerator.h"
@@ -20,7 +20,11 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnitAI.h"
+#include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
+#ifdef USE_OLD_PATH_GENERATOR
+#include "FAStarNode.h"
+#endif
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet* CvUnitAI::m_cachedMissionaryPlotset = NULL;
@@ -293,13 +297,14 @@ bool CvUnitAI::AI_update()
 			{
 				std::vector<CvUnit*> aCargoUnits;
 				getCargoUnits(aCargoUnits);
-				if (aCargoUnits.size() > 0)
+				if (!aCargoUnits.empty())
 				{
 					validateCargoUnits();
 				}
-				for (uint i = 0; i < aCargoUnits.size() && isAutomated(); i++)
+				foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 				{
-					CvUnit* pCargoUnit = aCargoUnits[i];
+					FAssert(isAutomated())
+
 					if (pCargoUnit->getDomainType() == DOMAIN_AIR && pCargoUnit->canMove())
 					{
 						pCargoUnit->getGroup()->setAutomateType(AUTOMATE_EXPLORE);
@@ -21484,21 +21489,19 @@ bool CvUnitAI::AI_carrierSeaTransport()
 {
 	PROFILE_FUNC();
 
-	const CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
-	int iValue;
 
 	int iMaxAirRange = 0;
 
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	if (aCargoUnits.size() > 0)
+	if (!aCargoUnits.empty())
 	{
 		validateCargoUnits();
 	}
-	for (uint32_t i = 0; i < aCargoUnits.size(); i++)
+	foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 	{
-		iMaxAirRange = std::max(iMaxAirRange, aCargoUnits[i]->airRange());
+		iMaxAirRange = std::max(iMaxAirRange, pCargoUnit->airRange());
 	}
 
 	if (iMaxAirRange == 0)
@@ -21510,11 +21513,6 @@ bool CvUnitAI::AI_carrierSeaTransport()
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestCarrierPlot = NULL;
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  02/22/10								jdog5000	  */
-	/*																							  */
-	/* Naval AI, War tactics, Efficiency															*/
-	/************************************************************************************************/
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
@@ -21527,7 +21525,7 @@ bool CvUnitAI::AI_carrierSeaTransport()
 			{
 				if (!pLoopPlot->isVisible(getTeam(), false) || !pLoopPlot->isVisibleEnemyUnit(this))
 				{
-					iValue = 0;
+					int iValue = 0;
 
 					foreach_(const CvPlot * pLoopPlotAir, pLoopPlot->rect(iMaxAirRange, iMaxAirRange))
 					{
@@ -21575,7 +21573,7 @@ bool CvUnitAI::AI_carrierSeaTransport()
 
 						if (iValue > iBestValue)
 						{
-							bool bStealth = (getInvisibleType() != NO_INVISIBLE);
+							const bool bStealth = (getInvisibleType() != NO_INVISIBLE);
 							if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_CARRIER, getGroup(), bStealth ? 5 : 3) <= (bStealth ? 0 : 3))
 							{
 								if (generatePath(pLoopPlot, 0, true, &iPathTurns))
@@ -21584,7 +21582,7 @@ bool CvUnitAI::AI_carrierSeaTransport()
 
 									if (iValue > iBestValue)
 									{
-										endTurnPlot = getPathEndTurnPlot();
+										const CvPlot* endTurnPlot = getPathEndTurnPlot();
 
 										if (endTurnPlot == pLoopPlot || !exposedToDanger(endTurnPlot, 70))
 										{
@@ -21601,9 +21599,6 @@ bool CvUnitAI::AI_carrierSeaTransport()
 			}
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if ((pBestPlot != NULL) && (pBestCarrierPlot != NULL))
 	{

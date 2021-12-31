@@ -7,11 +7,11 @@
 
 #include "CvDLLEntity.h"
 #include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvUnitComponents.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class cvInternalGlobals;
 class CvArea;
 class CvCity;
 class CvPlot;
@@ -3178,9 +3178,5 @@ public:
 
 typedef std::vector<CvUnit*> UnitVector;
 typedef std::vector<const CvUnit*> ConstUnitVector;
-
-// Safe unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
-// However it shouldn't be used in inner loops
-typedef copy_iterator<CvUnit> safe_unit_iterator;
 
 #endif

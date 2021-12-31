@@ -6,14 +6,11 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-//#include <bitset>
+#include "copy_iterator.h"
 #include "CvGameObject.h"
-#include "CvUnit.h"
-#include "idinfo_iterator_base.h"
-
+#include "CvProperties.h"
 #include "CvPlotPaging.h"
-
-class CvSelectionGroup;
+#include "idinfo_iterator_base.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -25,11 +22,13 @@ class CvRiver;
 class CvCity;
 class CvPlotGroup;
 class CvFeature;
+class CvSelectionGroup;
 class CvUnit;
 class CvSymbol;
 class CvFlagEntity;
 class CvPathGeneratorPlotInfo;
 class CvPathPlotInfoStore;
+enum UnitValueFlags;
 
 typedef bool (*ConstPlotUnitFunc)( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
 typedef bool (*PlotUnitFunc)(CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
@@ -301,8 +300,6 @@ public:
 	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const;
 	static void flushMovementCostCache();
 
-	int getExtraMovePathCost() const;
-	void changeExtraMovePathCost(int iChange);
 	//	Koshling - count of mountain leaders present per team maintained for efficiency of movement calculations
 	// TB: This was not working properly so has been changed to a plotcount method.
 	int getHasMountainLeader(TeamTypes eTeam) const;
@@ -877,31 +874,21 @@ public:
 	CLLNode<IDInfo>* tailUnitNode() const;
 
 	// For iterating over units on a plot
-	class unit_iterator : public idinfo_iterator_base<unit_iterator, CvUnit>
-	{
-	public:
-		unit_iterator() {}
-		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	private:
-		friend class core_access;
-		reference resolve(const IDInfo& info) const;
-	};
+	DECLARE_IDINFO_ITERATOR(CvUnit, unit_iterator)
+
 	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
 	typedef bst::iterator_range<unit_iterator> unit_range;
 	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
 
-	// As the plot doesn't own the units they aren't const even if the plot it, so not
-	// point in a const unit iterator
-	//class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
-	//{
-	//public:
-	//	const_unit_iterator() {}
-	//	explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	//private:
-	//	friend class core_access;
-	//	reference resolve(const IDInfo& info) const;
-	//};
+	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
+	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
+	typedef bst::iterator_range<safe_unit_iterator> safe_unit_range;
+	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
+
+	// As the plot doesn't own the units they aren't const even if the plot is, so no point in a const unit iterator
+	//DECLARE_IDINFO_ITERATOR(const CvUnit, const_unit_iterator)
+
 	//const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
 	//const_unit_iterator endUnits() const { return const_unit_iterator(); }
 	//typedef bst::iterator_range<const_unit_iterator> const_unit_range;

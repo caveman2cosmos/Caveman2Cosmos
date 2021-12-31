@@ -10,6 +10,8 @@
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvTeamAI.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 // Public Functions...
 

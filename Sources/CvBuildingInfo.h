@@ -11,18 +11,17 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#include "CvInfoUtil.h"
-#include "CvPython.h"
+#include "CvInfos.h"
+//#include "CvInfoUtil.h"
+//#include "CvPython.h"
 #include "IDValuemap.h"
 
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
 class CvHotkeyInfo;
-class CvProperties;
-class CvPropertyManipulators;
 class CvXMLLoadUtility;
-//struct CvInfoUtil;
+struct CvInfoUtil;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
@@ -241,11 +240,11 @@ public:
 	PropertyTypes getPropertySpawnProperty() const;
 	PromotionLineTypes getPromotionLineType() const;
 
-	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
-	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; }
-	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
-	const TCHAR* getButton() const;
-	const TCHAR* getMovie() const;
+	const char* getConstructSound() const			{ return m_szConstructSound; }
+	const char* getArtDefineTag() const				{ return m_szArtDefineTag; }
+	const char* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
+	const char* getButton() const;
+	const char* getMovie() const;
 	const CvArtInfoBuilding* getArtInfo() const;
 	const CvArtInfoMovie* getMovieInfo() const;
 
@@ -487,7 +486,7 @@ public:
 
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 
-	bool isNewCityFree(const CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject) const;
 
 	const BoolExpr* getConstructCondition() const;
 

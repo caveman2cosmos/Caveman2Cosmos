@@ -650,7 +650,6 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

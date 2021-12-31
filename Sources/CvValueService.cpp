@@ -1,4 +1,7 @@
+#include "CvPlot.h"
 #include "CvValueService.h"
+#include "OutputRatios.h"
+
 
 
 double CvValueService::CalculateFoodImportance(int citySize, int era, int health, int waste)
@@ -15,7 +18,7 @@ int CvValueService::CalculateUtilityValue(CvPlot* plot)
 	return 0;
 }
 
-int CvValueService::CalculateCityPlotValue(OutputRatios ratios, CvPlot* plot)
+int CvValueService::CalculateCityPlotValue(OutputRatios& ratios, CvPlot* plot)
 {
 	return 0;
 }
