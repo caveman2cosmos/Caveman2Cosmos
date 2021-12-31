@@ -3,16 +3,15 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
-#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDiploParameters.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
-#include "CvGameObject.h"
 #include "CvGlobals.h"
-#include "CvInitCore.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
@@ -21,6 +20,9 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 // Public Functions...
 #pragma warning( disable : 4355 )

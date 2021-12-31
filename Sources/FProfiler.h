@@ -9,7 +9,7 @@
 #define __PROFILE_H__
 
 
-#include "CvDLLEntityIFaceBase.h"
+//#include "CvDLLEntityIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvGlobals.h"	// for gDLL
 

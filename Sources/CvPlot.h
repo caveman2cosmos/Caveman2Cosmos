@@ -6,14 +6,11 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-//#include <bitset>
 #include "copy_iterator.h"
 #include "CvGameObject.h"
 #include "CvProperties.h"
-//#include "CvUnit.h"
-#include "idinfo_iterator_base.h"
-
 #include "CvPlotPaging.h"
+#include "idinfo_iterator_base.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 

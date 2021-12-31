@@ -2,7 +2,6 @@
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
-#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvContractBroker.h"
 #include "CvDLLEntity.h"
@@ -10,6 +9,7 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlot.h"
@@ -22,6 +22,11 @@
 #include "CvUnit.h"
 #include "CvUnitSelectionCriteria.h"
 #include "CvViewport.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#ifdef THE_GREAT_WALL
+#include "CvDLLEngineIFaceBase.h"
+#endif
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )

@@ -21,6 +21,8 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvGameTextMgr.h"
+#include "CvImprovementInfo.h"
+#include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
@@ -29,8 +31,9 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLSymbolIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 int shortenID(int iId)
 {

@@ -7,6 +7,8 @@
 #include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"
 #include "CvUnit.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlayer.h"
