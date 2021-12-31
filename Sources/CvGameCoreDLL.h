@@ -60,6 +60,7 @@
 
 #ifdef __INTELLISENSE__
 #define foreach_(item, rng) for (item; ; )
+#define reverse_foreach_(item, rng) for (item; ; )
 #else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH

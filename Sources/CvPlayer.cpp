@@ -14,8 +14,8 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
-#include "CvInitCore.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
@@ -27534,7 +27534,7 @@ bool CvPlayer::hasValidBuildings(TechTypes eTech) const
 			}
 		}
 	}
-	for (iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqOrBuildings(); iI++)
+	for (int iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqOrBuildings(); iI++)
 	{
 		if (!bHasOneOrBuilding)
 		{

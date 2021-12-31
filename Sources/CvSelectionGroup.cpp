@@ -21,6 +21,8 @@
 #include "CvUnit.h"
 #include "CvUnitSelectionCriteria.h"
 #include "CvViewport.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
@@ -1177,11 +1179,11 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 		case MISSION_SHADOW:
 			{
-				CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
+				const CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
 
 				if (pShadowPlot != NULL)
 				{
-					int iValidShadowUnits = std::count_if(pShadowPlot->beginUnits(), pShadowPlot->endUnits(),
+					const int iValidShadowUnits = std::count_if(pShadowPlot->beginUnits(), pShadowPlot->endUnits(),
 						bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
 
 					if (iValidShadowUnits > 0)
@@ -1220,7 +1222,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FErrorMsg("error");
-			CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
+			const CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
 			if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 			{
 				return true;
@@ -1230,7 +1232,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			{
 				if (pLoopUnit->isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					CvOutcomeMission* pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission((MissionTypes)iMission);
+					const CvOutcomeMission* pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission((MissionTypes)iMission);
 					if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 					{
 						return true;
@@ -1899,14 +1901,9 @@ bool CvSelectionGroup::startMission()
 								//if (pLoopUnit->canShadowAt(pShadowPlot))
 								{
 									//Check for multiple valid units
-									int iValidShadowUnits = 0;
-									foreach_(CvUnit* pLoopShadow, pShadowPlot->units())
-									{
-										if (pLoopUnit->canShadowAt(pShadowPlot, pLoopShadow))
-										{
-											iValidShadowUnits++;
-										}
-									}
+									const int iValidShadowUnits = algo::count_if(pShadowPlot->units(),
+										bind(CvUnit::canShadowAt, _1, pShadowPlot, _1)
+									);
 									//Strange Handling to ensure MP works
 									if (headMissionQueueNode()->m_data.iFlags == 0 && iValidShadowUnits > 1)
 									{

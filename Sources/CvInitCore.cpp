@@ -9,6 +9,8 @@
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 // BUG - EXE/DLL Paths - start
 //#include <shlobj.h>

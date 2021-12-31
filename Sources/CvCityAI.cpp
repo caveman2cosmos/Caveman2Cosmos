@@ -20,6 +20,8 @@
 #include "CvUnit.h"
 #include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 

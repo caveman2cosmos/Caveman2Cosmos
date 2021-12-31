@@ -12,6 +12,7 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilitySetMod.h"

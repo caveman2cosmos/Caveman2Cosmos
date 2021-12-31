@@ -24,6 +24,8 @@
 #include "CvUnit.h"
 #include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "FAStarNode.h"
 
 /************************************************************************************************/
