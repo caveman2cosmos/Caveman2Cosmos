@@ -20,9 +20,10 @@
 #include "CvUnit.h"
 #include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
-
 
 
 //	KOSHLING MOD - calculate all possible building focuses at once

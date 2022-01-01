@@ -1,7 +1,8 @@
-#include "CvImprovementInfo.h"
-
-#include "CvXMLLoadUtility.h"
 #include "CvArtFileMgr.h"
+#include "CvGlobals.h"
+#include "CvImprovementInfo.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvImprovementInfo::CvImprovementInfo() :
 	m_iAdvancedStartCost(100),

@@ -59,7 +59,8 @@
 #include <boost155/range/numeric.hpp>
 
 #ifdef __INTELLISENSE__
-#define foreach_(item, rng) item();
+#define foreach_(item, rng) for (item; ; )
+#define reverse_foreach_(item, rng) for (item; ; )
 #else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
@@ -78,7 +79,7 @@ using bst::bind;
 //
 // Boost Python
 //
-//#ifndef __INTELLISENSE__
+#ifndef __INTELLISENSE__
 #define BOOST_BIND_NO_PLACEHOLDERS // Disable the boost 1.32 placeholders, we won't be using them
 #include <boost/python/detail/wrap_python.hpp>
 #include <boost/python/list.hpp>
@@ -92,7 +93,7 @@ using bst::bind;
 #include <boost/python/to_python_converter.hpp>
 #include <boost/python/suite/indexing/container_utils.hpp>
 namespace python = boost::python;
-//#endif
+#endif
 
 //
 // WINDOWS
@@ -313,7 +314,6 @@ const std::string getModDir();
 //
 // Our code
 //
-#include "index_iterator_base.h"
 #include "logging.h"
 #include "algorithm2.h"
 #include "scoring.h"
@@ -331,9 +331,9 @@ const std::string getModDir();
 #include "CvStructs.h"
 
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvDLLEngineIFaceBase.h"
+//#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
-#include "CvDLLInterfaceIFaceBase.h"
+//#include "CvDLLInterfaceIFaceBase.h"
 
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"

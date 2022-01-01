@@ -13,8 +13,9 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
-#include "CheckSum.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CheckSum.h"
+#include "FAStarNode.h"
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
 #define PATH_RIVER_WEIGHT										(100)

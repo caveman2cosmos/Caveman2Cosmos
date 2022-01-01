@@ -11,10 +11,13 @@
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGameObject.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvProperties.h"
+#include "CvPropertyManipulators.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CyCity.h"
@@ -23,6 +26,7 @@
 #include "CyPlot.h"
 #include "CyTeam.h"
 #include "CyUnit.h"
+#include "BoolExpr.h"
 
 CvGameObjectGame::CvGameObjectGame()
 {

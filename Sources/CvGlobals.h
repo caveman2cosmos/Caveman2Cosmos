@@ -23,7 +23,6 @@ class CvInitCore;
 class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
-class CvDLLInterfaceIFaceBase;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
