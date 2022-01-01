@@ -25,6 +25,7 @@
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
 #endif
+#include <CvWorkerService.h>
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet* CvUnitAI::m_cachedMissionaryPlotset = NULL;
@@ -2187,21 +2188,9 @@ void CvUnitAI::AI_workerMove()
 
 	if (pCity != NULL)
 	{
-		foreach_(const CvPlot * pLoopPlot, pCity->plots())
-		{
-			const int plotIndex = pCity->getCityPlotIndex(pLoopPlot);
-			if (pLoopPlot != NULL
-			&& pLoopPlot->getWorkingCity() == pCity
-			//&& pLoopPlot->isBeingWorked() plot should be improved even if it is not currently worked by the city
-			//&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT //should be considered for improvement even if there already is an improvement there?
-			&& pCity->AI_getBestBuildValue(plotIndex) > 0
-			&& GC.getBuildInfo((BuildTypes)pCity->AI_getBestBuild(plotIndex)).getImprovement() != NO_IMPROVEMENT)
-			{
-				if (AI_improveCity(pCity))
-				{
-					return;
-				}
-				break;
+		if (CvWorkerService::ShouldImproveCity(pCity)) {
+			if (AI_improveCity(pCity)) {
+				return;
 			}
 		}
 	}

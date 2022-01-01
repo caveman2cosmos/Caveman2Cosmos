@@ -8396,7 +8396,7 @@ void CvCityAI::AI_updateBestBuild()
 		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
 		AI_findBestImprovementForPlot(loopedPlot, &optimalYieldList[iPlotCounter], ratios);
-
+		
 		m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
 		m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
 	}
