@@ -2,9 +2,12 @@
 #include "CvBuildingInfo.h"
 #include "CvBugOptions.h"
 #include "CvCity.h"
+#include "CvGame.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
 #include "CvPlayerAI.h"
@@ -14,8 +17,10 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 void CvGame::updateColoredPlots()
 {
@@ -656,7 +661,7 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 		return;
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
 	{
@@ -918,7 +923,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 
 
 // Returns true if unit was cycled...
-bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit = NULL;
@@ -1176,7 +1181,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			{
 				CvMessageControl::getInstance().sendAutoMission(pHeadSelectedUnit->getID());
 			}
-			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || /*iData2 == MISSION_ESTABLISH || iData2 == MISSION_ESCAPE ||*/ iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
+			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
 			{
 				const UnitTypes eUnit = pHeadSelectedUnit->getUnitType();
 
@@ -1223,7 +1228,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			}
 			break;
 		}
-		default: FAssert(false);
+		default: FErrorMsg("error");
 	}
 }
 
@@ -1257,7 +1262,7 @@ void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, 
 				break;
 
 			default:
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 			}
 		}
@@ -2380,7 +2385,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}

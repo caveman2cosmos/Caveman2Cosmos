@@ -1,7 +1,8 @@
-#include "CvImprovementInfo.h"
-
-#include "CvXMLLoadUtility.h"
 #include "CvArtFileMgr.h"
+#include "CvGlobals.h"
+#include "CvImprovementInfo.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvImprovementInfo::CvImprovementInfo() :
 	m_iAdvancedStartCost(100),
@@ -28,7 +29,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bIsUniversalTradeBonusProvider(false),
 	m_bIsZOCSource(false),
 	// Super forts C2C adaptation end
-	m_bActsAsCity(true),
+	m_bActsAsCity(false),
 	m_bHillsMakesValid(false),
 	m_bFreshWaterMakesValid(false),
 	m_bRiverSideMakesValid(false),
@@ -93,7 +94,6 @@ CvImprovementInfo::~CvImprovementInfo()
 	GC.removeDelayedResolution((int*)&m_iImprovementPillage);
 	GC.removeDelayedResolution((int*)&m_iImprovementUpgrade);
 	GC.removeDelayedResolution((int*)&m_iBonusChange);
-	GC.removeDelayedResolutionVector(m_improvementBuildTypes);
 	GC.removeDelayedResolutionVector(m_aiAlternativeImprovementUpgradeTypes);
 	GC.removeDelayedResolutionVector(m_aiFeatureChangeTypes);
 }
@@ -146,11 +146,6 @@ int CvImprovementInfo::getPillageGold() const
 bool CvImprovementInfo::isOutsideBorders() const
 {
 	return m_bOutsideBorders;
-}
-
-BuildTypes CvImprovementInfo::getImprovementBuildType(int iIndex) const
-{
-	return m_improvementBuildTypes[iIndex];
 }
 
 // Super Forts begin *XML*
@@ -288,11 +283,6 @@ int CvImprovementInfo::getPrereqNatureYield(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piPrereqNatureYield ? m_piPrereqNatureYield[i] : 0;
-}
-
-int* CvImprovementInfo::getPrereqNatureYieldArray() const
-{
-	return m_piPrereqNatureYield;
 }
 
 int CvImprovementInfo::getYieldChange(int i) const
@@ -451,8 +441,8 @@ int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 
 //int CvImprovementInfo::getTraitYieldChanges(int i, int j) const
 //{
-//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i)
-//	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i);
+//	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 //	return (m_ppiTraitYieldChanges && m_ppiTraitYieldChanges[i]) ? m_ppiTraitYieldChanges[i][j] : 0;
 //}
 
@@ -498,7 +488,7 @@ int CvImprovementInfo::getNumAlternativeImprovementUpgradeTypes() const
 
 bool CvImprovementInfo::isAlternativeImprovementUpgradeType(int i) const
 {
-	return algo::contains(m_aiAlternativeImprovementUpgradeTypes, i);
+	return algo::any_of_equal(m_aiAlternativeImprovementUpgradeTypes, i);
 }
 
 int CvImprovementInfo::getFeatureChangeType(int i) const
@@ -513,7 +503,7 @@ int CvImprovementInfo::getNumFeatureChangeTypes() const
 
 bool CvImprovementInfo::isFeatureChangeType(int i) const
 {
-	return algo::contains(m_aiFeatureChangeTypes, i);
+	return algo::any_of_equal(m_aiFeatureChangeTypes, i);
 }
 
 //Post Load functions
@@ -523,7 +513,7 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	int iHighestCost = 0;
 //	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 //	{
-//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
 //		{
 //			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
 //			{
@@ -539,6 +529,17 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //{
 //	return m_iHighestCost;
 //}
+
+void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+{
+	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
+	{
+		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
+		{
+			m_improvementBuildTypes.push_back((BuildTypes)i);
+		}
+	}
+}
 
 void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
@@ -585,7 +586,6 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
-	CheckSumC(iSum, m_improvementBuildTypes);
 
 	// Arrays
 
@@ -697,7 +697,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity", true);
+	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity");
 	pXML->GetOptionalChildXmlValByName(&m_bHillsMakesValid, L"bHillsMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterMakesValid, L"bFreshWaterMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bRiverSideMakesValid, L"bRiverSideMakesValid");
@@ -790,8 +790,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-
-	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
 
 	// initialize the boolean list to the correct size and all the booleans to false
 	FAssertMsg(GC.getNumRouteInfos() > 0, "the number of route infos is zero or less");
@@ -977,7 +975,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isUniversalTradeBonusProvider() == bDefault) m_bIsUniversalTradeBonusProvider = pClassInfo->isUniversalTradeBonusProvider();
 	if (isZOCSource() == bDefault) m_bIsZOCSource = pClassInfo->isZOCSource();
 	// Super forts C2C adaptation end
-	if (isActsAsCity()) m_bActsAsCity = pClassInfo->isActsAsCity();
+	if (m_bActsAsCity == bDefault) m_bActsAsCity = pClassInfo->isActsAsCity();
 	if (isHillsMakesValid() == bDefault) m_bHillsMakesValid = pClassInfo->isHillsMakesValid();
 	if (isFreshWaterMakesValid() == bDefault) m_bFreshWaterMakesValid = pClassInfo->isFreshWaterMakesValid();
 	if (isRiverSideMakesValid() == bDefault) m_bRiverSideMakesValid = pClassInfo->isRiverSideMakesValid();
@@ -992,7 +990,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
 	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
-	GC.copyNonDefaultDelayedResolutionVector(m_improvementBuildTypes, pClassInfo->getBuildTypes());
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{

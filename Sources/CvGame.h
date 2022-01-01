@@ -5,19 +5,21 @@
 #ifndef CIV4_GAME_H
 #define CIV4_GAME_H
 
-//#include "CvDeal.h"
+#include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
 #include "CvAllocator.h"
 
-class CvDeal;
+class CvArtInfoBuilding;
 class CvCity;
 class CvPlot;
 class CvReplayMessage;
 class CvReplayInfo;
 class CvUnit;
+class CvUnitCombatInfo;
 
 //	Max number of barbarian units in existence for a spawn of a new one to be allowed
 //	This allows a 'space' for 'real' barbarians to be built before we use up the entire
@@ -94,7 +96,7 @@ public:
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
 	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
-	DllExport bool cyclePlotUnits(CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
+	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;
 
 	DllExport void selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const;
@@ -324,7 +326,6 @@ public:
 
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
-	void setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue);
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
 	void findMountainRanges();
@@ -546,7 +547,7 @@ public:
 	void castVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes ePlayerVote);
 
 	DllExport const CvWString & getName();
-	void setName(const TCHAR* szName);
+	void setName(const char* szName);
 
 	// Script data needs to be a narrow string for pickling in Python
 	std::string getScriptData() const;
@@ -563,9 +564,7 @@ public:
 	DllExport CvDeal* getDeal(int iID);
 	CvDeal* addDeal();
 	void deleteDeal(int iID);
-	// iteration
-	CvDeal* firstDeal(int *pIterIdx, bool bRev=false) const;
-	CvDeal* nextDeal(int *pIterIdx, bool bRev=false) const;
+	FFreeListTrashArray<CvDeal>::Range_t deals() const { return m_deals.range(); }
 
 	VoteSelectionData* getVoteSelection(int iID) const;
 	VoteSelectionData* addVoteSelection(VoteSourceTypes eVoteSource);
@@ -643,10 +642,6 @@ public:
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
 	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
-	int getPlotExtraCost(int iX, int iY) const;
-	void changePlotExtraCost(int iX, int iY, int iCost);
-	void removePlotExtraCost(int iX, int iY);
-
 	ReligionTypes getVoteSourceReligion(VoteSourceTypes eVoteSource) const;
 	void setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce = false);
 
@@ -662,7 +657,7 @@ public:
 
 	bool pythonIsBonusIgnoreLatitudes() const;
 
-	inline bool isRecalculatingModifiers() { return m_bRecalculatingModifiers; }
+	inline bool isRecalculatingModifiers() const { return m_bRecalculatingModifiers; }
 
 	DllExport void getGlobeLayers(std::vector<CvGlobeLayerData>& aLayers) const;
 	DllExport void startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>& aFlyoutItems) const;
@@ -709,13 +704,8 @@ public:
 	void recalculateModifiers();
 
 protected:
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	MapTypes m_eCurrentMap;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+
 	CvString m_gameId;
 	int m_iElapsedGameTurns;
 	int m_iStartTurn;
@@ -832,7 +822,6 @@ protected:
 	int m_iNumSessions;
 
 	std::vector<PlotExtraYield> m_aPlotExtraYields;
-	std::vector<PlotExtraCost> m_aPlotExtraCosts;
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 

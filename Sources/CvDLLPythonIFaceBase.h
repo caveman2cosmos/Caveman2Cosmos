@@ -19,7 +19,8 @@ public:
 
 	virtual const char* getMapScriptModule() = 0;
 
-	template <typename T>	PyObject* makePythonObject(T*);
+	template <typename T>
+	static PyObject* makePythonObject(T*);
 
 	virtual PyObject* MakeFunctionArgs(void** args, int argc) = 0;
 

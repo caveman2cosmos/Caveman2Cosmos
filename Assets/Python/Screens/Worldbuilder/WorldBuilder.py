@@ -1125,10 +1125,10 @@ class WorldBuilder:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
-			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
+			if pPlot.isSpotterInSight(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
 		else:
-			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, - pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
+			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, -pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
 
 	def showRevealed(self, pPlot):
 		if self.iPlayerAddMode == "RevealPlot":

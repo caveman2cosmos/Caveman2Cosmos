@@ -1222,26 +1222,6 @@
 			<bSound>1</bSound>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_ESTABLISH</Type>
-			<Description>TXT_KEY_MISSION_ESTABLISH</Description>
-			<Help>TXT_KEY_MISSION_ESTABLISH_HELP</Help>
-			<EntityEventType>ENTITY_EVENT_FORTIFY</EntityEventType>
-			<bSound>1</bSound>
-			<bVisible>1</bVisible>
-			<iOrderPriority>15</iOrderPriority>
-			<Button>art/buttons/missions/Establish.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_ESCAPE</Type>
-			<Description>TXT_KEY_MISSION_ESCAPE</Description>
-			<Help>TXT_KEY_MISSION_ESCAPE_HELP</Help>
-			<EntityEventType>ENTITY_EVENT_FORTIFY</EntityEventType>
-			<bSound>1</bSound>
-			<bVisible>1</bVisible>
-			<iOrderPriority>15</iOrderPriority>
-			<Button>art/buttons/missions/Escape.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_BUILDUP</Type>
 			<Description>TXT_KEY_MISSION_BUILDUP</Description>
 			<Help>TXT_KEY_MISSION_BUILDUP_HELP</Help>
@@ -1676,8 +1656,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Button>
 		</MissionInfo>
-		<!--
-		Removed until they can only speed up military production
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Description>
@@ -1691,7 +1669,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
 		</MissionInfo>
- 		-->
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Description>

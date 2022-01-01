@@ -58,9 +58,9 @@ public:
 		{
 			currentUseCounter = 0;
 
-			for(int i = 0; i < PLOT_DANGER_CACHE_SIZE; i++)
+			foreach_(plotDangerCacheEntry& entry, entries)
 			{
-				entries[i].iLastUseCount = 0;
+				entry.iLastUseCount = 0;
 			}
 		}
 	}
@@ -81,7 +81,7 @@ public:
 	// inlined for performance reasons
 	static CvPlayerAI& getPlayer(PlayerTypes ePlayer)
 	{
-		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 		return m_aPlayers[ePlayer];
 	}
 

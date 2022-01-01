@@ -52,8 +52,8 @@ public:
 		int m_idx;
 		T* m_value;
 	};
-public:
 
+public:
 	FFreeListTrashArray();
 	~FFreeListTrashArray();
 
@@ -77,6 +77,9 @@ public:
 
 	iterator begin() const { return iterator(this); }
 	iterator end() const { return iterator(); }
+
+	typedef bst::iterator_range<iterator> Range_t;
+	Range_t range() const { return Range_t(begin(), end()); }
 
 	// Returns the iIndex after the last iIndex in the array containing an element
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
@@ -389,9 +392,9 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 		return NULL;
 	}
 
-	int iIndex = (iID & FLTA_INDEX_MASK);
+	const int iIndex = (iID & FLTA_INDEX_MASK);
 
-	FASSERT_NOT_NEGATIVE(iIndex)
+	FASSERT_NOT_NEGATIVE(iIndex);
 
 	if ((iIndex <= m_iLastIndex) &&
 		(m_pArray[iIndex].pData != NULL))
@@ -509,7 +512,6 @@ void FFreeListTrashArray<T>::load(T* pData)
 template <class T>
 void FFreeListTrashArray<T>::growArray()
 {
-
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
 	FFreeListTrashArrayNode* pOldArray = m_pArray;

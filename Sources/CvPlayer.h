@@ -5,28 +5,26 @@
 #ifndef CIV4_PLAYER_H
 #define CIV4_PLAYER_H
 
+#include "copy_iterator.h"
+#include "CvBuildLists.h"
 #include "CvCityAI.h"
-#include "CvPlotGroup.h"
-#include "LinkedList.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "CvPlotGroup.h"
+#include "CvProperties.h"
+#include "CvSelectionGroupAI.h"
+#include "CvTalkingHeadMessage.h"
 #include "CvUnitList.h"
 #include "CvUnitAI.h"
+#include "index_iterator_base.h"
+#include "LinkedList.h"
 
 class CvArea;
-class CvBuildLists;
-class CvCity;
-class CvCityAI;
-//class CvContractBroker;
 class CvDiploParameters;
 class CvEventTriggerInfo;
 class CvPlot;
-class CvPlotGroup;
 class CvPopupInfo;
-class CvSelectionGroupAI;
-class CvTalkingHeadMessage;
-class CvUnitAI;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
 
@@ -1266,7 +1264,6 @@ public:
 	int calculateTaxRateUnhappiness() const;
 
 	int getReligionSpreadRate() const;
-	void setReligionSpreadRate(int iNewValue);
 	void changeReligionSpreadRate(int iChange);
 
 	int getDistantUnitSupportCostModifier() const;
@@ -2000,9 +1997,9 @@ protected:
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
-	int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
+	int calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
 	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
-	bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
+	bool canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();

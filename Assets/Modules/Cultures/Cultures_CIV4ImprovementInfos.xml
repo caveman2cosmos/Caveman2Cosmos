@@ -3,9 +3,6 @@
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MOAI</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MOAI_STATUES</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MOAI</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MOAI</ArtDefineTag>
@@ -14,7 +11,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<bNoFreshWater>1</bNoFreshWater>
 			<iAdvancedStartCost>30</iAdvancedStartCost>

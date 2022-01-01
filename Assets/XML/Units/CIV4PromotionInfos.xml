@@ -1741,7 +1741,7 @@
 			<Type>PROMOTION_COMBAT6</Type>
 			<Description>TXT_KEY_PROMOTION_COMBAT6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_COMBAT5</PromotionPrereqOr1>
+			<PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
 			<!--TB SubCombat Mod begin TB Override Mod begin-->
 			<PromotionLine>PROMOTIONLINE_COMBAT</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -8201,7 +8201,20 @@
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iVisibilityChange>1</iVisibilityChange>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,10</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8211,8 +8224,20 @@
 			<PromotionPrereq>PROMOTION_HUNTING_SIGHT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iVisibilityChange>1</iVisibilityChange>
-			<iCombatPercent>10</iCombatPercent>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry2.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,10</Button>
 			<UnitCombats>
 				<UnitCombat>
@@ -8841,7 +8866,7 @@
 			<Type>PROMOTION_SPHINX</Type>
 			<Description>TXT_KEY_PROMOTION_SPHINX</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_COMBAT6</PromotionPrereqOr1>
+			<PromotionPrereq>PROMOTION_COMBAT6</PromotionPrereq>
 			<iUpgradeDiscount>50</iUpgradeDiscount>
 			<UnitCombats>
 				<UnitCombat>
@@ -20268,56 +20293,6 @@
 			<Button>,Art/Buttons/Promotions/TrapHunting5BuildUp.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
-			<Type>PROMOTION_BUILD_UP_FORTIFY1</Type>
-			<Description>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY1</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionLine>PROMOTIONLINE_BUILD_UP_FORTIFY</PromotionLine>
-			<iNoInvisibilityChange>1</iNoInvisibilityChange>
-			<iLinePriority>1</iLinePriority>
-			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
-			<Button>,Art/Buttons/Promotions/Fortify1BuildUp.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BUILD_UP_FORTIFY2</Type>
-			<Description>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY2</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionLine>PROMOTIONLINE_BUILD_UP_FORTIFY</PromotionLine>
-			<iNoInvisibilityChange>1</iNoInvisibilityChange>
-			<iLinePriority>2</iLinePriority>
-			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
-			<Button>,Art/Buttons/Promotions/Fortify2BuildUp.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BUILD_UP_FORTIFY3</Type>
-			<Description>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY3</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionLine>PROMOTIONLINE_BUILD_UP_FORTIFY</PromotionLine>
-			<iNoInvisibilityChange>1</iNoInvisibilityChange>
-			<iLinePriority>3</iLinePriority>
-			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
-			<Button>,Art/Buttons/Promotions/Fortify3BuildUp.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BUILD_UP_FORTIFY4</Type>
-			<Description>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY4</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionLine>PROMOTIONLINE_BUILD_UP_FORTIFY</PromotionLine>
-			<iNoInvisibilityChange>1</iNoInvisibilityChange>
-			<iLinePriority>4</iLinePriority>
-			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
-			<Button>,Art/Buttons/Promotions/Fortify4BuildUp.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BUILD_UP_FORTIFY5</Type>
-			<Description>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY5</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionLine>PROMOTIONLINE_BUILD_UP_FORTIFY</PromotionLine>
-			<iNoInvisibilityChange>1</iNoInvisibilityChange>
-			<iLinePriority>5</iLinePriority>
-			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
-			<Button>,Art/Buttons/Promotions/Fortify5BuildUp.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_ESCAPE_PLANS1</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_ESCAPE_PLANS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -22893,13 +22868,7 @@
 			<NotOnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</NotOnGameOptions>
-			<NegatesInvisibilityTypes>
-				<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-				<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
-				<InvisibleType>INVISIBLE_STEALTH</InvisibleType>
-				<InvisibleType>INVISIBLE_INVISIBLE</InvisibleType>
-				<InvisibleType>INVISIBLE_CLOAKED</InvisibleType>
-			</NegatesInvisibilityTypes>
+			<iNoInvisibilityChange>10</iNoInvisibilityChange>
 			<Button>Art/Buttons/Promotions/StandOutStatus.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -22917,17 +22886,7 @@
 			<NotOnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
-			<NegatesInvisibilityTypes>
-				<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-				<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
-				<InvisibleType>INVISIBLE_STEALTH</InvisibleType>
-				<InvisibleType>INVISIBLE_INVISIBLE</InvisibleType>
-				<InvisibleType>INVISIBLE_CLOAKED</InvisibleType>
-				<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-				<InvisibleType>INVISIBLE_POLITICAL</InvisibleType>
-				<InvisibleType>INVISIBLE_SUBMERGED</InvisibleType>
-				<InvisibleType>INVISIBLE_NAVAL_DISGUISE</InvisibleType>
-			</NegatesInvisibilityTypes>
+			<iNoInvisibilityChange>10</iNoInvisibilityChange>
 			<Button>Art/Buttons/Promotions/StandOutStatus.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -22943,18 +22902,7 @@
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
-			<NegatesInvisibilityTypes>
-				<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-				<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
-				<InvisibleType>INVISIBLE_STEALTH</InvisibleType>
-				<InvisibleType>INVISIBLE_INVISIBLE</InvisibleType>
-				<InvisibleType>INVISIBLE_CLOAKED</InvisibleType>
-				<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-				<InvisibleType>INVISIBLE_POLITICAL</InvisibleType>
-				<InvisibleType>INVISIBLE_SUBMERGED</InvisibleType>
-				<InvisibleType>INVISIBLE_NAVAL_DISGUISE</InvisibleType>
-				<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-			</NegatesInvisibilityTypes>
+			<iNoInvisibilityChange>10</iNoInvisibilityChange>
 			<Button>Art/Buttons/Promotions/StandOutStatus.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>

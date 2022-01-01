@@ -265,7 +265,6 @@ void CyGamePythonInterface()
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
 
 		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
-		.def("changePlotExtraCost", &CyGame::changePlotExtraCost, "void (int iX, int iY, int iCost)")
 
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
 		.def("isLeaderEverActive", &CyGame::isLeaderEverActive, "bool (int /*LeaderHeadTypes*/ eLeader)")
@@ -289,7 +288,7 @@ void CyGamePythonInterface()
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
-		.def("setModderGameOption", &CyGame::setModderGameOption, "void ()")
+		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 
 		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")

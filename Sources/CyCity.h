@@ -246,14 +246,14 @@ public:
 	void setOccupationTimer(int iNewValue);
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
-	void setNeverLost(int iNewValue);
+	void setNeverLost(bool bNewValue);
 
 	bool isBombarded() const;
-	void setBombarded(int iNewValue);
+	void setBombarded(bool bNewValue);
 	bool isDrafted() const;
-	void setDrafted(int iNewValue);
+	void setDrafted(bool bNewValue);
 	bool isAirliftTargeted() const;
-	void setAirliftTargeted(int iNewValue);
+	void setAirliftTargeted(bool bNewValue);
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
 	bool isProductionAutomated() const;

@@ -23,7 +23,7 @@ CvOutcomeList::~CvOutcomeList()
 
 CvOutcome* CvOutcomeList::getOutcome(int index) const
 {
-	FASSERT_BOUNDS(0, getNumOutcomes(), index)
+	FASSERT_BOUNDS(0, getNumOutcomes(), index);
 	return m_aOutcome[index];
 }
 
