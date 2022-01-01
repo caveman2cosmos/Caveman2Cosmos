@@ -10725,8 +10725,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	plotInfo->yieldValue = 0;
 	plotInfo->currentBuild = NO_BUILD;
 
-	//const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
-	//int iBestValue = 0;
+	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
 	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
@@ -10780,7 +10779,8 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			if (player.canBuild(pPlot, eBuildType, false, false, false))
+			//this check must check if improvement is already there, because canbuild will return false (you cant build same improvement that is already there)
+			if (player.canBuild(pPlot, eBuildType, false, false, false) || ePotentialImprovement == eCurrentPlotImprovement)
 			{
 				const int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
 
@@ -10849,8 +10849,14 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		{
 			plotInfo->yieldValue = plotValue;
 			plotInfo->currentBuild = eBestBuild;
+			plotInfo->currentImprovement = ePotentialImprovement;
 		}
 
+	}
+	if (plotInfo->currentImprovement == eCurrentPlotImprovement) {
+		plotInfo->yieldValue = 0;
+		plotInfo->currentBuild = NO_BUILD;
+		plotInfo->currentImprovement = NO_IMPROVEMENT;
 	}
 }
 
