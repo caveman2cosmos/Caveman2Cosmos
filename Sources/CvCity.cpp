@@ -2068,7 +2068,7 @@ int CvCity::findCommerceRateRank(CommerceTypes eCommerce) const
 }
 
 
-bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
+bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
@@ -2337,7 +2337,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!plot()->canTrain(eUnit, bContinue, bTestVisible))
+	if (!plot()->canTrain(eUnit, bTestVisible))
 	{
 		return false;
 	}
@@ -2347,7 +2347,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!isPlotTrainable(eUnit, bContinue, bTestVisible))
+	if (!isPlotTrainable(eUnit, bTestVisible))
 	{
 		return false;
 	}
@@ -5863,7 +5863,7 @@ int CvCity::getRevRequestPercentAnger(int iExtra) const
 	return iAngerPercent;
 }
 
-int CvCity::getRevIndexPercentAnger(int iExtra) const
+int CvCity::getRevIndexPercentAnger() const
 {
 	const int iLocalAdjust = std::min(getLocalRevIndex() * 5, 100);
 
@@ -5976,7 +5976,7 @@ int CvCity::unhappyLevel(int iExtra) const
 		iAngerPercent += getDefyResolutionPercentAnger(iExtra);
 		iAngerPercent += getWarWearinessPercentAnger();
 		iAngerPercent += getRevRequestPercentAnger(iExtra);
-		iAngerPercent += getRevIndexPercentAnger(iExtra);
+		iAngerPercent += getRevIndexPercentAnger();
 
 		for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 		{
@@ -15795,11 +15795,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					CvPlot* pPlot = plot();
 					if (pPlot != NULL)
 					{
-						if (pUnit->canSleep(pPlot))
-						{
-							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
-						}
-						else if (pUnit->canFortify(pPlot))
+						if (pUnit->canSleep() || pUnit->canFortify())
 						{
 							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
 						}

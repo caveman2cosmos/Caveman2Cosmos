@@ -8614,7 +8614,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 				else
 				{
 					FAssertMsg(getPlotGroup(ePlayer) == pPlotGroup, "ePlayer's plot group is expected to equal pPlotGroup");
-					GC.getMap().combinePlotGroups(ePlayer, pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
+					GC.getMap().combinePlotGroups(pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
 					pPlotGroup = getPlotGroup(ePlayer);
 					FAssertMsg(pPlotGroup != NULL, "PlotGroup is not assigned a valid value");
 				}
@@ -12026,7 +12026,7 @@ void CvPlot::applyEvent(EventTypes eEvent)
 }
 
 
-bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
+bool CvPlot::canTrain(UnitTypes eUnit, bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
@@ -12844,8 +12844,6 @@ int CvPlot::getTotalTurnDamage(const CvUnit* pUnit) const
 
 CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
-	int iBestUnitRank = -1;
-
 	CvUnit* pBestUnit = NULL;
 
 	foreach_(CvUnit* pLoopUnit, units())
@@ -12864,7 +12862,7 @@ CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 							{
 								if ((pAttacker == NULL) || (pAttacker->getDomainType() != DOMAIN_AIR) || (pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)))
 								{
-									if (pBestUnit == NULL || (pLoopUnit->canDefend() && !pLoopUnit->isBetterDefenderThan(pBestUnit, pAttacker, &iBestUnitRank)))
+									if (pBestUnit == NULL || (pLoopUnit->canDefend() && !pLoopUnit->isBetterDefenderThan(pBestUnit, pAttacker)))
 									{
 										pBestUnit = pLoopUnit;
 									}

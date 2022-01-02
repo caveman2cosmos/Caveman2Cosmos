@@ -1199,7 +1199,7 @@ bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 }
 
 
-void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, bool bCancelPacts)
+void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 {
 	PROFILE_FUNC();
 	FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");

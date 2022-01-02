@@ -34,7 +34,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 
 BOOL APIENTRY DllMain(HANDLE hModule,
 					  DWORD  ul_reason_for_call,
-					  LPVOID lpReserved)
+					  LPVOID /*lpReserved*/)
 {
 	switch( ul_reason_for_call ) {
 	case DLL_PROCESS_ATTACH:

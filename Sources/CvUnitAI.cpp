@@ -1109,7 +1109,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	int iDamageToThem;
 	int iTheirStrength;
 	int iTheirOdds;
-	getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
+	getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender);
 
 	int iBaseOdds = 100 - iTheirOdds / 10; // getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
 
@@ -1159,7 +1159,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		{
 			pDefender->AI_setPredictedHitPoints(std::max(0, pDefender->getHP() - ((iOurFirstStrikesTimes2 - iTheirFirstStrikesTimes2) * iDamageToThem * iBaseOdds) / 200));
 
-			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
+			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender);
 			iBaseOdds = 100 - iTheirOdds / 10;
 
 			if (iTheirStrength == 0)
@@ -1187,7 +1187,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 				return 1;
 			}
 
-			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
+			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender);
 			iBaseOdds = 100 - iTheirOdds / 10;
 		}
 	}
@@ -10097,7 +10097,7 @@ void CvUnitAI::AI_attackAirMove()
 			}
 		}
 
-		if (canRecon(plot()))
+		if (canRecon())
 		{
 			if (AI_exploreAir())
 			{
@@ -10182,7 +10182,7 @@ void CvUnitAI::AI_attackAirMove()
 		}
 	}
 
-	if (canRecon(plot()))
+	if (canRecon())
 	{
 		if (AI_exploreAir())
 		{
@@ -10416,7 +10416,7 @@ void CvUnitAI::AI_defenseAirMove()
 	}
 
 	// BBAI TODO: how valuable is recon information to AI in war time?
-	if (canRecon(plot()))
+	if (canRecon())
 	{
 		if (GC.getGame().getSorenRandNum(bDefensive ? 6 : 3, "AI defensive air recon") == 0)
 		{
@@ -13649,7 +13649,7 @@ bool CvUnitAI::AI_afterAttack()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_goldenAge()
 {
-	if (canGoldenAge(plot()))
+	if (canGoldenAge())
 	{
 		getGroup()->pushMission(MISSION_GOLDEN_AGE);
 		return true;
@@ -15833,7 +15833,7 @@ bool CvUnitAI::AI_greatWork()
 					if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
 					{
 						iValue = pLoopCity->AI_calculateCulturePressure(true);
-						iValue -= ((100 * pLoopCity->getCulture(pLoopCity->getOwner())) / std::max(1, getGreatWorkCulture(pLoopCity->plot())));
+						iValue -= ((100 * pLoopCity->getCulture(pLoopCity->getOwner())) / std::max(1, getGreatWorkCulture()));
 						if (iValue > 0)
 						{
 							if (iValue > iBestValue)
@@ -25522,7 +25522,7 @@ bool CvUnitAI::AI_infiltrate()
 						{
 							continue;
 						}
-						int iValue = getEspionagePoints(cityX->plot());
+						int iValue = getEspionagePoints();
 						int iPathTurns;
 
 						if (iValue > iBestValue && generatePath(cityX->plot(), 0, true, &iPathTurns))
@@ -27138,7 +27138,7 @@ bool CvUnitAI::AI_solveBlockageProblem(const CvPlot* pDestPlot, bool bDeclareWar
 						const CvPlot* pPlot = GC.getMap().plotSorenINLINE(pStepNode->m_pPrev->m_iX, pStepNode->m_pPrev->m_iY);
 						if (pPlot->getTeam() != NO_TEAM)
 						{
-							if (!getGroup()->canMoveIntoWithWar(pPlot, true, true))
+							if (!getGroup()->canMoveIntoWithWar(pPlot, true))
 							{
 								if (!isPotentialEnemy(pPlot->getTeam(), pPlot))
 								{
@@ -29221,7 +29221,7 @@ void CvUnitAI::AI_autoAirStrike()
 		}
 	}
 
-	if (canRecon(plot()))
+	if (canRecon())
 	{
 		if (AI_exploreAir())
 		{
@@ -30632,7 +30632,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 bool CvUnitAI::AI_arrest()
 {
-	int iMoves = getMoves();
+	const int iMoves = getMoves();
 	if (canArrest())
 	{
 		doArrest();
@@ -30719,7 +30719,7 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 	return false;
 }
 
-bool CvUnitAI::AI_activateStatus(bool bChange, bool bStack, PromotionTypes eStatus, CvUnit* pUnit)
+bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit)
 {
 	if (eStatus == NO_PROMOTION)
 	{
@@ -31178,12 +31178,12 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 	int iCompare = iBestValue - iWorstValue;
 	if (iCompare < 0 && eWorstStatus != NO_PROMOTION)
 	{
-		return (AI_activateStatus(true, bStack, eWorstStatus, pUnit) && !GC.getPromotionInfo(eWorstStatus).isQuick());
+		return (AI_activateStatus(bStack, eWorstStatus, pUnit) && !GC.getPromotionInfo(eWorstStatus).isQuick());
 		//setWorstStatus
 	}
 	else if (iCompare > 0 && eBestStatus != NO_PROMOTION && !isHasPromotion(eBestStatus))
 	{
-		return (AI_activateStatus(true, bStack, eBestStatus, pUnit) && !GC.getPromotionInfo(eBestStatus).isQuick());
+		return (AI_activateStatus(bStack, eBestStatus, pUnit) && !GC.getPromotionInfo(eBestStatus).isQuick());
 		//setBestStatus
 	}
 	//else

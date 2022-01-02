@@ -4284,7 +4284,7 @@ bool AI_buildingInfluencesProperty(const CvCity* city, const CvBuildingInfo& bui
 	return bFoundValidation;
 }
 
-bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibleBuildings, int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
+bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibleBuildings, int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY)
 {
 	PROFILE_FUNC();
 
@@ -4293,7 +4293,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 	{
 		foreach_(const BuildingTypes eBuilding, possibleBuildings)
 		{
-			FAssertMsg(eBuilding != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
+			FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 
 			if (GC.getBuildingInfo(eBuilding).isCapital())
 			{
@@ -4314,7 +4314,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 	foreach_(const BuildingTypes eBuilding, possibleBuildings)
 	{
-		FAssertMsg(eBuilding != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
+		FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 
 		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 
@@ -4517,7 +4517,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 	return !scoredBuildings.empty();
 }
 
-bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building)
+bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building) const
 {
 	for (int iHurry = 0; iHurry < GC.getNumHurryInfos(); ++iHurry)
 	{
@@ -4550,8 +4550,8 @@ public:
 
 	void AccumulateTo(int iFocusIndex, int value)
 	{
-		FAssertMsg(iFocusIndex < NUM_ALL_BUILDINGFOCUS_FLAGS, "iFocusIndex out of range")
-			m_focusValues[iFocusIndex] += value;
+		FASSERT_BOUNDS(0, NUM_ALL_BUILDINGFOCUS_FLAGS, iFocusIndex);
+		m_focusValues[iFocusIndex] += value;
 	}
 
 	void AccumulateToAny(int value)
@@ -4854,7 +4854,7 @@ int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFo
 	{
 		return itr->second;
 	}
-	int iResult = AI_buildingValueThresholdOriginalUncached(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue, bIgnoreCanBuildReplacement, bForTech);
+	const int iResult = AI_buildingValueThresholdOriginalUncached(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue, bIgnoreCanBuildReplacement, bForTech);
 
 	m_buildValueCache.insert(std::make_pair(cacheKey.get(), iResult));
 

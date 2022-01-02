@@ -149,7 +149,7 @@ public:
 	void unitBuilt( CvUnit *pUnit );
 	void unitKilled( CvUnit *pUnit, PlayerTypes eAttacker );
 	void cityBuilt( CvCity * pCity );
-	void cityRazed( CvCity * pCity, PlayerTypes ePlayer );
+	void cityRazed(PlayerTypes ePlayer);
 	void buildingBuilt( CvCity *pCity, BuildingTypes eBuilding );
 	void religionFounded( ReligionTypes eReligion, PlayerTypes eFounder );
 	void goldenAge( PlayerTypes ePlayer );

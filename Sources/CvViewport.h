@@ -81,7 +81,7 @@ public:
 	void setMapOffset(int iX, int iY);
 	void setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
 	void resizeForMap();
-	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bLookAt = true, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
+	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
 	void centerOnSelection();
 	void panLeft();
 	void panRight();
