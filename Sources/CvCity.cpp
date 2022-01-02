@@ -15788,11 +15788,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					if (pPlot != NULL)
 					{
-						if (pUnit->canSleep())
-						{
-							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
-						}
-						else if (pUnit->canFortify())
+						if (pUnit->canSleep() || pUnit->canFortify())
 						{
 							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
 						}
