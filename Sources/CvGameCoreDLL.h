@@ -11,9 +11,6 @@
 //
 // Compiler warnings
 //
-#pragma warning( 3: 4100 ) // unreferenced formal parameter
-//#pragma warning( 3: 4127 ) // conditional expression is constant
-
 #pragma warning( disable: 4510 ) // default constructor could not be generated
 #pragma warning( disable: 4511 ) // copy constructor could not be generated
 #pragma warning( disable: 4512 ) // assignment operator could not be generated
@@ -59,14 +56,9 @@
 #include <boost155/range/algorithm_ext/push_back.hpp>
 #include <boost155/range/numeric.hpp>
 
-#ifdef __INTELLISENSE__
-#define foreach_(item, rng) for (item; ; )
-#define reverse_foreach_(item, rng) for (item; ; )
-#else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
 #define reverse_foreach_ BOOST_155_REVERSE_FOREACH
-#endif
 
 // Alias our latest boost version
 namespace bst = boost155;
