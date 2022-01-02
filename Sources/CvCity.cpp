@@ -15792,6 +15792,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				}
 				if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_2))
 				{
+					CvPlot* pPlot = plot();
 					if (pPlot != NULL)
 					{
 						if (pUnit->canSleep() || pUnit->canFortify())
