@@ -4258,8 +4258,8 @@ void CvCity::hurry(HurryTypes eHurry)
 		return;
 	}
 
-	bool bBuy = (GC.getHurryInfo(eHurry).getGoldPerProduction() > 0);
 	bool bWhip = (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0);
+	bool bBuy = (GC.getHurryInfo(eHurry).getGoldPerProduction() > 0);
 
 	if (bBuy)
 	{
