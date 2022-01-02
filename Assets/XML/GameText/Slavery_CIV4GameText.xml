@@ -447,16 +447,6 @@
 		<Russian>Âàø ïëåííûé ñòàë ðàáîì-ñïåöèàëèñòîì (Ïðîèçâîäñòâî).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Tag>
-		<English>Set city slave to clean cities.</English>
-		<French>Placer un esclave pour nettoyer les villes.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Sanitation).</English>
-		<French>Votre prisonnier est devenu un esclave chargé du nettoyage.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR</Tag>
 		<English>Set city slave to work teach our children.</English>
 		<French>Assigne l'esclave au travail d'enseignement.</French>

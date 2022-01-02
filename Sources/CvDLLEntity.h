@@ -22,7 +22,7 @@ class CvCity;
 class CvUnit;
 class CvPlot;
 
-class CvDLLEntity : bst::noncopyable
+class CvDLLEntity
 {
 public:
 	CvDLLEntity();

@@ -13,25 +13,24 @@ OutputRatios::OutputRatios(const int food, const int production, const int comme
 }
 void OutputRatios::WeightOutputs(const int foodWeight, const int productionWeight, const int commerceWeight)
 {
-	food_ratio = food_ratio * foodWeight;
-	production_ratio = production_ratio * productionWeight;
-	commerce_ratio = commerce_ratio * commerceWeight;
+	food_ratio *= foodWeight;
+	production_ratio *= productionWeight;
+	commerce_ratio *= commerceWeight;
 }
 void OutputRatios::WeightFood(const int foodWeight)
 {
-	food_ratio = food_ratio * foodWeight;
+	food_ratio *= foodWeight;
 }
 void OutputRatios::WeightProduction(const int productionWeight)
 {
-	production_ratio = production_ratio * productionWeight;
+	production_ratio *= productionWeight;
 }
 void OutputRatios::WeightCommerce(const int commerceWeight)
 {
-	commerce_ratio = commerce_ratio * commerceWeight;
+	commerce_ratio *= commerceWeight;
 }
 
 int OutputRatios::CalculateOutputValue(const int food, const int production, const int commerce) const
 {
 	return (food_ratio * food) + (production_ratio * production) + (commerce_ratio * commerce);
 }
-

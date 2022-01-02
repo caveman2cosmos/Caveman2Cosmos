@@ -7,14 +7,15 @@
 #include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvInfoWater.h"
+#include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
-#include "CvImprovementInfo.h"
 #include <iostream>
-#include "CvInitCore.h"
 
 bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache)
 {
@@ -999,7 +1000,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eUnit = (UnitTypes)iI;
+		UnitTypes eUnit = static_cast<UnitTypes>(iI);
 		GC.getUnitInfo(eUnit).setQualifiedPromotionTypes();
 		GC.getUnitInfo(eUnit).setCanAnimalIgnores();
 	}

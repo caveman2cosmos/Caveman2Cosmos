@@ -6,9 +6,9 @@
 #define CIV4_TEAM_H
 
 #include "CvGameObject.h"
+#include "CvProperties.h"
 
 class CvArea;
-class CvProperties;
 
 class CvTeam : bst::noncopyable
 {

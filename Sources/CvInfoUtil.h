@@ -487,7 +487,7 @@ struct CvInfoUtil : bst::noncopyable
 		void copyNonDefaults(const WrappedVar* source)
 		{
 			foreach_(const T& element, static_cast<const VectorWrapper*>(source)->ref())
-				if (element > -1 && !algo::contains(ref(), element))
+				if (element > -1 && algo::none_of_equal(ref(), element))
 					ref().push_back(element);
 			algo::sort(ref());
 		}

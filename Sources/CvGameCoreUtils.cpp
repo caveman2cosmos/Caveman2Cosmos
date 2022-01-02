@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
@@ -12,8 +13,9 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
-#include "CheckSum.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CheckSum.h"
+#include "FAStarNode.h"
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
 #define PATH_RIVER_WEIGHT										(100)
@@ -233,174 +235,16 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 	return (pFirstUnit->getID() < pSecondUnit->getID());
 }
 
-/*************************************************************************************************/
-/** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
-/** BEGIN                                                                       v?.?             */
-/*************************************************************************************************/
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
-{
-	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
-	// RevolutionDCM - super spies
-	// Disable spy promotions mechanism
-	if (kUnit.isSpy() && !GC.isSS_ENABLED())
-	{
-		return false;
-	}
-	// RevolutionDCM - end
-
-	if (kUnit.getFreePromotions(ePromotion))
-	{
-		return true;
-	}
-
-	if (kUnit.getUnitCombatType() == NO_UNITCOMBAT)
-	{
-		return false;
-	}
-
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-
-	if (!bLeader && kPromotion.isLeader())
-	{
-		return false;
-	}
-// TB SubCombat Mod Begin - Unnecessary and create bugs in SubCombat:
-//	if (!(kPromotion.getUnitCombat(kUnit.getUnitCombatType())))
-//	{
-//		return false;
-//	}
-	//TB SubCombat Mod End
-/************************************************************************************************/
-/* SUPER_SPIES                             04/05/08                                Faichele     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original code
-	if (kUnit.isOnlyDefensive())
-	{
-		if ((kPromotion.getCityAttackPercent() != 0) ||
-			  (kPromotion.getWithdrawalChange() != 0) ||
-			  (kPromotion.getCollateralDamageChange() != 0) ||
-			  (kPromotion.isBlitz()) ||
-			  (kPromotion.isAmphib()) ||
-			  (kPromotion.isRiver()) ||
-			  (kPromotion.getHillsAttackPercent() != 0))
-		{
-			return false;
-		}
-	}
-*/
-	//TSHEEP Override for Spy promotions
-	//if (kUnit.isOnlyDefensive())
-	if (kUnit.isOnlyDefensive() && !kUnit.isSpy())//TSHEEP End
-	{
-		if ((kPromotion.getCityAttackPercent() != 0) ||
-		//TB Combat Mod begin
-			  ((!GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))&&(kPromotion.getWithdrawalChange() != 0)) ||
-			  //TB Combat Mod end
-			  (kPromotion.getCollateralDamageChange() != 0) ||
-			  (kPromotion.isBlitz()) ||
-			  (kPromotion.isAmphib()) ||
-			  (kPromotion.isRiver()) ||
-			  //TB Combat Mod begin
-			  (kPromotion.isRemoveStampede()) ||
-			  (kPromotion.isStampedeChange()) ||
-			  (kPromotion.isOnslaughtChange()) ||
-			  (kPromotion.getKnockbackChange()) ||
-			  //TB Combat Mod end
-			  (kPromotion.getHillsAttackPercent() != 0))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* SUPER_SPIES                             END                                                  */
-/************************************************************************************************/
-
-	//if (kUnit.isIgnoreTerrainCost())
-	//{
-	//	if (kPromotion.getMoveDiscountChange() != 0)
-	//	{
-	//		return false;
-	//	}
-	//}
-
-	//ls612: Remove this filter, it was causing wierd things to happen.
-	//if (kUnit.getMoves() == 1)
-	//{
-	//	if (kPromotion.isBlitz())
-	//	{
-	//		return false;
-	//	}
-	//}
-
-	if ((kUnit.getCollateralDamage() == 0) || (kUnit.getCollateralDamageLimit() == 0) || (kUnit.getCollateralDamageMaxUnits() == 0))
-	{
-		if (kPromotion.getCollateralDamageChange() != 0)
-		{
-			return false;
-		}
-	}
-
-	if (kUnit.getInterceptionProbability() == 0 && !kUnit.isSpy())
-	{
-		if (kPromotion.getInterceptChange() != 0)
-		{
-			return false;
-		}
-	}
-
-	if (NO_PROMOTION != kPromotion.getPrereqPromotion())
-	{
-		if (!isPromotionValid((PromotionTypes)kPromotion.getPrereqPromotion(), eUnit, bLeader))
-		{
-			return false;
-		}
-	}
-
-	const PromotionTypes ePrereq1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-	const PromotionTypes ePrereq2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
-	if (NO_PROMOTION != ePrereq1 || NO_PROMOTION != ePrereq2)
-	{
-		bool bValid = false;
-		if (!bValid)
-		{
-			if (NO_PROMOTION != ePrereq1 && isPromotionValid(ePrereq1, eUnit, bLeader))
-			{
-				bValid = true;
-			}
-		}
-
-		if (!bValid)
-		{
-			if (NO_PROMOTION != ePrereq2 && isPromotionValid(ePrereq2, eUnit, bLeader))
-			{
-				bValid = true;
-			}
-		}
-
-		if (!bValid)
-		{
-			return false;
-		}
-	}
-
-	return true;
-}
-/*************************************************************************************************/
-/** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
-/** END                                                                                          */
-/*************************************************************************************************/
 
 int getTechScore(TechTypes eTech)
 {
-	return (GC.getTechInfo(eTech).getEra() + 1);
+	return 1 + GC.getTechInfo(eTech).getEra();
 }
 
 int getWonderScore(BuildingTypes eWonder)
 {
-	return isLimitedWonder(eWonder) ? 5 : 0;
+	return isLimitedWonder(eWonder) ? 6 : 1;
 }
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount)
@@ -416,10 +260,7 @@ ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCou
 	{
 		return finalImprovementUpgrade(GC.getImprovementInfo(eImprovement).getImprovementUpgrade(), (iCount + 1));
 	}
-	else
-	{
-		return eImprovement;
-	}
+	return eImprovement;
 }
 
 int getWorldSizeMaxConscript(CivicTypes eCivic)
@@ -441,7 +282,6 @@ bool isReligionTech(TechTypes eTech)
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -454,7 +294,6 @@ bool isCorporationTech(TechTypes eTech)
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -466,8 +305,7 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 	{
 		return true;
 	}
-
-	return algo::contains(info.getPrereqAndTechs(), eTech);
+	return algo::any_of_equal(info.getPrereqAndTechs(), eTech);
 }
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
@@ -475,7 +313,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
 	if (info.getPrereqAndTech() == eTech
-	|| algo::contains(info.getPrereqAndTechs(), eTech))
+	|| algo::any_of_equal(info.getPrereqAndTechs(), eTech))
 	{
 		return true;
 	}
@@ -1681,13 +1519,13 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 bool PUF_isVisible(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false));
+	return !pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false);
 }
 
 bool PUF_isVisibleDebug(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true));
+	return !pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true);
 }
 
 bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -2620,10 +2458,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
-				}
 			}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
@@ -3284,10 +3118,6 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
-				}
-				if (pToPlot->getExtraMovePathCost() > 0)
-				{
-					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 				}
 			}
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
@@ -4106,7 +3936,7 @@ int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack)
 }
 
 
-bool isPickableName(const TCHAR* szName)
+bool isPickableName(const char* szName)
 {
 	return !szName || _tcsicmp(&szName[_tcslen(szName)-6], "NOPICK");
 }
@@ -4128,7 +3958,7 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 		piShuffle[iI] = iI;
 	}
 
-	for (iI = 0; iI < iNum; iI++)
+	for (int iI = 0; iI < iNum; iI++)
 	{
 		const int iJ = iI + rand.get(iNum - iI, NULL);
 
@@ -4294,8 +4124,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_SKIP: szString = L"MISSION_SKIP"; break;
 	case MISSION_SLEEP: szString = L"MISSION_SLEEP"; break;
 	case MISSION_FORTIFY: szString = L"MISSION_FORTIFY"; break;
-	//case MISSION_ESTABLISH: szString = L"MISSION_ESTABLISH"; break;
-	//case MISSION_ESCAPE: szString = L"MISSION_ESCAPE"; break;
 	case MISSION_BUILDUP: szString = L"MISSION_BUILDUP"; break;
 	case MISSION_PLUNDER: szString = L"MISSION_PLUNDER"; break;
 	case MISSION_AIRPATROL: szString = L"MISSION_AIRPATROL"; break;
@@ -4358,8 +4186,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_LAWYER_REMOVE_CORPORATIONS: szString = L"MISSION_LAWYER_REMOVE_CORPORATIONS"; break;
 	case MISSION_JOIN_CITY_POPULATION: szString = L"MISSION_JOIN_CITY_POPULATION"; break;
 	case MISSION_CURE: szString = L"MISSION_CURE"; break;
-	case MISSION_ESTABLISH: szString = L"MISSION_ESTABLISH"; break;
-	case MISSION_ESCAPE: szString = L"MISSION_ESCAPE"; break;
 	case MISSION_AUTO_BUILDUP: szString = L"MISSION_AUTO_BUILDUP"; break;
 	case MISSION_HEAL_BUILDUP: szString = L"MISSION_HEAL_BUILDUP"; break;
 	case MISSION_AMBUSH: szString = L"MISSION_AMBUSH"; break;
@@ -4647,7 +4473,7 @@ void CvChecksum::add(uint8_t b)
 #include "CyArgsList.h"
 
 void AddDLLMessage(
-	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound,
+	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound,
 	InterfaceMessageTypes eType, LPCSTR pszIcon, ColorTypes eFlashColor,
 	int iFlashX, int iFlashY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
 {

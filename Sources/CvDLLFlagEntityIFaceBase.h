@@ -16,12 +16,12 @@
 #define CvDLLFlagEntityIFaceBase_H
 
 #include "CvDLLEntityIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
 
 class CvPlot;
 class CvFlagEntity;
 class CvEntity;
-class cvInternalGlobals;
-class CvDLLUtilityIFaceBase;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  CLASS:      CvDLLFlagEntityIFaceBase

@@ -1,3 +1,5 @@
+#include "CvUnitComponents.h"
+#include "CvInfos.h"
 //------------------------------------------------------------------------------------------------------
 //  CLASS: UnitCompCommander
 //------------------------------------------------------------------------------------------------------
@@ -79,7 +81,7 @@ void UnitCompWorker::changeWorkModifier(const int iChange)
 bool UnitCompWorker::hasExtraBuild(const BuildTypes eBuild) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
-	return algo::contains(m_extraBuilds, eBuild);
+	return algo::any_of_equal(m_extraBuilds, eBuild);
 }
 
 void UnitCompWorker::setExtraBuild(BuildTypes eBuild, bool bNewValue)

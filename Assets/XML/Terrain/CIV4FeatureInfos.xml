@@ -6206,6 +6206,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>5</iTurnDamage>
+			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
@@ -6238,6 +6239,7 @@
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>

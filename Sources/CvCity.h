@@ -5,118 +5,24 @@
 #ifndef CIV4_CITY_H
 #define CIV4_CITY_H
 
-//#include "CvDLLEntity.h"
 #include "LinkedList.h"
+#include "CvDLLEntity.h"
+#include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
-#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
-class CvDLLEntity;
 class CvPlot;
 class CvPlotGroup;
+class CvUnit;
+class CvUnitSelectionCriteria;
 
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
 void subtractGoodOrBad(int iValue, int& iGood, int& iBad);
 // BUG - end
-
-//	Unit ordering criteria
-class CvUnitSelectionCriteria
-{
-public:
-	CvUnitSelectionCriteria()
-	:
-		m_eUnitAI(NO_UNITAI),
-		m_eIgnoreAdvisor(NO_ADVISOR),
-		m_eHealUnitCombat(NO_UNITCOMBAT),
-		m_eProperty(NO_PROPERTY),
-		m_eVisibility(NO_INVISIBLE),
-		m_bIgnoreNotUnitAIs(false),
-		m_bIgnoreGrowth(false),
-		m_bPropertyBeneficial(true),
-		m_bNoNegativeProperties(false),
-		m_bIsHealer(false),
-		m_bIsCommander(false)
-	{ }
-
-	CvString getDescription()
-	{
-		if (m_eProperty != NO_PROPERTY)
-		{
-			return (
-				CvString::format(
-					"Property %s for %S",
-					m_bPropertyBeneficial ? "improver" : "worsener",
-					GC.getPropertyInfo(m_eProperty).getDescription()
-				)
-			);
-		}
-		return CvString("");
-	}
-
-#define PROPERTY_MASK 0x0F
-#define ADVISOR_MASK 0x07
-
-	int getHash() const
-	{
-		int	iResult = (m_eUnitAI << 16);
-
-		if ( m_eProperty != NO_PROPERTY )
-		{
-			iResult |= 0x8000;
-			iResult |= (m_eProperty & PROPERTY_MASK) << 11;
-			if ( !m_bPropertyBeneficial )
-			{
-				iResult |= 0x400;
-			}
-		}
-		if ( m_bIgnoreNotUnitAIs )
-		{
-			iResult |= 0x200;
-		}
-		if ( m_bIgnoreGrowth )
-		{
-			iResult |= 0x100;
-		}
-		iResult |= (m_eIgnoreAdvisor & ADVISOR_MASK) << 5;
-		if ( m_bIsHealer )
-		{
-			iResult |= 0x10;
-		}
-		if ( m_bIsCommander )
-		{
-			iResult |= 0x8;
-		}
-
-		return iResult;
-	}
-
-	UnitAITypes		m_eUnitAI;
-	AdvisorTypes	m_eIgnoreAdvisor;
-	UnitCombatTypes	m_eHealUnitCombat;
-	PropertyTypes	m_eProperty;
-	InvisibleTypes	m_eVisibility;
-	bool			m_bIgnoreNotUnitAIs;
-	bool			m_bIgnoreGrowth;
-	bool			m_bPropertyBeneficial;
-	bool			m_bNoNegativeProperties;
-	bool			m_bIsHealer;
-	bool			m_bIsCommander;
-
-	CvUnitSelectionCriteria& UnitAI(UnitAITypes UnitAI) { m_eUnitAI = UnitAI; return *this; }
-	CvUnitSelectionCriteria& IgnoreAdvisor(AdvisorTypes IgnoreAdvisor) { m_eIgnoreAdvisor = IgnoreAdvisor; return *this; }
-	CvUnitSelectionCriteria& HealUnitCombat(UnitCombatTypes HealUnitCombat) { m_eHealUnitCombat = HealUnitCombat; return *this; }
-	CvUnitSelectionCriteria& Property(PropertyTypes Property) { m_eProperty = Property; return *this; }
-	CvUnitSelectionCriteria& Visibility(InvisibleTypes Visibility) { m_eVisibility = Visibility; return *this; }
-	CvUnitSelectionCriteria& IgnoreNotUnitAIs(bool IgnoreNotUnitAIs) { m_bIgnoreNotUnitAIs = IgnoreNotUnitAIs; return *this; }
-	CvUnitSelectionCriteria& IgnoreGrowth(bool IgnoreGrowth) { m_bIgnoreGrowth = IgnoreGrowth; return *this; }
-	CvUnitSelectionCriteria& PropertyBeneficial(bool PropertyBeneficial) { m_bPropertyBeneficial = PropertyBeneficial; return *this; }
-	CvUnitSelectionCriteria& NoNegativeProperties(bool NoNegativeProperties) { m_bNoNegativeProperties = NoNegativeProperties; return *this; }
-	CvUnitSelectionCriteria& IsHealer(bool IsHealer) { m_bIsHealer = IsHealer; return *this; }
-	CvUnitSelectionCriteria& IsCommander(bool IsCommander) { m_bIsCommander = IsCommander; return *this; }
-};
 
 struct ProductionCalc
 {
@@ -132,6 +38,7 @@ DECLARE_FLAGS(ProductionCalc::flags);
 
 
 class CvCity : public CvDLLEntity
+	, bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 public:
 	CvCity();
@@ -148,8 +55,8 @@ public:
 
 private:
 	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvCity(const CvCity&);
-	CvCity& operator=(const CvCity&);
+	//CvCity(const CvCity&);
+	//CvCity& operator=(const CvCity&);
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
 protected:
@@ -1285,12 +1192,12 @@ public:
 	// Fill the kEffectNames array with references to effects in the CIV4EffectInfos.xml to have a
 	// city play a given set of effects. This is called whenever the interface updates the city billboard
 	// or when the zoom level changes
-	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const TCHAR*>& kEffectNames);
+	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const char*>& kEffectNames);
 
 
 	// Billboard appearance controls
 	DllExport void getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kTextColor) const;
-	DllExport const TCHAR* getCityBillboardProductionIcon() const;
+	DllExport const char* getCityBillboardProductionIcon() const;
 	DllExport bool getFoodBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport bool getProductionBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport NiColorA getBarBackgroundColor() const;

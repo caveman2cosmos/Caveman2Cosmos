@@ -39,50 +39,6 @@ FONT_CENTER_JUSTIFY=1<<2
 FONT_RIGHT_JUSTIFY=1<<1
 FONT_LEFT_JUSTIFY=1<<0
 
-# if the string is non unicode, convert it to unicode by decoding it using utf-8
-def convertToUnicode(s):
-	if isinstance(s, str):
-		return s.decode("iso8859")
-	return s
-
-# if the string is unicode, convert it to str by encoding it using utf-8
-def convertToStr(txt):
-	if isinstance(txt, unicode):
-		i = 0
-		length = len(txt)
-		while i < length:
-			ordinal = ord(txt[i])
-			if ordinal > 255:
-				txt = txt[:i] + '?' + txt[i+1:]
-			i += 1
-		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ß".
-		return txt.encode("iso8859")
-	return txt
-
-# Used to reduce text to ascii, exe enforce ascii in some cases.
-def convertToAscii(txt):
-	txt = convertToStr(txt)
-	# convert to ascii equivalent where possible.
-	accent = [
-		('à', 'a'), ('ä', 'a'), ('â', 'a'),
-		('é', 'e'), ('è', 'e'), ('ê', 'e'),
-		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
-		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
-		('ç', 'c'), ('î', 'i'), ('ï', 'i'),
-		('ß', 'ss')
-	]
-	while accent:
-		a, b = accent.pop()
-		txt = txt.replace(a, b)
-	# get rid of any "above ascii ordinals" that may be left here.
-	i = 0
-	length = len(txt)
-	while i < length:
-		ordinal = ord(txt[i])
-		if ordinal > 128:
-			txt = txt[:i] + '?' + txt[i+1:]
-		i += 1
-	return txt
 
 class RedirectDebug:
 	"""Send Debug Messages to Civ Engine"""

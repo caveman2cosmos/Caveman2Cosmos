@@ -646,11 +646,11 @@ public:
 	template<class T>
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
-		foreach_(const T& it, source)
+		foreach_(const T& element, source)
 		{
-			if (/*it > -1 &&*/ !algo::contains(target, it))
+			if (/*it > -1 &&*/ algo::none_of_equal(target, element))
 			{
-				target.push_back(it);
+				target.push_back(element);
 			}
 		}
 
@@ -672,7 +672,7 @@ public:
 					for (int j = 0; j < iNumSibs; j++)
 					{
 						const T value = static_cast<T>(GetInfoClass(szTextVal));
-						if (value > -1  && !algo::contains(*aInfos, value))
+						if (value > -1  && algo::none_of_equal(*aInfos, value))
 						{
 							aInfos->push_back(value);
 						}

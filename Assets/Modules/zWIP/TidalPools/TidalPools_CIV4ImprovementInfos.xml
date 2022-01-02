@@ -9,9 +9,6 @@
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TIDAL_POOLS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_TIDAL_POOLS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TIDAL_POOLS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TIDAL_POOLS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIDAL_POOLS</ArtDefineTag>
