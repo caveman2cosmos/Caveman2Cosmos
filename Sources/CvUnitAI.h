@@ -437,7 +437,9 @@ public:
 	bool AI_arrest();
 	bool AI_ambush(int iOddsThreshold, bool bAssassinationOnly = false);
 
-	bool AI_activateStatus(bool bChange, bool bStack, PromotionTypes eStatus, CvUnit* pUnit = NULL);
+private:
+	bool AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit);
+public:
 	bool AI_selectStatus(bool bStack, CvUnit* pUnit = NULL);
 	bool AI_groupSelectStatus();
 

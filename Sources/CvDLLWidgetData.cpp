@@ -2599,7 +2599,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (pSelectedUnit->canGreatWork(pMissionPlot))
 					{
-						szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getGreatWorkCulture(pMissionPlot), GC.getCommerceInfo(COMMERCE_CULTURE).getChar()));
+						szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getGreatWorkCulture(), GC.getCommerceInfo(COMMERCE_CULTURE).getChar()));
 						break;
 					}
 				}
@@ -2619,7 +2619,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (pSelectedUnit->canEspionage(pMissionPlot))
 							{
-								szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getEspionagePoints(pMissionPlot), GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar()));
+								szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getEspionagePoints(), GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar()));
 								break;
 							}
 						}

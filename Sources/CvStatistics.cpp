@@ -406,7 +406,7 @@ void CvStatistics::cityBuilt( CvCity *pCity )
 {
 	getPlayerRecord( pCity->getOwner() )->cityBuilt();
 }
-void CvStatistics::cityRazed( CvCity * pCity, PlayerTypes ePlayer )
+void CvStatistics::cityRazed(PlayerTypes ePlayer)
 {
 	getPlayerRecord( ePlayer )->cityRazed();
 }

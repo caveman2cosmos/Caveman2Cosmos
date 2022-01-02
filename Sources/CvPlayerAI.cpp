@@ -5384,11 +5384,11 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		{
 			iValue += 200;
 
-			CivicTypes eCivic = getCivics((CivicOptionTypes)(GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType()));
+			const CivicTypes eCivic = getCivics((CivicOptionTypes)(GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType()));
 			if (NO_CIVIC != eCivic)
 			{
-				int iCurrentCivicValue = AI_civicValue(eCivic);
-				int iNewCivicValue = AI_civicValue((CivicTypes)iJ);
+				const int iCurrentCivicValue = AI_civicValue(eCivic);
+				const int iNewCivicValue = AI_civicValue((CivicTypes)iJ);
 				int iTechCivicValue = 0;
 
 				if (iNewCivicValue > iCurrentCivicValue)
@@ -8086,10 +8086,10 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 			iValue += GET_TEAM(getTeam()).AI_contactTradeVal((TeamTypes)(pNode->m_data.m_iData), GET_PLAYER(ePlayer).getTeam());
 			break;
 		case TRADE_CORPORATION:
-			iValue += AI_corporationTradeVal((CorporationTypes)(pNode->m_data.m_iData), ePlayer);
+			iValue += AI_corporationTradeVal((CorporationTypes)pNode->m_data.m_iData);
 
 			//	Partner is losing it also
-			iValue += GET_PLAYER(ePlayer).AI_corporationTradeVal((CorporationTypes)(pNode->m_data.m_iData), getID());
+			iValue += GET_PLAYER(ePlayer).AI_corporationTradeVal((CorporationTypes)pNode->m_data.m_iData);
 			break;
 		case TRADE_PLEDGE_VOTE:
 			iValue += AI_pledgeVoteTradeVal(GC.getGame().getVoteTriggered(GC.getGame().getCurrentVoteID()), ((PlayerVoteTypes)(pNode->m_data.m_iData)), ePlayer);
@@ -9820,7 +9820,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 			iValue += AI_corporationValue((CorporationTypes)iI, pCity) / 25;
 			if (pCity->isHeadquarters((CorporationTypes)iI))
 			{
-				iValue += AI_corporationTradeVal((CorporationTypes)iI, pCity->getOwner());
+				iValue += AI_corporationTradeVal((CorporationTypes)iI);
 			}
 		}
 	}
@@ -9920,7 +9920,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 			iValue += AI_corporationValue((CorporationTypes)iI, pCity) / 25;
 			if (pCity->isHeadquarters((CorporationTypes)iI))
 			{
-				iValue += AI_corporationTradeVal((CorporationTypes)iI, pCity->getOwner());
+				iValue += AI_corporationTradeVal((CorporationTypes)iI);
 			}
 		}
 	}
@@ -17152,7 +17152,7 @@ void CvPlayerAI::AI_doMilitary()
 				}
 				// Toffer - Minor problem, I don't think AI_disbandUnit only disbands military units...
 				//	It should also have a boolean telling it to only disband units with upkeep cost.
-				if (!AI_disbandUnit(iExperienceThreshold, false))
+				if (!AI_disbandUnit(iExperienceThreshold))
 				{
 					break;
 				}
@@ -21784,13 +21784,12 @@ void CvPlayerAI::AI_doCheckFinancialTrouble()
 	}
 }
 
-bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
+bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 {
 	int iBestValue = MAX_INT;
 	CvUnit* pBestUnit = NULL;
-	CvUnit* pLoopUnit;
-	int iLoop;
-	for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+
+	foreach_(CvUnit* pLoopUnit, units())
 	{
 		if (!pLoopUnit->hasCargo() && !pLoopUnit->isGoldenAge() && pLoopUnit->getUnitInfo().getProductionCost() > 0
 		&& (iExpThreshold == -1 || pLoopUnit->canFight() && pLoopUnit->getExperience() <= iExpThreshold)
@@ -25056,7 +25055,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 			//Find a new starting plot for this player
 			setStartingPlot(findStartingPlot(), true);
 			//Redo Starting visibility
-			CvPlot* pStartingPlot = getStartingPlot();
+			const CvPlot* pStartingPlot = getStartingPlot();
 			if (NULL != pStartingPlot)
 			{
 				for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
@@ -25100,7 +25099,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				{
 					for (int iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
 					{
-						CvPlot* pLoopPlot2 = plotCardinalDirection(pLoopPlot->getX(), pLoopPlot->getY(), (CardinalDirectionTypes)iJ);
+						const CvPlot* pLoopPlot2 = plotCardinalDirection(pLoopPlot->getX(), pLoopPlot->getY(), (CardinalDirectionTypes)iJ);
 						if ((pLoopPlot2 != NULL) && (getAdvancedStartVisibilityCost(pLoopPlot2) > 0))
 						{
 							// Mildly maphackery but any smart human can see the terrain type of a tile.
@@ -25149,10 +25148,10 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 	bool bDonePlacingCities = false;
 	for (int iPass = 0; iPass < 100; ++iPass)
 	{
-		int iRand = iTechRand + 10 * getNumCities();
+		const int iRand = iTechRand + 10 * getNumCities();
 		if ((iRand > 0) && (GC.getGame().getSorenRandNum(100, "AI AS Buy Tech 2") < iRand))
 		{
-			TechTypes eTech = AI_bestTech(1);
+			const TechTypes eTech = AI_bestTech(1);
 			if ((eTech != NO_TECH) && !GC.getTechInfo(eTech).isRepeat())
 			{
 				int iTechCost = getAdvancedStartTechCost(eTech, true);
@@ -25197,7 +25196,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		}
 		if (!bDonePlacingCities)
 		{
-			int iCost = getAdvancedStartCityCost(true, pBestFoundPlot);
+			const int iCost = getAdvancedStartCityCost(true, pBestFoundPlot);
 			if (iCost > getAdvancedStartPoints())
 			{
 				bDonePlacingCities = true;
@@ -25228,7 +25227,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 	while (!bDoneWithTechs)
 	{
 		bDoneWithTechs = true;
-		TechTypes eTech = AI_bestTech(1);
+		const TechTypes eTech = AI_bestTech(1);
 		if (eTech != NO_TECH && !GC.getTechInfo(eTech).isRepeat())
 		{
 			const int iTechCost = getAdvancedStartTechCost(eTech, true);
@@ -25285,9 +25284,9 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		{
 			if (iPass == 0 || pLoopCity->getArea() == getStartingPlot()->getArea())
 			{
-				CvPlot* pUnitPlot = pLoopCity->plot();
+				const CvPlot* pUnitPlot = pLoopCity->plot();
 				//Token defender
-				UnitTypes eBestUnit = AI_bestAdvancedStartUnitAI(pUnitPlot, aeUnitAITypes[iPass % aeUnitAITypes.size()]);
+				const UnitTypes eBestUnit = AI_bestAdvancedStartUnitAI(pUnitPlot, aeUnitAITypes[iPass % aeUnitAITypes.size()]);
 				if (eBestUnit != NO_UNIT)
 				{
 					if (getAdvancedStartUnitCost(eBestUnit, true, pUnitPlot) > getAdvancedStartPoints())
@@ -25303,7 +25302,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 	if (isHuman())
 	{
 		// remove unhappy population
-		foreach_(CvCity* pLoopCity, cities())
+		foreach_(const CvCity* pLoopCity, cities())
 		{
 			while (pLoopCity->angryPopulation() > 0 && getAdvancedStartPopCost(false, pLoopCity) > 0)
 			{
@@ -25378,9 +25377,6 @@ int CvPlayerAI::AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const
 
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
-	int iValue;
-	int iI;
-
 	logBBAI("Player %d (%S) begin Update City Sites ...", getID(), getCivilizationDescription(0));
 
 	int iPass = 0;
@@ -25390,12 +25386,12 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		int iBestFoundValue = 0;
 		CvPlot* pBestFoundPlot = NULL;
 
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
 			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			if (pLoopPlot->isRevealed(getTeam(), false))
 			{
-				iValue = pLoopPlot->getFoundValue(getID());
+				int iValue = pLoopPlot->getFoundValue(getID());
 				if (iValue > iMinFoundValueThreshold)
 				{
 					if (!AI_isPlotCitySite(pLoopPlot))
@@ -26592,7 +26588,7 @@ CvCity* CvPlayerAI::getInquisitionRevoltCity(const CvUnit *pUnit, const bool bNo
 	}
 
 	CvCity* pBestCity = NULL;
-	CvPlot* pUnitPlot = pUnit->plot();
+	const CvPlot* pUnitPlot = pUnit->plot();
 	int iBestRevoltIndex = 100;
 
 	foreach_(CvCity* pLoopCity, cities())
@@ -26628,7 +26624,7 @@ CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(const CvUnit* pUnit, const bool
 	}
 
 	CvCity* pBestCity = NULL;
-	CvPlot* pUnitPlot = pUnit->plot();
+	const CvPlot* pUnitPlot = pUnit->plot();
 	int iBestRevoltIndex = 100;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -27344,7 +27340,7 @@ int CvPlayerAI::AI_pledgeVoteTradeVal(const VoteTriggeredData* kData, PlayerVote
 	return 1;
 }
 
-int CvPlayerAI::AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const
+int CvPlayerAI::AI_corporationTradeVal(CorporationTypes eCorporation) const
 {
 	PROFILE_FUNC();
 
@@ -27377,9 +27373,8 @@ int CvPlayerAI::AI_corporationTradeVal(CorporationTypes eCorporation, PlayerType
 		}
 	}
 
-	iValue = (iValue*3)/(3+iCompetitorCount);
+	return (iValue * 3) / (3 + iCompetitorCount);
 
-	return iValue;
 }
 
 int CvPlayerAI::AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const

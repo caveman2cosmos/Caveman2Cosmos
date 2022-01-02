@@ -63,15 +63,12 @@ CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
 
-int g_iPercentDefault = 100;
-int g_iModifierDefault = 0;
-
 #ifdef _DEBUG
 int inDLL = 0;
 const char* fnName = NULL;
 
 //	Wrapper for debugging so as to be able to always tell last method entered
-ProxyTracker::ProxyTracker(const CvGlobals* proxy, const char* name)
+ProxyTracker::ProxyTracker(const char* name)
 {
 	inDLL++;
 	fnName = name;

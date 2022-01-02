@@ -909,7 +909,7 @@ public:
 	bool canApplyEvent(EventTypes eEvent) const;
 	void applyEvent(EventTypes eEvent);
 
-	bool canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const;
+	bool canTrain(UnitTypes eUnit, bool bTestVisible) const;
 
 	bool isEspionageCounterSpy(TeamTypes eTeam) const;
 
