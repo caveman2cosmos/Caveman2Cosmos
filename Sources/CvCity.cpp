@@ -4252,14 +4252,17 @@ void CvCity::hurry(HurryTypes eHurry)
 		return;
 	}
 
-	if (const bool bBuy = (GC.getHurryInfo(eHurry).getGoldPerProduction() > 0))
+	bool bBuy = (GC.getHurryInfo(eHurry).getGoldPerProduction() > 0);
+	bool bWhip = (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0);
+
+	if (bBuy)
 	{
 		iHurryGold = getHurryGold(eHurry);
 		GET_PLAYER(getOwner()).changeHurriedCount(1);
 		GET_PLAYER(getOwner()).changeGold(-iHurryGold);
 	}
 
-	if (const bool bWhip = (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0))
+	if (bWhip)
 	{
 		iHurryPopulation = hurryPopulation(eHurry);
 		iHurryAngerLength = hurryAngerLength(eHurry);
@@ -15783,13 +15786,16 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				}
 				if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_2))
 				{
-					if (pUnit->canSleep())
+					if (pPlot != NULL)
 					{
-						pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
-					}
-					else if (pUnit->canFortify())
-					{
-						pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
+						if (pUnit->canSleep())
+						{
+							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
+						}
+						else if (pUnit->canFortify())
+						{
+							pUnit->getGroup()->setActivityType(ACTIVITY_SLEEP);
+						}
 					}
 				}
 			}
