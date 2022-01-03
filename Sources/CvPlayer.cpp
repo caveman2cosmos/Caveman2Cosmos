@@ -21150,19 +21150,11 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 		{
 			if (bPickPlot)
 			{
-				for (int iPlot = 0; iPlot < NUM_CITY_PLOTS; ++iPlot)
+				foreach_(CvPlot* pLoopPlot, pCity->plots(NUM_CITY_PLOTS, true))
 				{
-					if (CITY_HOME_PLOT != iPlot)
+					if (pLoopPlot->canTrigger(eEventTrigger, getID()))
 					{
-						CvPlot* pLoopPlot = pCity->getCityIndexPlot(iPlot);
-
-						if (NULL != pLoopPlot)
-						{
-							if (pLoopPlot->canTrigger(eEventTrigger, getID()))
-							{
-								apPlots.push_back(pLoopPlot);
-							}
-						}
+						apPlots.push_back(pLoopPlot);
 					}
 				}
 			}

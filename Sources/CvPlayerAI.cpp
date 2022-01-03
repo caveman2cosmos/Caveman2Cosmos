@@ -2152,11 +2152,6 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 		}
 		break;
 	case COMMERCE_GOLD:
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  06/12/09								jdog5000	  */
-/*																							  */
-/* Gold AI																		*/
-/************************************************************************************************/
 		if (getCommercePercent(COMMERCE_GOLD) > 70)
 		{
 			//avoid strikes
@@ -2173,17 +2168,9 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 				iWeight -= 25 - getCommercePercent(COMMERCE_GOLD);
 			}
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		break;
 	case COMMERCE_CULTURE:
 		// COMMERCE_CULTURE AIWeightPercent is 25% in default xml
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/08/10								jdog5000	  */
-/*																							  */
-/* Bugfix, Cultural Victory AI																  */
-/************************************************************************************************/
 		// Adjustments for human player going for cultural victory (who won't have AI strategy set)
 		// so that governors do smart things
 		if (pCity != NULL)
@@ -2252,19 +2239,9 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 				iWeight /= 3;
 			}
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		break;
 	case COMMERCE_ESPIONAGE:
 		{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/29/09								jdog5000	  */
-/*																							  */
-/* Espionage AI, Bugfix																		 */
-/************************************************************************************************/
-			// Fixed bug where espionage weight set to 0 if winning all esp point races
-			// Smoothed out emphasis
 			int iEspBehindWeight = 0;
 			for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 			{
@@ -2318,9 +2295,6 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 					iWeight /= 2;
 				}
 			}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		}
 		break;
 
@@ -2434,35 +2408,32 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	int iBadTile = 0;
 
-	for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+	for (int iI = SKIP_CITY_HOME_PLOT; iI < NUM_CITY_PLOTS_2; iI++)
 	{
 		CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
-		if (iI != CITY_HOME_PLOT)
+		if (pLoopPlot == NULL)
 		{
-			if (pLoopPlot == NULL)
+			iBadTile += 4;
+		}
+		else if (pLoopPlot->isImpassable(getTeam()))
+		{
+			iBadTile += 3;
+		}
+		else if (!pLoopPlot->isFreshWater() && !pLoopPlot->isHills())
+		{
+			if (pLoopPlot->isWater() && (!bIsCoastal || pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) < 2))
 			{
-				iBadTile += 4;
+				iBadTile++;
 			}
-			else if (pLoopPlot->isImpassable(getTeam()))
+			else if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) < 2 || pLoopPlot->calculateTotalBestNatureYield(getTeam()) < 3)
 			{
-				iBadTile += 3;
+				iBadTile += 2;
 			}
-			else if (!pLoopPlot->isFreshWater() && !pLoopPlot->isHills())
-			{
-				if (pLoopPlot->isWater() && (!bIsCoastal || pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) < 2))
-				{
-					iBadTile++;
-				}
-				else if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) < 2 || pLoopPlot->calculateTotalBestNatureYield(getTeam()) < 3)
-				{
-					iBadTile += 2;
-				}
-			}
-			else if (pLoopPlot->isOwned() && pLoopPlot->getTeam() == getTeam() && (pLoopPlot->isCityRadius() || abCitySiteRadius[iI]))
-			{
-				iBadTile += bAdvancedStart ? 2 : 1;
-			}
+		}
+		else if (pLoopPlot->isOwned() && pLoopPlot->getTeam() == getTeam() && (pLoopPlot->isCityRadius() || abCitySiteRadius[iI]))
+		{
+			iBadTile += bAdvancedStart ? 2 : 1;
 		}
 	}
 	iBadTile /= 2;
@@ -2665,7 +2636,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 			for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; ++iYieldType)
 			{
-				YieldTypes eYield = (YieldTypes)iYieldType;
+				const YieldTypes eYield = (YieldTypes)iYieldType;
 				aiYield[eYield] = pLoopPlot->getYield(eYield);
 
 				if (iI == CITY_HOME_PLOT)
@@ -25315,7 +25286,6 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 	{
 		doAdvancedStartAction(ADVANCEDSTARTACTION_EXIT, -1, -1, -1, true);
 	}
-
 }
 
 
@@ -25516,13 +25486,12 @@ int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeAre
 
 CvPlot* CvPlayerAI::AI_getCitySite(int iIndex) const
 {
-	FAssert(iIndex < (int)m_aiAICitySites.size());
+	FASSERT_BOUNDS(0, (int)m_aiAICitySites.size(), iIndex);
 	return GC.getMap().plotByIndex(m_aiAICitySites[iIndex]);
 }
 
 int CvPlayerAI::AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType, const CvUnitSelectionCriteria* criteria) const
 {
-
 	CvCity* pCity = NULL;
 
 	if (pArea != NULL)
@@ -25577,7 +25546,7 @@ int CvPlayerAI::AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const CvCity* pCity,
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eUnitAI != NO_UNITAI, "UnitAI is not assigned a valid value");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eUnitAI);
 
 	int iBestValue = 0;
 
@@ -26040,8 +26009,7 @@ int CvPlayerAI::AI_getPlotCanalValue(const CvPlot* pPlot) const
 					}
 					if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 					{
-						CvImprovementInfo &kImprovementInfo = GC.getImprovementInfo(pPlot->getImprovementType());
-						if (!kImprovementInfo.isActsAsCity())
+						if (!GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity())
 						{
 							return 0;
 						}
@@ -26100,8 +26068,7 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 					}
 					if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 					{
-						CvImprovementInfo &kImprovementInfo = GC.getImprovementInfo(pPlot->getImprovementType());
-						if (!kImprovementInfo.isActsAsCity())
+						if (!GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity())
 						{
 							return 0;
 						}
@@ -26131,9 +26098,6 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 }
 // Super Forts end
 
-/********************************************************************************/
-/* 	New Civic AI						05.08.2010				Fuyu			*/
-/********************************************************************************/
 bool CvPlayerAI::AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, ReligionTypes eAssumedReligion) const
 {
 	if (eCivicSelected == NO_CIVIC)
@@ -26204,7 +26168,6 @@ bool CvPlayerAI::AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, Relig
 	}
 
 	return false;
-
 }
 
 bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTypes eCivicSelected, ReligionTypes eAssumedReligion) const
@@ -26317,9 +26280,6 @@ bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTy
 
 	return false;
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 //This returns a positive number equal approximately to the sum
 //of the percentage values of each unit (there is no need to scale the output by iHappy)
@@ -26386,58 +26346,20 @@ int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
 		int iHealthNow = std::min(8, iCityHealth);
 		int iHealthThen = std::min(8, iCityHealth + iHealth);
 
-		//Integration
 		int iTempValue = ((100 * iHealthThen - 6 * iHealthThen * iHealthThen) - (100 * iHealthNow - 6 * iHealthNow * iHealthNow));
 		if (iHealth > 0)
 		{
-			//Fuyu weighting
-			//iValue += std::max(0, iTempValue);
 			iValue += std::max(0, iTempValue) * (pLoopCity->getPopulation() + iExtraPop + 2);
 		}
 		else
 		{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   10/21/09								jdog5000	  */
-/*																							  */
-/* Bugfix																					   */
-/************************************************************************************************/
-/* orginal bts code
-			iValue += std::max(0, -iTempValue);
-*/
-			// Negative health changes should produce a negative value, not the same value as positive
-
-			//Fuyu weighting
-			//iValue += std::min(0, iTempValue);
 			iValue += std::min(0, iTempValue) * (pLoopCity->getPopulation() + iExtraPop + 2);
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
 		}
 
-		//Fuyu weighting
-		//iCount++;
 		iCount += (pLoopCity->getPopulation() + iExtraPop + 2);
-/*
-		if (iCount > 6)
-		{
-			break;
-		}
-*/
 	}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   10/21/09								jdog5000	  */
-/*																							  */
-/* Bugfix																					   */
-/************************************************************************************************/
-/* orginal bts code
-	return (0 == iCount) ? 50 : iValue / iCount;
-*/
-	// Mirror happiness valuation code
 	return (0 == iCount) ? 50*iHealth : iValue / iCount;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
 }
 
 void CvPlayerAI::AI_invalidateCloseBordersAttitudeCache()
@@ -26445,17 +26367,8 @@ void CvPlayerAI::AI_invalidateCloseBordersAttitudeCache()
 	for (int i = 0; i < MAX_PLAYERS; ++i)
 	{
 		m_aiCloseBordersAttitudeCache[i] = MAX_INT;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-		// From Sanguo Mod Performance, ie the CAR Mod
-		// Attitude cache
+
 		AI_invalidateAttitudeCache((PlayerTypes)i);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 	}
 }
 
@@ -26541,13 +26454,6 @@ bool CvPlayerAI::AI_isFirstTech(TechTypes eTech) const
 	return false;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-// From Sanguo Mod Performance, ie the CAR Mod
-// Attitude cache
 void CvPlayerAI::AI_invalidateAttitudeCache(PlayerTypes ePlayer)
 {
 	m_aiAttitudeCache[ePlayer] = MAX_INT;
@@ -26571,14 +26477,7 @@ void CvPlayerAI::AI_changeAttitudeCache(const PlayerTypes ePlayer, const int iCh
 	}
 	else m_aiAttitudeCache[ePlayer] = range(m_aiAttitudeCache[ePlayer] + iChange, -100, 100);
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* RevDCM					  Start		 5/1/09												 */
-/*																							  */
-/* Inquisitions																				 */
-/************************************************************************************************/
+
 CvCity* CvPlayerAI::getInquisitionRevoltCity(const CvUnit *pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const
 {
 	FAssert(pUnit != NULL);
@@ -26983,7 +26882,6 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 			}
 		}
 	}
-
 }
 
 int CvPlayerAI::countCityReligionRevolts() const
@@ -27006,9 +26904,6 @@ int CvPlayerAI::countCityReligionRevolts() const
 
 	return iCount;
 }
-/************************************************************************************************/
-/* Inquisitions						 END														*/
-/************************************************************************************************/
 
 
 int CvPlayerAI::AI_getEmbassyAttitude(PlayerTypes ePlayer) const
