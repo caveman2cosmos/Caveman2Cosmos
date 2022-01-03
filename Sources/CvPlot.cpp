@@ -1806,19 +1806,11 @@ bool CvPlot::isRiverCrossingFlowClockwise(DirectionTypes eDirection) const
 
 bool CvPlot::isRiverSide() const
 {
-	CvPlot* pLoopPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 	{
-		pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		if (isRiverCrossing(directionXY(this, pLoopPlot)))
 		{
-			if (isRiverCrossing(directionXY(this, pLoopPlot)))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -2502,11 +2494,9 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	if (pInfo.isRequiresRiverSide())
 	{
 		bValid = false;
-		for (int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+		foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 		{
-			const CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-			if (pLoopPlot != NULL && isRiverCrossing(directionXY(this, pLoopPlot)))
+			if (isRiverCrossing(directionXY(this, pLoopPlot)))
 			{
 				// Toffer - Only allowed on one side of the river without additional spacing.
 				// An odd rule, but I'm sure it's what the original code intended before I changed it to be consistent.
@@ -3570,20 +3560,9 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 
 int CvPlot::countImpassableCardinalDirections() const
 {
-	CvPlot* pAdjacentPlot;
-	int iCount = 0;
-	for(int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
-	{
-		pAdjacentPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-		if(pAdjacentPlot != NULL)
-		{
-			if(pAdjacentPlot->isImpassable() || (area() != pAdjacentPlot->area()))
-			{
-				++iCount;
-			}
-		}
-	}
-	return iCount;
+	return algo::count_if(cardinalDirectionAdjacent(),
+		bind(CvPlot::isImpassable, _1, NO_TEAM) || bind(CvPlot::area, _1) != area()
+	);
 }
 // Super Forts end
 
@@ -4438,29 +4417,24 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	{
 		bValid = true;
 
-		for (iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+		foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 		{
-			pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-			if (pLoopPlot != NULL)
+			if (pLoopPlot->isOwned())
 			{
-				if (pLoopPlot->isOwned())
+				if (eBestPlayer == NO_PLAYER)
 				{
-					if (eBestPlayer == NO_PLAYER)
-					{
-						eBestPlayer = pLoopPlot->getOwner();
-					}
-					else if (eBestPlayer != pLoopPlot->getOwner())
-					{
-						bValid = false;
-						break;
-					}
+					eBestPlayer = pLoopPlot->getOwner();
 				}
-				else
+				else if (eBestPlayer != pLoopPlot->getOwner())
 				{
 					bValid = false;
 					break;
 				}
+			}
+			else
+			{
+				bValid = false;
+				break;
 			}
 		}
 
@@ -6501,11 +6475,9 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			// XXX might want to change this if we allow diagonal water movement...
 			if (isWater())
 			{
-				for (int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+				foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 				{
-					CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-					if (pLoopPlot != NULL && pLoopPlot->area()->isWater())
+					if (pLoopPlot->area()->isWater())
 					{
 						if (pNewArea == NULL)
 						{
@@ -8614,7 +8586,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 				else
 				{
 					FAssertMsg(getPlotGroup(ePlayer) == pPlotGroup, "ePlayer's plot group is expected to equal pPlotGroup");
-					GC.getMap().combinePlotGroups(pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
+					CvMap::combinePlotGroups(pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
 					pPlotGroup = getPlotGroup(ePlayer);
 					FAssertMsg(pPlotGroup != NULL, "PlotGroup is not assigned a valid value");
 				}
@@ -10396,11 +10368,9 @@ void CvPlot::doFeature()
 		{
 			int iProbability = kFeature.isCanGrowAnywhere() ? kFeature.getGrowthProbability() : 0;
 
-			for (int iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
+			foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 			{
-				const CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), (CardinalDirectionTypes)iJ);
-
-				if (pLoopPlot != NULL && pLoopPlot->getFeatureType() == (FeatureTypes)iI)
+				if (pLoopPlot->getFeatureType() == (FeatureTypes)iI)
 				{
 					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
 					{
@@ -13368,4 +13338,24 @@ bool CvPlot::adjacent_iterator::equal(CvPlot::adjacent_iterator const& other) co
 		&& m_centerY == other.m_centerY
 		&& m_idx == other.m_idx)
 		|| (m_curr == NULL && other.m_curr == NULL);
+}
+
+CvPlot::adjacent_iterator CvPlot::beginAdjacent(int numPlots, const int* plotDirectionX, const int* plotDirectionY) const
+{
+	return CvPlot::adjacent_iterator(m_iX, m_iY, numPlots, plotDirectionX, plotDirectionY);
+}
+
+CvPlot::adjacent_iterator CvPlot::endAdjacent() const
+{
+	return CvPlot::adjacent_iterator();
+}
+
+CvPlot::adjacent_range CvPlot::adjacent() const
+{
+	return CvPlot::adjacent_range(beginAdjacent(NUM_DIRECTION_TYPES, GC.getPlotDirectionX(), GC.getPlotDirectionY()), endAdjacent());
+}
+
+CvPlot::adjacent_range CvPlot::cardinalDirectionAdjacent() const
+{
+	return CvPlot::adjacent_range(beginAdjacent(NUM_CARDINALDIRECTION_TYPES, GC.getPlotCardinalDirectionX(), GC.getPlotCardinalDirectionY()), endAdjacent());
 }

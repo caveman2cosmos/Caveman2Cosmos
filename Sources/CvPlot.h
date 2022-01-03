@@ -493,17 +493,13 @@ public:
 		int m_idx;
 	};
 
+	adjacent_iterator beginAdjacent(int numPlots, const int* plotDirectionX, const int* plotDirectionY) const;
+	adjacent_iterator endAdjacent() const;
+
 	typedef bst::iterator_range<adjacent_iterator> adjacent_range;
 
-	adjacent_range adjacent() const
-	{
-		return adjacent_range(adjacent_iterator(getX(), getY(), NUM_DIRECTION_TYPES, GC.getPlotDirectionX(), GC.getPlotDirectionY()), adjacent_iterator());
-	}
-
-	adjacent_range cardinalDirAdjacent() const
-	{
-		return adjacent_range(adjacent_iterator(getX(), getY(), NUM_CARDINALDIRECTION_TYPES, GC.getPlotCardinalDirectionX(), GC.getPlotCardinalDirectionY()), adjacent_iterator());
-	}
+	adjacent_range adjacent() const;
+	adjacent_range cardinalDirectionAdjacent() const;
 
 	// Base iterator type for iterating over a rectangle of plots
 	template < class Value_ >
