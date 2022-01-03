@@ -13328,3 +13328,44 @@ CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 //{
 //	return ::getUnit(info);
 //}
+
+CvPlot::adjacent_iterator::adjacent_iterator()
+	: m_centerX(-1)
+	, m_centerY(-1)
+	, m_numPlots(0)
+	, m_plotDirectionX(nullptr)
+	, m_plotDirectionY(nullptr)
+	, m_map(nullptr)
+	, m_curr(nullptr)
+	, m_idx(0)
+{}
+
+CvPlot::adjacent_iterator::adjacent_iterator(int centerX, int centerY, int numPlots, const int* plotDirectionX, const int* plotDirectionY)
+	: m_centerX(centerX)
+	, m_centerY(centerY)
+	, m_numPlots(numPlots)
+	, m_plotDirectionX(plotDirectionX)
+	, m_plotDirectionY(plotDirectionY)
+	, m_map(&GC.getMap())
+	, m_curr(nullptr)
+	, m_idx(0)
+{
+	increment();
+}
+
+void CvPlot::adjacent_iterator::increment()
+{
+	m_curr = nullptr;
+	while (m_curr == nullptr && m_idx < m_numPlots)
+	{
+		m_curr = m_map->plot(m_centerX + m_plotDirectionX[m_idx], m_centerY + m_plotDirectionY[m_idx]);
+		++m_idx;
+	}
+}
+bool CvPlot::adjacent_iterator::equal(CvPlot::adjacent_iterator const& other) const
+{
+	return (m_centerX == other.m_centerX
+		&& m_centerY == other.m_centerY
+		&& m_idx == other.m_idx)
+		|| (m_curr == NULL && other.m_curr == NULL);
+}
