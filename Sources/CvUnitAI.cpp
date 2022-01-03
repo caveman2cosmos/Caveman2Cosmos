@@ -17865,13 +17865,8 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, const CvCity* pT
 {
 	PROFILE_FUNC();
 
-	CvPlot* pAdjacentPlot;
-	CvPlot* pBestPlot;
-	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iI;
 
 	if (pTargetCity == NULL)
 	{
@@ -17881,8 +17876,8 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, const CvCity* pT
 	if (pTargetCity != NULL)
 	{
 		PROFILE("CvUnitAI::AI_targetCity plot attack");
-		iBestValue = 0;
-		pBestPlot = NULL;
+		int iBestValue = 0;
+		const CvPlot* pBestPlot = NULL;
 
 		if (0 == (iFlags & MOVE_THROUGH_ENEMY))
 		{
@@ -17891,69 +17886,59 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, const CvCity* pT
 
 			do
 			{
-				for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+				foreach_(const CvPlot* pAdjacentPlot, pTargetCity->plot()->adjacent())
 				{
-					pAdjacentPlot = plotDirection(pTargetCity->getX(), pTargetCity->getY(), ((DirectionTypes)iI));
-
-					if (pAdjacentPlot != NULL)
+					if (AI_plotValid(pAdjacentPlot) && !pAdjacentPlot->isVisibleEnemyUnit(this)
+					&& generatePath(pAdjacentPlot, iFlags, true, &iPathTurns, iMaxPathTurns))
 					{
-						if (AI_plotValid(pAdjacentPlot))
+						iValue = std::max(0, (pAdjacentPlot->defenseModifier(getTeam(), false) + 100));
+
+						if (!pAdjacentPlot->isRiverCrossing(directionXY(pAdjacentPlot, pTargetCity->plot())))
 						{
-							if (!(pAdjacentPlot->isVisibleEnemyUnit(this)))
+							iValue += (12 * -(GC.getRIVER_ATTACK_MODIFIER()));
+						}
+
+						if (!isEnemy(pAdjacentPlot->getTeam(), pAdjacentPlot))
+						{
+							iValue += 100;
+						}
+
+						if (atPlot(pAdjacentPlot))
+						{
+							iValue += 50;
+						}
+
+						iValue = std::max(1, iValue);
+
+						iValue *= 1000;
+
+						iValue /= (iPathTurns + 1);
+
+						if (iValue > iBestValue)
+						{
+							const CvPlot* endTurnPlot = getPathEndTurnPlot();
+							bool bAcceptable;
+
+							if (pAdjacentPlot == endTurnPlot)
 							{
-								if (generatePath(pAdjacentPlot, iFlags, true, &iPathTurns, iMaxPathTurns))
-								{
-									iValue = std::max(0, (pAdjacentPlot->defenseModifier(getTeam(), false) + 100));
+								bAcceptable = true;
+							}
+							else if (getGroup()->getNumUnits() < 3)
+							{
+								bAcceptable = !exposedToDanger(endTurnPlot, 60);
+							}
+							else
+							{
+								const int iTotalEnemyStrength = endTurnPlot->getVisibleEnemyStrength(getOwner(), 1);
+								const int iOurStrength = plot()->plotStrength((UnitValueFlags)(UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_DEFENSIVE), NULL, -1, -1, getOwner());
 
-									if (!(pAdjacentPlot->isRiverCrossing(directionXY(pAdjacentPlot, pTargetCity->plot()))))
-									{
-										iValue += (12 * -(GC.getRIVER_ATTACK_MODIFIER()));
-									}
+								bAcceptable = (iOurStrength > 2 * iTotalEnemyStrength);
+							}
 
-									if (!isEnemy(pAdjacentPlot->getTeam(), pAdjacentPlot))
-									{
-										iValue += 100;
-									}
-
-									if (atPlot(pAdjacentPlot))
-									{
-										iValue += 50;
-									}
-
-									iValue = std::max(1, iValue);
-
-									iValue *= 1000;
-
-									iValue /= (iPathTurns + 1);
-
-									if (iValue > iBestValue)
-									{
-										endTurnPlot = getPathEndTurnPlot();
-										bool bAcceptable;
-
-										if (pAdjacentPlot == endTurnPlot)
-										{
-											bAcceptable = true;
-										}
-										else if (getGroup()->getNumUnits() < 3)
-										{
-											bAcceptable = !exposedToDanger(endTurnPlot, 60);
-										}
-										else
-										{
-											int iTotalEnemyStrength = endTurnPlot->getVisibleEnemyStrength(getOwner(), 1);
-											int	iOurStrength = plot()->plotStrength((UnitValueFlags)(UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_DEFENSIVE), NULL, -1, -1, getOwner());
-
-											bAcceptable = (iOurStrength > 2 * iTotalEnemyStrength);
-										}
-
-										if (bAcceptable)
-										{
-											iBestValue = iValue;
-											pBestPlot = endTurnPlot;
-										}
-									}
-								}
+							if (bAcceptable)
+							{
+								iBestValue = iValue;
+								pBestPlot = endTurnPlot;
 							}
 						}
 					}
@@ -28777,9 +28762,8 @@ bool	CvUnitAI::AI_moveToBorders()
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot = NULL;
-	CvPlot* endTurnPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* endTurnPlot = NULL;
 	int		iDistance = 1;
 	int		iBestValue = 0;
 	bool	bValid;
@@ -28826,7 +28810,7 @@ bool	CvUnitAI::AI_moveToBorders()
 					break;
 				}
 
-				pLoopPlot = GC.getMap().plot(iX, iY);
+				const CvPlot* pLoopPlot = GC.getMap().plot(iX, iY);
 
 				if (pLoopPlot != NULL)
 				{
@@ -28839,23 +28823,19 @@ bool	CvUnitAI::AI_moveToBorders()
 
 							int iValue = 0;
 
-							for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+							foreach_(const CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
 							{
-								CvPlot* pAdjacentPlot = plotDirection(iX, iY, ((DirectionTypes)iI));
-								if (pAdjacentPlot != NULL)
+								if (!pAdjacentPlot->isWater() && pAdjacentPlot->getOwner() != getOwner())
 								{
-									if (!pAdjacentPlot->isWater() && pAdjacentPlot->getOwner() != getOwner())
-									{
-										iValue += GC.getGame().getSorenRandNum(300, "AI Move to Border");
+									iValue += GC.getGame().getSorenRandNum(300, "AI Move to Border");
 
-										if (NO_PLAYER == pAdjacentPlot->getOwner())
-										{
-											iValue += 100;
-										}
-										else if (GET_TEAM(getTeam()).isAtWar(pAdjacentPlot->getTeam()))
-										{
-											iValue += 200 + GC.getGame().getSorenRandNum(100, "AI Move to Border2");
-										}
+									if (NO_PLAYER == pAdjacentPlot->getOwner())
+									{
+										iValue += 100;
+									}
+									else if (GET_TEAM(getTeam()).isAtWar(pAdjacentPlot->getTeam()))
+									{
+										iValue += 200 + GC.getGame().getSorenRandNum(100, "AI Move to Border2");
 									}
 								}
 							}

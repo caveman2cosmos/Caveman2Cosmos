@@ -27960,56 +27960,46 @@ void CvUnit::doOpportunityFire()
 	//There is absolutely zero resistability to this damage and no potential for failure to strike, making it far more powerful than any player determined
 	//action.  Once I get to focusing in on the Bombard function and adding some more dynamics there to address the above noted issues,
 	//I'll have to enforce those mechanisms onto this Opportunity Fire process as well.
-	int iI;
 	int iUnitDamage = 0;
 	int iVolumeDefenders = 0;
 	int iBestUnitStr = 0;
 	int ipDefenderStr = 0;
-	CvPlot* pLoopPlot;
 	CvPlot* pAttackPlot = NULL;
 	CvUnit* pDefender = NULL;
 	CvWString szBuffer;
 	CvUnit* pBestUnit;
 
-	if (!GC.isDCM_OPP_FIRE())
-	{
-		return;
-	}
-	if (getBombardRate() <= 0 || getDCMBombRange() <= 0)
+	if (!GC.isDCM_OPP_FIRE() || getBombardRate() <= 0 || getDCMBombRange() <= 0)
 	{
 		return;
 	}
 
 	if (getFortifyTurns() > 0)
 	{
-		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(CvPlot* pLoopPlot, plot()->adjacent())
 		{
-			pLoopPlot = plotDirection(getX(), getY(), (DirectionTypes)iI);
-			if (pLoopPlot != NULL)
+			iVolumeDefenders = pLoopPlot->getNumUnits();
+			if (iVolumeDefenders > 0)
 			{
-				iVolumeDefenders = pLoopPlot->getNumUnits();
-				if (iVolumeDefenders > 0)
+				pBestUnit = NULL;
+				pBestUnit = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
+				if (pBestUnit != NULL)
 				{
-					pBestUnit = NULL;
-					pBestUnit = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
-					if (pBestUnit != NULL)
+					iBestUnitStr = pBestUnit->currCombatStr(pLoopPlot, this, NULL, true);
+					if (pDefender != NULL)
 					{
-						iBestUnitStr = pBestUnit->currCombatStr(pLoopPlot, this, NULL, true);
-						if (pDefender != NULL)
-						{
-							if (iBestUnitStr > ipDefenderStr)
-							{
-								pDefender = pBestUnit;
-								pAttackPlot = pLoopPlot;
-								ipDefenderStr = pDefender->currCombatStr(pLoopPlot, this, NULL, true);
-							}
-						}
-						else
+						if (iBestUnitStr > ipDefenderStr)
 						{
 							pDefender = pBestUnit;
 							pAttackPlot = pLoopPlot;
 							ipDefenderStr = pDefender->currCombatStr(pLoopPlot, this, NULL, true);
 						}
+					}
+					else
+					{
+						pDefender = pBestUnit;
+						pAttackPlot = pLoopPlot;
+						ipDefenderStr = pDefender->currCombatStr(pLoopPlot, this, NULL, true);
 					}
 				}
 			}
@@ -28026,7 +28016,6 @@ void CvUnit::doOpportunityFire()
 			//TB Combat Mod end
 
 			{
-
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_OPP_FIRE", getNameKey(), pDefender->getNameKey());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pAttackPlot->getX(), pAttackPlot->getY(), true, true);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_OPP_FIRE", getNameKey(), pDefender->getNameKey());
@@ -29096,7 +29085,7 @@ int CvUnit::surroundedDefenseModifier(const CvPlot *pPlot, const CvUnit *pDefend
 	{
 		if (iI != dtDirectionAttacker)
 		{
-			CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), static_cast<DirectionTypes>(iI));
+			CvPlot* pLoopPlot = plotDirection(pPlot, static_cast<DirectionTypes>(iI));
 
 			if (pLoopPlot != NULL && pLoopPlot->isWater() == pPlot->isWater())
 			{
