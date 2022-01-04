@@ -6,9 +6,9 @@
 #define CIV4_TEAM_H
 
 #include "CvGameObject.h"
+#include "CvProperties.h"
 
 class CvArea;
-class CvProperties;
 
 class CvTeam : bst::noncopyable
 {
@@ -41,7 +41,7 @@ public:
 	DllExport bool canDeclareWar(TeamTypes eTeam) const;
 
 	bool canEventuallyDeclareWar(TeamTypes eTeam) const;
-	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, bool bCancelPacts = true);
+	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan);
 
 	void makePeace(TeamTypes eTeam, bool bBumpUnits = true);
 	bool canContact(TeamTypes eTeam) const;

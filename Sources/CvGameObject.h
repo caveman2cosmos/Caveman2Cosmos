@@ -11,9 +11,6 @@
 #ifndef CV_GAME_OBJECT_H
 #define CV_GAME_OBJECT_H
 
-#include "CvProperties.h"
-#include "CvPropertyManipulators.h"
-#include "BoolExpr.h"
 #include "CvPython.h"
 
 class CvGameObjectGame;
@@ -28,6 +25,9 @@ class CvPlayer;
 class CvCity;
 class CvUnit;
 class CvPlot;
+class CvProperties;
+class CvPropertyManipulators;
+class BoolExpr;
 
 class CvGameObject
 {

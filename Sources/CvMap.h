@@ -12,11 +12,12 @@
 //-----------------------------------------------------------------------------
 //
 
+#include "CvArea.h"
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
 #include "CvUnitAI.h"
+#include "index_iterator_base.h"
 
-class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
@@ -75,7 +76,7 @@ private:
 public:
 	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
-	const std::vector<CvViewport*> getViewports() const;
+	const std::vector<CvViewport*>& getViewports() const;
 
 	const char* getMapScript() const;
 
@@ -104,7 +105,7 @@ public:
 
 	void verifyUnitValidPlot();
 
-	void combinePlotGroups(PlayerTypes ePlayer, CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2, bool bRecalculateBonuses);
+	static void combinePlotGroups(CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2, bool bRecalculateBonuses);
 
 	CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);
 

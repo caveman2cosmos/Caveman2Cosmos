@@ -1,5 +1,12 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlot.h"
 #include "CvPython.h"
 #include "CvUnit.h"
@@ -86,7 +93,7 @@ void CvViewport::resizeForMap()
 	}
 }
 
-void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
+void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	m_pLookatPlot = m_pMap->plot(iX, iY);
 	if ( pSelectionUnit != NULL && !pSelectionUnit->isDead() && !pSelectionUnit->isDelayedDeath() )
@@ -117,7 +124,7 @@ void CvViewport::centerOnSelection()
 
 	if ( pUnit != NULL )
 	{
-		bringIntoView( pUnit->getX(), pUnit->getY(), pUnit, true, true);
+		bringIntoView( pUnit->getX(), pUnit->getY(), pUnit, true);
 	}
 }
 
@@ -137,7 +144,7 @@ void CvViewport::panLeft()
 		}
 	}
 
-	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true, true);
+	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true);
 }
 
 void CvViewport::panRight()
@@ -156,7 +163,7 @@ void CvViewport::panRight()
 		}
 	}
 
-	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true, true);
+	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true);
 }
 
 void CvViewport::panDown()
@@ -175,7 +182,7 @@ void CvViewport::panDown()
 		}
 	}
 
-	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true, true);
+	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true);
 }
 
 void CvViewport::panUp()
@@ -194,7 +201,7 @@ void CvViewport::panUp()
 		}
 	}
 
-	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true, true);
+	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true);
 }
 
 
@@ -426,7 +433,7 @@ void CvViewport::processActionState()
 
 			if ( pSelectedUnit != NULL )
 			{
-				bringIntoView(pSelectedUnit->getX(), pSelectedUnit->getY(), pSelectedUnit, true, true);
+				bringIntoView(pSelectedUnit->getX(), pSelectedUnit->getY(), pSelectedUnit, true);
 			}
 
 #if 0
@@ -435,7 +442,7 @@ void CvViewport::processActionState()
 			//	viewport
 			if ( m_state == VIEWPORT_ACTION_STATE_NONE && m_state == VIEWPORT_MODE_UNINITIALIZED)
 			{
-				bringIntoView(m_pMap->getGridWidth()/2, m_pMap->getGridHeight()/2, NULL, true, true);
+				bringIntoView(m_pMap->getGridWidth()/2, m_pMap->getGridHeight()/2, NULL, true);
 			}
 #endif
 		}

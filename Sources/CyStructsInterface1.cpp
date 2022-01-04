@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvDate.h"
 
 //
 // Python interface for structs

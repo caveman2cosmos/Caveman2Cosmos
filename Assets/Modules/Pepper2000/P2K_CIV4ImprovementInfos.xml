@@ -2187,6 +2187,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</ArtDefineTag>
+			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>

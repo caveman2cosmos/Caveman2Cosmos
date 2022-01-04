@@ -2,8 +2,10 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
+#include "CvContractBroker.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"

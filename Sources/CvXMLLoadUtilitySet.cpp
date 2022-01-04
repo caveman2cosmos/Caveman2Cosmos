@@ -7,14 +7,15 @@
 #include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvInfoWater.h"
+#include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
-#include "CvImprovementInfo.h"
 #include <iostream>
-#include "CvInitCore.h"
 
 bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache)
 {
@@ -1581,7 +1582,7 @@ void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* sz
 //
 //------------------------------------------------------------------------------------------------------
 template <class T>
-void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, bool bTwoPass, CvInfoReplacements<T>* pReplacements)
+void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvInfoReplacements<T>* pReplacements)
 {
 	char szLog[256];
 	char* tmp = xercesc::XMLString::transcode(szTagName);
@@ -1859,16 +1860,16 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: %s\n", szFileRoot);
 
 	std::vector<CvString> aszFiles;
-	CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
+	const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
 	CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
-	if(aszFiles.size() == 0)
+	if (aszFiles.empty())
 		aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
 	foreach_(const CvString& szFile, aszFiles)
 	{
 		if (LoadCivXml(szFile))
 		{
-			SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
+			SetGlobalClassInfo(aInfos, szXmlPath, pReplacements);
 		}
 	}
 
@@ -1881,7 +1882,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		{
 			if (LoadCivXml(szFile))
 			{
-				SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
+				SetGlobalClassInfo(aInfos, szXmlPath, pReplacements);
 			}
 		}
 
@@ -1889,9 +1890,9 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		if (bTwoPass)
 		{
 			std::vector<CvString> aszFiles;
-			CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
+			const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
 			CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
-			if(aszFiles.size() == 0)
+			if (aszFiles.empty())
 				aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
 			foreach_(const CvString& szFile, aszFiles)
@@ -1938,7 +1939,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		{
 			if (LoadCivXml(szFile))
 			{
-				SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
+				SetGlobalClassInfo(aInfos, szXmlPath, pReplacements);
 			}
 		}
 
@@ -1946,7 +1947,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		if (bTwoPass)
 		{
 			std::vector<CvString> aszFiles;
-			CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
+			const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
 			CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
 			if (aszFiles.empty())
 				aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));

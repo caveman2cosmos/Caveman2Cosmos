@@ -21,6 +21,8 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvGameTextMgr.h"
+#include "CvImprovementInfo.h"
+#include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
@@ -29,8 +31,9 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLSymbolIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 int shortenID(int iId)
 {
@@ -741,7 +744,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					{
 						szString.append(DOUBLE_SEPARATOR);
 						szString.append(NEWLINE);
-						setUnitCombatHelp(szString, eUnitCombat, false, true);
+						setUnitCombatHelp(szString, eUnitCombat, false);
 						szString.append(DOUBLE_SEPARATOR);
 					}
 					else
@@ -16842,7 +16845,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 
 	//DPII < Maintenance Modifiers >
 	//  Decreases maintenance costs...
-	buildMaintenanceModifiersString(szBuffer, eTech, true, bPlayerContext);
+	buildMaintenanceModifiersString(szBuffer, eTech, true);
 	//DPII < Maintenance Modifiers >
 
 	//	Trade Routed per city change...
@@ -16991,7 +16994,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 	//	Build farm, irrigation, etc...
 	for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 	{
-		buildImprovementString(szBuffer, eTech, iI, true, bPlayerContext);
+		buildImprovementString(szBuffer, eTech, (BuildTypes)iI, true, bPlayerContext);
 	}
 
 	//	Extra moves for certain domains...
@@ -17290,7 +17293,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 	bFirst = true;
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
-		bFirst = buildPromotionString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
+		bFirst = buildPromotionString(szBuffer, eTech, iI, bFirst, true);
 	}
 
 	bFirst = true;
@@ -19698,7 +19701,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 				}
 
-				DomainTypes eDomain = (DomainTypes)kUnit.getDomainType();
+				const DomainTypes eDomain = kUnit.getDomainType();
 				iExperience = pCity->getDomainFreeExperience(eDomain);
 				if (iExperience != 0)
 				{
@@ -19744,7 +19747,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 				}
 				const UnitCombatTypes eCombatType = (UnitCombatTypes)kUnit.getUnitCombatType();
-				const DomainTypes eDomainType = (DomainTypes)kUnit.getDomainType();
+				const DomainTypes eDomainType = kUnit.getDomainType();
 				//Display sources you could have if you constructed them first
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
@@ -20006,7 +20009,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				{
 					szBuffer.append(DOUBLE_SEPARATOR);
 					szBuffer.append(NEWLINE);
-					setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
+					setUnitCombatHelp(szBuffer, eUnitCombat, false);
 					szBuffer.append(DOUBLE_SEPARATOR);
 				}
 				else
@@ -20035,7 +20038,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		{
 			bool bFirst = true;
 			CvWStringBuffer szPeekBuffer;
-			setUnitCombatHelp(szPeekBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), true, true);
+			setUnitCombatHelp(szPeekBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), true);
 			if (!szPeekBuffer.isEmpty())
 			{
 				szBuffer.append(NEWLINE);
@@ -20052,7 +20055,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			{
 				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombat)))
 				{
-					setUnitCombatHelp(szPeekBuffer, eSubCombat, true, true);
+					setUnitCombatHelp(szPeekBuffer, eSubCombat, true);
 					if (!szPeekBuffer.isEmpty())
 					{
 						if (bFirst)
@@ -26729,7 +26732,7 @@ void CvGameTextMgr::buildObsoleteString(CvWStringBuffer &szBuffer, int iItem, bo
 	{
 		szBuffer.append(NEWLINE);
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildingInfo((BuildingTypes)iItem).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes) iItem).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildingInfo((BuildingTypes)iItem).getType()).c_str(), GC.getBuildingInfo((BuildingTypes) iItem).getTextKeyWide()));
 }
 
 void CvGameTextMgr::buildObsoleteBonusString(CvWStringBuffer &szBuffer, int iItem, bool bList, bool bPlayerContext)
@@ -27110,25 +27113,26 @@ void CvGameTextMgr::buildWaterWorkString(CvWStringBuffer &szBuffer, TechTypes eT
 	}
 }
 
-void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, int iImprovement, bool bList, bool bPlayerContext)
+void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, BuildTypes eBuild, bool bList, bool bPlayerContext)
 {
+	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 	const bool bIsTeam = (GC.getGame().getActiveTeam() != NO_TEAM);
 
 	bool bTechFound = false;
 
-	if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == NO_TECH)
+	if (kBuild.getTechPrereq() == NO_TECH)
 	{
-		if (GC.getBuildInfo((BuildTypes)iImprovement).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo((BuildTypes)iImprovement).getRoute()).isSeaTunnel())
+		if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
 		{
 			for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 			{
-				if (GC.getBuildInfo((BuildTypes)iImprovement).getFeatureTech(iJ) == eTech)
+				if (kBuild.getFeatureTech((FeatureTypes)iJ) == eTech)
 				{
 					bTechFound = true;
 					break;
 				}
 			}
-			foreach_(const TerrainStructs& kTerrainStruct, GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStructs())
+			foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
 			{
 				if (kTerrainStruct.ePrereqTech == eTech)
 				{
@@ -27140,13 +27144,11 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 	}
 	else
 	{
-		if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == eTech)
+		if (kBuild.getTechPrereq() == eTech)
 		{
 			bTechFound = true;
 		}
 	}
-
-
 
 	if (bTechFound)
 	{
@@ -27156,28 +27158,28 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 		}
 		if (bIsTeam)
 		{
-			if (GC.getBuildInfo((BuildTypes)iImprovement).getObsoleteTech() != NO_TECH)
+			if (kBuild.getObsoleteTech() != NO_TECH)
 			{
-				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(GC.getBuildInfo((BuildTypes)iImprovement).getObsoleteTech()))
+				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(kBuild.getObsoleteTech()))
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildInfo((BuildTypes)iImprovement).getType()).GetCString(), GC.getBuildInfo((BuildTypes)iImprovement).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(kBuild.getType()).c_str(), kBuild.getTextKeyWide()));
 				}
 				else
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
 				}
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
 			}
 		}
 		else
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
 		}
 	}
-	foreach_(const MapCategoryTypes eMapCategory, GC.getBuildInfo((BuildTypes)iImprovement).getMapCategories())
+	foreach_(const MapCategoryTypes eMapCategory, kBuild.getMapCategories())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
@@ -27440,7 +27442,7 @@ bool CvGameTextMgr::buildFoundCorporationString(CvWStringBuffer &szBuffer, TechT
 	return bFirst;
 }
 
-bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList, bool bPlayerContext)
+bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList) const
 {
 	CvWString szTempBuffer;
 
@@ -27651,7 +27653,7 @@ void CvGameTextMgr::setTraitHelp(CvWStringBuffer &szBuffer, TraitTypes eTrait)
 	parseTraits(szBuffer, eTrait, eCivilization, false, false);
 }
 
-void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText, bool bFromUnit)
+void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText) const
 {
 	const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
 
@@ -31241,18 +31243,15 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 void CvGameTextMgr::getActiveDealsString(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer)
 {
-	int iIndex;
-	CvDeal* pDeal = GC.getGame().firstDeal(&iIndex);
-	while (NULL != pDeal)
+	foreach_(CvDeal& kDeal, GC.getGame().deals())
 	{
-		if ((pDeal->getFirstPlayer() == eThisPlayer && pDeal->getSecondPlayer() == eOtherPlayer)
-			|| (pDeal->getFirstPlayer() == eOtherPlayer && pDeal->getSecondPlayer() == eThisPlayer))
+		if ((kDeal.getFirstPlayer() == eThisPlayer && kDeal.getSecondPlayer() == eOtherPlayer)
+		|| (kDeal.getFirstPlayer() == eOtherPlayer && kDeal.getSecondPlayer() == eThisPlayer))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(BULLET_CHAR)));
-			getDealString(szBuffer, *pDeal, eThisPlayer);
+			getDealString(szBuffer, kDeal, eThisPlayer);
 		}
-		pDeal = GC.getGame().nextDeal(&iIndex);
 	}
 }
 
@@ -34196,7 +34195,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		// Toffer - Should add some text for this last part too I guess...
 		iModifier += GC.getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT();
 
-		FAssert(iModifier == kPlayer.getEspionageMissionCostModifier(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit));
+		FAssert(iModifier == kPlayer.getEspionageMissionCostModifier(eMission, eTargetPlayer, pPlot, pSpyUnit));
 
 		iMissionCost *= iModifier;
 		iMissionCost /= 100;
@@ -35827,7 +35826,7 @@ void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	szBuffer.append(CvWString::format(L" %c", gDLL->getSymbolID(CITIZEN_CHAR)));
 }
 
-void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
+void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList)
 {
 	if (GC.getTechInfo(eTech).getMaintenanceModifier() != 0)
 	{

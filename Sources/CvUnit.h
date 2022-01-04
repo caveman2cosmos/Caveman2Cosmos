@@ -7,11 +7,11 @@
 
 #include "CvDLLEntity.h"
 #include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvUnitComponents.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class cvInternalGlobals;
 class CvArea;
 class CvCity;
 class CvPlot;
@@ -550,7 +550,7 @@ public:
 	bool isActionRecommended(int iAction) const;
 
 	int defenderValue(const CvUnit* pAttacker) const;
-	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
+	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker) const;
 
 	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true) const;
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
@@ -587,7 +587,7 @@ public:
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
 	void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
 	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
-	void move(CvPlot* pPlot, bool bShow, bool bFree = false);
+	void move(CvPlot* pPlot, bool bShow);
 
 	bool jumpToNearestValidPlot(bool bKill = true);
 
@@ -605,7 +605,7 @@ public:
 	bool spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const;
 	bool canClaimTerritory(const CvPlot* pPlot) const;
 	bool claimTerritory();
-	int getMaxHurryFood(CvCity* pCity) const;
+	int getMaxHurryFood() const;
 	int getHurryFood(const CvPlot* pPlot) const;
 	bool canHurryFood(const CvPlot* pPlot) const;
 	bool hurryFood();
@@ -696,10 +696,10 @@ public:
 	bool canUnloadAll() const;
 	void unloadAll();
 
-	bool canHold(const CvPlot* pPlot) const;
-	bool canSleep(const CvPlot* pPlot) const;
-	bool canFortify(const CvPlot* pPlot) const;
-	bool canBuildUp(const CvPlot* pPlot) const;
+	bool canHold() const;
+	bool canSleep() const;
+	bool canFortify() const;
+	bool canBuildUp() const;
 	bool canAirPatrol(const CvPlot* pPlot) const;
 	void airCircle(bool bStart);
 
@@ -726,7 +726,7 @@ public:
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
-	bool canRecon(const CvPlot* pPlot) const;
+	bool canRecon() const;
 	bool canReconAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool recon(int iX, int iY);
 
@@ -808,13 +808,13 @@ public:
 	bool canTrade(const CvPlot* pPlot, bool bTestVisible = false) const;
 	bool trade();
 
-	int getGreatWorkCulture(const CvPlot* pPlot) const;
+	int getGreatWorkCulture() const;
 	bool canGreatWork(const CvPlot* pPlot) const;
 	bool greatWork();
 
 	bool doOutcomeMission(MissionTypes eMission);
 
-	int getEspionagePoints(const CvPlot* pPlot) const;
+	int getEspionagePoints() const;
 	bool canInfiltrate() const;
 	bool canInfiltrate(const CvPlot* pPlot, bool bTestVisible = false) const;
 	bool infiltrate();
@@ -825,7 +825,7 @@ public:
 	int getSpyInterceptPercent(TeamTypes eTargetTeam) const;
 	bool isIntruding() const;
 
-	bool canGoldenAge(const CvPlot* pPlot, bool bTestVisible = false) const;
+	bool canGoldenAge(bool bTestVisible = false) const;
 	bool goldenAge();
 
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible = false) const;
@@ -1617,7 +1617,7 @@ public:
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
 	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
-	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
+	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;
 	bool isPromotionValid(PromotionTypes ePromotion, bool bFree = false, bool bKeepCheck = false) const;
@@ -1684,16 +1684,16 @@ public:
 	bool canAirBomb1() const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb1(int iX, int iY);
-	bool canAirBomb2(const CvPlot* pPlot) const;
+	bool canAirBomb2() const;
 	bool canAirBomb2At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb2(int iX, int iY);
-	bool canAirBomb3(const CvPlot* pPlot) const;
+	bool canAirBomb3() const;
 	bool canAirBomb3At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb3(int iX, int iY);
-	bool canAirBomb4(const CvPlot* pPlot) const;
+	bool canAirBomb4() const;
 	bool canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb4(int iX, int iY);
-	bool canAirBomb5(const CvPlot* pPlot) const;
+	bool canAirBomb5() const;
 	bool canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb5(int iX, int iY);
 
@@ -2105,7 +2105,7 @@ protected:
 	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
 	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
 	void rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit = NULL);
-	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit = NULL, bool bSamePlot = false);
+	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit);
 
 	bool interceptTest(const CvPlot* pPlot);
 	CvUnit* airStrikeTarget(const CvPlot* pPlot) const;
@@ -2123,9 +2123,8 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
-		int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage,
-		CombatDetails* pTheirDetails = NULL, const CvUnit* pDefender = NULL, bool bSamePlot = false) const;
+	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds,
+		int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender) const;
 
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
@@ -2558,7 +2557,7 @@ public:
 	void checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes);
 
 	bool isBreakdownCombat(const CvPlot* pPlot, bool bSamePlot = false) const;
-	void resolveBreakdownAttack(const CvPlot* pPlot, CvUnit* pDefender, const int AdjustedRepel);
+	void resolveBreakdownAttack(const CvPlot* pPlot, const int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;
 	int getApproaching0Return(int i) const;
@@ -3178,9 +3177,5 @@ public:
 
 typedef std::vector<CvUnit*> UnitVector;
 typedef std::vector<const CvUnit*> ConstUnitVector;
-
-// Safe unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
-// However it shouldn't be used in inner loops
-typedef copy_iterator<CvUnit> safe_unit_iterator;
 
 #endif

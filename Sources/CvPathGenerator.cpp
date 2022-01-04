@@ -1,11 +1,12 @@
 //	Internal path generation engine
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPathGenerator.h"
-#include "CvSelectionGroup.h"
 #include "CvRandom.h"
+#include "CvPlayerAI.h"
 #include "CheckSum.h"
 
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION

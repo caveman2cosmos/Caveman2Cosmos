@@ -4,7 +4,6 @@
 #define CV_GROUPING_PARAMS
 
 #include "CvEnums.h"
-#include "CvGameCoreDLL.h"
 
 struct GroupingParams
 {

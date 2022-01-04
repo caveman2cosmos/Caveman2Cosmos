@@ -89,12 +89,12 @@ bool CyUnit::canTrade(const CyPlot& kPlot, bool bTestVisible) const
 
 int CyUnit::getGreatWorkCulture(const CyPlot& kPlot) const
 {
-	return m_pUnit->getGreatWorkCulture(kPlot.getPlot());
+	return m_pUnit->getGreatWorkCulture();
 }
 
 int CyUnit::getEspionagePoints(const CyPlot& kPlot) const
 {
-	return m_pUnit->getEspionagePoints(kPlot.getPlot());
+	return m_pUnit->getEspionagePoints();
 }
 
 bool CyUnit::canBuild(const CyPlot& kPlot, int /*BuildTypes*/ eBuild, bool bTestVisible) const
