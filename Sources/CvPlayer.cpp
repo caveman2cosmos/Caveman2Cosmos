@@ -9825,7 +9825,7 @@ int CvPlayer::getGreatPeopleThresholdModifier() const
 
 void CvPlayer::changeGreatPeopleThresholdModifier(int iChange)
 {
-	m_iGreatPeopleThresholdModifier = (m_iGreatPeopleThresholdModifier + iChange);
+	m_iGreatPeopleThresholdModifier += iChange;
 }
 
 
@@ -9849,7 +9849,7 @@ int CvPlayer::getGreatPeopleRateModifier() const
 
 void CvPlayer::changeGreatPeopleRateModifier(int iChange)
 {
-	m_iGreatPeopleRateModifier = (m_iGreatPeopleRateModifier + iChange);
+	m_iGreatPeopleRateModifier += iChange;
 }
 
 
@@ -9885,7 +9885,7 @@ int CvPlayer::getStateReligionGreatPeopleRateModifier() const
 
 void CvPlayer::changeStateReligionGreatPeopleRateModifier(int iChange)
 {
-	m_iStateReligionGreatPeopleRateModifier = (m_iStateReligionGreatPeopleRateModifier + iChange);
+	m_iStateReligionGreatPeopleRateModifier += iChange;
 }
 
 
@@ -9897,7 +9897,7 @@ int CvPlayer::getMaxGlobalBuildingProductionModifier() const
 
 void CvPlayer::changeMaxGlobalBuildingProductionModifier(int iChange)
 {
-	m_iMaxGlobalBuildingProductionModifier = (m_iMaxGlobalBuildingProductionModifier + iChange);
+	m_iMaxGlobalBuildingProductionModifier += iChange;
 }
 
 
@@ -9909,7 +9909,7 @@ int CvPlayer::getMaxTeamBuildingProductionModifier() const
 
 void CvPlayer::changeMaxTeamBuildingProductionModifier(int iChange)
 {
-	m_iMaxTeamBuildingProductionModifier = (m_iMaxTeamBuildingProductionModifier + iChange);
+	m_iMaxTeamBuildingProductionModifier += iChange;
 }
 
 
@@ -9921,7 +9921,7 @@ int CvPlayer::getMaxPlayerBuildingProductionModifier() const
 
 void CvPlayer::changeMaxPlayerBuildingProductionModifier(int iChange)
 {
-	m_iMaxPlayerBuildingProductionModifier = (m_iMaxPlayerBuildingProductionModifier + iChange);
+	m_iMaxPlayerBuildingProductionModifier += iChange;
 }
 
 
@@ -9933,7 +9933,7 @@ int CvPlayer::getFreeExperience() const
 
 void CvPlayer::changeFreeExperience(int iChange)
 {
-	m_iFreeExperience = (m_iFreeExperience + iChange);
+	m_iFreeExperience += iChange;
 }
 
 
@@ -9945,7 +9945,7 @@ int CvPlayer::getFeatureProductionModifier() const
 
 void CvPlayer::changeFeatureProductionModifier(int iChange)
 {
-	m_iFeatureProductionModifier = (m_iFeatureProductionModifier + iChange);
+	m_iFeatureProductionModifier += iChange;
 }
 
 
@@ -9957,7 +9957,7 @@ int CvPlayer::getWorkerSpeedModifier() const
 
 void CvPlayer::changeWorkerSpeedModifier(int iChange)
 {
-	m_iWorkerSpeedModifier = (m_iWorkerSpeedModifier + iChange);
+	m_iWorkerSpeedModifier += iChange;
 }
 
 // BUG - Partial Builds - start
@@ -10098,7 +10098,7 @@ void CvPlayer::changeRevIdxLocal(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevIdxLocal = (m_iRevIdxLocal + iChange);
+		m_iRevIdxLocal += iChange;
 	}
 }
 
@@ -10113,7 +10113,7 @@ void CvPlayer::changeRevIdxNational(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevIdxNational = (m_iRevIdxNational + iChange);
+		m_iRevIdxNational += iChange;
 	}
 }
 
@@ -10127,7 +10127,7 @@ void CvPlayer::changeRevIdxDistanceModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevIdxDistanceModifier = (m_iRevIdxDistanceModifier + iChange);
+		m_iRevIdxDistanceModifier += iChange;
 	}
 }
 
@@ -10141,7 +10141,7 @@ void CvPlayer::changeRevIdxHolyCityGood(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevIdxHolyCityGood = (m_iRevIdxHolyCityGood + iChange);
+		m_iRevIdxHolyCityGood += iChange;
 	}
 }
 
@@ -10155,7 +10155,7 @@ void CvPlayer::changeRevIdxHolyCityBad(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevIdxHolyCityBad = (m_iRevIdxHolyCityBad + iChange);
+		m_iRevIdxHolyCityBad += iChange;
 	}
 }
 
@@ -10169,7 +10169,7 @@ void CvPlayer::changeRevIdxNationalityMod(float fChange)
 {
 	if (fChange != 0)
 	{
-		m_fRevIdxNationalityMod = (m_fRevIdxNationalityMod + fChange);
+		m_fRevIdxNationalityMod += fChange;
 	}
 }
 
@@ -10183,7 +10183,7 @@ void CvPlayer::changeRevIdxBadReligionMod(float fChange)
 {
 	if (fChange != 0)
 	{
-		m_fRevIdxBadReligionMod = (m_fRevIdxBadReligionMod + fChange);
+		m_fRevIdxBadReligionMod += fChange;
 	}
 }
 
@@ -10197,7 +10197,7 @@ void CvPlayer::changeRevIdxGoodReligionMod(float fChange)
 {
 	if (fChange != 0)
 	{
-		m_fRevIdxGoodReligionMod = (m_fRevIdxGoodReligionMod + fChange);
+		m_fRevIdxGoodReligionMod += fChange;
 	}
 }
 
@@ -10562,7 +10562,7 @@ void CvPlayer::changeHappyPerMilitaryUnit(int iChange, bool bLimited)
 {
 	if (iChange != 0)
 	{
-		m_iHappyPerMilitaryUnit = (m_iHappyPerMilitaryUnit + iChange);
+		m_iHappyPerMilitaryUnit += iChange;
 
 		if (!bLimited)
 		{
@@ -10736,7 +10736,7 @@ void CvPlayer::changeMaintenanceModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iMaintenanceModifier = (m_iMaintenanceModifier + iChange);
+		m_iMaintenanceModifier += iChange;
 
 		setMaintenanceDirty(true);
 	}
@@ -10751,7 +10751,7 @@ void CvPlayer::changeCoastalDistanceMaintenanceModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iCoastalDistanceMaintenanceModifier = (m_iCoastalDistanceMaintenanceModifier + iChange);
+		m_iCoastalDistanceMaintenanceModifier += iChange;
 
 		setMaintenanceDirty(true);
 	}
@@ -10766,7 +10766,7 @@ void CvPlayer::changeConnectedCityMaintenanceModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iConnectedCityMaintenanceModifier = (m_iConnectedCityMaintenanceModifier + iChange);
+		m_iConnectedCityMaintenanceModifier += iChange;
 
 		setMaintenanceDirty(true);
 	}

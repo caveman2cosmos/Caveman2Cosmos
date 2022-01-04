@@ -25068,10 +25068,9 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				}
 				else
 				{
-					for (int iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
+					foreach_(const CvPlot* pLoopPlot2, pLoopPlot->cardinalDirectionAdjacent())
 					{
-						const CvPlot* pLoopPlot2 = plotCardinalDirection(pLoopPlot->getX(), pLoopPlot->getY(), (CardinalDirectionTypes)iJ);
-						if ((pLoopPlot2 != NULL) && (getAdvancedStartVisibilityCost(pLoopPlot2) > 0))
+						if (getAdvancedStartVisibilityCost(pLoopPlot2) > 0)
 						{
 							// Mildly maphackery but any smart human can see the terrain type of a tile.
 							int iFoodYield = GC.getTerrainInfo(pLoopPlot2->getTerrainType()).getYield(YIELD_FOOD);
