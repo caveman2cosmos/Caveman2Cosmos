@@ -603,9 +603,6 @@ void CvMap::verifyUnitValidPlot()
 
 void CvMap::combinePlotGroups(CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2, bool bRecalculateBonuses)
 {
-	CvPlotGroup* pNewPlotGroup;
-	CvPlotGroup* pOldPlotGroup;
-
 	FAssertMsg(pPlotGroup1 != NULL, "pPlotGroup is not assigned to a valid value");
 	FAssertMsg(pPlotGroup2 != NULL, "pPlotGroup is not assigned to a valid value");
 
@@ -616,16 +613,12 @@ void CvMap::combinePlotGroups(CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2
 
 	if (pPlotGroup1->getLengthPlots() > pPlotGroup2->getLengthPlots())
 	{
-		pNewPlotGroup = pPlotGroup1;
-		pOldPlotGroup = pPlotGroup2;
+		pPlotGroup1->mergeIn(pPlotGroup2, bRecalculateBonuses);
 	}
 	else
 	{
-		pNewPlotGroup = pPlotGroup2;
-		pOldPlotGroup = pPlotGroup1;
+		pPlotGroup2->mergeIn(pPlotGroup1, bRecalculateBonuses);
 	}
-
-	pNewPlotGroup->mergeIn(pOldPlotGroup, bRecalculateBonuses);
 }
 
 CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout)
