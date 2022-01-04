@@ -159,7 +159,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_CAPITAL</Tag>
 		<English>[ICON_BULLET]Makes this City the Capital</English>
 		<French>[ICON_BULLET]Fait de cette ville la capitale</French>
-		<German>[ICON_BULLET]Erhebt diese Stadt zur Hauptstadt</German>
+		<German>[ICON_BULLET]macht diese Stadt zur Hauptstadt</German>
 		<Italian>[ICON_BULLET]Rende capitale questa città</Italian>
 		<Spanish>[ICON_BULLET]Convierte esta ciudad en la capital</Spanish>
 	</TEXT>
@@ -475,7 +475,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_START_ERA</Tag>
 		<English>[ICON_BULLET]Available for free on %s1_EraName and later starts</English>
 		<French>[ICON_BULLET]Disponible gratuitement à l'époque "%s1_EraName" et pour les débuts de partie plus tardifs</French>
-		<German>[ICON_BULLET]Frei verfügbar im Zeitalter %s1_EraName und später</German>
+		<German>[ICON_BULLET]frei verfügbar im Zeitalter %s1_EraName und später</German>
 		<Italian>[ICON_BULLET]Disponibile gratuitamente al raggiungimento di %s1_EraName</Italian>
 		<Spanish>[ICON_BULLET]Disponible gratis a partir [NUM1:del:de la:de los:de las] %s1_EraName e inicios posteriores</Spanish>
 	</TEXT>
@@ -681,7 +681,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT</Tag>
 		<English>[ICON_BULLET]%D1_change[ICON_HAPPY] for %s2_trait leaders</English>
 		<French>[ICON_BULLET]%D1_change[ICON_HAPPY] pour les dirigeants avec le trait %s2_trait</French>
-		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für %s2:2_trait Staatsoberhaupt</German>
+		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
 		<Italian>[ICON_BULLET]%D1_change[ICON_HAPPY] con un leader %s2_trait</Italian>
 		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con líder %s2:1_trait</Spanish>
 	</TEXT>
@@ -916,14 +916,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
+		<German>[ICON_BULLET]optional erforderlich zum Bau von:[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
+		<German>[ICON_BULLET]ermöglicht im gesamten Reich den Bau von:[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_TRAIN</Tag>
 		<English>[ICON_BULLET]May be needed to Train[SPACE]</English>
+		<German>[ICON_BULLET]optional erforderlich für die Ausbildung von:[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NOT_REQUIRED_TO_BUILD</Tag>
@@ -1103,7 +1106,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REDUCES_MAINTENANCE</Tag>
 		<English>[ICON_BULLET]Reduces [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK] in Nearby Cities</English>
 		<French>[ICON_BULLET]Réduit le coût [LINK=CONCEPT_MAINTENANCE]d'entretien[\LINK] des villes voisines</French>
-		<German>[ICON_BULLET]Reduziert den [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK] in umliegenden Städten</German>
+		<German>[ICON_BULLET]reduziert [LINK=CONCEPT_MAINTENANCE]laufende Kosten[\LINK] nahe gelegener Städte</German>
 		<Italian>[ICON_BULLET]Riduce il [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK] nelle città vicine</Italian>
 		<Spanish>[ICON_BULLET]Reduce el [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK] de las ciudades cercanas</Spanish>
 	</TEXT>
@@ -1129,7 +1132,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]Required to Build[SPACE]</English>
 		<French>[ICON_BULLET]Requis pour construire :[SPACE]</French>
-		<German>[ICON_BULLET]Erforderlich zum Bau von:[SPACE]</German>
+		<German>[ICON_BULLET]erforderlich zum Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Necessario per costruire[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Se requiere para construir[SPACE]</Spanish>
 	</TEXT>
@@ -1137,7 +1140,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_TRAIN</Tag>
 		<English>[ICON_BULLET]Required to Train[SPACE]</English>
 		<French>[ICON_BULLET]Requis pour entraîner :[SPACE]</French>
-		<German>[ICON_BULLET]Erforderlich für die Ausbildung[SPACE]</German>
+		<German>[ICON_BULLET]erforderlich für die Ausbildung von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Necessario per addestrare[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Se requiere para entrenar[SPACE]</Spanish>
 	</TEXT>
@@ -1386,7 +1389,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_STORES_FOOD</Tag>
 		<English>[ICON_BULLET]Stores %d1_Mod%% of [ICON_FOOD] after Growth</English>
 		<French>[ICON_BULLET]Stocke %d1_Mod%% de [ICON_FOOD] après la croissance</French>
-		<German>[ICON_BULLET]Speichert %d1_Mod%% [ICON_FOOD] nach Wachstum</German>
+		<German>[ICON_BULLET]speichert %d1_Mod%% [ICON_FOOD] nach einem Stadtwachstum</German>
 		<Italian>[ICON_BULLET]Immagazzina %d1_Mod%% di [ICON_FOOD] dopo la crescita</Italian>
 		<Spanish>[ICON_BULLET]Almacena el %d1_Mod%% de los [ICON_FOOD] tras el crecimiento</Spanish>
 	</TEXT>
