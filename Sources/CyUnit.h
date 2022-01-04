@@ -42,7 +42,6 @@ public:
 	int getGreatWorkCulture(const CyPlot& kPlot) const;
 	int getEspionagePoints(const CyPlot& kPlot) const;
 
-	bool canBuild(const CyPlot& kPlot, int /*BuildTypes*/ eBuild, bool bTestVisible) const;
 	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible) const;
 
 	int /*HandicapTypes*/ getHandicapType() const;
