@@ -913,11 +913,6 @@ const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 
 const char* CvBuildingInfo::getButton() const
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
-	{
-		return NULL;
-	}
 	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
 	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }
