@@ -389,22 +389,8 @@ int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 
 const char* CvImprovementInfo::getButton() const
 {
-	/************************************************************************************************/
-	/* XMLCOPY								 10/25/07								MRGENIE	  */
-	/*																							  */
-	/* Catch non-existing tag																	   */
-	/************************************************************************************************/
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
 	const CvArtInfoImprovement* pImprovementArtInfo = getArtInfo();
-	if (pImprovementArtInfo != NULL)
-	{
-		return pImprovementArtInfo->getButton();
-	}
-	return NULL;
+	return pImprovementArtInfo ? pImprovementArtInfo->getButton() : NULL;
 }
 
 const CvArtInfoImprovement* CvImprovementInfo::getArtInfo() const

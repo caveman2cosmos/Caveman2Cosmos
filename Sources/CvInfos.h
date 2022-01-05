@@ -1619,7 +1619,7 @@ protected:
 	ActionSubTypes m_eSubType;
 
 private:
-	CvHotkeyInfo* getHotkeyInfo() const;
+	const CvHotkeyInfo* getHotkeyInfo() const;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
