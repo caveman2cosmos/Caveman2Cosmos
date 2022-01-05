@@ -146,11 +146,15 @@ void CyInfoPythonInterface1()
 		.def("getUnitCombat", &CvPromotionInfo::getUnitCombat, "bool (int i)")
 		.def("getPromotionLine", &CvPromotionInfo::getPromotionLine, "int ()")
 
-		.def("isQualifiedUnitCombatType", &CvPromotionInfo::isQualifiedUnitCombatType, "bool (int i)")
-		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
+		.def("getNumQualifiedUnitCombatTypes", &CvPromotionInfo::getNumQualifiedUnitCombatTypes, "int ()")
+		.def("getQualifiedUnitCombatType", &CvPromotionInfo::getQualifiedUnitCombatType, "int (int i)")
+		.def("getNumDisqualifiedUnitCombatTypes", &CvPromotionInfo::getNumDisqualifiedUnitCombatTypes, "int ()")
+		.def("getDisqualifiedUnitCombatType", &CvPromotionInfo::getDisqualifiedUnitCombatType, "int (int i)")
 
+		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
 		.def("isEquipment", &CvPromotionInfo::isEquipment, "bool ()")
 		.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
+
 		.def("getAddsBuildType", &CvPromotionInfo::getAddsBuildType, "int (int i)")
 		.def("getNumAddsBuildTypes", &CvPromotionInfo::getNumAddsBuildTypes, "int ()")
 		;
@@ -264,7 +268,11 @@ void CyInfoPythonInterface1()
 		.def("isSubCombatType", &CvUnitInfo::isSubCombatType, "int (int i)")
 		.def("isQualifiedPromotionType", &CvUnitInfo::isQualifiedPromotionType, "bool (int i)")
 		.def("hasUnitCombat", &CvUnitInfo::hasUnitCombat, "bool (UnitCombatTypes eUnitCombat)")
+		.def("getTotalModifiedCombatStrength100", &CvUnitInfo::getTotalModifiedCombatStrength100, "int ()")
+		.def("getTotalModifiedAirCombatStrength100", &CvUnitInfo::getTotalModifiedAirCombatStrength100, "int ()")
 		//TB Combat Mods End  TB SubCombat Mod end
+
+		.def("getMapCategories", &CvUnitInfo::getMapCategories, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getTrainCondition", &CvUnitInfo::getTrainCondition, python::return_value_policy<python::reference_existing_object>())
 		;

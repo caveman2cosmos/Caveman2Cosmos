@@ -64,7 +64,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>5000</iCost>
+			<iCost>3131</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -174,7 +174,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>5000</iCost>
+			<iCost>2006</iCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
@@ -2625,7 +2625,7 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2506</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
@@ -2749,7 +2749,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>4756</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
@@ -3186,7 +3186,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>4231</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3387,7 +3387,7 @@
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iCost>6500</iCost>
+			<iCost>8817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3458,7 +3458,7 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
-			<iCost>7000</iCost>
+			<iCost>12342</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3529,7 +3529,7 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
-			<iCost>7500</iCost>
+			<iCost>14817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3603,7 +3603,7 @@
 				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
-			<iCost>8000</iCost>
+			<iCost>18267</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3978,7 +3978,7 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>1762</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
@@ -4045,7 +4045,7 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2106</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
@@ -4839,7 +4839,7 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2306</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
@@ -5611,7 +5611,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>3006</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>

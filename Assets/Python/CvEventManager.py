@@ -9,6 +9,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
+import TextUtil
 import CvScreensInterface
 import CvAdvisorUtils
 import DebugUtils
@@ -1982,6 +1983,7 @@ class CvEventManager:
 
 		# Star Signs
 		if not CyUnit.isHasUnitCombat(self.UNITCOMBAT_CIVILIAN) and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
+
 			CyTeam = GC.getTeam(CyUnit.getTeam())
 			bLand = CyUnit.getDomainType() == self.mapDomain['DOMAIN_LAND']
 			if not CyTeam.isHasTech(self.TECH_SATELLITES) and CyTeam.isHasTech(self.TECH_STARGAZING) \
@@ -2335,7 +2337,13 @@ class CvEventManager:
 			popupInfo = CyPopupInfo()
 			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
 			popupInfo.setData1(iReligion)
-			popupInfo.setData2(GAME.getHolyCity(iReligion).getID())
+
+			# All religions have holy cities at this point afaik, but it's an assumption that we shouldn't make.
+			holyCity = GAME.getHolyCity(iReligion)
+			if holyCity:
+				popupInfo.setData2(holyCity.getID())
+			# else use default Data2 value: -1
+
 			popupInfo.setData3(1)
 			popupInfo.setText('showWonderMovie')
 			popupInfo.addPopup(iPlayer)
@@ -2719,8 +2727,7 @@ class CvEventManager:
 	def onVictory(self, argsList):
 		iTeam, iVictory = argsList
 		if iVictory >= 0 and iVictory < GC.getNumVictoryInfos():
-			victoryInfo = GC.getVictoryInfo(int(iVictory))
-			CvUtil.pyPrint("Victory!  Team %d achieves a %s victory" %(iTeam, victoryInfo.getDescription()))
+			print "Victory!  Team %d achieves a %s victory" %(iTeam, GC.getVictoryInfo(iVictory).getDescription())
 
 
 	def onVassalState(self, argsList):
@@ -2810,22 +2817,22 @@ class CvEventManager:
 			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeCurrentUnit()
 
 	def __eventWBPlayerScriptPopupApply(self, playerID, userData, popupReturn):
-		GC.getPlayer(userData[0]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		GC.getPlayer(userData[0]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
 		WBPlayerScreen.WBPlayerScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBCityScriptPopupApply(self, playerID, userData, popupReturn):
-		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
 
 		if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
 			import WBCityEditScreen
 			WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
-		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
 		WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBPlotScriptPopupApply(self, playerID, userData, popupReturn):
-		GC.getMap().plot(userData[0], userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		GC.getMap().plot(userData[0], userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
 		WBPlotScreen.WBPlotScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBLandmarkPopupApply(self, playerID, userData, popupReturn):
@@ -2837,7 +2844,7 @@ class CvEventManager:
 			CyEngine().removeSign(pPlot, iPlayer)
 		if sScript:
 			if iPlayer >= self.MAX_PC_PLAYERS:
-				CyEngine().addLandmark(pPlot, CvUtil.convertToStr(sScript))
+				CyEngine().addLandmark(pPlot, TextUtil.convertToStr(sScript))
 			else:
-				CyEngine().addSign(pPlot, iPlayer, CvUtil.convertToStr(sScript))
+				CyEngine().addSign(pPlot, iPlayer, TextUtil.convertToStr(sScript))
 		WBPlotScreen.iCounter = 10

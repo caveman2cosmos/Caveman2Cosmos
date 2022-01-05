@@ -1775,10 +1775,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SIZE_MICROSCOPIC</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1795,10 +1793,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SIZE_COLOSSAL</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1813,10 +1809,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_GROUP_SOLO</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1835,10 +1829,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_GROUP_COUNTLESS</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -2107,29 +2099,6 @@
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_AIR</DomainType>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
-			<bBuildUp>1</bBuildUp>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_BUILD_UP_FORTIFY</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Description>
-			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY_HELP</Help>
-			<Button>Art/Buttons/Promotions/Fortify1BuildUp.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
@@ -2920,10 +2889,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_MOTILITY_DRIVING</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CRIMINAL</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_STRIKE_TEAM</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_RUFFIAN</NotOnUnitCombatType>

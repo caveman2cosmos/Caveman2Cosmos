@@ -2,9 +2,12 @@
 #include "CvBuildingInfo.h"
 #include "CvBugOptions.h"
 #include "CvCity.h"
+#include "CvGame.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
 #include "CvPlayerAI.h"
@@ -14,8 +17,10 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 void CvGame::updateColoredPlots()
 {
@@ -263,7 +268,7 @@ void CvGame::updateColoredPlots()
 									if (eBestBuild != NO_BUILD)
 									{
 										const CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
-										eBestImprovement = (ImprovementTypes)kBestBuild.getImprovement();
+										eBestImprovement = kBestBuild.getImprovement();
 										eBestRoute = (RouteTypes)kBestBuild.getRoute();
 
 										if (ePlotFeature != NO_FEATURE && kBestBuild.isFeatureRemove(ePlotFeature))
@@ -656,7 +661,7 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 		return;
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
 	{
@@ -847,7 +852,7 @@ void CvGame::cycleCities(bool bForward, bool bAdd) const
 
 			gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 		}
-		else GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
+		else GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
 	}
 }
 
@@ -879,7 +884,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 	}
 	else
 	{
-		CvPlot* pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
+		const CvPlot* pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
 		pNextSelectionGroup = GC.getMap().findSelectionGroupInternal(((pPlot != NULL) ? pPlot->getX() : 0), ((pPlot != NULL) ? pPlot->getY() : 0), getActivePlayer(), true, bWorkers, bAllowViewportSwitch);
 	}
 
@@ -888,14 +893,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 		if (!GC.getCurrentViewport()->isInViewport(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 		{
 			// Switch viewport
-			CvUnit*	pSelectionUnit = pNextSelectionGroup->getHeadUnit();
-
-			GC.getCurrentViewport()->bringIntoView(
-				pNextSelectionGroup->getX(),
-				pNextSelectionGroup->getY(),
-				pSelectionUnit,
-				bSetCamera && (pCycleUnit != pSelectionUnit || pCycleUnit != NULL && pCycleUnit->getGroup()->readyToSelect())
-			);
+			GC.getCurrentViewport()->bringIntoView(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), pNextSelectionGroup->getHeadUnit());
 			return;
 		}
 		// If we switched viewport then the asynchronous viewport switching will also handle the unit selection
@@ -918,7 +916,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 
 
 // Returns true if unit was cycled...
-bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit = NULL;
@@ -1176,7 +1174,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			{
 				CvMessageControl::getInstance().sendAutoMission(pHeadSelectedUnit->getID());
 			}
-			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || /*iData2 == MISSION_ESTABLISH || iData2 == MISSION_ESCAPE ||*/ iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
+			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
 			{
 				const UnitTypes eUnit = pHeadSelectedUnit->getUnitType();
 
@@ -1223,7 +1221,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			}
 			break;
 		}
-		default: FAssert(false);
+		default: FErrorMsg("error");
 	}
 }
 
@@ -1257,7 +1255,7 @@ void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, 
 				break;
 
 			default:
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 			}
 		}
@@ -1590,7 +1588,7 @@ static void selectClosestCity(bool bAdd)
 		}
 		else
 		{
-			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, !bAdd, true, bAdd);
+			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, !bAdd, true, bAdd);
 		}
 	}
 }
@@ -1617,7 +1615,7 @@ void CvGame::doControl(ControlTypes eControl)
 		{
 			if ( !pPlot->isInViewport(GC.getViewportCenteringBorder()) )
 			{
-				GC.getCurrentViewport()->bringIntoView(pPlot->getX(), pPlot->getY(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true, true);
+				GC.getCurrentViewport()->bringIntoView(pPlot->getX(), pPlot->getY(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
 			}
 			else
 			{
@@ -1705,7 +1703,7 @@ void CvGame::doControl(ControlTypes eControl)
 			}
 			else
 			{
-				GC.getCurrentViewport()->bringIntoView(pCapitalCity->getX(), pCapitalCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp());
+				GC.getCurrentViewport()->bringIntoView(pCapitalCity->getX(), pCapitalCity->getY(), NULL, true, gDLL->getInterfaceIFace()->isCityScreenUp());
 			}
 		}
 		break;
@@ -2121,11 +2119,11 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 		{
 			bUnits = true;
 
-			if (pLoopUnit->canFortify(pPlot))
+			if (pLoopUnit->canFortify())
 			{
 				bFortifyUnit = true;
 			}
-			else if (pLoopUnit->canSleep(pPlot))
+			else if (pLoopUnit->canSleep())
 			{
 				bSleepUnit = true;
 			}
@@ -2380,7 +2378,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -2666,7 +2664,7 @@ void CvGame::initSelection() const
 
 	if (pSelectionUnit != NULL)
 	{
-		GC.getCurrentViewport()->bringIntoView(pSelectionUnit->getX(), pSelectionUnit->getY(), pSelectionUnit, true);
+		GC.getCurrentViewport()->bringIntoView(pSelectionUnit->getX(), pSelectionUnit->getY(), pSelectionUnit);
 	}
 }
 

@@ -12,6 +12,9 @@ class CvPlot;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
+typedef bst::array<int, NUM_COMMERCE_TYPES> CommerceArray;
+typedef bst::array<int, NUM_YIELD_TYPES> YieldArray;
+
 //TB Combat Mod
 typedef std::vector< std::pair<UnitCombatTypes, int> > UnitCombatModifierArray;
 typedef std::vector< std::pair<TechTypes, int> > TechModifierArray;
@@ -25,23 +28,6 @@ typedef std::vector< std::pair<PromotionLineTypes, int> > PromotionLineModifierA
 typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
 typedef std::vector< std::pair<EraTypes, int> > EraArray;
 typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
-
-struct plotInfo
-{
-	plotInfo();
-	std::string ToJSON();
-
-	int index;
-	bool worked;
-	bool owned;
-	bool bonusImproved;
-	int yieldValue;
-	short yields[NUM_YIELD_TYPES];
-	BonusTypes currentBonus;
-	ImprovementTypes currentImprovement;
-	FeatureTypes currentFeature;
-	BuildTypes currentBuild;
-};
 
 struct AidStruct
 {
@@ -676,22 +662,6 @@ struct PlotExtraYield
 	PlotExtraYield()
 		: m_iX(0)
 		, m_iY(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
-struct PlotExtraCost
-{
-	int m_iX;
-	int m_iY;
-	int m_iCost;
-
-	PlotExtraCost()
-		: m_iX(0)
-		, m_iY(0)
-		, m_iCost(0)
 	{}
 
 	void read(FDataStreamBase* pStream);

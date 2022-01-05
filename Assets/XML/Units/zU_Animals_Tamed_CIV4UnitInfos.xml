@@ -47,7 +47,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iCombat>3</iCombat>
@@ -118,7 +118,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -915,7 +915,7 @@
 				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -1060,7 +1060,7 @@
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>387</iCost>
 			<iMoves>1</iMoves>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -1130,7 +1130,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1202,7 +1202,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1273,7 +1273,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1344,7 +1344,7 @@
 				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -1415,7 +1415,7 @@
 				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1482,7 +1482,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -1552,7 +1552,7 @@
 				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -1619,7 +1619,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REDPANDA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -1691,7 +1691,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1762,7 +1762,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1835,7 +1835,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -2131,7 +2131,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2478,7 +2478,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2546,7 +2546,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BRAZILIAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2614,7 +2614,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2682,7 +2682,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2763,7 +2763,7 @@
 				<BuildingType>BUILDING_FOLKLORE_NILE_MONITOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -2849,7 +2849,7 @@
 				</Or>
 			</TrainCondition>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -2922,7 +2922,7 @@
 				<UnitType>UNIT_TAMED_DONKEY</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iMoves>2</iMoves>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -3025,7 +3025,7 @@
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iMoves>3</iMoves>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -3138,7 +3138,7 @@
 				<UnitType>UNIT_TAMED_WOLF</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

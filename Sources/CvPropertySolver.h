@@ -11,9 +11,13 @@
 #ifndef CV_PROPERTY_SOLVER_H
 #define CV_PROPERTY_SOLVER_H
 
+#include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
 #include "CvPropertyPropagator.h"
+
+class CvGameObject;
+class CvPropertyManipulators;
 
 typedef std::map<const CvGameObject*, CvProperties> PropertySolverMapType;
 

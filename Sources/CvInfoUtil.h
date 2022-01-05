@@ -222,7 +222,7 @@ struct CvInfoUtil : bst::noncopyable
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
 
-		void checkSum(uint32_t& iSum) const
+		void checkSum(uint32_t& /*iSum*/) const
 		{
 		}
 
@@ -303,7 +303,7 @@ struct CvInfoUtil : bst::noncopyable
 			}
 		}
 
-		void sendVarToPython(const char* file) const
+		void sendVarToPython(const char* /*file*/) const
 		{
 			/*
 			if (const T*& array = ref())
@@ -487,12 +487,12 @@ struct CvInfoUtil : bst::noncopyable
 		void copyNonDefaults(const WrappedVar* source)
 		{
 			foreach_(const T& element, static_cast<const VectorWrapper*>(source)->ref())
-				if (element > -1 && !algo::contains(ref(), element))
+				if (element > -1 && algo::none_of_equal(ref(), element))
 					ref().push_back(element);
 			algo::sort(ref());
 		}
 
-		void sendVarToPython(const char* file) const
+		void sendVarToPython(const char* /*file*/) const
 		{
 			//Cy::call(file, "handleVector", Cy::Args()
 			//	<< ref()

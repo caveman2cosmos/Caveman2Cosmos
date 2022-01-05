@@ -161,10 +161,10 @@ class WBPromotionScreen:
 		global lList
 		lList = []
 		for i in xrange(GC.getNumPromotionInfos()):
-			ItemInfo = GC.getPromotionInfo(i)
-			if not isPromotionValid(i, pUnit.getUnitType(), True): continue
-			if iSelectedClass == -2 or ItemInfo.getUnitCombat(iSelectedClass):
-				lList.append([ItemInfo.getDescription(), i])
+			if pUnit.isPromotionValid(i):
+				ItemInfo = GC.getPromotionInfo(i)
+				if iSelectedClass == -2 or ItemInfo.getUnitCombat(iSelectedClass):
+					lList.append([ItemInfo.getDescription(), i])
 		lList.sort()
 		self.placePromotions()
 

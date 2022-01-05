@@ -1829,7 +1829,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>125</iCost>
+			<iCost>133</iCost>
 			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -1895,7 +1895,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>440</iCost>
+			<iCost>473</iCost>
 			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -1967,7 +1967,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>760</iCost>
+			<iCost>811</iCost>
 			<iBaseUpkeep>1000</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>500</iEspionagePoints>
@@ -2053,7 +2053,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>4320</iCost>
+			<iCost>1350</iCost>
 			<iBaseUpkeep>1500</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
@@ -2109,6 +2109,7 @@
 			<Type>UNIT_NANITE_SPY</Type>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NANITE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
@@ -2154,7 +2155,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>3800</iCost>
+			<iCost>4092</iCost>
 			<iBaseUpkeep>10000</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>20</iDropRange>
@@ -2229,7 +2230,7 @@
 				<BuildingType>BUILDING_SPY_TRAINING_FACILITY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
-			<iCost>300</iCost>
+			<iCost>531</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -5123,7 +5124,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<iCost>150</iCost>
+			<iCost>233</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -5199,7 +5200,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
 			</SupersedingUnits>
-			<iCost>3</iCost>
+			<iCost>4</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -5285,7 +5286,7 @@
 				<UnitType>UNIT_NEANDERTHAL</UnitType>
 			</SupersedingUnits>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
-			<iCost>17</iCost>
+			<iCost>19</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -5381,7 +5382,7 @@
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</SupersedingUnits>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
-			<iCost>26</iCost>
+			<iCost>31</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -6780,7 +6781,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
 			</SupersedingUnits>
-			<iCost>35</iCost>
+			<iCost>38</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -6871,7 +6872,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
 			</SupersedingUnits>
-			<iCost>39</iCost>
+			<iCost>43</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -6967,7 +6968,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<iCost>52</iCost>
+			<iCost>56</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -7071,7 +7072,7 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>110</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -7239,7 +7240,7 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>175</iCost>
+			<iCost>190</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -7322,7 +7323,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
-			<iCost>240</iCost>
+			<iCost>259</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
@@ -8196,7 +8197,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
-			<iCost>50</iCost>
+			<iCost>52</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -9607,7 +9608,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
-			<iCost>340</iCost>
+			<iCost>342</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>20</iCombat>
@@ -9698,7 +9699,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
-			<iCost>400</iCost>
+			<iCost>402</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>26</iCombat>
@@ -24096,7 +24097,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
-			<iCost>5200</iCost>
+			<iCost>4968</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>160</iCombat>
@@ -24186,7 +24187,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
-			<iCost>10200</iCost>
+			<iCost>9756</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>360</iCombat>
@@ -24847,7 +24848,7 @@
 				<UnitType>UNIT_WARDOG</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRAINED_DOG</UnitType>
 			</UnitUpgrades>
-			<iCost>46</iCost>
+			<iCost>70</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -24954,7 +24955,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARDDOG</UnitType>
 			</UnitUpgrades>
-			<iCost>110</iCost>
+			<iCost>163</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25060,7 +25061,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_DOG</UnitType>
 			</UnitUpgrades>
-			<iCost>215</iCost>
+			<iCost>319</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25173,7 +25174,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_CANIS_SUPERIOR</UnitType>
 			</UnitUpgrades>
-			<iCost>400</iCost>
+			<iCost>601</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25307,7 +25308,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
 			</PrereqAndBuildings>
-			<iCost>2600</iCost>
+			<iCost>3942</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -25441,7 +25442,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>390</iCost>
+			<iCost>387</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>18</iCombat>
@@ -25544,7 +25545,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<iCost>570</iCost>
+			<iCost>568</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
@@ -25653,7 +25654,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
-			<iCost>1240</iCost>
+			<iCost>1237</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>60</iCombat>
@@ -25758,7 +25759,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOTUBES</BonusType>
 			</PrereqBonuses>
-			<iCost>5400</iCost>
+			<iCost>5393</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>200</iCombat>
@@ -35524,7 +35525,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
-			<iCost>9800</iCost>
+			<iCost>10617</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -38100,7 +38101,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>98</iCost>
+			<iCost>105</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38276,7 +38277,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<BonusType>BONUS_TOOLS</BonusType>
-			<iCost>155</iCost>
+			<iCost>169</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38471,7 +38472,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_TOOLS</BonusType>
 			</PrereqBonuses>
-			<iCost>250</iCost>
+			<iCost>268</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38571,7 +38572,7 @@
 				<BonusType>BONUS_FIREARMS</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
-			<iCost>575</iCost>
+			<iCost>578</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
@@ -38689,7 +38690,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>475</iCost>
+			<iCost>511</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38783,7 +38784,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>590</iCost>
+			<iCost>623</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -38986,7 +38987,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>750</iCost>
+			<iCost>811</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -39197,7 +39198,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>830</iCost>
+			<iCost>961</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -39497,7 +39498,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>1400</iCost>
+			<iCost>1654</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -43108,7 +43109,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_BARD</UnitType>
 			</UnitUpgrades>
-			<iCost>12</iCost>
+			<iCost>16</iCost>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43226,7 +43227,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
-			<iCost>120</iCost>
+			<iCost>151</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -43334,7 +43335,7 @@
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
-			<iCost>200</iCost>
+			<iCost>250</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>5</iAsset>
@@ -43440,7 +43441,7 @@
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
-			<iCost>700</iCost>
+			<iCost>886</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>8</iAsset>
@@ -43566,7 +43567,7 @@
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>40</iCost>
+			<iCost>47</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseFoodChange>30</iBaseFoodChange>
@@ -43651,7 +43652,7 @@
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>90</iCost>
+			<iCost>115</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iBaseFoodChange>72</iBaseFoodChange>
@@ -43888,7 +43889,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>40</iCost>
+			<iCost>47</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
@@ -43992,7 +43993,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>90</iCost>
+			<iCost>115</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iBaseTrade>30</iBaseTrade>
@@ -44957,7 +44958,7 @@
 			<Capture>UNIT_CAPTIVE_MILITARY</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
@@ -45144,6 +45145,19 @@
 								</Not>
 							</PlotCondition>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_ARCHER</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 				<Action>
@@ -45168,6 +45182,32 @@
 								</Not>
 							</PlotCondition>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_AXEMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_AXEMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 				<Action>
@@ -45181,6 +45221,32 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_SPEARMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_SPEARMAN</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<UnitType>UNIT_SPEARMAN</UnitType>
 							<bUnitToCity>
@@ -45325,9 +45391,23 @@
 							</PlotCondition>
 							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_TUTOR_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesTutor</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<!-- <Action>
+				<Action>
 					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -45345,7 +45425,7 @@
 							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
-				</Action> -->
+				</Action>
 				<Action>
 					<MissionType>MISSION_SELL_CAPTIVE</MissionType>
 					<ActionOutcomes>
@@ -45411,6 +45491,48 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
 							<iChance>100</iChance>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
@@ -45805,6 +45927,48 @@
 								</iYield>
 							</Yields>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>50</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>15</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>50</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>15</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 			</Actions>
@@ -46080,7 +46244,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>390</iCost>
+			<iCost>387</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>

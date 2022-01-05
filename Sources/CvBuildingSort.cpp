@@ -225,7 +225,7 @@ BuildingSortTypes BuildingSortList::getActiveSort() const
 
 bool BuildingSortList::setActiveSort(BuildingSortTypes eActiveSort)
 {
-	FASSERT_BOUNDS(0, NUM_BUILDING_SORT, eActiveSort)
+	FASSERT_BOUNDS(0, NUM_BUILDING_SORT, eActiveSort);
 	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;

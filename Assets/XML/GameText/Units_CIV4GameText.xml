@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
-		<English>Hurry Production (with overflow)</English>
-		<French>Accélérer la Production (avec gaspillage)</French>
-		<Russian>Ускорить производство (с избытком)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN</Tag>
 		<English>Hurry Production (with overflow)</English>
 		<French>Accélérer la Production (avec gaspillage)</French>
@@ -20,10 +14,6 @@
 		<Italian>L'attuale produzione cittadina è stata affrettata dalla tua unità.</Italian>
 		<Polish>Obecna produkcja w mieście została przyspieszona przez jednostk.</Polish>
 		<Russian>Текущее производство в городе было ускорено караваном.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Tag>
-		<English>Current city production has been hurried</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_AUTO_PROMOTION_GROUPING</Tag>
@@ -21516,7 +21506,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
-		<English>Subdued Polarbear</English>
+		<English>Subdued Polar Bear</English>
 		<French>Ours polaire (App.)</French>
 		<Italian>
 			<Text>Orso polare addomesticato</Text>

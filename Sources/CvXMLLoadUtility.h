@@ -22,8 +22,8 @@
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
-class FXmlSchemaCache;
-class FXml;
+//class FXmlSchemaCache;
+//class FXml;
 
 class ParserErrorHandler : public xercesc::ErrorHandler
 {
@@ -259,12 +259,14 @@ public:
 		}
 	}
 
-	// loads an xml file into the FXml variable.  The szFilename parameter has
+private:
+	// Loads an xml file.  The szFilename parameter has
 	// the m_szXmlPath member variable pre-pended to it to form the full pathname
-	bool LoadCivXml(FXml* pFXml, const char* szFilename);
+	bool LoadCivXml(const char* szFilename);
+public:
 
-	int  GetXmlChildrenNumber() { return m_pCurrentXmlElement->getChildElementCount(); }
-	int  GetXmlSiblingsNumber()
+	int GetXmlChildrenNumber() const { return m_pCurrentXmlElement->getChildElementCount(); }
+	int GetXmlSiblingsNumber() const
 	{
 		if (xercesc::DOMNode* node = m_pCurrentXmlElement->getParentNode())
 		{
@@ -277,13 +279,13 @@ public:
 		}
 	}
 
-	const XMLCh* GetXmlTagName()
+	const XMLCh* GetXmlTagName() const
 	{
 		// WARINING : here can be a problem, when we turn on namespaces
 		return m_pCurrentXmlElement->getNodeName();
 	}
 
-	int  GetXmlChildrenNumber(const XMLCh* name)
+	int  GetXmlChildrenNumber(const XMLCh* name) const
 	{
 		int number = 0;
 		for (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild();
@@ -296,7 +298,7 @@ public:
 		return number;
 	}
 
-	int  GetXmlSiblingsNumber(const XMLCh* name)
+	int  GetXmlSiblingsNumber(const XMLCh* name) const
 	{
 		int number = 0;
 		for (xercesc::DOMElement* sibling = m_pCurrentXmlElement;
@@ -317,7 +319,7 @@ public:
 		return number;
 	}
 
-	const XMLCh* GetXmlFirstText()
+	const XMLCh* GetXmlFirstText() const
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -337,7 +339,7 @@ public:
 		return NULL;
 	}
 
-	const XMLCh* TryGetXmlFirstText()
+	const XMLCh* TryGetXmlFirstText() const
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -349,7 +351,7 @@ public:
 		return NULL;
 	}
 
-	bool  HasXmlNextSibling()    { return m_pCurrentXmlElement->getNextElementSibling(); }
+	bool HasXmlNextSibling() const    { return m_pCurrentXmlElement->getNextElementSibling(); }
 
 	bool  TryMoveToXmlFirstChild()
 	{
@@ -501,8 +503,8 @@ public:
 	//	and then gets that node's boolean value
 	bool GetChildXmlVal(bool* pbVal, bool bDefault = false);
 
-	FXml* GetXML() { return NULL; }
-	xercesc::DOMElement* GetCurrentXMLElement() { return m_pCurrentXmlElement; }
+	//FXml* GetXML() { return NULL; }
+	xercesc::DOMElement* GetCurrentXMLElement() const { return m_pCurrentXmlElement; }
 	void SetCurrentXMLElement(xercesc::DOMElement* element) { m_pCurrentXmlElement = element; }
 
 	// loads the local yield from the xml file
@@ -531,11 +533,12 @@ public:
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
 
-	template <class T>
-	void SetList(T** ppList, int size, const wchar_t* tag);
+	template <typename T, size_t Size>
+	void set(bst::array<T, Size>& array, const wchar_t* tag);
 
 	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal = 0);
+	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName,
+		int iInfoBaseLength, int iDefaultListVal = 0);
 
 /************************************************************************************************/
 /* RevDCM  XMLloading                             05/05/10             phungus420               */
@@ -564,24 +567,8 @@ public:
 		int iInfoBaseLength, CvString szDefaultListVal = CvString());
 
 	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, int iDefaultListVal = 0);
-
-	// allocate and initialize a list from a tag pair in the xml for audio scripts
-	void SetVariableListTagPairForAudioScripts(int **ppiList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, int iDefaultListVal = -1);
-
-	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPairForAudioScripts(int **ppiList, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = -1);
-
-	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(bool **ppbList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, bool bDefaultListVal = false);
-
-	// allocate and initialize a list from a tag pair in the xml
-	void SetVariableListTagPair(CvString **ppszList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, CvString szDefaultListVal = CvString());
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
@@ -641,14 +628,12 @@ public:
 							aInfos->push_back(std::make_pair(eType, iModifier));
 
 							MoveToXmlParent();
-
 						}
 
 						if (!TryMoveToXmlNextSibling())
 						{
 							break;
 						}
-
 					}
 
 					MoveToXmlParent();
@@ -661,11 +646,11 @@ public:
 	template<class T>
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
-		foreach_(const T& it, source)
+		foreach_(const T& element, source)
 		{
-			if (/*it > -1 &&*/ !algo::contains(target, it))
+			if (/*it > -1 &&*/ algo::none_of_equal(target, element))
 			{
-				target.push_back(it);
+				target.push_back(element);
 			}
 		}
 
@@ -687,7 +672,7 @@ public:
 					for (int j = 0; j < iNumSibs; j++)
 					{
 						const T value = static_cast<T>(GetInfoClass(szTextVal));
-						if (value > -1  && !algo::contains(*aInfos, value))
+						if (value > -1  && algo::none_of_equal(*aInfos, value))
 						{
 							aInfos->push_back(value);
 						}
@@ -778,7 +763,7 @@ private:
 	//
 	// a dynamic value for the list size
 	template <class T>
-	void SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, bool bTwoPass, CvInfoReplacements<T>* pReplacements = NULL);
+	void SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvInfoReplacements<T>* pReplacements = NULL);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/17/08                                MRGENIE      */
 /*                                                                                              */
@@ -823,7 +808,7 @@ private:
 /////////////////////////// inlines / templates
 //
 template <class T>
-void CvXMLLoadUtility::InitList(T **ppList, int size, T val)
+void CvXMLLoadUtility::InitList(T** ppList, int size, T val)
 {
 	FAssert(size > 0);
 
@@ -861,20 +846,20 @@ void CvXMLLoadUtility::InitPointerList(T*** pppList, int size)
 	}
 }
 
-template <class T>
-void CvXMLLoadUtility::SetList(T** ppList, int size, const wchar_t* tag)
+template <typename T, size_t Size>
+void CvXMLLoadUtility::set(bst::array<T, Size>& array, const wchar_t* tag)
 {
-	InitList(ppList, size);
-
 	if (TryMoveToXmlFirstChild(tag))
 	{
 		if (const int iNumSibs = GetXmlChildrenNumber())
 		{
-			if (GetChildXmlVal(&(*ppList)[0]))
+			FAssert(iNumSibs <= Size);
+
+			if (GetChildXmlVal(&array[0]))
 			{
 				for (int i = 1; i < iNumSibs; i++)
 				{
-					if (!GetNextXmlVal(&(*ppList)[i]))
+					if (!GetNextXmlVal(&array[i]))
 					{
 						break;
 					}

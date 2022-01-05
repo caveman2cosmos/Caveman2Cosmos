@@ -113,11 +113,6 @@ CyUnit* cyGetUnit(const IDInfo unit)
 	return new CyUnit(getUnit(unit));
 }
 
-bool cyIsPromotionValid(int /*PromotionTypes*/ ePromotion, int /*UnitTypes*/ eUnit, bool bLeader)
-{
-	return isPromotionValid((PromotionTypes) ePromotion, (UnitTypes) eUnit, bLeader);
-}
-
 int cyGetTechScore(int /*TechTypes*/ eTech)
 {
 	return getTechScore((TechTypes)eTech);

@@ -57,7 +57,7 @@ public:
 	const CLinkList<TradeData>* getSecondTrades() const;
 
 	DllExport bool isCancelable(PlayerTypes eByPlayer = NO_PLAYER, CvWString* pszReason = NULL);
-	int turnsToCancel(PlayerTypes eByPlayer = NO_PLAYER);
+	int turnsToCancel() const;
 
 	static bool isAnnual(TradeableItems eItem);
 	DllExport static bool isDual(TradeableItems eItem, bool bExcludePeace = false);
@@ -75,7 +75,7 @@ public:
 /* Advanced Diplomacy                                                                           */
 /************************************************************************************************/
 	static bool isSingleOption(TradeableItems eItem);
-	bool isEmbassy();
+	bool isEmbassy() const;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/

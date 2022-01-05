@@ -18,7 +18,7 @@
 
 // The maps are assumed to be small, so a vector of pairs is used
 
-template <class ID_, class Value_, Value_ defaultValue = 0>
+template <class ID_, class Value_, int defaultValue = 0>
 struct IDValueMap
 {
 	typedef std::pair<ID_, Value_>																	value_type;
@@ -38,7 +38,7 @@ struct IDValueMap
 		return new python_iterator(begin(), end());
 	}
 
-	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
+	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
@@ -54,7 +54,7 @@ struct IDValueMap
 					pair.first = static_cast<ID_>(GC.getInfoTypeForString(szTextVal));
 					if (pair.first > -1)
 					{
-						pXML->SetList(&pair.second, pairedArraySize, secondChildTag);
+						pXML->set(pair.second, secondChildTag);
 						m_map.push_back(pair);
 					}
 					if (!pXML->TryMoveToXmlNextSibling())
@@ -152,10 +152,7 @@ struct IDValueMap
 		{
 			if (!hasValue(otherPair.first))
 			{
-				value_type pair = value_type();
-				pair.first = otherPair.first;
-				COPY(pair.second, otherPair.second, Value_);
-				m_map.push_back(pair);
+				m_map.push_back(otherPair);
 			}
 		}
 	}
@@ -211,6 +208,26 @@ struct IDValueMap
 	}
 
 private:
+	template <typename T>
+	struct DefaultValue
+	{
+		static T create(const T& value)
+		{
+			return value;
+		}
+	};
+
+	template <typename T, size_t ArraySize>
+	struct DefaultValue<bst::array<T, ArraySize> >
+	{
+		static bst::array<T, ArraySize> create(const T& value)
+		{
+			bst::array<T, ArraySize> a;
+			a.fill(value);
+			return a;
+		}
+	};
+
 	std::vector<value_type> m_map;
 };
 
@@ -227,6 +244,7 @@ void publishIDValueMapPythonInterface()
 	publishPythonIteratorInterface<IDValueMap_t::python_iterator>();
 }
 
+
 typedef std::pair<BonusTypes, int> BonusModifier2;
 typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<BuildTypes, int> BuildModifier2;
@@ -238,9 +256,10 @@ typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
-typedef std::pair<TechTypes, int*> TechArray;
-typedef std::pair<TerrainTypes, int*> TerrainArray;
-typedef std::pair<PlotTypes, int*> PlotArray;
+typedef std::pair<TechTypes, CommerceArray> TechCommerceArray;
+typedef std::pair<TechTypes, YieldArray> TechArray;
+typedef std::pair<TerrainTypes, YieldArray> TerrainArray;
+typedef std::pair<PlotTypes, YieldArray> PlotArray;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;
 typedef IDValueMap<int, int, 0> IDValueMapModifier;

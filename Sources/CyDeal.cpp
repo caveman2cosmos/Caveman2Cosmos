@@ -3,7 +3,7 @@
 #include "CyDeal.h"
 
 //
-// Python wrapper class for CvGame
+// Python wrapper class for CvDeal
 //
 
 CyDeal::CyDeal(CvDeal* pDeal) : m_pDeal(pDeal) {}
@@ -82,7 +82,6 @@ void CyDeal::kill()
 	if (m_pDeal) m_pDeal->kill();
 }
 
-// BUG - Expose Deal Cancelability - start
 bool CyDeal::isCancelable(int /*PlayerTypes*/ eByPlayer, bool bIgnoreWaitingPeriod) const
 {
 	if (m_pDeal)
@@ -110,6 +109,5 @@ std::wstring CyDeal::getCannotCancelReason(int /*PlayerTypes*/ eByPlayer) const
 
 int CyDeal::turnsToCancel(int /*PlayerTypes*/ eByPlayer) const
 {
-	return (m_pDeal ? m_pDeal->turnsToCancel((PlayerTypes)eByPlayer) : -1);
+	return (m_pDeal ? m_pDeal->turnsToCancel() : -1);
 }
-// BUG - Expose Deal Cancelability - end

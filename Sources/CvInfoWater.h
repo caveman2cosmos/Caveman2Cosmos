@@ -18,7 +18,8 @@
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class CvInfoBase;
+#include "CvInfos.h"
+
 class CvXMLLoadUtility;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -48,7 +49,6 @@ public:
 	DllExport const char* getTransitionTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo);
 
 protected:
 
@@ -94,7 +94,7 @@ public:
 	DllExport const char* getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo);
+	void copyNonDefaults(const CvTerrainPlaneInfo* pClassInfo);
 
 protected:
 
@@ -133,7 +133,7 @@ public:
 	DllExport const char* getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo);
+	void copyNonDefaults(const CvCameraOverlayInfo* pClassInfo);
 
 protected:
 

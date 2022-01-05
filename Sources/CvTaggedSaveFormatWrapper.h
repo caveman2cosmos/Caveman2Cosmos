@@ -128,7 +128,7 @@ public:
 	static CvTaggedSaveFormatWrapper& getSaveFormatWrapper();
 
 	void reset(bool useTaggedFormat);
-	inline bool isUsingTaggedFormat()
+	inline bool isUsingTaggedFormat() const
 	{
 		return m_useTaggedFormat;
 	}

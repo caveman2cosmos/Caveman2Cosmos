@@ -318,12 +318,6 @@
 				<iCommerce>500</iCommerce>
 				<iCommerce>500</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1228,12 +1222,6 @@
 				<iYield>1000</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -2721,12 +2709,6 @@
 				<iCommerce>1500</iCommerce>
 				<iCommerce>1500</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>

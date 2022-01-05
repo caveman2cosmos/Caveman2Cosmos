@@ -18,7 +18,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>-1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>50</iPillageGold>

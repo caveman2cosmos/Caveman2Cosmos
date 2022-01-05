@@ -172,10 +172,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
 		<English>Technocultural Bonuses</English>
+		<German>Technokulturboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
+		<German>Güter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
@@ -189,6 +191,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
 		<English>Unique Bonuses</English>
+		<German>Spezialboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
@@ -705,25 +708,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
-		<English>Unit Types</English>
-		<French>
-			<Text>Catégories d'unités</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Einheitenklassen</German>
-		<Italian>
-			<Text>Tipi di unità</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Categorías de unidades</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Kategorie Jednostek</Polish>
-		<Russian>Òèïû þíèòîâ</Russian>
+		<English>Combat Types</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
