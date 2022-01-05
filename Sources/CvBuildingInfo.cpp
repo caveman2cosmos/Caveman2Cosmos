@@ -1622,6 +1622,11 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 {
 	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)eThis);
 	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)eThis);
+
+	if (getHolyCity() != NO_RELIGION)
+	{
+		GC.getReligionInfo((ReligionTypes)getReligionType()).addShrineBuilding((BuildingTypes)eThis);
+	}
 }
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const

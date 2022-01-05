@@ -5360,18 +5360,17 @@ public:
 	int getFlavorValue(int i) const;
 
 	const std::vector<BuildingTypes>& getShrineBuildings() const { return m_shrineBuildings; }
+	void addShrineBuilding(BuildingTypes eBuilding) { m_shrineBuildings.push_back(eBuilding); }
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvReligionInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
-	static void doPostLoadCaching(std::vector<CvReligionInfo*>& religionInfos);
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 

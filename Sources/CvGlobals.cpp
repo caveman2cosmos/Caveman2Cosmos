@@ -3101,4 +3101,11 @@ void cvInternalGlobals::doPostLoadCaching()
 			(*infoVector)[i]->doPostLoadCaching(i);
 		}
 	}
+	foreach_(const CvReligionInfo* info, m_paReligionInfo)
+	{
+		foreach_(const BuildingTypes e, info->getShrineBuildings())
+		{
+			logging::logMsg("Shrine Test.log", "%d", e);
+		}
+	}
 }
