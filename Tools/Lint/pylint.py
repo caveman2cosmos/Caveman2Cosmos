@@ -74,7 +74,7 @@ def _install_pylint_for_python_version(version: _PythonVersion) -> None:
     print(f"Installing pylint for python {version.value}")
     _assert_valid_python_version(version)
     if version == _PythonVersion.python_2:
-        pylint_version = "pylint==1.9.5"
+        pylint_version = "pylint"
     elif version == _PythonVersion.python_3:
         pylint_version = "pylint"
     else:
