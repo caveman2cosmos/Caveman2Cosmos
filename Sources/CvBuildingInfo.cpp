@@ -418,13 +418,13 @@ int CvBuildingInfo::getVictoryThreshold(int i) const
 
 BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
 {
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
 	return m_aExtraFreeBonuses[i].first;
 }
 
 int CvBuildingInfo::getExtraFreeBonusNum(int i) const
 {
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
 	return m_aExtraFreeBonuses[i].second;
 }
 
@@ -913,11 +913,6 @@ const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 
 const char* CvBuildingInfo::getButton() const
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
-	{
-		return NULL;
-	}
 	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
 	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }

@@ -2500,9 +2500,6 @@ void cvInternalGlobals::setDefineSTRING(const char* szName, const char* szValue,
 
 float cvInternalGlobals::getPLOT_SIZE() const
 {
-	CvMapExternal& kMap = GC.getMapExternal();
-	kMap.mapCoordinates(true);
-
 	return m_fPLOT_SIZE;
 }
 

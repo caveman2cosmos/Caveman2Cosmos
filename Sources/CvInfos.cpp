@@ -115,7 +115,6 @@ const wchar_t* CvInfoBase::getDescription(uint uiForm) const
 {
 	while(m_aCachedDescriptions.size() <= uiForm)
 	{
-
 		m_aCachedDescriptions.push_back(gDLL->getObjectText(m_szTextKey, m_aCachedDescriptions.size()));
 	}
 
@@ -144,7 +143,7 @@ const wchar_t* CvInfoBase::getCivilopedia() const
 	return m_szCachedCivilopedia;
 }
 
-const wchar_t*  CvInfoBase::getHelp() const
+const wchar_t* CvInfoBase::getHelp() const
 {
 	if (m_szCachedHelp.empty())
 	{
@@ -286,50 +285,28 @@ CvHotkeyInfo::~CvHotkeyInfo()
 
 bool CvHotkeyInfo::read(CvXMLLoadUtility* pXML)
 {
-	int iVal;
-	bool bVal;
-	CvString szTextVal;
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"HotKey");
-	m_szHotKey = szTextVal;
+	pXML->GetOptionalChildXmlValByName(m_szHotKey, L"HotKey");
+	m_iHotKeyVal = pXML->GetHotKeyInt(m_szHotKey);
 
-	iVal = pXML->GetHotKeyInt(szTextVal);
-	m_iHotKeyVal = iVal;
+	pXML->GetOptionalChildXmlValByName(&m_iHotKeyPriority, L"iHotKeyPriority", -1);
 
-	pXML->GetOptionalChildXmlValByName(&iVal, L"iHotKeyPriority", -1);
-	m_iHotKeyPriority = iVal;
-
+	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"HotKeyAlt");
 	m_iHotKeyValAlt = pXML->GetHotKeyInt(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&iVal, L"iHotKeyPriorityAlt", -1);
-	m_iHotKeyPriorityAlt = iVal;
-
-	pXML->GetOptionalChildXmlValByName(&bVal, L"bAltDown");
-	m_bAltDown = bVal;
-
-	pXML->GetOptionalChildXmlValByName(&bVal, L"bShiftDown");
-	m_bShiftDown = bVal;
-
-	pXML->GetOptionalChildXmlValByName(&bVal, L"bCtrlDown");
-	m_bCtrlDown = bVal;
-
-	pXML->GetOptionalChildXmlValByName(&bVal, L"bAltDownAlt");
-	m_bAltDownAlt = bVal;
-
-	pXML->GetOptionalChildXmlValByName(&bVal, L"bShiftDownAlt");
-	m_bShiftDownAlt = bVal;
-
-	pXML->GetOptionalChildXmlValByName(&bVal, L"bCtrlDownAlt");
-	m_bCtrlDownAlt = bVal;
-
-	pXML->GetOptionalChildXmlValByName(&iVal, L"iOrderPriority", 5);
-	m_iOrderPriority = iVal;
+	pXML->GetOptionalChildXmlValByName(&m_iHotKeyPriorityAlt, L"iHotKeyPriorityAlt", -1);
+	pXML->GetOptionalChildXmlValByName(&m_bAltDown, L"bAltDown");
+	pXML->GetOptionalChildXmlValByName(&m_bShiftDown, L"bShiftDown");
+	pXML->GetOptionalChildXmlValByName(&m_bCtrlDown, L"bCtrlDown");
+	pXML->GetOptionalChildXmlValByName(&m_bAltDownAlt, L"bAltDownAlt");
+	pXML->GetOptionalChildXmlValByName(&m_bShiftDownAlt, L"bShiftDownAlt");
+	pXML->GetOptionalChildXmlValByName(&m_bCtrlDownAlt, L"bCtrlDownAlt");
+	pXML->GetOptionalChildXmlValByName(&m_iOrderPriority, L"iOrderPriority", 5);
 
 	setHotKeyDescription(getTextKeyWide(), NULL, pXML->CreateHotKeyFromDescription(getHotKey(), m_bShiftDown, m_bAltDown, m_bCtrlDown));
 
@@ -855,8 +832,8 @@ int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
 
 const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypes.size(), iUnitCombat);
-	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypes.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
 
 	if (!GC.getGame().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
 	{
@@ -7088,124 +7065,108 @@ CvActionInfo::~CvActionInfo()
 
 int CvActionInfo::getMissionData() const
 {
-
-	if	(
-				(ACTIONSUBTYPE_BUILD == m_eSubType)				||
-				(ACTIONSUBTYPE_RELIGION == m_eSubType)		||
-				(ACTIONSUBTYPE_CORPORATION == m_eSubType)		||
-				(ACTIONSUBTYPE_SPECIALIST == m_eSubType)	||
-				(ACTIONSUBTYPE_BUILDING == m_eSubType)
-			)
+	switch (m_eSubType)
 	{
-		return m_iOriginalIndex;
+		case ACTIONSUBTYPE_BUILD:
+		case ACTIONSUBTYPE_RELIGION:
+		case ACTIONSUBTYPE_CORPORATION:
+		case ACTIONSUBTYPE_SPECIALIST:
+		case ACTIONSUBTYPE_BUILDING:
+			return m_iOriginalIndex;
 	}
-
 	return -1;
 }
 
 int CvActionInfo::getCommandData() const
 {
+	switch (m_eSubType)
+	{
+		case ACTIONSUBTYPE_PROMOTION:
+		case ACTIONSUBTYPE_UNIT:
+			return m_iOriginalIndex;
 
-	if	(
-				(ACTIONSUBTYPE_PROMOTION == m_eSubType)	||
-				(ACTIONSUBTYPE_UNIT == m_eSubType)
-			)
-	{
-		return m_iOriginalIndex;
-	}
-	else if (ACTIONSUBTYPE_COMMAND == m_eSubType)
-	{
-		return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getAutomate();
-	}
-	else if (ACTIONSUBTYPE_AUTOMATE == m_eSubType)
-	{
-		return GC.getAutomateInfo(m_iOriginalIndex).getAutomate();
-	}
+		case ACTIONSUBTYPE_COMMAND:
+			return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getAutomate();
 
+		case ACTIONSUBTYPE_AUTOMATE:
+			return GC.getAutomateInfo(m_iOriginalIndex).getAutomate();
+	}
 	return -1;
 }
 
 int CvActionInfo::getAutomateType() const
 {
-
-	if (ACTIONSUBTYPE_COMMAND == m_eSubType)
+	switch (m_eSubType)
 	{
-		return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getAutomate();
-	}
-	else if (ACTIONSUBTYPE_AUTOMATE == m_eSubType)
-	{
-		return GC.getAutomateInfo(m_iOriginalIndex).getAutomate();
-	}
+		case ACTIONSUBTYPE_COMMAND:
+			return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getAutomate();
 
+		case ACTIONSUBTYPE_AUTOMATE:
+			return GC.getAutomateInfo(m_iOriginalIndex).getAutomate();
+	}
 	return NO_AUTOMATE;
 }
 
 int CvActionInfo::getInterfaceModeType() const
 {
-	if (ACTIONSUBTYPE_INTERFACEMODE == m_eSubType)
+	switch (m_eSubType)
 	{
-		return m_iOriginalIndex;
+		case ACTIONSUBTYPE_INTERFACEMODE:
+			return m_iOriginalIndex;
 	}
 	return NO_INTERFACEMODE;
 }
 
 int CvActionInfo::getMissionType() const
 {
-	if (ACTIONSUBTYPE_BUILD == m_eSubType)
+	switch (m_eSubType)
 	{
-		return GC.getBuildInfo((BuildTypes)m_iOriginalIndex).getMissionType();
-	}
-	else if (ACTIONSUBTYPE_RELIGION == m_eSubType)
-	{
-		return GC.getReligionInfo((ReligionTypes)m_iOriginalIndex).getMissionType();
-	}
-	else if (ACTIONSUBTYPE_CORPORATION == m_eSubType)
-	{
-		return GC.getCorporationInfo((CorporationTypes)m_iOriginalIndex).getMissionType();
-	}
-	else if (ACTIONSUBTYPE_SPECIALIST == m_eSubType)
-	{
-		return GC.getSpecialistInfo((SpecialistTypes)m_iOriginalIndex).getMissionType();
-	}
-	else if (ACTIONSUBTYPE_BUILDING == m_eSubType)
-	{
-		return GC.getBuildingInfo((BuildingTypes)m_iOriginalIndex).getMissionType();
-	}
-	else if (ACTIONSUBTYPE_MISSION == m_eSubType)
-	{
-		return m_iOriginalIndex;
-	}
+		case ACTIONSUBTYPE_BUILD:
+			return GC.getBuildInfo((BuildTypes)m_iOriginalIndex).getMissionType();
 
+		case ACTIONSUBTYPE_RELIGION:
+			return GC.getReligionInfo((ReligionTypes)m_iOriginalIndex).getMissionType();
+
+		case ACTIONSUBTYPE_CORPORATION:
+			return GC.getCorporationInfo((CorporationTypes)m_iOriginalIndex).getMissionType();
+
+		case ACTIONSUBTYPE_SPECIALIST:
+			return GC.getSpecialistInfo((SpecialistTypes)m_iOriginalIndex).getMissionType();
+
+		case ACTIONSUBTYPE_BUILDING:
+			return GC.getBuildingInfo((BuildingTypes)m_iOriginalIndex).getMissionType();
+
+		case ACTIONSUBTYPE_MISSION:
+			return m_iOriginalIndex;
+	}
 	return NO_MISSION;
 }
 
 int CvActionInfo::getCommandType() const
 {
-	if (ACTIONSUBTYPE_COMMAND == m_eSubType)
+	switch (m_eSubType)
 	{
-		return m_iOriginalIndex;
-	}
-	else if (ACTIONSUBTYPE_PROMOTION == m_eSubType)
-	{
-		return GC.getPromotionInfo((PromotionTypes)m_iOriginalIndex).getCommandType();
-	}
-	else if (ACTIONSUBTYPE_UNIT == m_eSubType)
-	{
-		return GC.getUnitInfo((UnitTypes)m_iOriginalIndex).getCommandType();
-	}
-	else if (ACTIONSUBTYPE_AUTOMATE == m_eSubType)
-	{
-		return GC.getAutomateInfo(m_iOriginalIndex).getCommand();
-	}
+		case ACTIONSUBTYPE_COMMAND:
+			return m_iOriginalIndex;
 
+		case ACTIONSUBTYPE_PROMOTION:
+			return GC.getPromotionInfo((PromotionTypes)m_iOriginalIndex).getCommandType();
+
+		case ACTIONSUBTYPE_UNIT:
+			return GC.getUnitInfo((UnitTypes)m_iOriginalIndex).getCommandType();
+
+		case ACTIONSUBTYPE_AUTOMATE:
+			return GC.getAutomateInfo(m_iOriginalIndex).getCommand();
+	}
 	return NO_COMMAND;
 }
 
 int CvActionInfo::getControlType() const
 {
-	if (ACTIONSUBTYPE_CONTROL == m_eSubType)
+	switch (m_eSubType)
 	{
-		return m_iOriginalIndex;
+		case ACTIONSUBTYPE_CONTROL:
+			return m_iOriginalIndex;
 	}
 	return -1;
 }
@@ -7217,42 +7178,36 @@ int CvActionInfo::getOriginalIndex() const
 
 bool CvActionInfo::isConfirmCommand() const
 {
-	if	(ACTIONSUBTYPE_COMMAND == m_eSubType)
+	switch (m_eSubType)
 	{
-		return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getConfirmCommand();
-	}
-	else if (ACTIONSUBTYPE_AUTOMATE == m_eSubType)
-	{
-		return GC.getAutomateInfo(m_iOriginalIndex).getConfirmCommand();
-	}
+		case ACTIONSUBTYPE_COMMAND:
+			return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getConfirmCommand();
 
+		case ACTIONSUBTYPE_AUTOMATE:
+			return GC.getAutomateInfo(m_iOriginalIndex).getConfirmCommand();
+	}
 	return false;
 }
 
 bool CvActionInfo::isVisible() const
 {
+	switch (m_eSubType)
+	{
+		case ACTIONSUBTYPE_CONTROL:
+			return false;
 
-	if (ACTIONSUBTYPE_CONTROL == m_eSubType)
-	{
-		return false;
-	}
-	else if	(ACTIONSUBTYPE_COMMAND == m_eSubType)
-	{
-		return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getVisible();
-	}
-	else if (ACTIONSUBTYPE_AUTOMATE == m_eSubType)
-	{
-		return GC.getAutomateInfo(m_iOriginalIndex).getVisible();
-	}
-	else if (ACTIONSUBTYPE_MISSION == m_eSubType)
-	{
-		return GC.getMissionInfo((MissionTypes)m_iOriginalIndex).getVisible();
-	}
-	else if (ACTIONSUBTYPE_INTERFACEMODE== m_eSubType)
-	{
-		return GC.getInterfaceModeInfo((InterfaceModeTypes)m_iOriginalIndex).getVisible();
-	}
+		case ACTIONSUBTYPE_COMMAND:
+			return GC.getCommandInfo((CommandTypes)m_iOriginalIndex).getVisible();
 
+		case ACTIONSUBTYPE_AUTOMATE:
+			return GC.getAutomateInfo(m_iOriginalIndex).getVisible();
+
+		case ACTIONSUBTYPE_MISSION:
+			return GC.getMissionInfo((MissionTypes)m_iOriginalIndex).getVisible();
+
+		case ACTIONSUBTYPE_INTERFACEMODE:
+			return GC.getInterfaceModeInfo((InterfaceModeTypes)m_iOriginalIndex).getVisible();
+	}
 	return true;
 }
 
@@ -7261,260 +7216,174 @@ ActionSubTypes CvActionInfo::getSubType() const
 	return m_eSubType;
 }
 
-CvHotkeyInfo* CvActionInfo::getHotkeyInfo() const
+const CvHotkeyInfo* CvActionInfo::getHotkeyInfo() const
 {
-	switch (getSubType())
+	switch (m_eSubType)
 	{
 		case ACTIONSUBTYPE_INTERFACEMODE:
 			return &GC.getInterfaceModeInfo((InterfaceModeTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_COMMAND:
 			return &GC.getCommandInfo((CommandTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_BUILD:
 			return &GC.getBuildInfo((BuildTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_PROMOTION:
 			return &GC.getPromotionInfo((PromotionTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_UNIT:
 			return &GC.getUnitInfo((UnitTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_RELIGION:
 			return &GC.getReligionInfo((ReligionTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_CORPORATION:
 			return &GC.getCorporationInfo((CorporationTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_SPECIALIST:
 			return &GC.getSpecialistInfo((SpecialistTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_BUILDING:
 			return &GC.getBuildingInfo((BuildingTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_CONTROL:
 			return &GC.getControlInfo((ControlTypes)getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_AUTOMATE:
 			return &GC.getAutomateInfo(getOriginalIndex());
-			break;
+
 		case ACTIONSUBTYPE_MISSION:
 			return &GC.getMissionInfo((MissionTypes)getOriginalIndex());
-			break;
 	}
-
 	FErrorMsg("Unknown Action Subtype in CvActionInfo::getHotkeyInfo");
 	return NULL;
 }
 
 const char* CvActionInfo::getType() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getType();
-	}
-
-	return NULL;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getType() : NULL;
 }
 
 const wchar_t* CvActionInfo::getDescription() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getDescription();
-	}
-
-	return L"";
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getDescription() : L"";
 }
 
 const wchar_t* CvActionInfo::getCivilopedia() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getCivilopedia();
-	}
-
-	return L"";
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getCivilopedia() : L"";
 }
 
 const wchar_t* CvActionInfo::getHelp() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHelp();
-	}
-
-	return L"";
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHelp() : L"";
 }
 
 const wchar_t* CvActionInfo::getStrategy() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getStrategy();
-	}
-
-	return L"";
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getStrategy() : L"";
 }
 
 const char* CvActionInfo::getButton() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getButton();
-	}
-
-	return NULL;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getButton() : NULL;
 }
 
 const wchar_t* CvActionInfo::getTextKeyWide() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getTextKeyWide();
-	}
-
-	return NULL;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getTextKeyWide() : NULL;
 }
 
 int CvActionInfo::getActionInfoIndex() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getActionInfoIndex();
-	}
-
-	return -1;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getActionInfoIndex() : -1;
 }
 
 int CvActionInfo::getHotKeyVal() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHotKeyVal();
-	}
-
-	return -1;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHotKeyVal() : -1;
 }
 
 int CvActionInfo::getHotKeyPriority() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHotKeyPriority();
-	}
-
-	return -1;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHotKeyPriority() : -1;
 }
 
 int CvActionInfo::getHotKeyValAlt() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHotKeyValAlt();
-	}
-
-	return -1;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHotKeyValAlt() : -1;
 }
 
 int CvActionInfo::getHotKeyPriorityAlt() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHotKeyPriorityAlt();
-	}
-
-	return -1;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHotKeyPriorityAlt() : -1;
 }
 
 int CvActionInfo::getOrderPriority() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getOrderPriority();
-	}
-
-	return -1;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getOrderPriority() : -1;
 }
 
 bool CvActionInfo::isAltDown() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->isAltDown();
-	}
-
-	return false;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->isAltDown() : false;
 }
 
 bool CvActionInfo::isShiftDown() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->isShiftDown();
-	}
-
-	return false;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->isShiftDown() : false;
 }
 
 bool CvActionInfo::isCtrlDown() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->isCtrlDown();
-	}
-
-	return false;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->isCtrlDown() : false;
 }
 
 bool CvActionInfo::isAltDownAlt() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->isAltDownAlt();
-	}
-
-	return false;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->isAltDownAlt() : false;
 }
 
 bool CvActionInfo::isShiftDownAlt() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->isShiftDownAlt();
-	}
-
-	return false;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->isShiftDownAlt() : false;
 }
 
 bool CvActionInfo::isCtrlDownAlt() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->isCtrlDownAlt();
-	}
-
-	return false;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->isCtrlDownAlt() : false;
 }
 
 const char* CvActionInfo::getHotKey() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHotKey();
-	}
-
-	return NULL;
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHotKey() : NULL;
 }
 
 std::wstring CvActionInfo::getHotKeyDescription() const
 {
-	if (getHotkeyInfo())
-	{
-		return getHotkeyInfo()->getHotKeyDescription();
-	}
-
-	return L"";
+	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
+	return pHotkeyInfo ? pHotkeyInfo->getHotKeyDescription() : L"";
 }
 
 //======================================================================================================
@@ -11440,33 +11309,13 @@ bool CvCivilizationInfo::isCivilizationDisableTechs(int i) const
 
 const CvArtInfoCivilization* CvCivilizationInfo::getArtInfo() const
 {
-	return ARTFILEMGR.getCivilizationArtInfo( getArtDefineTag() );
+	return ARTFILEMGR.getCivilizationArtInfo(getArtDefineTag());
 }
 
-/************************************************************************************************/
-/* XMLCOPY								 10/25/07								MRGENIE	  */
-/*																							  */
-/* Catch non-existing tag																	   */
-/************************************************************************************************/
-/*
 const char* CvCivilizationInfo::getButton() const
 {
-	return getArtInfo()->getButton();
-}
-*/
-const char* CvCivilizationInfo::getButton() const
-{
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
-	const CvArtInfoCivilization * pArtInfoCivilization = getArtInfo();
-	if (pArtInfoCivilization != NULL)
-	{
-		return pArtInfoCivilization->getButton();
-	}
-	return NULL;
+	const CvArtInfoCivilization* pArtInfoCivilization = getArtInfo();
+	return pArtInfoCivilization ? pArtInfoCivilization->getButton() : NULL;
 }
 
 std::string CvCivilizationInfo::getCityNames(int i) const
@@ -14100,20 +13949,9 @@ PromotionLineAfflictionModifier CvBonusInfo::getAfflictionCommunicabilityType(in
 
 const char* CvBonusInfo::getButton() const
 {
-/************************************************************************************************/
-/* XMLCOPY								 10/25/07								MRGENIE	  */
-/*																							  */
-/* Catch non-existing tag																	   */
-/************************************************************************************************/
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
 	const CvArtInfoBonus* pBonusArtInfo = getArtInfo();
 	return pBonusArtInfo ? pBonusArtInfo->getButton() : NULL;
 }
-
 
 bool CvBonusInfo::isPeaks() const
 {
@@ -14652,26 +14490,8 @@ int CvFeatureInfo::getNumVarieties() const
 
 const char* CvFeatureInfo::getButton() const
 {
-/************************************************************************************************/
-/* XMLCOPY								 10/25/07								MRGENIE	  */
-/*																							  */
-/* Catch non-existing tag																	   */
-/************************************************************************************************/
-	CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
-	const CvArtInfoFeature * pFeatureArtInfo;
-	pFeatureArtInfo = getArtInfo();
-	if (pFeatureArtInfo != NULL)
-	{
-		return pFeatureArtInfo->getButton();
-	}
-	else
-	{
-		return NULL;
-	}
+	const CvArtInfoFeature* pFeatureArtInfo = getArtInfo();
+	return pFeatureArtInfo ? pFeatureArtInfo->getButton() : NULL;
 }
 
 const CvArtInfoFeature* CvFeatureInfo::getArtInfo() const
@@ -15640,16 +15460,6 @@ void CvTerrainInfo::getCheckSum(uint32_t &iSum) const
 
 const char* CvTerrainInfo::getButton() const
 {
-/************************************************************************************************/
-/* XMLCOPY								 10/25/07								MRGENIE	  */
-/*																							  */
-/* Catch non-existing tag																	   */
-/************************************************************************************************/
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
 	const CvArtInfoTerrain* pTerrainArtInfo = getArtInfo();
 	return pTerrainArtInfo ? pTerrainArtInfo->getButton() : NULL;
 }
@@ -16003,26 +15813,8 @@ CvLeaderHeadInfo::~CvLeaderHeadInfo()
 
 const char* CvLeaderHeadInfo::getButton() const
 {
-/************************************************************************************************/
-/* XMLCOPY								 10/25/07								MRGENIE	  */
-/*																							  */
-/* Catch non-existing tag																	   */
-/************************************************************************************************/
-	CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
-	const CvArtInfoLeaderhead * pLeaderheadArtInfo;
-	pLeaderheadArtInfo = getArtInfo();
-	if (pLeaderheadArtInfo != NULL)
-	{
-		return pLeaderheadArtInfo->getButton();
-	}
-	else
-	{
-		return NULL;
-	}
+	const CvArtInfoLeaderhead* pLeaderheadArtInfo = getArtInfo();
+	return pLeaderheadArtInfo ? pLeaderheadArtInfo->getButton() : NULL;
 }
 
 bool CvLeaderHeadInfo::isNPC() const
@@ -25715,7 +25507,6 @@ void CvArtInfoLeaderhead::setBackgroundKFM(const char* szKFM)
 
 bool CvArtInfoLeaderhead::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvArtInfoAsset::read(pXML))
 	{
@@ -28238,13 +28029,13 @@ bool CvEventTriggerInfo::isTeam() const
 
 const CvWString& CvEventTriggerInfo::getText(int i) const
 {
-	FASSERT_BOUNDS(0, m_aszText.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aszText.size(), i);
 	return m_aszText[i];
 }
 
 int CvEventTriggerInfo::getTextEra(int i) const
 {
-	FASSERT_BOUNDS(0, m_aiTextEra.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aiTextEra.size(), i);
 	return m_aiTextEra[i];
 }
 
