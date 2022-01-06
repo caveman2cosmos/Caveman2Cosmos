@@ -8306,7 +8306,7 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 BuildTypes CvCityAI::AI_getBestBuild(int iIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex);
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), m_aeBestBuild[iIndex]);
+	FASSERT_BOUNDS(-1, GC.getNumBuildInfos(), m_aeBestBuild[iIndex]);
 	return m_aeBestBuild[iIndex];
 }
 
