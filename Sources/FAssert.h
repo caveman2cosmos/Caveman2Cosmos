@@ -155,12 +155,7 @@ enum AssertScopeTypes
 	FAssertMsg(index < upper, (bst::format("Index value (%d) is expected to be < %d") % index % upper).str().c_str());
 
 #define FASSERT_NOT_NEGATIVE(value) \
-	if (value < 0) \
-	{ \
-		char acOut[256]; \
-		sprintf(acOut, "Value (%d) is expected to be >= 0", value); \
-		FAssertMsg(value >= 0, acOut) \
-	} \
+	FAssertMsg(value >= 0, (bst::format("Value (%d) is expected to be >= 0") % value).str().c_str())
 
 #else
 // FASSERT_ENABLE not defined
