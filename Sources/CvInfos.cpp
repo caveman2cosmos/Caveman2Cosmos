@@ -832,8 +832,8 @@ int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
 
 const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypes.size(), iUnitCombat);
-	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypes.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
 
 	if (!GC.getGame().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
 	{
@@ -28029,13 +28029,13 @@ bool CvEventTriggerInfo::isTeam() const
 
 const CvWString& CvEventTriggerInfo::getText(int i) const
 {
-	FASSERT_BOUNDS(0, m_aszText.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aszText.size(), i);
 	return m_aszText[i];
 }
 
 int CvEventTriggerInfo::getTextEra(int i) const
 {
-	FASSERT_BOUNDS(0, m_aiTextEra.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aiTextEra.size(), i);
 	return m_aiTextEra[i];
 }
 
