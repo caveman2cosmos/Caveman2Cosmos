@@ -19,59 +19,43 @@ public:
 	CvMapGenerator();
 	virtual ~CvMapGenerator();
 
-	bool canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIgnoreLatitude);		// Exposed to Python
-	bool canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int iY);							// Exposed to Python
+	bool canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIgnoreLatitude);
+	bool canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int iY);
 
 	// does all of the below "add..." functions:
-	DllExport void addGameElements();											// Exposed to Python
+	DllExport void addGameElements();
 
-	void addLakes();																			// Exposed to Python
-	DllExport void addRivers();														// Exposed to Python
-	void doRiver(CvPlot* pStartPlot, CardinalDirectionTypes eLastCardinalDirection=NO_CARDINALDIRECTION, CardinalDirectionTypes eOriginalCardinalDirection=NO_CARDINALDIRECTION, int iThisRiverID=-1);	// Exposed to Python
+	void addLakes();
+	DllExport void addRivers();
+	void doRiver(CvPlot* pStartPlot, CardinalDirectionTypes eLastCardinalDirection=NO_CARDINALDIRECTION, CardinalDirectionTypes eOriginalCardinalDirection=NO_CARDINALDIRECTION, int iThisRiverID=-1);
 	bool addRiver(CvPlot *pFreshWaterPlot);
-	DllExport void addFeatures();													// Exposed to Python
-	DllExport void addBonuses();													// Exposed to Python
-	void addUniqueBonusType(BonusTypes eBonusType);				// Exposed to Python
-	void addNonUniqueBonusType(BonusTypes eBonusType);		// Exposed to Python
-	DllExport void addGoodies();													// Exposed to Python
+	DllExport void addFeatures();
+	DllExport void addBonuses();
+	void addUniqueBonusType(BonusTypes eBonusType);
+	void addNonUniqueBonusType(BonusTypes eBonusType);
+	DllExport void addGoodies();
 
-	DllExport void eraseRivers();													// Exposed to Python
-	DllExport void eraseFeatures();												// Exposed to Python
-	DllExport void eraseBonuses();												// Exposed to Python
-	DllExport void eraseGoodies();												// Exposed to Python
+	DllExport void eraseRivers();
+	DllExport void eraseFeatures();
+	DllExport void eraseBonuses();
+	DllExport void eraseGoodies();
 
-	DllExport void generateRandomMap();										// Exposed to Python
+	DllExport void generateRandomMap();
 
-	void generatePlotTypes();															// Exposed to Python
-	void generateTerrain();																// Exposed to Python
+	void generatePlotTypes();
+	void generateTerrain();
 
-	void afterGeneration();																// Exposed to Python
+	void afterGeneration();
 
-	void setPlotTypes(const int* paiPlotTypes);						// Exposed to Python
+	void setPlotTypes(const std::vector<int>& plotTypes);
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	void setUseDefaultMapScript(bool bTrue);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
-protected:
-
+private:
 	// Utility functions for roughenHeights()
 	int getRiverValueAtPlot(CvPlot* pPlot);
 	int calculateNumBonusesToAdd(BonusTypes eBonusType);
 
-private:
 	static CvMapGenerator* m_pInst;
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	bool m_bUseDefaultMapScript;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+
 	void setBonusClusterValues(const CvBonusInfo& bonus, const int iWorldSize, int& iGroupRange, int& iGroupRand, int& iMaxCluster);
 	void placeBonusWithCluster(const BonusTypes eBonus, const int iGroupRange, const int iGroupRand, const int iMaxCluster, const bool bIgnoreLatitude, int& iBonusCount, const CvArea *pBestArea=NULL);
 };

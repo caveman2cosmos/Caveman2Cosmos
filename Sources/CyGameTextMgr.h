@@ -12,28 +12,27 @@ class CyCity;
 class CyUnit;
 class CyDeal;
 struct TradeData;
-class CyGameTextMgr 
+
+class CyGameTextMgr
 {
 public:
 	CyGameTextMgr();
 	CyGameTextMgr(CvGameTextMgr* m_pGameTextMgr);			// Call from C++
-	bool isNone() const { return m_pGameTextMgr == NULL; }
 
 	void Reset();
 
 	std::wstring getTimeStr(int iGameTurn, bool bSave);
 	std::wstring getDateStr(int iGameTurn, bool bSave, int /*CalendarTypes*/ eCalendar, int iStartYear, int /*GameSpeedTypes*/ eSpeed);
 	std::wstring getInterfaceTimeStr(int /*PlayerTypes*/ iPlayer);
-	std::wstring getGoldStr(int /*PlayerTypes*/ iPlayer);
-	std::wstring getResearchStr(int /*PlayerTypes*/ iPlayer);
 	std::wstring getOOSSeeds(int /*PlayerTypes*/ iPlayer);
 	std::wstring getNetStats(int /*PlayerTypes*/ iPlayer);
 	std::wstring getTechHelp(int iTech, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, int iFromTech);
 	std::wstring getUnitHelp(int iUnit, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText, CyCity* pCity);
 	std::wstring getSpecificUnitHelp(CyUnit* pUnit, bool bOneLine, bool bShort);
-	std::wstring getBuildingHelp(int iBuilding, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText, CyCity* pCity, bool bActual = false);
+	std::wstring getBuildingHelp(int iBuilding, bool bActual, CyCity* pCity, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText);
 	std::wstring getProjectHelp(int iProject, bool bCivilopediaText, CyCity* pCity);
 	std::wstring getPromotionHelp(int iPromotion, bool bCivilopediaText);
+	std::wstring getUnitCombatHelp(int iUnitCombat, bool bCivilopediaText);
 	std::wstring getTraitHelp(int iTrait);
 	std::wstring getBonusHelp(int iBonus, bool bCivilopediaText);
 	std::wstring getProductionHelpCity(CyCity* pCity);
@@ -60,7 +59,7 @@ public:
 	std::wstring getActiveDealsString(int iThisPlayer, int iOtherPlayer);
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
 	std::wstring getFinanceUnitUpkeepString(int iPlayer);
-
+	std::wstring getDefenseHelp(CyCity* pCity);
 
 protected:
 	CvGameTextMgr* m_pGameTextMgr;

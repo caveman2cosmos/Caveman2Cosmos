@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- TB Notes regarding EnforcesGameOptionOnTypes and EnforcesGameOptionOffTypes (same formatting for Off, just change all Ons to Offs in the following)
 	Formatting: (note: may use this set multiple times to indicate more options that fall under the same enforcement guideline)
-				<EnforcesGameOptionOnTypes>
-					<EnforcesGameOptionOnType>
-						<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
-						<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-					</EnforcesGameOptionOnType>
-				</EnforcesGameOptionOnTypes>
+			<EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 	These tags, if used, go under bVisible and EnforcesGameOptionOnTypes comes before EnforcesGameOptionOffTypes.
 	EnforcesGameOptionOn will turn on indicated option(s) as the game is initialized, regardless of whether the indicated option(s) were set on or not.
 	EnforcesGameOptionOff does the opposite: turns the indicated option(s) off if the option with the tag in use is on.
@@ -37,7 +34,7 @@
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LOCK_MODS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LOCK_MODS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS</Help>
+			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 		</GameOptionInfo>
@@ -92,11 +89,15 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<!-- @SAVEBREAK DELETE -->
 			<Type>GAMEOPTION_ADVANCED_ECONOMY</Type>
 			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY</Description>
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
+			<EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
@@ -147,10 +148,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -223,10 +221,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -299,10 +294,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -327,11 +319,12 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<!-- @SAVEBREAK DELETE - Deprecated, moved to BUG options -->
 			<Type>GAMEOPTION_RELIGION_DECAY</Type>
-			<Description>TXT_KEY_GAMEOPTION_RELIGION_DECAY</Description>
-			<Help>TXT_KEY_GAMEOPTION_RELIGION_DECAY_HELP</Help>
+			<Description>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT</Description>
+			<Help>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_HOVER</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_DIVINE_PROPHETS</Type>
@@ -379,13 +372,6 @@
 			<Type>GAMEOPTION_NO_VASSAL_STATES</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_ESPIONAGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_ESPIONAGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_ESPIONAGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -501,6 +487,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<!-- Delete all references to LS traits on @SAVEBREAK -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LS612_TRAITS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LS612_TRAITS</Description>
@@ -523,13 +510,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_SIZE_MATTERS_UNCUT</Type>
-			<Description>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Description>
-			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>
 			<Description>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT</Description>
 			<Help>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT_HELP</Help>
@@ -543,11 +523,8 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
- 					<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
- 				</EnforcesGameOptionOnType>
- 			</EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_WITHOUT_WARNING</Type>
@@ -598,10 +575,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
-					<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-				</EnforcesGameOptionOnType>
+				<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -720,6 +694,13 @@
 			<Type>GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Type>
 			<Description>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Description>
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ADVANCED_ROUTES</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

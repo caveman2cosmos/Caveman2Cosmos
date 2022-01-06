@@ -294,10 +294,6 @@
 			<Path>Art/Movies/Wonders/PontDuGard.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SECRET_ARMY_BASE</Type>
-			<Path>Art/Movies/Wonders/SecretArmyBase.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SILKROAD</Type>
 			<Path>Art/Movies/Wonders/SilkRoad.bik</Path>
 		</MovieArtInfo>
@@ -339,7 +335,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_EDISON</Type>
-			<Path>Art/Movies/Wonders/edisons workshop.bik</Path>
+			<Path>Art/Movies/Wonders/EDISONS_WORKSHOP.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_EINSTEIN</Type>
@@ -416,10 +412,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_WORLD_TRADE_CENTER</Type>
 			<Path>Art/Movies/wonders/wtc.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_WESTP</Type>
-			<Path>Art/Movies/Wonders/WESTP.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MT_RUSHMORE</Type>
@@ -510,10 +502,6 @@
 			<Path>Art/Movies/Wonders/Nara.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</Type>
-			<Path>Art/Movies/Wonders/SanMarco.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VATICAN_LIBRARY</Type>
 			<Path>Art/Movies/Wonders/Papal.bik</Path>
 		</MovieArtInfo>
@@ -532,10 +520,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MEENAKSHI</Type>
 			<Path>Art/Movies/Wonders/Meenakshi.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_DESERT</Type>
-			<Path>Art/Movies/Wonders/Djenne.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ESTAMBUL</Type>
@@ -595,7 +579,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISHTAR</Type>
-			<Path>Art/Movies/Wonders/Ishtar.bik</Path>
+			<Path>Art/Movies/Wonders/ISHTAR.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NIMRUD</Type>
@@ -918,10 +902,6 @@
 			<Path>Art/movies/Wonders/HadrianWall.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_HOMELAND_SECURITY</Type>
-			<Path>Art/movies/Wonders/HomelandSecurity.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PENICILLIN</Type>
 			<Path>Art/Movies/Wonders/Penicillin.bik</Path>
 		</MovieArtInfo>
@@ -931,7 +911,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_COLUMN</Type>
-			<Path>Art/Movies/Wonders/TriumphColumn.bik</Path>
+			<Path>Art/Movies/national_wonders/TRIUMPH_COLUMN.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VENETIAN_ARSENAL</Type>
@@ -996,10 +976,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_SIKH</Type>
 			<Path>Art/Movies/Wonders/AnandpurSahib.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
-			<Path>Art/Movies/Wonders/Behistun_InscriptionMovie.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_AURORA</Type>
@@ -1139,7 +1115,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHARLIE_LAKE_CAVE</Type>
-			<Path>Art/Movies/Wonders/Charlie_Lake_Cave.bik</Path>
+			<Path>Art/Movies/group_wonders/Charlie_Lake_Cave.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHIEFS_PYRE</Type>
@@ -1159,7 +1135,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ENVIRONMENTAL_ACHIEVEMENT</Type>
-			<Path>Art/Movies/Wonders/Environmental_Achievement.bik</Path>
+			<Path>Art/Movies/special/Environmental_Achievement.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SING_FLYER</Type>
@@ -1191,7 +1167,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GREAT_BONFIRE</Type>
-			<Path>Art/Movies/Wonders/Great_Bonfire.bik</Path>
+			<Path>Art/Movies/national_wonders/GREAT_BONFIRE.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_HIERAPOLIS</Type>
@@ -1239,7 +1215,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MEDICAL_A</Type>
-			<Path>Art/Movies/Wonders/Medical_A.bik</Path>
+			<Path>Art/Movies/special/Medical_A.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MESA_VERDE</Type>
@@ -1255,7 +1231,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NATIONAL_AQUA</Type>
-			<Path>Art/Movies/Wonders/National_Aqua.bik</Path>
+			<Path>Art/Movies/national_wonders/NATIONAL_AQUA.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NATIONAL_ZOO</Type>
@@ -1283,7 +1259,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAFETY_A</Type>
-			<Path>Art/Movies/Wonders/Safety_A.bik</Path>
+			<Path>Art/Movies/special/Safety_A.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SRC</Type>
@@ -1311,7 +1287,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOURISM_A</Type>
-			<Path>Art/Movies/Wonders/Tourism_A.bik</Path>
+			<Path>Art/Movies/special/Tourism_A.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TUMEN</Type>
@@ -1443,19 +1419,15 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</Type>
-			<Path>Art/Movies/Wonders/Tradition_Asthetic_Ethic.bik</Path>
+			<Path>Art/Movies/special/TRADITION_ASTHETIC_APPRECIATION.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_WORK_ETHIC</Type>
-			<Path>Art/Movies/Wonders/Tradition_Work_Ethic.bik</Path>
+			<Path>Art/Movies/special/TRADITION_WORK_ETHIC.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_ARCHERY</Type>
-			<Path>Art/Movies/Wonders/Tradition_Archery.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NOBLEGARDEN</Type>
-			<Path>Art/Movies/Wonders/Noblegarden.bik</Path>
+			<Path>Art/Movies/special/TRADITION_ARCHERY.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHILEHAUS</Type>
@@ -1475,7 +1447,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CLEOPATRA_NEEDLE</Type>
-			<Path>Art/Movies/Wonders/Cleopatra's Needle.bik</Path>
+			<Path>Art/Movies/Wonders/CLEOPATRA_NEEDLE.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_HELSINKI</Type>
@@ -2520,6 +2492,982 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TERRA_SIGILLATA_WORKSHOP</Type>
 			<Path>Art/Movies/Wonders/TERRA_SIGILLATA_WORKSHOP.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANIMA_GAMING_LEAGUE</Type>
+			<Path>Art/Movies/national_wonders/ANIMA_GAMING_LEAGUE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BASKETROPEWAYS</Type>
+			<Path>Art/Movies/national_wonders/BASKETROPEWAYS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BFM</Type>
+			<Path>Art/Movies/national_wonders/BFM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BOTANICAL_GARDENS</Type>
+			<Path>Art/Movies/national_wonders/BOTANICAL_GARDENS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAPITAL_ADMINISTRATION</Type>
+			<Path>Art/Movies/national_wonders/CAPITAL_ADMINISTRATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAPTURED_FIRE</Type>
+			<Path>Art/Movies/national_wonders/CAPTURED_FIRE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMPUTER_CENTER</Type>
+			<Path>Art/Movies/national_wonders/COMPUTER_CENTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COURIER_SYSTEM</Type>
+			<Path>Art/Movies/national_wonders/COURIER_SYSTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CYBERSECURITY_CENTER</Type>
+			<Path>Art/Movies/national_wonders/CYBERSECURITY_CENTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEEP_SPACE_RESEARCH</Type>
+			<Path>Art/Movies/national_wonders/DEEP_SPACE_RESEARCH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEPARTMENT_EDUCATION</Type>
+			<Path>Art/Movies/national_wonders/DEPARTMENT_EDUCATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEPARTMENT_ENERGY</Type>
+			<Path>Art/Movies/national_wonders/DEPARTMENT_ENERGY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEPARTMENT_FOREIGN_WONDER</Type>
+			<Path>Art/Movies/national_wonders/DEPARTMENT_FOREIGN_WONDER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEPARTMENT_VEHICLES</Type>
+			<Path>Art/Movies/national_wonders/DEPARTMENT_VEHICLES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEPARTMENT_WATER</Type>
+			<Path>Art/Movies/national_wonders/DEPARTMENT_WATER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DISTRICT_COURTHOUSE</Type>
+			<Path>Art/Movies/national_wonders/DISTRICT_COURTHOUSE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DUTCH_DIKE</Type>
+			<Path>Art/Movies/national_wonders/DUTCH_DIKE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ELECTRONIC_GAMING_LEAGUE</Type>
+			<Path>Art/Movies/national_wonders/ELECTRONIC_GAMING_LEAGUE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FEDERAL_PRISON</Type>
+			<Path>Art/Movies/national_wonders/FEDERAL_PRISON.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FERTILITYFESTIVAL</Type>
+			<Path>Art/Movies/national_wonders/FERTILITYFESTIVAL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FLAK_TOWER</Type>
+			<Path>Art/Movies/national_wonders/FLAK_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GCA</Type>
+			<Path>Art/Movies/national_wonders/GCA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GRANDCENTRAL_STATION</Type>
+			<Path>Art/Movies/national_wonders/GRANDCENTRAL_STATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_APOTHECARY</Type>
+			<Path>Art/Movies/national_wonders/GUILD_APOTHECARY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_ARTIST</Type>
+			<Path>Art/Movies/national_wonders/GUILD_ARTIST.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_BAKER</Type>
+			<Path>Art/Movies/national_wonders/GUILD_BAKER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_BLACKSMITH</Type>
+			<Path>Art/Movies/national_wonders/GUILD_BLACKSMITH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_BUTCHER</Type>
+			<Path>Art/Movies/national_wonders/GUILD_BUTCHER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_CARPENTER</Type>
+			<Path>Art/Movies/national_wonders/GUILD_CARPENTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_CLERKS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_CLERKS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_CRAFTS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_CRAFTS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_DRAPERS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_DRAPERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_EQUESTRIAN</Type>
+			<Path>Art/Movies/national_wonders/GUILD_EQUESTRIAN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_FISHMONGER</Type>
+			<Path>Art/Movies/national_wonders/GUILD_FISHMONGER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_GLASSBLOWERS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_GLASSBLOWERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_GOLDSMITH</Type>
+			<Path>Art/Movies/national_wonders/GUILD_GOLDSMITH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_GROCERS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_GROCERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_LUMBER</Type>
+			<Path>Art/Movies/national_wonders/GUILD_LUMBER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_MASON</Type>
+			<Path>Art/Movies/national_wonders/GUILD_MASON.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_MERCERS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_MERCERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_POTTERS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_POTTERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_SERVANTS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_SERVANTS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_TAILOR</Type>
+			<Path>Art/Movies/national_wonders/GUILD_TAILOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GUILD_VICTUALLERS</Type>
+			<Path>Art/Movies/national_wonders/GUILD_VICTUALLERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HEROIC_EPIC</Type>
+			<Path>Art/Movies/national_wonders/HEROIC_EPIC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HHUNTINGBOW</Type>
+			<Path>Art/Movies/national_wonders/HHUNTINGBOW.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HOLOGRAPHIC_GAMING_LEAGUE</Type>
+			<Path>Art/Movies/national_wonders/HOLOGRAPHIC_GAMING_LEAGUE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HOMELAND_SECURITY</Type>
+			<Path>Art/Movies/national_wonders/HOMELAND_SECURITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HOUSE_OF_PARLIMENT</Type>
+			<Path>Art/Movies/national_wonders/HOUSE_OF_PARLIMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LOGROLLERS</Type>
+			<Path>Art/Movies/national_wonders/LOGROLLERS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MICROLITH_WEAPONS_FACTORY</Type>
+			<Path>Art/Movies/national_wonders/MICROLITH_WEAPONS_FACTORY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MIND_STORAGE</Type>
+			<Path>Art/Movies/national_wonders/MIND_STORAGE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MODERN_ART_THEATRE</Type>
+			<Path>Art/Movies/national_wonders/MODERN_ART_THEATRE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MOVIE_STUDIO</Type>
+			<Path>Art/Movies/national_wonders/MOVIE_STUDIO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MEDICAL_DATABASE</Type>
+			<Path>Art/Movies/national_wonders/MEDICAL_DATABASE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_ACADEMIC_DATABASE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_ACADEMIC_DATABASE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_EPIC</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_EPIC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAMEL_NATIONAL</Type>
+			<Path>Art/Movies/national_wonders/CAMEL_NATIONAL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ELEPHANT_NATIONAL</Type>
+			<Path>Art/Movies/national_wonders/ELEPHANT_NATIONAL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HORSE_NATIONAL</Type>
+			<Path>Art/Movies/national_wonders/HORSE_NATIONAL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_FIRE_SERVICE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_FIRE_SERVICE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_LEGAL_DATABASE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_LEGAL_DATABASE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_LIBRARY_SERVICE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_MINT</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_MINT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_PARK</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_PARK.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SCIENCE_FOUNDATION</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SCIENCE_FOUNDATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_ALUMINUM</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_ALUMINUM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_COPPER</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_COPPER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_GOLD</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_GOLD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_IRON</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_IRON.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_LEAD</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_LEAD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_PLATINUM</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_PLATINUM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_SILVER</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_SILVER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_TIN</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_TIN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_SMELTER_TITANIUM</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_SMELTER_TITANIUM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TVSTATION</Type>
+			<Path>Art/Movies/national_wonders/TVSTATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NOBLEGARDEN</Type>
+			<Path>Art/Movies/national_wonders/NOBLEGARDEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_WEATHER_SERVICE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_WEATHER_SERVICE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ONLINE_UNIVERSITY</Type>
+			<Path>Art/Movies/national_wonders/ONLINE_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PALACE</Type>
+			<Path>Art/Movies/national_wonders/PALACE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_POLICE_ACADEMY</Type>
+			<Path>Art/Movies/national_wonders/POLICE_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RADIOTELESCOPE</Type>
+			<Path>Art/Movies/national_wonders/RADIOTELESCOPE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RAILROAD_MUSEUM</Type>
+			<Path>Art/Movies/national_wonders/RAILROAD_MUSEUM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RED_CROSS</Type>
+			<Path>Art/Movies/national_wonders/RED_CROSS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RESEARCH_HOSPITAL</Type>
+			<Path>Art/Movies/national_wonders/RESEARCH_HOSPITAL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RUSSIAN_RESEARCH_INSTITUTE</Type>
+			<Path>Art/Movies/national_wonders/RUSSIAN_RESEARCH_INSTITUTE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SECRET_ARMY_BASE</Type>
+			<Path>Art/Movies/national_wonders/SECRET_ARMY_BASE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SPACE_LABORATORY</Type>
+			<Path>Art/Movies/national_wonders/SPACE_LABORATORY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KINGS_SAGA</Type>
+			<Path>Art/Movies/national_wonders/KINGS_SAGA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EGYPTIAN_MYTH_ISIS</Type>
+			<Path>Art/Movies/national_wonders/EGYPTIAN_MYTH_ISIS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EGYPTIAN_MYTH_OSIRIS</Type>
+			<Path>Art/Movies/national_wonders/EGYPTIAN_MYTH_OSIRIS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EGYPTIAN_MYTH_SET</Type>
+			<Path>Art/Movies/national_wonders/EGYPTIAN_MYTH_SET.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TOXIC_WASTE_DUMP</Type>
+			<Path>Art/Movies/national_wonders/TOXIC_WASTE_DUMP.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRAVEL_AGENCY</Type>
+			<Path>Art/Movies/national_wonders/TRAVEL_AGENCY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UN_MISSION</Type>
+			<Path>Art/Movies/national_wonders/UN_MISSION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WORLD_BANK</Type>
+			<Path>Art/Movies/national_wonders/WORLD_BANK.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SPY_TRAINING_FACILITY</Type>
+			<Path>Art/Movies/national_wonders/SPY_TRAINING_FACILITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HEAVY_WATER_PRODUCTION_PLANT</Type>
+			<Path>Art/Movies/national_wonders/HEAVY_WATER_PRODUCTION_PLANT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GARDEN_CITY</Type>
+			<Path>Art/Movies/national_wonders/GARDEN_CITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FUSION_PLANT</Type>
+			<Path>Art/Movies/national_wonders/FUSION_PLANT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WEMBLEY</Type>
+			<Path>Art/Movies/national_wonders/WEMBLEY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_METI</Type>
+			<Path>Art/Movies/national_wonders/METI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEUROIMPLANT_EXPORTER</Type>
+			<Path>Art/Movies/national_wonders/NEUROIMPLANT_EXPORTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTER_FOR_AI_SAFETY</Type>
+			<Path>Art/Movies/national_wonders/CENTER_FOR_AI_SAFETY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTER_FOR_BIOTECH_SAFETY</Type>
+			<Path>Art/Movies/national_wonders/CENTER_FOR_BIOTECH_SAFETY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTER_FOR_NANOTECH_SAFETY</Type>
+			<Path>Art/Movies/national_wonders/CENTER_FOR_NANOTECH_SAFETY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CISLUNAR_ANTIMATTER</Type>
+			<Path>Art/Movies/national_wonders/CISLUNAR_ANTIMATTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CISLUNAR_ECONOMY</Type>
+			<Path>Art/Movies/national_wonders/CISLUNAR_ECONOMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COSMIC_EXPANSION_POWER_PLANT</Type>
+			<Path>Art/Movies/national_wonders/COSMIC_EXPANSION_POWER_PLANT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DESIGNED_ANIMAL_SHOW</Type>
+			<Path>Art/Movies/national_wonders/DESIGNED_ANIMAL_SHOW.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DIGITAL_EMBASSY</Type>
+			<Path>Art/Movies/national_wonders/DIGITAL_EMBASSY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EMANCIPATION_PROCLAMATION</Type>
+			<Path>Art/Movies/national_wonders/EMANCIPATION_PROCLAMATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALACTIC_CORE_BASE</Type>
+			<Path>Art/Movies/national_wonders/GALACTIC_CORE_BASE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALACTIC_ECONOMY</Type>
+			<Path>Art/Movies/national_wonders/GALACTIC_ECONOMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GPS</Type>
+			<Path>Art/Movies/national_wonders/GPS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MANTLE_VACTRAIN_NETWORK</Type>
+			<Path>Art/Movies/national_wonders/MANTLE_VACTRAIN_NETWORK.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INTERGALACTIC_CAPITOL</Type>
+			<Path>Art/Movies/national_wonders/INTERGALACTIC_CAPITOL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INTERNET_OF_THINGS</Type>
+			<Path>Art/Movies/national_wonders/INTERNET_OF_THINGS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INTERPLANETARY_RAIL</Type>
+			<Path>Art/Movies/national_wonders/INTERPLANETARY_RAIL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LASER_STARWAY</Type>
+			<Path>Art/Movies/national_wonders/LASER_STARWAY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MARS_CYCLER</Type>
+			<Path>Art/Movies/national_wonders/MARS_CYCLER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COSMIC_ECONOMY</Type>
+			<Path>Art/Movies/national_wonders/COSMIC_ECONOMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AIRCRAFT_MUSEUM</Type>
+			<Path>Art/Movies/national_wonders/AIRCRAFT_MUSEUM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_CENSUS</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_CENSUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEPTUNE_ORBITAL_RING</Type>
+			<Path>Art/Movies/national_wonders/NEPTUNE_ORBITAL_RING.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NUCLEAR_POWERCOMPLEX</Type>
+			<Path>Art/Movies/national_wonders/NUCLEAR_POWERCOMPLEX.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ORBITAL_PRISON</Type>
+			<Path>Art/Movies/national_wonders/ORBITAL_PRISON.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PLUTO_BASE</Type>
+			<Path>Art/Movies/national_wonders/PLUTO_BASE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PRIME_DIRECTIVE</Type>
+			<Path>Art/Movies/national_wonders/PRIME_DIRECTIVE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SECTION_31</Type>
+			<Path>Art/Movies/national_wonders/SECTION_31.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SEMANTIC_WEB</Type>
+			<Path>Art/Movies/national_wonders/SEMANTIC_WEB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SKYHOOK</Type>
+			<Path>Art/Movies/national_wonders/SKYHOOK.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SOCIAL_CREDIT_SYSTEM</Type>
+			<Path>Art/Movies/national_wonders/SOCIAL_CREDIT_SYSTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SOLAR_ECONOMY</Type>
+			<Path>Art/Movies/national_wonders/SOLAR_ECONOMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SOLAR_NOVA_SURVIVAL_PLAN</Type>
+			<Path>Art/Movies/national_wonders/SOLAR_NOVA_SURVIVAL_PLAN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TIME_ZONES</Type>
+			<Path>Art/Movies/national_wonders/TIME_ZONES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSAL_ECONOMY</Type>
+			<Path>Art/Movies/national_wonders/UNIVERSAL_ECONOMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_URANUS_MINE</Type>
+			<Path>Art/Movies/national_wonders/URANUS_MINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VENTURE_INDUSTRIES</Type>
+			<Path>Art/Movies/national_wonders/VENTURE_INDUSTRIES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CISLUNAR_SOLAR_SATELLITES</Type>
+			<Path>Art/Movies/national_wonders/CISLUNAR_SOLAR_SATELLITES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BUILDING_ACADEMY</Type>
+			<Path>Art/Movies/special/BUILDING_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AGRICULTURAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/AGRICULTURAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ATLAST_SPACE_TELESCOPE</Type>
+			<Path>Art/Movies/special/ATLAST_SPACE_TELESCOPE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMMERCIAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/COMMERCIAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INDUSTRIAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/INDUSTRIAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MILITARY_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/MILITARY_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_POLITICAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/POLITICAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SCIENTIFIC_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/SCIENTIFIC_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SEAFARING_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/SEAFARING_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CULTURAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/CULTURAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTEROID_DEFLECTION_SYSTEM</Type>
+			<Path>Art/Movies/special/ASTEROID_DEFLECTION_SYSTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BRACEWELL_PROBES</Type>
+			<Path>Art/Movies/special/BRACEWELL_PROBES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CASSINI_HUYGENS</Type>
+			<Path>Art/Movies/special/CASSINI_HUYGENS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DAWN</Type>
+			<Path>Art/Movies/special/DAWN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EUROPA_PROBE</Type>
+			<Path>Art/Movies/special/EUROPA_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALILEO</Type>
+			<Path>Art/Movies/special/GALILEO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_IKAROS</Type>
+			<Path>Art/Movies/special/IKAROS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INTERSTELLAR_PROBE</Type>
+			<Path>Art/Movies/special/INTERSTELLAR_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JAMESWEBB_TELESCOPE</Type>
+			<Path>Art/Movies/special/JAMESWEBB_TELESCOPE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KEPLER</Type>
+			<Path>Art/Movies/special/KEPLER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEEP_SPACE_GATEWAY</Type>
+			<Path>Art/Movies/special/DEEP_SPACE_GATEWAY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LUNAR_OUTPOST</Type>
+			<Path>Art/Movies/special/LUNAR_OUTPOST.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LUNAR_XPRIZE</Type>
+			<Path>Art/Movies/special/LUNAR_XPRIZE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MARINER_PROGRAM</Type>
+			<Path>Art/Movies/special/MARINER_PROGRAM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MARS_SCIENCE_LAB</Type>
+			<Path>Art/Movies/special/MARS_SCIENCE_LAB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MIR</Type>
+			<Path>Art/Movies/special/MIR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MISSION_TO_CALLISTO</Type>
+			<Path>Art/Movies/special/MISSION_TO_CALLISTO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MISSION_MARS</Type>
+			<Path>Art/Movies/special/MISSION_MARS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALACTIC_CORE</Type>
+			<Path>Art/Movies/special/GALACTIC_CORE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MOON_ROCK_LAB</Type>
+			<Path>Art/Movies/special/MOON_ROCK_LAB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEPTUNE_ATMOSPHERE_PROBE</Type>
+			<Path>Art/Movies/special/NEPTUNE_ATMOSPHERE_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEW_HORIZONS</Type>
+			<Path>Art/Movies/special/NEW_HORIZONS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PROJECT_GEMINI</Type>
+			<Path>Art/Movies/special/PROJECT_GEMINI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PROJECT_MERCURY</Type>
+			<Path>Art/Movies/special/PROJECT_MERCURY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SCOTLAND_YARD</Type>
+			<Path>Art/Movies/special/SCOTLAND_YARD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SEDNA_PROBE</Type>
+			<Path>Art/Movies/special/SEDNA_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SENTINEL</Type>
+			<Path>Art/Movies/special/SENTINEL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SKYLAB</Type>
+			<Path>Art/Movies/special/SKYLAB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SOLAR_WEATHER_MONITOR</Type>
+			<Path>Art/Movies/special/SOLAR_WEATHER_MONITOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SPY_NETWORK</Type>
+			<Path>Art/Movies/special/SPY_NETWORK.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
+			<Path>Art/Movies/special/NATIONAL_STANDARD_OF_MEASUREMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TITAN_PROBE</Type>
+			<Path>Art/Movies/special/TITAN_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_HUNTER</Type>
+			<Path>Art/Movies/special/TRADITION_HUNTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_TOTEM</Type>
+			<Path>Art/Movies/special/TRADITION_TOTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_NAVAL_TOTEM</Type>
+			<Path>Art/Movies/special/TRADITION_NAVAL_TOTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_SEA_HUNTING</Type>
+			<Path>Art/Movies/special/TRADITION_SEA_HUNTING.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_URANUS_ATMOSPHERE_PROBE</Type>
+			<Path>Art/Movies/special/URANUS_ATMOSPHERE_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VOYAGER_PROGRAM</Type>
+			<Path>Art/Movies/special/VOYAGER_PROGRAM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_YUTU</Type>
+			<Path>Art/Movies/special/YUTU.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WMAP</Type>
+			<Path>Art/Movies/special/WMAP.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_CENTAUR</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_CENTAUR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_FEATHER</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_FEATHER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_FIST</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_FIST.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_LEECH</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_LEECH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_SHADOWS</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_SHADOWS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WARRIOR</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WARRIOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WAVES</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WAVES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WILD</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WILD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WIND</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WIND.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WOLF</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WOLF.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HARVARD_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/HARVARD_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HEIDELBERG_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/HEIDELBERG_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JAGIELLONIAN_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/JAGIELLONIAN_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MONTPELLIER_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/MONTPELLIER_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_OXFORD_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/OXFORD_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SORBONNE_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/SORBONNE_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_BARCELONA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_BARCELONA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_BASEL</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_BASEL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_BOLOGNA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_BOLOGNA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_CAMBRIDGE</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_CAMBRIDGE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_COIMBRA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_COIMBRA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_EDINBURGH</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_EDINBURGH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_MURCIA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_MURCIA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_PADUA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_PADUA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_SALAMANCA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_SALAMANCA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ACCADEMIA_AERONAUTICA</Type>
+			<Path>Art/Movies/group_wonders/ACCADEMIA_AERONAUTICA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EVELPIDON_MILITARY_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/EVELPIDON_MILITARY_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_IMPERIAL_JAPANESE_NAVAL_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/IMPERIAL_JAPANESE_NAVAL_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/REPUBLIC_OF_CHINA_NAVAL_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ROYAL_AIR_FORCE_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/ROYAL_AIR_FORCE_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WEST_POINT</Type>
+			<Path>Art/Movies/group_wonders/WEST_POINT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHAMPAGNE</Type>
+			<Path>Art/Movies/group_wonders/CHAMPAGNE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VINTAGE_RED_WINE</Type>
+			<Path>Art/Movies/group_wonders/VINTAGE_RED_WINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VINTAGE_WHITE_WINE</Type>
+			<Path>Art/Movies/group_wonders/VINTAGE_WHITE_WINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAODAI_SHRINE</Type>
+			<Path>Art/Movies/wonders/CAODAI_SHRINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RODNOVERY_SHRINE</Type>
+			<Path>Art/Movies/wonders/RODNOVERY_SHRINE_ARKONA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HINDU_BRIHADEESWARAR</Type>
+			<Path>Art/Movies/wonders/HINDU_BRIHADEESWARAR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MASADA</Type>
+			<Path>Art/Movies/wonders/MASADA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_POTALA</Type>
+			<Path>Art/Movies/wonders/POTALA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ZOROASTRIAN_SHRINE</Type>
+			<Path>Art/Movies/wonders/ZOROASTRIAN_SHRINE_PIR_E_SABZ.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TEMPLE_OF_HEAVEN</Type>
+			<Path>Art/Movies/wonders/TEMPLE_OF_HEAVEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</Type>
+			<Path>Art/Movies/wonders/AZTEC_SACRIFICIAL_ALTAR_TLALOC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_AQUARIUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_PISCES</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_PISCES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_TAURUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_GEMINI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_SCORPIO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_CAPRICORN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_ARIES</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_ARIES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CANCER</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_CANCER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LEO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_LEO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_VIRGO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_LIBRA.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

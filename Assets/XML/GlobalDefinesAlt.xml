@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bart Muzzin (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Global Defines -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<!-- DCM features -->
@@ -239,14 +238,6 @@
 		<DefineName>BUG_LEADERHEAD_HOVER_HIDDEN_ATTITUDE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>BUG_LEADERHEAD_HOVER_WORST_ENEMY</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_LEADERHEAD_HOVER_DEFENSIVE_PACTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
 	<!-- Plot -->
 	<Define>
 		<DefineName>BUG_PLOT_HOVER_LAT_LONG</DefineName>
@@ -272,15 +263,6 @@
 	</Define>
 	<Define>
 		<DefineName>BUG_UNIT_EXPERIENCE_MODIFIERS_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<!-- Specialist -->
-	<Define>
-		<DefineName>BUG_SPECIALIST_HOVER_ACTUAL_EFFECTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_TECH_TRADE_DENIAL_HOVER</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<!-- Bonus -->
@@ -529,16 +511,28 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Dynamic Civ Names   NOTE turned off in C2C code-->
+		<!-- Dynamic Civ Names NOTE turned off in C2C code-->
 		<DefineName>DYNAMIC_CIV_NAMES</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CHOOSE_RELIGION</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_POP_CONSIDER_INQUISITORS</DefineName>
 		<iDefineIntVal>7</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Toffer
+			Used when evaluating if player is well enough funded to start planning a war.
+			Value divided by 2 for limited war plan, and divided by 3 for dogpile war plan.
+		-->
+		<DefineName>ESTIMATED_EXTRA_WAR_EXPENSE_PERCENT</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_HAMMER_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 </Civ4Defines>

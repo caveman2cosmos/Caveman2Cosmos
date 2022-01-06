@@ -12,32 +12,17 @@
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
+#include "CvXMLLoadUtility.h"
 
 // Macro for Building Art Info Maps
-#if 0	// DEBUGGING
 #define BUILD_INFO_MAP(map, infoArray, numInfos) \
 { \
-	int iI; \
-	for (iI = 0; iI < numInfos; iI++) \
-	{ \
-		char temp[256];	\
-		sprintf(temp, "type = %s\n", infoArray(iI).getType()); \
-		OutputDebugString(temp); \
-		sprintf(temp, "description = %S\n", infoArray(iI).getDescription()); \
-		OutputDebugString(temp); \
-		(map)[infoArray(iI).getTag()] = &infoArray(iI); \
-	} \
-}
-#else
-#define BUILD_INFO_MAP(map, infoArray, numInfos) \
-{ \
-	int iI; \
-	for (iI = 0; iI < numInfos; iI++) \
+	for (int iI = 0; iI < numInfos; iI++) \
 	{ \
 	(map)[infoArray(iI).getTag()] = &infoArray(iI); \
 	} \
 }
-#endif
 
 //
 // creates a derived artItem class which automatically registers itself with the ARTFILEMGR upon contruction.
@@ -61,9 +46,9 @@ CvArtInfo##name * CvArtFileMgr::get##name##ArtInfo( const char *szArtDefineTag )
 	ArtInfo##name##MapType::const_iterator it = m_map##name##ArtInfos->find( szArtDefineTag );\
 	if ( it == m_map##name##ArtInfos->end() ) \
 	{\
-		char szErrorMsg[256]; \
-		sprintf(szErrorMsg, "ArtInfo: '%s' was not found", szArtDefineTag); \
-		FAssertMsg2(false, szErrorMsg ); \
+		char msg[256]; \
+		sprintf(msg, "ArtInfo: '%s' was not found", szArtDefineTag); \
+		FErrorMsg(msg); \
 		if ( 0 == strcmp(szArtDefineTag, "ERROR") ) \
 		{ \
 			return NULL; \
@@ -114,7 +99,7 @@ static CvArtFileMgr* gs_ArtFileMgr = NULL;
 
 CvArtFileMgr& CvArtFileMgr::GetInstance()
 {
-	if ( gs_ArtFileMgr == NULL )
+	if (gs_ArtFileMgr == NULL)
 	{
 		gs_ArtFileMgr = new CvArtFileMgr();
 
@@ -144,10 +129,9 @@ CvArtFileMgr& CvArtFileMgr::GetInstance()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::Init()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
+	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
-		m_artInfoItems[i]->init();
+		item->init();
 	}
 }
 
@@ -160,10 +144,9 @@ void CvArtFileMgr::Init()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::DeInit()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
+	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
-		m_artInfoItems[i]->deInit();
+		item->deInit();
 	}
 }
 
@@ -192,9 +175,8 @@ void CvArtFileMgr::Reset()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::buildArtFileInfoMaps()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
+	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
-		m_artInfoItems[i]->buildMap();
+		item->buildMap();
 	}
 }

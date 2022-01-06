@@ -29,14 +29,6 @@
 #    Please tell me.
 #  -----
 
-#  =====================
-#  Temudjin 15.July.2010
-#  =====================
-
-#	Changelog
-#	---------
-#	1.00					initial release
-#
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 import inspect
@@ -44,6 +36,7 @@ import inspect
 GC = CyGlobalContext()
 
 DEBUG = False
+bInitialized = False
 
 #################################################
 ### Defined Class Instances
@@ -76,16 +69,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 		if len(stackList) > 1:
 			callModule = stackList[1][1]
 		print "[MST] callModule: %s" %callModule
-
-	########################
-	### initialization check
-	########################
-	global bInitialized
-	try:
-		test = bInitialized
-		bInitialized = True
-	except:
-		bInitialized = False
 
 	###########################
 	### civ universal constants
@@ -175,13 +158,14 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	##############################
 	### Not available at init time
 	##############################
-
-	sprint = ""
+	global bInitialized
 	if not bInitialized:
+		bInitialized = True
 		if DEBUG:
 			mapStats.mapStatistics()
 	else:
 		global sClimateType, sSeaType, bTeams, mapGetLatitude
+		sprint = ""
 		#######################
 		### retrieve parameters
 		#######################
@@ -956,7 +940,6 @@ def getTerrainPercentage( eTerrain, bPercent=True ):
 # area = MAP.getArea( areaID )
 # area = MAP.findBiggestArea( bWater )
 # bTest = plot.isAdjacentToArea( area )
-# areaList = CvMapGeneratorUtil.getAreas()
 ################################################################################
 
 # get region from area
@@ -1105,7 +1088,7 @@ def getContinentDistance(areaID, otherAreaID=None):
 def getBigAreas( iTop, bCoord=True, noGoAreaPlots=None, iMinPlots=30 ):
 	CyMap().recalculateAreas()
 	continentArea = []
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = GC.getMap().areas()
 	if not (noGoAreaPlots == None):
 		if len( noGoAreaPlots ) == 0:
 			noGoAreaPlotList = []
@@ -2112,7 +2095,7 @@ class MapRegions:
 
 		# get continents and islands
 		MAP.recalculateAreas()
-		areaList = CvMapGeneratorUtil.getAreas()
+		areaList = GC.getMap().areas()
 		isleList = []
 
 		# make Lost Isle
@@ -3499,7 +3482,7 @@ class BonusBalancer:
 		# make lists of relevant areas
 		minContinentPlots = 12
 		MAP.recalculateAreas()
-		self.areas = CvMapGeneratorUtil.getAreas()
+		self.areas = GC.getMap().areas()
 		self.continentArea = []
 		self.startArea = []
 		for area in self.areas:
@@ -4228,7 +4211,7 @@ class RiverMaker:
 		print "[MST] ===== RiverMaker:islandRivers()"
 		sprint = ""
 		chNoHills = 66
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = GC.getMap().areas()
 		cnt = 0
 		for area in areas:
 			if areaID != None:
@@ -4302,7 +4285,7 @@ class RiverMaker:
 			print "[MST] ===== RiverMaker:buildRiversFromLake()"
 			# build rivers from all lakes
 			MAP.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = GC.getMap().areas()
 			for area in areas:
 				if area.isLake():
 					iAreaID = area.getID()
@@ -4940,7 +4923,6 @@ class MapPrint:
 	__mapText      = ""
 	__mapLegend    = ""
 	__diffMaps     = {}
-	manaDict       = {}				# for mana boni; for use by 'CrystallMana' module or 'WildMana' mod
 
 	# initialize dictionaries
 	def initialize( self ):
@@ -4979,12 +4961,12 @@ class MapPrint:
 		# feature dictionaries
 		# --------------------
 		self.__featureDict = {
-			efIce											: ["�", "Ice"	],
-			GC.getInfoTypeForString('FEATURE_FALLOUT')		: ["*", "Fallout"],
-			efJungle										: ["j", "Jungle"],
-			efForest										: ["f", "Forest"],
-			GC.getInfoTypeForString('FEATURE_OASIS')		: ["O", "Oasis"],
-			GC.getInfoTypeForString('FEATURE_FLOOD_PLAINS')	: ["p", "FloodPlains"]
+			efIce										: ["�", "Ice"	],
+			GC.getInfoTypeForString('FEATURE_FALLOUT')	: ["*", "Fallout"],
+			efJungle									: ["j", "Jungle"],
+			efForest									: ["f", "Forest"],
+			GC.getInfoTypeForString('FEATURE_OASIS')	: ["O", "Oasis"],
+			GC.getFEATURE_FLOOD_PLAINS()				: ["p", "FloodPlains"]
 		}
 		self.__featureDict[GC.getInfoTypeForString('FEATURE_SWAMP')] = ["w", "Swamp"]
 		self.__featureDict[efKelp]									 = ["=", "Kelp"]
@@ -5253,7 +5235,7 @@ class MapPrint:
 		self.__mapRegion = [x0, x1, y0, y1]
 
 		# get all areas
-		areaList = CvMapGeneratorUtil.getAreas()
+		areaList = GC.getMap().areas()
 		aList = [ (area.getNumTiles(), area.getID(), area.isWater()) for area in areaList ]
 		aList.sort()
 		aList.reverse()
@@ -5972,7 +5954,7 @@ class MapStats:
 			sprint += "[MST] ####################################################################### MapScriptTools:MapStats ### \n\n"
 		elif txt	!= "":
 			sprint += "[MST] " + txt + "\n\n"
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = GC.getMap().areas()
 		areaValue = {}
 		sprint += "[MST] Continent Areas \n"
 		sprint += "[MST] --------------- \n"
@@ -6136,18 +6118,7 @@ class MapStats:
 
 	# get technology prerequisites
 	def getTechPrereqLists( self, iTech ):
-		andTech = []
-		orTech = []
-		if iTech in range( GC.getNumTechInfos() ):
-			i = 0
-			while GC.getTechInfo(iTech).getPrereqAndTechs(i) in range( GC.getNumTechInfos() ):
-				andTech.append( GC.getTechInfo(iTech).getPrereqAndTechs(i) )
-				i += 1
-			i = 0
-			while GC.getTechInfo(iTech).getPrereqOrTechs(i) in range( GC.getNumTechInfos() ):
-				orTech.append( GC.getTechInfo(iTech).getPrereqOrTechs(i) )
-				i += 1
-		return andTech, orTech
+		return GC.getTechInfo(iTech).getPrereqAndTechs(), GC.getTechInfo(iTech).getPrereqOrTechs()
 
 	# get technology level
 	def getTechLevel( self, iTech ):

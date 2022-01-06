@@ -1,17 +1,15 @@
 ## TechWindowWide
 ##
-## Originally by SirRethcir: Techanzeige hinzugefügt
+## Originally by SirRethcir: Techanzeige hinzugefÃ¼gt
 ## Enhanced by Roamty, Caesium, Guarav
 ##
 ## Copyright (c) 2008 The BUG Mod.
 
 from CvPythonExtensions import *
-import CvUtil
 
-# BUG - Options - end
+# BUG Options
 import BugCore
 TechWindowOpt = BugCore.game.TechWindow
-# BUG - Options - end
 
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
@@ -79,7 +77,7 @@ class CvTechSplashScreen:
 #		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = self.H_UPPER_PANEL - (self.Y_QUOTE - self.Y_UPPER_PANEL) - (self.iMarginSpace * 2)
 
-#---Geändert START - siehe original Datei -----------------
+#---GeÃ¤ndert START - siehe original Datei -----------------
 		# Lower Panel
 
 		self.X_LOWER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
@@ -105,7 +103,7 @@ class CvTechSplashScreen:
 		self.W_ALLOWS_PANEL = self.W_LOWER_PANEL/2 - (self.iMarginSpace)
 		self.Y_ALLOWS_PANEL2 = self.Y_SPECIAL_PANEL + self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE
 		self.Y_ALLOWS_PANEL3 = self.Y_SPECIAL_PANEL + 2 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
-#---Geändert ENDE ------------------------------------------
+#---GeÃ¤ndert ENDE ------------------------------------------
 
 		# Contents
 
@@ -131,7 +129,7 @@ class CvTechSplashScreen:
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.enableWorldSounds( False )
 
-#		screen.setHelpTextArea(self.W_HELP_AREA, FontTypes.SMALL_FONT, self.X_UNIT_PANE, self.Y_UNIT_PANE, self.Z_HELP_AREA, 1, CyArtFileMgr().getInterfaceArtInfo("POPUPS_BACKGROUND_TRANSPARENT").getPath(), True, True, CvUtil.FONT_LEFT_JUSTIFY, 0 )
+#		screen.setHelpTextArea(self.W_HELP_AREA, FontTypes.SMALL_FONT, self.X_UNIT_PANE, self.Y_UNIT_PANE, self.Z_HELP_AREA, 1, CyArtFileMgr().getInterfaceArtInfo("POPUPS_BACKGROUND_TRANSPARENT").getPath(), True, True, 1<<0, 0 )
 #		screen.addDDSGFC( "TechSplashBackground", CyArtFileMgr().getInterfaceArtInfo("TEMP_BG").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.showWindowBackground( False )
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
@@ -176,13 +174,13 @@ class CvTechSplashScreen:
 				self.X_SPECIAL_PANEL+self.iMarginSpace, self.Y_SPECIAL_PANEL, self.W_SPECIAL_PANEL-(self.iMarginSpace * 2), self.H_SPECIAL_PANEL, PanelStyles.PANEL_STYLE_IN )
 		screen.setStyle(szSpecialPanel, "Panel_Black25_Style")
 
-#---Eingefügt START - kann komplett gelöscht werden-----------------
+#---Eingefï¿½gt START - kann komplett gelï¿½scht werden-----------------
 		# Allows PanelSIR
 		panelNameSIR = "SIR"
 		screen.addPanel( panelNameSIR, "", "", False, True,
                                  self.X_ALLOWS_PANELSIR+self.iMarginSpace, self.Y_ALLOWS_PANELSIR, self.W_ALLOWS_PANELSIR-(self.iMarginSpace * 2), self.H_ALLOWS_PANELSIR, PanelStyles.PANEL_STYLE_IN )
 		screen.setStyle(panelNameSIR, "Panel_Black25_Style")
-#---Eingefügt ENDE -------------------------------------------------
+#---Eingefï¿½gt ENDE -------------------------------------------------
 
 		# Allows Panel
 		panelName = self.getNextWidgetName()
@@ -190,7 +188,7 @@ class CvTechSplashScreen:
                                  self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN )
 		screen.setStyle(panelName, "Panel_Black25_Style")
 
-#---Eingefügt START - kann komplett gelöscht werden-----------------
+#---Eingefï¿½gt START - kann komplett gelï¿½scht werden-----------------
 		# Allows Panel2
 		panelName2 = "SIR2"
 		screen.addPanel( panelName2, "", "", False, True,
@@ -202,13 +200,13 @@ class CvTechSplashScreen:
 		screen.addPanel( panelName3, "", "", False, True,
                                  self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL3, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN )
 		screen.setStyle(panelName3, "Panel_Black25_Style")
-#---Eingefügt ENDE -------------------------------------------------
+#---Eingefï¿½gt ENDE -------------------------------------------------
 
 		# Add Contents
 
 		# Title
 		szTech = techInfo.getDescription()
-		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=4>" + szTech.upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY,
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=4>" + szTech.upper() + u"</font>", 1<<2,
 			self.X_TITLE, self.Y_TITLE, self.Z_CONTROLS, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Tech Icon
@@ -222,47 +220,40 @@ class CvTechSplashScreen:
 		else:
 			iTextOffset = 20
 		screen.addMultilineText( "Text", szTechQuote,
-                        self.X_QUOTE, self.Y_QUOTE + iTextOffset, self.W_QUOTE, self.H_QUOTE - iTextOffset, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                        self.X_QUOTE, self.Y_QUOTE + iTextOffset, self.W_QUOTE, self.H_QUOTE - iTextOffset, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 		# Special
 		szSpecialTitle = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()) + u"</font>"
 		szSpecialTitleWidget = "SpecialTitle"
-		screen.setText(szSpecialTitleWidget, "", szSpecialTitle, CvUtil.FONT_LEFT_JUSTIFY,
+		screen.setText(szSpecialTitleWidget, "", szSpecialTitle, 1<<0,
 			       self.X_SPECIAL_PANEL+self.iMarginSpace, self.Y_SPECIAL_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		listName = self.getNextWidgetName()
 
 		szSpecialText = CyGameTextMgr().getTechHelp(self.iTech, True, False, False, True, -1)[1:]
-		screen.addMultilineText(listName, szSpecialText, self.X_SPECIAL_PANEL+10, self.Y_SPECIAL_PANEL+5, self.W_SPECIAL_PANEL-20, self.H_SPECIAL_PANEL-20, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText(listName, szSpecialText, self.X_SPECIAL_PANEL+10, self.Y_SPECIAL_PANEL+5, self.W_SPECIAL_PANEL-20, self.H_SPECIAL_PANEL-20, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-#---Eingefügt START - kann komplett gelöscht werden --------------
+#---Eingefï¿½gt START - kann komplett gelï¿½scht werden --------------
 		# Allows -> LeadsTo
 		szAllowsTitleDescSIR = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()) + ":" + u"</font>"
 		szAllowsTitleWidgetSIR = "AllowsTitleSIR"
-		screen.setText(szAllowsTitleWidgetSIR, "", szAllowsTitleDescSIR, CvUtil.FONT_LEFT_JUSTIFY,
+		screen.setText(szAllowsTitleWidgetSIR, "", szAllowsTitleDescSIR, 1<<0,
 			       self.X_ALLOWS_PANELSIR+self.iMarginSpace, self.Y_ALLOWS_PANELSIR - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		for j in range(GC.getNumTechInfos()):
-			for k in range(GC.getDefineINT("NUM_OR_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqOrTechs(k)
-				if (iPrereq == self.iTech):
-        				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
-			for k in range(GC.getDefineINT("NUM_AND_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqAndTechs(k)
-				if (iPrereq == self.iTech):
-        				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
+			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
+				if iPrereq == self.iTech:
+					screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
+			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
+				if iPrereq == self.iTech:
+					screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-#---Eingefügt ENDE ------------------------------------------------
-		# Allows
-		# szAllowsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_ALLOWS", ()) + ":" + u"</font>"
-		# szAllowsTitleWidget = "AllowsTitle"
-		# screen.setText(szAllowsTitleWidget, "", szAllowsTitleDesc, CvUtil.FONT_LEFT_JUSTIFY,
-		# 	       self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#---Eingefï¿½gt ENDE ------------------------------------------------
 
 		# Units Enabled
 		szUnitsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()) + ":" + u"</font>"
 		szUnitsTitleWidget = "UnitsTitle"
-		screen.setText(szUnitsTitleWidget, "", szUnitsTitleDesc, CvUtil.FONT_LEFT_JUSTIFY,
+		screen.setText(szUnitsTitleWidget, "", szUnitsTitleDesc, 1<<0,
 			       self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		for iUnit in range(GC.getNumUnitInfos()):
@@ -272,7 +263,7 @@ class CvTechSplashScreen:
 		# Buildings Enabled
 		szBuildingsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_BUILDINGS_ENABLED", ()) + ":" + u"</font>"
 		szBuildingsTitleWidget = "BuildingsTitle"
-		screen.setText(szBuildingsTitleWidget, "", szBuildingsTitleDesc, CvUtil.FONT_LEFT_JUSTIFY,
+		screen.setText(szBuildingsTitleWidget, "", szBuildingsTitleDesc, 1<<0,
 			       self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL2 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		for eLoopBuilding in range(GC.getNumBuildingInfos()):
@@ -284,7 +275,7 @@ class CvTechSplashScreen:
 		# Improvements
 		szImprovesTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ()) + ":" + u"</font>"
 		szImprovesTitleWidget = "ImprovesTitle"
-		screen.setText(szImprovesTitleWidget, "", szImprovesTitleDesc, CvUtil.FONT_LEFT_JUSTIFY,
+		screen.setText(szImprovesTitleWidget, "", szImprovesTitleDesc, 1<<0,
 			       self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL3 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		for j in range(GC.getNumProjectInfos()):
@@ -298,11 +289,11 @@ class CvTechSplashScreen:
 				screen.attachImageButton( panelName3, "", GC.getPromotionInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
 							  WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, j, 1, False )
 
-#---Eingefügt START - kann komplett gelöscht werden --------------
+#---Eingefï¿½gt START - kann komplett gelï¿½scht werden --------------
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):
-				bTechFound = 0;
+				bTechFound = 0
 				if (GC.getBuildInfo(j).getTechPrereq() == -1):
 					bTechFound = 0
 					for k in range(GC.getNumFeatureInfos()):
@@ -330,7 +321,7 @@ class CvTechSplashScreen:
 				screen.attachImageButton( panelName3, "", GC.getCivicInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
 							  WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, j, 1, False )
 
-#---Eingefügt ENDE ------------------------------------------------
+#---Eingefï¿½gt ENDE ------------------------------------------------
 
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):

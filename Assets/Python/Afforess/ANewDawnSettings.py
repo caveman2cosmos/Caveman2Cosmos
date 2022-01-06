@@ -38,44 +38,42 @@ class ANewDawnSettings:
 			pPlayer.setModderOption(data2, data3)
 		#ModderGameOptions
 		elif protocol == MODDERGAMEOPTION_EVENT_ID:
-			#Only accept commands from host
-			if data1 == 0:
-				if data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_DEFENDER_WITHDRAW):
-					ANewDawnOpt.setDefenderWithdraw(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_UNITS_PER_TILES):
-					ANewDawnOpt.setMaxUnitsPerTile(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
-					ANewDawnOpt.setMaxBombardDefense(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
-					ANewDawnOpt.setCanNotClaimOcean(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION):
-					ANewDawnOpt.setDepletionMod(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BETTER_INTERCETION):
-					ANewDawnOpt.setBetterAirInterception(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AIRLIFT_RANGE):
-					ANewDawnOpt.setMaxRebaseRange(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MERCY_RULE):
-					ANewDawnOpt.setMercyRule(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_REALISTIC_DIPLOMACY):
-					ANewDawnOpt.setRealisiticDiplomacy(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS):
-					ANewDawnOpt.setBattlefieldPromotions(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS):
-					ANewDawnOpt.setNoStorms(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
-					ANewDawnOpt.setImprovedXP(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD):
-					ANewDawnOpt.setMultipleReligionSpread(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
-					ANewDawnOpt.setTerrainDamage(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS):
-					ANewDawnOpt.setStrategicEvents(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING):
-					ANewDawnOpt.setNoAutoCorporationFounding(data3)
-				elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
-					ANewDawnOpt.setFlexibleDifficultyAI(data3)
-			else:
-				print "Non-Host Player Attempted to Alter Game Option. Ignoring"
+			if data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_DEFENDER_WITHDRAW):
+				ANewDawnOpt.setDefenderWithdraw(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_UNITS_PER_TILES):
+				ANewDawnOpt.setMaxUnitsPerTile(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
+				ANewDawnOpt.setMaxBombardDefense(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
+				ANewDawnOpt.setCanNotClaimOcean(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION):
+				ANewDawnOpt.setDepletionMod(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BETTER_INTERCETION):
+				ANewDawnOpt.setBetterAirInterception(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AIRLIFT_RANGE):
+				ANewDawnOpt.setMaxRebaseRange(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MERCY_RULE):
+				ANewDawnOpt.setMercyRule(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_REALISTIC_DIPLOMACY):
+				ANewDawnOpt.setRealisiticDiplomacy(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS):
+				ANewDawnOpt.setBattlefieldPromotions(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS):
+				ANewDawnOpt.setNoStorms(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
+				ANewDawnOpt.setImprovedXP(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY):
+				ANewDawnOpt.setReligionDecay(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD):
+				ANewDawnOpt.setMultipleReligionSpread(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
+				ANewDawnOpt.setTerrainDamage(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS):
+				ANewDawnOpt.setStrategicEvents(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING):
+				ANewDawnOpt.setNoAutoCorporationFounding(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
+				ANewDawnOpt.setFlexibleDifficultyAI(data3)
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -87,11 +85,7 @@ class ANewDawnSettings:
 			GC.getMap().updateMinimapColor()
 		#disabled/enable worker actions
 		elif protocol == CANBUILD_EVENT_ID:
-			if data1 == 0:
-				GC.getBuildInfo(data2).setDisabled(data3)
-			else:
-				print "Non-Host Player Attempted to Alter Game Option. Ignoring"
-
+			GC.getBuildInfo(data2).setDisabled(data3)
 
 #####################################################
 # Module level functions defined in RoMSettings.xml #
@@ -157,14 +151,6 @@ def changedFlexibleDifficultyMinRank(option, value):
 def changedFlexibleDifficultyMaxRank(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_RANK, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_RANK), int(value), 0)
-
-def changedShowCoastalBuildings(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_COASTAL_BUILDINGS, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_COASTAL_BUILDINGS), int(value), 0)
-
-def changedHideObsoleteBuildings(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_OBSOLETE_BUILDINGS, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_OBSOLETE_BUILDINGS), int(value), 0)
 
 def changedDepletionMod(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION, value)
@@ -243,6 +229,10 @@ def changedIgnoreDisabledBuildingAlerts(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_IGNORE_DISABLED_ALERTS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_IGNORE_DISABLED_ALERTS), int(value), 0)
 
+def changedReligionDecay(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY), int(value), 0)
+
 def changedMultipleReligionSpread(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD), int(value), 0)
@@ -297,8 +287,6 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyMaximumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaximumDiff() - 1)
 	changedFlexibleDifficultyMinRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinRank())
 	changedFlexibleDifficultyMaxRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaxRank())
-	changedShowCoastalBuildings(ANewDawnOpt, ANewDawnOpt.isShowCoastalBuildings())
-	changedHideObsoleteBuildings(ANewDawnOpt, ANewDawnOpt.isHideObsoleteBuildings())
 	changedDepletionMod(ANewDawnOpt, ANewDawnOpt.isDepletionMod())
 	changedBetterAirInterception(ANewDawnOpt, ANewDawnOpt.isBetterAirInterception())
 	changedMaxRebaseRange(ANewDawnOpt, ANewDawnOpt.getMaxRebaseRange())
@@ -313,6 +301,7 @@ def setXMLOptionsfromIniFile():
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())
 	changedEventImages(ANewDawnOpt, ANewDawnOpt.isEventImages())
 	changedIgnoreDisabledBuildingAlerts(ANewDawnOpt, ANewDawnOpt.isIgnoreDisabledBuildingAlerts())
+	changedReligionDecay(ANewDawnOpt, ANewDawnOpt.isReligionDecay())
 	changedMultipleReligionSpread(ANewDawnOpt, ANewDawnOpt.isMultipleReligionSpread())
 	changedTerrainDamage(ANewDawnOpt, ANewDawnOpt.isTerrainDamage())
 	changedStrategicEvents(ANewDawnOpt, ANewDawnOpt.isStrategicEvents())

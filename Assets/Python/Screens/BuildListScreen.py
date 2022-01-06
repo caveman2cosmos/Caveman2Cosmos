@@ -1,8 +1,6 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 import CvScreenEnums
 
 # globals
@@ -67,19 +65,19 @@ class BuildListScreen:
 
 
     # set the standard "exit" text
-    screen.setText("BuildListCancelButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, self.W_SCREEN - 80, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, 1, 0)
+    screen.setText("BuildListCancelButton", "Background", u"<font=4>" + localText.getText("TXT_WORD_EXIT", ()).upper() + u"</font>", 1<<0, self.W_SCREEN - 80, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, 1, 0)
 
     # set the text button to add a list
-    screen.setText("BuildListAddButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_ADD", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iAddButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListAddButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_ADD", ()).upper() + u"</font>", 1<<0, iAddButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # set the text button to rename a list
-    screen.setText("BuildListRenameButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_RENAME", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iRenameButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListRenameButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_RENAME", ()).upper() + u"</font>", 1<<0, iRenameButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # set the text button to delete a list
-    screen.setText("BuildListDeleteButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_DELETE", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iDeleteButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListDeleteButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_DELETE", ()).upper() + u"</font>", 1<<0, iDeleteButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # set the text button to add a list
-    screen.setText("BuildListSaveButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_SAVE", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iSaveButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListSaveButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_SAVE", ()).upper() + u"</font>", 1<<0, iSaveButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # draw the lists
     self.drawLists()
@@ -154,24 +152,24 @@ class BuildListScreen:
 
     iSelectedGrouping = pPlayer.getUnitListGrouping()
     screen.addDropDownBoxGFC( "UnitGrouping", iMultiListXL + iFilterContainerLength + 10, 8, iGroupButtonWidth, WidgetTypes.WIDGET_UNIT_GROUPING, -1, -1, FontTypes.SMALL_FONT)
-    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_SINGLE", ()), UnitGroupingTypes.UNIT_GROUPING_SINGLE, UnitGroupingTypes.UNIT_GROUPING_SINGLE, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_SINGLE)
-    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_COMBAT", ()), UnitGroupingTypes.UNIT_GROUPING_COMBAT, UnitGroupingTypes.UNIT_GROUPING_COMBAT, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_COMBAT)
+    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNITHELP_GROUPING_SINGLE", ()), UnitGroupingTypes.UNIT_GROUPING_SINGLE, UnitGroupingTypes.UNIT_GROUPING_SINGLE, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_SINGLE)
+    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNITHELP_GROUPING_COMBAT", ()), UnitGroupingTypes.UNIT_GROUPING_COMBAT, UnitGroupingTypes.UNIT_GROUPING_COMBAT, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_COMBAT)
     screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_DOMAIN", ()), UnitGroupingTypes.UNIT_GROUPING_DOMAIN, UnitGroupingTypes.UNIT_GROUPING_DOMAIN, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_DOMAIN)
-    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_HERO", ()), UnitGroupingTypes.UNIT_GROUPING_HERO, UnitGroupingTypes.UNIT_GROUPING_HERO, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_HERO)
+    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNITHELP_GROUPING_HERO", ()), UnitGroupingTypes.UNIT_GROUPING_HERO, UnitGroupingTypes.UNIT_GROUPING_HERO, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_HERO)
     screen.show( "UnitGrouping" )
 
     iSelectedSorting = pPlayer.getUnitListSorting()
     screen.addDropDownBoxGFC( "UnitSorting", iMultiListXL + iFilterContainerLength + iSortPosition, 8, iSortButtonWidth, WidgetTypes.WIDGET_UNIT_SORT, -1, -1, FontTypes.SMALL_FONT)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_NAME", ()), UnitSortTypes.UNIT_SORT_NAME, UnitSortTypes.UNIT_SORT_NAME, iSelectedSorting == UnitSortTypes.UNIT_SORT_NAME)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_COST", ()), UnitSortTypes.UNIT_SORT_COST, UnitSortTypes.UNIT_SORT_COST, iSelectedSorting == UnitSortTypes.UNIT_SORT_COST)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_STRENGTH", ()), UnitSortTypes.UNIT_SORT_STRENGTH, UnitSortTypes.UNIT_SORT_STRENGTH, iSelectedSorting == UnitSortTypes.UNIT_SORT_STRENGTH)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_MOVE", ()), UnitSortTypes.UNIT_SORT_MOVE, UnitSortTypes.UNIT_SORT_MOVE, iSelectedSorting == UnitSortTypes.UNIT_SORT_MOVE)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_COLLATERAL", ()), UnitSortTypes.UNIT_SORT_COLLATERAL, UnitSortTypes.UNIT_SORT_COLLATERAL, iSelectedSorting == UnitSortTypes.UNIT_SORT_COLLATERAL)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_RANGE", ()), UnitSortTypes.UNIT_SORT_RANGE, UnitSortTypes.UNIT_SORT_RANGE, iSelectedSorting == UnitSortTypes.UNIT_SORT_RANGE)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_BOMBARD", ()), UnitSortTypes.UNIT_SORT_BOMBARD, UnitSortTypes.UNIT_SORT_BOMBARD, iSelectedSorting == UnitSortTypes.UNIT_SORT_BOMBARD)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_CARGO", ()), UnitSortTypes.UNIT_SORT_CARGO, UnitSortTypes.UNIT_SORT_CARGO, iSelectedSorting == UnitSortTypes.UNIT_SORT_CARGO)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_WITHDRAWAL", ()), UnitSortTypes.UNIT_SORT_WITHDRAWAL, UnitSortTypes.UNIT_SORT_WITHDRAWAL, iSelectedSorting == UnitSortTypes.UNIT_SORT_WITHDRAWAL)
-    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNIT_SORT_POWER", ()), UnitSortTypes.UNIT_SORT_POWER, UnitSortTypes.UNIT_SORT_POWER, iSelectedSorting == UnitSortTypes.UNIT_SORT_POWER)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_WORD_NAME", ()), UnitSortTypes.UNIT_SORT_NAME, UnitSortTypes.UNIT_SORT_NAME, iSelectedSorting == UnitSortTypes.UNIT_SORT_NAME)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_WORD_COST", ()), UnitSortTypes.UNIT_SORT_COST, UnitSortTypes.UNIT_SORT_COST, iSelectedSorting == UnitSortTypes.UNIT_SORT_COST)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_STRENGTH", ()), UnitSortTypes.UNIT_SORT_STRENGTH, UnitSortTypes.UNIT_SORT_STRENGTH, iSelectedSorting == UnitSortTypes.UNIT_SORT_STRENGTH)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_MOVE", ()), UnitSortTypes.UNIT_SORT_MOVE, UnitSortTypes.UNIT_SORT_MOVE, iSelectedSorting == UnitSortTypes.UNIT_SORT_MOVE)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_COLLATERAL", ()), UnitSortTypes.UNIT_SORT_COLLATERAL, UnitSortTypes.UNIT_SORT_COLLATERAL, iSelectedSorting == UnitSortTypes.UNIT_SORT_COLLATERAL)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_RANGE", ()), UnitSortTypes.UNIT_SORT_RANGE, UnitSortTypes.UNIT_SORT_RANGE, iSelectedSorting == UnitSortTypes.UNIT_SORT_RANGE)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_BOMBARD", ()), UnitSortTypes.UNIT_SORT_BOMBARD, UnitSortTypes.UNIT_SORT_BOMBARD, iSelectedSorting == UnitSortTypes.UNIT_SORT_BOMBARD)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_WORD_CARGO", ()), UnitSortTypes.UNIT_SORT_CARGO, UnitSortTypes.UNIT_SORT_CARGO, iSelectedSorting == UnitSortTypes.UNIT_SORT_CARGO)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_WITHDRAWAL", ()), UnitSortTypes.UNIT_SORT_WITHDRAWAL, UnitSortTypes.UNIT_SORT_WITHDRAWAL, iSelectedSorting == UnitSortTypes.UNIT_SORT_WITHDRAWAL)
+    screen.addPullDownString( "UnitSorting", localText.getText("TXT_KEY_UNITHELP_SORT_POWER", ()), UnitSortTypes.UNIT_SORT_POWER, UnitSortTypes.UNIT_SORT_POWER, iSelectedSorting == UnitSortTypes.UNIT_SORT_POWER)
     screen.show( "UnitSorting" )
 
     iNumFilterButtons = 18
@@ -223,27 +221,27 @@ class BuildListScreen:
     screen.show( "BuildingFilterButtonContainer" )
 
     iSelectedGrouping = pPlayer.getBuildingListGrouping()
-    screen.addDropDownBoxGFC( "BuildingGrouping", iMultiListXL + iFilterContainerLength + 10, 38, iGroupButtonWidth, WidgetTypes.WIDGET_BUILDING_GROUPING, -1, -1, FontTypes.SMALL_FONT)
-    screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_BUILDING_GROUPING_SINGLE", ()), BuildingGroupingTypes.BUILDING_GROUPING_SINGLE, BuildingGroupingTypes.BUILDING_GROUPING_SINGLE, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_SINGLE)
-    screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_BUILDING_GROUPING_WONDER_TYPE", ()), BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE, BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE)
-    screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_DOMAIN", ()), BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN)
+    screen.addDropDownBoxGFC("BuildingGrouping", iMultiListXL + iFilterContainerLength + 10, 38, iGroupButtonWidth, WidgetTypes.WIDGET_BUILDING_GROUPING, -1, -1, FontTypes.SMALL_FONT)
+    screen.addPullDownString("BuildingGrouping", localText.getText("TXT_KEY_BUILDINGHELP_GROUPING_SINGLE", ()), BuildingGroupingTypes.BUILDING_GROUPING_SINGLE, BuildingGroupingTypes.BUILDING_GROUPING_SINGLE, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_SINGLE)
+    screen.addPullDownString("BuildingGrouping", localText.getText("TXT_KEY_BUILDINGHELP_GROUPING_WONDER_TYPE", ()), BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE, BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE)
+    screen.addPullDownString("BuildingGrouping", localText.getText("TXT_KEY_DOMAIN", ()), BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN)
     screen.show( "BuildingGrouping" )
 
     iSelectedSorting = pPlayer.getBuildingListSorting()
-    screen.addDropDownBoxGFC( "BuildingSorting", iMultiListXL + iFilterContainerLength + iSortPosition, 38, iSortButtonWidth, WidgetTypes.WIDGET_BUILDING_SORT, -1, -1, FontTypes.SMALL_FONT)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_NAME", ()), BuildingSortTypes.BUILDING_SORT_NAME, BuildingSortTypes.BUILDING_SORT_NAME, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_NAME)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_COST", ()), BuildingSortTypes.BUILDING_SORT_COST, BuildingSortTypes.BUILDING_SORT_COST, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_COST)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_SCIENCE", ()), BuildingSortTypes.BUILDING_SORT_SCIENCE, BuildingSortTypes.BUILDING_SORT_SCIENCE, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_SCIENCE)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_ESPIONAGE", ()), BuildingSortTypes.BUILDING_SORT_ESPIONAGE, BuildingSortTypes.BUILDING_SORT_ESPIONAGE, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_ESPIONAGE)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_CULTURE", ()), BuildingSortTypes.BUILDING_SORT_CULTURE, BuildingSortTypes.BUILDING_SORT_CULTURE, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_CULTURE)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_GOLD", ()), BuildingSortTypes.BUILDING_SORT_GOLD, BuildingSortTypes.BUILDING_SORT_GOLD, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_GOLD)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_FOOD", ()), BuildingSortTypes.BUILDING_SORT_FOOD, BuildingSortTypes.BUILDING_SORT_FOOD, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_FOOD)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_PRODUCTION", ()), BuildingSortTypes.BUILDING_SORT_PRODUCTION, BuildingSortTypes.BUILDING_SORT_PRODUCTION, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_PRODUCTION)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_HAPPINESS", ()), BuildingSortTypes.BUILDING_SORT_HAPPINESS, BuildingSortTypes.BUILDING_SORT_HAPPINESS, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_HAPPINESS)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_HEALTH", ()), BuildingSortTypes.BUILDING_SORT_HEALTH, BuildingSortTypes.BUILDING_SORT_HEALTH, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_HEALTH)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_BUILDING_SORT_CRIME", ()), BuildingSortTypes.BUILDING_SORT_CRIME, BuildingSortTypes.BUILDING_SORT_CRIME, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_CRIME)
-    screen.addPullDownString( "BuildingSorting", localText.getText("TXT_KEY_PROPERTY_FLAMMABILITY", ()), BuildingSortTypes.BUILDING_SORT_FLAMMABILITY, BuildingSortTypes.BUILDING_SORT_FLAMMABILITY, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_FLAMMABILITY)
-    screen.show( "BuildingSorting" )
+    screen.addDropDownBoxGFC("BuildingSorting", iMultiListXL + iFilterContainerLength + iSortPosition, 38, iSortButtonWidth, WidgetTypes.WIDGET_BUILDING_SORT, -1, -1, FontTypes.SMALL_FONT)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_WORD_NAME", ()), BuildingSortTypes.BUILDING_SORT_NAME, BuildingSortTypes.BUILDING_SORT_NAME, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_NAME)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_WORD_COST", ()), BuildingSortTypes.BUILDING_SORT_COST, BuildingSortTypes.BUILDING_SORT_COST, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_COST)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_BUILDINGHELP_SORT_SCIENCE", ()), BuildingSortTypes.BUILDING_SORT_SCIENCE, BuildingSortTypes.BUILDING_SORT_SCIENCE, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_SCIENCE)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_WORD_ESPIONAGE", ()), BuildingSortTypes.BUILDING_SORT_ESPIONAGE, BuildingSortTypes.BUILDING_SORT_ESPIONAGE, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_ESPIONAGE)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_WORD_CULTURE", ()), BuildingSortTypes.BUILDING_SORT_CULTURE, BuildingSortTypes.BUILDING_SORT_CULTURE, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_CULTURE)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_BUILDINGHELP_SORT_GOLD", ()), BuildingSortTypes.BUILDING_SORT_GOLD, BuildingSortTypes.BUILDING_SORT_GOLD, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_GOLD)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_WORD_FOOD", ()), BuildingSortTypes.BUILDING_SORT_FOOD, BuildingSortTypes.BUILDING_SORT_FOOD, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_FOOD)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_PRODUCTION", ()), BuildingSortTypes.BUILDING_SORT_PRODUCTION, BuildingSortTypes.BUILDING_SORT_PRODUCTION, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_PRODUCTION)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_BUILDINGHELP_SORT_HAPPINESS", ()), BuildingSortTypes.BUILDING_SORT_HAPPINESS, BuildingSortTypes.BUILDING_SORT_HAPPINESS, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_HAPPINESS)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_BUILDINGHELP_SORT_HEALTH", ()), BuildingSortTypes.BUILDING_SORT_HEALTH, BuildingSortTypes.BUILDING_SORT_HEALTH, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_HEALTH)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_BUILDINGHELP_SORT_CRIME", ()), BuildingSortTypes.BUILDING_SORT_CRIME, BuildingSortTypes.BUILDING_SORT_CRIME, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_CRIME)
+    screen.addPullDownString("BuildingSorting", localText.getText("TXT_KEY_PROPERTY_FLAMMABILITY", ()), BuildingSortTypes.BUILDING_SORT_FLAMMABILITY, BuildingSortTypes.BUILDING_SORT_FLAMMABILITY, iSelectedSorting == BuildingSortTypes.BUILDING_SORT_FLAMMABILITY)
+    screen.show("BuildingSorting")
 
 
     screen.addMultiListControlGFC( "ButtonContainer", u"", iMultiListXL, self.PANEL_HEIGHT + 10, self.W_SCREEN - (iMultiListXL+iMultiListXR), self.H_SCREEN - 20 - 2*self.PANEL_HEIGHT, 4, 48, 48, TableStyles.TABLE_STYLE_STANDARD )
@@ -342,7 +340,7 @@ class BuildListScreen:
         szLeftBuffer = gc.getProjectInfo(iData).getDescription()
 
       screen.appendTableRow( "BuildQueueTable" )
-      screen.setTableText( "BuildQueueTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST_QUEUE, pPlayer.getBLID(iCurrentList), i, CvUtil.FONT_LEFT_JUSTIFY )
+      screen.setTableText( "BuildQueueTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST_QUEUE, pPlayer.getBLID(iCurrentList), i, 1<<0 )
       iRow += 1
 
     screen.show( "BuildQueueTable" )
@@ -372,8 +370,8 @@ class BuildListScreen:
       szLeftBuffer = pPlayer.getBLListName(i)
 
       #screen.appendTableRow( "BuildListTable" )
-      #screen.setTableText( "BuildListTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, CvUtil.FONT_LEFT_JUSTIFY )
-      screen.appendListBoxStringNoUpdate("BuildListTable", szLeftBuffer, WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, CvUtil.FONT_LEFT_JUSTIFY )
+      #screen.setTableText( "BuildListTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, 1<<0 )
+      screen.appendListBoxStringNoUpdate("BuildListTable", szLeftBuffer, WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, 1<<0 )
       #if (iCurrentList == pPlayer.getBLID(i)):
       #  screen.selectRow( "BuildListTable", iRow, True)
       iRow += 1
@@ -396,8 +394,8 @@ class BuildListScreen:
     # Logos
 #   screen.setImageButton( "Logos", ArtFileMgr.getInterfaceArtInfo("INTRO_LOGOS").getPath(), screen.centerX(0)+233, screen.centerY(0)+331, 549, 294, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
-#   screen.addMultilineText("LegalText1", "<font=1>" + localText.getText("TXT_LEGAL_LINE_1", ()) + "</font>", screen.centerX(0)+110, screen.centerY(0)+590, 804, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-#   screen.setLabel( "LegalText2", "Background", "<font=2>" + localText.getText("TXT_LEGAL_LINE_2", ()) + "</font>", CvUtil.FONT_CENTER_JUSTIFY, screen.centerX(0)+512, screen.centerY(0)+740, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+#   screen.addMultilineText("LegalText1", "<font=1>" + localText.getText("TXT_LEGAL_LINE_1", ()) + "</font>", screen.centerX(0)+110, screen.centerY(0)+590, 804, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+#   screen.setLabel( "LegalText2", "Background", "<font=2>" + localText.getText("TXT_LEGAL_LINE_2", ()) + "</font>", 1<<2, screen.centerX(0)+512, screen.centerY(0)+740, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 #   screen.setShowFor( 4000 )
     return
 

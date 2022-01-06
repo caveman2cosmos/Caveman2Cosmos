@@ -1,7 +1,11 @@
 // plotGroup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 //#define VALIDATION_FOR_PLOT_GROUPS
 
@@ -83,7 +87,7 @@ void CvPlotGroup::addPlot(CvPlot* pPlot, bool bRecalculateBonuses)
 
 	//	Add the zobrist contribution of this plot to the hash
 	m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
-	if ( pPlot->isCity() || 
+	if ( pPlot->isCity() ||
 		 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
 	{
 		m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
@@ -126,7 +130,7 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 
 			//	Remove the zobrist contribution of this plot to the hash
 			m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
-			if ( pPlot->isCity() || 
+			if ( pPlot->isCity() ||
 				 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
 			{
 				m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
@@ -204,12 +208,7 @@ static bool buildRemovedPlotList(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, voi
 	//	part of this plot group
 	if ( pLoopPlot->m_groupGenerationNumber != parm->groupGenNumber)
 	{
-		XYCoords xy;
-
-		xy.iX = pLoopPlot->getX();
-		xy.iY = pLoopPlot->getY();
-
-		parm->removedPlots.insertAtEnd(xy);
+		parm->removedPlots.insertAtEnd(XYCoords(*pLoopPlot));
 	}
 
 	return true;
@@ -224,12 +223,7 @@ static bool buildAllPlotList(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* p
 {
 	buildAllPlotListParams* parm = (buildAllPlotListParams*)params;
 
-	XYCoords xy;
-
-	xy.iX = pLoopPlot->getX();
-	xy.iY = pLoopPlot->getY();
-
-	parm->allPlots.insertAtEnd(xy);
+	parm->allPlots.insertAtEnd(XYCoords(*pLoopPlot));
 
 	//OutputDebugString(CvString::format("Enumerated plot: (%d,%d)\n", xy.iX,xy.iY).c_str());
 
@@ -298,7 +292,7 @@ void CvPlotGroup::recalculatePlots()
 			pPlotNode != NULL;
 			pPlotNode = removedPlotParams.removedPlots.next(pPlotNode))
 		{
-			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = pPlotNode->m_data.plot();
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -479,7 +473,7 @@ void CvPlotGroup::setID(int iID)
 
 int CvPlotGroup::getNumBonuses(const BonusTypes eBonus) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 	return (m_paiNumBonuses == NULL ? 0 : m_paiNumBonuses[eBonus]);
 }
 
@@ -494,11 +488,11 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 
 	if (iChange != 0)
 	{
-		if ( m_paiNumBonuses == NULL )
+		if (m_paiNumBonuses == NULL)
 		{
 			m_paiNumBonuses = new int[GC.getNumBonusInfos()];
 			memset(m_paiNumBonuses, 0, sizeof(int)*GC.getNumBonusInfos());
@@ -656,8 +650,6 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
-	MEMORY_TRACE_FUNCTION();
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -666,9 +658,6 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 
 	// Init saved data
 	reset();
-
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlotGroup", &uiFlag);	// flags for expansion
 
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_iID);
 
@@ -688,21 +677,7 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 	{
 		SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	}
-
-	m_numPlots = -1;
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_numPlots);
-
-	//	To maintain backwrd compatibility read the plot list from the old format
-	//	that didn't record m_numPlots
-	if ( m_numPlots == -1 )
-	{
-		CLinkList<XYCoords> dummyPlots;
-		dummyPlots.Read(pStream);
-
-		m_numPlots = dummyPlots.getLength();
-
-		FAssert(m_numPlots > 0);
-	}
 
 	if ( m_paiNumBonuses != NULL )
 	{
@@ -735,8 +710,6 @@ void CvPlotGroup::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag = 0;
-	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag); // flag for expansion
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_iID);
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_eOwner);
 
@@ -760,7 +733,7 @@ static bool zobristHashSetter(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* 
 	plotGroupHashInfo* parm = (plotGroupHashInfo*)params;
 
 	parm->allNodesHash ^= pLoopPlot->getZobristContribution();
-	if ( pLoopPlot->isCity() || 
+	if ( pLoopPlot->isCity() ||
 		 (pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getBonusType() != NO_BONUS) )
 	{
 		parm->resourceNodesHash ^= pLoopPlot->getZobristContribution();
@@ -790,7 +763,7 @@ static bool plotGroupMerger(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* pa
 
 	return true;
 }
-	
+
 void CvPlotGroup::mergeIn(CvPlotGroup* from, bool bRecalculateBonuses)
 {
 	PROFILE_FUNC();
@@ -801,7 +774,7 @@ void CvPlotGroup::mergeIn(CvPlotGroup* from, bool bRecalculateBonuses)
 	params.bRecalculateBonuses = bRecalculateBonuses;
 
 	from->plotEnumerator(plotGroupMerger, &params);
-	
+
 	GET_PLAYER(getOwner()).deletePlotGroup(from->getID());
 }
 

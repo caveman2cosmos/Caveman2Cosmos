@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
-
+#include "CvInfos.h"
+#include "CvImprovementInfo.h"
 //
 // Python interface for info classes (formerly structs)
 // These are simple enough to be exposed directly - no wrappers
@@ -9,16 +10,14 @@ void CyInfoPythonInterface2()
 {
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface2\n");
 
-	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo")
-
+	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo", python::no_init)
 	;
 
-	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo")
+	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo", python::no_init)
 
 		.def("getArtStyleType", &CvCivilizationInfo::getArtStyleType, "int ()")
 		.def("getNumCityNames", &CvCivilizationInfo::getNumCityNames, "int ()")
 		.def("getNumLeaders", &CvCivilizationInfo::getNumLeaders, "int ()")
-
 
 		.def("isAIPlayable", &CvCivilizationInfo::isAIPlayable, "bool ()")
 		.def("isPlayable", &CvCivilizationInfo::isPlayable, "bool ()")
@@ -39,7 +38,7 @@ void CyInfoPythonInterface2()
 		.def("getCityNames", &CvCivilizationInfo::getCityNames, "string (int i)")
 	;
 
-	python::class_<CvVictoryInfo, python::bases<CvInfoBase> >("CvVictoryInfo")
+	python::class_<CvVictoryInfo, python::bases<CvInfoBase> >("CvVictoryInfo", python::no_init)
 
 		.def("getLandPercent", &CvVictoryInfo::getLandPercent, "int ()")
 		.def("getMinLandPercent", &CvVictoryInfo::getMinLandPercent, "int ()")
@@ -58,7 +57,7 @@ void CyInfoPythonInterface2()
 		.def("getMovie", &CvVictoryInfo::getMovie, "string ()")
 	;
 
-	python::class_<CvHurryInfo, python::bases<CvInfoBase> >("CvHurryInfo")
+	python::class_<CvHurryInfo, python::bases<CvInfoBase> >("CvHurryInfo", python::no_init)
 
 		.def("getGoldPerProduction", &CvHurryInfo::getGoldPerProduction, "int ()")
 		.def("getProductionPerPopulation", &CvHurryInfo::getProductionPerPopulation, "int ()")
@@ -66,7 +65,7 @@ void CyInfoPythonInterface2()
 		.def("isAnger", &CvHurryInfo::isAnger, "bool ()")
 	;
 
-	python::class_<CvHandicapInfo, python::bases<CvInfoBase> >("CvHandicapInfo")
+	python::class_<CvHandicapInfo, python::bases<CvInfoBase> >("CvHandicapInfo", python::no_init)
 
 		.def("getStartingGold", &CvHandicapInfo::getStartingGold, "int ()")
 		.def("getTrainPercent", &CvHandicapInfo::getTrainPercent, "int ()")
@@ -83,34 +82,23 @@ void CyInfoPythonInterface2()
 		.def("getAIUnitUpgradePercent", &CvHandicapInfo::getAIUnitUpgradePercent, "int ()")
 		.def("getAIPerEraModifier", &CvHandicapInfo::getAIPerEraModifier, "int ()")
 		.def("getRevolutionIndexPercent", &CvHandicapInfo::getRevolutionIndexPercent, "int ()")
-
-		// Arrays
 	;
 
-	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo")
+	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo", python::no_init)
 
-		.def("getGrowthPercent", &CvGameSpeedInfo::getGrowthPercent, "int ()")
-		.def("getTrainPercent", &CvGameSpeedInfo::getTrainPercent, "int ()")
-		.def("getConstructPercent", &CvGameSpeedInfo::getConstructPercent, "int ()")
-		.def("getCreatePercent", &CvGameSpeedInfo::getCreatePercent, "int ()")
-		.def("getResearchPercent", &CvGameSpeedInfo::getResearchPercent, "int ()")
-		.def("getBuildPercent", &CvGameSpeedInfo::getBuildPercent, "int ()")
-		.def("getImprovementPercent", &CvGameSpeedInfo::getImprovementPercent, "int ()")
-		.def("getGreatPeoplePercent", &CvGameSpeedInfo::getGreatPeoplePercent, "int ()")
-		.def("getAnarchyPercent", &CvGameSpeedInfo::getAnarchyPercent, "int ()")
-		.def("getUnitTradePercent", &CvGameSpeedInfo::getUnitTradePercent, "int ()")
-		.def("getVictoryDelayPercent", &CvGameSpeedInfo::getVictoryDelayPercent, "int ()")
+		.def("getSpeedPercent", &CvGameSpeedInfo::getSpeedPercent, "int ()")
+		.def("getHammerCostPercent", &CvGameSpeedInfo::getHammerCostPercent, "int ()")
+
 		.def("getNumTurnIncrements", &CvGameSpeedInfo::getNumTurnIncrements, "int ()")
-
 		.def("getGameTurnInfo", &CvGameSpeedInfo::getGameTurnInfo, python::return_value_policy<python::reference_existing_object>(), "GameTurnInfo ()")
 		.def("getDateIncrement", &CvGameSpeedInfo::getDateIncrement, python::return_value_policy<python::reference_existing_object>(), "CvDateIncrement ()")
 	;
 
-	python::class_<CvTurnTimerInfo, python::bases<CvInfoBase> >("CvTurnTimerInfo")
+	python::class_<CvTurnTimerInfo, python::bases<CvInfoBase> >("CvTurnTimerInfo", python::no_init)
 
 	;
 
-	python::class_<CvBuildInfo, python::bases<CvInfoBase> >("CvBuildInfo")
+	python::class_<CvBuildInfo, python::bases<CvInfoBase> >("CvBuildInfo", python::no_init)
 
 		.def("getTime", &CvBuildInfo::getTime, "int ()")
 		.def("getCost", &CvBuildInfo::getCost, "int ()")
@@ -130,7 +118,7 @@ void CyInfoPythonInterface2()
 		.def("isFeatureRemove", &CvBuildInfo::isFeatureRemove, "bool (int i)")
 	;
 
-	python::class_<CvGoodyInfo, python::bases<CvInfoBase> >("CvGoodyInfo")
+	python::class_<CvGoodyInfo, python::bases<CvInfoBase> >("CvGoodyInfo", python::no_init)
 
 		.def("getGold", &CvGoodyInfo::getGold, "int ()")
 		.def("getExperience", &CvGoodyInfo::getExperience, "int ()")
@@ -140,7 +128,7 @@ void CyInfoPythonInterface2()
 		.def("getSound", &CvGoodyInfo::getSound, "string ()")
 	;
 
-	python::class_<CvRouteInfo, python::bases<CvInfoBase> >("CvRouteInfo")
+	python::class_<CvRouteInfo, python::bases<CvInfoBase> >("CvRouteInfo", python::no_init)
 
 		.def("getValue", &CvRouteInfo::getValue, "int ()")
 		.def("getMovementCost", &CvRouteInfo::getMovementCost, "int ()")
@@ -150,18 +138,14 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvRouteInfo::getYieldChange, "int (int i)")
 		.def("getTechMovementChange", &CvRouteInfo::getTechMovementChange, "int (int i)")
-		.def("getPrereqOrBonus", &CvRouteInfo::getPrereqOrBonus, "int (int i)")
+		.def("getPrereqOrBonuses", &CvRouteInfo::getPrereqOrBonuses, python::return_value_policy<python::reference_existing_object>())
 	;
 
-	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo")
-
-
-
-		// Arrays
+	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo", python::no_init)
 		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)")
 	;
 
-	python::class_<CvImprovementInfo, python::bases<CvInfoBase> >("CvImprovementInfo")
+	python::class_<CvImprovementInfo, python::bases<CvInfoBase> >("CvImprovementInfo", python::no_init)
 
 		.def("getTilesPerGoody", &CvImprovementInfo::getTilesPerGoody, "int ()")
 		.def("getGoodyUniqueRange", &CvImprovementInfo::getGoodyUniqueRange, "int ()")
@@ -170,7 +154,9 @@ void CyInfoPythonInterface2()
 		.def("getDefenseModifier", &CvImprovementInfo::getDefenseModifier, "int ()")
 		.def("getHappiness", &CvImprovementInfo::getHappiness, "int ()")
 		.def("getPillageGold", &CvImprovementInfo::getPillageGold, "int ()")
+		.def("getImprovementPillage", &CvImprovementInfo::getImprovementPillage, "int ()")
 		.def("getImprovementUpgrade", &CvImprovementInfo::getImprovementUpgrade, "int ()")
+		.def("getNumAlternativeImprovementUpgradeTypes", &CvImprovementInfo::getNumAlternativeImprovementUpgradeTypes, "int ()")
 		.def("getPrereqTech", &CvImprovementInfo::getPrereqTech, "int ()")
 
 		.def("isActsAsCity", &CvImprovementInfo::isActsAsCity, "bool ()")
@@ -192,11 +178,12 @@ void CyInfoPythonInterface2()
 		.def("getPrereqNatureYield", &CvImprovementInfo::getPrereqNatureYield, "int (int i)")
 		.def("getYieldChange", &CvImprovementInfo::getYieldChange, "int (int i)")
 		.def("getRiverSideYieldChange", &CvImprovementInfo::getRiverSideYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvImprovementInfo::getHillsYieldChange, "int (int i)")
 		.def("getIrrigatedYieldChange", &CvImprovementInfo::getIrrigatedYieldChange, "int (int i)")
+		.def("getAlternativeImprovementUpgradeType", &CvImprovementInfo::getAlternativeImprovementUpgradeType, "int (int i)")
 
 		.def("getTerrainMakesValid", &CvImprovementInfo::getTerrainMakesValid, "bool (int i)")
 		.def("getFeatureMakesValid", &CvImprovementInfo::getFeatureMakesValid, "bool (int i)")
+		.def("isAlternativeImprovementUpgradeType", &CvImprovementInfo::isAlternativeImprovementUpgradeType, "bool (int i)")
 
 		.def("getImprovementBonusYield", &CvImprovementInfo::getImprovementBonusYield, "int (int i, int j)")
 		.def("isImprovementBonusMakesValid", &CvImprovementInfo::isImprovementBonusMakesValid, "bool (int i)")
@@ -206,12 +193,12 @@ void CyInfoPythonInterface2()
 		.def("getRouteYieldChanges", &CvImprovementInfo::getRouteYieldChanges, "int (int i, int j)")
 	;
 
-	python::class_<CvBonusClassInfo, python::bases<CvInfoBase> >("CvBonusClassInfo")
+	python::class_<CvBonusClassInfo, python::bases<CvInfoBase> >("CvBonusClassInfo", python::no_init)
 
 		.def("getUniqueRange", &CvBonusClassInfo::getUniqueRange)
 	;
 
-	python::class_<CvBonusInfo, python::bases<CvInfoBase> >("CvBonusInfo")
+	python::class_<CvBonusInfo, python::bases<CvInfoBase> >("CvBonusInfo", python::no_init)
 
 		.def("getChar", &CvBonusInfo::getChar, "int ()")
 		.def("getTechReveal", &CvBonusInfo::getTechReveal, "int ()")
@@ -256,7 +243,7 @@ void CyInfoPythonInterface2()
 		.def("getButton", &CvBonusInfo::getButton, "string ()")
 	;
 
-	python::class_<CvFeatureInfo, python::bases<CvInfoBase> >("CvFeatureInfo")
+	python::class_<CvFeatureInfo, python::bases<CvInfoBase> >("CvFeatureInfo", python::no_init)
 
 		.def("getMovementCost", &CvFeatureInfo::getMovementCost, "int ()")
 		.def("getAppearanceProbability", &CvFeatureInfo::getAppearanceProbability, "int ()")
@@ -278,13 +265,11 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvFeatureInfo::getYieldChange, "int (int i)")
 		.def("getRiverYieldChange", &CvFeatureInfo::getRiverYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvFeatureInfo::getHillsYieldChange, "int (int i)")
 
 		.def("isTerrain", &CvFeatureInfo::isTerrain, "bool (int i)")
 	;
 
-	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo")
+	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo", python::no_init)
 		.def("getChar", &CvCommerceInfo::getChar, "int ()")
-
 	;
 }

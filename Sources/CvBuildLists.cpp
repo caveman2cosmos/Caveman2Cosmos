@@ -6,10 +6,11 @@
 //  PURPOSE: Store build lists for a player
 //
 //------------------------------------------------------------------------------------------------
+#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvBuildLists.h"
-#include "CvGameCoreDLL.h"
 #include "CvInitCore.h"
+#include "CvGlobals.h"
 #include <iostream>
 
 CvBuildLists::~CvBuildLists()
@@ -44,7 +45,7 @@ void CvBuildLists::pushOrder(int iID, OrderTypes eOrder, int iData1, int iData2,
 		return;
 
 	BuildList* pList = m_Lists[index];
-	
+
 	if (bPop)
 	{
 		popOrder(iID, 0);
@@ -118,25 +119,25 @@ int CvBuildLists::getIndexByID(int iID) const
 
 int CvBuildLists::getID(int index) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index);
 	return m_Lists[index]->iID;
 }
 
 const CvString CvBuildLists::getListName(int index) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index);
 	return m_Lists[index]->szName;
 }
 
 int CvBuildLists::getListLength(int index) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index);
 	return m_Lists[index]->orderQueue.getLength();
 }
 
 const OrderData* CvBuildLists::getOrder(int index, int iQIndex) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index);
 	const CLLNode<OrderData>* pOrderNode = m_Lists[index]->orderQueue.nodeNum(iQIndex);
 	if (pOrderNode)
 	{
@@ -230,7 +231,7 @@ void CvBuildLists::readFromFile()
 				addList("");
 				index = 0;
 			}
-			
+
 			OrderTypes eOrder = NO_ORDER;
 			if (szLine[0] == 'u')
 				eOrder = ORDER_TRAIN;
@@ -278,12 +279,12 @@ void CvBuildLists::writeToFile()
 				stream << 'p';
 				szType = GC.getProjectInfo((ProjectTypes)pOrder->iData1).getType();
 			}
-			
+
 			if (pOrder->bSave)
 				stream << '*';
 			else
 				stream << ':';
-			
+
 			stream << szType.c_str() << std::endl;
 		}
 
@@ -334,7 +335,7 @@ void CvBuildLists::readSubset(FDataStreamBase *pStream)
 	int iList = 0;
 	pStream->Read(&m_iMaxID);
 	pStream->Read(&iList);
-	
+
 	// make new lists if necessary
 	for (int i=getNumLists(); i<=iList; i++)
 	{
@@ -344,7 +345,7 @@ void CvBuildLists::readSubset(FDataStreamBase *pStream)
 	pStream->Read(&(m_Lists[iList]->iID));
 	pStream->ReadString(m_Lists[iList]->szName);
 	m_Lists[iList]->orderQueue.ReadNonWrapperSubset(pStream);
-	
+
 	// Update current list
 	if (iList >= 0)
 	{

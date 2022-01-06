@@ -39,5 +39,15 @@
 			<Type>BONUSCLASS_CULTURE</Type>
 			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
+		<!-- Represents resources, that are produced by cultural wonders BUT are primarily technological in nature, and are not meant to be placed on map -->
+		<BonusClassInfo>
+			<Type>BONUSCLASS_GENMODS</Type>
+			<iUniqueRange>0</iUniqueRange>
+		</BonusClassInfo>
+		<!-- Represents resources, that are produced by wonder building and nothing else (similar to Culture and Genmods) -->
+		<BonusClassInfo>
+			<Type>BONUSCLASS_WONDER</Type>
+			<iUniqueRange>0</iUniqueRange>
+		</BonusClassInfo>
 	</BonusClassInfos>
 </Civ4BonusClassInfos>

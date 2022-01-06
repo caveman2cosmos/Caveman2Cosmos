@@ -10,18 +10,18 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-	
+
 #pragma once
 #ifndef CvDLLFlagEntityIFaceBase_H
 #define CvDLLFlagEntityIFaceBase_H
 
 #include "CvDLLEntityIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
 
 class CvPlot;
 class CvFlagEntity;
 class CvEntity;
-class cvInternalGlobals;
-class CvDLLUtilityIFaceBase;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  CLASS:      CvDLLFlagEntityIFaceBase
@@ -38,7 +38,7 @@ class CvDLLFlagEntityIFaceBase : public CvDLLEntityIFaceBase
 		virtual void setPlot( CvFlagEntity * pkFlag, CvPlot * pkPlot, bool bOffset ) = 0;
 		virtual void updateUnitInfo( CvFlagEntity * pkFlag, const CvPlot * pkPlot, bool bOffset ) = 0;
 		virtual void updateGraphicEra(CvFlagEntity *pkFlag) = 0;
-		virtual void setVisible(CvFlagEntity* pEnt, bool bVis) { cvInternalGlobals::getInstance().getDLLIFace()->getEntityIFace()->setVisible((CvEntity*)pEnt, bVis); }
+		virtual void setVisible(CvFlagEntity* pEnt, bool bVis) { gDLL->getEntityIFace()->setVisible((CvEntity*)pEnt, bVis); }
 		virtual void destroy(CvFlagEntity*& pImp, bool bSafeDelete=true) = 0;
 };
 

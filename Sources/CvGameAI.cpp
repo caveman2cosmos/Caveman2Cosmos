@@ -1,6 +1,9 @@
 // gameAI.cpp
 
 #include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
@@ -75,9 +78,7 @@ void CvGameAI::AI_updateAssignWork()
 
 int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 {
-	int iValue;
-
-	iValue = 100;
+	int iValue = 100;
 
 	if (GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_AIR)
 	{
@@ -125,9 +126,6 @@ void CvGameAI::read(FDataStreamBase* pStream)
 {
 	CvGame::read(pStream);
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
-
 	pStream->Read(&m_iPad);
 }
 
@@ -135,9 +133,6 @@ void CvGameAI::read(FDataStreamBase* pStream)
 void CvGameAI::write(FDataStreamBase* pStream)
 {
 	CvGame::write(pStream);
-
-	uint uiFlag=0;
-	pStream->Write(uiFlag);		// flag for expansion
 
 	pStream->Write(m_iPad);
 }

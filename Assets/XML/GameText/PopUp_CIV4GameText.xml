@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT</Tag>
+		<English>You cannot continue constructing a [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
+		<French>Vous ne pouvez pas continuer à construire [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que voulez-vous faire à la place?</French>
+		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] [NUM1:kann:können] nicht in %s2_CityName fertiggestellt werden. Was wollt Ihr stattdessen produzieren lassen?</German>
+		<Italian>Non puoi continuare a costruire [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vorresti produrre al suo posto?</Italian>
+		<Polish>Nie możesz kontynuować konstrukcji [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Czy mamy się zająć teraz?</Polish>
+		<Spanish>No podéis seguir construyendo [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
+		<Russian>Построить здание [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] в городе %s2_CityName не удастся. Выберите другое занятие.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT</Tag>
+		<English>You cannot continue training a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
+		<French>Vous ne pouvez pas poursuivre l'entraînement [NUM1:d'un:d'une:de:de] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place?</French>
+		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:kann:können] nicht länger in %s2_CityName aufgestellt werden. Was wollt Ihr stattdessen produzieren lassen?</German>
+		<Italian>Non puoi continuare ad addestrare l'unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vorresti produrre al suo posto?</Italian>
+		<Polish>Nie możesz kontynuować werbunku [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] w %s2_CityName. Czy mamy się zająć teraz?</Polish>
+		<Spanish>No podéis seguir entrenando a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
+		<Russian>Продолжить производство юнита [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] в городе %s2_CityName нельзя. Выберите другое занятие.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CHAIR_ELECTION</Tag>
+		<English>As Chair of the Congress of Vienna, you can choose a Congress Act to put forward for a global vote (you have %d1_MyNum Votes).</English>
+		<French>En tant que Porte parole du Congrès de Vienne, vous pouvez choisir un Acte du Congrès, qui sera soumis au vote (vous avez %d1_MyNum Votes).</French>
+		<Italian>Come Portavoce del Congresso di Vienna, puoi scegliere un Atto da sottoporre a votazione (hai %d1_MyNum voti a disposizione).</Italian>
+		<Russian>Как председатель Венского конгресса, вы вправе предложить Акт Конгресса для вынесения его на всеобщее голосование (у вас есть %d1_MyNum голосов).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CHOOSE_ELECTION</Tag>
+		<English>As Secretary-General, you can choose a U.N. Resolution to put forward for a global vote.</English>
+		<French>En tant que Secrétaire général, vous pouvez demander le vote d'une résolution mondiale.</French>
+		<German>Als UN-Generalsekretär könnt Ihr eine Resolution zur weltweiten Abstimmung vorlegen.</German>
+		<Italian>In quanto Segretario generale, puoi scegliere una Risoluzione da sottoporre a votazione.</Italian>
+		<Polish>Jako Sekretarz Generalny możesz wybrać rezolucję O.N.Z, aby poddać ją pod głosowanie.</Polish>
+		<Spanish>Como Secretario General, podéis escoger una resolución de la ONU que presentar a votación mundial.</Spanish>
+		<Russian>Как Генеральный секретарь, вы имеете право вынести резолюцию ООН на всенародное голосование.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CHOOSE_SAVE_GAME_FORMAT</Tag>
+		<English>Choose Save Format</English>
+		<French>Choisir un format de Sauvegarde</French>
+		<Italian>Scegli un formato di salvataggio</Italian>
+		<Polish>Wybierz format zapisu</Polish>
+		<Spanish>Elige un formato de guardado</Spanish>
+		<Russian>Выберите формат сохр.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT</Tag>
+		<English>You have constructed a [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
+		<French>Vous venez de construire [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite?</French>
+		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
+		<Italian>Hai costruito [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
+		<Polish>Zbudowałeś [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
+		<Russian>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]: строительство в городе %s2_CityName завершено. Чем займетесь далее?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT_LIMITED</Tag>
+		<English>You have constructed [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
+		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite?</French>
+		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
+		<Italian>Hai costruito [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
+		<Polish>Zbudowałeś [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
+		<Russian>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]: производство в городе %s2_CityName завершено. Чем займетесь дальше?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT</Tag>
+		<English>You have created a [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
+		<French>Vous avez créé [NUM1:un:une:des:des] [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que voulez-vous faire ensuite?</French>
+		<German>[COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
+		<Italian>Hai realizzato [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
+		<Polish>Stworzyłeś [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_PrjctName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
+		<Russian>Создание проекта [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] в городе %s2_CityName завершено. Чем займетесь далее?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ENTER_LANDS_WAR</Tag>
+		<English>Entering [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT] lands will trigger WAR! Are you sure?</English>
+		<French>Une intrusion sur le territoire des [COLOR_HIGHLIGHT_TEXT]%s1:3_CivAdj[COLOR_REVERT] déclenchera une GUERRE! Vous confirmez?</French>
+		<German>Ein unerlaubter Grenzübertritt wäre eine [COLOR_HIGHLIGHT_TEXT]Kriegserklärung![COLOR_REVERT] Seid Ihr sicher?</German>
+		<Italian>Entrando nel territorio [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT] scatenerai una GUERRA! Sei sicuro?</Italian>
+		<Polish>Wkraczając w granice [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT] doprowadzi do WOJNY! Jesteś pewny?</Polish>
+		<Spanish>¡Entrar en las tierras de los [COLOR_HIGHLIGHT_TEXT]%s1:3_CivAdj[COLOR_REVERT] significará la GUERRA! ¿Seguro que eso es lo que queréis?</Spanish>
+		<Russian>Эту территорию заняли [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT]. Нарушение границ приведет к войне. Продолжить?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION</Tag>
+		<English>A wandering man has arrived in your capital, and he's talking about a religion, founded in the recent years in a far away land. The new religion is called %s1, and the wise man is so amazed by this religion, that he has decided to found a new school in your city to teach it to your citizens.</English>
+		<French>Un vagabond est arrivé dans votre capitale, et il parle d'une religion, fondée récemment dans un pays lointain. La découverte de cette nouvelle religion appelée %s1 a convaincu cet homme de fonder une école dans votre ville, pour y enseigner les préceptes à vos cityoens.</French>
+		<German>Ein Reisender hat deinen Palast erreicht, und er erzählt von einer Religion, die in den letzten Jahren in einem fernen Land begründet wurde. Die neue Religion wird %s1 genannt, und der weise Mann ist so sehr von ihr begeistert, dass er beschlossen hat, eine neue Schule in euerer Stadt zu errichten, um eure Bürger diese Religion zu lehren.</German>
+		<Italian>Un uomo errante è arrivato nella tua capitale e sta parlando di una nuova religione, fondata di recente in una terra lontana. La nuova religione si chiama %s1 e l'uomo ne è così ammirato, che ha deciso di fondare una scuola nella tua città per diffonderla tra i tuoi cittadini.</Italian>
+		<Russian>В вашу столицу прибыл странник, который поведал нам о религии, основанной в последние годы в далекой стране. Новая религия называется %s1, и мудрец был ей так впечатлен, что решил основать новую миссию в вашем городе, чтобы проповедовать там новое учение нашему народу.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER</Tag>
+		<English>A new mysticism</English>
+		<French>Un nouveau mystique</French>
+		<German>Ein neuer Kult</German>
+		<Italian>Un nuovo culto</Italian>
+		<Russian>Новый культ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_GOTO_CITY</Tag>
+		<English>Go to city</English>
+		<French>Aller à la ville</French>
+		<Italian>Vai alla città</Italian>
+		<Polish>Idź do Miasta</Polish>
+		<Spanish>Ir a ciudad</Spanish>
+		<Russian>Идти в город</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_INVADED_CITY</Tag>
+		<English>Enemy troops have discovered the secret entrance located in our %s1! They've bypassed our fortifications and are attacking unprotected citizens and wounded troops! If we don't send reinforcements immediately, %s2 will surely be razed to the ground!</English>
+		<French>Les Troupes ennemies ont découvert l'entrée d'un souterrain menant à notre %s1! Ils ont contourné nos fortification et attaquent nos citoyens sans protection et les troupes blessées! Si nous n'envoyons pas de renforts immédiatement, %s2 sera surement entièrement tombée!</French>
+		<German>Feindliche Einheiten haben den geheimen Eingang in unsere Stadt %s1 entdeckt! Sie haben unsere Befestigungsanlagen überwunden und greifen nun unbewaffnete Bürger und verwundete Einheiten an! Wenn wir nicht schnell Verstärkung schicken, wird %s2 sicher dem Erdboden gleichgemacht!</German>
+		<Italian>I nemici hanno scoperto l'entrata segreta di %s1! Hanno aggirato le nostre difese e stanno attaccando cittadini inermi e soldati feriti! Se non mandiamo rinforzi, %s2 sarà sicuramente rasa al suolo!</Italian>
+		<Polish>Wrogie jednostki odkryły tajne przejście w %s1! Omijają fortyfikację, atakują obywateli oraz rannych żołnierzy! Jeśli nie wyślemy posiłków do %s2 na pewno zostanie zrównane z ziemią!</Polish>
+		<Spanish>¡Las tropas enemigas han descubierto la entrada secreta ubicada en [NUM1:nuestro:nuestra:nuestros:nuestras] %s1! ¡Han traspasado nuestras fortificaciones y están atacando a nuestros ciudadanos indefensos y a nuestras tropas heridas! ¡Si no enviamos refuerzos inmediatamente, %s2 seguramente será arrasada!</Spanish>
+		<Russian>Враги обнаружили потайной ход в нашем %s1! Они обошли наши укрепления и напали на беззащитных горожан и раненных солдат! Если мы тотчас же не пришлем подкрепление, %s2 наверняка сравняют с землей!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_INVASION</Tag>
+		<English>Sire, enemy troops have invaded %s1!</English>
+		<French>Sir, des troupes ennemies ont envahi %s1!</French>
+		<German>Feindliche Einheiten sind in %s1 eingedrungen!</German>
+		<Italian>Sire, truppe nemiche hanno invaso %s1!</Italian>
+		<Polish>Panie, Wrogie wojska najechały %s1!</Polish>
+		<Spanish>¡Señor, las tropas enemigas han invadido %s1!</Spanish>
+		<Russian>Вражеские войска вторглись в %s1!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MODIFIER_RECALCULATION</Tag>
+		<English>Should the modifiers be recalculated?</English>
+		<French>Recalculer les modificateurs?</French>
+		<German>Sollen die Modifikatoren neu berechnet werden?</German>
+		<Italian>Ricalcolare i modificatori?</Italian>
+		<Polish>Czy mam przeliczyć ponownie modyfikatory?</Polish>
+		<Spanish>¿Deben recalcularse los modificadores?</Spanish>
+		<Russian>Пересчитать все данные?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MODIFIER_RECALCULATION_BODY</Tag>
+		<English>Assets or DLL have changed since this savegame was created. Recalculating the modifiers will apply any changes to buildings, events, civics and similar to the total amount stored for cities and players. This is recommended but still beta functionality. You can always manually trigger it with Ctrl-Shift-T.</English>
+		<French>Les Assets ou la DLL ont été modifiés depuis que la sauvegarde a été crée. En appliquant le recalcul des modificateurs, tous les changements aux bâtiments, événements, doctrines sont mis à jour. Recommandé, mais uniquement en mode beta. Ctrl-Shift-T permet de l'activer à tout moment.</French>
+		<German>Seit dem Anlegen dieses Spielstands haben sich Assets oder DLLs verändert. Die Neuberechnung der Modifikatoren sorgt dafür, dass alle Änderungen an Gebäuden, Ereignissen, Gesellschaftsformen u.Ä. korrekt auf die gespeicherten Städte und Nationen angewendet werden. Sie wird dringend empfohlen, aber es handelt sich dabei immer noch um Beta-Funktionalität. Die Neuberechnung kann im Spiel manuell durch die Tastenkombination STRG-UMSCHALT-T ausgelöst werden.</German>
+		<Italian>Sono cambiate alcune cose da quando hai salvato il gioco l'ultima volta. Il ricalcolo dei modificatori applicherà i cambi effettuati su edifici, eventi, forme di governo e altro al totale già accumulato da città e giocatori. Il ricalcolo è raccomandato, anche se è ancora una funzionalità beta. Puoi sempre effettuarlo manualmente premendo Ctrl-Shift-T.</Italian>
+		<Polish>Folder Assets lub plik DLL zostały zmienione po tym jak zapisany został plik save. Rekalkulacja modyfikatorów pozwoli wprowadzić zmiany w budynkach, wydarzeniach, doktrynach i innych przechowywanych zmiennych dla miast i graczy. Jest to rekomendowane lecz dalej w wersji beta. Zawsze możesz manualnie to wywołać kombinacją klawiszy: Ctrl-Shift-T.</Polish>
+		<Spanish>Los recursos (Assets) o la DLL han sido modificados desde la creación de este guardado. Recalcular los modificadores aplicará cualquier cambio en los edificios, eventos, principios, etc. a todo lo que los jugadores y sus ciudades posean. Se recomienda hacerlo, aunque esta función aún se encuentra en fase beta y puede haber errores. Puedes hacerlo manualmente pulsando Ctrl-Shift-T.</Spanish>
+		<Russian>Часть контента или DLL изменились с момента создания этого сохранения. Предлагаемый перерасчет модификаторов применит все изменения к зданиям, событиям, парадигмам и т.д. ко всем параметрам вашего сохранения для всех городов и игроков. Это РЕКОМЕНДУЕТСЯ сделать (перерасчет займёт некоторое время), но следует иметь в виду, что это работает в режиме бета-версии. Вы всегда можете запустить его вручную при нажатии Ctrl-Shift-T.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT</Tag>
+		<English>Maximum Compatibility</English>
+		<French>Compatibilité maximale</French>
+		<Italian>Compatibilità massima</Italian>
+		<Polish>Maksymalna kompatybilność</Polish>
+		<Spanish>Máxima compatibilidad</Spanish>
+		<Russian>Максимальная совместимость</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT_BODY</Tag>
+		<English>"Maximum Compatibility" will allow save games to be loaded into later versions of the mod (in most cases) but is larger and a little slower to load &amp; save. It is also currently beta functionality.[NEWLINE]"Original BTS" is the save format Civ4 used previously. It is more compact and a little faster to load &amp; save, but normally will not support game loading between releases of a mod.</English>
+		<French>"Compatibilité maximale" permettra de sauvegarder les parties à charger dans les versions ultérieures du mod (dans la plupart des cas) mais est plus grand et un peu plus lent à charger et à sauvegarder. C'est aussi actuellement une fonctionnalité bêta.[NEWLINE]"Original BTS" Il est plus compact et un peu plus rapide pour charger la sauvegarde, mais ne prend généralement pas en charge le chargement du jeu entre les versions d'un mod.</French>
+		<Italian>"Compatibilità massima" è una funzione che consente di caricare (nella maggior parte dei casi) i salvataggi anche nelle versioni successive del mod, ma è più grande e un po' più lento nel caricare e nel salvare. È anche una funzionalità beta, per il momento.[NEWLINE]"BTS originale" è il formato di salvataggio di Civ4 utilizzato in precedenza. È più compatto e più veloce a caricare e salvare, ma non supporta il caricamento di salvataggi fra versioni diverse del mod.</Italian>
+		<Polish>Maksymalna Kompatybilność pozwala wczytywać savy z wcześniejszych wersji modu ale jest większy i wolniejszy w zapisze i odczycie.[NEWLINE]"Oryginalny BTS" jest formatem Civ4. Jest mniejszy i szybszy ale nie pozwala na odczytywanie wcześniejszych wersji zapisów modu.</Polish>
+		<Spanish>"Máxima compatibilidad" permite que las partidas guardadas puedan ser cargadas en versiones posteriores del mod (en la mayoría de los casos), pero su tamaño será mayor y la carga/guardado será un poco más lenta. Actualmente se encuentra en fase beta.[NEWLINE]"Original de BTS" es el formato de guardado que utiliza Civilization 4. Su tamaño es menor y es algo más rápido al cargar/guardar, pero su uso en versiones distintas de un mod no está soportado (normalmente).</Spanish>
+		<Russian>«Максимальная совместимость» позволяет загружать сохраненные игры в более поздние версии мода (в большинстве случаев), но с ней несколько дольше и медленнее загружаются старые сохранения. В настоящее время эта функция находится в стадии бета-версии.[NEWLINE]"Оригинальный BTS" - это формат сохранения, который ранее использовался в классической Civ4. Он более компактен и загружается немного быстрее стары сохранения, но обычно не поддерживает загрузку игры между новыми версиями мода.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_OLD_GAME_SAVE_FORMAT</Tag>
+		<English>Original BTS</English>
+		<Italian>BTS originale</Italian>
+		<Polish>Oryginalny BTS</Polish>
+		<Spanish>Original de BTS</Spanish>
+		<Russian>Оригинальный BTS</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_SELECT_EVENT</Tag>
+		<English>Choose an event which should be triggered.</English>
+		<French>Choisir un événement qui sera activé.</French>
+		<German>Event aussuchen, das gestartet werden soll.</German>
+		<Italian>Scegli l'evento che dovrebbe attivarsi.</Italian>
+		<Polish>Wybierz wydarzenie, które chcesz wywołać.</Polish>
+		<Spanish>Elige el evento que deberá ser activado.</Spanish>
+		<Russian>Выберите событие, которое должно быть вызвано.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_THATS_TERRIBLE</Tag>
+		<English>That's terrible!</English>
+		<French>C'est terrible!</French>
+		<German>Das ist ja schrecklich!</German>
+		<Italian>È terribile!</Italian>
+		<Polish>To straszne!</Polish>
+		<Spanish>¡Es horrible!</Spanish>
+		<Russian>Какой кошмар!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_TRAINED_WORK_ON_NEXT</Tag>
+		<English>You have trained a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
+		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à présent?</French>
+		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt. Was wollt Ihr als Nächstes produzieren?</German>
+		<Italian>Hai addestrato [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
+		<Polish>Wytrenowałeś [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
+		<Russian>Юнит [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] в городе %s2_CityName готов. Чем займетесь далее?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_TRAINED_WORK_ON_NEXT_LIMITED</Tag>
+		<English>You have trained [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
+		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite?</French>
+		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt. Was wollt Ihr als Nächstes produzieren?</German>
+		<Italian>Hai addestrato [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
+		<Polish>Wytrenowałeś [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
+		<Russian>Юнит [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] в городе %s2_CityName готов. Чем займетесь дальше?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHAPPY_CITIZENS_DEMAND</Tag>
+		<English>Sire, the people of %s1_CityName are an unruly lot. Some are even refusing to work! They demand the construction of a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</English>
+		<French>Votre Altesse, le peuple de %s1_CityName s'agite. Certains refusent même de travailler! Ils demandent la construction [NUM2:d'un:d'une:de:de] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</French>
+		<German>%s1_CityName ist in Aufruhr, viele Leute verweigern die Arbeit! Die unzufriedenen Bürger verlangen [NUM2:einen:eine:ein:endlich:endlich:endlich] [COLOR_BUILDING_TEXT]%s2:4_BldgName![COLOR_REVERT]</German>
+		<Italian>Sire, i cittadini di %s1_CityName sono in agitazione. Alcuni si rifiutano persino di lavorare! Chiedono la costruzione di [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Italian>
+		<Polish>Mieszkańcy %s1_CityName są bardzo niespokojni. Część nawet odmawia pójścia do pracy! Domagają się wybudowania [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Polish>
+		<Spanish>Excelencia, el pueblo de %s1_CityName está descontrolado. ¡Algunos hasta se niegan a trabajar! Exigen la construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT].</Spanish>
+		<Russian>Осмелюсь сообщить, что город %s1_CityName становится центром волнений и беспорядков. Некоторые жители даже отказываются работать, пока вы не выполните их требование: [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] - неужели это такая непомерная плата за спокойный сон?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHEALTHY_CITIZENS_DEMAND</Tag>
+		<English>Sire, %s1_CityName has become an unhealthy cesspool of filth and vermin! The citizens demand the construction of a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</English>
+		<French>Votre Altesse, la ville de %s1_CityName est devenue un cloaque grouillant de vermine! Les citoyens demandent la construction [NUM2:d'un:d'une:de:de] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</French>
+		<German>%s1_CityName hat sich in eine stinkende Grube aus Dreck und Ungeziefer verwandelt! Die kränkelnden Bürger verlangen [NUM2:einen:eine:ein:endlich:endlich:endlich] [COLOR_BUILDING_TEXT]%s2:4_BldgName[COLOR_REVERT]!</German>
+		<Italian>Sire, %s1_CityName è diventata un ricettacolo di parassiti e sporcizia! I cittadini chiedono la costruzione di [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Italian>
+		<Spanish>Excelencia, %s1_CityName se ha convertido en una pocilga insalubre de inmundicia y alimañas. Los ciudadanos exigen la construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT].</Spanish>
+		<Russian>Осмелюсь сообщить, что город %s1_CityName превратился в рассадник грязи и нечистот! Его жители требуют постройки [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Russian>
+	</TEXT>
+</Civ4GameText>

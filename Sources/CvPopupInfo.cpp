@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvPopupInfo.h"
 
 CvPopupInfo::CvPopupInfo(ButtonPopupTypes eButtonPopupType, int iData1, int iData2, int iData3, int iFlags, bool bOption1, bool bOption2) :
 	m_iData1(iData1),
@@ -97,13 +98,13 @@ const CvString& CvPopupInfo::getPythonModule() const
 
 const CvWString& CvPopupInfo::getPythonButtonText(int i) const
 {
-	FAssertMsg(i < (int)m_aPythonButtons.size(), "index out of range");
+	FASSERT_BOUNDS(0, (int)m_aPythonButtons.size(), i);
 	return m_aPythonButtons[i].szText;
 }
 
 const CvString& CvPopupInfo::getPythonButtonArt(int i) const
 {
-	FAssertMsg(i < (int)m_aPythonButtons.size(), "index out of range");
+	FASSERT_BOUNDS(0, (int)m_aPythonButtons.size(), i);
 	return m_aPythonButtons[i].szArt;
 }
 

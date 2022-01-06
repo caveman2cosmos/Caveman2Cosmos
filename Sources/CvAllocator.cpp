@@ -1,5 +1,5 @@
 /*
-Partially base on MemTrack 
+Partially base on MemTrack
 from http://www.almostinfinite.com/memtrack.html
 
 Copyright (c) 2002, 2008 Curtis Bartley
@@ -35,6 +35,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include "CvGameCoreDLL.h"
+#include "CvAllocator.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -48,13 +49,13 @@ extern void CreateMiniDump(EXCEPTION_POINTERS *pep);
 
 void* CvMalloc(size_t size)
 {
-	if (g_DLL)
+	if (gDLL)
 	{
 		void* result = NULL;
 
 		try
 		{
-			result = g_DLL->newMem(size, __FILE__, __LINE__);
+			result = gDLL->newMem(size, __FILE__, __LINE__);
 
 #ifdef _DEBUG
 			memset(result, 0xDA, size);
@@ -80,12 +81,12 @@ void CvFree(void* p)
 	if (p == NULL)
 		return;
 
-	if (g_DLL)
+	if (gDLL)
 	{
 #ifdef _DEBUG
-		memset(p, 0xFA, g_DLL->memSize(p));
+		memset(p, 0xFA, gDLL->memSize(p));
 #endif
-		g_DLL->delMem(p, __FILE__, __LINE__);
+		gDLL->delMem(p, __FILE__, __LINE__);
 
 	}
 	else
@@ -96,14 +97,14 @@ void CvFree(void* p)
 
 void* CvMallocArray(size_t size)
 {
-	if (g_DLL)
+	if (gDLL)
 	{
 		//OutputDebugString("Alloc [safe]");
 
 		void* result = NULL;
 		try
 		{
-			result = g_DLL->newMemArray(size, __FILE__, __LINE__);
+			result = gDLL->newMemArray(size, __FILE__, __LINE__);
 #ifdef _DEBUG
 			memset(result, 0xDA, size);
 #endif
@@ -126,12 +127,12 @@ void CvFreeArray(void* p)
 	if (p == NULL)
 		return;
 
-	if (g_DLL)
+	if (gDLL)
 	{
 #ifdef _DEBUG
-		memset(p, 0xFA, g_DLL->memSize(p));
+		// memset(p, 0xFA, gDLL->memSize(p));
 #endif
-		g_DLL->delMemArray(p, __FILE__, __LINE__);
+		gDLL->delMemArray(p, __FILE__, __LINE__);
 	}
 	else
 	{
@@ -143,14 +144,14 @@ void* reallocMem(void* a, unsigned int uiBytes, const char* pcFile, int iLine)
 {
 	void* result;
 
-	result = g_DLL->reallocMem(a, uiBytes, pcFile, iLine);
+	result = gDLL->reallocMem(a, uiBytes, pcFile, iLine);
 
 	return result;
 }
 
 unsigned int memSize(void* a)
 {
-	unsigned int result = g_DLL->memSize(a);
+	unsigned int result = gDLL->memSize(a);
 
 	return result;
 }
@@ -162,7 +163,7 @@ unsigned int memSize(void* a)
 
 namespace MemTrack
 {
-	std::ofstream mem_log("memory.log");
+	std::ofstream mem_log("Mods/Caveman2Cosmos/memory.log");
 	/* ------------------------------------------------------------ */
 	/* --------------------- class BlockHeader -------------------- */
 	/* ------------------------------------------------------------ */
@@ -239,7 +240,7 @@ namespace MemTrack
 		assert(node->myPrevNode == NULL);
 		assert(node->myNextNode == NULL);
 
-		// If we have at least one node in the list ...        
+		// If we have at least one node in the list ...
 		if (ourFirstNode != NULL)
 		{
 			// ... make the new node the first node's predecessor.
@@ -510,7 +511,7 @@ namespace MemTrack
 		pBlockHeader->~BlockHeader();
 		pBlockHeader = NULL;
 
-		// Free the memory block.    
+		// Free the memory block.
 		CvFree(pProlog);
 	}
 
@@ -868,17 +869,17 @@ namespace MemTrack
 			}
 		}
 
-		std::sort(diffs.rbegin(), diffs.rend());
+		algo::sort(diffs);
 
 		for (std::vector<MemInfoDiff>::const_iterator itr = diffs.begin(); itr != diffs.end(); ++itr)
 		{
 			itr->write(mem_log);
 		}
 
-		mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n") 
-			% "" 
-			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str() 
-			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks)) 
+		mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
+			% ""
+			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str()
+			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks))
 			% convertSize(static_cast<int>(static_cast<int64_t>(grandTotalSize) - static_cast<int64_t>(totalLastTurnSize))).c_str();
 
 		totalLastTurnBlocks = grandTotalNumBlocks;

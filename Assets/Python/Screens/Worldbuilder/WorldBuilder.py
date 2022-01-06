@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
 import HandleInputUtil
-import PythonToolTip as pyTT
 import WBPlotScreen
 import WBEventScreen
 import WBCityEditScreen
@@ -17,7 +16,6 @@ import WBProjectScreen
 import WBPlayerUnits
 import WBInfoScreen
 import WBTradeScreen
-import Popup
 
 GC = CyGlobalContext()
 MAP = GC.getMap()
@@ -59,10 +57,10 @@ class WorldBuilder:
 		if self.bNotWB:
 			import InputData
 			self.InputData = InputData.instance
-			# Tool Tip
-			self.szTextTT = ""
-			self.iOffsetTT = []
-			self.bLockedTT = False
+
+			import PythonToolTip
+			self.tooltip = PythonToolTip.PythonToolTip()
+
 			# init sub-screens
 			self.inSubScreen = None
 			import WBTechScreen
@@ -188,7 +186,7 @@ class WorldBuilder:
 		self.m_iCurrentX = self.m_pCurrentPlot.getX()
 		self.m_iCurrentY = self.m_pCurrentPlot.getY()
 
-		sText = "<font=3b>%s, X: %d, Y: %d" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
+		sText = "<font=3b>%s, %s, X: %d, Y: %d" %(GC.getMapInfo(GAME.getCurrentMap()).getDescription(), CyTranslator().getText("TXT_KEY_WB_LATITUDE", (self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
 		screen.setLabel("WBCoords", "Background", sText, 1<<2, self.xRes/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		if self.iPlayerAddMode in self.RevealMode:
@@ -228,8 +226,7 @@ class WorldBuilder:
 
 	def refreshReveal(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.showRevealed(pPlot)
 
@@ -252,6 +249,7 @@ class WorldBuilder:
 			CyEngine().removeLandmark(self.m_pCurrentPlot)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				CyEngine().removeSign(self.m_pCurrentPlot, iPlayerX)
+
 		elif self.iPlayerAddMode == "AddLandMark":
 			iIndex = -1
 			for i in xrange(CyEngine().getNumSigns()):
@@ -264,12 +262,14 @@ class WorldBuilder:
 			sText = ""
 			if iIndex > -1:
 				sText = CyEngine().getSignByIndex(iIndex).getCaption()
-			popup = Popup.PyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARK_START", ()))
+			popup = CyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARK_START", ()), 1<<2)
 			popup.setUserData((self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), self.iCurrentPlayer, iIndex))
-			popup.createEditBox(sText)
-			popup.launch()
+			popup.createEditBox(sText, 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+
 		elif self.iSelection == -1: return
+
 		elif self.iPlayerAddMode == "Ownership":
 			self.m_pCurrentPlot.setOwner(self.iCurrentPlayer)
 	## Python Effects ##
@@ -359,8 +359,7 @@ class WorldBuilder:
 		elif self.iPlayerAddMode == "Ownership":
 			self.m_pCurrentPlot.setOwner(-1)
 		elif self.iPlayerAddMode == "Units":
-			for i in xrange (self.m_pCurrentPlot.getNumUnits()):
-				pUnit = self.m_pCurrentPlot.getUnit(i)
+			for pUnit in self.m_pCurrentPlot.units():
 				if pUnit.getUnitType() == self.iSelection:
 					pUnit.kill(False, PlayerTypes.NO_PLAYER)
 					return 1
@@ -909,7 +908,7 @@ class WorldBuilder:
 			sWonder = CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ())
 			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), 0, 0, 0 == self.iSelectClass)
-			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING",()), 1, 1, 1 == self.iSelectClass)
+			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_BUILDINGS",()), 1, 1, 1 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_NATIONAL_WONDER", ()), 2, 2, 2 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_TEAM_WONDER", ()), 3, 3, 3 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_WORLD_WONDER", ()), 4, 4, 4 == self.iSelectClass)
@@ -1114,8 +1113,7 @@ class WorldBuilder:
 
 
 	def revealAll(self, bReveal):
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
@@ -1125,12 +1123,12 @@ class WorldBuilder:
 		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
-				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1);
+				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
-			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
+			if pPlot.isSpotterInSight(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
 		else:
-			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, - pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
+			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, -pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
 
 	def showRevealed(self, pPlot):
 		if self.iPlayerAddMode == "RevealPlot":
@@ -1204,7 +1202,7 @@ class WorldBuilder:
 			if len(self.lMoveUnit) > 0:
 				for item in self.lMoveUnit:
 					loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
-					if loopUnit.isNone(): continue
+					if loopUnit is None: continue
 					loopUnit.setXY(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), True, True, False)
 				pUnitX = GC.getPlayer(self.lMoveUnit[0][0]).getUnit(self.lMoveUnit[0][1])
 				self.lMoveUnit = []
@@ -1225,7 +1223,7 @@ class WorldBuilder:
 				if self.iPlayerAddMode == "MoveCityPlus":
 					for item in self.lMoveUnit:
 						loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
-						if loopUnit.isNone(): continue
+						if loopUnit is None: continue
 						loopUnit.setXY(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), True, True, False)
 					self.lMoveUnit = []
 			self.iPlayerAddMode = "CityDataI"
@@ -1239,7 +1237,7 @@ class WorldBuilder:
 				if self.iPlayerAddMode == "DuplicateCityPlus":
 					for item in self.lMoveUnit:
 						loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
-						if loopUnit.isNone(): continue
+						if loopUnit is None: continue
 						pNewUnit = pPlayer.initUnit(loopUnit.getUnitType(), self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 						pNewUnit.setName(loopUnit.getNameNoDesc())
 						pNewUnit.setLevel(loopUnit.getLevel())
@@ -1374,42 +1372,17 @@ class WorldBuilder:
 	def getScreen(self):
 		return CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.aFontList[5]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
-
 	#--------------------------#
 	# Base operation functions #
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
 		screen = self.getScreen()
 
-		screen.hide("Tooltip") # Remove potential Help Text
+		self.tooltip.reset(screen)
 
 		if self.inSubScreen:
 			return self.inSubScreen.handleInput(inputClass, screen)
@@ -1425,8 +1398,8 @@ class WorldBuilder:
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		if NAME == "WorldBuilderEraseAll":
-			for i in xrange(MAP.numPlots()):
-				self.m_pCurrentPlot = MAP.plotByIndex(i)
+			for plot in MAP.plots():
+				self.m_pCurrentPlot = plot
 				self.placeObject()
 
 		elif NAME == "TradeScreen":
@@ -1590,8 +1563,6 @@ class WorldBuilder:
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
-		del self.xRes, self.yRes, self.iCurrentPlayer, self.iPlayerAddMode, \
-			self.iSelection, self.iSelectClass, self.iBrushWidth, self.iBrushHeight, self.iChange, \
-			self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT, \
-			self.subScreens, self.inSubScreen
+		del self.InputData, self.subScreens, self.inSubScreen, self.xRes, self.yRes, self.iCurrentPlayer, \
+			self.iPlayerAddMode, self.iSelection, self.iSelectClass, self.iBrushWidth, self.iBrushHeight, self.iChange
 		self.bNotWB = True

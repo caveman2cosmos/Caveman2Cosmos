@@ -12,8 +12,7 @@
 #ifndef CV_UNIT_SORT_H
 #define CV_UNIT_SORT_H
 
-#include "CvEnums.h"
-
+class CvCity;
 class CvPlayer;
 
 enum UnitSortTypes

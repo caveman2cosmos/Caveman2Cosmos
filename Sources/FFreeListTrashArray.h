@@ -52,8 +52,8 @@ public:
 		int m_idx;
 		T* m_value;
 	};
-public:
 
+public:
 	FFreeListTrashArray();
 	~FFreeListTrashArray();
 
@@ -77,6 +77,9 @@ public:
 
 	iterator begin() const { return iterator(this); }
 	iterator end() const { return iterator(); }
+
+	typedef bst::iterator_range<iterator> Range_t;
+	Range_t range() const { return Range_t(begin(), end()); }
 
 	// Returns the iIndex after the last iIndex in the array containing an element
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
@@ -291,7 +294,7 @@ T* FFreeListTrashArray<T>::add()
 {
 	int iIndex;
 
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
@@ -336,7 +339,7 @@ T* FFreeListTrashArray<T>::add()
 		{
 			//    Didn't find one - just take the free list head node
 			if (m_iFreeListHead == FFreeList::INVALID_INDEX)
-			{					
+			{
 				m_iCorruptedAdjustment++;
 				m_iLastIndex++;
 				iIndex = m_iLastIndex;
@@ -366,7 +369,6 @@ T* FFreeListTrashArray<T>::add()
 		iIndex = m_iLastIndex;
 	}
 
-	MEMORY_TRACK_EXEMPT();
 
 	m_pArray[iIndex].pData = new T;
 	m_pArray[iIndex].iNextFreeIndex = FFreeList::INVALID_INDEX;
@@ -390,11 +392,11 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 		return NULL;
 	}
 
-	int iIndex = (iID & FLTA_INDEX_MASK);
+	const int iIndex = (iID & FLTA_INDEX_MASK);
 
-	assert(iIndex >= 0);
+	FASSERT_NOT_NEGATIVE(iIndex);
 
-	if ((iIndex <= m_iLastIndex) && 
+	if ((iIndex <= m_iLastIndex) &&
 		(m_pArray[iIndex].pData != NULL))
 	{
 		if (((iID & FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->getID() == iID))
@@ -439,7 +441,7 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 
 	FAssertMsg(iIndex >= 0, "FFreeListTrashArray::removeAt - index part of iID is not a valid index");
 
-	if ((iIndex <= m_iLastIndex) && 
+	if ((iIndex <= m_iLastIndex) &&
 		(m_pArray[iIndex].pData != NULL))
 	{
 		if (((iID & FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->getID() == iID))
@@ -496,10 +498,10 @@ void FFreeListTrashArray<T>::load(T* pData)
 
 	int iIndex = (pData->getID() & FLTA_INDEX_MASK);
 
-	assert(iIndex < FLTA_MAX_BUCKETS);
-	assert(iIndex <= m_iLastIndex);
-	assert(m_pArray[iIndex].pData == NULL);
-	assert(m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX);
+	FAssert(iIndex < FLTA_MAX_BUCKETS);
+	FAssert(iIndex <= m_iLastIndex);
+	FAssert(m_pArray[iIndex].pData == NULL);
+	FAssert(m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX);
 
 	m_pArray[iIndex].pData = pData;
 	m_pArray[iIndex].iLastUsed = (pData->getID() & FLTA_ID_MASK);
@@ -510,8 +512,6 @@ void FFreeListTrashArray<T>::load(T* pData)
 template <class T>
 void FFreeListTrashArray<T>::growArray()
 {
-	MEMORY_TRACK_EXEMPT();
-
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
 	FFreeListTrashArrayNode* pOldArray = m_pArray;

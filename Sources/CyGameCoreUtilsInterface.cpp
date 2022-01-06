@@ -37,7 +37,6 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getCity", cyGetCity, python::return_value_policy<python::manage_new_object>(), "CyPlot* (IDInfo city)");
 	python::def("getUnit", cyGetUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* (IDInfo unit)");
 
-	python::def("isPromotionValid", cyIsPromotionValid, "bool (int /*PromotionTypes*/ ePromotion, int /*UnitTypes*/ eUnit, bool bLeader)");
 	python::def("finalImprovementUpgrade", cyFinalImprovementUpgrade, "int /*ImprovementTypes*/ (int /*ImprovementTypes*/ eImprovement, int iCount)");
 
 	python::def("getWorldSizeMaxConscript", cyGetWorldSizeMaxConscript, "int (int /*CivicTypes*/ eCivic)");
@@ -64,13 +63,10 @@ void CyGameCoreUtilsPythonInterface()
 
 	python::def("isCardinalDirection", isCardinalDirection,"bool (DirectionTypes eDirection)");
 
-	python::def("getPopulationAsset", getPopulationAsset, "int (int iPopulation)");
-	python::def("getLandPlotsAsset", getLandPlotsAsset, "int (int iLandPlots)");
-	python::def("getPopulationPower", getPopulationPower, "int (int iPopulation)");
-	python::def("getPopulationScore", getPopulationScore, "int (int iPopulation)");
-	python::def("getLandPlotsScore", getLandPlotsScore, "int (int iPopulation)");
 	python::def("getTechScore", getTechScore, "int (int /*TechTypes*/ eTech)");
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 
 	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");
+
+	python::def("getModDir", getModDir);
 }

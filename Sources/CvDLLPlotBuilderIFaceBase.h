@@ -3,15 +3,16 @@
 #ifndef CvDLLPlotBuilderIFaceBase_h
 #define CvDLLPlotBuilderIFaceBase_h
 
+#include "CvDLLEntityIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
+
+class CvEntity;
+class CvPlotBuilder;
+
 //
 // abstract interface for CvPlotBuilder functions used by DLL
 //
-class CvEntity;
-class CvPlotBuilder;
-class cvInternalGlobals;
-class CvDLLUtilityIFaceBase;
-class CvDLLEntityIFaceBase;
-
 class CvDLLPlotBuilderIFaceBase : public CvDLLEntityIFaceBase
 {
 public:
@@ -20,7 +21,7 @@ public:
 
 	// derived methods
 	virtual void destroy(CvPlotBuilder*& pPlotBuilder, bool bSafeDelete=true) {
-		cvInternalGlobals::getInstance().getDLLIFace()->getEntityIFace()->destroyEntity((CvEntity*&)pPlotBuilder, bSafeDelete);
+		gDLL->getEntityIFace()->destroyEntity((CvEntity*&)pPlotBuilder, bSafeDelete);
 	}
 };
 

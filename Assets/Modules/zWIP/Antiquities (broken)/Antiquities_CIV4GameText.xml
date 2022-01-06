@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</Tag>
+		<English>Antiquities - Grave Goods (Cave)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</Tag>
+		<English>Antiquities - Grave Goods (Earth)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</Tag>
+		<English>Antiquities - Grave Goods (Fire)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</Tag>
+		<English>Antiquities - Grave Goods (Sky)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_BURIAL_GOODS_PEDIA</Tag>
+		<English>Grave Goods made in ancient times and traded as antiquities to the rich and Museums.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_CAVE</Tag>
+		<English>Grave Goods (Cave)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_EARTH</Tag>
+		<English>Grave Goods (Earth)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_FIRE</Tag>
+		<English>Grave Goods (Fire)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Tag>
+		<English>Game auto builds used to provide antiquities at Archaeology.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_SKY</Tag>
+		<English>Grave Goods (Sky)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAVE_GOODS</Tag>
+		<English>Grave Goods</English>
+	</TEXT>
+</Civ4GameText>

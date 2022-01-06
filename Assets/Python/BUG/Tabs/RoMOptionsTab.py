@@ -23,10 +23,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		GAME = GC.getGame()
 		bCanAdjustSettings = not GAME.isGameMultiPlayer() or GAME.getActivePlayer() == 0
 
-		self.addLabel(screen, left, "RiseOfMankindOptions", "Rise of Mankind options:")
-		self.addCheckboxTextDropdown(screen, left, left, "RoMSettings__RoMResourceBar", "RoMSettings__RoMResourceBar_Types")
-		self.addSpacer(screen, left, "")
-
 		#Flexible Difficulty
 		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
 
@@ -48,11 +44,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
-		self.addCheckbox(screen, center, "RoMSettings__ShowCoastalBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideObsoleteBuildings")
 		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUnconstructableBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUntrainableUnits")
 
 		#Empire Management
 		self.addLabel(screen, center, "RoMSettings__EmpireManagement")
@@ -94,6 +86,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoStorms"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
 

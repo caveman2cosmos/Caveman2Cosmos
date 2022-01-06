@@ -8,12 +8,15 @@
 //	AUTHOR:  Steve Draper
 //	PURPOSE: Viewport presented as a map to the game engine
 
-
+#include "CvGlobals.h"
 #include "CvMap.h"
+
+class CvCity;
+class CvPlot;
+class CvUnit;
 
 enum ViewportMode
 {
-	VIEWPORT_MODE_FULL_MAP,
 	VIEWPORT_MODE_UNINITIALIZED,
 	VIEWPORT_MODE_INITIALIZED
 };
@@ -65,7 +68,7 @@ enum ViewportGraphicalSpoofingState
 class CvViewport : public CvMapInterfaceBase
 {
 public:
-	CvViewport(CvMap* map, bool bIsFullMapContext);
+	CvViewport(CvMap* map);
 	virtual ~CvViewport();
 
 	virtual CvMapInterfaceBase*	getUnderlyingMap() const { return m_pMap; }
@@ -74,19 +77,11 @@ public:
 	virtual void setupGraphical();
 	virtual void reset(CvMapInitData* pInitData);
 
-public:
-	virtual MapTypes getType() const;
-
-	virtual void beforeSwitch();
-	virtual void afterSwitch();
-
-	bool isMidSwitch() const;
-
 	void getMapOffset(int& iX, int& iY) const;
 	void setMapOffset(int iX, int iY);
 	void setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
 	void resizeForMap();
-	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bLookAt = true, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
+	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
 	void centerOnSelection();
 	void panLeft();
 	void panRight();
@@ -94,95 +89,52 @@ public:
 	void panDown();
 
 	inline ViewportMode getState() const { return m_mode; }
-	
-	virtual void erasePlots();																			// Exposed to Python
-	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);		// Exposed to Python
-	virtual void setAllPlotTypes(PlotTypes ePlotType);												// Exposed to Python
 
-	virtual void doTurn();																			
+	virtual void erasePlots();
 
 	virtual void updateFlagSymbols();
-
 	virtual void updateFog();
-	virtual void updateVisibility();																// Exposed to Python
 	virtual void updateSymbolVisibility();
-	virtual void updateSymbols();
-	virtual void updateMinimapColor();															// Exposed to Python
-	virtual void updateSight(bool bIncrement, bool bUpdatePlotGroups = true);
-	virtual void updateIrrigated();
+	virtual void updateMinimapColor();
 	virtual void updateCenterUnit();
-	virtual void updateWorkingCity();
-	virtual void updateMinOriginalStartDist(const CvArea* pArea);										// Exposed to Python
-	virtual void updateYield();
 
-	virtual void verifyUnitValidPlot();
+	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;
 
-	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);// Exposed to Python 
+	virtual bool isPlot(int iX, int iY) const;
+	virtual int numPlots() const;
 
-	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;	// Exposed to Python
-	virtual CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;				// Exposed to Python
+	int plotNum(int iX, int iY) const;
+	//int plotX(int iIndex) const;
+	//int plotY(int iIndex) const;
 
-	virtual CvArea* findBiggestArea(bool bWater) const;																						// Exposed to Python
-
-	virtual int getMapFractalFlags() const;																												// Exposed to Python
-	virtual bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
-
-	virtual bool isPlot(int iX, int iY) const;																		// Exposed to Python
-	virtual int numPlots() const; 																								// Exposed to Python
-
-	virtual int plotNum(int iX, int iY) const;																		// Exposed to Python
-	virtual int plotX(int iIndex) const;																										// Exposed to Python
-	virtual int plotY(int iIndex) const;																										// Exposed to Python
-
-	virtual int pointXToPlotX(float fX) const;
+	int pointXToPlotX(float fX) const;
 	virtual float plotXToPointX(int iX) const;
 
-	virtual int pointYToPlotY(float fY) const;
+	int pointYToPlotY(float fY) const;
 	virtual float plotYToPointY(int iY) const;
 
-	virtual float getWidthCoords() const;
-	virtual float getHeightCoords() const;
+	//float getWidthCoords() const;
+	//float getHeightCoords() const;
 
-	virtual int maxPlotDistance() const;																								// Exposed to Python
-	virtual int maxStepDistance() const;																								// Exposed to Python
+	virtual int getGridWidth() const;
+	virtual int getGridHeight() const;
 
-	virtual int getGridWidth() const;																		// Exposed to Python
-	virtual int getGridHeight() const;																	// Exposed to Python
-	virtual int getLandPlots() const;																					// Exposed to Python
-
-	virtual int getOwnedPlots() const;																				// Exposed to Python
-
-	virtual int getTopLatitude() const;																									// Exposed to Python
-	virtual int getBottomLatitude() const;																							// Exposed to Python
-
-	virtual bool isWrapX() const;																							// Exposed to Python
-	virtual bool isWrapY() const;																							// Exposed to Python
+	virtual bool isWrapX() const;
+	virtual bool isWrapY() const;
 	virtual bool isWrap() const;
-	virtual WorldSizeTypes getWorldSize() const;															// Exposed to Python
-	virtual ClimateTypes getClimate() const;																	// Exposed to Python
-	virtual SeaLevelTypes getSeaLevel() const;																// Exposed to Python
 
-	virtual int getNumCustomMapOptions() const;
-	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
-
-	virtual CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
-	virtual CvPlot* plot(int iX, int iY) const;													// Exposed to Python
+	virtual CvPlot* plotByIndex(int iIndex) const;
+	virtual CvPlot* plot(int iX, int iY) const;
 	virtual CvPlot* pointToPlot(float fX, float fY) const;
-	inline CvPlot* plotSorenINLINE(int iX, int iY) const
-	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
-		{
-			return NULL;
-		}
-		return plot(iX, iY);
-	}
 
-	virtual int getNumAreas() const;														// Exposed to Python
-	virtual int getNumLandAreas() const;
-
-	// Serialization:
-	virtual void read(FDataStreamBase* pStream);
-	virtual void write(FDataStreamBase* pStream);
+	//inline CvPlot* plotSorenINLINE(int iX, int iY) const
+	//{
+	//	if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
+	//	{
+	//		return NULL;
+	//	}
+	//	return plot(iX, iY);
+	//}
 
 	// Public methods used in coordinate transformation
 	inline int	getViewportXFromMapX(int iMapX) const
@@ -202,7 +154,7 @@ public:
 					iResult -= m_pMap->getGridWidth();
 				}
 
-				FASSERT_BOUNDS(0, m_iXSize, iResult)
+				FASSERT_BOUNDS(0, m_iXSize, iResult);
 
 				return iResult;
 			}
@@ -238,7 +190,7 @@ public:
 					iResult -= m_pMap->getGridHeight();
 				}
 
-				FASSERT_BOUNDS(0, m_iYSize, iResult)
+				FASSERT_BOUNDS(0, m_iYSize, iResult);
 
 				return iResult;
 			}
@@ -414,9 +366,12 @@ public:
 		return m_eSpoofHiddenGraphics;
 	}
 	void setSpoofHiddenGraphics(ViewportGraphicalSpoofingState eValue);
-	
+
 
 private:
+	void beforeSwitch();
+	void afterSwitch();
+
 	CvMap*	m_pMap;
 	int		m_iXOffset;
 	int		m_iYOffset;
@@ -433,7 +388,6 @@ private:
 	bool							m_bSelectCity;
 	bool							m_bAddSelectedCity;
 	int								m_countdown;
-	bool							m_bSwitchInProgress;
 	ViewportGraphicalSpoofingState	m_eSpoofHiddenGraphics;
 	DWORD							m_spoofTransitionStartTickCount;
 };

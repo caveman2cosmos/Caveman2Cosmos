@@ -7,22 +7,16 @@
 
 #include "CvTeam.h"
 
+class CvArea;
+class CvCity;
+
 class CvTeamAI : public CvTeam
 {
-
 public:
-
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
-	// inlined for performance reasons, only in the dll
-	static CvTeamAI& getTeam(TeamTypes eTeam)
-	{
-		FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
-		return m_aTeams[eTeam];
-	}
-
-	DllExport static CvTeamAI& getTeamNonInl(TeamTypes eTeam);
+	DllExport static CvTeamAI& getTeam(TeamTypes eTeam);
 
 	static void initStatics();
 	static void freeStatics();
@@ -183,7 +177,7 @@ public:
 	DenialTypes AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) const;
 	DenialTypes AI_FreeTradeAgreement(TeamTypes eTeam) const;
 
-	void AI_updateCache();
+	void AI_updateDiploCache();
 
 	bool AI_hasAdjacentLandPlots(TeamTypes eTeam) const;
 

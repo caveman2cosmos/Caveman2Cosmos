@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfos.h"
 #include "CyArtFileMgr.h"
 
 //
@@ -10,8 +11,6 @@ void CyArtFileMgrPythonInterface()
 	OutputDebugString("Python Extension Module - CyArtFileMgrPythonInterface\n");
 
 	python::class_<CyArtFileMgr>("CyArtFileMgr")
-		.def("isNone", &CyArtFileMgr::isNone, "bool () - Checks to see if pointer points to a real object")
-
 		.def("getInterfaceArtInfo", &CyArtFileMgr::getInterfaceArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoInterface ()")
 		.def("getMovieArtInfo", &CyArtFileMgr::getMovieArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoMovie ()")
 		.def("getMiscArtInfo", &CyArtFileMgr::getMiscArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoMisc ()")
@@ -22,4 +21,3 @@ void CyArtFileMgrPythonInterface()
 		.def("getImprovementArtInfo", &CyArtFileMgr::getImprovementArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoImprovement ()")
 	;
 }
-

@@ -9,9 +9,15 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
+#include "CvGameObject.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
+#include "CvPropertySource.h"
+#include "IntExpr.h"
 
-CvPropertySource::CvPropertySource() 
+CvPropertySource::CvPropertySource()
 	: m_eProperty(NO_PROPERTY)
 	, m_eObjectType(NO_GAMEOBJECT)
 	, m_eRelation(NO_RELATION)
@@ -20,7 +26,7 @@ CvPropertySource::CvPropertySource()
 {
 }
 
-CvPropertySource::CvPropertySource(PropertyTypes eProperty) 
+CvPropertySource::CvPropertySource(PropertyTypes eProperty)
 	: m_eProperty(eProperty)
 	, m_eObjectType(NO_GAMEOBJECT)
 	, m_eRelation(NO_RELATION)
@@ -40,19 +46,9 @@ PropertyTypes CvPropertySource::getProperty() const
 	return m_eProperty;
 }
 
-void CvPropertySource::setProperty(PropertyTypes eProperty)
-{
-	m_eProperty = eProperty;
-}
-
 GameObjectTypes CvPropertySource::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertySource::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertySource::getRelation() const
@@ -60,22 +56,12 @@ RelationTypes CvPropertySource::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertySource::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertySource::getRelationData() const
 {
 	return m_iRelationData;
 }
 
-void CvPropertySource::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
-}
-
-bool CvPropertySource::isActive(CvGameObject *pObject) const
+bool CvPropertySource::isActive(const CvGameObject* pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -111,7 +97,7 @@ bool CvPropertySource::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySource::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySource::copyNonDefaults(CvPropertySource* pProp)
 {
 	//if (m_eProperty == NO_PROPERTY)
 	//	m_eProperty = pProp->getProperty();
@@ -150,7 +136,7 @@ void CvPropertySource::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertySource::getCheckSum(unsigned int &iSum) const
+void CvPropertySource::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eProperty);
 }
@@ -162,13 +148,13 @@ CvPropertySourceConstant::CvPropertySourceConstant()
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty) 
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(NULL)
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn)
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, const IntExpr* pAmountPerTurn)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(pAmountPerTurn)
 {
@@ -176,7 +162,7 @@ CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, IntE
 
 int CvPropertySourceConstant::getAmountPerTurn(const CvGameObject* pObject) const
 {
-	return m_pAmountPerTurn->evaluate(const_cast<CvGameObject*>(pObject));
+	return m_pAmountPerTurn->evaluate(pObject);
 }
 
 int CvPropertySourceConstant::getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext) const
@@ -220,25 +206,25 @@ bool CvPropertySourceConstant::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceConstant::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceConstant::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
-	CvPropertySourceConstant* pOther = static_cast<CvPropertySourceConstant*>(pProp);
+	CvPropertySource::copyNonDefaults(pProp);
 	if (m_pAmountPerTurn == NULL)
 	{
+		CvPropertySourceConstant* pOther = static_cast<CvPropertySourceConstant*>(pProp);
 		m_pAmountPerTurn = pOther->m_pAmountPerTurn;
 		pOther->m_pAmountPerTurn = NULL;
 	}
 }
 
-void CvPropertySourceConstant::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceConstant::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	m_pAmountPerTurn->getCheckSum(iSum);
 }
 
 
-CvPropertySourceConstantLimited::CvPropertySourceConstantLimited() 
+CvPropertySourceConstantLimited::CvPropertySourceConstantLimited()
 	: CvPropertySource()
 	, m_iAmountPerTurn(0)
 	, m_iLimit(0)
@@ -300,9 +286,9 @@ bool CvPropertySourceConstantLimited::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceConstantLimited::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceConstantLimited::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
+	CvPropertySource::copyNonDefaults(pProp);
 	const CvPropertySourceConstantLimited* pOther = static_cast<const CvPropertySourceConstantLimited*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
@@ -310,7 +296,7 @@ void CvPropertySourceConstantLimited::copyNonDefaults(CvPropertySource *pProp, C
 		m_iLimit = pOther->getLimit();
 }
 
-void CvPropertySourceConstantLimited::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceConstantLimited::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -319,7 +305,7 @@ void CvPropertySourceConstantLimited::getCheckSum(unsigned int &iSum) const
 
 
 
-CvPropertySourceDecay::CvPropertySourceDecay() 
+CvPropertySourceDecay::CvPropertySourceDecay()
 	: CvPropertySource()
 	, m_iPercent(0)
 	, m_iNoDecayAmount(0)
@@ -340,7 +326,7 @@ CvPropertySourceDecay::CvPropertySourceDecay(PropertyTypes eProperty, int iPerce
 {
 }
 
-bool CvPropertySourceDecay::isActive(CvGameObject* pObject) const
+bool CvPropertySourceDecay::isActive(const CvGameObject* pObject) const
 {
 	int iVal = pObject->getProperties()->getValueByProperty(m_eProperty);
 	iVal = iVal < 0 ? -iVal : iVal;
@@ -411,9 +397,9 @@ bool CvPropertySourceDecay::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceDecay::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceDecay::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
+	CvPropertySource::copyNonDefaults(pProp);
 	const CvPropertySourceDecay* pOther = static_cast<const CvPropertySourceDecay*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
@@ -421,7 +407,7 @@ void CvPropertySourceDecay::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUt
 		m_iNoDecayAmount = pOther->getNoDecayAmount();
 }
 
-void CvPropertySourceDecay::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceDecay::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
@@ -479,9 +465,9 @@ bool CvPropertySourceAttributeConstant::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceAttributeConstant::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceAttributeConstant::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
+	CvPropertySource::copyNonDefaults(pProp);
 	const CvPropertySourceAttributeConstant* pOther = static_cast<const CvPropertySourceAttributeConstant*>(pProp);
 	if (m_eAttribute == NO_ATTRIBUTE)
 		m_eAttribute = pOther->getAttribute();
@@ -489,7 +475,7 @@ void CvPropertySourceAttributeConstant::copyNonDefaults(CvPropertySource *pProp,
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertySourceAttributeConstant::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceAttributeConstant::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	CheckSum(iSum, (int)m_eAttribute);

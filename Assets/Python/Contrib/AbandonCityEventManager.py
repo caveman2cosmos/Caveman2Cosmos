@@ -104,7 +104,7 @@ class CityDemolish:
 		iconGold = self.iconGold
 		fGoldMod = 0.09
 		fGoldMod *= GC.getDefineINT("BUILDING_PRODUCTION_PERCENT") / 100.0
-		fFactorGS = self.CvGameSpeedInfo.getConstructPercent() / 100.0
+		fFactorGS = self.CvGameSpeedInfo.getHammerCostPercent() / 100.0
 		fGoldMod *= fFactorGS
 		self.fGoldMod = fGoldMod
 		# Build List
@@ -113,7 +113,7 @@ class CityDemolish:
 		aList = []
 		iSum = 0
 		for iType in xrange(GC.getNumBuildingInfos()):
-			if CyCity.getNumRealBuilding(iType) and not CyTeam.isObsoleteBuilding(iType):
+			if CyCity.getNumRealBuilding(iType) and not CyCity.isFreeBuilding(iType):
 				if isWorldWonder(iType) or isTeamWonder(iType):
 					continue
 				CvBuildingInfo = GC.getBuildingInfo(iType)
@@ -191,10 +191,8 @@ class CityDemolish:
 			iForeignPop = iPopulation - iOwnCulturePop
 
 			# Judge
-			UNIT = GC.getInfoTypeForString("UNIT_JUDGE")
-			iBuilding = GC.getInfoTypeForString("BUILDING_COURTHOUSE")
-			if UNIT > -1 and iBuilding > -1 and CyCity.getNumBuilding(iBuilding):
-				CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, UNIT)
+			if CyCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_COURTHOUSE")):
+				CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, GC.getInfoTypeForString("UNIT_JUDGE"))
 
 			# Tribal Guardian
 			iExp = -1
@@ -209,11 +207,9 @@ class CityDemolish:
 						CyMessageControl().sendModNetMessage(902, iPlayer, CyUnit.getID(), 0, 0)
 						break
 
-			NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 			CyTeam = GC.getTeam(CyPlayer.getTeam())
 			# Settler
 			if iOwnCulturePop > 0 or iForeignPop > 2:
-				NUM_UNIT_PREREQ_OR_BONUSES = GC.getNUM_UNIT_PREREQ_OR_BONUSES()
 				aSettlerList = [
 					GC.getInfoTypeForString("UNIT_AIRSETTLER"),
 					GC.getInfoTypeForString("UNIT_PIONEER"),
@@ -230,23 +226,21 @@ class CityDemolish:
 					iTech = CvUnitInfo.getPrereqAndTech()
 					if iTech > -1 and not CyTeam.isHasTech(iTech):
 						continue
-					for i in range(NUM_UNIT_AND_TECH_PREREQS):
-						iTech = CvUnitInfo.getPrereqAndTechs(i)
-						if iTech > -1 and not CyTeam.isHasTech(iTech):
+					for iTech in CvUnitInfo.getPrereqAndTechs():
+						if not CyTeam.isHasTech(iTech):
 							bContinue = True
 							break
 					if bContinue: continue
 					# Building Prereq
 					for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
-						if not CyCity.getNumBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
+						if not CyCity.getNumActiveBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
 							continue
 					# Bonus Prereq
 					iBonus = CvUnitInfo.getPrereqAndBonus()
 					if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
 						continue
-					for i in range(NUM_UNIT_PREREQ_OR_BONUSES):
-						iBonus = CvUnitInfo.getPrereqOrBonuses(i)
-						if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
+					for iBonus in CvUnitInfo.getPrereqOrBonuses():
+						if not CyCity.getNumBonuses(iBonus):
 							bContinue = True
 							break
 					if bContinue: continue
@@ -279,7 +273,7 @@ class CityDemolish:
 					CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, UNIT)
 
 			# Merchants
-			fModifierGS = self.CvGameSpeedInfo.getTrainPercent() / 100.0
+			fModifierGS = self.CvGameSpeedInfo.getHammerCostPercent() / 100.0
 			aMerchantList = [
 				GC.getInfoTypeForString("UNIT_FREIGHT"),
 				GC.getInfoTypeForString("UNIT_SUPPLY_TRAIN"),
@@ -294,9 +288,8 @@ class CityDemolish:
 				iTech = CvUnitInfo.getPrereqAndTech()
 				if iTech > -1 and not CyTeam.isHasTech(iTech):
 					continue
-				for i in range(NUM_UNIT_AND_TECH_PREREQS):
-					iTech = CvUnitInfo.getPrereqAndTechs(i)
-					if iTech > -1 and not CyTeam.isHasTech(iTech):
+				for iTech in CvUnitInfo.getPrereqAndTechs():
+					if not CyTeam.isHasTech(iTech):
 						bContinue = True
 						break
 				if bContinue: continue
@@ -322,9 +315,8 @@ class CityDemolish:
 				iTech = CvUnitInfo.getPrereqAndTech()
 				if iTech > -1 and not CyTeam.isHasTech(iTech):
 					continue
-				for i in range(NUM_UNIT_AND_TECH_PREREQS):
-					iTech = CvUnitInfo.getPrereqAndTechs(i)
-					if iTech > -1 and not CyTeam.isHasTech(iTech):
+				for iTech in CvUnitInfo.getPrereqAndTechs():
+					if not CyTeam.isHasTech(iTech):
 						bContinue = True
 						break
 				if bContinue: continue
@@ -360,7 +352,7 @@ class CityDemolish:
 		print "ACEM - handleInput"
 		if iNotifyCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 			if szSplit[0] in ("List", "ListBtn"):
-				szText = CyGameTextMgr().getBuildingHelp(ID, False, False, False, self.CyCity, True)
+				szText = CyGameTextMgr().getBuildingHelp(ID, True, self.CyCity, False, False, False)
 				self.updateTooltip(screen, szText, self.xListTooltip)
 		elif iNotifyCode == NotifyCode.NOTIFY_CLICKED:
 			if szSplit[0] == "Exit":

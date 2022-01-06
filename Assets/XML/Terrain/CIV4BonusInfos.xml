@@ -2943,7 +2943,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>3</iPlacementOrder>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>30</iMinLatitude>
@@ -4897,8 +4897,8 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>3</iPlacementOrder>
-			<iConstAppearance>200</iConstAppearance>
+			<iPlacementOrder>1</iPlacementOrder>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
 				<iRandApp1>25</iRandApp1>

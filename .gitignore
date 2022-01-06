@@ -46,6 +46,7 @@ Tools/Autocorrect/__pycache__/
 Tools/python/
 
 .vscode/.ropeproject/
+.vscode/
 
 lights-found.txt
 
@@ -58,3 +59,14 @@ Sources/C2C.args.json
 Sources/profile.json
 
 *.bak
+
+FPKTemp/
+
+Logs/
+UserSettings/
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/caveman2cosmos/v16/.suo
+/.idea
+/cmake-build-debug
+/CMakeLists.txt

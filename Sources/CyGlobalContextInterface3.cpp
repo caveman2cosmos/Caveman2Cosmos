@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfos.h"
 #include "CyGlobalContext.h"
 #include "CyMap.h"
 
@@ -11,25 +12,16 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface3\n");
 
 	x
-		.def("multiMapsEnabled", &CyGlobalContext::multiMapsEnabled, "bool ()")
-		.def("enableMultiMaps", &CyGlobalContext::enableMultiMaps)
-		.def("getNumMapInfos", &CyGlobalContext::getNumMapInfos, "int ()")
 		.def("getMapInfo", &CyGlobalContext::getMapInfo, python::return_value_policy<python::reference_existing_object>())
 		.def("switchMap", &CyGlobalContext::switchMap, "void (int)")
 		.def("getMapByIndex", &CyGlobalContext::getMapByIndex, python::return_value_policy<python::reference_existing_object>(), "CyMap (int)")
-		.def("getNumMaps", &CyGlobalContext::getNumMaps, "int ()")
-		.def("updateMaps", &CyGlobalContext::updateMaps, "void ()")
-		.def("initializeMap", &CyGlobalContext::initializeMap, "void (int)")
-		.def("mapInitialized", &CyGlobalContext::mapInitialized, "bool (int)")
 
 		.def("getAttitudeInfo", &CyGlobalContext::getAttitudeInfo, python::return_value_policy<python::reference_existing_object>(), "AttitudeInfo (int id)")
 		.def("getMemoryInfo", &CyGlobalContext::getMemoryInfo, python::return_value_policy<python::reference_existing_object>(), "MemoryInfo (int id)")
 
 		.def("getPlayerOptionsInfo", &CyGlobalContext::getPlayerOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(PlayerOptionsInfoID) - PlayerOptionsInfo for PlayerOptionsInfo")
-		.def("getPlayerOptionsInfoByIndex", &CyGlobalContext::getPlayerOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(PlayerOptionsInfoID) - PlayerOptionsInfo for PlayerOptionsInfo")
 
 		.def("getGraphicOptionsInfo", &CyGlobalContext::getGraphicOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(GraphicOptionsInfoID) - GraphicOptionsInfo for GraphicOptionsInfo")
-		.def("getGraphicOptionsInfoByIndex", &CyGlobalContext::getGraphicOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(GraphicOptionsInfoID) - GraphicOptionsInfo for GraphicOptionsInfo")
 
 		.def("getNumHurryInfos", &CyGlobalContext::getNumHurryInfos, "() - Total Hurry Infos")
 
@@ -39,10 +31,9 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 		.def("getNumNewConceptInfos", &CyGlobalContext::getNumNewConceptInfos, "int () - NumNewConceptInfos")
 		.def("getNewConceptInfo", &CyGlobalContext::getNewConceptInfo, python::return_value_policy<python::reference_existing_object>(), "New Concept Info () - Returns info object")
 
-
 		.def("getNumCalendarInfos", &CyGlobalContext::getNumCalendarInfos, "int () - Returns NumCalendarInfos")
 		.def("getCalendarInfo", &CyGlobalContext::getCalendarInfo, python::return_value_policy<python::reference_existing_object>(), "CalendarInfo () - Returns Info object")
-		 
+
 		.def("getNumGameOptionInfos", &CyGlobalContext::getNumGameOptionInfos, "int () - Returns NumGameOptionInfos")
 		.def("getGameOptionInfo", &CyGlobalContext::getGameOptionInfo, python::return_value_policy<python::reference_existing_object>(), "GameOptionInfo () - Returns Info object")
 
@@ -57,5 +48,5 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 
 		.def("getNumDenialInfos", &CyGlobalContext::getNumDenialInfos, "int () - Returns NumDenialInfos")
 		.def("getDenialInfo", &CyGlobalContext::getDenialInfo, python::return_value_policy<python::reference_existing_object>(), "DenialInfo () - Returns Info object")
-		;
+	;
 }

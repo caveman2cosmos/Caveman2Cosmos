@@ -6,13 +6,11 @@
 #define CIV4_DEAL_H
 
 #include "LinkedList.h"
-#include "CvStructs.h"
+//#include "CvStructs.h"
 
-class CvDeal
+class CvDeal : bst::noncopyable
 {
-
 public:
-
 	CvDeal();
 	virtual ~CvDeal();
 
@@ -59,7 +57,7 @@ public:
 	const CLinkList<TradeData>* getSecondTrades() const;
 
 	DllExport bool isCancelable(PlayerTypes eByPlayer = NO_PLAYER, CvWString* pszReason = NULL);
-	int turnsToCancel(PlayerTypes eByPlayer = NO_PLAYER);
+	int turnsToCancel() const;
 
 	static bool isAnnual(TradeableItems eItem);
 	DllExport static bool isDual(TradeableItems eItem, bool bExcludePeace = false);
@@ -77,7 +75,7 @@ public:
 /* Advanced Diplomacy                                                                           */
 /************************************************************************************************/
 	static bool isSingleOption(TradeableItems eItem);
-	bool isEmbassy();
+	bool isEmbassy() const;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -92,7 +90,7 @@ protected:
 	void endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToPlayer, bool bTeam);
 
 	void startTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam, bool bDual);
-	
+
 	void endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam);
 
 	static bool isVassalTrade(const CLinkList<TradeData>* pFirstList);

@@ -14,7 +14,7 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "General", "General")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 
@@ -52,11 +52,9 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextDropdown(screen, right, right, "MainInterface__UnitIconSize", True)
 		self.addCheckbox(screen, right, "MainInterface__UseAIPathing")
 		self.addCheckbox(screen, right, "MainInterface__AutoEndDecisionlessTurns")
+		self.addIntDropdown(screen, right, right, "MainInterface__AutoEndTurnDelay", True)
 		self.addCheckbox(screen, right, "MainInterface__MinimizeAITurnSlices")
 		self.addCheckbox(screen, right, "MainInterface__InverseShiftForQueueing")
-
-		self.addLabel(screen, right, "Discord RPC", "Discord RPC:")
-		self.addCheckbox(screen, right, "MainInterface__EnableRP")
 
 		# Graphical Paging and viewport
 		self.addLabel(screen, column, "View", "View options:")

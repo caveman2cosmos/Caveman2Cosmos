@@ -9,7 +9,6 @@
 #define	ACTIVITY_ID_ANY_ATTACK	0
 #define	ACTIVITY_ID_EXPLORE		1
 #define	ACTIVITY_ID_PILLAGE		2
-
 #define	NUM_ACTIVITY_IDS		3
 
 typedef struct CvReachablePlotInfo
@@ -18,6 +17,9 @@ typedef struct CvReachablePlotInfo
 	int iOutsideOwnedDistance;
 	int	iOpaqueInfo[NUM_ACTIVITY_IDS];
 } CvReachablePlotInfo;
+
+class CvPlot;
+class CvSelectionGroup;
 
 class CvReachablePlotSet
 {
@@ -63,7 +65,7 @@ public:
 
 	static void ClearCache();
 private:
-	
+
 	static bool canMoveBetweenWithFlags(const CvSelectionGroup* group, const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags);
 
 	void enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*, int> >& prevRing);

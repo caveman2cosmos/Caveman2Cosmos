@@ -64,28 +64,29 @@
 //TBANIMAL - the project really starts here
 #define MAX_PC_PLAYERS									(40)
 #define MAX_PC_TEAMS									(40)
-#define BARBARIAN_PLAYER								((PlayerTypes)40)
-#define BARBARIAN_TEAM									((TeamTypes)40)
-#define NEANDERTHAL_PLAYER								((PlayerTypes)41)
-#define NEANDERTHAL_TEAM								((TeamTypes)41)
-#define BEAST_PLAYER									((PlayerTypes)42)
-#define BEAST_TEAM										((TeamTypes)42)
-#define PREDATOR_PLAYER									((PlayerTypes)43)
-#define PREDATOR_TEAM									((TeamTypes)43)
-#define PREY_PLAYER										((PlayerTypes)44)
-#define PREY_TEAM										((TeamTypes)44)
-#define INSECT_PLAYER									((PlayerTypes)45)
-#define INSECT_TEAM										((TeamTypes)45)
-#define NPC4_PLAYER										((PlayerTypes)46)
-#define NPC4_TEAM										((TeamTypes)46)
-#define NPC3_PLAYER										((PlayerTypes)47)
-#define NPC3_TEAM										((TeamTypes)47)
-#define NPC2_PLAYER										((PlayerTypes)48)
-#define NPC2_TEAM										((TeamTypes)48)
-#define NPC1_PLAYER										((PlayerTypes)49)
-#define NPC1_TEAM										((TeamTypes)49)
-#define NPC0_PLAYER										((PlayerTypes)50)
-#define NPC0_TEAM										((TeamTypes)50)
+#define BEAST_PLAYER									((PlayerTypes)40)
+#define BEAST_TEAM										((TeamTypes)40)
+#define PREDATOR_PLAYER									((PlayerTypes)41)
+#define PREDATOR_TEAM									((TeamTypes)41)
+#define PREY_PLAYER										((PlayerTypes)42)
+#define PREY_TEAM										((TeamTypes)42)
+#define INSECT_PLAYER									((PlayerTypes)43)
+#define INSECT_TEAM										((TeamTypes)43)
+#define NPC4_PLAYER										((PlayerTypes)44)
+#define NPC4_TEAM										((TeamTypes)44)
+#define NPC3_PLAYER										((PlayerTypes)45)
+#define NPC3_TEAM										((TeamTypes)45)
+#define NPC2_PLAYER										((PlayerTypes)46)
+#define NPC2_TEAM										((TeamTypes)46)
+#define NPC1_PLAYER										((PlayerTypes)47)
+#define NPC1_TEAM										((TeamTypes)47)
+#define NPC0_PLAYER										((PlayerTypes)48)
+#define NPC0_TEAM										((TeamTypes)48)
+#define NEANDERTHAL_PLAYER								((PlayerTypes)49)
+#define NEANDERTHAL_TEAM								((TeamTypes)49)
+// Toffer - Barbarian player must be last, expected by the exe.
+#define BARBARIAN_PLAYER								((PlayerTypes)50)
+#define BARBARIAN_TEAM									((TeamTypes)50)
 #define MAX_PLAYERS										(51)
 #define MAX_TEAMS										(51)
 
@@ -105,21 +106,12 @@
 #define DIRECTION_RADIUS								(1)
 #define DIRECTION_DIAMETER								((DIRECTION_RADIUS * 2) + 1)
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//#define NUM_CITY_PLOTS								(21)
 #define NUM_CITY_PLOTS_1								(9)
 #define NUM_CITY_PLOTS_2								(21)
 #define NUM_CITY_PLOTS									(37)
 #define CITY_HOME_PLOT									(0)
-//#define CITY_PLOTS_RADIUS								(2)
+#define SKIP_CITY_HOME_PLOT								(1)
 #define CITY_PLOTS_RADIUS								(3)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 #define CITY_PLOTS_DIAMETER								((CITY_PLOTS_RADIUS*2) + 1)
 
 #define GAME_NAME										("Game")
@@ -167,18 +159,12 @@
 #define ANIMATION_DEFAULT								(1)			// Default idle animation
 
 // python module names
-#define PYDebugToolModule								"CvDebugInterface"
 #define PYScreensModule									"CvScreensInterface"
 #define PYCivModule										"CvAppInterface"
 #define PYWorldBuilderModule							"CvWBInterface"
 #define PYPopupModule									"CvPopupInterface"
 #define PYDiplomacyModule								"CvDiplomacyInterface"
-#define PYUnitControlModule								"CvUnitControlInterface"
-#define PYTextMgrModule									"CvTextMgrInterface"
-#define PYPerfTestModule								"CvPerfTest"
-#define PYDebugScriptsModule							"DebugScripts"
 #define PYPitBossModule									"PbMain"
-#define PYTranslatorModule								"CvTranslator"
 #define PYGameModule									"CvGameInterface"
 #define PYEventModule									"CvEventInterface"
 #define PYRandomEventModule								"CvRandomEventInterface"
@@ -195,6 +181,9 @@
 /************************************************************************************************/
 
 // AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
-#define SAVE_FORMAT_VERSION	(2)
+#define SAVE_FORMAT_VERSION	(3)
+
+#define GC				cvInternalGlobals::getInstance()
+#define ARTFILEMGR		CvArtFileMgr::GetInstance()
 
 #endif	// CVDEFINES_H

@@ -6,10 +6,7 @@
 #define CIV4_UNIT_AI_H
 
 #include "CvUnit.h"
-
-class CvReachablePlotSet;
-class CvCity;
-class ConstructionNeeds;
+#include "GroupingParams.h"
 
 typedef enum
 {
@@ -20,32 +17,31 @@ typedef enum
 	CONTRACTUAL_STATE_NO_WORK_FOUND
 } ContractualState;
 
+class CvCity;
+class CvPlot;
+class CvReachablePlotSet;
+class CvSelectionGroup;
+class ConstructionNeeds;
+
 class CvUnitAI : public CvUnit
 {
-
 public:
-
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
+
+	CvUnitAI& operator=(const CvUnitAI& other);
 
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
 	void AI_reset(UnitAITypes eUnitAI = NO_UNITAI, bool bConstructorCall = false);
+	void SendLog(CvWString function, CvWString message);
 
 	bool AI_update();
 	bool AI_follow();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/05/10                                jdog5000      */
-/*                                                                                              */
-/* Unit AI                                                                                      */
-/************************************************************************************************/
+
 	bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	bool AI_upgrade(); // override
-
 	bool AI_promote(); // override
 
 #define	LEADER_PRIORITY_MIN 0
@@ -110,8 +106,13 @@ protected:
 	void doUnitAIMove();
 
 	void AI_animalMove();
+	void AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
+	bool Worker_CanDefend();
+	bool IsAbroad();
+	int GetNumberOfUnitsInGroup();
+	bool AI_upgradeWorker();
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
@@ -166,62 +167,15 @@ protected:
 	void AI_SeeInvisibleMove();
 	void AI_SeeInvisibleSeaMove();
 	void AI_EscortMove();
-
+	bool AI_retreatIfCantDefend();
 	void AI_networkAutomated();
 	void AI_cityAutomated();
 
-	int AI_promotionValue(PromotionTypes ePromotion);
+	int AI_promotionValue(PromotionTypes ePromotion) const;
 
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
-	struct GroupingParams
-	{
-		GroupingParams()
-			: eUnitAI(NO_UNITAI)
-			, iMaxGroup(-1)
-			, iMaxOwnUnitAI(-1)
-			, iMinUnitAI(-1)
-			, bIgnoreFaster(false)
-			, bIgnoreOwnUnitType(false)
-			, bStackOfDoom(false)
-			, bBiggerGroupOnly(false)
-			, bMergeWholeGroup(false)
-			, iMaxPath(MAX_INT)
-			, bAllowRegrouping(false)
-			, bWithCargoOnly(false)
-			, bInCityOnly(false)
-			, eIgnoreMissionAIType(NO_MISSIONAI)
-		{}
-		GroupingParams& withUnitAI(UnitAITypes unitAI) { eUnitAI = unitAI; return *this; }
-		GroupingParams& maxGroupSize(int maxGroup) { iMaxGroup = maxGroup; return *this; }
-		GroupingParams& maxOwnUnitAI(int maxOwnUnitAI) { iMaxOwnUnitAI = maxOwnUnitAI; return *this; }
-		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
-		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
-		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
-		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
-		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
-		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
-		GroupingParams& withCargoOnly(bool state = true) { bWithCargoOnly = state; return *this; }
-		GroupingParams& inCityOnly(bool state = true) { bInCityOnly = state; return *this; }
-		GroupingParams& ignoreMissionAIType(MissionAITypes ignoreMissionAIType) { eIgnoreMissionAIType = ignoreMissionAIType; return *this; }
 
-		UnitAITypes eUnitAI;
-		int iMaxGroup;
-		int iMaxOwnUnitAI;
-		int iMinUnitAI;
-		bool bIgnoreFaster;
-		bool bIgnoreOwnUnitType;
-		bool bStackOfDoom;
-		bool bBiggerGroupOnly;
-		bool bMergeWholeGroup;
-		int iMaxPath;
-		bool bAllowRegrouping;
-		bool bWithCargoOnly;
-		bool bInCityOnly;
-		MissionAITypes eIgnoreMissionAIType;
-	};
 
 
 	// Returns true if a group was joined or a mission was pushed...
@@ -249,7 +203,9 @@ protected:
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
 	bool AI_foundReligion();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
+#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
@@ -295,9 +251,9 @@ protected:
 	bool AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh = true);
 
 	CvCity* AI_pickTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, bool bHuntBarbs = false);
-	bool AI_goToTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, CvCity* pTargetCity = NULL);
+	bool AI_goToTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, const CvCity* pTargetCity = NULL);
 	bool AI_goToTargetBarbCity(int iMaxPath = 10);
-	bool AI_pillageAroundCity(CvCity* pTargetCity, int iBonusValueThreshold = 0, int iMaxPathTurns = MAX_INT);
+	bool AI_pillageAroundCity(const CvCity* pTargetCity, int iBonusValueThreshold = 0, int iMaxPathTurns = MAX_INT);
 	bool AI_bombardCity();
 	bool AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow = false);
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
@@ -306,7 +262,7 @@ protected:
 // Dale - RB: Field Bombard
 	bool AI_RbombardPlot(int iRange, int iBonusValueThreshold); // RevolutionDCM
 	bool AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinStack, int iSeigeDiff, int iPowerThreshold, bool bCity = false);
-	bool AI_RbombardCity(CvCity* pCity);
+	bool AI_RbombardCity(const CvCity* pCity);
 	bool AI_RbombardNaval();
 // Dale - FE: Fighters
 	bool AI_FEngage();
@@ -315,7 +271,7 @@ protected:
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
 	bool AI_blockade();
-	int  AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
+	int  AI_blockadeValue(const CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
 	bool AI_pirateBlockade();
 	bool AI_seaBombardRange(int iMaxRange);
 	bool AI_pillage(int iBonusValueThreshold = 0);
@@ -333,76 +289,50 @@ protected:
 	bool AI_carrierSeaTransport();
 	bool AI_connectPlot(CvPlot* pPlot, int iRange = 0);
 	bool AI_improveCity(CvCity* pCity);
-	bool AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity);
+	bool AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity);
 	bool AI_nextCityToImprove(CvCity* pCity);
 	bool AI_nextCityToImproveAirlift();
 	bool AI_irrigateTerritory();
 	bool AI_fortTerritory(bool bCanal, bool bAirbase);
 	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL);
 	bool AI_improvePlot(CvPlot* pPlot, BuildTypes eBuild);
-	BuildTypes AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild);
+	BuildTypes AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) const;
 	bool AI_connectBonus(bool bTestTrade = true);
 	bool AI_connectCity();
 	bool AI_routeCity();
 	bool AI_routeTerritory(bool bImprovementOnly = false);
 	bool AI_travelToUpgradeCity();
 	bool AI_retreatToCity(bool bPrimary = false, bool bAirlift = false, int iMaxPath = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/15/09                                jdog5000      */
-/*                                                                                              */
-/* Naval AI                                                                                     */
-/************************************************************************************************/
+
 	bool AI_pickup(UnitAITypes eUnitAI, bool bCountProduction = false, int iMaxPath = MAX_INT);
 	bool AI_pickupStranded(UnitAITypes eUnitAI = NO_UNITAI, int iMaxPath = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_airOffensiveCity();
 	bool AI_airDefensiveCity();
 	bool AI_airCarrier();
 	bool AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI = -1, bool bStealthOnly = false);
 	bool AI_airStrike();
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						9/26/08				jdog5000	    */
-/* 																			    */
-/* 	Air AI																	    */
-/********************************************************************************/
-	int AI_airOffenseBaseValue( CvPlot* pPlot );
+
+	int AI_airOffenseBaseValue(const CvPlot* pPlot) const;
 	bool AI_defensiveAirStrike();
 	bool AI_defendBaseAirStrike();
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								    */
-/********************************************************************************/
+
 	bool AI_airBombPlots();
-	bool AI_airBombDefenses();	
+	bool AI_airBombDefenses();
 	bool AI_exploreAir();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/12/09                                jdog5000      */
-/*                                                                                              */
-/* Player Interface                                                                             */
-/************************************************************************************************/
+
 	int AI_exploreAirPlotValue(const CvPlot* pPlot) const;
 	bool AI_exploreAir2();
 	void AI_exploreAirMove();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_nuke();
 	bool AI_nukeRange(int iRange);
 	bool AI_trade(int iValueThreshold);
 	bool AI_infiltrate();
 	bool AI_reconSpy(int iRange);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/20/09                                jdog5000      */
-/*                                                                                              */
-/* Espionage AI                                                                                 */
-/************************************************************************************************/
 	bool AI_revoltCitySpy();
 	bool AI_bonusOffenseSpy(int iMaxPath);
-	bool AI_cityOffenseSpy(int iRange, CvCity* pSkipCity = NULL);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	bool AI_cityOffenseSpy(const int iRange, const CvCity* pSkipCity = NULL);
 	bool AI_espionageSpy();
 	bool AI_moveToStagingCity();
 	//bool AI_seaRetreatFromCityDanger();
@@ -430,49 +360,35 @@ protected:
 	bool AI_moveIntoNearestOwnedCity();
 
 	bool AI_groupMergeRange(UnitAITypes eUnitAI, int iRange, bool bBiggerOnly = true, bool bAllowRegrouping = false, bool bIgnoreFaster = false);
-	
+
 	bool AI_artistCultureVictoryMove();
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/31/10                              jdog5000        */
-/*                                                                                              */
-/* War tactics AI                                                                               */
-/************************************************************************************************/
 	bool AI_choke(int iRange = 1, bool bDefensive = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-	bool AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar);
-	
-	int AI_calculatePlotWorkersNeeded(CvPlot* pPlot, BuildTypes eBuild);
+	bool AI_solveBlockageProblem(const CvPlot* pDestPlot, bool bDeclareWar);
 
-	int AI_getEspionageTargetValue(CvPlot* pPlot, int iMaxPath, int iMinUsefulValue);
+	int AI_calculatePlotWorkersNeeded(const CvPlot* pPlot, BuildTypes eBuild) const;
+
+	int AI_getEspionageTargetValue(const CvPlot* pPlot, int iMaxPath, int iMinUsefulValue) const;
 
 	bool AI_canGroupWithAIType(UnitAITypes eUnitAI) const;
 	bool AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const;
 
-	bool AI_workerNeedsDefender(CvPlot* pPlot) const;
+	bool AI_workerNeedsDefender(const CvPlot* pPlot) const;
 	bool AI_workerReleaseDefenderIfNotNeeded() const;
 	bool processContracts(int iMinPriority = 0);
 	void contractFulfilled();
 
-
-	bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
-	CvUnitAI* AI_cityConstructionTargeted(CvCity* pCity, BuildingTypes eBuilding, CvSelectionGroup* omitGroup) const;
+	//bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
+	//CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
 
 public:
-/************************************************************************************************/
-/* Afforess	                  Start		 6/20/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bool AI_hurryFood();
 	bool AI_claimForts(CvReachablePlotSet* pReachablePlots, int iMinValue = 0, int iMaxPath = -1);
-	BuildTypes AI_findBestFort(CvPlot* pPlot) const;
+	BuildTypes AI_findBestFort(const CvPlot* pPlot) const;
 	bool AI_StrategicForts();
 	bool AI_caravan(bool bAnyCity = false);
 	bool AI_command();
@@ -487,14 +403,12 @@ public:
 	void AI_AutomatedpillageMove();
 	void AI_autoAirStrike();
 	bool AI_airBombCities();
-	bool AI_moveToTarget(CvUnit* pTarget);
+	bool AI_moveToTarget(const CvUnit* pTarget);
 	void AI_shadowMove();
 	bool AI_protectTarget(const CvUnit* pTarget);
 	bool AI_joinMilitaryCity(bool bNaval = false);
-	bool AI_isPlotWellDefended(CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	bool AI_isPlotWellDefended(const CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat) const;
+
 	int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const;
 	void AI_flushValueCache();
 
@@ -504,7 +418,7 @@ public:
 	virtual int AI_getPredictedHitPoints() const;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints);
 	virtual bool AI_getHasAttacked() const;
-	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const;
+	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const;
 
 	//	KOSHLING - inform the AI of unit losses so that it can adjust internal counts
 	virtual void AI_killed();
@@ -523,7 +437,9 @@ public:
 	bool AI_arrest();
 	bool AI_ambush(int iOddsThreshold, bool bAssassinationOnly = false);
 
-	bool AI_activateStatus(bool bChange, bool bStack, PromotionTypes eStatus, CvUnit* pUnit = NULL);
+private:
+	bool AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit);
+public:
 	bool AI_selectStatus(bool bStack, CvUnit* pUnit = NULL);
 	bool AI_groupSelectStatus();
 
@@ -533,7 +449,7 @@ public:
 	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
-	bool isWaitingOnUnitAI(int iIndex);
+	bool isWaitingOnUnitAI(int iIndex) const;
 	bool isWaitingOnUnitAIAny() const;
 	void setWaitingOnUnitAIAny();
 	bool AI_isNegativePropertyUnit() const;

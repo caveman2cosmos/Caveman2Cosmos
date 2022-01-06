@@ -11,14 +11,17 @@
 #ifndef CV_PROPERTIES_H
 #define CV_PROPERTIES_H
 
-class CvXMLLoadUtility;
-class CvGame;
-class CvTeam;
-class CvPlayer;
+#include "CheckSum.h"
+#include "CvEnums.h"
+
 class CvCity;
-class CvUnit;
-class CvPlot;
+class CvGame;
 class CvGameObject;
+class CvPlayer;
+class CvPlot;
+class CvTeam;
+class CvUnit;
+class CvXMLLoadUtility;
 
 struct PropertyBuilding
 {
@@ -38,7 +41,7 @@ class CvProperties
 {
 public:
 	CvProperties();
-	
+
 	explicit CvProperties(CvGame* pGame);
 	explicit CvProperties(CvTeam* pTeam);
 	explicit CvProperties(CvPlayer* pPlayer);
@@ -63,7 +66,7 @@ public:
 	void changeValueByProperty(PropertyTypes eProp, int iChange);
 	void changeChangeByProperty(PropertyTypes eProp, int iChange);
 	void propagateChange(PropertyTypes eProp, int iChange);
-	
+
 	void addProperties(const CvProperties* pProp);
 	void subtractProperties(const CvProperties* pProp);
 
@@ -90,25 +93,15 @@ public:
 
 	// For Python
 	std::wstring getPropertyDisplay(int index) const;
-	
+
 	void read(FDataStreamBase* pStream);
 	void readWrapper(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 	void writeWrapper(FDataStreamBase* pStream);
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Properties");
-	void copyNonDefaults(const CvProperties* pProp, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvProperties* pProp);
 
-	void getCheckSum(unsigned int& iSum) const;
-
-private:
-	friend void CyPropertiesPythonInterface();
-
-	// Python variants with non-strict enum typing (don't use these in C++ code)
-	int _getProperty(int index) const { return static_cast<int>(getProperty(index)); }
-	int _getValueByProperty(int eProp) const { return getValueByProperty(static_cast<PropertyTypes>(eProp)); }
-	int _getChangeByProperty(int eProp) const { return getChangeByProperty(static_cast<PropertyTypes>(eProp)); }
-	void _setValueByProperty(int eProp, int iVal) { setValueByProperty(static_cast<PropertyTypes>(eProp), iVal); }
-	void _changeValueByProperty(int eProp, int iChange) { changeValueByProperty(static_cast<PropertyTypes>(eProp), iChange); }
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	struct PropertyValue
@@ -116,7 +109,7 @@ private:
 		PropertyValue(PropertyTypes prop = NO_PROPERTY, int value = 0) : prop(prop), value(value) {}
 		PropertyTypes prop;
 		int value;
-		friend inline void CheckSum(unsigned int& iSum, const PropertyValue& propValue)
+		friend inline void CheckSum(uint32_t& iSum, const PropertyValue& propValue)
 		{
 			CheckSum(iSum, propValue.prop);
 			CheckSum(iSum, propValue.value);
@@ -134,7 +127,7 @@ private:
 
 	PropertyValueVector m_aiProperty;
 	PropertyValueVector m_aiPropertyChange;
-	
+
 	// Pointer to the object to which the properties belong
 	CvGameObject* m_pGameObject;
 };

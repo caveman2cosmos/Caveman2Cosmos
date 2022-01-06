@@ -1097,7 +1097,7 @@ class TerrainGenerator:
 		self.terrainRockyCold = self.GC.getInfoTypeForString("TERRAIN_JAGGED")
 		self.terrainRocky = self.GC.getInfoTypeForString("TERRAIN_ROCKY")
 		self.terrainRockyArid = self.GC.getInfoTypeForString("TERRAIN_BADLAND")
-		self.terrainDesert = self.GC.getInfoTypeForString("TERRAIN_DESERT")
+		self.terrainDesert = self.GC.getTERRAIN_DESERT()
 		self.terrainPlains = self.GC.getInfoTypeForString("TERRAIN_PLAINS")
 		self.terrainGrass = self.GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrainMarsh = self.GC.getInfoTypeForString("TERRAIN_MARSH")
@@ -1269,8 +1269,8 @@ class FeatureGenerator:
 
 	def __initFeatureTypes(self):
 		self.featureIce = self.GC.getInfoTypeForString("FEATURE_ICE")
-		self.featureJungle = self.GC.getInfoTypeForString("FEATURE_JUNGLE")
-		self.featureForest = self.GC.getInfoTypeForString("FEATURE_FOREST")
+		self.featureJungle = self.GC.getFEATURE_JUNGLE()
+		self.featureForest = self.GC.getFEATURE_FOREST()
 
 	def addFeatures(self):
 		"adds features to all plots as appropriate"
@@ -1287,18 +1287,15 @@ class FeatureGenerator:
 		lat = self.getLatitudeAtPlot(iX, iY)
 		pPlot = self.map.sPlot(iX, iY)
 
-		for iI in range(self.GC.getNumFeatureInfos()):
-#			print self.GC.getFeatureInfo(iI).getDescription()
-			if pPlot.canHaveFeature(iI):
-#				print "Can have feature with probability: %d" % self.GC.getFeatureInfo(iI).getAppearanceProbability()
-				if self.mapRand.get(10000, "Add Feature PYTHON") < self.GC.getFeatureInfo(iI).getAppearanceProbability():
-#					print "Setting feature"
-					variety = -1
-					varietynum = self.GC.getFeatureInfo(iI).getNumVarieties()
-					if varietynum > 1:
-						variety = self.mapRand.get(varietynum, "Add Feature PYTHON")
-						#print "Variety choice: %d" % varietynum
-					pPlot.setFeatureType(iI, variety)
+		for iI in xrange(self.GC.getNumFeatureInfos()):
+			if (self.GC.getFeatureInfo(iI).getAppearanceProbability() > -1
+			and pPlot.canHaveFeature(iI)
+			and self.mapRand.get(10000, "Add Feature PYTHON") < self.GC.getFeatureInfo(iI).getAppearanceProbability()):
+				variety = -1
+				varietynum = self.GC.getFeatureInfo(iI).getNumVarieties()
+				if varietynum > 1:
+					variety = self.mapRand.get(varietynum, "Add Feature PYTHON")
+				pPlot.setFeatureType(iI, variety)
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
 			self.addIceAtPlot(pPlot, iX, iY, lat)
@@ -1332,18 +1329,6 @@ class FeatureGenerator:
 		if pPlot.canHaveFeature(self.featureForest):
 			if self.forests.getHeight(iX, iY) >= self.iForestLevel:
 				pPlot.setFeatureType(self.featureForest, -1)
-
-def getAreas():
-	"Returns a list of CyArea objects representing all the areas in the map (land and water)"
-	MAP = CyMap()
-
-	areas = []
-	for i in range(MAP.getIndexAfterLastArea()):
-		area = MAP.getArea(i)
-		if not area.isNone():
-			areas.append(area)
-
-	return areas
 
 def findStartingPlot(playerID, validFn = None):
 	GC = CyGlobalContext()
@@ -1604,7 +1589,7 @@ def c2CMapReport(sWhen):
 	# Display actual Mod-Resources
 	# countResource.sort()
 	boni = 0
-	dontReportBonusClass = [GC.getInfoTypeForString("BONUSCLASS_CULTURE"), GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED")]
+	dontReportBonusClass = [GC.getInfoTypeForString("BONUSCLASS_CULTURE"), GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED"), GC.getInfoTypeForString("BONUSCLASS_GENMODS"), GC.getInfoTypeForString("BONUSCLASS_WONDER")]
 	while boni < GC.getNumBonusInfos():
 		type_string = GC.getBonusInfo(boni).getType()
 		class_int = GC.getBonusInfo(boni).getBonusClassType()

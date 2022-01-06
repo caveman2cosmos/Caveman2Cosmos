@@ -3,6 +3,11 @@
 #ifndef CvContractBroker_h__
 #define CvContractBroker_h__
 
+#include "CvUnitSelectionCriteria.h"
+
+class CvCity;
+class CvUnit;
+
 //	Define this to have cities advertise units needs and tender for the business of building them
 #define	USE_UNIT_TENDERING
 
@@ -83,9 +88,7 @@ typedef struct
 //			to do what is asked of it (move to a location, join a group being current options)
 //		4)	If no suitable work is available continue with its own unit AI for low priority actions
 //
-class CvUnit;
-
-class CvContractBroker
+class CvContractBroker : bst::noncopyable
 {
 public:
 	CvContractBroker();
@@ -116,7 +119,7 @@ public:
 	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, const CvPlot* pPlot = NULL) const;
 	//	Make a contract
 	//	This will attempt to make the best contracts between currently
-	//	advertising units and work, then search the resulting set for the work 
+	//	advertising units and work, then search the resulting set for the work
 	//	of the requested unit
 	//	returns true if a contract is made along with the details of what to do
 	bool	makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly);

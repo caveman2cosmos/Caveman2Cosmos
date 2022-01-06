@@ -1,128 +1,148 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_COLONY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_COLONY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_COLONY_STRATEGY</Strategy>
+			<Type>BUILDING_AGRODOME</Type>
+			<Description>TXT_KEY_BUILDING_AGRODOME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AGRODOME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_COLONY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_AGRODOME</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
+			<iCost>5294</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
-				<iCommerce>150</iCommerce>
+				<iCommerce>125</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>150</iYield>
+				<iYield>25</iYield>
 			</YieldChanges>
-			<iHealth>-5</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
-					<TechYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</TechYield>
-				</TechYieldChange>
-			</TechYieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
+			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CALCIUM_CARBONATE</Type>
+			<Description>TXT_KEY_BUILDING_CALCIUM_CARBONATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_CARBONATE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CALCIUM_CARBONATE</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ASTROECOLOGY</PrereqTech>
+			<iCost>6372</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>5</iYield>
+				<iYield>50</iYield>
+				<iYield>10</iYield>
+			</YieldChanges>
+			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CO2_REMOVAL</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CALCIUM_MINE</Type>
+			<Description>TXT_KEY_BUILDING_CALCIUM_MINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_MINE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CALCIUM_MINE</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
+			<iCost>3683</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAPTURED_IO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
+			<Description>TXT_KEY_BUILDING_CAPTURED_IO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_IO_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_IO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAPTURED_IO</MovieDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
+			<iCost>59408</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>10</iYield>
+				<iYield>10</iYield>
+				<iYield>10</iYield>
+			</YieldChanges>
+			<GlobalBuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>10</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</GlobalBuildingExtraCommerces>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_IO_BASE</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TERRAFORMED_VENUS_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_VENUS_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>125</iCommerce>
+				<iCommerce>250</iCommerce>
+				<iCommerce>50</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>20</iYield>
+			</YieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>-50</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iRevIdxLocal>-5</iRevIdxLocal>
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_CITY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_CITY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CITY</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
-			<iCost>1921</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>500</iCommerce>
-				<iCommerce>150</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>1</iYield>
-				<iYield>50</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_NANOTUBES</Bonus>
-			<iRevIdxLocal>-10</iRevIdxLocal>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
-			<iCost>2793</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>500</iCommerce>
-				<iCommerce>150</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>2</iYield>
-				<iYield>50</iYield>
-				<iYield>2</iYield>
-			</YieldChanges>
-			<iHealth>5</iHealth>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<iWorkableRadius>3</iWorkableRadius>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_PLASTEEL</Bonus>
-			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ARCOLOGY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ARCOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -143,547 +163,58 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LAUNCH_ARCOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_COLONY_ARCOLOGY</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_SKY_ARCOLOGY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_ARTIFICIAL_ROTATION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
+			<Description>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SKY_ARCOLOGY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ARTIFICIAL_ROTATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENUS_ARTIFICIAL_ROTATION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
-			<iCost>12267</iCost>
+			<iCost>49068</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>500</iCommerce>
-				<iCommerce>150</iCommerce>
-			</CommerceChanges>
 			<YieldChanges>
-				<iYield>4</iYield>
-				<iYield>50</iYield>
-				<iYield>4</iYield>
+				<iYield>30</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<GlobalBuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_CALCIUM_CARBONATE</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>10</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</BuildingType>
+				<BuildingType>BUILDING_VENUS_SKY_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_SOLAR_ARRAY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SOLAR_ARRAY</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-			<iCost>702</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>50</iYield>
-				<iYield>0</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<bPower>1</bPower>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_VERTICAL_WIND_FARM</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_VERTICAL_WIND_FARM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
-			<iCost>800</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>100</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>100</iYield>
-				<iYield>0</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<bPower>1</bPower>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_OXYGEN_GENERATOR</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_OXYGEN_GENERATOR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
-			<iCost>905</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>3</iYield>
-				<iYield>35</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_HYDROGEN_GENERATOR</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_GENERATOR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
-			<iCost>905</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>5</iYield>
-				<iYield>20</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<bPrereqPower>1</bPrereqPower>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_CARBONWORKS</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_CARBONWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_CARBONWORKS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_CARBONWORKS_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CARBONWORKS</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
-			<iCost>905</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>200</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>20</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PLASTIC</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_MAGLEV</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_MAGLEV</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_MAGLEV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_MAGLEV_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MAGLEV</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
-			<iCost>1144</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<Bonus>BONUS_NANOTUBES</Bonus>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_ECOSYSTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_ECOSYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_ECOSYSTEM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ECOSYSTEM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
-			<iCost>2110</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<iHappiness>1</iHappiness>
-			<iHealth>2</iHealth>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
-			<iCost>4032</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>250</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>20</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_GOVERNING_COUNCIL</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_GOVERNING_COUNCIL</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
-			<iCost>1921</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<iHappiness>1</iHappiness>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iRevIdxLocal>-10</iRevIdxLocal>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
-			<iCost>1921</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>120</iCommerce>
-			</CommerceChanges>
-			<iHappiness>5</iHappiness>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_TRADE</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_TRADE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_TRADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_TRADE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TRADE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
-			<iCost>1921</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>10</iYield>
-			</YieldChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<Bonus>BONUS_ROCKET_FUEL</Bonus>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_DEUTERIUM_EXPORTER</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEUTERIUM_EXPORTER</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
-			<iCost>1921</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>1000</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
-				<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
-			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_BROADBAND</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_BROADBAND</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_BROADBAND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_BROADBAND_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_BROADBAND</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PHOTON_THERMODYNAMICS</PrereqTech>
-			<iCost>1144</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>20</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>50</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_OPTRONICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>3</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<iRevIdxLocal>-5</iRevIdxLocal>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE_PROBE</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_PROBE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<iCost>1144</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE_SCOOP</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_SCOOP</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_NANOMINING</PrereqTech>
-			<iCost>2793</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>200</iCommerce>
-				<iCommerce>250</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>50</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_OPTRONICS</PrereqTech>
-			<iCost>2544</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>200</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>50</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_FACTORY</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
-			<iCost>2793</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>250</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>100</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_FUSION_PLANT</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_FUSION_PLANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_FUSION_PLANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_FUSION_PLANT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_FUSION_PLANT</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
-			<iCost>3065</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>150</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-			</PrereqInCityBuildings>
-			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_BIOTIC_ATMOSPHERE</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_BIOTIC_ATMOSPHERE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -717,10 +248,324 @@
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_VENUS_BROADBAND</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_BROADBAND</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_BROADBAND_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_BROADBAND</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PHOTON_THERMODYNAMICS</PrereqTech>
+			<iCost>1144</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>20</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>50</iCommerce>
+			</CommerceChanges>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<TechType>TECH_OPTRONICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>300</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
+			<iRevIdxLocal>-5</iRevIdxLocal>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_CARBONWORKS</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_CARBONWORKS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_CARBONWORKS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CARBONWORKS</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<iCost>905</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>200</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
+			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASTIC</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_CITY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_CITY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CITY</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			<iCost>1921</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>500</iCommerce>
+				<iCommerce>150</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>1</iYield>
+				<iYield>50</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
+			<Bonus>BONUS_NANOTUBES</Bonus>
+			<iRevIdxLocal>-10</iRevIdxLocal>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_CLAYTRONIC_CITY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CLAYTRONIC_CITY</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
+			<iCost>9246</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>5</iYield>
+				<iYield>50</iYield>
+			</YieldChanges>
+			<iHappiness>1</iHappiness>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_CO2_REMOVAL</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CO2_REMOVAL</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ASTROECOLOGY</PrereqTech>
+			<iCost>6372</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>-10</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>10</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CALCIUM_MINE</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_COLONY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_COLONY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_COLONY</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>-50</iCommerce>
+				<iCommerce>150</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>150</iYield>
+			</YieldChanges>
+			<iHealth>-5</iHealth>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iRevIdxLocal>-5</iRevIdxLocal>
+			<bAutoBuild>1</bAutoBuild>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_DEATH_RAY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_DEATH_RAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEATH_RAY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEATH_RAY</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
+			<iCost>10158</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
+			<iDefense>50</iDefense>
+			<iDCMAirbombMission>2</iDCMAirbombMission>
+			<iLineOfSight>1</iLineOfSight>
+			<iBombardDefense>20</iBombardDefense>
+			<iLocalDynamicDefense>20</iLocalDynamicDefense>
+			<CommerceChanges>
+				<iCommerce>-10</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_DEUTERIUM_EXPORTER</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEUTERIUM_EXPORTER</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
+			<iCost>1921</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>1000</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
+				<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
+			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_ECOSYSTEM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_ECOSYSTEM_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ECOSYSTEM</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
+			<iCost>2110</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
+			<iHappiness>1</iHappiness>
+			<iHealth>2</iHealth>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
+			<iCost>1921</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>120</iCommerce>
+			</CommerceChanges>
+			<iHappiness>5</iHappiness>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_FUSION_PLANT</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_FUSION_PLANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_FUSION_PLANT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_FUSION_PLANT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
+			<iCost>3065</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>150</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
+			<bPower>1</bPower>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_GOVERNING_COUNCIL</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_GOVERNING_COUNCIL</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
+			<iCost>1921</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<iHappiness>1</iHappiness>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iRevIdxLocal>-10</iRevIdxLocal>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_VENUS_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HOTEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -753,105 +598,79 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_CO2_REMOVAL</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CO2_REMOVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ASTROECOLOGY</PrereqTech>
-			<iCost>6372</iCost>
+			<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
+			<iCost>4032</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>250</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>10</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CALCIUM_MINE</BuildingType>
-			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CALCIUM_MINE</Type>
-			<Description>TXT_KEY_BUILDING_CALCIUM_MINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CALCIUM_MINE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CALCIUM_MINE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
-			<iCost>3683</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>50</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CALCIUM_CARBONATE</Type>
-			<Description>TXT_KEY_BUILDING_CALCIUM_CARBONATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_CARBONATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CALCIUM_CARBONATE_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_HYDROGEN_GENERATOR</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CALCIUM_CARBONATE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ASTROECOLOGY</PrereqTech>
-			<iCost>6372</iCost>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
-				<iYield>50</iYield>
-				<iYield>10</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_CO2_REMOVAL</BuildingType>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AGRODOME</Type>
-			<Description>TXT_KEY_BUILDING_AGRODOME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AGRODOME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AGRODOME_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_MAGLEV</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_MAGLEV</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_MAGLEV_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AGRODOME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MAGLEV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
-			<iCost>5294</iCost>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>125</iCommerce>
-			</CommerceChanges>
 			<YieldChanges>
-				<iYield>25</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
+			<Bonus>BONUS_NANOTUBES</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_MEGAFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_MEGAFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_MEGAFACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_MEGAFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MEGAFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -874,54 +693,216 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_CLAYTRONIC_CITY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CLAYTRONIC_CITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
-			<iCost>9246</iCost>
+			<PrereqTech>TECH_OPTRONICS</PrereqTech>
+			<iCost>2544</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>200</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_OXYGEN_GENERATOR</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_OXYGEN_GENERATOR</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
-				<iYield>5</iYield>
-				<iYield>50</iYield>
+				<iYield>3</iYield>
+				<iYield>35</iYield>
 			</YieldChanges>
-			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
-				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_DEATH_RAY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_DEATH_RAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEATH_RAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_DEATH_RAY_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_SKY_ARCOLOGY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEATH_RAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SKY_ARCOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
-			<iCost>10158</iCost>
+			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
+			<iCost>12267</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
-			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
-			<iDefense>50</iDefense>
-			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iLineOfSight>1</iLineOfSight>
-			<iBombardDefense>20</iBombardDefense>
-			<iLocalDynamicDefense>20</iLocalDynamicDefense>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>500</iCommerce>
+				<iCommerce>150</iCommerce>
 			</CommerceChanges>
+			<YieldChanges>
+				<iYield>4</iYield>
+				<iYield>50</iYield>
+				<iYield>4</iYield>
+			</YieldChanges>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_SOLAR_ARRAY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SOLAR_ARRAY</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<iCost>702</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+				<iYield>0</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
+			<bPower>1</bPower>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_SURFACE</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			<iCost>2793</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>500</iCommerce>
+				<iCommerce>150</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>2</iYield>
+				<iYield>50</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
+			<iHealth>5</iHealth>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<TechType>TECH_THERMAL_NEGATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
+			<iWorkableRadius>3</iWorkableRadius>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
+			<Bonus>BONUS_PLASTEEL</Bonus>
+			<iRevIdxLocal>-10</iRevIdxLocal>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_SURFACE_FACTORY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_FACTORY</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			<iCost>2793</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>250</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>100</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
+			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_SURFACE_PROBE</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_PROBE</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+			<iCost>1144</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1000</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>5</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_SURFACE_SCOOP</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_SCOOP</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_NANOMINING</PrereqTech>
+			<iCost>2793</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>200</iCommerce>
+				<iCommerce>250</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -930,7 +911,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VENUS_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_TERRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TERRA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENUS_TERRA</MovieDefineTag>
@@ -969,109 +949,56 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TERRAFORMED_VENUS_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_STRATEGY</Strategy>
+			<Type>BUILDING_VENUS_TRADE</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_TRADE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_TRADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_VENUS_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TRADE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
+			<iCost>1921</iCost>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
+			<Bonus>BONUS_ROCKET_FUEL</Bonus>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENUS_VERTICAL_WIND_FARM</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_VERTICAL_WIND_FARM</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
+			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
-				<iCommerce>125</iCommerce>
-				<iCommerce>250</iCommerce>
-				<iCommerce>50</iCommerce>
+				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>20</iYield>
+				<iYield>0</iYield>
+				<iYield>100</iYield>
+				<iYield>0</iYield>
 			</YieldChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>-50</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-50</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CAPTURED_IO</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_CAPTURED_IO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_IO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAPTURED_IO_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_IO</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CAPTURED_IO</MovieDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
-			<iCost>59408</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
-			</YieldChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_IO_BASE</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VENUS_ARTIFICIAL_ROTATION</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ARTIFICIAL_ROTATION</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_VENUS_ARTIFICIAL_ROTATION</MovieDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
-			<iCost>49068</iCost>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>30</iYield>
-			</YieldChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CALCIUM_CARBONATE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</BuildingType>
-				<BuildingType>BUILDING_VENUS_SKY_ARCOLOGY</BuildingType>
-			</PrereqInCityBuildings>
+			<bPower>1</bPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

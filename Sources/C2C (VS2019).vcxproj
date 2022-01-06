@@ -30,7 +30,6 @@
     <ProjectName>C2C</ProjectName>
     <ProjectGuid>{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
@@ -118,8 +117,6 @@
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;LOG_AI;FASSERT_ENABLE;FASSERT_LOGGING</NMakePreprocessorDefinitions>
     <NMakeOutput>
     </NMakeOutput>
-    <AdditionalOptions>-v</AdditionalOptions>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -145,12 +142,9 @@
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;LOG_AI</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
-    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0 -D__MS_VC_INSTALL_PATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110"</AdditionalOptions>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);Include\Discord\win32-static\lib</LibraryPath>
-    <NMakeForcedIncludes>
-    </NMakeForcedIncludes>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -200,9 +194,15 @@
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
+    <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvValueService.cpp" />
+    <ClCompile Include="CvWorkerAI.cpp" />
+    <ClCompile Include="CvWorkerService.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
-    <ClCompile Include="Discord.cpp" />
+    <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="OutputRatios.cpp" />
+    <ClCompile Include="PlotInfo.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
@@ -280,10 +280,12 @@
     <ClCompile Include="CvTeamAI.cpp" />
     <ClCompile Include="CvUnit.cpp" />
     <ClCompile Include="CvUnitAI.cpp" />
+    <ClCompile Include="CvUnitComponents.cpp" />
     <ClCompile Include="CvUnitFilters.cpp" />
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
     <ClCompile Include="CvUnitList.cpp" />
+    <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvUnitSort.cpp" />
     <ClCompile Include="CvViewport.cpp" />
     <ClCompile Include="CvXMLLoadUtility.cpp" />
@@ -297,6 +299,7 @@
     <ClCompile Include="CyArgsList.cpp" />
     <ClCompile Include="CyArtFileMgr.cpp" />
     <ClCompile Include="CyArtFileMgrInterface.cpp" />
+    <ClCompile Include="CyBoolExprInterface.cpp" />
     <ClCompile Include="CyCity.cpp" />
     <ClCompile Include="CyCityInterface1.cpp" />
     <ClCompile Include="CyCityInterface2.cpp" />
@@ -354,10 +357,14 @@
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
-    <ClInclude Include="discord.h" />
+    <ClInclude Include="CvSettlerAI.h" />
+    <ClInclude Include="CvValueService.h" />
+    <ClInclude Include="CvWorkerAI.h" />
+    <ClInclude Include="CvWorkerService.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
+    <ClInclude Include="GroupingParams.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
@@ -401,11 +408,13 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
-    <ClInclude Include="include\Discord\win32-static\include\discord_rpc.h" />
+    <ClInclude Include="CvImprovementInfo.h" />
     <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="nullptr_t.h" />
+    <ClInclude Include="OutputRatios.h" />
+    <ClInclude Include="PlotInfo.h" />
     <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
@@ -424,7 +433,9 @@
     <ClInclude Include="CvGlobals.h" />
     <ClInclude Include="CvHallOfFameInfo.h" />
     <ClInclude Include="CvInfoReplacements.h" />
+    <ClInclude Include="CvInfoClassTraits.h" />
     <ClInclude Include="CvInfos.h" />
+    <ClInclude Include="CvInfoUtil.h" />
     <ClInclude Include="CvInfoWater.h" />
     <ClInclude Include="CvInitCore.h" />
     <ClInclude Include="CvMap.h" />
@@ -460,9 +471,11 @@
     <ClInclude Include="CvTeamAI.h" />
     <ClInclude Include="CvUnit.h" />
     <ClInclude Include="CvUnitAI.h" />
+    <ClInclude Include="CvUnitComponents.h" />
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />
     <ClInclude Include="CvUnitList.h" />
+    <ClInclude Include="CvUnitSelectionCriteria.h" />
     <ClInclude Include="CvUnitSort.h" />
     <ClInclude Include="CvXMLLoadUtility.h" />
     <ClInclude Include="CvXMLLoadUtilityModTools.h" />
@@ -477,6 +490,7 @@
     <ClInclude Include="CyGameTextMgr.h" />
     <ClInclude Include="CyGlobalContext.h" />
     <ClInclude Include="CyHallOfFameInfo.h" />
+    <ClInclude Include="CyIterator.h" />
     <ClInclude Include="CyMap.h" />
     <ClInclude Include="CyMapGenerator.h" />
     <ClInclude Include="CyMessageControl.h" />
@@ -507,6 +521,7 @@
     <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="cpp.hint" />
     <None Include="CvGameCoreDLL.def" />
     <None Include="fbuild.bff" />

@@ -3,11 +3,6 @@
 #ifndef CyCity_h__
 #define CyCity_h__
 
-#ifndef __INTELLISENSE__
-#include <boost/python/tuple.hpp>
-namespace python = boost::python;
-#endif
-
 //
 // Python wrapper class for CvCity
 //
@@ -22,7 +17,6 @@ struct OrderData;
 class CyCity
 {
 public:
-	CyCity();
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
 
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
@@ -53,17 +47,17 @@ public:
 	int countNumImprovedPlots() const;
 	int countNumWaterPlots() const;
 
-	int findBaseYieldRateRank(int /*YieldTypes*/ eYield) const;
-	int findYieldRateRank(int /*YieldTypes*/ eYield) const;
-	int findCommerceRateRank(int /*CommerceTypes*/ eCommerce) const;
+	int findBaseYieldRateRank(YieldTypes eYield) const;
+	int findYieldRateRank(YieldTypes eYield) const;
+	int findCommerceRateRank(CommerceTypes eCommerce) const;
 
 	int getMaxNumWorldWonders() const;
 	int getMaxNumNationalWonders() const;
 
-	bool canTrain(int iUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const;
-	bool canConstruct(int iBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const;
-	bool canCreate(int iProject, bool bContinue, bool bTestVisible) const;
-	bool canMaintain(int iProcess, bool bContinue) const;
+	bool canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const;
+	bool canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const;
+	bool canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible) const;
+	bool canMaintain(ProcessTypes eProcess) const;
 	int getFoodTurnsLeft() const;
 	bool isProduction() const;
 	bool isProductionUnit() const;
@@ -71,13 +65,13 @@ public:
 	bool isProductionProject() const;
 	bool isProductionProcess() const;
 
-	int getProductionExperience(int /*UnitTypes*/ eUnit) const;
+	int getProductionExperience(UnitTypes eUnit) const;
 	void addProductionExperience(const CyUnit& kUnit, bool bConscript);
 
-	int /*UnitTypes*/ getProductionUnit() const;
-	int /*BuildingTypes*/ getProductionBuilding() const;
-	int /*ProjectTypes*/ getProductionProject() const;
-	int /*ProcessTypes*/ getProductionProcess() const;
+	UnitTypes getProductionUnit() const;
+	BuildingTypes getProductionBuilding() const;
+	ProjectTypes getProductionProject() const;
+	ProcessTypes getProductionProcess() const;
 	std::wstring getProductionName() const;
 	std::wstring getProductionNameKey() const;
 	int getGeneralProductionTurnsLeft() const;
@@ -93,7 +87,6 @@ public:
 	int getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const;
 	void setProduction(int iNewValue);
 	void changeProduction(int iChange);
-	int getProductionModifier() const;
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;
 
 	bool canHurry(int /*HurryTypes*/ iHurry, bool bTestVisible) const;
@@ -102,7 +95,7 @@ public:
 	bool canConscript() const;
 	int getBonusHealth(int /*BonusTypes*/ iBonus) const;
 	int getBonusHappiness(int /*BonusTypes*/ iBonus) const;
-	int getBonusPower(int /*BonusTypes*/ eBonus, bool bDirty) const;
+	int getBonusPower(int /*BonusTypes*/ eBonus) const;
 	int getBonusYieldRateModifier(int /*YieldTypes*/ eIndex, int /*BonusTypes*/ eBonus) const;
 	int /* HandicapTypes */ getHandicapType() const;
 	int /* CivilizationTypes */ getCivilizationType() const;
@@ -138,14 +131,15 @@ public:
 	int foodDifference(bool bBottom) const;
 	int growthThreshold() const;
 	int productionLeft() const;
-	int hurryGold(int /*HurryTypes*/ iHurry) const;
+	int64_t getHurryGold(int /*HurryTypes*/ iHurry) const;
 	int hurryPopulation(int /*HurryTypes*/ iHurry) const;
 	int hurryProduction(int /*HurryTypes*/ iHurry) const;
 	int flatHurryAngerLength() const;
 
-	int getNumBuilding(int /*BuildingTypes*/ iIndex) const;
-	bool isHasBuilding(int /*BuildingTypes*/ iIndex) const;		// This is a function to help modders out, since it was replaced with getNumBuildings() in the C++
+	void setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
+	int getNumRealBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
+	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
 	int getX() const;
 	int getY() const;
@@ -223,6 +217,7 @@ public:
 	void setFood(int iNewValue);
 	void changeFood(int iChange);
 	int getFoodKept() const;
+	int getMaxProductionOverflow() const;
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
 	int getFeatureProduction() const;
@@ -230,6 +225,7 @@ public:
 	int getMilitaryProductionModifier() const;
 	int getSpaceProductionModifier() const;
 	int getExtraTradeRoutes() const;
+	int getMaxTradeRoutes() const;
 	void changeExtraTradeRoutes(int iChange);
 	int getTradeRouteModifier() const;
 	int getForeignTradeRouteModifier() const;
@@ -239,8 +235,6 @@ public:
 	int getAirModifier() const;
 	int getNukeModifier() const;
 	bool isPower() const;
-	bool isAreaCleanPower() const;
-	bool isDirtyPower() const;
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
 	int getNaturalDefense() const;
@@ -252,16 +246,14 @@ public:
 	void setOccupationTimer(int iNewValue);
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
-	void setNeverLost(int iNewValue);
-
-	int getMADIncoming() const;
+	void setNeverLost(bool bNewValue);
 
 	bool isBombarded() const;
-	void setBombarded(int iNewValue);
+	void setBombarded(bool bNewValue);
 	bool isDrafted() const;
-	void setDrafted(int iNewValue);
+	void setDrafted(bool bNewValue);
 	bool isAirliftTargeted() const;
-	void setAirliftTargeted(int iNewValue);
+	void setAirliftTargeted(bool bNewValue);
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
 	bool isProductionAutomated() const;
@@ -274,12 +266,11 @@ public:
 	int /*TeamTypes*/getTeam() const;
 	int /*PlayerTypes*/getPreviousOwner() const;
 	int /*PlayerTypes*/getOriginalOwner() const;
+	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
-	int getBaseYieldRate(int /*YieldTypes*/ eIndex) const;
-	void changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue);
+	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const;
 	int getYieldRate(int /*YieldTypes*/ eIndex) const;
@@ -319,13 +310,14 @@ public:
 	bool isWeLoveTheKingDay() const;
 	void setWeLoveTheKingDay(bool bWeLoveTheKingDay);
 	int calculateCorporateTaxes() const;
-	void changePowerCount(int iChange, bool bDirty);
+	void changePowerCount(int iChange);
 
 	void changeEventAnger(int iChange);
 
 	int getNumPopulationEmployed() const;
 
 	int getBonusCommercePercentChanges(int eIndex, int eBuilding) const;
+	int getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const;
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
@@ -399,8 +391,6 @@ public:
 	int getEspionageDefenseModifier() const;
 
 	bool isWorkingPlot(const CyPlot& kPlot) const;
-	int getNumRealBuilding(int /*BuildingTypes*/ iIndex) const;
-	void setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
 	bool isHasReligion(int /*ReligionTypes*/ iIndex) const;
 	void setHasReligion(int /*ReligionTypes*/ iIndex, bool bNewValue, bool bAnnounce, bool bArrows);
 	bool isHasCorporation(int /*CorporationTypes*/ iIndex) const;
@@ -426,6 +416,7 @@ public:
 
 	int getLiberationPlayer(bool bConquest) const;
 
+	bool AI_isEmphasizeSpecialist(int /*SpecialistTypes*/ iIndex) const;
 	bool AI_isEmphasize(int iEmphasizeType) const;
 	int AI_countBestBuilds(const CyArea& kArea) const;
 	int AI_cityValue() const;

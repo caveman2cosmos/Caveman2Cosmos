@@ -9,145 +9,142 @@
 // Python wrapper class for CvSelectionGroup
 //
 
-CySelectionGroup::CySelectionGroup() : m_pSelectionGroup(NULL) {}
-
-CySelectionGroup::CySelectionGroup(CvSelectionGroup* pSelectionGroup) : m_pSelectionGroup(pSelectionGroup) {}
-
+CySelectionGroup::CySelectionGroup(CvSelectionGroup* pSelectionGroup) : m_pSelectionGroup(pSelectionGroup)
+{
+	FAssert(m_pSelectionGroup != NULL);
+}
 
 void CySelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, const CyPlot& kMissionAIPlot, const CyUnit& kMissionAIUnit)
 {
-	if (m_pSelectionGroup)
-		m_pSelectionGroup->pushMission(eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, kMissionAIPlot.getPlot(), kMissionAIUnit.getUnit());
+	m_pSelectionGroup->pushMission(eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, kMissionAIPlot.getPlot(), kMissionAIUnit.getUnit());
 }
 
 bool CySelectionGroup::canStartMission(int iMission, int iData1, int iData2, const CyPlot& kPlot, bool bTestVisible) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->canStartMission(iMission, iData1, iData2, kPlot.getPlot(), bTestVisible) : false;
+	return m_pSelectionGroup->canStartMission(iMission, iData1, iData2, kPlot.getPlot(), bTestVisible);
 }
 
 bool CySelectionGroup::isHuman() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->isHuman() : false;
+	return m_pSelectionGroup->isHuman();
 }
 
 int CySelectionGroup::baseMoves() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->baseMoves() : -1;
+	return m_pSelectionGroup->baseMoves();
 }
 
 bool CySelectionGroup::isWaiting() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->isWaiting() : false;
+	return m_pSelectionGroup->isWaiting();
 }
 
 bool CySelectionGroup::isFull() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->isFull() : false;
+	return m_pSelectionGroup->isFull();
 }
 
 bool CySelectionGroup::hasMoved() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->hasMoved() : false;
+	return m_pSelectionGroup->hasMoved();
 }
 
 bool CySelectionGroup::canMoveInto(const CyPlot& kPlot, bool bAttack) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->canMoveInto(kPlot.getPlot(), bAttack) : false;
+	return m_pSelectionGroup->canMoveInto(kPlot.getPlot(), bAttack);
 }
 
 bool CySelectionGroup::canMoveOrAttackInto(const CyPlot& kPlot, bool bDeclareWar) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->canMoveOrAttackInto(kPlot.getPlot(), bDeclareWar) : false;
+	return m_pSelectionGroup->canMoveOrAttackInto(kPlot.getPlot(), bDeclareWar);
 }
 
 bool CySelectionGroup::canFight() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->canFight() : false;
+	return m_pSelectionGroup->canFight();
 }
 
 bool CySelectionGroup::isInvisible(int /*TeamTypes*/ eTeam) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->isInvisible((TeamTypes) eTeam) : false;
+	return m_pSelectionGroup->isInvisible((TeamTypes) eTeam);
 }
 
 CyPlot* CySelectionGroup::plot() const
 {
-	return m_pSelectionGroup ? new CyPlot(m_pSelectionGroup->plot()) : NULL;
+	return new CyPlot(m_pSelectionGroup->plot());
 }
 
 CyArea* CySelectionGroup::area() const
 {
-	return m_pSelectionGroup ? new CyArea(m_pSelectionGroup->area()) : NULL;
+	return new CyArea(m_pSelectionGroup->area());
 }
 
 bool CySelectionGroup::readyToMove(bool bAny) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->readyToMove(bAny) : false;
+	return m_pSelectionGroup->readyToMove(bAny);
 }
 
 int CySelectionGroup::getID() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getID() : -1;
+	return m_pSelectionGroup->getID();
 }
 
 int /*PlayerTypes*/ CySelectionGroup::getOwner() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getOwner() : -1;
+	return m_pSelectionGroup->getOwner();
 }
 
 int /*TeamTypes*/ CySelectionGroup::getTeam() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getTeam() : -1;
+	return m_pSelectionGroup->getTeam();
 }
 
 int /*ActivityTypes*/ CySelectionGroup::getActivityType() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getActivityType() : -1;
+	return m_pSelectionGroup->getActivityType();
 }
 
 void CySelectionGroup::setActivityType(int /*ActivityTypes*/ eNewValue)
 {
-	if (m_pSelectionGroup)
-		m_pSelectionGroup->setActivityType((ActivityTypes) eNewValue);
+	m_pSelectionGroup->setActivityType((ActivityTypes) eNewValue);
 }
 
 int /*AutomateTypes*/ CySelectionGroup::getAutomateType() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getAutomateType() : -1;
+	return m_pSelectionGroup->getAutomateType();
 }
 
 bool CySelectionGroup::isAutomated() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->isAutomated() : false;
+	return m_pSelectionGroup->isAutomated();
 }
 
 void CySelectionGroup::setAutomateType(int /*AutomateTypes*/ eNewValue)
 {
-	if (m_pSelectionGroup)
-		m_pSelectionGroup->setAutomateType((AutomateTypes) eNewValue);
+	m_pSelectionGroup->setAutomateType((AutomateTypes) eNewValue);
 }
 
 int CySelectionGroup::getNumUnits() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getNumUnits() : -1;
+	return m_pSelectionGroup->getNumUnits();
 }
 
 int CySelectionGroup::getLengthMissionQueue() const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getLengthMissionQueue() : -1;
+	return m_pSelectionGroup->getLengthMissionQueue();
 }
 
 CyUnit* CySelectionGroup::getHeadUnit() const
 {
-	return m_pSelectionGroup ? new CyUnit(m_pSelectionGroup->getHeadUnit()) : NULL;
+	return new CyUnit(m_pSelectionGroup->getHeadUnit());
 }
 
 int CySelectionGroup::getMissionType(int iNode) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getMissionType(iNode) : -1;
+	return m_pSelectionGroup->getMissionType(iNode);
 }
 
 int CySelectionGroup::getMissionData1(int iNode) const
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getMissionData1(iNode) : -1;
+	return m_pSelectionGroup->getMissionData1(iNode);
 }

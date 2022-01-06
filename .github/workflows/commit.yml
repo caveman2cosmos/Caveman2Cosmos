@@ -1,0 +1,52 @@
+name: Commit jobs
+on: [push, pull_request]
+jobs:
+    pylint:
+        name: Linting - Pylint
+        runs-on: ubuntu-20.04
+        strategy:
+            matrix:
+                python-version: [2]
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+              with:
+                  lfs: true
+            - name: Lint in docker
+              run: |
+                  docker run \
+                      --rm \
+                      --interactive \
+                      --volume ${{ github.workspace }}:/host_dir \
+                      --workdir /host_dir ubuntu:18.04 \
+                      bash -c \
+                      "./Tools/Lint/setup.sh && python3 Tools/Lint/pylint.py --python-versions ${{ matrix.python-version }}"
+    python-unit-tests:
+        name: Testing - Python 3 unit tests
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+              with:
+                  lfs: true
+            - name: Test in docker
+              run: |
+                  docker run \
+                      --rm \
+                      --interactive \
+                      --volume ${{ github.workspace }}:/host_dir \
+                      --workdir /host_dir ubuntu:18.04 \
+                      bash -c \
+                      "./Test/Python3/setup.sh && pytest -c Test/Python3/pytest.ini ."
+    validate-xmls:
+        name: Validate XMLs
+        runs-on: windows-2019
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+              with:
+                  lfs: true
+            - name: Run XmlValidator
+              working-directory: ${{ github.workspace }}/Tools
+              run: |
+                  ${{ github.workspace }}/Tools/XmlValidator.exe -a

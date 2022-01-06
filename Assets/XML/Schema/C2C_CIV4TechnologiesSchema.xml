@@ -1,38 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
@@ -41,7 +39,6 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE		-->
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="Civilopedia" content="textOnly"/>
 	<ElementType name="Help" content="textOnly"/>
@@ -50,19 +47,15 @@
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iAITradeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="Era" content="textOnly"/>
 	<ElementType name="FirstFreeUnit" content="textOnly"/>
 	<ElementType name="FirstFreeProphet" content="textOnly"/>
 	<ElementType name="iFeatureProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorkerSpeedModifier" content="textOnly" dt:type="int"/>
-	<!-- DPII < Maintenance Modifiers > -->
 	<ElementType name="iMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistanceMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumCitiesMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iCoastalDistanceMaintenanceModifier" content="textOnly" dt:type="int"/>
-	<!-- DPII < Maintenance Modifiers > -->
 	<ElementType name="iTradeRoutes" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealth" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappiness" content="textOnly" dt:type="int"/>
@@ -70,7 +63,6 @@
 	<ElementType name="iAsset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPower" content="textOnly" dt:type="int"/>
 	<ElementType name="bRepeat" content="textOnly" dt:type="boolean"/>
-	<!-- Afforess -->
 	<ElementType name="bCanPassPeaks" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMoveFastPeaks" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanFoundOnPeaks" content="textOnly" dt:type="boolean"/>
@@ -84,16 +76,11 @@
 	<ElementType name="iCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bRebaseAnywhere" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowsDesertFarming" content="textOnly" dt:type="boolean"/>
-	<!-- Afforess -->
-	<!--TB-->
 	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
-	<!--TB-->
-	<!-- ls612 -->
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="CommerceModifiers" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- ls612 -->
 	<ElementType name="bTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bDisable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGoodyTech" content="textOnly" dt:type="boolean"/>
@@ -166,11 +153,9 @@
 	<ElementType name="bDCMAirBombTech2" content="textOnly" dt:type="int"/>
 	<ElementType name="TechInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -179,19 +164,15 @@
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iAITradeModifier" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
-		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="Era" minOccurs="0"/>
 		<element type="FirstFreeUnit" minOccurs="0"/>
 		<element type="FirstFreeProphet" minOccurs="0"/>
 		<element type="iFeatureProductionModifier" minOccurs="0"/>
 		<element type="iWorkerSpeedModifier" minOccurs="0"/>
-		<!-- DPII < Maintenance Modifiers > -->
 		<element type="iMaintenanceModifier" minOccurs="0"/>
 		<element type="iDistanceMaintenanceModifier" minOccurs="0"/>
 		<element type="iNumCitiesMaintenanceModifier" minOccurs="0"/>
 		<element type="iCoastalDistanceMaintenanceModifier" minOccurs="0"/>
-		<!-- DPII < Maintenance Modifiers > -->
 		<element type="iTradeRoutes" minOccurs="0"/>
 		<element type="iHealth" minOccurs="0"/>
 		<element type="iHappiness" minOccurs="0"/>
@@ -199,7 +180,6 @@
 		<element type="iAsset" minOccurs="0"/>
 		<element type="iPower" minOccurs="0"/>
 		<element type="bRepeat" minOccurs="0"/>
-		<!-- Afforess -->
 		<element type="bCanPassPeaks" minOccurs="0"/>
 		<element type="bMoveFastPeaks" minOccurs="0"/>
 		<element type="bCanFoundOnPeaks" minOccurs="0"/>
@@ -214,10 +194,7 @@
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
 		<element type="bRebaseAnywhere" minOccurs="0"/>
 		<element type="bAllowsDesertFarming" minOccurs="0"/>
-		<!-- Afforess -->
-		<!--TB-->
 		<element type="bGlobal" minOccurs="0"/>
-		<!--TB-->
 		<element type="bTrade" minOccurs="0"/>
 		<element type="bDisable" minOccurs="0"/>
 		<element type="bGoodyTech" minOccurs="0"/>
@@ -237,9 +214,7 @@
 		<element type="bWaterWork" minOccurs="0"/>
 		<element type="iGridX" minOccurs="0"/>
 		<element type="iGridY" minOccurs="0"/>
-		<!-- ls612 -->
 		<element type="CommerceModifiers" minOccurs="0"/>
-		<!-- ls612 -->
 		<element type="DomainExtraMoves" minOccurs="0"/>
 		<element type="CommerceFlexible" minOccurs="0"/>
 		<element type="TerrainTrades" minOccurs="0"/>
@@ -253,10 +228,8 @@
 		<element type="Button" minOccurs="0"/>
 		<element type="bDCMAirBombTech1" minOccurs="0"/>
 		<element type="bDCMAirBombTech2" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="PrereqBuildings" minOccurs="0"/>
 		<element type="PrereqOrBuildings" minOccurs="0"/>
-		<!--Afforess-->
 	</ElementType>
 	<ElementType name="TechInfos" content="eltOnly">
 		<element type="TechInfo" maxOccurs="*"/>
@@ -264,7 +237,6 @@
 	<ElementType name="Civ4TechInfos" content="eltOnly">
 		<element type="TechInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
 	<ElementType name="PrereqBuilding" content="eltOnly">
@@ -281,7 +253,6 @@
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
 		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="SpecialistType" content="textOnly"/>
 	<ElementType name="iFreeSpecialistCount" content="textOnly" dt:type="int"/>
 	<ElementType name="FreeSpecialistCount" content="eltOnly">
@@ -290,15 +261,5 @@
 	</ElementType>
 	<ElementType name="FreeSpecialistCounts" content="eltOnly">
 		<element type="FreeSpecialistCount" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-
-	<ElementType name="UnitType" content="textOnly"/>
-	<ElementType name="iStrengthChange" content="textOnly" dt:type="int"/>
-	<ElementType name="UnitStrengthChange" content="eltOnly">
-		<element type="UnitType"/>
-		<element type="iStrengthChange"/>
-	</ElementType>
-	<ElementType name="UnitStrengthChanges" content="eltOnly">
-		<element type="UnitStrengthChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 </Schema>

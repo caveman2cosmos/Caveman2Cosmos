@@ -9,8 +9,12 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
+#include "CvPropertyInteraction.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
-CvPropertyInteraction::CvPropertyInteraction() : 
+CvPropertyInteraction::CvPropertyInteraction() :
 									m_eSourceProperty(NO_PROPERTY),
 									m_eTargetProperty(NO_PROPERTY),
 									m_eObjectType(NO_GAMEOBJECT),
@@ -47,24 +51,9 @@ PropertyTypes CvPropertyInteraction::getTargetProperty() const
 	return m_eTargetProperty;
 }
 
-void CvPropertyInteraction::setSourceProperty(PropertyTypes eProperty)
-{
-	m_eSourceProperty = eProperty;
-}
-
-void CvPropertyInteraction::setTargetProperty(PropertyTypes eProperty)
-{
-	m_eTargetProperty = eProperty;
-}
-
 GameObjectTypes CvPropertyInteraction::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertyInteraction::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertyInteraction::getRelation() const
@@ -72,22 +61,12 @@ RelationTypes CvPropertyInteraction::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertyInteraction::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertyInteraction::getRelationData() const
 {
 	return m_iRelationData;
 }
 
-void CvPropertyInteraction::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
-}
-
-bool CvPropertyInteraction::isActive(CvGameObject *pObject) const
+bool CvPropertyInteraction::isActive(const CvGameObject *pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -126,7 +105,7 @@ bool CvPropertyInteraction::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteraction::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteraction::copyNonDefaults(CvPropertyInteraction* pProp)
 {
 //	if (m_eSourceProperty == NO_PROPERTY)
 //		m_eSourceProperty = pProp->getSourceProperty();
@@ -167,7 +146,7 @@ void CvPropertyInteraction::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertyInteraction::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteraction::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eSourceProperty);
 	CheckSum(iSum, m_eTargetProperty);
@@ -224,15 +203,15 @@ bool CvPropertyInteractionConvertConstant::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction* pProp)
 {
-	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
+	CvPropertyInteraction::copyNonDefaults(pProp);
 	const CvPropertyInteractionConvertConstant* pOther = static_cast<const CvPropertyInteractionConvertConstant*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertyInteractionConvertConstant::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteractionConvertConstant::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyInteraction::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -299,9 +278,9 @@ bool CvPropertyInteractionInhibitedGrowth::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction* pProp)
 {
-	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
+	CvPropertyInteraction::copyNonDefaults(pProp);
 	const CvPropertyInteractionInhibitedGrowth* pOther = static_cast<const CvPropertyInteractionInhibitedGrowth*>(pProp);
 	if (m_iGrowthPercent == 0)
 		m_iGrowthPercent = pOther->getGrowthPercent();
@@ -309,7 +288,7 @@ void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction
 		m_iInhibitionPercent = pOther->getInhibitionPercent();
 }
 
-void CvPropertyInteractionInhibitedGrowth::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteractionInhibitedGrowth::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyInteraction::getCheckSum(iSum);
 	CheckSum(iSum, m_iGrowthPercent);
@@ -376,9 +355,9 @@ bool CvPropertyInteractionConvertPercent::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction* pProp)
 {
-	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
+	CvPropertyInteraction::copyNonDefaults(pProp);
 	const CvPropertyInteractionConvertPercent* pOther = static_cast<const CvPropertyInteractionConvertPercent*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
@@ -386,7 +365,7 @@ void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction 
 		m_iNoConvertAmount = pOther->getNoConvertAmount();
 }
 
-void CvPropertyInteractionConvertPercent::getCheckSum(unsigned int &iSum) const
+void CvPropertyInteractionConvertPercent::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyInteraction::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);

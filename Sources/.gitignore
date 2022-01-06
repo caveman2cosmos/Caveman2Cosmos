@@ -363,3 +363,7 @@ VTune Amplifier Results/
 temp_files/
 /version.svn
 /version.cpp
+
+#IntelliJ
+
+.idea/

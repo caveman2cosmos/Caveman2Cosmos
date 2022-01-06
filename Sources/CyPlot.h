@@ -160,9 +160,10 @@ public:
 	void setRevealed(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly, int /*TeamTypes*/ eFromTeam);
 
 	int getInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
-	bool isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
-	void changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity);
+	bool isSpotterInSight(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
+	void changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChange);
 
+	python::list units() const;
 	int getNumUnits() const;
 	CyUnit* getUnit(int iIndex) const;
 
@@ -174,6 +175,8 @@ public:
 	//	Multi-maps
 	bool isInViewport() const;
 	CyPlot* cloneToViewport() const;
+
+	python::list rect(int halfWid, int halfHgt) const;
 
 private:
 	CvPlot* m_pPlot;

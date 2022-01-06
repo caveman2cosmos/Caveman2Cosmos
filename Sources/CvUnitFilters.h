@@ -12,6 +12,7 @@
 #ifndef CV_UNIT_FILTERS_H
 #define CV_UNIT_FILTERS_H
 
+class CvCity;
 class CvPlayer;
 
 enum UnitFilterTypes

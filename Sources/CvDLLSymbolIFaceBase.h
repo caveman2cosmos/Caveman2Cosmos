@@ -3,6 +3,9 @@
 #ifndef CvDLLSymbolIFaceBase_h
 #define CvDLLSymbolIFaceBase_h
 
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
+
 //
 // abstract interface for CvSymbol functions used by DLL
 //
@@ -26,7 +29,7 @@ public:
 	virtual void Hide(CvSymbol*, bool bHide) = 0;
 	virtual bool IsHidden(CvSymbol*) = 0;
 	virtual void updatePosition(CvSymbol*) = 0;
-	virtual int getID(CvSymbol*) = 0;	
+	virtual int getID(CvSymbol*) = 0;
 	virtual SymbolTypes getSymbol(CvSymbol* pSym) = 0;
 	virtual void setTypeYield(CvSymbol *, int iType, int count) =0;
 };
@@ -44,10 +47,10 @@ public:
 	virtual void resetModel(CvFeature *feature) = 0;
 
 	// derived methods
-	virtual void destroy(CvFeature*& pObj, bool bSafeDelete=true) { cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->destroy((CvSymbol*&)pObj, bSafeDelete); }
-	virtual void Hide(CvFeature* pObj, bool bHide) { cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->Hide((CvSymbol*)pObj, bHide); }
-	virtual bool IsHidden(CvFeature* pObj) { return cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->IsHidden((CvSymbol*)pObj); }
-	virtual void updatePosition(CvFeature* pObj) { cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->updatePosition((CvSymbol*)pObj); }
+	virtual void destroy(CvFeature*& pObj, bool bSafeDelete=true) { gDLL->getSymbolIFace()->destroy((CvSymbol*&)pObj, bSafeDelete); }
+	virtual void Hide(CvFeature* pObj, bool bHide) { gDLL->getSymbolIFace()->Hide((CvSymbol*)pObj, bHide); }
+	virtual bool IsHidden(CvFeature* pObj) { return gDLL->getSymbolIFace()->IsHidden((CvSymbol*)pObj); }
+	virtual void updatePosition(CvFeature* pObj) { gDLL->getSymbolIFace()->updatePosition((CvSymbol*)pObj); }
 };
 
 class CvDLLRouteIFaceBase
@@ -58,10 +61,10 @@ public:
 	virtual RouteTypes getRoute(CvRoute* pObj) = 0;
 
 	// derived methods
-	virtual void destroy(CvRoute*& pObj, bool bSafeDelete=true) { cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->destroy((CvSymbol*&)pObj, bSafeDelete); }
-	virtual void Hide(CvRoute* pObj, bool bHide) { cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->Hide((CvSymbol*)pObj, bHide); }
-	virtual bool IsHidden(CvRoute* pObj) { return cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->IsHidden((CvSymbol*)pObj); }
-	virtual void updatePosition(CvRoute* pObj) { cvInternalGlobals::getInstance().getDLLIFace()->getSymbolIFace()->updatePosition((CvSymbol*)pObj); }
+	virtual void destroy(CvRoute*& pObj, bool bSafeDelete=true) { gDLL->getSymbolIFace()->destroy((CvSymbol*&)pObj, bSafeDelete); }
+	virtual void Hide(CvRoute* pObj, bool bHide) { gDLL->getSymbolIFace()->Hide((CvSymbol*)pObj, bHide); }
+	virtual bool IsHidden(CvRoute* pObj) { return gDLL->getSymbolIFace()->IsHidden((CvSymbol*)pObj); }
+	virtual void updatePosition(CvRoute* pObj) { gDLL->getSymbolIFace()->updatePosition((CvSymbol*)pObj); }
 	virtual int getConnectionMask(CvRoute* pObj) = 0;
 	virtual void updateGraphicEra(CvRoute *pObj) = 0;
 };
@@ -73,10 +76,10 @@ public:
 	virtual void init(CvRiver*, int iID, int iOffset, int iType, CvPlot* pPlot) = 0;
 
 	// derived methods
-	virtual void destroy(CvRiver*& pObj, bool bSafeDelete=true) { cvInternalGlobals::getInstance().getDLLIFace()->getRouteIFace()->destroy((CvRoute*&)pObj, bSafeDelete); }
-	virtual void Hide(CvRiver* pObj, bool bHide) { cvInternalGlobals::getInstance().getDLLIFace()->getRouteIFace()->Hide((CvRoute*)pObj, bHide); }
-	virtual bool IsHidden(CvRiver* pObj) { return cvInternalGlobals::getInstance().getDLLIFace()->getRouteIFace()->IsHidden((CvRoute*)pObj); }
-	virtual void updatePosition(CvRiver* pObj) { cvInternalGlobals::getInstance().getDLLIFace()->getRouteIFace()->updatePosition((CvRoute*)pObj); }
+	virtual void destroy(CvRiver*& pObj, bool bSafeDelete=true) { gDLL->getRouteIFace()->destroy((CvRoute*&)pObj, bSafeDelete); }
+	virtual void Hide(CvRiver* pObj, bool bHide) { gDLL->getRouteIFace()->Hide((CvRoute*)pObj, bHide); }
+	virtual bool IsHidden(CvRiver* pObj) { return gDLL->getRouteIFace()->IsHidden((CvRoute*)pObj); }
+	virtual void updatePosition(CvRiver* pObj) { gDLL->getRouteIFace()->updatePosition((CvRoute*)pObj); }
 };
 
 #endif	// CvDLLSymbolIFaceBase_h

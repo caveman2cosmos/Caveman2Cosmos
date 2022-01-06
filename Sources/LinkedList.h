@@ -108,7 +108,7 @@ inline CLinkList<tVARTYPE>::CLinkList()
 template <class tVARTYPE>
 inline CLinkList<tVARTYPE>::~CLinkList()
 {
-  clear();
+	clear();
 }
 
 
@@ -136,12 +136,10 @@ inline void CLinkList<tVARTYPE>::clear()
 //inserts at the tail of the list
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAtBeginning(const tVARTYPE& val)
-{	
-	CLLNode<tVARTYPE>* pNode;
+{
+	FAssert(m_pHead == NULL || m_iLength > 0);
 
-	assert((m_pHead == NULL) || (m_iLength > 0));
-
-	pNode = new CLLNode<tVARTYPE>(val);
+	CLLNode<tVARTYPE>* pNode = new CLLNode<tVARTYPE>(val);
 
 	if (m_pHead != NULL)
 	{
@@ -162,14 +160,10 @@ inline void CLinkList<tVARTYPE>::insertAtBeginning(const tVARTYPE& val)
 //inserts at the tail of the list
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
-{	
-	MEMORY_TRACK_EXEMPT();
+{
+	FAssert(m_pHead == NULL || m_iLength > 0);
 
-	CLLNode<tVARTYPE>* pNode;
-
-	assert((m_pHead == NULL) || (m_iLength > 0));
-
-	pNode = new CLLNode<tVARTYPE>(val);
+	CLLNode<tVARTYPE>* pNode = new CLLNode<tVARTYPE>(val);
 
 	if (m_pTail != NULL)
 	{
@@ -191,11 +185,7 @@ inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-	MEMORY_TRACK_EXEMPT();
-
-	CLLNode<tVARTYPE>* pNode;
-
-	assert((m_pHead == NULL) || (m_iLength > 0));
+	FAssert(m_pHead == NULL || m_iLength > 0);
 
 	if ((pThisNode == NULL) || (pThisNode->m_pPrev == NULL))
 	{
@@ -203,7 +193,7 @@ inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVART
 		return;
 	}
 
-	pNode = new CLLNode<tVARTYPE>(val);
+	CLLNode<tVARTYPE>* pNode = new CLLNode<tVARTYPE>(val);
 
 	pThisNode->m_pPrev->m_pNext = pNode;
 	pNode->m_pPrev = pThisNode->m_pPrev;
@@ -218,11 +208,7 @@ inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVART
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-	MEMORY_TRACK_EXEMPT();
-
-	CLLNode<tVARTYPE>* pNode;
-
-	assert((m_pHead == NULL) || (m_iLength > 0));
+	FAssert(m_pHead == NULL || m_iLength > 0);
 
 	if ((pThisNode == NULL) || (pThisNode->m_pNext == NULL))
 	{
@@ -230,12 +216,12 @@ inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTY
 		return;
 	}
 
-	pNode = new CLLNode<tVARTYPE>(val);
+	CLLNode<tVARTYPE>* pNode = new CLLNode<tVARTYPE>(val);
 
 	pThisNode->m_pNext->m_pPrev = pNode;
 	pNode->m_pNext              = pThisNode->m_pNext;
 	pThisNode->m_pNext          = pNode;
-	pNode->m_pPrev			        = pThisNode;
+	pNode->m_pPrev			    = pThisNode;
 
 	m_iLength++;
 }
@@ -244,13 +230,10 @@ inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTY
 template <class tVARTYPE>
 inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::deleteNode(CLLNode<tVARTYPE>* pNode)
 {
-	CLLNode<tVARTYPE>* pPrevNode;
-	CLLNode<tVARTYPE>* pNextNode;
-
 	FAssert(pNode != NULL);
 
-	pPrevNode = pNode->m_pPrev;
-	pNextNode = pNode->m_pNext;
+	CLLNode<tVARTYPE>* pPrevNode = pNode->m_pPrev;
+	CLLNode<tVARTYPE>* pNextNode = pNode->m_pNext;
 
 	if ((pPrevNode != NULL) && (pNextNode != NULL))
 	{
@@ -284,14 +267,11 @@ inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::deleteNode(CLLNode<tVARTYPE>* pNo
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::moveToEnd(CLLNode<tVARTYPE>* pNode)
 {
-	CLLNode<tVARTYPE>* pPrevNode;
-	CLLNode<tVARTYPE>* pNextNode;
-
-	assert(pNode != NULL);
+	FAssert(pNode != NULL);
 
 	if (getLength() == 1)
 	{
-	return;
+		return;
 	}
 
 	if (pNode == m_pTail)
@@ -299,8 +279,8 @@ inline void CLinkList<tVARTYPE>::moveToEnd(CLLNode<tVARTYPE>* pNode)
 		return;
 	}
 
-	pPrevNode = pNode->m_pPrev;
-	pNextNode = pNode->m_pNext;
+	CLLNode<tVARTYPE>* pPrevNode = pNode->m_pPrev;
+	CLLNode<tVARTYPE>* pNextNode = pNode->m_pNext;
 
 	if ((pPrevNode != NULL) && (pNextNode != NULL))
 	{
@@ -333,16 +313,16 @@ inline void CLinkList<tVARTYPE>::moveToEnd(CLLNode<tVARTYPE>* pNode)
 template <class tVARTYPE>
 inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::next(CLLNode<tVARTYPE>* pNode) const
 {
-  assert(pNode != NULL);
+	FAssert(pNode != NULL);
 
-  return pNode->m_pNext;
+	return pNode->m_pNext;
 }
 
 
 template <class tVARTYPE>
 inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::prev(CLLNode<tVARTYPE>* pNode) const
 {
-	assert(pNode != NULL);
+	FAssert(pNode != NULL);
 
 	return pNode->m_pPrev;
 }
@@ -351,11 +331,8 @@ inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::prev(CLLNode<tVARTYPE>* pNode) co
 template <class tVARTYPE>
 inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::nodeNum(int iNum) const
 {
-	CLLNode<tVARTYPE>* pNode;
-	int iCount;
-
-	iCount = 0;
-	pNode = m_pHead;
+	int iCount = 0;
+	CLLNode<tVARTYPE>* pNode = m_pHead;
 
 	while (pNode != NULL)
 	{
@@ -474,7 +451,7 @@ inline void CLinkList< T >::ReadNonWrapperSubset( FDataStreamBase* pStream)
 	{
 		insertAtEnd(val);
 	}
-	
+
 	CLLNode< T >* pNode = nodeNum(index);
 	for ( int i = index; i < index + iNum; i++ )
 	{
@@ -486,7 +463,7 @@ template < class T >
 inline void CLinkList< T >::WriteNonWrapperSubset( FDataStreamBase* pStream, int index, int iNum ) const
 {
 	int iLength = getLength();
-	
+
 	// If iNum is too large, limit it to the length of the list
 	if (iLength < index + iNum)
 	{

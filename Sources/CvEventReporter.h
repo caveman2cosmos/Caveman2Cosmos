@@ -13,10 +13,11 @@
 
 struct CvStatBase;
 struct TradeData;
-class CvUnit;
 class CvCity;
 class CvPlot;
 class CvSelectionGroup;
+class CvUnit;
+
 class CvEventReporter
 {
 	friend class CyStatistics;
@@ -40,7 +41,7 @@ public:
 	DllExport void windowActivation(bool bActive);
 	void mapRegen();
 
-	void gameEnd();
+	void gameEnd(int iGameTurn);
 	void beginGameTurn(int iGameTurn);
 	void endGameTurn(int iGameTurn);
 	void preEndGameTurn(int iGameTurn);
@@ -88,7 +89,6 @@ public:
 	void selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
 
 	void unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot);
-	void unitSetXY(CvPlot* pPlot, CvUnit* pUnit);
 	void unitCreated(CvUnit *pUnit);
 	void unitBuilt(CvCity *pCity, CvUnit *pUnit);
 	void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker);
@@ -132,8 +132,6 @@ public:
 	void playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
 
-	void playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics);
-
 	void changeTeam(TeamTypes eOld, TeamTypes eNew);
 
 	void victory(TeamTypes eWinner, VictoryTypes eVictory);
@@ -151,8 +149,5 @@ private:
 	CvDllPythonEvents m_kPythonEventMgr;
 	CvStatistics m_kStatistics;
 };
-
-// helper
-#define EVENT_REPORTER CvEventReporter::getInstance()	
 
 #endif	// CvEventReporter_h

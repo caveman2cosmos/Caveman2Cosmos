@@ -33,14 +33,14 @@ class WBDiplomacyScreen:
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel( "MainBG", "", "", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
-		screen.setText("DiplomacyExit", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 25, screen.getYResolution() - 40, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
-		
+
+		screen.setText("DiplomacyExit", "Background", "<font=4b>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 25, screen.getYResolution() - 40, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+
 		iWidth = screen.getXResolution()/5
 		screen.addDropDownBoxGFC("ChangeType", 20, 50, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_CITY_ADD", ()), 1, 1, not bRemove)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_CITY_REMOVE", ()), 0, 0, bRemove)
-		
+
 		screen.addDropDownBoxGFC("ChangeBy", 20, 80, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		i = 1
 		while i < 1000001:
@@ -52,15 +52,15 @@ class WBDiplomacyScreen:
 
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_GLOBELAYER_RESOURCES_GENERAL", ()), 0, 0, not bDiplomacyPage)
-		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()), 1, 1, bDiplomacyPage)
+		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_ESPIONAGE", ()), 1, 1, bDiplomacyPage)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_CONCEPT_TRADE", ()), 2, 2, False)
-		
+
 		sText = "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_HIDE_DEAD", ()) + "</font>"
 		sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 		if bHideDead:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setText("HideDead", "Background", sColor + sText + "</color>", 1<<1, screen.getXResolution() - 20, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		self.setPlayerList(iPlayerX)
 
 		if bDiplomacyPage:
@@ -110,7 +110,7 @@ class WBDiplomacyScreen:
 			sText = u"%s >>> %s" %(CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()), GC.getPlayer(iSelectedPlayer).getName())
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=3b>" + sText + "</color></font>"
 		screen.setText("TowardsPlayer", "Background", sText, 1<<0, 20 + iWidth, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 	def setGeneralPage(self):
 		screen = CyGInterfaceScreen( "WBDiplomacyScreen", CvScreenEnums.WB_DIPLOMACY)
 		sText = "%s: %s\t" %(CyTranslator().getText("[ICON_ANGRYPOP]", ()), CyTranslator().getText("TXT_KEY_FOREIGN_ADVISOR_CONTACT", ()))
@@ -150,9 +150,9 @@ class WBDiplomacyScreen:
 		screen.setTableText("DiplomacyAll", 2, 0, "<font=4>" + CyTranslator().getText("[ICON_DEFENSIVEPACT]", ()) + "<\font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 2, 1<<2)
 		screen.setTableText("DiplomacyAll", 3, 0, "<font=4>" + CyTranslator().getText("[ICON_OCCUPATION]", ()) + "<\font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 3, 1<<2)
 		screen.setLabel("DiplomacyAllText", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + "</font>", 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		screen.setText("WearinessAll", "Background",  sText, 1<<1, screen.getXResolution() - 20, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		for iPlayer in lPlayers:
 			iRow = screen.appendTableRow("WBDiplomacy")
 			pPlayer = GC.getPlayer(iPlayer)
@@ -170,7 +170,7 @@ class WBDiplomacyScreen:
 				sText = "[" + sText + "]"
 			screen.setTableText("WBDiplomacy", 1, iRow, "<font=3>" + sColor + sText + "</font></color>", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iPlayer * 10000 + iLeader, 1<<0 )
 			screen.setTableInt("WBDiplomacy", 2, iRow, "<font=3>" + sColor + str(iTeam) + "</font></color>", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2 )
-			
+
 			if bTowardsPlayer:
 				iAttitude = pPlayer.AI_getAttitude(iSelectedPlayer)
 				sWeariness = str(pTeam.getWarWeariness(iSelectedTeam))
@@ -179,7 +179,7 @@ class WBDiplomacyScreen:
 				sWeariness = str(GC.getTeam(iSelectedTeam).getWarWeariness(iTeam))
 			sText = CyTranslator().changeTextColor(GC.getAttitudeInfo(iAttitude).getDescription(), GC.getInfoTypeForString(self.lAttitude[iAttitude]))
 			screen.setTableText("WBDiplomacy", 3, iRow, "<font=3>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, iPlayer, 1<<2)
-			
+
 			if bTowardsPlayer:
 				iRelationshipStatus = self.RelationshipStatus(iTeam, iSelectedTeam)
 			else:
@@ -192,7 +192,7 @@ class WBDiplomacyScreen:
 			elif iRelationshipStatus == 3:
 				sText = CyTranslator().getText("TXT_KEY_MISC_MASTER",())
 			screen.setTableText("WBDiplomacy", 4, iRow, "<font=3>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1031, iTeam, 1<<2)
-			
+
 			sText = ""
 			if pTeam.isHasMet(iSelectedTeam):
 				sText = CyTranslator().getText("[ICON_ANGRYPOP]",())
@@ -210,13 +210,15 @@ class WBDiplomacyScreen:
 				sText = CyTranslator().getText("[ICON_OCCUPATION]",())
 			screen.setTableText("WBDiplomacy", 8, iRow, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1035, iTeam , 1<<2)
 			screen.setTableText("WBDiplomacy", 9, iRow, "<font=3>" + sWeariness + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1036, iTeam, 1<<1)
-			
+
 	def setEspionagePage(self):
+		eWidGen = WidgetTypes.WIDGET_GENERAL
 		screen = CyGInterfaceScreen( "WBDiplomacyScreen", CvScreenEnums.WB_DIPLOMACY)
-		screen.addDropDownBoxGFC("CurrentMemory", screen.getXResolution()/5 + 20, screen.getYResolution() - 40, 450, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+		screen.addDropDownBoxGFC("CurrentMemory", screen.getXResolution()/5 + 20, screen.getYResolution() - 40, 450, eWidGen, 1, 2, FontTypes.GAME_FONT)
 		for i in xrange(MemoryTypes.NUM_MEMORY_TYPES):
 			screen.addPullDownString("CurrentMemory", GC.getMemoryInfo(i).getDescription(), i, i, i == iSelectedMemory)
 
+		szEspionage = CyTranslator().getText("TXT_WORD_ESPIONAGE", ())
 		iWidth = screen.getXResolution() - 40
 		iHeight = screen.getYResolution() - self.iTable_Y - 40
 		screen.addTableControlGFC( "WBEspionage", 9, 20, self.iTable_Y, iWidth, iHeight, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
@@ -224,25 +226,25 @@ class WBDiplomacyScreen:
 		iWidth2 = iWidth *3/16
 		screen.setTableColumnHeader("WBEspionage", 0, CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_CIV", ()), iWidth2)
 		screen.setTableColumnHeader("WBEspionage", 1, CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ()), iWidth2)
-		screen.setTableColumnHeader("WBEspionage", 2, CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()), iWidth1)
+		screen.setTableColumnHeader("WBEspionage", 2, szEspionage, iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 3, CyTranslator().getText("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT", ()), iWidth1)
-		screen.setTableColumnHeader("WBEspionage", 4, CyTranslator().getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()), iWidth1)
+		screen.setTableColumnHeader("WBEspionage", 4, CyTranslator().getText("TXT_KEY_TURNS", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 5, CyTranslator().getText("TXT_KEY_WB_MODIFIER", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 6, CyTranslator().getText("TXT_KEY_WB_MEMORY", ()), iWidth1)
 
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + " (+/-)</font></color>"
 		iX = screen.getXResolution() - 20 - iWidth1
-		screen.setText("CEModifierAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("CEModifierAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 		iX -= iWidth1
-		screen.setText("CETurnsAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		screen.setLabel("CounterEspionageHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_WB_COUNTER_ESPIONAGE", ()) + "</font>", 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("CETurnsAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+		screen.setLabel("CounterEspionageHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_WB_COUNTER_ESPIONAGE", ()) + "</font>", 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 
 		iX -= iWidth1
-		screen.setText("WeightAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("WeightAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 		iX -= iWidth1
-		screen.setText("EspionageAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		screen.setLabel("EspionageHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()) + "</font>", 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+		screen.setText("EspionageAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+		screen.setLabel("EspionageHeader", "Background", "<font=4b>" + szEspionage, 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+
 		for iPlayer in lPlayers:
 			iRow = screen.appendTableRow("WBEspionage")
 			pPlayer = GC.getPlayer(iPlayer)
@@ -270,12 +272,12 @@ class WBDiplomacyScreen:
 				sWeight = str(GC.getPlayer(iSelectedPlayer).getEspionageSpendingWeightAgainstTeam(iTeam))
 				sTurns = str(GC.getTeam(iSelectedTeam).getCounterespionageTurnsLeftAgainstTeam(iTeam))
 				sModifier = str(GC.getTeam(iSelectedTeam).getCounterespionageModAgainstTeam(iTeam))
-			screen.setTableInt("WBEspionage", 2, iRow, "<font=3>" + sEspionage + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, iTeam, 1<<1)
-			screen.setTableInt("WBEspionage", 3, iRow, "<font=3>" + sWeight + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1031, iPlayer, 1<<1)
-			screen.setTableInt("WBEspionage", 4, iRow, "<font=3>" + sTurns + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1032, iTeam, 1<<1)
-			screen.setTableInt("WBEspionage", 5, iRow, "<font=3>" + sModifier + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1033, iTeam, 1<<1)
-			screen.setTableInt("WBEspionage", 6, iRow, "<font=3>" + sMemory + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1034, iPlayer, 1<<1)
-			
+			screen.setTableInt("WBEspionage", 2, iRow, "<font=3>" + sEspionage, "", WidgetTypes.WIDGET_PYTHON, 1030, iTeam, 1<<1)
+			screen.setTableInt("WBEspionage", 3, iRow, "<font=3>" + sWeight, "", WidgetTypes.WIDGET_PYTHON, 1031, iPlayer, 1<<1)
+			screen.setTableInt("WBEspionage", 4, iRow, "<font=3>" + sTurns, "", WidgetTypes.WIDGET_PYTHON, 1032, iTeam, 1<<1)
+			screen.setTableInt("WBEspionage", 5, iRow, "<font=3>" + sModifier, "", WidgetTypes.WIDGET_PYTHON, 1033, iTeam, 1<<1)
+			screen.setTableInt("WBEspionage", 6, iRow, "<font=3>" + sMemory, "", WidgetTypes.WIDGET_PYTHON, 1034, iPlayer, 1<<1)
+
 	def handleInput (self, inputClass):
 		screen = CyGInterfaceScreen("WBDiplomacyScreen", CvScreenEnums.WB_DIPLOMACY)
 		global iSelectedPlayer
@@ -451,9 +453,9 @@ class WBDiplomacyScreen:
 				iTeam2 = GC.getPlayer(pDeal.getSecondPlayer()).getTeam()
 				if (iTeam1 == iTeam and iTeam2 == iSelectedTeam) or (iTeam2 == iTeam and iTeam1 == iSelectedTeam):
 					for j in xrange(pDeal.getLengthFirstTrades()):
-						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_DEFENSIVE_PACT:	
+						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_DEFENSIVE_PACT:
 							pDeal.kill()
-							self.interfaceScreen(iSelectedPlayer)
+							self.interfaceScreen(iSelectedPlayer, bDiplomacyPage)
 							return
 		else:
 			pSelectedTeam.signDefensivePact(iTeam)
@@ -470,7 +472,7 @@ class WBDiplomacyScreen:
 				iTeam2 = GC.getPlayer(pDeal.getSecondPlayer()).getTeam()
 				if (iTeam1 == iTeam and iTeam2 == iSelectedTeam) or (iTeam2 == iTeam and iTeam1 == iSelectedTeam):
 					for j in xrange(pDeal.getLengthFirstTrades()):
-						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_OPEN_BORDERS:	
+						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_OPEN_BORDERS:
 							pDeal.kill()
 							return
 		else:
@@ -581,14 +583,14 @@ class WBDiplomacyScreen:
 				iTeamY = GC.getPlayer(pDeal.getSecondPlayer()).getTeam()
 				if (iTeam1 == iTeamX and iTeam2 == iTeamY) or (iTeam2 == iTeamX and iTeam1 == iTeamY):
 					for j in xrange(pDeal.getLengthFirstTrades()):
-						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_VASSAL:	
+						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_VASSAL:
 							return 1
-						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_SURRENDER:	
+						if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_SURRENDER:
 							return 0
 					for j in xrange(pDeal.getLengthSecondTrades()):
-						if pDeal.getSecondTrade(j).ItemType == TradeableItems.TRADE_VASSAL:	
+						if pDeal.getSecondTrade(j).ItemType == TradeableItems.TRADE_VASSAL:
 							return 1
-						if pDeal.getSecondTrade(j).ItemType == TradeableItems.TRADE_SURRENDER:	
+						if pDeal.getSecondTrade(j).ItemType == TradeableItems.TRADE_SURRENDER:
 							return 0
 		elif GC.getTeam(iTeam2).isVassal(iTeam1):
 			return 3

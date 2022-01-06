@@ -9,10 +9,7 @@ void CyTeamPythonInterface()
 {
 	OutputDebugString("Python Extension Module - CyTeamPythonInterface\n");
 
-	python::class_<CyTeam>("CyTeam")
-
-		.def("isNone", &CyTeam::isNone, "bool () - is this instance valid?")
-
+	python::class_<CyTeam>("CyTeam", python::no_init)
 		.def("isRebelAgainst", &CyTeam::isRebelAgainst, "bool ( int iTeam )" )
 		.def("setRebelAgainst", &CyTeam::setRebelAgainst, "void ( int iTeam, bool bNewValue )" )
 		.def("countRebelAgainst", &CyTeam::countRebelAgainst, "int ( )" )
@@ -171,7 +168,8 @@ void CyTeamPythonInterface()
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
 
-		.def("getBuildingYieldChange", &CyTeam::getBuildingYieldChange,	"int (int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
+		.def("getBuildingCommerceTechChange", &CyTeam::getBuildingCommerceTechChange, "int (eCommerce, eBuilding)")
+
 		.def("isHasEmbassy", &CyTeam::isHasEmbassy, "bool (TeamTypes)")
 
 		.def("getVictoryCountdown", &CyTeam::getVictoryCountdown, "int (int /*VictoryTypes*/)")

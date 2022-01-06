@@ -21,32 +21,26 @@ class CvArtInfoImprovement;
 class CvArtInfoTerrain;
 class CvArtInfoFeature;
 class CvArtInfoCivilization;
-class CyArtFileMgr 
+
+class CyArtFileMgr
 {
 public:
 	CyArtFileMgr();
-	explicit CyArtFileMgr(CvArtFileMgr* pArtFileMgr);			// Call from C++
-	bool isNone() const { return m_pArtFileMgr == NULL; }
+	explicit CyArtFileMgr(const CvArtFileMgr& pArtFileMgr);			// Call from C++
 
-	void Reset();
-	void buildArtFileInfoMaps();
+	CvArtInfoInterface* getInterfaceArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoMovie* getMovieArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoMisc* getMiscArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoUnit* getUnitArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoGenericBuilding* getGenericBuildingArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoGenericCity* getGenericCityArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoBuilding* getBuildingArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoCivilization* getCivilizationArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoBonus* getBonusArtInfo(const char* szArtDefineTag) const;
+	CvArtInfoImprovement* getImprovementArtInfo(const char* szArtDefineTag) const;
 
-	CvArtInfoInterface* getInterfaceArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoMovie* getMovieArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoMisc* getMiscArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoUnit* getUnitArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoGenericBuilding* getGenericBuildingArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoGenericCity* getGenericCityArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoBuilding* getBuildingArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoCivilization* getCivilizationArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoLeaderhead* getLeaderheadArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoBonus* getBonusArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoImprovement* getImprovementArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoTerrain* getTerrainArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoFeature* getFeatureArtInfo( const char * szArtDefineTag ) const;
-	
 protected:
-	CvArtFileMgr* m_pArtFileMgr;
+	const CvArtFileMgr& m_pArtFileMgr;
 };
 
 #endif	// #ifndef CyArtFileMgr

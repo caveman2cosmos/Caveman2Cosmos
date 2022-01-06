@@ -5,7 +5,7 @@
 <!-- Upkeep -->
 <Civ4OutcomeInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<OutcomeInfos>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_LAUNCH_SATELLITE</Type>
 			<Description>TXT_KEY_OUTCOME_LAUNCH_SATELLITE</Description>
 			<Message>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_MESSAGE</Message>
@@ -14,7 +14,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_LAUNCH_SATELLITE_CISLUNAR</Type>
 			<Description>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR</Description>
 			<Message>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR_MESSAGE</Message>
@@ -23,6 +23,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
+		<!-- Delete OUTCOME_EXPLORE_MOON after finishing multimaps if we doesn't want single map space scenario support -->
 		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_MOON</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_MOON</Description>
@@ -32,7 +33,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_MOON_SURFACE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE_MESSAGE</Message>
@@ -41,7 +42,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_SS1</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_SS1</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_SS1_MESSAGE</Message>
@@ -50,7 +51,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_SS2</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_SS2</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_SS2_MESSAGE</Message>
@@ -59,7 +60,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_SS3</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_SS3</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_SS3_MESSAGE</Message>
@@ -68,7 +69,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_SS2</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_SS2</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_SS2_MESSAGE</Message>
@@ -77,7 +78,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_SS3</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_SS3</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_SS3_MESSAGE</Message>
@@ -86,7 +87,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM_MESSAGE</Message>
@@ -95,7 +96,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM_MESSAGE</Message>
@@ -104,7 +105,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_TRANSNEPTUNIAN</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN_MESSAGE</Message>
@@ -113,7 +114,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_INTERSTELLAR</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_MESSAGE</Message>
@@ -122,7 +123,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_BRACEWELL</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_GALACTIC</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_MESSAGE</Message>
@@ -131,7 +132,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_VON_NEUMANN</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_INTERGALACTIC</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_INTERGALACTIC_MESSAGE</Message>
@@ -140,7 +141,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_EXOPLANET</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_EXOPLANET</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_EXOPLANET_MESSAGE</Message>
@@ -149,7 +150,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_OORT_CLOUD</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_OORT_CLOUD</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_OORT_CLOUD_MESSAGE</Message>
@@ -158,7 +159,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_DISTANT_COSMOS</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS_MESSAGE</Message>
@@ -167,7 +168,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_HYPERSPACE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_HYPERSPACE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_HYPERSPACE_MESSAGE</Message>
@@ -176,7 +177,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_MULTIVERSE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_MULTIVERSE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_MULTIVERSE_MESSAGE</Message>
@@ -185,7 +186,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_ANCIENT_CIVILIZATION</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION_MESSAGE</Message>
@@ -194,7 +195,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE_MESSAGE</Message>
@@ -203,7 +204,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_INTERSTELLAR_LIFE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_LIFE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_LIFE_MESSAGE</Message>
@@ -212,7 +213,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_GALACTIC_CORE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE_MESSAGE</Message>
@@ -221,16 +222,16 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_TO_PLANET_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_CISLUNAR_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER_MESSAGE</Message>
@@ -239,7 +240,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_LUNAR_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER_MESSAGE</Message>
@@ -248,7 +249,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_PLANET_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER_MESSAGE</Message>
@@ -257,7 +258,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_PLANET</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_PLANET</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_PLANET_MESSAGE</Message>
@@ -266,7 +267,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_ASTEROID</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_ASTEROID</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_ASTEROID_MESSAGE</Message>
@@ -275,7 +276,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_SEDNOID</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_SEDNOID</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_SEDNOID_MESSAGE</Message>
@@ -284,7 +285,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_JMOON</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_JMOON</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_JMOON_MESSAGE</Message>
@@ -293,16 +294,16 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_SAMPLE_STUDY</Type>
 			<Description>TXT_KEY_OUTCOME_SAMPLE_STUDY</Description>
 			<Message>TXT_KEY_OUTCOME_SAMPLE_STUDY_MESSAGE</Message>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 		</OutcomeInfo>
-        <OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_CAPTURE_ASTEROID</Type>
 			<Description>TXT_KEY_OUTCOME_CAPTURE_ASTEROID</Description>
 			<Message>TXT_KEY_OUTCOME_CAPTURE_ASTEROID_MESSAGE</Message>

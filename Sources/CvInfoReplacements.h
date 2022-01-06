@@ -11,11 +11,10 @@
 #ifndef CVINFOREPLACEMENTS_H
 #define CVINFOREPLACEMENTS_H
 
-class BoolExpr;
-class cvInternalGlobals;
-class CvInfoBase;
-
-#include <set>
+//#include "BoolExpr.h"
+//#include "CvGameAI.h"
+//#include "CvGlobals.h"
+//#include "CvInfos.h"
 
 template <class T>
 class CvInfoReplacement
@@ -23,11 +22,11 @@ class CvInfoReplacement
 protected:
 	const uint m_uiID;
 	const uint m_uiReplID;
-	BoolExpr* m_pCondition;
+	const BoolExpr* m_pCondition;
 	T* m_pInfo;
 
 public:
-	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, BoolExpr* pCondition = NULL, T* pInfo = NULL):
+	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, const BoolExpr* pCondition = NULL, T* pInfo = NULL):
 		m_uiID(uiID), m_uiReplID(uiReplID), m_pCondition(pCondition), m_pInfo(pInfo) {}
 
 	void read(FDataStreamBase* pStream)
@@ -59,7 +58,7 @@ public:
 
 	bool checkCondition()
 	{
-		return m_pCondition->evaluate(cvInternalGlobals::getInstance().getGame().getGameObject());
+		return m_pCondition->evaluate(GC.getGame().getGameObject());
 	}
 
 	T* getInfo() const
@@ -72,21 +71,12 @@ public:
 		m_pInfo = pInfo;
 	}
 
-//	void updateInfo(BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+//	void updateInfo(const BoolExpr* pCondition, T* pInfo)
 //	{
-//		if (bPassTwo)
-//		{
-//			SAFE_DELETE(pCondition);
-//			m_pInfo->copyNonDefaultsReadPass2(pInfo, NULL);
-//			SAFE_DELETE(pInfo);
-//		}
-//		else
-//		{
-//			m_pCondition = pCondition;
-//			pInfo->copyNonDefaults(m_pInfo, NULL);
-//			SAFE_DELETE(m_pInfo);
-//			m_pInfo = pInfo;
-//		}
+//		m_pCondition = pCondition;
+//		pInfo->copyNonDefaults(m_pInfo, NULL);
+//		SAFE_DELETE(m_pInfo);
+//		m_pInfo = pInfo;
 //	}
 };
 
@@ -134,9 +124,9 @@ public:
 		}
 		return NULL;
 	}
-	
+
 	// This adds a replacement or updates an existing one
-	void addReplacement(uint uiID, uint uiReplID, BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+	void addReplacement(uint uiID, uint uiReplID, const BoolExpr* pCondition, T* pInfo/*, bool bPassTwo = false*/)
 	{
 //		CvInfoReplacement<T>* pExisting = getReplacement(iID, iReplID);
 //		if (pExisting)
@@ -179,7 +169,7 @@ public:
 
 		// Switch in all replacements for which the condition is true, but only the first right one if there is more than one
 		std::set<int> setSwitched;
-		
+
 		iSize = m_apReplacements.size();
 		for (unsigned int i=0; i<iSize; i++)
 		{

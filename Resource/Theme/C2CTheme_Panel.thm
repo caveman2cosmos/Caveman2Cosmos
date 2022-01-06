@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Panel.thm
 Content		:	Civ4 - GPanel control theme
@@ -10,7 +10,7 @@ Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
 **********************************************************************/
 
 
-// *** Main Panel control namespace 
+// *** Main Panel control namespace
 
 with GFC_Control_Panel
 {
@@ -83,7 +83,7 @@ with GFC_Control_Panel
 	{
 		.StyleId_Border			=	GPropertyId(GFC_Control_InBorder_Style);
 		.Flag_NoInnerFill		=	0;
-		
+
 		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
 		{
 			.Default
@@ -166,7 +166,7 @@ with GFC_Control_Panel
 	}
 
 	// ** External style
-	style SF_CtrlTheme_Civ4_Panel_ExternalBorderLabel_Style	
+	style SF_CtrlTheme_Civ4_Panel_ExternalBorderLabel_Style
 	{
 		GFC_Control_Color_Background				=	GFC_Control_ExternalBorder_Style[GFC_Control_Border_Color_Inner];
 		GFC_Control_Combine_Background				=	GFC_Control_ExternalBorder_Style[GFC_Control_Border_Combine_Inner];
@@ -189,7 +189,7 @@ with GFC_Control_Panel
 	{
 		.StyleId_Border			=	GPropertyId(SF_CtrlTheme_Civ4_Panel_ExternalBorder_Style);
 		.Flag_NoInnerFill		=	0;
-		
+
 		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
 		{
 			.Default

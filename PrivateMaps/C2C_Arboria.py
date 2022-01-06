@@ -10,8 +10,6 @@
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 from CvMapGeneratorUtil import HintedWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_ARBORIA_DESCR"
@@ -22,7 +20,7 @@ def isAdvancedMap():
 # Rise of Mankind 2.5
 	return 0
 # Rise of Mankind 2.5
-	
+
 def isClimateMap():
 	return 0
 
@@ -38,10 +36,10 @@ def getNumHiddenCustomMapOptions():
 def getCustomMapOptionName(argsList):
 	translated_text = unicode(CyTranslator().getText("TXT_KEY_MAP_WORLD_WRAP", ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	return 3
-	
+
 def getCustomMapOptionDescAt(argsList):
 	iSelection = argsList[1]
 	selection_names = ["TXT_KEY_MAP_WRAP_FLAT",
@@ -49,7 +47,7 @@ def getCustomMapOptionDescAt(argsList):
 					   "TXT_KEY_MAP_WRAP_TOROID"]
 	translated_text = unicode(CyTranslator().getText(selection_names[iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	return 1
 
@@ -59,14 +57,14 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 1 or map.getCustomMapOption(0) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 2)
 
 def getTopLatitude():
 	return 50
-	
+
 def getBottomLatitude():
 	return -50
 
@@ -100,7 +98,7 @@ def beforeGeneration():
 	global food
 	food = CyFractal()
 	food.fracInit(iW, iH, 7, dice, 0, -1, -1)
-		
+
 def generatePlotTypes():
 	NiTextOut("Setting Plot Types (Python Arboria) ...")
 	global hinted_world
@@ -114,7 +112,7 @@ def generatePlotTypes():
 	if not cont:
 		print "Couldn't create continent! Reverting to C implementation."
 		CyPythonMgr().allowDefaultImpl()
-	else:		
+	else:
 		for x in range(hinted_world.w):
 			for y in (0, hinted_world.h - 1):
 				hinted_world.setValue(x,y, 1) # force ocean at poles
@@ -141,12 +139,12 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 		self.map = CyMap()
 		self.mapRand = GC.getGame().getMapRand()
 		self.forests = CyFractal()
-		
+
 		self.iFlags = 0  # Disallow FRAC_POLAR flag, to prevent "zero row" problems.
 
 		self.iGridW = self.map.getGridWidth()
 		self.iGridH = self.map.getGridHeight()
-		
+
 		self.forest_grain = forest_grain + GC.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
 
 		self.fracXExp = fracXExp
@@ -154,19 +152,19 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 
 		self.__initFractals()
 		self.__initFeatureTypes()
-	
+
 	def __initFractals(self):
 		self.forests.fracInit(self.iGridW, self.iGridH, self.forest_grain, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
-		
+
 		self.iJungleStart = self.forests.getHeightFromPercent(65)
 		self.iJungleStop = self.forests.getHeightFromPercent(69)
 		self.iForestStart = self.forests.getHeightFromPercent(29)
-	
+
 	def __initFeatureTypes(self):
 		GC = CyGlobalContext()
 		self.featureJungle = GC.getInfoTypeForString("FEATURE_JUNGLE")
 		self.featureForest = GC.getInfoTypeForString("FEATURE_FOREST")
-	
+
 	def getLatitudeAtPlot(self, iX, iY):
 		return 50
 
@@ -187,14 +185,14 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
 			self.addJunglesAtPlot(pPlot, iX, iY, lat)
-			
+
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
 			self.addForestsAtPlot(pPlot, iX, iY, lat, long)
-		
+
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
-		ice = 0
-	
+		return
+
 	def addJunglesAtPlot(self, pPlot, iX, iY, lat):
 		# Warning: this version of JunglesAtPlot is using the forest fractal!
 		if pPlot.canHaveFeature(self.featureJungle):
@@ -242,7 +240,6 @@ def addBonusType(argsList):
 	[iBonusType] = argsList
 	GC = CyGlobalContext()
 	map = CyMap()
-	dice = GC.getGame().getMapRand()
 	type_string = GC.getBonusInfo(iBonusType).getType()
 
 	if not (type_string in forest):
@@ -281,7 +278,6 @@ def addBonusType(argsList):
 							if pPlot.isHills():
 								if (foodVal >= iSilverBottom and foodVal <= iSilverTop):
 									map.plot(x,y).setBonusType(iBonusType)
-
 		return None
 
 def afterGeneration():

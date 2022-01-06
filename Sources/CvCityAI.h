@@ -5,7 +5,12 @@
 #ifndef CIV4_CITY_AI_H
 #define CIV4_CITY_AI_H
 
+#include <vector>
+
 #include "CvCity.h"
+#include "OutputRatios.h"
+#include "PlotInfo.h"
+#include "CvEnums.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -30,14 +35,15 @@
 
 #define BUILDINGFOCUS_CONSIDER_ANY			(1 << 20)
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-class	BuildingValueCache;
+class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
+class CvArea;
+class CvUnitSelectionCriteria;
 
 //	Koshling - add caching to yield calculations
 #ifdef YIELD_VALUE_CACHING
 struct yieldValueCacheEntry
 {
-	yieldValueCacheEntry() 
+	yieldValueCacheEntry()
 		: aiYields()
 		, aiCommerceYields()
 		, bAvoidGrowth(false)
@@ -92,6 +98,7 @@ public:
 	void AI_init();
 	void AI_uninit();
 	void AI_reset();
+	void SendLog(CvWString function, CvWString message) const;
 
 	void AI_doTurn();
 
@@ -101,7 +108,7 @@ public:
 
 	bool AI_avoidGrowth();
 	bool AI_ignoreGrowth();
-	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove);
+	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const;
 
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remain valid for the processing of the current turn's units to be cleared
@@ -116,19 +123,18 @@ public:
 	UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL);
 
 	BuildingTypes AI_bestBuildingThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
-	std::vector<ScoredBuilding> AI_bestBuildingsThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
+	const std::vector<ScoredBuilding> AI_bestBuildingsThreshold(int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty);
 
-	bool AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibles, int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
+	bool AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibles, int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty);
 
 	// Can a building be reasonably hurried by any method?
-	bool AI_canRushBuildingConstruction(BuildingTypes building);
+	bool AI_canRushBuildingConstruction(BuildingTypes building) const;
 
 	int AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags = 0, bool bForTech = false);
 	int AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanConstruct = false);
 	int AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
 	int AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
-	int getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate);
-	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield);
+	int getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const;
 
 	ProjectTypes AI_bestProject() const;
 	int AI_projectValue(ProjectTypes eProject) const;
@@ -189,8 +195,7 @@ public:
 
 	int AI_getGoodTileCount() const;
 	int AI_countWorkedPoorTiles() const;
-	int AI_getTargetSize();
-	void AI_getYieldMultipliers();
+	int AI_getTargetSize() const;
 
 	BuildTypes AI_getBestBuild(int iIndex) const;
 	int AI_countBestBuilds(const CvArea* pArea) const;
@@ -202,6 +207,7 @@ public:
 
 	int AI_getCityImportance(bool bEconomy, bool bMilitary) const;
 
+	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
 	int AI_yieldMultiplier(YieldTypes eYield) const;
 	void AI_updateSpecialYieldMultiplier();
 	int AI_specialYieldMultiplier(YieldTypes eYield) const;
@@ -293,14 +299,14 @@ protected:
 	void AI_doHurry(bool bForce = false);
 	void AI_doEmphasize();
 	int AI_getHappyFromHurry(HurryTypes eHurry) const;
-	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
-	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding) const;
 	int AI_getHappyFromHurry(int iHurryPopulation) const;
 	bool AI_doPanic();
 	int AI_calculateCulturePressure(bool bGreatWork = false) const;
 
-	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI /*= NO_UNITAI*/, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, CvUnitSelectionCriteria* criteria = NULL);
-	bool AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, CvUnitSelectionCriteria* criteria = NULL, UnitTypes eUnitType = NO_UNIT);
+	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI /*= NO_UNITAI*/, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, const CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, const CvUnitSelectionCriteria* criteria = NULL, UnitTypes eUnitType = NO_UNIT);
 	bool AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI);
 	bool AI_chooseDefender(const char* reason);
 	bool AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightArray &allowedTypes, int iOdds = -1);
@@ -313,7 +319,7 @@ protected:
 
 	int	getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) const;
 
-	bool AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue);
+	bool AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue) const;
 	bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL);
 	bool AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist = NO_SPECIALIST);
 	void AI_juggleCitizens();
@@ -321,28 +327,28 @@ protected:
 	bool AI_potentialPlot(short* piYields) const;
 	bool AI_foodAvailable(int iExtra = 0) const;
 
-public:
-	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-protected:
+	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFreeSpecialistYield) const;
+
+	void AI_getBestPlotValue(OutputRatios& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList) const;
+	void AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plotInfo, OutputRatios& ratios) const;
+	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
+	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
+
 #ifdef YIELD_VALUE_CACHING
 	virtual void AI_NoteWorkerChange();
 	virtual void AI_NoteSpecialistChange();
-
-	int AI_yieldValueWithCache(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization, bool bSpecialist);
 #endif
-	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
+	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
+	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) const;
 
 	int AI_experienceWeight() const;
 	int AI_buildUnitProb() const;
+	bool AI_checkIrrigationSpread(const CvPlot* pPlot) const;
 
-	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
-
-	int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange);
-	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );
+	int AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const;
+	void AI_getYieldMultipliers(int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange) const;
 
 	int tradeRouteValue(const CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
-
 
 	void AI_buildGovernorChooseProduction();
 
@@ -350,11 +356,9 @@ protected:
 	int AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false) const;
 	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false) const;
 	int AI_countGoodSpecialists(bool bHealthy) const;
-	int AI_calculateTargetCulturePerTurn() const;
+	//int AI_calculateTargetCulturePerTurn() const;
 
 	void AI_stealPlots();
-
-	int AI_buildingSpecialYieldChangeValue(BuildingTypes kBuilding, YieldTypes eYield) const;
 
 	void AI_cachePlayerCloseness(int iMaxDistance);
 	void AI_updateWorkersNeededHere();
@@ -368,13 +372,35 @@ public:
 	int getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) const;
 	int getPropertyDecay(PropertyTypes eProperty) const;
 	int getPropertyNonBuildingSource(PropertyTypes eProperty) const;
+
 private:
-	int	GetBuildingValue(BuildingTypes eType, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct = false);
+	int AI_getBuildingYieldValue
+	(
+		BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bForeignTrade, bool bFinancialTrouble,
+		int* aiFreeSpecialistYield, int* aiYieldRank, int iLimitedWonderLimit, const CvArea* pArea, int iTotalPopulation, int iFoodDifference
+	)
+	const;
+
+	int AI_getBuildingProductionValue
+	(
+		BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder,
+		bool bForeignTrade, int iFreeSpecialistYield, int iYieldRank, int iLimitedWonderLimit
+	)
+	const;
+
+	int AI_getBuildingCommerceValue
+	(
+		BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bIsLimitedWonder, bool bFinancialTrouble, bool bCulturalVictory1,
+		int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate, int* aiCommerceRank,
+		int iLimitedWonderLimit, int iTotalPopulation
+	)
+	const;
+
 	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags) const;
 	void CalculateAllBuildingValues(int iFocusFlags);
-	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel);
+	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const;
 	int healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHealthLevel, int iBaseFoodDifference) const;
-	int worstWorkedPlotValue();
+	int worstWorkedPlotValue() const;
 	//	Evaluate a building we are considering building here in terms of its
 	//	effect on properties
 	int buildingPropertiesValue(const CvBuildingInfo& kBuilding) const;
@@ -382,18 +408,17 @@ private:
 	bool AI_establishSeeInvisibleCoverage();
 	bool AI_establishInvestigatorCoverage();
 	bool AI_isNegativePropertyUnit(UnitTypes eUnit) const;
-	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria) const;
 
 	//	The cache itself
 	BuildingValueCache* cachedBuildingValues;
 
 #ifdef YIELD_VALUE_CACHING
-private:
 	virtual void ClearYieldValueCache();
 	void ClearYieldValueCacheImpl();
 	virtual void CheckYieldValueCache(char* label);
 
-	yieldCache yieldValueCache;
+	mutable yieldCache yieldValueCache;
 	static int yieldValueCacheHits;
 	static int yieldValueCacheReads;
 #endif

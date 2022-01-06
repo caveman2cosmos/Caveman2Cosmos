@@ -4,7 +4,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_CRIME</Type>
 			<Description>TXT_KEY_PROPERTY_CRIME</Description>
-			<Strategy>TXT_KEY_PROPERTY_CRIME_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_CRIME_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_CRIME_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_CRIME_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -87,7 +86,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					 <BuildingType>BUILDING_CRIME_POACHING</BuildingType>
+					<BuildingType>BUILDING_CRIME_POACHING</BuildingType>
 					<iMinValue>750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -496,7 +495,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_FLAMMABILITY</Type>
 			<Description>TXT_KEY_PROPERTY_FLAMMABILITY</Description>
-			<Strategy>TXT_KEY_PROPERTY_FLAMMABILITY_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_FLAMMABILITY_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -518,7 +516,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_WATER_POLLUTION</Type>
 			<Description>TXT_KEY_PROPERTY_WATER_POLLUTION</Description>
-			<Strategy>TXT_KEY_PROPERTY_WATER_POLLUTION_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_WATER_POLLUTION_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_WATER_POLLUTION_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_WATER_POLLUTION_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -673,7 +670,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_AIR_POLLUTION</Type>
 			<Description>TXT_KEY_PROPERTY_AIR_POLLUTION</Description>
-			<Strategy>TXT_KEY_PROPERTY_AIR_POLLUTION_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_AIR_POLLUTION_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -828,7 +824,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_DISEASE</Type>
 			<Description>TXT_KEY_PROPERTY_DISEASE</Description>
-			<Strategy>TXT_KEY_PROPERTY_DISEASE_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_DISEASE_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_DISEASE_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_DISEASE_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -981,7 +976,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_EDUCATION</Type>
 			<Description>TXT_KEY_PROPERTY_EDUCATION</Description>
-			<Strategy>TXT_KEY_PROPERTY_EDUCATION_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_EDUCATION_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_EDUCATION_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_EDUCATION_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -1326,7 +1320,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_TOURISM</Type>
 			<Description>TXT_KEY_PROPERTY_TOURISM</Description>
-			<Strategy>TXT_KEY_PROPERTY_TOURISM_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_TOURISM_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_TOURISM_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_TOURISM_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>

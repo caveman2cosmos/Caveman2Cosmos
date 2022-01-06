@@ -39,38 +39,6 @@ FONT_CENTER_JUSTIFY=1<<2
 FONT_RIGHT_JUSTIFY=1<<1
 FONT_LEFT_JUSTIFY=1<<0
 
-# if the string is non unicode, convert it to unicode by decoding it using utf-8
-def convertToUnicode(s):
-	if isinstance(s, str):
-		return s.decode("utf-8")
-	return s
-
-# if the string is unicode, convert it to str by encoding it using utf-8
-def convertToStr(txt):
-	if isinstance(txt, unicode):
-		i = 0
-		length = len(txt)
-		while i < length:
-			ordinal = ord(txt[i])
-			if ordinal > 255:
-				txt[i] = '?'
-			i += 1
-		return txt.encode("utf-8")
-	return txt
-
-def remove_diacriticals(txt):
-	txt = convertToStr(txt)
-	accent = [
-		('à', 'a'), ('ä', 'a'), ('â', 'a'),
-		('é', 'e'), ('è', 'e'), ('ê', 'e'),
-		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
-		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
-		('ç', 'c'), ('î', 'i'), ('ï', 'i')
-	]
-	while accent:
-		a, b = accent.pop()
-		txt = txt.replace(a, b)
-	return txt
 
 class RedirectDebug:
 	"""Send Debug Messages to Civ Engine"""
@@ -102,11 +70,6 @@ def myExceptHook(type, value, tb):
 def pyPrint(stuff):
 	sys.stdout.write('PY:' + stuff + "\n")
 
-def pyAssert(cond, msg):
-	if not cond:
-		sys.stderr.write(msg)
-	assert(cond, msg)
-
 def getOppositeCardinalDirection(dir):
 	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
 
@@ -119,13 +82,6 @@ def shuffle(num, rand):
 def spawnUnit(iUnit, pPlot, pPlayer):
 	pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 	return 1
-
-def findInfoTypeNum(infoGetter, numInfos, typeStr):
-	if typeStr == 'NONE':
-		return -1
-	idx = GC.getInfoTypeForString(typeStr)
-	pyAssert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
-	return idx
 
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 	if cdUnit.iExtraCombatPercent:
@@ -205,7 +161,7 @@ def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iDomainDefenseModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CITY_DOMAIN_DEFENSE",(cdUnit.iDomainDefenseModifier * iChange,))
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_DOMAIN_DEFENSE",(cdUnit.iDomainDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iCityBarbarianDefenseModifier:

@@ -4,7 +4,7 @@
 #define CyGameCoreUtils_h
 
 //
-// Python wrapper functions for DLL 
+// Python wrapper functions for DLL
 //
 
 class CyCity;
@@ -36,7 +36,6 @@ bool cyIsPotentialEnemy(int /*TeamTypes*/ eOurPlayer, int /*TeamTypes*/ eTheirPl
 CyCity* cyGetCity(const IDInfo city);
 CyUnit* cyGetUnit(const IDInfo unit);
 
-bool cyIsPromotionValid(int /*PromotionTypes*/ ePromotion, int /*UnitTypes*/ eUnit, bool bLeader);
 int cyGetTechScore(int /*TechTypes*/ eTech);
 int cyGetWonderScore(int /*BuildingTypes*/ eWonder);
 int /*ImprovementTypes*/ cyFinalImprovementUpgrade(int /*ImprovementTypes*/ eImprovement, int iCount);

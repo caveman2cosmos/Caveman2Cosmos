@@ -11,9 +11,10 @@
 #ifndef CV_OUTCOME_LIST_H
 #define CV_OUTCOME_LIST_H
 
-#include "CvOutcome.h"
-
+class CvPlot;
+class CvOutcome;
 class CvUnit;
+class CvXMLLoadUtility;
 
 class CvOutcomeList
 {
@@ -29,16 +30,16 @@ public:
 	bool execute(CvUnit& kUnit, PlayerTypes eDefeatedUnitPlayer = NO_PLAYER, UnitTypes eDefeatedUnitType = NO_UNIT);
 
 	int AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
-	
+
 	bool isEmpty() const;
 	void clear();
 
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
-	
-	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
-	void copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
+	void copyNonDefaults(CvOutcomeList* pOutcomeList);
+	void getCheckSum(uint32_t& iSum) const;
+
 protected:
 	bool m_bIsReference;
 	std::vector<CvOutcome*> m_aOutcome;

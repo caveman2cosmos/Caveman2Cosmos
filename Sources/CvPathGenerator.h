@@ -3,11 +3,10 @@
 #ifndef CvPathGenerator_h__
 #define CvPathGenerator_h__
 
-#include <queue>
-
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 
-//	Forward declarations of helper classes
+class CvMap;
+class CvPlot;
 class CvPathNode;
 class CvPathGenerator;
 class CvSelectionGroup;
@@ -54,7 +53,7 @@ public:
 
 protected:
 	CvPath();
-	
+
 	void Set(CvPathNode* startNode);
 
 public:
@@ -128,7 +127,6 @@ public:
 		{
 			if ( m_nextBucketToAllocate == m_nextBucketIndex )
 			{
-				MEMORY_TRACK_EXEMPT();
 
 				std::vector<AllocationType>* newBucket = new std::vector<AllocationType>();
 
@@ -189,7 +187,6 @@ typedef struct
 
 //	Forward declarations of helper classes
 class CvPathPlotInfoStore;
-class CvPathGenerator;
 class CvPathGeneratorPlotInfo;
 
 class CvNodeCostInfo
@@ -217,7 +214,6 @@ typedef struct
 
 //	Forward declarations of helper classes
 class CvPathPlotInfoStore;
-class CvPathGenerator;
 class CvPathGeneratorPlotInfo;
 
 class CvPathGenerator : public CvPathGeneratorBase
@@ -232,13 +228,12 @@ public:
 	bool generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit = -1);
 	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns);
 	bool haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen);
-	
+
 	virtual const CvPlot* getTerminalPlot() const;
 
 	const CvPath& getLastPath() const;
 	void SelfTest();
-	static void EnableMaxPerformance(bool bEnable) { m_bFastMode = bEnable; }
-	static bool IsMaxPerformance() { return m_bFastMode; }
+
 private:
 	class CvPathNodeComparer
 	{
@@ -250,7 +245,7 @@ private:
 	};
 
 	CvPathNode*	allocatePathNode();
-	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum);
+	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum);
 	void AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool bHasQueued);
 	void OrphanChildTree(CvPathNode* node);
 	void DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot);
@@ -280,7 +275,7 @@ private:
 	CvPathNode*							m_pReplacedNonTerminalNode;
 	const CvPlot*						m_pTerminalPlot;
 	CvPath								m_generatedPath;
-	unsigned int						m_currentGroupMembershipChecksum;
+	uint32_t							m_currentGroupMembershipChecksum;
 	const CvPlot*						m_pFrom;
 	int									m_iFlags;
 	int									m_iTurn;
@@ -291,8 +286,6 @@ private:
 	EdgeValidity						m_ValidFunc;
 	TerminusValidity					m_TerminusValidFunc;
 	TurnEndValidityCheckRequired		m_TurnEndValidCheckNeeded;
-
-	static bool							m_bFastMode;
 
 public:
 	int									m_nodesProcessed;
