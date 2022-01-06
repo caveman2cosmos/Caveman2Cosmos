@@ -12,10 +12,9 @@
 //-----------------------------------------------------------------------------
 //
 
-#include "CvPlot.h"
-
 class CvCity;
 class CvMapExternal;
+class CvPlot;
 
 //
 // holds initialization info

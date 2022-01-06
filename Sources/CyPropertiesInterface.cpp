@@ -1,4 +1,7 @@
 #include "CvGameCoreDLL.h"
+#include "CvProperties.h"
+#include "CvPropertyManipulators.h"
+#include "CvPropertySource.h"
 #include "BoolExpr.h"
 #include "IntExpr.h"
 

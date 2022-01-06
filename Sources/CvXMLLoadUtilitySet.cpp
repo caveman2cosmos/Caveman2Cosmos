@@ -7,14 +7,15 @@
 #include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvInfoWater.h"
+#include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
-#include "CvImprovementInfo.h"
 #include <iostream>
-#include "CvInitCore.h"
 
 bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache)
 {
@@ -993,12 +994,13 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	//Establish Promotion Pedia Help info
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		PromotionTypes ePromotion = (PromotionTypes)iI;
+		const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
 		GC.getPromotionInfo(ePromotion).setQualifiedUnitCombatTypes();
+		GC.getPromotionInfo(ePromotion).setDisqualifiedUnitCombatTypes();
 	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eUnit = (UnitTypes)iI;
+		UnitTypes eUnit = static_cast<UnitTypes>(iI);
 		GC.getUnitInfo(eUnit).setQualifiedPromotionTypes();
 		GC.getUnitInfo(eUnit).setCanAnimalIgnores();
 	}
@@ -1179,12 +1181,10 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	logging::logMsg("xml.log", "SetGlobalActionInfo\n");
 	int i=0;					//loop counter
 
-	if(!(NUM_INTERFACEMODE_TYPES > 0))
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "NUM_INTERFACE_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
+	STATIC_ASSERT(NUM_INTERFACEMODE_TYPES > 0, value_should_be_greater_than_zero);
+	STATIC_ASSERT(NUM_CONTROL_TYPES > 0, value_should_be_greater_than_zero);
+	STATIC_ASSERT(NUM_COMMAND_TYPES > 0, value_should_be_greater_than_zero);
+
 	if(!(GC.getNumBuildInfos() > 0))
 	{
 		char	szMessage[1024];
@@ -1209,22 +1209,10 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		sprintf( szMessage, "GC.getNumBuildingInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(NUM_CONTROL_TYPES > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "NUM_CONTROL_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
 	if(!(GC.getNumAutomateInfos() > 0) )
 	{
 		char	szMessage[1024];
 		sprintf( szMessage, "GC.getNumAutomateInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-	if(!(NUM_COMMAND_TYPES > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "NUM_COMMAND_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 	if(!(GC.getNumMissionInfos() > 0) )
@@ -1594,7 +1582,7 @@ void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* sz
 //
 //------------------------------------------------------------------------------------------------------
 template <class T>
-void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, bool bTwoPass, CvInfoReplacements<T>* pReplacements)
+void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvInfoReplacements<T>* pReplacements)
 {
 	char szLog[256];
 	char* tmp = xercesc::XMLString::transcode(szTagName);
@@ -1822,7 +1810,7 @@ void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfo
 		{
 			CvString szType;
 			GetChildXmlValByName(szType, L"Type");
-			int iIndex = GC.getInfoTypeForString(szType, true);
+			const int iIndex = GC.getInfoTypeForString(szType, true);
 
 			if (-1 == iIndex)
 			{
@@ -1830,7 +1818,7 @@ void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfo
 
 				if (NULL == pClassInfo)
 				{
-					FAssert(false);
+					FErrorMsg("error");
 					break;
 				}
 
@@ -1872,16 +1860,16 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: %s\n", szFileRoot);
 
 	std::vector<CvString> aszFiles;
-	CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
+	const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
 	CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
-	if(aszFiles.size() == 0)
+	if (aszFiles.empty())
 		aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
 	foreach_(const CvString& szFile, aszFiles)
 	{
 		if (LoadCivXml(szFile))
 		{
-			SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
+			SetGlobalClassInfo(aInfos, szXmlPath, pReplacements);
 		}
 	}
 
@@ -1894,7 +1882,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		{
 			if (LoadCivXml(szFile))
 			{
-				SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
+				SetGlobalClassInfo(aInfos, szXmlPath, pReplacements);
 			}
 		}
 
@@ -1902,9 +1890,9 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		if (bTwoPass)
 		{
 			std::vector<CvString> aszFiles;
-			CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
+			const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
 			CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
-			if(aszFiles.size() == 0)
+			if (aszFiles.empty())
 				aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
 			foreach_(const CvString& szFile, aszFiles)
@@ -1951,7 +1939,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		{
 			if (LoadCivXml(szFile))
 			{
-				SetGlobalClassInfo(aInfos, szXmlPath, false, pReplacements);
+				SetGlobalClassInfo(aInfos, szXmlPath, pReplacements);
 			}
 		}
 
@@ -1959,7 +1947,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		if (bTwoPass)
 		{
 			std::vector<CvString> aszFiles;
-			CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
+			const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\xml\\";
 			CvXMLLoadUtilitySetMod::MLFEnumerateFiles(aszFiles, (szModDirectory + szFileDirectory).c_str(), CvString::format("xml\\%s", szFileDirectory).c_str(), CvString::format("%s.xml", szFileRoot).c_str(), false);
 			if (aszFiles.empty())
 				aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
@@ -2835,7 +2823,7 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 }
 
 
-DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
+bool CvXMLLoadUtility::LoadPlayerOptions()
 {
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -2865,7 +2853,7 @@ DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 	return true;
 }
 
-DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
+bool CvXMLLoadUtility::LoadGraphicOptions()
 {
 	if (!CreateFXml())
 		return false;

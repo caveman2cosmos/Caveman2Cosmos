@@ -11,18 +11,17 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#include "CvInfoUtil.h"
-#include "CvPython.h"
+#include "CvInfos.h"
+//#include "CvInfoUtil.h"
+//#include "CvPython.h"
 #include "IDValuemap.h"
 
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
 class CvHotkeyInfo;
-class CvProperties;
-class CvPropertyManipulators;
 class CvXMLLoadUtility;
-//struct CvInfoUtil;
+struct CvInfoUtil;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
@@ -241,11 +240,11 @@ public:
 	PropertyTypes getPropertySpawnProperty() const;
 	PromotionLineTypes getPromotionLineType() const;
 
-	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
-	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; }
-	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
-	const TCHAR* getButton() const;
-	const TCHAR* getMovie() const;
+	const char* getConstructSound() const			{ return m_szConstructSound; }
+	const char* getArtDefineTag() const				{ return m_szArtDefineTag; }
+	const char* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
+	const char* getButton() const;
+	const char* getMovie() const;
 	const CvArtInfoBuilding* getArtInfo() const;
 	const CvArtInfoMovie* getMovieInfo() const;
 
@@ -439,11 +438,11 @@ public:
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
-	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange; }
+	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange != NULL; }
 
 	int getLocalSpecialistCommerceChange(int i, int j) const;
 	int* getLocalSpecialistCommerceChangeArray(int i) const;
-	bool isAnyLocalSpecialistCommerceChanges() const { return m_ppaiLocalSpecialistCommerceChange; }
+	bool isAnyLocalSpecialistCommerceChanges() const { return m_ppaiLocalSpecialistCommerceChange != NULL; }
 
 	bool isHurry(int i) const;
 
@@ -487,7 +486,7 @@ public:
 
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 
-	bool isNewCityFree(const CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject) const;
 
 	const BoolExpr* getConstructCondition() const;
 
@@ -507,7 +506,7 @@ public:
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
-	void doPostLoadCaching(BuildingTypes eThis);
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
 	void setNotShowInCity();

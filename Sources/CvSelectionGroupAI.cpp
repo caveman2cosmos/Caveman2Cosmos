@@ -84,7 +84,7 @@ namespace {
 		foreach_(CvUnit* unit, group->units() | filtered(predicateFn))
 		{
 			unit->joinGroup(NULL);
-			FAssertMsg(!algo::contains(group->units(), unit), "Failed to remove unit from group");
+			FAssertMsg(algo::none_of_equal(group->units(), unit), "Failed to remove unit from group");
 			if (unit->plot()->getTeam() == group->getTeam())
 			{
 				unit->getGroup()->pushMission(MISSION_SKIP);
@@ -159,7 +159,7 @@ bool CvSelectionGroupAI::AI_update()
 		iTempHack++;
 		if (iTempHack > 90 && iTempHack < 100)
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
@@ -181,7 +181,7 @@ bool CvSelectionGroupAI::AI_update()
 		}
 		if (iTempHack >= 100)
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
@@ -714,7 +714,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 	return pBestUnit;
 }
 
-CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce, bool bNoBlitz, bool bSuprise) const
+CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const
 {
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
@@ -728,7 +728,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 				if (bForce || (pLoopUnit->canMove() && pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack)))
 				{
 					const int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
-					FAssertMsg(iValue >= 0, "iValue is expected to be greater than 0");
+					FASSERT_NOT_NEGATIVE(iValue);
 
 					// we want to pick the last unit of highest value, so pick the last unit with a good value
 					if (iValue > 0 && iValue >= iBestValue)
@@ -987,7 +987,7 @@ bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 

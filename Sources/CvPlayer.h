@@ -5,28 +5,26 @@
 #ifndef CIV4_PLAYER_H
 #define CIV4_PLAYER_H
 
+#include "copy_iterator.h"
+#include "CvBuildLists.h"
 #include "CvCityAI.h"
-#include "CvPlotGroup.h"
-#include "LinkedList.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "CvPlotGroup.h"
+#include "CvProperties.h"
+#include "CvSelectionGroupAI.h"
+#include "CvTalkingHeadMessage.h"
 #include "CvUnitList.h"
 #include "CvUnitAI.h"
+#include "index_iterator_base.h"
+#include "LinkedList.h"
 
 class CvArea;
-class CvBuildLists;
-class CvCity;
-class CvCityAI;
-//class CvContractBroker;
 class CvDiploParameters;
 class CvEventTriggerInfo;
 class CvPlot;
-class CvPlotGroup;
 class CvPopupInfo;
-class CvSelectionGroupAI;
-class CvTalkingHeadMessage;
-class CvUnitAI;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
 
@@ -120,7 +118,7 @@ public:
 	CvUnit* getTempUnit(UnitTypes eUnit, int iX, int iY);
 	void releaseTempUnit();
 	CvUnit* initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection, int iBirthmark);
-	void disbandUnit(bool bAnnounce);
+	void disbandUnit();
 	void killUnits();
 
 	CvSelectionGroup* cycleSelectionGroups(const CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch);
@@ -263,7 +261,7 @@ public:
 
 	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bPropertySpawn = false) const;
 	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
-	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
+	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
 	bool canMaintain(ProcessTypes eProcess) const;
 	bool isProductionMaxedBuilding(BuildingTypes building, bool bAcquireCity = false) const;
@@ -396,7 +394,7 @@ public:
 	bool canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pUnit) const;
 	int64_t getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
 	int getEspionageMissionCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;
-	int getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;
+	int getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, const CvUnit* pSpyUnit) const;
 	bool doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pUnit, bool bCaught = false);
 	int getEspionageSpendingWeightAgainstTeam(TeamTypes eIndex) const;
 	void setEspionageSpendingWeightAgainstTeam(TeamTypes eIndex, int iValue);
@@ -1999,9 +1997,9 @@ protected:
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
-	int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
+	int calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
 	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
-	bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
+	bool canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();

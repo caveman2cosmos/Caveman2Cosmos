@@ -32043,7 +32043,6 @@
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iCivicAnarchyTimeModifier>50</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
-			<iTradeRoutes>1</iTradeRoutes>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
@@ -32339,7 +32338,6 @@
 			<iWarWearinessAccumulationModifier>10</iWarWearinessAccumulationModifier>
 			<iCivicAnarchyTimeModifier>25</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iTradeRoutes>1</iTradeRoutes>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>

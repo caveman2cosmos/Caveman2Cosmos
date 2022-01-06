@@ -355,11 +355,9 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 
 		for (std::vector<std::pair<CvPlot*,int> >::const_iterator itr = prevRing.begin(), itrend = prevRing.end(); itr != itrend; ++itr)
 		{
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			foreach_(CvPlot* pAdjacentPlot, (*itr).first->adjacent())
 			{
-				CvPlot* pAdjacentPlot = plotDirection((*itr).first->getX(), (*itr).first->getY(), ((DirectionTypes)iI));
-
-				if (pAdjacentPlot != NULL && reachablePlots->find(pAdjacentPlot) == reachablePlots->end())
+				if (reachablePlots->find(pAdjacentPlot) == reachablePlots->end())
 				{
 					bool bValidAsTerminus = false;
 					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX(), (*itr).first->getY(), pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);

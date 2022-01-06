@@ -2,8 +2,10 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvInitCore.h"
@@ -17,9 +19,11 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
-#include "CvImprovementInfo.h"
 #include <time.h>
 #include <sstream>
 
@@ -59,15 +63,12 @@ CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
 
-int g_iPercentDefault = 100;
-int g_iModifierDefault = 0;
-
 #ifdef _DEBUG
 int inDLL = 0;
 const char* fnName = NULL;
 
 //	Wrapper for debugging so as to be able to always tell last method entered
-ProxyTracker::ProxyTracker(const CvGlobals* proxy, const char* name)
+ProxyTracker::ProxyTracker(const char* name)
 {
 	inDLL++;
 	fnName = name;
@@ -117,13 +118,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_statsReporter(NULL)
 	, m_diplomacyScreen(NULL)
 	, m_mpDiplomacyScreen(NULL)
-	//, m_pathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_interfacePathFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_stepFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_routeFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_borderFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_areaFinders(bst::array<FAStar*, NUM_MAPS>())
-	//, m_plotGroupFinders(bst::array<FAStar*, NUM_MAPS>())
 	, m_aiPlotDirectionX(NULL)
 	, m_aiPlotDirectionY(NULL)
 	, m_aiPlotCardinalDirectionX(NULL)
@@ -1703,8 +1697,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_LAWYER_REMOVE_CORPORATIONS);
 	REGISTER_MISSION(MISSION_JOIN_CITY_POPULATION);
 	REGISTER_MISSION(MISSION_CURE);
-	REGISTER_MISSION(MISSION_ESTABLISH);
-	REGISTER_MISSION(MISSION_ESCAPE);
 	REGISTER_MISSION(MISSION_BUILDUP);
 	REGISTER_MISSION(MISSION_AUTO_BUILDUP);
 	REGISTER_MISSION(MISSION_HEAL_BUILDUP);
@@ -2378,7 +2370,7 @@ CvString& cvInternalGlobals::getFootstepAudioTags(int i) const
 	return m_paszFootstepAudioTags ? m_paszFootstepAudioTags[i] : *emptyString;
 }
 
-void cvInternalGlobals::setCurrentXMLFile(const TCHAR* szFileName)
+void cvInternalGlobals::setCurrentXMLFile(const char* szFileName)
 {
 	m_szCurrentXMLFile = szFileName;
 }
@@ -2508,9 +2500,6 @@ void cvInternalGlobals::setDefineSTRING(const char* szName, const char* szValue,
 
 float cvInternalGlobals::getPLOT_SIZE() const
 {
-	CvMapExternal& kMap = GC.getMapExternal();
-	kMap.mapCoordinates(true);
-
 	return m_fPLOT_SIZE;
 }
 
@@ -3102,8 +3091,11 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 
 void cvInternalGlobals::doPostLoadCaching()
 {
-	for (int i = 0, num = getNumBuildingInfos(); i < num; i++)
+	foreach_(std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
-		m_paBuildingInfo[i]->doPostLoadCaching(static_cast<BuildingTypes>(i));
+		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
+		{
+			(*infoVector)[i]->doPostLoadCaching(i);
+		}
 	}
 }

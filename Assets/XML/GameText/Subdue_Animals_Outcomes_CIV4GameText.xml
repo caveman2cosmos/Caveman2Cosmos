@@ -79,6 +79,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT2</Tag>
+		<English>Man against animals in an arena, skill and style are the point. This will consume the unit providing a temporary happiness boost.</English>
+		<French>L'Homme contre l'animal dans l'arène. expérience et style sont au rendez-vous. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
+		<Italian>Un uomo contro un animale in un'arena: tutto ciò che conta sono stile e abilità. Consuma l'unità selezionata fornendo un bonus temporaneo alla felicità.</Italian>
+		<Polish>Człowiek przeciwko zwierzętom na arenie. Styl i finezja to podstawa. Ta akcja usunie jednostkę w zamian tymczasowo zwiększając zadowolenie miejskiej populacji.</Polish>
+		<Russian>×åëîâåê ïðîòèâ æèâîòíûõ íà àðåíå, óìåíèå è ñòèëü - ïóíêò. Ýòî áóäåò ïîòðåáëÿòü åäèíèöó, îáåñïå÷èâàþùóþ ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Tag>
 		<English>Man against animals in a colosseum, blood is the point. This will consume the unit providing a temporary happiness boost.</English>
 		<French>L'homme contre les bêtes au Colisée, on réclame du sand. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
 		<Italian>Un uomo contro un animale in un'arena: ciò che la gente vuole è solo sangue. Consuma l'unità selezionata fornendo un bonus temporaneo alla felicità.</Italian>
@@ -86,12 +94,8 @@
 		<Russian>×åëîâåê ïðîòèâ æèâîòíûõ â Êîëèçåå, êðîâü - ïóíêò. Ýòî áóäåò ïîòðåáëÿòü åäèíèöó, îáåñïå÷èâàþùóþ ïîâûøåíèå ñ÷àñòüÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Tag>
-		<English>Man against animals in an arena, skill and style are the point. This will consume the unit providing a temporary happiness boost.</English>
-		<French>L'Homme contre l'animal dans l'arène. expérience et style sont au rendez-vous. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
-		<Italian>Un uomo contro un animale in un'arena: tutto ciò che conta sono stile e abilità. Consuma l'unità selezionata fornendo un bonus temporaneo alla felicità.</Italian>
-		<Polish>Człowiek przeciwko zwierzętom na arenie. Styl i finezja to podstawa. Ta akcja usunie jednostkę w zamian tymczasowo zwiększając zadowolenie miejskiej populacji.</Polish>
-		<Russian>×åëîâåê ïðîòèâ æèâîòíûõ íà àðåíå, óìåíèå è ñòèëü - ïóíêò. Ýòî áóäåò ïîòðåáëÿòü åäèíèöó, îáåñïå÷èâàþùóþ ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Tag>
+		<English>Various animal performances, slightly more civilized. This will consume the unit providing a temporary happiness boost.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Tag>
@@ -164,22 +168,6 @@
 		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca.</Italian>
 		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki.</Polish>
 		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY</Tag>
-		<English>This will consume the unit providing a science boost based on which building is available in the city (Butcher or Biology Lab).</English>
-		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abattoir, Laboratoire de biologie...).</French>
-		<Italian>Consumerà l'unità, fornendo un bonus alla ricerca basato sull'edificio presente in città (Macelleria o Laboratorio di biologia).</Italian>
-		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości nauki bazując na tym jakie budynki są dostępne w mieście (Rzeźnik lub Laboratorium Biologiczne).</Polish>
-		<Russian>Ýòî áóäåò ïîòðåáëÿòü îòðÿä, îáåñïå÷èâàþùóþ íàó÷íîå ïîâûøåíèå, îñíîâàííîå, íà êîòîðîì çäàíèå äîñòóïíî â ãîðîäå (Ìÿñíèê èëè áèîëàáîðàòîðèÿ).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY_MESSAGE</Tag>
-		<English>You have studied the animal.</English>
-		<French>Vous avez étudié l'animal.</French>
-		<Italian>Hai studiato l'animale.</Italian>
-		<Polish>Zbadałeś zwierzę.</Polish>
-		<Russian>Âû îáó÷èëè æèâîòíîå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE</Tag>

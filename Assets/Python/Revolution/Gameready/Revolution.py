@@ -6,6 +6,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
+import TextUtil
 import math
 # --------- Revolution mod -------------
 import RevDefs
@@ -3971,7 +3972,7 @@ class Revolution:
 		if newLeaderType == None:
 			# Use same leader type, but with new name
 			newLeaderType = ownerLeaderType
-			newLeaderName = CvUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription())
+			newLeaderName = TextUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription())
 
 			if newLeaderName == owner.getName():
 				# Hack Roman numeral naming
@@ -5249,7 +5250,7 @@ class Revolution:
 
 						if not pRevPlayer.isAlive():
 							if len(cityList) < 3:
-								cityString = CvUtil.convertToStr(cityList[0].getName())
+								cityString = TextUtil.convertToStr(cityList[0].getName())
 							else: cityString = None
 							RevData.revObjectSetVal( pRevPlayer, 'CapitalName', cityString )
 
@@ -5720,7 +5721,7 @@ class Revolution:
 
 		if newLeaderType == pPlayer.getLeaderType():
 
-			pPlayer.setName( CvUtil.convertToStr(newLeaderName) )
+			pPlayer.setName(TextUtil.convertToStr(newLeaderName))
 
 			if self.LOG_DEBUG: print "[REV] Revolt: No leader change, leader's of same type"
 
@@ -5733,7 +5734,7 @@ class Revolution:
 			if GAME.isOption(GameOptionTypes.GAMEOPTION_RANDOM_PERSONALITIES):
 				if self.LOG_DEBUG: print "[REV] Revolt: Giving new, random personality by game option"
 				RevUtils.changePersonality(pPlayer.getID())
-			elif newLeaderName == CvUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription()):
+			elif newLeaderName == TextUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription()):
 				if self.LOG_DEBUG: print "[REV] Revolt: Giving back original leader personality"
 				RevUtils.changePersonality( pPlayer.getID(), newLeaderType )
 			else:
@@ -6050,7 +6051,7 @@ class Revolution:
 			RevData.revObjectSetVal(pRevPlayer, 'RevolutionTurn', GAME.getGameTurn())
 
 			if len(cityList) < 3:
-				cityString = CvUtil.convertToStr(cityList[0].getName())
+				cityString = TextUtil.convertToStr(cityList[0].getName())
 			else:
 				cityString = None
 

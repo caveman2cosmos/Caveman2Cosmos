@@ -34,54 +34,67 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
 		<English>Autobuild - Folklore Requirement</English>
+		<German>Folklore-Grundlagen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
 		<English>Autobuild - Presence of Coral</English>
+		<German>Präsenz von Korallen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
 		<English>Autobuild - Presence of Crater</English>
+		<German>Präsenz von Kratern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
 		<English>Autobuild - Presence of Metal</English>
+		<German>Präsenz von Metall</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
 		<English>Autobuild - Presence of Oasis</English>
+		<German>Präsenz von Oasen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
 		<English>Autobuild - Presence of Landform</English>
+		<German>Präsenz von Felsformationen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
 		<English>Autobuild - Presence of Reef</English>
+		<German>Präsenz von Riffen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
 		<English>Autobuild - Presence of Volcano</English>
+		<German>Präsenz von Vulkanen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
 		<English>Autobuild - Presence of Sea</English>
+		<German>Präsenz der See</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
 		<English>Autobuild - Presence of Earth</English>
+		<German>Präsenz der Erde</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
 		<English>Autobuild - Presence of Fire</English>
+		<German>Präsenz des Feuers</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
 		<English>Folklore Requirements autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
 		<English>Folklore Presence autobuildings require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities</English>
+		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>
@@ -702,7 +715,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO</Tag>
-		<English>Nine-Banded Armadillo</English>
+		<English>Nine-banded Armadillo</English>
 		<French>Tatou à neuf bandes</French>
 		<German>
 			<Text>Neunbinden-Gürteltier:Neunbinden-Gürteltieres:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Neunbinden-Gürteltiere:Neunbinden-Gürteltiere:Neunbinden-Gürteltieren:Neunbinden-Gürteltiere</Text>
@@ -1440,7 +1453,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH</Tag>
-		<English>Megatherium</English>
+		<English>Ground Sloth</English>
 		<French>Mégatherium</French>
 		<German>
 			<Text>Megatherium:Megatheriums:Megatherium:Megatherium:Megatherien:Megatherien:Megatherien:Megatherien</Text>
@@ -1620,7 +1633,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
-		<English>Ring-Tailed Lemur</English>
+		<English>Ring-tailed Lemur</English>
 		<French>Lémur catta</French>
 		<German>
 			<Text>Katta:Kattas:Katta:Katta:Kattas:Kattas:Kattas:Kattas</Text>
@@ -2137,7 +2150,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION</Tag>
-		<English>Sealion</English>
+		<English>Sea Lion</English>
 		<French>Lion de mer</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
@@ -2231,7 +2244,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO</Tag>
-		<English>Subdued Armadillo</English>
+		<English>Subdued Nine-banded Armadillo</English>
 		<French>Tatou (App.)</French>
 		<German>
 			<Text>Gefangenes Neunbinden-Gürteltier:Gefangenen Neunbinden-Gürteltieres:Gefangenen Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltieren:Gefangenen Neunbinden-Gürteltiere</Text>
@@ -2265,7 +2278,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR</Tag>
-		<English>Subdued Brazilian Tapir</English>
+		<English>Subdued Lowland Tapir</English>
 		<French>
 			<Text>Tapir du Brésil (App.)</Text>
 			<Gender>Male</Gender>
@@ -2281,7 +2294,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN</Tag>
-		<English>Subdued Caiman</English>
+		<English>Subdued Black Caiman</English>
 		<French>
 			<Text>Caïman (App.)</Text>
 			<Gender>Male</Gender>
@@ -2297,7 +2310,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
-		<English>Subdued Cuscus</English>
+		<English>Subdued Spotted Cuscus</English>
 		<French>Couscous (App.)</French>
 		<German>
 			<Text>Gefangener Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangene Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus</Text>
@@ -2343,7 +2356,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE</Tag>
-		<English>Subdued Dhole</English>
+		<English>Subdued Ussuri Dhole</English>
 		<French>Cuon d'Asie (App.)</French>
 		<German>
 			<Text>Gefangener Rothund:Gefangenen Rothundes:Gefangenen Rothund:Gefangenen Rothund:Gefangene Rothunde:Gefangenen Rothunde:Gefangenen Rothunden:Gefangenen Rothunde</Text>
@@ -2365,7 +2378,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Tag>
-		<English>Subdued Elasmotherium</English>
+		<English>Subdued Giant Rhinoceros</English>
 		<French>Elasmotherium (App.)</French>
 		<German>
 			<Text>Gefangenes Elasmotherium:Gefangenen Elasmotheriums:Gefangenen Elasmotherium:Gefangene Elasmotherium:Gefangene Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien</Text>
@@ -2636,7 +2649,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
-		<English>Subdued Tree Sloth</English>
+		<English>Subdued Three-toed Sloth</English>
 		<French>Paresseux (App.)</French>
 		<German>
 			<Text>Gefangenes Dreifinger-Faultier:Gefangenen Dreifinger-Faultiers:Gefangenen Dreifinger-Faultier:Gefangene Dreifinger-Faultier:Gefangene Dreifinger-Faultiere:Gefangenen Dreifinger-Faultiere:Gefangenen Dreifinger-Faultieren:Gefangenen Dreifinger-Faultiere</Text>
@@ -2762,6 +2775,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Tag>
 		<English>Tamed Javan Rhinoceros</English>
 		<French>Rhinocéros de Java dompté</French>
+		<German>
+			<Text>Gezähmtes Java-Nashorn:Gezähmten Java-Nashorns:Gezähmten Java-Nashorn:Gezähmte Java-Nashorn:Gezähmte Java-Nashörner:Gezähmten Java-Nashörner:Gezähmten Java-Nashörnern:Gezähmten Java-Nashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Nosorożec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (äîì.)</Russian>
 	</TEXT>
@@ -2769,6 +2787,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Tag>
 		<English>Tamed Malayan Tapir</English>
 		<French>Tapir Malais (dompté)</French>
+		<German>
+			<Text>Gezähmter Schabrackentapir:Gezähmten Schabrackentapirs:Gezähmten Schabrackentapir:Gezähmten Schabrackentapir:Gezähmte Schabrackentapire:Gezähmten Schabrackentapire:Gezähmten Schabrackentapiren:Gezähmten Schabrackentapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Malayan Tapir</Polish>
 		<Russian>Ìàëàéñêèé òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -2780,6 +2803,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gezähmter Bergtapir:Gezähmten Bergtapirs:Gezähmten Bergtapir:Gezähmten Bergtapir:Gezähmte Bergtapire:Gezähmten Bergtapire:Gezähmten Bergtapiren:Gezähmten Bergtapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Mountain Tapir</Polish>
 		<Russian>Ãîðíûé òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -2787,6 +2815,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Tag>
 		<English>Tamed White Rhinoceros</English>
 		<French>Rhinocéros Blanc dompté</French>
+		<German>
+			<Text>Gezähmtes Breitmaulnashorn:Gezähmten Breitmaulnashorns:Gezähmten Breitmaulnashorn:Gezähmte Breitmaulnashorn:Gezähmte Breitmaulnashörner:Gezähmten Breitmaulnashörner:Gezähmten Breitmaulnashörnern:Gezähmten Breitmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Nosorożec Biały</Polish>
 		<Russian>Áåëûé íîñîðîã (äîì.)</Russian>
 	</TEXT>
@@ -2896,7 +2929,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY</Tag>
-		<English>Ring-Tailed Wallaby</English>
+		<English>Ring-tailed Wallaby</English>
 		<French>
 			<Text>Wallaby</Text>
 			<Gender>Male</Gender>

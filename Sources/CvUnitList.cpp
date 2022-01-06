@@ -190,7 +190,7 @@ int CvUnitList::getSelectionRow()
 
 	for (unsigned int i=0; i<m_aaiGroupedUnitList.size(); i++)
 	{
-		if (algo::contains(*m_aaiGroupedUnitList[i], m_eSelectedUnit))
+		if (algo::any_of_equal(*m_aaiGroupedUnitList[i], m_eSelectedUnit))
 			return i;
 	}
 

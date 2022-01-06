@@ -1,18 +1,20 @@
-//
-// Python wrapper class for CvGame
-//
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyCity.h"
 #include "CyDeal.h"
 #include "CyGame.h"
 #include "CyPlot.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
+
+//
+// Python wrapper class for CvGame
+//
 
 CyGame::CyGame() : m_pGame(GC.getGame()) {}
 
@@ -1076,11 +1078,6 @@ int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
-}
-
-void CyGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	m_pGame.changePlotExtraCost(iX, iY, iCost);
 }
 
 bool CyGame::isCivEverActive(CivilizationTypes eCivilization) const

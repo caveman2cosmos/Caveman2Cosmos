@@ -53,7 +53,9 @@ def init():
 
 def initUserSettingsDir():
 	if not path.isdir(userSettingsDir):
+		print "SystemPaths - initUserSettingsDir()\n\tUserSettings directory " + userSettingsDir + " not found, creating it."
 		mkdir(userSettingsDir)
+
 	if not path.isdir(userSettingsDir + "\\DomesticAdv"):
 		mkdir(userSettingsDir + "\\DomesticAdv")
 

@@ -23,7 +23,6 @@ class CvInitCore;
 class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
-class CvDLLInterfaceIFaceBase;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
@@ -259,7 +258,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
-		foreach_(T type, vector)
+		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
@@ -419,6 +418,7 @@ public:
 
 	int getNumUnitInfos() const;
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
+	const std::vector<CvUnitInfo*>& getUnitInfos() const { return m_paUnitInfo; }
 
 	int getNumSpawnInfos() const;
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
@@ -674,7 +674,7 @@ public:
 	CvString& getFootstepAudioTags(int i) const;
 
 	const CvString& getCurrentXMLFile() const;
-	void setCurrentXMLFile(const TCHAR* szFileName);
+	void setCurrentXMLFile(const char* szFileName);
 
 	//
 	///////////////// BEGIN global defines
@@ -1138,11 +1138,11 @@ extern const char* fnName;
 class ProxyTracker
 {
 public:
-	ProxyTracker(const CvGlobals* proxy, const char* name);
+	ProxyTracker(const char* name);
 	~ProxyTracker();
 };
 
-#define PROXY_TRACK(x)	ProxyTracker tracker(this,x);
+#define PROXY_TRACK(x)	ProxyTracker tracker(x);
 
 #else
 #define	PROXY_TRACK(x)	;

@@ -1,7 +1,8 @@
-#include "CvImprovementInfo.h"
-
-#include "CvXMLLoadUtility.h"
 #include "CvArtFileMgr.h"
+#include "CvGlobals.h"
+#include "CvImprovementInfo.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvImprovementInfo::CvImprovementInfo() :
 	m_iAdvancedStartCost(100),
@@ -93,7 +94,6 @@ CvImprovementInfo::~CvImprovementInfo()
 	GC.removeDelayedResolution((int*)&m_iImprovementPillage);
 	GC.removeDelayedResolution((int*)&m_iImprovementUpgrade);
 	GC.removeDelayedResolution((int*)&m_iBonusChange);
-	GC.removeDelayedResolutionVector(m_improvementBuildTypes);
 	GC.removeDelayedResolutionVector(m_aiAlternativeImprovementUpgradeTypes);
 	GC.removeDelayedResolutionVector(m_aiFeatureChangeTypes);
 }
@@ -146,11 +146,6 @@ int CvImprovementInfo::getPillageGold() const
 bool CvImprovementInfo::isOutsideBorders() const
 {
 	return m_bOutsideBorders;
-}
-
-BuildTypes CvImprovementInfo::getImprovementBuildType(int iIndex) const
-{
-	return m_improvementBuildTypes[iIndex];
 }
 
 // Super Forts begin *XML*
@@ -394,22 +389,8 @@ int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 
 const char* CvImprovementInfo::getButton() const
 {
-	/************************************************************************************************/
-	/* XMLCOPY								 10/25/07								MRGENIE	  */
-	/*																							  */
-	/* Catch non-existing tag																	   */
-	/************************************************************************************************/
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
 	const CvArtInfoImprovement* pImprovementArtInfo = getArtInfo();
-	if (pImprovementArtInfo != NULL)
-	{
-		return pImprovementArtInfo->getButton();
-	}
-	return NULL;
+	return pImprovementArtInfo ? pImprovementArtInfo->getButton() : NULL;
 }
 
 const CvArtInfoImprovement* CvImprovementInfo::getArtInfo() const
@@ -493,7 +474,7 @@ int CvImprovementInfo::getNumAlternativeImprovementUpgradeTypes() const
 
 bool CvImprovementInfo::isAlternativeImprovementUpgradeType(int i) const
 {
-	return algo::contains(m_aiAlternativeImprovementUpgradeTypes, i);
+	return algo::any_of_equal(m_aiAlternativeImprovementUpgradeTypes, i);
 }
 
 int CvImprovementInfo::getFeatureChangeType(int i) const
@@ -508,7 +489,7 @@ int CvImprovementInfo::getNumFeatureChangeTypes() const
 
 bool CvImprovementInfo::isFeatureChangeType(int i) const
 {
-	return algo::contains(m_aiFeatureChangeTypes, i);
+	return algo::any_of_equal(m_aiFeatureChangeTypes, i);
 }
 
 //Post Load functions
@@ -518,7 +499,7 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	int iHighestCost = 0;
 //	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 //	{
-//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
 //		{
 //			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
 //			{
@@ -534,6 +515,17 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //{
 //	return m_iHighestCost;
 //}
+
+void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+{
+	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
+	{
+		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
+		{
+			m_improvementBuildTypes.push_back((BuildTypes)i);
+		}
+	}
+}
 
 void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
@@ -580,7 +572,6 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
-	CheckSumC(iSum, m_improvementBuildTypes);
 
 	// Arrays
 
@@ -786,8 +777,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
-
 	// initialize the boolean list to the correct size and all the booleans to false
 	FAssertMsg(GC.getNumRouteInfos() > 0, "the number of route infos is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"RouteYieldChanges"))
@@ -987,7 +976,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
 	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
-	GC.copyNonDefaultDelayedResolutionVector(m_improvementBuildTypes, pClassInfo->getBuildTypes());
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{

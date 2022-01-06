@@ -689,7 +689,7 @@ short CvBuildingInfo::getNumPrereqInCityBuildings() const
 
 bool CvBuildingInfo::isPrereqInCityBuilding(const int i) const
 {
-	return algo::contains(m_aiPrereqInCityBuildings, i);
+	return algo::any_of_equal(m_aiPrereqInCityBuildings, i);
 }
 
 
@@ -911,13 +911,8 @@ const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 	return pyList;
 }
 
-const TCHAR* CvBuildingInfo::getButton() const
+const char* CvBuildingInfo::getButton() const
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
-	{
-		return NULL;
-	}
 	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
 	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }
@@ -929,7 +924,7 @@ const CvArtInfoBuilding* CvBuildingInfo::getArtInfo() const
 
 const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 {
-	const TCHAR* pcTag = getMovieDefineTag();
+	const char* pcTag = getMovieDefineTag();
 	if (NULL != pcTag && 0 != _tcscmp(pcTag, "") && 0 != _tcscmp(pcTag, "NONE"))
 	{
 		return ARTFILEMGR.getMovieArtInfo(pcTag);
@@ -940,7 +935,7 @@ const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 	}
 }
 
-const TCHAR* CvBuildingInfo::getMovie() const
+const char* CvBuildingInfo::getMovie() const
 {
 	const CvArtInfoMovie* pArt = getMovieInfo();
 	return pArt ? pArt->getPath() : NULL;
@@ -1306,7 +1301,7 @@ int CvBuildingInfo::getNumUnitCombatRetrainTypes() const
 bool CvBuildingInfo::isUnitCombatRetrainType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiUnitCombatRetrainTypes, i);
+	return algo::any_of_equal(m_aiUnitCombatRetrainTypes, i);
 }
 
 int CvBuildingInfo::getMayDamageAttackingUnitCombatType(int i) const
@@ -1322,7 +1317,7 @@ int CvBuildingInfo::getNumMayDamageAttackingUnitCombatTypes() const
 bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiMayDamageAttackingUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiMayDamageAttackingUnitCombatTypes, i);
 }
 
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
@@ -1548,7 +1543,7 @@ namespace CvBuildingInternal
 			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 			{
 				if (loopBuilding->getPrereqAndBonus() == eFreeBonus
-				|| algo::contains(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
+				|| algo::any_of_equal(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
 				{
 					return true;
 				}
@@ -1618,10 +1613,10 @@ namespace CvBuildingInternal
 }
 
 
-void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
+void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 {
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, eThis);
-	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
+	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)eThis);
+	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)eThis);
 }
 
 
@@ -3400,9 +3395,9 @@ bool CvBuildingInfo::readPass3()
 		m_abPrereqAndCivicsforPass3.clear();
 	}
 
-	if (m_aszExtraXMLforPass3.size() < 1)
+	if (m_aszExtraXMLforPass3.empty())
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return false;
 	}
 	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
@@ -4453,7 +4448,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
 	int iDefault = 0;
-	int iTextDefault = -1;
 	bool bNoDuplicate = true;
 
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -4486,7 +4480,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	}
 }
 
-bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject)
+bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject) const
 {
 	return m_pExprNewCityFree && m_pExprNewCityFree->evaluate(pObject);
 }
@@ -4515,7 +4509,7 @@ void CvBuildingInfo::setNotShowInCity()
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
 {
-	return algo::contains(m_vPrereqOrBuilding, i);
+	return algo::any_of_equal(m_vPrereqOrBuilding, i);
 }
 
 int CvBuildingInfo::getPrereqOrBuilding(const int i) const
@@ -4538,7 +4532,7 @@ short CvBuildingInfo::getNumReplacementBuilding() const
 
 void CvBuildingInfo::setReplacedBuilding(const int i)
 {
-	if (!algo::contains(m_vReplacedBuilding, i))
+	if (algo::none_of_equal(m_vReplacedBuilding, i))
 	{
 		m_vReplacedBuilding.push_back(i);
 	}

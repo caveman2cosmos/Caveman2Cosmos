@@ -1004,9 +1004,9 @@ bool CyCity::isNeverLost() const
 	return m_pCity->isNeverLost();
 }
 
-void CyCity::setNeverLost(int iNewValue)
+void CyCity::setNeverLost(bool bNewValue)
 {
-	m_pCity->setNeverLost(iNewValue);
+	m_pCity->setNeverLost(bNewValue);
 }
 
 bool CyCity::isBombarded() const
@@ -1014,9 +1014,9 @@ bool CyCity::isBombarded() const
 	return m_pCity->isBombarded();
 }
 
-void CyCity::setBombarded(int iNewValue)
+void CyCity::setBombarded(bool bNewValue)
 {
-	m_pCity->setBombarded(iNewValue);
+	m_pCity->setBombarded(bNewValue);
 }
 
 bool CyCity::isDrafted() const
@@ -1024,9 +1024,9 @@ bool CyCity::isDrafted() const
 	return m_pCity->isDrafted();
 }
 
-void CyCity::setDrafted(int iNewValue)
+void CyCity::setDrafted(bool bNewValue)
 {
-	m_pCity->setDrafted(iNewValue);
+	m_pCity->setDrafted(bNewValue);
 }
 
 bool CyCity::isAirliftTargeted() const
@@ -1034,9 +1034,9 @@ bool CyCity::isAirliftTargeted() const
 	return m_pCity->isAirliftTargeted();
 }
 
-void CyCity::setAirliftTargeted(int iNewValue)
+void CyCity::setAirliftTargeted(bool bNewValue)
 {
-	m_pCity->setAirliftTargeted(iNewValue);
+	m_pCity->setAirliftTargeted(bNewValue);
 }
 
 bool CyCity::isCitizensAutomated() const
