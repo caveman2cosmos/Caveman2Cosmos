@@ -1476,7 +1476,7 @@ void CvMap::deleteViewport(int iIndex)
 
 CvViewport* CvMap::getCurrentViewport() const
 {
-	FASSERT_BOUNDS(0, m_viewports.size(), m_iCurrentViewportIndex);
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), m_iCurrentViewportIndex);
 	return m_viewports[m_iCurrentViewportIndex];
 }
 
