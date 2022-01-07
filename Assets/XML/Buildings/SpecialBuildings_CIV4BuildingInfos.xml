@@ -10798,8 +10798,8 @@
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_CLASSICAL</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
-				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
@@ -10838,8 +10838,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
-				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
@@ -10877,8 +10877,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
-				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
@@ -10914,9 +10914,9 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-			<!--
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
@@ -10924,10 +10924,9 @@
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				-->
 			</ReplacementBuildings>
-			-->
 		</BuildingInfo>
-		<!--
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
 			<MapCategoryTypes>
@@ -10953,6 +10952,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<!--
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
@@ -10962,7 +10962,9 @@
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
+			-->
 		</BuildingInfo>
+		<!--
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
 			<MapCategoryTypes>
