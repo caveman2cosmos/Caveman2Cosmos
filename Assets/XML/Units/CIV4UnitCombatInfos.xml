@@ -7491,7 +7491,6 @@
 			<Description>TXT_KEY_UNIT_EXILE</Description>
 			<iExcileChange>1</iExcileChange>
 			<iBarbCoExistChange>1</iBarbCoExistChange>
-			<iBlendIntoCityChange>1</iBlendIntoCityChange>
 			<iHiddenNationalityChange>1</iHiddenNationalityChange>
 			<bIgnoreZoneofControlAdd>1</bIgnoreZoneofControlAdd>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>

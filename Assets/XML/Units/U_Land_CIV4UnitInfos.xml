@@ -28092,6 +28092,7 @@
 			<bCounterSpy>1</bCounterSpy>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<bAlwaysHostile>1</bAlwaysHostile>
