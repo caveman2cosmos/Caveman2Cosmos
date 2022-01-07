@@ -2970,7 +2970,7 @@
 			<iHappiness>-2</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -5809,9 +5809,9 @@
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
 			<YieldChanges>
-				<iYield>2</iYield>
-				<iYield>2</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>

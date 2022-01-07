@@ -42,6 +42,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
+		self.main.addTestCode(screen, self.checkBuildingMinYields, "Building - check yields", "Check if buildings with yield income have at least minimum yield as derived from era")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitCosts, "Unit - check costs", "Check if unit costs are within sane limits")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
@@ -2730,6 +2731,31 @@ class TestCode:
 			#ObsoletesToBuilding shouldn't be used, if building doesn't obsolete at first place
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
+
+	#Check if buildings with yield income have at least minimum yield as derived from era
+	def checkBuildingMinYields(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iEra = self.HF.checkBuildingEra(CvBuildingInfo)
+
+			for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+				iYieldChange = CvBuildingInfo.getYieldChange(iYield)
+
+				if iYieldChange > 0 and GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories():
+					if iYieldChange < 1 and (iEra == 0 or iEra == 1): # Prehistoric/Ancient
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 1 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 2 and (iEra == 2 or iEra == 3): # Classical/Medieval
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 2 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 3 and (iEra == 4 or iEra == 5): # Renaissance/Industrial
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 3 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 4 and (iEra == 6 or iEra == 7): # Atomic/Information
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 4 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 5 and (iEra == 8 or iEra == 9): # Nanotech/Transhuman
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 5 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 6 and (iEra == 10 or iEra == 11): # Galactic/Cosmic
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 6 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 7 and iEra == 12: # Transcendent
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 7 "+GC.getYieldInfo(iYield).getType())
 
 	#Building - Check if buildings have proper costs
 	def checkBuildingCosts(self):
