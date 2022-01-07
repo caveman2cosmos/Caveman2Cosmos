@@ -7541,7 +7541,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7570,7 +7569,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7598,7 +7596,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7625,7 +7622,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7651,7 +7647,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7676,7 +7671,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7700,7 +7694,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7723,7 +7716,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7745,7 +7737,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7766,7 +7757,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7786,7 +7776,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7805,7 +7794,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
