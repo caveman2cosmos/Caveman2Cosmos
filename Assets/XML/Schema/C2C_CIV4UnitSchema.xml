@@ -126,14 +126,12 @@
 	<ElementType name="EntityEvent" content="textOnly"/>
 	<ElementType name="iProduction" content="textOnly" dt:type="int"/>
 	<ElementType name="bRemove" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanRemoveWithNoProductionGain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="FeatureStruct" content="eltOnly">
 		<element type="FeatureType"/>
 		<element type="PrereqTech"/>
 		<element type="iTime"/>
 		<element type="iProduction"/>
 		<element type="bRemove" minOccurs="0"/>
-		<element type="bCanRemoveWithNoProductionGain" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="FeatureStructs" content="eltOnly">
 		<element type="FeatureStruct" minOccurs="0" maxOccurs="*"/>

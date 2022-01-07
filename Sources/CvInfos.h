@@ -3852,7 +3852,6 @@ public:
 	int getTerrainChange() const;
 	int getFeatureChange() const;
 	TechTypes getObsoleteTech() const;
-	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
 	void setDisabled(bool bNewVal);
 	DllExport int getEntityEvent() const;
@@ -3899,9 +3898,7 @@ protected:
 	int* m_paiFeatureTech;
 	int* m_paiFeatureTime;
 	int* m_paiFeatureProduction;
-
 	bool* m_pabFeatureRemove;
-	bool* m_pabNoTechCanRemoveWithNoProductionGain;
 
 	std::vector<BonusTypes> m_aiPrereqBonusTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;

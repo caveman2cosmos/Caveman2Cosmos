@@ -2215,12 +2215,12 @@ int CvXMLLoadUtility::SetYields(int** ppiYield)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove, bool** ppbNoTechCanRemoveWithNoProductionGain)
+//  FUNCTION:   SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove)
 //
 //  PURPOSE :   allocate and set the feature struct variables for the CvBuildInfo class
 //	Last Modified: Afforess, 5/25/10
 //------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove, bool** ppbNoTechCanRemoveWithNoProductionGain)
+void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove)
 {
 	int i=0;				//loop counter
 	int iNumChildren;		// the number of siblings the current xml node has
@@ -2230,7 +2230,6 @@ void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTi
 	int* paiFeatureTime = NULL;
 	int* paiFeatureProduction = NULL;
 	bool* pabFeatureRemove = NULL;
-	bool* pabNoTechCanRemoveWithNoProductionGain = NULL;
 
 	if(GC.getNumFeatureInfos() < 1)
 	{
@@ -2242,13 +2241,11 @@ void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTi
 	InitList(ppiFeatureTime, GC.getNumFeatureInfos());
 	InitList(ppiFeatureProduction, GC.getNumFeatureInfos());
 	InitList(ppbFeatureRemove, GC.getNumFeatureInfos());
-	InitList(ppbNoTechCanRemoveWithNoProductionGain, GC.getNumFeatureInfos());
 
 	paiFeatureTech = *ppiFeatureTech;
 	paiFeatureTime = *ppiFeatureTime;
 	paiFeatureProduction = *ppiFeatureProduction;
 	pabFeatureRemove = *ppbFeatureRemove;
-	pabNoTechCanRemoveWithNoProductionGain = *ppbNoTechCanRemoveWithNoProductionGain;
 
 	if (TryMoveToXmlFirstChild(L"FeatureStructs"))
 	{
@@ -2279,7 +2276,6 @@ void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTi
 					GetChildXmlValByName(&paiFeatureTime[iFeatureIndex], L"iTime");
 					GetChildXmlValByName(&paiFeatureProduction[iFeatureIndex], L"iProduction");
 					GetOptionalChildXmlValByName(&pabFeatureRemove[iFeatureIndex], L"bRemove");
-					GetOptionalChildXmlValByName(&pabNoTechCanRemoveWithNoProductionGain[iFeatureIndex], L"bCanRemoveWithNoProductionGain");
 
 					if (!TryMoveToXmlNextSibling())
 					{
