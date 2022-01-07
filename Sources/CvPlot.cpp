@@ -9500,10 +9500,11 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 						}
 					}
 				}
-				if (!m_aBonusResult.empty())
+				if (m_aBonusResult.size()>0)
 				{
-					const int iPossible = std::max((int)m_aBonusResult.size(), 100);
-					const uint32_t iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
+					int iPossible = (int)m_aBonusResult.size();
+					iPossible = std::max(iPossible, 100);
+					unsigned iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
 
 					if (iResult > m_aBonusResult.size())
 					{

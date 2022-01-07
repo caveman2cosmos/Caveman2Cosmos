@@ -6292,7 +6292,11 @@ void CvTeam::verifySpyUnitsValidPlot()
 			}
 		}
 	}
-	algo::for_each(aUnits, bind(&CvUnit::jumpToNearestValidPlot, _1, true));
+
+	for (uint32_t i = 0; i < aUnits.size(); i++)
+	{
+		aUnits[i]->jumpToNearestValidPlot();
+	}
 }
 
 
@@ -6322,11 +6326,13 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 	}
 	else
 	{
-		foreach_(BonusTypes& eRevealedBonus, m_aeRevealedBonuses)
+		std::vector<BonusTypes>::iterator it;
+
+		for (it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
 		{
-			if (eRevealedBonus == eBonus)
+			if (*it == eBonus)
 			{
-				m_aeRevealedBonuses.erase(&eRevealedBonus);
+				m_aeRevealedBonuses.erase(it);
 				break;
 			}
 		}
@@ -6756,9 +6762,9 @@ void CvTeam::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvTeam", m_aeRevealedBonuses.size(), "iSize" );
-	foreach_(const BonusTypes eBonus, m_aeRevealedBonuses)
+	for (std::vector<BonusTypes>::iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
 	{
-		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BONUSES, eBonus, "eBonus");
+		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BONUSES, *it, "eBonus");
 	}
 
 	WRAPPER_WRITE(wrapper, "CvTeam", m_iCanPassPeaksCount);

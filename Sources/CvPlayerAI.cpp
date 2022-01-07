@@ -13224,16 +13224,20 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption) const
 
 CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestValue, bool bCivicOptionVacuum, CivicTypes* paeSelectedCivics) const
 {
-	(*iBestValue) = MIN_INT;
-	CivicTypes eBestCivic = NO_CIVIC;
+	CivicTypes eBestCivic;
+	int iValue;
+	int iI;
 
-	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	(*iBestValue) = MIN_INT;
+	eBestCivic = NO_CIVIC;
+
+	for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
 		if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == eCivicOption)
 		{
 			if (canDoCivics((CivicTypes)iI))
 			{
-				const int iValue = AI_civicValue((CivicTypes)iI, bCivicOptionVacuum, paeSelectedCivics);
+				iValue = AI_civicValue((CivicTypes)iI, bCivicOptionVacuum, paeSelectedCivics);
 
 				if (iValue > (*iBestValue))
 				{
@@ -20979,11 +20983,12 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iTurnLastProductionDirty);
 
 		{
-			const uint32_t iSize = m_aiAICitySites.size();
+			uint iSize = m_aiAICitySites.size();
 			WRAPPER_WRITE(wrapper, "CvPlayerAI", iSize);
-			foreach_(const int iCitySite, m_aiAICitySites)
+			std::vector<int>::iterator it;
+			for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayerAI", iCitySite, "iCitySite");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayerAI", (*it), "iCitySite");
 			}
 		}
 

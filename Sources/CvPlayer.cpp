@@ -15424,12 +15424,12 @@ int CvPlayer::getNumEventsTriggered() const
 
 EventTriggeredData* CvPlayer::getEventTriggered(int iID) const
 {
-	return m_eventsTriggered.getAt(iID);
+	return ((EventTriggeredData*)(m_eventsTriggered.getAt(iID)));
 }
 
 EventTriggeredData* CvPlayer::addEventTriggered()
 {
-	return m_eventsTriggered.add();
+	return ((EventTriggeredData*)(m_eventsTriggered.add()));
 }
 
 void CvPlayer::deleteEventTriggered(int iID)
@@ -15453,7 +15453,7 @@ void CvPlayer::clearMessages()
 
 const CvMessageQueue& CvPlayer::getGameMessages() const
 {
-	return m_listGameMessages;
+	return (m_listGameMessages);
 }
 
 
@@ -15503,9 +15503,14 @@ void CvPlayer::addPopup(CvPopupInfo* pInfo, bool bFront)
 
 void CvPlayer::clearPopups()
 {
-	foreach_(CvPopupInfo* pInfo, m_listPopups)
+	CvPopupQueue::iterator it;
+	for (it = m_listPopups.begin(); it != m_listPopups.end(); ++it)
 	{
-		SAFE_DELETE(pInfo);
+		CvPopupInfo* pInfo = *it;
+		if (NULL != pInfo)
+		{
+			delete pInfo;
+		}
 	}
 	m_listPopups.clear();
 }
@@ -15525,7 +15530,7 @@ CvPopupInfo* CvPlayer::popFrontPopup()
 
 const CvPopupQueue& CvPlayer::getPopups() const
 {
-	return m_listPopups;
+	return (m_listPopups);
 }
 
 
@@ -15540,9 +15545,14 @@ void CvPlayer::addDiplomacy(CvDiploParameters* pDiplo)
 
 void CvPlayer::clearDiplomacy()
 {
-	foreach_(CvDiploParameters* pDiplo, m_listDiplomacy)
+	CvDiploQueue::iterator it;
+	for (it = m_listDiplomacy.begin(); it != m_listDiplomacy.end(); ++it)
 	{
-		SAFE_DELETE(pDiplo);
+		CvDiploParameters* pDiplo = *it;
+		if (NULL != pDiplo)
+		{
+			delete pDiplo;
+		}
 	}
 	m_listDiplomacy.clear();
 }
@@ -15550,7 +15560,7 @@ void CvPlayer::clearDiplomacy()
 
 const CvDiploQueue& CvPlayer::getDiplomacy() const
 {
-	return m_listDiplomacy;
+	return (m_listDiplomacy);
 }
 
 
@@ -19699,11 +19709,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			FAssert(m_pTempUnit != NULL);
 		}
 
-		foreach_(CvUnit* plotlessUnit, plotlessUnits)
+		for(int iI = 0; iI < (int)plotlessUnits.size(); iI++)
 		{
-			if (plotlessUnit != m_pTempUnit)
+			if ( plotlessUnits[iI] != m_pTempUnit )
 			{
-				plotlessUnit->kill(false);
+				plotlessUnits[iI]->kill(false);
 			}
 		}
 
@@ -20281,14 +20291,18 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		}
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
+
+		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_ePledgedVote);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eSecretaryGeneralVote);
 
-		foreach_(const civcSwitchInstance& switchInstance, m_civicSwitchHistory)
+		for(iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
 		{
+			civcSwitchInstance switchInstance = m_civicSwitchHistory[iI];
+
 			WRAPPER_WRITE(wrapper, "CvPlayer", switchInstance.iTurn);
 			WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVICS, switchInstance.eFromCivic);
 			WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVICS, switchInstance.eToCivic);
@@ -20370,8 +20384,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			CvMessageQueue::_Alloc::size_type iSize = m_listGameMessages.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numListGameMessages");
-			foreach_(CvTalkingHeadMessage& message, m_listGameMessages)
+			CvMessageQueue::iterator it;
+			for (it = m_listGameMessages.begin(); it != m_listGameMessages.end(); ++it)
 			{
+				CvTalkingHeadMessage& message = *it;
 				message.write(*pStream);
 			}
 		}
@@ -20389,16 +20405,19 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 			CvPopupQueue::_Alloc::size_type iSize = m_listPopups.size() + currentPopups.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numPopups");
-			foreach_(CvPopupInfo* pInfo, currentPopups)
+			CvPopupQueue::iterator it;
+			for (it = currentPopups.begin(); it != currentPopups.end(); ++it)
 			{
-				if (pInfo != NULL)
+				CvPopupInfo* pInfo = *it;
+				if (NULL != pInfo)
 				{
 					pInfo->write(*pStream);
 				}
 			}
-			foreach_(CvPopupInfo* pInfo, m_listPopups)
+			for (it = m_listPopups.begin(); it != m_listPopups.end(); ++it)
 			{
-				if (pInfo != NULL)
+				CvPopupInfo* pInfo = *it;
+				if (NULL != pInfo)
 				{
 					pInfo->write(*pStream);
 				}
@@ -20408,9 +20427,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			CvDiploQueue::_Alloc::size_type iSize = m_listDiplomacy.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numDiploParams");
-			foreach_(CvDiploParameters* pDiplo, m_listDiplomacy)
+			CvDiploQueue::iterator it;
+			for (it = m_listDiplomacy.begin(); it != m_listDiplomacy.end(); ++it)
 			{
-				if (pDiplo != NULL)
+				CvDiploParameters* pDiplo = *it;
+				if (NULL != pDiplo)
 				{
 					pDiplo->write(*pStream);
 				}
@@ -20576,9 +20597,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			uint iSize = m_triggersFired.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numEventTriggers");
-			foreach_(const EventTriggerTypes eTrigger, m_triggersFired)
+			std::vector<EventTriggerTypes>::iterator it;
+			for (it = m_triggersFired.begin(); it != m_triggersFired.end(); ++it)
 			{
-				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, eTrigger, "iTrigger");
+				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, (*it), "iTrigger");
 			}
 		}
 
@@ -22844,10 +22866,13 @@ void CvPlayer::expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData
 
 	if (GC.getEventInfo(eEvent).isQuest())
 	{
-		for (CvMessageQueue::iterator it = m_listGameMessages.begin(); it != m_listGameMessages.end(); ++it)
+		CvMessageQueue::iterator it;
+		for (it = m_listGameMessages.begin(); it != m_listGameMessages.end(); ++it)
 		{
+			CvTalkingHeadMessage& message = *it;
+
 			// the trigger ID is stored in the otherwise unused length field
-			if ((*it).getLength() == kTriggeredData.getID())
+			if (message.getLength() == kTriggeredData.getID())
 			{
 				m_listGameMessages.erase(it);
 				gDLL->getInterfaceIFace()->dirtyTurnLog(getID());
@@ -22857,6 +22882,7 @@ void CvPlayer::expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData
 
 		if (bFail)
 		{
+
 			AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText(GC.getEventInfo(eEvent).getQuestFailTextKey()), "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_RED());
 		}
 	}
@@ -26708,11 +26734,13 @@ void CvPlayer::setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue)
 bool CvPlayer::hasEnemyDefenderUnit(const CvPlot* pPlot) const
 {
 	std::vector<CvUnit *> plotUnits;
+	CvUnit *pLoopUnit;
 
 	GC.getGame().getPlotUnits(pPlot, plotUnits);
 
-	foreach_(CvUnit* pLoopUnit, plotUnits)
+	for (int iI = 0; iI < (int) plotUnits.size(); iI++)
 	{
+		pLoopUnit = plotUnits[iI];
 		if (atWar(getTeam(), GET_PLAYER(pLoopUnit->getOwner()).getTeam()))
 		{
 			return true;

@@ -154,13 +154,13 @@ void VoteSelectionData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "VoteSelectionData", iId);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTE_SOURCES, eVoteSource);
 	WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", aVoteOptions.size(),"aVoteOption.size");
-	foreach_(const VoteSelectionSubData& data, aVoteOptions)
+	for (std::vector<VoteSelectionSubData>::iterator it = aVoteOptions.begin(); it != aVoteOptions.end(); ++it)
 	{
-		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTES, data.eVote, "voteOption.eVote");
-		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", data.ePlayer, "voteOption.ePlayer");
-		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", data.iCityId, "voteOption.iCityId");
-		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", data.eOtherPlayer, "voteOption.eOtherPlayer");
-		WRAPPER_WRITE_STRING_DECORATED(wrapper, "VoteSelectionData", data.szText, "voteOption.szText");
+		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTES, (*it).eVote, "voteOption.eVote");
+		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", (*it).ePlayer, "voteOption.ePlayer");
+		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", (*it).iCityId, "voteOption.iCityId");
+		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", (*it).eOtherPlayer, "voteOption.eOtherPlayer");
+		WRAPPER_WRITE_STRING_DECORATED(wrapper, "VoteSelectionData", (*it).szText, "voteOption.szText");
 	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
