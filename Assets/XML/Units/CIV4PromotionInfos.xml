@@ -11681,6 +11681,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_INCAPABLE</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
 			<SubCombatChangeTypes>
@@ -11699,6 +11702,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>1</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_PATHETIC</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11718,6 +11724,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>2</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_INFERIOR</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11737,6 +11746,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>3</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_POOR</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11756,6 +11768,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>4</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_MEDIOCRE</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11775,6 +11790,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>6</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_STANDARD</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11794,6 +11812,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>8</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_SUPERIOR</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11813,6 +11834,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>11</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EXCEPTIONAL</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11832,6 +11856,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>15</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_ELITE</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11851,6 +11878,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iLevelPrereq>20</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EPIC</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -11870,6 +11900,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_DIVINE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11888,6 +11921,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EPIC</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11906,6 +11942,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_ELITE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11924,6 +11963,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EXCEPTIONAL</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11942,6 +11984,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_SUPERIOR</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11960,6 +12005,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_STANDARD</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11978,6 +12026,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_MEDIOCRE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -11996,6 +12047,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_POOR</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -12014,6 +12068,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_INFERIOR</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -12032,6 +12089,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_PATHETIC</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
 			<SubCombatChangeTypes>
@@ -17501,6 +17561,41 @@
 			</OnGameOptions>
 			<iStealthCombatModifierChange>25</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/Crackdown5Promotion.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_STATUS_TRESPASS_ON</Type>
+			<Description>TXT_KEY_STATUS_TRESPASS_ON</Description>
+			<Help>TXT_KEY_PROMOTION_DEPLETE_MP_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionLine>PROMOTIONLINE_TRESPASS</PromotionLine>
+			<bStatus>1</bStatus>
+			<iLinePriority>2</iLinePriority>
+			<iAssassinChange>-1</iAssassinChange>
+			<iDefenseOnlyChange>1</iDefenseOnlyChange>
+			<iExcileChange>-1</iExcileChange>
+			<iStealthDefenseChange>-1</iStealthDefenseChange>
+			<iBarbCoExistChange>-1</iBarbCoExistChange>
+			<iBlendIntoCityChange>-1</iBlendIntoCityChange>
+			<iChanceFirstStrikesChange>-1</iChanceFirstStrikesChange>
+			<Button>Art/Interface/buttons/Promotions/StatusTrespass.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_STATUS_TRESPASS_OFF</Type>
+			<Description>TXT_KEY_STATUS_TRESPASS_OFF</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_STATUS_TRESPASS_ON</PromotionPrereq>
+			<PromotionLine>PROMOTIONLINE_TRESPASS</PromotionLine>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<bStatus>1</bStatus>
+			<bQuick>1</bQuick>
+			<bRemoveAfterSet>1</bRemoveAfterSet>
+			<iLinePriority>1</iLinePriority>
+			<Button>Art/Interface/buttons/Promotions/StatusTrespassOff.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_CORRUPTION1</Type>
