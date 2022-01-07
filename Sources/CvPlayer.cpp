@@ -11711,14 +11711,11 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 		FErrorMsg("iExperience < 0");
 		iExperience = 0;
 	}
-
 	if (iExperience == m_iCombatExperience)
 	{
 		return;
 	}
-
-	if (m_iCombatExperience > 0 && iExperience > m_iCombatExperience
-	||  m_iCombatExperience < 0 && iExperience > -m_iCombatExperience)
+	if (iExperience > m_iCombatExperience)
 	{
 		changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperience - m_iCombatExperience);
 	}
@@ -11727,7 +11724,8 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 	if (!isNPC() || isHominid())
 	{
 		const int iExperienceThreshold = greatPeopleThresholdMilitary();
-		if (m_iCombatExperience >= iExperienceThreshold && iExperienceThreshold > 0)
+
+		if (m_iCombatExperience >= iExperienceThreshold)
 		{
 			// create great person
 			CvCity* pBestCity = scoring::min_score(cities(), bind(calculateGreatGeneralSpawnCityScore, _1, getNumCities())).get_value_or(nullptr);
@@ -11743,6 +11741,7 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 			}
 		}
 	}
+	FASSERT_NOT_NEGATIVE(m_iCombatExperience);
 }
 
 void CvPlayer::changeCombatExperience(int iChange, UnitTypes eGGType)
