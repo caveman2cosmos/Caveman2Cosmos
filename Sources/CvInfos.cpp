@@ -832,8 +832,8 @@ int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
 
 const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypes.size(), iUnitCombat);
-	FASSERT_BOUNDS(0, m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypes.size(), iUnitCombat);
+	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
 
 	if (!GC.getGame().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
 	{
@@ -12760,7 +12760,6 @@ m_paiFeatureTime(NULL),
 m_paiFeatureProduction(NULL),
 m_pabFeatureRemove(NULL)
 
-,m_pabNoTechCanRemoveWithNoProductionGain(NULL)
 ,m_iTerrainChange(NO_TERRAIN)
 ,m_iFeatureChange(NO_FEATURE)
 ,m_iObsoleteTech(NO_TECH)
@@ -12780,7 +12779,6 @@ CvBuildInfo::~CvBuildInfo()
 	SAFE_DELETE_ARRAY(m_paiFeatureTime);
 	SAFE_DELETE_ARRAY(m_paiFeatureProduction);
 	SAFE_DELETE_ARRAY(m_pabFeatureRemove);
-	SAFE_DELETE_ARRAY(m_pabNoTechCanRemoveWithNoProductionGain);
 
 	for (int i=0; i<(int)m_aiPrereqBonusTypes.size(); i++)
 	{
@@ -12835,11 +12833,6 @@ bool CvBuildInfo::isDisabled() const
 void CvBuildInfo::setDisabled(bool bNewVal)
 {
 	m_bDisabled = bNewVal;
-}
-bool CvBuildInfo::isNoTechCanRemoveWithNoProductionGain(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
-	return m_pabNoTechCanRemoveWithNoProductionGain ? m_pabNoTechCanRemoveWithNoProductionGain[i] : false;
 }
 
 int CvBuildInfo::getEntityEvent() const
@@ -12917,7 +12910,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EntityEvent");
 	m_iEntityEvent = pXML->GetInfoClass(szTextVal);
 
-	pXML->SetFeatureStruct(&m_paiFeatureTech, &m_paiFeatureTime, &m_paiFeatureProduction, &m_pabFeatureRemove, &m_pabNoTechCanRemoveWithNoProductionGain);
+	pXML->SetFeatureStruct(&m_paiFeatureTech, &m_paiFeatureTime, &m_paiFeatureProduction, &m_pabFeatureRemove);
 
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqBonusTypes, L"PrereqBonusTypes");
 	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
@@ -13009,7 +13002,6 @@ void CvBuildInfo::copyNonDefaults(const CvBuildInfo* pClassInfo)
 			m_paiFeatureTime[i] = pClassInfo->getFeatureTime((FeatureTypes)i);
 			m_paiFeatureProduction[i] = pClassInfo->getFeatureProduction((FeatureTypes)i);
 			m_pabFeatureRemove[i] = pClassInfo->isFeatureRemove((FeatureTypes)i);
-			m_pabNoTechCanRemoveWithNoProductionGain[i] = pClassInfo->isNoTechCanRemoveWithNoProductionGain(i);
 		}
 	}
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqBonusTypes, pClassInfo->m_aiPrereqBonusTypes);
@@ -13042,7 +13034,6 @@ void CvBuildInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_paiFeatureTime,  GC.getNumFeatureInfos());
 	CheckSum(iSum, m_paiFeatureProduction,  GC.getNumFeatureInfos());
 	CheckSum(iSum, m_pabFeatureRemove,  GC.getNumFeatureInfos());
-	CheckSum(iSum, m_pabNoTechCanRemoveWithNoProductionGain,  GC.getNumFeatureInfos());
 
 	//Vectors
 
@@ -28029,13 +28020,13 @@ bool CvEventTriggerInfo::isTeam() const
 
 const CvWString& CvEventTriggerInfo::getText(int i) const
 {
-	FASSERT_BOUNDS(0, m_aszText.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aszText.size(), i);
 	return m_aszText[i];
 }
 
 int CvEventTriggerInfo::getTextEra(int i) const
 {
-	FASSERT_BOUNDS(0, m_aiTextEra.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aiTextEra.size(), i);
 	return m_aiTextEra[i];
 }
 

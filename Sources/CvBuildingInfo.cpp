@@ -418,13 +418,13 @@ int CvBuildingInfo::getVictoryThreshold(int i) const
 
 BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
 {
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
 	return m_aExtraFreeBonuses[i].first;
 }
 
 int CvBuildingInfo::getExtraFreeBonusNum(int i) const
 {
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
 	return m_aExtraFreeBonuses[i].second;
 }
 

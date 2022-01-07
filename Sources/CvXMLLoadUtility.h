@@ -514,7 +514,7 @@ public:
 	int SetCommerce(T** ppiCommerce);
 
 	// allocate and set the feature struct variables for the CvBuildInfo class
-	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove, bool** ppbNoTechCanRemoveWithNoProductionGain);
+	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove);
 
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
@@ -705,9 +705,7 @@ public:
 	// Returns true if the dependency list is satisfied, false if not.
 	inline bool CheckDependency();
 
-	static void RemoveTGAFiller();
-
-	static void showXMLError(const char* const format, ...);
+  static void showXMLError(const char* const format, ...);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 private:

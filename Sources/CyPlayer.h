@@ -113,7 +113,6 @@ public:
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const;
 	int getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const;
 
-	bool canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const;
 	int /*RouteTypes*/ getBestRoute(const CyPlot* pPlot) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield) const;

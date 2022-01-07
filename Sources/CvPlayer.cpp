@@ -7650,9 +7650,9 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 }
 
 
-// If this func returns false, the build will not show up in the worker UI
-// bTestEra and bTestVisible are to show builds regardless of availability within a range; BUG option.
-bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, bool bTestVisible, bool bIncludePythonOverrides) const
+// If this func returns false, the build is not available.
+// bTestVisible are to show builds that are not yet available in the UI as greyed out options.
+bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible, bool bIncludePythonOverrides) const
 {
 	PROFILE_FUNC();
 
@@ -7663,8 +7663,8 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
-	// false if build obsolete by tech
-	if (kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech()))
+	if (kBuild.isDisabled()
+	||	kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech()))
 	{
 		return false;
 	}
@@ -7678,19 +7678,40 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 			return false;
 		}
 
-		// check tech prereq, allow if bTests within same era
-		if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()))
+		if (!bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTechPrereq()).getEra())
 		{
-			if (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTechPrereq()).getEra())
+			if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()))
 			{
 				return false;
 			}
-		}
 
-		// check plot terrain/features against player current tech, allow if bTests within +1 era
-		if (!canBuildPlotTechPrereq(pPlot, eBuild, bTestEra, bTestVisible))
-		{
-			return false;
+			if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
+			{
+				{
+					const FeatureTypes plotFeature = pPlot->getFeatureType();
+
+					if (plotFeature != NO_FEATURE && !GET_TEAM(getTeam()).isHasTech(kBuild.getFeatureTech(plotFeature)))
+					{
+						return false;
+					}
+				}
+				// terrain is similar to feature; can't build if don't have tech, etc, only diff is looping thru terrain structs because that's how we roll
+				foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
+				{
+					const TerrainTypes eTerrain = kTerrainStruct.eTerrain;
+					if (
+					(
+							eTerrain == pPlot->getTerrainType()
+						||	eTerrain == GC.getTERRAIN_PEAK() && pPlot->isAsPeak()
+						||	eTerrain == GC.getTERRAIN_HILL() && pPlot->isHills()
+					)
+					&&	kTerrainStruct.ePrereqTech != NO_TECH
+					&&	!GET_TEAM(getTeam()).isHasTech(kTerrainStruct.ePrereqTech))
+					{
+						return false;
+					}
+				}
+			}
 		}
 
 		if (pPlot->isWater() && kBuild.getRoute() != NO_ROUTE && !GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
@@ -7699,79 +7720,23 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 	}
 
-	if (kBuild.isDisabled())
-	{
-		return false;
-	}
-
 	// Unique improvement checks
-	const ImprovementTypes eImprovement = kBuild.getImprovement();
-	if (eImprovement != NO_IMPROVEMENT)
 	{
+		const ImprovementTypes eImprovement = kBuild.getImprovement();
 
-		if (GC.getImprovementInfo(eImprovement).isNational() && getImprovementCount(eImprovement) > 0)
-		{
-			return false;
-		}
-
-		if (GC.getImprovementInfo(eImprovement).isGlobal() && GC.getGame().getImprovementCount(eImprovement) > 0)
-		{
-			return false;
-		}
-	}
-
-	return true;
-}
-
-// Evaluate if eBuild can be built on pPlot based on the features/terrain present.
-bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, bool bTestVisible) const
-{
-	if (eBuild == NO_BUILD) return false;
-
-	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
-
-	// false if must but can't remove feature without prod gain, OR feature/terrain tech req is several eras past us. Allow 1 era past for UI feedback!
-	if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
-	{
-		const FeatureTypes plotFeature = pPlot->getFeatureType();
-		if (plotFeature != NO_FEATURE)
-		{
-			// if feature requires tech we don't have...
-			if (!GET_TEAM(getTeam()).isHasTech(kBuild.getFeatureTech(plotFeature)))
-			{
-				// if feature is not removed, or is removed but can do so without prod gain...
-				if (!kBuild.isFeatureRemove(plotFeature)
-					|| kBuild.isFeatureRemove(plotFeature) && !kBuild.isNoTechCanRemoveWithNoProductionGain(plotFeature))
-				{
-					// if bTests are true, delay returning false by a few eras
-					if (!bTestEra && !bTestVisible || getCurrentEra() + 3 < GC.getTechInfo(kBuild.getFeatureTech(plotFeature)).getEra())
-					{
-						return false;
-					}
-				}
-			}
-		}
-
-		// terrain is similar to feature; can't build if don't have tech, etc, only diff is looping thru terrain structs because that's how we roll
-		foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
-		{
-			const TerrainTypes eTerrain = kTerrainStruct.eTerrain;
-
-			if ((eTerrain == pPlot->getTerrainType()
-				|| eTerrain == GC.getTERRAIN_PEAK() && pPlot->isAsPeak()
-				|| eTerrain == GC.getTERRAIN_HILL() && pPlot->isHills())
-				&& kTerrainStruct.ePrereqTech != NO_TECH
-				&& !GET_TEAM(getTeam()).isHasTech(kTerrainStruct.ePrereqTech))
-			{
-				if (!bTestEra && !bTestVisible || getCurrentEra() + 3 < GC.getTechInfo(kTerrainStruct.ePrereqTech).getEra())
-				{
-					return false;
-				}
-			}
-		}
+		if (
+			eImprovement != NO_IMPROVEMENT
+		&&
+			(
+				GC.getImprovementInfo(eImprovement).isNational() && getImprovementCount(eImprovement) > 0
+				||
+				GC.getImprovementInfo(eImprovement).isGlobal() && GC.getGame().getImprovementCount(eImprovement) > 0
+			)
+		) return false;
 	}
 	return true;
 }
+
 
 // Returns the cost
 int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
@@ -7818,7 +7783,6 @@ bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvP
             return false;
         }
     }
-	// plot specific query; maybe check !canBuildPlotTechPrereq(pPlot, eRouteBuild) here as well?
     else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
     {
         return false;
@@ -15460,12 +15424,12 @@ int CvPlayer::getNumEventsTriggered() const
 
 EventTriggeredData* CvPlayer::getEventTriggered(int iID) const
 {
-	return ((EventTriggeredData*)(m_eventsTriggered.getAt(iID)));
+	return m_eventsTriggered.getAt(iID);
 }
 
 EventTriggeredData* CvPlayer::addEventTriggered()
 {
-	return ((EventTriggeredData*)(m_eventsTriggered.add()));
+	return m_eventsTriggered.add();
 }
 
 void CvPlayer::deleteEventTriggered(int iID)
@@ -15489,7 +15453,7 @@ void CvPlayer::clearMessages()
 
 const CvMessageQueue& CvPlayer::getGameMessages() const
 {
-	return (m_listGameMessages);
+	return m_listGameMessages;
 }
 
 
@@ -15539,14 +15503,9 @@ void CvPlayer::addPopup(CvPopupInfo* pInfo, bool bFront)
 
 void CvPlayer::clearPopups()
 {
-	CvPopupQueue::iterator it;
-	for (it = m_listPopups.begin(); it != m_listPopups.end(); ++it)
+	foreach_(CvPopupInfo* pInfo, m_listPopups)
 	{
-		CvPopupInfo* pInfo = *it;
-		if (NULL != pInfo)
-		{
-			delete pInfo;
-		}
+		SAFE_DELETE(pInfo);
 	}
 	m_listPopups.clear();
 }
@@ -15566,7 +15525,7 @@ CvPopupInfo* CvPlayer::popFrontPopup()
 
 const CvPopupQueue& CvPlayer::getPopups() const
 {
-	return (m_listPopups);
+	return m_listPopups;
 }
 
 
@@ -15581,14 +15540,9 @@ void CvPlayer::addDiplomacy(CvDiploParameters* pDiplo)
 
 void CvPlayer::clearDiplomacy()
 {
-	CvDiploQueue::iterator it;
-	for (it = m_listDiplomacy.begin(); it != m_listDiplomacy.end(); ++it)
+	foreach_(CvDiploParameters* pDiplo, m_listDiplomacy)
 	{
-		CvDiploParameters* pDiplo = *it;
-		if (NULL != pDiplo)
-		{
-			delete pDiplo;
-		}
+		SAFE_DELETE(pDiplo);
 	}
 	m_listDiplomacy.clear();
 }
@@ -15596,7 +15550,7 @@ void CvPlayer::clearDiplomacy()
 
 const CvDiploQueue& CvPlayer::getDiplomacy() const
 {
-	return (m_listDiplomacy);
+	return m_listDiplomacy;
 }
 
 
@@ -19745,11 +19699,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			FAssert(m_pTempUnit != NULL);
 		}
 
-		for(int iI = 0; iI < (int)plotlessUnits.size(); iI++)
+		foreach_(CvUnit* plotlessUnit, plotlessUnits)
 		{
-			if ( plotlessUnits[iI] != m_pTempUnit )
+			if (plotlessUnit != m_pTempUnit)
 			{
-				plotlessUnits[iI]->kill(false);
+				plotlessUnit->kill(false);
 			}
 		}
 
@@ -20327,18 +20281,14 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		}
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
-
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_ePledgedVote);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eSecretaryGeneralVote);
 
-		for(iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
+		foreach_(const civcSwitchInstance& switchInstance, m_civicSwitchHistory)
 		{
-			civcSwitchInstance switchInstance = m_civicSwitchHistory[iI];
-
 			WRAPPER_WRITE(wrapper, "CvPlayer", switchInstance.iTurn);
 			WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVICS, switchInstance.eFromCivic);
 			WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVICS, switchInstance.eToCivic);
@@ -20420,10 +20370,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			CvMessageQueue::_Alloc::size_type iSize = m_listGameMessages.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numListGameMessages");
-			CvMessageQueue::iterator it;
-			for (it = m_listGameMessages.begin(); it != m_listGameMessages.end(); ++it)
+			foreach_(CvTalkingHeadMessage& message, m_listGameMessages)
 			{
-				CvTalkingHeadMessage& message = *it;
 				message.write(*pStream);
 			}
 		}
@@ -20441,19 +20389,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 			CvPopupQueue::_Alloc::size_type iSize = m_listPopups.size() + currentPopups.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numPopups");
-			CvPopupQueue::iterator it;
-			for (it = currentPopups.begin(); it != currentPopups.end(); ++it)
+			foreach_(CvPopupInfo* pInfo, currentPopups)
 			{
-				CvPopupInfo* pInfo = *it;
-				if (NULL != pInfo)
+				if (pInfo != NULL)
 				{
 					pInfo->write(*pStream);
 				}
 			}
-			for (it = m_listPopups.begin(); it != m_listPopups.end(); ++it)
+			foreach_(CvPopupInfo* pInfo, m_listPopups)
 			{
-				CvPopupInfo* pInfo = *it;
-				if (NULL != pInfo)
+				if (pInfo != NULL)
 				{
 					pInfo->write(*pStream);
 				}
@@ -20463,11 +20408,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			CvDiploQueue::_Alloc::size_type iSize = m_listDiplomacy.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numDiploParams");
-			CvDiploQueue::iterator it;
-			for (it = m_listDiplomacy.begin(); it != m_listDiplomacy.end(); ++it)
+			foreach_(CvDiploParameters* pDiplo, m_listDiplomacy)
 			{
-				CvDiploParameters* pDiplo = *it;
-				if (NULL != pDiplo)
+				if (pDiplo != NULL)
 				{
 					pDiplo->write(*pStream);
 				}
@@ -20633,10 +20576,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			uint iSize = m_triggersFired.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numEventTriggers");
-			std::vector<EventTriggerTypes>::iterator it;
-			for (it = m_triggersFired.begin(); it != m_triggersFired.end(); ++it)
+			foreach_(const EventTriggerTypes eTrigger, m_triggersFired)
 			{
-				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, (*it), "iTrigger");
+				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, eTrigger, "iTrigger");
 			}
 		}
 
@@ -22902,13 +22844,10 @@ void CvPlayer::expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData
 
 	if (GC.getEventInfo(eEvent).isQuest())
 	{
-		CvMessageQueue::iterator it;
-		for (it = m_listGameMessages.begin(); it != m_listGameMessages.end(); ++it)
+		for (CvMessageQueue::iterator it = m_listGameMessages.begin(); it != m_listGameMessages.end(); ++it)
 		{
-			CvTalkingHeadMessage& message = *it;
-
 			// the trigger ID is stored in the otherwise unused length field
-			if (message.getLength() == kTriggeredData.getID())
+			if ((*it).getLength() == kTriggeredData.getID())
 			{
 				m_listGameMessages.erase(it);
 				gDLL->getInterfaceIFace()->dirtyTurnLog(getID());
@@ -22918,7 +22857,6 @@ void CvPlayer::expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData
 
 		if (bFail)
 		{
-
 			AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText(GC.getEventInfo(eEvent).getQuestFailTextKey()), "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_RED());
 		}
 	}
@@ -26770,13 +26708,11 @@ void CvPlayer::setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue)
 bool CvPlayer::hasEnemyDefenderUnit(const CvPlot* pPlot) const
 {
 	std::vector<CvUnit *> plotUnits;
-	CvUnit *pLoopUnit;
 
 	GC.getGame().getPlotUnits(pPlot, plotUnits);
 
-	for (int iI = 0; iI < (int) plotUnits.size(); iI++)
+	foreach_(CvUnit* pLoopUnit, plotUnits)
 	{
-		pLoopUnit = plotUnits[iI];
 		if (atWar(getTeam(), GET_PLAYER(pLoopUnit->getOwner()).getTeam()))
 		{
 			return true;
@@ -27741,10 +27677,10 @@ void CvPlayer::setHandicap(int iNewVal)
 	AI_makeAssignWorkDirty();
 }
 
-bool CvPlayer::canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestEra, bool bTestVisible) const
+bool CvPlayer::canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestVisible) const
 {
 	return algo::any_of(GC.getImprovementInfo(eImprovement).getBuildTypes(),
-		bind(CvPlayer::canBuild, this, pPlot, _1, bTestEra, bTestVisible, true)
+		bind(CvPlayer::canBuild, this, pPlot, _1, bTestVisible, true)
 	);
 }
 

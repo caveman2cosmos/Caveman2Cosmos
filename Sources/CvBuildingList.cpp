@@ -110,7 +110,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, m_aaiGroupedBuildingList.size(), iGroup);
+	FASSERT_BOUNDS(0, static_cast<int>(m_aaiGroupedBuildingList.size()), iGroup);
 	return m_aaiGroupedBuildingList[iGroup].size();
 }
 

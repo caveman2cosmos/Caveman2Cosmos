@@ -8306,7 +8306,7 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 BuildTypes CvCityAI::AI_getBestBuild(int iIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex);
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), m_aeBestBuild[iIndex]);
+	FASSERT_BOUNDS(-1, GC.getNumBuildInfos(), m_aeBestBuild[iIndex]);
 	return m_aeBestBuild[iIndex];
 }
 
@@ -10740,8 +10740,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			//this check must check if improvement is already there, because canbuild will return false (you cant build same improvement that is already there)
-			if (player.canBuild(pPlot, eBuildType, false, false, false) || ePotentialImprovement == eCurrentPlotImprovement)
+			if (player.canBuild(pPlot, eBuildType, false, false) || ePotentialImprovement == eCurrentPlotImprovement)
 			{
 				const int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
 
