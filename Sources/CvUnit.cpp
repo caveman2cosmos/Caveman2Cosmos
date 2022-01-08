@@ -11145,7 +11145,7 @@ bool CvUnit::greatWork()
 
 bool CvUnit::doOutcomeMission(MissionTypes eMission)
 {
-	CvOutcomeMission* pOutcomeMission = getUnitInfo().getOutcomeMissionByMission(eMission);
+	const CvOutcomeMission* pOutcomeMission = getUnitInfo().getOutcomeMissionByMission(eMission);
 
 	if (!pOutcomeMission)
 	{
