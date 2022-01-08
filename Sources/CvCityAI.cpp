@@ -10793,7 +10793,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		}
 
 		// subtract existing plot value
-		int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus)) - currentPlotValue);
+		int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, plotHasBonus && potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus)) - currentPlotValue);
 
 		if (plotValue >= plotInfo->newValue)
 		{

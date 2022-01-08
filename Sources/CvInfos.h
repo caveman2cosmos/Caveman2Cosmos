@@ -2255,12 +2255,8 @@ public:
 	int getLeaderExperience() const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
-	int getNumActionOutcomes() const;
-	const CvOutcomeList* getActionOutcomeList(int index) const;
-	MissionTypes getActionOutcomeMission(int index) const;
-	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
-	const CvOutcomeMission* getOutcomeMission(int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const std::vector<const CvOutcomeMission*>& getActionOutcomes() const;
 
 	const char* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setEarlyArtDefineTag(int i, const char* szVal);
@@ -2480,7 +2476,7 @@ protected:
 	std::vector<int> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
 
 	//TB Combat Mods Start  TB SubCombat Mod begin
 	//integers
@@ -8612,16 +8608,12 @@ public:
 	void getCheckSum(uint32_t& iSum) const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
-	int getNumActionOutcomes() const;
-	const CvOutcomeList* getActionOutcomeList(int index) const;
-	MissionTypes getActionOutcomeMission(int index) const;
-	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
-	const CvOutcomeMission* getOutcomeMission(int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const std::vector<const CvOutcomeMission*>& getActionOutcomes() const;
 
 protected:
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
 
 public:
 	// Textual References

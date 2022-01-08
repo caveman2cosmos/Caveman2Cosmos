@@ -36,6 +36,7 @@ public:
 	bool isWaterImprovement() const;
 	bool isPermanent() const;
 	bool isOutsideBorders() const;
+	bool isMilitaryStructure() const { return m_bMilitaryStructure; }
 	bool isCanMoveSeaUnits() const;
 	bool isChangeRemove() const;
 	bool isNotOnAnyBonus() const;
@@ -139,6 +140,7 @@ private:
 	bool m_bGoody;
 	bool m_bPermanent;
 	bool m_bOutsideBorders;
+	bool m_bMilitaryStructure;
 	bool m_bCanMoveSeaUnits;
 	bool m_bChangeRemove;
 	bool m_bNotOnAnyBonus;
