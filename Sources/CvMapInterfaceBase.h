@@ -37,7 +37,7 @@ struct CvMapInitData
 //
 // CvMapInterfaceBase
 //
-class CvMapInterfaceBase : bst::noncopyable
+class CvMapInterfaceBase
 {
 public:
 	CvMapInterfaceBase();

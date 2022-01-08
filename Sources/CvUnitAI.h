@@ -106,7 +106,7 @@ protected:
 	void doUnitAIMove();
 
 	void AI_animalMove();
-	void AI_SettleFirstCity();
+	bool AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
 	bool Worker_CanDefend();

@@ -786,7 +786,6 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	return AI_isEmphasizeSpecialist(eSpecialist) ? (iValue * 175) : (iValue * 100);
 }
 
-
 void CvCityAI::AI_chooseProduction()
 {
 	PROFILE_FUNC();
@@ -917,8 +916,6 @@ void CvCityAI::AI_chooseProduction()
 	// Sea worker need independent of whether water area is militarily relevant
 	int iNeededSeaWorkers = (bMaybeWaterArea) ? AI_neededSeaWorkers() : 0;
 	int iExistingSeaWorkers = (waterArea(true) != NULL) ? player.AI_totalWaterAreaUnitAIs(waterArea(true), UNITAI_WORKER_SEA) : 0;
-
-	// int iTargetCulturePerTurn = AI_calculateTargetCulturePerTurn();
 
 	int iAreaBestFoundValue;
 	int iNumAreaCitySites = player.AI_getNumAreaCitySites(getArea(), iAreaBestFoundValue);
@@ -1237,6 +1234,8 @@ void CvCityAI::AI_chooseProduction()
 		return;
 	}
 
+	const EraTypes eCurrentEra = player.getCurrentEra();
+	const int iCulturePerTurn = getCommerceRate(COMMERCE_CULTURE);
 	const bool bPrimaryArea = player.AI_isPrimaryArea(pArea);
 
 	if (player.isRebel())
@@ -1281,15 +1280,13 @@ void CvCityAI::AI_chooseProduction()
 			}
 
 			// Area defense
-			int iNeededFloatingDefenders = player.AI_getTotalFloatingDefendersNeeded(pArea);
-			int iTotalFloatingDefenders = player.AI_getTotalFloatingDefenders(pArea);
+			if (
+				player.AI_getTotalFloatingDefenders(pArea) <
+				(player.AI_getTotalFloatingDefendersNeeded(pArea) + 1) / 2
 
-			if (iTotalFloatingDefenders < ((iNeededFloatingDefenders + 1) / (2)))
+			&&	AI_chooseLeastRepresentedUnit("rebel defense", rebelDefenseTypes))
 			{
-				if (AI_chooseLeastRepresentedUnit("rebel defense", rebelDefenseTypes))
-				{
-					return;
-				}
+				return;
 			}
 
 			// Offensive rebel units
@@ -1398,20 +1395,14 @@ void CvCityAI::AI_chooseProduction()
 		}
 
 		// Buildings important for rebels
-		if ((getPopulation() > 3) && (getCommerceRate(COMMERCE_CULTURE) == 0))
+		if (iCulturePerTurn == 0 && AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
 		{
-			if (AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
-			{
-				return;
-			}
+			return;
 		}
 
-		if (getPopulation() < 8)
+		if (getPopulation() < 2 * (eCurrentEra + 1) && AI_chooseBuilding(BUILDINGFOCUS_FOOD))
 		{
-			if (AI_chooseBuilding(BUILDINGFOCUS_FOOD))
-			{
-				return;
-			}
+			return;
 		}
 
 		// Happiness?  Health?
@@ -1548,7 +1539,7 @@ void CvCityAI::AI_chooseProduction()
 	int iPlotCityDefenderStrength = getGarrisonStrength();
 	int iPlotOtherCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2) - iPlotCityDefenderStrength;
 
-	if (player.getCurrentEra() == 0)
+	if (eCurrentEra == 0)
 	{
 		// Warriors are blocked from UNITAI_CITY_DEFENSE, in early game this confuses AI city building
 		if (player.AI_totalUnitAIs(UNITAI_CITY_DEFENSE) <= player.getNumCities() + iNumSettlers)
@@ -1882,12 +1873,9 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!m_bRequestedUnit && !bInhibitUnits)
+	if (!m_bRequestedUnit && !bInhibitUnits && AI_establishSeeInvisibleCoverage())
 	{
-		if (AI_establishSeeInvisibleCoverage())
-		{
-			return;
-		}
+		return;
 	}
 
 	m_iTempBuildPriority--;
@@ -2011,12 +1999,13 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	// cppcheck-suppress knownConditionTrueFalse
-	if (getCommerceRate(COMMERCE_CULTURE) == 0
-		&& (/*iTargetCulturePerTurn > 0 ||*/ getPopulation() > 5)
-		&& !player.AI_isDoStrategy(AI_STRATEGY_TURTLE)
-		&& (!isHuman() || AI_isEmphasizeCommerce(COMMERCE_CULTURE))
-		&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
+	const bool bStrategyTurtle = player.AI_isDoStrategy(AI_STRATEGY_TURTLE);
+	const int iTargetCulturePerTurn = AI_calculateTargetCulturePerTurn();
+
+	if (iTargetCulturePerTurn > 0 && !bStrategyTurtle
+	&& (!isHuman() || AI_isEmphasizeCommerce(COMMERCE_CULTURE))
+	&& iCulturePerTurn < GC.getGame().getSorenRandNum(iTargetCulturePerTurn * 5 / 4, "Culture roll")
+	&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
 	{
 		return;
 	}
@@ -2031,7 +2020,7 @@ void CvCityAI::AI_chooseProduction()
 	// Early game worker logic
 	if (!bInhibitUnits && isCapital() && GC.getGame().getElapsedGameTurns() < 30 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100)
 	{
-		if (!bDanger && !(player.AI_isDoStrategy(AI_STRATEGY_TURTLE)))
+		if (!bDanger && !bStrategyTurtle)
 		{
 			if (!bWaterDanger && (getPopulation() <= 2) && (iNeededSeaWorkers > 0))
 			{
@@ -2113,8 +2102,9 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 
-		if (getPopulation() > 3 && getCommerceRate(COMMERCE_CULTURE) < 5
-			&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30, 0 + 3 * iWarTroubleThreshold, 3 * getPopulation()))
+		if (iTargetCulturePerTurn > 0
+		&& iCulturePerTurn < GC.getGame().getSorenRandNum(iTargetCulturePerTurn * 4 / 5, "Culture roll")
+		&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30, 0 + 3 * iWarTroubleThreshold, 3 * getPopulation()))
 		{
 			return;
 		}
@@ -2210,7 +2200,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bDanger && (player.getCurrentEra() > GC.getGame().getStartEra() + iProductionRank / 2 || player.getCurrentEra() > GC.getNumEraInfos() / 2))
+	if (!bDanger && (eCurrentEra > GC.getGame().getStartEra() + iProductionRank / 2 || eCurrentEra > GC.getNumEraInfos() / 2))
 	{
 		if ((!isHuman() || AI_isEmphasizeYield(YIELD_PRODUCTION))
 			&& AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, 20 - iWarTroubleThreshold, 15, (!isHuman() && (bLandWar || bAssault)) ? 25 : -1))
@@ -2304,7 +2294,7 @@ void CvCityAI::AI_chooseProduction()
 	//this can be overridden by "wait and grow more"
 	if (!bDanger && (iExistingWorkers == 0) && (isCapital() || (iNeededWorkers > 0) || (iNeededSeaWorkers > iExistingSeaWorkers)))
 	{
-		if (!(bDefenseWar && iWarSuccessRatio < -30) && !(player.AI_isDoStrategy(AI_STRATEGY_TURTLE)))
+		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
 		{
 			if ((AI_countNumBonuses(NO_BONUS, /*bIncludeOurs*/ true, /*bIncludeNeutral*/ true, -1, /*bLand*/ true, /*bWater*/ false) > 0) ||
 				(isCapital() && (getPopulation() > 3) && iNumCitiesInArea > 1))
@@ -2366,7 +2356,7 @@ void CvCityAI::AI_chooseProduction()
 		//Building city hunting stack.
 
 		if (getDomainFreeExperience(DOMAIN_LAND) == 0 && getYieldRate(YIELD_PRODUCTION) > 5 * getPopulation()
-			&& AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, (player.getCurrentEra() > 1) ? 0 : 7, 33))
+			&& AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, (eCurrentEra > 1) ? 0 : 7, 33))
 		{
 			if (gCityLogLevel >= 2)
 			{
@@ -2477,7 +2467,7 @@ void CvCityAI::AI_chooseProduction()
 	UnitTypes eBestSpreadUnit = NO_UNIT;
 	int iBestSpreadUnitValue = -1;
 
-	if (!bInhibitUnits && !bDanger && !player.AI_isDoStrategy(AI_STRATEGY_TURTLE))
+	if (!bInhibitUnits && !bDanger && !bStrategyTurtle)
 	{
 		const int iSpreadUnitRoll = (bLandWar ? 0 : 10) + (100 - iBuildUnitProb) / 3;
 
@@ -2573,7 +2563,7 @@ void CvCityAI::AI_chooseProduction()
 	if (!bInhibitUnits && (!bImportantCity || bLandWar || bAssault))
 	{
 		//	Koshling in early game moved optional non-wartime attack unit builds below economy
-		if (bPrimaryArea && player.getCurrentEra() != 0
+		if (bPrimaryArea && eCurrentEra != 0
 			&& player.AI_totalAreaUnitAIs(pArea, UNITAI_ATTACK) == 0
 			&& AI_chooseUnit("optional attack", UNITAI_ATTACK))
 		{
@@ -2744,7 +2734,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	if (getDomainFreeExperience(DOMAIN_LAND) == 0 && getYieldRate(YIELD_PRODUCTION) > 4
-		&& AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, (player.getCurrentEra() > 1) ? 0 : 7, 33))
+		&& AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, (eCurrentEra > 1) ? 0 : 7, 33))
 	{
 		if (gCityLogLevel >= 2)
 		{
@@ -2757,7 +2747,7 @@ void CvCityAI::AI_chooseProduction()
 
 	//	Koshling - increased priority for economic builds, especially in early game and allowed
 	//	wonders in if they appear best
-	if (AI_chooseBuilding(iEconomyFlags | BUILDINGFOCUS_WONDEROK, 20, 0, player.getCurrentEra() == 0 ? 100 : 50))
+	if (AI_chooseBuilding(iEconomyFlags | BUILDINGFOCUS_WONDEROK, 20, 0, eCurrentEra == 0 ? 100 : 50))
 	{
 		if (gCityLogLevel >= 2)
 		{
@@ -2772,7 +2762,7 @@ void CvCityAI::AI_chooseProduction()
 	// don't build frivolous things if this is an important city unless we at war
 	if (!bInhibitUnits && bPrimaryArea
 		&& (!bImportantCity || bLandWar || bAssault)
-		&& player.getCurrentEra() == 0
+		&& eCurrentEra == 0
 		&& player.AI_totalAreaUnitAIs(pArea, UNITAI_ATTACK) == 0
 		&& AI_chooseUnit("primary area attack", UNITAI_ATTACK))
 	{
@@ -2787,7 +2777,7 @@ void CvCityAI::AI_chooseProduction()
 	//this can be overridden by "wait and grow more"
 	if (!bInhibitUnits && !bDanger && (iExistingWorkers == 0) && (isCapital() || (iNeededWorkers > 0) || (iNeededSeaWorkers > iExistingSeaWorkers)))
 	{
-		if (!(bDefenseWar && iWarSuccessRatio < -30) && !(player.AI_isDoStrategy(AI_STRATEGY_TURTLE)))
+		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
 		{
 			if ((AI_countNumBonuses(NO_BONUS, /*bIncludeOurs*/ true, /*bIncludeNeutral*/ true, -1, /*bLand*/ true, /*bWater*/ false) > 0) ||
 				(isCapital() && (getPopulation() > 3) && iNumCitiesInArea > 1))
@@ -3528,15 +3518,11 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!isHuman() || AI_isEmphasizeCommerce(COMMERCE_CULTURE))
+	if (iTargetCulturePerTurn > 0 && !bStrategyTurtle
+	&& (!isHuman() || AI_isEmphasizeCommerce(COMMERCE_CULTURE))
+	&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
 	{
-		if (getCommerceRateTimes100(COMMERCE_CULTURE) == 0)
-		{
-			if (AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
-			{
-				return;
-			}
-		}
+		return;
 	}
 
 	if (AI_chooseBuilding(iEconomyFlags, 15, iEcononmyFlagsThreasholdWeighting / 5))
@@ -3702,8 +3688,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	//	Koshling.  AI shouldn't choose gold as often as it does.  If we have plenty of
-	//	gold prefer research most of the time
+	// Koshling - AI shouldn't choose gold as often as it does. If we have plenty of gold prefer research most of the time.
 
 	//	Set up weights 0-100 for each commerce type to weight the choice (gold weigth can actuially go higher than
 	//	100, but only if we already have less gold than our target in which case we should already have unconditonally
@@ -8369,7 +8354,7 @@ void CvCityAI::AI_updateBestBuild()
 		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
 		AI_findBestImprovementForPlot(loopedPlot, &optimalYieldList[iPlotCounter], ratios);
-		
+
 		m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
 		m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
 	}
@@ -11202,45 +11187,48 @@ int CvCityAI::AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshol
 	return iCount;
 }
 
-/*
 int CvCityAI::AI_calculateTargetCulturePerTurn() const
 {
-	int iTarget = 0;
-
-	bool bAnyGoodPlotUnowned = false;
-	bool bAnyGoodPlotHighPressure = false;
+	bool bOwnAllWorkablePlots = true;
+	bool bCompetition = false;
+	bool bBonus = false;
 
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX(),getY(),iI);
+		const CvPlot* plotX = plotCity(getX(),getY(),iI);
 
-		if (pLoopPlot != NULL)
+		if (plotX != NULL && plotX->getOwner() != getOwner())
 		{
-			if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS
-			|| pLoopPlot->getYield(YIELD_FOOD) > GC.getFOOD_CONSUMPTION_PER_POPULATION())
+			if (plotX->isOwned())
 			{
-				if (!pLoopPlot->isOwned())
-				{
-					bAnyGoodPlotUnowned = true;
-				}
-				else if (pLoopPlot->getOwner() != getOwner())
-				{
-					bAnyGoodPlotHighPressure = true;
-				}
+				bCompetition = true;
 			}
+			if (plotX->getBonusType(getTeam()) != NO_BONUS)
+			{
+				bBonus = true;
+			}
+			bOwnAllWorkablePlots = false;
 		}
 	}
-	if (bAnyGoodPlotUnowned)
+	if (bOwnAllWorkablePlots)
 	{
-		iTarget = 1;
+		return 0;
 	}
-	if (bAnyGoodPlotHighPressure)
+	int iTarget = getCommerceRate(COMMERCE_CULTURE) + 1;
+
+	if (bCompetition)
 	{
-		iTarget += getCommerceRate(COMMERCE_CULTURE) + 1;
+		if (bBonus)
+		{
+			iTarget += 20;
+			iTarget *= 5;
+			iTarget /= 4;
+		}
+		iTarget *= 5;
+		iTarget /= 4;
 	}
 	return iTarget;
 }
-*/
 
 int CvCityAI::AI_countGoodSpecialists(bool bHealthy) const
 {
@@ -11400,14 +11388,14 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		if (GC.getBuildingInfo(eProductionBuilding).getCommerceChange(COMMERCE_CULTURE) > 0
 			|| GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0)
 		{
-			//const int iTargetCultureRate = AI_calculateTargetCulturePerTurn();
-			//if (iTargetCultureRate > 0)
+			const int iTargetCultureRate = AI_calculateTargetCulturePerTurn();
+			if (iTargetCultureRate > 0)
 			{
-				if (getCommerceRate(COMMERCE_CULTURE) == 0)
+				if (iTargetCultureRate == 1)
 				{
 					m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += 50;
 				}
-				else if (getCommerceRate(COMMERCE_CULTURE) < 1 /*iTargetCultureRate*/)
+				else
 				{
 					m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += 20;
 				}
@@ -14715,9 +14703,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	}
 
 	//	If we are desperate for SOME culture boost non-trivial producers
-	// cppcheck-suppress knownConditionTrueFalse
-	if (iI == COMMERCE_CULTURE && iResult >= 3
-		&& getCommerceRate(COMMERCE_CULTURE) == 0 /*&& AI_calculateTargetCulturePerTurn() == 1*/)
+	if (iI == COMMERCE_CULTURE && iResult >= 3 && AI_calculateTargetCulturePerTurn() > 0)
 	{
 		iResult += 7;
 	}

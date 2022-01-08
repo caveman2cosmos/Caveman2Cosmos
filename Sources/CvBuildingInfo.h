@@ -12,18 +12,17 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #include "CvInfos.h"
-//#include "CvInfoUtil.h"
-//#include "CvPython.h"
 #include "IDValuemap.h"
 
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
-class CvHotkeyInfo;
 class CvXMLLoadUtility;
 struct CvInfoUtil;
 
-class CvBuildingInfo : public CvHotkeyInfo
+class CvBuildingInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 public:
 	CvBuildingInfo();

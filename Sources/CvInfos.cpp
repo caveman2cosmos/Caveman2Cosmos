@@ -27045,29 +27045,10 @@ void CvLandscapeInfo::copyNonDefaults(const CvLandscapeInfo* pClassInfo)
 int CvGameText::NUM_LANGUAGES = 7;
 CvWString CvGameText::m_szLanguage = L"";
 
-int CvGameText::getNumLanguages() const
-{
-	return NUM_LANGUAGES;
-}
-void CvGameText::setNumLanguages(int iNum)
-{
-	//NUM_LANGUAGES = iNum;
-}
-
 CvGameText::CvGameText() :
 	m_szGender("N"),
 	m_szPlural("false")
 {
-}
-
-const wchar_t* CvGameText::getText() const
-{
-	return m_szText;
-}
-
-void CvGameText::setText(const wchar_t* szText)
-{
-	m_szText = szText;
 }
 
 bool CvGameText::read(CvXMLLoadUtility* pXML)
@@ -27135,7 +27116,7 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 		// if there is content, we succeeded and break the loop
 		if (!wszTextVal.empty())
 		{
-			setText(wszTextVal);
+			m_szText = wszTextVal;
 			break;
 		}
 		else
@@ -27148,13 +27129,13 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 	// GENDER
 	if (pXML->GetOptionalChildXmlValByName(wszTextVal, L"Gender", L""))
 	{
-		setGender(wszTextVal);
+		m_szGender = wszTextVal;
 	}
 
 	// PLURAL
 	if (pXML->GetOptionalChildXmlValByName(wszTextVal, L"Plural", L""))
 	{
-		setPlural(wszTextVal);
+		m_szPlural = wszTextVal;
 	}
 
 	// old code
@@ -27173,7 +27154,7 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 			// TEXT
 			if (pXML->GetChildXmlValByName(wszTextVal, L"Text"))
 			{
-				setText(wszTextVal);
+				m_szText = wszTextVal;
 			}
 			else
 			{
@@ -27188,13 +27169,13 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 			// GENDER
 			if (pXML->GetChildXmlValByName(wszTextVal, L"Gender"))
 			{
-				setGender(wszTextVal);
+				m_szGender = wszTextVal;
 			}
 
 			// PLURAL
 			if (pXML->GetChildXmlValByName(wszTextVal, L"Plural"))
 			{
-				setPlural(wszTextVal);
+				m_szPlural = wszTextVal;
 			}
 			if (NUM_LANGUAGES > 0)
 			{

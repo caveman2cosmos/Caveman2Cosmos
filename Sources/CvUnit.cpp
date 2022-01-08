@@ -18417,11 +18417,6 @@ int CvUnit::getIgnoreZoneofControlCount() const
 	return m_iIgnoreZoneofControlCount;
 }
 
-void CvUnit::setIgnoreZoneofControlCount(int iChange)
-{
-	m_iIgnoreZoneofControlCount = iChange;
-}
-
 void CvUnit::changeIgnoreZoneofControlCount(int iChange)
 {
 	m_iIgnoreZoneofControlCount += iChange;
