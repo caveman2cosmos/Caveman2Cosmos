@@ -9970,6 +9970,7 @@
 			<iAirBombDefense>15</iAirBombDefense>
 			<iDefenseModifier>20</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10058,6 +10059,7 @@
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10148,6 +10150,7 @@
 			<iAirBombDefense>5</iAirBombDefense>
 			<iDefenseModifier>10</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10239,6 +10242,7 @@
 			<iAirBombDefense>2</iAirBombDefense>
 			<iDefenseModifier>5</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10328,6 +10332,7 @@
 			<iAirBombDefense>60</iAirBombDefense>
 			<iDefenseModifier>100</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10421,6 +10426,7 @@
 			<iAirBombDefense>40</iAirBombDefense>
 			<iDefenseModifier>75</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10516,6 +10522,7 @@
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10611,6 +10618,7 @@
 			<iAirBombDefense>90</iAirBombDefense>
 			<iDefenseModifier>25</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -10639,6 +10647,7 @@
 			<iAirBombDefense>50</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -10664,6 +10673,7 @@
 			<iAirBombDefense>5</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -10753,6 +10763,7 @@
 			<iUpgradeTime>5</iUpgradeTime>
 			<iDefenseModifier>10</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -12308,6 +12319,7 @@
 			<iDefenseModifier>10</iDefenseModifier>
 			<iAirBombDefense>50</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -12405,6 +12417,7 @@
 			<iDefenseModifier>50</iDefenseModifier>
 			<iAirBombDefense>20</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_COAST</TerrainType>

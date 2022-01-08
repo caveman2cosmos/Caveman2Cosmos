@@ -2166,6 +2166,7 @@
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
@@ -2193,6 +2194,7 @@
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
@@ -2228,6 +2230,7 @@
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
@@ -2267,6 +2270,7 @@
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
@@ -2310,6 +2314,7 @@
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
@@ -3435,6 +3440,7 @@
 			<iAirBombDefense>15</iAirBombDefense>
 			<iDefenseModifier>10</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
+			<bMilitaryStructure>1</bMilitaryStructure>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>

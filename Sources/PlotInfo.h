@@ -16,13 +16,18 @@ struct plotInfo
 	bool worked;
 	bool owned;
 	bool bonusImproved;
-	int yieldValue;
+	int value;
+	int newValue;
 	short yields[NUM_YIELD_TYPES];
-	BonusTypes currentBonus;
+	short newYields[NUM_YIELD_TYPES];
+	BonusTypes bonus;
 	ImprovementTypes currentImprovement;
+	ImprovementTypes newImprovement;
 	FeatureTypes currentFeature;
+	FeatureTypes newFeature;
 	BuildTypes currentBuild;
-};
+	BuildTypes newBuild;
 
+};
 
 #endif

@@ -8058,28 +8058,17 @@ PlayerTypes CvPlot::findHighestCulturePlayer() const
 	return eBestPlayer;
 }
 
-
+// returns value between 0 and 100
 int CvPlot::calculateCulturePercent(PlayerTypes eIndex) const
 {
 	PROFILE_FUNC();
 
-	int iTotalCulture = countTotalCulture();
+	const int iTotalCulture = countTotalCulture();
 
 	if (iTotalCulture > 0)
 	{
-		int iResult;
-
-		if (getCulture(eIndex) > MAX_INT/1000)
-		{
-			iResult = (getCulture(eIndex) / (iTotalCulture/100));
-		}
-		else
-		{
-			iResult = ((getCulture(eIndex) * 100) / iTotalCulture);
-		}
-		return iResult;
+		return 100 * getCulture(eIndex) / iTotalCulture;
 	}
-
 	return 0;
 }
 
