@@ -1366,7 +1366,6 @@ public:
 	void changeIgnoreNoEntryLevelCount(int iChange);
 
 	int getIgnoreZoneofControlCount() const;
-	void setIgnoreZoneofControlCount(int iChange);
 	void changeIgnoreZoneofControlCount(int iChange);
 
 	int getFliesToMoveCount() const;

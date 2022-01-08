@@ -151,26 +151,11 @@ enum AssertScopeTypes
 #define FAssertNotInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth == 0, "Expected to not be in a " #_id_ " scope!")
 
 #define FASSERT_BOUNDS(lower, upper, index) \
-	if ((int64_t)index < (int64_t)lower) \
-	{ \
-		char acOut[256]; \
-		sprintf(acOut, "Index value (%d) is expected to be >= %d", index, lower); \
-		FAssertMsg((int64_t)index >= (int64_t)lower, acOut); \
-	} \
-	else if ((int64_t)index >= (int64_t)upper) \
-	{ \
-		char acOut[256]; \
-		sprintf(acOut, "Index value (%d) is expected to be < %d", index, upper); \
-		FAssertMsg((int64_t)index < (int64_t)upper, acOut); \
-	}
+	FAssertMsg(index >= lower, (bst::format("Index value (%d) is expected to be >= %d") % index % lower).str().c_str()); \
+	FAssertMsg(index < upper, (bst::format("Index value (%d) is expected to be < %d") % index % upper).str().c_str());
 
 #define FASSERT_NOT_NEGATIVE(value) \
-	if (value < 0) \
-	{ \
-		char acOut[256]; \
-		sprintf(acOut, "Value (%d) is expected to be >= 0", value); \
-		FAssertMsg(value >= 0, acOut) \
-	} \
+	FAssertMsg(value >= 0, (bst::format("Value (%d) is expected to be >= 0") % value).str().c_str())
 
 #else
 // FASSERT_ENABLE not defined

@@ -779,7 +779,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -819,7 +819,7 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -5064,7 +5064,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5116,7 +5116,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5220,7 +5220,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5324,7 +5324,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5376,7 +5376,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>

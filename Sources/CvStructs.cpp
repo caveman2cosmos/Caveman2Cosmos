@@ -627,13 +627,13 @@ void CvBattleDefinition::clearBattleRounds()
 
 CvBattleRound &CvBattleDefinition::getBattleRound(int index)
 {
-	FASSERT_BOUNDS(0, m_aBattleRounds.size(), index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index);
 	return m_aBattleRounds[index];
 }
 
 const CvBattleRound &CvBattleDefinition::getBattleRound(int index) const
 {
-	FASSERT_BOUNDS(0, m_aBattleRounds.size(), index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index);
 	return m_aBattleRounds[index];
 }
 

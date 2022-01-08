@@ -15300,7 +15300,7 @@ void CvCity::resizeTradeRouteVector()
 
 CvCity* CvCity::getTradeCity(int iIndex) const
 {
-	FASSERT_BOUNDS(0, m_paTradeCities.size(), iIndex);
+	FASSERT_BOUNDS(0, (int)m_paTradeCities.size(), iIndex);
 	return getCity(m_paTradeCities[iIndex]);
 }
 

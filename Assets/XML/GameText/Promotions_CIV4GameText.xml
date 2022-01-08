@@ -15964,4 +15964,16 @@
 		<English>Zen</English>
 		<Russian>Äçýí</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS</Tag>
+		<English>Trespass Status</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_OFF</Tag>
+		<English>Remove Trespass</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_ON</Tag>
+		<English>Trespass</English>
+	</TEXT>
 </Civ4GameText>

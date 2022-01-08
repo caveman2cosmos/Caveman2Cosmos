@@ -110,7 +110,7 @@ int CvUnitList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, m_aaiGroupedUnitList.size(), iGroup);
+	FASSERT_BOUNDS(0, static_cast<int>(m_aaiGroupedUnitList.size()), iGroup);
 	return m_aaiGroupedUnitList[iGroup]->size();
 }
 

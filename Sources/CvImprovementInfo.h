@@ -8,15 +8,17 @@
 class CvArtInfoImprovement;
 class CvXMLLoadUtility;
 
-class CvImprovementInfo :
-	public CvInfoBase
+class CvImprovementInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvImprovementInfo();
 	virtual ~CvImprovementInfo();
 
+	DllExport bool isGoody() const;
+	DllExport bool isRequiresRiverSide() const;
 	bool isBombardable() const;
 	bool isUpgradeRequiresFortify() const;
 	bool isUniversalTradeBonusProvider() const;
@@ -27,13 +29,11 @@ public:
 	bool isRiverSideMakesValid() const;
 	bool isNoFreshWater() const;
 	bool isRequiresFlatlands() const;
-	DllExport bool isRequiresRiverSide() const;
 	bool isRequiresIrrigation() const;
 	bool isCarriesIrrigation() const;
 	bool isRequiresFeature() const;
 	bool isPeakImprovement() const;
 	bool isWaterImprovement() const;
-	DllExport bool isGoody() const;
 	bool isPermanent() const;
 	bool isOutsideBorders() const;
 	bool isCanMoveSeaUnits() const;
