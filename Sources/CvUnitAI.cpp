@@ -1657,7 +1657,7 @@ void CvUnitAI::AI_animalMove()
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
-void CvUnitAI::AI_SettleFirstCity()
+bool CvUnitAI::AI_SettleFirstCity()
 {
 	// Afforess & Fuyu - Check for Good City Sites Near Starting Location
 	const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
@@ -1674,7 +1674,6 @@ void CvUnitAI::AI_SettleFirstCity()
 			CvPlot* pCitySite = GET_PLAYER(getOwner()).AI_getCitySite(iCitySite);
 			if (pCitySite->getArea() == getArea() || canMoveAllTerrain())
 			{
-				//int iPlotValue = GET_PLAYER(getOwner()).AI_foundValue(pCitySite->getX(), pCitySite->getY());
 				int iPlotValue = pCitySite->getFoundValue(getOwner());
 				if (iPlotValue > iBestValue)
 				{
@@ -1725,12 +1724,11 @@ void CvUnitAI::AI_SettleFirstCity()
 				logBBAI("	Settler not founding in place but moving %d, %d to nearby city site at %d, %d (%d turns away) with value %d)", (pBestPlot->getX() - getX()), (pBestPlot->getY() - getY()), pBestPlot->getX(), pBestPlot->getY(), iBestFoundTurn, iBestValue);
 			}
 			getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pBestPlot);
-			return;
+			return true;
 		}
 	}
 	// ! Afforess & Fuyu - Check for Good City Sites Near Starting Location
 
-	// RevDCM TODO: What makes sense for rebels here?
 	if (canFound(plot()))
 	{
 		if (gUnitLogLevel >= 2)
@@ -1738,8 +1736,9 @@ void CvUnitAI::AI_SettleFirstCity()
 			logBBAI("	Settler (%d) founding in place due to no cities", getID());
 		}
 		getGroup()->pushMission(MISSION_FOUND);
-		return;
+		return true;
 	}
+	return false;
 }
 
 
@@ -1753,9 +1752,9 @@ void CvUnitAI::AI_settleMove()
 		return;
 	}
 
-	if (GET_PLAYER(getOwner()).getNumCities() == 0)
+	if (GET_PLAYER(getOwner()).getNumCities() == 0 && AI_SettleFirstCity())
 	{
-		AI_SettleFirstCity();
+		return;
 	}
 
 	const int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
@@ -1776,7 +1775,6 @@ void CvUnitAI::AI_settleMove()
 
 	// Don't found new cities if that would cause more unhappiness when we already have happiness issues
 	bool bInhibitFounding = false;
-
 
 
 	if (GET_PLAYER(getOwner()).getCityLimit() > 0)

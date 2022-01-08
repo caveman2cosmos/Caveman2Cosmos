@@ -11823,7 +11823,7 @@ bool CvUnit::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible)
 		}
 	}
 
-	if (!(GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false, bTestVisible)))
+	if (!GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, bTestVisible))
 	{
 		return false;
 	}
@@ -18415,11 +18415,6 @@ void CvUnit::changeIgnoreNoEntryLevelCount(int iChange)
 int CvUnit::getIgnoreZoneofControlCount() const
 {
 	return m_iIgnoreZoneofControlCount;
-}
-
-void CvUnit::setIgnoreZoneofControlCount(int iChange)
-{
-	m_iIgnoreZoneofControlCount = iChange;
 }
 
 void CvUnit::changeIgnoreZoneofControlCount(int iChange)

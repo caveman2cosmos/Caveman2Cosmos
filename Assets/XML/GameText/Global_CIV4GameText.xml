@@ -16230,7 +16230,7 @@
 		<Tag>TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS</Tag>
 		<English>An enemy %s1_EnUName attempted to flee our onslaught but was chased down and dispatched by our %s2_UnitName!</English>
 		<French>[COLOR_YELLOW][NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté de fuir votre assaut, mais [NUM1:a:a:ont:ont] été poursuivi et dispersé par [NUM2:votre:votre:vos:vos] %s2_UnitName ![COLOR_REVERT]</French>
-		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:4_EnUName [NUM1:versuchte:versuchten] zu fliehen, [NUM1:wurde:wurden] aber von [NUM2:Eurem:Eurer:Eurem:Euren:Euren:Euren] %s2:1_UnitName verfolgt und zur Strecke gebracht!</German>		
+		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:4_EnUName [NUM1:versuchte:versuchten] zu fliehen, [NUM1:wurde:wurden] aber von [NUM2:Eurem:Eurer:Eurem:Euren:Euren:Euren] %s2:1_UnitName verfolgt und zur Strecke gebracht!</German>
 		<Italian>[NUM1:Un:Una:Alcuni:Alcune] %s1_EnUName [NUM1:ha:ha:hanno:hanno] cercato di sfuggire al nostro accerchiamento, ma è stata inseguita e sconfitta dalla nostra unità %s2_UnitName!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName probowała uciec z pola walki lecz została złapana przez: %s2_UnitName!</Polish>
 	</TEXT>
@@ -19775,7 +19775,7 @@
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL_MESSAGE</Tag>
 		<English>Our %s1 has killed a %s2</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1 [NUM1:a:a:ont:ont] tué l'animal : [COLOR_UNIT_TEXT]%s2[COLOR_REVERT]</French>
-		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1 [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] %s2 erlegt.</German>		
+		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1 [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] %s2 erlegt.</German>
 		<Italian>La nostra unità %s1 ha ucciso [NUM2:un:una] %s2</Italian>
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] cazado [NUM2:un:una:unos:unas] %s2</Spanish>
 		<Polish>Nasza jednostka %s1 pokonała %s2</Polish>

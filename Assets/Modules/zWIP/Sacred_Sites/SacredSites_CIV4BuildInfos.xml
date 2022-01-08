@@ -18,7 +18,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
@@ -56,7 +55,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -64,7 +62,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -72,7 +69,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -80,7 +76,6 @@
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -88,7 +83,6 @@
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -96,7 +90,6 @@
 					<iTime>200</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
@@ -104,7 +97,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
@@ -170,7 +162,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -178,7 +169,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -186,7 +176,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -194,7 +183,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -202,7 +190,6 @@
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -210,7 +197,6 @@
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
@@ -218,7 +204,6 @@
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
@@ -226,7 +211,6 @@
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SAVANNA</FeatureType>
@@ -234,7 +218,6 @@
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -242,7 +225,6 @@
 					<iTime>300</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CACTUS</FeatureType>
@@ -250,7 +232,6 @@
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
@@ -258,7 +239,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -450,7 +430,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -458,7 +437,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -466,7 +444,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -474,7 +451,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -482,7 +458,6 @@
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -490,7 +465,6 @@
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
@@ -498,7 +472,6 @@
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
@@ -506,7 +479,6 @@
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SAVANNA</FeatureType>
@@ -514,7 +486,6 @@
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -522,7 +493,6 @@
 					<iTime>300</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CACTUS</FeatureType>
@@ -530,7 +500,6 @@
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
@@ -538,7 +507,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>

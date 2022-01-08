@@ -838,6 +838,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -1910,6 +1911,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>

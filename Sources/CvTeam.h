@@ -10,7 +10,8 @@
 
 class CvArea;
 
-class CvTeam : bst::noncopyable
+class CvTeam
+	: private bst::noncopyable
 {
 public:
 	CvTeam();

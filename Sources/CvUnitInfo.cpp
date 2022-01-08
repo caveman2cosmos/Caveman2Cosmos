@@ -613,11 +613,6 @@ int CvUnitInfo::getCombat() const
 	return m_iCombat;
 }
 
-void CvUnitInfo::setCombat(int iNum)
-{
-	m_iCombat = iNum;
-}
-
 int CvUnitInfo::getCombatLimit() const
 {
 	return m_iCombatLimit;

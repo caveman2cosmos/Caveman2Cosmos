@@ -404,11 +404,6 @@ int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const
 	return m_pPlayer->getProductionNeeded((ProjectTypes)iIndex);
 }
 
-bool CyPlayer::canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const
-{
-	return m_pPlayer->canBuild(pPlot->getPlot(), (BuildTypes)eBuild, bTestEra, bTestVisible);
-}
-
 int /*RouteTypes*/ CyPlayer::getBestRoute(const CyPlot* pPlot) const
 {
 	return (int) m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL);

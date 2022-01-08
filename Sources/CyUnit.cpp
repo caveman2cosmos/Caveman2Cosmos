@@ -97,11 +97,6 @@ int CyUnit::getEspionagePoints(const CyPlot& kPlot) const
 	return m_pUnit->getEspionagePoints();
 }
 
-bool CyUnit::canBuild(const CyPlot& kPlot, int /*BuildTypes*/ eBuild, bool bTestVisible) const
-{
-	return m_pUnit->canBuild(kPlot.getPlot(), (BuildTypes) eBuild, bTestVisible);
-}
-
 bool CyUnit::canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible) const
 {
 	return m_pUnit->canUpgrade((UnitTypes)eUnit, bTestVisible);
