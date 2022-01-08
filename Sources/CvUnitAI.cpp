@@ -1373,7 +1373,6 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 			CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 
 			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == pCity && AI_plotValid(pLoopPlot) && pLoopPlot != pIgnorePlot
-
 				&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
 			{
 				int iValue = pCity->AI_getBestBuildValue(iI);
@@ -15262,11 +15261,9 @@ bool CvUnitAI::AI_outcomeMission()
 
 	std::vector<std::pair<MissionTypes, const CvOutcomeList*> > aMissions;
 
-	const CvUnitInfo& kInfo = getUnitInfo();
-
-	for (int iI = 0; iI < kInfo.getNumActionOutcomes(); iI++)
+	foreach_(const CvOutcomeMission* outcomeMission, getUnitInfo().getActionOutcomes())
 	{
-		aMissions.push_back(std::make_pair(kInfo.getActionOutcomeMission(iI), kInfo.getActionOutcomeList(iI)));
+		aMissions.push_back(std::make_pair(outcomeMission->getMission(), outcomeMission->getOutcomeList()));
 	}
 
 	// check the unit combat types for outcome missions
@@ -15274,10 +15271,9 @@ bool CvUnitAI::AI_outcomeMission()
 	{
 		if (it->second.m_bHasUnitCombat)
 		{
-			const CvUnitCombatInfo& kCombatInfo = GC.getUnitCombatInfo(it->first);
-			for (int iI = 0; iI < kCombatInfo.getNumActionOutcomes(); iI++)
+			foreach_(const CvOutcomeMission* outcomeMission, GC.getUnitCombatInfo(it->first).getActionOutcomes())
 			{
-				aMissions.push_back(std::make_pair(kCombatInfo.getActionOutcomeMission(iI), kCombatInfo.getActionOutcomeList(iI)));
+				aMissions.push_back(std::make_pair(outcomeMission->getMission(), outcomeMission->getOutcomeList()));
 			}
 		}
 	}
@@ -21852,6 +21848,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 	int iPathTurns;
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
+	bool plotIsInCity = false;
 	BuildTypes eBestBuild = NO_BUILD;
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iRange, iRange))
@@ -21862,12 +21859,15 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 			CvCity* pCity = pLoopPlot->getPlotCity();
 			if (NULL != pCity && pCity->getOwner() == getOwner() && (NULL == pIgnoreCity || pCity != pIgnoreCity) && AI_plotValid(pLoopPlot))
 			{
+				plotIsInCity = true;
 				const int iIndex = pCity->getCityPlotIndex(pLoopPlot);
+				const BuildTypes bestBuildForCurrentCity = pCity->AI_getBestBuild(iIndex);
+				const ImprovementTypes currentImprovementOnPlot = pLoopPlot->getImprovementType();
 
-				if (iIndex != CITY_HOME_PLOT && pCity->AI_getBestBuild(iIndex) != NO_BUILD
-				&& (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || GC.getBuildInfo(pCity->AI_getBestBuild(iIndex)).getImprovement() == NO_IMPROVEMENT)
+				if (iIndex != CITY_HOME_PLOT && bestBuildForCurrentCity != NO_BUILD
+				&& (currentImprovementOnPlot == NO_IMPROVEMENT || GC.getBuildInfo(bestBuildForCurrentCity).getImprovement() != NO_IMPROVEMENT)
 				&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->AI_getWorkersHave() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
-				&& canBuild(pLoopPlot, pCity->AI_getBestBuild(iIndex))
+				&& canBuild(pLoopPlot, bestBuildForCurrentCity)
 				&& generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
 				{
 					int iValue = pCity->AI_getBestBuildValue(iIndex);
@@ -21883,7 +21883,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 					}
 					else if (iPathTurns <= 1)
 					{
-						iMaxWorkers = AI_calculatePlotWorkersNeeded(pLoopPlot, pCity->AI_getBestBuild(iIndex));
+						iMaxWorkers = AI_calculatePlotWorkersNeeded(pLoopPlot, bestBuildForCurrentCity);
 					}
 
 					if (kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup()) < iMaxWorkers)
@@ -21895,7 +21895,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 						{
 							iBestValue = iValue;
 							pBestPlot = pLoopPlot;
-							eBestBuild = pCity->AI_getBestBuild(iIndex);
+							eBestBuild = bestBuildForCurrentCity;
 						}
 					}
 				}
@@ -21942,7 +21942,13 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 				eMission = MISSION_ROUTE_TO;
 			}
 		}
-		eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
+		// this _should_ eliminate forts within city limits...
+		if (!plotIsInCity && eBestBuild == NO_BUILD)
+		{
+			// AI_betterplotbuild needs to be refactored...
+			eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
+		}
+
 
 		const CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
 

@@ -24,6 +24,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "OutputRatios.h"
 #include "PlotInfo.h"
+#include "CvValueService.h"
 
 
 //	KOSHLING MOD - calculate all possible building focuses at once
@@ -6183,7 +6184,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					if (kBuilding.isProvidesFreshWater() && !plot()->isFreshWater())
 					{
 						int freshWaterValue = 0;
-						foreach_(const CvPlot* pLoopPlot, plots(NUM_CITY_PLOTS_1, true))
+						foreach_(const CvPlot * pLoopPlot, plots(NUM_CITY_PLOTS_1, true))
 						{
 							if (!pLoopPlot->isWater() &&
 								!pLoopPlot->isFreshWater() &&
@@ -8353,10 +8354,13 @@ void CvCityAI::AI_updateBestBuild()
 
 		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
+		optimalYieldList[iPlotCounter].value = m_aiBestBuildValue[iPlotCounter];
+		optimalYieldList[iPlotCounter].currentBuild = m_aeBestBuild[iPlotCounter];
+
 		AI_findBestImprovementForPlot(loopedPlot, &optimalYieldList[iPlotCounter], ratios);
 
-		m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
-		m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
+		m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].newBuild;
+		m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].newValue;
 	}
 }
 
@@ -10667,27 +10671,38 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 {
 	if (plotInfo == NULL) return;
 	if (pPlot == NULL) return;
+	if (pPlot->getOwner() != getOwner()) return;
 
-	plotInfo->yieldValue = 0;
-	plotInfo->currentBuild = NO_BUILD;
+	plotInfo->newBuild = NO_BUILD;
+	plotInfo->currentImprovement = pPlot->getImprovementType();
+	plotInfo->newImprovement = NO_IMPROVEMENT;
 
-	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
+
+	for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
+	{
+		plotInfo->yields[yieldCounter] = 0;
+		plotInfo->yields[yieldCounter] = pPlot->getYield((YieldTypes)yieldCounter);
+	}
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
 	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
+	const CvImprovementInfo* currentImprovement = plotInfo->currentImprovement != NO_IMPROVEMENT ? &GC.getImprovementInfo(plotInfo->currentImprovement) : NULL;
 
 	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 
 	BonusTypes eNonObsoleteBonus = NO_BONUS;
-	bool bHasBonusImprovement = false;
-	bool bWorked = false;
-	pPlot->getVisibleBonusState(eNonObsoleteBonus, bHasBonusImprovement, bWorked);
+	bool bonusIsImproved = false;
+	bool plotIsWorked = false;
+	pPlot->getVisibleBonusState(eNonObsoleteBonus, bonusIsImproved, plotIsWorked);
 
-	if (bHasBonusImprovement)
+	if (bonusIsImproved)
 	{
-		plotInfo->currentBonus = eNonObsoleteBonus;
-		plotInfo->worked = bWorked;
+		plotInfo->bonus = eNonObsoleteBonus;
+		plotInfo->worked = plotIsWorked;
 	}
+
+	const bool plotHasBonus = eNonObsoleteBonus != NO_BONUS;
+	const int currentPlotValue = plotInfo->currentImprovement != NO_IMPROVEMENT ? CvValueService::CalculateCityPlotValue(ratios, plotInfo->yields, plotHasBonus, bonusIsImproved) : 0;
 
 	//If a worker is already building a build, force that Build.
 	BuildTypes eForcedBuild = algo::find_if(
@@ -10695,16 +10710,19 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		BuildsAnyImprovement()
 	).get_value_or(NO_BUILD);
 
-
+	// this entire section could be done smarter?
 	if (eForcedBuild != NO_BUILD)
 	{
-		plotInfo->currentBuild = eForcedBuild;
+		plotInfo->newBuild = eForcedBuild;
+		plotInfo->newValue = plotInfo->value;
 		return;
 	}
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
-	const bool bLeaveForest = player.isOption(PLAYEROPTION_LEAVE_FORESTS);
 
-	//bool bEmphasizeIrrigation = !bHasBonusImprovement && AI_checkIrrigationSpread(pPlot);
+	const bool gameOptionLeaveForestOn = player.isOption(PLAYEROPTION_LEAVE_FORESTS);
+
+
+	//bool bEmphasizeIrrigation = !bonusIsImproved && AI_checkIrrigationSpread(pPlot);
 
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
 	// int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
@@ -10725,7 +10743,8 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// find fastest build for improvement
 		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
 		{
-			if (player.canBuild(pPlot, eBuildType, false, false) || ePotentialImprovement == eCurrentPlotImprovement)
+			//this check must check if improvement is already there, because canbuild will return false (you cant build same improvement that is already there)
+			if (player.canBuild(pPlot, eBuildType, false, false) || ePotentialImprovement == plotInfo->currentImprovement)
 			{
 				const int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
 
@@ -10747,9 +10766,9 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 			bIgnoreFeature = true;
 
 			// check if feature is forest
-			if (eNonObsoleteBonus == NO_BONUS && currentFeature->getYieldChange(YIELD_PRODUCTION) > 0)
+			if (!plotHasBonus && currentFeature->getYieldChange(YIELD_PRODUCTION) > 0)
 			{
-				if (bLeaveForest)
+				if (gameOptionLeaveForestOn)
 				{
 					bValid = false;
 				}
@@ -10766,42 +10785,28 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 		if (!bValid) continue;
 
-		// if plot has a bonus
-
-
-		int finalYields[NUM_YIELD_TYPES];
 		for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
 		{
-			finalYields[yieldCounter] = 0;
-			finalYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
-			finalYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
-			plotInfo->yields[yieldCounter] = finalYields[yieldCounter];
+			plotInfo->newYields[yieldCounter] = 0;
+			plotInfo->newYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
+			plotInfo->newYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
 		}
-		int plotValue = ratios.CalculateOutputValue(finalYields[YIELD_FOOD], finalYields[YIELD_PRODUCTION], finalYields[YIELD_COMMERCE]);
 
-		if (eNonObsoleteBonus != NO_BONUS)
+		// subtract existing plot value
+		int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, plotHasBonus && potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus)) - currentPlotValue);
+
+		if (plotValue >= plotInfo->newValue)
 		{
-			// if plot is not improved with improvement that gives bonus
-			if (potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
-			{
-				plotValue = plotValue * 3;
-			}
-			else {
-				plotValue = plotValue / 3;
-			}
-		}
-		if (plotValue >= plotInfo->yieldValue)
-		{
-			plotInfo->yieldValue = plotValue;
-			plotInfo->currentBuild = eBestBuild;
-			plotInfo->currentImprovement = ePotentialImprovement;
+			plotInfo->newValue = plotValue;
+			plotInfo->newBuild = eBestBuild;
+			plotInfo->newImprovement = ePotentialImprovement;
 		}
 
 	}
-	if (plotInfo->currentImprovement == eCurrentPlotImprovement) {
-		plotInfo->yieldValue = 0;
-		plotInfo->currentBuild = NO_BUILD;
-		plotInfo->currentImprovement = NO_IMPROVEMENT;
+	if (plotInfo->newImprovement == plotInfo->currentImprovement) {
+		plotInfo->newValue = 0;
+		plotInfo->newBuild = NO_BUILD;
+		plotInfo->newImprovement = NO_IMPROVEMENT;
 	}
 }
 
@@ -14245,7 +14250,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				if (kBuilding.isProvidesFreshWater() && !plot()->isFreshWater())
 				{
 					int freshWaterModifier = 0;
-					foreach_(const CvPlot* pLoopPlot, plots(NUM_CITY_PLOTS_1, true))
+					foreach_(const CvPlot * pLoopPlot, plots(NUM_CITY_PLOTS_1, true))
 					{
 						if (!pLoopPlot->isWater() &&
 							!pLoopPlot->isFreshWater() &&
