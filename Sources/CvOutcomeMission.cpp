@@ -174,7 +174,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 	m_OutcomeList.buildDisplayString(szBuffer, *pUnit);
 }
 
-void CvOutcomeMission::execute(CvUnit* pUnit) const
+void CvOutcomeMission::execute(CvUnit* pUnit)
 {
 	if (m_iCost)
 	{
