@@ -56,7 +56,8 @@ private: \
 
 #define ART_INFO_INIT(name) m_map##name##ArtInfos(NULL)
 
-class CvArtFileMgr : bst::noncopyable
+class CvArtFileMgr
+	: private bst::noncopyable
 {
 public:
 	class ArtInfoItem

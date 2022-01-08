@@ -131,7 +131,8 @@ struct ECvPlotGraphics
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot : bst::noncopyable
+class CvPlot
+	: private bst::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:

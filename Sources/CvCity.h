@@ -37,13 +37,13 @@ struct ProductionCalc
 DECLARE_FLAGS(ProductionCalc::flags);
 
 
-class CvCity : public CvDLLEntity
-	, bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
+class CvCity
+	: public CvDLLEntity
+	, private bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 public:
 	CvCity();
 	virtual ~CvCity();
-
 
 	void init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, bool bUpdatePlotGroups);
 	void uninit();
@@ -54,9 +54,6 @@ public:
 	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
 
 private:
-	// disable copy: we have owned pointers so we can't use the default copy implementation
-	//CvCity(const CvCity&);
-	//CvCity& operator=(const CvCity&);
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
 protected:

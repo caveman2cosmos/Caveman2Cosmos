@@ -13,7 +13,8 @@
 struct WrappedVar;
 
 
-struct CvInfoUtil : bst::noncopyable
+struct CvInfoUtil
+	: private bst::noncopyable
 {
 	CvInfoUtil(CvInfoBase* info)
 	{

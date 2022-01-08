@@ -31,7 +31,7 @@ void CyInfoPythonInterface1()
 		.def("getScale", &CvScalableInfo::getScale, "float ()")
 		;
 
-	python::class_<CvSpecialistInfo, python::bases<CvInfoBase> >("CvSpecialistInfo", python::no_init)
+	python::class_<CvSpecialistInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvSpecialistInfo", python::no_init)
 
 		.def("getGreatPeopleUnitType", &CvSpecialistInfo::getGreatPeopleUnitType, "int ()")
 		.def("getGreatPeopleRateChange", &CvSpecialistInfo::getGreatPeopleRateChange, "int ()")
@@ -48,7 +48,7 @@ void CyInfoPythonInterface1()
 		.def("getTexture", &CvSpecialistInfo::getTexture, "string ()")
 	;
 
-	python::class_<CvTechInfo, python::bases<CvInfoBase> >("CvTechInfo", python::no_init)
+	python::class_<CvTechInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvTechInfo", python::no_init)
 		.def("getAdvisorType", &CvTechInfo::getAdvisorType, "int ()")
 		.def("getResearchCost", &CvTechInfo::getResearchCost, "int ()")
 		.def("getEra", &CvTechInfo::getEra, "int ()")
@@ -104,7 +104,7 @@ void CyInfoPythonInterface1()
 		.def("getPrereqOrBuildingMinimumRequired", &CvTechInfo::getPrereqOrBuildingMinimumRequired, "int (int i)")
 		;
 
-	python::class_<CvPromotionInfo, python::bases<CvInfoBase> >("CvPromotionInfo", python::no_init)
+	python::class_<CvPromotionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPromotionInfo", python::no_init)
 
 		.def("getPrereqPromotion", &CvPromotionInfo::getPrereqPromotion, "int ()")
 		.def("getPrereqOrPromotion1", &CvPromotionInfo::getPrereqOrPromotion1, "int ()")
@@ -159,7 +159,7 @@ void CyInfoPythonInterface1()
 		.def("getNumAddsBuildTypes", &CvPromotionInfo::getNumAddsBuildTypes, "int ()")
 		;
 
-	python::class_<CvMissionInfo, python::bases<CvInfoBase> >("CvMissionInfo", python::no_init)
+	python::class_<CvMissionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvMissionInfo", python::no_init)
 		.def("getTime", &CvMissionInfo::getTime, "int ()")
 
 		.def("isSound", &CvMissionInfo::isSound, "bool ()")
@@ -168,20 +168,11 @@ void CyInfoPythonInterface1()
 		.def("getVisible", &CvMissionInfo::getVisible, "bool ()")
 		;
 
-	python::class_<CvActionInfo>("CvActionInfo", python::no_init)
-		.def("getMissionData", &CvActionInfo::getMissionData, "int ()")
-		.def("getAutomateType", &CvActionInfo::getAutomateType, "int ()")
-
-		.def("getMissionType", &CvActionInfo::getMissionType, "int ()")
-		.def("getCommandType", &CvActionInfo::getCommandType, "int ()")
-
-		.def("isVisible", &CvActionInfo::isVisible, "bool ()")
-
-		.def("getHotKey", &CvActionInfo::getHotKey, "string ()")
+	python::class_<CvActionInfo, boost::noncopyable>("CvActionInfo", python::no_init)
 		.def("getButton", &CvActionInfo::getButton, "string ()")
 		;
 
-	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvUnitInfo", python::no_init)
+	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo>, boost::noncopyable>("CvUnitInfo", python::no_init)
 
 		.def("getMaxGlobalInstances", &CvUnitInfo::getMaxGlobalInstances, "int ()")
 		.def("getMaxPlayerInstances", &CvUnitInfo::getMaxPlayerInstances, "int ()")
@@ -193,7 +184,6 @@ void CyInfoPythonInterface1()
 		.def("getGreatWorkCulture", &CvUnitInfo::getGreatWorkCulture, "int ()")
 		.def("getEspionagePoints", &CvUnitInfo::getEspionagePoints, "int ()")
 		.def("getCombat", &CvUnitInfo::getCombat, "int ()")
-		.def("setCombat", &CvUnitInfo::setCombat, "void (int)")
 		.def("getAirCombat", &CvUnitInfo::getAirCombat, "int ()")
 		.def("getFirstStrikes", &CvUnitInfo::getFirstStrikes, "int ()")
 		.def("getChanceFirstStrikes", &CvUnitInfo::getChanceFirstStrikes, "int ()")
@@ -277,15 +267,15 @@ void CyInfoPythonInterface1()
 		.def("getTrainCondition", &CvUnitInfo::getTrainCondition, python::return_value_policy<python::reference_existing_object>())
 		;
 
-	python::class_<CvSpecialUnitInfo, python::bases<CvInfoBase> >("CvSpecialUnitInfo", python::no_init)
+	python::class_<CvSpecialUnitInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvSpecialUnitInfo", python::no_init)
 		.def("isValid", &CvSpecialUnitInfo::isValid, "bool ()")
 		;
 
-	python::class_<CvCivicOptionInfo, python::bases<CvInfoBase> >("CvCivicOptionInfo", python::no_init)
+	python::class_<CvCivicOptionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCivicOptionInfo", python::no_init)
 		//.def("getTraitNoUpkeep", &CvCivicOptionInfo::getTraitNoUpkeep, "bool (int i)")
 		;
 
-	python::class_<CvCivicInfo, python::bases<CvInfoBase> >("CvCivicInfo", python::no_init)
+	python::class_<CvCivicInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCivicInfo", python::no_init)
 
 		.def("getCivicOptionType", &CvCivicInfo::getCivicOptionType, "int ()")
 		.def("getUpkeep", &CvCivicInfo::getUpkeep, "int ()")
@@ -601,19 +591,19 @@ void CyInfoPythonInterface1()
 		.def("getConstructCondition", &CvBuildingInfo::getConstructCondition, python::return_value_policy<python::reference_existing_object>())
 		;
 
-	python::class_<CvSpecialBuildingInfo, python::bases<CvInfoBase> >("CvSpecialBuildingInfo", python::no_init)
+	python::class_<CvSpecialBuildingInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvSpecialBuildingInfo", python::no_init)
 		.def("getObsoleteTech", &CvSpecialBuildingInfo::getObsoleteTech, "int ()")
 		.def("getTechPrereq", &CvSpecialBuildingInfo::getTechPrereq, "int ()")
 		.def("isValid", &CvSpecialBuildingInfo::isValid, "bool ()")
 		;
 
-	python::class_<CvPromotionLineInfo, python::bases<CvInfoBase> >("CvPromotionLineInfo", python::no_init)
+	python::class_<CvPromotionLineInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPromotionLineInfo", python::no_init)
 		.def("getPrereqTech", &CvPromotionLineInfo::getPrereqTech, "int ()")
 		.def("getObsoleteTech", &CvPromotionLineInfo::getObsoleteTech, "int ()")
 		.def("isBuildUp", &CvPromotionLineInfo::isBuildUp, "bool ()")
 		;
 
-	python::class_<CvUnitCombatInfo, python::bases<CvInfoBase> >("CvUnitCombatInfo", python::no_init)
+	python::class_<CvUnitCombatInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvUnitCombatInfo", python::no_init)
 		.def("getVisibilityChange", &CvUnitCombatInfo::getVisibilityChange, "int ()")
 		.def("getMoveDiscountChange", &CvUnitCombatInfo::getMoveDiscountChange, "int ()")
 		.def("getWithdrawalChange", &CvUnitCombatInfo::getWithdrawalChange, "int ()")
