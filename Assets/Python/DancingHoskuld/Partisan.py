@@ -220,7 +220,6 @@ def onCityAcquired(argsList):
 		iiX = CyPlot.getX()
 		iiY = CyPlot.getY()
 		pNewUnit = CyPlayerOld.initUnit(UNIT_PARTISAN, iiX, iiY, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION )
-		print ("WWWWWWW", iiX, iiY, iPop)
 
 ################################
 ### set aditional promotions ###
