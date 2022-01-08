@@ -19,6 +19,7 @@
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
 #include "CvInfos.h"
+#include "NiPoint.h"
 
 class CvXMLLoadUtility;
 
@@ -29,7 +30,9 @@ class CvXMLLoadUtility;
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWaterPlaneInfo : public CvInfoBase
+class CvWaterPlaneInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -73,7 +76,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTerrainPlaneInfo : public CvInfoBase
+class CvTerrainPlaneInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -121,7 +126,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCameraOverlayInfo : public CvInfoBase
+class CvCameraOverlayInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 

@@ -49,7 +49,8 @@ typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 typedef std::vector<TechTypes> techPath;
 
-class CvPlayer : bst::noncopyable
+class CvPlayer
+	: private bst::noncopyable
 {
 public:
 	CvPlayer();
