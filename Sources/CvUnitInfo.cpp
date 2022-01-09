@@ -13,6 +13,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvInfoUtil.h"
 #include "CvPlayerAI.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
@@ -320,6 +321,8 @@ m_bCanAnimalIgnoresCities(false),
 m_bNoNonTypeProdMods(false),
 m_bGatherHerd(false)
 {
+	CvInfoUtil(this).initDataMembers();
+
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
@@ -332,6 +335,8 @@ m_bGatherHerd(false)
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::~CvUnitInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitCombat);
 	SAFE_DELETE_ARRAY(m_pbDefenderUnitCombat);
@@ -3556,8 +3561,18 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 #endif
 //TB Combat Mods End  TB SubCombat Mod end
 
+void CvUnitInfo::getDataMembers(CvInfoUtil& util)
+{
+	util
+		//.addEnum(m_iObsoleteTech, L"ObsoleteTech")
+		//.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+	;
+}
+
 void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_bUnlimitedException);
@@ -4048,6 +4063,9 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
+
+	CvInfoUtil(this).readXml(pXML);
+
 	CvString szTextVal;
 	CvString szTextVal2;
 
@@ -5001,6 +5019,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 {
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 
 	const bool bDefault = false;
 	const int iDefault = 0;
@@ -5968,6 +5988,10 @@ bool CvUnitInfo::readPass3()
 		m_aszCivilizationNamesValueforPass3.clear();
 	}
 	return true;
+}
+
+void CvUnitInfo::doPostLoadCaching(uint32_t eThis)
+{
 }
 
 bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const

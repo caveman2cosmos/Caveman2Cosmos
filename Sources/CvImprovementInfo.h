@@ -7,6 +7,7 @@
 
 class CvArtInfoImprovement;
 class CvXMLLoadUtility;
+struct CvInfoUtil;
 
 class CvImprovementInfo
 	: public CvInfoBase
@@ -120,6 +121,8 @@ public:
 	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bPeakMakesValid;
 	bool m_bBombardable;
 	bool m_bUpgradeRequiresFortify;
