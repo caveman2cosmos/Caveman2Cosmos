@@ -7,7 +7,7 @@
 			<Description>TXT_KEY_BUILD_MESOAMERICAN_TEMPLE</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>100</iCost>
+			<iCost>65</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MESOAMERICAN_TEMPLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -137,7 +137,7 @@
 			<Description>TXT_KEY_BUILD_ASIAN_TEMPLE</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>150</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ASIAN_TEMPLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -151,7 +151,7 @@
 			<Description>TXT_KEY_BUILD_PYRAMIDS</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>100</iCost>
+			<iCost>65</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_PYRAMIDS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -419,7 +419,7 @@
 			<Description>TXT_KEY_BUILD_ZIGGURAT</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>200</iCost>
+			<iCost>130</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ZIGGURAT</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
