@@ -15102,7 +15102,7 @@
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TRAIT</Tag>
 		<English>[ICON_BULLET]%D1%%%F2 for %s3_trait leader</English>
 		<French>[ICON_BULLET]%D1%%%F2 pour un dirigeant %s3_trait</French>
-		<German>[ICON_BULLET]%D1%%%F2 für %s3:2_trait Staatsoberhaupt</German>
+		<German>[ICON_BULLET]%D1%%%F2 für Staatsoberhäupter mit dem Charakterzug: %s3:2_trait</German>
 		<Italian>[ICON_BULLET]%D1%%%F2 per un leader %s3_trait</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por líder %s3_trait</Spanish>
 	</TEXT>
@@ -16230,6 +16230,7 @@
 		<Tag>TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS</Tag>
 		<English>An enemy %s1_EnUName attempted to flee our onslaught but was chased down and dispatched by our %s2_UnitName!</English>
 		<French>[COLOR_YELLOW][NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté de fuir votre assaut, mais [NUM1:a:a:ont:ont] été poursuivi et dispersé par [NUM2:votre:votre:vos:vos] %s2_UnitName ![COLOR_REVERT]</French>
+		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:4_EnUName [NUM1:versuchte:versuchten] zu fliehen, [NUM1:wurde:wurden] aber von [NUM2:Eurem:Eurer:Eurem:Euren:Euren:Euren] %s2:1_UnitName verfolgt und zur Strecke gebracht!</German>
 		<Italian>[NUM1:Un:Una:Alcuni:Alcune] %s1_EnUName [NUM1:ha:ha:hanno:hanno] cercato di sfuggire al nostro accerchiamento, ma è stata inseguita e sconfitta dalla nostra unità %s2_UnitName!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName probowała uciec z pola walki lecz została złapana przez: %s2_UnitName!</Polish>
 	</TEXT>
@@ -19774,6 +19775,7 @@
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL_MESSAGE</Tag>
 		<English>Our %s1 has killed a %s2</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1 [NUM1:a:a:ont:ont] tué l'animal : [COLOR_UNIT_TEXT]%s2[COLOR_REVERT]</French>
+		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1 [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] %s2 erlegt.</German>
 		<Italian>La nostra unità %s1 ha ucciso [NUM2:un:una] %s2</Italian>
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] cazado [NUM2:un:una:unos:unas] %s2</Spanish>
 		<Polish>Nasza jednostka %s1 pokonała %s2</Polish>
@@ -20116,7 +20118,7 @@
 		<Tag>TXT_KEY_PEDIA_TRAITS</Tag>
 		<English>Traits</English>
 		<French>Traits de caractère</French>
-		<German>Merkmale</German>
+		<German>Charakterzüge</German>
 		<Italian>Punti di forza</Italian>
 		<Spanish>Rasgos</Spanish>
 	</TEXT>
@@ -21864,7 +21866,7 @@
 		<Tag>TXT_KEY_PRODUCTION_MODIFIER_TRAIT</Tag>
 		<English>[ICON_BULLET]%D1_change%% production speed for %s2_trait leaders</English>
 		<French>[ICON_BULLET]Vitesse de production de %D1_change%% pour les dirigeants avec le trait %s2_trait</French>
-		<German>[ICON_BULLET]%D1_change%% Produktionsgeschwindigkeit für %s2:2_trait Staatsoberhaupt</German>
+		<German>[ICON_BULLET]%D1_change%% Produktionsgeschwindigkeit für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
 		<Italian>[ICON_BULLET]%D1_change%% di velocità produttiva con un leader %s2_trait</Italian>
 		<Spanish>[ICON_BULLET]%D1_change%% de velocidad de producción con líder %s2:1_trait</Spanish>
 	</TEXT>
@@ -25493,7 +25495,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECHHELP_GREAT_PERSON_DISCOVER</Tag>
 		<English>[ICON_BULLET]Can be researched by a [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
-		<German>[ICON_BULLET]Kann von der Großen Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
+		<German>[ICON_BULLET]kann von der Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
 		<Italian>[ICON_BULLET]Può essere ricercata da un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</Italian>
 		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
 	</TEXT>

@@ -1806,19 +1806,11 @@ bool CvPlot::isRiverCrossingFlowClockwise(DirectionTypes eDirection) const
 
 bool CvPlot::isRiverSide() const
 {
-	CvPlot* pLoopPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 	{
-		pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		if (isRiverCrossing(directionXY(this, pLoopPlot)))
 		{
-			if (isRiverCrossing(directionXY(this, pLoopPlot)))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -2502,11 +2494,9 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	if (pInfo.isRequiresRiverSide())
 	{
 		bValid = false;
-		for (int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+		foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 		{
-			const CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-			if (pLoopPlot != NULL && isRiverCrossing(directionXY(this, pLoopPlot)))
+			if (isRiverCrossing(directionXY(this, pLoopPlot)))
 			{
 				// Toffer - Only allowed on one side of the river without additional spacing.
 				// An odd rule, but I'm sure it's what the original code intended before I changed it to be consistent.
@@ -3570,20 +3560,9 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 
 int CvPlot::countImpassableCardinalDirections() const
 {
-	CvPlot* pAdjacentPlot;
-	int iCount = 0;
-	for(int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
-	{
-		pAdjacentPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-		if(pAdjacentPlot != NULL)
-		{
-			if(pAdjacentPlot->isImpassable() || (area() != pAdjacentPlot->area()))
-			{
-				++iCount;
-			}
-		}
-	}
-	return iCount;
+	return algo::count_if(cardinalDirectionAdjacent(),
+		bind(CvPlot::isImpassable, _1, NO_TEAM) || bind(CvPlot::area, _1) != area()
+	);
 }
 // Super Forts end
 
@@ -4438,29 +4417,24 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	{
 		bValid = true;
 
-		for (iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+		foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 		{
-			pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-			if (pLoopPlot != NULL)
+			if (pLoopPlot->isOwned())
 			{
-				if (pLoopPlot->isOwned())
+				if (eBestPlayer == NO_PLAYER)
 				{
-					if (eBestPlayer == NO_PLAYER)
-					{
-						eBestPlayer = pLoopPlot->getOwner();
-					}
-					else if (eBestPlayer != pLoopPlot->getOwner())
-					{
-						bValid = false;
-						break;
-					}
+					eBestPlayer = pLoopPlot->getOwner();
 				}
-				else
+				else if (eBestPlayer != pLoopPlot->getOwner())
 				{
 					bValid = false;
 					break;
 				}
+			}
+			else
+			{
+				bValid = false;
+				break;
 			}
 		}
 
@@ -4766,67 +4740,33 @@ bool CvPlot::isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const
 
 	return false;
 }
-/************************************************************************************************/
-/* Afforess	Vicinity Bonus Start		 07/29/09                                            */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+
+// Afforess - Vicinity Bonus - 07/29/09
 bool CvPlot::isHasValidBonus() const
 {
-	if (getBonusType() == NO_BONUS)
+	if (getBonusType() == NO_BONUS
+	|| getImprovementType() == NO_IMPROVEMENT
+	|| !isBonusNetwork(getTeam())
+	|| !isWithinTeamCityRadius(getTeam()))
 	{
 		return false;
 	}
-	if (getImprovementType() == NO_IMPROVEMENT)
-	{
-		return false;
-	}
-	if (!isBonusNetwork(getTeam()))
-	{
-		return false;
-	}
-	if (!isWithinTeamCityRadius(getTeam()))
-	{
-		return false;
-	}
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechReveal())))
-	{
-		if (GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(getBonusType()))
-		{
-			return true;
-		}
-	}
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechReveal())) && GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechObsolete())))
-	{
-		if (GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(getBonusType()))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	const CvBonusInfo& bonus = GC.getBonusInfo(getBonusType());
+	return (
+		GET_TEAM(getTeam()).isHasTech((TechTypes)bonus.getTechReveal())
+		&& (
+				bonus.isProvidedByImprovementType(getImprovementType())
+			||	GET_TEAM(getTeam()).isHasTech((TechTypes)bonus.getTechObsolete())
+		)
+	);
 }
-/************************************************************************************************/
-/* Afforess	Vicinity Bonus End       END                                                     */
-/************************************************************************************************/
+// ! Afforess - Vicinity Bonus - 07/29/09
+
+
 bool CvPlot::isEnemyCity(const CvUnit& kUnit, bool bOnlyRealCities) const
 {
-	// Super Forts begin *culture*
-	TeamTypes ePlotTeam = getTeam();
-	if (isCity(!bOnlyRealCities) && (ePlotTeam != NO_TEAM))
-	{
-		return kUnit.isEnemy(ePlotTeam, this);
-	}
-	/* Original Code
-	CvCity* pCity = getPlotCity();
-
-	if (pCity != NULL)
-	{
-		return kUnit.isEnemy(pCity->getTeam(), this);
-	} */
-	// Super Forts end
-
-	return false;
+	return isCity(!bOnlyRealCities) && getTeam() != NO_TEAM && kUnit.isEnemy(getTeam(), this);
 }
 
 
@@ -6501,11 +6441,9 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			// XXX might want to change this if we allow diagonal water movement...
 			if (isWater())
 			{
-				for (int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+				foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 				{
-					CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iI));
-
-					if (pLoopPlot != NULL && pLoopPlot->area()->isWater())
+					if (pLoopPlot->area()->isWater())
 					{
 						if (pNewArea == NULL)
 						{
@@ -8086,28 +8024,17 @@ PlayerTypes CvPlot::findHighestCulturePlayer() const
 	return eBestPlayer;
 }
 
-
+// returns value between 0 and 100
 int CvPlot::calculateCulturePercent(PlayerTypes eIndex) const
 {
 	PROFILE_FUNC();
 
-	int iTotalCulture = countTotalCulture();
+	const int iTotalCulture = countTotalCulture();
 
 	if (iTotalCulture > 0)
 	{
-		int iResult;
-
-		if (getCulture(eIndex) > MAX_INT/1000)
-		{
-			iResult = (getCulture(eIndex) / (iTotalCulture/100));
-		}
-		else
-		{
-			iResult = ((getCulture(eIndex) * 100) / iTotalCulture);
-		}
-		return iResult;
+		return 100 * getCulture(eIndex) / iTotalCulture;
 	}
-
 	return 0;
 }
 
@@ -8455,24 +8382,11 @@ void CvPlot::updatePlotGroup()
 	}
 }
 
-static bool PlotSetContains(CvPlot* pPlot, std::vector<CvPlot*>& set)
-{
-	for(int iJ = 0; iJ < (int)set.size(); iJ++)
-	{
-		if ( set[iJ] == pPlot )
-		{
-			return true;
-		}
-	}
-
-	return false;
-}
-
 static void CalculateClosePlotGroupConnectSet(PlayerTypes ePlayer, CvPlot* pSeedPlot, std::vector<CvPlot*>& set, int iRange)
 {
 	CvPlotGroup* seedPlotGroup = pSeedPlot->getPlotGroup(ePlayer);
 
-	if ( !PlotSetContains(pSeedPlot, set) )
+	if (!algo::any_of_equal(set, pSeedPlot))
 	{
 		set.push_back(pSeedPlot);
 
@@ -8518,11 +8432,9 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 			{
 				bConnected = true;
 #if 0
-				for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+				foreach_(const CvPlot* pAdjacentPlot, adjacent())
 				{
-					CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-					if (pAdjacentPlot != NULL && pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
+					if (pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
 					&& !isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(ePlayer).getTeam()))
 					{
 						bConnected = false;
@@ -8573,13 +8485,10 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 
 						int	iStillConnectedCount = 0;
 
-						for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+						foreach_(const CvPlot* pAdjacentPlot, adjacent())
 						{
-							CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-							if (pAdjacentPlot != NULL
-							&& pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
-							&& PlotSetContains(pAdjacentPlot, closeConnected))
+							if (pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
+							&& algo::any_of_equal(closeConnected, pAdjacentPlot))
 							{
 								iStillConnectedCount++;
 							}
@@ -8614,7 +8523,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 				else
 				{
 					FAssertMsg(getPlotGroup(ePlayer) == pPlotGroup, "ePlayer's plot group is expected to equal pPlotGroup");
-					GC.getMap().combinePlotGroups(ePlayer, pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
+					CvMap::combinePlotGroups(pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
 					pPlotGroup = getPlotGroup(ePlayer);
 					FAssertMsg(pPlotGroup != NULL, "PlotGroup is not assigned a valid value");
 				}
@@ -9055,9 +8964,9 @@ void CvPlot::updateRiverCrossing(DirectionTypes eIndex)
 
 		if (pCornerPlot != NULL)
 		{
-			pNorthEastPlot = plotDirection(pCornerPlot->getX(), pCornerPlot->getY(), DIRECTION_EAST);
-			pSouthEastPlot = plotDirection(pCornerPlot->getX(), pCornerPlot->getY(), DIRECTION_SOUTHEAST);
-			pSouthWestPlot = plotDirection(pCornerPlot->getX(), pCornerPlot->getY(), DIRECTION_SOUTH);
+			pNorthEastPlot = plotDirection(pCornerPlot, DIRECTION_EAST);
+			pSouthEastPlot = plotDirection(pCornerPlot, DIRECTION_SOUTHEAST);
+			pSouthWestPlot = plotDirection(pCornerPlot, DIRECTION_SOUTH);
 			pNorthWestPlot = pCornerPlot;
 
 			if (pSouthWestPlot && pNorthWestPlot && pSouthEastPlot && pNorthEastPlot)
@@ -9546,11 +9455,10 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 						}
 					}
 				}
-				if (m_aBonusResult.size()>0)
+				if (!m_aBonusResult.empty())
 				{
-					int iPossible = (int)m_aBonusResult.size();
-					iPossible = std::max(iPossible, 100);
-					unsigned iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
+					const int iPossible = std::max((int)m_aBonusResult.size(), 100);
+					const uint32_t iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
 
 					if (iResult > m_aBonusResult.size())
 					{
@@ -10396,11 +10304,9 @@ void CvPlot::doFeature()
 		{
 			int iProbability = kFeature.isCanGrowAnywhere() ? kFeature.getGrowthProbability() : 0;
 
-			for (int iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
+			foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 			{
-				const CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), (CardinalDirectionTypes)iJ);
-
-				if (pLoopPlot != NULL && pLoopPlot->getFeatureType() == (FeatureTypes)iI)
+				if (pLoopPlot->getFeatureType() == (FeatureTypes)iI)
 				{
 					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
 					{
@@ -12026,7 +11932,7 @@ void CvPlot::applyEvent(EventTypes eEvent)
 }
 
 
-bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
+bool CvPlot::canTrain(UnitTypes eUnit, bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
@@ -12844,8 +12750,6 @@ int CvPlot::getTotalTurnDamage(const CvUnit* pUnit) const
 
 CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
-	int iBestUnitRank = -1;
-
 	CvUnit* pBestUnit = NULL;
 
 	foreach_(CvUnit* pLoopUnit, units())
@@ -12864,7 +12768,7 @@ CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 							{
 								if ((pAttacker == NULL) || (pAttacker->getDomainType() != DOMAIN_AIR) || (pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)))
 								{
-									if (pBestUnit == NULL || (pLoopUnit->canDefend() && !pLoopUnit->isBetterDefenderThan(pBestUnit, pAttacker, &iBestUnitRank)))
+									if (pBestUnit == NULL || (pLoopUnit->canDefend() && !pLoopUnit->isBetterDefenderThan(pBestUnit, pAttacker)))
 									{
 										pBestUnit = pLoopUnit;
 									}
@@ -13330,3 +13234,64 @@ CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 //{
 //	return ::getUnit(info);
 //}
+
+CvPlot::adjacent_iterator::adjacent_iterator()
+	: m_centerX(-1)
+	, m_centerY(-1)
+	, m_numPlots(0)
+	, m_plotDirectionX(nullptr)
+	, m_plotDirectionY(nullptr)
+	, m_map(nullptr)
+	, m_curr(nullptr)
+	, m_idx(0)
+{}
+
+CvPlot::adjacent_iterator::adjacent_iterator(int centerX, int centerY, int numPlots, const int* plotDirectionX, const int* plotDirectionY)
+	: m_centerX(centerX)
+	, m_centerY(centerY)
+	, m_numPlots(numPlots)
+	, m_plotDirectionX(plotDirectionX)
+	, m_plotDirectionY(plotDirectionY)
+	, m_map(&GC.getMap())
+	, m_curr(nullptr)
+	, m_idx(0)
+{
+	increment();
+}
+
+void CvPlot::adjacent_iterator::increment()
+{
+	m_curr = nullptr;
+	while (m_curr == nullptr && m_idx < m_numPlots)
+	{
+		m_curr = m_map->plot(m_centerX + m_plotDirectionX[m_idx], m_centerY + m_plotDirectionY[m_idx]);
+		++m_idx;
+	}
+}
+bool CvPlot::adjacent_iterator::equal(CvPlot::adjacent_iterator const& other) const
+{
+	return (m_centerX == other.m_centerX
+		&& m_centerY == other.m_centerY
+		&& m_idx == other.m_idx)
+		|| (m_curr == NULL && other.m_curr == NULL);
+}
+
+CvPlot::adjacent_iterator CvPlot::beginAdjacent(int numPlots, const int* plotDirectionX, const int* plotDirectionY) const
+{
+	return CvPlot::adjacent_iterator(m_iX, m_iY, numPlots, plotDirectionX, plotDirectionY);
+}
+
+CvPlot::adjacent_iterator CvPlot::endAdjacent() const
+{
+	return CvPlot::adjacent_iterator();
+}
+
+CvPlot::adjacent_range CvPlot::adjacent() const
+{
+	return CvPlot::adjacent_range(beginAdjacent(NUM_DIRECTION_TYPES, GC.getPlotDirectionX(), GC.getPlotDirectionY()), endAdjacent());
+}
+
+CvPlot::adjacent_range CvPlot::cardinalDirectionAdjacent() const
+{
+	return CvPlot::adjacent_range(beginAdjacent(NUM_CARDINALDIRECTION_TYPES, GC.getPlotCardinalDirectionX(), GC.getPlotCardinalDirectionY()), endAdjacent());
+}

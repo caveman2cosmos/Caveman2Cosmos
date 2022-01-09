@@ -45,15 +45,14 @@ static char gVersionString[1024] = { 0 };
 	}
 */
 
-template <class T>
-void deleteInfoArray(std::vector<T*>& array)
+void deleteInfoArray(std::vector<CvInfoBase*>* array)
 {
-	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
+	foreach_(const CvInfoBase* info, *array)
 	{
-		SAFE_DELETE(*it);
+		delete info;
 	}
 
-	array.clear();
+	array->clear();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,15 +62,12 @@ CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
 
-int g_iPercentDefault = 100;
-int g_iModifierDefault = 0;
-
 #ifdef _DEBUG
 int inDLL = 0;
 const char* fnName = NULL;
 
 //	Wrapper for debugging so as to be able to always tell last method entered
-ProxyTracker::ProxyTracker(const CvGlobals* proxy, const char* name)
+ProxyTracker::ProxyTracker(const char* name)
 {
 	inDLL++;
 	fnName = name;
@@ -2503,9 +2499,6 @@ void cvInternalGlobals::setDefineSTRING(const char* szName, const char* szValue,
 
 float cvInternalGlobals::getPLOT_SIZE() const
 {
-	CvMapExternal& kMap = GC.getMapExternal();
-	kMap.mapCoordinates(true);
-
 	return m_fPLOT_SIZE;
 }
 
@@ -2543,121 +2536,9 @@ const char* cvInternalGlobals::alternateProfileSampleName() const
 
 void cvInternalGlobals::deleteInfoArrays()
 {
-	deleteInfoArray(m_paBuildingInfo);
-	deleteInfoArray(m_paSpecialBuildingInfo);
+	algo::for_each(m_aInfoVectors, bind(deleteInfoArray, _1));
 
-	deleteInfoArray(m_paLeaderHeadInfo);
-	deleteInfoArray(m_paTraitInfo);
-	deleteInfoArray(m_paCivilizationInfo);
-	deleteInfoArray(m_paUnitArtStyleTypeInfo);
-
-	deleteInfoArray(m_paVoteSourceInfo);
-	deleteInfoArray(m_paHints);
-	deleteInfoArray(m_paMainMenus);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/01/07                            MRGENIE          */
-/************************************************************************************************/
-	// MLF loading
 	m_paModLoadControlVector.clear();
-	deleteInfoArray(m_paModLoadControls);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-	deleteInfoArray(m_paGoodyInfo);
-	deleteInfoArray(m_paHandicapInfo);
-	deleteInfoArray(m_paGameSpeedInfo);
-	deleteInfoArray(m_paTurnTimerInfo);
-	deleteInfoArray(m_paVictoryInfo);
-	deleteInfoArray(m_paHurryInfo);
-	deleteInfoArray(m_paWorldInfo);
-	deleteInfoArray(m_paSeaLevelInfo);
-	deleteInfoArray(m_paClimateInfo);
-	deleteInfoArray(m_paProcessInfo);
-	deleteInfoArray(m_paVoteInfo);
-	deleteInfoArray(m_paProjectInfo);
-	deleteInfoArray(m_paReligionInfo);
-	deleteInfoArray(m_paCorporationInfo);
-	deleteInfoArray(m_paCommerceInfo);
-	deleteInfoArray(m_paEmphasizeInfo);
-	deleteInfoArray(m_paUpkeepInfo);
-	deleteInfoArray(m_paCultureLevelInfo);
-
-	deleteInfoArray(m_paColorInfo);
-	deleteInfoArray(m_paPlayerColorInfo);
-	deleteInfoArray(m_paInterfaceModeInfo);
-	deleteInfoArray(m_paAdvisorInfo);
-	deleteInfoArray(m_paThroneRoomCamera);
-	deleteInfoArray(m_paThroneRoomInfo);
-	deleteInfoArray(m_paThroneRoomStyleInfo);
-	deleteInfoArray(m_paSlideShowInfo);
-	deleteInfoArray(m_paSlideShowRandomInfo);
-	deleteInfoArray(m_paWorldPickerInfo);
-	deleteInfoArray(m_paSpaceShipInfo);
-
-	deleteInfoArray(m_paCivicInfo);
-	deleteInfoArray(m_paImprovementInfo);
-
-	deleteInfoArray(m_paRouteInfo);
-	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverModelInfo);
-
-	deleteInfoArray(m_paWaterPlaneInfo);
-	deleteInfoArray(m_paTerrainPlaneInfo);
-	deleteInfoArray(m_paCameraOverlayInfo);
-
-	deleteInfoArray(m_aEraInfo);
-	deleteInfoArray(m_paEffectInfo);
-	deleteInfoArray(m_paAttachableInfo);
-
-	deleteInfoArray(m_paTechInfo);
-	deleteInfoArray(m_paDiplomacyInfo);
-
-	deleteInfoArray(m_paBuildInfo);
-	deleteInfoArray(m_paUnitInfo);
-	deleteInfoArray(m_paSpawnInfo);
-	deleteInfoArray(m_paSpecialUnitInfo);
-	deleteInfoArray(m_paSpecialistInfo);
-	deleteInfoArray(m_paActionInfo);
-	deleteInfoArray(m_paMissionInfo);
-	deleteInfoArray(m_paControlInfo);
-	deleteInfoArray(m_paCommandInfo);
-	deleteInfoArray(m_paAutomateInfo);
-	deleteInfoArray(m_paPromotionInfo);
-
-	deleteInfoArray(m_paConceptInfo);
-	deleteInfoArray(m_paNewConceptInfo);
-	deleteInfoArray(m_paCityTabInfo);
-	deleteInfoArray(m_paCalendarInfo);
-	deleteInfoArray(m_paSeasonInfo);
-	deleteInfoArray(m_paMonthInfo);
-	deleteInfoArray(m_paDenialInfo);
-	deleteInfoArray(m_paInvisibleInfo);
-	deleteInfoArray(m_paUnitCombatInfo);
-	deleteInfoArray(m_paPromotionLineInfo);
-	deleteInfoArray(m_paMapCategoryInfo);
-	deleteInfoArray(m_paIdeaClassInfo);
-	deleteInfoArray(m_paIdeaInfo);
-	//deleteInfoArray(m_paTraitOptionEditsInfo);
-	deleteInfoArray(m_paDomainInfo);
-	deleteInfoArray(m_paUnitAIInfos);
-	deleteInfoArray(m_paAttitudeInfos);
-	deleteInfoArray(m_paMemoryInfos);
-	deleteInfoArray(m_paGameOptionInfos);
-	deleteInfoArray(m_paMPOptionInfos);
-	deleteInfoArray(m_paForceControlInfos);
-	deleteInfoArray(m_paPlayerOptionInfos);
-	deleteInfoArray(m_paGraphicOptionInfos);
-
-	deleteInfoArray(m_paYieldInfo);
-	deleteInfoArray(m_paTerrainInfo);
-	deleteInfoArray(m_paFeatureInfo);
-	deleteInfoArray(m_paBonusClassInfo);
-	deleteInfoArray(m_paBonusInfo);
-	deleteInfoArray(m_paLandscapeInfo);
-
-	deleteInfoArray(m_paUnitFormationInfo);
-	deleteInfoArray(m_paCivicOptionInfo);
-	deleteInfoArray(m_paCursorInfo);
 
 	SAFE_DELETE_ARRAY(GC.getAnimationOperatorTypes());
 	SAFE_DELETE_ARRAY(GC.getFunctionTypes());
@@ -2670,15 +2551,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
-
-	deleteInfoArray(m_paEventInfo);
-	deleteInfoArray(m_paEventTriggerInfo);
-	deleteInfoArray(m_paEspionageMissionInfo);
-
-	deleteInfoArray(m_paEntityEventInfo);
-	deleteInfoArray(m_paAnimationCategoryInfo);
-	deleteInfoArray(m_paAnimationPathInfo);
-	deleteInfoArray(m_paPropertyInfo);
 
 	clearTypesMap();
 	m_aInfoVectors.clear();
@@ -3097,11 +2969,80 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 
 void cvInternalGlobals::doPostLoadCaching()
 {
+	checkInitialCivics();
+
+	//Establish Promotion Pedia Help info
+	for (int iI = getNumPromotionInfos() - 1; iI > -1; iI--)
+	{
+		const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
+		getPromotionInfo(ePromotion).setQualifiedUnitCombatTypes();
+		getPromotionInfo(ePromotion).setDisqualifiedUnitCombatTypes();
+	}
+	for (int iI = getNumUnitInfos() - 1; iI > -1; iI--)
+	{
+		const UnitTypes eUnit = static_cast<UnitTypes>(iI);
+		getUnitInfo(eUnit).setQualifiedPromotionTypes();
+		getUnitInfo(eUnit).setCanAnimalIgnores();
+	}
+	// Establish derived xml caching in info classes
+	{
+		const int iNumBonusInfos = getNumBonusInfos();
+
+		for (int iI = getNumImprovementInfos() - 1; iI > -1; iI--)
+		{
+			const ImprovementTypes eType = static_cast<ImprovementTypes>(iI);
+			const CvImprovementInfo& improvement = GC.getImprovementInfo(eType);
+
+			for (int iBonus = 0; iBonus < iNumBonusInfos; iBonus++)
+			{
+				if (improvement.isImprovementBonusTrade(iBonus))
+				{
+					getBonusInfo((BonusTypes)iBonus).setProvidedByImprovementTypes(eType);
+				}
+			}
+		}
+	}
+
 	foreach_(std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
 		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
 		{
 			(*infoVector)[i]->doPostLoadCaching(i);
+		}
+	}
+}
+
+
+void cvInternalGlobals::checkInitialCivics()
+{
+	for (int iCiv = getNumCivilizationInfos() - 1; iCiv > -1; iCiv--)
+	{
+		CvCivilizationInfo& civ = getCivilizationInfo(static_cast<CivilizationTypes>(iCiv));
+
+		for (int iJ = getNumCivicOptionInfos() - 1; iJ > -1; iJ--)
+		{
+			//No Initial Civic Found
+			const CivicTypes eCivic = (CivicTypes)civ.getCivilizationInitialCivics(iJ);
+
+			if (eCivic == NO_CIVIC || getCivicInfo(eCivic).getCivicOptionType() != iJ)
+			{
+				bool bFound = false;
+				for (int iK = 0; iK < getNumCivicInfos(); iK++)
+				{
+					if (getCivicInfo((CivicTypes)iK).getCivicOptionType() == iJ
+					&&  getCivicInfo((CivicTypes)iK).getTechPrereq() == NO_TECH)
+					{
+						bFound = true;
+						civ.setCivilizationInitialCivics(iJ, iK);
+						break;
+					}
+				}
+				if (!bFound)
+				{
+					// Should not get here, having no initial civic is very bad.
+					FErrorMsg("Error, No Valid Civic Was Found!");
+				}
+			}
 		}
 	}
 }

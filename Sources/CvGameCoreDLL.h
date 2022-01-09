@@ -4,14 +4,17 @@
 #define CvGameCoreDLL_h__
 
 //
+// includes (pch) for gamecore dll files
+// Author - Mustafa Thamer
+//
+
+//
 // Compiler warnings
 //
-//#pragma warning( 3: 4127 ) // conditional expression is constant
-
-#pragma warning( disable : 4510 ) // default constructor could not be generated
-#pragma warning( disable : 4511 ) // copy constructor could not be generated
-#pragma warning( disable : 4512 ) // assignment operator could not be generated
-#pragma warning( disable : 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
+#pragma warning( disable: 4510 ) // default constructor could not be generated
+#pragma warning( disable: 4511 ) // copy constructor could not be generated
+#pragma warning( disable: 4512 ) // assignment operator could not be generated
+#pragma warning( disable: 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
 
 #pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
 
@@ -20,11 +23,6 @@
 #pragma warning( disable: 4121 ) // alignment of a member was sensitive to packing
 #pragma warning( disable: 4127 ) // conditional expression is constant
 #pragma warning( disable: 4610 ) // struct/class can never be instantiated - user defined constructor required
-
-//
-// includes (pch) for gamecore dll files
-// Author - Mustafa Thamer
-//
 
 //
 // Boost
@@ -58,14 +56,9 @@
 #include <boost155/range/algorithm_ext/push_back.hpp>
 #include <boost155/range/numeric.hpp>
 
-#ifdef __INTELLISENSE__
-#define foreach_(item, rng) for (item; ; )
-#define reverse_foreach_(item, rng) for (item; ; )
-#else
 // Make boost foreach look nice enough to actually use
 #define foreach_		 BOOST_155_FOREACH
 #define reverse_foreach_ BOOST_155_REVERSE_FOREACH
-#endif
 
 // Alias our latest boost version
 namespace bst = boost155;

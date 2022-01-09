@@ -1,6 +1,7 @@
 #include "CvArtFileMgr.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
@@ -44,6 +45,11 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bGoody(false),
 	m_bPermanent(false),
 	m_bOutsideBorders(false),
+	m_bMilitaryStructure(false),
+	m_bPlacesBonus(false),
+	m_bPlacesFeature(false),
+	m_bPlacesTerrain(false),
+	m_bExtraterresial(false),
 	m_iWorldSoundscapeScriptId(0),
 	m_piPrereqNatureYield(NULL),
 	m_piYieldChange(NULL),
@@ -70,6 +76,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	//,m_iHighestCost(0)
 	, m_iBonusChange(NO_BONUS)
 {
+	CvInfoUtil(this).initDataMembers();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -81,6 +88,8 @@ CvImprovementInfo::CvImprovementInfo() :
 //------------------------------------------------------------------------------------------------------
 CvImprovementInfo::~CvImprovementInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_piPrereqNatureYield);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverSideYieldChange);
@@ -389,22 +398,8 @@ int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 
 const char* CvImprovementInfo::getButton() const
 {
-	/************************************************************************************************/
-	/* XMLCOPY								 10/25/07								MRGENIE	  */
-	/*																							  */
-	/* Catch non-existing tag																	   */
-	/************************************************************************************************/
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
 	const CvArtInfoImprovement* pImprovementArtInfo = getArtInfo();
-	if (pImprovementArtInfo != NULL)
-	{
-		return pImprovementArtInfo->getButton();
-	}
-	return NULL;
+	return pImprovementArtInfo ? pImprovementArtInfo->getButton() : NULL;
 }
 
 const CvArtInfoImprovement* CvImprovementInfo::getArtInfo() const
@@ -530,19 +525,18 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	return m_iHighestCost;
 //}
 
-void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+void CvImprovementInfo::getDataMembers(CvInfoUtil& util)
 {
-	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
-	{
-		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
-		{
-			m_improvementBuildTypes.push_back((BuildTypes)i);
-		}
-	}
+	util
+		//.addEnum(m_iObsoleteTech, L"ObsoleteTech")
+		//.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+	;
 }
 
 void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_iAdvancedStartCost);
 
 	CheckSum(iSum, m_iTilesPerGoody);
@@ -585,6 +579,11 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bGoody);
 	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
+	CheckSum(iSum, m_bMilitaryStructure);
+	CheckSum(iSum, m_bPlacesBonus);
+	CheckSum(iSum, m_bPlacesFeature);
+	CheckSum(iSum, m_bPlacesTerrain);
+	CheckSum(iSum, m_bExtraterresial);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
 
 	// Arrays
@@ -647,6 +646,8 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
+
+	CvInfoUtil(this).readXml(pXML);
 
 	int iIndex, j, iNumSibs;
 
@@ -720,6 +721,11 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHappiness, L"iHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iPillageGold, L"iPillageGold");
 	pXML->GetOptionalChildXmlValByName(&m_bOutsideBorders, L"bOutsideBorders");
+	pXML->GetOptionalChildXmlValByName(&m_bMilitaryStructure, L"bMilitaryStructure");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesBonus, L"bPlacesBonus");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesFeature, L"bPlacesFeature");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesTerrain, L"bPlacesTerrain");
+	pXML->GetOptionalChildXmlValByName(&m_bExtraterresial, L"bExtraterresial");
 	// Super Forts begin *XML*
 	pXML->GetOptionalChildXmlValByName(&m_iCulture, L"iCulture");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
@@ -909,15 +915,16 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
+	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
+	const CvString cDefault = CvString::format("").GetCString();
 
 	if (getArtDefineTag() == cDefault) m_szArtDefineTag = pClassInfo->getArtDefineTag();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 
 	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
@@ -990,6 +997,11 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
 	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
+	if (m_bMilitaryStructure == bDefault) m_bMilitaryStructure = pClassInfo->isMilitaryStructure();
+	if (m_bPlacesBonus == bDefault) m_bPlacesBonus = pClassInfo->isPlacesBonus();
+	if (m_bPlacesFeature == bDefault) m_bPlacesFeature = pClassInfo->isPlacesFeature();
+	if (m_bPlacesTerrain == bDefault) m_bPlacesTerrain = pClassInfo->isPlacesTerrain();
+	if (m_bExtraterresial == bDefault) m_bExtraterresial = pClassInfo->isExtraterresial();
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{
@@ -1132,4 +1144,15 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
+}
+
+void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+{
+	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
+	{
+		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
+		{
+			m_improvementBuildTypes.push_back((BuildTypes)i);
+		}
+	}
 }

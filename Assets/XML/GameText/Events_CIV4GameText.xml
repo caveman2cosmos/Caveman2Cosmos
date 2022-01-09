@@ -295,7 +295,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have made a technological breakthrough, rapidly advancing their progress.</English>
 		<French>Des chercheurs %s1:3_civ_adjective auraient fait une avancée technologique et cette dernière aurait accéléré leurs recherches.</French>
-		<German>%s1:3_civ_adjective Forscher sollen einen technologischen Durchbruch erzielt haben und rasante Fortschritte machen.</German>
+		<German>Die %[s1_civ_adjective]en Forscher sollen einen technologischen Durchbruch erzielt haben und rasante Fortschritte machen.</German>
 		<Italian>Pare che i ricercatori %s1_civ_adjective abbiano fatto un'importante scoperta tecnologica, velocizzando il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:3_civ_adjective han conseguido un adelanto tecnológico que les hará avanzar rápidamente.</Spanish>
 	</TEXT>
@@ -303,7 +303,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_2</Tag>
 		<English>Discoveries made by the %s1_civ_adjective Empire have boosted progress on their current research project.</English>
 		<French>Des découvertes effectuées par l'empire %s1:1_civ_adjective ont accéléré les recherches sur le projet qui les occupe actuellement.</French>
-		<German>Die im %s1:2_civ_adjective Reich gewonnenen Erkenntnisse haben ihr aktuelles Forschungsprojekt bedeutend vorangebracht.</German>
+		<German>Die im %[s1_civ_adjective]en Reich gewonnenen Erkenntnisse haben ihr aktuelles Forschungsprojekt bedeutend vorangebracht.</German>
 		<Italian>Le scoperte fatte dall'impero %s1_civ_adjective hanno velocizzato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>Los descubrimientos realizados por el imperio %s1:1_civ_adjective han impulsado sus avances en el actual proyecto de investigación.</Spanish>
 	</TEXT>
@@ -12589,6 +12589,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
 		<English>A volcano has erupted at a site we long regarded as safe, even though traces of volcanic activity long ago could be found. While this caused widespread destruction, the surrounding soil has improved tremendously.</English>
 		<French>L'éruption d'un volcan a eu lieu sur un site que l'on pensait sûr, même si de l'activité volcanique avait déjà été recensée à cet emplacement. Malgré les destructions occasionnées par cette catastrophe, le sol de la région en est amélioré.</French>
+		<German>Ein Vulkan ist in einem Gebiet ausgebrochen, das bei unseren Wissenschaftlern bisher als sicher galt, obwohl durchaus Spuren von vulkanischen Aktivitäten vor vielen tausend Jahren dort zu finden waren. Durch den Ausbruch kam es zu großflächigen Zerstörungen im Umfeld, aber auch zu einer erstaunlichen Steigerung der Bodenqualität.</German>
 		<Polish>Wulkan eksplodował w miejscu, które uważaliśmy za bezpieczne. Chociaż wulkan zniszczył wszystko w pobliżu, przy okazji wulkan użyźnił ziemię na terenach wokół.</Polish>
 		<Russian>На месте, которое мы давно считали безопасным, случилось извержение вулкана, хотя следы вулканической активности давно могли быть найдены. Хотя это вызвало повсеместное разрушение, окружающая почва стала значительно плодороднее.</Russian>
 	</TEXT>
@@ -12953,6 +12954,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_1</Tag>
 		<English>A volcano eruption has destroyed much of its vicinity!</English>
 		<French>Une éruption volcanique a causé beaucoup de dégâts à sa périphérie!</French>
+		<German>Die Rekultivierung des Gebiets sollte jetzt unsere vorrangige Aufgabe sein.</German>
 		<Polish>Wulkaniczna erupcja niszczy okolicę.</Polish>
 		<Russian>Извержение вулкана разрушило большую часть его окрестностей!</Russian>
 	</TEXT>
@@ -12960,6 +12962,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP</Tag>
 		<English>Surrounding improvements are lost, units caught in the eruption may be displaced and damaged or killed. The surrounding tiles gain 1 [ICON_FOOD] if an earlier eruption did not already do this.</English>
 		<French>Les aménagements aux alentours sont perdus, les unités prises dans l'éruption sont blessées ou mortes. Certaines ont pu fuir. Les cases environnantes obtiennent +1 [ICON_FOOD] si une éruption précédente n'a pas déjà procuré ce bonus.</French>
+		<German>Verlust von Landschaftsausbauten und Verlust oder Beschädigung von Einheiten in der Nähe der Eruption, +1 [ICON_FOOD] auf umliegenden Feldern (nur einmalig pro Feld möglich)</German>
 		<Polish>Okoliczne ulepszenia terenu są stracone, jednostki będące w pobliżu mogły zostać zabite bądź uszkodzone. Urodzajny pył wulkaniczny osiada na okolicznych terenach dodając +1 do produkcji [ICON_FOOD] (pod warunkiem, że już wcześniej ten bonus nie został dodany)</Polish>
 		<Russian>Ближайшие улучшения потеряны, отряды, оказавшиеся недалеко от эпицентра извержения, могут быть перемещены, ранены или убиты. Окружающие клетки получают +1 [ICON_FOOD], если более раннее извержение еще не сделало этого.</Russian>
 	</TEXT>
@@ -12995,6 +12998,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_TRIGGER_ACTIVE</Tag>
 		<English>A volcano that has been erupting regularly in recent history is erupting again. Structures on its slopes are being destroyed.</English>
 		<French>Un volcan qui a une activité régulière depuis des années est à nouveau en éruption. les aménagements sur ses pentes sont détruits.</French>
+		<German>Ein aktiver, berüchtigter Vulkan ist erneut ausgebrochen, wodurch es zu immensen Schäden im umliegenden Gebiet kam.</German>
 		<Polish>Wulkan znany z tego, że regularnie wybuchał, eksplodował ponownie niszcząc wszystkie budynki na swoich stokach.</Polish>
 		<Russian>Вулкан, извергавшийся регулярно в прошлом, снова пробудился. Сооружения на его склонах были уничтожены.</Russian>
 	</TEXT>

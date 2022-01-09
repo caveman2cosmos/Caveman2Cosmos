@@ -106,7 +106,7 @@ protected:
 	void doUnitAIMove();
 
 	void AI_animalMove();
-	void AI_SettleFirstCity();
+	bool AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
 	bool Worker_CanDefend();
@@ -195,9 +195,7 @@ protected:
 	// Super Forts end
 	bool AI_guardCitySite();
 	bool AI_guardSpy(int iRandomPercent);
-	bool AI_destroySpy();
-	bool AI_sabotageSpy();
-	bool AI_pickupTargetSpy();
+
 	bool AI_chokeDefend();
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
@@ -437,7 +435,9 @@ public:
 	bool AI_arrest();
 	bool AI_ambush(int iOddsThreshold, bool bAssassinationOnly = false);
 
-	bool AI_activateStatus(bool bChange, bool bStack, PromotionTypes eStatus, CvUnit* pUnit = NULL);
+private:
+	bool AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit);
+public:
 	bool AI_selectStatus(bool bStack, CvUnit* pUnit = NULL);
 	bool AI_groupSelectStatus();
 

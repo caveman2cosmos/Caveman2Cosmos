@@ -1019,27 +1019,27 @@
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_NANOTECH</EraType>
-					<iTargetLevel>20100</iTargetLevel>
+					<iTargetLevel>15100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_TRANSHUMAN</EraType>
-					<iTargetLevel>30100</iTargetLevel>
+					<iTargetLevel>20100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_GALACTIC</EraType>
-					<iTargetLevel>40100</iTargetLevel>
+					<iTargetLevel>25100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_COSMIC</EraType>
-					<iTargetLevel>50100</iTargetLevel>
+					<iTargetLevel>30100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_TRANSCENDENT</EraType>
-					<iTargetLevel>60100</iTargetLevel>
+					<iTargetLevel>35100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_FUTURE</EraType>
-					<iTargetLevel>60100</iTargetLevel>
+					<iTargetLevel>35100</iTargetLevel>
 				</TargetLevelbyEraType>
 			</TargetLevelbyEraTypes>
 			<AIScaleType>AISCALE_CITY</AIScaleType>
@@ -1097,27 +1097,27 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-					<iMinValue>20000</iMinValue>
+					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-					<iMinValue>30000</iMinValue>
+					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-					<iMinValue>40000</iMinValue>
+					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-					<iMinValue>50000</iMinValue>
+					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
-					<iMinValue>60000</iMinValue>
+					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
@@ -1163,27 +1163,27 @@
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-20000</iMaxValue>
+					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-30000</iMaxValue>
+					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-40000</iMaxValue>
+					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-50000</iMaxValue>
+					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-60000</iMaxValue>
+					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS1</BuildingType>
@@ -1227,27 +1227,27 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-					<iMinValue>20000</iMinValue>
+					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-					<iMinValue>30000</iMinValue>
+					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-					<iMinValue>40000</iMinValue>
+					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-					<iMinValue>50000</iMinValue>
+					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
-					<iMinValue>60000</iMinValue>
+					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
@@ -1293,27 +1293,27 @@
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-20000</iMaxValue>
+					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-30000</iMaxValue>
+					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-40000</iMaxValue>
+					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-50000</iMaxValue>
+					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-60000</iMaxValue>
+					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
 			</PropertyBuildings>
 		</PropertyInfo>

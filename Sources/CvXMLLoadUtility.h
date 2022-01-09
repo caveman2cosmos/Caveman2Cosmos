@@ -514,7 +514,7 @@ public:
 	int SetCommerce(T** ppiCommerce);
 
 	// allocate and set the feature struct variables for the CvBuildInfo class
-	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove, bool** ppbNoTechCanRemoveWithNoProductionGain);
+	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove);
 
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
@@ -763,7 +763,7 @@ private:
 	//
 	// a dynamic value for the list size
 	template <class T>
-	void SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, bool bTwoPass, CvInfoReplacements<T>* pReplacements = NULL);
+	void SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvInfoReplacements<T>* pReplacements = NULL);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/17/08                                MRGENIE      */
 /*                                                                                              */

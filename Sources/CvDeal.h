@@ -8,7 +8,8 @@
 #include "LinkedList.h"
 //#include "CvStructs.h"
 
-class CvDeal : bst::noncopyable
+class CvDeal
+	: private bst::noncopyable
 {
 public:
 	CvDeal();
@@ -57,7 +58,7 @@ public:
 	const CLinkList<TradeData>* getSecondTrades() const;
 
 	DllExport bool isCancelable(PlayerTypes eByPlayer = NO_PLAYER, CvWString* pszReason = NULL);
-	int turnsToCancel(PlayerTypes eByPlayer = NO_PLAYER);
+	int turnsToCancel() const;
 
 	static bool isAnnual(TradeableItems eItem);
 	DllExport static bool isDual(TradeableItems eItem, bool bExcludePeace = false);

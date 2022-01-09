@@ -12,18 +12,17 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #include "CvInfos.h"
-//#include "CvInfoUtil.h"
-//#include "CvPython.h"
 #include "IDValuemap.h"
 
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
-class CvHotkeyInfo;
 class CvXMLLoadUtility;
 struct CvInfoUtil;
 
-class CvBuildingInfo : public CvHotkeyInfo
+class CvBuildingInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 public:
 	CvBuildingInfo();
@@ -499,7 +498,6 @@ public:
 	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
 	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
@@ -509,6 +507,7 @@ public:
 	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
 	void setNotShowInCity();
 
 	bool m_bNoLimit;

@@ -42,6 +42,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
+		self.main.addTestCode(screen, self.checkBuildingMinYields, "Building - check yields", "Check if buildings with yield income have at least minimum yield as derived from era")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitCosts, "Unit - check costs", "Check if unit costs are within sane limits")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
@@ -503,7 +504,7 @@ class TestCode:
 			aBuildingReplacementList = []
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iBuildingReplacement = CvBuildingInfo.getReplacementBuilding(iReplacement)
-				if iBuildingReplacement not in aSpecialReplacementsList:
+				if iBuildingReplacement not in aSpecialReplacementsList and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_EQ_") == -1 and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_KNOWLEDGE_BASE_") == -1:
 					aBuildingReplacementList.append(iBuildingReplacement)
 
 			#All replacements of replacements
@@ -688,9 +689,10 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Tech location would be good way to sort replacements, as later ones tend to replace more
 			iTechID = max(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[2])
+			iTechBase = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0] #Tech level of building - most advanced tech XGrid
 
-			#Ignore Pollution, and Bans
-			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0:
+			#Ignore Pollution, Bans and Education pseudobuildings
+			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0 and CvBuildingInfo.getType().find("BUILDING_EQ_") == -1:
 				#Get list of replaced buildings
 				aReplacedBuildings = []
 				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
@@ -1188,26 +1190,50 @@ class TestCode:
 				#<TechHappinessChanges>, <TechHealthChanges> - base
 				aTechHappinessChanges = [[0 for x in xrange(GC.getNumTechInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aTechHealthChanges = [[0 for x in xrange(GC.getNumTechInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+
+				iEarlyHappinessChanges = 0
+				iEarlyHealthChanges = 0
+				aEarlyHappinessTechs = []
+				aEarlyHealthTechs = []
+
 				for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
-					aTechHappinessChanges[BASE][iTech] += iHappiness
+					if GC.getTechInfo(iTech).getGridX() > iTechBase:
+						aTechHappinessChanges[BASE][iTech] += iHappiness
+					else:
+						aEarlyHappinessTechs.append(GC.getTechInfo(iTech).getType())
 				for iTech, iHealth in CvBuildingInfo.getTechHealthChanges():
-					aTechHealthChanges[BASE][iTech] += iHealth
+					if GC.getTechInfo(iTech).getGridX() > iTechBase:
+						aTechHealthChanges[BASE][iTech] += iHealth
+					else:
+						aEarlyHealthTechs.append(GC.getTechInfo(iTech).getType())
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<TechHappinessChanges>, <TechHealthChanges>
 					for iTech, iHappiness in CvReplacedBuildingInfo.getTechHappinessChanges():
-						aTechHappinessChanges[REPLACED][iTech] += iHappiness
+						if GC.getTechInfo(iTech).getGridX() > iTechBase:
+							aTechHappinessChanges[REPLACED][iTech] += iHappiness
+						else:
+							iEarlyHappinessChanges += iHappiness
 					for iTech, iHealth in CvReplacedBuildingInfo.getTechHealthChanges():
-						aTechHealthChanges[REPLACED][iTech] += iHealth
+						if GC.getTechInfo(iTech).getGridX() > iTechBase:
+							aTechHealthChanges[REPLACED][iTech] += iHealth
+						else:
+							iEarlyHealthChanges += iHealth
 
 				#Building shouldn't be worse than replaced one!
 				for iTech in xrange(GC.getNumTechInfos()):
-					if aTechHappinessChanges[BASE][iTech] < aTechHappinessChanges[REPLACED][iTech]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech happiness Changes "+str(aTechHappinessChanges[BASE][iTech])+"/"+str(aTechHappinessChanges[REPLACED][iTech]))
-					if aTechHealthChanges[BASE][iTech] < aTechHealthChanges[REPLACED][iTech]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech health Changes "+str(aTechHealthChanges[BASE][iTech])+"/"+str(aTechHealthChanges[REPLACED][iTech]))
+					if GC.getTechInfo(iTech).getGridX() > iTechBase:
+						if aTechHappinessChanges[BASE][iTech] < aTechHappinessChanges[REPLACED][iTech]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech happiness Changes "+str(aTechHappinessChanges[BASE][iTech])+"/"+str(aTechHappinessChanges[REPLACED][iTech]))
+						if aTechHealthChanges[BASE][iTech] < aTechHealthChanges[REPLACED][iTech]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech health Changes "+str(aTechHealthChanges[BASE][iTech])+"/"+str(aTechHealthChanges[REPLACED][iTech]))
+
+				if aHappiness[BASE] + iEarlyHappinessChanges > aHappiness[REPLACED] and len(aEarlyHappinessTechs) > 0:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early Happiness Changes: "+str(aHappiness[BASE] + iEarlyHappinessChanges)+" Early Happiness Changes Techs: "+str(aEarlyHappinessTechs))
+				if aHealth[BASE] + iEarlyHealthChanges > aHealth[REPLACED] and len(aEarlyHealthTechs) > 0:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early Health Changes: "+str(aHealth[BASE] + iEarlyHealthChanges)+" Early Health Changes Techs: "+str(aEarlyHealthTechs))
 
 				#=============================================================================================================================
 				#<GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers> - base
@@ -1442,64 +1468,124 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Bonus Commerce Modifiers "+str(aBonusCommerceModifiers[BASE][iBonus])+"/"+str(aBonusCommerceModifiers[REPLACED][iBonus]))
 
 				#======================================================================================================================================
-				#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
+				#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
 				aTechYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechYieldModifiers = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-				aTechCommercePercentChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechSpecialistChanges = [[[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 
+				aEarlyYieldChanges = [0]*YieldTypes.NUM_YIELD_TYPES
+				aEarlyYieldModifiers = [0]*YieldTypes.NUM_YIELD_TYPES
+				aEarlyCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aEarlyCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aEarlySpecialistChanges = [0]*GC.getNumSpecialistInfos()
+				aEarlyYieldChangesTechs = []
+				aEarlyYieldModifiersTechs = []
+				aEarlyCommerceChangesTechs = []
+				aEarlyCommerceModifiersTechs = []
+				aEarlySpecialistChangesTechs = []
+
 				for entry in CvBuildingInfo.getTechYieldChanges100():
-					aTechYieldChanges[BASE][entry.eTech][entry.eYield] += entry.value
+					if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+						aTechYieldChanges[BASE][entry.eTech][entry.eYield] += entry.value
+					else:
+						if GC.getTechInfo(entry.eTech).getType() not in aEarlyYieldChangesTechs:
+							aEarlyYieldChangesTechs.append(GC.getTechInfo(entry.eTech).getType())
 				for entry in CvBuildingInfo.getTechYieldModifiers():
-					aTechYieldModifiers[BASE][entry.eTech][entry.eYield] += entry.value
+					if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+						aTechYieldModifiers[BASE][entry.eTech][entry.eYield] += entry.value
+					else:
+						if GC.getTechInfo(entry.eTech).getType() not in aEarlyYieldModifiersTechs:
+							aEarlyYieldModifiersTechs.append(GC.getTechInfo(entry.eTech).getType())
 				for entry in CvBuildingInfo.getTechCommerceChanges100():
-					aTechCommercePercentChanges[BASE][entry.eTech][entry.eCommerce] += entry.value
+					if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+						aTechCommerceChanges[BASE][entry.eTech][entry.eCommerce] += entry.value
+					else:
+						if GC.getTechInfo(entry.eTech).getType() not in aEarlyCommerceChangesTechs:
+							aEarlyCommerceChangesTechs.append(GC.getTechInfo(entry.eTech).getType())
 				for entry in CvBuildingInfo.getTechCommerceModifiers():
-					aTechCommerceModifiers[BASE][entry.eTech][entry.eCommerce] += entry.value
+					if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+						aTechCommerceModifiers[BASE][entry.eTech][entry.eCommerce] += entry.value
+					else:
+						if GC.getTechInfo(entry.eTech).getType() not in aEarlyCommerceModifiersTechs:
+							aEarlyCommerceModifiersTechs.append(GC.getTechInfo(entry.eTech).getType())
 
 				if CvBuildingInfo.isAnyTechSpecialistChanges():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-							aTechSpecialistChanges[BASE][iTech][iSpecialist] += CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+							if CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist) != 0:
+								if GC.getTechInfo(iTech).getGridX() > iTechBase:
+									aTechSpecialistChanges[BASE][iTech][iSpecialist] += CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+								else:
+									if GC.getTechInfo(iTech).getType() not in aEarlySpecialistChangesTechs:
+										aEarlySpecialistChangesTechs.append(GC.getTechInfo(iTech).getType())
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
+					#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
 
 					for entry in CvReplacedBuildingInfo.getTechYieldChanges100():
-						aTechYieldChanges[REPLACED][entry.eTech][entry.eYield] += entry.value
+						if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+							aTechYieldChanges[REPLACED][entry.eTech][entry.eYield] += entry.value
+						else:
+							aEarlyYieldChanges[entry.eYield] += entry.value
 					for entry in CvReplacedBuildingInfo.getTechYieldModifiers():
-						aTechYieldModifiers[REPLACED][entry.eTech][entry.eYield] += entry.value
+						if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+							aTechYieldModifiers[REPLACED][entry.eTech][entry.eYield] += entry.value
+						else:
+							aEarlyYieldModifiers[entry.eYield] += entry.value
 					for entry in CvReplacedBuildingInfo.getTechCommerceChanges100():
-						aTechCommercePercentChanges[REPLACED][entry.eTech][entry.eCommerce] += entry.value
+						if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+							aTechCommerceChanges[REPLACED][entry.eTech][entry.eCommerce] += entry.value
+						else:
+							aEarlyCommerceChanges[entry.eCommerce] += entry.value
 					for entry in CvReplacedBuildingInfo.getTechCommerceModifiers():
-						aTechCommerceModifiers[REPLACED][entry.eTech][entry.eCommerce] += entry.value
+						if GC.getTechInfo(entry.eTech).getGridX() > iTechBase:
+							aTechCommerceModifiers[REPLACED][entry.eTech][entry.eCommerce] += entry.value
+						else:
+							aEarlyCommerceModifiers[entry.eCommerce] += entry.value
 
 					if CvReplacedBuildingInfo.isAnyTechSpecialistChanges():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-								aTechSpecialistChanges[REPLACED][iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+								if CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist) != 0:
+									if GC.getTechInfo(iTech).getGridX() > iTechBase:
+										aTechSpecialistChanges[REPLACED][iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+									else:
+										aEarlySpecialistChanges[iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
 
 				#Building shouldn't be worse than replaced one!
 				for iTech in xrange(GC.getNumTechInfos()):
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						if aTechYieldChanges[BASE][iTech][iYield] < aTechYieldChanges[REPLACED][iTech][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getYieldInfo(iYield).getType()+" Tech Yield Changes "+str(aTechYieldChanges[BASE][iTech])+"/"+str(aTechYieldChanges[REPLACED][iTech]))
-						if aTechYieldModifiers[BASE][iTech][iYield] < aTechYieldModifiers[REPLACED][iTech][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getYieldInfo(iYield).getType()+" Tech Yield Modifiers "+str(aTechYieldModifiers[BASE][iTech])+"/"+str(aTechYieldModifiers[REPLACED][iTech]))
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if aTechCommerceChanges[BASE][iTech][iCommerce] < aTechCommerceChanges[REPLACED][iTech][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce Changes "+str(aTechCommerceChanges[BASE][iTech])+"/"+str(aTechCommerceChanges[REPLACED][iTech]))
-						if aTechCommercePercentChanges[BASE][iTech][iCommerce] < aTechCommercePercentChanges[REPLACED][iTech][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce percent Changes "+str(aTechCommercePercentChanges[BASE][iTech])+"/"+str(aTechCommercePercentChanges[REPLACED][iTech]))
-						if aTechCommerceModifiers[BASE][iTech][iCommerce] < aTechCommerceModifiers[REPLACED][iTech][iCommerce]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce Modifiers "+str(aTechCommerceModifiers[BASE][iTech])+"/"+str(aTechCommerceModifiers[REPLACED][iTech]))
-					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-						if aTechSpecialistChanges[BASE][iTech][iSpecialist] < aTechSpecialistChanges[REPLACED][iTech][iSpecialist]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType())
+					if GC.getTechInfo(iTech).getGridX() > iTechBase:
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if aTechYieldChanges[BASE][iTech][iYield] < aTechYieldChanges[REPLACED][iTech][iYield]:
+								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getYieldInfo(iYield).getType()+" Tech Yield Changes "+str(aTechYieldChanges[BASE][iTech])+"/"+str(aTechYieldChanges[REPLACED][iTech]))
+							if aTechYieldModifiers[BASE][iTech][iYield] < aTechYieldModifiers[REPLACED][iTech][iYield]:
+								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getYieldInfo(iYield).getType()+" Tech Yield Modifiers "+str(aTechYieldModifiers[BASE][iTech])+"/"+str(aTechYieldModifiers[REPLACED][iTech]))
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							if aTechCommerceChanges[BASE][iTech][iCommerce] < aTechCommerceChanges[REPLACED][iTech][iCommerce]:
+								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce Changes "+str(aTechCommerceChanges[BASE][iTech])+"/"+str(aTechCommerceChanges[REPLACED][iTech]))
+							if aTechCommerceModifiers[BASE][iTech][iCommerce] < aTechCommerceModifiers[REPLACED][iTech][iCommerce]:
+								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" "+GC.getCommerceInfo(iCommerce).getType()+" Tech Commerce Modifiers "+str(aTechCommerceModifiers[BASE][iTech])+"/"+str(aTechCommerceModifiers[REPLACED][iTech]))
+						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+							if aTechSpecialistChanges[BASE][iTech][iSpecialist] < aTechSpecialistChanges[REPLACED][iTech][iSpecialist]:
+								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType())
+
+				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+					if aYieldChangesList[BASE][iYield] + 0.01*aEarlyYieldChanges[iYield] > aYieldChangesList[REPLACED][iYield] and len(aEarlyYieldChangesTechs) > 0:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early "+GC.getYieldInfo(iYield).getType()+" Changes: "+str(aYieldChangesList[BASE][iYield] + 0.01*aEarlyYieldChanges[iYield])+" Early Yield Changes Techs: "+str(aEarlyYieldChangesTechs))
+					if aYieldModifiersList[BASE][iYield] + aEarlyYieldModifiers[iYield] > aYieldModifiersList[REPLACED][iYield] and len(aEarlyYieldModifiersTechs) > 0:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early "+GC.getYieldInfo(iYield).getType()+" Modifiers: "+str(aYieldModifiersList[BASE][iYield] + aEarlyYieldModifiers[iYield])+" Early Yield Modifiers Techs: "+str(aEarlyYieldModifiersTechs))
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					if aCommerceChanges[BASE][iCommerce] + 0.01*aEarlyCommerceChanges[iCommerce] > aCommerceChanges[REPLACED][iCommerce] and len(aEarlyCommerceChangesTechs) > 0:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early "+GC.getCommerceInfo(iCommerce).getType()+" Changes: "+str(aCommerceChanges[BASE][iCommerce] + 0.01*aEarlyCommerceChanges[iCommerce])+" Early Commerce Changes Techs: "+str(aEarlyCommerceChangesTechs))
+					if aCommerceModifiers[BASE][iCommerce] + aEarlyCommerceModifiers[iCommerce] > aCommerceModifiers[REPLACED][iCommerce] and len(aEarlyCommerceModifiersTechs) > 0:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early "+GC.getCommerceInfo(iCommerce).getType()+" Modifiers: "+str(aCommerceModifiers[BASE][iCommerce] + aEarlyCommerceModifiers[iCommerce])+" Early Commerce Modifiers Techs: "+str(aEarlyCommerceModifiersTechs))
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					if aSpecialistCounts[BASE][iSpecialist] + aEarlySpecialistChanges[iSpecialist] > aSpecialistCounts[REPLACED][iSpecialist] and len(aEarlySpecialistChangesTechs) > 0:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Early "+GC.getSpecialistInfo(iSpecialist).getType()+" Changes: "+str(aSpecialistCounts[BASE][iSpecialist] + aEarlySpecialistChanges[iSpecialist])+" Early Specialist Changes Techs: "+str(aEarlySpecialistChangesTechs))
 
 				#======================================================================================================================================
 				#<SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges> - base
@@ -2390,7 +2476,7 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
-			if CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0: #Redundant tech tags are carried over from replaced buildings
+			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_") == -1: #Folklore is allowed to have techmod on its unlock as we don't have fractional commerce changes
 				#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
 				for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
 					iTechTLoc = GC.getTechInfo(iTech).getGridX()
@@ -2645,6 +2731,31 @@ class TestCode:
 			#ObsoletesToBuilding shouldn't be used, if building doesn't obsolete at first place
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
+
+	#Check if buildings with yield income have at least minimum yield as derived from era
+	def checkBuildingMinYields(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iEra = self.HF.checkBuildingEra(CvBuildingInfo)
+
+			for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+				iYieldChange = CvBuildingInfo.getYieldChange(iYield)
+
+				if iYieldChange > 0 and GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories():
+					if iYieldChange < 1 and (iEra == 0 or iEra == 1): # Prehistoric/Ancient
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 1 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 2 and (iEra == 2 or iEra == 3): # Classical/Medieval
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 2 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 3 and (iEra == 4 or iEra == 5): # Renaissance/Industrial
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 3 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 4 and (iEra == 6 or iEra == 7): # Atomic/Information
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 4 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 5 and (iEra == 8 or iEra == 9): # Nanotech/Transhuman
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 5 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 6 and (iEra == 10 or iEra == 11): # Galactic/Cosmic
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 6 "+GC.getYieldInfo(iYield).getType())
+					if iYieldChange < 7 and iEra == 12: # Transcendent
+						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 7 "+GC.getYieldInfo(iYield).getType())
 
 	#Building - Check if buildings have proper costs
 	def checkBuildingCosts(self):

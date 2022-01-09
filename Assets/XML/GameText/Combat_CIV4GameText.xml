@@ -9959,6 +9959,10 @@
 		<Russian>Ðàêåòîïëàíû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_PACIFIST</Tag>
+		<English>Pacifist</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PIRATE</Tag>
 		<English>Pirate Ships</English>
 		<French>Navires Pirates</French>

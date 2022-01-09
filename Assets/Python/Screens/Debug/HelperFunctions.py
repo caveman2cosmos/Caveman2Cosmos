@@ -180,6 +180,64 @@ class HelperFunctions:
 
 		return iTechLoc, iTechRow, aMostAdvancedColumnRequirementsXY, aMostAdvancedColumnRequirementsNames
 
+	def checkBuildingEra(self, CvBuildingInfo):
+		iEra = 0
+
+		#Main tech requirement
+		if CvBuildingInfo.getPrereqAndTech() != -1:
+			iEra = GC.getTechInfo(CvBuildingInfo.getPrereqAndTech()).getEra()
+
+		#Tech Type requirement
+		for iTech in CvBuildingInfo.getPrereqAndTechs():
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+
+		#Tech requirement as defined in special building infos (core tech)
+		if CvBuildingInfo.getSpecialBuildingType() != -1:
+			iTech = GC.getSpecialBuildingInfo(CvBuildingInfo.getSpecialBuildingType()).getTechPrereq()
+			if iTech != -1 and GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+
+		#Tech requirement derived from location of religion in tech tree
+		if CvBuildingInfo.getPrereqReligion() != -1:
+			iTech = GC.getReligionInfo(CvBuildingInfo.getPrereqReligion()).getTechPrereq()
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+		if CvBuildingInfo.getReligionType() != -1:
+			iTech = GC.getReligionInfo(CvBuildingInfo.getReligionType()).getTechPrereq()
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+		if CvBuildingInfo.getPrereqStateReligion() != -1:
+			iTech = GC.getReligionInfo(CvBuildingInfo.getPrereqStateReligion()).getTechPrereq()
+			if GC.getTechInfo(iTech).getEra() > iEra:
+				iEra = GC.getTechInfo(iTech).getEra()
+
+		#Folklore handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.
+		if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_",0,18) != -1:
+			iPrereqBuilding = GC.getInfoTypeForString("BUILDING_ANIMAL_FOLKLORE_REQUIRE")
+			if GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra() > iEra:
+				iEra = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra()
+
+		#Tech GOM requirements
+		aTechGOMReqList = []
+		for i in range(2):
+			aTechGOMReqList.append([])
+		self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
+
+		#Extract GOM AND requirements
+		for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+			if GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getEra() > iEra:
+				iEra = GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getEra()
+
+		#Extract GOM OR requirements - those are OR type requirements, so pick earliest one.
+		aEraList = []
+		for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aEraList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getEra())
+		if len(aEraList) > 0 and min(aEraList) > iEra:
+			iEra = min(aEraList)
+
+		return iEra
+
 	#Unit tech location
 	def checkUnitTechRequirementLocation(self, CvUnitInfo):
 		#Main tech

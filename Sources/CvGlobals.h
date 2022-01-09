@@ -141,9 +141,9 @@ class CvMapInfo;
 
 extern CvDLLUtilityIFaceBase* gDLL;
 
-class cvInternalGlobals : bst::noncopyable
+class cvInternalGlobals
+	: private bst::noncopyable
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 public:
 
@@ -786,6 +786,8 @@ public:
 
 	void deleteInfoArrays();
 
+	void checkInitialCivics();
+
 protected:
 	void doPostLoadCaching();
 
@@ -1138,11 +1140,11 @@ extern const char* fnName;
 class ProxyTracker
 {
 public:
-	ProxyTracker(const CvGlobals* proxy, const char* name);
+	ProxyTracker(const char* name);
 	~ProxyTracker();
 };
 
-#define PROXY_TRACK(x)	ProxyTracker tracker(this,x);
+#define PROXY_TRACK(x)	ProxyTracker tracker(x);
 
 #else
 #define	PROXY_TRACK(x)	;

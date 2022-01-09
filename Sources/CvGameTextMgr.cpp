@@ -744,7 +744,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					{
 						szString.append(DOUBLE_SEPARATOR);
 						szString.append(NEWLINE);
-						setUnitCombatHelp(szString, eUnitCombat, false, true);
+						setUnitCombatHelp(szString, eUnitCombat, false);
 						szString.append(DOUBLE_SEPARATOR);
 					}
 					else
@@ -9173,7 +9173,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 
 			if (pPlot->getOwner() == GC.getGame().getActivePlayer()
-			&& (pPlot->getImprovementType() == NO_IMPROVEMENT || !GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eBonus)))
+			&& (pPlot->getImprovementType() == NO_IMPROVEMENT || !bonus.isProvidedByImprovementType(pPlot->getImprovementType())))
 			{
 				bool bKnowsValid = false;
 				TechTypes eMostRecentObsoletingTech = NO_TECH;
@@ -9181,12 +9181,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				TechTypes eClosestUnlockingTech = NO_TECH;
 				int iClosestX = MAX_INT;
 
-				for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+				for (int iI = bonus.getNumProvidedByImprovementTypes() - 1; iI > -1; iI--)
 				{
-					const CvImprovementInfo& improvement = GC.getImprovementInfo((ImprovementTypes)iJ);
+					const ImprovementTypes eTypeX = bonus.getProvidedByImprovementType(iI);
 
-					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, eActiveTeam, true))
+					if (pPlot->canHaveImprovement(eTypeX, eActiveTeam, true))
 					{
+						const CvImprovementInfo& improvement = GC.getImprovementInfo(eTypeX);
+
 						foreach_(const BuildTypes& eBuild, improvement.getBuildTypes())
 						{
 							const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
@@ -16845,7 +16847,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 
 	//DPII < Maintenance Modifiers >
 	//  Decreases maintenance costs...
-	buildMaintenanceModifiersString(szBuffer, eTech, true, bPlayerContext);
+	buildMaintenanceModifiersString(szBuffer, eTech, true);
 	//DPII < Maintenance Modifiers >
 
 	//	Trade Routed per city change...
@@ -17293,7 +17295,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 	bFirst = true;
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
-		bFirst = buildPromotionString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
+		bFirst = buildPromotionString(szBuffer, eTech, iI, bFirst, true);
 	}
 
 	bFirst = true;
@@ -20009,7 +20011,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				{
 					szBuffer.append(DOUBLE_SEPARATOR);
 					szBuffer.append(NEWLINE);
-					setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
+					setUnitCombatHelp(szBuffer, eUnitCombat, false);
 					szBuffer.append(DOUBLE_SEPARATOR);
 				}
 				else
@@ -20038,7 +20040,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		{
 			bool bFirst = true;
 			CvWStringBuffer szPeekBuffer;
-			setUnitCombatHelp(szPeekBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), true, true);
+			setUnitCombatHelp(szPeekBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), true);
 			if (!szPeekBuffer.isEmpty())
 			{
 				szBuffer.append(NEWLINE);
@@ -20055,7 +20057,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			{
 				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombat)))
 				{
-					setUnitCombatHelp(szPeekBuffer, eSubCombat, true, true);
+					setUnitCombatHelp(szPeekBuffer, eSubCombat, true);
 					if (!szPeekBuffer.isEmpty())
 					{
 						if (bFirst)
@@ -26732,7 +26734,7 @@ void CvGameTextMgr::buildObsoleteString(CvWStringBuffer &szBuffer, int iItem, bo
 	{
 		szBuffer.append(NEWLINE);
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildingInfo((BuildingTypes)iItem).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes) iItem).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildingInfo((BuildingTypes)iItem).getType()).c_str(), GC.getBuildingInfo((BuildingTypes) iItem).getTextKeyWide()));
 }
 
 void CvGameTextMgr::buildObsoleteBonusString(CvWStringBuffer &szBuffer, int iItem, bool bList, bool bPlayerContext)
@@ -27442,7 +27444,7 @@ bool CvGameTextMgr::buildFoundCorporationString(CvWStringBuffer &szBuffer, TechT
 	return bFirst;
 }
 
-bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList, bool bPlayerContext)
+bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList) const
 {
 	CvWString szTempBuffer;
 
@@ -27653,7 +27655,7 @@ void CvGameTextMgr::setTraitHelp(CvWStringBuffer &szBuffer, TraitTypes eTrait)
 	parseTraits(szBuffer, eTrait, eCivilization, false, false);
 }
 
-void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText, bool bFromUnit)
+void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText) const
 {
 	const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
 
@@ -34195,7 +34197,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		// Toffer - Should add some text for this last part too I guess...
 		iModifier += GC.getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT();
 
-		FAssert(iModifier == kPlayer.getEspionageMissionCostModifier(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit));
+		FAssert(iModifier == kPlayer.getEspionageMissionCostModifier(eMission, eTargetPlayer, pPlot, pSpyUnit));
 
 		iMissionCost *= iModifier;
 		iMissionCost /= 100;
@@ -35826,7 +35828,7 @@ void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	szBuffer.append(CvWString::format(L" %c", gDLL->getSymbolID(CITIZEN_CHAR)));
 }
 
-void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
+void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList)
 {
 	if (GC.getTechInfo(eTech).getMaintenanceModifier() != 0)
 	{

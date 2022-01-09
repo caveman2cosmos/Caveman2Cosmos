@@ -10,7 +10,8 @@
 
 class CvArea;
 
-class CvTeam : bst::noncopyable
+class CvTeam
+	: private bst::noncopyable
 {
 public:
 	CvTeam();
@@ -41,7 +42,7 @@ public:
 	DllExport bool canDeclareWar(TeamTypes eTeam) const;
 
 	bool canEventuallyDeclareWar(TeamTypes eTeam) const;
-	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, bool bCancelPacts = true);
+	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan);
 
 	void makePeace(TeamTypes eTeam, bool bBumpUnits = true);
 	bool canContact(TeamTypes eTeam) const;

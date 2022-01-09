@@ -923,7 +923,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -1000,7 +1000,7 @@
 			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_CRAB</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
