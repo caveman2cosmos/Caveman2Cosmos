@@ -10,7 +10,7 @@ plotInfo::plotInfo() :
 	worked(false),
 	owned(false),
 	bonusImproved(false),
-	value(0), 
+	value(0),
 	newValue(0),
 	yields(),
 	newYields(),
