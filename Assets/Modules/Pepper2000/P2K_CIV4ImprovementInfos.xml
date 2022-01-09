@@ -333,7 +333,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bPlacesTerrain>1</bPlacesTerrain>
-			<bGraphicalOnly>1</bGraphicalOnly>			
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MARS</Type>
