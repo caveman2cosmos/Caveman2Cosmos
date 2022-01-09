@@ -988,8 +988,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		}
 	}
 
-	GC.getInitCore().checkInitialCivics();
-
 	GC.doPostLoadCaching();
 
 	// Add TGA space fillers

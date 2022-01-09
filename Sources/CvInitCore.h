@@ -290,10 +290,6 @@ public:
 	CvString getExeName() const;
 // BUG - EXE/DLL Paths - end
 
-//Afforess
-	void checkInitialCivics();
-//End
-
 	void handleOldGameSpeed();
 
 protected:

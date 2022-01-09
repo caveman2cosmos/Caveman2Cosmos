@@ -2969,6 +2969,8 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 
 void cvInternalGlobals::doPostLoadCaching()
 {
+	checkInitialCivics();
+
 	//Establish Promotion Pedia Help info
 	for (int iI = getNumPromotionInfos() - 1; iI > -1; iI--)
 	{
@@ -3006,6 +3008,41 @@ void cvInternalGlobals::doPostLoadCaching()
 		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
 		{
 			(*infoVector)[i]->doPostLoadCaching(i);
+		}
+	}
+}
+
+
+void cvInternalGlobals::checkInitialCivics()
+{
+	for (int iCiv = getNumCivilizationInfos() - 1; iCiv > -1; iCiv--)
+	{
+		CvCivilizationInfo& civ = getCivilizationInfo(static_cast<CivilizationTypes>(iCiv));
+
+		for (int iJ = getNumCivicOptionInfos() - 1; iJ > -1; iJ--)
+		{
+			//No Initial Civic Found
+			const CivicTypes eCivic = (CivicTypes)civ.getCivilizationInitialCivics(iJ);
+
+			if (eCivic == NO_CIVIC || getCivicInfo(eCivic).getCivicOptionType() != iJ)
+			{
+				bool bFound = false;
+				for (int iK = 0; iK < getNumCivicInfos(); iK++)
+				{
+					if (getCivicInfo((CivicTypes)iK).getCivicOptionType() == iJ
+					&&  getCivicInfo((CivicTypes)iK).getTechPrereq() == NO_TECH)
+					{
+						bFound = true;
+						civ.setCivilizationInitialCivics(iJ, iK);
+						break;
+					}
+				}
+				if (!bFound)
+				{
+					// Should not get here, having no initial civic is very bad.
+					FErrorMsg("Error, No Valid Civic Was Found!");
+				}
+			}
 		}
 	}
 }
