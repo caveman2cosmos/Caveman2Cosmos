@@ -25,6 +25,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- MAPBONUS-ONLY* EXPLOITATION (*mostly) -->
@@ -11086,6 +11087,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Grass -->
@@ -11103,6 +11105,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Plains -->
@@ -11136,6 +11139,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Rocky -->
@@ -11161,6 +11165,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Muddy -->
@@ -11178,6 +11183,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Taiga -->
@@ -11195,6 +11201,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Tundra -->
@@ -11212,6 +11219,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Permafrost -->
@@ -11229,6 +11237,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Scrub -->
@@ -11250,6 +11259,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Desert -->
@@ -11267,6 +11277,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Dunes -->
@@ -11284,6 +11295,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- NAVAL IMPROVEMENTS -->

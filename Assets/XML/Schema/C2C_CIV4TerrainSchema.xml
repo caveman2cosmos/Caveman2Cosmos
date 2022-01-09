@@ -647,6 +647,7 @@
 	<ElementType name="bMilitaryStructure" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPlacesBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPlacesFeature" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPlacesTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartRemoveCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iTilesPerGoody" content="textOnly" dt:type="int"/>
@@ -727,6 +728,7 @@
 		<element type="bMilitaryStructure" minOccurs="0"/>
 		<element type="bPlacesBonus" minOccurs="0"/>
 		<element type="bPlacesFeature" minOccurs="0"/>
+		<element type="bPlacesTerrain" minOccurs="0"/>
 		<element type="TerrainMakesValids" minOccurs="0"/>
 		<element type="FeatureMakesValids" minOccurs="0"/>
 		<element type="BonusTypeStructs" minOccurs="0" maxOccurs="*"/>

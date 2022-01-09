@@ -332,7 +332,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bGraphicalOnly>1</bGraphicalOnly>
+			<bPlacesTerrain>1</bPlacesTerrain>
+			<bGraphicalOnly>1</bGraphicalOnly>			
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MARS</Type>
@@ -372,6 +373,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -394,6 +396,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -418,6 +421,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -442,6 +446,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -466,6 +471,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -490,6 +496,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesTerrain>1</bPlacesTerrain>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
