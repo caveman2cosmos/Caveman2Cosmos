@@ -5182,7 +5182,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CORE_MINE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>12</iYieldChange>
+				<iYieldChange>15</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<bHillsMakesValid>1</bHillsMakesValid>
@@ -5551,7 +5551,7 @@
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>10</iYieldChange>
+				<iYieldChange>13</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bHillsMakesValid>1</bHillsMakesValid>
@@ -5869,7 +5869,7 @@
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>6</iYieldChange>
+				<iYieldChange>8</iYieldChange>
 			</YieldChanges>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
@@ -6221,7 +6221,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -6455,7 +6455,21 @@
 			<ImprovementUpgrade>IMPROVEMENT_SHAFT_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_COAL_MINING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -6546,7 +6560,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_QUARRY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>4</iYieldChange>
+				<iYieldChange>5</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -6744,6 +6758,13 @@
 			<ImprovementUpgrade>IMPROVEMENT_CORE_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_GEOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -6843,7 +6864,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<PrereqTech>TECH_MINING</PrereqTech>
@@ -7066,6 +7087,13 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_TRIBALISM</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Hybrid Forest | End -->
@@ -7077,7 +7105,7 @@
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>10</iYieldChange>
+				<iYieldChange>12</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
 			<RiverSideYieldChange>
@@ -7250,7 +7278,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>8</iYieldChange>
+				<iYieldChange>10</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<RiverSideYieldChange>
@@ -7434,7 +7462,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LUMBERMILL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>5</iYieldChange>
+				<iYieldChange>6</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<RiverSideYieldChange>
@@ -7545,6 +7573,13 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
@@ -7637,7 +7672,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LUMBERJACK</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -7796,6 +7831,15 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_CARPENTRY</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+			</TechYieldChanges>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_RESIN</BonusType>
@@ -8722,7 +8766,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
