@@ -2253,8 +2253,12 @@ public:
 	int getLeaderExperience() const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
-	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
-	const std::vector<const CvOutcomeMission*>& getActionOutcomes() const;
+	int getNumActionOutcomes() const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 	const char* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setEarlyArtDefineTag(int i, const char* szVal);
@@ -2477,7 +2481,7 @@ private:
 	std::vector<int> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
 
 	//TB Combat Mods Start  TB SubCombat Mod begin
 	//integers
@@ -4232,6 +4236,11 @@ public:
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
+	ImprovementTypes getProvidedByImprovementType(const int i) const;
+	int getNumProvidedByImprovementTypes() const;
+	bool isProvidedByImprovementType(const ImprovementTypes i) const;
+	void setProvidedByImprovementTypes(const ImprovementTypes eType);
+
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -4284,6 +4293,8 @@ private:
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 	volatile std::vector<std::pair<ImprovementTypes,BuildTypes> >* m_tradeProvidingImprovements;
+
+	std::vector<ImprovementTypes> m_providedByImprovementTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8613,12 +8624,16 @@ public:
 	void getCheckSum(uint32_t& iSum) const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
-	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
-	const std::vector<const CvOutcomeMission*>& getActionOutcomes() const;
+	int getNumActionOutcomes() const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
 
 public:
 	// Textual References

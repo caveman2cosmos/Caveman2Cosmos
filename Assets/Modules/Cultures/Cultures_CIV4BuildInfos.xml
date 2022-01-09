@@ -6,7 +6,7 @@
 			<Description>TXT_KEY_BUILD_MOAI</Description>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>10</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>

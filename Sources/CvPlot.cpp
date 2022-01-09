@@ -4740,67 +4740,33 @@ bool CvPlot::isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const
 
 	return false;
 }
-/************************************************************************************************/
-/* Afforess	Vicinity Bonus Start		 07/29/09                                            */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+
+// Afforess - Vicinity Bonus - 07/29/09
 bool CvPlot::isHasValidBonus() const
 {
-	if (getBonusType() == NO_BONUS)
+	if (getBonusType() == NO_BONUS
+	|| getImprovementType() == NO_IMPROVEMENT
+	|| !isBonusNetwork(getTeam())
+	|| !isWithinTeamCityRadius(getTeam()))
 	{
 		return false;
 	}
-	if (getImprovementType() == NO_IMPROVEMENT)
-	{
-		return false;
-	}
-	if (!isBonusNetwork(getTeam()))
-	{
-		return false;
-	}
-	if (!isWithinTeamCityRadius(getTeam()))
-	{
-		return false;
-	}
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechReveal())))
-	{
-		if (GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(getBonusType()))
-		{
-			return true;
-		}
-	}
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechReveal())) && GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechObsolete())))
-	{
-		if (GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(getBonusType()))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	const CvBonusInfo& bonus = GC.getBonusInfo(getBonusType());
+	return (
+		GET_TEAM(getTeam()).isHasTech((TechTypes)bonus.getTechReveal())
+		&& (
+				bonus.isProvidedByImprovementType(getImprovementType())
+			||	GET_TEAM(getTeam()).isHasTech((TechTypes)bonus.getTechObsolete())
+		)
+	);
 }
-/************************************************************************************************/
-/* Afforess	Vicinity Bonus End       END                                                     */
-/************************************************************************************************/
+// ! Afforess - Vicinity Bonus - 07/29/09
+
+
 bool CvPlot::isEnemyCity(const CvUnit& kUnit, bool bOnlyRealCities) const
 {
-	// Super Forts begin *culture*
-	TeamTypes ePlotTeam = getTeam();
-	if (isCity(!bOnlyRealCities) && (ePlotTeam != NO_TEAM))
-	{
-		return kUnit.isEnemy(ePlotTeam, this);
-	}
-	/* Original Code
-	CvCity* pCity = getPlotCity();
-
-	if (pCity != NULL)
-	{
-		return kUnit.isEnemy(pCity->getTeam(), this);
-	} */
-	// Super Forts end
-
-	return false;
+	return isCity(!bOnlyRealCities) && getTeam() != NO_TEAM && kUnit.isEnemy(getTeam(), this);
 }
 
 

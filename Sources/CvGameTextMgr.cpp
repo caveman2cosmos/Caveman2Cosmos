@@ -9173,7 +9173,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 
 			if (pPlot->getOwner() == GC.getGame().getActivePlayer()
-			&& (pPlot->getImprovementType() == NO_IMPROVEMENT || !GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eBonus)))
+			&& (pPlot->getImprovementType() == NO_IMPROVEMENT || !bonus.isProvidedByImprovementType(pPlot->getImprovementType())))
 			{
 				bool bKnowsValid = false;
 				TechTypes eMostRecentObsoletingTech = NO_TECH;
@@ -9181,12 +9181,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				TechTypes eClosestUnlockingTech = NO_TECH;
 				int iClosestX = MAX_INT;
 
-				for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+				for (int iI = bonus.getNumProvidedByImprovementTypes() - 1; iI > -1; iI--)
 				{
-					const CvImprovementInfo& improvement = GC.getImprovementInfo((ImprovementTypes)iJ);
+					const ImprovementTypes eTypeX = bonus.getProvidedByImprovementType(iI);
 
-					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, eActiveTeam, true))
+					if (pPlot->canHaveImprovement(eTypeX, eActiveTeam, true))
 					{
+						const CvImprovementInfo& improvement = GC.getImprovementInfo(eTypeX);
+
 						foreach_(const BuildTypes& eBuild, improvement.getBuildTypes())
 						{
 							const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);

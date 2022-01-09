@@ -786,6 +786,8 @@ public:
 
 	void deleteInfoArrays();
 
+	void checkInitialCivics();
+
 protected:
 	void doPostLoadCaching();
 

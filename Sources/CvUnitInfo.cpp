@@ -1499,14 +1499,48 @@ const CvOutcomeList* CvUnitInfo::getKillOutcomeList() const
 	return &m_KillOutcomeList;
 }
 
-const std::vector<const CvOutcomeMission*>& CvUnitInfo::getActionOutcomes() const
+int CvUnitInfo::getNumActionOutcomes() const
 {
-	return m_aOutcomeMissions;
+	return m_aOutcomeMissions.size();
 }
 
-const CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) const
+MissionTypes CvUnitInfo::getActionOutcomeMission(int index) const
 {
-	return algo::find_if(m_aOutcomeMissions, bind(CvOutcomeMission::getMission, _1) == eMission).get_value_or(NULL);
+	return m_aOutcomeMissions[index]->getMission();
+}
+
+const CvOutcomeList* CvUnitInfo::getActionOutcomeList(int index) const
+{
+	return m_aOutcomeMissions[index]->getOutcomeList();
+}
+
+const CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(MissionTypes eMission) const
+{
+	foreach_(const CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
+	{
+		if (outcomeMission->getMission() == eMission)
+		{
+			return outcomeMission->getOutcomeList();
+		}
+	}
+	return NULL;
+}
+
+const CvOutcomeMission* CvUnitInfo::getOutcomeMission(int index) const
+{
+	return m_aOutcomeMissions[index];
+}
+
+CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) const
+{
+	foreach_(CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
+	{
+		if (outcomeMission->getMission() == eMission)
+		{
+			return outcomeMission;
+		}
+	}
+	return NULL;
 }
 
 const char* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const
@@ -4988,11 +5022,12 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"Action"))
 			{
+				int i = 0;
 				do
 				{
-					CvOutcomeMission* pOutcomeMission = new CvOutcomeMission();
-					pOutcomeMission->read(pXML);
-					m_aOutcomeMissions.push_back(pOutcomeMission);
+					m_aOutcomeMissions.push_back(new CvOutcomeMission());
+					m_aOutcomeMissions[i]->read(pXML);
+					i++;
 				} while(pXML->TryMoveToXmlNextSibling());
 			}
 			pXML->MoveToXmlParent();
@@ -5818,10 +5853,11 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 
 	if (m_aOutcomeMissions.empty())
 	{
-		foreach_(const CvOutcomeMission* pClassOutcomeMission, pClassInfo->getActionOutcomes())
+		const int num = pClassInfo->getNumActionOutcomes();
+		for (int index = 0; index < num; index++)
 		{
-			m_aOutcomeMissions.push_back(pClassOutcomeMission);
-			pClassOutcomeMission = NULL;
+			m_aOutcomeMissions.push_back(pClassInfo->m_aOutcomeMissions[index]);
+			pClassInfo->m_aOutcomeMissions[index] = NULL;
 		}
 	}
 

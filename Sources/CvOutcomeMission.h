@@ -10,9 +10,8 @@
 #ifndef CV_OUTCOME_MISSION_H
 #define CV_OUTCOME_MISSION_H
 
-#include "CvOutcomeList.h"
-#include "CvProperties.h"
-
+class CvOutcomeList;
+class CvProperties;
 class CvUnit;
 class CvXMLLoadUtility;
 class BoolExpr;
@@ -32,7 +31,7 @@ public:
 
 	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const;
-	void execute(CvUnit* pUnit) const;
+	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);

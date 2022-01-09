@@ -988,23 +988,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		}
 	}
 
-	GC.getInitCore().checkInitialCivics();
-
-
-	//Establish Promotion Pedia Help info
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		const PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
-		GC.getPromotionInfo(ePromotion).setQualifiedUnitCombatTypes();
-		GC.getPromotionInfo(ePromotion).setDisqualifiedUnitCombatTypes();
-	}
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-	{
-		UnitTypes eUnit = static_cast<UnitTypes>(iI);
-		GC.getUnitInfo(eUnit).setQualifiedPromotionTypes();
-		GC.getUnitInfo(eUnit).setCanAnimalIgnores();
-	}
-
 	GC.doPostLoadCaching();
 
 	// Add TGA space fillers

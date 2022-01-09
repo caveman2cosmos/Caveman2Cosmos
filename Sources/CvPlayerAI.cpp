@@ -27137,7 +27137,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			{
 				const BuildingTypes eBuilding = (BuildingTypes)kUnit.getBuildings(iI);
 
-				if (canConstruct(eBuilding, false, false, true)
+				if (NO_BUILDING != eBuilding && canConstruct(eBuilding, false, false, true)
 				&& AI_getNumBuildingsNeeded(eBuilding, pUnit->getDomainType() == DOMAIN_SEA) > 0)
 				{
 					foreach_(CvCity* pLoopCity, cities())
@@ -27156,11 +27156,12 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			}
 
 			//	Also check their action outcomes (in the capital)
-			foreach_(const CvOutcomeMission* outcomeMission, kUnit.getActionOutcomes())
+			for (int iI = 0; iI < kUnit.getNumActionOutcomes(); iI++)
 			{
-				if (outcomeMission->getMission() != NO_MISSION)
+				const MissionTypes eMission = kUnit.getActionOutcomeMission(iI);
+				if (eMission != NO_MISSION)
 				{
-					const CvOutcomeList* pOutcomeList = outcomeMission->getOutcomeList();
+					const CvOutcomeList* pOutcomeList = kUnit.getActionOutcomeList(iI);
 					if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 					{
 						const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
@@ -27176,11 +27177,13 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			{
 				if (pUnit->isHasUnitCombat((UnitCombatTypes)iJ))
 				{
-					foreach_(const CvOutcomeMission* outcomeMission, GC.getUnitCombatInfo((UnitCombatTypes)iJ).getActionOutcomes())
+					const CvUnitCombatInfo& kInfo = GC.getUnitCombatInfo((UnitCombatTypes)iJ);
+					for (int iI = 0; iI < kInfo.getNumActionOutcomes(); iI++)
 					{
-						if (outcomeMission->getMission() != NO_MISSION)
+						const MissionTypes eMission = kInfo.getActionOutcomeMission(iI);
+						if (eMission != NO_MISSION)
 						{
-							const CvOutcomeList* pOutcomeList = outcomeMission->getOutcomeList();
+							const CvOutcomeList* pOutcomeList = kInfo.getActionOutcomeList(iI);
 							if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 							{
 								const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
