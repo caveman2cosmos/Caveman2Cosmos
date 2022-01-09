@@ -2133,8 +2133,6 @@ public:
 
 	virtual const wchar_t* getExtraHoverText() const;
 
-	void getCheckSum(uint32_t& iSum) const;
-
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	const BoolExpr* getTrainCondition() const;
@@ -2277,11 +2275,14 @@ public:
 	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	bool m_bDCMFighterEngage;
@@ -3906,10 +3907,13 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvBuildInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	//----------------------PRIVATE MEMBER VARIABLES----------------------------
 
-protected:
+private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bDisabled;
 	bool m_bKill;
 
@@ -5820,12 +5824,13 @@ public:
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 	bool** m_ppbFreePromotionUnitCombats;
