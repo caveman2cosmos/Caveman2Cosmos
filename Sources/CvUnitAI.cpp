@@ -15261,9 +15261,11 @@ bool CvUnitAI::AI_outcomeMission()
 
 	std::vector<std::pair<MissionTypes, const CvOutcomeList*> > aMissions;
 
-	foreach_(const CvOutcomeMission* outcomeMission, getUnitInfo().getActionOutcomes())
+	const CvUnitInfo& kInfo = getUnitInfo();
+
+	for (int iI = 0; iI < kInfo.getNumActionOutcomes(); iI++)
 	{
-		aMissions.push_back(std::make_pair(outcomeMission->getMission(), outcomeMission->getOutcomeList()));
+		aMissions.push_back(std::make_pair(kInfo.getActionOutcomeMission(iI), kInfo.getActionOutcomeList(iI)));
 	}
 
 	// check the unit combat types for outcome missions
@@ -15271,9 +15273,10 @@ bool CvUnitAI::AI_outcomeMission()
 	{
 		if (it->second.m_bHasUnitCombat)
 		{
-			foreach_(const CvOutcomeMission* outcomeMission, GC.getUnitCombatInfo(it->first).getActionOutcomes())
+			const CvUnitCombatInfo& kCombatInfo = GC.getUnitCombatInfo(it->first);
+			for (int iI = 0; iI < kCombatInfo.getNumActionOutcomes(); iI++)
 			{
-				aMissions.push_back(std::make_pair(outcomeMission->getMission(), outcomeMission->getOutcomeList()));
+				aMissions.push_back(std::make_pair(kCombatInfo.getActionOutcomeMission(iI), kCombatInfo.getActionOutcomeList(iI)));
 			}
 		}
 	}
