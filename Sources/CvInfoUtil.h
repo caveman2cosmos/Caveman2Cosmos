@@ -16,9 +16,9 @@ struct WrappedVar;
 struct CvInfoUtil
 	: private bst::noncopyable
 {
-	CvInfoUtil(CvInfoBase* info)
+	CvInfoUtil(const CvInfoBase* info)
 	{
-		info->getDataMembers(*this);
+		const_cast<CvInfoBase*>(info)->getDataMembers(*this);
 	}
 
 	~CvInfoUtil()
@@ -223,7 +223,7 @@ struct CvInfoUtil
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
 
-		void checkSum(uint32_t& /*iSum*/) const
+		void checkSum(uint32_t&) const
 		{
 		}
 
@@ -650,9 +650,9 @@ struct CvInfoUtil
 	};
 
 	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& add(IDValueMap<T1, T2*, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
+	CvInfoUtil& add(IDValueMap<T1, T2, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
 	{
-		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, T2*, default_> >(map, rootTag, firstChildTag, secondChildTag, pairedArraySize));
+		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, T2, default_> >(map, rootTag, firstChildTag, secondChildTag, pairedArraySize));
 		return *this;
 	}
 
