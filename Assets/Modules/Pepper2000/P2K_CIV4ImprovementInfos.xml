@@ -6,6 +6,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV1</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -29,6 +30,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV2</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -53,6 +55,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV3</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -75,6 +78,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LUNAR_ARCOLOGY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>5</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -124,6 +128,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VENUS_SURFACE_MINE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -169,6 +174,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_VENUS_AERIAL_FARM</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>5</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -196,6 +202,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARTIAN_MINE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>4</iYieldChange>
@@ -272,6 +279,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARTIAN_FARM</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -307,6 +315,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -340,6 +349,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MARS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -381,6 +391,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_NEUTRON_STAR</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -404,6 +415,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_HYPERSPACE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -429,6 +441,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PAST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PAST</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -454,6 +467,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_FUTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_FUTURE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -479,6 +493,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_BRANESPACE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -504,6 +519,7 @@
 			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_ASTEROID</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_ASTEROIDS</FeatureType>
 			</FeatureChangeTypes>
@@ -537,6 +553,7 @@
 			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_GALAXY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_GALAXY</FeatureType>
 			</FeatureChangeTypes>
@@ -562,6 +579,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_SOLAR_PANELS</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -609,6 +627,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_CONCENTRATOR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_SOLAR_PANELS</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -648,6 +667,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MERCURY_SOLAR_ARRAY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>8</iYieldChange>
@@ -669,6 +689,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MERCURY_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -690,6 +711,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ASTEROID_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ASTEROID_MINE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -764,6 +786,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -784,6 +807,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_NEUTRON_STAR_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -804,6 +828,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BIOTIC_NEUTRON_STAR</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>20</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -824,6 +849,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_TRADING_POST</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -862,6 +888,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SUN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUN_SCOOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUN_SCOOP</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>25</iYieldChange>
@@ -882,6 +909,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_SCOOP</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>15</iYieldChange>
@@ -914,6 +942,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_FLOATING_CITY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -946,6 +975,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_LUNAR_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -1011,6 +1041,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -1075,6 +1106,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DISTANT_PAST_CITY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>10</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -1095,6 +1127,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DISTANT_FUTURE_CITY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -1115,6 +1148,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PARATERRAFORMED_ASTEROID</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>10</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -1167,6 +1201,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BRANE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BRANE_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BRANE_FACTORY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>25</iYieldChange>
@@ -1187,6 +1222,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BRANE_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BRANE_FARM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BRANE_FARM</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -1207,6 +1243,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPIRITUAL_REALM</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>5</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -1237,6 +1274,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_TRADING_POST</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -1283,6 +1321,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUPERNOVA_MINE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>25</iYieldChange>
@@ -1320,6 +1359,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -1391,6 +1431,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COSMIC_EXPANSION_NODE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>40</iYieldChange>
@@ -1410,6 +1451,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_TRUE_VACUUM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TRUE_VACUUM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TRUE_VACUUM</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>25</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -1429,6 +1471,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DYSON_SPHERE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DYSON_SPHERE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>5</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -1494,6 +1537,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -1583,6 +1627,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORMED_PLANET</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>20</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -1666,6 +1711,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARTIFICIAL_PLANET</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>20</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -1697,6 +1743,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_STAR_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_STAR_SCOOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STAR_SCOOP</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>25</iYieldChange>
@@ -1736,6 +1783,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BIOTIC_GALAXY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>25</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -1809,6 +1857,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>7</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -1846,6 +1895,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_DISTANT_RESEARCH_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -1887,6 +1937,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -1916,6 +1967,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SATELLITE_STATION</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SATELLITE_STATION_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SATELLITE_STATION</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -1955,6 +2007,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARCOLOGY_MOON</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>4</iYieldChange>
 				<iYieldChange>11</iYieldChange>
@@ -1983,6 +2036,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2028,6 +2082,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2067,6 +2122,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUPERCLUSTER_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2086,6 +2142,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -2105,6 +2162,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PARALLEL_UNIVERSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -2146,6 +2204,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIME_MANIFOLD</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>5</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -2169,6 +2228,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -2197,6 +2257,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -2233,6 +2294,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -2273,6 +2335,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_BASE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -2317,6 +2380,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYPERSPACE_BUNKER</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_COSMIC_WARFARE</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -2357,6 +2421,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2399,6 +2464,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2442,6 +2508,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2483,6 +2550,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -2575,6 +2643,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2651,6 +2720,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_SMALL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_SMALL</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2723,6 +2793,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_MEDIUM</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2806,6 +2877,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_LARGE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2889,6 +2961,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_HUGE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -3008,6 +3081,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -3129,6 +3203,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDTRAP</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -3234,6 +3309,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
@@ -3346,6 +3422,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_PANELS</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -3444,6 +3521,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LISTENING_NODE</ArtDefineTag>
+			<bExtraterresial>1</bExtraterresial>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iAirBombDefense>15</iAirBombDefense>

@@ -49,6 +49,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bPlacesBonus(false),
 	m_bPlacesFeature(false),
 	m_bPlacesTerrain(false),
+	m_bExtraterresial(false),
 	m_iWorldSoundscapeScriptId(0),
 	m_piPrereqNatureYield(NULL),
 	m_piYieldChange(NULL),
@@ -582,6 +583,7 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPlacesBonus);
 	CheckSum(iSum, m_bPlacesFeature);
 	CheckSum(iSum, m_bPlacesTerrain);
+	CheckSum(iSum, m_bExtraterresial);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
 
 	// Arrays
@@ -723,6 +725,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPlacesBonus, L"bPlacesBonus");
 	pXML->GetOptionalChildXmlValByName(&m_bPlacesFeature, L"bPlacesFeature");
 	pXML->GetOptionalChildXmlValByName(&m_bPlacesTerrain, L"bPlacesTerrain");
+	pXML->GetOptionalChildXmlValByName(&m_bExtraterresial, L"bExtraterresial");
 	// Super Forts begin *XML*
 	pXML->GetOptionalChildXmlValByName(&m_iCulture, L"iCulture");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
@@ -998,6 +1001,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (m_bPlacesBonus == bDefault) m_bPlacesBonus = pClassInfo->isPlacesBonus();
 	if (m_bPlacesFeature == bDefault) m_bPlacesFeature = pClassInfo->isPlacesFeature();
 	if (m_bPlacesTerrain == bDefault) m_bPlacesTerrain = pClassInfo->isPlacesTerrain();
+	if (m_bExtraterresial == bDefault) m_bExtraterresial = pClassInfo->isExtraterresial();
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{

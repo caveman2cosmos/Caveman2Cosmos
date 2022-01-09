@@ -41,6 +41,7 @@ public:
 	bool isPlacesBonus() const { return m_bPlacesBonus; }
 	bool isPlacesFeature() const { return m_bPlacesFeature; }
 	bool isPlacesTerrain() const { return m_bPlacesTerrain; }
+	bool isExtraterresial() const { return m_bExtraterresial; }
 	bool isCanMoveSeaUnits() const;
 	bool isChangeRemove() const;
 	bool isNotOnAnyBonus() const;
@@ -150,6 +151,7 @@ private:
 	bool m_bPlacesBonus;
 	bool m_bPlacesFeature;
 	bool m_bPlacesTerrain;
+	bool m_bExtraterresial;
 	bool m_bCanMoveSeaUnits;
 	bool m_bChangeRemove;
 	bool m_bNotOnAnyBonus;
