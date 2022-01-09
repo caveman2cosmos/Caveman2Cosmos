@@ -4232,6 +4232,11 @@ public:
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
+	ImprovementTypes getProvidedByImprovementType(const int i) const;
+	int getNumProvidedByImprovementTypes() const;
+	bool isProvidedByImprovementType(const ImprovementTypes i) const;
+	void setProvidedByImprovementTypes(const ImprovementTypes eType);
+
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -4284,6 +4289,8 @@ private:
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 	volatile std::vector<std::pair<ImprovementTypes,BuildTypes> >* m_tradeProvidingImprovements;
+
+	std::vector<ImprovementTypes> m_providedByImprovementTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

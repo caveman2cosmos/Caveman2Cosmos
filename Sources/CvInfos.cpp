@@ -13967,6 +13967,28 @@ bool CvBonusInfo::isPeaks() const
 	return m_bPeaks;
 }
 
+
+ImprovementTypes CvBonusInfo::getProvidedByImprovementType(const int i) const
+{
+	return m_providedByImprovementTypes[i];
+}
+
+int CvBonusInfo::getNumProvidedByImprovementTypes() const
+{
+	return (int)m_providedByImprovementTypes.size();
+}
+
+bool CvBonusInfo::isProvidedByImprovementType(const ImprovementTypes i) const
+{
+	return algo::any_of_equal(m_providedByImprovementTypes, i);
+}
+
+void CvBonusInfo::setProvidedByImprovementTypes(const ImprovementTypes eType)
+{
+	m_providedByImprovementTypes.push_back(eType);
+}
+
+
 void CvBonusInfo::getCheckSum(uint32_t &iSum) const
 {
 	CheckSum(iSum, m_iBonusClassType);
