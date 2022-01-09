@@ -10926,6 +10926,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Grow Forest (special case of FeatureChange handled in CvEventManager.py; has 'fake' YieldChanges) -->
@@ -10947,6 +10948,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
@@ -10985,6 +10987,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Savanna -->
@@ -11024,6 +11027,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Jungle -->
@@ -11060,16 +11064,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<RelationType>RELATION_NEAR</RelationType>
-					<iDistance>1</iDistance>
-					<iAmountPerTurn>-5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Lush -->
@@ -11756,6 +11751,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -11776,6 +11772,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -11796,6 +11793,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Beacons -->
@@ -11813,6 +11811,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -11829,6 +11828,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -11845,6 +11845,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Marine Preserve -->

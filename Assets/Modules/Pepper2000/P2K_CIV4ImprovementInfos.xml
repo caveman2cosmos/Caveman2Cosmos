@@ -500,6 +500,7 @@
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_ASTEROIDS</FeatureType>
 			</FeatureChangeTypes>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bChangeRemove>1</bChangeRemove>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -532,6 +533,7 @@
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_GALAXY</FeatureType>
 			</FeatureChangeTypes>
+			<bPlacesFeature>1</bPlacesFeature>
 			<bChangeRemove>1</bChangeRemove>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>

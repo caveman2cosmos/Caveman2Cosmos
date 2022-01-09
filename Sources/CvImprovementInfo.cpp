@@ -47,6 +47,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bOutsideBorders(false),
 	m_bMilitaryStructure(false),
 	m_bPlacesBonus(false),
+	m_bPlacesFeature(false),
 	m_iWorldSoundscapeScriptId(0),
 	m_piPrereqNatureYield(NULL),
 	m_piYieldChange(NULL),
@@ -578,6 +579,7 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bOutsideBorders);
 	CheckSum(iSum, m_bMilitaryStructure);
 	CheckSum(iSum, m_bPlacesBonus);
+	CheckSum(iSum, m_bPlacesFeature);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
 
 	// Arrays
@@ -717,6 +719,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bOutsideBorders, L"bOutsideBorders");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitaryStructure, L"bMilitaryStructure");
 	pXML->GetOptionalChildXmlValByName(&m_bPlacesBonus, L"bPlacesBonus");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesFeature, L"bPlacesFeature");
 	// Super Forts begin *XML*
 	pXML->GetOptionalChildXmlValByName(&m_iCulture, L"iCulture");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
@@ -990,6 +993,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
 	if (m_bMilitaryStructure == bDefault) m_bMilitaryStructure = pClassInfo->isMilitaryStructure();
 	if (m_bPlacesBonus == bDefault) m_bPlacesBonus = pClassInfo->isPlacesBonus();
+	if (m_bPlacesFeature == bDefault) m_bPlacesFeature = pClassInfo->isPlacesFeature();
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{
