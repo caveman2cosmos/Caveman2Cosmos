@@ -849,7 +849,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
 
 				// Only normal transports
-				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->specialCargo() == NO_SPECIALUNIT) )
+				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->getSpecialCargo() == NO_SPECIALUNIT) )
 				{
 					bValid = (bAnyWar || bUnderBudget);
 				}
@@ -1382,7 +1382,7 @@ int CvPlayerAI::AI_movementPriority(const CvSelectionGroup* pGroup) const
 	if (pHeadUnit->hasCargo())
 	{
 		// General transport before specialized
-		return pHeadUnit->specialCargo() == NO_SPECIALUNIT ? 1 : 2;
+		return pHeadUnit->getSpecialCargo() == NO_SPECIALUNIT ? 1 : 2;
 	}
 
 	if (pHeadUnit->getDomainType() == DOMAIN_AIR)

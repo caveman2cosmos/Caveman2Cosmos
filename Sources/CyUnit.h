@@ -91,8 +91,8 @@ public:
 
 	int bombardRate() const;
 
-	int /*SpecialUnitTypes*/ specialCargo() const;
-	int /*DomainTypes*/ domainCargo() const;
+	int /*SpecialUnitTypes*/ getSpecialCargo() const;
+	int /*DomainTypes*/ getDomainCargo() const;
 	int cargoSpace() const;
 	void changeCargoSpace(int iChange);
 	bool isFull() const;

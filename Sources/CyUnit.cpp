@@ -297,14 +297,14 @@ int CyUnit::bombardRate() const
 	return m_pUnit->getBombardRate();
 }
 
-int /*SpecialUnitTypes*/ CyUnit::specialCargo() const
+int /*SpecialUnitTypes*/ CyUnit::getSpecialCargo() const
 {
-	return m_pUnit->specialCargo();
+	return m_pUnit->getSpecialCargo();
 }
 
-int /*DomainTypes*/ CyUnit::domainCargo() const
+int /*DomainTypes*/ CyUnit::getDomainCargo() const
 {
-	return m_pUnit->domainCargo();
+	return m_pUnit->getDomainCargo();
 }
 
 int CyUnit::cargoSpace() const

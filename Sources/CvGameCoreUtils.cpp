@@ -3393,7 +3393,7 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 		{
 			foreach_(const CvUnit* pLoopUnit1, pSelectionGroup->units())
 			{
-				if (pLoopUnit1->hasCargo() && pLoopUnit1->domainCargo() == DOMAIN_LAND)
+				if (pLoopUnit1->hasCargo() && pLoopUnit1->getDomainCargo() == DOMAIN_LAND)
 				{
 					foreach_(const CvUnit* pLoopUnit2, pLoopUnit1->plot()->units())
 					{
