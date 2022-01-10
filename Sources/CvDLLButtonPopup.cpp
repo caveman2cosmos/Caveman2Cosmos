@@ -2041,7 +2041,7 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 			szBuffer.append(L", ");
 			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pLoopUnit->SMgetCargo(), pLoopUnit->SMcargoSpace()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pLoopUnit->SMgetCargo(), pLoopUnit->cargoSpace()));
 			}
 			else
 			{

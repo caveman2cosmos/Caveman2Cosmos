@@ -695,8 +695,6 @@ public:
 	DomainTypes getDomainCargoChange() const;
 	SpecialUnitTypes getSpecialCargoChange() const;
 	SpecialUnitTypes getSpecialCargoPrereq() const;
-	SpecialUnitTypes getSMSpecialCargoChange() const;
-	SpecialUnitTypes getSMSpecialCargoPrereq() const;
 	SpecialUnitTypes getSMNotSpecialCargoChange() const;
 	SpecialUnitTypes getSMNotSpecialCargoPrereq() const;
 	SpecialUnitTypes setSpecialUnit() const;
@@ -1199,8 +1197,6 @@ protected:
 	DomainTypes m_eDomainCargoChange;
 	SpecialUnitTypes m_eSpecialCargoChange;
 	SpecialUnitTypes m_eSpecialCargoPrereq;
-	SpecialUnitTypes m_eSMSpecialCargoChange;
-	SpecialUnitTypes m_eSMSpecialCargoPrereq;
 	SpecialUnitTypes m_eSMNotSpecialCargoChange;
 	SpecialUnitTypes m_eSMNotSpecialCargoPrereq;
 	SpecialUnitTypes m_eSetSpecialUnit;
@@ -1707,7 +1703,6 @@ public:
 	int getBombRate() const;
 	int getBombardRate() const;
 	int getSpecialCargo() const;
-	int getSMSpecialCargo() const;
 	int getSMNotSpecialCargo() const;
 	int getDomainCargo() const;
 	int getCargoSpace() const;
@@ -2258,7 +2253,7 @@ public:
 	MissionTypes getActionOutcomeMission(int index) const;
 	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
 	const CvOutcomeMission* getOutcomeMission(int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 	const char* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setEarlyArtDefineTag(int i, const char* szVal);
@@ -2340,7 +2335,6 @@ private:
 	int m_iBombRate;
 	int m_iBombardRate;
 	int m_iSpecialCargo;
-	int m_iSMSpecialCargo;
 	int m_iSMNotSpecialCargo;
 	int m_iDomainCargo;
 	int m_iCargoSpace;
@@ -2481,7 +2475,7 @@ private:
 	std::vector<int> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
 
 	//TB Combat Mods Start  TB SubCombat Mod begin
 	//integers
@@ -5427,10 +5421,11 @@ public:
 	int* getStateReligionCommerceArray() const;
 	int getFlavorValue(int i) const;
 
+	const std::vector<BuildingTypes>& getShrineBuildings() const { return m_shrineBuildings; }
+	void addShrineBuilding(BuildingTypes eBuilding) { m_shrineBuildings.push_back(eBuilding); }
+
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvReligionInfo* pClassInfo);
-
 	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -5438,7 +5433,6 @@ public:
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
@@ -5463,6 +5457,8 @@ protected:
 	int* m_paiHolyCityCommerce;
 	int* m_paiStateReligionCommerce;
 	int* m_piFlavorValue;
+
+	std::vector<BuildingTypes> m_shrineBuildings;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8629,11 +8625,11 @@ public:
 	MissionTypes getActionOutcomeMission(int index) const;
 	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
 	const CvOutcomeMission* getOutcomeMission(int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
 
 public:
 	// Textual References
