@@ -293,7 +293,7 @@ bool CvUnitAI::AI_update()
 			}
 			}
 			// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
-			if (hasCargo() && domainCargo() == DOMAIN_AIR
+			if (hasCargo() && getDomainCargo() == DOMAIN_AIR
 			&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
 			{
 				std::vector<CvUnit*> aCargoUnits;

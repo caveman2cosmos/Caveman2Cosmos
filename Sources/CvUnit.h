@@ -1079,10 +1079,6 @@ public:
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const;
 	int domainModifier(DomainTypes eDomain) const;
 
-	SpecialUnitTypes specialCargo() const;
-	SpecialUnitTypes SMspecialCargo() const;
-	SpecialUnitTypes SMnotSpecialCargo() const;
-	DomainTypes domainCargo() const;
 	int cargoSpace() const;
 	void changeCargoSpace(int iChange);
 	bool isFull() const;

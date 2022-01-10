@@ -8750,43 +8750,32 @@ bool CvUnit::canReconAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
+	const int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
+
 	if (iDistance > airRange() || 0 == iDistance)
 	{
 		return false;
 	}
-
 	return true;
 }
 
 
 bool CvUnit::recon(int iX, int iY)
 {
-	CvPlot* pPlot;
-
 	if (!canReconAt(plot(), iX, iY))
 	{
 		return false;
 	}
 
-	pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	setReconPlot(pPlot);
-
 	finishMoves();
-/************************************************************************************************/
-/* Afforess	                  Start		 09/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP))
 	{
 		 setExperience100(getExperience100() + 5, -1);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 	addMission(CvAirMissionDefinition(MISSION_RECON, pPlot, this, NULL));
 
 	return true;
@@ -9397,25 +9386,15 @@ bool CvUnit::bombard()
 		changeExperience100(100, -1, true);
 		setMadeAttack(true);
 		changeMoves(GC.getMOVE_DENOMINATOR());
-/************************************************************************************************/
-/* Afforess	                  Start		 07/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP))
 		{
 			 setExperience100(getExperience100() + getRandomMinExperienceTimes100(), -1);
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 		if (pPlot->isActiveVisible(false))
 		{
-			// Super Forts begin *bombard*
 			CvUnit *pDefender = pTargetPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
-			//CvUnit *pDefender = pBombardCity->plot()->getBestDefender(NO_PLAYER, getOwner(), this, true); - Original Code
-			// Super Forts end
 
 			// Bombard entity mission
 			addMission(CvMissionDefinition(MISSION_BOMBARD, pTargetPlot, this, pDefender));
@@ -10205,36 +10184,31 @@ bool CvUnit::canStealPlans(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::stealPlans()
 {
-	CvCity* pCity;
-	CvWString szBuffer;
-	bool bCaught;
-
 	if (!canStealPlans(plot()))
 	{
 		return false;
 	}
-
-	bCaught = (GC.getGame().getSorenRandNum(100, "Spy: Steal Plans") > stealPlansProb(plot()));
-
-	pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
-	GET_PLAYER(getOwner()).changeGold(-(stealPlansCost(plot())));
+	GET_PLAYER(getOwner()).changeGold(-stealPlansCost(plot()));
 
-	if (!bCaught)
+	if (GC.getGame().getSorenRandNum(100, "Spy: Steal Plans") <= stealPlansProb(plot()))
 	{
 		GET_TEAM(getTeam()).changeStolenVisibilityTimer(pCity->getTeam(), 2);
 
 		finishMoves();
 
-		{
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_STOLE_PLANS", getNameKey(), pCity->getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY());
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_PLANS_STOLEN", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true);
-		}
+		AddDLLMessage(
+			getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+			gDLL->getText("TXT_KEY_MISC_SPY_STOLE_PLANS", getNameKey(), pCity->getNameKey()),
+			"AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY()
+		);
+		AddDLLMessage(
+			pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+			gDLL->getText("TXT_KEY_MISC_PLANS_STOLEN", pCity->getNameKey()),
+			"AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true
+		);
 
 		if (plot()->isActiveVisible(false))
 		{
@@ -10250,29 +10224,35 @@ bool CvUnit::stealPlans()
 	{
 		if (isSpy())
 		{
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+			AddDLLMessage(
+				pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey()),
+				"AS2D_EXPOSE", MESSAGE_TYPE_INFO
+			);
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey()),
+				"AS2D_EXPOSED", MESSAGE_TYPE_INFO
+			);
 
 			if (plot()->isActiveVisible(false))
 			{
 				NotifyEntity(MISSION_SURRENDER);
 			}
-
 			kill(true, pCity->getOwner(), true);
 		}
 		else
 		{
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_CRIMINAL_CAUGHT", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT", getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
-
+			AddDLLMessage(
+				pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_MISC_CRIMINAL_CAUGHT", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey()),
+				"AS2D_EXPOSE", MESSAGE_TYPE_INFO
+			);
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT", getNameKey()),
+				"AS2D_EXPOSED", MESSAGE_TYPE_INFO
+			);
 			makeWanted(pCity);
 		}
 
@@ -13248,30 +13228,20 @@ int CvUnit::baseCombatStr() const
 
 int CvUnit::baseCombatStrNonGranular() const
 {
-	int iStr = baseCombatStr();
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		return iStr;
+		return baseCombatStr() / 100;
 	}
-	else
-	{
-		iStr /= 100;
-	}
-	return iStr;
+	return baseCombatStr();
 }
 
 int CvUnit::airBaseCombatStr() const
 {
-	int iStr = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iStr = baseAirCombatStrPreCheck();
+		return getSMStrength();
 	}
-	else
-	{
-		iStr = getSMStrength();
-	}
-	return iStr;
+	return baseAirCombatStrPreCheck();
 }
 
 int CvUnit::baseCombatStrPreCheck() const
@@ -15655,27 +15625,6 @@ int CvUnit::domainModifier(DomainTypes eDomain) const
 }
 
 
-
-SpecialUnitTypes CvUnit::specialCargo() const
-{
-	return getSpecialCargo();
-}
-
-SpecialUnitTypes CvUnit::SMspecialCargo() const
-{
-	return getSMSpecialCargo();
-}
-
-SpecialUnitTypes CvUnit::SMnotSpecialCargo() const
-{
-	return getSMNotSpecialCargo();
-}
-
-DomainTypes CvUnit::domainCargo() const
-{
-	return getDomainCargo();
-}
-
 int CvUnit::cargoSpace() const
 {
 	int iCargoCapacity = m_pUnitInfo->getCargoSpace() + m_iCargoCapacity;
@@ -15684,7 +15633,7 @@ int CvUnit::cargoSpace() const
 	{
 		iCargoCapacity += GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange();
 	}
-	if (specialCargo() == GC.getSPECIALUNIT_MISSILE())
+	if (getSpecialCargo() == GC.getSPECIALUNIT_MISSILE())
 	{
 		iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 	}
@@ -15713,11 +15662,11 @@ bool CvUnit::isFull() const
 
 int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
-	if (specialCargo() != NO_SPECIALUNIT && specialCargo() != eSpecialCargo)
+	if (getSpecialCargo() != NO_SPECIALUNIT && getSpecialCargo() != eSpecialCargo)
 	{
 		return 0;
 	}
-	if (domainCargo() != NO_DOMAIN && domainCargo() != eDomainCargo)
+	if (getDomainCargo() != NO_DOMAIN && getDomainCargo() != eDomainCargo)
 	{
 		return 0;
 	}
@@ -15729,21 +15678,21 @@ int CvUnit::SMcargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eD
 {
 	if  (eSpecialCargo != NO_SPECIALUNIT)
 	{
-		if (SMspecialCargo() != NO_SPECIALUNIT
+		if (getSMSpecialCargo() != NO_SPECIALUNIT
 		&& !GC.getSpecialUnitInfo(eSpecialCargo).isSMLoadSame()
-		&& SMspecialCargo() != eSpecialCargo)
+		&& getSMSpecialCargo() != eSpecialCargo)
 		{
 			return 0;
 		}
-		if (SMnotSpecialCargo() != NO_SPECIALUNIT
-		&& SMnotSpecialCargo() == eSpecialCargo)
+		if (getSMNotSpecialCargo() != NO_SPECIALUNIT
+		&& getSMNotSpecialCargo() == eSpecialCargo)
 		{
 			return 0;
 		}
 	}
 	if (eDomainCargo != NO_DOMAIN
-	&& domainCargo() != NO_DOMAIN
-	&& domainCargo() != eDomainCargo)
+	&& getDomainCargo() != NO_DOMAIN
+	&& getDomainCargo() != eDomainCargo)
 	{
 		return 0;
 	}
@@ -20597,7 +20546,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		&&	promo.getSMSpecialCargoPrereq() != getSMSpecialCargo()
 		||
 			promo.getSMNotSpecialCargoPrereq() != NO_SPECIALUNIT
-		&&	promo.getSMNotSpecialCargoPrereq() != SMnotSpecialCargo()
+		&&	promo.getSMNotSpecialCargoPrereq() != getSMNotSpecialCargo()
 		||
 			promo.isCargoPrereq() && SMcargoSpace() < 1
 		) return false;
@@ -36264,7 +36213,7 @@ int CvUnit::SMcargoSpace() const
 				GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
 		}
 		const SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
-		if (SMspecialCargo() == eMissile)
+		if (getSMSpecialCargo() == eMissile)
 		{
 			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange(),
 				getSizeMattersSpacialOffsetValue(),
@@ -36278,7 +36227,7 @@ int CvUnit::SMcargoSpace() const
 			iCargoCapacity += GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange();
 		}
 		const SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
-		if (SMspecialCargo() == eMissile)
+		if (getSMSpecialCargo() == eMissile)
 		{
 			iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 		}

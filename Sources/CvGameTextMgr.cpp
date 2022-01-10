@@ -2296,9 +2296,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					}
 					szString.append(szTempBuffer);
 
-					if (pUnit->specialCargo() != NO_SPECIALUNIT)
+					if (pUnit->getSpecialCargo() != NO_SPECIALUNIT)
 					{
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->specialCargo()).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->getSpecialCargo()).getTextKeyWide()));
 					}
 				}
 				szString.append(NEWLINE);
@@ -2316,9 +2316,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 				szString.append(szTempBuffer);
 
-				if (pUnit->specialCargo() != NO_SPECIALUNIT)
+				if (pUnit->getSpecialCargo() != NO_SPECIALUNIT)
 				{
-					szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->specialCargo()).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->getSpecialCargo()).getTextKeyWide()));
 				}
 			}
 			//Healing

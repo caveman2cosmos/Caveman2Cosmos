@@ -3088,7 +3088,7 @@ bool CvSelectionGroup::isFull() const
 			iCargoCount++;
 		}
 
-		if (pLoopUnit->specialCargo() != NO_SPECIALUNIT)
+		if (pLoopUnit->getSpecialCargo() != NO_SPECIALUNIT)
 		{
 			iSpecialCargoCount++;
 		}
@@ -4681,7 +4681,7 @@ bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 	// BBAI TODO: Bombard with warships if invading
 	foreach_(const CvUnit* unit, units())
 	{
-		if (!unit->hasCargo() || unit->domainCargo() != DOMAIN_LAND)
+		if (!unit->hasCargo() || unit->getDomainCargo() != DOMAIN_LAND)
 		{
 			continue;
 		}
