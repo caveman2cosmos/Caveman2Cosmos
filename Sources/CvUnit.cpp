@@ -15643,31 +15643,6 @@ bool CvUnit::isFull() const
 
 int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		if  (eSpecialCargo != NO_SPECIALUNIT)
-		{
-			if (getSpecialCargo() != NO_SPECIALUNIT
-			&& !GC.getSpecialUnitInfo(eSpecialCargo).isSMLoadSame()
-			&& getSpecialCargo() != eSpecialCargo)
-			{
-				return 0;
-			}
-			if (getSMNotSpecialCargo() != NO_SPECIALUNIT
-			&& getSMNotSpecialCargo() == eSpecialCargo)
-			{
-				return 0;
-			}
-		}
-		if (eDomainCargo != NO_DOMAIN
-		&& getDomainCargo() != NO_DOMAIN
-		&& getDomainCargo() != eDomainCargo)
-		{
-			return 0;
-		}
-		return std::max(0, cargoSpace() - SMgetCargo());
-	}
-
 	if (getSpecialCargo() != NO_SPECIALUNIT && getSpecialCargo() != eSpecialCargo)
 	{
 		return 0;
@@ -15675,6 +15650,15 @@ int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDom
 	if (getDomainCargo() != NO_DOMAIN && getDomainCargo() != eDomainCargo)
 	{
 		return 0;
+	}
+
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		if  (eSpecialCargo != NO_SPECIALUNIT && getSMNotSpecialCargo() == eSpecialCargo)
+		{
+			return 0;
+		}
+		return std::max(0, cargoSpace() - SMgetCargo());
 	}
 	return std::max(0, cargoSpace() - getCargo());
 }
