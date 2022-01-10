@@ -6561,20 +6561,17 @@ int CvSelectionGroup::getCargoSpace() const
 {
 	FAssert(getNumUnits() > 0);
 
-	const bSizeMatters = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
 	const UnitAITypes eUnitAI = getHeadUnitAI();
-
 	int iCargoCount = 0;
 
 	// first pass, count but ignore special cargo units
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(const CvUnit* unitX, units())
 	{
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI && (pLoopUnit->cargoSpace() > 0 || pLoopUnit->SMcargoSpace() > 0))
+		if (unitX->AI_getUnitAIType() == eUnitAI)
 		{
-			iCargoCount += bSizeMatters ? pLoopUnit->SMcargoSpace() : pLoopUnit->cargoSpace();
+			iCargoCount += unitX->cargoSpace();
 		}
 	}
-
 	return iCargoCount;
 }
 

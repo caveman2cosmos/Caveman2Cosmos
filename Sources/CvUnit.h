@@ -2611,7 +2611,6 @@ public:
 	void setNewSMNotSpecialCargo(SpecialUnitTypes eSpecialUnit);
 
 	void changeSMCargoSpace(int iChange);
-	int SMcargoSpace() const;
 	int SMcargoSpaceFilter() const;
 	int SMcargoCapacityPreCheck() const;
 	int getSMCargoCapacity() const;

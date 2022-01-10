@@ -8593,23 +8593,16 @@ void CvUnitAI::AI_assaultSeaMove()
 		}
 		else
 		{
-			if ((eAreaAIType == AREAAI_ASSAULT))
+			if (eAreaAIType == AREAAI_ASSAULT && iCargoCount >= iTargetInvasionSize)
 			{
-				if (iCargoCount >= iTargetInvasionSize)
-				{
-					bAttack = true;
-				}
+				bAttack = true;
 			}
 
-			if ((eAreaAIType == AREAAI_ASSAULT) || (eAreaAIType == AREAAI_ASSAULT_ASSIST))
+			if (bFull
+			&& (eAreaAIType == AREAAI_ASSAULT || eAreaAIType == AREAAI_ASSAULT_ASSIST)
+			&& (iCargoVolume > cargoSpace() || iCargoCount >= iTargetReinforcementSize))
 			{
-				if ((bFull &&
-					((iCargoVolume > SMcargoSpace() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-						|| (iCargoVolume > cargoSpace() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-						|| (iCargoCount >= iTargetReinforcementSize))))
-				{
-					bReinforce = true;
-				}
+				bReinforce = true;
 			}
 		}
 
@@ -8688,10 +8681,8 @@ void CvUnitAI::AI_assaultSeaMove()
 			bAttack = true;
 		}
 
-		if ((iCargoCount >= iTargetReinforcementSize)
-			|| (bFull
-				&& ((iCargoVolume > cargoSpace() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-					|| (iCargoVolume > SMcargoSpace() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)))))
+		if (iCargoCount >= iTargetReinforcementSize
+		|| bFull && iCargoVolume > cargoSpace())
 		{
 			bReinforce = true;
 		}
@@ -8909,13 +8900,13 @@ void CvUnitAI::AI_assaultSeaMove()
 	else if (!bFull)
 	{
 		bool bHasOneLoad = false;
-		if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			bHasOneLoad = (getGroup()->getCargo() >= cargoSpace());
+			bHasOneLoad = (getGroup()->getCargo(true) >= cargoSpace());
 		}
 		else
 		{
-			bHasOneLoad = (getGroup()->getCargo(true) >= SMcargoSpace());
+			bHasOneLoad = (getGroup()->getCargo() >= cargoSpace());
 		}
 
 		bool bHasCargo = getGroup()->hasCargo();
@@ -9210,7 +9201,7 @@ void CvUnitAI::AI_settlerSeaMove()
 		}
 	}
 
-	if (!(getGroup()->isFull()))
+	if (!getGroup()->isFull())
 	{
 		if (GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_LOAD_SETTLER) > 0)
 		{
@@ -9226,14 +9217,17 @@ void CvUnitAI::AI_settlerSeaMove()
 				return;
 			}
 		}
-		else if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (cargoSpace() - 2 >= getCargo() + iWorkerCount))
+		else if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			if (AI_pickup(UNITAI_SETTLE, true))
+			if (cargoSpace() - 2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER) >= SMgetCargo() + iWorkerCount * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))
 			{
-				return;
+				if (AI_pickup(UNITAI_SETTLE, true))
+				{
+					return;
+				}
 			}
 		}
-		else if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (SMcargoSpace() - (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)) >= SMgetCargo() + (iWorkerCount * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))))
+		else if (cargoSpace() - 2 >= getCargo() + iWorkerCount)
 		{
 			if (AI_pickup(UNITAI_SETTLE, true))
 			{
@@ -9280,23 +9274,23 @@ void CvUnitAI::AI_settlerSeaMove()
 	//	through here without ever actually wanting to load a settler (which it never does without an
 	//	escort unit also) and wound up giving no orders at all to this unit, then looping over this 100 times
 	//	a ta higher level before giving up and skipping moves for this unit.
-	//if( cargoSpace() - 2 < getCargo() + iWorkerCount )
-	if ((!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (cargoSpace() > 1 && cargoSpace() - getCargo() < 2 && iWorkerCount > 0)) ||
-		(GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (SMcargoSpace() > GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_SETTLE) && SMcargoSpace() - SMgetCargo() < (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)) && iWorkerCount > 0)))
+	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	&& cargoSpace() > 1 && cargoSpace() - getCargo() < 2 && iWorkerCount > 0
+
+	|| GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	&& cargoSpace() > GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_SETTLE)
+	&& cargoSpace() - SMgetCargo() < 2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)
+	&& iWorkerCount > 0)
 	{
 		// If full of workers and not going anywhere, dump them if a settler is available
-		if ((iSettlerCount == 0) && (plot()->plotCount(PUF_isAvailableUnitAITypeGroupie, UNITAI_SETTLE, -1, NULL, getOwner(), NO_TEAM, PUF_isFiniteRange) > 0))
+		if (iSettlerCount == 0 && plot()->plotCount(PUF_isAvailableUnitAITypeGroupie, UNITAI_SETTLE, -1, NULL, getOwner(), NO_TEAM, PUF_isFiniteRange) > 0)
 		{
 			getGroup()->unloadAll();
 
-			if (!(getGroup()->isFull()))
+			if (!getGroup()->isFull())
 			{
-				if (AI_pickup(UNITAI_SETTLE, true))
-				{
-					return;
-				}
+				AI_pickup(UNITAI_SETTLE, true);
 			}
-
 			return;
 		}
 	}
@@ -23830,12 +23824,11 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 				if (pPickupPlot != NULL)
 				{
 					MissionAITypes eMissionAIType = MISSIONAI_PICKUP;
-					iCount -=
-						(
-							player.AI_unitTargetMissionAIs(pHeadUnit, &eMissionAIType, 1, getGroup(), iMaxPath == MAX_INT ? -1 : iMaxPath)
-							*
-							(bSM ? SMcargoSpace() : cargoSpace())
-						);
+					iCount -= (
+						player.AI_unitTargetMissionAIs(pHeadUnit, &eMissionAIType, 1, getGroup(), iMaxPath == MAX_INT ? -1 : iMaxPath)
+						*
+						cargoSpace()
+					);
 					int iValue = 1000 * iCount;
 
 					const int iMaxValuePath = (iBestValue == 0 ? MAX_INT : iValue / iBestValue);

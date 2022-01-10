@@ -1098,7 +1098,7 @@ bool CvSelectionGroupAI::AI_isFull() const
 	{
 		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
 		{
-			if (pLoopUnit->cargoSpace() > 0 || pLoopUnit->SMcargoSpace() > 0)
+			if (pLoopUnit->cargoSpace() > 0)
 			{
 				iCargoCount++;
 			}

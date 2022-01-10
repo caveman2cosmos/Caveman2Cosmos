@@ -15589,6 +15589,25 @@ int CvUnit::domainModifier(DomainTypes eDomain) const
 
 int CvUnit::cargoSpace() const
 {
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		int iCargoCapacity = SMcargoSpaceFilter();
+
+		if (getDomainType() == DOMAIN_SEA)
+		{
+			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange(),
+				getSizeMattersSpacialOffsetValue(),
+				GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
+		}
+		const SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
+		if (getSpecialCargo() == eMissile)
+		{
+			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange(),
+				getSizeMattersSpacialOffsetValue(),
+				GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
+		}
+		return iCargoCapacity;
+	}
 	int iCargoCapacity = m_pUnitInfo->getCargoSpace() + m_iCargoCapacity;
 
 	if (getDomainType() == DOMAIN_SEA)
@@ -15616,7 +15635,7 @@ bool CvUnit::isFull() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		return SMgetCargo() >= SMcargoSpace();
+		return SMgetCargo() >= cargoSpace();
 	}
 	return getCargo() >= cargoSpace();
 }
@@ -15646,7 +15665,7 @@ int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDom
 		{
 			return 0;
 		}
-		return std::max(0, SMcargoSpace() - SMgetCargo());
+		return std::max(0, cargoSpace() - SMgetCargo());
 	}
 
 	if (getSpecialCargo() != NO_SPECIALUNIT && getSpecialCargo() != eSpecialCargo)
@@ -20492,23 +20511,20 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	}
 	//TB Combat Mod end
 
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if	(promo.isCargoPrereq() && cargoSpace() < 1)
 	{
-		if (promo.getSpecialCargoPrereq() != NO_SPECIALUNIT
-		&&  promo.getSpecialCargoPrereq() != getSpecialCargo()
-
-		||  promo.getSMNotSpecialCargoPrereq() != NO_SPECIALUNIT
-		&&  promo.getSMNotSpecialCargoPrereq() != getSMNotSpecialCargo()
-
-		||  promo.isCargoPrereq() && SMcargoSpace() < 1)
-		{
-			return false;
-		}
+		return false;
 	}
-	else if (
-		promo.getSpecialCargoPrereq() != NO_SPECIALUNIT
-	&&	promo.getSpecialCargoPrereq() != getSpecialCargo()
-	||	promo.isCargoPrereq() && cargoSpace() < 1)
+
+	if (promo.getSpecialCargoPrereq() != NO_SPECIALUNIT
+	&&  promo.getSpecialCargoPrereq() != getSpecialCargo())
+	{
+		return false;
+	}
+
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	&& promo.getSMNotSpecialCargoPrereq() != NO_SPECIALUNIT
+	&& promo.getSMNotSpecialCargoPrereq() != getSMNotSpecialCargo())
 	{
 		return false;
 	}
@@ -36126,30 +36142,6 @@ void CvUnit::changeSMCargoSpace(int iChange)
 		FASSERT_NOT_NEGATIVE(m_iSMCargoCapacity);
 		setInfoBarDirty(true);
 	}
-}
-
-int CvUnit::SMcargoSpace() const
-{
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		return 0;
-	}
-	int iCargoCapacity = SMcargoSpaceFilter();
-
-	if (getDomainType() == DOMAIN_SEA)
-	{
-		iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange(),
-			getSizeMattersSpacialOffsetValue(),
-			GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
-	}
-	const SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
-	if (getSpecialCargo() == eMissile)
-	{
-		iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange(),
-			getSizeMattersSpacialOffsetValue(),
-			GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
-	}
-	return iCargoCapacity;
 }
 
 int CvUnit::SMcargoSpaceFilter() const
