@@ -18592,38 +18592,39 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	}
 
 	//bTBUnitView2 = (Civil)
-	int iCargoValue = kUnit.getCargoSpace();
 	if (bTBUnitView2)
 	{
-		//Cargo
-		if (game.isOption(GAMEOPTION_SIZE_MATTERS))
 		{
+			const int iCargoValue = kUnit.getCargoSpace();
+			//Cargo
 			if (iCargoValue > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM", iCargoValue));
 
-				if (kUnit.getSMSpecialCargo() != NO_SPECIALUNIT)
+				if (game.isOption(GAMEOPTION_SIZE_MATTERS))
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSMSpecialCargo()).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM", iCargoValue));
+
+					if (kUnit.getSpecialCargo() != NO_SPECIALUNIT)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSpecialCargo()).getTextKeyWide()));
+					}
+					if (kUnit.getSMNotSpecialCargo() != NO_SPECIALUNIT)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSMNotSpecialCargo()).getTextKeyWide()));
+					}
 				}
-				if (kUnit.getSMNotSpecialCargo() != NO_SPECIALUNIT)
+				else
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSMNotSpecialCargo()).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN", iCargoValue));
+
+					if (kUnit.getSpecialCargo() != NO_SPECIALUNIT)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSpecialCargo()).getTextKeyWide()));
+					}
 				}
 			}
 		}
-		else if (iCargoValue > 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN", iCargoValue));
-
-			if (kUnit.getSpecialCargo() != NO_SPECIALUNIT)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSpecialCargo()).getTextKeyWide()));
-			}
-		}
-
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (game.isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{

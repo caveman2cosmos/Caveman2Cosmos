@@ -1707,7 +1707,6 @@ public:
 	int getBombRate() const;
 	int getBombardRate() const;
 	int getSpecialCargo() const;
-	int getSMSpecialCargo() const;
 	int getSMNotSpecialCargo() const;
 	int getDomainCargo() const;
 	int getCargoSpace() const;
@@ -2340,7 +2339,6 @@ private:
 	int m_iBombRate;
 	int m_iBombardRate;
 	int m_iSpecialCargo;
-	int m_iSMSpecialCargo;
 	int m_iSMNotSpecialCargo;
 	int m_iDomainCargo;
 	int m_iCargoSpace;

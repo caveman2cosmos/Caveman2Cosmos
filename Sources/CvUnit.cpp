@@ -12375,14 +12375,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	{
 		if (pLoopUnit->getTransportUnit() == this)
 		{
-			if (isHuman() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-			{
-				if (kUnitInfo.getSMSpecialCargo() != NO_SPECIALUNIT)
-				{
-					return NULL;
-				}
-			}
-			else if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
+			if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
 			{
 				return NULL;
 			}
@@ -36125,7 +36118,7 @@ SpecialUnitTypes CvUnit::getSMSpecialCargo() const
 	{
 		return m_eNewSMSpecialCargo;
 	}
-	return (SpecialUnitTypes)m_pUnitInfo->getSMSpecialCargo();
+	return (SpecialUnitTypes)m_pUnitInfo->getSpecialCargo();
 }
 
 void CvUnit::setNewSMSpecialCargo(SpecialUnitTypes eSpecialUnit)

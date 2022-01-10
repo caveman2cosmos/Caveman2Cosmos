@@ -21387,7 +21387,6 @@
 			<iLunge>10</iLunge>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -23060,7 +23059,6 @@
 			<iLunge>10</iLunge>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -31733,7 +31731,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>30</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -32266,7 +32263,6 @@
 			<iLunge>15</iLunge>
 			<iCaptureProbabilityModifier>10</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -33156,7 +33152,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>50</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -47106,7 +47101,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>25</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
