@@ -4408,15 +4408,8 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			return;
 		}
 
-		int iCargoSpaceAvailable = 0;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCargoSpaceAvailable = pTransportUnit->SMcargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
-		else
-		{
-			iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
+		const int iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
+
 		// if no space at all, give up
 		if (iCargoSpaceAvailable < 1)
 		{
@@ -4475,24 +4468,21 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			// if there is room, load the unit
 			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				if (pTransportUnit->SMcargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) >= pLoopUnit->SMCargoVolume())
+				if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) >= pLoopUnit->SMCargoVolume())
 				{
 					pLoopUnit->setTransportUnit(pTransportUnit);
 				}
 				// We should continue on the loop because another unit might be able to fit
 				// todo: Should we perhaps consider all unit volumes before we start the loop? Perhaps do a packing algorithm to get the most in?
 			}
+			else if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > 0)
+			{
+				pLoopUnit->setTransportUnit(pTransportUnit);
+			}
 			else
 			{
-				if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()))
-				{
-					pLoopUnit->setTransportUnit(pTransportUnit);
-				}
-				else
-				{
-					// If there is no room and we aren't using size matters then we may aswell abort the rest of the loop as no more units will fit
-					break;
-				}
+				// If there is no room and we aren't using size matters then we may aswell abort the rest of the loop as no more units will fit
+				break;
 			}
 		}
 	}
@@ -4523,15 +4513,8 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 		}
 		FAssertMsg(pHeadUnit != NULL, "non-zero group without head unit");
 
-		int iCargoSpaceAvailable = 0;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCargoSpaceAvailable = pTransportUnit->SMcargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
-		else
-		{
-			iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
+		const int iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
+
 		// if no space at all, give up
 		if (iCargoSpaceAvailable < 1)
 		{
@@ -4583,14 +4566,14 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 			{
 				if (pLoopUnit->getTransportUnit() != pTransportUnit && pLoopUnit->getOwner() == pTransportUnit->getOwner())
 				{
-					bool bSpaceAvailable = 0;
-					if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					bool bSpaceAvailable = false;
+					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
-						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType());
+						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > pLoopUnit->SMCargoVolume();
 					}
 					else
 					{
-						bSpaceAvailable = (pTransportUnit->SMcargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > pLoopUnit->SMCargoVolume());
+						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > 0;
 					}
 					if (bSpaceAvailable)
 					{
@@ -6599,21 +6582,19 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 {
 	FAssert(getNumUnits() > 0);
 
-	const bSizeMatters = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
 	const UnitAITypes eUnitAI = getHeadUnitAI();
-
 	int iCargoCount = 0;
 
 	// first pass, count but ignore special cargo units
 	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
-		const CvUnit* pLoopUnit = *unitItr;
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
+		const CvUnit* unitX = *unitItr;
+
+		if (unitX->AI_getUnitAIType() == eUnitAI)
 		{
-			iCargoCount += bSizeMatters ? pLoopUnit->SMcargoSpaceAvailable(eSpecialCargo, eDomainCargo) : pLoopUnit->cargoSpaceAvailable(eSpecialCargo, eDomainCargo);
+			iCargoCount += unitX->cargoSpaceAvailable(eSpecialCargo, eDomainCargo);
 		}
 	}
-
 	return iCargoCount;
 }
 

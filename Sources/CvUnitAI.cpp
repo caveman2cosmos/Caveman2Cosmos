@@ -11821,10 +11821,10 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 				if (eLoopUnitAI == eUnitAI)// || (eUnitAI == UNITAI_ASSAULT_SEA && eLoopUnitAI == UNITAI_ESCORT_SEA))
 				{
 					int iCargoSpaceAvailable = pLoopUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+
 					// iCargoSpaceAvailable refers to the space (in unit counts here) available to load units on the transport under eval
 					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
-						iCargoSpaceAvailable = pLoopUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 						// here we make it refer to the space (in cargo volumes) available to load units on the transport instead
 						iCargoSpaceAvailable -= GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup(), -1, true);
 						// here we must refer to things in a cargo volume manner rather than a unit count manner
@@ -11956,11 +11956,8 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		{
 			// BBAI TODO: To split or not to split?
 			//Here is where it gets complicated again...
-			int iCargoSpaceAvailable = bestTransportUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-			{//This is actually somewhat unnecessary as it's only going to ask for a count and otherwise split into individual units rather than a group that can then load just right
-				iCargoSpaceAvailable = bestTransportUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
-			}
+			const int iCargoSpaceAvailable = bestTransportUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+
 			FAssertMsg(iCargoSpaceAvailable > 0, "best unit has no space");
 
 			// split our group to fit on the transport

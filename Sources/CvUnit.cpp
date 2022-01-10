@@ -1430,7 +1430,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 		// Check cargo types and capacity when upgrading transports
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			if (SMcargoSpaceAvailable(pCargo->getSpecialUnitType(), pCargo->getDomainType()) > pCargo->getCargoVolume())
+			if (cargoSpaceAvailable(pCargo->getSpecialUnitType(), pCargo->getDomainType()) > pCargo->getCargoVolume())
 			{
 				pCargo->setTransportUnit(NULL);
 				pCargo->setTransportUnit(this);
@@ -7387,49 +7387,21 @@ bool CvUnit::canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
 	{
 		return false;
 	}
-/*	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		if (pUnit->getTeam() == getTeam())
-		{
-			if (!pUnit->isHuman() || !isHuman())
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
-	}
-	else */if (pUnit->getTeam() != getTeam())
+
+	if (pUnit->getTeam() != getTeam())
 	{
 		return false;
 	}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       06/23/10                     Mongoose & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-	// From Mongoose SDK
 	if (getTransportUnit() == pUnit || pUnit->getTransportUnit() == this)
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+
 	{
-		if (pUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType()) < SMCargoVolume()
-			|| pUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType()) <= 0)
-		{
-			return false;
-		}
-	}
-	else
-	{
-		if (pUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType()) <= 0)
+		const int iCargoSpace = pUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+
+		if (iCargoSpace < 1 || GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && iCargoSpace < SMCargoVolume())
 		{
 			return false;
 		}
@@ -15662,6 +15634,31 @@ bool CvUnit::isFull() const
 
 int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		if  (eSpecialCargo != NO_SPECIALUNIT)
+		{
+			if (getSMSpecialCargo() != NO_SPECIALUNIT
+			&& !GC.getSpecialUnitInfo(eSpecialCargo).isSMLoadSame()
+			&& getSMSpecialCargo() != eSpecialCargo)
+			{
+				return 0;
+			}
+			if (getSMNotSpecialCargo() != NO_SPECIALUNIT
+			&& getSMNotSpecialCargo() == eSpecialCargo)
+			{
+				return 0;
+			}
+		}
+		if (eDomainCargo != NO_DOMAIN
+		&& getDomainCargo() != NO_DOMAIN
+		&& getDomainCargo() != eDomainCargo)
+		{
+			return 0;
+		}
+		return std::max(0, SMcargoSpace() - SMgetCargo());
+	}
+
 	if (getSpecialCargo() != NO_SPECIALUNIT && getSpecialCargo() != eSpecialCargo)
 	{
 		return 0;
@@ -15671,32 +15668,6 @@ int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDom
 		return 0;
 	}
 	return std::max(0, cargoSpace() - getCargo());
-}
-
-
-int CvUnit::SMcargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
-{
-	if  (eSpecialCargo != NO_SPECIALUNIT)
-	{
-		if (getSMSpecialCargo() != NO_SPECIALUNIT
-		&& !GC.getSpecialUnitInfo(eSpecialCargo).isSMLoadSame()
-		&& getSMSpecialCargo() != eSpecialCargo)
-		{
-			return 0;
-		}
-		if (getSMNotSpecialCargo() != NO_SPECIALUNIT
-		&& getSMNotSpecialCargo() == eSpecialCargo)
-		{
-			return 0;
-		}
-	}
-	if (eDomainCargo != NO_DOMAIN
-	&& getDomainCargo() != NO_DOMAIN
-	&& getDomainCargo() != eDomainCargo)
-	{
-		return 0;
-	}
-	return std::max(0, SMcargoSpace() - SMgetCargo());
 }
 
 
@@ -19802,15 +19773,8 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 
 		if (pTransportUnit != NULL)
 		{
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-			{
-				FAssertMsg(pTransportUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType()) > 0, "Cargo space is expected to be available");
-				//Can Happen without it being a bug if the unit was forced reloaded by means of an adjustment when already loaded that allowed the unit to overload the transport.
-			}
-			else
-			{
-				FAssertMsg(pTransportUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType()) > 0, "Cargo space is expected to be available");
-			}
+			//Can Happen without it being a bug if the unit was forced reloaded by means of an adjustment when already loaded that allowed the unit to overload the transport.
+			FAssertMsg(pTransportUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType()) > 0, "Cargo space is expected to be available");
 
 			joinGroup(NULL, true); // Because what if a group of 3 tries to get in a transport which can hold 2...
 
