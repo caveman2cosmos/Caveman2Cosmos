@@ -310,6 +310,8 @@ m_ppaiBonusYieldModifier(NULL)
 //------------------------------------------------------------------------------------------------------
 CvBuildingInfo::~CvBuildingInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_piVictoryThreshold);
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piGlobalSeaPlotYieldChange);
@@ -406,8 +408,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aGlobalBuildingProductionModifier.removeDelayedResolution();
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
-
-	CvInfoUtil(this).uninitDataMembers();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -418,13 +418,13 @@ int CvBuildingInfo::getVictoryThreshold(int i) const
 
 BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
 {
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
 	return m_aExtraFreeBonuses[i].first;
 }
 
 int CvBuildingInfo::getExtraFreeBonusNum(int i) const
 {
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
 	return m_aExtraFreeBonuses[i].second;
 }
 
@@ -913,11 +913,6 @@ const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 
 const char* CvBuildingInfo::getButton() const
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
-	{
-		return NULL;
-	}
 	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
 	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }
@@ -1631,6 +1626,8 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
@@ -2041,8 +2038,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_techCommerceModifiers);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
 	CheckSumC(iSum, m_aPlotYieldChanges);
-
-	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
 }
 
 void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
@@ -2070,6 +2065,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
+
+	CvInfoUtil(this).readXml(pXML);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SpecialBuildingType");
 	m_eSpecialBuilding = static_cast<SpecialBuildingTypes>(pXML->GetInfoClass(szTextVal));
@@ -3311,8 +3308,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges");
 	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields");
 
-	CvInfoUtil(this).readXml(pXML);
-
 	return true;
 }
 
@@ -3460,6 +3455,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	}
 
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 
 	if (getSpecialBuilding() == iTextDefault) m_eSpecialBuilding = pClassInfo->getSpecialBuilding();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
@@ -4450,8 +4447,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_techCommerceModifiers.copyNonDefaults(pClassInfo->getTechCommerceModifiers());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 	m_aPlotYieldChanges.copyNonDefaults(pClassInfo->getPlotYieldChanges());
-
-	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)

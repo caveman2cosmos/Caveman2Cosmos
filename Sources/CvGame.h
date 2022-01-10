@@ -28,7 +28,8 @@ class CvUnitCombatInfo;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame : bst::noncopyable
+class CvGame
+	: private bst::noncopyable
 {
 public:
 

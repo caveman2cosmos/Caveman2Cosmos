@@ -193,6 +193,7 @@ protected:
 
 class CvDiplomacyInfo;
 class CvDiplomacyResponse
+	: private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -236,7 +237,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSpecialistInfo : public CvHotkeyInfo
+class CvSpecialistInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -339,10 +342,10 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTechInfo : public CvInfoBase
+class CvTechInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
-//friend class CvXMLLoadUtility;
-
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
 
@@ -553,7 +556,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPromotionInfo :	public CvHotkeyInfo
+class CvPromotionInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1419,7 +1424,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMissionInfo : public CvHotkeyInfo
+class CvMissionInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1467,7 +1474,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvControlInfo : public CvHotkeyInfo
+class CvControlInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1490,7 +1499,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCommandInfo : public CvHotkeyInfo
+class CvCommandInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1524,7 +1535,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAutomateInfo : public CvHotkeyInfo
+class CvAutomateInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1559,6 +1572,7 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvActionInfo
+	: private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1619,7 +1633,7 @@ protected:
 	ActionSubTypes m_eSubType;
 
 private:
-	CvHotkeyInfo* getHotkeyInfo() const;
+	const CvHotkeyInfo* getHotkeyInfo() const;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1630,7 +1644,10 @@ private:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoUnit;
-class CvUnitInfo : public CvHotkeyInfo
+
+class CvUnitInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -1664,7 +1681,6 @@ public:
 	int getEspionagePoints() const;
 	int getCombat() const;
 
-	void setCombat(int iNum);
 	int getCombatLimit() const;
 	//TB Tweaked for Size Matters
 	int getAirCombat() const;
@@ -2117,8 +2133,6 @@ public:
 
 	virtual const wchar_t* getExtraHoverText() const;
 
-	void getCheckSum(uint32_t& iSum) const;
-
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	const BoolExpr* getTrainCondition() const;
@@ -2265,11 +2279,14 @@ public:
 	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	bool m_bDCMFighterEngage;
@@ -2640,7 +2657,9 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-class CvSpawnInfo : public CvInfoBase
+class CvSpawnInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvSpawnInfo();
@@ -2755,7 +2774,9 @@ public:
 	float m_fFacingVariance;
 };
 
-class CvUnitFormationInfo : public CvInfoBase
+class CvUnitFormationInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -2798,8 +2819,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSpecialUnitInfo :
-	public CvInfoBase
+class CvSpecialUnitInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -2848,8 +2870,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCivicOptionInfo :
-	public CvInfoBase
+class CvCivicOptionInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -2877,8 +2900,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCivicInfo :
-	public CvInfoBase
+class CvCivicInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3215,8 +3239,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvDiplomacyInfo :
-	public CvInfoBase
+class CvDiplomacyInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 
 	friend class CvXMLLoadUtility;		// so it can access private vars to initialize the class
@@ -3255,8 +3280,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSpecialBuildingInfo :
-	public CvInfoBase
+class CvSpecialBuildingInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3295,8 +3321,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRiverModelInfo :
-	public CvInfoBase
+class CvRiverModelInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3335,8 +3362,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRouteModelInfo :
-	public CvInfoBase
+class CvRouteModelInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3383,8 +3411,9 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoCivilization;
-class CvCivilizationInfo :
-	public CvInfoBase
+class CvCivilizationInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3498,8 +3527,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvVictoryInfo :
-	public CvInfoBase
+class CvVictoryInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3559,8 +3589,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvHurryInfo :
-	public CvInfoBase
+class CvHurryInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3593,8 +3624,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvHandicapInfo :
-	public CvInfoBase
+class CvHandicapInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3752,8 +3784,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGameSpeedInfo :
-	public CvInfoBase
+class CvGameSpeedInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3800,8 +3833,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTurnTimerInfo :
-	public CvInfoBase
+class CvTurnTimerInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3836,7 +3870,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvBuildInfo : public CvHotkeyInfo
+class CvBuildInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3852,7 +3888,6 @@ public:
 	int getTerrainChange() const;
 	int getFeatureChange() const;
 	TechTypes getObsoleteTech() const;
-	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
 	void setDisabled(bool bNewVal);
 	DllExport int getEntityEvent() const;
@@ -3876,10 +3911,13 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvBuildInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	//----------------------PRIVATE MEMBER VARIABLES----------------------------
 
-protected:
+private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bDisabled;
 	bool m_bKill;
 
@@ -3899,9 +3937,7 @@ protected:
 	int* m_paiFeatureTech;
 	int* m_paiFeatureTime;
 	int* m_paiFeatureProduction;
-
 	bool* m_pabFeatureRemove;
-	bool* m_pabNoTechCanRemoveWithNoProductionGain;
 
 	std::vector<BonusTypes> m_aiPrereqBonusTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
@@ -3917,8 +3953,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGoodyInfo :
-	public CvInfoBase
+class CvGoodyInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -3992,8 +4029,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRouteInfo :
-	public CvInfoBase
+class CvRouteInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4051,8 +4089,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvImprovementBonusInfo :
-	public CvInfoBase
+class CvImprovementBonusInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	friend class CvImprovementInfo;
 	friend class CvXMLLoadUtility;
@@ -4095,8 +4134,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvBonusClassInfo :
-	public CvInfoBase
+class CvBonusClassInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4123,8 +4163,9 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoBonus;
-class CvBonusInfo :
-	public CvInfoBase
+class CvBonusInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4195,6 +4236,11 @@ public:
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
+	ImprovementTypes getProvidedByImprovementType(const int i) const;
+	int getNumProvidedByImprovementTypes() const;
+	bool isProvidedByImprovementType(const ImprovementTypes i) const;
+	void setProvidedByImprovementTypes(const ImprovementTypes eType);
+
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -4247,6 +4293,8 @@ private:
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 	volatile std::vector<std::pair<ImprovementTypes,BuildTypes> >* m_tradeProvidingImprovements;
+
+	std::vector<ImprovementTypes> m_providedByImprovementTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4257,8 +4305,9 @@ private:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoFeature;
-class CvFeatureInfo :
-	public CvInfoBase
+class CvFeatureInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4408,8 +4457,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCommerceInfo :
-	public CvInfoBase
+class CvCommerceInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4450,8 +4500,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvYieldInfo :
-	public CvInfoBase
+class CvYieldInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4511,8 +4562,9 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoTerrain;
-class CvTerrainInfo :
-	public CvInfoBase
+class CvTerrainInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4604,8 +4656,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvInterfaceModeInfo :
-	public CvHotkeyInfo
+class CvInterfaceModeInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4645,8 +4698,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAdvisorInfo :
-	public CvInfoBase
+class CvAdvisorInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4676,8 +4730,9 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoLeaderhead;
-class CvLeaderHeadInfo :
-	public CvInfoBase
+class CvLeaderHeadInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -4933,8 +4988,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWorldInfo :
-	public CvInfoBase
+class CvWorldInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -5004,7 +5060,9 @@ protected:
 //  class : CvMapInfo
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-class CvMapInfo : public CvInfoBase
+class CvMapInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvMapInfo();
@@ -5035,7 +5093,9 @@ private:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  class : CvClimateInfo
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvClimateInfo : public CvInfoBase
+class CvClimateInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -5078,7 +5138,9 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  class : CvSeaLevelInfo
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSeaLevelInfo :	public CvInfoBase
+class CvSeaLevelInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -5102,8 +5164,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvProcessInfo :
-	public CvInfoBase
+class CvProcessInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -5137,7 +5200,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvVoteInfo :	public CvInfoBase
+class CvVoteInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvVoteInfo();
@@ -5204,8 +5269,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvProjectInfo :
-	public CvInfoBase
+class CvProjectInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -5315,7 +5381,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvReligionInfo : public CvHotkeyInfo
+class CvReligionInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE----------------------------------------
 public:
@@ -5406,7 +5474,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCorporationInfo : public CvHotkeyInfo
+class CvCorporationInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE----------------------------------------
 public:
@@ -5532,8 +5602,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTraitInfo :
-	public CvInfoBase
+class CvTraitInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -5766,12 +5837,13 @@ public:
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 	bool** m_ppbFreePromotionUnitCombats;
@@ -5971,7 +6043,9 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCursorInfo : public CvInfoBase
+class CvCursorInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -5997,7 +6071,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvThroneRoomCamera : public CvInfoBase
+class CvThroneRoomCamera
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6023,7 +6099,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvThroneRoomInfo : public CvInfoBase
+class CvThroneRoomInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6057,7 +6135,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvThroneRoomStyleInfo : public CvInfoBase
+class CvThroneRoomStyleInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6089,7 +6169,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSlideShowInfo : public CvInfoBase
+class CvSlideShowInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6119,7 +6201,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSlideShowRandomInfo : public CvInfoBase
+class CvSlideShowRandomInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6145,7 +6229,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWorldPickerInfo : public CvInfoBase
+class CvWorldPickerInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6185,7 +6271,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSpaceShipInfo : public CvInfoBase
+class CvSpaceShipInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6229,7 +6317,9 @@ protected:
 typedef std::vector<std::pair<int,float> > CvAnimationPathDefinition;
 typedef std::pair<int,int >			CvAnimationCategoryDefinition;
 
-class CvAnimationPathInfo : public CvInfoBase
+class CvAnimationPathInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 	public:
@@ -6260,7 +6350,9 @@ class CvAnimationPathInfo : public CvInfoBase
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAnimationCategoryInfo : public CvInfoBase
+class CvAnimationCategoryInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 	public:
@@ -6288,7 +6380,9 @@ class CvAnimationCategoryInfo : public CvInfoBase
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEntityEventInfo : public CvInfoBase
+class CvEntityEventInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 		//---------------------------PUBLIC INTERFACE---------------------------------
 	public:
@@ -6324,7 +6418,8 @@ class CvEntityEventInfo : public CvInfoBase
 //  DESC:  Used to store data from Art\Civ4ArtDefines.xml
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAssetInfoBase : public CvInfoBase
+class CvAssetInfoBase
+	: public CvInfoBase
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6347,7 +6442,8 @@ protected:
 	CvString m_szPath;
 };
 
-class CvArtInfoAsset : public CvAssetInfoBase
+class CvArtInfoAsset
+	: public CvAssetInfoBase
 {
 public:
 
@@ -6376,9 +6472,9 @@ protected:
 // Another base class
 //////////////////////////////////////////////////////////////////////////
 
-class CvArtInfoScalableAsset :
-	public CvArtInfoAsset,
-	public CvScalableInfo
+class CvArtInfoScalableAsset
+	: public CvArtInfoAsset
+	, public CvScalableInfo
 {
 public:
 	bool read(CvXMLLoadUtility* pXML);
@@ -6387,7 +6483,9 @@ public:
 
 // todoJS: Remove empty classes if additional items are not added
 
-class CvArtInfoInterface : public CvArtInfoAsset
+class CvArtInfoInterface
+	: public CvArtInfoAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6395,7 +6493,9 @@ public:
 	virtual ~CvArtInfoInterface() {}
 };
 
-class CvArtInfoMisc : public CvArtInfoScalableAsset
+class CvArtInfoMisc
+	: public CvArtInfoScalableAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6403,7 +6503,9 @@ public:
 	virtual ~CvArtInfoMisc() {}
 };
 
-class CvArtInfoMovie : public CvArtInfoAsset
+class CvArtInfoMovie
+	: public CvArtInfoAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6415,7 +6517,9 @@ public:
 	void copyNonDefaults(const CvArtInfoMovie* pClassInfo);
 };
 
-class CvArtInfoUnit : public CvArtInfoScalableAsset
+class CvArtInfoUnit
+	: public CvArtInfoScalableAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6496,7 +6600,9 @@ protected:
 	int m_iActionSoundScriptId;
 };
 
-class CvArtInfoBuilding : public CvArtInfoScalableAsset
+class CvArtInfoBuilding
+	: public CvArtInfoScalableAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6516,7 +6622,9 @@ protected:
 	CvString m_szLSystemName;
 };
 
-class CvArtInfoCivilization : public CvArtInfoAsset
+class CvArtInfoCivilization
+	: public CvArtInfoAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6533,7 +6641,9 @@ protected:
 	bool m_bWhiteFlag;
 };
 
-class CvArtInfoLeaderhead : public CvArtInfoAsset
+class CvArtInfoLeaderhead
+	: public CvArtInfoAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6554,7 +6664,9 @@ protected:
 	CvString m_szBackgroundKFM;
 };
 
-class CvArtInfoBonus : public CvArtInfoScalableAsset
+class CvArtInfoBonus
+	: public CvArtInfoScalableAsset
+	, private bst::noncopyable
 {
 public:
 	CvArtInfoBonus();
@@ -6573,7 +6685,9 @@ protected:
 	int m_iFontButtonIndex;
 };
 
-class CvArtInfoImprovement : public CvArtInfoScalableAsset
+class CvArtInfoImprovement
+	: public CvArtInfoScalableAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6596,7 +6710,9 @@ protected:
 
 typedef std::vector<std::pair<int, int> > CvTextureBlendSlotList;
 
-class CvArtInfoTerrain : public CvArtInfoAsset
+class CvArtInfoTerrain
+	: public CvArtInfoAsset
+	, private bst::noncopyable
 {
 public:
 	//!< number to blend textures.
@@ -6632,7 +6748,9 @@ protected:
 	CvString m_pSlotNames[NUM_TEXTURE_BLENDS];
 };
 
-class CvArtInfoFeature : public CvArtInfoScalableAsset
+class CvArtInfoFeature
+	: public CvArtInfoScalableAsset
+	, private bst::noncopyable
 {
 public:
 
@@ -6693,7 +6811,7 @@ public:
 
 		const FeatureArtModel& getArtModel(int index) const
 		{
-			FAssertMsg((index >= 0) && (index < (int) m_aArtModels.size()), "[Jason] Invalid feature model file index.");
+			FASSERT_BOUNDS(0, (int)m_aArtModels.size(), index);
 			return m_aArtModels[index];
 		}
 
@@ -6741,15 +6859,15 @@ public:
 
 		const FeatureArtPiece& getFeatureArtPiece(int index) const
 		{
-			FAssertMsg((index >= 0) && (index < (int) m_aFeatureArtPieces.size()), "[Jason] Invalid feature art index.");
+			FASSERT_BOUNDS(0, (int)m_aFeatureArtPieces.size(), index);
 			return m_aFeatureArtPieces[index];
 		}
 
 		const FeatureArtPiece& getFeatureArtPieceFromConnectionMask(int connectionMask) const
 		{
-			for(int i=0;i<(int)m_aFeatureArtPieces.size();i++)
-				if(m_aFeatureArtPieces[i].getConnectionMask() == connectionMask)
-					return m_aFeatureArtPieces[i];
+			foreach_(const FeatureArtPiece& art, m_aFeatureArtPieces)
+				if (art.getConnectionMask() == connectionMask)
+					return art;
 
 			FErrorMsg("[Jason] Failed to find feature art piece with valid connection mask.");
 			return m_aFeatureArtPieces[0];
@@ -6757,10 +6875,10 @@ public:
 
 		const CvString getFeatureDummyNodeName(const CvString &tagName) const
 		{
-			for(int i=0;i<(int)m_aFeatureDummyNodes.size();i++)
+			foreach_(const FeatureDummyNode& dummy, m_aFeatureDummyNodes)
 			{
-				if(m_aFeatureDummyNodes[i].getTagName().CompareNoCase(tagName) == 0)
-					return m_aFeatureDummyNodes[i].getNodeName();
+				if (dummy.getTagName().CompareNoCase(tagName) == 0)
+					return dummy.getNodeName();
 			}
 
 			FErrorMsg("[Jason] Failed to find dummy tag name.");
@@ -6769,10 +6887,10 @@ public:
 
 		const CvString getFeatureDummyTag(const CvString &nodeName) const
 		{
-			for(int i=0;i<(int)m_aFeatureDummyNodes.size();i++)
+			foreach_(const FeatureDummyNode& dummy, m_aFeatureDummyNodes)
 			{
-				if(m_aFeatureDummyNodes[i].getNodeName().CompareNoCase(nodeName) == 0)
-					return m_aFeatureDummyNodes[i].getTagName();
+				if (dummy.getNodeName().CompareNoCase(nodeName) == 0)
+					return dummy.getTagName();
 			}
 
 			return "";
@@ -6780,9 +6898,9 @@ public:
 
 		FeatureArtPiece& createFeatureArtPieceFromConnectionMask(int connectionMask)
 		{
-			for(int i=0;i<(int)m_aFeatureArtPieces.size();i++)
-				if(m_aFeatureArtPieces[i].getConnectionMask() == connectionMask)
-					return m_aFeatureArtPieces[i];
+			foreach_(FeatureArtPiece& art, m_aFeatureArtPieces)
+				if (art.getConnectionMask() == connectionMask)
+					return art;
 
 			m_aFeatureArtPieces.push_back(FeatureArtPiece(connectionMask));
 			return m_aFeatureArtPieces.back();
@@ -6824,8 +6942,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEmphasizeInfo :
-	public CvInfoBase
+class CvEmphasizeInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6871,8 +6990,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvUpkeepInfo :
-	public CvInfoBase
+class CvUpkeepInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6901,8 +7021,9 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCultureLevelInfo :
-	public CvInfoBase
+class CvCultureLevelInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -6948,8 +7069,9 @@ protected:
 //  DESC:   Used to manage different types of Art Styles
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEraInfo :
-	public CvInfoBase
+class CvEraInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -7035,7 +7157,6 @@ protected:
 
 	int* m_paiSoundtracks;
 	int* m_paiCitySoundscapeSciptIds;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7045,8 +7166,9 @@ protected:
 //  DESC:   Used to manage different types of Art Styles
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvColorInfo :
-	public CvInfoBase
+class CvColorInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -7070,8 +7192,9 @@ protected:
 //  DESC:   Used to manage different types of Art Styles
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPlayerColorInfo :
-	public CvInfoBase
+class CvPlayerColorInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -7100,8 +7223,9 @@ protected:
 //					XML/Terrain/TerrainSettings.xml
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvLandscapeInfo :
-	public CvInfoBase
+class CvLandscapeInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	public:
 
@@ -7173,42 +7297,31 @@ class CvLandscapeInfo :
 //  class : CvGameText
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGameText : public CvInfoBase
+class CvGameText
+	: public CvInfoBase
 {
 public:
 	DllExport CvGameText();
 
-	const wchar_t* getText() const;
-	void setText(const wchar_t* szText);
+	DllExport static int getNumLanguages()               { return NUM_LANGUAGES; }
+	DllExport static void setNumLanguages(int iNum)      { }
+	static void setLanguage(const CvWString& szLanguage) { m_szLanguage = szLanguage; }
 
-	// for Python
-	std::wstring pyGetText() const { return getText(); }
-
-	void setGender(const wchar_t* szGender) { m_szGender = szGender;	}
+	const wchar_t* getText() const   { return m_szText; }
 	const wchar_t* getGender() const { return m_szGender; }
-
-	void setPlural(const wchar_t* szPlural) { m_szPlural = szPlural; }
 	const wchar_t* getPlural() const { return m_szPlural; }
 
-	DllExport int getNumLanguages() const; // not static for Python access
-	DllExport void setNumLanguages(int iNum); // not static for Python access
+	std::wstring pyGetText() const   { return getText(); }	// for Python
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	virtual void read(FDataStreamBase*) {}
-	virtual void write(FDataStreamBase*) {}
-
-	static void setLanguage(const CvWString& szLanguage) { m_szLanguage = szLanguage; }
-
 protected:
-
+	static int NUM_LANGUAGES;
 	static CvWString m_szLanguage;
 
 	CvWString m_szText;
 	CvWString m_szGender;
 	CvWString m_szPlural;
-
-	static int NUM_LANGUAGES;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7217,11 +7330,14 @@ protected:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvDiplomacyTextInfo :	public CvInfoBase
+class CvDiplomacyTextInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	friend class CvXMLLoadUtility;		// so it can access private vars to initialize the class
 public:
 	struct Response
+		: private bst::noncopyable
 	{
 		Response() :
 			m_iNumDiplomacyText(0),
@@ -7284,9 +7400,10 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEffectInfo :
-	public CvInfoBase,
-	public CvScalableInfo
+class CvEffectInfo
+	: public CvInfoBase
+	, public CvScalableInfo
+	, private bst::noncopyable
 {
 public:
 
@@ -7320,9 +7437,10 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAttachableInfo :
-	public CvInfoBase,
-	public CvScalableInfo
+class CvAttachableInfo
+	: public CvInfoBase
+	, public CvScalableInfo
+	, private bst::noncopyable
 {
 public:
 
@@ -7346,7 +7464,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGameOptionInfo : public CvInfoBase
+class CvGameOptionInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvGameOptionInfo();
@@ -7379,8 +7499,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMPOptionInfo :
-	public CvInfoBase
+class CvMPOptionInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvMPOptionInfo();
@@ -7404,8 +7525,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvForceControlInfo :
-	public CvInfoBase
+class CvForceControlInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvForceControlInfo();
@@ -7429,8 +7551,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPlayerOptionInfo :
-	public CvInfoBase
+class CvPlayerOptionInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvPlayerOptionInfo();
@@ -7454,8 +7577,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGraphicOptionInfo :
-	public CvInfoBase
+class CvGraphicOptionInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvGraphicOptionInfo();
@@ -7479,7 +7603,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEventTriggerInfo : public CvInfoBase
+class CvEventTriggerInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	friend class CvXMLLoadUtility;
 
@@ -7695,7 +7821,9 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEventInfo : public CvInfoBase
+class CvEventInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	friend class CvXMLLoadUtility;
 
@@ -7925,7 +8053,9 @@ private:
 //  class : CvEspionageMissionInfo
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEspionageMissionInfo : public CvInfoBase
+class CvEspionageMissionInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -8035,7 +8165,9 @@ protected:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvUnitArtStyleTypeInfo : public CvInfoBase
+class CvUnitArtStyleTypeInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8086,7 +8218,9 @@ protected:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvVoteSourceInfo : public CvInfoBase
+class CvVoteSourceInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8126,7 +8260,9 @@ protected:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMainMenuInfo : public CvInfoBase
+class CvMainMenuInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8155,7 +8291,9 @@ protected:
 /*																							  */
 /************************************************************************************************/
 // MLF loading
-class CvModLoadControlInfo : public CvInfoBase
+class CvModLoadControlInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8188,8 +8326,9 @@ protected:
 //  DESC:   Contains info about generic properties which can be added to buildings
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPropertyInfo :
-	public CvInfoBase
+class CvPropertyInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8271,8 +8410,9 @@ protected:
 //  DESC:   Contains info about outcome types which can be the result of a kill or of actions
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvOutcomeInfo :
-	public CvInfoBase
+class CvOutcomeInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8328,8 +8468,9 @@ protected:
 //  DESC:   Contains info about Promotion Lines, definitions of promotion upgrade chains
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPromotionLineInfo :
-	public CvInfoBase
+class CvPromotionLineInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -8471,8 +8612,9 @@ protected:
 //  DESC:   Contains unit combat types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvUnitCombatInfo :
-	public CvInfoBase
+class CvUnitCombatInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -9103,7 +9245,9 @@ protected:
 //  DESC:   Contains info about Map Category Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMapCategoryInfo : public CvInfoBase
+class CvMapCategoryInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 	CvMapCategoryInfo();
@@ -9121,8 +9265,9 @@ public:
 //  DESC:   Contains info about Idea Class Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvIdeaClassInfo :
-	public CvInfoBase
+class CvIdeaClassInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -9146,8 +9291,9 @@ protected:
 //  DESC:   Contains info about Idea Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvIdeaInfo :
-	public CvInfoBase
+class CvIdeaInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -9171,8 +9317,9 @@ protected:
 //  DESC:   Contains info about Invisible Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvInvisibleInfo :
-	public CvInfoBase
+class CvInvisibleInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -9196,17 +9343,17 @@ private:
 	bool m_bIntrinsic;
 };
 
-class CvUnitAIInfo : public CvInfoBase { };
-class CvDomainInfo : public CvInfoBase { };
-class CvConceptInfo : public CvInfoBase { };
-class CvNewConceptInfo : public CvInfoBase { };
-class CvCityTabInfo : public CvInfoBase { };
-class CvCalendarInfo : public CvInfoBase { };
-class CvSeasonInfo : public CvInfoBase { };
-class CvMonthInfo : public CvInfoBase { };
-class CvDenialInfo : public CvInfoBase { };
-class CvAttitudeInfo : public CvInfoBase { };
-class CvMemoryInfo : public CvInfoBase { };
-class CvHintInfo : public CvInfoBase { };
+class CvUnitAIInfo : public CvInfoBase, private bst::noncopyable { };
+class CvDomainInfo : public CvInfoBase, private bst::noncopyable { };
+class CvConceptInfo : public CvInfoBase, private bst::noncopyable { };
+class CvNewConceptInfo : public CvInfoBase, private bst::noncopyable { };
+class CvCityTabInfo : public CvInfoBase, private bst::noncopyable { };
+class CvCalendarInfo : public CvInfoBase, private bst::noncopyable { };
+class CvSeasonInfo : public CvInfoBase, private bst::noncopyable { };
+class CvMonthInfo : public CvInfoBase, private bst::noncopyable { };
+class CvDenialInfo : public CvInfoBase, private bst::noncopyable { };
+class CvAttitudeInfo : public CvInfoBase, private bst::noncopyable { };
+class CvMemoryInfo : public CvInfoBase, private bst::noncopyable { };
+class CvHintInfo : public CvInfoBase, private bst::noncopyable { };
 
 #endif

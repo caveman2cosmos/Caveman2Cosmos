@@ -218,7 +218,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
-				<iYield>1</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -2478,7 +2478,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
@@ -2854,7 +2854,7 @@
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -8039,7 +8039,7 @@
 				<iCommerce>7</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -15274,7 +15274,7 @@
 			<PrereqTech>TECH_ATOMIC_SCALE_ENGINEERING</PrereqTech>
 			<iCost>54630</iCost>
 			<YieldChanges>
-				<iYield>5</iYield>
+				<iYield>6</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_LOFSTROM_LOOP</FreeBuilding>
@@ -17867,7 +17867,7 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
@@ -20163,7 +20163,7 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>6</iYield>
 				<iYield>6</iYield>
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
@@ -21292,7 +21292,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
@@ -22447,7 +22447,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>

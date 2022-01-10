@@ -1048,15 +1048,15 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 
 		case MISSION_BUILD:
-
-			FAssertMsg((BuildTypes)iData1 < GC.getNumBuildInfos(), "Invalid Build");
+		{
+			FASSERT_BOUNDS(0, GC.getNumBuildInfos(), iData1);
 
 			if (pLoopUnit->canBuild(pPlot, (BuildTypes)iData1, bTestVisible && !GET_PLAYER(pLoopUnit->getOwner()).isModderOption(MODDEROPTION_HIDE_UNAVAILBLE_BUILDS)))
 			{
 				return true;
 			}
 			break;
-
+		}
 		case MISSION_LEAD:
 			if (pLoopUnit->canLead(pPlot, iData1))
 			{

@@ -17,11 +17,8 @@ class CvPlot;
 class CvMapExternal
 {
 public:
-	CvMapExternal();
 	CvMapExternal(CvMapInterfaceBase* proxiedMap);
 	virtual ~CvMapExternal();
-
-	void mapCoordinates(bool bNewValue) { m_bMapCoordinates = bNewValue; }
 
 	DllExport void init(CvMapInitData* pInitData=NULL);
 	DllExport void setupGraphical();
@@ -62,8 +59,6 @@ public:
 
 private:
 	CvMapInterfaceBase*	m_proxiedMap;
-	//mutable std::map<int,CvPlot*>		m_psuedoPlots;
-	bool m_bMapCoordinates;
 };
 
 #endif

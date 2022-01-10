@@ -34,54 +34,67 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
 		<English>Autobuild - Folklore Requirement</English>
+		<German>Folklore-Grundlagen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
 		<English>Autobuild - Presence of Coral</English>
+		<German>Präsenz von Korallen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
 		<English>Autobuild - Presence of Crater</English>
+		<German>Präsenz von Kratern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
 		<English>Autobuild - Presence of Metal</English>
+		<German>Präsenz von Metall</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
 		<English>Autobuild - Presence of Oasis</English>
+		<German>Präsenz von Oasen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
 		<English>Autobuild - Presence of Landform</English>
+		<German>Präsenz von Felsformationen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
 		<English>Autobuild - Presence of Reef</English>
+		<German>Präsenz von Riffen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
 		<English>Autobuild - Presence of Volcano</English>
+		<German>Präsenz von Vulkanen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
 		<English>Autobuild - Presence of Sea</English>
+		<German>Präsenz der See</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
 		<English>Autobuild - Presence of Earth</English>
+		<German>Präsenz der Erde</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
 		<English>Autobuild - Presence of Fire</English>
+		<German>Präsenz des Feuers</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
 		<English>Folklore Requirements autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
 		<English>Folklore Presence autobuildings require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities</English>
+		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>

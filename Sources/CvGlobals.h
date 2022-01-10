@@ -141,9 +141,9 @@ class CvMapInfo;
 
 extern CvDLLUtilityIFaceBase* gDLL;
 
-class cvInternalGlobals : bst::noncopyable
+class cvInternalGlobals
+	: private bst::noncopyable
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 public:
 
@@ -785,6 +785,8 @@ public:
 	uint32_t getAssetCheckSum() const;
 
 	void deleteInfoArrays();
+
+	void checkInitialCivics();
 
 protected:
 	void doPostLoadCaching();

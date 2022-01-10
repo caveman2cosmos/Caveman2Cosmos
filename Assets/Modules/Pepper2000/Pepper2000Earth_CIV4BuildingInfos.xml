@@ -258,7 +258,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<iHappiness>-1</iHappiness>
 			<GlobalBuildingProductionModifiers>
@@ -587,7 +587,7 @@
 			<PrereqTech>TECH_3D_PROJECTIONS</PrereqTech>
 			<iCost>141330</iCost>
 			<YieldChanges>
-				<iYield>5</iYield>
+				<iYield>7</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</FreeBuilding>

@@ -7,16 +7,19 @@
 
 class CvArtInfoImprovement;
 class CvXMLLoadUtility;
+struct CvInfoUtil;
 
-class CvImprovementInfo :
-	public CvInfoBase
+class CvImprovementInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvImprovementInfo();
 	virtual ~CvImprovementInfo();
 
+	DllExport bool isGoody() const;
+	DllExport bool isRequiresRiverSide() const;
 	bool isBombardable() const;
 	bool isUpgradeRequiresFortify() const;
 	bool isUniversalTradeBonusProvider() const;
@@ -27,15 +30,18 @@ public:
 	bool isRiverSideMakesValid() const;
 	bool isNoFreshWater() const;
 	bool isRequiresFlatlands() const;
-	DllExport bool isRequiresRiverSide() const;
 	bool isRequiresIrrigation() const;
 	bool isCarriesIrrigation() const;
 	bool isRequiresFeature() const;
 	bool isPeakImprovement() const;
 	bool isWaterImprovement() const;
-	DllExport bool isGoody() const;
 	bool isPermanent() const;
 	bool isOutsideBorders() const;
+	bool isMilitaryStructure() const { return m_bMilitaryStructure; }
+	bool isPlacesBonus() const { return m_bPlacesBonus; }
+	bool isPlacesFeature() const { return m_bPlacesFeature; }
+	bool isPlacesTerrain() const { return m_bPlacesTerrain; }
+	bool isExtraterresial() const { return m_bExtraterresial; }
 	bool isCanMoveSeaUnits() const;
 	bool isChangeRemove() const;
 	bool isNotOnAnyBonus() const;
@@ -119,6 +125,8 @@ public:
 	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bPeakMakesValid;
 	bool m_bBombardable;
 	bool m_bUpgradeRequiresFortify;
@@ -139,6 +147,11 @@ private:
 	bool m_bGoody;
 	bool m_bPermanent;
 	bool m_bOutsideBorders;
+	bool m_bMilitaryStructure;
+	bool m_bPlacesBonus;
+	bool m_bPlacesFeature;
+	bool m_bPlacesTerrain;
+	bool m_bExtraterresial;
 	bool m_bCanMoveSeaUnits;
 	bool m_bChangeRemove;
 	bool m_bNotOnAnyBonus;
