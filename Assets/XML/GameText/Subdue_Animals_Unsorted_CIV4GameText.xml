@@ -545,16 +545,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
-		<English>Amphibian Colony</English>
+		<English>Tamed Amphibian Colony</English>
 		<French>Colonie d'Amphibiens</French>
 		<Polish>Kolonia Płazów</Polish>
 		<Russian>Êîëîíèÿ àìôèáèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Tag>
-		<English>[ICON_BULLET]Use the [COLOR_HIGHLIGHT_TEXT]Amphibian Colony[COLOR_REVERT] to spread [COLOR_HIGHLIGHT_TEXT]Amphibian Ponds[COLOR_REVERT] to other cities.</English>
-		<Polish>Użyj [COLOR_HIGHLIGHT_TEXT]Kolonii Płazów[COLOR_REVERT] by rozprzestrzenić [COLOR_HIGHLIGHT_TEXT]Stawyz z płazami[COLOR_REVERT] do innych miast.</Polish>
-		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Используйте [COLOR_HIGHLIGHT_TEXT]Колонию амфибий[COLOR_REVERT] для размещения [COLOR_HIGHLIGHT_TEXT]Затонов амфибий[COLOR_REVERT] в других городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Tag>
@@ -563,18 +557,10 @@
 		<Russian>Çàâîä÷èê îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
 		<English>Tamed Horse (Breeding Pair)</English>
 		<French>Couple reproducteur - Chevaux</French>
 		<Russian>Çàâîä÷èê ëîøàäåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LIZARD</Tag>
@@ -583,20 +569,10 @@
 		<Russian>ßùåðèöà (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_LIZARD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories - Lizards, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construisez l'[COLOR_REVERT]Histoire ou les Histoires des lézards[NEWLINE][ICON_BULLET]Cage et Enclos à Reptiles</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE</Tag>
 		<English>Tamed Snake</English>
 		<French>Serpent (dompté)</French>
 		<Russian>Çìåÿ (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_SNAKE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories - Snakes, Reptile Cage and Enclosure, Snake pit and charmer</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Histoires des Serpents[NEWLINE][ICON_BULLET]Cage des Reptiles et enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Tag>
