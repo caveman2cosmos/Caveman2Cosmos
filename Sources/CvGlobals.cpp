@@ -3003,7 +3003,7 @@ void cvInternalGlobals::doPostLoadCaching()
 		}
 	}
 
-	foreach_(std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
+	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
 		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
 		{
