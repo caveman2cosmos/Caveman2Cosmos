@@ -61,16 +61,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Afforess: Don't round up for 5% tax increments with taxation anger, only round down. -->
-		<DefineName>TAXATION_ANGER_ROUND_DOWN</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Afforess: Disbanding units earn gold -->
-		<DefineName>DISBANDING_EARNS_GOLD</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Afforess: The divisor (or denominator) for the disbanded units gold. 1 will yield the full production cost. Has no effect if the above setting is disabled. -->
 		<DefineName>UNIT_GOLD_DISBAND_DIVISOR</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
@@ -102,7 +92,6 @@
 	<Define>
 		<!-- Afforess:
 	Sets a Maximum Airlift and Rebase range for aircraft. -1 for no limit to range or rebase.
-
 	Toffer: This is only used for the AI perceived value of a tech; and for wheter to display the can rebase anywhere information for air units.
 	A dll modder will need to decide if it should be removed from the dll or implemented to actually influence the max re-base range for air units.
 -->
@@ -207,8 +196,17 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
+		<!--
+			Base number of turns (10 equals 1 turn) between decay on normal gamespeed.
+			Higher value means slower decay rate.
+			Min value: 1 (means: decay 10 times per turn on Normal gamsepeed, decay every turn on eternity gamespeed)
+			Note: Decay can only happens 1 time per turn,
+				so a value of 10 means decay happens every turn on normal or faster gamespeeds,
+				which means no scaling occurs between normal and faster gamespeeds.
+			Default value: 20 (Decay every 2 turns on normal gamespeed, every 20 turns on eternity)
+		-->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>
@@ -221,12 +219,12 @@
 	<Define>
 		<!-- Realistic Corporations: Corporation will be founded when more players than X have the prereq tech for it. -->
 		<DefineName>MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The game will try to found a HQ for a corporation every X turns -->
 		<DefineName>CORPORATION_FOUND_CHECK_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The Time and Gold to Build a Route over an existing route is reduced by the time and Gold already invested in the previous Route -->
@@ -252,10 +250,6 @@
 	<Define>
 		<DefineName>SEA_ANIMAL_SPAWN_MODIFIER</DefineName>
 		<iDefineIntVal>75</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BANDIT_SPAWN_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>KILLERRABBIT_SPAWN_MODIFIER</DefineName>
@@ -301,10 +295,6 @@ We default to all of them (1+2+128 = 131)
 if set to 0 you will need to escort subdued animals back to your lands.
 if set to 1 they will "teleport" to the nearest city when captured. -->
 	<Define>
-		<DefineName>DONT_ESCORT_SUBDUED_LAND_ANIMAL</DefineName>
-		<bDefineBoolVal>1</bDefineBoolVal>
-	</Define>
-	<Define>
 		<DefineName>DONT_ESCORT_SUBDUED_SEA_ANIMAL</DefineName>
 		<bDefineBoolVal>1</bDefineBoolVal>
 	</Define>
@@ -335,6 +325,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v40-dev</DefineTextVal>
+		<DefineTextVal>v42.0.BETA</DefineTextVal>
 	</Define>
 </Civ4Defines>

@@ -1,0 +1,2191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BIG_GAME_HUNTER</Tag>
+		<English>Big Game Hunter</English>
+		<French>Grand Chasseur</French>
+		<Italian>
+			<Text>Esperto di caccia grossa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Myśliwy Grubej Zwierzyny</Polish>
+		<Russian>Åãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GAME_HUNTER</Tag>
+		<English>Game Hunter</English>
+		<French>Maître chasseur</French>
+		<Italian>
+			<Text>Esperto cacciatore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Myśliwy</Polish>
+		<Russian>Îõîòíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HUNTER</Tag>
+		<English>Hunter</English>
+		<French>Chasseur</French>
+		<German>Jäger</German>
+		<Italian>
+			<Text>Cacciatore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Cazador</Spanish>
+		<Polish>Łowca</Polish>
+		<Russian>Çâåðîáîé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RANGER</Tag>
+		<English>Ranger</English>
+		<French>Rôdeur</French>
+		<Italian>
+			<Text>Ranger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Strażnik Lasu</Polish>
+		<Russian>Ðåéíäæåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_AARDVARK</Tag>
+		<English>Subdued Aardvark</English>
+		<French>Oryctérope (App.)</French>
+		<Italian>
+			<Text>Oritteropo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Mrównik</Polish>
+		<Russian>Òðóáêîçóá (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ANTEATER</Tag>
+		<English>Subdued Anteater</English>
+		<French>Fourmilier (App.)</French>
+		<Italian>
+			<Text>Formichiere addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Mrówkojad</Polish>
+		<Russian>Ìóðàâüåä (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BADGER</Tag>
+		<English>Subdued Badger</English>
+		<French>Blaireau (App.)</French>
+		<Italian>
+			<Text>Tasso addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Borsuk</Polish>
+		<Russian>Áàðñóê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BALLPYTHON</Tag>
+		<English>Subdued Ball Python</English>
+		<French>Python royal (App.)</French>
+		<Italian>
+			<Text>Pitone reale addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Pyton Królewski</Polish>
+		<Russian>Êîðîëåâñêèé ïèòîí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BARBARYAPE</Tag>
+		<English>Subdued Barbary Macaque</English>
+		<French>Macaque berbère (App.)</French>
+		<Italian>
+			<Text>Macaco addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Magot</Polish>
+		<Russian>Ìàãîò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BEAVER</Tag>
+		<English>Subdued Beaver</English>
+		<French>Castor (App.)</French>
+		<Italian>
+			<Text>Castoro addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Bóbr</Polish>
+		<Russian>Áîáåð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BELUGA</Tag>
+		<English>Subdued Beluga</English>
+		<French>Beluga (App.)</French>
+		<Italian>
+			<Text>Beluga addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Bieługa</Polish>
+		<Russian>Áåëóõà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BENGALTIGER</Tag>
+		<English>Subdued Bengal Tiger</English>
+		<French>Tigre du Bengale (App.)</French>
+		<Italian>
+			<Text>Tigre del Bengala addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Tygrys Bengalski</Polish>
+		<Russian>Áåíãàëüñêèé òèãð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BISON</Tag>
+		<English>Subdued Bison</English>
+		<French>Bison (App.)</French>
+		<Italian>
+			<Text>Bisonte addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Bizon</Polish>
+		<Russian>Áèçîí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BOAR</Tag>
+		<English>Subdued Wild Boar</English>
+		<French>Sanglier (App.)</French>
+		<Italian>
+			<Text>Cinghiale addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Dzik</Polish>
+		<Russian>Êàáàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BONGO</Tag>
+		<English>Subdued Bongo</English>
+		<French>Bongo (App.)</French>
+		<Italian>
+			<Text>Bongo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Bongo</Polish>
+		<Russian>Áîíãî (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO</Tag>
+		<English>Subdued Cape Buffalo</English>
+		<French>Buffle d'eau (App.)</French>
+		<Italian>
+			<Text>Bufalo d'acqua addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Bawół</Polish>
+		<Russian>Àçèàòñêèé áóéâîë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CAMEL</Tag>
+		<English>Subdued Camel</English>
+		<French>Chameau (App.)</French>
+		<German>Subdued Kamel</German>
+		<Italian>
+			<Text>Cammello addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Subdued Camello</Spanish>
+		<Polish>Poskromiony Wielbłąd</Polish>
+		<Russian>Âåðáëþä (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CAPUCHIN</Tag>
+		<English>Subdued Capuchin Monkey</English>
+		<French>Singe Capucin (App.)</French>
+		<Italian>
+			<Text>Scimmia cappuccino addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Kapucynka</Polish>
+		<Russian>Êàïóöèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CAPYBARA</Tag>
+		<English>Subdued Capybara</English>
+		<French>Cabiaï (App.)</French>
+		<Italian>
+			<Text>Capibara addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Kapibara</Polish>
+		<Russian>Âîäîñâèíêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CARIBOU</Tag>
+		<English>Subdued Caribou</English>
+		<French>Caribou (App.)</French>
+		<Italian>
+			<Text>Caribù addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromione Karibu</Polish>
+		<Russian>Êàðèáó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CASSOWARY</Tag>
+		<English>Subdued Cassowary</English>
+		<French>Casoar (App.)</French>
+		<Italian>
+			<Text>Casuario addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Kazuar</Polish>
+		<Russian>Êàçóàð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_LION</Tag>
+		<English>Subdued Cave Lion</English>
+		<French>Lion des cavernes (App.)</French>
+		<Italian>
+			<Text>Leone delle caverne addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lew Jaskiniowy</Polish>
+		<Russian>Ïåùåðíûé ëåâ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CHEETAH</Tag>
+		<English>Subdued Cheetah</English>
+		<French>Guépard (App.)</French>
+		<Italian>
+			<Text>Ghepardo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Gepard</Polish>
+		<Russian>Ãåïàðä (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CHIMPANZEE</Tag>
+		<English>Subdued Chimpanzee</English>
+		<French>Chimpanzé (App.)</French>
+		<Italian>
+			<Text>Scimpanzè addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Szaympans</Polish>
+		<Russian>Øèìïàíçå (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_COBRA</Tag>
+		<English>Subdued Cobra</English>
+		<French>Cobra (App.)</French>
+		<Italian>
+			<Text>Cobra addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Kobra</Polish>
+		<Russian>Êîáðà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_COD</Tag>
+		<English>Subdued Cod</English>
+		<French>
+			<Text>Morue (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Merluzzo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Dorsz</Polish>
+		<Russian>Òðåñêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_COW</Tag>
+		<English>Subdued Aurochs</English>
+		<French>Taureau (App.)</French>
+		<Italian>
+			<Text>Uro addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Tur</Polish>
+		<Russian>Çóáð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CRAB</Tag>
+		<English>Subdued Crab</English>
+		<French>Crabe (App.)</French>
+		<Italian>
+			<Text>Granchio addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krab</Polish>
+		<Russian>Êðàá (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CROW</Tag>
+		<English>Subdued Crow</English>
+		<French>
+			<Text>Corneille (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Cornacchia addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Kruk</Polish>
+		<Russian>Âîðîíà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Tag>
+		<English>Subdued Desert Tortoise</English>
+		<French>
+			<Text>Tortue du désert (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Tartaruga del deserto addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Żółw Pustynny</Polish>
+		<Russian>Ïóñòûííàÿ ÷åðåïàõà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DIREWOLF</Tag>
+		<English>Subdued Dire Wolf</English>
+		<French>Loup primitif (App.)</French>
+		<Italian>
+			<Text>Lupo nero addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Wilk Straszny</Polish>
+		<Russian>Ëþòîâîëê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DOLPHIN</Tag>
+		<English>Subdued Dolphin</English>
+		<French>Dauphin (App.)</French>
+		<Italian>
+			<Text>Delfino addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Delfin</Polish>
+		<Russian>Äåëüôèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DUCK</Tag>
+		<English>Subdued Duck</English>
+		<French>Canard (App.)</French>
+		<Italian>
+			<Text>Oca addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Kaczka</Polish>
+		<Russian>Óòêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DUGONG</Tag>
+		<English>Subdued Dugong</English>
+		<French>Dugong (App.)</French>
+		<Italian>
+			<Text>Dugongo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Dugong</Polish>
+		<Russian>Äþãîíü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE</Tag>
+		<English>Subdued Eagle</English>
+		<French>Aigle (App.)</French>
+		<Italian>
+			<Text>Aquila addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Orzeł</Polish>
+		<Russian>Îðåë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD</Tag>
+		<English>Subdued Bald Eagle</English>
+		<French>Pygargue à tête blanche (App.)</French>
+		<Russian>Áåëîãîëîâûé îðëàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
+		<English>Subdued Asian Elephant</English>
+		<French>Éléphant d'Asie (App.)</French>
+		<Polish>Poskromiony Słoń Indyjski</Polish>
+		<Russian>Ñëîí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_EMU</Tag>
+		<English>Subdued Emu</English>
+		<French>Emeu (App.)</French>
+		<German>
+			<Text>Gefangener Emu:Gefangenen Emus:Gefangenen Emu:Gefangenen Emu:Gefangene Emus:Gefangenen Emus:Gefangenen Emus:Gefangenen Emus</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Emù addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromione Emu</Polish>
+		<Russian>Ýìó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_FLAMINGO</Tag>
+		<English>Subdued Flamingo</English>
+		<French>Flamant rose (App.)</French>
+		<Italian>
+			<Text>Fenicottero addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Flaming</Polish>
+		<Russian>Ôëàìèíãî (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE</Tag>
+		<English>Subdued Galapagos Tortoise</English>
+		<French>
+			<Text>Tortue des Galapagos (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Tartaruga delle Galapagos addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Żółw Słoniowy</Polish>
+		<Russian>Ãàëàïàãîñ. ÷åðåïàõà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GAZELLE</Tag>
+		<English>Subdued Thomson's Gazelle</English>
+		<French>
+			<Text>Gazelle (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gazzella addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Gazela</Polish>
+		<Russian>Ãàçåëü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GELADA</Tag>
+		<English>Subdued Gelada Monkey</English>
+		<French>Babouin Gélada (App.)</French>
+		<Italian>
+			<Text>Babbuino Gelada addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Dżelada</Polish>
+		<Russian>Ãåëàäà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GEMSBOK</Tag>
+		<English>Subdued Gemsbok</English>
+		<French>
+			<Text>Gazelle Onyx (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Orice addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Oryks</Polish>
+		<Russian>Ñåðíîáûê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GERENUK</Tag>
+		<English>Subdued Gerenuk</English>
+		<French>
+			<Text>Gazelle de Waller (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gerenuk addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Gerenuk</Polish>
+		<Russian>Ãåðåíóê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GHARIAL</Tag>
+		<English>Subdued Gharial</English>
+		<French>Gavial (App.)</French>
+		<Italian>
+			<Text>Gaviale addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Garial</Polish>
+		<Russian>Ãàâèàë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GIANT_SQUID</Tag>
+		<English>Subdued Giant Squid</English>
+		<French>Calamar Géant (App.)</French>
+		<Italian>
+			<Text>Calamaro gigante addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Wielka Kałamarnica</Polish>
+		<Russian>Ãèãàíòñêèé êàëüìàð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GIRAFFE</Tag>
+		<English>Subdued Giraffe</English>
+		<French>
+			<Text>Girafe (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gefangene Giraffe:Gefangenen Giraffe:Gefangenen Giraffe:Gefangene Giraffe:Gefangene Giraffen:Gefangenen Giraffen:Gefangenen Giraffen:Gefangenen Giraffen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Giraffa addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Żyrafa</Polish>
+		<Russian>Æèðàô (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GORILLA</Tag>
+		<English>Subdued Gorilla</English>
+		<French>Gorille (App.)</French>
+		<Italian>
+			<Text>Gorilla addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Goryl</Polish>
+		<Russian>Ãîðèëëà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GREATWHITE</Tag>
+		<English>Subdued Great White Shark</English>
+		<French>Grand requin blanc (App.)</French>
+		<Italian>
+			<Text>Grande squalo bianco addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Żarłacz Biały</Polish>
+		<Russian>Áåëàÿ àêóëà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GULL</Tag>
+		<English>Subdued Seagull</English>
+		<French>
+			<Text>Mouette (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gabbiano addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Mewa</Polish>
+		<Russian>×àéêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE</Tag>
+		<English>Subdued Haast's Eagle</English>
+		<French>Aigle de Haast (App.)</French>
+		<Italian>
+			<Text>Aquila di Haast addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Orzeł Haasta</Polish>
+		<Russian>Îðåë Õààñòà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HAMMERHEAD</Tag>
+		<English>Subdued Hammerhead Shark</English>
+		<French>Requin marteau (App.)</French>
+		<Italian>
+			<Text>Squalo martello addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Rekin-Młot</Polish>
+		<Russian>Àêóëà-ìîëîò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK</Tag>
+		<English>Subdued Hawk</English>
+		<French>Faucon (App.)</French>
+		<Italian>
+			<Text>Falco addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Jastrząb</Polish>
+		<Russian>ßñòðåá (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HIPPO</Tag>
+		<English>Subdued Hippopotamus</English>
+		<French>Hippopotame (App.)</French>
+		<Italian>
+			<Text>Ippopotamo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Hippopotam</Polish>
+		<Russian>Áåãåìîò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HORNEDOWL</Tag>
+		<English>Subdued Great Horned Owl</English>
+		<French>Grand hibou à cornes (App.)</French>
+		<Italian>
+			<Text>Gufo della Virginia addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Puchacz</Polish>
+		<Russian>Ôèëèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HORSE</Tag>
+		<English>Subdued Horse</English>
+		<French>Cheval (App.)</French>
+		<Italian>
+			<Text>Cavallo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Koń</Polish>
+		<Russian>Ëîøàäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HUMPBACK_WHALE</Tag>
+		<English>Subdued Humpback Whale</English>
+		<French>Baleine à bosses (App.)</French>
+		<German>
+			<Text>Subdued Humpback Whale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Megattera addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Subdued Humpback Whale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Poskromiony Humpbak</Polish>
+		<Russian>Ãîðáàòûé êèò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HYENA</Tag>
+		<English>Subdued Striped Hyena</English>
+		<French>
+			<Text>Hyène (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Iena addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Hiena</Polish>
+		<Russian>Ãèåíà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_IBEX</Tag>
+		<English>Subdued Walia Ibex</English>
+		<French>Bouquetin (App.)</French>
+		<Italian>
+			<Text>Stambecco addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Koziorożec</Polish>
+		<Russian>Êîçåðîã (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_IGUANA</Tag>
+		<English>Subdued Iguana</English>
+		<French>Iguane (App.)</French>
+		<Italian>
+			<Text>Iguana addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Iguana</Polish>
+		<Russian>Èãóàíà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_IMPALA</Tag>
+		<English>Subdued Impala</English>
+		<French>Impala (App.)</French>
+		<Italian>
+			<Text>Impala addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Impala</Polish>
+		<Russian>Èìïàëà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_JAGUAR</Tag>
+		<English>Subdued Jaguar</English>
+		<French>Jaguar (App.)</French>
+		<Italian>
+			<Text>Giaguaro addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Jaguar</Polish>
+		<Russian>ßãóàð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY</Tag>
+		<English>Subdued Grey Kangaroo</English>
+		<French>Kangourou gris (App.)</French>
+		<Italian>
+			<Text>Canguro grigio addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Kangur Szary</Polish>
+		<Russian>Ñåðûé êåíãóðó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED</Tag>
+		<English>Subdued Red Kangaroo</English>
+		<French>Kangourou rouge (App.)</French>
+		<Italian>
+			<Text>Canguro rosso addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Kangur Czerwony</Polish>
+		<Russian>Ðûæèé êåíãóðó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_KOALA</Tag>
+		<English>Subdued Koala</English>
+		<French>Koala (App.)</French>
+		<Italian>
+			<Text>Koala addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Koala</Polish>
+		<Russian>Êîàëà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON</Tag>
+		<English>Subdued Komodo Dragon</English>
+		<French>Dragon de Komodo (App.)</French>
+		<Italian>
+			<Text>Drago di Komodo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Waran z Komodo</Polish>
+		<Russian>Êîìîäñêèé âàðàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_KOOKABURRA</Tag>
+		<English>Subdued Kookaburra</English>
+		<French>Kookaboura (App.)</French>
+		<Italian>
+			<Text>Kookaburra addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Zimorodek</Polish>
+		<Russian>Êóêàáàðà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_LEMUR</Tag>
+		<English>Subdued Ring-tailed Lemur</English>
+		<French>Lémurien (App.)</French>
+		<Italian>
+			<Text>Lemure addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lemur</Polish>
+		<Russian>Ëåìóð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_LION</Tag>
+		<English>Subdued Lion</English>
+		<French>Lion (App.)</French>
+		<Italian>
+			<Text>Leone addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lew</Polish>
+		<Russian>Ëåâ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA</Tag>
+		<English>Subdued Guanaco</English>
+		<French>Lama (App.)</French>
+		<Italian>
+			<Text>Lama addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Lama</Polish>
+		<Russian>Ëàìà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_LOON</Tag>
+		<English>Subdued Loon</English>
+		<French>Plongeon (App.)</French>
+		<Italian>
+			<Text>Gavia addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Nur</Polish>
+		<Russian>Ãàãàðà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_LYNX</Tag>
+		<English>Subdued Lynx</English>
+		<French>Lynx (App.)</French>
+		<Italian>
+			<Text>Lince addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Ryś</Polish>
+		<Russian>Ðûñü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MACAW</Tag>
+		<English>Subdued Macaw</English>
+		<French>Ara (App.)</French>
+		<Italian>
+			<Text>Ara addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Ara</Polish>
+		<Russian>Àðà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL</Tag>
+		<English>Subdued Mackerel</English>
+		<French>Maquereau (App.)</French>
+		<Italian>
+			<Text>Sgombro addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Makrela</Polish>
+		<Russian>Ìàêðåëü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MANDRILL</Tag>
+		<English>Subdued Mandrill</English>
+		<French>Mandrill (App.)</French>
+		<Italian>
+			<Text>Mandrillo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Mandryl</Polish>
+		<Russian>Ìàíäðèë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN</Tag>
+		<English>Subdued Marlin</English>
+		<French>Marlin (App.)</French>
+		<Italian>
+			<Text>Pesce vela addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Marlin</Polish>
+		<Russian>Ìàðëèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MINKIE_WHALE</Tag>
+		<English>Subdued Minkie Whale</English>
+		<French>Rorqual (App.)</French>
+		<Italian>
+			<Text>Balenottera addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Płetwal</Polish>
+		<Russian>Ïîëîñàòèê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MOA</Tag>
+		<English>Subdued Moa</English>
+		<French>Moa (App.)</French>
+		<Italian>
+			<Text>Moa addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromione Moa</Polish>
+		<Russian>Ìîà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MONITOR</Tag>
+		<English>Subdued Nile Monitor</English>
+		<French>Varan du Nil (App.)</French>
+		<Italian>
+			<Text>Varano del Nilo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krokodyl Nilowy</Polish>
+		<Russian>Íèëüñêèé âàðàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MOOSE</Tag>
+		<English>Subdued Moose</English>
+		<French>Elan (App.)</French>
+		<Italian>
+			<Text>Alce addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Łoś</Polish>
+		<Russian>Ëîñü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MOUFLON</Tag>
+		<English>Subdued Mouflon</English>
+		<French>Mouflon (App.)</French>
+		<Italian>
+			<Text>Muflone addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Muflon</Polish>
+		<Russian>Ìóôëîí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MUSKOX</Tag>
+		<English>Subdued Musk Ox</English>
+		<French>Boeuf musqué (App.)</French>
+		<Italian>
+			<Text>Bue muschiato addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Wół Piżmowy</Polish>
+		<Russian>Îâöåáûê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_NARWHAL</Tag>
+		<English>Subdued Narwhal</English>
+		<French>Narval (App.)</French>
+		<Italian>
+			<Text>Narvalo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Narwal</Polish>
+		<Russian>Íàðâàë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC</Tag>
+		<English>Subdued Nile Crocodile</English>
+		<French>Crocodile du Nil (App.)</French>
+		<German>
+			<Text>Gefangenes Nilkrokodil:Gefangenen Nilkrokodils:Gefangenen Nilkrokodil:Gefangene Nilkrokodil:Gefangene Nilkrokodile:Gefangenen Nilkrokodile:Gefangenen Nilkrokodilen:Gefangenen Nilkrokodile</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Coccodrillo del Nilo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krokodyl Nilowy</Polish>
+		<Russian>Íèëüñêèé êðîêîäèë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI</Tag>
+		<English>Subdued Okapi</English>
+		<French>Okapi (App.)</French>
+		<Italian>
+			<Text>Okapi addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromione Okapi</Polish>
+		<Russian>Îêàïè (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN</Tag>
+		<English>Subdued Orangutan</English>
+		<French>Orang-outan (App.)</French>
+		<Italian>
+			<Text>Orangotango addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Orangutan</Polish>
+		<Russian>Îðàíãóòàíã (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ORCA</Tag>
+		<English>Subdued Orca</English>
+		<French>Orque (App.)</French>
+		<Italian>
+			<Text>Orca addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Orka</Polish>
+		<Russian>Êàñàòêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_OSTRICH</Tag>
+		<English>Subdued Ostrich</English>
+		<French>
+			<Text>Autruche (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenem Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
+			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Struzzo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Struś</Polish>
+		<Russian>Ñòðàóñ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER</Tag>
+		<English>Subdued Oxpecker</English>
+		<French>Pique-bœuf (App.)</French>
+		<Italian>
+			<Text>Bufaga addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Bąkojad</Polish>
+		<Russian>Ñêâîðåö (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PANTHER</Tag>
+		<English>Subdued Panther</English>
+		<French>
+			<Text>Panthère (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Pantera addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Pantera</Polish>
+		<Russian>Ïàíòåðà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK</Tag>
+		<English>Subdued Peacock</English>
+		<French>Paon (App.)</French>
+		<Italian>
+			<Text>Pavone addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Paw</Polish>
+		<Russian>Ïàâëèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PENGUIN</Tag>
+		<English>Subdued Emperor Penguin</English>
+		<French>
+			<Text>Manchot Empereur (App.)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gefangener Kaiserpinguin:Gefangenen Kaiserpinguins:Gefangenen Kaiserpinguin:Gefangenen Kaiserpinguin:Gefangene Kaiserpinguine:Gefangenen Kaiserpinguine:Gefangenen Kaiserpinguinen:Gefangenen Kaiserpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Russian>Ïèíãâèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PHEASANT</Tag>
+		<English>Subdued Pheasant</English>
+		<French>Faisan (App.)</French>
+		<Italian>
+			<Text>Fagiano addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Bażant</Polish>
+		<Russian>Ôàçàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON</Tag>
+		<English>Subdued Pigeon</English>
+		<French>Pigeon (App.)</French>
+		<Italian>
+			<Text>Piccione addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Gołąb</Polish>
+		<Russian>Ãîëóáü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PIG_NEW</Tag>
+		<English>Subdued Swine</English>
+		<French>Cochon (App.)</French>
+		<Italian>
+			<Text>Maiale addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Zwinia</Polish>
+		<Russian>Ñâèíüÿ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON</Tag>
+		<English>Subdued Procoptodon</English>
+		<French>Procoptodon (App.)</French>
+		<Italian>
+			<Text>Procoptodonte addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Prokoptodon</Polish>
+		<Russian>Ïðîêîïòîäîí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER</Tag>
+		<English>Subdued Puff Adder</English>
+		<French>
+			<Text>Vipère heurtante (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Vipera soffiatrice addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Żmija Sykliwa</Polish>
+		<Russian>Øóìÿùàÿ ãàäþêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL</Tag>
+		<English>Subdued Quoll</English>
+		<French>Chat marsupial (App.)</French>
+		<German>SubduedQuoll</German>
+		<Italian>
+			<Text>Quoll addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>SubduedQuoll</Spanish>
+		<Polish>Poskromiony Quoll</Polish>
+		<Russian>Ñóì÷àòàÿ êóíèöà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RACCOON</Tag>
+		<English>Subdued Raccoon</English>
+		<French>Raton laveur (App.)</French>
+		<Italian>
+			<Text>Procione addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Szop Pracz</Polish>
+		<Russian>Åíîò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL</Tag>
+		<English>Subdued Ratel</English>
+		<French>Ratel (App.)</French>
+		<Italian>
+			<Text>Ratele addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Miodożer</Polish>
+		<Russian>Ìåäîåä (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE</Tag>
+		<English>Subdued Eagle Ray</English>
+		<French>Aigle de mer (App.)</French>
+		<Italian>
+			<Text>Aquila di mare addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Płaszczka</Polish>
+		<Russian>Îðëÿêîâûé ñêàò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_MANTA</Tag>
+		<English>Subdued Manta Ray</English>
+		<French>
+			<Text>Raie Manta (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Manta addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Manta</Polish>
+		<Russian>Ìàíòà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX</Tag>
+		<English>Subdued Red Fox</English>
+		<French>Renard roux (App.)</French>
+		<German>
+			<Text>Gefangener Rotfuchs:Gefangenen Rotfuchses:Gefangenen Rotfuchs:Gefangenen Rotfuchs:Gefangene Rotfüchse:Gefangenen Rotfüchse:Gefangenen Rotfüchsen:Gefangenen Rotfüchse</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Volpe rossa addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lis Rudy</Polish>
+		<Russian>Ëèñèöà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK</Tag>
+		<English>Subdued Reef Shark</English>
+		<French>Requin des récifs (App.)</French>
+		<German>
+			<Text>Gefangener Riffhai:Gefangenen Riffhais:Gefangenen Riffhai:Gefangenen Riffhai:Gefangene Riffhaie:Gefangenen Riffhaie:Gefangenen Riffhaien:Gefangenen Riffhaie</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Squalo di barriera addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Żarłacz Karaibski</Polish>
+		<Russian>Ðèôîâàÿ àêóëà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA</Tag>
+		<English>Subdued Rhea</English>
+		<French>Nandou (App.)</French>
+		<Italian>
+			<Text>Nandù addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromione Nandu</Polish>
+		<Russian>Íàíäó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_LARGE</Tag>
+		<English>Subdued Crocodile (Large)</English>
+		<French>Grand Crocodile (App.)</French>
+		<German>
+			<Text>Gefangenes Krokodil (groß):Gefangenen Krokodils (groß):Gefangenen Krokodil (groß):Gefangene Krokodil (groß):Gefangene Krokodile (groß):Gefangenen Krokodile (groß):Gefangenen Krokodilen (groß):Gefangenen Krokodile (groß)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Coccodrillo (grande) addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krokodyl (duży)</Polish>
+		<Russian>Êðóïíûé êðîêîäèë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_SMALL</Tag>
+		<English>Subdued Crocodile (Small)</English>
+		<French>Petit Crocodile (App.)</French>
+		<German>
+			<Text>Gefangenes Krokodil (klein):Gefangenen Krokodils (klein):Gefangenen Krokodil (klein):Gefangene Krokodil (klein):Gefangene Krokodile (klein):Gefangenen Krokodile (klein):Gefangenen Krokodilen (klein):Gefangenen Krokodile (klein)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Coccodrillo (piccolo) addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krokodyl (mały)</Polish>
+		<Russian>Ìåëêèé êðîêîäèë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER</Tag>
+		<English>Subdued Rockhopper Penguin</English>
+		<French>Gorfou sauteur (App.)</French>
+		<German>
+			<Text>Gefangener Felsenpinguin:Gefangenen Felsenpinguins:Gefangenen Felsenpinguin:Gefangenen Felsenpinguin:Gefangene Felsenpinguine:Gefangenen Felsenpinguine:Gefangenen Felsenpinguinen:Gefangenen Felsenpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Pinguino Rockhopper addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Pingwin</Polish>
+		<Russian>Ñêàëèñòûé ïèíãâèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA</Tag>
+		<English>Subdued Saiga Antelope</English>
+		<French>Saiga (App.)</French>
+		<Italian>
+			<Text>Saiga addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Saiga</Polish>
+		<Russian>Ñàéãàê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCL</Tag>
+		<English>Subdued Saltwater Crocodile (Large)</English>
+		<French>Grand Crocodile de mer (App.)</French>
+		<German>
+			<Text>Gefangenes Salzwasserkrokodil (groß):Gefangenen Salzwasserkrokodils (groß):Gefangenen Salzwasserkrokodil (groß):Gefangene Salzwasserkrokodil (groß):Gefangene Salzwasserkrokodile (groß):Gefangenen Salzwasserkrokodile (groß):Gefangenen Salzwasserkrokodilen (groß):Gefangenen Salzwasserkrokodile (groß)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Coccodrillo marino (grande) addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krokodyl Różańcowy (duży)</Polish>
+		<Russian>Áîë. ìîð. êðîêîäèë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCS</Tag>
+		<English>Subdued Saltwater Crocodile (Small)</English>
+		<French>Petit Crocodile de mer (App.)</French>
+		<German>
+			<Text>Gefangenes Salzwasserkrokodil (klein):Gefangenen Salzwasserkrokodils (klein):Gefangenen Salzwasserkrokodil (klein):Gefangene Salzwasserkrokodil (klein):Gefangene Salzwasserkrokodile (klein):Gefangenen Salzwasserkrokodile (klein):Gefangenen Salzwasserkrokodilen (klein):Gefangenen Salzwasserkrokodile (klein)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Coccodrillo marino (piccolo) addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Krokodyl Różańcowy (mały)</Polish>
+		<Russian>Ìàë. ìîð. êðîêîäèë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Tag>
+		<English>Subdued Sea Lion (Land)</English>
+		<French>Lion de mer (App.)</French>
+		<German>
+			<Text>Gezähmter Seelöwe:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmte Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Leone marino addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lew Morski</Polish>
+		<Russian>Âîäíûé ñèâó÷ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Tag>
+		<English>Subdued Sea Lion (Sea)</English>
+		<French>Lion de mer (App.)</French>
+		<German>
+			<Text>Gezähmter Seelöwe:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmte Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Leone marino addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lew Morski</Polish>
+		<Russian>Íàçåì. ñèâó÷ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEAOTTER</Tag>
+		<English>Subdued Sea Otter</English>
+		<French>
+			<Text>Loutre de mer (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Lontra marina addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Wydra Morska</Polish>
+		<Russian>Êàëàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEATURTLE</Tag>
+		<English>Subdued Sea Turtle</English>
+		<French>
+			<Text>Tortue de mer (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Tartaruga marina addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Żółw Morski</Polish>
+		<Russian>Ìîðñêàÿ ÷åðåïàõà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER</Tag>
+		<English>Subdued Siberian Tiger</English>
+		<French>Tigre de Sibérie (App.)</French>
+		<Italian>
+			<Text>Tigre siberiana addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Tygrys Syberyjski</Polish>
+		<Russian>Ñèáèðñêèé òèãð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SKUNK</Tag>
+		<English>Subdued Skunk</English>
+		<French>
+			<Text>Mouffette (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Moffetta addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Skunks</Polish>
+		<Russian>Ñêóíñ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SNOWLEOPARD</Tag>
+		<English>Subdued Snow Leopard</English>
+		<French>Léopard des neiges (App.)</French>
+		<Italian>
+			<Text>Leopardo delle nevi addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony</Polish>
+		<Russian>Ñíåæíûé áàðñ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_STAG_DEER</Tag>
+		<English>Subdued Deer</English>
+		<French>Cerf (App.)</French>
+		<Italian>
+			<Text>Cervo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Jeleń</Polish>
+		<Russian>Îëåíü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_TAPIR</Tag>
+		<English>Subdued Baird's Tapir</English>
+		<French>Tapir de Baird (App.)</French>
+		<German>
+			<Text>Gefangener Baird-Tapir:Gefangenen Baird-Tapirs:Gefangenen Baird-Tapir:Gefangenen Baird-Tapir:Gefangene Baird-Tapire:Gefangenen Baird-Tapire:Gefangenen Baird-Tapiren:Gefangenen Baird-Tapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Tapiro addomesticato (Baird's)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Tapir Panamski</Polish>
+		<Russian>Òàïèð (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_TASMANIANDEVIL</Tag>
+		<English>Subdued Tasmanian Devil</English>
+		<French>Diable de Tasmanie (App.)</French>
+		<Italian>
+			<Text>Diavolo della Tasmania addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Diabeł Tasmański</Polish>
+		<Russian>Òàñìàíñêèé äüÿâîë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_TERN</Tag>
+		<English>Subdued Arctic Tern</English>
+		<French>
+			<Text>Sterne Arctique (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Sterna artica addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Rybitwa</Polish>
+		<Russian>Ïîëÿðíàÿ êðà÷êà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_TOUCAN</Tag>
+		<English>Subdued Toucan</English>
+		<French>Toucan (App.)</French>
+		<Italian>
+			<Text>Tucano addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Tukan</Polish>
+		<Russian>Òóêàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA</Tag>
+		<English>Subdued Tuna</English>
+		<French>Thon (App.)</French>
+		<Italian>
+			<Text>Tonno addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Tuńczyk</Polish>
+		<Russian>Òóíåö (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_TURKEY</Tag>
+		<English>Subdued Wild Turkey</English>
+		<French>
+			<Text>Dinde (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Tacchino addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Indyk</Polish>
+		<Russian>Èíäåéêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER</Tag>
+		<English>Subdued Viper</English>
+		<French>
+			<Text>Vipère (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Vipera addomesticata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Żmija</Polish>
+		<Russian>Ãàäþêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_CHAIN</Tag>
+		<English>Subdued Chain Viper</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_VULTURE</Tag>
+		<English>Subdued Vulture</English>
+		<French>Vautour (App.)</French>
+		<Italian>
+			<Text>Avvoltoio addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Sęp</Polish>
+		<Russian>Ãðèô (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WALLABY</Tag>
+		<English>Subdued Ring-tailed Wallaby</English>
+		<French>Wallaby (App.)</French>
+		<German>
+			<Text>Gefangenes Wallaby:Gefangenen Wallabys:Gefangenen Wallaby:Gefangene Wallaby:Gefangene Wallabys:Gefangenen Wallabys:Gefangenen Wallabys:Gefangenen Wallabys</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Wallaby addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Walabia</Polish>
+		<Russian>Êåíãóðó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO</Tag>
+		<English>Subdued Wallaroo</English>
+		<French>Wallaroo (App.)</French>
+		<German>
+			<Text>Gefangenes Bergkänguru:Gefangenen Bergkängurus:Gefangenen Bergkänguru:Gefangene Bergkänguru:Gefangene Bergkängurus:Gefangenen Bergkängurus:Gefangenen Bergkängurus:Gefangenen Bergkängurus</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Wallaroo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Kangur Górski</Polish>
+		<Russian>Ãîðíûé êåíãóðó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS</Tag>
+		<English>Subdued Walrus</English>
+		<French>Morse (App.)</French>
+		<German>
+			<Text>Gefangenes Walross:Gefangenen Walrosses:Gefangenen Walross:Gefangene Walross:Gefangene Walrosse:Gefangenen Walrosse:Gefangenen Walrossen:Gefangenen Walrosse</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Tricheco addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Mors</Polish>
+		<Russian>Ìîðæ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WARTHOG</Tag>
+		<English>Subdued Warthog</English>
+		<French>Phacochère (App.)</French>
+		<Italian>
+			<Text>Facocero addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Guziec</Polish>
+		<Russian>Áîðîäàâî÷íèê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK</Tag>
+		<English>Subdued Whale Shark</English>
+		<French>Requin-baleine (App.)</French>
+		<German>
+			<Text>Gefangener Walhai:Gefangenen Walhais:Gefangenen Walhai:Gefangenen Walhai:Gefangene Walhaie:Gefangenen Walhaie:Gefangenen Walhaien:Gefangenen Walhaie</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Squalo balena addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Rekin Wielorybi</Polish>
+		<Russian>Êèòîâàÿ àêóëà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST</Tag>
+		<English>Subdued Wildebeest</English>
+		<French>Gnou (App.)</French>
+		<Italian>
+			<Text>Gnu addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromione Gnu</Polish>
+		<Russian>Ãíó (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WOLF</Tag>
+		<English>Subdued Wolf</English>
+		<French>Loup (App.)</French>
+		<Italian>
+			<Text>Lupo addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Wilk</Polish>
+		<Russian>Âîëê (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_WOLVERINE</Tag>
+		<English>Subdued Wolverine</English>
+		<French>Carcajou (App.)</French>
+		<Italian>
+			<Text>Ghiottone addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Rosomak</Polish>
+		<Russian>Ðîñîìàõà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_BELUGA</Tag>
+		<English>Tales of Beluga</English>
+		<French>
+			<Text>Histoires de Beluga</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di beluga</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Biełudze</Polish>
+		<Russian>Áåëóõà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_COD</Tag>
+		<English>Tales of Cod</English>
+		<French>
+			<Text>Histoires de Corneilles</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di merluzzi</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Dorszu</Polish>
+		<Russian>Òðåñêà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_CRAB</Tag>
+		<English>Tales of Crab</English>
+		<French>
+			<Text>Histoires de Crabes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di granchi</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Krabie</Polish>
+		<Russian>Êðàá (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_DOLPHIN</Tag>
+		<English>Tales of Dolphin</English>
+		<French>
+			<Text>Histoires de Dauphins</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di delfini</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Delfinie</Polish>
+		<Russian>Äåëüôèí (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_DUGONG</Tag>
+		<English>Tales of Dugong</English>
+		<French>
+			<Text>Histoires de Dugong</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di dugonghi</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Dugongu</Polish>
+		<Russian>Äþãîíü (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_GIANT_SQUID</Tag>
+		<English>Tales of Giant Squid</English>
+		<French>
+			<Text>Histoires de Calamars géants</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di calamari giganti</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Wielkiej Kałamarnicy</Polish>
+		<Russian>Ãèãàíñêèé êàëüìàð (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_GREATWHITE</Tag>
+		<English>Tales of Great White Shark</English>
+		<French>
+			<Text>Histoires de Grands requins blancs</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di grandi squali bianchi</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Żarłaczu Białym</Polish>
+		<Russian>Áåëàÿ àêóëà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_HAMMERHEAD</Tag>
+		<English>Tales of Hammerhead Shark</English>
+		<French>
+			<Text>Histoires de Requins marteau</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di squali martelli</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Rekini-Młocie</Polish>
+		<Russian>Àêóëà-ìîëîò (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_HUMPBACK_WHALE</Tag>
+		<English>Tales of Humpback Whale</English>
+		<French>
+			<Text>Histoires de Baleines à bosses</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Tales of Humpback Whale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Storie di megattere</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tales of Humpback Whale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Opowieści o Humpbaku</Polish>
+		<Russian>Ãîðáàòûé êèò (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_MACKEREL</Tag>
+		<English>Tales of Mackerel</English>
+		<French>
+			<Text>Histoires de Maquereaux</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di sgombri</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Makreli</Polish>
+		<Russian>Ìàêðåëü (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_MARLIN</Tag>
+		<English>Tales of Marlin</English>
+		<French>
+			<Text>Histoires de Marlins</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di pesci vela</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Marlinie</Polish>
+		<Russian>Ìàðëèí (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_MINKIE_WHALE</Tag>
+		<English>Tales of Minkie Whale</English>
+		<French>
+			<Text>Histoires de Rorquals</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di balenottere</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Płetwalu</Polish>
+		<Russian>Ïîëîñàòèê (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_NARWHAL</Tag>
+		<English>Tales of Narwhal</English>
+		<French>
+			<Text>Histoires de Narval</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di narvali</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Narwalu</Polish>
+		<Russian>Íàðâàë (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_ORCA</Tag>
+		<English>Tales of Orca</English>
+		<French>
+			<Text>Histoires d'Orques</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di orche</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Orce</Polish>
+		<Russian>Êàñàòêà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_RAY_EAGLE</Tag>
+		<English>Tales of Eagle Ray</English>
+		<French>
+			<Text>Histoires d'Aigle des mers</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di aquile di mare</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Płaszczce</Polish>
+		<Russian>Îðëÿêîâûé ñêàò (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_RAY_MANTA</Tag>
+		<English>Tales of Manta Ray</English>
+		<French>
+			<Text>Histoires de Raies Manta</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di mante</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Mancie</Polish>
+		<Russian>Ìàíòà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_REEF_SHARK</Tag>
+		<English>Tales of Reef Shark</English>
+		<French>
+			<Text>Histoires de Requins des récifs</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di squali di barriera</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Żarłaczu Karaibskim</Polish>
+		<Russian>Ðèôîâàÿ àêóëà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCL</Tag>
+		<English>Tales of Saltwater Crocodile (Large)</English>
+		<French>
+			<Text>Histoires de Grands Crocodiles des mers</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di coccodrilli marini (grandi)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Krokodylu Różańcowym (dużym)</Polish>
+		<Russian>Áîë. ìîð. êðîêîäèë (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCS</Tag>
+		<English>Tales of Saltwater Crocodile (Small)</English>
+		<French>
+			<Text>Histoires de petits Crocodiles des mers</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di coccodrilli marini (piccoli)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Krokodylu Różańcowym (małym)</Polish>
+		<Russian>Ìàë. ìîð. êðîêîäèë (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Tag>
+		<English>Tales of Sea Lion</English>
+		<French>Histoires de Lions de mer</French>
+		<Italian>
+			<Text>Storie di leoni marini</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Lwie Morskim</Polish>
+		<Russian>Ìîðñêîé ëåâ (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_SEATURTLE</Tag>
+		<English>Tales of Sea Turtle</English>
+		<French>
+			<Text>Histoires de Tortues de mer</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di tartarughe marine</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Morskim Żółwiu</Polish>
+		<Russian>Ìîðñêàÿ ÷åðåïàõà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_TUNA</Tag>
+		<English>Tales of Tuna</English>
+		<French>
+			<Text>Histoires de Thons</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di tonni</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Tuńczyku</Polish>
+		<Russian>Òóíåö (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_WHALESHARK</Tag>
+		<English>Tales of Whale Shark</English>
+		<French>
+			<Text>Histoires de Requins-baleine</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>
+			<Text>Storie di squali balena</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Polish>Opowieści o Rekinie Wielorybim</Polish>
+		<Russian>Êèòîâàÿ àêóëà (ñêàç)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRACKER</Tag>
+		<English>Tracker</English>
+		<French>Pisteur</French>
+		<Italian>
+			<Text>Cercatore di tracce</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Tropiciel</Polish>
+		<Russian>Çâåðîëîâ</Russian>
+	</TEXT>
+</Civ4GameText>

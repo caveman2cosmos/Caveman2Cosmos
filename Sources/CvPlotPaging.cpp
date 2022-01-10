@@ -1,6 +1,7 @@
 
 #include "CvGameCoreDLL.h"
-
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlotPaging.h"
 
 #include <psapi.h>
@@ -224,8 +225,7 @@ void CvPlotPaging::UpdatePaging()
 {
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
-	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
-	
+
 	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
 	{
 		const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
@@ -234,22 +234,22 @@ void CvPlotPaging::UpdatePaging()
 			return;
 		}
 
-		const int centerX = lookatPlot->getX_INLINE();
-		const int centerY = lookatPlot->getY_INLINE();
+		const int centerX = lookatPlot->getX();
+		const int centerY = lookatPlot->getY();
 
 		// Gather and sort all plots by distance to view center
 		std::vector<PlotDist> plots;
-		const CvMap& map = GC.getMapINLINE();
-		plots.reserve(map.numPlotsINLINE());
-		for (int i = 0; i < map.numPlotsINLINE(); i++)
+		const CvMap& map = GC.getMap();
+		plots.reserve(map.numPlots());
+		for (int i = 0; i < map.numPlots(); i++)
 		{
-			CvPlot* plot = map.plotByIndexINLINE(i);
+			CvPlot* plot = map.plotByIndex(i);
 			if (plot != NULL)
 			{
-				plots.push_back(PlotDist(map.plotByIndexINLINE(i), ToroidalDistanceSq(centerX, centerY, plot->getX_INLINE(), plot->getY_INLINE(), map.getGridWidthINLINE(), map.getGridHeightINLINE())));
+				plots.push_back(PlotDist(map.plotByIndex(i), ToroidalDistanceSq(centerX, centerY, plot->getX(), plot->getY(), map.getGridWidth(), map.getGridHeight())));
 			}
 		}
-		std::sort(plots.begin(), plots.end());
+		algo::sort(plots);
 
 		if (!bPagingEnabled && g_bWasGraphicsPagingEnabled)
 		{
@@ -259,8 +259,8 @@ void CvPlotPaging::UpdatePaging()
 			win32::Stopwatch pageTimer;
 			pageTimer.Start();
 
-			const CvMap& map = GC.getMapINLINE();
-			
+			//const CvMap& map = GC.getMap();
+
 			bool timedout = false;
 			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)
 			{
@@ -314,8 +314,8 @@ void CvPlotPaging::UpdatePaging()
 				}
 			}
 
-			g_iLastLookatX = lookatPlot->getX_INLINE();
-			g_iLastLookatY = lookatPlot->getY_INLINE();
+			g_iLastLookatX = lookatPlot->getX();
+			g_iLastLookatY = lookatPlot->getY();
 
 			g_bWasGraphicsPagingEnabled = true;
 		}

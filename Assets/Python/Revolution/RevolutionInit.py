@@ -12,17 +12,13 @@
 # where configFileName is nominally "Revolution.ini".
 
 from CvPythonExtensions import *
-import Popup as PyPopup
-
 import RevEvents
 import BarbarianCiv
 import AIAutoPlay
 import ChangePlayer
 import Revolution
 import RevInstances
-
 import BugCore
-import RevDCM
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -37,15 +33,7 @@ class RevolutionInit:
 		print "RevolutionInit.__init__"
 
 		self.customEM = customEM
-		self.RevOpt = RevOpt
-		self.bShowActivePopup = RevOpt.isActivePopup()
 		self.bFirst = True
-
-		self.sectionFormat = "<font=3><color=200,200,0>"
-		self.optionFormat = "<font=2><color=127,255,0>"
-		self.noneOptionFormat = "<font=2><color=0,0,255>"
-		self.helpTextTitle = "<font=3b><color=255,255,0>"
-		self.helpTextFormat = "<font=2><color=255,255,255>"
 
 		customEM.addEventHandler("kbdEvent", self.onKbdEvent)
 		customEM.addEventHandler('GameStart', self.onGameStart)
@@ -56,9 +44,7 @@ class RevolutionInit:
 			self.onGameLoad(bShowPopup = False)
 
 
-
 	def onKbdEvent(self, argsList):
-		'keypress handler'
 		eventType,key,mx,my,px,py = argsList
 
 		if eventType == 6:
@@ -96,21 +82,21 @@ class RevolutionInit:
 
 			bAIAutoPlay = RevOpt.isAIAutoPlayEnable()
 			if bAIAutoPlay:
-				RevInstances.AIAutoPlayInst = AIAutoPlay.AIAutoPlay(self.customEM, self.RevOpt)
+				RevInstances.AIAutoPlayInst = AIAutoPlay.AIAutoPlay(self.customEM, RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIAN_CIV):
-				RevInstances.BarbarianCivInst = BarbarianCiv.BarbarianCiv(self.customEM, self.RevOpt)
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_CIV):
+				RevInstances.BarbarianCivInst = BarbarianCiv.BarbarianCiv(self.customEM, RevOpt)
 
 			bChangePlayer = RevOpt.isChangePlayerEnable()
 			if bChangePlayer:
-				RevInstances.ChangePlayerInst = ChangePlayer.ChangePlayer(self.customEM, self.RevOpt)
+				RevInstances.ChangePlayerInst = ChangePlayer.ChangePlayer(self.customEM, RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 				# RevEvents needs to service beginPlayerTurn events before Revolution
-				RevEvents.init(self.customEM, self.RevOpt)
-				RevInstances.RevolutionInst = Revolution.Revolution(self.customEM, self.RevOpt)
+				RevEvents.init(self.customEM, RevOpt)
+				RevInstances.RevolutionInst = Revolution.Revolution(self.customEM, RevOpt)
 
-		if bShowPopup and self.bShowActivePopup and self.bFirst:
+		if bShowPopup and RevOpt.isActivePopup() and self.bFirst:
 			self.showActivePopup()
 			self.bFirst = False
 
@@ -134,165 +120,163 @@ class RevolutionInit:
 		bodStr += TRNSLTR.getText("TXT_KEY_REV_MOD_TURNS_IN_GAME",( GAME.getMaxTurns(), ))
 		bodStr += TRNSLTR.getText("TXT_KEY_REV_MOD_DEFAULT_NUM_PLAYERS",( revDefaultNumPlayers, ))
 
-		popup = PyPopup.PyPopup()
-		popup.setBodyString(bodStr)
-		popup.setPosition(0,12)
-		screen = CyGInterfaceScreen("",0)
-		dx = screen.getXResolution() / 4
-		dy = screen.getYResolution() - 64
-		popup.setSize(dx, dy)
-		popup.launch()
+		popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+		popup.setBodyString(bodStr, 1<<0)
+		popup.setPosition(0, 12)
+		screen = CyGInterfaceScreen("", 0)
+		popup.setSize(screen.getXResolution() / 4, screen.getYResolution() - 64)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
-	#RevolutionDCM
+
 	def getRevComponentsText(self):
-		revComponentsText = "<color=250,170,0,255><font=4b>Caveman2Cosmos"
-		revComponentsText += self.helpTextTitle + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP",())
-		revNoneText = TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_NONE",())
 
-		### RevolutionDCM start
-		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INIT",())
+		sectionFormat = "<font=3><color=200,200,0>\n"
+		optionFormat = "<font=2><color=127,255,0>"
 		szNewLineTab = "\n\t"
-		anyOption = False
+		revNoneText = "<font=2><color=0,0,255>\n\t" + TRNSLTR.getText("TXT_KEY_NONE",())
+
+		revComponentsText = (
+			"<color=250,170,0,255><font=4b>Caveman2Cosmos<font=2b><color=255,255,0>\n"
+			+ TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP",())
+			+ sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_GAME",())
+		)
+		temp = ""
 		for iI in range(GC.getNumGameOptionInfos()):
 			if GAME.isOption(iI):
-				anyOption = True
-				revComponentsText += self.optionFormat + (szNewLineTab + GC.getGameOptionInfo(iI).getDescription())
-		if not anyOption:
-			revComponentsText += self.noneOptionFormat + revNoneText
+				temp += szNewLineTab + GC.getGameOptionInfo(iI).getDescription()
+		if temp:
+			revComponentsText += optionFormat + temp
+			temp = ""
+		else: revComponentsText += revNoneText
 
-		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_AND_OPTIONS",())
-		anyOption = False
+		revComponentsText += sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_BUG",())
+
 		if ANewDawnOpt.isDefenderWithdraw():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__DEFENDERWITHDRAW_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__DEFENDERWITHDRAW_TEXT",())
+
 		if ANewDawnOpt.getMaxUnitsPerTile() > 0:
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_AND_UNITS_PER_TILE",(ANewDawnOpt.getMaxUnitsPerTile(),)))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_AND_UNITS_PER_TILE",(ANewDawnOpt.getMaxUnitsPerTile(),))
+
 		if ANewDawnOpt.isEnableFlexibleDifficulty():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__ENABLEFLEXIBLEDIFFICULTY_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__ENABLEFLEXIBLEDIFFICULTY_TEXT",())
+
 		if ANewDawnOpt.isBetterAirInterception():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__BETTERAIRINTERCEPTION_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__BETTERAIRINTERCEPTION_TEXT",())
+
 		if ANewDawnOpt.isDepletionMod():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__DEPLETIONMOD_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__DEPLETIONMOD_TEXT",())
+
 		if ANewDawnOpt.isRealisiticDiplomacy():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__REALISITICDIPLOMACY_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__REALISITICDIPLOMACY_TEXT",())
+
 		if ANewDawnOpt.isImprovedXP():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT",())
+
 		if ANewDawnOpt.isBattlefieldPromotions():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__BATTLEFIELDPROMOTIONS_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__BATTLEFIELDPROMOTIONS_TEXT",())
+
+		if ANewDawnOpt.isReligionDecay():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT",())
+
 		if ANewDawnOpt.isMultipleReligionSpread():
-			revComponentsText += self.optionFormat + (szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__MULTIPLERELIGIONSPREAD_TEXT",()))
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__MULTIPLERELIGIONSPREAD_TEXT",())
 
-		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_DCM_OPTIONS",())
-		anyOption = False
+		if ANewDawnOpt.isTelepathicReligion():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_TEXT",())
 
-		if RevDCMOpt.isDCM_BATTLE_EFFECTS():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_BATTLE_EFFECTS",())
-			anyOption = True
-		if RevDCMOpt.isDCM_ARCHER_BOMBARD():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ARCHER_BOMBARD",())
-			anyOption = True
-		if RevDCMOpt.isDCM_STACK_ATTACK():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_STACK_ATTACK",())
-			anyOption = True
+		if temp:
+			revComponentsText += optionFormat + temp
+			temp = ""
+		else: revComponentsText += revNoneText
+
+		# DCM
+		revComponentsText += sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_DCM",())
+
 		if RevDCMOpt.isDCM_ATTACK_SUPPORT():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_TEXT",())
+
 		if RevDCMOpt.isDCM_RANGE_BOMBARD():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_RANGE_BOMBARD",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_RANGE_BOMBARD_TEXT",())
+
 		if RevDCMOpt.isDCM_OPP_FIRE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_OPP_FIRE",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_OPP_FIRE_TEXT",())
+
 		if RevDCMOpt.isDCM_AIR_BOMBING():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_AIR_BOMBING",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_AIR_BOMBING_TEXT",())
+
 		if RevDCMOpt.isDCM_ACTIVE_DEFENSE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ACTIVE_DEFENSE",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_ACTIVE_DEFENSE_TEXT",())
+
 		if RevDCMOpt.isDCM_FIGHTER_ENGAGE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_FIGHTER_ENGAGE",())
-			anyOption = True
-		if not anyOption:
-			revComponentsText += self.noneOptionFormat + revNoneText
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_TEXT",())
 
-		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_IDW_OPTIONS",())
-		anyOption = False
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__OC_RESPAWN_HOLY_CITIES_TEXT",())
+
+		if temp:
+			revComponentsText += optionFormat + temp
+			temp = ""
+		else: revComponentsText += revNoneText
+
+		# Influence Driven War
 		if RevDCMOpt.isIDW_ENABLED():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_IDW_ENABLED",())
-			anyOption = True
-		if RevDCMOpt.isIDW_PILLAGE_INFLUENCE_ENABLED():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE",())
-			anyOption = True
-		if RevDCMOpt.isIDW_EMERGENCY_DRAFT_ENABLED() :
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT",())
-			anyOption = True
-		if RevDCMOpt.isIDW_NO_BARBARIAN_INFLUENCE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_NO_BARBARIAN_INFLUENCE",())
-			anyOption = True
-		if RevDCMOpt.isIDW_NO_NAVAL_INFLUENCE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_NO_NAVAL_INFLUENCE",())
-			anyOption = True
-		if not anyOption:
-			revComponentsText += self.noneOptionFormat + revNoneText
+			revComponentsText += sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_IDW",()) + optionFormat + szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__IDW_ENABLED_TEXT",())
 
-		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_OPTIONS",())
-		anyOption = False
-		if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS):
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED",())
-			anyOption = True
-		if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_RESPAWN_HOLY_CITIES",())
-			anyOption = True
-		if not anyOption:
-			revComponentsText += self.noneOptionFormat + revNoneText
+			if RevDCMOpt.isIDW_PILLAGE_INFLUENCE_ENABLED():
+				revComponentsText += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__IDW_PILLAGE_INFLUENCE_ENABLED_TEXT",())
 
-		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SS_OPTIONS",())
-		anyOption = False
+			if RevDCMOpt.isIDW_EMERGENCY_DRAFT_ENABLED():
+				revComponentsText += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__IDW_EMERGENCY_DRAFT_ENABLED_TEXT",())
+
+			if RevDCMOpt.isIDW_NO_BARBARIAN_INFLUENCE():
+				revComponentsText += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__IDW_NO_BARBARIAN_INFLUENCE_TEXT",())
+
+			if RevDCMOpt.isIDW_NO_NAVAL_INFLUENCE():
+				revComponentsText += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__IDW_NO_NAVAL_INFLUENCE_TEXT",())
+
+		# Super Spies
+		revComponentsText += sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_SS",())
+
 		if RevDCMOpt.isSS_ENABLED():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SS_ENABLED",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__SS_ENABLED_TEXT",())
+
 		if RevDCMOpt.isSS_BRIBE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SS_BRIBE",())
-			anyOption = True
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__SS_BRIBE_TEXT",())
+
 		if RevDCMOpt.isSS_ASSASSINATE():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SS_ASSASSINATE",())
-			anyOption = True
-		if not anyOption:
-			revComponentsText += self.noneOptionFormat + revNoneText
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__SS_ASSASSINATE_TEXT",())
 
-		revHelpText = self.helpTextTitle
-		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_GAME_SHORTCUTS",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY",())
+		if temp:
+			revComponentsText += optionFormat + temp
+			temp = ""
+		else: revComponentsText += revNoneText
 
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_M_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_X_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_X_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_S_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_M_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_L_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_E_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_B_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_F_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_O_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_L_ARROW_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_R_ARROW_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_I_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_I_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_CTRL_N_ARROW_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT",())
-		revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT",())
+
+		revHelpText = "<font=3b><color=255,255,0>\n"
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_GAME_SHORTCUTS",()) + "<font=2><color=255,255,255>"
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY",())
+
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_M_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_X_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_X_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_S_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_M_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_L_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_E_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_B_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_F_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_O_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_L_ARROW_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_R_ARROW_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_I_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_I_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ALT_CTRL_N_ARROW_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT",())
+		revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT",())
 
 		if GAME.isDebugMode():
-			revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_L_SHORTCUT",())
-			revHelpText += self.helpTextFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_P_SHORTCUT",())
+			revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_L_SHORTCUT",())
+			revHelpText += TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_P_SHORTCUT",())
 		return revComponentsText + revHelpText

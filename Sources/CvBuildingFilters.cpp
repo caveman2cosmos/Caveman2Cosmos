@@ -7,8 +7,14 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
+#include "CvBuildingFilters.h"
+#include "CvBuildingInfo.h"
+#include "CvBugOptions.h"
+#include "CvCity.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvPlayerAI.h"
 
 void BuildingFilterBase::Activate()
 {
@@ -20,19 +26,19 @@ void BuildingFilterBase::Deactivate()
 	setActive(false);
 }
 
-bool BuildingFilterBase::isActive()
+bool BuildingFilterBase::isActive() const
 {
 	return m_bActive;
 }
 
 bool BuildingFilterBase::setActive(bool bActive)
 {
-	bool bChanged = m_bActive ^ bActive;
+	const bool bChanged = m_bActive ^ bActive;
 	m_bActive = bActive;
 	return bChanged;
 }
 
-bool BuildingFilterBase::isFiltered(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterBase::isFiltered(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	return !m_bActive || (m_bInvert ^ isFilteredBuilding(pPlayer, pCity, eBuilding));
 }
@@ -42,7 +48,7 @@ BuildingFilterBase::~BuildingFilterBase()
 
 }
 
-bool BuildingFilterCanBuild::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterCanBuild::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
@@ -51,233 +57,215 @@ bool BuildingFilterCanBuild::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity
 	return pPlayer->canConstruct(eBuilding, false, m_bShowSomeUnconstructable);
 }
 
-bool BuildingFilterIsWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsWonder::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	return isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isLimitedWonder(eBuilding);
 }
 
-bool BuildingFilterIsGreatWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsGreatWonder::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	return isWorldWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isWorldWonder(eBuilding);
 }
 
-bool BuildingFilterIsNationalWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsNationalWonder::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	return isNationalWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isNationalWonder(eBuilding);
 }
 
-BuildingFilterIsCommerce::BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert) : BuildingFilterBase(bInvert)
-{
-	m_eCommerce = eCommerce;
-}
+BuildingFilterIsCommerce::BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert) : BuildingFilterBase(bInvert), m_eCommerce(eCommerce) {}
 
-bool BuildingFilterIsCommerce::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsCommerce::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
 		return pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding) > 0;
 	}
-	return ((GC.getBuildingInfo(eBuilding).getCommerceChange(m_eCommerce) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getCommercePerPopChange(m_eCommerce) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getCommerceModifier(m_eCommerce) > 0)|| 
-		(GC.getBuildingInfo(eBuilding).getSpecialistExtraCommerce(m_eCommerce) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getGlobalCommerceModifier(m_eCommerce) > 0));
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	return buildingInfo.getCommerceChange(m_eCommerce) > 0
+		|| buildingInfo.getCommercePerPopChange(m_eCommerce) > 0
+		|| buildingInfo.getCommerceModifier(m_eCommerce) > 0
+		|| buildingInfo.getSpecialistExtraCommerce(m_eCommerce) > 0
+		|| buildingInfo.getGlobalCommerceModifier(m_eCommerce) > 0;
 }
 
-BuildingFilterIsYield::BuildingFilterIsYield(YieldTypes eYield, bool bInvert) : BuildingFilterBase(bInvert)
-{
-	m_eYield = eYield;
-}
+BuildingFilterIsYield::BuildingFilterIsYield(YieldTypes eYield, bool bInvert) : BuildingFilterBase(bInvert), m_eYield(eYield) {}
 
-bool BuildingFilterIsYield::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
 		return pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0;
 	}
-	return ((GC.getBuildingInfo(eBuilding).getYieldChange(m_eYield) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getYieldPerPopChange(m_eYield) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getYieldModifier(m_eYield) > 0)	|| 
-		(GC.getBuildingInfo(eBuilding).getAreaYieldModifier(m_eYield) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getGlobalYieldModifier(m_eYield) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getGlobalSeaPlotYieldChange(m_eYield) > 0) || 
-		(GC.getBuildingInfo(eBuilding).getSeaPlotYieldChange(m_eYield) > 0));
+	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+
+	foreach_(const PlotArray& pair, info.getPlotYieldChanges())
+	{
+		if (pair.second[m_eYield] > 0)
+		{
+			return true;
+		}
+	}
+	foreach_(const TerrainArray& pair, info.getTerrainYieldChanges())
+	{
+		if (pair.second[m_eYield] > 0)
+		{
+			return true;
+		}
+	}
+	return info.getYieldChange(m_eYield) > 0
+		|| info.getYieldPerPopChange(m_eYield) > 0
+		|| info.getYieldModifier(m_eYield) > 0
+		|| info.getAreaYieldModifier(m_eYield) > 0
+		|| info.getGlobalYieldModifier(m_eYield) > 0
+		|| info.getGlobalSeaPlotYieldChange(m_eYield) > 0;
 }
 
-bool BuildingFilterIsHappiness::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	//TB Note: isn't the following checking only buildings already built?
 	if (pCity)
 	{
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) > 0;
 	}
-	bool bTechHapp = false;
-	if (GC.getBuildingInfo(eBuilding).getNumTechHappinessTypes() > 0)
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (GC.getBuildingInfo(eBuilding).getTechHappinessType(iI) > 0)
-			{
-				bTechHapp = true;
-			}
-		}
+		if (modifier.second > 0)
+			return true;
 	}
-	return ((GC.getBuildingInfo(eBuilding).getHappiness() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getAreaHappiness() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getGlobalHappiness() > 0) ||
-		bTechHapp);
+	return buildingInfo.getHappiness() > 0
+		|| buildingInfo.getAreaHappiness() > 0
+		|| buildingInfo.getGlobalHappiness() > 0;
 }
 
-bool BuildingFilterIsHealth::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsHealth::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
 		return pCity->getAdditionalHealthByBuilding(eBuilding) > 0;
 	}
-	bool bTechHealth = false;
-	if (GC.getBuildingInfo(eBuilding).getNumTechHealthTypes() > 0)
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (GC.getBuildingInfo(eBuilding).getTechHealthType(iI) > 0)
-			{
-				bTechHealth = true;
-			}
-		}
+		if (modifier.second > 0)
+			return true;
 	}
-	return ((GC.getBuildingInfo(eBuilding).getHealth() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getAreaHealth() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getGlobalHealth() > 0) ||
-		bTechHealth);
+	return buildingInfo.getHealth() > 0
+		|| buildingInfo.getAreaHealth() > 0
+		|| buildingInfo.getGlobalHealth() > 0;
 }
 
-bool BuildingFilterIsUnhappiness::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsUnhappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) < 0;
 	}
-	bool bTechUnHapp = false;
-	if (GC.getBuildingInfo(eBuilding).getNumTechHappinessTypes() > 0)
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (GC.getBuildingInfo(eBuilding).getTechHappinessType(iI) < 0)
-			{
-				bTechUnHapp = true;
-			}
-		}
+		if (modifier.second < 0)
+			return true;
 	}
-
-	return ((GC.getBuildingInfo(eBuilding).getHappiness() < 0) ||
-		(GC.getBuildingInfo(eBuilding).getAreaHappiness() < 0) ||
-		(GC.getBuildingInfo(eBuilding).getGlobalHappiness() < 0) ||
-		bTechUnHapp);
+	return buildingInfo.getHappiness() < 0
+		|| buildingInfo.getAreaHappiness() < 0
+		|| buildingInfo.getGlobalHappiness() < 0;
 }
 
-bool BuildingFilterIsUnhealthiness::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+bool BuildingFilterIsUnhealthiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
 		return pCity->getAdditionalHealthByBuilding(eBuilding) < 0;
 	}
-	bool bTechUnHealth = false;
-	if (GC.getBuildingInfo(eBuilding).getNumTechHealthTypes() > 0)
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (modifier.second < 0)
+			return true;
+	}
+	return buildingInfo.getHealth() < 0
+		|| buildingInfo.getAreaHealth() < 0
+		|| buildingInfo.getGlobalHealth() < 0;
+}
+
+bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const // not finished
+{
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	return buildingInfo.getMilitaryProductionModifier() > 0
+		|| buildingInfo.getFreeExperience() > 0
+		|| buildingInfo.getFreePromotion() != NO_PROMOTION
+		|| buildingInfo.getFreePromotion_2() != NO_PROMOTION
+		|| buildingInfo.getFreePromotion_3() != NO_PROMOTION
+		|| buildingInfo.getNumUnitCombatRetrainTypes() > 0
+		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
+		|| !buildingInfo.getFreePromoTypes().empty()
+		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
+		|| !buildingInfo.getUnitCombatFreeExperience().empty()
+		|| buildingInfo.isAnyDomainFreeExperience();
+}
+
+bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
+{
+	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+	if (GC.getGame().isOption(GAMEOPTION_SAD))
+	{
+		if (buildingInfo.getLocalDynamicDefense() > 0)
+			return true;
+	}
+#ifdef STRENGTH_IN_NUMBERS
+	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	{
+		if(buildingInfo.getFrontSupportPercentModifier() > 0
+		|| buildingInfo.getShortRangeSupportPercentModifier() > 0
+		|| buildingInfo.getMediumRangeSupportPercentModifier() > 0
+		|| buildingInfo.getLongRangeSupportPercentModifier() > 0
+		|| buildingInfo.getFlankSupportPercentModifier() > 0)
 		{
-			if (GC.getBuildingInfo(eBuilding).getTechHealthType(iI) < 0)
-			{
-				bTechUnHealth = true;
-			}
+			return true;
 		}
 	}
-	return ((GC.getBuildingInfo(eBuilding).getHealth() < 0) || 
-		(GC.getBuildingInfo(eBuilding).getAreaHealth() < 0) || 
-		(GC.getBuildingInfo(eBuilding).getGlobalHealth() < 0) ||
-		bTechUnHealth);
+#endif
+	return buildingInfo.getDefenseModifier() > 0
+		|| buildingInfo.getAllCityDefenseModifier() > 0
+		|| buildingInfo.getAdjacentDamagePercent() > 0
+		|| buildingInfo.getBombardDefenseModifier() > 0
+		|| buildingInfo.getNumUnitCombatRepelModifiers() > 0
+		|| buildingInfo.getLocalCaptureProbabilityModifier() > 0
+		|| buildingInfo.getLocalCaptureResistanceModifier() > 0
+		|| buildingInfo.getNationalCaptureResistanceModifier() > 0
+		|| buildingInfo.getRiverDefensePenalty() < 0
+		|| buildingInfo.getLocalRepel() > 0
+		|| buildingInfo.getMinDefense() > 0
+		|| buildingInfo.getBuildingDefenseRecoverySpeedModifier() > 0
+		|| buildingInfo.getCityDefenseRecoverySpeedModifier() > 0
+		|| buildingInfo.getNumUnitCombatRepelAgainstModifiers() > 0
+		|| buildingInfo.getNumUnitCombatDefenseAgainstModifiers() > 0;
 }
 
-bool BuildingFilterIsMilitary::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) // not finished
+bool BuildingFilterIsProperty::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	return ((GC.getBuildingInfo(eBuilding).getMilitaryProductionModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getFreeExperience() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getFreePromotion() != NO_PROMOTION) || 
-		(GC.getBuildingInfo(eBuilding).getFreePromotion_2() != NO_PROMOTION) ||
-		(GC.getBuildingInfo(eBuilding).getFreePromotion_3() != NO_PROMOTION) || 
-		(GC.getBuildingInfo(eBuilding).getNumUnitCombatRetrainTypes() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getNumUnitCombatProdModifiers() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getNumFreePromoTypes() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getNumUnitCombatOngoingTrainingDurations() > 0) ||
-		(GC.getBuildingInfo(eBuilding).isAnyUnitCombatFreeExperience()) ||
-		(GC.getBuildingInfo(eBuilding).isAnyDomainFreeExperience()));
-}
-
-bool BuildingFilterIsCityDefense::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
-{
-	bool bSAD = false;
-	bool bSIN = false;
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
-	{
-		bSAD = (GC.getBuildingInfo(eBuilding).getLocalDynamicDefense() > 0);
-	}
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		bSIN =  ((GC.getBuildingInfo(eBuilding).getFrontSupportPercentModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getShortRangeSupportPercentModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getMediumRangeSupportPercentModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getLongRangeSupportPercentModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getFlankSupportPercentModifier() > 0)) ;
-	}
-
-	return ((GC.getBuildingInfo(eBuilding).getDefenseModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getAllCityDefenseModifier() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getAdjacentDamagePercent() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getBombardDefenseModifier() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getNumUnitCombatRepelModifiers() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getLocalCaptureProbabilityModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getLocalCaptureResistanceModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getNationalCaptureResistanceModifier() > 0) || 
-		bSAD || 
-		bSIN || 
-		(GC.getBuildingInfo(eBuilding).getRiverDefensePenalty() < 0) || 
-		(GC.getBuildingInfo(eBuilding).getLocalRepel() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getMinDefense() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getBuildingDefenseRecoverySpeedModifier() > 0) || 
-		(GC.getBuildingInfo(eBuilding).getCityDefenseRecoverySpeedModifier() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getNumUnitCombatRepelAgainstModifiers() > 0) ||
-		(GC.getBuildingInfo(eBuilding).getNumUnitCombatDefenseAgainstModifiers() > 0));
-}
-
-bool BuildingFilterIsProperty::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
-{
-	CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
 	if ((kInfo.getProperties()->getValueByProperty(m_eProperty) != 0) || (kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty)))
 		return true;
 
-	CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
-	int iNum = pMani->getNumSources();
-	for (int i=0; i<iNum; i++)
+	const CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		if (pMani->getSource(i)->getProperty() == m_eProperty)
+		if (pSource->getProperty() == m_eProperty)
 			return true;
 	}
 
-	iNum = pMani->getNumInteractions();
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvPropertyInteraction* pInteraction, pMani->getInteractions())
 	{
-		if (pMani->getInteraction(i)->getSourceProperty() == m_eProperty)
+		if (pInteraction->getSourceProperty() == m_eProperty)
 			return true;
-		if (pMani->getInteraction(i)->getTargetProperty() == m_eProperty)
+		if (pInteraction->getTargetProperty() == m_eProperty)
 			return true;
 	}
 
-	iNum = pMani->getNumPropagators();
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvPropertyPropagator* pPropagator, pMani->getPropagators())
 	{
-		if (pMani->getPropagator(i)->getProperty() == m_eProperty)
+		if (pPropagator->getProperty() == m_eProperty)
 			return true;
 	}
 
@@ -329,7 +317,7 @@ void BuildingFilterList::init()
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_AIR_POLLUTION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_AIR_POLLUTION"));
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_WATER_POLLUTION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_WATER_POLLUTION"));
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_TOURISM] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_TOURISM"));
-	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
+	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 }
 
 BuildingFilterList::~BuildingFilterList()
@@ -340,15 +328,9 @@ BuildingFilterList::~BuildingFilterList()
 	}
 }
 
-int BuildingFilterList::getNumFilters()
+bool BuildingFilterList::isFilterActive(BuildingFilterTypes i) const
 {
-	return NUM_BUILDING_FILTERS;
-}
-
-bool BuildingFilterList::isFilterActive(BuildingFilterTypes i)
-{
-	FAssertMsg(i < NUM_BUILDING_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_FILTERS, i)
 	return m_apBuildingFilters[i]->isActive();
 }
 
@@ -364,12 +346,11 @@ void BuildingFilterList::setPlayer(CvPlayer *pPlayer)
 
 bool BuildingFilterList::setFilterActive(BuildingFilterTypes i, bool bActive)
 {
-	FAssertMsg(i < NUM_BUILDING_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_FILTERS, i)
 	return m_apBuildingFilters[i]->setActive(bActive);
 }
 
-bool BuildingFilterList::isFiltered(BuildingTypes eBuilding)
+bool BuildingFilterList::isFiltered(BuildingTypes eBuilding) const
 {
 	for (int i = 0; i < NUM_BUILDING_FILTERS; i++)
 	{
@@ -387,11 +368,8 @@ void BuildingFilterList::setFilterActiveAll(BuildingFilterTypes eFilter, bool bA
 		if (kLoopPlayer.isAlive())
 		{
 			kLoopPlayer.setBuildingListFilterActive(eFilter, bActive);
-			int iIter;
-			for (CvCity* pCity = kLoopPlayer.firstCity(&iIter); NULL != pCity; pCity = kLoopPlayer.nextCity(&iIter))
-			{
-				pCity->setBuildingListFilterActive(eFilter, bActive);
-			}
+
+			algo::for_each(kLoopPlayer.cities(), CvCity::fn::setBuildingListFilterActive(eFilter, bActive));
 		}
 	}
 }

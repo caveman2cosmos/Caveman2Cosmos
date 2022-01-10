@@ -1,36 +1,31 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Upkeep -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UpkeepInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<UpkeepInfos>
 		<UpkeepInfo>
 			<Type>UPKEEP_LOW</Type>
 			<Description>TXT_KEY_UPKEEP_LOW</Description>
-			<Strategy>TXT_KEY_UPKEEP_LOW_HELP</Strategy>
+			<Strategy/>
 			<iPopulationPercent>6</iPopulationPercent>
 			<iCityPercent>20</iCityPercent>
 		</UpkeepInfo>
 		<UpkeepInfo>
 			<Type>UPKEEP_MEDIUM</Type>
 			<Description>TXT_KEY_UPKEEP_MEDIUM</Description>
-			<Strategy>TXT_KEY_UPKEEP_MEDIUM_HELP</Strategy>
+			<Strategy/>
 			<iPopulationPercent>12</iPopulationPercent>
 			<iCityPercent>40</iCityPercent>
 		</UpkeepInfo>
 		<UpkeepInfo>
 			<Type>UPKEEP_HIGH</Type>
 			<Description>TXT_KEY_UPKEEP_HIGH</Description>
-			<Strategy>TXT_KEY_UPKEEP_HIGH_HELP</Strategy>
+			<Strategy/>
 			<iPopulationPercent>24</iPopulationPercent>
 			<iCityPercent>60</iCityPercent>
 		</UpkeepInfo>
 		<UpkeepInfo>
 			<Type>UPKEEP_EXTREME</Type>
 			<Description>TXT_KEY_UPKEEP_EXTREME</Description>
-			<Strategy>TXT_KEY_UPKEEP_HIGH_HELP</Strategy>
+			<Strategy/>
 			<iPopulationPercent>48</iPopulationPercent>
 			<iCityPercent>80</iCityPercent>
 		</UpkeepInfo>

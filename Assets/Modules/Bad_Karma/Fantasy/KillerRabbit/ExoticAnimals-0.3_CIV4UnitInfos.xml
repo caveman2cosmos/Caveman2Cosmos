@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_KILLERRABBIT</Class>
 			<Type>UNIT_KILLERRABBIT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -29,10 +28,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KILLERRABBIT</Description>
 			<Civilopedia>TXT_KEY_UNIT_KILLERRABBIT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitAIs>
 				<UnitAI>

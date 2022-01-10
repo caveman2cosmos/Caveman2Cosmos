@@ -1,7 +1,20 @@
 #include "CvGameCoreDLL.h"
-
-#include <boost155/functional.hpp>
-#include <boost155/bind.hpp>
+#include "CvCity.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDllPythonEvents.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "NiPoint.h"
 
 
 namespace logging {
@@ -210,18 +223,18 @@ struct EventArgs
 		return *this;
 	}
 
-	template < class Ty_ >
-	EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
-	{
-		pyArgs.add(value);
-		std::vector<Ty_> arr;
-		for (int idx = 0; idx < value.len; ++idx)
-		{
-			arr.push_back(value.vals[idx]);
-		}
-		jsonArgs << logging::JsonValue(name, arr);
-		return *this;
-	}
+	//template < class Ty_ >
+	//EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
+	//{
+	//	pyArgs.add(value);
+	//	std::vector<Ty_> arr;
+	//	for (int idx = 0; idx < value.len; ++idx)
+	//	{
+	//		arr.push_back(value.vals[idx]);
+	//	}
+	//	jsonArgs << logging::JsonValue(name, arr);
+	//	return *this;
+	//}
 
 	template < class Ty_, class Ty2_ >
 	EventArgs& arg(const std::string& name, const Ty_& value, const Ty2_& valueJson)
@@ -239,18 +252,13 @@ struct EventArgs
 	}
 };
 
-bool preEvent()
-{
-	return gDLL->getPythonIFace()->isInitialized();
-}
-
 CvString create_session_id()
 {
 	time_t rawtime;
 	struct tm* timeinfo;
 	char buffer[80];
 
-	time (&rawtime);
+	time(&rawtime);
 	timeinfo = localtime(&rawtime);
 
 	strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
@@ -261,23 +269,25 @@ static const CvString gSessionID = create_session_id();
 
 bool postEvent(EventArgs eventData, const char* eventName)
 {
+	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "onEvent");
+
 	if (eventData.toJson)
 	{
 		eventData.jsonArgs << logging::JsonValue("game_name", GC.getInitCore().getGameName());
-		eventData.jsonArgs << logging::JsonValue("game_id", GC.getGameINLINE().getGameId());
+		eventData.jsonArgs << logging::JsonValue("game_id", GC.getGame().getGameId());
 		eventData.jsonArgs << logging::JsonValue("session_id", gSessionID);
 
 		logging::log_json_event("pyevent", eventData.jsonArgs);
 	}
 
-	eventData.pyArgs << GC.getGameINLINE().isDebugMode();
+	eventData.pyArgs << GC.getGame().isDebugMode();
 	eventData.pyArgs << false;
 	eventData.pyArgs << gDLL->altKey();
 	eventData.pyArgs << gDLL->ctrlKey();
 	eventData.pyArgs << gDLL->shiftKey();
 	eventData.pyArgs << (gDLL->getChtLvl() > 0);
 
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
+#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off ..
 #ifdef USE_INTERNAL_PROFILER
 	static	std::map<int,ProfileSample*>*	g_pythonProfiles = NULL;
 
@@ -292,7 +302,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 
 	for(ptr = eventName; *ptr != '\0'; ptr++)
 	{
-		xSum.add((byte)*ptr);
+		xSum.add((uint8_t)*ptr);
 	}
 
 	std::map<int,ProfileSample*>::const_iterator itr = g_pythonProfiles->find(xSum.get());
@@ -311,7 +321,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 		pSample = itr->second;
 	}
 
-	CProfileScope detailedScope(pSample);		
+	CProfileScope detailedScope(pSample);
 #endif
 #endif
 
@@ -320,162 +330,124 @@ bool postEvent(EventArgs eventData, const char* eventName)
 
 bool CvDllPythonEvents::reportKbdEvent(int evt, int key, int iCursorX, int iCursorY)
 {
-	if (preEvent())
-	{
-		NiPoint3 pt3Location;
-		CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "kbdEvent")
-			.arg("evt", evt)
-			.arg("key", key)
-			.arg("iCursorX", iCursorX)
-			.arg("iCursorY", iCursorY)
-			.arg("plotx", (pPlot ? pPlot->getX() : -1))
-			.arg("ploty", (pPlot ? pPlot->getY() : -1));
-
-		return postEvent(eventData, "kbdEvent");
-	}
-	return false;
+	NiPoint3 pt3Location;
+	const CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "kbdEvent")
+		.arg("evt", evt)
+		.arg("key", key)
+		.arg("iCursorX", iCursorX)
+		.arg("iCursorY", iCursorY)
+		.arg("plotx", (pPlot ? pPlot->getX() : -1))
+		.arg("ploty", (pPlot ? pPlot->getY() : -1));
+	return postEvent(eventData, "kbdEvent");
 }
 
 bool CvDllPythonEvents::reportMouseEvent(int evt, int iCursorX, int iCursorY, bool bInterfaceConsumed)
 {
-	if (preEvent())
-	{
-		NiPoint3 pt3Location;
-		CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
-		// add list of active screens
-		std::vector<int> screens;
-		gDLL->getInterfaceIFace()->getInterfaceScreenIdsForInput(screens);
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "mouseEvent")
-			.arg("evt", evt)
-			.arg("iCursorX", iCursorX) .arg("iCursorY", iCursorY)
-			.arg("plotx", (pPlot ? pPlot->getX() : -1))
-			.arg("ploty", (pPlot ? pPlot->getY() : -1))
-			.arg("bInterfaceConsumed", bInterfaceConsumed)
-			.arg("screens", screens);
-		return postEvent(eventData, "mouseEvent");
-	}
-	return false;
+	NiPoint3 pt3Location;
+	const CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
+	// add list of active screens
+	std::vector<int> screens;
+	gDLL->getInterfaceIFace()->getInterfaceScreenIdsForInput(screens);
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "mouseEvent")
+		.arg("evt", evt)
+		.arg("iCursorX", iCursorX) .arg("iCursorY", iCursorY)
+		.arg("plotx", (pPlot ? pPlot->getX() : -1))
+		.arg("ploty", (pPlot ? pPlot->getY() : -1))
+		.arg("bInterfaceConsumed", bInterfaceConsumed)
+		.arg("screens", screens);
+	return postEvent(eventData, "mouseEvent");
 }
 
 void CvDllPythonEvents::reportModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "ModNetMessage")
-			.arg("iData1", iData1)
-			.arg("iData2", iData2)
-			.arg("iData3", iData3)
-			.arg("iData4", iData4)
-			.arg("iData5", iData5);
-		postEvent(eventData, "ModNetMessage");
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "ModNetMessage")
+		.arg("iData1", iData1)
+		.arg("iData2", iData2)
+		.arg("iData3", iData3)
+		.arg("iData4", iData4)
+		.arg("iData5", iData5);
+	postEvent(eventData, "ModNetMessage");
 }
 
 void CvDllPythonEvents::reportInit()
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "Init");
-		postEvent(eventData, "Init");
-	}
-}
-
-void CvDllPythonEvents::reportUpdate(float fDeltaTime)
-{
-	if (preEvent())
-	{
-		if(GC.getUSE_ON_UPDATE_CALLBACK())
-		{
-			EventArgs eventData;
-			eventData
-				.no_json()
-				.arg("event", "Update")
-				.arg("fDeltaTime", fDeltaTime);
-			postEvent(eventData, "Update");
-		}
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "Init");
+	postEvent(eventData, "Init");
 }
 
 void CvDllPythonEvents::reportUnInit()
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "UnInit");
-		postEvent(eventData, "UnInit");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "UnInit");
+	postEvent(eventData, "UnInit");
 }
 
 void CvDllPythonEvents::reportGameStart()
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "GameStart");
-		postEvent(eventData, "GameStart");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "GameStart");
+	postEvent(eventData, "GameStart");
 }
 
-void CvDllPythonEvents::reportGameEnd()
+void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "GameEnd");
-		postEvent(eventData, "GameEnd");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "GameEnd")
+		.arg("iGameTurn", iGameTurn);
+	postEvent(eventData, "GameEnd");
 }
 
 
 void CvDllPythonEvents::reportWindowActivation(bool bActive)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "windowActivation")
-			.arg("bActive", bActive);
-		postEvent(eventData, "windowActivation");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "windowActivation")
+		.arg("bActive", bActive);
+	postEvent(eventData, "windowActivation");
 }
+
+
+void CvDllPythonEvents::reportMapRegen()
+{
+	EventArgs eventData;
+	eventData
+		.arg("event", "MapRegen");
+	postEvent(eventData, "MapRegen");
+}
+
 
 void CvDllPythonEvents::reportBeginGameTurn(int iGameTurn)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "BeginGameTurn")
-			.arg("iGameTurn", iGameTurn);
-		postEvent(eventData, "BeginGameTurn");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "BeginGameTurn")
+		.arg("iGameTurn", iGameTurn);
+	postEvent(eventData, "BeginGameTurn");
 }
 
 void CvDllPythonEvents::reportEndGameTurn(int iGameTurn)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "EndGameTurn")
-			.arg("iGameTurn", iGameTurn);
-		postEvent(eventData, "EndGameTurn");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "EndGameTurn")
+		.arg("iGameTurn", iGameTurn);
+	postEvent(eventData, "EndGameTurn");
 }
 /************************************************************************************************/
 /* RevolutionDCM MpFix                                                           lemmy101       */
@@ -484,14 +456,11 @@ void CvDllPythonEvents::reportEndGameTurn(int iGameTurn)
 /************************************************************************************************/
 void CvDllPythonEvents::reportPreEndGameTurn(int iGameTurn)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "PreEndGameTurn")
-			.arg("iGameTurn", iGameTurn);
-		postEvent(eventData, "PreEndGameTurn");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "PreEndGameTurn")
+		.arg("iGameTurn", iGameTurn);
+	postEvent(eventData, "PreEndGameTurn");
 }
 /************************************************************************************************/
 /* RevolutionDCM                           END                                                  */
@@ -499,1008 +468,756 @@ void CvDllPythonEvents::reportPreEndGameTurn(int iGameTurn)
 
 void CvDllPythonEvents::reportBeginPlayerTurn(int iGameTurn, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "BeginPlayerTurn")
-			.arg("iGameTurn", iGameTurn)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "BeginPlayerTurn");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "BeginPlayerTurn")
+		.arg("iGameTurn", iGameTurn)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "BeginPlayerTurn");
 }
 
 void CvDllPythonEvents::reportEndPlayerTurn(int iGameTurn, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "EndPlayerTurn")
-			.arg("iGameTurn", iGameTurn)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "EndPlayerTurn");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "EndPlayerTurn")
+		.arg("iGameTurn", iGameTurn)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "EndPlayerTurn");
 }
 
 void CvDllPythonEvents::reportFirstContact(TeamTypes eTeamID1, TeamTypes eTeamID2)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "firstContact")
-			.arg("eTeamID1", eTeamID1)
-			.arg("eTeamID2", eTeamID2);
-		postEvent(eventData, "firstContact");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "firstContact")
+		.arg("eTeamID1", eTeamID1)
+		.arg("eTeamID2", eTeamID2);
+	postEvent(eventData, "firstContact");
 }
 
 void CvDllPythonEvents::reportCombatResult(CvUnit* pWinner, CvUnit* pLoser)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "combatResult")
-			.arg("pWinner", pWinner)
-			.arg("pLoser", pLoser);
-		postEvent(eventData, "combatResult");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "combatResult")
+		.arg("pWinner", pWinner)
+		.arg("pLoser", pLoser);
+	postEvent(eventData, "combatResult");
 }
 
 // BUG - Combat Events - start
 void CvDllPythonEvents::reportCombatRetreat(CvUnit* pAttacker, CvUnit* pDefender)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "combatRetreat")
-			.arg("pAttacker", pAttacker)
-			.arg("pDefender", pDefender);
-		postEvent(eventData,"combatRetreat");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "combatRetreat")
+		.arg("pAttacker", pAttacker)
+		.arg("pDefender", pDefender);
+	postEvent(eventData,"combatRetreat");
 }
 
 void CvDllPythonEvents::reportCombatWithdrawal(CvUnit* pAttacker, CvUnit* pDefender)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "combatWithdrawal")
-			.arg("pAttacker", pAttacker)
-			.arg("pDefender", pDefender);
-		postEvent(eventData, "combatWithdrawal");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "combatWithdrawal")
+		.arg("pAttacker", pAttacker)
+		.arg("pDefender", pDefender);
+	postEvent(eventData, "combatWithdrawal");
 }
 
 void CvDllPythonEvents::reportCombatLogCollateral(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "combatLogCollateral")
-			.arg("pAttacker", pAttacker)
-			.arg("pDefender", pDefender)
-			.arg("iDamage", iDamage);
-		postEvent(eventData, "combatLogCollateral");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "combatLogCollateral")
+		.arg("pAttacker", pAttacker)
+		.arg("pDefender", pDefender)
+		.arg("iDamage", iDamage);
+	postEvent(eventData, "combatLogCollateral");
 }
 
 void CvDllPythonEvents::reportCombatLogFlanking(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "combatLogFlanking")
-			.arg("pAttacker", pAttacker)
-			.arg("pDefender", pDefender)
-			.arg("iDamage", iDamage);
-		postEvent(eventData, "combatLogFlanking");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "combatLogFlanking")
+		.arg("pAttacker", pAttacker)
+		.arg("pDefender", pDefender)
+		.arg("iDamage", iDamage);
+	postEvent(eventData, "combatLogFlanking");
 }
 // BUG - Combat Events - end
 
 void CvDllPythonEvents::reportImprovementBuilt(int iImprovementType, int iX, int iY)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "improvementBuilt")
-			.arg("iImprovementType", iImprovementType)
-			.arg("iX", iX) .arg("iY", iY);
-		postEvent(eventData, "improvementBuilt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "improvementBuilt")
+		.arg("iImprovementType", iImprovementType)
+		.arg("iX", iX) .arg("iY", iY);
+	postEvent(eventData, "improvementBuilt");
 }
 
 void CvDllPythonEvents::reportImprovementDestroyed(int iImprovementType, int iPlayer, int iX, int iY)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "improvementDestroyed")
-			.arg("iImprovementType", iImprovementType)
-			.arg("iPlayer", iPlayer)
-			.arg("iX", iX) .arg("iY", iY);
-		postEvent(eventData, "improvementDestroyed");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "improvementDestroyed")
+		.arg("iImprovementType", iImprovementType)
+		.arg("iPlayer", iPlayer)
+		.arg("iX", iX) .arg("iY", iY);
+	postEvent(eventData, "improvementDestroyed");
 }
 
 void CvDllPythonEvents::reportRouteBuilt(int iRouteType, int iX, int iY)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "routeBuilt")
-			.arg("iRouteType", iRouteType)
-			.arg("iX", iX) .arg("iY", iY);
-		postEvent(eventData, "routeBuilt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "routeBuilt")
+		.arg("iRouteType", iRouteType)
+		.arg("iX", iX) .arg("iY", iY);
+	postEvent(eventData, "routeBuilt");
 }
 
 void CvDllPythonEvents::reportChat(CvWString szString)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "chat")
-			.arg("szString", szString);
-		postEvent(eventData, "chat");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "chat")
+		.arg("szString", szString);
+	postEvent(eventData, "chat");
 }
 
 void CvDllPythonEvents::reportPlotRevealed(CvPlot *pPlot, TeamTypes eTeam)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "plotRevealed")
-			.arg("pPlot", pPlot)
-			.arg("eTeam", eTeam);
-		postEvent(eventData, "plotRevealed");
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "plotRevealed")
+		.arg("pPlot", pPlot)
+		.arg("eTeam", eTeam);
+	postEvent(eventData, "plotRevealed");
 }
 
 void CvDllPythonEvents::reportPlotFeatureRemoved(CvPlot *pPlot, FeatureTypes eFeature, CvCity* pCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "plotFeatureRemoved")
-			.arg("pPlot", pPlot)
-			.arg("eFeature", eFeature)
-			.arg("pCity", pCity);
-		postEvent(eventData, "plotFeatureRemoved");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "plotFeatureRemoved")
+		.arg("pPlot", pPlot)
+		.arg("eFeature", eFeature)
+		.arg("pCity", pCity);
+	postEvent(eventData, "plotFeatureRemoved");
 }
 
 void CvDllPythonEvents::reportPlotPicked(CvPlot *pPlot)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "plotPicked")
-			.arg("pPlot", pPlot);
-		postEvent(eventData, "plotPicked");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "plotPicked")
+		.arg("pPlot", pPlot);
+	postEvent(eventData, "plotPicked");
 }
 
 void CvDllPythonEvents::reportNukeExplosion(CvPlot *pPlot, CvUnit* pNukeUnit)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "nukeExplosion")
-			.arg("pPlot", pPlot)
-			.arg("pNukeUnit", pNukeUnit);
-		postEvent(eventData, "nukeExplosion");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "nukeExplosion")
+		.arg("pPlot", pPlot)
+		.arg("pNukeUnit", pNukeUnit);
+	postEvent(eventData, "nukeExplosion");
 }
 
 void CvDllPythonEvents::reportGotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "gotoPlotSet")
-			.arg("pPlot", pPlot)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "gotoPlotSet");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "gotoPlotSet")
+		.arg("pPlot", pPlot)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "gotoPlotSet");
 }
 
 void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityBuilt")
-			.arg("pCity", pCity)
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "cityBuilt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityBuilt")
+		.arg("pCity", pCity);
+
+	if (pUnit)
+		eventData.arg("pUnit", pUnit);
+	else
+		eventData.arg("pUnit", NULL);
+
+	postEvent(eventData, "cityBuilt");
 }
 
 void CvDllPythonEvents::reportCityRazed( CvCity *pCity, PlayerTypes ePlayer )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityRazed")
-			.arg("pCity", pCity)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "cityRazed");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityRazed")
+		.arg("pCity", pCity)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "cityRazed");
 }
 
 void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pOldCity, bool bConquest, bool bTrade)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityAcquired")
-			.arg("eOldOwner", eOldOwner)
-			.arg("ePlayer", ePlayer)
-			.arg("pOldCity", pOldCity)
-			.arg("bConquest", bConquest)
-			.arg("bTrade", bTrade);
-		postEvent(eventData, "cityAcquired");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityAcquired")
+		.arg("eOldOwner", eOldOwner)
+		.arg("ePlayer", ePlayer)
+		.arg("pOldCity", pOldCity)
+		.arg("bConquest", bConquest)
+		.arg("bTrade", bTrade);
+	postEvent(eventData, "cityAcquired");
 }
 
 void CvDllPythonEvents::reportCityAcquiredAndKept(PlayerTypes ePlayer, CvCity* pOldCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityAcquiredAndKept")
-			.arg("ePlayer", ePlayer)
-			.arg("pOldCity", pOldCity);
-
-		postEvent(eventData, "cityAcquiredAndKept");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityAcquiredAndKept")
+		.arg("ePlayer", ePlayer)
+		.arg("pOldCity", pOldCity);
+	postEvent(eventData, "cityAcquiredAndKept");
 }
 
 void CvDllPythonEvents::reportCityLost(CvCity* pCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityLost")
-			.arg("pCity", pCity);
-		postEvent(eventData, "cityLost");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityLost")
+		.arg("pCity", pCity);
+	postEvent(eventData, "cityLost");
 }
 
 void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
 {
-	if (preEvent())
-	{
-		postEvent(EventArgs() .arg("event", "cultureExpansion") .arg("pCity", pCity) .arg("ePlayer", ePlayer), "cultureExpansion");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cultureExpansion")
+		.arg("pCity", pCity)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "cultureExpansion");
 }
 
 void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityGrowth")
-			.arg("pCity", pCity)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "cityGrowth");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityGrowth")
+		.arg("pCity", pCity)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "cityGrowth");
 }
 
 void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "cityDoTurn")
-			.arg("pCity", pCity)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "cityDoTurn");
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "cityDoTurn")
+		.arg("pCity", pCity)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "cityDoTurn");
 }
 
 void CvDllPythonEvents::reportCityBuildingUnit( CvCity *pCity, UnitTypes eUnitType )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "cityBuildingUnit")
-			.arg("pCity", pCity)
-			.arg("eUnitType", eUnitType);
-		postEvent(eventData, "cityBuildingUnit");
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "cityBuildingUnit")
+		.arg("pCity", pCity)
+		.arg("eUnitType", eUnitType);
+	postEvent(eventData, "cityBuildingUnit");
 }
 
 void CvDllPythonEvents::reportCityBuildingBuilding( CvCity *pCity, BuildingTypes eBuildingType )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "cityBuildingBuilding")
-			.arg("pCity", pCity)
-			.arg("eBuildingType", eBuildingType);
-		postEvent(eventData, "cityBuildingBuilding");
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "cityBuildingBuilding")
+		.arg("pCity", pCity)
+		.arg("eBuildingType", eBuildingType);
+	postEvent(eventData, "cityBuildingBuilding");
 }
 
 // BUG - Project Started Event - start
 void CvDllPythonEvents::reportCityBuildingProject( CvCity* pCity, ProjectTypes eProjectType )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityBuildingProject")
-			.arg("pCity", pCity)
-			.arg("eProjectType", eProjectType);
-		postEvent(eventData, "cityBuildingProject");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityBuildingProject")
+		.arg("pCity", pCity)
+		.arg("eProjectType", eProjectType);
+	postEvent(eventData, "cityBuildingProject");
 }
 // BUG - Project Started Event - end
 
 // BUG - Process Started Event - start
 void CvDllPythonEvents::reportCityBuildingProcess( CvCity* pCity, ProcessTypes eProcessType )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityBuildingProcess")
-			.arg("pCity", pCity)
-			.arg("eProcessType", eProcessType);
-		postEvent(eventData, "cityBuildingProcess");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityBuildingProcess")
+		.arg("pCity", pCity)
+		.arg("eProcessType", eProcessType);
+	postEvent(eventData, "cityBuildingProcess");
 }
 // BUG - Process Started Event - end
 
 void CvDllPythonEvents::reportCityRename( CvCity *pCity )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityRename")
-			.arg("pCity", pCity);
-		postEvent(eventData, "cityRename");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityRename")
+		.arg("pCity", pCity);
+	postEvent(eventData, "cityRename");
 }
 
 void CvDllPythonEvents::reportCityHurry( CvCity *pCity, HurryTypes eHurry )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "cityHurry")
-			.arg("pCity", pCity)
-			.arg("eHurry", eHurry);
-		postEvent(eventData,"cityHurry");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "cityHurry")
+		.arg("pCity", pCity)
+		.arg("eHurry", eHurry);
+	postEvent(eventData,"cityHurry");
 }
 
-void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
+void CvDllPythonEvents::reportSelectionGroupPushMission(const CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
 {
 	if (NULL == pSelectionGroup)
 	{
 		return;
 	}
 
-	if (preEvent())
-	{
-		std::vector<int> aiUnitIds;
+	std::vector<int> aiUnitIds;
 
-		//using namespace bst::lambda;
+	//using namespace bst::lambda;
 
-		std::transform(pSelectionGroup->beginUnits(), pSelectionGroup->endUnits(), std::back_inserter(aiUnitIds), bst::bind(&CvUnit::getID, _1));
+	algo::transform(pSelectionGroup->units(), std::back_inserter(aiUnitIds), bind(&CvUnit::getID, _1));
 
-		EventArgs eventData;
-		eventData
-			.arg("event", "selectionGroupPushMission")
-			.arg("pSelectionGroup", pSelectionGroup->getOwner())
-			.arg("eMission", eMission)
-			.arg("aiUnitIds", aiUnitIds.size())
-			.arg("aiUnitIds", aiUnitIds);
-		postEvent(eventData, "selectionGroupPushMission");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "selectionGroupPushMission")
+		.arg("pSelectionGroup", pSelectionGroup->getOwner())
+		.arg("eMission", eMission)
+		.arg("aiUnitIds", aiUnitIds.size())
+		.arg("aiUnitIds", aiUnitIds);
+	postEvent(eventData, "selectionGroupPushMission");
 }
 
 void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "unitMove")
-			.arg("pPlot", pPlot)
-			.arg("pUnit", pUnit)
-			.arg("pOldPlot", pOldPlot);
-		postEvent(eventData, "unitMove");
-	}
-}
-
-void CvDllPythonEvents::reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	if (preEvent())
-	{
-		if(GC.getUSE_ON_UNIT_SET_XY_CALLBACK())
-		{
-			EventArgs eventData;
-			eventData
-				.arg("event", "unitSetXY")
-				.arg("pPlot", pPlot)
-				.arg("pUnit", pUnit);
-			postEvent(eventData, "unitSetXY");
-		}
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("event", "unitMove")
+		.arg("pPlot", pPlot)
+		.arg("pUnit", pUnit)
+		.arg("pOldPlot", pOldPlot);
+	postEvent(eventData, "unitMove");
 }
 
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
-	if (preEvent())
-	{
-		if(GC.getUSE_ON_UNIT_CREATED_CALLBACK())
-		{
-			EventArgs eventData;
-			eventData
-				.arg("event", "unitCreated")
-				.arg("pUnit", pUnit);
-			postEvent(eventData, "unitCreated");
-		}
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitCreated")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitCreated");
 }
 
 void CvDllPythonEvents::reportUnitBuilt(CvCity *pCity, CvUnit* pUnit)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitBuilt")
-			.arg("pCity", pCity)
-			.arg("pUnit", pUnit);
-		postEvent(eventData,"unitBuilt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitBuilt")
+		.arg("pCity", pCity)
+		.arg("pUnit", pUnit);
+	postEvent(eventData,"unitBuilt");
 }
 
 void CvDllPythonEvents::reportUnitKilled(CvUnit* pUnit, PlayerTypes eAttacker)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitKilled")
-			.arg("pUnit", pUnit)
-			.arg("eAttacker", eAttacker);
-		postEvent(eventData, "unitKilled");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitKilled")
+		.arg("pUnit", pUnit)
+		.arg("eAttacker", eAttacker);
+	postEvent(eventData, "unitKilled");
 }
 
 // BUG - Unit Captured Event - start
 void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitCaptured")
-			.arg("eFromPlayer", eFromPlayer)
-			.arg("eUnitType", eUnitType)
-			.arg("pNewUnit", pNewUnit);
-		postEvent(eventData, "unitCaptured");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitCaptured")
+		.arg("eFromPlayer", eFromPlayer)
+		.arg("eUnitType", eUnitType)
+		.arg("pNewUnit", pNewUnit);
+	postEvent(eventData, "unitCaptured");
 }
 // BUG - Unit Captured Event - end
 
 void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
 {
-	if (preEvent())
-	{
-		if(GC.getUSE_ON_UNIT_LOST_CALLBACK())
-		{
-			EventArgs eventData;
-			eventData
-				.arg("event", "unitLost")
-				.arg("pUnit", pUnit);
-			postEvent(eventData, "unitLost");
-		}
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitLost")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitLost");
 }
 
 void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitPromoted")
-			.arg("pUnit", pUnit)
-			.arg("ePromotion", ePromotion);
-		postEvent(eventData, "unitPromoted");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitPromoted")
+		.arg("pUnit", pUnit)
+		.arg("ePromotion", ePromotion);
+	postEvent(eventData, "unitPromoted");
 }
 
 // BUG - Upgrade Unit Event - start
 void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitUpgraded")
-			.arg("pOldUnit", pOldUnit)
-			.arg("pNewUnit", pNewUnit)
-			.arg("iPrice", iPrice);
-		postEvent(eventData, "unitUpgraded");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitUpgraded")
+		.arg("pOldUnit", pOldUnit)
+		.arg("pNewUnit", pNewUnit)
+		.arg("iPrice", iPrice);
+	postEvent(eventData, "unitUpgraded");
 }
 // BUG - Upgrade Unit Event - end
 
 void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
 {
-	if (preEvent())
-	{
-		if(GC.getUSE_ON_UNIT_SELECTED_CALLBACK())
-		{
-			EventArgs eventData;
-			eventData
-				.arg("event", "unitSelected")
-				.arg("pUnit", pUnit);
-			postEvent(eventData, "unitSelected");
-		}
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitSelected")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitSelected");
 }
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "UnitRename")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "UnitRename");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "UnitRename")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "UnitRename");
 }
 
 void CvDllPythonEvents::reportUnitPillage(CvUnit* pUnit, ImprovementTypes eImprovement, RouteTypes eRoute, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitPillage")
-			.arg("pUnit", pUnit)
-			.arg("eImprovement", eImprovement)
-			.arg("eRoute", eRoute)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "unitPillage");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitPillage")
+		.arg("pUnit", pUnit)
+		.arg("eImprovement", eImprovement)
+		.arg("eRoute", eRoute)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "unitPillage");
+
 }
 
 void CvDllPythonEvents::reportUnitSpreadReligionAttempt(CvUnit* pUnit, ReligionTypes eReligion, bool bSuccess)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitSpreadReligionAttempt")
-			.arg("pUnit", pUnit)
-			.arg("eReligion", eReligion)
-			.arg("bSuccess", bSuccess);
-		postEvent(eventData, "unitSpreadReligionAttempt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitSpreadReligionAttempt")
+		.arg("pUnit", pUnit)
+		.arg("eReligion", eReligion)
+		.arg("bSuccess", bSuccess);
+	postEvent(eventData, "unitSpreadReligionAttempt");
 }
 
 void CvDllPythonEvents::reportUnitGifted(CvUnit* pUnit, PlayerTypes eGiftingPlayer, CvPlot* pPlotLocation)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitGifted")
-			.arg("pUnit", pUnit)
-			.arg("eGiftingPlayer", eGiftingPlayer)
-			.arg("pPlotLocation", pPlotLocation);
-		postEvent(eventData, "unitGifted");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitGifted")
+		.arg("pUnit", pUnit)
+		.arg("eGiftingPlayer", eGiftingPlayer)
+		.arg("pPlotLocation", pPlotLocation);
+	postEvent(eventData, "unitGifted");
 }
 
 void CvDllPythonEvents::reportUnitBuildImprovement(CvUnit* pUnit, BuildTypes eBuild, bool bFinished)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitBuildImprovement")
-			.arg("pUnit", pUnit)
-			.arg("eBuild", eBuild)
-			.arg("bFinished", bFinished);
-		postEvent(eventData, "unitBuildImprovement");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitBuildImprovement")
+		.arg("pUnit", pUnit)
+		.arg("eBuild", eBuild)
+		.arg("bFinished", bFinished);
+	postEvent(eventData, "unitBuildImprovement");
 }
 
 void CvDllPythonEvents::reportGoodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyPlot, CvUnit *pGoodyUnit, GoodyTypes eGoodyType)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "goodyReceived")
-			.arg("ePlayer", ePlayer)
-			.arg("pGoodyPlot", pGoodyPlot)
-			.arg("pGoodyUnit", pGoodyUnit)
-			.arg("eGoodyType", eGoodyType);
-		postEvent(eventData, "goodyReceived");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "goodyReceived")
+		.arg("ePlayer", ePlayer)
+		.arg("pGoodyPlot", pGoodyPlot);
+
+	if (pGoodyUnit)
+		eventData.arg("pGoodyUnit", pGoodyUnit);
+	else
+		eventData.arg("pGoodyUnit", NULL);
+
+	eventData.arg("eGoodyType", eGoodyType);
+	postEvent(eventData, "goodyReceived");
 }
 
 void CvDllPythonEvents::reportGreatPersonBorn( CvUnit *pUnit, PlayerTypes ePlayer, CvCity *pCity )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "greatPersonBorn")
-			.arg("pUnit", pUnit)
-			.arg("ePlayer", ePlayer)
-			.arg("pCity", pCity);
-		postEvent(eventData, "greatPersonBorn");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "greatPersonBorn")
+		.arg("pUnit", pUnit)
+		.arg("ePlayer", ePlayer)
+		.arg("pCity", pCity);
+	postEvent(eventData, "greatPersonBorn");
 }
+
 void CvDllPythonEvents::reportCivicChanged(PlayerTypes ePlayer, CivicTypes eOldCivic, CivicTypes eNewCivic)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "civicChanged")
-			.arg("ePlayer", ePlayer)
-			.arg("eOldCivic", eOldCivic)
-			.arg("eNewCivic", eNewCivic);
-		postEvent(eventData, "civicChanged");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "civicChanged")
+		.arg("ePlayer", ePlayer)
+		.arg("eOldCivic", eOldCivic)
+		.arg("eNewCivic", eNewCivic);
+	postEvent(eventData, "civicChanged");
 }
 
 void CvDllPythonEvents::reportBuildingBuilt(CvCity *pCity, BuildingTypes eBuilding)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "buildingBuilt")
-			.arg("pCity", pCity)
-			.arg("eBuilding", eBuilding);
-		postEvent(eventData, "buildingBuilt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "buildingBuilt")
+		.arg("pCity", pCity)
+		.arg("eBuilding", eBuilding);
+	postEvent(eventData, "buildingBuilt");
 }
 
 void CvDllPythonEvents::reportProjectBuilt(CvCity *pCity, ProjectTypes eProject)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "projectBuilt")
-			.arg("pCity", pCity)
-			.arg("eProject", eProject);
-		postEvent(eventData, "projectBuilt");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "projectBuilt")
+		.arg("pCity", pCity)
+		.arg("eProject", eProject);
+	postEvent(eventData, "projectBuilt");
 }
 
 void CvDllPythonEvents::reportTechAcquired(TechTypes eType, TeamTypes eTeam, PlayerTypes ePlayer, bool bAnnounce)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "techAcquired")
-			.arg("eType", eType)
-			.arg("eTeam", eTeam)
-			.arg("ePlayer", ePlayer)
-			.arg("bAnnounce", bAnnounce);
-		postEvent(eventData, "techAcquired");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "techAcquired")
+		.arg("eType", eType)
+		.arg("eTeam", eTeam)
+		.arg("ePlayer", ePlayer)
+		.arg("bAnnounce", bAnnounce);
+	postEvent(eventData, "techAcquired");
 }
 
 void CvDllPythonEvents::reportTechSelected(TechTypes eTech, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "techSelected")
-			.arg("eTech", eTech)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "techSelected");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "techSelected")
+		.arg("eTech", eTech)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "techSelected");
 }
 
 void CvDllPythonEvents::reportReligionFounded(ReligionTypes eType, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "religionFounded")
-			.arg("eType", eType)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "religionFounded");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "religionFounded")
+		.arg("eType", eType)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "religionFounded");
 }
 
 void CvDllPythonEvents::reportReligionSpread(ReligionTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "religionSpread")
-			.arg("eType", eType)
-			.arg("ePlayer", ePlayer)
-			.arg("pSpreadCity", pSpreadCity);
-
-		postEvent(eventData, "religionSpread");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "religionSpread")
+		.arg("eType", eType)
+		.arg("ePlayer", ePlayer)
+		.arg("pSpreadCity", pSpreadCity);
+	postEvent(eventData, "religionSpread");
 }
 
 void CvDllPythonEvents::reportReligionRemove(ReligionTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "religionRemove")
-			.arg("eType", eType)
-			.arg("ePlayer", ePlayer)
-			.arg("pSpreadCity", pSpreadCity);
-
-		postEvent(eventData, "religionRemove");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "religionRemove")
+		.arg("eType", eType)
+		.arg("ePlayer", ePlayer)
+		.arg("pSpreadCity", pSpreadCity);
+	postEvent(eventData, "religionRemove");
 }
 
 void CvDllPythonEvents::reportCorporationFounded(CorporationTypes eType, PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "corporationFounded")
-			.arg("eType", eType)
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "corporationFounded");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "corporationFounded")
+		.arg("eType", eType)
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "corporationFounded");
 }
 
 void CvDllPythonEvents::reportCorporationSpread(CorporationTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "corporationSpread")
-			.arg("eType", eType)
-			.arg("ePlayer", ePlayer)
-			.arg("pSpreadCity", pSpreadCity);
-		postEvent(eventData, "corporationSpread");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "corporationSpread")
+		.arg("eType", eType)
+		.arg("ePlayer", ePlayer)
+		.arg("pSpreadCity", pSpreadCity);
+	postEvent(eventData, "corporationSpread");
 }
 
 void CvDllPythonEvents::reportCorporationRemove(CorporationTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "corporationRemove")
-			.arg("eType", eType)
-			.arg("ePlayer", ePlayer)
-			.arg("pSpreadCity", pSpreadCity);
-		postEvent(eventData, "corporationRemove");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "corporationRemove")
+		.arg("eType", eType)
+		.arg("ePlayer", ePlayer)
+		.arg("pSpreadCity", pSpreadCity);
+	postEvent(eventData, "corporationRemove");
 }
 
 void CvDllPythonEvents::reportGoldenAge(PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "goldenAge")
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "goldenAge");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "goldenAge")
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "goldenAge");
 }
 
 void CvDllPythonEvents::reportEndGoldenAge(PlayerTypes ePlayer)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "endGoldenAge")
-			.arg("ePlayer", ePlayer);
-		postEvent(eventData, "endGoldenAge");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "endGoldenAge")
+		.arg("ePlayer", ePlayer);
+	postEvent(eventData, "endGoldenAge");
 }
 
 void CvDllPythonEvents::reportChangeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "changeWar")
-			.arg("bWar", bWar)
-			.arg("eTeam", eTeam)
-			.arg("eOtherTeam", eOtherTeam);
-		postEvent(eventData, "changeWar");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "changeWar")
+		.arg("bWar", bWar)
+		.arg("eTeam", eTeam)
+		.arg("eOtherTeam", eOtherTeam);
+	postEvent(eventData, "changeWar");
 }
 
 void CvDllPythonEvents::reportVictory(TeamTypes eNewWinner, VictoryTypes eNewVictory)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "victory")
-			.arg("eNewWinner", eNewWinner)
-			.arg("eNewVictory", eNewVictory);
-		postEvent(eventData, "victory");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "victory")
+		.arg("eNewWinner", eNewWinner)
+		.arg("eNewVictory", eNewVictory);
+	postEvent(eventData, "victory");
 }
 
 void CvDllPythonEvents::reportVassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "vassalState")
-			.arg("eMaster", eMaster)
-			.arg("eVassal", eVassal)
-			.arg("bVassal", bVassal);
-		postEvent(eventData, "vassalState");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "vassalState")
+		.arg("eMaster", eMaster)
+		.arg("eVassal", eVassal)
+		.arg("bVassal", bVassal);
+	postEvent(eventData, "vassalState");
 }
 
 void CvDllPythonEvents::reportSetPlayerAlive( PlayerTypes ePlayerID, bool bNewValue )
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "setPlayerAlive")
-			.arg("ePlayerID", ePlayerID)
-			.arg("bNewValue", bNewValue);
-		postEvent(eventData, "setPlayerAlive");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "setPlayerAlive")
+		.arg("ePlayerID", ePlayerID)
+		.arg("bNewValue", bNewValue);
+	postEvent(eventData, "setPlayerAlive");
 }
 
 void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "playerChangeStateReligion")
-			.arg("ePlayerID", ePlayerID)
-			.arg("eNewReligion", eNewReligion)
-			.arg("eOldReligion", eOldReligion);
-
-		postEvent(eventData, "playerChangeStateReligion");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "playerChangeStateReligion")
+		.arg("ePlayerID", ePlayerID)
+		.arg("eNewReligion", eNewReligion)
+		.arg("eOldReligion", eOldReligion);
+	postEvent(eventData, "playerChangeStateReligion");
 }
-
 
 void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "playerGoldTrade")
-			.arg("eFromPlayer", eFromPlayer)
-			.arg("eToPlayer", eToPlayer)
-			.arg("iAmount", iAmount);
-
-		postEvent(eventData, "playerGoldTrade");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "playerGoldTrade")
+		.arg("eFromPlayer", eFromPlayer)
+		.arg("eToPlayer", eToPlayer)
+		.arg("iAmount", iAmount);
+	postEvent(eventData, "playerGoldTrade");
 }
-
-// BUG - Revolution Event - start
-void CvDllPythonEvents::reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "playerRevolution")
-			.arg("ePlayerID", ePlayerID)
-			.arg("iAnarchyLength", iAnarchyLength)
-			.arg("paeOldCivics", Cy::Array<int>((const int*)paeOldCivics, GC.getNumCivicOptionInfos()))
-			.arg("paeNewCivics", Cy::Array<int>((const int*)paeNewCivics, GC.getNumCivicOptionInfos()));
-		postEvent(eventData, "playerRevolution");
-	}
-}
-// BUG - Revolution Event - end
 
 void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("szEventName", szEventName)
-			// generic args tuple
-			.argPy(pyArgs);
-		postEvent(eventData, szEventName);
-	}
+	EventArgs eventData;
+	eventData
+		.no_json()
+		.arg("szEventName", szEventName)
+		.argPy(pyArgs); // generic args tuple
+	postEvent(eventData, szEventName);
 }
 
 void CvDllPythonEvents::preSave()
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "OnPreSave");
-		postEvent(eventData, "OnPreSave");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "OnPreSave");
+	postEvent(eventData, "OnPreSave");
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvDllPythonEvents::reportAddTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded)
+
+void CvDllPythonEvents::reportChangeTeam(TeamTypes eOld, TeamTypes eNew)
 {
-	if (preEvent())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "addTeam")
-			.arg("eIndex0", eIndex0)
-			.arg("eIndex1", eIndex1)
-			.arg("bAdded", bAdded);
-		postEvent(eventData, "addTeam");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "changeTeam")
+		.arg("eOld", eOld)
+		.arg("eNew", eNew);
+	postEvent(eventData, "changeTeam");
 }
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-

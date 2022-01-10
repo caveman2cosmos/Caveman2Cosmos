@@ -2,9 +2,6 @@
 # AI_AUTO_PLAY_MOD
 #
 from CvPythonExtensions import *
-import CvTopCivs
-import Popup as PyPopup
-
 import RevDefs
 import SdToolKit
 import RevUtils
@@ -60,7 +57,6 @@ class AIAutoPlay :
 
 		customEM.setPopupHandler(RevDefs.toAIChooserPopup, ["toAIChooserPopup",self.AIChooserHandler,self.blankHandler])
 		customEM.setPopupHandler(RevDefs.abdicatePopup, ["abdicatePopup",self.blankHandler,self.blankHandler])
-		customEM.setPopupHandler(RevDefs.pickHumanPopup, ["pickHumanPopup",self.pickHumanHandler,self.blankHandler])
 
 		self.customEM = customEM
 
@@ -78,7 +74,6 @@ class AIAutoPlay :
 
 		self.customEM.setPopupHandler(RevDefs.toAIChooserPopup, ["toAIChooserPopup",self.blankHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.abdicatePopup, ["abdicatePopup",self.blankHandler,self.blankHandler])
-		self.customEM.setPopupHandler(RevDefs.pickHumanPopup, ["pickHumanPopup",self.blankHandler,self.blankHandler])
 
 		self.customEM.removeEventHandler("BeginGameTurn", self.onBeginGameTurn)
 
@@ -101,52 +96,14 @@ class AIAutoPlay :
 
 		for i in range(GC.getMAX_PC_PLAYERS()):
 			CyPlayer = GC.getPlayer(i)
-			if CyPlayer.isHumanDisabled():
-				if not GAME.isForcedAIAutoPlay(i):
-					GAME.setAIAutoPlay(i, 1)
+			if CyPlayer.isHumanDisabled() and not GAME.isForcedAIAutoPlay(i):
+				GAME.setAIAutoPlay(i, 1)
 
 	def onVictory(self, argsList):
 		self.checkPlayer()
 		for i in range(GC.getMAX_PC_PLAYERS()):
-			CyPlayer = GC.getPlayer(i)
-			if CyPlayer.isHuman() and CyPlayer.isHumanDisabled():
+			if GC.getPlayer(i).isHumanDisabled():
 				GAME.setForcedAIAutoPlay(i, 0)
-
-
-
-	# This is still not working properly. Boo.... Close though.
-	def doNewHuman(self, iPlayerNew, iPlayerOld):
-
-		CyInterface().addImmediateMessage("doNewHuman","")
-
-		CyPlayer = GC.getPlayer(iPlayerOld)
-		CyPlayer.setNewPlayerAlive(True)
-
-		iSettler = GC.getInfoTypeForString("UNIT_SETTLER")
-		CyPlayer.initUnit(iSettler, 0, 0, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-		CyPlayer.setFoundedFirstCity(False)
-		CyPlayer.setIsHuman(True)
-
-		CyInterface().addImmediateMessage("calling changeHuman","")
-		RevUtils.changeHuman(iPlayerNew, iPlayerOld)
-
-		if not CyPlayer.getNumCities():
-			print "Killing off player %d" % iPlayerOld
-			CyPlayer.killUnits()
-			CyPlayer.setIsHuman(False)
-			CyPlayer.setNewPlayerAlive(False)
-			CyPlayer.setFoundedFirstCity(True)
-
-	def pickHumanHandler(self, iPlayerOld, netUserData, popupReturn):
-		print 'Handling pick human popup'
-
-		if not popupReturn.getButtonClicked(): # if you pressed cancel
-			CyInterface().addImmediateMessage("Kill your remaining units if you'd like to see end game screens","")
-			return
-
-		iPlayerNew = popupReturn.getSelectedPullDownValue(1)
-
-		self.doNewHuman(iPlayerNew, iPlayerOld)
 
 
 	def onBeginPlayerTurn(self, argsList):
@@ -170,29 +127,7 @@ class AIAutoPlay :
 
 
 	def checkPlayer(self):
-		iPlayer = GAME.getActivePlayer()
 		CyPlayer = GC.getActivePlayer()
-
-		if CyPlayer and not CyPlayer.isAlive():
-			popup = PyPopup.PyPopup(RevDefs.pickHumanPopup, contextType=EventContextTypes.EVENTCONTEXT_ALL, bDynamic=False)
-			popup.setHeaderString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_PICK_CIV", ()))
-			popup.setBodyString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_CIV_DIED", ()))
-			popup.addSeparator()
-			popup.createPythonPullDown(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TAKE_CONTROL_CIV", ()), 1)
-
-			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
-				if iPlayerX == iPlayer: continue
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive():
-					popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_OF_THE", ()) %(CyPlayerX.getName(), CyPlayerX.getCivilizationName()), iPlayerX, 1)
-
-			popup.popup.setSelectedPulldownID(iPlayer, 1)
-
-			popup.addSeparator()
-			popup.addButton(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_NONE", ()))
-			print 'Launching pick human popup'
-			popup.launch()
-
 		for i in range(GC.getMAX_PC_TEAMS()):
 			CyPlayer.setEspionageSpendingWeightAgainstTeam(i, CyPlayer.getEspionageSpendingWeightAgainstTeam(i)/10)
 
@@ -265,11 +200,11 @@ class AIAutoPlay :
 		popupSizeX = 400
 		popupSizeY = 250
 
-		popup = PyPopup.PyPopup(RevDefs.toAIChooserPopup,contextType = EventContextTypes.EVENTCONTEXT_ALL)
+		popup = CyPopup(RevDefs.toAIChooserPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
 		popup.setPosition((xResolution - popupSizeX )/2, (yResolution-popupSizeY)/2-50)
 		popup.setSize(popupSizeX,popupSizeY)
-		popup.setHeaderString( TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURN_ON", ()) )
-		popup.setBodyString( TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURNS", ()) )
+		popup.setHeaderString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURN_ON", ()), 1<<2)
+		popup.setBodyString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURNS", ()), 1<<0)
 		popup.addSeparator()
 		popup.createPythonEditBox('10', 'Number of turns to turn over to AI', 0)
 		popup.setEditBoxMaxCharCount(4, 2, 0)
@@ -278,7 +213,7 @@ class AIAutoPlay :
 		popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_NO", ()), 0, 2)
 		popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_FULLY", ()), 1, 2)
 
-		popup.popup.setSelectedPulldownID( 1, 2 )
+		popup.setSelectedPulldownID(1, 2)
 
 		popup.addSeparator()
 		popup.addButton("OK")

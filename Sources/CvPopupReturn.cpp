@@ -100,13 +100,13 @@ PopupReturn &PopupReturn::operator=(const PopupReturn &source)
 
 //
 // read object from a stream
-// 
+//
 void PopupReturn::read(FDataStreamBase* pStream)
 {
 	int iSize;
 	int iValue;
 	int i;
-	wchar szValue[1024];
+	wchar_t szValue[1024];
 
 	pStream->Read( &iSize );
 	for (i = 0; i < iSize; i++)
@@ -167,12 +167,12 @@ void PopupReturn::read(FDataStreamBase* pStream)
 
 //
 // write object to a stream
-// 
+//
 void PopupReturn::write(FDataStreamBase* pStream) const
 {
 	unsigned int iI;
 	//char szString[1024];
-	
+
 	pStream->Write( m_aiSelectedRadioButton.size() );
 	for (iI = 0; iI < m_aiSelectedRadioButton.size(); iI++)
 	{

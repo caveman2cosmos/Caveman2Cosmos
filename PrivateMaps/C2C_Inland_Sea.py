@@ -3,38 +3,32 @@
 #	AUTHOR:  Bob Thomas (Sirian)
 #	CONTRIB: Soren Johnson, Andy Szybalski
 #	PURPOSE: Regional map script - Loosely simulates a Mediterranean type
-#	         temperate zone with civs ringing a central sea.
+#			 temperate zone with civs ringing a central sea.
 #-----------------------------------------------------------------------------
 #	Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 #-----------------------------------------------------------------------------
-#       MODIFIED BY: Temudjin
-#       PURPOSE:    - compatibility with 'Planetfall' and 'Mars Now!'
-#                   - add Marsh terrain, if supported by mod
-#                   - print stats of mod and map
-#                   - much more ...
-#       DEPENDENCY: - needs MapScriptTools.py
+#	   MODIFIED BY: Temudjin
+#	   PURPOSE:	- add Marsh terrain
+#				   - print stats of mod and map
+#				   - much more ...
+#	   DEPENDENCY: - needs MapScriptTools.py
 #-----------------------------------------------------------------------------
-#  1.10	          4.Feb.09  - works with 'Giant' map in FlavourMod by Jean Elcard
+#  1.10			  4.Feb.09  - works with 'Giant' map in FlavourMod by Jean Elcard
 #	1.20	Temudjin 29.Mar.09  - utilizes mapTools( Ringworld2 )
 #	1.30	Temudjin 15.July.10 - utilizes MapScriptTools
-#                            - add Team Start option
-#                            - allow all map-wrapping
-#                            - allow any number of civs
-#                            - allow more world sizes, if supported by mod
-#                            - add Marsh terrain, if supported by mod
-#                            - add Deep Ocean terrain, if supported by mod
-#                            - add Map Regions ( BigDent, BigBog, ElementalQuarter, LostIsle )
-#                            - add Map Features ( Kelp, HauntedLands, CrystalPlains )
-#                            - better balanced resources
-#                            - compatibility with 'Mars Now!'
+#							- add Team Start option
+#							- allow all map-wrapping
+#							- allow any number of civs
+#							- allow more world sizes, if supported by mod
+#							- add Marsh terrain, if supported by mod
+#							- add Deep Ocean terrain, if supported by mod
+#							- add Map Regions ( BigDent, BigBog, ElementalQuarter, LostIsle )
+#							- add Map Features ( Kelp, HauntedLands, CrystalPlains )
+#							- better balanced resources
 
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-import sys
-from CvMapGeneratorUtil import HintedWorld
-
 
 ################################################################
 ## MapScriptTools by Temudjin
@@ -64,12 +58,8 @@ def beforeGeneration():
 
 def generateTerrainTypes():
 	print "-- generateTerrainTypes()"
-
 	# Choose terrainGenerator
-	if mst.bPfall or mst.bMars:
-		terraingen = mst.MST_TerrainGenerator()	# for Planetfall/Mars Now! use MST_TerrainGenerator()
-	else:
-		terraingen = ISTerrainGenerator()
+	terraingen = ISTerrainGenerator()
 	# Generate terrain
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
@@ -78,26 +68,18 @@ def addRivers():
 	print "-- addRivers()"
 	# Generate DeepOcean-terrain if mod allows for it
 	mst.deepOcean.buildDeepOcean()
-	# Planetfall: handle shelves and trenches
-	mst.planetFallMap.buildPfallOcean()
 	# Generate marsh-terrain
 	mst.marshMaker.convertTerrain()
 	# Build between 0..3 mountain-ranges.
 	mst.mapRegions.buildBigDents()
 	# Build between 0..3 bog-regions.
 	mst.mapRegions.buildBigBogs()
-	# build ElementalQuarter
-	mst.mapRegions.buildElementalQuarter()
-
-	# No rivers on Mars
-	if not mst.bMars:
-		# Put rivers on the map.
-		CyPythonMgr().allowDefaultImpl()
+	# Put rivers on the map.
+	CyPythonMgr().allowDefaultImpl()
 
 def addLakes():
 	print "-- addLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # shuffle starting-plots for teams
 def normalizeStartingPlotLocations():
@@ -105,7 +87,7 @@ def normalizeStartingPlotLocations():
 
 	# build Lost Isle
 	# - this region needs to be placed after starting-plots are first assigned
-	mst.mapRegions.buildLostIsle( bAliens = mst.choose(33,True,False) )
+	mst.mapRegions.buildLostIsle(bAliens = mst.choose(33,True,False))
 
 	if CyMap().getCustomMapOption(2) == 0:
 		# by default civ places teams near to each other
@@ -119,25 +101,21 @@ def normalizeStartingPlotLocations():
 
 def normalizeAddRiver():
 	print "-- normalizeAddRiver()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def normalizeAddLakes():
 	print "-- normalizeAddLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeRemoveBadTerrain():
 	print "-- normalizeRemoveBadTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def normalizeAddExtras():
 	print "-- normalizeAddExtras()"
@@ -165,9 +143,12 @@ def normalizeAddExtras():
 	mst.mapStats.mapStatistics()
 
 def minStartingDistanceModifier():
-	if mst.bPfall: return -25
-	minStartingDistanceModifier2()			# call renamed script function
-#	return 0
+	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
+	if numPlrs  <= 18:
+		return -95
+	else:
+		return -50
+
 ################################################################
 
 
@@ -182,10 +163,10 @@ def isAdvancedMap():
 	return 0
 
 def getNumCustomMapOptions():
-	return 2 + mst.iif( mst.bMars, 0, 1 )
+	return 3
 
 def getNumHiddenCustomMapOptions():
-	return 1 + mst.iif( mst.bMars, 0, 1 )
+	return 2
 
 def getCustomMapOptionName(argsList):
 	[iOption] = argsList
@@ -327,320 +308,320 @@ def beforeGeneration2():
 
 	# Templates are nested by keys: {(NumPlayers, TemplateID): {PlayerID: [X, Y, xVariance, yVariance]}}
 	templates = {(1,0): {0: [0.5, 0.5, int(0.5 * iW), int(0.5 * iH)]},
-	             (2,0): {0: [0.1, 0.5, fVar, int(0.5 * iH)],
-	                     1: [0.9, 0.5, fVar, int(0.5 * iH)]},
-	             (2,1): {0: [0.5, 0.167, int(0.3 * iW), fVar],
-	                     1: [0.5, 0.833, int(0.3 * iW), fVar]},
-	             (2,2): {0: [0.3, 0.167, int(0.3 * iW), fVar],
-	                     1: [0.7, 0.833, int(0.3 * iW), fVar]},
-	             (2,3): {0: [0.7, 0.167, int(0.3 * iW), fVar],
-	                     1: [0.3, 0.833, int(0.3 * iW), fVar]},
-	             (2,4): {0: [0.2, 0.333, int(0.2 * iW), int(0.333 * iH)],
-	                     1: [0.8, 0.667, int(0.2 * iW), int(0.333 * iH)]},
-	             (2,5): {0: [0.8, 0.333, int(0.2 * iW), int(0.333 * iH)],
-	                     1: [0.2, 0.677, int(0.2 * iW), int(0.333 * iH)]},
-	             (3,0): {0: [0.1, 0.5, fVar, fVar],
-	                     1: [0.7, 0.167, fVar, fVar],
-	                     2: [0.7, 0.833, fVar, fVar]},
-	             (3,1): {0: [0.9, 0.5, fVar, fVar],
-	                     1: [0.3, 0.167, fVar, fVar],
-	                     2: [0.3, 0.833, fVar, fVar]},
-	             (3,2): {0: [0.5, 0.167, fVar, fVar],
-	                     1: [0.1, 0.833, fVar, fVar],
-	                     2: [0.9, 0.833, fVar, fVar]},
-	             (3,3): {0: [0.5, 0.833, fVar, fVar],
-	                     1: [0.1, 0.167, fVar, fVar],
-	                     2: [0.9, 0.167, fVar, fVar]},
-	             (4,0): {0: [0.1, 0.5, fVar, fVar],
-	                     1: [0.5, 0.167, fVar, fVar],
-	                     2: [0.9, 0.5, fVar, fVar],
-	                     3: [0.5, 0.833, fVar, fVar]},
-	             (4,1): {0: [0.1, 0.167, fVar, fVar],
-	                     1: [0.7, 0.167, fVar, fVar],
-	                     2: [0.9, 0.833, fVar, fVar],
-	                     3: [0.3, 0.833, fVar, fVar]},
-	             (4,2): {0: [0.1, 0.833, fVar, fVar],
-	                     1: [0.7, 0.833, fVar, fVar],
-	                     2: [0.9, 0.167, fVar, fVar],
-	                     3: [0.3, 0.167, fVar, fVar]},
-	             (5,0): {0: [0.5, 0.167, fVar, fVar],
-	                     1: [0.125, 0.333, fVar, fVar],
-	                     2: [0.25, 0.833, fVar, fVar],
-	                     3: [0.75, 0.833, fVar, fVar],
-	                     4: [0.875, 0.333, fVar, fVar]},
-	             (5,1): {0: [0.5, 0.833, fVar, fVar],
-	                     1: [0.125, 0.667, fVar, fVar],
-	                     2: [0.25, 0.167, fVar, fVar],
-	                     3: [0.75, 0.167, fVar, fVar],
-	                     4: [0.875, 0.667, fVar, fVar]},
-	             (6,0): {0: [0.1, 0.5, fVar, fVar],
-	                     1: [0.3, 0.167, fVar, fVar],
-	                     2: [0.7, 0.167, fVar, fVar],
-	                     3: [0.9, 0.5, fVar, fVar],
-	                     4: [0.7, 0.833, fVar, fVar],
-	                     5: [0.3, 0.833, fVar, fVar]},
-	             (6,1): {0: [0.1, 0.167, fVar, fVar],
-	                     1: [0.5, 0.167, fVar, fVar],
-	                     2: [0.9, 0.167, fVar, fVar],
-	                     3: [0.9, 0.833, fVar, fVar],
-	                     4: [0.5, 0.833, fVar, fVar],
-	                     5: [0.1, 0.833, fVar, fVar]},
-	             (7,0): {0: [0.1, 0.5, fVar, fVar],
-	                     1: [0.2, 0.125, fVar, fVar],
-	                     2: [0.6, 0.125, fVar, fVar],
-	                     3: [0.9, 0.25, fVar, fVar],
-	                     4: [0.9, 0.75, fVar, fVar],
-	                     5: [0.6, 0.875, fVar, fVar],
-	                     6: [0.2, 0.875, fVar, fVar]},
-	             (7,1): {0: [0.9, 0.5, fVar, fVar],
-	                     1: [0.8, 0.125, fVar, fVar],
-	                     2: [0.4, 0.125, fVar, fVar],
-	                     3: [0.1, 0.25, fVar, fVar],
-	                     4: [0.1, 0.75, fVar, fVar],
-	                     5: [0.4, 0.875, fVar, fVar],
-	                     6: [0.8, 0.875, fVar, fVar]},
-	             (8,0): {0: [0.583, 0.125, fVar, fVar],
-	                     1: [0.25, 0.125, fVar, fVar],
-	                     2: [0.083, 0.375, fVar, fVar],
-	                     3: [0.083, 0.875, fVar, fVar],
-	                     4: [0.417, 0.875, fVar, fVar],
-	                     5: [0.75, 0.875, fVar, fVar],
-	                     6: [0.917, 0.625, fVar, fVar],
-	                     7: [0.917, 0.125, fVar, fVar]},
-	             (8,1): {0: [0.417, 0.125, fVar, fVar],
-	                     1: [0.083, 0.125, fVar, fVar],
-	                     2: [0.083, 0.625, fVar, fVar],
-	                     3: [0.25, 0.875, fVar, fVar],
-	                     4: [0.583, 0.875, fVar, fVar],
-	                     5: [0.917, 0.875, fVar, fVar],
-	                     6: [0.917, 0.375, fVar, fVar],
-	                     7: [0.75, 0.125, fVar, fVar]},
-	             (8,2): {0: [0.1, 0.5, fVar, fVar],
-	                     1: [0.2, 0.125, fVar, fVar],
-	                     2: [0.5, 0.125, fVar, fVar],
-	                     3: [0.8, 0.125, fVar, fVar],
-	                     4: [0.9, 0.5, fVar, fVar],
-	                     5: [0.8, 0.875, fVar, fVar],
-	                     6: [0.5, 0.875, fVar, fVar],
-	                     7: [0.2, 0.875, fVar, fVar]},
-	             (8,3): {0: [0.1, 0.75, fVar, fVar],
-	                     1: [0.1, 0.25, fVar, fVar],
-	                     2: [0.333, 0.125, fVar, fVar],
-	                     3: [0.667, 0.125, fVar, fVar],
-	                     4: [0.9, 0.25, fVar, fVar],
-	                     5: [0.9, 0.75, fVar, fVar],
-	                     6: [0.667, 0.875, fVar, fVar],
-	                     7: [0.333, 0.875, fVar, fVar]},
-	             (9,0): {0: [0.833, 0.15, fVar, fVar],
-	                     1: [0.5, 0.15, fVar, fVar],
-	                     2: [0.167, 0.15, fVar, fVar],
-	                     3: [0.08, 0.412, fVar, fVar],
-	                     4: [0.08, 0.775, fVar, fVar],
-	                     5: [0.35, 0.85, fVar, fVar],
-	                     6: [0.65, 0.85, fVar, fVar],
-	                     7: [0.92, 0.775, fVar, fVar],
-	                     8: [0.92, 0.412, fVar, fVar]},
-	             (9,1): {0: [0.833, 0.85, fVar, fVar],
-	                     1: [0.5, 0.85, fVar, fVar],
-	                     2: [0.167, 0.85, fVar, fVar],
-	                     3: [0.08, 0.588, fVar, fVar],
-	                     4: [0.08, 0.225, fVar, fVar],
-	                     5: [0.35, 0.15, fVar, fVar],
-	                     6: [0.65, 0.15, fVar, fVar],
-	                     7: [0.92, 0.225, fVar, fVar],
-	                     8: [0.92, 0.588, fVar, fVar]},
-	             (10,0): {0: [0.875, 0.15, fVar, fVar],
-	                      1: [0.625, 0.15, fVar, fVar],
-	                      2: [0.375, 0.15, fVar, fVar],
-	                      3: [0.125, 0.15, fVar, fVar],
-	                      4: [0.08, 0.5, fVar, fVar],
-	                      5: [0.125, 0.85, fVar, fVar],
-	                      6: [0.375, 0.85, fVar, fVar],
-	                      7: [0.625, 0.85, fVar, fVar],
-	                      8: [0.875, 0.85, fVar, fVar],
-	                      9: [0.92, 0.5, fVar, fVar]},
-	             (10,1): {0: [0.75, 0.15, fVar, fVar],
-	                      1: [0.5, 0.15, fVar, fVar],
-	                      2: [0.25, 0.15, fVar, fVar],
-	                      3: [0.08, 0.33, fVar, fVar],
-	                      4: [0.08, 0.67, fVar, fVar],
-	                      5: [0.25, 0.85, fVar, fVar],
-	                      6: [0.5, 0.85, fVar, fVar],
-	                      7: [0.75, 0.85, fVar, fVar],
-	                      8: [0.92, 0.67, fVar, fVar],
-	                      9: [0.92, 0.33, fVar, fVar]},
-	             (11,0): {0: [0.875, 0.15, fVar, fVar],
-	                      1: [0.625, 0.15, fVar, fVar],
-	                      2: [0.375, 0.15, fVar, fVar],
-	                      3: [0.125, 0.15, fVar, fVar],
-	                      4: [0.08, 0.45, fVar, fVar],
-	                      5: [0.08, 0.75, fVar, fVar],
-	                      6: [0.28, 0.85, fVar, fVar],
-	                      7: [0.5, 0.85, fVar, fVar],
-	                      8: [0.72, 0.85, fVar, fVar],
-	                      9: [0.92, 0.75, fVar, fVar],
-	                      10: [0.92, 0.45, fVar, fVar]},
-	             (11,1): {0: [0.875, 0.85, fVar, fVar],
-	                      1: [0.625, 0.85, fVar, fVar],
-	                      2: [0.375, 0.85, fVar, fVar],
-	                      3: [0.125, 0.85, fVar, fVar],
-	                      4: [0.08, 0.55, fVar, fVar],
-	                      5: [0.08, 0.25, fVar, fVar],
-	                      6: [0.28, 0.15, fVar, fVar],
-	                      7: [0.5, 0.15, fVar, fVar],
-	                      8: [0.72, 0.15, fVar, fVar],
-	                      9: [0.92, 0.25, fVar, fVar],
-	                      10: [0.92, 0.55, fVar, fVar]},
-	             (12,0): {0: [0.7, 0.15, fVar, fVar],
-	                      1: [0.5, 0.15, fVar, fVar],
-	                      2: [0.3, 0.15, fVar, fVar],
-	                      3: [0.1, 0.15, fVar, fVar],
-	                      4: [0.08, 0.5, fVar, fVar],
-	                      5: [0.1, 0.85, fVar, fVar],
-	                      6: [0.3, 0.85, fVar, fVar],
-	                      7: [0.5, 0.85, fVar, fVar],
-	                      8: [0.7, 0.85, fVar, fVar],
-	                      9: [0.9, 0.85, fVar, fVar],
-	                      10: [0.92, 0.5, fVar, fVar],
-	                      11: [0.9, 0.15, fVar, fVar]},
-	             (13,0): {0: [0.7, 0.125, fVar, fVar],
-	                      1: [0.5, 0.125, fVar, fVar],
-	                      2: [0.3, 0.125, fVar, fVar],
-	                      3: [0.1, 0.125, fVar, fVar],
-	                      4: [0.08, 0.425, fVar, fVar],
-	                      5: [0.08, 0.725, fVar, fVar],
-	                      6: [0.2, 0.875, fVar, fVar],
-	                      7: [0.4, 0.875, fVar, fVar],
-	                      8: [0.6, 0.875, fVar, fVar],
-	                      9: [0.8, 0.875, fVar, fVar],
-	                      10: [0.92, 0.725, fVar, fVar],
-	                      11: [0.92, 0.425, fVar, fVar],
-	                      12: [0.9, 0.125, fVar, fVar]},
-	             (13,1): {0: [0.7, 0.875, fVar, fVar],
-	                      1: [0.5, 0.875, fVar, fVar],
-	                      2: [0.3, 0.875, fVar, fVar],
-	                      3: [0.1, 0.875, fVar, fVar],
-	                      4: [0.08, 0.575, fVar, fVar],
-	                      5: [0.08, 0.275, fVar, fVar],
-	                      6: [0.2, 0.125, fVar, fVar],
-	                      7: [0.4, 0.125, fVar, fVar],
-	                      8: [0.6, 0.125, fVar, fVar],
-	                      9: [0.8, 0.125, fVar, fVar],
-	                      10: [0.92, 0.275, fVar, fVar],
-	                      11: [0.92, 0.575, fVar, fVar],
-	                      12: [0.9, 0.875, fVar, fVar]},
-	             (14,0): {0: [0.7, 0.125, fVar, fVar],
-	                      1: [0.5, 0.125, fVar, fVar],
-	                      2: [0.3, 0.125, fVar, fVar],
-	                      3: [0.1, 0.125, fVar, fVar],
-	                      4: [0.08, 0.375, fVar, fVar],
-	                      5: [0.08, 0.625, fVar, fVar],
-	                      6: [0.1, 0.875, fVar, fVar],
-	                      7: [0.3, 0.875, fVar, fVar],
-	                      8: [0.5, 0.875, fVar, fVar],
-	                      9: [0.7, 0.875, fVar, fVar],
-	                      10: [0.9, 0.875, fVar, fVar],
-	                      11: [0.92, 0.625, fVar, fVar],
-	                      12: [0.92, 0.375, fVar, fVar],
-	                      13: [0.9, 0.125, fVar, fVar]},
-	             (15,0): {0: [0.583, 0.125, fVar, fVar],
-	                      1: [0.417, 0.125, fVar, fVar],
-	                      2: [0.25, 0.125, fVar, fVar],
-	                      3: [0.083, 0.125, fVar, fVar],
-	                      4: [0.083, 0.4, fVar, fVar],
-	                      5: [0.083, 0.65, fVar, fVar],
-	                      6: [0.1, 0.9, fVar, fVar],
-	                      7: [0.3, 0.875, fVar, fVar],
-	                      8: [0.5, 0.875, fVar, fVar],
-	                      9: [0.7, 0.875, fVar, fVar],
-	                      10: [0.9, 0.9, fVar, fVar],
-	                      11: [0.917, 0.65, fVar, fVar],
-	                      12: [0.917, 0.4, fVar, fVar],
-	                      13: [0.917, 0.125, fVar, fVar],
-	                      14: [0.75, 0.125, fVar, fVar]},
-	             (15,1): {0: [0.583, 0.875, fVar, fVar],
-	                      1: [0.417, 0.875, fVar, fVar],
-	                      2: [0.25, 0.875, fVar, fVar],
-	                      3: [0.083, 0.875, fVar, fVar],
-	                      4: [0.083, 0.6, fVar, fVar],
-	                      5: [0.083, 0.35, fVar, fVar],
-	                      6: [0.1, 0.1, fVar, fVar],
-	                      7: [0.3, 0.125, fVar, fVar],
-	                      8: [0.5, 0.125, fVar, fVar],
-	                      9: [0.7, 0.125, fVar, fVar],
-	                      10: [0.9, 0.1, fVar, fVar],
-	                      11: [0.917, 0.35, fVar, fVar],
-	                      12: [0.917, 0.6, fVar, fVar],
-	                      13: [0.917, 0.875, fVar, fVar],
-	                      14: [0.75, 0.875, fVar, fVar]},
-	             (16,0): {0: [0.583, 0.125, fVar, fVar],
-	                      1: [0.417, 0.125, fVar, fVar],
-	                      2: [0.25, 0.125, fVar, fVar],
-	                      3: [0.083, 0.125, fVar, fVar],
-	                      4: [0.083, 0.375, fVar, fVar],
-	                      5: [0.083, 0.625, fVar, fVar],
-	                      6: [0.083, 0.875, fVar, fVar],
-	                      7: [0.25, 0.875, fVar, fVar],
-	                      8: [0.417, 0.875, fVar, fVar],
-	                      9: [0.583, 0.875, fVar, fVar],
-	                      10: [0.75, 0.875, fVar, fVar],
-	                      11: [0.917, 0.875, fVar, fVar],
-	                      12: [0.917, 0.625, fVar, fVar],
-	                      13: [0.917, 0.375, fVar, fVar],
-	                      14: [0.917, 0.125, fVar, fVar],
-	                      15: [0.75, 0.125, fVar, fVar]},
-	             (17,0): {0: [0.5, 0.125, fVar, fVar],
-	                      1: [0.35, 0.125, fVar, fVar],
-	                      2: [0.2, 0.125, fVar, fVar],
-	                      3: [0.05, 0.175, fVar, fVar],
-	                      4: [0.083, 0.45, fVar, fVar],
-	                      5: [0.083, 0.7, fVar, fVar],
-	                      6: [0.083, 0.95, fVar, fVar],
-	                      7: [0.25, 0.875, fVar, fVar],
-	                      8: [0.417, 0.875, fVar, fVar],
-	                      9: [0.583, 0.875, fVar, fVar],
-	                      10: [0.75, 0.875, fVar, fVar],
-	                      11: [0.917, 0.95, fVar, fVar],
-	                      12: [0.917, 0.7, fVar, fVar],
-	                      13: [0.917, 0.45, fVar, fVar],
-	                      14: [0.95, 0.175, fVar, fVar],
-	                      15: [0.8, 0.125, fVar, fVar],
-	                      16: [0.65, 0.125, fVar, fVar]},
-	             (17,1): {0: [0.5, 0.875, fVar, fVar],
-	                      1: [0.35, 0.875, fVar, fVar],
-	                      2: [0.2, 0.875, fVar, fVar],
-	                      3: [0.05, 0.825, fVar, fVar],
-	                      4: [0.083, 0.65, fVar, fVar],
-	                      5: [0.083, 0.3, fVar, fVar],
-	                      6: [0.083, 0.05, fVar, fVar],
-	                      7: [0.25, 0.125, fVar, fVar],
-	                      8: [0.417, 0.125, fVar, fVar],
-	                      9: [0.583, 0.125, fVar, fVar],
-	                      10: [0.75, 0.125, fVar, fVar],
-	                      11: [0.917, 0.05, fVar, fVar],
-	                      12: [0.917, 0.3, fVar, fVar],
-	                      13: [0.917, 0.65, fVar, fVar],
-	                      14: [0.95, 0.825, fVar, fVar],
-	                      15: [0.8, 0.875, fVar, fVar],
-	                      16: [0.65, 0.875, fVar, fVar]},
-	             (18,0): {0: [0.5, 0.125, fVar, fVar],
-	                      1: [0.35, 0.125, fVar, fVar],
-	                      2: [0.2, 0.125, fVar, fVar],
-	                      3: [0.05, 0.125, fVar, fVar],
-	                      4: [0.075, 0.375, fVar, fVar],
-	                      5: [0.075, 0.625, fVar, fVar],
-	                      6: [0.05, 0.875, fVar, fVar],
-	                      7: [0.2, 0.875, fVar, fVar],
-	                      8: [0.35, 0.875, fVar, fVar],
-	                      9: [0.5, 0.875, fVar, fVar],
-	                      10: [0.65, 0.875, fVar, fVar],
-	                      11: [0.8, 0.875, fVar, fVar],
-	                      12: [0.95, 0.875, fVar, fVar],
-	                      13: [0.925, 0.625, fVar, fVar],
-	                      14: [0.925, 0.375, fVar, fVar],
-	                      15: [0.95, 0.125, fVar, fVar],
-	                      16: [0.8, 0.125, fVar, fVar],
-	                      17: [0.65, 0.125, fVar, fVar]}
+				 (2,0): {0: [0.1, 0.5, fVar, int(0.5 * iH)],
+						 1: [0.9, 0.5, fVar, int(0.5 * iH)]},
+				 (2,1): {0: [0.5, 0.167, int(0.3 * iW), fVar],
+						 1: [0.5, 0.833, int(0.3 * iW), fVar]},
+				 (2,2): {0: [0.3, 0.167, int(0.3 * iW), fVar],
+						 1: [0.7, 0.833, int(0.3 * iW), fVar]},
+				 (2,3): {0: [0.7, 0.167, int(0.3 * iW), fVar],
+						 1: [0.3, 0.833, int(0.3 * iW), fVar]},
+				 (2,4): {0: [0.2, 0.333, int(0.2 * iW), int(0.333 * iH)],
+						 1: [0.8, 0.667, int(0.2 * iW), int(0.333 * iH)]},
+				 (2,5): {0: [0.8, 0.333, int(0.2 * iW), int(0.333 * iH)],
+						 1: [0.2, 0.677, int(0.2 * iW), int(0.333 * iH)]},
+				 (3,0): {0: [0.1, 0.5, fVar, fVar],
+						 1: [0.7, 0.167, fVar, fVar],
+						 2: [0.7, 0.833, fVar, fVar]},
+				 (3,1): {0: [0.9, 0.5, fVar, fVar],
+						 1: [0.3, 0.167, fVar, fVar],
+						 2: [0.3, 0.833, fVar, fVar]},
+				 (3,2): {0: [0.5, 0.167, fVar, fVar],
+						 1: [0.1, 0.833, fVar, fVar],
+						 2: [0.9, 0.833, fVar, fVar]},
+				 (3,3): {0: [0.5, 0.833, fVar, fVar],
+						 1: [0.1, 0.167, fVar, fVar],
+						 2: [0.9, 0.167, fVar, fVar]},
+				 (4,0): {0: [0.1, 0.5, fVar, fVar],
+						 1: [0.5, 0.167, fVar, fVar],
+						 2: [0.9, 0.5, fVar, fVar],
+						 3: [0.5, 0.833, fVar, fVar]},
+				 (4,1): {0: [0.1, 0.167, fVar, fVar],
+						 1: [0.7, 0.167, fVar, fVar],
+						 2: [0.9, 0.833, fVar, fVar],
+						 3: [0.3, 0.833, fVar, fVar]},
+				 (4,2): {0: [0.1, 0.833, fVar, fVar],
+						 1: [0.7, 0.833, fVar, fVar],
+						 2: [0.9, 0.167, fVar, fVar],
+						 3: [0.3, 0.167, fVar, fVar]},
+				 (5,0): {0: [0.5, 0.167, fVar, fVar],
+						 1: [0.125, 0.333, fVar, fVar],
+						 2: [0.25, 0.833, fVar, fVar],
+						 3: [0.75, 0.833, fVar, fVar],
+						 4: [0.875, 0.333, fVar, fVar]},
+				 (5,1): {0: [0.5, 0.833, fVar, fVar],
+						 1: [0.125, 0.667, fVar, fVar],
+						 2: [0.25, 0.167, fVar, fVar],
+						 3: [0.75, 0.167, fVar, fVar],
+						 4: [0.875, 0.667, fVar, fVar]},
+				 (6,0): {0: [0.1, 0.5, fVar, fVar],
+						 1: [0.3, 0.167, fVar, fVar],
+						 2: [0.7, 0.167, fVar, fVar],
+						 3: [0.9, 0.5, fVar, fVar],
+						 4: [0.7, 0.833, fVar, fVar],
+						 5: [0.3, 0.833, fVar, fVar]},
+				 (6,1): {0: [0.1, 0.167, fVar, fVar],
+						 1: [0.5, 0.167, fVar, fVar],
+						 2: [0.9, 0.167, fVar, fVar],
+						 3: [0.9, 0.833, fVar, fVar],
+						 4: [0.5, 0.833, fVar, fVar],
+						 5: [0.1, 0.833, fVar, fVar]},
+				 (7,0): {0: [0.1, 0.5, fVar, fVar],
+						 1: [0.2, 0.125, fVar, fVar],
+						 2: [0.6, 0.125, fVar, fVar],
+						 3: [0.9, 0.25, fVar, fVar],
+						 4: [0.9, 0.75, fVar, fVar],
+						 5: [0.6, 0.875, fVar, fVar],
+						 6: [0.2, 0.875, fVar, fVar]},
+				 (7,1): {0: [0.9, 0.5, fVar, fVar],
+						 1: [0.8, 0.125, fVar, fVar],
+						 2: [0.4, 0.125, fVar, fVar],
+						 3: [0.1, 0.25, fVar, fVar],
+						 4: [0.1, 0.75, fVar, fVar],
+						 5: [0.4, 0.875, fVar, fVar],
+						 6: [0.8, 0.875, fVar, fVar]},
+				 (8,0): {0: [0.583, 0.125, fVar, fVar],
+						 1: [0.25, 0.125, fVar, fVar],
+						 2: [0.083, 0.375, fVar, fVar],
+						 3: [0.083, 0.875, fVar, fVar],
+						 4: [0.417, 0.875, fVar, fVar],
+						 5: [0.75, 0.875, fVar, fVar],
+						 6: [0.917, 0.625, fVar, fVar],
+						 7: [0.917, 0.125, fVar, fVar]},
+				 (8,1): {0: [0.417, 0.125, fVar, fVar],
+						 1: [0.083, 0.125, fVar, fVar],
+						 2: [0.083, 0.625, fVar, fVar],
+						 3: [0.25, 0.875, fVar, fVar],
+						 4: [0.583, 0.875, fVar, fVar],
+						 5: [0.917, 0.875, fVar, fVar],
+						 6: [0.917, 0.375, fVar, fVar],
+						 7: [0.75, 0.125, fVar, fVar]},
+				 (8,2): {0: [0.1, 0.5, fVar, fVar],
+						 1: [0.2, 0.125, fVar, fVar],
+						 2: [0.5, 0.125, fVar, fVar],
+						 3: [0.8, 0.125, fVar, fVar],
+						 4: [0.9, 0.5, fVar, fVar],
+						 5: [0.8, 0.875, fVar, fVar],
+						 6: [0.5, 0.875, fVar, fVar],
+						 7: [0.2, 0.875, fVar, fVar]},
+				 (8,3): {0: [0.1, 0.75, fVar, fVar],
+						 1: [0.1, 0.25, fVar, fVar],
+						 2: [0.333, 0.125, fVar, fVar],
+						 3: [0.667, 0.125, fVar, fVar],
+						 4: [0.9, 0.25, fVar, fVar],
+						 5: [0.9, 0.75, fVar, fVar],
+						 6: [0.667, 0.875, fVar, fVar],
+						 7: [0.333, 0.875, fVar, fVar]},
+				 (9,0): {0: [0.833, 0.15, fVar, fVar],
+						 1: [0.5, 0.15, fVar, fVar],
+						 2: [0.167, 0.15, fVar, fVar],
+						 3: [0.08, 0.412, fVar, fVar],
+						 4: [0.08, 0.775, fVar, fVar],
+						 5: [0.35, 0.85, fVar, fVar],
+						 6: [0.65, 0.85, fVar, fVar],
+						 7: [0.92, 0.775, fVar, fVar],
+						 8: [0.92, 0.412, fVar, fVar]},
+				 (9,1): {0: [0.833, 0.85, fVar, fVar],
+						 1: [0.5, 0.85, fVar, fVar],
+						 2: [0.167, 0.85, fVar, fVar],
+						 3: [0.08, 0.588, fVar, fVar],
+						 4: [0.08, 0.225, fVar, fVar],
+						 5: [0.35, 0.15, fVar, fVar],
+						 6: [0.65, 0.15, fVar, fVar],
+						 7: [0.92, 0.225, fVar, fVar],
+						 8: [0.92, 0.588, fVar, fVar]},
+				 (10,0): {0: [0.875, 0.15, fVar, fVar],
+						  1: [0.625, 0.15, fVar, fVar],
+						  2: [0.375, 0.15, fVar, fVar],
+						  3: [0.125, 0.15, fVar, fVar],
+						  4: [0.08, 0.5, fVar, fVar],
+						  5: [0.125, 0.85, fVar, fVar],
+						  6: [0.375, 0.85, fVar, fVar],
+						  7: [0.625, 0.85, fVar, fVar],
+						  8: [0.875, 0.85, fVar, fVar],
+						  9: [0.92, 0.5, fVar, fVar]},
+				 (10,1): {0: [0.75, 0.15, fVar, fVar],
+						  1: [0.5, 0.15, fVar, fVar],
+						  2: [0.25, 0.15, fVar, fVar],
+						  3: [0.08, 0.33, fVar, fVar],
+						  4: [0.08, 0.67, fVar, fVar],
+						  5: [0.25, 0.85, fVar, fVar],
+						  6: [0.5, 0.85, fVar, fVar],
+						  7: [0.75, 0.85, fVar, fVar],
+						  8: [0.92, 0.67, fVar, fVar],
+						  9: [0.92, 0.33, fVar, fVar]},
+				 (11,0): {0: [0.875, 0.15, fVar, fVar],
+						  1: [0.625, 0.15, fVar, fVar],
+						  2: [0.375, 0.15, fVar, fVar],
+						  3: [0.125, 0.15, fVar, fVar],
+						  4: [0.08, 0.45, fVar, fVar],
+						  5: [0.08, 0.75, fVar, fVar],
+						  6: [0.28, 0.85, fVar, fVar],
+						  7: [0.5, 0.85, fVar, fVar],
+						  8: [0.72, 0.85, fVar, fVar],
+						  9: [0.92, 0.75, fVar, fVar],
+						  10: [0.92, 0.45, fVar, fVar]},
+				 (11,1): {0: [0.875, 0.85, fVar, fVar],
+						  1: [0.625, 0.85, fVar, fVar],
+						  2: [0.375, 0.85, fVar, fVar],
+						  3: [0.125, 0.85, fVar, fVar],
+						  4: [0.08, 0.55, fVar, fVar],
+						  5: [0.08, 0.25, fVar, fVar],
+						  6: [0.28, 0.15, fVar, fVar],
+						  7: [0.5, 0.15, fVar, fVar],
+						  8: [0.72, 0.15, fVar, fVar],
+						  9: [0.92, 0.25, fVar, fVar],
+						  10: [0.92, 0.55, fVar, fVar]},
+				 (12,0): {0: [0.7, 0.15, fVar, fVar],
+						  1: [0.5, 0.15, fVar, fVar],
+						  2: [0.3, 0.15, fVar, fVar],
+						  3: [0.1, 0.15, fVar, fVar],
+						  4: [0.08, 0.5, fVar, fVar],
+						  5: [0.1, 0.85, fVar, fVar],
+						  6: [0.3, 0.85, fVar, fVar],
+						  7: [0.5, 0.85, fVar, fVar],
+						  8: [0.7, 0.85, fVar, fVar],
+						  9: [0.9, 0.85, fVar, fVar],
+						  10: [0.92, 0.5, fVar, fVar],
+						  11: [0.9, 0.15, fVar, fVar]},
+				 (13,0): {0: [0.7, 0.125, fVar, fVar],
+						  1: [0.5, 0.125, fVar, fVar],
+						  2: [0.3, 0.125, fVar, fVar],
+						  3: [0.1, 0.125, fVar, fVar],
+						  4: [0.08, 0.425, fVar, fVar],
+						  5: [0.08, 0.725, fVar, fVar],
+						  6: [0.2, 0.875, fVar, fVar],
+						  7: [0.4, 0.875, fVar, fVar],
+						  8: [0.6, 0.875, fVar, fVar],
+						  9: [0.8, 0.875, fVar, fVar],
+						  10: [0.92, 0.725, fVar, fVar],
+						  11: [0.92, 0.425, fVar, fVar],
+						  12: [0.9, 0.125, fVar, fVar]},
+				 (13,1): {0: [0.7, 0.875, fVar, fVar],
+						  1: [0.5, 0.875, fVar, fVar],
+						  2: [0.3, 0.875, fVar, fVar],
+						  3: [0.1, 0.875, fVar, fVar],
+						  4: [0.08, 0.575, fVar, fVar],
+						  5: [0.08, 0.275, fVar, fVar],
+						  6: [0.2, 0.125, fVar, fVar],
+						  7: [0.4, 0.125, fVar, fVar],
+						  8: [0.6, 0.125, fVar, fVar],
+						  9: [0.8, 0.125, fVar, fVar],
+						  10: [0.92, 0.275, fVar, fVar],
+						  11: [0.92, 0.575, fVar, fVar],
+						  12: [0.9, 0.875, fVar, fVar]},
+				 (14,0): {0: [0.7, 0.125, fVar, fVar],
+						  1: [0.5, 0.125, fVar, fVar],
+						  2: [0.3, 0.125, fVar, fVar],
+						  3: [0.1, 0.125, fVar, fVar],
+						  4: [0.08, 0.375, fVar, fVar],
+						  5: [0.08, 0.625, fVar, fVar],
+						  6: [0.1, 0.875, fVar, fVar],
+						  7: [0.3, 0.875, fVar, fVar],
+						  8: [0.5, 0.875, fVar, fVar],
+						  9: [0.7, 0.875, fVar, fVar],
+						  10: [0.9, 0.875, fVar, fVar],
+						  11: [0.92, 0.625, fVar, fVar],
+						  12: [0.92, 0.375, fVar, fVar],
+						  13: [0.9, 0.125, fVar, fVar]},
+				 (15,0): {0: [0.583, 0.125, fVar, fVar],
+						  1: [0.417, 0.125, fVar, fVar],
+						  2: [0.25, 0.125, fVar, fVar],
+						  3: [0.083, 0.125, fVar, fVar],
+						  4: [0.083, 0.4, fVar, fVar],
+						  5: [0.083, 0.65, fVar, fVar],
+						  6: [0.1, 0.9, fVar, fVar],
+						  7: [0.3, 0.875, fVar, fVar],
+						  8: [0.5, 0.875, fVar, fVar],
+						  9: [0.7, 0.875, fVar, fVar],
+						  10: [0.9, 0.9, fVar, fVar],
+						  11: [0.917, 0.65, fVar, fVar],
+						  12: [0.917, 0.4, fVar, fVar],
+						  13: [0.917, 0.125, fVar, fVar],
+						  14: [0.75, 0.125, fVar, fVar]},
+				 (15,1): {0: [0.583, 0.875, fVar, fVar],
+						  1: [0.417, 0.875, fVar, fVar],
+						  2: [0.25, 0.875, fVar, fVar],
+						  3: [0.083, 0.875, fVar, fVar],
+						  4: [0.083, 0.6, fVar, fVar],
+						  5: [0.083, 0.35, fVar, fVar],
+						  6: [0.1, 0.1, fVar, fVar],
+						  7: [0.3, 0.125, fVar, fVar],
+						  8: [0.5, 0.125, fVar, fVar],
+						  9: [0.7, 0.125, fVar, fVar],
+						  10: [0.9, 0.1, fVar, fVar],
+						  11: [0.917, 0.35, fVar, fVar],
+						  12: [0.917, 0.6, fVar, fVar],
+						  13: [0.917, 0.875, fVar, fVar],
+						  14: [0.75, 0.875, fVar, fVar]},
+				 (16,0): {0: [0.583, 0.125, fVar, fVar],
+						  1: [0.417, 0.125, fVar, fVar],
+						  2: [0.25, 0.125, fVar, fVar],
+						  3: [0.083, 0.125, fVar, fVar],
+						  4: [0.083, 0.375, fVar, fVar],
+						  5: [0.083, 0.625, fVar, fVar],
+						  6: [0.083, 0.875, fVar, fVar],
+						  7: [0.25, 0.875, fVar, fVar],
+						  8: [0.417, 0.875, fVar, fVar],
+						  9: [0.583, 0.875, fVar, fVar],
+						  10: [0.75, 0.875, fVar, fVar],
+						  11: [0.917, 0.875, fVar, fVar],
+						  12: [0.917, 0.625, fVar, fVar],
+						  13: [0.917, 0.375, fVar, fVar],
+						  14: [0.917, 0.125, fVar, fVar],
+						  15: [0.75, 0.125, fVar, fVar]},
+				 (17,0): {0: [0.5, 0.125, fVar, fVar],
+						  1: [0.35, 0.125, fVar, fVar],
+						  2: [0.2, 0.125, fVar, fVar],
+						  3: [0.05, 0.175, fVar, fVar],
+						  4: [0.083, 0.45, fVar, fVar],
+						  5: [0.083, 0.7, fVar, fVar],
+						  6: [0.083, 0.95, fVar, fVar],
+						  7: [0.25, 0.875, fVar, fVar],
+						  8: [0.417, 0.875, fVar, fVar],
+						  9: [0.583, 0.875, fVar, fVar],
+						  10: [0.75, 0.875, fVar, fVar],
+						  11: [0.917, 0.95, fVar, fVar],
+						  12: [0.917, 0.7, fVar, fVar],
+						  13: [0.917, 0.45, fVar, fVar],
+						  14: [0.95, 0.175, fVar, fVar],
+						  15: [0.8, 0.125, fVar, fVar],
+						  16: [0.65, 0.125, fVar, fVar]},
+				 (17,1): {0: [0.5, 0.875, fVar, fVar],
+						  1: [0.35, 0.875, fVar, fVar],
+						  2: [0.2, 0.875, fVar, fVar],
+						  3: [0.05, 0.825, fVar, fVar],
+						  4: [0.083, 0.65, fVar, fVar],
+						  5: [0.083, 0.3, fVar, fVar],
+						  6: [0.083, 0.05, fVar, fVar],
+						  7: [0.25, 0.125, fVar, fVar],
+						  8: [0.417, 0.125, fVar, fVar],
+						  9: [0.583, 0.125, fVar, fVar],
+						  10: [0.75, 0.125, fVar, fVar],
+						  11: [0.917, 0.05, fVar, fVar],
+						  12: [0.917, 0.3, fVar, fVar],
+						  13: [0.917, 0.65, fVar, fVar],
+						  14: [0.95, 0.825, fVar, fVar],
+						  15: [0.8, 0.875, fVar, fVar],
+						  16: [0.65, 0.875, fVar, fVar]},
+				 (18,0): {0: [0.5, 0.125, fVar, fVar],
+						  1: [0.35, 0.125, fVar, fVar],
+						  2: [0.2, 0.125, fVar, fVar],
+						  3: [0.05, 0.125, fVar, fVar],
+						  4: [0.075, 0.375, fVar, fVar],
+						  5: [0.075, 0.625, fVar, fVar],
+						  6: [0.05, 0.875, fVar, fVar],
+						  7: [0.2, 0.875, fVar, fVar],
+						  8: [0.35, 0.875, fVar, fVar],
+						  9: [0.5, 0.875, fVar, fVar],
+						  10: [0.65, 0.875, fVar, fVar],
+						  11: [0.8, 0.875, fVar, fVar],
+						  12: [0.95, 0.875, fVar, fVar],
+						  13: [0.925, 0.625, fVar, fVar],
+						  14: [0.925, 0.375, fVar, fVar],
+						  15: [0.95, 0.125, fVar, fVar],
+						  16: [0.8, 0.125, fVar, fVar],
+						  17: [0.65, 0.125, fVar, fVar]}
 	}
 	# End of Templates data.
 
@@ -697,30 +678,7 @@ def getStartPositions():
 	return coord
 ########### Temudjin END
 
-def minStartingDistanceModifier2():
-	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	if numPlrs  <= 18:
-		return -95
-	else:
-		return -50
-
 def findStartingPlot(argsList):
-
-	########### Temudjin START
-	# Usually Planetfall uses default starting-plot function, because
-	# otherwise the 'scattered landing pods' option would be ignored.
-	# But this script specificly designed its starting-plots, so we pay that price.
-	#if mst.bPfall:
-	#	CyPythonMgr().allowDefaultImpl()
-	#	return
-	########### Temudjin END
-
-	# Set up for maximum of 18 players! If more, use default implementation.
-	#iPlayers = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	#if iPlayers > 18:
-	#	CyPythonMgr().allowDefaultImpl()
-	#	return
-
 	[playerID] = argsList
 	global plotSuccess
 	global plotValue
@@ -794,18 +752,12 @@ def getStartingPlot(playerID, validFn = None):
 
 				if val > iBestValue:
 
-					valid = True
-
-					for iI in range(gc.getMAX_CIV_PLAYERS()):
-						if (gc.getPlayer(iI).isAlive()):
-							if (iI != playerID):
-								if gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
-									valid = False
-									break
-
-					if valid:
-							iBestValue = val
-							pBestPlot = pLoopPlot
+					for iI in range(gc.getMAX_PC_PLAYERS()):
+						if iI != playerID and gc.getPlayer(iI).isAlive() and gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
+							break
+					else:
+						iBestValue = val
+						pBestPlot = pLoopPlot
 
 		if pBestPlot != None:
 			plotSuccess = true
@@ -846,7 +798,7 @@ def getGridSize(argsList):
 # Subclasses to fix the FRAC_POLAR zero row bugs.
 class ISFractalWorld(CvMapGeneratorUtil.FractalWorld):
 	def generatePlotTypes(self, water_percent=78, shift_plot_types=True,
-	                      grain_amount=3):
+						  grain_amount=3):
 		# Check for changes to User Input variances.
 		self.checkForOverrideDefaultUserInputVariances()
 

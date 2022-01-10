@@ -74,9 +74,6 @@
 ##   - combatLogFlanking(pAttacker, pDefender, iDamage)
 ##       Fired when a unit inflicts flanking damage to another unit
 ##
-##   - playerRevolution(ePlayer, iAnarchyTurns, leOldCivics, leNewCivics)
-##       Fired when a player begins revolution to new civics
-##
 ## * Fixed events
 ##
 ##   - endTurnReady
@@ -172,9 +169,8 @@ class BugEventManager(CvEventManager.CvEventManager):
 		self.addEvent("combatRetreat")
 		self.addEvent("combatLogCollateral")
 		self.addEvent("combatLogFlanking")
-		self.addEvent("playerRevolution")
 		#AND Events
-		self.addEvent("addTeam")
+		self.addEvent("changeTeam")
 
 	def hasEvent(self, eventType):
 		"""Returns True if the given event type is defined."""
@@ -449,11 +445,8 @@ def onCombatLogFlanking(self, argsList):
 	"""Fired when a unit inflicts flanking damage to another unit."""
 	pAttacker, pDefender, iDamage = argsList
 
-def onPlayerRevolution(self, argsList):
-	ePlayer, iAnarchyTurns, leOldCivics, leNewCivics = argsList
-
 #A New Dawn Event
-def onAddTeam(self, argsList):
+def onChangeTeam(self, argsList):
 	"""Fired when two teams join or seperate"""
-	eTeam1, eTeam2, bAdded = argsList
+	iOldTeam, iNewTeam = argsList
 '''

@@ -1,6 +1,10 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvTalkingHeadMessage.h"
+#include "CvViewport.h"
 
-CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
+CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, const char* pszSound, InterfaceMessageTypes eType, const char* pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
 	m_iTurn(iMessageTurn),
 	m_szDescription(pszDesc),
 	m_szSound(pszSound),
@@ -65,7 +69,7 @@ void CvTalkingHeadMessage::write(FDataStreamBase& stream) const
 	stream.Write(m_bShown);
 }
 
-const wchar* CvTalkingHeadMessage::getDescription() const
+const wchar_t* CvTalkingHeadMessage::getDescription() const
 {
 	return (m_szDescription);
 }
@@ -80,17 +84,12 @@ const CvString& CvTalkingHeadMessage::getSound() const
 	return (m_szSound);
 }
 
-void CvTalkingHeadMessage::setSound(LPCTSTR pszSound)
-{
-	m_szSound = pszSound;
-}
-
 const CvString& CvTalkingHeadMessage::getIcon() const
 {
 	return (m_szIcon);
 }
 
-void CvTalkingHeadMessage::setIcon(LPCTSTR pszIcon)
+void CvTalkingHeadMessage::setIcon(const char* pszIcon)
 {
 	m_szIcon = pszIcon;
 }
@@ -118,7 +117,7 @@ void CvTalkingHeadMessage::setFlashColor(ColorTypes eColor)
 
 int CvTalkingHeadMessage::getX() const
 {
-	CvViewport* pViewport = GC.getCurrentViewport();
+	const CvViewport* pViewport = GC.getCurrentViewport();
 
 	return (m_iFlashX == -1 || !pViewport->isInViewportX(m_iFlashX)) ? -1 : pViewport->getViewportXFromMapX(m_iFlashX);
 }
@@ -130,7 +129,7 @@ void CvTalkingHeadMessage::setX(int i)
 
 int CvTalkingHeadMessage::getY() const
 {
-	CvViewport* pViewport = GC.getCurrentViewport();
+	const CvViewport* pViewport = GC.getCurrentViewport();
 
 	return (m_iFlashY == -1 || !pViewport->isInViewportY(m_iFlashY)) ? -1 : pViewport->getViewportYFromMapY(m_iFlashY);
 }
@@ -200,7 +199,7 @@ void CvTalkingHeadMessage::setTarget(ChatTargetTypes eType)
 	m_eTarget = eType;
 }
 
-int CvTalkingHeadMessage::getExpireTurn()
+int CvTalkingHeadMessage::getExpireTurn() const
 {
 	int iExpireTurn = getTurn();
 	switch (m_eMessageType)
@@ -220,14 +219,14 @@ int CvTalkingHeadMessage::getExpireTurn()
 	case MESSAGE_TYPE_QUEST:
 	case MESSAGE_TYPE_MAJOR_EVENT:
 		// never expires
-		iExpireTurn = GC.getGameINLINE().getGameTurn() + 1;
+		iExpireTurn = GC.getGame().getGameTurn() + 1;
 		break;
 	case MESSAGE_TYPE_DISPLAY_ONLY:
 		// never saved
-		iExpireTurn = GC.getGameINLINE().getGameTurn() - 1;
+		iExpireTurn = GC.getGame().getGameTurn() - 1;
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 	return (iExpireTurn);

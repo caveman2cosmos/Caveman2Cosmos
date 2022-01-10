@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Dean Ray Johnson (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- 3D Audio Scripts -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Script3DSounds xmlns="x-schema:AudioScriptSchema.xml">
 	<Script3DSound>
 		<ScriptID>AS3D_ERROR</ScriptID>
@@ -23700,267 +23694,6 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
 	<Script3DSound>
-		<ScriptID>AS3D_UN_FEMALE_SELECTION_VOX</ScriptID>
-		<SoundID>SND_FEMALE_SELECTION</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-	<Script3DSound>
-		<ScriptID>AS3D_UN_FEMALE_ACTION_VOX</ScriptID>
-		<SoundID>SND_FEMALE_ACTION</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-	<Script3DSound>
-		<ScriptID>AS3D_UN_AMAZON_SELECTION_VOX</ScriptID>
-		<SoundID>SND_AMAZON_SELECTION</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-	<Script3DSound>
-		<ScriptID>AS3D_UN_AMAZON_ACTION_VOX</ScriptID>
-		<SoundID>SND_AMAZON_ACTION</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-	<Script3DSound>
-		<ScriptID>AS3D_UN_FEMWARLORD_COMMAND_VOX</ScriptID>
-		<SoundID>SND_FEMWARLORD_COMMAND</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-	<Script3DSound>
-		<ScriptID>AS3D_UN_FEMALE_MISSIONARY_SELECTION_VOX</ScriptID>
-		<SoundID>SND_FEMALE_MISSIONARY_SELECTION</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-	<Script3DSound>
-		<ScriptID>AS3D_UN_FEMALE_MISSIONARY_ACTION_VOX</ScriptID>
-		<SoundID>SND_FEMALE_MISSIONARY_ACTION</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-     <Script3DSound>
-		<ScriptID>AS3D_UN_ELEPHANT</ScriptID>
-		<SoundID>SND_ELEPHANT</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>80</iMinVolume>
-		<iMaxVolume>80</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-    <Script3DSound>
-		<ScriptID>AS3D_UN_GORILLA</ScriptID>
-		<SoundID>SND_GORILLA</SoundID>
-		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>80</iMinVolume>
-		<iMaxVolume>80</iMaxVolume>
-		<iPitchChangeDown>0</iPitchChangeDown>
-		<iPitchChangeUp>0</iPitchChangeUp>
-		<bLooping>0</bLooping>
-		<iMinTimeDelay>0</iMinTimeDelay>
-		<iMaxTimeDelay>0</iMaxTimeDelay>
-		<StartPosition>NONE</StartPosition>
-		<EndPosition>NONE</EndPosition>
-		<iMinVelocity>0</iMinVelocity>
-		<iMaxVelocity>0</iMaxVelocity>
-		<iMinDistanceFromListener>0</iMinDistanceFromListener>
-		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
-		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
-		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
-		<iMinCutoffDistance>7000</iMinCutoffDistance>
-		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
-		<bTaperForSoundtracks>0</bTaperForSoundtracks>
-		<iLengthOfSound>0</iLengthOfSound>
-		<fMinDryLevel>1.0</fMinDryLevel>
-		<fMaxDryLevel>1.0</fMaxDryLevel>
-		<fMinWetLevel>0.5</fMinWetLevel>
-		<fMaxWetLevel>0.5</fMaxWetLevel>
-		<iNotPlayPercent>0</iNotPlayPercent>
-	</Script3DSound>
-    <Script3DSound>
 		<ScriptID>AS3D_UN_HAWK</ScriptID>
 		<SoundID>SND_HAWK</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24424,7 +24157,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-        <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_SPIDER</ScriptID>
 		<SoundID>SND_SPIDER</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24453,7 +24186,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-        <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_SPIDERSILK</ScriptID>
 		<SoundID>SND_SPIDERSILK</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24474,6 +24207,35 @@
 		<iMaxDistanceForMaxVolume>1000</iMaxDistanceForMaxVolume>
 		<iMinCutoffDistance>7000</iMinCutoffDistance>
 		<iMaxCutoffDistance>7000</iMaxCutoffDistance>
+		<bTaperForSoundtracks>0</bTaperForSoundtracks>
+		<iLengthOfSound>0</iLengthOfSound>
+		<fMinDryLevel>1.0</fMinDryLevel>
+		<fMaxDryLevel>1.0</fMaxDryLevel>
+		<fMinWetLevel>0.5</fMinWetLevel>
+		<fMaxWetLevel>0.5</fMaxWetLevel>
+		<iNotPlayPercent>0</iNotPlayPercent>
+	</Script3DSound>
+	<Script3DSound>
+		<ScriptID>AS3D_FOREST_FIRE</ScriptID>
+		<SoundID>SND_FOREST_FIRE</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<iMinVolume>50</iMinVolume>
+		<iMaxVolume>140</iMaxVolume>
+		<iPitchChangeDown>0</iPitchChangeDown>
+		<iPitchChangeUp>0</iPitchChangeUp>
+		<bLooping>0</bLooping>
+		<iMinTimeDelay>0</iMinTimeDelay>
+		<iMaxTimeDelay>0</iMaxTimeDelay>
+		<StartPosition>NONE</StartPosition>
+		<EndPosition>NONE</EndPosition>
+		<iMinVelocity>0</iMinVelocity>
+		<iMaxVelocity>0</iMaxVelocity>
+		<iMinDistanceFromListener>0</iMinDistanceFromListener>
+		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
+		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
+		<iMaxDistanceForMaxVolume>3000</iMaxDistanceForMaxVolume>
+		<iMinCutoffDistance>6000</iMinCutoffDistance>
+		<iMaxCutoffDistance>12000</iMaxCutoffDistance>
 		<bTaperForSoundtracks>0</bTaperForSoundtracks>
 		<iLengthOfSound>0</iLengthOfSound>
 		<fMinDryLevel>1.0</fMinDryLevel>

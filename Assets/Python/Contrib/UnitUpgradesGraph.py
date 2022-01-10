@@ -4,7 +4,6 @@
 ## Automatic layout algorithm by Progor
 ##
 from CvPythonExtensions import *
-import string
 
 # globals
 GC = CyGlobalContext()
@@ -75,11 +74,11 @@ class UnitUpgradesGraph:
 		return GC.getPromotionInfo(e).getType()
 
 	def getGraphEdges(self, graph):
-		for unitA in graph.iterkeys():
-			for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-				unitB = GC.getUnitClassInfo(iUnitClass).getDefaultUnitIndex()
-				if GC.getUnitInfo(unitA).getUpgradeUnitClass(iUnitClass):
-					self.addUpgradePath(graph, unitA, unitB)
+		for iUnitA in graph.iterkeys():
+			CvUnitInfoA = GC.getUnitInfo(iUnitA)
+			for i in range(CvUnitInfoA.getNumUnitUpgrades()):
+				iUnitB = CvUnitInfoA.getUnitUpgrade(i)
+				self.addUpgradePath(graph, iUnitA, iUnitB)
 
 	def placeOnScreen(self, screen, unit, xPos, yPos):
 		screen.setImageButtonAt(self.pediaScreen.getNextWidgetName(), self.upgradesList, GC.getUnitInfo(unit).getButton(), xPos, yPos, self.buttonSize, self.buttonSize, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)
@@ -575,42 +574,43 @@ class BuildingsGraph(UnitUpgradesGraph):
 	def getGraphEdges(self, graph):
 		import copy
 
+		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
 		for buildingA in graph.iterkeys():
-			if GC.getBuildingInfo(buildingA) is None:
+			info = GC.getBuildingInfo(buildingA)
+			if not info:
 				continue
 			buildingReplacesA = []
 			buildingReplacesAList = []
 			#Create a list of buildings that replace buildingA
-			for numB in xrange(GC.getNumBuildingClassInfos()):
-				if GC.getBuildingInfo(buildingA).isReplaceBuildingClass(numB):
-					buildingReplacesA.append(numB)
+			for i in xrange(info.getNumReplacementBuilding()):
+				CvReplacementBuilding = GC.getBuildingInfo(info.getReplacementBuilding(i))
+				if CvReplacementBuilding.getType() not in aSpecialReplacementsList: #Ignore bans
+					buildingReplacesA.append(info.getReplacementBuilding(i))
+
 			#Create a list of buildings that replace the list buildingReplacesA
 			for numB in buildingReplacesA:
-				buildingB = GC.getBuildingClassInfo(numB).getDefaultBuildingIndex()
-				if GC.getBuildingInfo(buildingB) is None:
+				info = GC.getBuildingInfo(numB)
+				if not info:
 					continue
-				for numC in xrange(GC.getNumBuildingClassInfos()):
-					if (GC.getBuildingInfo(buildingB).isReplaceBuildingClass(numC)):
-						if (buildingReplacesAList.count(numC) == 0):
-							buildingReplacesAList.append(numC)
+				for i in xrange(info.getNumReplacementBuilding()):
+					iReplacement = info.getReplacementBuilding(i)
+					if iReplacement not in buildingReplacesAList:
+						buildingReplacesAList.append(iReplacement)
 			#Create a deepcopy
 			replacesA = copy.deepcopy(buildingReplacesA)
 			#If the building is replaced by a building that replaces A, remove it from the path
 			for numB in replacesA:
-				buildingB = GC.getBuildingClassInfo(numB).getDefaultBuildingIndex()
-				if GC.getBuildingInfo(buildingB) is None:
+				if GC.getBuildingInfo(numB) is None:
 					continue
 				for numC in buildingReplacesAList:
-					buildingC = GC.getBuildingClassInfo(numC).getDefaultBuildingIndex()
-					if GC.getBuildingInfo(buildingC) is None:
+					if GC.getBuildingInfo(numC) is None:
 						continue
 					if numC == numB:
 						buildingReplacesA.remove(numB)
 						break
 			#Generate graph
 			for numB in buildingReplacesA:
-				buildingB = GC.getBuildingClassInfo(numB).getDefaultBuildingIndex()
-				self.addUpgradePath(graph, buildingA, buildingB)
+				self.addUpgradePath(graph, buildingA, numB)
 
 	def unitToString(self, unit):
 		return GC.getBuildingInfo(unit).getDescription() + ":%d"%(unit, )

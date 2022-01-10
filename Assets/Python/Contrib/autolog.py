@@ -8,9 +8,9 @@ from CvPythonExtensions import *
 import BugConfigTracker
 import BugCore
 import BugOptions
-import BugPath
+import SystemPaths as SP
 import codecs
-import os.path
+import os
 import time
 
 AutologOpt = BugCore.game.Autolog
@@ -41,7 +41,9 @@ class autologInstance:
 			AutologOpt.setFilePath(LogFilePath)
 			BugOptions.write()
 		if not LogFilePath or LogFilePath == "Default":
-			LogFilePath = BugPath.findOrMakeDir("Autolog")
+			LogFilePath = SP.joinModDir("Autolog")
+		if not os.path.isdir(LogFilePath):
+			os.makedirs(LogFilePath)
 		self.LogFilePath = LogFilePath
 		self.updateLogFile()
 
@@ -63,20 +65,19 @@ class autologInstance:
 		self.writeMsg("")
 		self.writeMsg("Logging by autolog.py")
 		self.writeMsg("------------------------------------------------")
-		zcurrturn = GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn()
-		zmaxturn = GAME.getMaxTurns()
-		zyear = GAME.getGameTurnYear()
-		if zyear < 0:
-			zyear = str(-zyear) + TRNSLTR.getText("TXT_KEY_AUTOLOG_BC", ())
+		iMaxTurns = GAME.getMaxTurns()
+		year = GAME.getGameTurnYear()
+		if year < 0:
+			year = TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
 		else:
-			zyear = str(zyear) + TRNSLTR.getText("TXT_KEY_AUTOLOG_AD", ())
-		zCurrDateTime = time.strftime("%d-%b-%Y %H:%M:%S")
-		if zmaxturn:
-			zsTurn = "%i/%i" % (zcurrturn, zmaxturn)
+			year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
+
+		if iMaxTurns:
+			zTurn = "%i/%i" % (GAME.getElapsedGameTurns() + AutologOpt.getStartDateTurn(), iMaxTurns)
 		else:
-			zsTurn = "%i" % zcurrturn
-		message = TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zsTurn, zyear, zCurrDateTime))
-		self.writeMsg(message, vBold=True, vUnderline=True)
+			zTurn = "%i" %(GAME.getElapsedGameTurns() + AutologOpt.getStartDateTurn())
+
+		self.writeMsg(TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zTurn, year, time.strftime("%d-%b-%Y %H:%M:%S"))), vBold=True, vUnderline=True)
 		self.bStarted = True
 
 	def writeLog(self, vMsg, vColor = "Black", vBold = False, vUnderline = False, vPrefix = ""):

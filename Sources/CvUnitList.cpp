@@ -7,6 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvPlayerAI.h"
 
 CvUnitList::CvUnitList(CvPlayer* pPlayer, CvCity* pCity) :
 m_bFilteringValid(false),
@@ -35,7 +38,7 @@ void CvUnitList::setPlayerToOwner()
 {
 	if (m_pCity && !m_pPlayer)
 	{
-		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwnerINLINE());
+		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwner());
 		m_pPlayer = pPlayer;
 		m_UnitFilters.setPlayer(pPlayer);
 		m_UnitGrouping.setPlayer(pPlayer);
@@ -50,7 +53,7 @@ void CvUnitList::setInvalid()
 	m_bSortingValid = false;
 }
 
-bool CvUnitList::getFilterActive(UnitFilterTypes eFilter)
+bool CvUnitList::getFilterActive(UnitFilterTypes eFilter) const
 {
 	return m_UnitFilters.isFilterActive(eFilter);
 }
@@ -65,7 +68,7 @@ void CvUnitList::setFilterActive(UnitFilterTypes eFilter, bool bActive)
 	}
 }
 
-UnitGroupingTypes CvUnitList::getGroupingActive()
+UnitGroupingTypes CvUnitList::getGroupingActive() const
 {
 	return m_UnitGrouping.getActiveGrouping();
 }
@@ -79,7 +82,7 @@ void CvUnitList::setGroupingActive(UnitGroupingTypes eGrouping)
 	}
 }
 
-UnitSortTypes CvUnitList::getSortingActive()
+UnitSortTypes CvUnitList::getSortingActive() const
 {
 	return m_UnitSort.getActiveSort();
 }
@@ -107,8 +110,7 @@ int CvUnitList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FAssertMsg(iGroup < (int) m_aaiGroupedUnitList.size(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, static_cast<int>(m_aaiGroupedUnitList.size()), iGroup);
 	return m_aaiGroupedUnitList[iGroup]->size();
 }
 
@@ -118,10 +120,8 @@ UnitTypes CvUnitList::getUnitType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FAssertMsg(iGroup < getGroupNum(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
-	FAssertMsg(iPos < getNumInGroup(iGroup), "Index out of bounds");
-	FAssertMsg(iPos > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return (*m_aaiGroupedUnitList[iGroup])[iPos];
 }
 
@@ -130,7 +130,7 @@ void CvUnitList::doFilter()
 	m_aiUnitList.clear();
 	for (int i = 0; i < GC.getNumUnitInfos(); i++)
 	{
-		UnitTypes eUnit = (UnitTypes) i;
+		const UnitTypes eUnit = (UnitTypes) i;
 		if (m_UnitFilters.isFiltered(eUnit))
 			m_aiUnitList.push_back(eUnit);
 	}
@@ -148,12 +148,12 @@ void CvUnitList::doGroup()
 	}
 	m_aaiGroupedUnitList.clear();
 
-	int iSize = m_aiUnitList.size();
+	const int iSize = m_aiUnitList.size();
 	std::multimap<int, UnitTypes> mmap_Units;
 
 	for (int i=0; i < iSize; i++)
 		mmap_Units.insert(std::pair<int,UnitTypes>(m_UnitGrouping.getGroup(m_aiUnitList[i]), m_aiUnitList[i]));
-	
+
 	int index = -1;
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, UnitTypes>::iterator it = mmap_Units.begin(); it != mmap_Units.end(); ++it)
@@ -177,7 +177,7 @@ void CvUnitList::doSort()
 	UnitSortListWrapper* pWrapper = new UnitSortListWrapper(&m_UnitSort);
 	for (unsigned int i=0; i<m_aaiGroupedUnitList.size(); i++)
 	{
-		std::stable_sort(m_aaiGroupedUnitList[i]->begin(), m_aaiGroupedUnitList[i]->end(), *pWrapper);
+		algo::stable_sort(*m_aaiGroupedUnitList[i], *pWrapper);
 	}
 	delete pWrapper;
 	m_bSortingValid = true;
@@ -190,7 +190,7 @@ int CvUnitList::getSelectionRow()
 
 	for (unsigned int i=0; i<m_aaiGroupedUnitList.size(); i++)
 	{
-		if (std::find(m_aaiGroupedUnitList[i]->begin(), m_aaiGroupedUnitList[i]->end(), m_eSelectedUnit) != m_aaiGroupedUnitList[i]->end())
+		if (algo::any_of_equal(*m_aaiGroupedUnitList[i], m_eSelectedUnit))
 			return i;
 	}
 
@@ -203,9 +203,9 @@ void CvUnitList::setSelectedUnit(UnitTypes eSelectedUnit)
 	m_eSelectedUnit = eSelectedUnit;
 }
 
-UnitTypes CvUnitList::getSelectedUnit()
+UnitTypes CvUnitList::getSelectedUnit() const
 {
 	return m_eSelectedUnit;
 }
 
-	
+

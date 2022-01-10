@@ -7,17 +7,14 @@ from CvPythonExtensions import *
 # If your mod changes some of these XML variables, you'll need to find an appropriate replacement
 
 # Civs
-sXMLMinor = 'CIVILIZATION_MINOR'
 sXMLBarbarian = 'CIVILIZATION_BARBARIAN'
 
 # Units
-sXMLWarrior = 'UNITCLASS_CLUBMAN'
-sXMLWorker = 'UNITCLASS_WORKER'
 sXMLGeneral = 'UNIT_GREAT_GENERAL'
 
 # Buildings
 # Used by Rev when rebels capture a tiny city first
-sXMLPalace = "BUILDINGCLASS_PALACE"
+sXMLPalace = "BUILDING_PALACE"
 
 # Techs
 # Used by Rev, weight of nationality effects increases after discovery
@@ -33,9 +30,6 @@ sXMLSpiritual = 'TRAIT_SPIRITUAL'
 
 # Goodies
 sXMLGoodyMap = 'GOODY_MAP'
-
-# Improvements
-sXMLFort = 'IMPROVEMENT_FORT'
 
 # Terrain
 sXMLOcean = "TERRAIN_OCEAN"
@@ -66,7 +60,7 @@ def initRevIdxHistory( ) :
 	global revIdxHistKeyList
 
 	revIdxHist = dict()
-	for key in revIdxHistKeyList :
+	for key in revIdxHistKeyList:
 		revIdxHist[key] = [0]
 
 	return revIdxHist
@@ -154,7 +148,9 @@ class RevoltData:
 
 ## ---------- Revolution constants ---------- ##
 # Changing these values is not recommended
-revReadyFrac = .6
+revReadyDividend = 3
+revReadyDivisor = 5
+revReadyFrac = 0.6 # result of the two above, used by game text only, no OOS danger.
 revInstigatorThreshold = 1000
 alwaysViolentThreshold = 1700
 badLocalThreshold = 10
@@ -180,11 +176,6 @@ pickHumanPopup = 7052
 changeCivPopup = 7060
 changeHumanPopup = 7061
 updateGraphicsPopup = 7062
-
-## ---------- Misc defines ---------- ##
-
-# Popup ids
-EventKeyDown=6
 
 #RevolutionDCM
 ## ---------- RevWatch defines ---------- ##

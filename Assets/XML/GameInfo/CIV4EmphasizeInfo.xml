@@ -1,15 +1,9 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Emphasize Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4EmphasizeInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<EmphasizeInfos>
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_FOOD</Type>
 			<Description>TXT_KEY_EMPHASIZE_FOOD</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_FOOD_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Food.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>
@@ -29,7 +23,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_PRODUCTION</Type>
 			<Description>TXT_KEY_EMPHASIZE_PRODUCTION</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_PRODUCTION_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Production.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>
@@ -49,7 +42,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_COMMERCE</Type>
 			<Description>TXT_KEY_EMPHASIZE_COMMERCE</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_COMMERCE_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Commerce.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>
@@ -69,7 +61,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_RESEARCH</Type>
 			<Description>TXT_KEY_EMPHASIZE_RESEARCH</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_RESEARCH_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Science.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>
@@ -89,7 +80,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_GREAT_PEOPLE</Type>
 			<Description>TXT_KEY_EMPHASIZE_GREAT_PEOPLE</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_GREAT_PEOPLE_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/GreatPerson.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>1</bGreatPeople>
@@ -109,7 +99,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_AVOID_GROWTH</Type>
 			<Description>TXT_KEY_EMPHASIZE_AVOID_GROWTH</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_AVOID_GROWTH_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Governor.dds</Button>
 			<bAvoidGrowth>1</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>
@@ -129,7 +118,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_AVOID_ANGRY_CITIZENS</Type>
 			<Description>TXT_KEY_EMPHASIZE_AVOID_ANGRY_CITIZENS</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_AVOID_ANGRY_CITIZENS_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Governor.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>
@@ -149,7 +137,6 @@
 		<EmphasizeInfo>
 			<Type>EMPHASIZE_AVOID_UNHEALTHY_CITIZENS</Type>
 			<Description>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS</Description>
-			<Strategy>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Governor/Governor.dds</Button>
 			<bAvoidGrowth>0</bAvoidGrowth>
 			<bGreatPeople>0</bGreatPeople>

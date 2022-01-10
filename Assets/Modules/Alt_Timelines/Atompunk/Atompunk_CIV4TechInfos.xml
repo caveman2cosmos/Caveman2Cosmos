@@ -4,17 +4,16 @@
 		<TechInfo>
 			<!-- Atompunk -->
 			<Type>TECH_ATOMPUNK</Type>
-			<Description>TXT_KEY_CULTURE_ATOMPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_ATOMPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_ATOMPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_ATOMPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_ATOMPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<Quote>TXT_KEY_CULTURE_ATOMPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_ATOMPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_ATOMPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/retrospace.dds</Button>
 			<!-- Main properties -->
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>C2C_ERA_ATOMIC</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
 			</OrPreReqs>

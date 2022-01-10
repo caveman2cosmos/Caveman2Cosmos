@@ -1,3 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by tomw (Firaxis Games) --><!-- Sid Meier's Civilization 4 --><!-- Copyright Firaxis Games 2005 --><!-- --><!-- Terrain Plane, texture scaling and zheight are in world units, urate and vrate are in texture units -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4TerrainPlaneInfos xmlns="x-schema:../Schema/C2C_CIV4MiscSchema.xml"/>
 <!-- The point of this is to remove a texture, never used, from being loaded at game launch.-->

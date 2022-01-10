@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Mission Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Mission Infos -->
 <Civ4MissionInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<!--Changes must be reflected in CvEnums.h-->
 	<MissionInfos>
@@ -283,7 +282,7 @@
 		<MissionInfo>
 			<Type>MISSION_RANGE_ATTACK</Type>
 			<Description>TXT_KEY_MISSION_RANGE_ATTACK</Description>
-			<Help>TXT_KEY_MISSION_RANGE_ATTACK_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_BOMBARD</EntityEventType>
 			<iTime>10</iTime>
@@ -706,7 +705,7 @@
 		<MissionInfo>
 			<Type>MISSION_BEGIN_COMBAT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_BEGIN_COMBAT</EntityEventType>
 			<iTime>0</iTime>
@@ -717,7 +716,7 @@
 		<MissionInfo>
 			<Type>MISSION_END_COMBAT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_END_COMBAT</EntityEventType>
 			<iTime>0</iTime>
@@ -728,7 +727,7 @@
 		<MissionInfo>
 			<Type>MISSION_AIRSTRIKE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_AIRSTRIKE</EntityEventType>
 			<iTime>16</iTime>
@@ -739,7 +738,7 @@
 		<MissionInfo>
 			<Type>MISSION_SURRENDER</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_SURRENDER</EntityEventType>
 			<iTime>10</iTime>
@@ -750,7 +749,7 @@
 		<MissionInfo>
 			<Type>MISSION_CAPTURED</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_CAPTURED</EntityEventType>
 			<iTime>8</iTime>
@@ -761,7 +760,7 @@
 		<MissionInfo>
 			<Type>MISSION_IDLE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_IDLE</EntityEventType>
 			<iTime>0</iTime>
@@ -772,7 +771,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_DIE</EntityEventType>
 			<iTime>0</iTime>
@@ -783,7 +782,7 @@
 		<MissionInfo>
 			<Type>MISSION_DAMAGE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_DAMAGE</EntityEventType>
 			<iTime>0</iTime>
@@ -794,7 +793,7 @@
 		<MissionInfo>
 			<Type>MISSION_MULTI_SELECT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_MULTI_SELECT</EntityEventType>
 			<iTime>0</iTime>
@@ -805,7 +804,7 @@
 		<MissionInfo>
 			<Type>MISSION_MULTI_DESELECT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_MULTI_DESELECT</EntityEventType>
 			<iTime>0</iTime>
@@ -879,18 +878,6 @@
 			<bBuild>0</bBuild>
 			<bSound>1</bSound>
 			<Button>art/Buttons/Missions/RangedAttack1Button.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_ABOMBARD</Type>
-			<Description>TXT_KEY_MISSION_ABOMBARD</Description>
-			<Help>TXT_KEY_MISSION_ABOMBARD_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>ENTITY_EVENT_BOMBARD</EntityEventType>
-			<iTime>10</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>1</bSound>
-			<Button>Art/Interface/Buttons/Actions/Barrage.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_FENGAGE</Type>
@@ -1133,18 +1120,6 @@
 			<Button>Art/Interface/Buttons/Actions/gotocity.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_PRETARGET_NUKE</Type>
-			<Description>TXT_KEY_MISSION_PRETARGET_NUKE</Description>
-			<Help>TXT_KEY_MISSION_PRETARGET_NUKE_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>ENTITY_EVENT_NUKE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>1</bSound>
-			<Button>Art/Interface/Buttons/Actions/PretargetNuke.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_BUTCHER</Type>
 			<Description>TXT_KEY_MISSION_BUTCHER</Description>
 			<Help>TXT_KEY_MISSION_BUTCHER_HELP</Help>
@@ -1160,7 +1135,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1173,7 +1148,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_PRAISE_IND_PEOPLE</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_PRAISE_IND_PEOPLE</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_PRAISE_IND_PEOPLE_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1186,7 +1161,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1199,7 +1174,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_SPREAD_RELIGION</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_SPREAD_RELIGION</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_SPREAD_RELIGION_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1245,26 +1220,6 @@
 			<bTarget>0</bTarget>
 			<bBuild>0</bBuild>
 			<bSound>1</bSound>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_ESTABLISH</Type>
-			<Description>TXT_KEY_MISSION_ESTABLISH</Description>
-			<Help>TXT_KEY_MISSION_ESTABLISH_HELP</Help>
-			<EntityEventType>ENTITY_EVENT_FORTIFY</EntityEventType>
-			<bSound>1</bSound>
-			<bVisible>1</bVisible>
-			<iOrderPriority>15</iOrderPriority>
-			<Button>art/buttons/missions/Establish.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_ESCAPE</Type>
-			<Description>TXT_KEY_MISSION_ESCAPE</Description>
-			<Help>TXT_KEY_MISSION_ESCAPE_HELP</Help>
-			<EntityEventType>ENTITY_EVENT_FORTIFY</EntityEventType>
-			<bSound>1</bSound>
-			<bVisible>1</bVisible>
-			<iOrderPriority>15</iOrderPriority>
-			<Button>art/buttons/missions/Escape.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_BUILDUP</Type>
@@ -1342,7 +1297,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1356,7 +1310,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1370,7 +1323,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_WORKER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1384,7 +1336,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1398,7 +1349,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1412,7 +1362,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1426,7 +1375,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1440,7 +1388,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_SPEARMAN</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SPEARMAN</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1454,7 +1401,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1493,7 +1439,6 @@
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_FREED_SLAVE</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE</Description>
-			<!--Help>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE_HELP</Help-->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1598,7 +1543,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1612,7 +1556,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1713,8 +1656,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Button>
 		</MissionInfo>
-		<!--
- Removed until they can only speed up military production
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Description>
@@ -1728,7 +1669,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
 		</MissionInfo>
-		-->
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Description>
@@ -1758,7 +1698,7 @@
 		<MissionInfo>
 			<Type>MISSION_REMOVE_WV_SLAVERY</Type>
 			<Description>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Description>
-			<Help>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1784,7 +1724,7 @@
 		<MissionInfo>
 			<Type>MISSION_REMOVE_WV_CANNIBALISM</Type>
 			<Description>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM</Description>
-			<Help>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1810,7 +1750,7 @@
 		<MissionInfo>
 			<Type>MISSION_REMOVE_WV_HUMAN_SACRIFICE</Type>
 			<Description>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Description>
-			<Help>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1819,6 +1759,142 @@
 			<bSound>0</bSound>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Missions/nohumansacrifice.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_EARTH</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_CISLUNAR</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_MOON</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_MOON</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_MARS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_MARS</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_VENUS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_TITAN</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_NEARBY_STARS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_MILKY_WAY</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_LOCAL_GROUP</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_UNIVERSE</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_DISTANT_COSMOS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 	</MissionInfos>
 </Civ4MissionInfos>

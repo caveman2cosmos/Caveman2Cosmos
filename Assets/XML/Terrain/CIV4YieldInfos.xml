@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Yield Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4YieldInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<YieldInfos>
 		<YieldInfo>
@@ -11,14 +6,9 @@
 			<Description>TXT_KEY_YIELD_FOOD</Description>
 			<iHillsChange>-1</iHillsChange>
 			<iPeakChange>-2</iPeakChange>
-			<iLakeChange>1</iLakeChange>
-			<iCityChange>0</iCityChange>
-			<iPopulationChangeOffset>0</iPopulationChangeOffset>
-			<iPopulationChangeDivisor>0</iPopulationChangeDivisor>
 			<iMinCity>3</iMinCity>
-			<iTradeModifier>0</iTradeModifier>
-			<iGoldenAgeYield>0</iGoldenAgeYield>
-			<iGoldenAgeYieldThreshold>0</iGoldenAgeYieldThreshold>
+			<iCityChange>-1</iCityChange>
+			<iPopulationChangeDivisor>5</iPopulationChangeDivisor>
 			<iAIWeightPercent>100</iAIWeightPercent>
 			<ColorType>COLOR_YIELD_FOOD</ColorType>
 			<SymbolPaths>
@@ -34,12 +24,9 @@
 			<Description>TXT_KEY_YIELD_PRODUCTION</Description>
 			<iHillsChange>1</iHillsChange>
 			<iPeakChange>3</iPeakChange>
-			<iLakeChange>0</iLakeChange>
-			<iCityChange>0</iCityChange>
-			<iPopulationChangeOffset>0</iPopulationChangeOffset>
-			<iPopulationChangeDivisor>0</iPopulationChangeDivisor>
-			<iMinCity>2</iMinCity>
-			<iTradeModifier>0</iTradeModifier>
+			<iMinCity>1</iMinCity>
+			<iCityChange>1</iCityChange>
+			<iPopulationChangeDivisor>2</iPopulationChangeDivisor>
 			<iGoldenAgeYield>1</iGoldenAgeYield>
 			<iGoldenAgeYieldThreshold>1</iGoldenAgeYieldThreshold>
 			<iAIWeightPercent>110</iAIWeightPercent>
@@ -55,17 +42,15 @@
 		<YieldInfo>
 			<Type>YIELD_COMMERCE</Type>
 			<Description>TXT_KEY_YIELD_COMMERCE</Description>
-			<iHillsChange>0</iHillsChange>
-			<iPeakChange>0</iPeakChange>
-			<iLakeChange>0</iLakeChange>
-			<iCityChange>0</iCityChange>
-			<iPopulationChangeOffset>0</iPopulationChangeOffset>
-			<iPopulationChangeDivisor>0</iPopulationChangeDivisor>
+			<iPeakChange>-1</iPeakChange>
+			<iRiverChange>1</iRiverChange>
 			<iMinCity>1</iMinCity>
+			<iCityChange>1</iCityChange>
+			<iPopulationChangeDivisor>4</iPopulationChangeDivisor>
 			<iTradeModifier>100</iTradeModifier>
 			<iGoldenAgeYield>1</iGoldenAgeYield>
 			<iGoldenAgeYieldThreshold>1</iGoldenAgeYieldThreshold>
-			<iAIWeightPercent>80</iAIWeightPercent>
+			<iAIWeightPercent>90</iAIWeightPercent>
 			<ColorType>COLOR_YIELD_COMMERCE</ColorType>
 			<SymbolPaths>
 				<SymbolPath>Art/Interface/Symbols/Commerce/Commerce01.nif</SymbolPath>

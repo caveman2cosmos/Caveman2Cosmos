@@ -1,7 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "SCyDebug.h"
 
-bool SCyDebug::checkMode(SCvDebug::Mode mode)
+bool SCyDebug::checkMode(SCvDebug::Mode mode) const
 {
 	return SCvDebug::checkMode(mode);
 }

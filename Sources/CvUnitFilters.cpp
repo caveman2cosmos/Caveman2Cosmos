@@ -7,8 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvPlayerAI.h"
 
 void UnitFilterBase::Activate()
 {
@@ -20,19 +21,19 @@ void UnitFilterBase::Deactivate()
 	setActive(false);
 }
 
-bool UnitFilterBase::isActive()
+bool UnitFilterBase::isActive() const
 {
 	return m_bActive;
 }
 
 bool UnitFilterBase::setActive(bool bActive)
 {
-	bool bChanged = m_bActive ^ bActive;
+	const bool bChanged = m_bActive ^ bActive;
 	m_bActive = bActive;
 	return bChanged;
 }
 
-bool UnitFilterBase::isFiltered(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterBase::isFiltered(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return !m_bActive || (m_bInvert ^ isFilteredUnit(pPlayer, pCity, eUnit));
 }
@@ -42,7 +43,7 @@ UnitFilterBase::~UnitFilterBase()
 
 }
 
-bool UnitFilterCanBuild::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterCanBuild::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	if (pCity)
 	{
@@ -51,20 +52,19 @@ bool UnitFilterCanBuild::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTy
 	return pPlayer->canTrain(eUnit, false, m_bShowSomeUnconstructable);
 }
 
-bool UnitFilterIsLimited::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterIsLimited::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
-	return isLimitedUnitClass((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType());
+	return isLimitedUnit(eUnit);
 }
 
-bool UnitFilterIsCombat::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterIsCombat::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return (UnitCombatTypes)(GC.getUnitInfo(eUnit).getUnitCombatType()) == m_eCombat;
 }
 
-bool UnitFilterIsCombats::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterIsCombats::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
-	UnitCombatTypes eCombat = (UnitCombatTypes)(GC.getUnitInfo(eUnit).getUnitCombatType());
-	return std::find(m_eCombats.begin(), m_eCombats.end(), eCombat) != m_eCombats.end();
+	return algo::any_of_equal(m_eCombats, (UnitCombatTypes)GC.getUnitInfo(eUnit).getUnitCombatType());
 }
 
 void UnitFilterIsCombats::addCombat(UnitCombatTypes eCombat)
@@ -72,22 +72,22 @@ void UnitFilterIsCombats::addCombat(UnitCombatTypes eCombat)
 	m_eCombats.push_back(eCombat);
 }
 
-bool UnitFilterIsCombats::isEmpty()
+bool UnitFilterIsCombats::isEmpty() const
 {
 	return m_eCombats.empty();
 }
 
-bool UnitFilterIsDomain::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterIsDomain::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
-	return ((DomainTypes)GC.getUnitInfo(eUnit).getDomainType()) == m_eDomain;
+	return GC.getUnitInfo(eUnit).getDomainType() == m_eDomain;
 }
 
-bool UnitFilterIsDefense::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+bool UnitFilterIsDefense::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).isOnlyDefensive();
 }
 
-UnitFilterList::UnitFilterList(CvPlayer *pPlayer, CvCity *pCity)
+UnitFilterList::UnitFilterList(const CvPlayer *pPlayer, const CvCity *pCity)
 	: m_apUnitFilters()
 	, m_pCity(pCity)
 	, m_pPlayer(pPlayer)
@@ -148,42 +148,35 @@ void UnitFilterList::init()
 		m_apUnitFilters[UNIT_FILTER_SHOW_DEFENSE] = new UnitFilterIsDefense();
 		m_apUnitFilters[UNIT_FILTER_SHOW_MISSIONARY] = new UnitFilterIsCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_MISSIONARY"));
 
-		m_apUnitFilters[UNIT_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("RoMSettings__HideUntrainableUnits", false));
-		
+		m_apUnitFilters[UNIT_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("CityScreen__HideUntrainableUnits", false));
+
 		m_bInit = true;
 	}
 }
 
-int UnitFilterList::getNumFilters()
+bool UnitFilterList::isFilterActive(UnitFilterTypes i) const
 {
-	return NUM_UNIT_FILTERS;
-}
-
-bool UnitFilterList::isFilterActive(UnitFilterTypes i)
-{
-	FAssertMsg(i < NUM_UNIT_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i);
 	return m_apUnitFilters[i]->isActive();
 }
 
-void UnitFilterList::setCity(CvCity *pCity)
+void UnitFilterList::setCity(const CvCity *pCity)
 {
 	m_pCity = pCity;
 }
 
-void UnitFilterList::setPlayer(CvPlayer *pPlayer)
+void UnitFilterList::setPlayer(const CvPlayer *pPlayer)
 {
 	m_pPlayer = pPlayer;
 }
 
 bool UnitFilterList::setFilterActive(UnitFilterTypes i, bool bActive)
 {
-	FAssertMsg(i < NUM_UNIT_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i);
 	return m_apUnitFilters[i]->setActive(bActive);
 }
 
-bool UnitFilterList::isFiltered(UnitTypes eUnit)
+bool UnitFilterList::isFiltered(UnitTypes eUnit) const
 {
 	for (int i = 0; i < NUM_UNIT_FILTERS; i++)
 	{
@@ -201,8 +194,7 @@ void UnitFilterList::setFilterActiveAll(UnitFilterTypes eFilter, bool bActive)
 		if (kLoopPlayer.isAlive())
 		{
 			kLoopPlayer.setUnitListFilterActive(eFilter, bActive);
-			int iIter;
-			for (CvCity* pCity = kLoopPlayer.firstCity(&iIter); NULL != pCity; pCity = kLoopPlayer.nextCity(&iIter))
+			foreach_(CvCity* pCity, kLoopPlayer.cities())
 			{
 				pCity->setUnitListFilterActive(eFilter, bActive);
 			}

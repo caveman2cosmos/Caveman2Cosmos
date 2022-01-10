@@ -4,17 +4,16 @@
 		<TechInfo>
 			<!-- Cyberpunk -->
 			<Type>TECH_CYBERPUNK</Type>
-			<Description>TXT_KEY_CULTURE_CYBERPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_CYBERPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_CYBERPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_CYBERPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_CYBERPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<Quote>TXT_KEY_CULTURE_CYBERPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CYBERPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_CYBERPUNK2</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/cyberpunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>67710</iCost>
-			<Era>ERA_TRANSHUMAN</Era>
+			<Era>C2C_ERA_TRANSHUMAN</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_SIMULATED_REALITY</PrereqTech>
 			</OrPreReqs>

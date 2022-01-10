@@ -4,19 +4,18 @@
 		<TechInfo>
 			<!-- Biopunk -->
 			<Type>TECH_BIOPUNK</Type>
-			<Description>TXT_KEY_CULTURE_BIOPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_BIOPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_BIOPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_BIOPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_BIOPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<Quote>TXT_KEY_CULTURE_BIOPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_BIOPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_BIOPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/biopunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>40165</iCost>
-			<Era>ERA_NANOTECH</Era>
+			<Era>C2C_ERA_NANOTECH</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>

@@ -42,6 +42,16 @@
                 "cwd": "Tools\\Autocorrect"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Sort this XML Text File",
+            "type": "shell",
+            "command": "SortByTag.bat",
+            "args": ["${file}"],
+            "options": {
+                "cwd": "Tools\\XMLTools"
+            },
+            "problemMatcher": []
         }
     ]
 }

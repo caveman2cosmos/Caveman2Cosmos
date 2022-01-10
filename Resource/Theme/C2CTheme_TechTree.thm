@@ -726,7 +726,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/0_PrehistoricBackOverlay.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_CENTER);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
@@ -978,7 +978,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/2_ClassicalBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -1098,7 +1098,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/3_MedievalBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -1212,7 +1212,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/4_RenaissanceBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -1291,7 +1291,7 @@ with GFC_Control_Button
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
 	}
-	
+
 	// ==========================================================================================
 	// 5    I N D U S T R I A L
 	// ==========================================================================================
@@ -1338,7 +1338,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/5_IndustrialBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
@@ -1452,7 +1452,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/6_AtomicBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
@@ -1572,7 +1572,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/7_InformationBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -1674,7 +1674,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/8_NanotechBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
@@ -1794,7 +1794,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/MilkyWay.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
@@ -1897,7 +1897,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/Galaxy.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
@@ -1944,7 +1944,7 @@ with GFC_Control_Button
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
 	}
-	
+
 	// ==========================================================================================
 	// 11   C O S M I C
 	// ==========================================================================================
@@ -1991,7 +1991,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/Universe.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -2069,7 +2069,7 @@ with GFC_Control_Button
 					DestCombine		=	GColorCombine(BlendSource,Disable);
 					Image			=	GBitmap("GUI/TechTree/12_TranscendentBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 				// layer {
 				// 	CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
 				// 	DestCombine		=	GColorCombine(BlendSource,Disable);

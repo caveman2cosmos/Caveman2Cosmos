@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Eric MacDonald (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Hints Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4Hints xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HintInfos>
 		<HintInfo>
@@ -210,9 +205,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_HINT_INTERFACE_68</Description>
 		</HintInfo>
-
 		<!-- BUG Interface Hints -->
-
 		<HintInfo>
 			<Description>TXT_KEY_BUG_HINT_INTERFACE_1</Description>
 		</HintInfo>
@@ -234,7 +227,6 @@
 		<HintInfo>
 			<Description>TXT_KEY_BUG_HINT_INTERFACE_7</Description>
 		</HintInfo>
-
 		<HintInfo>
 			<Description>TXT_KEY_HINT_1</Description>
 		</HintInfo>
@@ -431,6 +423,9 @@
 			<Description>TXT_KEY_HINT_65</Description>
 		</HintInfo>
 		<HintInfo>
+			<Description>TXT_KEY_HINT_66</Description>
+		</HintInfo>
+		<HintInfo>
 			<Description>TXT_KEY_HINT_67</Description>
 		</HintInfo>
 		<HintInfo>
@@ -451,9 +446,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_HINT_73</Description>
 		</HintInfo>
-
 		<!-- BUG Hints -->
-
 		<HintInfo>
 			<Description>TXT_KEY_BUG_HINT_1</Description>
 		</HintInfo>
@@ -520,9 +513,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_BUG_HINT_22</Description>
 		</HintInfo>
-
 		<!-- ROM Hints -->
-
 		<HintInfo>
 			<Description>TXT_KEY_ROM_HINT_1</Description>
 		</HintInfo>
@@ -643,9 +634,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_ROM_HINT_40</Description>
 		</HintInfo>
-
 		<!-- RevolutionDCM Hints -->
-
 		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_1</Description>
 		</HintInfo>
@@ -658,7 +647,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_4</Description>
 		</HintInfo>
-			<HintInfo>
+		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_5</Description>
 		</HintInfo>
 		<HintInfo>
@@ -673,7 +662,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_9</Description>
 		</HintInfo>
-			<HintInfo>
+		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_10</Description>
 		</HintInfo>
 		<HintInfo>
@@ -946,9 +935,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_100</Description>
 		</HintInfo>
-
 		<!-- C2C Hints -->
-
 		<HintInfo>
 			<Description>TXT_KEY_C2C_HINT_1</Description>
 		</HintInfo>

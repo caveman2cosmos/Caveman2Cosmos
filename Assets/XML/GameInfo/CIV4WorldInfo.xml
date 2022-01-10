@@ -1,59 +1,51 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- World Infos -->
-<!-- NOTE: If you remove any of these you need to update Interface/WorldPickerInfos.xml -->
-<!--
-Copied from http://civ4.wikidot.com/xml:civ4worldinfo
-Text Tags
-
-    Description = The name of the map type.
-    Help = A description of the map type.
-    Type = The internal tag for the map type.
-
-Integer Tags
-
-    iDefaultPlayers = The default number of players for the map type. For Play Now! mode, this is the number of players in the game. For Custom Game mode, this is the number of player entries that appear when the map type is selected.
-    iUnitNameModifier = UNKNOWN EFFECT
-    iTargetNumCities = The expected number of cities for each civilization, which determines how far apart the starting locations of the civilizations are spaced.
-    iNumFreeBuildingBonuses = The default number of resources, which e.g. Hollywood provide
-    iBuildingClassPrereqModifier = A percentage increase to the PrereqBuildingClass tags in CIV4BuildingInfos. So, a value of 50 means that if 4 Temples are normally needed to construct a Cathedral, this map size will change that amount to 6. (Remember that for this type of instance, where only a whole number can be used, CivIV truncates, or rounds down, decimals. so, 4.5 becomes 4, but so does 4.9)
-    iMaxConscriptModifier = A percentage change to the number of units you may conscript.
-    iWarWearinessModifier = The percentage change to the amount of unhappiness gained from war weariness. A negative value here means less war weariness. For example, -50 means that war weariness will be half of what it is normally, and 100 means that war weariness will be twice what it is normally.
-    iGridWidth = The width of the map in 4x4 groups of tiles. If iGridWidth is set to 10, then the map will be 40 tiles wide.
-    iGridHeight = The height of the map in 4x4 groups of tiles. If iGridHeight is set to 10, then the map will be 40 tiles high.
-    iTerrainGrainChange = Used by map scripts.
-    iFeatureGrainChange = Used by map scripts.
-    iResearchPercent = The percentage of the rate at which technology is researched, implemented through the cost in beakers of researching. So 100 means normal research rates. Higher values yield slower research, so 200 means that researches will require twice as many beakers and will thus be half as fast.
-    iTradeProfitPercent = A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce. (This may also effect Great Merchant trade missions).
-    iDistanceMaintenancePercent = The amount of maintenance that city distance generates. It is a percentage, so 100 means full maintenance from city distance.
-    iNumCitiesMaintenancePercent = The amount of maintenance the number of cities possessed generates. It is a percentage, so 100 means full number of cities maintenance. (Note: the highest default setting for iNumCitiesMaintenancePercent occurs in Quick mode, and is only 45%, not 100%.)
-    iNumCitiesAnarchyPercent = iAnarchyLength += getNumCities() * WorldSize.getNumCitiesAnarchyPercent() / 100
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- NOTE: If you remove any of these you need to update Interface/WorldPickerInfos.xml
+* Text Tags:
+			Description	= The name of the map type.
+			Type		= The internal tag for the map type.
+* Integer Tags:
+			iDefaultPlayers					= The default number of players for the map type. For Play Now! mode, this is the number of players in the game.
+												For Custom Game mode, this is the number of player entries that appear when the map type is selected.
+			iUnitNameModifier				= UNKNOWN EFFECT
+			iTargetNumCities				= The expected number of cities for each civilization, which determines how far apart the starting locations of the civilizations are spaced.
+			iNumFreeBuildingBonuses			= The default number of resources, which e.g. Hollywood provide
+			iBuildingPrereqModifier			= A percentage increase to the PrereqAmountBuildings tags in CIV4BuildingInfos. So, a value of 50 means that, if 4 Temples are normally needed
+												to construct a Cathedral, this map size will change that amount to 6. (Remember that for this type of instance, where only a whole number
+												can be used, CivIV truncates, or rounds down, decimals. So, 4.5 becomes 4, but so does 4.9)
+			iMaxConscriptModifier			= A percentage change to the number of units you may conscript.
+			iWarWearinessModifier			= The percentage change to the amount of unhappiness gained from war weariness. A negative value here means less war weariness. For example,
+												-50 means that war weariness will be half of what it is normally, and 100 means that war weariness will be twice what it is normally.
+			iGridWidth						= The width of the map in 4x4 groups of tiles. If iGridWidth is set to 10, then the map will be 40 tiles wide.
+			iGridHeight						= The height of the map in 4x4 groups of tiles. If iGridHeight is set to 10, then the map will be 40 tiles high.
+			iTerrainGrainChange				= Used by map scripts.
+			iFeatureGrainChange				= Used by map scripts.
+			iResearchPercent				= The percentage of the rate at which technology is researched, implemented through the cost in beakers of researching. So 100 means normal
+												research rates. Higher values yield slower research, so 200 means that researches will require twice as many beakers and will thus be half as fast.
+			iTradeProfitPercent				= A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce.
+												(This may also effect Great Merchant trade missions)
+			iDistanceMaintenancePercent		= The amount of maintenance that city distance generates. It is a percentage, so 100 means full maintenance from city distance.
+			iNumCitiesAnarchyPercent		= iAnarchyLength += getNumCities() * WorldSize.getNumCitiesAnarchyPercent() / 100
 -->
-
-
 <Civ4WorldInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<WorldInfos>
 		<WorldInfo>
 			<Type>WORLDSIZE_DUEL</Type>
 			<Description>TXT_KEY_WORLD_DUEL</Description>
-			<Help>TXT_KEY_WORLD_DUEL_HELP</Help>
 			<iDefaultPlayers>2</iDefaultPlayers>
 			<iUnitNameModifier>50</iUnitNameModifier>
 			<iTargetNumCities>2</iTargetNumCities>
 			<iNumFreeBuildingBonuses>1</iNumFreeBuildingBonuses>
+			<iBuildingPrereqModifier>-120</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-75</iMaxConscriptModifier>
 			<iWarWearinessModifier>30</iWarWearinessModifier>
 			<iGridWidth>12</iGridWidth>
 			<iGridHeight>8</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
+			<iOceanMinAreaSize>6</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>500</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>50</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 2 cities -->
@@ -68,21 +60,21 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_TINY</Type>
 			<Description>TXT_KEY_WORLD_TINY</Description>
-			<Help>TXT_KEY_WORLD_TINY_HELP</Help>
 			<iDefaultPlayers>4</iDefaultPlayers>
 			<iUnitNameModifier>40</iUnitNameModifier>
 			<iTargetNumCities>3</iTargetNumCities>
 			<iNumFreeBuildingBonuses>1</iNumFreeBuildingBonuses>
+			<iBuildingPrereqModifier>-80</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-50</iMaxConscriptModifier>
 			<iWarWearinessModifier>20</iWarWearinessModifier>
 			<iGridWidth>18</iGridWidth>
 			<iGridHeight>12</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
+			<iOceanMinAreaSize>8</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>300</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>33</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 3 cities -->
@@ -97,20 +89,19 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_SMALL</Type>
 			<Description>TXT_KEY_WORLD_SMALL</Description>
-			<Help>TXT_KEY_WORLD_SMALL_HELP</Help>
 			<iDefaultPlayers>6</iDefaultPlayers>
 			<iUnitNameModifier>30</iUnitNameModifier>
 			<iTargetNumCities>4</iTargetNumCities>
 			<iNumFreeBuildingBonuses>2</iNumFreeBuildingBonuses>
-			<iBuildingClassPrereqModifier>25</iBuildingClassPrereqModifier>
+			<iBuildingPrereqModifier>-40</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-25</iMaxConscriptModifier>
 			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iGridWidth>21</iGridWidth>
 			<iGridHeight>14</iGridHeight>
+			<iOceanMinAreaSize>10</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>150</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>25</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 4 cities -->
@@ -125,18 +116,16 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_STANDARD</Type>
 			<Description>TXT_KEY_WORLD_STANDARD</Description>
-			<Help>TXT_KEY_WORLD_STANDARD_HELP</Help>
 			<iDefaultPlayers>8</iDefaultPlayers>
 			<iUnitNameModifier>20</iUnitNameModifier>
 			<iTargetNumCities>6</iTargetNumCities>
 			<iNumFreeBuildingBonuses>3</iNumFreeBuildingBonuses>
-			<iBuildingClassPrereqModifier>25</iBuildingClassPrereqModifier>
 			<iGridWidth>24</iGridWidth>
 			<iGridHeight>16</iGridHeight>
+			<iOceanMinAreaSize>14</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>370</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>18</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 5.55 cities -->
@@ -151,22 +140,21 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_LARGE</Type>
 			<Description>TXT_KEY_WORLD_LARGE</Description>
-			<Help>TXT_KEY_WORLD_LARGE_HELP</Help>
 			<iDefaultPlayers>10</iDefaultPlayers>
 			<iUnitNameModifier>10</iUnitNameModifier>
 			<iTargetNumCities>8</iTargetNumCities>
 			<iNumFreeBuildingBonuses>4</iNumFreeBuildingBonuses>
-			<iBuildingClassPrereqModifier>50</iBuildingClassPrereqModifier>
+			<iBuildingPrereqModifier>40</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>25</iMaxConscriptModifier>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iGridWidth>27</iGridWidth>
 			<iGridHeight>18</iGridHeight>
+			<iOceanMinAreaSize>18</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>230</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>96</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>50</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>13</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 7.7 cities -->
@@ -181,22 +169,21 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_HUGE</Type>
 			<Description>TXT_KEY_WORLD_HUGE</Description>
-			<Help>TXT_KEY_WORLD_HUGE_HELP</Help>
 			<iDefaultPlayers>12</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>11</iTargetNumCities>
 			<iNumFreeBuildingBonuses>5</iNumFreeBuildingBonuses>
-			<iBuildingClassPrereqModifier>75</iBuildingClassPrereqModifier>
+			<iBuildingPrereqModifier>80</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>50</iMaxConscriptModifier>
 			<iWarWearinessModifier>-20</iWarWearinessModifier>
 			<iGridWidth>30</iGridWidth>
 			<iGridHeight>20</iGridHeight>
+			<iOceanMinAreaSize>22</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>125</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>91</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>35</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>9</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 11.1 cities -->
@@ -211,22 +198,21 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_GIANT</Type>
 			<Description>TXT_KEY_WORLD_GIANT</Description>
-			<Help>TXT_KEY_WORLD_GIANT_HELP</Help>
 			<iDefaultPlayers>14</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>14</iTargetNumCities>
 			<iNumFreeBuildingBonuses>7</iNumFreeBuildingBonuses>
-			<iBuildingClassPrereqModifier>100</iBuildingClassPrereqModifier>
+			<iBuildingPrereqModifier>120</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>75</iMaxConscriptModifier>
 			<iWarWearinessModifier>-30</iWarWearinessModifier>
 			<iGridWidth>33</iGridWidth>
 			<iGridHeight>22</iGridHeight>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
+			<iOceanMinAreaSize>26</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>55</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>85</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>25</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>7</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 14.3 cities -->
@@ -241,22 +227,21 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_GIGANTIC</Type>
 			<Description>TXT_KEY_WORLD_GIGANTIC</Description>
-			<Help>TXT_KEY_WORLD_GIGANTIC_HELP</Help>
 			<iDefaultPlayers>16</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>18</iTargetNumCities>
 			<iNumFreeBuildingBonuses>10</iNumFreeBuildingBonuses>
-			<iBuildingClassPrereqModifier>125</iBuildingClassPrereqModifier>
+			<iBuildingPrereqModifier>160</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>100</iMaxConscriptModifier>
 			<iWarWearinessModifier>-40</iWarWearinessModifier>
 			<iGridWidth>36</iGridWidth>
 			<iGridHeight>24</iGridHeight>
+			<iOceanMinAreaSize>30</iOceanMinAreaSize>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>20</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>78</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>20</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>5</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 20 cities -->

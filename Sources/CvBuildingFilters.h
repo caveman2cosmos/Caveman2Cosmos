@@ -12,8 +12,7 @@
 #ifndef CV_BUILDING_FILTERS_H
 #define CV_BUILDING_FILTERS_H
 
-#include "CvEnums.h"
-
+class CvCity;
 class CvPlayer;
 
 enum BuildingFilterTypes
@@ -55,119 +54,119 @@ public:
 	BuildingFilterBase(bool bInvert = false): m_bInvert(bInvert), m_bActive(false) {};
 	virtual ~BuildingFilterBase();
 	// Returns true if the building has the filter property
-	bool isFiltered(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
-	bool isActive();
+	bool isFiltered(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
+	bool isActive() const;
 	bool setActive(bool bActive);
 	void Activate();
 	void Deactivate();
 
 protected:
-	virtual bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) = 0;
+	virtual bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const = 0;
 	bool m_bActive;
-	bool m_bInvert;
+	const bool m_bInvert;
 };
 
 class BuildingFilterCanBuild : public BuildingFilterBase
 {
 public:
 	BuildingFilterCanBuild(bool bShowSomeUnconstructable = false, bool bInvert = false) : BuildingFilterBase(bInvert), m_bShowSomeUnconstructable(bShowSomeUnconstructable) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 
 protected:
-	bool m_bShowSomeUnconstructable;
+	const bool m_bShowSomeUnconstructable;
 };
 
 class BuildingFilterIsWonder : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsWonder(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsGreatWonder : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsGreatWonder(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsNationalWonder : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsNationalWonder(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsCommerce : public BuildingFilterBase
 {
 public:
 	explicit BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert = false);
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 
 protected:
-	CommerceTypes m_eCommerce;
+	const CommerceTypes m_eCommerce;
 };
 
 class BuildingFilterIsYield : public BuildingFilterBase
 {
 public:
 	explicit BuildingFilterIsYield(YieldTypes eYield, bool bInvert = false);
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 
 protected:
-	YieldTypes m_eYield;
+	const YieldTypes m_eYield;
 };
 
 class BuildingFilterIsHappiness : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsHappiness(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsHealth : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsHealth(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsUnhappiness : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsUnhappiness(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsUnhealthiness : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsUnhealthiness(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsMilitary : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsMilitary(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsCityDefense : public BuildingFilterBase
 {
 public:
 	BuildingFilterIsCityDefense(bool bInvert = false) : BuildingFilterBase(bInvert) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 };
 
 class BuildingFilterIsProperty : public BuildingFilterBase
 {
 public:
 	explicit BuildingFilterIsProperty(PropertyTypes eProperty, bool bInvert = false) : BuildingFilterBase(bInvert), m_eProperty(eProperty) {};
-	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
 
 protected:
-	PropertyTypes m_eProperty;
+	const PropertyTypes m_eProperty;
 };
 
 class BuildingFilterList
@@ -176,19 +175,18 @@ public:
 	BuildingFilterList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
 	~BuildingFilterList();
 	void init();
-	bool isFilterActive(BuildingFilterTypes i);
+	bool isFilterActive(BuildingFilterTypes i) const;
 	bool setFilterActive(BuildingFilterTypes i, bool bActive);
-	int getNumFilters();
 	void setPlayer(CvPlayer* pPlayer);
 	void setCity(CvCity* pCity);
-	bool isFiltered(BuildingTypes eBuilding);
+	bool isFiltered(BuildingTypes eBuilding) const;
 
 	static void setFilterActiveAll(BuildingFilterTypes eFilter, bool bActive);
 
 protected:
 	BuildingFilterBase* m_apBuildingFilters[NUM_BUILDING_FILTERS];
 	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
+	const CvPlayer* m_pPlayer;
 };
 
 #endif

@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvDiploParameters.h"
+#include "FVariableSystem.h"
 
 CvDiploParameters::CvDiploParameters(PlayerTypes ePlayer) :
 	m_eWhoTalkingTo(ePlayer),
@@ -16,7 +17,7 @@ CvDiploParameters::CvDiploParameters(PlayerTypes ePlayer) :
 	m_theirOffer.clear();
 }
 
-CvDiploParameters::~CvDiploParameters() 
+CvDiploParameters::~CvDiploParameters()
 {
 	m_ourOffer.clear();
 	m_theirOffer.clear();
@@ -32,13 +33,13 @@ PlayerTypes CvDiploParameters::getWhoTalkingTo() const
 	return m_eWhoTalkingTo;
 }
 
-void addVar(std::vector<FVariable>& argsList, const wchar *arg)
+void addVar(std::vector<FVariable>& argsList, const wchar_t* arg)
 {
 	if (arg)
 	{
 		FVariable var;
 		var.m_eType = FVARTYPE_WSTRING;
-		var.m_wszValue = new wchar[wcslen(arg)+1];
+		var.m_wszValue = new wchar_t[wcslen(arg)+1];
 		wcscpy(var.m_wszValue, arg);
 		argsList.push_back(var);
 	}
@@ -206,12 +207,12 @@ bool CvDiploParameters::getTheirOffering() const
 	return m_bTheirOffering;
 }
 
-void CvDiploParameters::setChatText(const wchar* szText)
+void CvDiploParameters::setChatText(const wchar_t* szText)
 {
 	m_szChatText = szText;
 }
 
-const wchar* CvDiploParameters::getChatText() const
+const wchar_t* CvDiploParameters::getChatText() const
 {
 	return m_szChatText;
 }
@@ -220,8 +221,6 @@ const wchar* CvDiploParameters::getChatText() const
 void CvDiploParameters::read(FDataStreamBase& stream)
 {
 	int iType;
-	uint uiFlag=0;
-	stream.Read(&uiFlag);	// flags for expansion
 
 	stream.Read(&iType);
 	m_eWhoTalkingTo = (PlayerTypes)iType;
@@ -247,9 +246,6 @@ void CvDiploParameters::read(FDataStreamBase& stream)
 
 void CvDiploParameters::write(FDataStreamBase& stream) const
 {
-	uint uiFlag=0;
-	stream.Write(uiFlag);		// flag for expansion
-
 	stream.Write(m_eWhoTalkingTo);
 	stream.Write(m_eCommentType);
 	m_ourOffer.Write(&stream);

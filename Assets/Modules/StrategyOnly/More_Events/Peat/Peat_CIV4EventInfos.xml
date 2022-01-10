@@ -3,7 +3,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4: Beyond the Sword -->
 <!-- Copyright Firaxis Games 2006 -->
-<!-- -->
 <!-- Event Infos -->
 <Civ4EventInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4EventSchema.xml">
 	<EventInfos>
@@ -35,16 +34,13 @@
 			<iTechCostPercent>0</iTechCostPercent>
 			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
 			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
 			<iNumFreeUnits>0</iNumFreeUnits>
 			<bDisbandUnit>0</bDisbandUnit>
 			<iUnitExperience>0</iUnitExperience>
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitPromotion/>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>

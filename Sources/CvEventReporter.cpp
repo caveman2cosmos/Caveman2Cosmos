@@ -1,4 +1,15 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvEventReporter.h"
+#include "CvGlobals.h"
+#include "CvInitCore.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
+#include "CvPathGenerator.h"
+#include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 #include "FInputDevice.h"
 
 //
@@ -53,17 +64,17 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 		if ( gDLL->ctrlKey() && gDLL->shiftKey() && evt == 7 && (key == 30 || key == 32) )
 		{
 			// TESTING ONLY ... GET_PLAYER((PlayerTypes)0/*GC.getGame().getActivePlayer()*/).AI_doCivics();
-			//GC.getGameINLINE().recalculateModifiers();
+			//GC.getGame().recalculateModifiers();
 			//AIAndy: Changed to use a message to make it multiplayer safe
 			CvMessageControl::getInstance().sendRecalculateModifiers();
 		}
 		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 30) )
 		{
-			GC.getMapINLINE().toggleCitiesDisplay();
+			GC.getMap().toggleCitiesDisplay();
 		}
 		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 32) )
 		{
-			GC.getMapINLINE().toggleUnitsDisplay();
+			GC.getMap().toggleUnitsDisplay();
 		}
 #ifndef FINAL_RELEASE
 		if ( gDLL->altKey() && gDLL->ctrlKey() && evt ==7 && key == FInputDevice::KB_P )
@@ -122,7 +133,7 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
+
 }
 
 void CvEventReporter::newGame()
@@ -156,7 +167,7 @@ void CvEventReporter::init()
 
 void CvEventReporter::update(float fDeltaTime)
 {
-	m_kPythonEventMgr.reportUpdate(fDeltaTime);
+	// Toffer - Called by exe every frame, might be useful.
 }
 
 void CvEventReporter::unInit()
@@ -169,9 +180,14 @@ void CvEventReporter::gameStart()
 	m_kPythonEventMgr.reportGameStart();
 }
 
-void CvEventReporter::gameEnd()
+void CvEventReporter::gameEnd(int iGameTurn)
 {
-	m_kPythonEventMgr.reportGameEnd();
+	m_kPythonEventMgr.reportGameEnd(iGameTurn);
+}
+
+void CvEventReporter::mapRegen()
+{
+	m_kPythonEventMgr.reportMapRegen();
 }
 
 void CvEventReporter::beginGameTurn(int iGameTurn)
@@ -281,16 +297,16 @@ void CvEventReporter::gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 	m_kPythonEventMgr.reportGotoPlotSet(pPlot, ePlayer);
 }
 
-void CvEventReporter::cityBuilt( CvCity *pCity, CvUnit *pUnit )
+void CvEventReporter::cityBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportCityBuilt(pCity, pUnit);
 	m_kStatistics.cityBuilt(pCity);
 }
 
-void CvEventReporter::cityRazed( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityRazed(pCity, ePlayer);
-	m_kStatistics.cityRazed(pCity, ePlayer);
+	m_kStatistics.cityRazed(ePlayer);
 }
 
 void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes iPlayer, CvCity* pCity, bool bConquest, bool bTrade)
@@ -365,11 +381,6 @@ void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGrou
 void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 {
 	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
-}
-
-void CvEventReporter::unitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	m_kPythonEventMgr.reportUnitSetXY(pPlot, pUnit);
 }
 
 void CvEventReporter::unitCreated(CvUnit *pUnit)
@@ -542,13 +553,6 @@ void CvEventReporter::playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPl
 	m_kPythonEventMgr.reportPlayerGoldTrade(eFromPlayer, eToPlayer, iAmount);
 }
 
-// BUG - Revolution Event - start
-void CvEventReporter::playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	m_kPythonEventMgr.reportPlayerRevolution(ePlayerID, iAnarchyLength, paeOldCivics, paeNewCivics);
-}
-// BUG - Revolution Event - end
-
 void CvEventReporter::chat(CvWString szString)
 {
 	m_kPythonEventMgr.reportChat(szString);
@@ -653,16 +657,9 @@ void CvEventReporter::writeStatistics(FDataStreamBase* pStream)
 {
 	m_kStatistics.write(pStream);
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
-void CvEventReporter::addTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded)
+
+void CvEventReporter::changeTeam(TeamTypes eOld, TeamTypes eNew)
 {
-	m_kPythonEventMgr.reportAddTeam(eIndex0, eIndex1, bAdded);
+	m_kPythonEventMgr.reportChangeTeam(eOld, eNew);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/

@@ -4,23 +4,22 @@
 		<TechInfo>
 			<!-- Nanopunk -->
 			<Type>TECH_NANOPUNK</Type>
-			<Description>TXT_KEY_CULTURE_NANOPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_NANOPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_NANOPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_NANOPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_NANOPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<Quote>TXT_KEY_CULTURE_NANOPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_NANOPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_NANOPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/nanopunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>38858</iCost>
-			<Era>ERA_NANOTECH</Era>
+			<Era>C2C_ERA_NANOTECH</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_NANOGENERATOR</PrereqTech>
+				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
 				<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
+				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<!-- System -->
 			<iAsset>48</iAsset>

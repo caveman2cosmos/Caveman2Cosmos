@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- ###################################################################################### -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIPOD</Tag>
@@ -7,10 +6,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIPOD_PEDIA</Tag>
-		<English>The Martian Tripod is from H.G.Wells' novel "War of the Worlds".[PARAGRAPH:2]The Fighting Machine (also known as a Tripod) is one of the fictional machines used by the Martians in H. G. Wells' classic science fiction novel The War of the Worlds. It is a fast-moving, three-legged walker, reported to be 100 feet tall, with multiple whip-like tentacles used for grasping, and two lethal weapons: the heat-ray and a gun-like tube used for discharging canisters of a poisonous chemical black smoke that kills humans and animals. It is the primary machine the Martians use when they invade Earth, along with the handling machine, the flying machine, and the embankment machine.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRIPOD_STRATEGY</Tag>
-		<English>These units invade Earth if the War of the Worlds event happens.</English>
+		<English>TBD</English>
 	</TEXT>
 </Civ4GameText>

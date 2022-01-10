@@ -5,14 +5,12 @@
 #ifndef CIV4_DLL_BUTTON_POPUP_H
 #define CIV4_DLL_BUTTON_POPUP_H
 
-//#include "CvEnums.h"
-#include "CvPopupInfo.h"
-#include "CvPopupReturn.h"
-
 class CvPopup;
+class CvPopupInfo;
+class PopupReturn;
+
 class CvDLLButtonPopup
 {
-
 public:
 	CvDLLButtonPopup();
 	virtual ~CvDLLButtonPopup();
@@ -66,20 +64,11 @@ private:
 	bool launchFreeColonyPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchLaunchPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchFoundReligionPopup(CvPopup* pPopup, CvPopupInfo &info);
-	//	Koshling - added to allow user to choose game save format
 	bool launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &info);
-	bool launchGetSaveInfoLostPopup(CvPopup* pPopup, CvPopupInfo &info);
-	// AIAndy - added to recommend modifier recalculation
 	bool launchModifierRecalculationPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchNameListPopup(CvPopup* pPopup, CvPopupInfo &info);
-	// ls612: Added City Go-To popup.
 	bool launchGoToCityPopup(CvPopup* pPopup, CvPopupInfo &info);
-	
-/************************************************************************************************/
-/* Afforess	                  Start		 09/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool invasionPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupInfo &info);

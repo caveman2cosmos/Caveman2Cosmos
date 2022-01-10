@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by StrategyOnly -->
+<!-- Improvement -->
+<Civ4ImprovementInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TerrainSchema.xml">
+	<!-- Indigenous People (Barb Diplomacy placeholder? Inquire with DH, not currently used afaik) -->
+	<ImprovementInfos>
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</ArtDefineTag>
+			<YieldChanges>
+				<iYieldChange>-1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>-1</iYieldChange>
+			</YieldChanges>
+			<bRequiresFeature>1</bRequiresFeature>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iPillageGold>50</iPillageGold>
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_EDUCATION</PrereqTech>
+					<TechYields>
+						<iYield>1</iYield>
+						<iYield>4</iYield>
+						<iYield>4</iYield>
+					</TechYields>
+				</TechYieldChange>
+			</TechYieldChanges>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+	</ImprovementInfos>
+</Civ4ImprovementInfos>

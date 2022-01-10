@@ -69,7 +69,7 @@ class CvTopCivs:
 		self.screen.addPanel("TopCivsHeaderPanel", "", "", True, True, 265, 85, 520, 470, PanelStyles.PANEL_STYLE_DAWNBOTTOM)
 		# Bottom
 		self.screen.addPanel("TopCivsTextPanel", "", "", True, True, 280, 217, 490, 265, PanelStyles.PANEL_STYLE_DAWNTOP)
-		szTxt = TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		szTxt = TRNSLTR.getText("TXT_WORD_EXIT", ())
 		self.screen.setButtonGFC("Exit", szTxt, "", 460, 510, 120, 30, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 		# Title Text
 		szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_TOPCIVS_TITLE", ())
@@ -97,7 +97,7 @@ class CvTopCivs:
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_WEALTH", ()):
 
-					iGold = 1000000 * CyPlayer.getGreaterGold() + CyPlayer.getGold()
+					iGold = CyPlayer.getGold()
 					aTopCivList.append([iGold, iPlayer, CyPlayer])
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_POWER", ()):
@@ -119,7 +119,7 @@ class CvTopCivs:
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_CULTURE", ()):
 
-					aTopCivList.append([CyPlayer.countTotalCulture(), iPlayer, CyPlayer])
+					aTopCivList.append([CyPlayer.getCulture(), iPlayer, CyPlayer])
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_SIZE", ()):
 

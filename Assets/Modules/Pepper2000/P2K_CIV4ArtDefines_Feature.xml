@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jason Winokur (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Feature art path information -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jason Winokur (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Feature art path information -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<FeatureArtInfos>
 		<FeatureArtInfo>
@@ -85,7 +84,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/oort_cloud.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_SEDNOID</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -197,7 +196,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/sednoid.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_BLUE_DWARF</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -218,7 +217,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/blue_dwarf.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_BLUE_SUPERGIANT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -239,7 +238,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/blue_supergiant.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_BROWN_DWARF</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -260,7 +259,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/brown_dwarf.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_DWARF_GALAXY</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -281,7 +280,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/dwarf_galaxy.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_GALAXY</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -302,7 +301,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/galaxy.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_QUASAR</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -323,7 +322,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/quasar.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_WHITE_DWARF</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -344,7 +343,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/white_dwarf.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CARBON_PLANET</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -365,7 +364,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/carbon_planet.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_DESERT_PLANET</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -386,7 +385,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/desert_planet.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_ROGUE_PLANET</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -407,7 +406,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/rogue_planet.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_SMALL_MOON</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -428,7 +427,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/small_moon.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_SUPER_EARTH</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -449,7 +448,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/super_earth.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CHTHONIAN_PLANET</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -470,7 +469,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/chthonian_planet.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_HOT_JUPITER</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -491,7 +490,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/hot_jupiter.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_MINI_NEPTUNE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -512,7 +511,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/mini_neptune.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_PLANETARY_RING</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -591,8 +590,8 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/planetary_ring.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_WATER_PLANET</Type>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_OCEAN_PLANET</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -612,7 +611,7 @@
 				<VarietyButton>Art/Interface/Buttons/WorldBuilder/water_planet.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-        <FeatureArtInfo>
+		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_SUPERMASSIVE_BLACK_HOLE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>

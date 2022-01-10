@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Goody Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GoodyInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<GoodyInfos>
 		<GoodyInfo>
@@ -13,19 +8,7 @@
 			<iGold>8</iGold>
 			<iGoldRand1>11</iGoldRand1>
 			<iGoldRand2>11</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_GOLD</Type>
@@ -34,19 +17,7 @@
 			<iGold>15</iGold>
 			<iGoldRand1>31</iGoldRand1>
 			<iGoldRand2>31</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_LOW_GOLD</Type>
@@ -55,19 +26,7 @@
 			<iGold>15</iGold>
 			<iGoldRand1>31</iGoldRand1>
 			<iGoldRand2>31</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_HIGH_GOLD</Type>
@@ -76,19 +35,7 @@
 			<iGold>30</iGold>
 			<iGoldRand1>62</iGoldRand1>
 			<iGoldRand2>62</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_LOW_GOLD</Type>
@@ -97,19 +44,7 @@
 			<iGold>30</iGold>
 			<iGoldRand1>62</iGoldRand1>
 			<iGoldRand2>62</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_HIGH_GOLD</Type>
@@ -118,19 +53,7 @@
 			<iGold>60</iGold>
 			<iGoldRand1>124</iGoldRand1>
 			<iGoldRand2>124</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_LOW_GOLD</Type>
@@ -139,19 +62,7 @@
 			<iGold>60</iGold>
 			<iGoldRand1>124</iGoldRand1>
 			<iGoldRand2>124</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_HIGH_GOLD</Type>
@@ -160,19 +71,7 @@
 			<iGold>120</iGold>
 			<iGoldRand1>248</iGoldRand1>
 			<iGoldRand2>248</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_LOW_GOLD</Type>
@@ -181,19 +80,7 @@
 			<iGold>120</iGold>
 			<iGoldRand1>248</iGoldRand1>
 			<iGoldRand2>248</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_HIGH_GOLD</Type>
@@ -202,19 +89,7 @@
 			<iGold>240</iGold>
 			<iGoldRand1>596</iGoldRand1>
 			<iGoldRand2>596</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_LOW_GOLD</Type>
@@ -223,19 +98,7 @@
 			<iGold>240</iGold>
 			<iGoldRand1>596</iGoldRand1>
 			<iGoldRand2>596</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_HIGH_GOLD</Type>
@@ -244,19 +107,7 @@
 			<iGold>480</iGold>
 			<iGoldRand1>1192</iGoldRand1>
 			<iGoldRand2>1192</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_LOW_GOLD</Type>
@@ -265,19 +116,7 @@
 			<iGold>480</iGold>
 			<iGoldRand1>1192</iGoldRand1>
 			<iGoldRand2>1192</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_HIGH_GOLD</Type>
@@ -286,19 +125,7 @@
 			<iGold>960</iGold>
 			<iGoldRand1>2384</iGoldRand1>
 			<iGoldRand2>2384</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_LOW_GOLD</Type>
@@ -307,19 +134,7 @@
 			<iGold>960</iGold>
 			<iGoldRand1>2384</iGoldRand1>
 			<iGoldRand2>2384</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_HIGH_GOLD</Type>
@@ -328,19 +143,7 @@
 			<iGold>1920</iGold>
 			<iGoldRand1>4768</iGoldRand1>
 			<iGoldRand2>4768</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NANOTECH_LOW_GOLD</Type>
@@ -349,19 +152,7 @@
 			<iGold>1920</iGold>
 			<iGoldRand1>4768</iGoldRand1>
 			<iGoldRand2>4768</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NANOTECH_HIGH_GOLD</Type>
@@ -370,19 +161,7 @@
 			<iGold>3840</iGold>
 			<iGoldRand1>9536</iGoldRand1>
 			<iGoldRand2>9536</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_RESEARCH</Type>
@@ -391,18 +170,6 @@
 			<iResearch>10</iResearch>
 			<iGoldRand1>10</iGoldRand1>
 			<iGoldRand2>10</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_RESEARCH</Type>
@@ -411,2321 +178,908 @@
 			<iResearch>28</iResearch>
 			<iGoldRand1>36</iGoldRand1>
 			<iGoldRand2>36</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MAP</Type>
 			<Description>TXT_KEY_GOODY_MAP</Description>
 			<Sound>AS2D_GOODY_MAP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
 			<iMapOffset>4</iMapOffset>
 			<iMapRange>4</iMapRange>
 			<iMapProb>80</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_TRIBE</Type>
 			<Description>TXT_KEY_GOODY_TRIBE</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_TRIBE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_TRIBE</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SETTLER</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SETTLER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_SETTLER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SETTLER2</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SETTLER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_SETTLER</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SETTLER3</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SETTLER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_SETTLER</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_COLONIST</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_COLONIST</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<FreeUnit>UNIT_COLONIST</FreeUnit>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_PIONEER</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_PIONEER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<FreeUnit>UNIT_PIONEER</FreeUnit>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AIRSETTLER</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_AIRSETTLER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<FreeUnit>UNIT_AIRSETTLER</FreeUnit>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>4</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>6</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>8</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>10</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>12</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>14</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>16</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>18</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NANOTECH_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
 			<iExperience>20</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALING</Type>
 			<Description>TXT_KEY_GOODY_HEALING</Description>
 			<Sound>AS2D_GOODY_HEAL</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
 			<iHealing>100</iHealing>
 			<iDamagePrereq>60</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_TECH</Type>
 			<Description>TXT_KEY_GOODY_TECH</Description>
 			<Sound/>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
 			<bTech>1</bTech>
-			<bBad>0</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARRIOR</Type>
 			<Description>TXT_KEY_GOODY_WARRIOR</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_CLUBMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_CLUBMAN</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_SPEARMAN</Type>
 			<Description>TXT_KEY_GOODY_STONE_SPEARMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_STONE_AGE_SPEARMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_STONE_SPEARMAN</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_AXEMAN</Type>
 			<Description>TXT_KEY_GOODY_STONE_AXEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_STONE_AGE_AXEMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_STONE_AXEMAN</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SPEARMAN</Type>
 			<Description>TXT_KEY_GOODY_SPEARMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SPEARMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_SPEARMAN</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AXEMAN</Type>
 			<Description>TXT_KEY_GOODY_AXEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_AXEMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_AXEMAN</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SWORDSMAN</Type>
 			<Description>TXT_KEY_GOODY_SWORDSMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SWORDSMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_SWORDSMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_PIKEMAN</Type>
 			<Description>TXT_KEY_GOODY_PIKEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_PIKEMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_PIKEMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MACEMAN</Type>
 			<Description>TXT_KEY_GOODY_MACEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_MACEMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_MACEMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEAVY_SWORDSMAN</Type>
 			<Description>TXT_KEY_GOODY_SWORDSMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_HEAVY_SWORDSMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_HEAVY_SWORDSMAN</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEAVY_PIKEMAN</Type>
 			<Description>TXT_KEY_GOODY_PIKEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_HEAVY_PIKEMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_HEAVY_PIKEMAN</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ARQUEBUSIER</Type>
 			<Description>TXT_KEY_GOODY_ARQUEBUSIER</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_ARQUEBUSIER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<FreeUnit>UNIT_ARQUEBUSIER</FreeUnit>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RIFLEMAN</Type>
-			<Description>TXT_KEY_GOODY_RIFLEMAN</Description>
+			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_RIFLEMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<FreeUnit>UNIT_RIFLEMAN</FreeUnit>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFANTRY</Type>
 			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_INFANTRY</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<FreeUnit>UNIT_INFANTRY</FreeUnit>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_INFANTRY</Type>
 			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_MODERN_INFANTRY</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<FreeUnit>UNIT_MODERN_INFANTRY</FreeUnit>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_TESLA_INFANTRY</Type>
-			<Description>TXT_KEY_GOODY_TESLA_INFANTRY</Description>
+			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_TESLA_INFANTRY</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<FreeUnit>UNIT_TESLA_INFANTRY</FreeUnit>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_THROWER</Type>
 			<Description>TXT_KEY_GOODY_STONE_THROWER</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_STONE_THROWER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
+			<FreeUnit>UNIT_STONE_THROWER</FreeUnit>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ARCHER</Type>
 			<Description>TXT_KEY_GOODY_ARCHER</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_ARCHER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_ARCHER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_COMPOSITE_BOWMAN</Type>
 			<Description>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_COMPOSITE_BOWMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_COMPOSITE_BOWMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LONGBOWMAN</Type>
 			<Description>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_LONGBOWMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_LONGBOWMAN</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SCOUT</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SCOUT</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_SCOUT</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GUIDE</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_GUIDE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_GUIDE</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPLORER</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_EXPLORER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_EXPLORER</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ADVENTURER</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_ADVENTURER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_ADVENTURER</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MOTORCYCLE</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_MOTORCYCLE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<FreeUnit>UNIT_MOTORCYCLE</FreeUnit>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_UNMANNED_TRIKE</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_UNMANNED_TRIKE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<FreeUnit>UNIT_UNMANNED_TRIKE</FreeUnit>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_HUNTER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_HUNTER</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RANGER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_RANGER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_RANGER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARDEN</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WARDEN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_WARDEN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARDEN2</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WARDEN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_WARDEN</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GAME_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_GAME_HUNTER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<FreeUnit>UNIT_GAME_HUNTER</FreeUnit>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BIG_GAME_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_BIG_GAME_HUNTER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<FreeUnit>UNIT_BIG_GAME_HUNTER</FreeUnit>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WISE_WOMAN</Type>
 			<Description>TXT_KEY_GOODY_WISE_WOMAN</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WISE_WOMAN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALER</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_HEALER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_HEALER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_APOTHECARY</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_APOTHECARY</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_APOTHECARY</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SURGEON</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_SURGEON</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<FreeUnit>UNIT_SURGEON</FreeUnit>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIC</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_MEDIC</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<FreeUnit>UNIT_MEDIC</FreeUnit>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AMBULANCE_II</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_AMBULANCE_II</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<FreeUnit>UNIT_AMBULANCE_II</FreeUnit>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDEVAC_DROPSHIP</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_MEDEVAC_DROPSHIP</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<FreeUnit>UNIT_MEDEVAC_DROPSHIP</FreeUnit>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GATHERER</Type>
 			<Description>TXT_KEY_GOODY_GATHERER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_GATHERER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<FreeUnit>UNIT_GATHERER</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKER</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_DOG_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKANIMAL</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<FreeUnit>UNIT_WORKANIMAL</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ELEPHANT_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKELEPHANT</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<FreeUnit>UNIT_WORKELEPHANT</FreeUnit>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MULE_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKMULE</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<FreeUnit>UNIT_WORKMULE</FreeUnit>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKER_INDUSTRIAL</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<FreeUnit>UNIT_WORKER_INDUSTRIAL</FreeUnit>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKER_MODERN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<FreeUnit>UNIT_WORKER_MODERN</FreeUnit>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_MODERN_WORKER</Type>
+			<Type>GOODY_MODERN_WORKER2</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_WORKER_MODERN</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<FreeUnit>UNIT_WORKER_MODERN</FreeUnit>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLONES</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
-			<bBad>0</bBad>
-			<UnitClass>UNITCLASS_CLONES</UnitClass>
-			<BarbarianClass>NONE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
-			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<FreeUnit>UNIT_CLONES</FreeUnit>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_STONE_THROWER</BarbarianClass>
+			<BarbarianUnit>UNIT_STONE_THROWER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_CLUBMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_CLUBMAN</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_THIEF</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_THIEF</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_ANCIENT_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_JAVELINEER</BarbarianClass>
+			<BarbarianUnit>UNIT_JAVELINEER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_ANCIENT_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_AXEMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_AXEMAN</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_ROGUE</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_ROGUE</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_CLASSICAL_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_SKIRMISHER</BarbarianClass>
+			<BarbarianUnit>UNIT_SKIRMISHER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_CLASSICAL_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_SWORDSMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_SWORDSMAN</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_ASSASSIN</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_ASSASSIN</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MEDIEVAL_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_LONGBOWMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_LONGBOWMAN</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MEDIEVAL_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_HEAVY_SWORDSMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_HEAVY_SWORDSMAN</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_ASSASSIN</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_ASSASSIN</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_RENAISSANCE_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_ARQUEBUSIER</BarbarianClass>
+			<BarbarianUnit>UNIT_ARQUEBUSIER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_RENAISSANCE_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_MUSKETMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_MUSKETMAN</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_HIGHWAYMAN</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_HIGHWAYMAN</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INDUSTRIAL_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_GRENADIER</BarbarianClass>
+			<BarbarianUnit>UNIT_GRENADIER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INDUSTRIAL_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_RIFLEMAN</BarbarianClass>
+			<BarbarianUnit>UNIT_RIFLEMAN</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_OUTLAW</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_OUTLAW</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MODERN_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_INFANTRY</BarbarianClass>
+			<BarbarianUnit>UNIT_INFANTRY</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MODERN_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_MODERN_INFANTRY</BarbarianClass>
+			<BarbarianUnit>UNIT_MODERN_INFANTRY</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_CRIMINAL</Type>
 			<Description>TXT_KEY_GOODY_CRIMINAL</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_MOBSTER_CAR</BarbarianClass>
-			<iBarbarianUnitProb>0</iBarbarianUnitProb>
+			<BarbarianUnit>UNIT_MOBSTER_CAR</BarbarianUnit>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INFORMATION_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_MODERN_INFANTRY</BarbarianClass>
+			<BarbarianUnit>UNIT_MODERN_INFANTRY</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INFORMATION_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_EXOARMORED_INFANTRY</BarbarianClass>
+			<BarbarianUnit>UNIT_EXOARMORED_INFANTRY</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_NANOTECH_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_EXOARMORED_INFANTRY</BarbarianClass>
+			<BarbarianUnit>UNIT_EXOARMORED_INFANTRY</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_NANOTECH_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_TESLA_INFANTRY</BarbarianClass>
+			<BarbarianUnit>UNIT_TESLA_INFANTRY</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_CANOE</BarbarianClass>
+			<BarbarianUnit>UNIT_CANOE</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_WAR_CANOE</BarbarianClass>
+			<BarbarianUnit>UNIT_WAR_CANOE</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_WARGALLEY</BarbarianClass>
+			<BarbarianUnit>UNIT_WARGALLEY</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_TRIREME</BarbarianClass>
+			<BarbarianUnit>UNIT_TRIREME</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_QUINQUEREME</BarbarianClass>
+			<BarbarianUnit>UNIT_QUINQUEREME</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_DECAREME</BarbarianClass>
+			<BarbarianUnit>UNIT_DECAREME</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_GALLEASS</BarbarianClass>
+			<BarbarianUnit>UNIT_GALLEASS</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_SLOOP_OF_WAR</BarbarianClass>
+			<BarbarianUnit>UNIT_SLOOP_OF_WAR</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_FRIGATE</BarbarianClass>
+			<BarbarianUnit>UNIT_FRIGATE</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_MANOWAR</BarbarianClass>
+			<BarbarianUnit>UNIT_MANOWAR</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_IRONCLAD</BarbarianClass>
+			<BarbarianUnit>UNIT_IRONCLAD</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_IRON_FRIGATE</BarbarianClass>
+			<BarbarianUnit>UNIT_IRON_FRIGATE</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_DESTROYER</BarbarianClass>
+			<BarbarianUnit>UNIT_DESTROYER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_BATTLESHIP</BarbarianClass>
+			<BarbarianUnit>UNIT_BATTLESHIP</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_MODERN_FRIGATE</BarbarianClass>
+			<BarbarianUnit>UNIT_MODERN_FRIGATE</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_STEALTH_DESTROYER</BarbarianClass>
+			<BarbarianUnit>UNIT_STEALTH_DESTROYER</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_STEALTH_DESTROYER</BarbarianClass>
+			<BarbarianUnit>UNIT_STEALTH_DESTROYER</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<iGold>0</iGold>
-			<iGoldRand1>0</iGoldRand1>
-			<iGoldRand2>0</iGoldRand2>
-			<iMapOffset>0</iMapOffset>
-			<iMapRange>0</iMapRange>
-			<iMapProb>0</iMapProb>
-			<iExperience>0</iExperience>
-			<iHealing>0</iHealing>
-			<iDamagePrereq>0</iDamagePrereq>
-			<bTech>0</bTech>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<UnitClass>NONE</UnitClass>
-			<BarbarianClass>UNITCLASS_FF_DESTROYER_I</BarbarianClass>
+			<BarbarianUnit>UNIT_FF_DESTROYER_I</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 	</GoodyInfos>
 </Civ4GoodyInfo>

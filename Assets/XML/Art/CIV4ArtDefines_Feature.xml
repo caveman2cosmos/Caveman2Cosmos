@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jason Winokur (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Feature art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<FeatureArtInfos>
 		<FeatureArtInfo>
@@ -512,7 +507,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_BIOGAS</Type>
+			<Type>ART_DEF_FEATURE_INFECTIOUS_SMOG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -533,7 +528,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_PLAGUEGAS</Type>
+			<Type>ART_DEF_FEATURE_PLAGUED_SMOG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -559,13 +554,55 @@
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
 			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
 			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Resources/Stone/Stone.nif</ModelFile>
+						<ModelFile>art/terrain/features/Reef/Reef.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/baseterrain/reef.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_REEF_BEACON</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>art/terrain/features/Reef/ReefBeacon.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/baseterrain/reef.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_REEF_LIGHTHOUSE</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>art/terrain/features/Reef/ReefLighthouse.nif</ModelFile>
 						<Connections/>
 					</FeatureArtPiece>
 				</FeatureArtPieces>
@@ -596,18 +633,39 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_CORAL</Type>
+			<Type>ART_DEF_FEATURE_CORAL_REEF</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
 			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.0</fScale>
+			<fScale>0.45</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
-						<ModelFile>Art/terrain/features/coral/wheat.nif</ModelFile>
+						<ModelFile>Art/terrain/features/coral/coral.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/terrainfeatures/Coral.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_CORAL_REEF_BEACON</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/terrain/features/coral/CoralBeacon.nif</ModelFile>
 						<Connections/>
 					</FeatureArtPiece>
 				</FeatureArtPieces>
@@ -617,24 +675,24 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOSSIL</Type>
-			<bAnimated>0</bAnimated>
+			<Type>ART_DEF_FEATURE_CORAL_REEF_LIGHTHOUSE</Type>
+			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
 			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>0.5</fInterfaceScale>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Bones.dds</Button>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Features/Bones/animal_skeleton.nif</ModelFile>
+						<ModelFile>Art/terrain/features/coral/CoralLighthouse.nif</ModelFile>
 						<Connections/>
 					</FeatureArtPiece>
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Bones.dds</VarietyButton>
+				<VarietyButton>Art/Interface/Buttons/terrainfeatures/coral.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
@@ -659,7 +717,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_TARPIT</Type>
+			<Type>ART_DEF_FEATURE_TAR_PIT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1233,7 +1291,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_SWORD_GRASS</Type>
+			<Type>ART_DEF_FEATURE_VERY_TALL_GRASS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1254,7 +1312,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_KAKTUS</Type>
+			<Type>ART_DEF_FEATURE_CACTUS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1297,7 +1355,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_VOLCANO</Type>
+			<Type>ART_DEF_FEATURE_VOLCANO_ACTIVE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1318,7 +1376,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_VOLCANO2</Type>
+			<Type>ART_DEF_FEATURE_VOLCANO_DORMANT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1339,7 +1397,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_CAVE</Type>
+			<Type>ART_DEF_FEATURE_CAVES</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1360,7 +1418,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_SEAGRASS</Type>
+			<Type>ART_DEF_FEATURE_SEA_GRASS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1423,7 +1481,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOREST_NEW</Type>
+			<Type>ART_DEF_FEATURE_FOREST_YOUNG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1521,7 +1579,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOREST_OLD</Type>
+			<Type>ART_DEF_FEATURE_FOREST_ANCIENT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_TREES</TileArtType>
@@ -1598,7 +1656,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LUNAR_CRATER1</Type>
+			<Type>ART_DEF_FEATURE_CRATER_MEDIUM</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1619,7 +1677,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LUNAR_CRATER2</Type>
+			<Type>ART_DEF_FEATURE_CRATER_LARGE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1640,7 +1698,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LUNAR_CRATER3</Type>
+			<Type>ART_DEF_FEATURE_CRATER_SMALL</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1920,27 +1978,6 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_RAINWATER_BASIN</Type>
-			<bAnimated>1</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Structures/Buildings/Great_Bath/RainWaterButton.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Structures/Buildings/Great_Bath/bath_middle_east_water.nif</ModelFile>
-						<Connections/>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Structures/Buildings/Great_Bath/RainWaterButton.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CITY_RUINS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -1980,6 +2017,447 @@
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>,Art/Interface/Buttons/Builds/BuildCityRuins.dds,Art/Interface/Buttons/NextWar_Atlas.dds,4,4</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_AUYANTEPUI</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Auyantepui/Button_Auyantepui.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Auyantepui/tepui_autana.nif</ModelFile>
+						<Connections></Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Auyantepui/Button_Auyantepui.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_EVEREST</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>1.4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Everest/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Everest/peak_single.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Everest/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_FUJI</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Fuji/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Fuji/Fuji.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Fuji/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_NGORONGORO_CRATER</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>1</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Ngorongoro/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Ngorongoro/ngorongoro.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Ngorongoro/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_AURORA</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>20</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Aurora/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Aurora/aurora.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Aurora/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_BARRINGER_CRATER</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>1</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Barringer_Crater/Button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Barringer_Crater/Barringer_Crater.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Barringer_Crater/Button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_SINAI</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Sinai/Sinai.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Sinai/pousthora.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Sinai/Sinai.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_ULURU</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/uluru/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Uluru/Uluru.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/uluru/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_PRAVCICKA_BRANA</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Pravcicka_Brana/Pravcicka.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Pravcicka_Brana/Brana.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Pravcicka_Brana/Pravcicka.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_PAMUKKALE</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>3.4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Pamukkale/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Pamukkale/pamukkale.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Pamukkale/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_SUGARLOAF</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.002</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Sugarloaf_Mountain/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Sugarloaf_Mountain/Sugarloaf.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Sugarloaf_Mountain/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_VICTORIA_FALLS</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Victoria_Falls/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Victoria_Falls/falls03.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Victoria_Falls/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_SOPKA</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/sopka/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/sopka/sopka3new.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/sopka/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_DEVILS_TABLE</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.2</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Devil's_Table/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Devil's_Table/table.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Devil's_Table/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_NUKUORO</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.8</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Nukuoro/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Nukuoro/atolus.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Nukuoro/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_BAIKAL</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Baikal/Baikal.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Baikal/Bajkal4.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Baikal/Baikal.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_BASALT_ORGAN</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>2</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Basalt/Basalt.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Basalt/varhany.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Basalt/Basalt.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_KRAKATOA</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Krakatoa/Krakatoa.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Krakatoa/sopka7.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Krakatoa/Krakatoa.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_SHARK_BAY</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>2</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Shark_Bay/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Shark_Bay/shark_bay.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Shark_Bay/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_DEAD_SEA</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/Dead_Sea/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/Dead_Sea/mrtvemore.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/Dead_Sea/button.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_KILIMANJARO</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Terrain/Natural_Wonders/kilimanjaro/button.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Natural_Wonders/kilimanjaro/kilimanjaro.nif</ModelFile>
+						<Connections />
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes />
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Terrain/Natural_Wonders/kilimanjaro/button.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 	</FeatureArtInfos>

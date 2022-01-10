@@ -12,7 +12,7 @@ from CvPythonExtensions import *
 GC = CyGlobalContext()
 
 # Types
-NUM_TYPES = 11
+NUM_TYPES = 10
 (
 	WORKED_TILES,
 	CITY_TILES,
@@ -28,7 +28,6 @@ NUM_TYPES = 11
 
 	# Hold the percents, not the actual yield values
 	BASE_MODIFIER,
-	PRODUCTION_MODIFIER,
 ) = xrange(NUM_TYPES)
 
 # Leave these for later when we have icons for each
@@ -49,11 +48,10 @@ LABEL_KEYS = (
 	"TXT_KEY_CONCEPT_ALL_TILES",
 	"TXT_KEY_CONCEPT_DOMESTIC_TRADE",
 	"TXT_KEY_CONCEPT_FOREIGN_TRADE",
-	"TXT_KEY_CONCEPT_BUILDINGS",
+	"TXT_KEY_WB_BUILDINGS",
 	"TXT_KEY_CONCEPT_CORPORATIONS",
 	"TXT_KEY_CONCEPT_SPECIALISTS",
-	"TXT_KEY_CONCEPT_BASE_MODIFIER",
-	"TXT_KEY_CONCEPT_PRODUCTION_MODIFIER"
+	"TXT_KEY_CONCEPT_BASE_MODIFIER"
 )
 # Yields
 YIELDS = (YieldTypes.YIELD_FOOD, YieldTypes.YIELD_PRODUCTION, YieldTypes.YIELD_COMMERCE)
@@ -139,10 +137,6 @@ class Tracker:
 			if iValue:
 				self.values[eYield][BASE_MODIFIER] += iValue
 				iValue = 0
-		# Depends on the item being built
-		self.iProductionModifier = CyCity.getProductionModifier()
-		if self.iProductionModifier:
-			self.sModifierDetail = CyCity.getProductionName()
 
 
 	def fillTable(self, screen, table, eYield, eType):
@@ -181,17 +175,7 @@ class Tracker:
 		else:
 			iSubtotal = iTotal
 
-		# Subtotal and Production Modifiers
-		if eYield == YieldTypes.YIELD_PRODUCTION and self.iProductionModifier != 0:
-			# Subtotal
-			self.appendTableTotal(screen, table, eYield, iSubtotal)
-			# Total
-			iTotal = iTotal * (iModifier + self.iProductionModifier + 100) // 100
-			# Modifier
-			iValue = iTotal - iSubtotal
-			self.appendTable(screen, table, False, TRNSLTR.getText("TXT_KEY_CONCEPT_PRODUCTION_MODIFIER", (self.sModifierDetail, self.iProductionModifier)), eYield, iValue)
-		else:
-			iTotal = iSubtotal
+		iTotal = iSubtotal
 
 		# Total
 		self.appendTableTotal(screen, table, eYield, iTotal)

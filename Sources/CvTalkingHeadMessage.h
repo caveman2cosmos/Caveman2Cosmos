@@ -6,19 +6,19 @@
 class CvTalkingHeadMessage
 {
 public:
-	DllExport CvTalkingHeadMessage(int iMessageTurn = 0, int iLen = 0, LPCWSTR pszDesc = NULL, LPCTSTR pszSound = NULL, InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCTSTR icon = NULL, ColorTypes eColor = NO_COLOR, int iX = -1, int iY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
+	DllExport CvTalkingHeadMessage(int iMessageTurn = 0, int iLen = 0, LPCWSTR pszDesc = NULL, const char* pszSound = NULL, InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, const char* icon = NULL, ColorTypes eColor = NO_COLOR, int iX = -1, int iY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
 	DllExport virtual ~CvTalkingHeadMessage();
 
 	void read(FDataStreamBase& stream);
 	void write(FDataStreamBase& stream) const;
 
 	// Accessors
-	DllExport const wchar* getDescription() const;
+	DllExport const wchar_t* getDescription() const;
 	void setDescription(CvWString pszDescription);
 	DllExport const CvString& getSound() const;
-	void setSound(LPCTSTR pszSound);
+	//void setSound(const char* pszSound) { m_szSound = pszSound; }
 	DllExport const CvString& getIcon() const;
-	void setIcon(LPCTSTR pszIcon);
+	void setIcon(const char* pszIcon);
 	DllExport int getLength() const;
 	DllExport void setLength(int iLength);
 	DllExport ColorTypes getFlashColor() const;
@@ -42,7 +42,7 @@ public:
 	bool getShown() const;
 	DllExport void setShown(bool bShown);
 
-	int getExpireTurn();
+	int getExpireTurn() const;
 
 
 protected:

@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Vote Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4VoteInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<VoteInfos>
 		<VoteInfo>
@@ -143,7 +138,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_UNIVERSAL_SUFFRAGE</Type>
-			<Description>TXT_KEY_VOTE_UNIVERSAL_SUFFRAGE</Description>
+			<Description>TXT_KEY_VOTE_DEMOCRACY</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -175,7 +170,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_FREE_SPEECH</Type>
-			<Description>TXT_KEY_VOTE_FREE_SPEECH</Description>
+			<Description>TXT_KEY_VOTE_LEGISLATURE</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -194,7 +189,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_SENATE</CivicType>
+					<CivicType>CIVIC_LEGISLATURE</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -207,7 +202,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_EMANCIPATION</Type>
-			<Description>TXT_KEY_VOTE_EMANCIPATION</Description>
+			<Description>TXT_KEY_VOTE_EGALITARIAN</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -226,7 +221,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_LIBERAL</CivicType>
+					<CivicType>CIVIC_EGALITARIAN</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -239,7 +234,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_ENVIRONMENTALISM</Type>
-			<Description>TXT_KEY_VOTE_ENVIRONMENTALISM</Description>
+			<Description>TXT_KEY_VOTE_GREEN</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -258,7 +253,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_ENVIRONMENTALISM</CivicType>
+					<CivicType>CIVIC_GREEN</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -271,7 +266,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_FREE_RELIGION</Type>
-			<Description>TXT_KEY_VOTE_FREE_RELIGION</Description>
+			<Description>TXT_KEY_VOTE_SECULARISM</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -290,7 +285,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_SECULAR</CivicType>
+					<CivicType>CIVIC_SECULARISM</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -303,7 +298,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_WELFARE</Type>
-			<Description>TXT_KEY_VOTE_SOCIALIZED_WELFARE</Description>
+			<Description>TXT_KEY_VOTE_SOCIALIZED</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -712,7 +707,7 @@
 			</DiploVotes>
 		</VoteInfo>
 		<VoteInfo>
-			<Type>VOTE_DEFENSIVE_PACT</Type>
+			<Type>VOTE_DEFENSIVE_PACT_CV</Type>
 			<Description>TXT_KEY_VOTE_CONGVIENNA_DEFENSIVE_PACT</Description>
 			<iPopulationThreshold>62</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>

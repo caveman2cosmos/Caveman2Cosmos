@@ -9,9 +9,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
+#from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 #from CvMapGeneratorUtil import BonusBalancer
@@ -40,7 +39,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -49,7 +48,7 @@ def getNumCustomMapOptionValues(argsList):
 		2:  2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -70,7 +69,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -92,11 +91,11 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(1) == 1 or map.getCustomMapOption(1) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(1) == 2)
-	
+
 def normalizeAddExtras():
 	if (CyMap().getCustomMapOption(2) == 1):
 		balancer.normalizeAddExtras()
@@ -110,7 +109,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(2) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 class ArchipelagoFractalWorld(CvMapGeneratorUtil.FractalWorld):
@@ -124,14 +123,13 @@ class ArchipelagoFractalWorld(CvMapGeneratorUtil.FractalWorld):
 
 def generatePlotTypes():
 	"Generates a very grainy world so we get lots of islands."
-	gc = CyGlobalContext()
 	map = CyMap()
 	fractal_world = ArchipelagoFractalWorld()
 	NiTextOut("Setting Plot Types (Python Archipelago) ...")
 
 	# Get user input.
 	userInputLandmass = map.getCustomMapOption(0)
-	
+
 	if userInputLandmass == 2: # Tiny Islands
 		fractal_world.initFractal(continent_grain = 5, rift_grain = -1, has_center_rift = False, polar = True)
 		return fractal_world.generatePlotTypes(grain_amount = 4)
@@ -158,10 +156,10 @@ def addFeatures():
 	iH = map.getGridHeight()
 	for plotIndex in range(iW * iH):
 		pPlot = map.plotByIndex(plotIndex)
-		if pPlot.isPeak() and pPlot.isCoastalLand():
+		if pPlot.isPeak() and pPlot.isCoastal():
 			# If a peak is along the coast, change to hills and recalc.
 			pPlot.setPlotType(PlotTypes.PLOT_HILLS, true, true)
-	
+
 	# Now add Features.
 	NiTextOut("Adding Features (Python Archipelago) ...")
 	featuregen = FeatureGenerator()
@@ -176,7 +174,7 @@ def assignStartingPlots():
 	dice = gc.getGame().getMapRand()
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
-	
+
 	# Success flag. Set to false if regional assignment fails or is not to be used.
 	global bSuccessFlag
 	global start_plots
@@ -202,12 +200,12 @@ def assignStartingPlots():
 
 	# Obtain the minimum crow-flies distance figures [minX, minY] for this map size and number of players.
 	minimums = {3: [0.1, 0.2],
-	            6: [0.1, 0.125],
-	            8: [0.07, 0.125],
-	            12: [0.07, 0.1],
-	            15: [0.06, 0.1],
-	            20: [0.06, 0.06],
-	            24: [0.05, 0.05]}
+				6: [0.1, 0.125],
+				8: [0.07, 0.125],
+				12: [0.07, 0.1],
+				15: [0.06, 0.1],
+				20: [0.06, 0.06],
+				24: [0.05, 0.05]}
 	[minLon, minLat] = minimums[iNumRegions]
 	minX = max(3, int(minLon * iW))
 	minY = max(3, int(minLat * iH))
@@ -215,99 +213,99 @@ def assignStartingPlots():
 
 	# Templates are nested by keys: {NumRegions: {RegionID: [WestLon, EastLon, SouthLat, NorthLat]}}
 	templates = {3: {0: [0.0, 0.333, 0.0, 1.0],
-	                 1: [0.333, 0.667, 0.0, 1.0],
-	                 2: [0.667, 1.0, 0.0, 1.0]},
-	             6: {0: [0.0, 0.333, 0.0, 0.5],
-	                 1: [0.333, 0.667, 0.0, 0.5],
-	                 2: [0.667, 1.0, 0.0, 0.5],
-	                 3: [0.0, 0.333, 0.5, 1.0],
-	                 4: [0.333, 0.667, 0.5, 1.0],
-	                 5: [0.667, 1.0, 0.5, 1.0]},
-	             8: {0: [0.0, 0.25, 0.0, 0.5],
-	                 1: [0.25, 0.5, 0.0, 0.5],
-	                 2: [0.5, 0.75, 0.0, 0.5],
-	                 3: [0.75, 1.0, 0.0, 0.5],
-	                 4: [0.0, 0.25, 0.5, 1.0],
-	                 5: [0.25, 0.5, 0.5, 1.0],
-	                 6: [0.5, 0.75, 0.5, 1.0],
-	                 7: [0.75, 1.0, 0.5, 1.0]},
-	             12: {0: [0.0, 0.25, 0.0, 0.35],
-	                  1: [0.25, 0.5, 0.0, 0.35],
-	                  2: [0.5, 0.75, 0.0, 0.35],
-	                  3: [0.75, 1.0, 0.0, 0.35],
-	                  4: [0.0, 0.25, 0.35, 0.63],
-	                  5: [0.25, 0.5, 0.35, 0.63],
-	                  6: [0.5, 0.75, 0.35, 0.63],
-	                  7: [0.75, 1.0, 0.35, 0.63],
-	                  8: [0.0, 0.25, 0.63, 1.0],
-	                  9: [0.25, 0.5, 0.63, 1.0],
-	                  10: [0.5, 0.75, 0.63, 1.0],
-	                  11: [0.75, 1.0, 0.63, 1.0]},
-	             15: {0: [0.0, 0.2, 0.0, 0.35],
-	                  1: [0.2, 0.4, 0.0, 0.35],
-	                  2: [0.4, 0.6, 0.0, 0.35],
-	                  3: [0.6, 0.8, 0.0, 0.35],
-	                  4: [0.8, 1.0, 0.0, 0.35],
-	                  5: [0.0, 0.2, 0.35, 0.63],
-	                  6: [0.2, 0.4, 0.35, 0.63],
-	                  7: [0.4, 0.6, 0.35, 0.63],
-	                  8: [0.6, 0.8, 0.35, 0.63],
-	                  9: [0.8, 1.0, 0.35, 0.63],
-	                  10: [0.0, 0.2, 0.63, 1.0],
-	                  11: [0.2, 0.4, 0.63, 1.0],
-	                  12: [0.4, 0.6, 0.63, 1.0],
-	                  13: [0.6, 0.8, 0.63, 1.0],
-	                  14: [0.8, 1.0, 0.63, 1.0]},
-	             20: {0: [0.0, 0.2, 0.0, 0.3],
-	                  1: [0.2, 0.4, 0.0, 0.3],
-	                  2: [0.4, 0.6, 0.0, 0.3],
-	                  3: [0.6, 0.8, 0.0, 0.3],
-	                  4: [0.8, 1.0, 0.0, 0.3],
-	                  5: [0.0, 0.2, 0.3, 0.5],
-	                  6: [0.2, 0.4, 0.3, 0.5],
-	                  7: [0.4, 0.6, 0.3, 0.5],
-	                  8: [0.6, 0.8, 0.3, 0.5],
-	                  9: [0.8, 1.0, 0.3, 0.5],
-	                  10: [0.0, 0.2, 0.5, 0.7],
-	                  11: [0.2, 0.4, 0.5, 0.7],
-	                  12: [0.4, 0.6, 0.5, 0.7],
-	                  13: [0.6, 0.8, 0.5, 0.7],
-	                  14: [0.8, 1.0, 0.5, 0.7],
-	                  15: [0.0, 0.2, 0.7, 1.0],
-	                  16: [0.2, 0.4, 0.7, 1.0],
-	                  17: [0.4, 0.6, 0.7, 1.0],
-	                  18: [0.6, 0.8, 0.7, 1.0],
-	                  19: [0.8, 1.0, 0.7, 1.0]},
-	             24: {0: [0.0, 0.167, 0.0, 0.3],
-	                  1: [0.167, 0.333, 0.0, 0.3],
-	                  2: [0.333, 0.5, 0.0, 0.3],
-	                  3: [0.5, 0.667, 0.0, 0.3],
-	                  4: [0.667, 0.833, 0.0, 0.3],
-	                  5: [0.833, 1.0, 0.0, 0.3],
-	                  6: [0.0, 0.167, 0.3, 0.5],
-	                  7: [0.167, 0.333, 0.3, 0.5],
-	                  8: [0.333, 0.5, 0.3, 0.5],
-	                  9: [0.5, 0.667, 0.3, 0.5],
-	                  10: [0.667, 0.833, 0.3, 0.5],
-	                  11: [0.833, 1.0, 0.3, 0.5],
-	                  12: [0.0, 0.167, 0.5, 0.7],
-	                  13: [0.167, 0.333, 0.5, 0.7],
-	                  14: [0.333, 0.5, 0.5, 0.7],
-	                  15: [0.5, 0.667, 0.5, 0.7],
-	                  16: [0.667, 0.833, 0.5, 0.7],
-	                  17: [0.833, 1.0, 0.5, 0.7],
-	                  18: [0.0, 0.167, 0.7, 1.0],
-	                  19: [0.167, 0.333, 0.7, 1.0],
-	                  20: [0.333, 0.5, 0.7, 1.0],
-	                  21: [0.5, 0.667, 0.7, 1.0],
-	                  22: [0.667, 0.833, 0.7, 1.0],
-	                  23: [0.833, 1.0, 0.7, 1.0]}
+					 1: [0.333, 0.667, 0.0, 1.0],
+					 2: [0.667, 1.0, 0.0, 1.0]},
+				 6: {0: [0.0, 0.333, 0.0, 0.5],
+					 1: [0.333, 0.667, 0.0, 0.5],
+					 2: [0.667, 1.0, 0.0, 0.5],
+					 3: [0.0, 0.333, 0.5, 1.0],
+					 4: [0.333, 0.667, 0.5, 1.0],
+					 5: [0.667, 1.0, 0.5, 1.0]},
+				 8: {0: [0.0, 0.25, 0.0, 0.5],
+					 1: [0.25, 0.5, 0.0, 0.5],
+					 2: [0.5, 0.75, 0.0, 0.5],
+					 3: [0.75, 1.0, 0.0, 0.5],
+					 4: [0.0, 0.25, 0.5, 1.0],
+					 5: [0.25, 0.5, 0.5, 1.0],
+					 6: [0.5, 0.75, 0.5, 1.0],
+					 7: [0.75, 1.0, 0.5, 1.0]},
+				 12: {0: [0.0, 0.25, 0.0, 0.35],
+					  1: [0.25, 0.5, 0.0, 0.35],
+					  2: [0.5, 0.75, 0.0, 0.35],
+					  3: [0.75, 1.0, 0.0, 0.35],
+					  4: [0.0, 0.25, 0.35, 0.63],
+					  5: [0.25, 0.5, 0.35, 0.63],
+					  6: [0.5, 0.75, 0.35, 0.63],
+					  7: [0.75, 1.0, 0.35, 0.63],
+					  8: [0.0, 0.25, 0.63, 1.0],
+					  9: [0.25, 0.5, 0.63, 1.0],
+					  10: [0.5, 0.75, 0.63, 1.0],
+					  11: [0.75, 1.0, 0.63, 1.0]},
+				 15: {0: [0.0, 0.2, 0.0, 0.35],
+					  1: [0.2, 0.4, 0.0, 0.35],
+					  2: [0.4, 0.6, 0.0, 0.35],
+					  3: [0.6, 0.8, 0.0, 0.35],
+					  4: [0.8, 1.0, 0.0, 0.35],
+					  5: [0.0, 0.2, 0.35, 0.63],
+					  6: [0.2, 0.4, 0.35, 0.63],
+					  7: [0.4, 0.6, 0.35, 0.63],
+					  8: [0.6, 0.8, 0.35, 0.63],
+					  9: [0.8, 1.0, 0.35, 0.63],
+					  10: [0.0, 0.2, 0.63, 1.0],
+					  11: [0.2, 0.4, 0.63, 1.0],
+					  12: [0.4, 0.6, 0.63, 1.0],
+					  13: [0.6, 0.8, 0.63, 1.0],
+					  14: [0.8, 1.0, 0.63, 1.0]},
+				 20: {0: [0.0, 0.2, 0.0, 0.3],
+					  1: [0.2, 0.4, 0.0, 0.3],
+					  2: [0.4, 0.6, 0.0, 0.3],
+					  3: [0.6, 0.8, 0.0, 0.3],
+					  4: [0.8, 1.0, 0.0, 0.3],
+					  5: [0.0, 0.2, 0.3, 0.5],
+					  6: [0.2, 0.4, 0.3, 0.5],
+					  7: [0.4, 0.6, 0.3, 0.5],
+					  8: [0.6, 0.8, 0.3, 0.5],
+					  9: [0.8, 1.0, 0.3, 0.5],
+					  10: [0.0, 0.2, 0.5, 0.7],
+					  11: [0.2, 0.4, 0.5, 0.7],
+					  12: [0.4, 0.6, 0.5, 0.7],
+					  13: [0.6, 0.8, 0.5, 0.7],
+					  14: [0.8, 1.0, 0.5, 0.7],
+					  15: [0.0, 0.2, 0.7, 1.0],
+					  16: [0.2, 0.4, 0.7, 1.0],
+					  17: [0.4, 0.6, 0.7, 1.0],
+					  18: [0.6, 0.8, 0.7, 1.0],
+					  19: [0.8, 1.0, 0.7, 1.0]},
+				 24: {0: [0.0, 0.167, 0.0, 0.3],
+					  1: [0.167, 0.333, 0.0, 0.3],
+					  2: [0.333, 0.5, 0.0, 0.3],
+					  3: [0.5, 0.667, 0.0, 0.3],
+					  4: [0.667, 0.833, 0.0, 0.3],
+					  5: [0.833, 1.0, 0.0, 0.3],
+					  6: [0.0, 0.167, 0.3, 0.5],
+					  7: [0.167, 0.333, 0.3, 0.5],
+					  8: [0.333, 0.5, 0.3, 0.5],
+					  9: [0.5, 0.667, 0.3, 0.5],
+					  10: [0.667, 0.833, 0.3, 0.5],
+					  11: [0.833, 1.0, 0.3, 0.5],
+					  12: [0.0, 0.167, 0.5, 0.7],
+					  13: [0.167, 0.333, 0.5, 0.7],
+					  14: [0.333, 0.5, 0.5, 0.7],
+					  15: [0.5, 0.667, 0.5, 0.7],
+					  16: [0.667, 0.833, 0.5, 0.7],
+					  17: [0.833, 1.0, 0.5, 0.7],
+					  18: [0.0, 0.167, 0.7, 1.0],
+					  19: [0.167, 0.333, 0.7, 1.0],
+					  20: [0.333, 0.5, 0.7, 1.0],
+					  21: [0.5, 0.667, 0.7, 1.0],
+					  22: [0.667, 0.833, 0.7, 1.0],
+					  23: [0.833, 1.0, 0.7, 1.0]}
 	}
 	# End of template data.
-	
-	# region_data: [WestX, EastX, SouthY, NorthY, 
+
+	# region_data: [WestX, EastX, SouthY, NorthY,
 	# numLandPlotsinRegion, numCoastalPlotsinRegion,
-	# numOceanPlotsinRegion, iRegionNetYield, 
+	# numOceanPlotsinRegion, iRegionNetYield,
 	# iNumLandAreas, iNumPlotsinRegion]
 	region_data = []
 	region_best_areas = []
@@ -342,7 +340,7 @@ def assignStartingPlots():
 					iFertileCheck = pPlot.calculateBestNatureYield(YieldTypes.YIELD_FOOD, TeamTypes.NO_TEAM)
 					if iFertileCheck > 1: # If the plot has extra food, count it.
 						iRegionNetYield += (2 * (iFertileCheck - 1))
-					if pPlot.isAdjacentToLand(): # Coastal plot
+					if pPlot.isCoastal(): # Coastal plot
 						if pPlot.isFreshWater:
 							iNumCoastalPlots += 1
 							iRegionNetYield += 2
@@ -380,14 +378,14 @@ def assignStartingPlots():
 					del land_areas[landLoop]
 					break
 		# Store infos to regional lists.
-		region_data.append([iWestX, iEastX, iSouthY, iNorthY, 
-		                    iNumLandPlots, iNumCoastalPlots,
-		                    iNumOceanPlots, iRegionNetYield,
-		                    iNumLandAreas, iNumPlotsinRegion])
+		region_data.append([iWestX, iEastX, iSouthY, iNorthY,
+							iNumLandPlots, iNumCoastalPlots,
+							iNumOceanPlots, iRegionNetYield,
+							iNumLandAreas, iNumPlotsinRegion])
 		region_best_areas.append(best_areas)
 		region_yields.append(iRegionNetYield)
 		sorting_regions.append(iRegionNetYield)
-		
+
 	#print region_data
 	#print "---"
 	#print region_best_areas
@@ -421,13 +419,13 @@ def assignStartingPlots():
 				break
 			#print "x-x"
 		#print "-x-"
-		
+
 	# Need to discard the worst regions and then reverse the region order.
 	# Of the regions that will be used, the worst will be assigned first.
 	#
-	# This means the civ with the poorest region will get best pick of its 
-	# lands without MinDistance concerns. Richer regions will have to obey 
-	# MinDistances in regard to poorer regions already assigned. This instead 
+	# This means the civ with the poorest region will get best pick of its
+	# lands without MinDistance concerns. Richer regions will have to obey
+	# MinDistances in regard to poorer regions already assigned. This instead
 	# of giving the richest region pick of its lands and making poorer regions
 	# even worse off by pushing them around with MinDistances.
 	best_regions[iPlayers:] = []
@@ -456,15 +454,12 @@ def assignStartingPlots():
 
 	# Find the oceans. We want all civs to start along the coast of a salt water body.
 	oceans = []
-	for i in range(map.getIndexAfterLastArea()):
-		area = map.getArea(i)
-		if not area.isNone():
-			if area.isWater() and not area.isLake():
-				oceans.append(area)
+	for area in map.areas():
+		if area.isWater() and not area.isLake():
+			oceans.append(area)
 	#print("Oceans: ", oceans)
 
 	# Now assign the start plots!
-	plot_assignments = {}
 	min_dist = []
 	# Loop through players/regions.
 	for assignLoop in range(iPlayers):
@@ -493,40 +488,32 @@ def assignStartingPlots():
 				player.AI_updateFoundValues(True)
 				#print "!-!"
 				iRange = player.startingPlotRange()
-				validFn = None
+				#validFn = None
 				# Loop through all plots in the region.
 				for iX in range(westX, eastX + 1):
 					for iY in range(southY, northY + 1):
 						pPlot = map.plot(iX, iY)
 						if pPlot.isWater(): continue
 						if areaID != pPlot.getArea(): continue
-						if validFn != None and not validFn(playerID, iX, iY): continue
+						#if validFn != None and not validFn(playerID, iX, iY): continue
 						val = pPlot.getFoundValue(playerID)
 						if val > iBestValue:
-							valid = True
 							for invalid in min_dist:
 								[invalidX, invalidY] = invalid
 								if abs(invalidX - iX) < minX and abs(invalidY - iY) < minY:
-									valid = False
 									break
-							if valid:
-								oceanside = False
+							else:
 								for ocean in oceans:
 									if pPlot.isAdjacentToArea(ocean):
-										oceanside = True
 										break
-								if not oceanside:
-									valid = False # Not valid unless adjacent to an ocean!
-							if valid:
-								for iI in range(gc.getMAX_CIV_PLAYERS()):
-									if (gc.getPlayer(iI).isAlive()):
-										if (iI != playerID):
-											if gc.getPlayer(iI).startingPlotWithinRange(pPlot, playerID, iRange, iPass):
-												valid = False
-												break
-							if valid:
-								iBestValue = val
-								pBestPlot = pPlot
+								else: continue # Not valid unless adjacent to an ocean!
+
+								for iI in range(gc.getMAX_PC_PLAYERS()):
+									if iI != playerID and gc.getPlayer(iI).isAlive() and gc.getPlayer(iI).startingPlotWithinRange(pPlot, playerID, iRange, iPass):
+										break
+								else:
+									iBestValue = val
+									pBestPlot = pPlot
 
 				if pBestPlot != None:
 					min_dist.append([pBestPlot.getX(), pBestPlot.getY()])
@@ -543,7 +530,7 @@ def assignStartingPlots():
 					#print "- - - - -"
 					break # Valid start found, stop checking areas and plots.
 				else: pass # This area too close to somebody, try the next area.
-			
+
 			# Check to see if a valid start was found in ANY areaID.
 			if pBestPlot == None:
 				print("player", playerID, "pass", iPass, "failed")
@@ -559,13 +546,10 @@ def assignStartingPlots():
 					CyPythonMgr().allowDefaultImpl()
 					return
 			else: break # This player has been assigned a start plot.
-			
-	#print plot_assignments
-	#print "..."
 
 	# Successfully assigned start plots, continue back to C++
 	return None
-	
+
 def findStartingPlot(argsList):
 	# This function is only called for Snaky Continents (or if an entire region should fail to produce a valid start plot via the regional method).
 	[playerID] = argsList
@@ -575,21 +559,17 @@ def findStartingPlot(argsList):
 	if bSuccessFlag == False:
 		CyPythonMgr().allowDefaultImpl()
 		return
-	
+
 	# Identify the best land area available to this player.
-	global areas
-	global area_values
-	global iBestArea
-	gc = CyGlobalContext()
-	map = CyMap()
+	global areas, area_values, iBestArea
 	iBestValue = 0
 	iBestArea = -1
-	areas = CvMapGeneratorUtil.getAreas()
-	
+	areas = map.areas()
+
 	for area in areas:
 		if area.isWater(): continue # Don't want to start "in the drink"!
 		iNumPlayersOnArea = area.getNumStartingPlots() + 1 # Number of players starting on the area, plus this player.
-		
+
 		iTileValue = area.calculateTotalBestNatureYield() + area.getNumRiverEdges() + 2 * area.countCoastalLand() + 3 * area.countNumUniqueBonusTypes()
 		iValue = iTileValue / iNumPlayersOnArea
 		if (iNumPlayersOnArea == 1):
@@ -603,12 +583,10 @@ def findStartingPlot(argsList):
 		global iBestArea
 		pPlot = CyMap().plot(x, y)
 		if pPlot.getArea() != iBestArea:
-			return false
+			return False
 		pWaterArea = pPlot.waterArea()
-		if (pWaterArea.isNone()):
-			return false
-		return not pWaterArea.isLake()
-	
+		return pWaterArea is not None and not pWaterArea.isLake()
+
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 
 def normalizeRemovePeaks():
@@ -616,4 +594,3 @@ def normalizeRemovePeaks():
 
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
-	

@@ -12,16 +12,17 @@
 //-----------------------------------------------------------------------------
 //
 
-
 #include "CvArea.h"
-#include "CvPlot.h"
-#include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
+#include "CvPlot.h"
+#include "CvUnitAI.h"
+#include "index_iterator_base.h"
 
-
-class FAStar;
+class CvCity;
 class CvPlotGroup;
-
+class CvSelectionGroup;
+//class CvUnitAI;
+class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {
@@ -29,14 +30,13 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 	{
 		if (iCoord < 0 )
 		{
-			return (iRange + (iCoord % iRange));
+			return iRange + (iCoord % iRange);
 		}
-		else if (iCoord >= iRange)
+		if (iCoord >= iRange)
 		{
-			return (iCoord % iRange);
+			return iCoord % iRange;
 		}
 	}
-
 	return iCoord;
 }
 
@@ -44,16 +44,12 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 //
 // CvMap
 //
-class CvSelectionGroup;
 class CvMap : public CvMapInterfaceBase
 {
-
 	friend class CyMap;
 
 public:
-
-	CvMap();
-	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
+	explicit CvMap(MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -62,111 +58,77 @@ public:
 	void setupGraphical();
 	void reset(CvMapInitData* pInitData);
 
-	void uninit();
 protected:
-
+	void uninit();
 	void setup();
 
 public:
-/************************************************************************************************/
-/* Afforess	                  Start		 07/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int percentUnoccupiedLand(bool bExcludeWater = true, bool bIncludeBarbarian = false, bool bExcludePeaks = true, CvArea* pArea = NULL, int iRange = -1, CvPlot* pRangeFromPlot = NULL);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	MapTypes getType() const;
-	void setType(MapTypes eNewType);
 
 	void beforeSwitch();
 	void afterSwitch();
 
-	//	Viewports are owned by their underlying maps
-	int	getNumViewports() const;
-	CvViewport* getViewport(int iIndex) const;
-	int addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext);	//	Returns new viewport index
-	void deleteViewport(int iIndex);
-	void setCurrentViewport(int iIndex);
+	void updateIncomingUnits();
+	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
+
+private:
+	void addViewport(int iXOffset, int iYOffset);
+public:
+	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	const std::vector<CvViewport*>& getViewports() const;
 
-	void erasePlots();																			// Exposed to Python
-	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);		// Exposed to Python
+	const char* getMapScript() const;
+
+	bool plotsInitialized() const;
+
+	void erasePlots();
+	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
 	void resetRevealedPlots(TeamTypes eTeam);
-	void setAllPlotTypes(PlotTypes ePlotType);												// Exposed to Python
+	void setAllPlotTypes(PlotTypes ePlotType);
 
-	void doTurn();																			
+	void doTurn();
 
 	void updateFlagSymbolsInternal(bool bForce);
 	void updateFlagSymbols();
-
 	void updateFog();
-	void updateVisibility();																// Exposed to Python
+	void updateVisibility();
 	void updateSymbolVisibility();
 	void updateSymbols();
-	void updateMinimapColor();															// Exposed to Python
+	void updateMinimapColor();
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups = true);
 	void updateIrrigated();
 	void updateCenterUnit();
 	void updateWorkingCity();
-	void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
+	void updateMinOriginalStartDist(const CvArea* pArea);
 	void updateYield();
 
 	void verifyUnitValidPlot();
 
-	void combinePlotGroups(PlayerTypes ePlayer, CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2, bool bRecalculateBonuses);	
+	static void combinePlotGroups(CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2, bool bRecalculateBonuses);
 
-	CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);// Exposed to Python 
+	CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);
 
-	CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;	// Exposed to Python
-	CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;				// Exposed to Python
-	CvSelectionGroup* findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch) const;				// Exposed to Python
+	CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;
+	CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;
+	CvSelectionGroup* findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch) const;
 
-	CvArea* findBiggestArea(bool bWater) const;																						// Exposed to Python
+	CvArea* findBiggestArea(bool bWater) const;
 
-	int getMapFractalFlags() const;																												// Exposed to Python
-	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
+	int getMapFractalFlags() const;
+	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;
 
-	bool isPlot(int iX, int iY) const;																		// Exposed to Python
-#ifdef _USRDLL
-	inline int isPlotINLINE(int iX, int iY) const
+	inline bool isPlot(int iX, int iY) const
 	{
-		return ((iX >= 0) && (iX < getGridWidthINLINE()) && (iY >= 0) && (iY < getGridHeightINLINE()));
+		return (iX >= 0 && iX < getGridWidth() && iY >= 0 && iY < getGridHeight());
 	}
-#endif
-	int numPlots() const; 																								// Exposed to Python
-#ifdef _USRDLL
-	inline int numPlotsINLINE() const
-	{
-		return getGridWidthINLINE() * getGridHeightINLINE();
-	}
-#endif
-	int plotNum(int iX, int iY) const;																		// Exposed to Python
-#ifdef _USRDLL
-	inline int plotNumINLINE(int iX, int iY) const
-	{
-		return ((iY * getGridWidthINLINE()) + iX);
-	}
-	inline int plotNumINLINE_checked(int iX, int iY) const
-	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
-		{
-			return -1;
-		}
-		int iMapX = coordRange(iX, getGridWidthINLINE(), isWrapXINLINE());
-		int iMapY = coordRange(iY, getGridHeightINLINE(), isWrapYINLINE());
-		return (isPlotINLINE(iMapX, iMapY) ? plotNumINLINE(iMapX, iMapY) : -1);
-	}
-#endif
-	int plotX(int iIndex) const;																										// Exposed to Python
-	int plotY(int iIndex) const;																										// Exposed to Python
+
+	inline int numPlots() const { return getGridWidth() * getGridHeight(); }
+
+	inline int plotNum(int iX, int iY) const { return (iY * getGridWidth()) + iX; }
+
+	int plotX(int iIndex) const;
+	int plotY(int iIndex) const;
 
 	int pointXToPlotX(float fX) const;
 	float plotXToPointX(int iX) const;
@@ -177,139 +139,111 @@ public:
 	float getWidthCoords() const;
 	float getHeightCoords() const;
 
-	int maxPlotDistance() const;																								// Exposed to Python
-	int maxStepDistance() const;																								// Exposed to Python
+	int maxPlotDistance() const;
+	int maxStepDistance() const;
 
-	int getGridWidth() const;																		// Exposed to Python
-#ifdef _USRDLL
-	inline int getGridWidthINLINE() const
-	{
-		return m_iGridWidth;
-	}
-#endif
-	int getGridHeight() const;																	// Exposed to Python
-#ifdef _USRDLL
-	inline int getGridHeightINLINE() const
-	{
-		return m_iGridHeight;
-	}
-#endif
-	int getLandPlots() const;																					// Exposed to Python
+	inline int getGridWidth() const { return m_iGridWidth; }
+	inline int getGridHeight() const { return m_iGridHeight; }
+
+	int getLandPlots() const;
 	void changeLandPlots(int iChange);
 
-	int getOwnedPlots() const;																				// Exposed to Python
+	int getOwnedPlots() const;
 	void changeOwnedPlots(int iChange);
 
-	int getTopLatitude() const;																									// Exposed to Python
-	int getBottomLatitude() const;																							// Exposed to Python
+	int getTopLatitude() const;
+	int getBottomLatitude() const;
 
-	int getNextRiverID() const;																									// Exposed to Python
-	void incrementNextRiverID();																					// Exposed to Python
+	int getNextRiverID() const;
+	void incrementNextRiverID();
 
-	bool isWrapX() const;																							// Exposed to Python
-#ifdef _USRDLL
-	inline bool isWrapXINLINE() const
-	{
-		return m_bWrapX;
-	}
-#endif
-	bool isWrapY() const;																							// Exposed to Python
-#ifdef _USRDLL
-	inline bool isWrapYINLINE() const
-	{
-		return m_bWrapY;
-	}
-#endif
-	bool isWrap() const;
-#ifdef _USRDLL
-	inline bool isWrapINLINE() const
-	{
-		return m_bWrapX || m_bWrapY;
-	}
-#endif
-	WorldSizeTypes getWorldSize() const;															// Exposed to Python
-	ClimateTypes getClimate() const;																	// Exposed to Python
-	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
+	inline bool isWrapX() const { return m_bWrapX; }
+	inline bool isWrapY() const { return m_bWrapY; }
+	inline bool isWrap() const { return m_bWrapX || m_bWrapY; }
+
+	WorldSizeTypes getWorldSize() const;
+	ClimateTypes getClimate() const;
+	SeaLevelTypes getSeaLevel() const;
 
 	int getNumCustomMapOptions() const;
-	CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
+	CustomMapOptionTypes getCustomMapOption(int iOption) const;
 
-	int getNumBonuses(BonusTypes eIndex) const;																	// Exposed to Python
+	int getNumBonuses(BonusTypes eIndex) const;
 	void changeNumBonuses(BonusTypes eIndex, int iChange);
 
-	int getNumBonusesOnLand(BonusTypes eIndex) const;														// Exposed to Python
+	int getNumBonusesOnLand(BonusTypes eIndex) const;
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
-	CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
-#ifdef _USRDLL
-	inline CvPlot* plotByIndexINLINE(int iIndex) const
+	inline CvPlot* plotByIndex(int iIndex) const
 	{
-		return (((iIndex >= 0) && (iIndex < (getGridWidthINLINE() * getGridHeightINLINE()))) ? &(m_pMapPlots[iIndex]) : NULL);
+		return (iIndex >= 0 && iIndex < getGridWidth() * getGridHeight()) ? &(m_pMapPlots[iIndex]) : NULL;
 	}
-#endif
-	CvPlot* plot(int iX, int iY) const;													// Exposed to Python
-#ifdef _USRDLL
-	__forceinline CvPlot* plotINLINE(int iX, int iY) const
+
+	__forceinline CvPlot* plot(int iX, int iY) const
 	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
+		if (iX == INVALID_PLOT_COORD || iY == INVALID_PLOT_COORD)
 		{
 			return NULL;
 		}
-		int iMapX = coordRange(iX, getGridWidthINLINE(), isWrapXINLINE());
-		int iMapY = coordRange(iY, getGridHeightINLINE(), isWrapYINLINE());
-		return ((isPlotINLINE(iMapX, iMapY)) ? &(m_pMapPlots[plotNumINLINE(iMapX, iMapY)]) : NULL);
+		const int iMapX = coordRange(iX, getGridWidth(), isWrapX());
+		const int iMapY = coordRange(iY, getGridHeight(), isWrapY());
+		return isPlot(iMapX, iMapY) ? &(m_pMapPlots[plotNum(iMapX, iMapY)]) : NULL;
 	}
+
 	__forceinline CvPlot* plotSorenINLINE(int iX, int iY) const
 	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
+		if (iX == INVALID_PLOT_COORD || iY == INVALID_PLOT_COORD)
 		{
 			return NULL;
 		}
-		return &(m_pMapPlots[plotNumINLINE(iX, iY)]);
+		return &(m_pMapPlots[plotNum(iX, iY)]);
 	}
-#endif
+
 	CvPlot* pointToPlot(float fX, float fY) const;
 
-	int getIndexAfterLastArea() const;														// Exposed to Python
-	int getNumAreas() const;														// Exposed to Python
+	int getIndexAfterLastArea() const;
+	int getNumAreas() const;
 	int getNumLandAreas() const;
-	CvArea* getArea(int iID) const;																// Exposed to Python
+	CvArea* getArea(int iID) const;
 	CvArea* addArea();
 	void deleteArea(int iID);
-	// iteration
-	CvArea* firstArea(int *pIterIdx, bool bRev=false) const;								// Exposed to Python
-	CvArea* nextArea(int *pIterIdx, bool bRev=false) const;									// Exposed to Python
 
-	void recalculateAreas();																		// Exposed to Python
+	// city iteration
+	DECLARE_INDEX_ITERATOR(const CvMap, CvArea, area_iterator, firstArea, nextArea);
+	area_iterator beginAreas() const { return area_iterator(this); }
+	area_iterator endAreas() const { return area_iterator(); }
+	typedef bst::iterator_range<area_iterator> area_range;
+	area_range areas() const { return area_range(beginAreas(), endAreas()); }
 
-	void resetPathDistance();																		// Exposed to Python
-	// Super Forts begin *canal* *choke*
-	int calculatePathDistance(CvPlot *pSource, CvPlot *pDest, CvPlot *pInvalidPlot = NULL);	// Exposed to Python
-	void calculateCanalAndChokePoints();	// Exposed to Python
-	// Super Forts end
+	// deprecated, use area_range
+	CvArea* firstArea(int *pIterIdx, bool bRev=false) const;
+	// deprecated, use area_range
+	CvArea* nextArea(int *pIterIdx, bool bRev=false) const;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
+	void recalculateAreas();
+	void resetPathDistance();
+
+	// Super Forts *canal* *choke*
+	int calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, const CvPlot* pInvalidPlot = NULL) const;
+	void calculateCanalAndChokePoints();
+
 	// Plot danger cache
 	void invalidateIsActivePlayerNoDangerCache();
 	void invalidateIsTeamBorderCache(TeamTypes eTeam);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	// Serialization:
 	 virtual void read(FDataStreamBase* pStream);
 	 virtual void write(FDataStreamBase* pStream);
 
-	void rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * eCustomMapOptions);		// Exposed to Python
+	void rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * eCustomMapOptions);
 
 	void toggleUnitsDisplay();
 	void toggleCitiesDisplay();
 
-protected:
+private:
+	void calculateAreas();
+
+	const MapTypes m_eType;
 
 	int m_iGridWidth;
 	int m_iGridHeight;
@@ -318,38 +252,38 @@ protected:
 	int m_iTopLatitude;
 	int m_iBottomLatitude;
 	int m_iNextRiverID;
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	MapTypes m_eType;
-	std::vector<CvViewport*> m_viewports;
 	int m_iCurrentViewportIndex;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	bool m_bWrapX;
 	bool m_bWrapY;
 
-	int* m_paiNumBonus;
-	int* m_paiNumBonusOnLand;
-
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
+
+	static bool m_bSwitchInProgress;
+
+	int* m_paiNumBonus;
+	int* m_paiNumBonusOnLand;
 
 	CvPlot* m_pMapPlots;
 
 	FFreeListTrashArray<CvArea> m_areas;
 
-	void calculateAreas();
+	std::vector<CvViewport*> m_viewports;
 
-public:
-	// AIAndy: Expose path generation functionality here to expose it to Python via CyMap
-	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns);
-	CvPath&	getLastPath();
-	int getLastPathStepNum();
-	CvPlot* getLastPathPlotByIndex(int index);
+	struct TravelingUnit
+	{
+		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
+			: numTurnsUntilArrival(numTravelTurns)
+		{
+			unit = static_cast<const CvUnitAI&>(travelingUnit);
+		}
+
+		CvUnitAI unit;
+		int numTurnsUntilArrival;
+	};
+
+	std::vector<TravelingUnit*> m_IncomingUnits;
 };
 
 #endif

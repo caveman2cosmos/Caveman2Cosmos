@@ -1,6 +1,5 @@
 #include "CvGameCoreDLL.h"
-
-#include "BetterBTSAI.h"
+#include "CvGlobals.h"
 
 #ifdef LOG_AI
 int gPlayerLogLevel = 0;
@@ -23,4 +22,11 @@ void logBBAI(char* format, ... )
 		strcat(buf, "\n");
 		OutputDebugString(buf);
 	}
+}
+void logAIJson(CvWString type,CvWString identifier, CvWString squirrel, CvWString message)
+{
+
+
+	const std::wstring data = "{ type: \"" + type + "\" name: \""+identifier+ "\" function: \" " + squirrel + "\" message: \"" + message + "\" }";
+	logging::logMsgW("FLB.log", data.c_str());
 }

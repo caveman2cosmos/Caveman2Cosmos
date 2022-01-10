@@ -7,24 +7,16 @@
 
 #include "CvTeam.h"
 
+class CvArea;
+class CvCity;
+
 class CvTeamAI : public CvTeam
 {
-
 public:
-
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
-#ifdef _USRDLL
-	// inlined for performance reasons, only in the dll
-	static CvTeamAI& getTeam(TeamTypes eTeam)
-	{
-		FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");
-		FAssertMsg(eTeam <= MAX_TEAMS, "eTeam is not assigned a valid value");
-		return m_aTeams[eTeam]; 
-	}
-#endif
-	DllExport static CvTeamAI& getTeamNonInl(TeamTypes eTeam);
+	DllExport static CvTeamAI& getTeam(TeamTypes eTeam);
 
 	static void initStatics();
 	static void freeStatics();
@@ -38,50 +30,24 @@ public:
 
 	void AI_makeAssignWorkDirty();
 
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						10/6/08				jdog5000	    */
-/* 																			    */
-/* 																			    */
-/********************************************************************************/
-	int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves, bool bIncludeVassals = false);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								    */
-/********************************************************************************/
+	int AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const bool bDefensiveBonuses, const bool bTestMoves, const bool bIncludeVassals = false) const;
 
-	void AI_updateAreaStragies(bool bTargets = true);
+	void AI_updateAreaStragies(const bool bTargets = true);
 	void AI_updateAreaTargets();
 
-	int AI_countFinancialTrouble() const;
-	int AI_countMilitaryWeight(CvArea* pArea) const;
+	int AI_countMilitaryWeight(const CvArea* pArea) const;
 
 	bool AI_isAnyCapitalAreaAlone() const;
-	bool AI_isPrimaryArea(CvArea* pArea) const;
-	bool AI_hasCitiesInPrimaryArea(TeamTypes eTeam) const;
-	AreaAITypes AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal = false) const;
+	bool AI_isPrimaryArea(const CvArea* pArea) const;
+	bool AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const;
+	AreaAITypes AI_calculateAreaAIType(const CvArea* pArea, const bool bPreparingTotal = false) const;
 
-	int AI_calculateAdjacentLandPlots(TeamTypes eTeam) const;
+	int AI_calculateAdjacentLandPlots(const TeamTypes eTeam) const;
 	int AI_calculateCapitalProximity(TeamTypes eTeam) const;
-	int AI_calculatePlotWarValue(TeamTypes eTeam) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/10/08                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+	int AI_calculatePlotWarValue(const TeamTypes eTeam) const;
 	int AI_calculateBonusWarValue(TeamTypes eTeam) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-	bool AI_isWarPossible() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/12/10                         Fuyu & jdog5000      */
-/*                                                                                              */
-/* War Strategy AI                                                                              */
-/************************************************************************************************/
 	bool AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly = false) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	bool AI_isAllyLandTarget(TeamTypes eTeam) const;
 	bool AI_shareWar(TeamTypes eTeam) const;
 
@@ -93,19 +59,12 @@ public:
 
 	int AI_startWarVal(TeamTypes eTeam) const;
 	int AI_endWarVal(TeamTypes eTeam) const;
-/********************************************************************************/
-/**		REVOLUTION_MOD							6/9/08				jdog5000	*/
-/**																				*/
-/**		Revolution AI															*/
-/********************************************************************************/
+
 	int AI_minorKeepWarVal(TeamTypes eTeam) const;
 	int AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance = 10) const;
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
 
 	int AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const;
-	DenialTypes AI_techTrade(TechTypes eTech, TeamTypes eTeam) const;
+	DenialTypes AI_techTrade(const TechTypes eTech, const TeamTypes eTeam) const;
 
 	int AI_mapTradeVal(TeamTypes eTeam) const;
 	DenialTypes AI_mapTrade(TeamTypes eTeam) const;
@@ -116,34 +75,19 @@ public:
 	int AI_surrenderTradeVal(TeamTypes eTeam) const;
 	DenialTypes AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier = 100) const;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/20/10                                jdog5000      */
-/*                                                                                              */
-/* Victory Strategy AI                                                                          */
-/************************************************************************************************/
 	bool AI_isAnyMemberDoVictoryStrategy( int iVictoryStrategy ) const;
 	bool AI_isAnyMemberDoVictoryStrategyLevel4() const;
 	bool AI_isAnyMemberDoVictoryStrategyLevel3() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/14/10                                jdog5000      */
-/*                                                                                              */
-/* War Strategy AI                                                                              */
-/************************************************************************************************/
+
 	int AI_getWarSuccessCapitulationRatio() const;
 	int AI_getEnemyPowerPercent( bool bConsiderOthers = false ) const;
 	int AI_getRivalAirPower( ) const;
-	bool AI_acceptSurrender( TeamTypes eSurrenderTeam );
-	bool AI_isOkayVassalTarget( TeamTypes eTeam );
+	bool AI_acceptSurrender(const TeamTypes eSurrenderTeam) const;
+	bool AI_isOkayVassalTarget(const TeamTypes eTeam) const;
 
 	void AI_getWarRands( int &iMaxWarRand, int &iLimitedWarRand, int &iDogpileWarRand ) const;
 	void AI_getWarThresholds( int &iMaxWarThreshold, int &iLimitedWarThreshold, int &iDogpileWarThreshold ) const;
 	int AI_getTotalWarOddsTimes100( ) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	int AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const;
 	DenialTypes AI_makePeaceTrade(TeamTypes ePeaceTeam, TeamTypes eTeam) const;
@@ -209,41 +153,33 @@ public:
 	void AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar = true, bool bInFull = true);
 
 	int AI_teamCloseness(TeamTypes eIndex, int iMaxDistance = -1) const;
-	
+
 	bool AI_performNoWarRolls(TeamTypes eTeam);
-	
-	int AI_getAttitudeWeight(TeamTypes eTeam);
-	
+
+	int AI_getAttitudeWeight(const TeamTypes eTeam) const;
+
 	int AI_getLowestVictoryCountdown() const;
 
 	int AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const;
-	
-	bool AI_isWaterAreaRelevant(CvArea* pArea);
-	
+
+	bool AI_isWaterAreaRelevant(const CvArea* pArea) const;
+
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/8/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int AI_embassyTradeVal(TeamTypes eTeam) const;
 	int AI_LimitedBordersTradeVal(TeamTypes eTeam) const;
 	int AI_FreeTradeAgreementVal(TeamTypes eTeam) const;
     int AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeam) const;
-	
+
 	DenialTypes AI_embassyTrade(TeamTypes eTeam) const;
 	DenialTypes AI_LimitedBordersTrade(TeamTypes eTeam) const;
 	DenialTypes AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) const;
 	DenialTypes AI_FreeTradeAgreement(TeamTypes eTeam) const;
-	
-	void AI_updateCache();
-	
+
+	void AI_updateDiploCache();
+
 	bool AI_hasAdjacentLandPlots(TeamTypes eTeam) const;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	
 
 
 protected:
@@ -270,11 +206,6 @@ protected:
 	void AI_doCounter();
 	void AI_doWar();
 
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iNoTechTradeThreshold;
 	int m_iTechTradeKnownPercent;
 	int m_iMaxWarRand;
@@ -285,10 +216,7 @@ protected:
 	int m_iLimitedWarPowerRatio;
 	int m_iDogpileWarRand;
 	int m_iMakePeaceRand;
-	
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
-	//edited functions
+
 	int AI_noTechTradeThreshold(bool bRecalculate = false) const;
 	int AI_techTradeKnownPercent(bool bRecalculate = false) const;
 	int AI_maxWarRand(bool bRecalculate = false) const;
@@ -299,9 +227,6 @@ protected:
 	int AI_limitedWarPowerRatio(bool bRecalculate = false) const;
 	int AI_dogpileWarRand(bool bRecalculate = false) const;
 	int AI_makePeaceRand(bool bRecalculate = false) const;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
@@ -314,10 +239,6 @@ protected:
 };
 
 // helper for accessing static functions
-#ifdef _USRDLL
 #define GET_TEAM CvTeamAI::getTeam
-#else
-#define GET_TEAM CvTeamAI::getTeamNonInl
-#endif
 
 #endif

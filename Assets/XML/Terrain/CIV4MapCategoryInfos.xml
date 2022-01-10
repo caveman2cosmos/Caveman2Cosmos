@@ -1,8 +1,4 @@
-<?xml version="1.0"?>
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright C2C team 2016 and Firaxis Games 2016 -->
-	<!-- -->
-	<!-- Map Category -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4MapCategoryInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<MapCategoryInfos>
 		<MapCategoryInfo>
@@ -14,12 +10,20 @@
 			<Description>TXT_KEY_MAPCATEGORY_SUBTERRANEAN</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
-			<Type>MAPCATEGORY_SOLAR_SYSTEM</Type>
-			<Description>TXT_KEY_MAPCATEGORY_SOLAR_SYSTEM</Description>
+			<Type>MAPCATEGORY_AQUATIC</Type>
+			<Description>TXT_KEY_MAPCATEGORY_AQUATIC</Description>
+		</MapCategoryInfo>
+		<MapCategoryInfo>
+			<Type>MAPCATEGORY_CISLUNAR</Type>
+			<Description>TXT_KEY_MAPCATEGORY_CISLUNAR</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
 			<Type>MAPCATEGORY_LUNAR</Type>
 			<Description>TXT_KEY_MAPCATEGORY_LUNAR</Description>
+		</MapCategoryInfo>
+		<MapCategoryInfo>
+			<Type>MAPCATEGORY_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MAPCATEGORY_SOLAR_SYSTEM</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
 			<Type>MAPCATEGORY_MARTIAN</Type>
@@ -38,8 +42,8 @@
 			<Description>TXT_KEY_MAPCATEGORY_TITANIC</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
-			<Type>MAPCATEGORY_AQUATIC</Type>
-			<Description>TXT_KEY_MAPCATEGORY_AQUATIC</Description>
+			<Type>MAPCATEGORY_INTERSTELLAR</Type>
+			<Description>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
 			<Type>MAPCATEGORY_PLASMA</Type>
@@ -49,27 +53,15 @@
 			<Type>MAPCATEGORY_GALACTIC</Type>
 			<Description>TXT_KEY_MAPCATEGORY_GALACTIC</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
-			<Type>MAPCATEGORY_INTERSTELLAR</Type>
-			<Description>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Description>
-		</MapCategoryInfo>
-        <MapCategoryInfo>
-			<Type>MAPCATEGORY_MILKYWAY</Type>
-			<Description>TXT_KEY_MAPCATEGORY_MILKYWAY</Description>
+		<MapCategoryInfo>
+			<Type>MAPCATEGORY_MILKY_WAY</Type>
+			<Description>TXT_KEY_MAPCATEGORY_MILKY_WAY</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
-			<Type>MAPCATEGORY_VOID</Type>
-			<Description>TXT_KEY_MAPCATEGORY_VOID</Description>
-		</MapCategoryInfo>
-		<MapCategoryInfo>
-			<Type>MAPCATEGORY_SPACE</Type>
-			<Description>TXT_KEY_MAPCATEGORY_SPACE</Description>
-		</MapCategoryInfo>
-        <MapCategoryInfo>
 			<Type>MAPCATEGORY_UNIVERSAL</Type>
 			<Description>TXT_KEY_MAPCATEGORY_UNIVERSAL</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_DISTANT</Type>
 			<Description>TXT_KEY_MAPCATEGORY_DISTANT</Description>
 		</MapCategoryInfo>

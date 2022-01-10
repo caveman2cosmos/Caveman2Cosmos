@@ -7,12 +7,13 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_TRIPOD</Class>
 			<Type>UNIT_TRIPOD</Type>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_TRIPOD</Description>
-			<Civilopedia>TXT_KEY_UNIT_TRIPOD</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRIPOD_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_TRIPOD_PEDIA</Civilopedia>
 			<bPillage>1</bPillage>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>

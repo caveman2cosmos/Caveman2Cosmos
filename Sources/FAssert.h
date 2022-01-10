@@ -26,8 +26,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
 #define FAssertMsg( expr, msg )	FAssert( expr )
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
-#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
-#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
+#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGame().isOption(option) && expr )
+#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGame().isOption(option) && expr )
 #define FErrorMsg( msg ) FAssert( false )
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
@@ -63,7 +63,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssertOptionMsg( option, expr, msg ) \
 { \
 	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && GC.getGameINLINE().isOption(option) && !(expr) ) \
+	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
@@ -72,7 +72,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssertOptionRecalcMsg( option, expr, msg) \
 { \
 	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && GC.getGameINLINE().isOption(option) && !(expr) ) \
+	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
@@ -113,8 +113,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssert( expr )	FAssert( expr )
 #define FAssertMsg( expr, msg )	FAssert( expr )
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
-#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
-#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
+#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGame().isOption(option) && expr )
+#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGame().isOption(option) && expr )
 #define FErrorMsg( msg ) FAssertMsg( false, msg )
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
@@ -150,6 +150,13 @@ enum AssertScopeTypes
 #define FAssertInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth != 0, "Expected to be in a " #_id_ " scope!")
 #define FAssertNotInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth == 0, "Expected to not be in a " #_id_ " scope!")
 
+#define FASSERT_BOUNDS(lower, upper, index) \
+	FAssertMsg(index >= lower, (bst::format("Index value (%d) is expected to be >= %d") % index % lower).str().c_str()); \
+	FAssertMsg(index < upper, (bst::format("Index value (%d) is expected to be < %d") % index % upper).str().c_str());
+
+#define FASSERT_NOT_NEGATIVE(value) \
+	FAssertMsg(value >= 0, (bst::format("Value (%d) is expected to be >= 0") % value).str().c_str())
+
 #else
 // FASSERT_ENABLE not defined
 #define FAssert( expr )
@@ -164,6 +171,9 @@ enum AssertScopeTypes
 #define FAssertDeclareScope(_id_)
 #define FAssertInScope(_id_)
 #define FAssertNotInScope(_id_)
+
+#define FASSERT_BOUNDS(lower, upper, index)
+#define FASSERT_NOT_NEGATIVE(value)
 
 #endif
 

@@ -1,40 +1,36 @@
-<?xml version="1.0"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
-<!-- Civilizations Schema -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<!-- PropertyManipulators added by AIAndy -->
 	<ElementType name="PropertySourceType" content="textOnly"/>
 	<ElementType name="PropertyInteractionType" content="textOnly"/>
@@ -57,7 +53,6 @@
 	<ElementType name="iLimit" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="Active"/>
-
 	<ElementType name="PropertySource" content="eltOnly" order="many">
 		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -71,7 +66,6 @@
 		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
 		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
 		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
@@ -84,7 +78,6 @@
 		<element type="iInhibitionPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
 		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -99,10 +92,9 @@
 		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!--TB's Tags Begin-->
@@ -112,7 +104,7 @@
 	<ElementType name="TraitPrereqOr1" content="textOnly"/>
 	<ElementType name="TraitPrereqOr2" content="textOnly"/>
 	<ElementType name="PromotionLine" content="textOnly"/>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="PrereqTech" content="textOnly"/>
 	<ElementType name="EraAdvanceFreeSpecialistType" content="textOnly"/>
 	<ElementType name="GoldenAgeonBirthofGreatPersonType" content="textOnly"/>
@@ -129,12 +121,12 @@
 	<ElementType name="iCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeExperience" content="textOnly" dt:type="int"/>
-	<ElementType name="iBaseFreeUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iBaseFreeMilitaryUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iFreeUnitsPopulationPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFreeMilitaryUnitsPopulationPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldPerUnit" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldPerMilitaryUnit" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepCivilian" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepMilitary" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepCivilianPopPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepMilitaryPopPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCivilianUnitUpkeepMod" content="textOnly" dt:type="int"/>
+	<ElementType name="iMilitaryUnitUpkeepMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyPerMilitaryUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iLargestCityHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
@@ -569,10 +561,10 @@
 	</ElementType>
 	<ElementType name="LeaderHeadInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
@@ -675,7 +667,7 @@
 		<element type="LeaderHeadInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -683,7 +675,7 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE		-->
+	<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="ShortDescription" content="textOnly"/>
 	<ElementType name="Help" content="textOnly"/>
 	<ElementType name="iHealth" content="textOnly" dt:type="int"/>
@@ -698,9 +690,9 @@
 	<ElementType name="iMaxTeamBuildingProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxPlayerBuildingProductionModifier" content="textOnly" dt:type="int"/>
 	<!-- Phungus Rev Trait Effects -->
-	<ElementType name="iRevIdxLocal" content= "textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxNational" content= "textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxDistanceModifier" content= "textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxLocal" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxNational" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxDistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevIdxHolyCityGood" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevIdxHolyCityBad" content="textOnly" dt:type="int"/>
 	<ElementType name="fRevIdxNationalityMod" content="textOnly"/>
@@ -765,10 +757,10 @@
 	<!--Afforess-->
 	<ElementType name="TraitInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="ShortDescription" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -860,12 +852,12 @@
 		<element type="iCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iStateReligionGreatPeopleRateModifier" minOccurs="0"/>
 		<element type="iFreeExperience" minOccurs="0"/>
-		<element type="iBaseFreeUnits" minOccurs="0"/>
-		<element type="iBaseFreeMilitaryUnits" minOccurs="0"/>
-		<element type="iFreeUnitsPopulationPercent" minOccurs="0"/>
-		<element type="iFreeMilitaryUnitsPopulationPercent" minOccurs="0"/>
-		<element type="iGoldPerUnit" minOccurs="0"/>
-		<element type="iGoldPerMilitaryUnit" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepCivilian" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepMilitary" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepCivilianPopPercent" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepMilitaryPopPercent" minOccurs="0"/>
+		<element type="iCivilianUnitUpkeepMod" minOccurs="0"/>
+		<element type="iMilitaryUnitUpkeepMod" minOccurs="0"/>
 		<element type="iHappyPerMilitaryUnit" minOccurs="0"/>
 		<element type="iLargestCityHappiness" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>
@@ -883,7 +875,7 @@
 		<element type="iMinAnarchy" minOccurs="0"/>
 		<element type="iMaxTradeRoutesChange" minOccurs="0"/>
 		<element type="iGoldenAgeDurationModifier" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="iGreatPeopleRateChange" minOccurs="0"/>
 		<element type="iHurryAngerModifier" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
@@ -934,39 +926,23 @@
 	<ElementType name="Cities" content="eltOnly">
 		<element type="City" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingClassType" content="textOnly"/>
 	<ElementType name="BuildingType" content="textOnly"/>
-	<ElementType name="Building" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="BuildingType"/>
-	</ElementType>
-	<ElementType name="Buildings" content="eltOnly">
-		<element type="Building" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="UnitClassType" content="textOnly"/>
 	<ElementType name="UnitType" content="textOnly"/>
-	<ElementType name="Unit" content="eltOnly">
-		<element type="UnitClassType"/>
-		<element type="UnitType"/>
-	</ElementType>
-	<ElementType name="Units" content="eltOnly">
-		<element type="Unit" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="FreeUnitClass" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="FreeUnit" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iFreeUnits"/>
 	</ElementType>
-	<ElementType name="FreeUnitClasses" content="eltOnly">
-		<element type="FreeUnitClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="FreeUnits" content="eltOnly">
+		<element type="FreeUnit" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bFreeBuildingClass" content="textOnly" dt:type="boolean"/>
-	<ElementType name="FreeBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="bFreeBuildingClass"/>
+	<ElementType name="bFreeBuilding" content="textOnly" dt:type="boolean"/>
+	<ElementType name="FreeBuilding" content="eltOnly">
+		<element type="BuildingType"/>
+		<element type="bFreeBuilding"/>
 	</ElementType>
-	<ElementType name="FreeBuildingClasses" content="eltOnly">
-		<element type="FreeBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="FreeBuildings" content="eltOnly">
+		<element type="FreeBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TechType" content="textOnly"/>
 	<ElementType name="bFreeTech" content="textOnly" dt:type="boolean"/>
@@ -1008,10 +984,10 @@
 	<ElementType name="UnitArtStyleType" content="textOnly"/>
 	<ElementType name="CivilizationInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="ShortDescription" minOccurs="0"/>
 		<element type="Adjective" minOccurs="0"/>
@@ -1026,10 +1002,8 @@
 		<element type="iSpawnRateModifier" minOccurs="0"/>
 		<element type="iSpawnRateNPCPeaceModifier" minOccurs="0"/>
 		<element type="Cities" minOccurs="0"/>
-		<element type="Buildings" minOccurs="0"/>
-		<element type="Units" minOccurs="0"/>
-		<element type="FreeUnitClasses" minOccurs="0"/>
-		<element type="FreeBuildingClasses" minOccurs="0"/>
+		<element type="FreeUnits" minOccurs="0"/>
+		<element type="FreeBuildings" minOccurs="0"/>
 		<element type="FreeTechs" minOccurs="0"/>
 		<element type="DisableTechs" minOccurs="0"/>
 		<element type="InitialCivics" minOccurs="0"/>
@@ -1068,10 +1042,10 @@
 	</ElementType>
 	<ElementType name="UnitArtStyleTypeInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="StyleUnits" minOccurs="0" maxOccurs="1"/>
 	</ElementType>
 	<ElementType name="UnitArtStyleTypeInfos" content="eltOnly">
@@ -1086,7 +1060,6 @@
 		<element type="CivilizationInfos" minOccurs="0" maxOccurs="*"/>
 		<element type="UnitArtStyleTypeInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrefix" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bSuffix" content="textOnly" dt:type="boolean"/>
 	<ElementType name="Name" content="textOnly"/>

@@ -17,7 +17,7 @@
 from CvPythonExtensions import *
 import BugOptions
 import BugCore
-# Globals
+
 GC = CyGlobalContext()
 RevDCMOpt = BugCore.game.RevDCM
 
@@ -54,8 +54,6 @@ def changedReset (option, value):
 #DCM
 def changedDCM_RANGE_BOMBARD (option, value):
 	GC.setDefineINT("DCM_RANGE_BOMBARD", RevDCMOpt.isDCM_RANGE_BOMBARD())
-def changedDCM_STACK_ATTACK (option, value):
-	GC.setDefineINT("DCM_STACK_ATTACK", RevDCMOpt.isDCM_STACK_ATTACK())
 def changedDCM_ATTACK_SUPPORT (option, value):
 	GC.setDefineINT("DCM_ATTACK_SUPPORT", RevDCMOpt.isDCM_ATTACK_SUPPORT())
 def changedDCM_OPP_FIRE (option, value):
@@ -66,10 +64,6 @@ def changedDCM_ACTIVE_DEFENSE (option, value):
 	GC.setDefineINT("DCM_ACTIVE_DEFENSE", RevDCMOpt.isDCM_ACTIVE_DEFENSE())
 def changedDCM_FIGHTER_ENGAGE (option, value):
 	GC.setDefineINT("DCM_FIGHTER_ENGAGE", RevDCMOpt.isDCM_FIGHTER_ENGAGE())
-def changedDCM_ARCHER_BOMBARD (option, value):
-	GC.setDefineINT("DCM_ARCHER_BOMBARD", RevDCMOpt.isDCM_ARCHER_BOMBARD())
-def changedDCM_BATTLE_EFFECTS (option, value):
-	GC.setDefineINT("DCM_BATTLE_EFFECTS", RevDCMOpt.isDCM_BATTLE_EFFECTS())
 
 #IDW
 def changedIDW_ENABLED (option, value):
@@ -101,19 +95,22 @@ def changedLIMITED_RELIGIONS_EXCEPTIONS (option, value):
 def changedHiddenAttitude(option, value):
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
 
+def changedDYNAMIC_CIV_NAMES(option, value):
+	import DynamicCivNames
+	if value:
+		DynamicCivNames.init()
+	else:
+		DynamicCivNames.uninit()
 
 def setXMLOptionsfromIniFile():
 	print "Reinitialising RevDCM SDK variables"
 	#DCM
 	GC.setDefineINT("DCM_RANGE_BOMBARD", RevDCMOpt.isDCM_RANGE_BOMBARD())
-	GC.setDefineINT("DCM_STACK_ATTACK", RevDCMOpt.isDCM_STACK_ATTACK())
 	GC.setDefineINT("DCM_ATTACK_SUPPORT", RevDCMOpt.isDCM_ATTACK_SUPPORT())
 	GC.setDefineINT("DCM_OPP_FIRE", RevDCMOpt.isDCM_OPP_FIRE())
 	GC.setDefineINT("DCM_AIR_BOMBING", RevDCMOpt.isDCM_AIR_BOMBING())
 	GC.setDefineINT("DCM_ACTIVE_DEFENSE", RevDCMOpt.isDCM_ACTIVE_DEFENSE())
 	GC.setDefineINT("DCM_FIGHTER_ENGAGE", RevDCMOpt.isDCM_FIGHTER_ENGAGE())
-	GC.setDefineINT("DCM_ARCHER_BOMBARD", RevDCMOpt.isDCM_ARCHER_BOMBARD())
-	GC.setDefineINT("DCM_BATTLE_EFFECTS", RevDCMOpt.isDCM_BATTLE_EFFECTS())
 	#IDW
 	GC.setDefineINT("IDW_ENABLED", RevDCMOpt.isIDW_ENABLED())
 	GC.setDefineINT("IDW_EMERGENCY_DRAFT_ENABLED", RevDCMOpt.isIDW_EMERGENCY_DRAFT_ENABLED())
@@ -129,6 +126,8 @@ def setXMLOptionsfromIniFile():
 	GC.setDefineINT("LIMITED_RELIGIONS_EXCEPTIONS", 0)
 	#Hidden Attitude
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
+
+	changedDYNAMIC_CIV_NAMES(None, RevDCMOpt.isDYNAMIC_CIV_NAMES())
 
 def resetOptions():
 	revDCMoptions = BugOptions.getOptions("RevDCM").options

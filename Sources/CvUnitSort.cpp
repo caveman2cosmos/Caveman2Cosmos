@@ -7,10 +7,12 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvPlayer.h"
 
-bool UnitSortBase::isLesserUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit1, UnitTypes eUnit2)
+bool UnitSortBase::isLesserUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit1, UnitTypes eUnit2) const
 {
 	// To keep the strict weak ordering for sorting, the result of the comparison cannot just be inverted, equal must always be false
 	if (m_bInvert)
@@ -19,64 +21,63 @@ bool UnitSortBase::isLesserUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUni
 		return getUnitValue(pPlayer, pCity, eUnit1) > getUnitValue(pPlayer, pCity, eUnit2);
 }
 
-bool UnitSortBase::isInverse()
+bool UnitSortBase::isInverse() const
 {
 	return m_bInvert;
 }
 
 bool UnitSortBase::setInverse(bool bInvert)
 {
-	bool bChanged = bInvert != m_bInvert;
+	const bool bChanged = bInvert != m_bInvert;
 	m_bInvert = bInvert;
 	return bChanged;
 }
 
 UnitSortBase::~UnitSortBase()
 {
-
 }
 
-int UnitSortStrength::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortStrength::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return std::max(GC.getUnitInfo(eUnit).getCombat(), GC.getUnitInfo(eUnit).getAirCombat());
 }
 
-int UnitSortMove::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortMove::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).getMoves();
 }
 
-int UnitSortCollateral::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortCollateral::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).getCollateralDamage();
 }
 
-int UnitSortRange::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortRange::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return std::max(std::max(GC.getUnitInfo(eUnit).getAirRange(), GC.getUnitInfo(eUnit).getNukeRange()), GC.getUnitInfo(eUnit).getDropRange());
 }
 
-int UnitSortBombard::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortBombard::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).getBombardRate();
 }
 
-int UnitSortCargo::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortCargo::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).getCargoSpace();
 }
 
-int UnitSortWithdrawal::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortWithdrawal::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).getWithdrawalProbability();
 }
 
-int UnitSortPower::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortPower::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return GC.getUnitInfo(eUnit).getPowerValue();
 }
 
-int UnitSortCost::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortCost::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	if (pCity)
 	{
@@ -89,13 +90,13 @@ int UnitSortCost::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit
 }
 
 // dummy
-int UnitSortName::getUnitValue(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitSortName::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
 	return 0;
 }
 
 // name sorting defaults to A first
-bool UnitSortName::isLesserUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit1, UnitTypes eUnit2)
+bool UnitSortName::isLesserUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit1, UnitTypes eUnit2) const
 {
 	if (m_bInvert)
 		return wcscmp(GC.getUnitInfo(eUnit1).getDescription(), GC.getUnitInfo(eUnit2).getDescription()) > 0;
@@ -103,11 +104,11 @@ bool UnitSortName::isLesserUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUni
 		return wcscmp(GC.getUnitInfo(eUnit1).getDescription(), GC.getUnitInfo(eUnit2).getDescription()) < 0;
 }
 
-UnitSortList::UnitSortList(CvPlayer *pPlayer, CvCity *pCity)
+UnitSortList::UnitSortList(const CvPlayer *pPlayer, const CvCity *pCity)
 {
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
-	
+
 	m_apUnitSort[UNIT_SORT_NAME] = new UnitSortName();
 	m_apUnitSort[UNIT_SORT_COST] = new UnitSortCost(true);
 	m_apUnitSort[UNIT_SORT_STRENGTH] = new UnitSortStrength();
@@ -130,36 +131,30 @@ UnitSortList::~UnitSortList()
 	}
 }
 
-int UnitSortList::getNumSort()
-{
-	return NUM_UNIT_SORT;
-}
-
-UnitSortTypes UnitSortList::getActiveSort()
+UnitSortTypes UnitSortList::getActiveSort() const
 {
 	return m_eActiveSort;
 }
 
 bool UnitSortList::setActiveSort(UnitSortTypes eActiveSort)
 {
-	FAssertMsg(eActiveSort < NUM_UNIT_SORT, "Index out of bounds");
-	FAssertMsg(eActiveSort > -1, "Index out of bounds");
-	bool bChanged = m_eActiveSort != eActiveSort;
+	FASSERT_BOUNDS(0, NUM_UNIT_SORT, eActiveSort);
+	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;
 }
 
-void UnitSortList::setCity(CvCity *pCity)
+void UnitSortList::setCity(const CvCity *pCity)
 {
 	m_pCity = pCity;
 }
 
-void UnitSortList::setPlayer(CvPlayer *pPlayer)
+void UnitSortList::setPlayer(const CvPlayer *pPlayer)
 {
 	m_pPlayer = pPlayer;
 }
 
-bool UnitSortList::operator ()(UnitTypes eUnit1, UnitTypes eUnit2)
+bool UnitSortList::operator ()(UnitTypes eUnit1, UnitTypes eUnit2) const
 {
 	return m_apUnitSort[m_eActiveSort]->isLesserUnit(m_pPlayer, m_pCity, eUnit1, eUnit2);
 }

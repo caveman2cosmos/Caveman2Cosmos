@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Upkeep -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4OutcomeInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<OutcomeInfos>
 		<OutcomeInfo>
@@ -554,28 +549,6 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_BUTCHERED_NEUTRAL</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_NEUTRAL</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_NEUTRAL_MESSAGE</Message>
-			<bFriendlyTerritory>0</bFriendlyTerritory>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_BUTCHERED_FRIENDLY</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bNotCity>1</bNotCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_BUTCHERED_CITY</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_CITY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_CITY_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_LAWYER_LITIGATION</Type>
 			<Description>TXT_KEY_OUTCOME_LAWYER_LITIGATION</Description>
 			<Message>TXT_KEY_OUTCOME_LAWYER_LITIGATION_MESSAGE</Message>
@@ -617,31 +590,6 @@
 			<Type>OUTCOME_HURRY_PRODUCTION_CARAVAN</Type>
 			<Description>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN</Description>
 			<Message>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_SET_CAPTIVE_FREE</Type>
-			<Description>TXT_KEY_OUTCOME_SET_CAPTIVE_FREE</Description>
-			<Message>TXT_KEY_OUTCOME_SET_CAPTIVE_FREE_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_SLAVE_SALE_NOT_SLAVERY</Type>
-			<Description>TXT_KEY_OUTCOME_SELL_CAPTIVE_NOT_SLAVERY</Description>
-			<Message>TXT_KEY_OUTCOME_SELL_CAPTIVE_MESSAGE</Message>
-			<PrereqTech>TECH_TRADE</PrereqTech>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_HURRY_PRODUCTION</Type>
-			<Description>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Description>
-			<Message>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Message>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
@@ -733,6 +681,21 @@
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_ARCHER_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER_MESSAGE</Message>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_TO_AXEMAN</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN_MESSAGE</Message>
@@ -745,6 +708,37 @@
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN_MESSAGE</Message>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT2</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN_MESSAGE</Message>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN</OutcomeType>
+				<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_TO_SPEARMAN</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN_MESSAGE</Message>
@@ -755,6 +749,37 @@
 			<PrereqBuildings>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
 			</PrereqBuildings>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN_MESSAGE</Message>
+			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT2</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN_MESSAGE</Message>
+			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+				<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</OutcomeType>
+			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_JOIN_CITY_FREED_SLAVE</Type>
@@ -819,6 +844,23 @@
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Type>
+			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Description>
+			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_FRESCO</BuildingType>
+			</PrereqBuildings>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Type>
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
@@ -832,6 +874,8 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -848,6 +892,8 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
@@ -865,6 +911,8 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</OutcomeType>
 			</ReplaceOutcomes>
@@ -883,7 +931,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT2</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<BuildingType>BUILDING_ARENA</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -897,38 +945,47 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_ARENA</BuildingType>
+				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_STUDY1</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_STUDY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_STUDY</Message>
+			<Type>OUTCOME_ANIMAL_COMBAT4</Type>
+			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Description>
+			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_BUTCHERY</BuildingType>
-			</PrereqBuildings>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_STUDY2</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_STUDY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_STUDY_MESSAGE</Message>
-			<PrereqBuildings>
-				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<ReplaceOutcomes>
-				<OutcomeType>OUTCOME_ANIMAL_STUDY1</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_ANIMAL_COMBAT5</Type>
+			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Description>
+			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+			</PrereqBuildings>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT4</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1037,8 +1094,22 @@
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
-		<!--
- Removed until they can only improve military production
+		<OutcomeInfo>
+			<Type>OUTCOME_JOIN_AS_SLAVE_TUTOR_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR</Description>
+			<Message>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_JOIN_AS_SLAVE_TUTOR</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_JOIN_AS_SLAVE_MILITARY</Type>
 			<Description>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_MILITARY</Description>
@@ -1049,19 +1120,6 @@
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
-			</PrereqBuildings>
-		</OutcomeInfo>
-		-->
-		<OutcomeInfo>
-			<Type>OUTCOME_JOIN_AS_SLAVE_SANITATION</Type>
-			<Description>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Description>
-			<Message>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Message>
-			<PrereqTech>NONE</PrereqTech>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1153,6 +1211,41 @@
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Description>
+			<Message>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</Type>
+			<Description>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Description>
+			<Message>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_REMOVE_WV_CANNIBALISM</Type>
 			<Description>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM</Description>
 			<Message>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM_MESSAGE</Message>
@@ -1205,14 +1298,12 @@
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SACRIFICE_CAPTIVE_DRUID</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DRUID_MONASTERY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Description>
 			<Message>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_MESSAGE</Message>
 			<PrereqTech>NONE</PrereqTech>
@@ -1229,9 +1320,6 @@
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_I</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DRUID_MONASTERY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Description>
 			<Message>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_MESSAGE</Message>
 			<PrereqTech>NONE</PrereqTech>
@@ -1249,9 +1337,6 @@
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_II</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DRUID_MONASTERY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Description>
 			<Message>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_MESSAGE</Message>
 			<PrereqTech>NONE</PrereqTech>
@@ -1324,11 +1409,333 @@
 			<PrereqTech>NONE</PrereqTech>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
-            <bFriendlyTerritory>1</bFriendlyTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
 			</PrereqBuildings>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_EARTH</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<!-- Early tech requirements for explorer/scout types -->
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_CISLUNAR</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Message>
+			<PrereqTech>TECH_SATELLITES</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_MOON</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Message>
+			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_MARS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Message>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_VENUS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Message>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Message>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Message>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_TITAN</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Message>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Message>
+			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_NEARBY_STARS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Message>
+			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Message>
+			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_MILKY_WAY</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Message>
+			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_LOCAL_GROUP</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Message>
+			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Message>
+			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_UNIVERSE</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Message>
+			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Message>
+			<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<!-- Standard tech requirements for all other unit types -->
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_CISLUNAR</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Message>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_MOON</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Message>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_MARS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Message>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_VENUS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Message>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Message>
+			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Message>
+			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_TITAN</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Message>
+			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Message>
+			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_NEARBY_STARS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Message>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Message>
+			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_MILKY_WAY</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Message>
+			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Message>
+			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Message>
+			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_UNIVERSE</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Message>
+			<PrereqTech>TECH_INTERCLUSTER_TRAVEL</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Message>
+			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
 		</OutcomeInfo>
 	</OutcomeInfos>
 </Civ4OutcomeInfos>

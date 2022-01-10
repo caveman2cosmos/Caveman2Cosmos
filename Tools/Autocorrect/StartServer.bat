@@ -18,7 +18,7 @@ if errorlevel 1 (
 PUSHD "%~dp0"
 
 echo Downloading LanguageTool server ...
-..\Utils\wget.exe -O LanguageTool.zip "https://languagetool.org/download/LanguageTool-stable.zip" --quiet --show-progress --continue
+..\Utils\wget.exe -O LanguageTool.zip "https://languagetool.org/download/LanguageTool-4.7.zip" --quiet --show-progress --continue
 
 echo Unzipping LanguageTool server ...
 ..\Utils\7z.exe x LanguageTool.zip -r -aos

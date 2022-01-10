@@ -1,19 +1,23 @@
 // random.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvRandom.h"
+#include "CvTaggedSaveFormatWrapper.h"
 
 #define RANDOM_A      (1103515245)
 #define RANDOM_C      (12345)
 #define RANDOM_SHIFT  (16)
 
 CvRandom::CvRandom()
-{ 
+{
 	reset();
 }
 
 
 CvRandom::~CvRandom()
-{ 
+{
 	uninit();
 }
 
@@ -46,7 +50,7 @@ void CvRandom::reset(unsigned long ulSeed)
 }
 
 
-unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
+uint16_t CvRandom::get(uint16_t usNum, const char* pszLog)
 {
 
 /*************************************************************************************************/
@@ -58,14 +62,14 @@ unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
 #ifdef _DEBUG
 	if (pszLog != NULL)
 	{
-		if (GC.getLogging() && GC.getRandLogging() && GC.getGameINLINE().isNetworkMultiPlayer())
+		if (GC.getLogging() && GC.getRandLogging() && GC.getGame().isNetworkMultiPlayer())
 		{
-			if (GC.getGameINLINE().getTurnSlice() > 0)
+			if (GC.getGame().getTurnSlice() > 0)
 			{
-				TCHAR szOut[1024];
-				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGameINLINE().getActivePlayer());
+				char szOut[1024];
+				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGame().getActivePlayer());
 				//gDLL->messageControlLog(szOut);
-				GC.getGameINLINE().logMsgTo(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGameINLINE().getTurnSlice(), pszLog);
+				logging::logMsg(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGame().getTurnSlice(), pszLog);
 			}
 		}
 	}
@@ -76,7 +80,7 @@ unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
 /*************************************************************************************************/
 	m_ulRandomSeed = ((RANDOM_A * m_ulRandomSeed) + RANDOM_C);
 
-	unsigned short us = ((unsigned short)((((m_ulRandomSeed >> RANDOM_SHIFT) & MAX_UNSIGNED_SHORT) * ((unsigned long)usNum)) / (MAX_UNSIGNED_SHORT + 1)));
+	uint16_t us = ((uint16_t)((((m_ulRandomSeed >> RANDOM_SHIFT) & MAX_UNSIGNED_SHORT) * ((unsigned long)usNum)) / (MAX_UNSIGNED_SHORT + 1)));
 
 	return us;
 }

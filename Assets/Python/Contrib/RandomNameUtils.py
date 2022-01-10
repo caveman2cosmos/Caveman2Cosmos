@@ -4,10 +4,6 @@
 #
 
 from CvPythonExtensions import *
-
-import CvUtil
-import sys
-import math
 import string
 
 gc = CyGlobalContext()
@@ -170,12 +166,6 @@ civilizationNameHash =	{
 								"PRE" : ("Amahle","Andile","Ayanda","Ayize","Bandile","Bheka","Bhekizizwe","Bhekithemba","Bonginkosi","Bongani","Buyisiwe","Busisiwe","Dingane","Duduzile","Dumisani","Gugu","Hlengiwe","Jabulani","Jabu","Khethiwe","Kwanele","Lindelani","Lindiwe","Londisizwe","Mandla","Manelesi","Mbali","Mondli","Msizi","Muzikayise","Nandi","Nathi","Nhlakanipho","Njabulo","Nkosinathi","Nkosingiphile","Nkosiphendule","Nobuhle","Nobesuthu","Nolwazi","Nomathemba","Nomsa","Nomusa","Nomvula","Nomzamo","Nonhlanhla","Nonkululeko","Nothembi","Nozipho","Ntokozo","Ntombintombi","Ntombifuthi","Ntombizanele","Ntombizodwa","Phila","Philani","Phumlani","Sakhile","Samukelisiwe","Sandile","Sanele","S'bu","Sibongile","Sibongiseni","Sibusiso","Sifiso","Sihle","Simangele","Simosihle","Simphiwe","Sindisiwe","Sinethemba","Sinenhlanhla","Siphephelo","Siphelele","Sipho","Siphokazi","Sithembiso","Siyabonga","Siyanda","Sizani","Sizwe","Slindile","S'phamandla","Thabo","Thabisa","Thamsanqa","Thandeka","Thandiwe","Thando","Themba","Thembisile","Thenjiwe","Tholakele","Thulani","Thulisile","Lwazi","Unathi","Vusi","Vusumuzi","Wandile","Xolisile","Xolani","Zama","Zandile","Zanele","Zithembe","Zinhle","Zodwa"),
 								"MID" : (),
 								"END" : ()
-							},
-							"CIVILIZATION_MINOR" :
-							{
-								"PRE" : ("A","Ab","c","Ad","Af","Agr","st","As","Al","Adw","Adr","Ar","r","h","ad","D","r","w","d","th","Et","Er","El","ow","F","r","r","w","wyd","l","l","a","b","er","ed","th","r","eg","r","d","l","c","n","r","h","ev","k","a","r","h","h","b","ic"),
-								"MID" : ("a","e","u","o","re","ale","li","ay","rdo","e","i","i","ra","la","li","nda","erra","i","e","ra","la","li","o","ra","go","i","e","re","y"),
-								"END" : ("a","and","b","bwyn","baen","bard","c","ctred","cred","ch","can","con","d","dan","don","der","dric","dfrid","dus","f","g","gord","gan","l","ld","li","lgrin","lin","lith","lath","loth","ld","ldric","ldan","m","mas","mma","mos","mar","mond","n","nydd","nidd","nnon","nwan","nyth","nad","nn","nnor","nd","p","r","ran","ron","rd","s","sh","seth","sean","t","th","th","tha","tlan","trem","tram","v","vudd","w","wan","win","win","wyn","wyn","wyr","wyr","wyth")
 							},
 							"CIVILIZATION_BARBARIAN" :
 							{

@@ -9,10 +9,88 @@
 //
 
 //
+// Compiler warnings
+//
+#pragma warning( disable: 4510 ) // default constructor could not be generated
+#pragma warning( disable: 4511 ) // copy constructor could not be generated
+#pragma warning( disable: 4512 ) // assignment operator could not be generated
+#pragma warning( disable: 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
+
+#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
+
+#pragma warning( push )
+#pragma warning( disable: 4100 ) // unreferenced formal parameter
+#pragma warning( disable: 4121 ) // alignment of a member was sensitive to packing
+#pragma warning( disable: 4127 ) // conditional expression is constant
+#pragma warning( disable: 4610 ) // struct/class can never be instantiated - user defined constructor required
+
+//
+// Boost
+//
+#define BOOST_155_USE_WINDOWS_H
+#define BOOST_155_ALL_NO_LIB
+#include <boost155/scoped_ptr.hpp>
+#include <boost155/scoped_array.hpp>
+#include <boost155/shared_ptr.hpp>
+#include <boost155/shared_array.hpp>
+#include <boost155/lambda/lambda.hpp>
+#include <boost155/bind.hpp>
+#include <boost155/optional.hpp>
+#include <boost155/algorithm/string.hpp>
+#include <boost155/format.hpp>
+#include <boost155/function.hpp>
+#include <boost155/array.hpp>
+#include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+#include <boost155/functional.hpp>
+#include <boost155/detail/algorithm.hpp>
+
+//
+// Boost Range
+//
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+#include <boost155/range/algorithm_ext/push_back.hpp>
+#include <boost155/range/numeric.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_		 BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
+
+// Alias our latest boost version
+namespace bst = boost155;
+
+// Bring range adaptors into global namespace
+using namespace bst::adaptors;
+
+// Bring bind into global namespace
+using bst::bind;
+
+//
+// Boost Python
+//
+#ifndef __INTELLISENSE__
+#define BOOST_BIND_NO_PLACEHOLDERS // Disable the boost 1.32 placeholders, we won't be using them
+#include <boost/python/detail/wrap_python.hpp>
+#include <boost/python/list.hpp>
+#include <boost/python/tuple.hpp>
+#include <boost/python/class.hpp>
+#include <boost/python/object.hpp>
+#include <boost/python/def.hpp>
+#include <boost/python/enum.hpp>
+#include <boost/python/manage_new_object.hpp>
+#include <boost/python/return_value_policy.hpp>
+#include <boost/python/to_python_converter.hpp>
+#include <boost/python/suite/indexing/container_utils.hpp>
+namespace python = boost::python;
+#endif
+
+//
 // WINDOWS
 //
-#pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
-
 //#ifdef __INTELLISENSE__
 //// #undef _MSC_VER
 //#define _MSC_VER 1310
@@ -54,6 +132,7 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
+#include <queue>
 
 //
 // Google sparsehash
@@ -66,19 +145,21 @@
 #include <sparsehash/type_traits.h>
 
 
-#define DllExport   __declspec( dllexport ) 
+#define DllExport   __declspec( dllexport )
 
 #include "NiPoint.h"
 
 //
 // Basic types
 //
-typedef unsigned char    byte;
-typedef unsigned short   word;
-typedef unsigned int     uint;
-typedef unsigned long    dword;
-typedef unsigned __int64 qword;
-typedef wchar_t          wchar;
+typedef unsigned int        uint;
+
+typedef long long           int64_t;
+
+typedef unsigned char       uint8_t;
+typedef unsigned short      uint16_t;
+typedef unsigned int        uint32_t;
+typedef unsigned long long  uint64_t;
 
 //
 // Type traits
@@ -100,6 +181,13 @@ typedef wchar_t          wchar;
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
 
+#define SAFE_DELETE_ARRAY2(p,size) \
+	if(p) { \
+		for (int i = 0; i < size; i++) \
+			SAFE_DELETE_ARRAY(p[i]); \
+		SAFE_DELETE_ARRAY(p); \
+	}
+
 #define SQR(x)      ( (x) * (x) )
 #define DEGTORAD(x) ( (float)( (x) * (M_PI / 180) ))
 #define LIMIT_RANGE(low, value, high) value = (value < low ? low : (value > high ? high : value));
@@ -109,7 +197,7 @@ typedef wchar_t          wchar;
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( dword n ) { return *(float*)&n; }
+__forceinline float DWtoF( uint n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 // General flags that declare cache access
@@ -128,10 +216,12 @@ DECLARE_FLAGS(ECacheAccess::flags);
 //
 // Feature macros
 //
+#define OUTBREAKS_AND_AFFLICTIONS
+// #define BATTLEWORN
 // #define STRENGTH_IN_NUMBERS
-// #define BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
+// #define NOMADIC_START
 
 //
 // Cache feature macros
@@ -139,6 +229,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 #define PATHFINDING_CACHE
 #define PATHFINDING_VALIDITY_CACHE
 #define DISCOVERY_TECH_CACHE
+#define YIELD_VALUE_CACHING // KOSHLING - Cache yield values where possible
+#define CAN_TRAIN_CACHING  // Enable canTrain results to be cached within a (caller) defined scope
 
 //
 // Profiler
@@ -166,89 +258,22 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-#define	MEMORY_TRACK()
-#define MEMORY_TRACK_EXEMPT()
-#define MEMORY_TRACE_FUNCTION()
-#define MEMORY_TRACK_NAME(x)
+// Toffer
+int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
+int64_t intSqrt64(const uint64_t iValue);
+
+int intPow(const int x, const int p);
+int64_t intPow64(const int64_t x, const int p);
+
+int getModifiedIntValue(const int iValue, const int iMod);
+int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
+// ! Toffer
+
+const std::string getModDir();
 
 //
-// Python
+// Xercesc
 //
-#ifdef _DEBUG
-  #undef _DEBUG
-  #include "Python.h"
-  #define _DEBUG
-#else
-  #include "Python.h"
-#endif
-
-//
-// Boost
-//
-#define BOOST_155_USE_WINDOWS_H
-#define BOOST_155_ALL_NO_LIB
-#include <boost155/scoped_ptr.hpp>
-#include <boost155/scoped_array.hpp>
-#include <boost155/shared_ptr.hpp>
-#include <boost155/shared_array.hpp>
-#include <boost155/lambda/lambda.hpp>
-#include <boost155/bind.hpp>
-#include <boost155/optional.hpp>
-#include <boost155/algorithm/string.hpp>
-#include <boost155/format.hpp>
-#include <boost155/function.hpp>
-#include <boost155/array.hpp>
-#include <boost155/utility.hpp>
-#include <boost155/foreach.hpp>
-#include <boost155/functional.hpp>
-
-
-// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
-
-// Ranges
-#include <boost155/range.hpp>
-#include <boost155/range/adaptor/filtered.hpp>
-#include <boost155/range/adaptor/transformed.hpp>
-#include <boost155/range/any_range.hpp>
-#include <boost155/range/algorithm.hpp>
-#include <boost155/range/algorithm_ext/push_back.hpp>
-#include <boost155/range/numeric.hpp>
-
-// Make boost foreach look nice enough to actually use
-#define foreach_ BOOST_155_FOREACH
-
-// Alias our latest boost version
-namespace bst = boost155;
-
-// Bring range adaptors into global namespace
-using namespace bst::adaptors;
-
-// Bring bind into global namespace
-using bst::bind;
-
-//
-// Boost Python
-//
-#ifndef __INTELLISENSE__
-// Disable the boost 1.32 placeholders, we won't be using them
-#define BOOST_BIND_NO_PLACEHOLDERS
-#include <boost/python/list.hpp>
-#include <boost/python/tuple.hpp>
-#include <boost/python/class.hpp>
-#include <boost/python/manage_new_object.hpp>
-#include <boost/python/return_value_policy.hpp>
-#include <boost/python/object.hpp>
-#include <boost/python/def.hpp>
-#include <boost/python/enum.hpp>
-namespace python = boost::python;
-#endif
-
-//#include <boost155/range/adaptor/filtered.hpp>
-//#include <boost155/range/adaptor/transformed.hpp>
-
-//
-// xercesc for XML loading
-// 
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/util/XMLString.hpp>
 #include <xercesc/util/PlatformUtils.hpp>
@@ -261,6 +286,8 @@ namespace python = boost::python;
 #include <xercesc/framework/XMLGrammarPoolImpl.hpp>
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
+
+#pragma warning( pop )
 
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
@@ -280,75 +307,41 @@ namespace python = boost::python;
 //
 // Our code
 //
-#include "copy_iterator.h"
-#include "index_iterator_base.h"
 #include "logging.h"
-
 #include "algorithm2.h"
-
 #include "scoring.h"
-
-#include "CvAllocator.h"
-
 #include "FAssert.h"
-#include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
+#include "CvGameCoreDLLUnDefNew.h"
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 #include "FFreeListTrashArray.h"
 #include "FFreeListArray.h"
-#include "FVariableSystem.h"
 #include "FAStarNode.h"
-#include "CvString.h"
+
 #include "CvEnums.h"
 #include "CvStructs.h"
-#include "CvDLLUtilityIFaceBase.h"
-#include "CvDLLEngineIFaceBase.h"
-#include "CvDLLFAStarIFaceBase.h"
-#include "CvDLLPythonIFaceBase.h"
-#include "CvDLLInterfaceIFaceBase.h"
-#include "CvDLLXMLIFaceBase.h"
 
+#include "CvDLLUtilityIFaceBase.h"
+//#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLPythonIFaceBase.h"
+//#include "CvDLLInterfaceIFaceBase.h"
+
+#include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
-#include "CvXMLLoadUtility.h"
-#include "CvInitCore.h"
-#include "CvArtFileMgr.h"
-#include "CvGameTextMgr.h"
 #include "CvBugOptions.h"
-#include "CvPopupInfo.h"
-#include "CvEventReporter.h"
-#include "CvMessageControl.h"
-#include "CvDiploParameters.h"
-#include "CvDeal.h"
-#include "CvInfoWater.h"
-#include "CvMap.h"
+//#include "CvInfos.h"
+//#include "CvInfoWater.h"
 #include "CvViewport.h"
-#include "CvGlobals.h"
-#include "CvGameAI.h"
-#include "CvTeamAI.h"
-#include "CvPlayerAI.h"
-#include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
-#include "CvPlot.h"
-#include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvPathGenerator.h"
-#include "CvBugOptions.h"
-#include "CvPython.h"
 
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
-#include "CyGlobalContext.h"
-#include "CyArtFileMgr.h"
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"
-#include "CyGame.h"
-#include "CyTeam.h"
-#include "CyPlayer.h"
 #include "CyCity.h"
 #include "CyUnit.h"
 #include "CySelectionGroup.h"

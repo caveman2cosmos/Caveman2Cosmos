@@ -1,12 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4: Beyond the Sword -->
-<!-- Copyright Firaxis Games 2006 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Event Infos -->
-<!-- DAS: Adding Callbacks to all events which change plot yields in order to add landmarks -->
 <Civ4EventInfos xmlns="x-schema:../Schema/C2C_CIV4EventSchema.xml">
 	<EventInfos>
 		<EventInfo>
@@ -288,7 +280,7 @@
 			<Type>EVENT_HYMNS_AND_SCULPTURES_1</Type>
 			<Description>TXT_KEY_EVENT_HYMNS_AND_SCULPTURES_1</Description>
 			<bPickCity>1</bPickCity>
-			<UnitClass>UNITCLASS_ARTIST</UnitClass>
+			<FreeUnit>UNIT_ARTIST</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -306,7 +298,7 @@
 			<Description>TXT_KEY_EVENT_CARELESS_APPRENTICE_2</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-10</iGold>
-			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
+			<Building>BUILDING_FORGE</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -315,7 +307,7 @@
 			<Type>EVENT_CARELESS_APPRENTICE_3</Type>
 			<Description>TXT_KEY_EVENT_CARELESS_APPRENTICE_3</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
+			<Building>BUILDING_FORGE</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -449,7 +441,7 @@
 			<Type>EVENT_BLESSED_SEA_DONE_3</Type>
 			<Description>TXT_KEY_EVENT_BLESSED_SEA_DONE_3</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClass>UNITCLASS_PROPHET</UnitClass>
+			<FreeUnit>UNIT_PROPHET</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<ClearEvents>
 				<EventChance>
@@ -805,7 +797,7 @@
 			<bPickCity>1</bPickCity>
 			<iGold>-25</iGold>
 			<iCulture>450</iCulture>
-			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+			<Building>BUILDING_THEATRE</Building>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -883,7 +875,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_2</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_2</OtherPlayerPopup>
-			<BonusGift>BONUS_WARE_COPPER</BonusGift>
+			<BonusGift>BONUS_COPPER_WARES</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -893,7 +885,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_3</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_3</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_3</OtherPlayerPopup>
-			<BonusGift>BONUS_WARE_IRON</BonusGift>
+			<BonusGift>BONUS_IRON_WARES</BonusGift>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<iTheirEnemyAttitudeModifier>3</iTheirEnemyAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -913,7 +905,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_5</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_5</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_5</OtherPlayerPopup>
-			<BonusGift>BONUS_ELEPHANT</BonusGift>
+			<BonusGift>BONUS_ELEPHANTS</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -933,7 +925,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_7</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_7</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_7</OtherPlayerPopup>
-			<BonusGift>BONUS_AMMO</BonusGift>
+			<BonusGift>BONUS_AMMUNITION</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -943,7 +935,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_8</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_8</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_8</OtherPlayerPopup>
-			<BonusGift>BONUS_WARE_STEEL</BonusGift>
+			<BonusGift>BONUS_STEEL_WARES</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -953,7 +945,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_9</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_9</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_9</OtherPlayerPopup>
-			<BonusGift>BONUS_DIESEL</BonusGift>
+			<BonusGift>BONUS_PETROLEUM_PRODUCTS</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1223,7 +1215,7 @@
 		<EventInfo>
 			<Type>EVENT_TIN_1</Type>
 			<Description>TXT_KEY_EVENT_TIN_1</Description>
-			<BonusType>BONUS_TIN</BonusType>
+			<BonusType>BONUS_TIN_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1394,7 +1386,7 @@
 			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LIBRARY</BuildingClass>
+					<Building>BUILDING_LIBRARY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -1408,7 +1400,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
+					<Building>BUILDING_FORGE</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
@@ -1422,7 +1414,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_GROCER</BuildingClass>
+					<Building>BUILDING_GROCER</Building>
 					<YieldType>YIELD_FOOD</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
@@ -1436,7 +1428,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
+					<Building>BUILDING_MARKET</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -1450,7 +1442,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_ARCHER</UnitCombat>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1462,7 +1454,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MOUNTED</UnitCombat>
-					<UnitPromotion>PROMOTION_FLANKING1</UnitPromotion>
+					<Promotion>PROMOTION_FLANKING1</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1526,7 +1518,7 @@
 			<iGold>-45</iGold>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_AIRPORT</BuildingClass>
+					<Building>BUILDING_AIRPORT</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -1539,7 +1531,7 @@
 			<iSpaceProductionMod>5</iSpaceProductionMod>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LABORATORY</BuildingClass>
+					<Building>BUILDING_LABORATORY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -1555,7 +1547,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_PUBLIC_TRANSPORTATION</BuildingClass>
+					<Building>BUILDING_PUBLIC_TRANSPORTATION</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
@@ -1637,7 +1629,7 @@
 		<EventInfo>
 			<Type>EVENT_HIYOSILVER_1</Type>
 			<Description>TXT_KEY_EVENT_HIYOSILVER_1</Description>
-			<BonusType>BONUS_SILVER</BonusType>
+			<BonusType>BONUS_SILVER_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1648,7 +1640,7 @@
 			<iGold>-20</iGold>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>1</iImprovementChange>
-			<BonusType>BONUS_SILVER</BonusType>
+			<BonusType>BONUS_SILVER_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1656,7 +1648,7 @@
 		<EventInfo>
 			<Type>EVENT_WININGMONKS_1</Type>
 			<Description>TXT_KEY_EVENT_WININGMONKS_1</Description>
-			<BonusType>BONUS_WINE</BonusType>
+			<BonusType>BONUS_GRAPES</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1666,7 +1658,7 @@
 			<Description>TXT_KEY_EVENT_WININGMONKS_2</Description>
 			<iGold>-20</iGold>
 			<iImprovementChange>1</iImprovementChange>
-			<BonusType>BONUS_WINE</BonusType>
+			<BonusType>BONUS_GRAPES</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<PythonCallback>doWiningMonks2</PythonCallback>
 			<PythonHelp>getHelpWiningMonks2</PythonHelp>
@@ -1754,12 +1746,12 @@
 		<EventInfo>
 			<Type>EVENT_AXE_HAFT_1</Type>
 			<Description>TXT_KEY_EVENT_AXE_HAFT_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_AXEMAN</UnitClass>
-					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_AXEMAN</UnitType>
+					<Promotion>PROMOTION_SHOCK</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1769,7 +1761,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MELEE</UnitCombat>
-					<UnitPromotion>PROMOTION_COVER</UnitPromotion>
+					<Promotion>PROMOTION_COVER</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1778,16 +1770,16 @@
 		<EventInfo>
 			<Type>EVENT_SMOKELESS_POWDER_1</Type>
 			<Description>TXT_KEY_EVENT_SMOKELESS_POWDER_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_MUSKETMAN</UnitClass>
-					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_ARQUEBUSIER</UnitClass>
-					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_MUSKETMAN</UnitType>
+					<Promotion>PROMOTION_PINCH</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_ARQUEBUSIER</UnitType>
+					<Promotion>PROMOTION_PINCH</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1795,20 +1787,20 @@
 		<EventInfo>
 			<Type>EVENT_STRONGER_FITTINGS_1</Type>
 			<Description>TXT_KEY_EVENT_STRONGER_FITTINGS_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_LIGHT_CROSSBOWMAN</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CROSSBOWMAN</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_HEAVY_CROSSBOWMAN</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CROSSBOWMAN</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_HEAVY_CROSSBOWMAN</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1816,16 +1808,16 @@
 		<EventInfo>
 			<Type>EVENT_FIRING_PINS_1</Type>
 			<Description>TXT_KEY_EVENT_FIRING_PINS_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_GRENADIER</UnitClass>
-					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_MODERN_GRENADIER</UnitClass>
-					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_GRENADIER</UnitType>
+					<Promotion>PROMOTION_PINCH</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MODERN_GRENADIER</UnitType>
+					<Promotion>PROMOTION_PINCH</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1833,20 +1825,20 @@
 		<EventInfo>
 			<Type>EVENT_RIFLED_CANNON_1</Type>
 			<Description>TXT_KEY_EVENT_RIFLED_CANNON_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CANNON</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CULVERIN</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FALCONET</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_CANNON</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CULVERIN</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FALCONET</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1854,12 +1846,12 @@
 		<EventInfo>
 			<Type>EVENT_METAL_DECKS_1</Type>
 			<Description>TXT_KEY_EVENT_METAL_DECKS_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CARRIER</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL3</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_CARRIER</UnitType>
+					<Promotion>PROMOTION_DRILL3</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1867,12 +1859,12 @@
 		<EventInfo>
 			<Type>EVENT_LONG_RANGE_FIGHTERS_1</Type>
 			<Description>TXT_KEY_EVENT_LONG_RANGE_FIGHTERS_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FIGHTER</UnitClass>
-					<UnitPromotion>PROMOTION_RANGE1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_FIGHTER</UnitType>
+					<Promotion>PROMOTION_RANGE1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1880,16 +1872,16 @@
 		<EventInfo>
 			<Type>EVENT_HALBERD_1</Type>
 			<Description>TXT_KEY_EVENT_HALBERD_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_PIKEMAN</UnitClass>
-					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_HEAVY_PIKEMAN</UnitClass>
-					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<Promotion>PROMOTION_SHOCK</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<Promotion>PROMOTION_SHOCK</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1897,12 +1889,12 @@
 		<EventInfo>
 			<Type>EVENT_REINFORCED_HULL_1</Type>
 			<Description>TXT_KEY_EVENT_REINFORCED_HULL_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_TRIREME</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_TRIREME</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1920,7 +1912,7 @@
 			<Description>TXT_KEY_EVENT_CIGARETTE_SMOKER_2</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-10</iGold>
-			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+			<Building>BUILDING_THEATRE</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1929,7 +1921,7 @@
 			<Type>EVENT_CIGARETTE_SMOKER_3</Type>
 			<Description>TXT_KEY_EVENT_CIGARETTE_SMOKER_3</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+			<Building>BUILDING_THEATRE</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2123,37 +2115,62 @@
 			<iRandomGold>30</iRandomGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JEWISH_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_JEWISH_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHRISTIAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HINDU_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_HINDU_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BUDDHIST_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CONFUCIAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TAOIST_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ASATRU_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2168,7 +2185,7 @@
 			<iRandomGold>-20</iRandomGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SCULPTOR</BuildingClass>
+					<Building>BUILDING_SCULPTOR</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2290,7 +2307,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MOUNTED</UnitCombat>
-					<UnitPromotion>PROMOTION_SENTRY</UnitPromotion>
+					<Promotion>PROMOTION_SENTRY</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<ClearEvents>
@@ -2308,12 +2325,12 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
+					<Building>BUILDING_STABLE</Building>
 					<YieldType>YIELD_FOOD</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_KNIGHT_STABLE</BuildingClass>
+					<Building>BUILDING_KNIGHT_STABLE</Building>
 					<YieldType>YIELD_FOOD</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
@@ -2343,7 +2360,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_WOODEN_SHIPS</UnitCombat>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<ClearEvents>
@@ -2361,22 +2378,22 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+					<Building>BUILDING_HARBOR</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PORT</BuildingClass>
+					<Building>BUILDING_PORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
+					<Building>BUILDING_COMMERCIAL_PORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_INTERNATIONAL_PORT</BuildingClass>
+					<Building>BUILDING_INTERNATIONAL_PORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2397,7 +2414,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_WOODEN_SHIPS</UnitCombat>
-					<UnitPromotion>PROMOTION_NAVIGATION1</UnitPromotion>
+					<Promotion>PROMOTION_NAVIGATION1</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<ClearEvents>
@@ -2424,7 +2441,7 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LIBRARY</BuildingClass>
+					<Building>BUILDING_LIBRARY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2500,20 +2517,20 @@
 			<Type>EVENT_MASTER_BLACKSMITH_DONE_2</Type>
 			<Description>TXT_KEY_EVENT_MASTER_BLACKSMITH_DONE_2</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_LIGHT_SWORDSMAN</UnitClass>
-					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_SWORDSMAN</UnitClass>
-					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_HEAVY_SWORDSMAN</UnitClass>
-					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
+					<Promotion>PROMOTION_SHOCK</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_SWORDSMAN</UnitType>
+					<Promotion>PROMOTION_SHOCK</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_HEAVY_SWORDSMAN</UnitType>
+					<Promotion>PROMOTION_SHOCK</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_MASTER_BLACKSMITH_1</Event>
@@ -2540,7 +2557,6 @@
 					<iEventChance>100</iEventChance>
 				</EventChance>
 			</ClearEvents>
-			<PythonCanDo>canApplyMasterBlacksmithDone3</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -2560,7 +2576,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MELEE</UnitCombat>
-					<UnitPromotion>PROMOTION_CITY_GARRISON1</UnitPromotion>
+					<Promotion>PROMOTION_CITY_GARRISON1</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<ClearEvents>
@@ -2593,7 +2609,7 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_GREAT_WALL</BuildingClass>
+					<Building>BUILDING_GREAT_WALL</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>25</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2623,7 +2639,7 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_COLOSSEUM</BuildingClass>
+					<Building>BUILDING_COLOSSEUM</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -2642,7 +2658,7 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COLOSSEUM</BuildingClass>
+					<Building>BUILDING_COLOSSEUM</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2735,12 +2751,12 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
+					<Building>BUILDING_WALLS</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HIGH_WALLS</BuildingClass>
+					<Building>BUILDING_HIGH_WALLS</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2764,7 +2780,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+					<Building>BUILDING_THEATRE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2779,7 +2795,7 @@
 			<iGold>-10</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+					<Building>BUILDING_THEATRE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2802,7 +2818,7 @@
 			<iGold>-10</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COLOSSEUM</BuildingClass>
+					<Building>BUILDING_COLOSSEUM</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2847,7 +2863,7 @@
 			<Type>EVENT_HIGH_WARLORD_2</Type>
 			<Description>TXT_KEY_EVENT_HIGH_WARLORD_2</Description>
 			<bPickCity>1</bPickCity>
-			<UnitClass>UNITCLASS_PIKEMAN</UnitClass>
+			<FreeUnit>UNIT_PIKEMAN</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -2859,7 +2875,7 @@
 			<iGold>-250</iGold>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -2888,7 +2904,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
+					<Building>BUILDING_HOSPITAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2903,13 +2919,13 @@
 			<iGold>-100</iGold>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
+					<Building>BUILDING_HOSPITAL</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
+					<Building>BUILDING_HOSPITAL</Building>
 					<iHealth>1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -2922,17 +2938,17 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_AIRFIELD</BuildingClass>
+					<Building>BUILDING_AIRFIELD</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_AIRPORT</BuildingClass>
+					<Building>BUILDING_AIRPORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COMMERCIAL_AIRPORT</BuildingClass>
+					<Building>BUILDING_COMMERCIAL_AIRPORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2944,7 +2960,7 @@
 			<Type>EVENT_INDUSTRIAL_FIRE_1</Type>
 			<Description>TXT_KEY_EVENT_INDUSTRIAL_FIRE_1</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+			<Building>BUILDING_FACTORY</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -2972,7 +2988,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
+					<Building>BUILDING_DRYDOCK</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2985,7 +3001,7 @@
 			<Description>TXT_KEY_EVENT_EXPERIENCED_CAPTAIN_2</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-250</iGold>
-			<BuildingClass>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClass>
+			<Building>BUILDING_NAVAL_ACADEMY</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -3048,7 +3064,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -3074,7 +3090,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -3086,12 +3102,12 @@
 			<Description>TXT_KEY_EVENT_CRISIS_IN_THE_SENATE_1</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
+					<Building>BUILDING_BARRACKS</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_GARRISON</BuildingClass>
+					<Building>BUILDING_GARRISON</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3119,7 +3135,7 @@
 			<Description>TXT_KEY_EVENT_TOO_CLOSE_TO_CALL_1</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
+					<Building>BUILDING_COURTHOUSE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3132,7 +3148,7 @@
 			<Description>TXT_KEY_EVENT_TOO_CLOSE_TO_CALL_2</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
+					<Building>BUILDING_COURTHOUSE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3146,7 +3162,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_GUN</UnitCombat>
-					<UnitPromotion>PROMOTION_MARCH</UnitPromotion>
+					<Promotion>PROMOTION_MARCH</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -3204,12 +3220,12 @@
 			<Type>EVENT_WAR_CHARIOTS_DONE_1</Type>
 			<Description>TXT_KEY_EVENT_WAR_CHARIOTS_DONE_1</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CHARIOT</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_WAR_CHARIOTS_1</Event>
@@ -3247,20 +3263,20 @@
 			<Type>EVENT_ELITE_SWORDS_DONE_1</Type>
 			<Description>TXT_KEY_EVENT_ELITE_SWORDS_DONE_1</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_LIGHT_SWORDSMAN</UnitClass>
-					<UnitPromotion>PROMOTION_CITY_RAIDER1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_SWORDSMAN</UnitClass>
-					<UnitPromotion>PROMOTION_CITY_RAIDER1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_HEAVY_SWORDSMAN</UnitClass>
-					<UnitPromotion>PROMOTION_CITY_RAIDER1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
+					<Promotion>PROMOTION_CITY_RAIDER1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_SWORDSMAN</UnitType>
+					<Promotion>PROMOTION_CITY_RAIDER1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_HEAVY_SWORDSMAN</UnitType>
+					<Promotion>PROMOTION_CITY_RAIDER1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_ELITE_SWORDS_1</Event>
@@ -3277,7 +3293,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MELEE</UnitCombat>
-					<UnitPromotion>PROMOTION_DRILL1</UnitPromotion>
+					<Promotion>PROMOTION_DRILL1</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<ClearEvents>
@@ -3303,12 +3319,12 @@
 			<Type>EVENT_WARSHIPS_DONE_1</Type>
 			<Description>TXT_KEY_EVENT_WARSHIPS_DONE_1</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_TRIREME</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_TRIREME</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_WARSHIPS_1</Event>
@@ -3325,22 +3341,22 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+					<Building>BUILDING_HARBOR</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_PORT</BuildingClass>
+					<Building>BUILDING_PORT</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
+					<Building>BUILDING_COMMERCIAL_PORT</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_INTERNATIONAL_PORT</BuildingClass>
+					<Building>BUILDING_INTERNATIONAL_PORT</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
@@ -3367,12 +3383,12 @@
 			<Type>EVENT_GUNS_BUTTER_DONE_1</Type>
 			<Description>TXT_KEY_EVENT_GUNS_BUTTER_DONE_1</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_MUSKETMAN</UnitClass>
-					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_MUSKETMAN</UnitType>
+					<Promotion>PROMOTION_PINCH</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_GUNS_BUTTER_1</Event>
@@ -3426,12 +3442,12 @@
 			<Type>EVENT_NOBLE_KNIGHTS_DONE_1</Type>
 			<Description>TXT_KEY_EVENT_NOBLE_KNIGHTS_DONE_1</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_KNIGHT</UnitClass>
-					<UnitPromotion>PROMOTION_FLANKING1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_KNIGHT</UnitType>
+					<Promotion>PROMOTION_FLANKING1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_NOBLE_KNIGHTS_1</Event>
@@ -3464,7 +3480,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -3490,28 +3506,28 @@
 			<Type>EVENT_OVERWHELM_DONE_1</Type>
 			<Description>TXT_KEY_EVENT_OVERWHELM_DONE_1</Description>
 			<bGlobal>1</bGlobal>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_DESTROYER</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_BATTLESHIP</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CARRIER</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FIGHTER</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_JET_FIGHTER</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_DESTROYER</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_BATTLESHIP</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CARRIER</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FIGHTER</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_JET_FIGHTER</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_OVERWHELM_1</Event>
@@ -3530,22 +3546,22 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+					<Building>BUILDING_HARBOR</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_PORT</BuildingClass>
+					<Building>BUILDING_PORT</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
+					<Building>BUILDING_COMMERCIAL_PORT</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_INTERNATIONAL_PORT</BuildingClass>
+					<Building>BUILDING_INTERNATIONAL_PORT</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
@@ -3637,7 +3653,7 @@
 			<Description>TXT_KEY_EVENT_CIV_GAME_2</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
+					<Building>BUILDING_UNIVERSITY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3786,7 +3802,7 @@
 			<Description>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_3</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-100</iGold>
-			<BuildingClass>BUILDINGCLASS_ACADEMY</BuildingClass>
+			<Building>BUILDING_ACADEMY</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<iHappy>-2</iHappy>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -3847,7 +3863,7 @@
 			<Description>TXT_KEY_EVENT_SPY_DISCOVERED_2</Description>
 			<iGold>-300</iGold>
 			<iEspionagePoints>300</iEspionagePoints>
-			<UnitClass>UNITCLASS_GREAT_SPY</UnitClass>
+			<FreeUnit>UNIT_GREAT_SPY</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -3893,7 +3909,7 @@
 			<Description>TXT_KEY_EVENT_BETTER_COAL_1</Description>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_COAL_PLANT</BuildingClass>
+					<Building>BUILDING_COAL_PLANT</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>4</iExtraYield>
 				</BuildingExtraYield>
@@ -3906,14 +3922,14 @@
 			<Description>TXT_KEY_EVENT_BETTER_COAL_2</Description>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
+					<Building>BUILDING_DRYDOCK</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
+					<Building>BUILDING_DRYDOCK</Building>
 					<iHealth>1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -3924,7 +3940,7 @@
 			<Type>EVENT_BROKEN_DAM_1</Type>
 			<Description>TXT_KEY_EVENT_BROKEN_DAM_1</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_HYDRO_PLANT</BuildingClass>
+			<Building>BUILDING_HYDRO_PLANT</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<iHurryAnger>1</iHurryAnger>
 			<iPopulationChange>-1</iPopulationChange>
@@ -3980,12 +3996,12 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JEWISH_MONASTERY</BuildingClass>
+					<Building>BUILDING_JEWISH_MONASTERY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>8</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JEWISH_MONASTERY</BuildingClass>
+					<Building>BUILDING_JEWISH_MONASTERY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4008,7 +4024,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_GOLDSMITH</BuildingClass>
+					<Building>BUILDING_GOLDSMITH</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4030,7 +4046,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHRISTIAN_MONASTERY</BuildingClass>
+					<Building>BUILDING_CHRISTIAN_MONASTERY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4045,33 +4061,16 @@
 			<iGold>-120</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHRISTIAN_MONASTERY</BuildingClass>
+					<Building>BUILDING_CHRISTIAN_MONASTERY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHRISTIAN_MONASTERY</BuildingClass>
+					<Building>BUILDING_CHRISTIAN_MONASTERY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_TOXCATL_1</Type>
-			<Description>TXT_KEY_EVENT_TOXCATL_1</Description>
-			<bPickCity>1</bPickCity>
-			<iHurryAnger>2</iHurryAnger>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_TOXCATL_2</Type>
-			<Description>TXT_KEY_EVENT_TOXCATL_2</Description>
-			<bPickCity>1</bPickCity>
-			<iGold>-65</iGold>
-			<iUnitImmobileTurns>3</iUnitImmobileTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4097,12 +4096,12 @@
 			<iGold>-200</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LIBRARY</BuildingClass>
+					<Building>BUILDING_LIBRARY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LIBRARY</BuildingClass>
+					<Building>BUILDING_LIBRARY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4123,7 +4122,7 @@
 			<Description>TXT_KEY_EVENT_ROGUE_STATION_1</Description>
 			<bPickCity>1</bPickCity>
 			<iEspionagePoints>-150</iEspionagePoints>
-			<BuildingClass>BUILDINGCLASS_BROADCAST_TOWER</BuildingClass>
+			<Building>BUILDING_BROADCAST_TOWER</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -4141,7 +4140,7 @@
 			<Description>TXT_KEY_EVENT_ROGUE_STATION_3</Description>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
@@ -4155,7 +4154,7 @@
 			<Description>TXT_KEY_EVENT_ANTIMONARCHISTS_1</Description>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
+					<Building>BUILDING_PALACE</Building>
 					<iHappy>3</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -4167,87 +4166,107 @@
 			<Description>TXT_KEY_EVENT_ANTIMONARCHISTS_2</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JEWISH_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_JEWISH_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HINDU_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_HINDU_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BUDDHIST_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CONFUCIAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHRISTIAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TAOIST_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_TAOIST_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HELLENIC_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ZOROASTRIAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MESOAMERICAN_CATHEDRAL</BuildingClass>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<!--BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CANAANISM_CATHEDRAL</BuildingClass>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce-->
-				<!--BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClass>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce-->
-				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MORMON_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SCIENTOLOGY_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_MORMON_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SHINTO_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SIKH_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_SHINTO_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_VOODOO_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_SIKH_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_VOODOO_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_JAIN_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ASATRU_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4268,7 +4287,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
+					<Building>BUILDING_COURTHOUSE</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
@@ -4285,7 +4304,7 @@
 			</WorldNewsTexts>
 			<OtherPlayerPopup>TXT_KEY_EVENTOTHER_FUTBOL_WAR_1</OtherPlayerPopup>
 			<bDeclareWar>1</bDeclareWar>
-			<UnitClass>UNITCLASS_INFANTRY</UnitClass>
+			<FreeUnit>UNIT_INFANTRY</FreeUnit>
 			<iNumFreeUnits>3</iNumFreeUnits>
 			<iHappyTurns>10</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -4321,16 +4340,16 @@
 		<EventInfo>
 			<Type>EVENT_BATTLE_LASERS_1</Type>
 			<Description>TXT_KEY_EVENT_BATTLE_LASERS_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_GUNSHIP</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_AH64_GUNSHIP</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_GUNSHIP</UnitType>
+					<Promotion>PROMOTION_DRILL1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_AH64_GUNSHIP</UnitType>
+					<Promotion>PROMOTION_DRILL1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4341,36 +4360,36 @@
 				<Text>TXT_KEY_WORLD_NAPALM_1</Text>
 			</WorldNewsTexts>
 			<iGold>-100</iGold>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FIGHTER_BOMBER</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_BOMBER</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_A10_BOMBER</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_UAV</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_B52_BOMBER</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_STEALTH_BOMBER</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_B1_LANCER</UnitClass>
-					<UnitPromotion>PROMOTION_NAPALM_BOMBS</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_FIGHTER_BOMBER</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_BOMBER</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_A10_BOMBER</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_UAV</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_B52_BOMBER</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_STEALTH_BOMBER</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_B1_LANCER</UnitType>
+					<Promotion>PROMOTION_NAPALM_BOMBS</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<PythonCallback>applyNapalm1</PythonCallback>
 			<PythonHelp>getHelpNapalm1</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -4394,7 +4413,7 @@
 			</WorldNewsTexts>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BROADCAST_TOWER</BuildingClass>
+					<Building>BUILDING_BROADCAST_TOWER</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4409,10 +4428,10 @@
 				<Text>TXT_KEY_EVENT_WORLD_BILLIONS_AND_BILLIONS_2</Text>
 			</WorldNewsTexts>
 			<iGold>-200</iGold>
-			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+			<Building>BUILDING_THEATRE</Building>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
+					<Building>BUILDING_THEATRE</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4428,24 +4447,24 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_REACTIVE_ARMOR_1</Text>
 			</WorldNewsTexts>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_EARLY_TANK</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL2</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_TANK</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL2</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_LIGHT_TANK</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL2</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_HEAVY_TANK</UnitClass>
-					<UnitPromotion>PROMOTION_DRILL2</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<Promotion>PROMOTION_DRILL2</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_TANK</UnitType>
+					<Promotion>PROMOTION_DRILL2</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<Promotion>PROMOTION_DRILL2</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<Promotion>PROMOTION_DRILL2</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4455,12 +4474,12 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_GREEK_FIRE_1</Text>
 			</WorldNewsTexts>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_TRIREME</UnitClass>
-					<UnitPromotion>PROMOTION_BLITZ</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_TRIREME</UnitType>
+					<Promotion>PROMOTION_BLITZ</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4561,7 +4580,7 @@
 				<Text>TXT_KEY_EVENT_WORLD_THE_GENERALS_PUTSCH_2</Text>
 			</WorldNewsTexts>
 			<iGold>-300</iGold>
-			<UnitClass>UNITCLASS_INFANTRY</UnitClass>
+			<FreeUnit>UNIT_INFANTRY</FreeUnit>
 			<iNumFreeUnits>3</iNumFreeUnits>
 			<bDisbandUnit>1</bDisbandUnit>
 			<iRevoltTurns>1</iRevoltTurns>
@@ -4588,7 +4607,7 @@
 			</WorldNewsTexts>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
+					<Building>BUILDING_HOSPITAL</Building>
 					<iHealth>1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -4689,7 +4708,7 @@
 			<Description>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_1</Description>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
@@ -4702,7 +4721,7 @@
 			<Description>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_2</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HYDRO_PLANT</BuildingClass>
+					<Building>BUILDING_HYDRO_PLANT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4715,7 +4734,7 @@
 			<Description>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_3</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClass>
+					<Building>BUILDING_NUCLEAR_PLANT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4728,7 +4747,7 @@
 			<Description>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_4</Description>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<iHealth>2</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -4804,14 +4823,14 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4827,7 +4846,7 @@
 				<Text>TXT_KEY_EVENT_WORLD_INDUSTRIAL_ACTION_4</Text>
 			</WorldNewsTexts>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+			<Building>BUILDING_FACTORY</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<iHurryAnger>2</iHurryAnger>
 			<iRevoltTurns>1</iRevoltTurns>
@@ -4865,7 +4884,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-	<EventInfo>
+		<EventInfo>
 			<Type>EVENT_THE_BUCCANEERS_1</Type>
 			<Description>TXT_KEY_EVENT_THE_BUCCANEERS_1</Description>
 			<WorldNewsTexts>
@@ -4966,7 +4985,7 @@
 			<iSpaceProductionMod>1</iSpaceProductionMod>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
+					<Building>BUILDING_OBSERVATORY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4983,7 +5002,7 @@
 			<iGold>-80</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
+					<Building>BUILDING_OBSERVATORY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5018,23 +5037,23 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MELEE</UnitCombat>
-					<UnitPromotion>PROMOTION_CRUCIBLE_STEEL</UnitPromotion>
+					<Promotion>PROMOTION_CRUCIBLE_STEEL</Promotion>
 				</UnitCombatPromotion>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MOUNTED</UnitCombat>
-					<UnitPromotion>PROMOTION_CRUCIBLE_STEEL</UnitPromotion>
+					<Promotion>PROMOTION_CRUCIBLE_STEEL</Promotion>
 				</UnitCombatPromotion>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_RECON</UnitCombat>
-					<UnitPromotion>PROMOTION_CRUCIBLE_STEEL</UnitPromotion>
+					<Promotion>PROMOTION_CRUCIBLE_STEEL</Promotion>
 				</UnitCombatPromotion>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_HUNTER</UnitCombat>
-					<UnitPromotion>PROMOTION_CRUCIBLE_STEEL</UnitPromotion>
+					<Promotion>PROMOTION_CRUCIBLE_STEEL</Promotion>
 				</UnitCombatPromotion>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_CRIMINAL</UnitCombat>
-					<UnitPromotion>PROMOTION_CRUCIBLE_STEEL</UnitPromotion>
+					<Promotion>PROMOTION_CRUCIBLE_STEEL</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -5046,7 +5065,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_ARCHER</UnitCombat>
-					<UnitPromotion>PROMOTION_POISON_TIPS</UnitPromotion>
+					<Promotion>PROMOTION_POISON_TIPS</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -5069,7 +5088,7 @@
 		<EventInfo>
 			<Type>EVENT_ARCHERY_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_ARCHERY_FOUNDED_1</Description>
-			<UnitClass>UNITCLASS_ARCHER</UnitClass>
+			<FreeUnit>UNIT_ARCHER</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5077,7 +5096,7 @@
 		<EventInfo>
 			<Type>EVENT_SAILING_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_SAILING_FOUNDED_1</Description>
-			<UnitClass>UNITCLASS_GALLEY</UnitClass>
+			<FreeUnit>UNIT_GALLEY</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5086,7 +5105,7 @@
 			<Type>EVENT_NATUROPATHY_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_NATUROPATHY_FOUNDED_1</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_HEALERHUT</BuildingClass>
+			<Building>BUILDING_HEALERHUT</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5107,7 +5126,7 @@
 			<iTechCostPercent>10</iTechCostPercent>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SCHOOL_OF_SCRIBES</BuildingClass>
+					<Building>BUILDING_SCHOOL_OF_SCRIBES</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5118,7 +5137,7 @@
 		<EventInfo>
 			<Type>EVENT_TRADE_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_TRADE_FOUNDED_1</Description>
-			<UnitClass>UNITCLASS_TRADE_CARAVAN</UnitClass>
+			<FreeUnit>UNIT_TRADE_CARAVAN</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5127,7 +5146,7 @@
 			<Type>EVENT_CHARIOTRY_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_1</Description>
 			<iGold>-20</iGold>
-			<UnitClass>UNITCLASS_CHARIOT</UnitClass>
+			<FreeUnit>UNIT_CHARIOT</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5139,7 +5158,7 @@
 			<iGold>-40</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
+					<Building>BUILDING_STABLE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5173,7 +5192,7 @@
 			<Type>EVENT_MERCENARIES_ANCIENT_3</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_ANCIENT_3</Description>
 			<iGold>-200</iGold>
-			<UnitClass>UNITCLASS_STONE_THROWER</UnitClass>
+			<FreeUnit>UNIT_STONE_THROWER</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5198,7 +5217,7 @@
 			<Type>EVENT_MERCENARIES_CLASSICAL_3</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_CLASSICAL_3</Description>
 			<iGold>-300</iGold>
-			<UnitClass>UNITCLASS_AXEMAN</UnitClass>
+			<FreeUnit>UNIT_AXEMAN</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5223,7 +5242,7 @@
 			<Type>EVENT_MERCENARIES_MEDIEVAL_3</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_MEDIEVAL_3</Description>
 			<iGold>-500</iGold>
-			<UnitClass>UNITCLASS_SWORDSMAN</UnitClass>
+			<FreeUnit>UNIT_SWORDSMAN</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5244,7 +5263,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TANNERY</BuildingClass>
+					<Building>BUILDING_TANNERY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5258,7 +5277,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_MELEE</UnitCombat>
-					<UnitPromotion>PROMOTION_SEGMENTED_ARMOR</UnitPromotion>
+					<Promotion>PROMOTION_SEGMENTED_ARMOR</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -5267,48 +5286,48 @@
 		<EventInfo>
 			<Type>EVENT_CHAIN_SHOT_1</Type>
 			<Description>TXT_KEY_EVENT_CHAIN_SHOT_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FRIGATE</UnitClass>
-					<UnitPromotion>PROMOTION_CHAIN_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_SHIP_OF_THE_LINE</UnitClass>
-					<UnitPromotion>PROMOTION_CHAIN_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_MANOWAR</UnitClass>
-					<UnitPromotion>PROMOTION_CHAIN_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_FRIGATE</UnitType>
+					<Promotion>PROMOTION_CHAIN_SHOT</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
+					<Promotion>PROMOTION_CHAIN_SHOT</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MANOWAR</UnitType>
+					<Promotion>PROMOTION_CHAIN_SHOT</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_GRAPE_SHOT_1</Type>
 			<Description>TXT_KEY_EVENT_GRAPE_SHOT_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_BOMBARD</UnitClass>
-					<UnitPromotion>PROMOTION_GRAPE_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CANNON</UnitClass>
-					<UnitPromotion>PROMOTION_GRAPE_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CULVERIN</UnitClass>
-					<UnitPromotion>PROMOTION_GRAPE_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FALCONET</UnitClass>
-					<UnitPromotion>PROMOTION_GRAPE_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_GREAT_BOMBARD</UnitClass>
-					<UnitPromotion>PROMOTION_GRAPE_SHOT</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_BOMBARD</UnitType>
+					<Promotion>PROMOTION_GRAPE_SHOT</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CANNON</UnitType>
+					<Promotion>PROMOTION_GRAPE_SHOT</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CULVERIN</UnitType>
+					<Promotion>PROMOTION_GRAPE_SHOT</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FALCONET</UnitType>
+					<Promotion>PROMOTION_GRAPE_SHOT</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_GREAT_BOMBARD</UnitType>
+					<Promotion>PROMOTION_GRAPE_SHOT</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -5318,7 +5337,7 @@
 			<UnitCombatPromotions>
 				<UnitCombatPromotion>
 					<UnitCombat>UNITCOMBAT_WOODEN_SHIPS</UnitCombat>
-					<UnitPromotion>PROMOTION_COPPER_PLATING</UnitPromotion>
+					<Promotion>PROMOTION_COPPER_PLATING</Promotion>
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -5338,7 +5357,7 @@
 			<Description>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_2</Description>
 			<iGold>-200</iGold>
 			<iEspionagePoints>100</iEspionagePoints>
-			<UnitClass>UNITCLASS_GREAT_SPY</UnitClass>
+			<FreeUnit>UNIT_GREAT_SPY</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<iOurAttitudeModifier>-1</iOurAttitudeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -5377,7 +5396,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_STONEHENGE</BuildingClass>
+					<Building>BUILDING_STONEHENGE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5419,7 +5438,7 @@
 			<iGold>-300</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TREASURY</BuildingClass>
+					<Building>BUILDING_TREASURY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5450,7 +5469,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHEMISTRY_LAB</BuildingClass>
+					<Building>BUILDING_CHEMISTRY_LAB</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5464,7 +5483,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ACCELERATOR</BuildingClass>
+					<Building>BUILDING_ACCELERATOR</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5523,7 +5542,7 @@
 			<Description>TXT_KEY_EVENT_REFINERY_EXPLOSION_2</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-2000</iGold>
-			<BuildingClass>BUILDINGCLASS_OIL_REFINERY</BuildingClass>
+			<Building>BUILDING_OIL_REFINERY</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5532,7 +5551,7 @@
 			<Type>EVENT_REFINERY_EXPLOSION_3</Type>
 			<Description>TXT_KEY_EVENT_REFINERY_EXPLOSION_3</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_OIL_REFINERY</BuildingClass>
+			<Building>BUILDING_OIL_REFINERY</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<iHappy>-3</iHappy>
 			<iHealth>-3</iHealth>
@@ -5546,19 +5565,19 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<iHappy>-2</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -5572,12 +5591,12 @@
 			<iGold>-1000</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5592,19 +5611,19 @@
 			<iGold>-2000</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
+					<Building>BUILDING_SECRET_ARMY_BASE</Building>
 					<iHappy>2</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -5625,7 +5644,7 @@
 			<bPickCity>1</bPickCity>
 			<iGold>-15000</iGold>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
-			<UnitClass>UNITCLASS_NANITE_CLOUD</UnitClass>
+			<FreeUnit>UNIT_NANITE_CLOUD</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5646,14 +5665,14 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
+					<Building>BUILDING_UNIVERSITY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
+					<Building>BUILDING_UNIVERSITY</Building>
 					<iHealth>1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -5664,7 +5683,7 @@
 			<Type>EVENT_FAMOUS_DOCTOR_2</Type>
 			<Description>TXT_KEY_EVENT_FAMOUS_DOCTOR_2</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
+			<Building>BUILDING_HOSPITAL</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5673,9 +5692,9 @@
 			<Type>EVENT_HARDY_CROPS_1</Type>
 			<Description>TXT_KEY_EVENT_HARDY_CROPS_1</Description>
 			<PlotExtraYields>
-	            		<PlotExtraYield>
-					 <YieldType>YIELD_FOOD</YieldType>
-					 <iExtraYield>2</iExtraYield>
+				<PlotExtraYield>
+					<YieldType>YIELD_FOOD</YieldType>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
@@ -5685,7 +5704,7 @@
 		<EventInfo>
 			<Type>EVENT_PRIME_TIMBER_1</Type>
 			<Description>TXT_KEY_EVENT_PRIME_TIMBER_1</Description>
-			<BonusType>BONUS_TIMBER</BonusType>
+			<BonusType>BONUS_PRIME_TIMBER</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5733,7 +5752,7 @@
 		<EventInfo>
 			<Type>EVENT_TOLERANCE_1</Type>
 			<Description>TXT_KEY_EVENT_TOLERANCE_1</Description>
-			<UnitClass>UNITCLASS_PROPHET</UnitClass>
+			<FreeUnit>UNIT_PROPHET</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5741,7 +5760,7 @@
 		<EventInfo>
 			<Type>EVENT_RECRUITMENT_DRIVE_1</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_1</Description>
-			<UnitClass>UNITCLASS_MUSKETMAN</UnitClass>
+			<FreeUnit>UNIT_MUSKETMAN</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5750,7 +5769,7 @@
 			<Type>EVENT_RECRUITMENT_DRIVE_2</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_2</Description>
 			<iGold>-120</iGold>
-			<UnitClass>UNITCLASS_MUSKETMAN</UnitClass>
+			<FreeUnit>UNIT_MUSKETMAN</FreeUnit>
 			<iNumFreeUnits>3</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5759,7 +5778,7 @@
 			<Type>EVENT_RECRUITMENT_DRIVE_3</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_3</Description>
 			<iGold>-300</iGold>
-			<UnitClass>UNITCLASS_MUSKETMAN</UnitClass>
+			<FreeUnit>UNIT_MUSKETMAN</FreeUnit>
 			<iNumFreeUnits>6</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5794,7 +5813,7 @@
 			<Type>EVENT_WAR_MEMORIAL_1</Type>
 			<Description>TXT_KEY_EVENT_WAR_MEMORIAL_1</Description>
 			<bPickCity>1</bPickCity>
-			<BuildingClass>BUILDINGCLASS_OBELISK</BuildingClass>
+			<Building>BUILDING_MONUMENT</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5805,7 +5824,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_OBELISK</BuildingClass>
+					<Building>BUILDING_MONUMENT</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5819,7 +5838,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_OBELISK</BuildingClass>
+					<Building>BUILDING_MONUMENT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5876,7 +5895,7 @@
 		<EventInfo>
 			<Type>EVENT_PROMISING_COMMANDER_1</Type>
 			<Description>TXT_KEY_EVENT_PROMISING_COMMANDER_1</Description>
-			<UnitClass>UNITCLASS_GREAT_GENERAL</UnitClass>
+			<FreeUnit>UNIT_GREAT_GENERAL</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5886,7 +5905,7 @@
 			<Description>TXT_KEY_EVENT_LOYALTY_TESTS_1</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
+					<Building>BUILDING_PALACE</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5901,7 +5920,7 @@
 			<iGold>-50</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
+					<Building>BUILDING_PALACE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5928,14 +5947,14 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
+					<Building>BUILDING_UNIVERSITY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
+					<Building>BUILDING_UNIVERSITY</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -5976,12 +5995,12 @@
 		<EventInfo>
 			<Type>EVENT_HARDY_SCOUTS</Type>
 			<Description>TXT_KEY_EVENT_HARDY_SCOUTS_1</Description>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_SCOUT</UnitClass>
-					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_SCOUT</UnitType>
+					<Promotion>PROMOTION_COMBAT1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -6039,11 +6058,11 @@
 			</WorldNewsTexts>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<iHealth>1</iHealth>
 				</BuildingExtraHealth>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_COAL_PLANT</BuildingClass>
+					<Building>BUILDING_COAL_PLANT</Building>
 					<iHealth>1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6058,23 +6077,23 @@
 			</WorldNewsTexts>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_COAL_PLANT</BuildingClass>
+					<Building>BUILDING_COAL_PLANT</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_FACTORY</BuildingClass>
+					<Building>BUILDING_FACTORY</Building>
 					<iHappy>-1</iHappy>
 				</BuildingExtraHappy>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_COAL_PLANT</BuildingClass>
+					<Building>BUILDING_COAL_PLANT</Building>
 					<iHappy>-1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -6094,17 +6113,17 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PORT</BuildingClass>
+					<Building>BUILDING_PORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+					<Building>BUILDING_HARBOR</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
+					<Building>BUILDING_COMMERCIAL_PORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6117,7 +6136,7 @@
 			<Description>TXT_KEY_EVENT_LOOSE_MORALS_1</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BROADCAST_TOWER</BuildingClass>
+					<Building>BUILDING_BROADCAST_TOWER</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6138,7 +6157,7 @@
 			<Description>TXT_KEY_EVENT_PRESIDENT_ASSASSINATED_1</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
+					<Building>BUILDING_COURTHOUSE</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6218,13 +6237,6 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_CAKE_FLOUR_1</Type>
-			<Description>TXT_KEY_EVENT_CAKE_FLOUR_1</Description>
-			<iGold>42</iGold>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
 			<Type>EVENT_SILKWORM_GOING_EXTINCT_1</Type>
 			<Description>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT_1</Description>
 			<iGold>-75</iGold>
@@ -6245,92 +6257,92 @@
 			<Type>EVENT_NAVAL_PROXIMITY_AAA_FUSES_1</Type>
 			<Description>TXT_KEY_EVENT_NAVAL_PROXIMITY_AAA_FUSES_1</Description>
 			<iGold>-90</iGold>
-			<UnitClassPromotions>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_DESTROYER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_BATTLESHIP</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_MISSILE_CRUISER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_STEALTH_DESTROYER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_BATTLECRUISER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CARRIER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_STEAM_DESTROYER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_CRUISER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_AEGIS</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_NUCLEAR_CARRIER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FF_DESTROYER_I</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FUSION_CRUISER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FUSION_BATTLESHIP</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_FUSION_CARRIER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_HEAVY_CRUISER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_WW1_DESTROYER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_PRE_DREADNOUGHT</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_DREADNOUGHT_SHIP</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_WW2_BATTLESHIP</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_EARLY_CARRIER</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-				<UnitClassPromotion>
-					<UnitClass>UNITCLASS_LITTORAL_COMBAT_SHIP</UnitClass>
-					<UnitPromotion>PROMOTION_INTERCEPTION1</UnitPromotion>
-				</UnitClassPromotion>
-			</UnitClassPromotions>
+			<PromoteUnits>
+				<PromoteUnit>
+					<UnitType>UNIT_DESTROYER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_BATTLESHIP</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MISSILE_CRUISER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_STEALTH_DESTROYER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_BATTLECRUISER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CARRIER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_STEAM_DESTROYER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_CRUISER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_AEGIS_CRUISER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FF_DESTROYER_I</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FUSION_CRUISER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FUSION_BATTLESHIP</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_FUSION_CARRIER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_HEAVY_CRUISER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_WW1_DESTROYER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_PRE_DREADNOUGHT</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_DREADNOUGHT_SHIP</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_WW2_BATTLESHIP</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_EARLY_CARRIER</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
+					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
+				</PromoteUnit>
+			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -6461,7 +6473,7 @@
 			<Description>TXT_KEY_EVENT_SUPER_VIRUS_3</Description>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
+					<Building>BUILDING_HOSPITAL</Building>
 					<iHealth>2</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6531,27 +6543,27 @@
 			<iRandomGold>-200</iRandomGold>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_RIVER_PORT</BuildingClass>
+					<Building>BUILDING_RIVER_PORT</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+					<Building>BUILDING_HARBOR</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_PORT</BuildingClass>
+					<Building>BUILDING_PORT</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
+					<Building>BUILDING_COMMERCIAL_PORT</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_INTERNATIONAL_PORT</BuildingClass>
+					<Building>BUILDING_INTERNATIONAL_PORT</Building>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>3</iExtraYield>
 				</BuildingExtraYield>
@@ -6572,7 +6584,7 @@
 			<iRevoltTurns>1</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
-<!-- Other -->
+		<!-- Other -->
 		<EventInfo>
 			<Type>EVENT_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_EVENT_ACHIEVEMENT</Description>
@@ -6584,12 +6596,12 @@
 			<Type>EVENT_MERCHANTFLEET</Type>
 			<Description>TXT_KEY_EVENT_MERCHANTFLEET</Description>
 			<bPickCity>1</bPickCity>
-			<UnitClass>UNITCLASS_MERCHANTFLEET</UnitClass>
+			<FreeUnit>UNIT_MERCHANTFLEET</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-<!-- STUCK IN SWAMP -->
+		<!-- STUCK IN SWAMP -->
 		<EventInfo>
 			<Type>EVENT_STUCK_IN_SWAMP_1</Type>
 			<Description>TXT_KEY_EVENT_STUCK_IN_SWAMP_1</Description>
@@ -6597,7 +6609,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-<!-- Events for Missions and Outcomes-->
+		<!-- Events for Missions and Outcomes-->
 		<EventInfo>
 			<Type>EVENT_LAWYER_LITIGATION</Type>
 			<Description>TXT_KEY_EVENT_LAWYER_LITIGATION</Description>
@@ -6615,7 +6627,7 @@
 			<Type>EVENT_HERO_SPAWN_1</Type>
 			<Description>TXT_KEY_EVENT_HERO_SPAWN_1</Description>
 			<bPickCity>1</bPickCity>
-			<UnitClass>UNITCLASS_SPARTACUS</UnitClass>
+			<FreeUnit>UNIT_SPARTACUS</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6638,7 +6650,7 @@
 		<EventInfo>
 			<Type>EVENT_ABATIS_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6653,7 +6665,7 @@
 		<EventInfo>
 			<Type>EVENT_PALISADE_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6668,7 +6680,7 @@
 		<EventInfo>
 			<Type>EVENT_BUNKER_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6683,7 +6695,7 @@
 		<EventInfo>
 			<Type>EVENT_FUTURE_BUNKER_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6701,35 +6713,35 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>-2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-<!-- End Template -->
+		<!-- End Template -->
 		<EventInfo>
 			<Type>EVENT_COCK_FIGHTS_2</Type>
 			<Description>TXT_KEY_EVENT_COCK_FIGHTS_2</Description>
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<iHappy>-1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -6743,19 +6755,19 @@
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_CHICKEN_COOP</BuildingClass>
+					<Building>BUILDING_CHICKEN_COOP</Building>
 					<iHappy>-1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -6770,7 +6782,7 @@
 			<iRandomGold>-50</iRandomGold>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_DOCTOR</BuildingClass>
+					<Building>BUILDING_DOCTOR</Building>
 					<iHealth>-1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6784,14 +6796,14 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_DOCTOR</BuildingClass>
+					<Building>BUILDING_DOCTOR</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<BuildingClass>BUILDINGCLASS_DOCTOR</BuildingClass>
+					<Building>BUILDING_DOCTOR</Building>
 					<iHealth>-2</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6806,7 +6818,7 @@
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_DOCTOR</BuildingClass>
+					<Building>BUILDING_DOCTOR</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -6840,26 +6852,26 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SLED_DOGS</BuildingClass>
+					<Building>BUILDING_SLED_DOGS</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SLED_DOGS</BuildingClass>
+					<Building>BUILDING_SLED_DOGS</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_SLED_DOGS</BuildingClass>
+					<Building>BUILDING_SLED_DOGS</Building>
 					<iHappy>2</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-				<EventInfo>
+		<EventInfo>
 			<Type>EVENT_SHERIFF_1</Type>
 			<Description>TXT_KEY_EVENT_SHERIFF_1</Description>
 			<bPickCity>1</bPickCity>
@@ -6891,13 +6903,13 @@
 			<Description>TXT_KEY_EVENT_SHERIFF_4</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-200</iGold>
-			<UnitClass>UNITCLASS_SHERIFF</UnitClass>
+			<FreeUnit>UNIT_SHERIFF</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-			<EventInfo>
+		<EventInfo>
 			<Type>EVENT_MUSICOFGODS_1</Type>
 			<Description>TXT_KEY_EVENT_MUSICOFGODS_1</Description>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -6909,22 +6921,22 @@
 			<iGold>-500</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MAJOR_LEAGUE_STADIUM</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MINOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MINOR_LEAGUE_STADIUM</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FAIR_GROUNDS</BuildingClass>
+					<Building>BUILDING_FAIR_GROUNDS</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SPEEDWAY</BuildingClass>
+					<Building>BUILDING_SPEEDWAY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6939,61 +6951,61 @@
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MAJOR_LEAGUE_STADIUM</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MINOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MINOR_LEAGUE_STADIUM</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FAIR_GROUNDS</BuildingClass>
+					<Building>BUILDING_FAIR_GROUNDS</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SPEEDWAY</BuildingClass>
+					<Building>BUILDING_SPEEDWAY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MAJOR_LEAGUE_STADIUM</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MINOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MINOR_LEAGUE_STADIUM</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FAIR_GROUNDS</BuildingClass>
+					<Building>BUILDING_FAIR_GROUNDS</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SPEEDWAY</BuildingClass>
+					<Building>BUILDING_SPEEDWAY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MAJOR_LEAGUE_STADIUM</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_MINOR_LEAGUE_STADIUM</BuildingClass>
+					<Building>BUILDING_MINOR_LEAGUE_STADIUM</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_FAIR_GROUNDS</BuildingClass>
+					<Building>BUILDING_FAIR_GROUNDS</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 				<BuildingExtraHappy>
-					<BuildingClass>BUILDINGCLASS_SPEEDWAY</BuildingClass>
+					<Building>BUILDING_SPEEDWAY</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -7018,7 +7030,7 @@
 			<Type>EVENT_VOLCANO_EXTINCTION</Type>
 			<Description>TXT_KEY_EVENT_VOLCANO_EXTINCTION</Description>
 			<bPickCity>1</bPickCity>
-			<FeatureType>FEATURE_VOLCANO2</FeatureType>
+			<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<PythonHelp>getHelpVolcanoExtinction</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7051,7 +7063,7 @@
 		<EventInfo>
 			<Type>EVENT_ELEPHANT_MIGRATION_1</Type>
 			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
-			<BonusType>BONUS_ELEPHANT</BonusType>
+			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -7091,8 +7103,6 @@
 			<Type>EVENT_CITYFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_1</Description>
 			<bPickCity>1</bPickCity>
-			<AdditionalEvents>
-			</AdditionalEvents>
 			<PythonCallback>doMinorFire</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<PythonHelp>getHelpMinorFire</PythonHelp>
@@ -7312,7 +7322,7 @@
 		<EventInfo>
 			<Type>EVENT_SEAL_MIGRATION_1</Type>
 			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
-			<BonusType>BONUS_SEA_LIONS</BonusType>
+			<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -7335,14 +7345,14 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_1</Type>
-			<Description>Ignore them.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_INVASION_1</Description>
 			<bDisbandUnit>1</bDisbandUnit>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_2</Type>
-			<Description>Destroy them and take their gold!</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_INVASION_2</Description>
 			<iGold>50</iGold>
 			<iUnitImmobileTurns>3</iUnitImmobileTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7350,16 +7360,16 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_3</Type>
-			<Description>Bribe them to join your navy.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_INVASION_3</Description>
 			<iGold>-350</iGold>
-			<UnitClass>UNITCLASS_PRIVATEER</UnitClass>
+			<FreeUnit>UNIT_PRIVATEER</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_MAP_1</Type>
-			<Description>Bah! That map is a fraud. Ignore the old man.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_MAP_1</Description>
 			<bPickCity>1</bPickCity>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7367,7 +7377,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_MAP_2</Type>
-			<Description>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_MAP_2</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-100</iGold>
 			<iHappyTurns>3</iHappyTurns>
@@ -7376,7 +7386,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_MAP_3</Type>
-			<Description>Search the world over for the treasure.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_MAP_3</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-150</iGold>
 			<iRandomGold>500</iRandomGold>
@@ -7385,9 +7395,9 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_NAVY_1</Type>
-			<Description>What's he waiting for?</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_NAVY_1</Description>
 			<bPickCity>1</bPickCity>
-			<UnitClass>UNITCLASS_PRIVATEER</UnitClass>
+			<FreeUnit>UNIT_PRIVATEER</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<iUnitExperience>2</iUnitExperience>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7395,11 +7405,11 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_NAVY_2</Type>
-			<Description>Let him start an academy.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_NAVY_2</Description>
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -7408,7 +7418,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_NAVY_3</Type>
-			<Description>Does he have any gold?</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_NAVY_3</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>100</iGold>
 			<iRandomGold>400</iRandomGold>
@@ -7440,59 +7450,7 @@
 			<Type>EVENT_BLARNEYVISIT_1</Type>
 			<Description>TXT_KEY_EVENT_BLARNEYVISIT_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_BLARNEYVISIT_2</Event>
@@ -7506,177 +7464,29 @@
 			<Type>EVENT_BLARNEYVISIT_2</Type>
 			<Description>TXT_KEY_EVENT_BLARNEYVISIT_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_2</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
 			<iOurAttitudeModifier>1</iOurAttitudeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_DINO_ATTACK_1</Type>
 			<Description>TXT_KEY_EVENT_DINO_ATTACK_1</Description>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
 			<iGold>-600</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
 			<iRandomGold>-300</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_DINO_ATTACK_2</Type>
 			<Description>TXT_KEY_EVENT_DINO_ATTACK_2</Description>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
 			<iHurryAnger>3</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
 			<iRevoltTurns>2</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7684,59 +7494,9 @@
 			<Type>EVENT_NSL_CHAMP_1</Type>
 			<Description>TXT_KEY_EVENT_NSLCHAMP_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_NSL_CHAMP_OTHER_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
 			<iHappy>1</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_NSL_CHAMP_2</Event>
@@ -7750,66 +7510,14 @@
 			<Type>EVENT_NSL_CHAMP_2</Type>
 			<Description>TXT_KEY_EVENT_NSLCHAMP_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_NSL_CHAMP_OTHER_2</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
-					<BuildingClass>BUILDINGCLASS_DISNEYLAND</BuildingClass>
+					<Building>BUILDING_DISNEYLAND</Building>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7817,59 +7525,10 @@
 			<Type>EVENT_VEGAS_JACKPOT_1</Type>
 			<Description>TXT_KEY_EVENT_VEGAS_JACKPOT_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
 			<iGold>800</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
 			<iRandomGold>300</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7877,59 +7536,9 @@
 			<Type>EVENT_VEGAS_JACKPOT_2</Type>
 			<Description>TXT_KEY_EVENT_VEGAS_JACKPOT_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
 			<iHappyTurns>20</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7937,59 +7546,10 @@
 			<Type>EVENT_BREAK_THE_BANK_1</Type>
 			<Description>TXT_KEY_EVENT_BREAK_THE_BANK_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BREAK_THE_BANK_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
 			<iGold>600</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
 			<iRandomGold>200</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7997,177 +7557,29 @@
 			<Type>EVENT_BREAK_THE_BANK_2</Type>
 			<Description>TXT_KEY_EVENT_BREAK_THE_BANK_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BREAK_THE_BANK_OTHER_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
 			<iHappyTurns>20</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MEGA_ATTACK_1</Type>
 			<Description>TXT_KEY_EVENT_MEGA_ATTACK_1</Description>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
 			<iGold>-300</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
 			<iRandomGold>-200</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MEGA_ATTACK_2</Type>
 			<Description>TXT_KEY_EVENT_MEGA_ATTACK_2</Description>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
 			<iHurryAnger>2</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
 			<iRevoltTurns>1</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -8175,59 +7587,9 @@
 			<Type>EVENT_SUMMER_OF_LOVE</Type>
 			<Description>TXT_KEY_EVENT_SUMMER_OF_LOVE_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_SUMMER_OF_LOVE_OTHER_1</OtherPlayerPopup>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
 			<iCulture>1000</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<UnitClass>NONE</UnitClass>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<BuildingClass>NONE</BuildingClass>
-			<iBuildingChange>0</iBuildingChange>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
 			<iHurryAnger>3</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
 			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>

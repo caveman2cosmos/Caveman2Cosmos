@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
         {
             "name": "Python: Autocorrect.py Test",
             "type": "python",
@@ -56,6 +57,15 @@
             "program": "${workspaceFolder}\\Tools\\XMLTools\\verify-python-callbacks.py",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python: SortByTag Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\XMLTools\\SortByTag.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceFolder}\\Assets\\XML\\Text\\Bonus_CIV4GameText.xml"],
+            "cwd": "${workspaceFolder}\\Tools\\XMLTools"
         }
     ]
 }

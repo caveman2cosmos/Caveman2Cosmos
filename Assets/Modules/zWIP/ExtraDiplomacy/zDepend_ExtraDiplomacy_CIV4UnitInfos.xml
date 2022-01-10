@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Unit Infos -->
+<Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
+	<UnitInfos>
+		<UnitInfo>
+			<Type>UNIT_DIPLOMAT_MESSENGER</Type>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NEGOTIATOR_HUT</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_NEGOTIATION</PrereqTech>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_DIPLOMAT_EARLY</Type>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_AMBASSADOR_HOUSE</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_DIPLOMAT_INDUST</Type>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEPARTMENT_FOREIGN_EFFECT</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_DIPLOMAT_MODERN</Type>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEPARTMENT_FOREIGN_EFFECT</BuildingType>
+			</PrereqAndBuildings>
+		</UnitInfo>
+	</UnitInfos>
+</Civ4UnitInfos>

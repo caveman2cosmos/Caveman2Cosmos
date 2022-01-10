@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by DancingHoskuld -->
-<!-- Assets\Modules\Alt_Timelines\Clockpunk\Units\ClockWorkGolem\ClockWorkGolem_CIV4UnitInfos.xml-->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CLOCKWORK_GOLEM</Class>
 			<Type>UNIT_CLOCKWORK_GOLEM</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -35,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLOCKWORK_GOLEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLOCKWORK_GOLEM_STRATEGY</Strategy>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitAIs>
 				<UnitAI>
@@ -59,13 +52,15 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_MODERN_WARFARE</ForceObsoleteTech>
-			<PrereqBuilding>BUILDING_CLOCKWORK_WORKSHOP</PrereqBuilding>
+			<ObsoleteTech>TECH_MODERN_WARFARE</ObsoleteTech>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>350</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -114,8 +109,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DAVINCI_TANK</Class>
 			<Type>UNIT_DAVINCI_TANK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -140,7 +135,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DAVINCI_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_DAVINCI_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DAVINCI_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -149,12 +143,9 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_EARLY_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_EARLY_TANK</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -177,14 +168,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>410</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>26</iCombat>
@@ -212,8 +198,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ORNITHOPTER</Class>
 			<Type>UNIT_ORNITHOPTER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -237,30 +223,28 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ORNITHOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORNITHOPTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORNITHOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_EARLY_FIGHTER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_EARLY_FIGHTER</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_SIEGE_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_TIMBER</BonusType>
+				<BonusType>BONUS_PRIME_TIMBER</BonusType>
 			</PrereqBonuses>
 			<iCost>380</iCost>
 			<iMoves>1</iMoves>
@@ -294,8 +278,8 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_REPEATING_CROSSBOWMAN</Class>
 			<Type>UNIT_REPEATING_CROSSBOWMAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -322,18 +306,14 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -395,8 +375,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEPHYR</Class>
 			<Type>UNIT_ZEPHYR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -424,7 +404,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZEPHYR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZEPHYR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZEPHYR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -435,26 +414,25 @@
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GUNSHIP</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_SIEGE_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>

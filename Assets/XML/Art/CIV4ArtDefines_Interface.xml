@@ -1,30 +1,9 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Piper (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Interface art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<InterfaceArtInfos>
 		<InterfaceArtInfo>
 			<Type>ARROW_HEAD</Type>
 			<Path>art/interface/screens/TechTree/Head.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ARROW_MXMY</Type>
-			<Path>art/interface/screens/TechTree/Corner-X-Y.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_TAB</Type>
-			<Path>Art/Interface/MainScreen/CityScreenTab.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_TAB_DOWN</Type>
-			<Path>Art/Interface/MainScreen/CityScreenTabDOWN.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTON_BACKGROUND</Type>
-			<Path>Art/Interface/MainScreen/MiniButtonDot.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>ARROW_MXY</Type>
@@ -55,28 +34,6 @@
 			<Path>Art/Interface/Buttons/Button_SELECT.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>CIVICS_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Civics/CivicsBG.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>CIVICS_CANCEL</Type>
-			<Path>Art/Interface/Screens/Civics/CivicsRev-CancelButton.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>CIVICS_TOGGLE</Type>
-			<Path>Art/Interface/Screens/Civics/CivicsToggleButton.kfm</Path>
-		</InterfaceArtInfo>
-		<!-- -->
-		<InterfaceArtInfo>
-			<Type>C2C_INITIAL_OPTIONS_SCREEN_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Civilopedia/WaterEnvironment/WaterEnvironment.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>C2C_NATION_ADVISOR_SCREEN_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Civilopedia/WaterEnvironment/WaterEnvironment.nif</Path>
-		</InterfaceArtInfo>
-		<!-- -->
-		<InterfaceArtInfo>
 			<Type>CIVILOPEDIA_ANCIENT_BATTLEGROUND</Type>
 			<Path>Art/Interface/Screens/Civilopedia/AncientBattlefield/AncientBattlefield.nif</Path>
 		</InterfaceArtInfo>
@@ -93,83 +50,27 @@
 			<Path>Art/Interface/Screens/Civilopedia/Amphibious/AmphibiousBG.nif</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>DAWNOFMAN</Type>
-			<Path>Art/Interface/Screens/DawnOfMan/DawnOfManBG.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/DiploBG.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_CLEARTABLE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/ClearTableBTN.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_INVENTORY</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/TradeTable.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_INVENTORY_BUTTON</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/InventoryButton.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_NEW_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Diplomacy/DiplomacyScreenHACK02.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_OFFER</Type>
-			<Path>Art/Interface/Screens/Diplomacy/Button_Offer.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_RESPONSE_1LINE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/ConvoBTN1.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_RESPONSE_2LINE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/DiplomacyResponseButton_2LINE.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_RETRACT</Type>
-			<Path>Art/Interface/Screens/Diplomacy/Button_Retract.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_TEXTENTRY</Type>
-			<Path>Art/Interface/Screens/Diplomacy/P2P_TextEntry.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_TRADETABLE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/DiplomacyTradeTable.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DOMESTIC_BG</Type>
-			<Path>Art/Interface/Screens/Advisor/Domesticbg.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DOMESTIC_EXIT</Type>
-			<Path>art/interface/screens/civics/CivicsRev-CancelButton.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>CURSORS_SELECTION_UNIT</Type>
 			<Path>Art/Interface/Cursors/SelectionCursor.nif</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_GAMEFONT</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/GameFont.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_MONOCONSOLE</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/MonoSpacedConsoleFont.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_NUMBERFONT</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/NumberFont-Sylfaen64px.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_SMALLFONT</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/GameFont_75.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
@@ -197,44 +98,8 @@
 			<Path>Art/Interface/MainScreen/CityScreen/Angry_Citizen.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_AUTOMATION_FRAME</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/auto_button_frame.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BACK</Type>
-			<Path>Art/Interface/MainScreen/BottomLeft.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_CENTER</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Center.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_LEFT</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Left.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_RIGHT</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Right.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_CIVICS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_CivicsAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_DEMOGRAPHICS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_Demographics.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_DOMESTIC</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_DomesticAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_EVENT_LOG</Type>
 			<Path>Art/Interface/MainScreen/Turn_Log.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_FINANCE</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_FinanceAdvisor.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_FOREIGN</Type>
@@ -245,32 +110,8 @@
 			<Path>Art/Interface/MainScreen/AD_BTN_MilitaryAdvisor.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_RELIGIOUS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_ReligiousAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_TECH</Type>
 			<Path>Art/Interface/MainScreen/AD_BTN_TECHAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_VICTORY</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_Victory.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_16</Type>
-			<Path>Art/Interface/Buttons/Button_16.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_24</Type>
-			<Path>Art/Interface/Buttons/Button_24.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_32</Type>
-			<Path>Art/Interface/Buttons/Button_32.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_46</Type>
-			<Path>Art/Interface/Buttons/Button_46.kfm</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_CANCEL</Type>
@@ -281,28 +122,8 @@
 			<Path>Art/Interface/Buttons/Builds/BuildVillage.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_CONSCRIPT</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/hurry_draft.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_CREATEGROUP</Type>
 			<Path>Art/Interface/Buttons/Actions/CreateUnitGroup.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_EMPTY</Type>
-			<Path>Art/Interface/Buttons/Empty.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_EMPTYBROWN</Type>
-			<Path>Art/Interface/Buttons/Brown_empty.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_GOVERNOR</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/automate_citizens.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_GOVERNOR_PRODUCTION</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/automate_production.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_LEFT</Type>
@@ -323,10 +144,6 @@
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_RED_X</Type>
 			<Path>Art/Interface/Screens/TechTree/X.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_CHECK</Type>
-			<Path>Art/Interface/Buttons/General/CheckMark.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_RIGHT</Type>
@@ -365,17 +182,10 @@
 			<Path>Art/Interface/CityBar/CityBar_Circle.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_PANEL</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/PanelBG.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_STRATEGY_BAR_MODEL</Type>
 			<Path>Art/Interface/CityBar/Strategy_Billboard.nif</Path>
 		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_EMPTY</Type>
-			<Path>Art/Interface/Empty.kfm</Path>
-		</InterfaceArtInfo>
+		<!-- Review point - Toffer 21.06.20-->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_GAMEDATABACK</Type>
 			<Path>Art/Interface/GameDataBack.nif</Path>
@@ -795,10 +605,6 @@
 		<InterfaceArtInfo>
 			<Type>MAINMENU_MP_JOIN</Type>
 			<Path>Art/Interface/Main Menu/CIV4MainMenuJoinGame.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>MAINMENU_NEWGAME</Type>
-			<Path>Art/Interface/Main Menu/CIV4MainMenuNewGame.kfm</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MAINMENU_PLAY</Type>
@@ -1259,10 +1065,6 @@
 			<Path>Art/Interface/Globeview/ReligionLayer.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_GLOBELAYER_PLOTDEBUG</Type>
-			<Path>Art/Interface/Globeview/PlotDebugLayer.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_GLOBELAYER_STRATEGY</Type>
 			<Path>Art/Interface/Globeview/StrategyLayer.dds</Path>
 		</InterfaceArtInfo>
@@ -1596,7 +1398,7 @@
 			<Path>Art/Interface/UnitUpgradesGraph/line-arrow.dds</Path>
 		</InterfaceArtInfo>
 		<!-- BUG - Sevopedia - end -->
-		<!-- BUG - specialists  - start  -->
+		<!-- BUG - specialists - start -->
 		<InterfaceArtInfo>
 			<Type>OVERLAY_CHEVRON5</Type>
 			<Path>Art/Interface/screens/medallion_Chevron5.dds</Path>
@@ -1609,7 +1411,7 @@
 			<Type>OVERLAY_CHEVRON20</Type>
 			<Path>Art/Interface/screens/medallion_Chevron20.dds</Path>
 		</InterfaceArtInfo>
-		<!-- BUG - specialists  - end  -->
+		<!-- BUG - specialists - end -->
 		<!-- BUG - Raw Yields - start -->
 		<InterfaceArtInfo>
 			<Type>RAW_YIELDS_TRADE</Type>
@@ -1674,15 +1476,13 @@
 			<Path>Art/BUG/Projects_On.dds</Path>
 		</InterfaceArtInfo>
 		<!-- BUG - Wonders Tab - end -->
-		<!-- BUG - Main Interface - BUG Options Screen - Start -->
 		<InterfaceArtInfo>
 			<Type>BUG_OPTIONS_SCREEN_BUTTON</Type>
 			<Path>Art/BUG/BUGMantis.dds</Path>
 		</InterfaceArtInfo>
-		<!-- BUG - Main Interface - BUG Options Screen - end -->
 		<InterfaceArtInfo>
-			<Type>MAD_NUKES_MANAGER_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/MADNukesManagerBackground.dds</Path>
+			<Type>INTERFACE_DEBUG_SCREEN_BUTTON</Type>
+			<Path>Art/Interface/Buttons/General/Gear.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>QUESTION_MARK</Type>
@@ -1692,7 +1492,6 @@
 			<Type>INTERFACE_BUTTON_NULL</Type>
 			<Path>Art/BUG/Null.dds</Path>
 		</InterfaceArtInfo>
-
 		<InterfaceArtInfo>
 			<Type>ART_DEF_BACKGROUND_ADMIRAL</Type>
 			<Path>Art/interface/great_people/bg_admiral.dds</Path>
@@ -1733,30 +1532,6 @@
 			<Type>ART_DEF_BACKGROUND_DOCTOR</Type>
 			<Path>Art/interface/great_people/bg_doctor.dds</Path>
 		</InterfaceArtInfo>
-		<!--InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_DAVE_TOSCHI</Type>
-			<Path>Art/interface/great_people/Dave_Toschi.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_ISIDOR_EINSTEIN</Type>
-			<Path>Art/interface/great_people/Isidor_Einstein.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_JOHNNY_BRODERICK</Type>
-			<Path>Art/interface/great_people/Johnny_Broderick.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_MOE_W_SMITH</Type>
-			<Path>Art/interface/great_people/Moe_W_Smith.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_WILLIAM_J_BURNS</Type>
-			<Path>Art/interface/great_people/William_J_Burns.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_WILLIAM_J_FLYNN</Type>
-			<Path>Art/interface/great_people/William_J_Flynn.dds</Path>
-		</InterfaceArtInfo-->
 		<InterfaceArtInfo>
 			<Type>ART_DEF_GREAT_PERSON_ABBA</Type>
 			<Path>Art/interface/great_people/abba.dds</Path>
@@ -6541,8 +6316,7 @@
 			<Type>ART_DEF_GREAT_PERSON_MONTALBANO</Type>
 			<Path>Art/interface/great_people/great_spy.dds</Path>
 		</InterfaceArtInfo>
-
-		<!-- Orion's  Immigration Mod -->
+		<!-- Orion's Immigration Mod -->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_JOIN_CITY</Type>
 			<Path>Art/Interface/Buttons/Missions/JoinCity.dds</Path>
@@ -6762,6 +6536,18 @@
 		<InterfaceArtInfo>
 			<Type>ART_DEF_FILTER_SHOW_MILITARY</Type>
 			<Path>Art/Interface/buttons/filters/show_military.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_SHOW_UNLIMITED</Type>
+			<Path>Art/BUG/World_Off.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_CHECKBOX_CHECKED</Type>
+			<Path>Art/Interface/buttons/general/checkbox_checked.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_CHECKBOX_UNCHECKED</Type>
+			<Path>Art/Interface/buttons/general/checkbox_unchecked.dds</Path>
 		</InterfaceArtInfo>
 	</InterfaceArtInfos>
 </Civ4ArtDefines>

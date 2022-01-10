@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Created with Notepad by strategyonly -->
-<!-- -->
-<!-- Unit art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<UnitArtInfos>
 		<UnitArtInfo>
@@ -27,8 +21,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -51,8 +45,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -75,8 +69,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -99,8 +93,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -123,8 +117,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -136,7 +130,7 @@
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Animals/Panda/panda.nif</NIF>
 			<KFM>Art/Units/Bear/Bear.kfm</KFM>
-			<SHADERNIF />
+			<SHADERNIF/>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/BearShadow.nif</ShadowNIF>
 				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
@@ -147,8 +141,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -171,8 +165,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -195,8 +189,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -219,8 +213,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -243,8 +237,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -267,8 +261,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -291,8 +285,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -315,32 +309,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TAMED_BEAR</Type>
-			<Button>Art/Interface/Buttons/units/sparth/tamed_bear.dds</Button>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Bear/Bear.nif</NIF>
-			<KFM>Art/Units/Bear/Bear.kfm</KFM>
-			<SHADERNIF>Art/Units/Bear/Bear_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/BearShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>.6</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -363,32 +333,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TAMED_CHEETAH</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/tamed_cheetach.dds</Button>
-			<fScale>0.45</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/animals/Cheetah/Panther.nif</NIF>
-			<KFM>Art/Units/Panther/Panther.kfm</KFM>
-			<SHADERNIF>Art/Units/animals/Cheetah/Panther.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -411,8 +357,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_HORSE</SelectionSound>
 			<ActionSound>AS3D_UN_HORSE</ActionSound>
@@ -437,8 +383,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_HORSE</SelectionSound>
 			<ActionSound>AS3D_UN_HORSE</ActionSound>
@@ -452,7 +398,7 @@
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/animals/Bison/Bison.nif</NIF>
 			<KFM>Art/Units/animals/Bison/Bison.kfm</KFM>
-			<SHADERNIF></SHADERNIF>
+			<SHADERNIF/>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
 				<ShadowAttachNode>Spine</ShadowAttachNode>
@@ -463,8 +409,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -487,11 +433,11 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound />
-			<ActionSound />
+			<SelectionSound/>
+			<ActionSound/>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_CATTLE</Type>
@@ -513,8 +459,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -537,8 +483,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -561,8 +507,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -574,7 +520,7 @@
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/animals/Llama/Llama.nif</NIF>
 			<KFM>Art/Units/animals/Llama/Llama.kfm</KFM>
-			<SHADERNIF />
+			<SHADERNIF/>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Spine</ShadowAttachNode>
@@ -585,8 +531,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -609,8 +555,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -633,8 +579,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -656,11 +602,9 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_UN_ELEPHANT</SelectionSound>
-			<ActionSound>AS3D_UN_ELEPHANT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_HIPPO</Type>
@@ -682,8 +626,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -706,32 +650,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TAMED_RHINO</Type>
-			<Button>Art/Interface/Buttons/units/sparth/tamed_rhino.dds</Button>
-			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/animals/Rhino/mounted_swordsman_mongol.nif</NIF>
-			<KFM>Art/Units/knight/knight.kfm</KFM>
-			<SHADERNIF>Art/Units/animals/Rhino/mounted_swordsman_mongol.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/WarElephantShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.45</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
@@ -754,8 +674,8 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_SEA_SERPENT</SelectionSound>
 			<ActionSound>AS3D_UN_SEA_SERPENT</ActionSound>

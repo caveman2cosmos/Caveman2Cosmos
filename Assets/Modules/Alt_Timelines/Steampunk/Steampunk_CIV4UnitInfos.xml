@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by DancingHoskuld -->
-<!-- Assets\Modules\Alt_Timelines\Steampunk\Units\CloudDestroyer\CloudDestroyer_CIV4UnitInfos.xml -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CLOUD_DESTROYER</Class>
 			<Type>UNIT_CLOUD_DESTROYER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -34,7 +28,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLOUD_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLOUD_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLOUD_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45,12 +38,9 @@
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GUNSHIP</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -66,6 +56,7 @@
 				<BonusType>BONUS_HYDROGEN</BonusType>
 			</PrereqBonuses>
 			<iCost>645</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
@@ -77,42 +68,42 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>6</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BALLOON</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BLIMP</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BARRAGE_BALLOON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_AIRSHIP</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BALLOON</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BLIMP</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BARRAGE_BALLOON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_AIRSHIP</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BALLOON</UnitType>
+					<iModifier>100</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BLIMP</UnitType>
+					<iModifier>75</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BARRAGE_BALLOON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_AIRSHIP</UnitType>
+					<iModifier>25</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_BALLOON</UnitType>
+					<iModifier>100</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_BLIMP</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_BARRAGE_BALLOON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_AIRSHIP</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iBombRate>12</iBombRate>
 			<iAsset>3</iAsset>
 			<iPower>75</iPower>
@@ -136,8 +127,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NAUTILUS</Class>
 			<Type>UNIT_NAUTILUS</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -165,7 +156,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_NAUTILUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAUTILUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAUTILUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -177,45 +167,30 @@
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ATTACK_SUBMARINE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitUpgrades>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+			</UnitUpgrades>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -241,15 +216,18 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_NEMO_ACADEMY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>885</iCost>
+			<iCost>818</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>34</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -276,7 +254,6 @@
 			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>4</iAsset>
 			<iPower>102</iPower>
 			<UnitMeshGroups>
@@ -293,8 +270,8 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WAR_WHEEL</Class>
 			<Type>UNIT_WAR_WHEEL</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -320,18 +297,14 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WAR_WHEEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAR_WHEEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAR_WHEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_UNMANNED_TRIKE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_UNMANNED_TRIKE</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
@@ -342,14 +315,17 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>555</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -387,8 +363,8 @@
 			<bRBombardForceAbility>1</bRBombardForceAbility>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAM_TANK</Class>
 			<Type>UNIT_STEAM_TANK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -414,7 +390,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STEAM_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEAM_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEAM_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -424,16 +399,10 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_LIGHT_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_LIGHT_TANK</UnitType>
+				<UnitType>UNIT_TANK</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -448,21 +417,23 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>720</iCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iCollateralDamageLimit>30</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>3</iCollateralDamageMaxUnits>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>105</iPower>
 			<UnitMeshGroups>
@@ -489,9 +460,9 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAMPUNK_WORKER</Class>
 			<Type>UNIT_STEAMPUNK_WORKER</Type>
-			<Capture>UNITCLASS_STEAMPUNK_WORKER</Capture>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<Capture>UNIT_STEAMPUNK_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ROBOT</SubCombatType>
@@ -505,7 +476,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_STEAMPUNK_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEAMPUNK_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEAMPUNK_WORKER_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -520,314 +490,111 @@
 			</UnitAIs>
 			<bWorkerTrade>1</bWorkerTrade>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUMPLANE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYBRID_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_GRASS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_PLAINS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_MUDDY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_PERMAFROST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_ROCKY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_SCRUB</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_DESERT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_DUNES</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
+				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+				<!-- Obsolete in: C2C_ERA_NANOTECH -->
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
+				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
+				<BuildType>BUILD_FARM</BuildType>
+				<!-- Obsolete in: C2C_ERA_GALACTIC -->
+				<BuildType>BUILD_QUARRY</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
+				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_FORT</BuildType>
+				<!-- Obsolete in: C2C_ERA_ATOMIC -->
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
+				<!-- Obsolete in: C2C_ERA_NANOTECH -->
+				<BuildType>BUILD_PLANTATION</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_ROAD</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
+				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_VILLAGE</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_WINDMILL</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
+				<!-- Obsolete in: C2C_ERA_ATOMIC -->
+				<BuildType>BUILD_TOWN</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
+				<!-- Obsolete in: C2C_ERA_ATOMIC -->
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
+				<!-- Obsolete in: C2C_ERA_NANOTECH -->
+				<BuildType>BUILD_HIGHWAY</BuildType>
+				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
+				<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
+				<!-- Obsolete in: C2C_ERA_GALACTIC -->
+				<BuildType>BUILD_MODERN_MINE</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
+				<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
+				<BuildType>BUILD_MODERN_WINDMILL</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_RADAR_TOWER</BuildType>
+				<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
+				<BuildType>BUILD_SOLAR_PANELS</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 			</Builds>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 			<BonusType>BONUS_STEAMPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -837,36 +604,28 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WORKER_ANDROID</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_WORKER_MODERN</UnitType>
+			</UnitUpgrades>
 			<iCost>590</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>400</iWorkRate>
+			<iWorkRate>310</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

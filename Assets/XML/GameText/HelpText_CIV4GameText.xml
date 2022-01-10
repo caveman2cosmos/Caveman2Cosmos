@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_BUILDING_DISABLED</Tag>
+		<English>[COLOR_WARNING_TEXT]Disabled[COLOR_REVERT]</English>
+		<German>[COLOR_WARNING_TEXT]inaktiv[COLOR_REVERT]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_BUILDING_DISABLED_RELIGIOUSLY</Tag>
+		<English>[COLOR_WARNING_TEXT]Religiously disabled[COLOR_REVERT][NEWLINE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0</Tag>
+		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3 Total) in any city[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1</Tag>
+		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3/%d4 Total) in any city[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
+		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
+		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>
+		<Russian>[ICON_BULLET]Содержание доп. отрядов: %s1 [ICON_GOLD]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
+		<English>[ICON_BULLET]Free civilian unit upkeep: %d1 [ICON_GOLD]</English>
+		<German>[ICON_BULLET]Kostenübernahme für zivile Einheiten: %d1 [ICON_GOLD]</German>
+		<Russian>[ICON_BULLET]Поддержка бесплатных гражд. юнитов: %d1 [ICON_GOLD]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP</Tag>
+		<English>[ICON_BULLET]%d1%% free civilian unit upkeep per population.</English>
+		<German>[ICON_BULLET]freie zivile Einheiten ohne laufende Kosten: %d1%%</German>
+		<Russian>[ICON_BULLET]%d1%% бесплатных гражданских юнитов на население.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
+		<English>[ICON_BULLET]Free military unit upkeep: %d1 [ICON_GOLD]</English>
+		<German>[ICON_BULLET]Kostenübernahme für militärische Einheiten: %d1 [ICON_GOLD]</German>
+		<Russian>[ICON_BULLET]Поддержка бесплатных комбатантов: %d1 [ICON_GOLD]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP</Tag>
+		<English>[ICON_BULLET]%d1%% free military unit upkeep per population.</English>
+		<German>[ICON_BULLET]freie Militäreinheiten ohne laufende Kosten: %d1%%</German>
+		<Russian>[ICON_BULLET]%d1%% бесплатных военных отрядов на население.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP</Tag>
+		<English>[SPACE](%s1 [ICON_GOLD])</English>
+		<Russian>[SPACE](%s1 [ICON_GOLD])</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
+		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
+		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
+		<Russian>[ICON_BULLET]Измен. содерж. базового отряда: %d1%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>
+		<English>[ICON_BULLET]%d1%% civilian unit upkeep cost</English>
+		<German>[ICON_BULLET]%d1%% laufende Kosten für zivile Einheiten</German>
+		<Russian>[ICON_BULLET]%d1%% стоимость гражданского юнита</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY</Tag>
+		<English>[ICON_BULLET]%d1%% military unit upkeep cost</English>
+		<German>[ICON_BULLET]%d1%% laufende Kosten für militärische Einheiten</German>
+		<Russian>[ICON_BULLET]%d1%% стоимость военного отряда</Russian>
+	</TEXT>
+</Civ4GameText>

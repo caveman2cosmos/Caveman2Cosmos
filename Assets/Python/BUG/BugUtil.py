@@ -124,15 +124,6 @@ import time
 import traceback
 import types
 
-## Display Year
-
-def getDisplayYear(vYear):
-	if vYear < 0:
-		return str(-vYear) + getPlainText("TXT_KEY_AUTOLOG_BC")
-	else:
-		return str(vYear) + getPlainText("TXT_KEY_AUTOLOG_AD")
-
-
 ## Text Formatting and Processing
 
 def getPlainText(key, default=None, replaceFontTags=True):
@@ -158,12 +149,13 @@ def getText(key, values=(), default=None, replaceFontTags=True):
 	text = CyTranslator().getText(key, values)
 	if text not in ("", key):
 		return text
-	else:
-		if default is None:
-			debug("BugUtil.getText - XML key %s not found", key)
-			return "XML key %s not found" % key
-		else:
-			return default
+
+	if default is None:
+		debug("BugUtil.getText - XML key %s not found", key)
+		return "XML key %s not found" % key
+
+	return default
+
 
 def colorText(text, color):
 	"""
@@ -634,7 +626,8 @@ def doHotSeatCheck(args):
 	Called during EndPlayerTurn, fires SwitchHotSeatPlayer event during a hot seat
 	game when the active player's turn ends.
 	"""
-	iGameTurn, ePlayer = args
+	#iGameTurn = args[0]
+	ePlayer = args[1]
 	GAME = CyGame()
 	if GAME.isHotSeat() and ePlayer == GAME.getActivePlayer():
 		CvEventInterface.getEventManager().fireEvent("SwitchHotSeatPlayer", ePlayer)

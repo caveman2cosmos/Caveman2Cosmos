@@ -4,11 +4,10 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import BugCore
-import PlayerUtil
 import TradeUtil
 
 GC = CyGlobalContext()
+GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
 EVENT_MESSAGE_TIME_LONG = GC.getDefineINT("EVENT_MESSAGE_TIME_LONG")
@@ -46,6 +45,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		eventManager.addEventHandler("OnLoad", self.reset)
 
 		self.eventMgr = eventManager
+		import BugCore
 		self.options = BugCore.game.MoreCiv4lerts
 		self.reset()
 
@@ -69,28 +69,28 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 	def onBeginActivePlayerTurn(self, argsList):
 		"Called when the active player can start making their moves."
 		iGameTurn = argsList[0]
-		iPlayer = GC.getGame().getActivePlayer()
+		iPlayer = GAME.getActivePlayer()
 		self.CheckForAlerts(iPlayer, True)
 
 	def OnCityAcquired(self, argsList):
 		owner, playerType, city, bConquest, bTrade = argsList
 		iPlayer = city.getOwner()
 		if not self.getCheckForDomVictory(): return
-		if iPlayer == GC.getGame().getActivePlayer():
+		if iPlayer == GAME.getActivePlayer():
 			self.CheckForAlerts(iPlayer, False)
 
 	def OnCityBuilt(self, argsList):
 		CyCity = argsList[0]
 		iOwner = CyCity.getOwner()
-		iPlayer = GC.getGame().getActivePlayer()
+		iPlayer = GAME.getActivePlayer()
 		if self.getCheckForDomVictory():
 			if iOwner == iPlayer:
 				self.CheckForAlerts(iOwner, False)
 		if self.options.isShowCityFoundedAlert():
 			if iOwner != iPlayer:
 				bRevealed = CyCity.isRevealed(GC.getActivePlayer().getTeam(), False)
-				if bRevealed or PlayerUtil.canSeeCityList(iOwner):
-					CyPlayer = GC.getPlayer(iOwner)
+				CyPlayer = GC.getPlayer(iOwner)
+				if bRevealed or canSeeCityList(CyPlayer):
 					iColor = GC.getInfoTypeForString("COLOR_MAGENTA")
 					if bRevealed:
 						msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_FOUNDED", (CyPlayer.getName(), CyCity.getName()))
@@ -103,27 +103,22 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 	def OnCityRazed(self, argsList):
 		city, iPlayer = argsList
 		if not self.getCheckForDomVictory(): return
-		if iPlayer == GC.getGame().getActivePlayer():
+		if iPlayer == GAME.getActivePlayer():
 			self.CheckForAlerts(iPlayer, False)
 
 	def OnCityLost(self, argsList):
 		city = argsList[0]
-		iPlayer = city.getOwner()
-		if not self.getCheckForDomVictory(): return
-		if iPlayer == GC.getGame().getActivePlayer():
-			self.CheckForAlerts(iPlayer, False)
+		if not self.getCheckForDomVictory() or city.getOwner() != GAME.getActivePlayer():
+			return
+		self.CheckForAlerts(city.getOwner(), False)
 
 	def CheckForAlerts(self, iPlayer, bBeginTurn):
-		GAME = GC.getGame()
 		CyPlayer = GC.getPlayer(iPlayer)
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 		iGrowthCount = 0
 
 		bCheck1 = self.options.isShowDomPopAlert()
-		if bBeginTurn and self.options.isShowCityPendingExpandBorderAlert():
-			bCheck2 = True
-		else:
-			bCheck2 = False
+		bCheck2 = bBeginTurn and self.options.isShowCityPendingExpandBorderAlert()
 
 		if bCheck1 or bCheck2:
 			# Check for cultural expansion and population growth
@@ -131,17 +126,15 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 			iActiveTeam = GAME.getActiveTeam()
 			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive() and CyPlayerX.getTeam() == iActiveTeam:
-					CyCity, i = CyPlayerX.firstCity(False)
-					while CyCity:
-						if CyCity.getFoodTurnsLeft() == 1 and not CyCity.isFoodProduction() and not CyCity.AI_isEmphasize(5):
-							iGrowthCount += 1
-						if bCheck2 and CyCity.getCultureLevel() != GC.getNumCultureLevelInfos() - 1:
-							if CyCity.getCulture(iPlayerX) + CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= CyCity.getCultureThreshold():
-								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(CyCity.getName(),))
-								CvUtil.sendMessage(msg, iPlayer, EVENT_MESSAGE_TIME_LONG, icon, -1, CyCity.getX(), CyCity.getY(), True, True)
-
-						CyCity, i = CyPlayerX.nextCity(i, False)
+				if not CyPlayerX.isAlive() or CyPlayerX.getTeam() != iActiveTeam:
+					continue
+				for cityX in CyPlayerX.cities():
+					if cityX.getFoodTurnsLeft() == 1 and not cityX.isFoodProduction() and not cityX.AI_isEmphasize(5):
+						iGrowthCount += 1
+					if bCheck2 and cityX.getCultureLevel() != GC.getNumCultureLevelInfos() - 1:
+						if cityX.getCulture(iPlayerX) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
+							msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(cityX.getName(),))
+							CvUtil.sendMessage(msg, iPlayer, EVENT_MESSAGE_TIME_LONG, icon, -1, cityX.getX(), cityX.getY(), True, True)
 
 		# Check Domination Limit
 		if self.getCheckForDomVictory() and GAME.isVictoryValid(3):
@@ -200,10 +193,10 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		tradeData = TradeData()
 		# Bonus
 		if self.options.isShowBonusTradeAlert():
-			desiredBonuses = TradeUtil.getDesiredBonuses(CyPlayer)
+			desiredBonuses = TradeUtil.getDesiredBonuses(CyPlayer, CyTeam)
 			tradesByPlayer = {}
 			for CyPlayerX in TradeUtil.getBonusTradePartners(CyPlayer):
-				will, wont = TradeUtil.getTradeableBonuses(CyPlayerX, CyPlayer)
+				will, wont = TradeUtil.getTradeableBonuses(CyPlayerX, iPlayer)
 				tradesByPlayer[CyPlayerX.getID()] = will
 
 			for iLoopPlayer, currentTrades in tradesByPlayer.iteritems():
@@ -236,7 +229,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 			for CyPlayerX in TradeUtil.getTechTradePartners(CyPlayer):
 				techsToTrade = set()
 				for iTech in range(iTotalTechs):
-					if bCheck1 and CyPlayer.canResearch(iTech, True):
+					if bCheck1 and CyPlayer.canResearch(iTech):
 						researchTechs.add(iTech)
 					tradeData.iData = iTech
 					if CyPlayerX.canTradeItem(iPlayer, tradeData, False):
@@ -347,3 +340,24 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		names = [getNameFunc(getItemFunc(eItem)) for eItem in items]
 		names.sort()
 		return u", ".join(names)
+
+def canSeeCityList(askedPlayer):
+	"""
+	Returns True if the active player can see the list of <player>'s cities.
+
+	In the unmodified game, this is possible if the players have met and <player>
+	is not a vassal of a rival. They must be able to contact (trade with)
+	<player>, and OCC must be disabled. You can always see a teammate's cities.
+	"""
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+		return False
+	iAskedTeam = askedPlayer.getTeam()
+	iAskingTeam = GAME.getActiveTeam()
+	if iAskingTeam == iAskedTeam:
+		return True
+
+	askedTeam = GC.getTeam(iAskedTeam)
+	if askedTeam.isAVassal() and not askedTeam.isVassal(iAskingTeam):
+		return False
+
+	return TradeUtil.canTrade(GC.getActivePlayer(), askedPlayer)

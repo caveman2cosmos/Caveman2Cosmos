@@ -71,19 +71,16 @@ from CvPythonExtensions import *
 import CvUtil
 import BugUtil
 import BugCore
-import PlayerUtil
 import Roman
 import RandomNameUtils
 import random
-import Popup as PyPopup
 import BugData
 
 
 SD_MOD_ID = "UnitCnt"
-RENAME_EVENT_ID = CvUtil.getNewEventID("UnitNaming.Rename")
+RENAME_EVENT_ID = CvUtil.getNewEventID()
 
-gc = CyGlobalContext()
-localText = CyTranslator()
+GC = CyGlobalContext()
 
 UnitNamingOpt = BugCore.game.UnitNaming
 
@@ -95,136 +92,27 @@ greek_array = ['Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'The
 
 ordinal_array = 'th st nd rd th th th th th th'.split()
 
-#def BUGPrint (stuff):
-#	stuff = "UNEvMg: " + stuff
-#	print stuff
-#	return
 
 class UnitNameEventManager:
 
 	def __init__(self, eventManager):
-
-		BuildUnitName(eventManager)
-
-		# additions to self.Events
-		moreEvents = {
-			RENAME_EVENT_ID : ('', self.__eventUnitRenameApply,  self.__eventUnitRenameBegin),
-		}
-		eventManager.Events.update(moreEvents)
-		self.eventMgr = eventManager
-
-		self.UnitNameConv = "^ut^ ^cntu[n]^ of ^ct^"
-		self.Prompt = localText.getText("TXT_KEY_UNIT_NAME_EM_PROMPT_1",())
-		#~ self.Prompt = "Enter a rename convention"
-
-	def __eventUnitRenameBegin(self, argsList):
-		header = localText.getText("TXT_KEY_UNIT_NAME_EM_HEADER_1",())  #BugUtil.getPlainText("TXT_KEY_REMINDER_HEADER")
-		#~ header = "Unit Name Testing (cancel to quit)"  #BugUtil.getPlainText("TXT_KEY_REMINDER_HEADER")
-		prompt = self.Prompt   #"Enter a rename convention"   #BugUtil.getPlainText("TXT_KEY_REMINDER_PROMPT")
-		ok = BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK")
-		cancel = BugUtil.getPlainText("TXT_KEY_POPUP_CANCEL")
-		popup = PyPopup.PyPopup(RENAME_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
-		popup.setHeaderString(header)
-		popup.setBodyString(prompt)
-		popup.createPythonEditBox(self.UnitNameConv, "Enter the unit name convention that you want to test.", 0)
-#		popup.createPythonCheckBoxes(1, 0)
-#		popup.setPythonCheckBoxText(0, "Check to increment counters", "Note: if checked, units named in-game commence from counter used in testing.", 0)
-		popup.addButton(localText.getText("TXT_KEY_UNIT_NAME_EM_DONT_INCREMENT_COUNTER",()))
-		popup.addButton(localText.getText("TXT_KEY_UNIT_NAME_EM_INCREMENT_COUNTER",()))
-		#~ popup.addButton("Ok, don't increment counter")
-		#~ popup.addButton("Ok, increment counter")
-		popup.addButton(cancel)
-		popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
-
-#				popup.createPythonCheckBoxes(3, 0)
-#				for i in range(3):
-#					strCheckboxText = "Checkbox " + str(i)
-#					strCheckBoxHelp = "Checkbox Help Text " + str(i)
-#					# set checkbox text of button i, group 0 to strCheckboxText
-#					popup.setPythonCheckBoxText(i, strCheckboxText, strCheckBoxHelp, 0)
-
-	def __eventUnitRenameApply(self, playerID, userData, popupReturn):
-		self.testUnitNameConv(popupReturn)
-
-	def testUnitNameConv(self, popupReturn):
-
-		if (popupReturn.getButtonClicked() == 2):
-			return
-
-		pPlayer = gc.getActivePlayer()
-		pUnit = pPlayer.getUnit(0)
-		pCity = pPlayer.getCity(0)
-		lUnitReName = UnitReName()
-
-		zsEra = gc.getEraInfo(pPlayer.getCurrentEra()).getType()
-		zsUnitCombat = lUnitReName.getUnitCombat(pUnit)
-		zsUnitClass = gc.getUnitClassInfo(pUnit.getUnitClassType()).getType()
-
-		#BUGPrint("ERA(%s)" % (zsEra))
-		#BUGPrint("Combat(%s)" % (zsUnitCombat))
-		#BUGPrint("Class(%s)" % (zsUnitClass))
-
-		zsUnitNameConv = lUnitReName.getUnitNameConvFromIniFile(zsEra, zsUnitClass, zsUnitCombat)
-		zsUnitNameConv = popupReturn.getEditBoxString(0)
-		self.UnitNameConv = zsUnitNameConv
-
-		zsUnitName = lUnitReName.getUnitName(zsUnitNameConv, pUnit, pCity, popupReturn.getButtonClicked() == 1)
-
-		self.Prompt = "Using the convention\n   '%s'\ngenerated the unit name\n   '%s'\n\nEnter another rename convention" % (zsUnitNameConv, zsUnitName)
-
-		self.eventMgr.beginEvent(RENAME_EVENT_ID)
-		return
-
-
-
-
-
-class AbstractBuildUnitName(object):
-
-	def __init__(self, eventManager, *args, **kwargs):
-		super(AbstractBuildUnitName, self).__init__(*args, **kwargs)
-
-class BuildUnitName(AbstractBuildUnitName):
-
-	def __init__(self, eventManager, *args, **kwargs):
-		super(BuildUnitName, self).__init__(eventManager, *args, **kwargs)
-
-		eventManager.addEventHandler("kbdEvent", self.onKbdEvent)
 		eventManager.addEventHandler("unitBuilt", self.onUnitBuilt)
-
-		self.eventMgr = eventManager
-		self.config = None
-
-	def onKbdEvent(self, argsList):
-		eventType,key,mx,my,px,py = argsList
-		if eventType == self.eventMgr.EventKeyDown:
-			if key == InputTypes.KB_N and self.eventMgr.bCtrl and self.eventMgr.bAlt:
-				if UnitNamingOpt.isEnabled():
-					self.eventMgr.beginEvent(RENAME_EVENT_ID)
-
-		return 0
 
 	def onUnitBuilt(self, argsList):
 		pUnit = argsList[1]
+		if pUnit is None: return
+
 		iPlayer = pUnit.getOwner()
-
-		if not pUnit or pUnit.isNone():
-			return
-		if iPlayer != gc.getGame().getActivePlayer() or not UnitNamingOpt.isEnabled():
+		if iPlayer != GC.getGame().getActivePlayer() or not UnitNamingOpt.isEnabled():
 			# Not having the same name for a unit will cause OOS issues if unit names are considered part of the game-state.
-			# Remove "iPlayer != gc.getGame().getActivePlayer()" to fix it if that's the case.
+			# Remove "iPlayer != GC.getGame().getActivePlayer()" to fix it if that's the case.
 			return
 
-		pCity = argsList[0]
-		pPlayer = gc.getPlayer(iPlayer)
-		lUnitReName = UnitReName()
+		if UnitNamingOpt.isAdvanced():
+			zsUnitNameConv = UnitNamingOpt.getByEraAndClass(GC.getEraInfo(GC.getPlayer(iPlayer).getCurrentEra()).getType()[4:], GC.getUnitInfo(pUnit.getUnitType()).getType()[5:])
+		else: zsUnitNameConv = UnitNamingOpt.getDefault()
 
-		zsEra = gc.getEraInfo(pPlayer.getCurrentEra()).getType()
-		zsUnitCombat = lUnitReName.getUnitCombat(pUnit)
-		zsUnitClass = gc.getUnitClassInfo(pUnit.getUnitClassType()).getType()
-
-		zsUnitNameConv = lUnitReName.getUnitNameConvFromIniFile(zsEra, zsUnitClass, zsUnitCombat)
-		zsUnitName = lUnitReName.getUnitName(zsUnitNameConv, pUnit, pCity, True)
+		zsUnitName = UnitReName().getUnitName(zsUnitNameConv, pUnit, argsList[0], True)
 
 		if zsUnitName:
 			pUnit.setName(zsUnitName)
@@ -233,35 +121,24 @@ class BuildUnitName(AbstractBuildUnitName):
 class UnitReName(object):
 
 	def getUnitName(self, sUnitNameConv, pUnit, pCity, bIncrementCounter):
+		zsName = sUnitNameConv
+
+##  - ^civ4^ - no naming convention, uses standard civ4
+#		check if Civ4 naming convention is required
+		if zsName.find("^civ4^") != -1:
+			return ""
 
 		iPlayer = pUnit.getOwner()
-		pPlayer = gc.getPlayer(iPlayer)
+		pPlayer = GC.getPlayer(iPlayer)
 
 		zsCiv = pPlayer.getCivilizationAdjective(0)
 		zsLeader = pPlayer.getName()
 		zsUnitCombat = self.getUnitCombat(pUnit)
-		zsUnitDomain = BugUtil.getPlainText("TXT_KEY_BUG_UNIT_NAMING_" + gc.getDomainInfo(pUnit.getDomainType()).getType())
-		zsUnit = gc.getUnitInfo(pUnit.getUnitType()).getDescription()
-		zsCity = pCity.getName()
-
-		#BUGPrint("Civ(%s)" % (zsCiv))
-		#BUGPrint("Leader(%s)" % (zsLeader))
-		#BUGPrint("Combat(%s)" % (zsUnitCombat))
-		#BUGPrint("Domain(%s)" % (zsUnitDomain))
-		#BUGPrint("Unit(%s)" % (zsUnit))
-		#BUGPrint("City(%s)" % (zsCity))
-
-		zsName = sUnitNameConv
-
-		#if zsName == "":
-		#zsName = "^ut^ ^cnt[r]^ Div ^tt1[s][5:7]^ : ^ct^ ^tt2[o][101]^"
-
-		#BUGPrint("UnitNameEM-A [" + zsName + "]")
-
-##  - ^civ4^ - no naming convention, uses standard civ4
-#		check if Civ4 naming convention is required
-		if not (zsName.find("^civ4^") == -1):
-			return ""
+		zsUnitDomain = BugUtil.getPlainText("TXT_KEY_BUG_UNIT_NAMING_" + GC.getDomainInfo(pUnit.getDomainType()).getType())
+		zsUnit = GC.getUnitInfo(pUnit.getUnitType()).getDescription()
+		if pCity:
+			zsCity = pCity.getName()
+		else: zsCity = ""
 
 ##  - ^rd^ - random name
 #		check if random naming convention is required
@@ -269,16 +146,11 @@ class UnitReName(object):
 			zsRandomName = RandomNameUtils.getRandomName()
 			zsName = zsName.replace("^rd^", zsRandomName)
 
-
-		#BUGPrint("UnitNameEM-B")
-
 ##  - ^rc^ - random civ related name
 #		check if random civ related naming convention is required
 		if not (zsName.find("^rc^") == -1):
 			zsRandomName = RandomNameUtils.getRandomCivilizationName(pPlayer.getCivilizationType())
 			zsName = zsName.replace("^rc^", zsRandomName)
-
-		#BUGPrint("UnitNameEM-C [" + zsName + "]")
 
 ##  - ^ct^ - City
 ##  - ^cv^ - Civilization
@@ -294,7 +166,6 @@ class UnitReName(object):
 		zsName = zsName.replace("^dm^", zsUnitDomain)
 		zsName = zsName.replace("^ld^", zsLeader)
 
-		#BUGPrint("UnitNameEM-D [" + zsName + "]")
 
 #		check if there are any more codes to swap out, return if not
 		counters = BugData.getGameData().getTable(SD_MOD_ID)
@@ -307,7 +178,6 @@ class UnitReName(object):
 			elif zsSDKey == "UNITCITY": zsSDKey = zsSDKey + zsUnit + zsCity
 			elif zsSDKey == "DOMAIN":	zsSDKey = zsSDKey + zsUnitDomain
 
-			#BUGPrint("UnitNameEM-E [" + zsSDKey + "]")
 
 #			see if we have already started this counter
 			if (not counters.hasTable(zsSDKey)):
@@ -322,8 +192,6 @@ class UnitReName(object):
 				ziCnt = counter["cnt"]
 				ziTT1 = counter["tt1"]
 				ziTT2 = counter["tt2"]
-
-			#BUGPrint("UnitNameEM-F [" + str(ziCnt) + "] [" + str(ziTT1) + "] [" + str(ziTT2) + "]")
 
 #			increment count, adjust totals if required
 			if bIncrementCounter:
@@ -345,53 +213,14 @@ class UnitReName(object):
 
 		return zsName
 
-	def getUnitNameConvFromIniFile(self, Era, UnitClass, UnitCombat):
-##    a. try to get the advanced naming convention
-##    b. if it returns 'DEFAULT', then get the combat based naming convention
-##    c. if naming convention is 'DEFAULT', get default naming convention
-
-		#BUGPrint("UnitNameEM-ini0 [isAdvanced?]")
-		if UnitNamingOpt.isAdvanced():
-			#BUGPrint("UnitNameEM-ini0 [isAdvanced-YES]")
-			era = Era[4:]
-			unitClass = UnitClass[10:]
-
-			zsUnitNameConv = UnitNamingOpt.getByEraAndClass(era, unitClass)
-
-			#BUGPrint("UnitNameEM-iniAdv [" + zsUnitNameConv + "]" + Era + "|" + unitClass + "|" + era + "|" + unitClass +"]")
-		else:
-			#BUGPrint("UnitNameEM-ini0 [isAdvanced-NO]")
-			zsUnitNameConv = "DEFAULT"
-
-		if not (zsUnitNameConv == "DEFAULT"):
-			return zsUnitNameConv
-
-		#BUGPrint("UnitNameEM-iniA [" + zsUnitNameConv + "]" + UnitCombat[11:])
-
-		zsUnitNameConv = UnitNamingOpt.getByCombatType(UnitCombat[11:])
-
-		#BUGPrint("UnitNameEM-iniB [" + zsUnitNameConv + "]")
-
-		if not (zsUnitNameConv == "DEFAULT"):
-			return zsUnitNameConv
-
-		#BUGPrint("UnitNameEM-iniC [" + zsUnitNameConv + "]")
-
-		zsUnitNameConv = UnitNamingOpt.getDefault()
-		return zsUnitNameConv
-
 
 	def getUnitCombat(self, pUnit):
-
-# Return immediately if the unit passed in is invalid
-		if (pUnit == None
-		or pUnit.isNone()):
+		if pUnit is None:
 			return "UNITCOMBAT_None"
 
-		iUnitCombat = pUnit.getUnitCombatType()
-		infoUnitCombat = gc.getUnitCombatInfo(iUnitCombat)
+		infoUnitCombat = GC.getUnitCombatInfo(pUnit.getUnitCombatType())
 
-		if (infoUnitCombat == None):
+		if infoUnitCombat == None:
 			return "UNITCOMBAT_None"
 
 		return infoUnitCombat.getType()
@@ -409,16 +238,13 @@ class UnitReName(object):
 ##  -   r = other, means count across units that have the same code
 
 		ziStart = conv.find("^cnt[")
-		if (ziStart == -1):  # ie not found
+		if ziStart == -1:  # ie not found
 			return "ALL"
 
 #		locate and extract the code
-		ziStart = conv.find("[", ziStart)
-		ziStart = conv.find("[", ziStart+1)
+		ziStart = conv.find("[", conv.find("[", ziStart) + 1)
 		ziEnd = conv.find("]", ziStart+1)
 		zsValue = conv[ziStart+1:ziEnd]
-
-		#BUGPrint("UnitNameEM-E1 [" + conv  + "|" + str(ziStart)  + "|" + str(ziEnd)  + "|" + zsValue + "]")
 
 		if zsValue == "a": return "ALL"
 		if zsValue == "u": return "UNIT"
@@ -433,12 +259,11 @@ class UnitReName(object):
 
 #		return 'not found' indicator
 		ziStart = conv.find("^tt1[")
-		if (ziStart == -1):
+		if ziStart == -1:
 			return -1
 
 #		locate and extract the 'low' value
-		ziStart = conv.find("[",ziStart)
-		ziStart = conv.find("[",ziStart + 1)
+		ziStart = conv.find("[", conv.find("[", ziStart) + 1)
 		ziEnd = conv.find(":",ziStart)
 		ziLow = int(conv[ziStart + 1:ziEnd])
 		if (ziLow < 1): ziLow = 1
@@ -461,64 +286,45 @@ class UnitReName(object):
 
 #		return 'not found' indicator
 		ziStart = conv.find("^tt2[")
-		if (ziStart == -1):
+		if ziStart == -1:
 			return -1
 
 #		locate and extract the value
-		ziStart = conv.find("[",ziStart)
-		ziStart = conv.find("[",ziStart + 1)
+		ziStart = conv.find("[", conv.find("[", ziStart) + 1)
 		ziEnd = conv.find("]",ziStart)
 		ziValue = int(conv[ziStart + 1:ziEnd])
 
-		if (ziValue < 1): ziValue = 1
+		if ziValue < 1:
+			return 1
 		return ziValue
 
 
 	def getNumberFormat(self, conv, searchStr):
-#		return 'not found' indicator
-		ziStart = conv.find(searchStr)
-		ziStart = conv.find("[",ziStart)
-		if (ziStart == -1):
+		ziStart = conv.find("[", conv.find(searchStr))
+		if ziStart == -1:
 			return "s"   # s for silent, hides number
-		else:
-			return conv[ziStart + 1:ziStart + 2]
+		return conv[ziStart + 1:ziStart + 2]
 
 
 	def getCountCode(self, conv, searchStr):
-#		return 'not found' indicator
 		ziStart = conv.find(searchStr)
-		if (ziStart == -1):
+		if ziStart == -1:
 			return ""
-		else:
-			ziEnd = conv.find("^", ziStart + 1)
-			return conv[ziStart:ziEnd + 1]
+
+		ziEnd = conv.find("^", ziStart + 1)
+		return conv[ziStart:ziEnd + 1]
 
 
 	def swapCountCode(self, conv, searchStr, iCnt):
 
-#		return if iCnt is negative (this means that the code is not in the unitnameconv)
+		# return if iCnt is negative (this means that the code is not in the unitnameconv)
 		if iCnt < 0: return conv
-
-		#BUGPrint("UnitNameEM-SCC [" + conv + "] [" + searchStr + "] [" + str(iCnt) + "]")
 
 		zsCntCode = self.getCountCode(conv, searchStr)
 
-		if zsCntCode == "": return conv
-
-		#BUGPrint("UnitNameEM-SCC [" + zsCntCode + "]")
-
-		zsNumberFormat = self.getNumberFormat(conv, searchStr)
-
-		#BUGPrint("UnitNameEM-SCC [" + zsNumberFormat + "]")
-
-		zsCnt = self.FormatNumber(zsNumberFormat, iCnt)
-
-		#BUGPrint("UnitNameEM-SCC [" + zsCnt + "]")
-
-		if zsCntCode == "":
-			return conv
-		else:
-			return conv.replace(zsCntCode, zsCnt)
+		if zsCntCode:
+			return conv.replace(zsCntCode, self.FormatNumber(self.getNumberFormat(conv, searchStr), iCnt))
+		return conv
 
 
 	def FormatNumber(self, fmt, i):
@@ -527,22 +333,22 @@ class UnitReName(object):
 			i = 1
 		if (fmt == "s"):     # silent
 			return ""
-		elif (fmt == "a"):   # lower case alpha
+		if (fmt == "a"):   # lower case alpha
 			return chr(97 + ((i - 1) % 26))
-		elif (fmt == "A"):   # upper case alpha
+		if (fmt == "A"):   # upper case alpha
 			return chr(65 + ((i - 1) % 26))
-		elif (fmt == "p"):   # phonetic
+		if (fmt == "p"):   # phonetic
 			return phonetic_array[(i - 1) % 26]
-		elif (fmt == "g"):   # greek
+		if (fmt == "g"):   # greek
 			return greek_array[(i - 1) % 24]
-		elif (fmt == "n"):   # number
+		if (fmt == "n"):   # number
 			return str(i)
-		elif (fmt == "o"):   # ordinal
+		if (fmt == "o"):   # ordinal
 			return self.getOrdinal(i)
-		elif (fmt == "r"):   # roman
+		if (fmt == "r"):   # roman
 			return Roman.toRoman(i)
-		else:
-			return str(i)
+
+		return str(i)
 
 
 	def getOrdinal(self, i):

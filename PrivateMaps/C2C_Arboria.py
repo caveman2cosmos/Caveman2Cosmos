@@ -8,13 +8,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import random
 import CvMapGeneratorUtil
-import sys
 from CvMapGeneratorUtil import HintedWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_ARBORIA_DESCR"
@@ -25,7 +20,7 @@ def isAdvancedMap():
 # Rise of Mankind 2.5
 	return 0
 # Rise of Mankind 2.5
-	
+
 def isClimateMap():
 	return 0
 
@@ -41,18 +36,18 @@ def getNumHiddenCustomMapOptions():
 def getCustomMapOptionName(argsList):
 	translated_text = unicode(CyTranslator().getText("TXT_KEY_MAP_WORLD_WRAP", ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	return 3
-	
+
 def getCustomMapOptionDescAt(argsList):
 	iSelection = argsList[1]
 	selection_names = ["TXT_KEY_MAP_WRAP_FLAT",
-	                   "TXT_KEY_MAP_WRAP_CYLINDER",
-	                   "TXT_KEY_MAP_WRAP_TOROID"]
+					   "TXT_KEY_MAP_WRAP_CYLINDER",
+					   "TXT_KEY_MAP_WRAP_TOROID"]
 	translated_text = unicode(CyTranslator().getText(selection_names[iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	return 1
 
@@ -62,14 +57,14 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 1 or map.getCustomMapOption(0) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 2)
 
 def getTopLatitude():
 	return 50
-	
+
 def getBottomLatitude():
 	return -50
 
@@ -96,15 +91,14 @@ def getGridSize(argsList):
 	return grid_sizes[eWorldSize]
 
 def beforeGeneration():
-	gc = CyGlobalContext()
 	map = CyMap()
-	dice = gc.getGame().getMapRand()
+	dice = CyGame().getMapRand()
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
 	global food
 	food = CyFractal()
 	food.fracInit(iW, iH, 7, dice, 0, -1, -1)
-		
+
 def generatePlotTypes():
 	NiTextOut("Setting Plot Types (Python Arboria) ...")
 	global hinted_world
@@ -118,7 +112,7 @@ def generatePlotTypes():
 	if not cont:
 		print "Couldn't create continent! Reverting to C implementation."
 		CyPythonMgr().allowDefaultImpl()
-	else:		
+	else:
 		for x in range(hinted_world.w):
 			for y in (0, hinted_world.h - 1):
 				hinted_world.setValue(x,y, 1) # force ocean at poles
@@ -141,62 +135,64 @@ def generateTerrainTypes():
 
 class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def __init__(self, forest_grain=6, fracXExp=-1, fracYExp=-1):
-		self.gc = CyGlobalContext()
+		GC = CyGlobalContext()
 		self.map = CyMap()
-		self.mapRand = self.gc.getGame().getMapRand()
+		self.mapRand = GC.getGame().getMapRand()
 		self.forests = CyFractal()
-		
+
 		self.iFlags = 0  # Disallow FRAC_POLAR flag, to prevent "zero row" problems.
 
 		self.iGridW = self.map.getGridWidth()
 		self.iGridH = self.map.getGridHeight()
-		
-		self.forest_grain = forest_grain + self.gc.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
+
+		self.forest_grain = forest_grain + GC.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
 
 		self.fracXExp = fracXExp
 		self.fracYExp = fracYExp
 
 		self.__initFractals()
 		self.__initFeatureTypes()
-	
+
 	def __initFractals(self):
 		self.forests.fracInit(self.iGridW, self.iGridH, self.forest_grain, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
-		
+
 		self.iJungleStart = self.forests.getHeightFromPercent(65)
 		self.iJungleStop = self.forests.getHeightFromPercent(69)
 		self.iForestStart = self.forests.getHeightFromPercent(29)
-	
+
 	def __initFeatureTypes(self):
-		self.featureJungle = self.gc.getInfoTypeForString("FEATURE_JUNGLE")
-		self.featureForest = self.gc.getInfoTypeForString("FEATURE_FOREST")
-	
+		GC = CyGlobalContext()
+		self.featureJungle = GC.getInfoTypeForString("FEATURE_JUNGLE")
+		self.featureForest = GC.getInfoTypeForString("FEATURE_FOREST")
+
 	def getLatitudeAtPlot(self, iX, iY):
 		return 50
 
 	def addFeaturesAtPlot(self, iX, iY):
 		"adds any appropriate features at the plot (iX, iY) where (0,0) is in the SW"
+		GC = CyGlobalContext()
 		long = iX/float(self.iGridW)
 		lat = iY/float(self.iGridH)
 		pPlot = self.map.sPlot(iX, iY)
 
-		for iI in range(self.gc.getNumFeatureInfos()):
-#			print self.gc.getFeatureInfo(iI).getDescription()
+		for iI in range(GC.getNumFeatureInfos()):
+#			print GC.getFeatureInfo(iI).getDescription()
 			if pPlot.canHaveFeature(iI):
-#				print "Can have feature with probability: %d" % self.gc.getFeatureInfo(iI).getAppearanceProbability()
-				if self.mapRand.get(10000, "Add Feature PYTHON") < self.gc.getFeatureInfo(iI).getAppearanceProbability():
+#				print "Can have feature with probability: %d" % GC.getFeatureInfo(iI).getAppearanceProbability()
+				if self.mapRand.get(10000, "Add Feature PYTHON") < GC.getFeatureInfo(iI).getAppearanceProbability():
 #					print "Setting feature"
 					pPlot.setFeatureType(iI, -1)
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
 			self.addJunglesAtPlot(pPlot, iX, iY, lat)
-			
+
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
 			self.addForestsAtPlot(pPlot, iX, iY, lat, long)
-		
+
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
-		ice = 0
-	
+		return
+
 	def addJunglesAtPlot(self, pPlot, iX, iY, lat):
 		# Warning: this version of JunglesAtPlot is using the forest fractal!
 		if pPlot.canHaveFeature(self.featureJungle):
@@ -235,17 +231,16 @@ def normalizeAddExtras():
 # Sirian's "Sahara Regional Bonus Placement" system.
 
 # Init all bonuses. This is your master key.
-forest = ('BONUS_SILVER', 'BONUS_DEER')
-silver = ('BONUS_SILVER')
+forest = ('BONUS_SILVER_ORE', 'BONUS_DEER')
+silver = ('BONUS_SILVER_ORE')
 deer = ('BONUS_DEER')
 
 def addBonusType(argsList):
 	print('*******')
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
+	GC = CyGlobalContext()
 	map = CyMap()
-	dice = gc.getGame().getMapRand()
-	type_string = gc.getBonusInfo(iBonusType).getType()
+	type_string = GC.getBonusInfo(iBonusType).getType()
 
 	if not (type_string in forest):
 		print('Default', type_string, 'Default')
@@ -276,14 +271,13 @@ def addBonusType(argsList):
 					if pPlot.getBonusType(-1) == -1:
 						foodVal = food.getHeight(x,y)
 						if (type_string in deer):
-							if pPlot.getFeatureType() == gc.getInfoTypeForString("FEATURE_FOREST") and pPlot.isFlatlands():
+							if pPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST") and pPlot.isFlatlands():
 								if (foodVal >= iDeerBottom1 and foodVal <= iDeerTop1) or (foodVal >= iDeerBottom2 and foodVal <= iDeerTop2) or (foodVal >= iDeerBottom3 and foodVal <= iDeerTop3):
 									map.plot(x,y).setBonusType(iBonusType)
 						if (type_string in silver):
 							if pPlot.isHills():
 								if (foodVal >= iSilverBottom and foodVal <= iSilverTop):
 									map.plot(x,y).setBonusType(iBonusType)
-
 		return None
 
 def afterGeneration():

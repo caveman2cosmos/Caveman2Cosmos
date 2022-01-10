@@ -7,8 +7,13 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingList.h"
+#include "CvBuildingSort.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvPlayerAI.h"
 
-CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity) 
+CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity)
 	: m_bFilteringValid(false)
 	, m_bGroupingValid(false)
 	, m_bSortingValid(false)
@@ -33,7 +38,7 @@ void CvBuildingList::setPlayerToOwner()
 {
 	if (m_pCity && !m_pPlayer)
 	{
-		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwnerINLINE());
+		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwner());
 		m_pPlayer = pPlayer;
 		m_BuildingFilters.setPlayer(pPlayer);
 		m_BuildingGrouping.setPlayer(pPlayer);
@@ -48,7 +53,7 @@ void CvBuildingList::setInvalid()
 	m_bSortingValid = false;
 }
 
-bool CvBuildingList::getFilterActive(BuildingFilterTypes eFilter)
+bool CvBuildingList::getFilterActive(BuildingFilterTypes eFilter) const
 {
 	return m_BuildingFilters.isFilterActive(eFilter);
 }
@@ -63,7 +68,7 @@ void CvBuildingList::setFilterActive(BuildingFilterTypes eFilter, bool bActive)
 	}
 }
 
-BuildingGroupingTypes CvBuildingList::getGroupingActive()
+BuildingGroupingTypes CvBuildingList::getGroupingActive() const
 {
 	return m_BuildingGrouping.getActiveGrouping();
 }
@@ -77,7 +82,7 @@ void CvBuildingList::setGroupingActive(BuildingGroupingTypes eGrouping)
 	}
 }
 
-BuildingSortTypes CvBuildingList::getSortingActive()
+BuildingSortTypes CvBuildingList::getSortingActive() const
 {
 	return m_BuildingSort.getActiveSort();
 }
@@ -105,8 +110,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FAssertMsg(iGroup < (int) m_aaiGroupedBuildingList.size(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, static_cast<int>(m_aaiGroupedBuildingList.size()), iGroup);
 	return m_aaiGroupedBuildingList[iGroup].size();
 }
 
@@ -116,10 +120,8 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FAssertMsg(iGroup < getGroupNum(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
-	FAssertMsg(iPos < getNumInGroup(iGroup), "Index out of bounds");
-	FAssertMsg(iPos > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return m_aaiGroupedBuildingList[iGroup][iPos];
 }
 
@@ -128,7 +130,7 @@ void CvBuildingList::doFilter()
 	m_aiBuildingList.clear();
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		BuildingTypes eBuilding = (BuildingTypes) i;
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 		if (m_BuildingFilters.isFiltered(eBuilding))
 			m_aiBuildingList.push_back(eBuilding);
 	}
@@ -142,14 +144,14 @@ void CvBuildingList::doGroup()
 
 	m_aaiGroupedBuildingList.clear();
 
-	int iSize = static_cast<int>(m_aiBuildingList.size());
+	const int iSize = static_cast<int>(m_aiBuildingList.size());
 	std::multimap<int, BuildingTypes> mmap_Buildings;
 
 	for (int i = 0; i < iSize; i++)
 	{
 		mmap_Buildings.insert(std::pair<int, BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
 	}
-	
+
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, BuildingTypes>::iterator it = mmap_Buildings.begin(); it != mmap_Buildings.end(); ++it)
 	{
@@ -171,7 +173,7 @@ void CvBuildingList::doSort()
 	std::auto_ptr<BuildingSortListWrapper> pWrapper(new BuildingSortListWrapper(&m_BuildingSort));
 	for (GroupedBuildingVector::iterator itr = m_aaiGroupedBuildingList.begin(); itr != m_aaiGroupedBuildingList.end(); ++itr)
 	{
-		std::stable_sort(itr->begin(), itr->end(), *pWrapper);
+		algo::stable_sort(*itr, *pWrapper);
 		pWrapper->deleteCache();
 	}
 	m_bSortingValid = true;
@@ -183,7 +185,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedBuilding) != m_aaiGroupedBuildingList[i].end())
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedBuilding))
 				return i;
 		}
 		m_eSelectedBuilding = NO_BUILDING;
@@ -193,8 +195,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
-			if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+			if (!isLimitedWonder(static_cast<BuildingTypes>(m_aaiGroupedBuildingList[i][j])))
 				return i;
 		}
 	}
@@ -207,7 +208,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedWonder) != m_aaiGroupedBuildingList[i].end())
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedWonder))
 				return i;
 		}
 		m_eSelectedWonder = NO_BUILDING;
@@ -217,8 +218,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
-			if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+			if (!isLimitedWonder(static_cast<BuildingTypes>(m_aaiGroupedBuildingList[i][j])))
 				return i;
 		}
 	}
@@ -235,12 +235,12 @@ void CvBuildingList::setSelectedWonder(BuildingTypes eSelectedWonder)
 	m_eSelectedWonder = eSelectedWonder;
 }
 
-BuildingTypes CvBuildingList::getSelectedBuilding()
+BuildingTypes CvBuildingList::getSelectedBuilding() const
 {
 	return m_eSelectedBuilding;
 }
 
-BuildingTypes CvBuildingList::getSelectedWonder()
+BuildingTypes CvBuildingList::getSelectedWonder() const
 {
 	return m_eSelectedWonder;
 }

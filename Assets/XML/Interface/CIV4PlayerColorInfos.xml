@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Player Color -->
 <Civ4PlayerColorInfos xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
 	<PlayerColorInfos>
@@ -159,7 +158,7 @@
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_MIDDLE_PURPLE</Type>
 			<ColorTypePrimary>COLOR_PLAYER_MIDDLE_PURPLE</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_PLAYER_GOLDENROD</ColorTypeSecondary>
+			<ColorTypeSecondary>COLOR_GOLDENROD_1</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_MIDDLE_PURPLE</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
@@ -224,9 +223,9 @@
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_GOLD_AND_BLACK</Type>
-			<ColorTypePrimary>COLOR_PLAYER_GOLDENROD</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_GOLDENROD_1</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
-			<TextColorType>COLOR_PLAYER_GOLDENROD</TextColorType>
+			<TextColorType>COLOR_GOLDENROD_1</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_GREEN_AND_BLACK</Type>
@@ -272,39 +271,39 @@
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_HITTITES</Type>
-			<ColorTypePrimary>COLOR_X_CADETBLUE</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_MOCCASIN</ColorTypeSecondary>
-			<TextColorType>COLOR_X_CADETBLUE</TextColorType>
+			<ColorTypePrimary>COLOR_CADETBLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_MOCCASIN</ColorTypeSecondary>
+			<TextColorType>COLOR_CADETBLUE</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ABYSSINIANS</Type>
-			<ColorTypePrimary>COLOR_X_FORESTGREEN</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_GOLD</ColorTypeSecondary>
-			<TextColorType>COLOR_X_FORESTGREEN</TextColorType>
+			<ColorTypePrimary>COLOR_FORESTGREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_GOLD</ColorTypeSecondary>
+			<TextColorType>COLOR_FORESTGREEN</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_IROQUOIS</Type>
-			<ColorTypePrimary>COLOR_X_DARKSLATEBLUE</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_MINTCREAM</ColorTypeSecondary>
-			<TextColorType>COLOR_X_DARKSLATEBLUE</TextColorType>
+			<ColorTypePrimary>COLOR_DARKSLATEBLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_HONEYDEW</ColorTypeSecondary>
+			<TextColorType>COLOR_DARKSLATEBLUE</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ASSYRIA</Type>
-			<ColorTypePrimary>COLOR_X_HOTPINK</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_CORNFLOWERBLUE</ColorTypeSecondary>
-			<TextColorType>COLOR_X_HOTPINK</TextColorType>
+			<ColorTypePrimary>COLOR_HOTPINK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_CORNFLOWERBLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_HOTPINK</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_RED_BLUE</Type>
-			<ColorTypePrimary>COLOR_X_WHITESMOKE</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_GREY</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_RED</ColorTypeSecondary>
-			<TextColorType>COLOR_X_WHITESMOKE</TextColorType>
+			<TextColorType>COLOR_GREY</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_AUSTRALIA</Type>
-			<ColorTypePrimary>COLOR_PLAYER_AUSTRALIA_BLUE</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_STEELBLUE_4</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
-			<TextColorType>COLOR_PLAYER_AUSTRALIA_BLUE</TextColorType>
+			<TextColorType>COLOR_STEELBLUE_4</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_DENMARK</Type>
@@ -314,27 +313,63 @@
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_TUPI</Type>
-			<ColorTypePrimary>COLOR_X_DARKVIOLET</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_DARK_VIOLET</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_LIGHT_GREEN</ColorTypeSecondary>
-			<TextColorType>COLOR_X_DARKVIOLET</TextColorType>
+			<TextColorType>COLOR_DARK_VIOLET</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_POLYNESIA</Type>
-			<ColorTypePrimary>COLOR_PLAYER_SALMON</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_DARK_SALMON</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_DARK_GREEN</ColorTypeSecondary>
-			<TextColorType>COLOR_PLAYER_SALMON</TextColorType>
+			<TextColorType>COLOR_DARK_SALMON</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ANIMAL</Type>
-			<ColorTypePrimary>COLOR_X_FORESTGREEN</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_FORESTGREEN</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_CLEAR</ColorTypeSecondary>
-			<TextColorType>COLOR_X_FORESTGREEN</TextColorType>
+			<TextColorType>COLOR_FORESTGREEN</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_NEANDERTHAL</Type>
 			<ColorTypePrimary>COLOR_PLAYER_BLACK</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_BROWN</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_BLACK</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ABORIGINES</Type>
+			<ColorTypePrimary>COLOR_HONEYDEW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
+			<TextColorType>COLOR_HONEYDEW</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BRAZIL</Type>
+			<ColorTypePrimary>COLOR_DARK_GOLDENROD</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_DARK_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_DARK_GOLDENROD</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ISRAEL</Type>
+			<ColorTypePrimary>COLOR_PLAYER_ISRAEL</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ISRAEL</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_JIVARO</Type>
+			<ColorTypePrimary>COLOR_PLAYER_DARK_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_DARK_RED</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MAORI</Type>
+			<ColorTypePrimary>COLOR_BLACK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_MISTYROSE</ColorTypeSecondary>
+			<TextColorType>COLOR_BLACK</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_NEANDERTHAL_EMPIRE</Type>
+			<ColorTypePrimary>COLOR_BROWNNEANDERTHAL1</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_BROWNNEANDERTHAL2</ColorTypeSecondary>
+			<TextColorType>COLOR_BROWNNEANDERTHAL1</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>

@@ -5,14 +5,14 @@
 
 // Types and algorithms for helping with scoring.
 // Scoring is the process of mapping an item to an integer value
-// that represents its value by some set of criteria. 
-// 
+// that represents its value by some set of criteria.
+//
 // e.g. Scoring a unit based on its ability to defend against another unit.
-// 
-// The preferred way to do scoring is to transform a range of items (of type Ty_) into 
+//
+// The preferred way to do scoring is to transform a range of items (of type Ty_) into
 // a range of item_score<Ty_>s via a scoring function.
-// This range of scored items can then be used as needed. 
-// e.g. 
+// This range of scored items can then be used as needed.
+// e.g.
 //   Call algo::max_element() to get the best scoring item.
 //   Sort the range from biggest to smallest.
 namespace scoring {
@@ -45,6 +45,7 @@ namespace scoring {
 		};
 	}
 
+	// Return item with maximum score as determined by scoringFn
 	template < class RangeItrTy_ >
 	bst::optional<typename bst::range_value<RangeItrTy_>::type> max_score(RangeItrTy_& range, bst::function<int(const typename bst::range_value<RangeItrTy_>::type&)> scoringFn)
 	{
@@ -57,9 +58,10 @@ namespace scoring {
 		{
 			return best->item;
 		}
-		return bst::optional<value_type>::type>();
+		return bst::optional<value_type>();
 	}
 
+	// Return item with minimum score as determined by scoringFn
 	template < class RangeItrTy_ >
 	bst::optional<typename bst::range_value<RangeItrTy_>::type> min_score(RangeItrTy_& range, bst::function<int(const typename bst::range_value<RangeItrTy_>::type&)> scoringFn)
 	{
@@ -78,7 +80,7 @@ namespace scoring {
 	//template < class RangeItrTy_ >
 	//bst::optional< typename RangeItrTy_::value_type > unwrap(const RangeItrTy_& itr)
 	//{
-	//	
+	//
 	//}
 }
 

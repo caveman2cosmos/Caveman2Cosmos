@@ -11,13 +11,21 @@ def init():
 	import BugCore
 	options = BugCore.game.AutoSave
 	import CvEventInterface
+	CvEventInterface.eventManager.addEventHandler("MapRegen", onMapRegen)
 	CvEventInterface.eventManager.addEventHandler("endTurnReady", onEndTurnReady)
+	CvEventInterface.eventManager.addEventHandler("GameEnd", onGameEnd)
+
+def onMapRegen(argsList):
+	autoSave("[Start]", 0)
 
 def onEndTurnReady(argsList):
 	iTurn, = argsList
 	inter = options.getInterval()
-	if inter < 2 or not iTurn % inter:
+	if inter > 0 and not iTurn % inter:
 		autoSave("[Late]", iTurn)
+
+def onGameEnd(argsList):
+	autoSave("[End]", argsList[0])
 
 def save(type, prefix, iTurn):
 

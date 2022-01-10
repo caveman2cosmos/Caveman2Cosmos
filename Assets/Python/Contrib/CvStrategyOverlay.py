@@ -388,8 +388,7 @@ class DotMapLayer(StrategyLayer):
 		if self.highlightedCity:
 			if self.highlightedCity == city:
 				return
-			else:
-				self.unhighlightCity()
+			self.unhighlightCity()
 		self.highlightedCity = city
 		ePlayer = GC.getGame().getActivePlayer()
 		existingCity = self.getCity(ePlayer, point)

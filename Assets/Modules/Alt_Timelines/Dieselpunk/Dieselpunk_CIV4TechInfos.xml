@@ -4,17 +4,16 @@
 		<TechInfo>
 			<!-- Dieselpunk -->
 			<Type>TECH_DIESELPUNK</Type>
-			<Description>TXT_KEY_CULTURE_DIESELPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_DIESELPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_DIESELPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_DIESELPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_DIESELPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<Quote>TXT_KEY_CULTURE_DIESELPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_DIESELPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_DIESELPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/dieselpunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>C2C_ERA_ATOMIC</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			</OrPreReqs>

@@ -1,15 +1,10 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Michael Curran (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Terrain Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Michael Curran (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Terrain Infos -->
 <Civ4TerrainInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
-		<TerrainInfo>
-			<Type>TERRAIN_SPACE</Type>
-			<Description>TXT_KEY_TERRAIN_CISLUNAR_SPACE</Description>
-		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MERCURY</Type>
 			<Description>TXT_KEY_TERRAIN_MERCURY</Description>
@@ -20,8 +15,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/mercury.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -39,8 +32,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/venus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -48,17 +39,15 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_VENUS_LOWLAND</Type>
-			<Description>TXT_KEY_TERRAIN_VENUS_LOWLAND</Description>
+			<Type>TERRAIN_VENUS_LOWLANDS</Type>
+			<Description>TXT_KEY_TERRAIN_VENUS_LOWLANDS</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_VENUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_VENUS_LOWLAND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_VENUS_LOWLANDS</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>50</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/venus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -66,17 +55,15 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_VENUS_HIGHLAND</Type>
-			<Description>TXT_KEY_TERRAIN_VENUS_HIGHLAND</Description>
+			<Type>TERRAIN_VENUS_HIGHLANDS</Type>
+			<Description>TXT_KEY_TERRAIN_VENUS_HIGHLANDS</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_VENUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_VENUS_HIGHLAND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_VENUS_HIGHLANDS</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>50</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/venus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -93,8 +80,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/asteroid_surface.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -112,8 +97,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/jupiter.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -187,8 +170,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/saturn.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -228,7 +209,7 @@
 			<Description>TXT_KEY_TERRAIN_LAVA_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_LAVA_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAVA_OCEAN</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/lava_ocean.dds</Button>
@@ -243,14 +224,13 @@
 			<Description>TXT_KEY_TERRAIN_METHANE_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_METHANE_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_METHANE_OCEAN</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/methane_ocean.dds</Button>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_AQUATIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -258,7 +238,7 @@
 			<Description>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SUBSURFACE_OCEAN</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/ocean.dds</Button>
@@ -278,8 +258,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
 			<bFound>1</bFound>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/uranus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -311,8 +289,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/neptune.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -344,8 +320,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/kuiper_belt_object.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -394,10 +368,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_TRANSNEPTUNIAN</Type>
-			<Description>TXT_KEY_TERRAIN_TRANSNEPTUNIAN</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_TRANSNEPTUNIAN</ArtDefineTag>
+			<Type>TERRAIN_TRANSNEPTUNIAN_SPACE</Type>
+			<Description>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_TRANSNEPTUNIAN_SPACE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
@@ -407,10 +381,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_TRANSTELLAR</Type>
-			<Description>TXT_KEY_TERRAIN_TRANSTELLAR</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_TRANSTELLAR_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_TRANSTELLAR</ArtDefineTag>
+			<Type>TERRAIN_TRANSTELLAR_SPACE</Type>
+			<Description>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_TRANSTELLAR_SPACE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
@@ -435,10 +409,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_G_TYPE</Type>
-			<Description>TXT_KEY_TERRAIN_G_TYPE</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_G_TYPE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_G_TYPE</ArtDefineTag>
+			<Type>TERRAIN_SUN_LIKE_STAR</Type>
+			<Description>TXT_KEY_TERRAIN_SUN_LIKE_STAR</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_SUN_LIKE_STAR_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_SUN_LIKE_STAR</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
@@ -473,7 +447,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/orion_arm.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -487,7 +461,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/milky_way.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -501,7 +475,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/neutron_star.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -515,7 +489,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/nebula.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -529,7 +503,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/star_cluster.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -543,7 +517,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/galactic_core.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -573,10 +547,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_COSMOS</Type>
-			<Description>TXT_KEY_TERRAIN_COSMOS</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_COSMOS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_COSMOS</ArtDefineTag>
+			<Type>TERRAIN_OBSERVABLE_UNIVERSE</Type>
+			<Description>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_OBSERVABLE_UNIVERSE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
@@ -586,10 +560,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_GALACTIC_VOID</Type>
-			<Description>TXT_KEY_TERRAIN_GALACTIC_VOID</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_GALACTIC_VOID_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_GALACTIC_VOID</ArtDefineTag>
+			<Type>TERRAIN_INTERGALACTIC_VOID</Type>
+			<Description>TXT_KEY_TERRAIN_INTERGALACTIC_VOID</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_INTERGALACTIC_VOID_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_INTERGALACTIC_VOID</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
@@ -667,14 +641,12 @@
 			<Type>TERRAIN_GREEN_MOON</Type>
 			<Description>TXT_KEY_TERRAIN_GREEN_MOON</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_GREEN_MOON_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_GRASS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_GRASSLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>50</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>1</iYield>
 			</Yields>
@@ -688,19 +660,252 @@
 			<Type>TERRAIN_GREEN_MARS</Type>
 			<Description>TXT_KEY_TERRAIN_GREEN_MARS</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_GREEN_MARS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_GRASS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_GRASSLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>50</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>1</iYield>
 			</Yields>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_ORBIT</Type>
+			<Description>TXT_KEY_TERRAIN_ORBIT</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_ORBIT_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_CISLUNAR_SPACE</ArtDefineTag>
+			<bFound>1</bFound>
+			<iCultureDistance>3</iCultureDistance>
+			<bImpassable>1</bImpassable>
+			<iMovement>1</iMovement>
+			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_CISLUNAR_SPACE</Type>
+			<Description>TXT_KEY_TERRAIN_CISLUNAR_SPACE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_CISLUNAR_SPACE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_CISLUNAR_SPACE</ArtDefineTag>
+			<bFound>1</bFound>
+			<iCultureDistance>2</iCultureDistance>
+			<iMovement>1</iMovement>
+			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_LUNAR_DOME</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_DOME</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_DOME_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_DOME</ArtDefineTag>
+			<bFound>1</bFound>
+			<iHealthPercent>-15</iHealthPercent>
+			<iCultureDistance>3</iCultureDistance>
+			<iMovement>2</iMovement>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
+			<Button>Art/Interface/Buttons/WorldBuilder/lunarbasalt.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_GRASSLAND_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_LUNAR_MARE</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_MARE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_MARE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_MARE</ArtDefineTag>
+			<bFound>1</bFound>
+			<iDefense>25</iDefense>
+			<iHealthPercent>-15</iHealthPercent>
+			<iCultureDistance>3</iCultureDistance>
+			<iMovement>1</iMovement>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
+			<Button>Art/Interface\Buttons\WorldBuilder\lunarMaria.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_LUNAR_HIGHLAND</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_HIGHLAND</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_HIGHLAND_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_HIGHLAND</ArtDefineTag>
+			<bFound>1</bFound>
+			<iBuildModifier>25</iBuildModifier>
+			<iHealthPercent>-15</iHealthPercent>
+			<iCultureDistance>3</iCultureDistance>
+			<iMovement>2</iMovement>
+			<Button>Art/Interface\Buttons\WorldBuilder\lunarHighlands.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_DESERT_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_LUNAR_REGOLITH</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_REGOLITH</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_REGOLITH_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_REGOLITH</ArtDefineTag>
+			<bFound>1</bFound>
+			<iBuildModifier>25</iBuildModifier>
+			<iHealthPercent>-15</iHealthPercent>
+			<iCultureDistance>3</iCultureDistance>
+			<iMovement>1</iMovement>
+			<Button>Art/Interface\Buttons\WorldBuilder\lunarbarren.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_LUNAR_RILLE</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_RILLE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_RILLE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_RILLE</ArtDefineTag>
+			<bFound>1</bFound>
+			<iBuildModifier>25</iBuildModifier>
+			<iDefense>-25</iDefense>
+			<iHealthPercent>-15</iHealthPercent>
+			<iCultureDistance>3</iCultureDistance>
+			<iMovement>3</iMovement>
+			<Button>Art/Interface\Buttons\WorldBuilder\lunarRilles.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_ICE</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_ICE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_ICE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_ICE</ArtDefineTag>
+			<bFoundCoast>1</bFoundCoast>
+			<bFoundFreshWater>1</bFoundFreshWater>
+			<iBuildModifier>75</iBuildModifier>
+			<iCultureDistance>3</iCultureDistance>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>4</iMovement>
+			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ice.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_PERMAFROST</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_PERMAFROST</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_PERMAFROST_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_PERMAFROST</ArtDefineTag>
+			<bFound>1</bFound>
+			<iBuildModifier>50</iBuildModifier>
+			<iCultureDistance>2</iCultureDistance>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>3</iMovement>
+			<Button>Art/Interface/Buttons/baseterrain/DuneIce.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_DESERT</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_DESERT</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_DESERT_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_DESERT</ArtDefineTag>
+			<bFoundCoast>1</bFoundCoast>
+			<bFoundFreshWater>1</bFoundFreshWater>
+			<iBuildModifier>25</iBuildModifier>
+			<iCultureDistance>2</iCultureDistance>
+			<iDefense>-25</iDefense>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>3</iMovement>
+			<Button>Art/Interface/Buttons/baseterrain/DuneGraben.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_DESERT_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_DUNES</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_DUNES</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_DUNES_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_DESERT</ArtDefineTag>
+			<bFoundCoast>1</bFoundCoast>
+			<bFoundFreshWater>1</bFoundFreshWater>
+			<iBuildModifier>50</iBuildModifier>
+			<iCultureDistance>2</iCultureDistance>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>4</iMovement>
+			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Desert.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_DESERT_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_BARREN</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_BARREN</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_BARREN_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_MARTIAN_BARREN</ArtDefineTag>
+			<bFound>1</bFound>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>1</iMovement>
+			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_GRASSLAND_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_PLAINS</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_PLAINS</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_PLAINS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_MARTIAN_PLAINS</ArtDefineTag>
+			<bFound>1</bFound>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>1</iMovement>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
+			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Plains.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+			</MapCategoryTypes>
+		</TerrainInfo>
+		<TerrainInfo>
+			<Type>TERRAIN_MARTIAN_ROCKY</Type>
+			<Description>TXT_KEY_TERRAIN_MARTIAN_ROCKY</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_MARTIAN_ROCKY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_ROCKY</ArtDefineTag>
+			<bFound>1</bFound>
+			<iBuildModifier>25</iBuildModifier>
+			<iDefense>25</iDefense>
+			<iHealthPercent>-15</iHealthPercent>
+			<iMovement>2</iMovement>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
+			<Button>Art/Interface/Buttons/baseterrain/DuneRugged.dds</Button>
+			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>

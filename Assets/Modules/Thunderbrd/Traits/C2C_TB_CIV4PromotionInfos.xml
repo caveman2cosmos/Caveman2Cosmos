@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Promotion Infos -->
 <Civ4PromotionInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<PromotionInfos>
 		<PromotionInfo>
@@ -589,13 +583,13 @@
 			<iCityAttack>20</iCityAttack>
 			<iRevoltProtection>5</iRevoltProtection>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<UnitCombats>
 				<UnitCombat>
@@ -624,13 +618,13 @@
 			</UnitCombats>
 			<iCityAttack>15</iCityAttack>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionImperialist.dds</Button>
 		</PromotionInfo>
@@ -1663,20 +1657,20 @@
 			<iNumHealSupport>1</iNumHealSupport>
 			<iSameTileHealChange>5</iSameTileHealChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionHumanitarian.dds</Button>
 		</PromotionInfo>
@@ -1700,20 +1694,20 @@
 			<iNumHealSupport>1</iNumHealSupport>
 			<iSameTileHealChange>3</iSameTileHealChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionHumanitarian.dds</Button>
 		</PromotionInfo>
@@ -1736,20 +1730,20 @@
 			</UnitCombats>
 			<iSameTileHealChange>7</iSameTileHealChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionHumanitarian2.dds</Button>
 		</PromotionInfo>
@@ -1787,20 +1781,20 @@
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iCombatPercent>10</iCombatPercent>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCruel.dds</Button>
 		</PromotionInfo>
@@ -1840,20 +1834,20 @@
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iCombatPercent>10</iCombatPercent>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCruel.dds</Button>
 		</PromotionInfo>
@@ -1893,20 +1887,20 @@
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iCombatPercent>10</iCombatPercent>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCruel2.dds</Button>
 		</PromotionInfo>
@@ -1924,20 +1918,20 @@
 			<iInvestigationChange>10</iInvestigationChange>
 			<iRevoltProtection>5</iRevoltProtection>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionLawful.dds</Button>
 		</PromotionInfo>
@@ -1957,20 +1951,20 @@
 			<iInvestigationChange>5</iInvestigationChange>
 			<iRevoltProtection>5</iRevoltProtection>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionLawful.dds</Button>
 		</PromotionInfo>
@@ -1990,20 +1984,20 @@
 			<iInvestigationChange>10</iInvestigationChange>
 			<iRevoltProtection>5</iRevoltProtection>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionLawful2.dds</Button>
 		</PromotionInfo>
@@ -2023,20 +2017,20 @@
 			<iInvestigationChange>15</iInvestigationChange>
 			<iRevoltProtection>5</iRevoltProtection>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionLawful3.dds</Button>
 		</PromotionInfo>
@@ -2055,20 +2049,20 @@
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCrooked.dds</Button>
 		</PromotionInfo>
@@ -2089,20 +2083,20 @@
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iStealthCombatModifier>5</iStealthCombatModifier>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCrooked.dds</Button>
 		</PromotionInfo>
@@ -2123,20 +2117,20 @@
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCrooked2.dds</Button>
 		</PromotionInfo>
@@ -2157,20 +2151,20 @@
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iStealthCombatModifier>5</iStealthCombatModifier>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionCrooked3.dds</Button>
 		</PromotionInfo>
@@ -2188,20 +2182,20 @@
 			<iSameTileHealChange>5</iSameTileHealChange>
 			<iNumHealSupport>1</iNumHealSupport>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionMedical.dds</Button>
 		</PromotionInfo>
@@ -2221,20 +2215,20 @@
 			<iSameTileHealChange>3</iSameTileHealChange>
 			<iNumHealSupport>1</iNumHealSupport>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionMedical.dds</Button>
 		</PromotionInfo>
@@ -2254,20 +2248,20 @@
 			<iSameTileHealChange>5</iSameTileHealChange>
 			<iNumHealSupport>1</iNumHealSupport>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionMedical2.dds</Button>
 		</PromotionInfo>
@@ -2286,20 +2280,20 @@
 			</UnitCombats>
 			<iSameTileHealChange>7</iSameTileHealChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionMedical3.dds</Button>
 		</PromotionInfo>
@@ -2323,20 +2317,20 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionUnsanitary.dds</Button>
 		</PromotionInfo>
@@ -2362,20 +2356,20 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionUnsanitary.dds</Button>
 		</PromotionInfo>
@@ -2401,20 +2395,20 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionUnsanitary2.dds</Button>
 		</PromotionInfo>
@@ -2440,20 +2434,20 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionUnsanitary3.dds</Button>
 		</PromotionInfo>
@@ -2473,34 +2467,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionNaturalist.dds</Button>
 		</PromotionInfo>
@@ -2522,34 +2516,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionNaturalist.dds</Button>
 		</PromotionInfo>
@@ -2571,34 +2565,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionNaturalist2.dds</Button>
 		</PromotionInfo>
@@ -2620,34 +2614,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionNaturalist3.dds</Button>
 		</PromotionInfo>
@@ -2667,34 +2661,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionSlob.dds</Button>
 		</PromotionInfo>
@@ -2716,34 +2710,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionSlob.dds</Button>
 		</PromotionInfo>
@@ -2765,34 +2759,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionSlob2.dds</Button>
 		</PromotionInfo>
@@ -2814,34 +2808,34 @@
 				</UnitCombat>
 			</UnitCombats>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/PromotionSlob3.dds</Button>
 		</PromotionInfo>

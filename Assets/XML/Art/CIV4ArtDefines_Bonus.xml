@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<!-- These entries should be ordered alphabetically. -->
-<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unmique font icon -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unique font icon -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BonusArtInfos>
 		<BonusArtInfo>
@@ -22,7 +21,7 @@
 			<FontButtonIndex>11</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MELON</Type>
+			<Type>ART_DEF_BONUS_MELONS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Melon/Wheat.nif</NIF>
@@ -31,7 +30,7 @@
 			<FontButtonIndex>111</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_POTATO</Type>
+			<Type>ART_DEF_BONUS_POTATOES</Type>
 			<fScale>0.8</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Potato/Wheat.nif</NIF>
@@ -133,7 +132,7 @@
 			<FontButtonIndex>123</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GUAVA</Type>
+			<Type>ART_DEF_BONUS_GUAVAS</Type>
 			<fScale>.7</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/guava/guava.nif</NIF>
@@ -142,7 +141,7 @@
 			<FontButtonIndex>211</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LEMON</Type>
+			<Type>ART_DEF_BONUS_LEMONS</Type>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Lemon/Lemqes.nif</NIF>
@@ -226,7 +225,7 @@
 			<FontButtonIndex>28</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CANNABIS</Type>
+			<Type>ART_DEF_BONUS_HEMP</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Cannabis/Cnq.nif</NIF>
@@ -389,7 +388,7 @@
 			<FontButtonIndex>140</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WINE</Type>
+			<Type>ART_DEF_BONUS_GRAPES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
@@ -407,7 +406,7 @@
 			<FontButtonIndex>166</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TIMBER</Type>
+			<Type>ART_DEF_BONUS_PRIME_TIMBER</Type>
 			<fScale>0.58</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Timber/olives.nif</NIF>
@@ -484,7 +483,7 @@
 			<FontButtonIndex>18</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FUR</Type>
+			<Type>ART_DEF_BONUS_BEAVERS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Fur/Fur.nif</NIF>
@@ -514,7 +513,7 @@
 			<FontButtonIndex>14</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ELEPHANT</Type>
+			<Type>ART_DEF_BONUS_ELEPHANTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Elephant/Elephant.nif</NIF>
@@ -524,7 +523,7 @@
 			<FontButtonIndex>25</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GUINEA_PIG</Type>
+			<Type>ART_DEF_BONUS_GUINEA_PIGS</Type>
 			<fScale>15</fScale>
 			<fInterfaceScale>15</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/guinea pig/guineapig.nif</NIF>
@@ -579,7 +578,7 @@
 			<FontButtonIndex>108</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SEA_LIONS</Type>
+			<Type>ART_DEF_BONUS_SEA_LION_AND_SEAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Sea_Lions/Sea_Lions.nif</NIF>
@@ -694,7 +693,7 @@
 			<FontButtonIndex>48</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_BAUXITE</Type>
+			<Type>ART_DEF_BONUS_BAUXITE_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Aluminum/Aluminum.nif</NIF>
@@ -712,7 +711,7 @@
 			<FontButtonIndex>1</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COPPER</Type>
+			<Type>ART_DEF_BONUS_COPPER_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Copper/Copper.nif</NIF>
@@ -740,7 +739,7 @@
 			<FontButtonIndex>228</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GOLD</Type>
+			<Type>ART_DEF_BONUS_GOLD_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Gold/Gold.nif</NIF>
@@ -749,7 +748,7 @@
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_IRON</Type>
+			<Type>ART_DEF_BONUS_IRON_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Iron/Iron.nif</NIF>
@@ -758,7 +757,7 @@
 			<FontButtonIndex>4</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LEAD</Type>
+			<Type>ART_DEF_BONUS_LEAD_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.25</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Lead/iron.nif</NIF>
@@ -777,7 +776,7 @@
 			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PLATINUM</Type>
+			<Type>ART_DEF_BONUS_PLATINUM_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Terrain/resources/Platinum/Aluminum.nif</NIF>
@@ -786,7 +785,7 @@
 			<FontButtonIndex>229</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RUBY</Type>
+			<Type>ART_DEF_BONUS_RUBIES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Rubies/gems.nif</NIF>
@@ -796,7 +795,7 @@
 			<FontButtonIndex>59</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SAPPHIRE</Type>
+			<Type>ART_DEF_BONUS_SAPPHIRES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Sapphires/gems.nif</NIF>
@@ -806,7 +805,7 @@
 			<FontButtonIndex>60</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SILVER</Type>
+			<Type>ART_DEF_BONUS_SILVER_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Silver/Silver.nif</NIF>
@@ -824,7 +823,7 @@
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TIN</Type>
+			<Type>ART_DEF_BONUS_TIN_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Tin/copper.nif</NIF>
@@ -834,7 +833,7 @@
 			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TITANIUM</Type>
+			<Type>ART_DEF_BONUS_TITANIUM_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Terrain/resources/Titanium/Aluminum.nif</NIF>
@@ -918,7 +917,7 @@
 			<FontButtonIndex>142</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FOSSIL</Type>
+			<Type>ART_DEF_BONUS_FOSSIL_BEDS</Type>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>5</fInterfaceScale>
 			<NIF>Art/Terrain/Features/Bones/animal_skeleton.nif</NIF>
@@ -927,7 +926,7 @@
 			<FontButtonIndex>189</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GEOTHERMAL_SEA_VENT</Type>
+			<Type>ART_DEF_BONUS_HYDROTHERMAL_VENT</Type>
 			<fScale>2.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Geothermal_Sea_Vent/library.nif</NIF>
@@ -936,7 +935,7 @@
 			<FontButtonIndex>30</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_METHANE</Type>
+			<Type>ART_DEF_BONUS_METHANE_ICE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Methane/fallout.nif</NIF>
@@ -963,7 +962,7 @@
 			<FontButtonIndex>6</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_THERMAL_VENT</Type>
+			<Type>ART_DEF_BONUS_GEOTHERMAL_ENERGY</Type>
 			<fScale>0.9</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/ThermalVent/Uranium.nif</NIF>
@@ -972,7 +971,7 @@
 			<FontButtonIndex>46</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CO2_ICE</Type>
+			<Type>ART_DEF_BONUS_CARBON_DIOXIDE_ICE</Type>
 			<fScale>0.7</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/CO2_Ice/Rice.nif</NIF>
@@ -999,12 +998,21 @@
 			<FontButtonIndex>98</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ANCIENTTEMPLE</Type>
-			<fScale>0.08</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<Type>ART_DEF_BONUS_ANCIENT_RELICS</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/LostCiv1/oldtemple.nif</NIF>
 			<KFM></KFM>
 			<Button>,Art/Interface/Buttons/Buildings/ChichenItza.dds,Art/RoM_Atlas.dds,2,2</Button>
+			<FontButtonIndex>90</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_MACHU_PICCHU_PLANS</Type>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
 			<FontButtonIndex>90</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

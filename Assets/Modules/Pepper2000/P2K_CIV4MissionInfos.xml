@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- Mission Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Mission Infos -->
 <Civ4MissionInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<MissionInfos>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_LAUNCH_SATELLITE</Type>
 			<Description>TXT_KEY_MISSION_LAUNCH_SATELLITE</Description>
 			<Help>TXT_KEY_MISSION_LAUNCH_SATELLITE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -19,12 +19,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/units/satellite.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_LAUNCH_SATELLITE_CISLUNAR</Type>
 			<Description>TXT_KEY_MISSION_LAUNCH_SATELLITE_CISLUNAR</Description>
 			<Help>TXT_KEY_MISSION_LAUNCH_SATELLITE_CISLUNAR_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -33,12 +33,13 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/units/satellite.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<!-- Delete MISSION_EXPLORE_MOON after finishing multimaps if we doesn't want single map space scenario support -->
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_MOON</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MOON</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_MOON_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -47,12 +48,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/units/lunarrover.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_SS1</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SS1</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SS1_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -61,12 +62,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/improvements/space_station_1.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_SS2</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SS2</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SS2_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -75,12 +76,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/improvements/space_station_2.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_SS3</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SS3</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SS3_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -89,12 +90,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/improvements/space_station_3.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_UPGRADE_SS2</Type>
 			<Description>TXT_KEY_MISSION_UPGRADE_SS2</Description>
 			<Help>TXT_KEY_MISSION_UPGRADE_SS2_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -103,12 +104,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/improvements/space_station_2.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_UPGRADE_SS3</Type>
 			<Description>TXT_KEY_MISSION_UPGRADE_SS3</Description>
 			<Help>TXT_KEY_MISSION_UPGRADE_SS3_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -117,12 +118,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/improvements/space_station_3.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_UPGRADE_CISLUNAR_SETTLER</Type>
 			<Description>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER</Description>
 			<Help>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -131,12 +132,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/sparth/spacecraft_settler.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_UPGRADE_LUNAR_SETTLER</Type>
 			<Description>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER</Description>
 			<Help>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -145,12 +146,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/sparth/spacecraft_settler.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_UPGRADE_PLANET_SETTLER</Type>
 			<Description>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER</Description>
 			<Help>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -159,12 +160,12 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/sparth/spacecraft_settler.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_MOON_SURFACE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -178,7 +179,7 @@
 			<Description>TXT_KEY_MISSION_PLANET_LAND</Description>
 			<Help>TXT_KEY_MISSION_PLANET_LAND_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_B</HotKey>
+			<HotKey>KB_B</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -187,12 +188,12 @@
 			<bVisible>1</bVisible>
 			<Button>,Art/Interface/Buttons/Actions/FoundCity.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,4</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_INNER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_INNER_SOLAR_SYSTEM</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_INNER_SOLAR_SYSTEM_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -201,12 +202,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/inner_solar_system.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_OUTER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -215,12 +216,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/outer_solar_system.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_TRANSNEPTUNIAN</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -229,12 +230,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/transneptunian.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_INTERSTELLAR</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -243,12 +244,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/transtellar.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_BRACEWELL</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_GALACTIC</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_GALACTIC_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -257,12 +258,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/orion_arm.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_VON_NEUMANN</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -271,12 +272,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/galaxy.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_QUANTUM</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_DISTANT</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_DISTANT_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -285,12 +286,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/distant_cosmos.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_INTERDIMENSIONAL</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_HYPERSPACE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_HYPERSPACE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -299,12 +300,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/hyperspace.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_MERCURY</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MERCURY</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_MERCURY_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -313,12 +314,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/mercury.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_VENUS</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_VENUS</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_VENUS_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -327,12 +328,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/venus.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_ASTEROID</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_ASTEROID</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_ASTEROID_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -341,12 +342,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/asteroid_surface.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_MARS</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MARS</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_MARS_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -355,12 +356,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/mars.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_JUPITER</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_JUPITER</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_JUPITER_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -369,12 +370,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/jupiter.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_EUROPA</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_EUROPA</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_EUROPA_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -383,12 +384,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/europa.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_SATURN</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SATURN</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SATURN_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -397,12 +398,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/saturn.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_TITAN</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_TITAN</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_TITAN_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -411,12 +412,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/titan.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_URANUS</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_URANUS</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_URANUS_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -425,12 +426,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/uranus.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_NEPTUNE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_NEPTUNE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_NEPTUNE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -439,12 +440,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/neptune.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_KBO</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_KBO</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_KBO_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -453,12 +454,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/kuiper_belt_object.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_SEDNOID</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SEDNOID</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SEDNOID_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -467,12 +468,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/sednoid.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_EXOPLANET</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_EXOPLANET</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_EXOPLANET_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -481,12 +482,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/super_earth.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_OORT_CLOUD</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -495,12 +496,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/oort_cloud.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_DISTANT_COSMOS</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -509,12 +510,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/distant_cosmos.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_HYPERSPACE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_HYPERSPACE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_HYPERSPACE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -523,12 +524,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/hyperspace.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_MULTIVERSE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MULTIVERSE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_MULTIVERSE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -537,12 +538,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/branespace.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_ANCIENT_CIVILIZATION</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -551,12 +552,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/abandoned_civilization.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_SOLAR_SYSTEM_LIFE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -565,12 +566,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/extraterrestrial_microbes.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_INTERSTELLAR_LIFE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -579,12 +580,12 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/xenoflora.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_EXPLORE_GALACTIC_CORE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE_HELP</Help>
 			<Waypoint>NONE</Waypoint>
-            <HotKey>KB_E</HotKey>
+			<HotKey>KB_E</HotKey>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
 			<bTarget>0</bTarget>
@@ -593,7 +594,7 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/worldbuilder/galactic_core.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_SAMPLE_STUDY</Type>
 			<Description>TXT_KEY_MISSION_SAMPLE_STUDY</Description>
 			<Help>TXT_KEY_MISSION_SAMPLE_STUDY_HELP</Help>
@@ -606,7 +607,7 @@
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/improvements/data_analysis.dds</Button>
 		</MissionInfo>
-        <MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_CAPTURE_ASTEROID</Type>
 			<Description>TXT_KEY_MISSION_CAPTURE_ASTEROID</Description>
 			<Help>TXT_KEY_MISSION_CAPTURE_ASTEROID_HELP</Help>
@@ -620,10 +621,9 @@
 			<Button>art/interface/buttons/units/captured_asteroid.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Type>
-			<Description>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Description>
-			<Help/>
-			<Help>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Help>
+			<Type>MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Type>
+			<Description>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Description>
+			<Help>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Help>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -631,7 +631,7 @@
 			<bBuild>0</bBuild>
 			<bSound>0</bSound>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/Units/button_neanderthal.dds</Button>
+			<Button>Art/Interface/Buttons/Units/sparth/bulldozer.dds</Button>
 		</MissionInfo>
 	</MissionInfos>
 </Civ4MissionInfos>

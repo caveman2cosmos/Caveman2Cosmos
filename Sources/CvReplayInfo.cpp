@@ -1,6 +1,15 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvGameTextMgr.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvInitCore.h"
+#include "CvMap.h"
+#include "CvPlayerAI.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 int CvReplayInfo::REPLAY_VERSION = 4;
 
@@ -23,41 +32,34 @@ CvReplayInfo::CvReplayInfo()
 	, m_iStartYear(0)
 	, m_eCalendar(NO_CALENDAR)
 {
-	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2); 
+	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2);
 }
 
 CvReplayInfo::~CvReplayInfo()
 {
-	//ReplayMessageList::const_iterator it;
-	for (uint i = 0; i < m_listReplayMessages.size(); i++)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		SAFE_DELETE(m_listReplayMessages[i]);
+		SAFE_DELETE(pMessage);
 	}
 	SAFE_DELETE(m_pcMinimapPixels);
 }
 
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
-	CvGame& game = GC.getGameINLINE();
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	CvGame& game = GC.getGame();
+
 	if (!game.isFinalInitialized())
 		return;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	CvMap& map = GC.getMapINLINE();
-	
+
+	const CvMap& map = GC.getMap();
+
 	if (ePlayer == NO_PLAYER)
 	{
 		ePlayer = game.getActivePlayer();
 	}
 	if (NO_PLAYER != ePlayer)
 	{
-		CvPlayer& player = GET_PLAYER(ePlayer);
+		const CvPlayer& player = GET_PLAYER(ePlayer);
 
 		m_eDifficulty = player.getHandicapType();
 		m_szLeaderName = player.getName();
@@ -74,7 +76,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		m_listGameOptions.clear();
 		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
 		{
-			GameOptionTypes eOption = (GameOptionTypes)i;
+			const GameOptionTypes eOption = (GameOptionTypes)i;
 			if (game.isOption(eOption))
 			{
 				m_listGameOptions.push_back(eOption);
@@ -84,7 +86,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		m_listVictoryTypes.clear();
 		for (int i = 0; i < GC.getNumVictoryInfos(); i++)
 		{
-			VictoryTypes eVictory = (VictoryTypes)i;
+			const VictoryTypes eVictory = (VictoryTypes)i;
 			if (game.isVictoryValid(eVictory))
 			{
 				m_listVictoryTypes.push_back(eVictory);
@@ -99,18 +101,18 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 			m_eVictoryType = NO_VICTORY;
 		}
 
-		m_iNormalizedScore = player.calculateScore(true, player.getTeam() == GC.getGameINLINE().getWinner());
+		m_iNormalizedScore = player.calculateScore(true, player.getTeam() == GC.getGame().getWinner());
 	}
 
 	m_bMultiplayer = game.isGameMultiPlayer();
 
 
-	m_iInitialTurn = GC.getGameINLINE().getStartTurn();
-	m_iStartYear = GC.getGameINLINE().getStartYear();
+	m_iInitialTurn = GC.getGame().getStartTurn();
+	m_iStartYear = GC.getGame().getStartYear();
 	m_iFinalTurn = game.getGameTurn();
-	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGameINLINE().getCalendar(), GC.getGameINLINE().getStartYear(), GC.getGameINLINE().getGameSpeedType());
+	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
 
-	m_eCalendar = GC.getGameINLINE().getCalendar();
+	m_eCalendar = GC.getGame().getCalendar();
 
 
 	std::map<PlayerTypes, int> mapPlayers;
@@ -118,7 +120,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	int iPlayerIndex = 0;
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 	{
-		CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
+		const CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
 		if (player.isEverAlive())
 		{
 			mapPlayers[(PlayerTypes)iPlayer] = iPlayerIndex;
@@ -158,7 +160,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 				pMsg->setText(game.getReplayMessageText(i));
 				pMsg->setPlot(game.getReplayMessagePlotX(i), game.getReplayMessagePlotY(i));
 				m_listReplayMessages.push_back(pMsg);
-			}	
+			}
 		}
 		else
 		{
@@ -169,16 +171,16 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 				pMsg->setText(game.getReplayMessageText(i));
 				pMsg->setPlot(game.getReplayMessagePlotX(i), game.getReplayMessagePlotY(i));
 				m_listReplayMessages.push_back(pMsg);
-			}	
+			}
 		}
 	}
 
-	m_iMapWidth = GC.getMapINLINE().getGridWidthINLINE();
-	m_iMapHeight = GC.getMapINLINE().getGridHeightINLINE();
-	
-	SAFE_DELETE(m_pcMinimapPixels);	
-	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
-	
+	m_iMapWidth = GC.getMap().getGridWidth();
+	m_iMapHeight = GC.getMap().getGridHeight();
+
+	SAFE_DELETE(m_pcMinimapPixels);
+	m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
+
 	void *ptexture = (void*)gDLL->getInterfaceIFace()->getMinimapBaseTexture();
 	if (ptexture)
 		memcpy((void*)m_pcMinimapPixels, ptexture, m_nMinimapSize);
@@ -330,13 +332,9 @@ void CvReplayInfo::addReplayMessage(CvReplayMessage* pMessage)
 
 void CvReplayInfo::clearReplayMessageMap()
 {
-	for (ReplayMessageList::const_iterator itList = m_listReplayMessages.begin(); itList != m_listReplayMessages.end(); ++itList)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		const CvReplayMessage* pMessage = *itList;
-		if (NULL != pMessage)
-		{
-			delete pMessage;
-		}
+		SAFE_DELETE(pMessage);
 	}
 	m_listReplayMessages.clear();
 }
@@ -461,7 +459,7 @@ int CvReplayInfo::getFinalTurn() const
 	return m_iFinalTurn;
 }
 
-const wchar* CvReplayInfo::getFinalDate() const
+const wchar_t* CvReplayInfo::getFinalDate() const
 {
 	return m_szFinalDate;
 }
@@ -472,7 +470,7 @@ CalendarTypes CvReplayInfo::getCalendar() const
 }
 
 
-int CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -481,7 +479,7 @@ int CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -490,7 +488,7 @@ int CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -499,7 +497,7 @@ int CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -508,22 +506,22 @@ int CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getFinalScore() const
+int64_t CvReplayInfo::getFinalScore() const
 {
 	return getPlayerScore(m_iActivePlayer, m_iFinalTurn);
 }
 
-int CvReplayInfo::getFinalEconomy() const
+int64_t CvReplayInfo::getFinalEconomy() const
 {
 	return getPlayerEconomy(m_iActivePlayer, m_iFinalTurn);
 }
 
-int CvReplayInfo::getFinalIndustry() const
+int64_t CvReplayInfo::getFinalIndustry() const
 {
 	return getPlayerIndustry(m_iActivePlayer, m_iFinalTurn);
 }
 
-int CvReplayInfo::getFinalAgriculture() const
+int64_t CvReplayInfo::getFinalAgriculture() const
 {
 	return getPlayerAgriculture(m_iActivePlayer, m_iFinalTurn);
 }
@@ -543,7 +541,7 @@ int CvReplayInfo::getMapWidth() const
 	return m_iMapWidth;
 }
 
-const unsigned char* CvReplayInfo::getMinimapPixels() const
+const uint8_t* CvReplayInfo::getMinimapPixels() const
 {
 	return m_pcMinimapPixels;
 }
@@ -583,7 +581,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		}
 		else
 		{
-			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN");
+			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN");
 		}
 		stream.Read(&iType);
 		m_eWorldSize = (WorldSizeTypes)iType;
@@ -639,10 +637,23 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 			for (int j = 0; j < jNumTypes; j++)
 			{
 				TurnData data;
-				stream.Read(&(data.m_iScore));
-				stream.Read(&(data.m_iEconomy));
-				stream.Read(&(data.m_iIndustry));
-				stream.Read(&(data.m_iAgriculture));
+
+				double fScore;
+				stream.Read(&fScore);
+				data.m_iScore = static_cast<int64_t>(fScore);
+
+				double fEconomy;
+				stream.Read(&fEconomy);
+				data.m_iEconomy = static_cast<int64_t>(fEconomy);
+
+				double fIndustry;
+				stream.Read(&fIndustry);
+				data.m_iIndustry = static_cast<int64_t>(fIndustry);
+
+				double fAgriculture;
+				stream.Read(&fAgriculture);
+				data.m_iAgriculture = static_cast<int64_t>(fAgriculture);
+
 				info.m_listScore.push_back(data);
 			}
 			m_listPlayerScoreHistory.push_back(info);
@@ -650,7 +661,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		stream.Read(&m_iMapWidth);
 		stream.Read(&m_iMapHeight);
 		SAFE_DELETE(m_pcMinimapPixels);
-		m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
+		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
 		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
 		stream.Read(&m_bMultiplayer);
 		if (iVersion > 2)
@@ -692,12 +703,11 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 	}
 	stream.Write((int)m_eVictoryType);
 	stream.Write((int)m_listReplayMessages.size());
-	//ReplayMessageList::const_iterator it;
-	for (uint i = 0; i < m_listReplayMessages.size(); i++)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		if (NULL != m_listReplayMessages[i])
+		if (pMessage != NULL)
 		{
-			m_listReplayMessages[i]->write(stream);
+			pMessage->write(stream);
 		}
 	}
 	stream.Write(m_iInitialTurn);
@@ -715,10 +725,10 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 		stream.Write((int)info.m_listScore.size());
 		for (uint j = 0; j < info.m_listScore.size(); j++)
 		{
-			stream.Write(info.m_listScore[j].m_iScore);
-			stream.Write(info.m_listScore[j].m_iEconomy);
-			stream.Write(info.m_listScore[j].m_iIndustry);
-			stream.Write(info.m_listScore[j].m_iAgriculture);
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iScore));
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iEconomy));
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iIndustry));
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iAgriculture));
 		}
 	}
 	stream.Write(m_iMapWidth);

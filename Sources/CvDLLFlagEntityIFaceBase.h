@@ -10,17 +10,18 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-	
+
 #pragma once
 #ifndef CvDLLFlagEntityIFaceBase_H
 #define CvDLLFlagEntityIFaceBase_H
 
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvGlobals.h"	// for gDLL
+#include "CvGlobals.h"
 
 class CvPlot;
 class CvFlagEntity;
+class CvEntity;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  CLASS:      CvDLLFlagEntityIFaceBase

@@ -5,6 +5,9 @@
 
 #include "CvPython.h"
 
+class CvCity;
+class CvPlot;
+class CvUnit;
 class CyArgsList;
 class CvSelectionGroup;
 
@@ -17,11 +20,11 @@ public:
 	void reportModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5);
 
 	void reportInit();
-	void reportUpdate(float fDeltaTime);
 	void reportUnInit();
 	void reportGameStart();
-	void reportGameEnd();
+	void reportGameEnd(int iGameTurn);
 	void reportWindowActivation(bool bActive);
+	void reportMapRegen();
 
 	void reportBeginGameTurn(int iGameTurn);
 /************************************************************************************************/
@@ -38,17 +41,17 @@ public:
 	void reportBeginPlayerTurn(int iGameTurn, PlayerTypes);
 	void reportEndPlayerTurn(int iGameTurn, PlayerTypes);
 
-	void reportFirstContact(TeamTypes iTeamID1, TeamTypes iTeamID2);						
-	void reportCombatResult(CvUnit* pWinner, CvUnit* pLoser);					
+	void reportFirstContact(TeamTypes iTeamID1, TeamTypes iTeamID2);
+	void reportCombatResult(CvUnit* pWinner, CvUnit* pLoser);
 // BUG - Combat Events - start
 	void reportCombatRetreat(CvUnit* pAttacker, CvUnit* pDefender);
 	void reportCombatWithdrawal(CvUnit* pAttacker, CvUnit* pDefender);
 	void reportCombatLogCollateral(CvUnit* pAttacker, CvUnit* pDefender, int iDamage);
 	void reportCombatLogFlanking(CvUnit* pAttacker, CvUnit* pDefender, int iDamage);
 // BUG - Combat Events - start
-	void reportImprovementBuilt(int iImprovementType, int iX, int iY);	
-	void reportImprovementDestroyed(int iImprovementType, int iPlayer, int iX, int iY);	
-	void reportRouteBuilt(int iRouteType, int iX, int iY);	
+	void reportImprovementBuilt(int iImprovementType, int iX, int iY);
+	void reportImprovementDestroyed(int iImprovementType, int iPlayer, int iX, int iY);
+	void reportRouteBuilt(int iRouteType, int iX, int iY);
 
 	void reportPlotRevealed(CvPlot *pPlot, TeamTypes eTeam);
 	void reportPlotFeatureRemoved(CvPlot *pPlot, FeatureTypes eFeature, CvCity* pCity);
@@ -75,13 +78,12 @@ public:
 	void reportCityRename(CvCity *pCity);
 	void reportCityHurry(CvCity *pCity, HurryTypes eHurry);
 
-	void reportSelectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
+	void reportSelectionGroupPushMission(const CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
 
-	void reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot);					
-	void reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit);					
+	void reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot);
 	void reportUnitCreated(CvUnit *pUnit);
 	void reportUnitBuilt(CvCity *pCity, CvUnit *pUnit);
-	void reportUnitKilled(CvUnit *pUnit, PlayerTypes eAttacker);			
+	void reportUnitKilled(CvUnit *pUnit, PlayerTypes eAttacker);
 // BUG - Upgrade Unit Event - start
 	void reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit);
 // BUG - Upgrade Unit Event - end
@@ -119,7 +121,7 @@ public:
 	void reportGoldenAge(PlayerTypes ePlayer);
 	void reportEndGoldenAge(PlayerTypes ePlayer);
 	void reportChangeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam);
-	void reportChat(CvWString szString);				
+	void reportChat(CvWString szString);
 	void reportVictory(TeamTypes eNewWinner, VictoryTypes eNewVictory);
 
 	void reportVassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal);
@@ -127,19 +129,9 @@ public:
 	void reportSetPlayerAlive(PlayerTypes ePlayerID, bool bNewValue);
 	void reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
-	
-// BUG - Revolution Event - start
-	void reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics);
-// BUG - Revolution Event - end
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void reportAddTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	void reportChangeTeam(TeamTypes eOld, TeamTypes eNew);
+
 	void preSave();
 };
 

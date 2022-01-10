@@ -1,13 +1,9 @@
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Assets\Modules\Alt_Timelines\Dieselpunk\Units\Dieselpunk_CIV4UnitInfos.xml-->
-<!-- Unit Infos -->
+<?xml version="1.0" encoding="UTF-8"?>
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_GOLIATH_AIRSHIP</Class>
 			<Type>UNIT_GOLIATH_AIRSHIP</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -33,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GOLIATH_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_GOLIATH_AIRSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GOLIATH_AIRSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43,12 +38,9 @@
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GUNSHIP</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -64,6 +56,7 @@
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1030</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>40</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
@@ -103,8 +96,8 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DRACHE_HELICOPTER</Class>
 			<Type>UNIT_DRACHE_HELICOPTER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -130,7 +123,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DRACHE_HELICOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DRACHE_HELICOPTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DRACHE_HELICOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -141,12 +133,9 @@
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GUNSHIP</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -161,11 +150,12 @@
 			<TechTypes>
 				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_DIESEL</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
@@ -198,7 +188,6 @@
 					<iDomainMod>-50</iDomainMod>
 				</DomainMod>
 			</DomainMods>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>196</iPower>
 			<UnitMeshGroups>
@@ -215,9 +204,9 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAILROAD_ARTILLERY</Class>
 			<Type>UNIT_RAILROAD_ARTILLERY</Type>
-			<Capture>UNITCLASS_RAILROAD_ARTILLERY</Capture>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<Capture>UNIT_RAILROAD_ARTILLERY</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -245,7 +234,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAILROAD_ARTILLERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAILROAD_ARTILLERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -255,12 +243,9 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MOBILE_ARTILLERY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
@@ -276,14 +261,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iCombatLimit>85</iCombatLimit>
@@ -330,9 +313,9 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BIG_BERTHA</Class>
 			<Type>UNIT_BIG_BERTHA</Type>
-			<Capture>UNITCLASS_BIG_BERTHA</Capture>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<Capture>UNIT_BIG_BERTHA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -365,7 +348,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BIG_BERTHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_BIG_BERTHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BIG_BERTHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -375,12 +357,9 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MOBILE_ARTILLERY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
@@ -396,14 +375,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iCombatLimit>85</iCombatLimit>
@@ -450,8 +427,8 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TZAR_TANK</Class>
 			<Type>UNIT_TZAR_TANK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -476,7 +453,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TZAR_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TZAR_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TZAR_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -485,12 +461,9 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MODERN_ARMOR</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MODERN_ARMOR</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -508,9 +481,10 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>35</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -531,23 +505,22 @@
 					<iTerrainAttack>-50</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 					<iUnitCombatMod>-50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>161</iPower>
 			<UnitMeshGroups>
@@ -564,8 +537,8 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DOUBLE_BIPLANE</Class>
 			<Type>UNIT_DOUBLE_BIPLANE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -589,23 +562,16 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DOUBLE_BIPLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOUBLE_BIPLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOUBLE_BIPLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_P51_MUSTANG</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_FIGHTER_BOMBER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_EARLYJET</UnitType>
+				<UnitType>UNIT_A10_BOMBER</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
@@ -615,9 +581,10 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<iCost>970</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>6</iAirRange>
 			<iAirUnitCap>1</iAirUnitCap>
@@ -648,9 +615,9 @@
 			<bDCMAirBomb5>0</bDCMAirBomb5>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
- 		<UnitInfo>
-			<Class>UNITCLASS_VERY_HEAVY_ARMOR</Class>
+		<UnitInfo>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -676,7 +643,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -686,12 +652,9 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MODERN_ARMOR</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MODERN_ARMOR</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -709,14 +672,14 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_ALUMINUM</ID>
+						<ID>BONUS_ALUMINUM_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -725,6 +688,7 @@
 				</And>
 			</TrainCondition>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>55</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -732,27 +696,26 @@
 			<iFirstStrikes>1</iFirstStrikes>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>150</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_TANK</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>150</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>6</iAsset>
 			<iPower>260</iPower>
 			<UnitMeshGroups>
@@ -775,8 +738,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CHROMIUM_GUNMAN</Class>
 			<Type>UNIT_CHROMIUM_GUNMAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ROBOT</SubCombatType>
@@ -804,7 +767,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHROMIUM_GUNMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHROMIUM_GUNMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHROMIUM_GUNMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -834,18 +796,18 @@
 			</TechTypes>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_TITANIUM</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIESEL</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -854,6 +816,7 @@
 				</And>
 			</TrainCondition>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>40</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -867,11 +830,11 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

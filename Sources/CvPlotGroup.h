@@ -5,10 +5,7 @@
 #ifndef CIV4_PLOT_GROUP_H
 #define CIV4_PLOT_GROUP_H
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
-#include "CvGame.h"
-#include "CvGameAI.h"
 
 typedef struct
 {
@@ -24,6 +21,7 @@ typedef struct
 
 class CvPlot;
 class CvPlotGroup
+	: private bst::noncopyable
 {
 friend class CvPlot;
 
@@ -35,25 +33,20 @@ public:
 
 	void init(int iID, PlayerTypes eOwner, CvPlot* pPlot, bool bRecalculateBonuses = true);
 	void uninit();
-	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall=false);
+	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
 
 	void addPlot(CvPlot* pPlot, bool bRecalculateBonuses);
 	void removePlot(CvPlot* pPlot, bool bRecalculateBonuses = true);
-	void recalculatePlots();														
+	void recalculatePlots();
 
 	int getID() const;
 	void setID(int iID);
 
-	PlayerTypes getOwner() const;
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
-	int getNumBonuses(BonusTypes eBonus) const;
-	bool hasBonus(BonusTypes eBonus);										
-	void changeNumBonuses(BonusTypes eBonus, int iChange);
+	inline PlayerTypes getOwner() const { return m_eOwner; }
+
+	int getNumBonuses(const BonusTypes eBonus) const;
+	bool hasBonus(const BonusTypes eBonus) const;
+	void changeNumBonuses(const BonusTypes eBonus, const int iChange);
 
 	int getNumCities();
 
@@ -94,11 +87,19 @@ protected:
 
 	plotGroupHashInfo m_zobristHashes;
 						//	XOR of the zobrist contributions from all
-						//	constituent plots 
+						//	constituent plots
 public:
 	int m_numPlots;
 	mutable int m_numCities;
 	//CLinkList<XYCoords> m_plots;
+
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlotGroup, void, recalculatePlots);
+		DECLARE_MAP_FUNCTOR(CvPlotGroup, void, RecalculateHashes);
+	};
 };
 
 #endif

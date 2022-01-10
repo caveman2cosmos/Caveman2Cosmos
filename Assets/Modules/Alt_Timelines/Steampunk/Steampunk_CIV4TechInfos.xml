@@ -4,12 +4,11 @@
 		<TechInfo>
 			<!-- Steampunk -->
 			<Type>TECH_STEAMPUNK</Type>
-			<Description>TXT_KEY_CULTURE_STEAMPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_STEAMPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_STEAMPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_STEAMPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_STEAMPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>5460</iCost>
-			<Era>ERA_INDUSTRIAL</Era>
+			<Era>C2C_ERA_INDUSTRIAL</Era>
 			<iGridX>63</iGridX>
 			<iGridY>13</iGridY>
 			<bTrade>1</bTrade>
@@ -42,7 +41,7 @@
 			<AndPreReqs>
 				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_CULTURE_STEAMPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_STEAMPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_STEAMPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/steampunk.dds</Button>

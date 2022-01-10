@@ -2,34 +2,9 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bart Muzzin (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Global Defines -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<!-- DCM features -->
-	<Define>
-		<DefineName>DCM_BATTLE_EFFECTS</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECT_LESS_FOOD</DefineName>
-		<iDefineIntVal>-1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECT_LESS_PRODUCTION</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECT_LESS_COMMERCE</DefineName>
-		<iDefineIntVal>-1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_BATTLE_TURNS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
 	<Define>
 		<DefineName>DCM_AIR_BOMBING</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
@@ -49,10 +24,6 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>DCM_STACK_ATTACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>DCM_ATTACK_SUPPORT</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -62,10 +33,6 @@
 	</Define>
 	<Define>
 		<DefineName>DCM_ACTIVE_DEFENSE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>DCM_ARCHER_BOMBARD</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
@@ -80,27 +47,22 @@
 	<Define>
 		<DefineName>IDW_BASE_COMBAT_INFLUENCE</DefineName>
 		<!-- Higher value: more influence from combat victory -->
-		<fDefineFloatVal>4.0</fDefineFloatVal>
+		<iDefineIntVal>320</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_NO_CITY_DEFENDER_MULTIPLIER</DefineName>
 		<!-- Multiply influence if last city defender dies -->
-		<fDefineFloatVal>2.5</fDefineFloatVal>
+		<iDefineIntVal>250</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_FORT_CAPTURE_MULTIPLIER</DefineName>
 		<!-- Multiply influence if fort is captured in combat -->
-		<fDefineFloatVal>2.0</fDefineFloatVal>
-	</Define>
-	<Define>
-		<DefineName>IDW_EXPERIENCE_FACTOR</DefineName>
-		<!-- Increase influence due to experience of victorious unit (per experience point) -->
-		<fDefineFloatVal>0.03</fDefineFloatVal>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_WARLORD_MULTIPLIER</DefineName>
 		<!-- Multiply influence if warlord wins (works only in Warlords -->
-		<fDefineFloatVal>1.3</fDefineFloatVal>
+		<iDefineIntVal>130</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_INFLUENCE_RADIUS</DefineName>
@@ -108,19 +70,14 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>IDW_PLOT_DISTANCE_FACTOR</DefineName>
-		<!-- Higher value: influence decreases faster with distance from attacker/defended plot -->
-		<fDefineFloatVal>0.2</fDefineFloatVal>
-	</Define>
-	<Define>
 		<DefineName>IDW_WINNER_PLOT_MULTIPLIER</DefineName>
 		<!-- By default: the same influence mulitiplier in attacker and defended plot -->
-		<fDefineFloatVal>1.0</fDefineFloatVal>
+		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_LOSER_PLOT_MULTIPLIER</DefineName>
 		<!-- By default: the same influence mulitiplier in attacker and defended plot -->
-		<fDefineFloatVal>1.0</fDefineFloatVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_ENABLED</DefineName>
@@ -135,12 +92,12 @@
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_STRENGTH</DefineName>
 		<!-- Militia health ratio -->
-		<fDefineFloatVal>0.25</fDefineFloatVal>
+		<iDefineIntVal>33</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER</DefineName>
-		<!-- Draft anger from militia -->
-		<fDefineFloatVal>0.5</fDefineFloatVal>
+		<!-- Draft anger percentage from militia -->
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_NO_BARBARIAN_INFLUENCE</DefineName>
@@ -160,12 +117,12 @@
 	<Define>
 		<DefineName>IDW_BASE_PILLAGE_INFLUENCE</DefineName>
 		<!-- Higher value: more influence from pillage -->
-		<fDefineFloatVal>2.0</fDefineFloatVal>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_CITY_TILE_MULTIPLIER</DefineName>
 		<!-- Multiplier used to adjust cultural effect of IDW in city tiles, not used if emergency draft is enabled-->
-		<fDefineFloatVal>0.2</fDefineFloatVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<!-- Super Spies -->
 	<Define>
@@ -281,14 +238,6 @@
 		<DefineName>BUG_LEADERHEAD_HOVER_HIDDEN_ATTITUDE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>BUG_LEADERHEAD_HOVER_WORST_ENEMY</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_LEADERHEAD_HOVER_DEFENSIVE_PACTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
 	<!-- Plot -->
 	<Define>
 		<DefineName>BUG_PLOT_HOVER_LAT_LONG</DefineName>
@@ -314,20 +263,6 @@
 	</Define>
 	<Define>
 		<DefineName>BUG_UNIT_EXPERIENCE_MODIFIERS_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<!-- Specialist -->
-	<Define>
-		<DefineName>BUG_SPECIALIST_HOVER_ACTUAL_EFFECTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<!-- Tech -->
-	<Define>
-		<DefineName>BUG_SPED_UP_TECHS_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_TECH_TRADE_DENIAL_HOVER</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<!-- Bonus -->
@@ -536,7 +471,7 @@
 	</Define>
 	<Define>
 		<DefineName>TEMPERATE_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
+		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>DRY_TERRAIN</DefineName>
@@ -576,16 +511,28 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Dynamic Civ Names   NOTE turned off in C2C code-->
+		<!-- Dynamic Civ Names NOTE turned off in C2C code-->
 		<DefineName>DYNAMIC_CIV_NAMES</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CHOOSE_RELIGION</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_POP_CONSIDER_INQUISITORS</DefineName>
 		<iDefineIntVal>7</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Toffer
+			Used when evaluating if player is well enough funded to start planning a war.
+			Value divided by 2 for limited war plan, and divided by 3 for dogpile war plan.
+		-->
+		<DefineName>ESTIMATED_EXTRA_WAR_EXPENSE_PERCENT</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_HAMMER_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 </Civ4Defines>

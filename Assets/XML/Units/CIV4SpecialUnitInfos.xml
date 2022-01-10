@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Special Unit Infos -->
 <Civ4SpecialUnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<SpecialUnitInfos>
@@ -17,7 +16,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_PEOPLE</Type>
@@ -39,7 +37,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_MISSILE</Type>
@@ -52,7 +49,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_TROOP</Type>
@@ -60,7 +56,6 @@
 			<bValid>1</bValid>
 			<bCityLoad>0</bCityLoad>
 			<CarrierUnitAIs/>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_SEAPLANE</Type>
@@ -73,15 +68,11 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
 			<Type>SPECIALUNIT_UNITED_NATIONS</Type>
-			<Description>TXT_KEY_SPECIALUNIT_UNITED_NATIONS</Description>
-			<bValid>1</bValid>
-			<bCityLoad>0</bCityLoad>
-			<CarrierUnitAIs/>
-			<ProductionTraits/>
+			<bValid>0</bValid>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_VTOL</Type>
@@ -94,7 +85,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_CAPTIVE</Type>
@@ -105,7 +95,6 @@
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iPursuitChange>-10</iPursuitChange>
 			<CarrierUnitAIs/>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 	</SpecialUnitInfos>
 </Civ4SpecialUnitInfos>

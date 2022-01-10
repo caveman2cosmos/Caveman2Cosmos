@@ -3,9 +3,8 @@
 #ifndef CvDLLSymbolIFaceBase_h
 #define CvDLLSymbolIFaceBase_h
 
-//#include "CvEnums.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvGlobals.h"	// for gDLL
+#include "CvGlobals.h"
 
 //
 // abstract interface for CvSymbol functions used by DLL
@@ -16,6 +15,9 @@ class CvPlot;
 class CvRoute;
 class CvFeature;
 class CvRiver;
+class cvInternalGlobals;
+class CvDLLUtilityIFaceBase;
+
 class CvDLLSymbolIFaceBase
 {
 public:
@@ -27,7 +29,7 @@ public:
 	virtual void Hide(CvSymbol*, bool bHide) = 0;
 	virtual bool IsHidden(CvSymbol*) = 0;
 	virtual void updatePosition(CvSymbol*) = 0;
-	virtual int getID(CvSymbol*) = 0;	
+	virtual int getID(CvSymbol*) = 0;
 	virtual SymbolTypes getSymbol(CvSymbol* pSym) = 0;
 	virtual void setTypeYield(CvSymbol *, int iType, int count) =0;
 };

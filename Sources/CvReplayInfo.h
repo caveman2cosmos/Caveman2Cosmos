@@ -4,10 +4,7 @@
 #define CvReplayInfo_H
 
 
-#include "CvEnums.h"
-
 class CvReplayMessage;
-
 
 class CvReplayInfo
 {
@@ -43,29 +40,29 @@ public:
 	int getReplayMessagePlotX(uint i) const;
 	int getReplayMessagePlotY(uint i) const;
 	PlayerTypes getReplayMessagePlayer(uint i) const;
-	const wchar* getReplayMessageText(uint i) const;
+	const wchar_t* getReplayMessageText(uint i) const;
 	uint getNumReplayMessages() const;
 	ColorTypes getReplayMessageColor(uint i) const;
 
 	int getInitialTurn() const;
 	int getFinalTurn() const;
 	int getStartYear() const;
-	const wchar* getFinalDate() const;
+	const wchar_t* getFinalDate() const;
 	CalendarTypes getCalendar() const;
 	int getNumPlayers() const;
-	int getPlayerScore(int iPlayer, int iTurn) const;
-	int getPlayerEconomy(int iPlayer, int iTurn) const;
-	int getPlayerIndustry(int iPlayer, int iTurn) const;
-	int getPlayerAgriculture(int iPlayer, int iTurn) const;
-	int getFinalScore() const;
-	int getFinalEconomy() const;
-	int getFinalIndustry() const;
-	int getFinalAgriculture() const;
+	int64_t getPlayerScore(int iPlayer, int iTurn) const;
+	int64_t getPlayerEconomy(int iPlayer, int iTurn) const;
+	int64_t getPlayerIndustry(int iPlayer, int iTurn) const;
+	int64_t getPlayerAgriculture(int iPlayer, int iTurn) const;
+	int64_t getFinalScore() const;
+	int64_t getFinalEconomy() const;
+	int64_t getFinalIndustry() const;
+	int64_t getFinalAgriculture() const;
 	int getNormalizedScore() const;
 
 	DllExport int getMapHeight() const;
 	DllExport int getMapWidth() const;
-	DllExport const unsigned char* getMinimapPixels() const;
+	DllExport const uint8_t* getMinimapPixels() const;
 
 	DllExport const char* getModName() const;
 
@@ -97,7 +94,7 @@ protected:
 	bool m_bMultiplayer;
 
 	typedef std::vector<const CvReplayMessage*> ReplayMessageList;
-	ReplayMessageList m_listReplayMessages; 
+	ReplayMessageList m_listReplayMessages;
 
 	int m_iInitialTurn;
 	int m_iFinalTurn;
@@ -108,10 +105,10 @@ protected:
 
 	struct TurnData
 	{
-		int m_iScore;
-		int m_iEconomy;
-		int m_iIndustry;
-		int m_iAgriculture;
+		int64_t m_iScore;
+		int64_t m_iEconomy;
+		int64_t m_iIndustry;
+		int64_t m_iAgriculture;
 	};
 	typedef std::vector<TurnData> ScoreHistory;
 
@@ -126,7 +123,7 @@ protected:
 
 	int m_iMapHeight;
 	int m_iMapWidth;
-	unsigned char* m_pcMinimapPixels;
+	uint8_t* m_pcMinimapPixels;
 
 	int m_nMinimapSize;
 

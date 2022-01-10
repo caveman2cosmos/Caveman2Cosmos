@@ -1,57 +1,53 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BonusClassInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<BonusClassInfos>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_GENERAL</Type>
-			<iUnique>0</iUnique>
+			<Type>BONUSCLASS_MISC</Type>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_GRAIN</Type>
-			<iUnique>2</iUnique>
+			<Type>BONUSCLASS_CROP</Type>
+			<iUniqueRange>2</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LIVESTOCK</Type>
-			<iUnique>2</iUnique>
+			<iUniqueRange>3</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_SEAFOOD</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_RUSH</Type>
-			<iUnique>3</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_MODERN</Type>
-			<iUnique>3</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_WONDER</Type>
-			<iUnique>3</iUnique>
+			<Type>BONUSCLASS_STRATEGIC</Type>
+			<iUniqueRange>1</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LUXURY</Type>
-			<iUnique>3</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_FUEL</Type>
-			<iUnique>3</iUnique>
+			<Type>BONUSCLASS_PRODUCTION</Type>
+			<iUniqueRange>2</iUniqueRange>
 		</BonusClassInfo>
+		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MANUFACTURED</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_FUTURE</Type>
-			<iUnique>0</iUnique>
-		</BonusClassInfo>
+		<!-- Represents resources, that are produced by cultural wonders, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_CULTURE</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
+		<!-- Represents resources, that are produced by cultural wonders BUT are primarily technological in nature, and are not meant to be placed on map -->
 		<BonusClassInfo>
-			<Type>BONUSCLASS_RELIGION</Type>
-			<iUnique>0</iUnique>
+			<Type>BONUSCLASS_GENMODS</Type>
+			<iUniqueRange>0</iUniqueRange>
+		</BonusClassInfo>
+		<!-- Represents resources, that are produced by wonder building and nothing else (similar to Culture and Genmods) -->
+		<BonusClassInfo>
+			<Type>BONUSCLASS_WONDER</Type>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 	</BonusClassInfos>
 </Civ4BonusClassInfos>

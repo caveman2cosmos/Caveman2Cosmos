@@ -12,8 +12,9 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
-
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
+#include "CvXMLLoadUtility.h"
 
 static const int kBufSize = 2048;
 
@@ -26,129 +27,12 @@ void CvXMLLoadUtility::showXMLError(const char* const format, ...)
 
 	_vsnprintf(buf, kBufSize - 1, format, args);
 
-	OutputDebugString(buf);
-	gDLL->logMsg("xml.log", buf);
+	logging::logMsg("xml.log", buf);
 
 	gDLL->MessageBox(buf, "XML Error");
 }
 
-//
-// for logging
-//
-void CvXMLLoadUtility::logMsg(char* format, ...)
-{
-	//#ifdef _DEBUG
-	static char buf[kBufSize];
-	_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-	OutputDebugString(buf);
-	gDLL->logMsg("xml.log", buf);
-	//#endif
-}
 
-void CvXMLLoadUtility::logMsgW(wchar_t* format, ...)
-{
-	//#ifdef _DEBUG
-	static wchar_t buf[kBufSize];
-	_vsnwprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-	OutputDebugStringW(buf);
-	static char buf2[kBufSize];
-	wcstombs(buf2, buf, kBufSize - 4);
-	gDLL->logMsg("xml.log", buf2);
-	//#endif
-}
-
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-void CvXMLLoadUtility::logXmlCheckDoubleTypes(char* format, ...)
-{
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XmlCheckDoubleTypes.log", buf);
-	}
-}
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/19/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-void CvXMLLoadUtility::XmlArtTagVerification(char* format, ...)
-{
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XmlArtTagVerification.log", buf);
-	}
-}
-#endif
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvXMLLoadUtility::logMLF(char* format, ...)
-{
-#ifdef _DEBUG
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("MLF.log", buf);
-	}
-#endif
-}
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/20/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//
-void CvXMLLoadUtility::logXmlDependencyTypes(char* format, ...)
-{
-#ifdef _DEBUG	
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XmlDependencyTypes.log", buf);
-	}
-#endif
-}
-//
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvXMLLoadUtility::logXML(char* format, ...)
-{
-#ifdef _DEBUG	
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XML Loadup.log", buf);
-	}
-#endif
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 bool CvXMLLoadUtility::CreateFXml()
 {
 	PROFILE("CreateFXML");
@@ -201,17 +85,17 @@ bool CvXMLLoadUtility::CreateFXml()
 	//		return false;
 	//	}
 	//}
-	//catch (const xercesc::XMLException& toCatch) 
+	//catch (const xercesc::XMLException& toCatch)
 	//{
 	//	char* message = xercesc::XMLString::transcode(toCatch.getMessage());
-	//	sprintf(szLog, "XML error: %s(%i) : (%s)\n", 
+	//	sprintf(szLog, "XML error: %s(%i) : (%s)\n",
 	//		toCatch.getSrcFile(), toCatch.getSrcLine(), message);
 	//	logMsg(szLog);
 	//	gDLL->MessageBox(szLog, "Error");
 	//	xercesc::XMLString::release(&message);
 	//	return false;
 	//}
-	//catch (const xercesc::DOMException& toCatch) 
+	//catch (const xercesc::DOMException& toCatch)
 	//{
 	//	char* message = xercesc::XMLString::transcode(toCatch.msg);
 	//	sprintf(szLog, "XML model (DOM) error: %s : %s\n", szPath.c_str(), message);
@@ -229,7 +113,7 @@ bool CvXMLLoadUtility::CreateFXml()
 	//	xercesc::XMLString::release(&message);
 	//	return false;
 	//}
-	//catch (const xercesc::SAXException& toCatch) 
+	//catch (const xercesc::SAXException& toCatch)
 	//{
 	//	char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 	//	sprintf(szLog, "XML parsing SAX error: %s : %s\n", szPath.c_str(), message);
@@ -257,7 +141,7 @@ void CvXMLLoadUtility::DestroyFXml()
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvXMLLoadUtility::CvXMLLoadUtility() 
+CvXMLLoadUtility::CvXMLLoadUtility()
 	: m_pCurrentXmlElement(NULL)
 	, m_pParser(NULL)
 	, m_iCurProgressStep(0)
@@ -271,9 +155,9 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 	}
 	catch (const xercesc::XMLException & toCatch)
 	{
-		OutputDebugString("XMLPlatformUtils::Initialize Faild");
+		OutputDebugString("XMLPlatformUtils::Initialize Faild\n");
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
-		logMsg(message);
+		logging::logMsg("xml.log", message);
 		gDLL->MessageBox(message, "Error");
 		xercesc::XMLString::release(&message);
 	}
@@ -281,7 +165,6 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 
 //	m_pSchemaCache = GETXML->CreateFXmlSchemaCache();
 //	m_pSchemaCache = NULL;
-
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -309,10 +192,10 @@ void CvXMLLoadUtility::ResetLandscapeInfo()
 {
 	for (int i = 0; i < GC.getNumLandscapeInfos(); ++i)
 	{
-		SAFE_DELETE(GC.getLandscapeInfos()[i]);
+		SAFE_DELETE(GC.m_paLandscapeInfo[i]);
 	}
 
-	GC.getLandscapeInfos().clear();
+	GC.m_paLandscapeInfo.clear();
 
 	SetupGlobalLandscapeInfo();
 }
@@ -328,200 +211,21 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 {
 	for (int i = 0; i < GC.getNumEffectInfos(); ++i)
 	{
-		SAFE_DELETE(GC.getEffectInfos()[i]);
+		SAFE_DELETE(GC.m_paEffectInfo[i]);
 	}
 
-	GC.getEffectInfos().clear();
+	GC.m_paEffectInfo.clear();
 
-	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
-}
-
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   MakeMaskFromString(unsigned int *puiMask, char* szMask)
-//
-//  PURPOSE :   takes a string of hex digits, 0-f and converts it into an unsigned integer
-//				mask value
-//
-//------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::MakeMaskFromString(unsigned int* puiMask, char* szMask)
-{
-	int iLen = strlen(szMask);
-
-	// loop through each character in the szMask parameter
-	for (int i = 0; i < iLen; i++)
-	{
-		// if the current character in the string is a zero
-		if (szMask[i] == '0')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// making the last 4 bits of the mask 0000
-		}
-		// if the current character in the string is a zero
-		else if (szMask[i] == '1')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 1 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0001
-			*puiMask += 1;
-		}
-		// if the current character in the string is a two
-		else if (szMask[i] == '2')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 2 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0010
-			*puiMask += 2;
-		}
-		// if the current character in the string is a three
-		else if (szMask[i] == '3')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 3 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0011
-			*puiMask += 3;
-		}
-		// if the current character in the string is a four
-		else if (szMask[i] == '4')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 4 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0100
-			*puiMask += 4;
-		}
-		// if the current character in the string is a five
-		else if (szMask[i] == '5')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 5 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0101
-			*puiMask += 5;
-		}
-		// if the current character in the string is a six
-		else if (szMask[i] == '6')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 6 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0110
-			*puiMask += 6;
-		}
-		// if the current character in the string is a seven
-		else if (szMask[i] == '7')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 7 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0111
-			*puiMask += 7;
-		}
-		// if the current character in the string is a eight
-		else if (szMask[i] == '8')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 8 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1000
-			*puiMask += 8;
-		}
-		// if the current character in the string is a nine
-		else if (szMask[i] == '9')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 9 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1001
-			*puiMask += 9;
-		}
-		// if the current character in the string is a A, 10
-		else if ((szMask[i] == 'a') || (szMask[i] == 'A'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 10 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1010
-			*puiMask += 10;
-		}
-		// if the current character in the string is a B, 11
-		else if ((szMask[i] == 'b') || (szMask[i] == 'B'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 11 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1011
-			*puiMask += 11;
-		}
-		// if the current character in the string is a C, 12
-		else if ((szMask[i] == 'c') || (szMask[i] == 'C'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 12 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1100
-			*puiMask += 12;
-		}
-		// if the current character in the string is a D, 13
-		else if ((szMask[i] == 'd') || (szMask[i] == 'D'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 13 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1101
-			*puiMask += 13;
-		}
-		// if the current character in the string is a E, 14
-		else if ((szMask[i] == 'd') || (szMask[i] == 'E'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 14 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1110
-			*puiMask += 14;
-		}
-		// if the current character in the string is a F, 15
-		else if ((szMask[i] == 'f') || (szMask[i] == 'F'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 15 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1111
-			*puiMask += 15;
-		}
-	}
+	LoadGlobalClassInfo(GC.m_paEffectInfo, "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 }
 
 //------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   GetInfoClass(TCHAR* pszVal)
-//
-//  PURPOSE :   Searches the InfoClass for the pszVal and returns the location if a match
-//				is found.
-//				returns -1 if no match is found
-//
+//	Searches the InfoClass for the pszVal and returns the location if a match is found.
+//	returns -1 if no match is found
 //------------------------------------------------------------------------------------------------------
-int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
+int CvXMLLoadUtility::GetInfoClass(const char* pszVal)
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 03/18/10                                               */
-	/*                                                                                              */
-	/* Hide Assert for Deleted Objects                                                       */
-	/************************************************************************************************/
-		//AIAndy: I don't think we should do a hack like that, references in the XML should always be valid
-		//if ((GC.getNumGameSpeedInfos() > 0) && (GC.getDefineINT(pszVal)))
-		//	hideAssert = true;
-		//if (pszVal == "") return -1;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
-	int idx = GC.getInfoTypeForString(pszVal, false);
+	const int idx = GC.getInfoTypeForString(pszVal, false);
 
 	// if we found a match in the list we will return the value of the loop counter
 	// which will hold the location of the match in the list
@@ -529,28 +233,26 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 	{
 		return idx;
 	}
-
 	if (_tcscmp(pszVal, "NONE") != 0 && _tcscmp(pszVal, "") != 0)
 	{
 		char errorMsg[1024];
 		sprintf(errorMsg, "Tag: %s in Info class was incorrect\n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(errorMsg, "XML Error");
 	}
-
 	return idx;
 }
 
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   LoadCivXml(FXml* pFXml, TCHAR* szFilename)
+//  FUNCTION:   LoadCivXml(const char* szFilename)
 //
 //  PURPOSE :   Gets the full pathname for the xml file from the FileManager .
 //				If it is succesful we return true
 //				from the function and a valid FXml pointer to the pFXml parameter.
 //
 //------------------------------------------------------------------------------------------------------
-bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
+bool CvXMLLoadUtility::LoadCivXml(const char* szFilename)
 {
 	char szLog[8192];
 	sprintf(szLog, "LoadCivXml (%s)", szFilename);
@@ -591,7 +293,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 				if (f == NULL)
 				{
 					sprintf(szLog, "IO error: %s : File can't be found\n", szPath.c_str());
-					logMsg(szLog);
+					logging::logMsg("xml.log", szLog);
 					gDLL->MessageBox(szLog, "Error");
 					return false;
 				}
@@ -601,21 +303,9 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	fclose(f);
 
 	sprintf(szLog, "LoadCivXml: Read %s", szDir.c_str());
-	logMsg(szLog);
-	OutputDebugString(szLog);
+	logging::logMsg("xml.log", szLog);
 
-	/************************************************************************************************/
-	/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("Loading XML file %s\n", szPath.c_str());
-#endif
-	/************************************************************************************************/
-	/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-	/************************************************************************************************/
-
+	DEBUG_LOG("XmlCheckDoubleTypes.log", "Loading XML file %s\n", szPath.c_str());
 
 	try
 	{
@@ -627,7 +317,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML error: %s(%llu) : (%s)\n",
 			toCatch.getSrcFile(), toCatch.getSrcLine(), message);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -636,7 +326,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.msg);
 		sprintf(szLog, "XML model (DOM) error: %s : %s\n", szPath.c_str(), message);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -645,7 +335,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML parsing SAX error:\n%s :\n%s at line %llu", szPath.c_str(), message, toCatch.getLineNumber());
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -654,7 +344,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML parsing SAX error: %s : %s\n", szPath.c_str(), message);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -662,12 +352,12 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	catch (...)
 	{
 		sprintf(szLog, "Something happened\n");
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		return false;
 	}
 
-	logMsg("Load XML file %s SUCCEEDED\n", szPath.c_str());
+	logging::logMsg("xml.log", "Load XML file %s SUCCEEDED\n", szPath.c_str());
 	GC.setCurrentXMLFile(szFilename);
 	return true;	// success
 }
@@ -679,7 +369,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 //  PURPOSE :   create a hot key from a description and return it
 //
 //------------------------------------------------------------------------------------------------------
-CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const TCHAR* pszHotKey, bool bShift, bool bAlt, bool bCtrl)
+CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const char* pszHotKey, bool bShift, bool bAlt, bool bCtrl)
 {
 	// Delete <COLOR:140,255,40,255>Shift+Delete</COLOR>
 	CvWString szHotKey;
@@ -743,12 +433,12 @@ bool CvXMLLoadUtility::SetStringList(CvString** ppszStringArray, int* piSize)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
+//  FUNCTION:   CreateKeyStringFromKBCode(const char* pszHotKey)
 //
 //  PURPOSE :   Create a keyboard string from a KB code, Delete would be returned for KB_DELETE
 //
 //------------------------------------------------------------------------------------------------------
-CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
+CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const char* pszHotKey)
 {
 	// SPEEDUP
 	PROFILE("CreateKeyStringFromKBCode");
@@ -757,7 +447,7 @@ CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
 
 	struct CvKeyBoardMapping
 	{
-		TCHAR szDefineString[25];
+		char szDefineString[25];
 		CvWString szKeyString;
 	};
 
@@ -993,7 +683,7 @@ bool CvXMLLoadUtility::TryMoveToXmlFirstMatchingElement(const XMLCh* xpath)
 		xercesc::XMLString::release(&fileName);
 	}
 
-	logMsg(szLog);
+	logging::logMsg("xml.log", szLog);
 	gDLL->MessageBox(szLog, "Error");
 	return false;
 }

@@ -5,34 +5,29 @@
 |-------------------------------------------------------------------|
 
 Several hundred if not few thousand tags with mismatched defined and ingame name.
-For example ERA_MODERN is Atomic in game.
-BUILDINGCLASS, UNITCLASS are going to be removed by anq
-Tag types, that could be renamed to match ingame name:
-BUILDING_, UNIT_, PROMOTION_, TECH_, ERA_, CIVIC_, CIVICOPTION_, BONUS_, TERRAIN_, FEATURE_, IMPROVEMENT_
+Example: If INFOTYPE_FISH has the name "Bird" in game then INFOTYPE_FISH should be renamed to INFOTYPE_BIRD.
+Rule: Ignore slight deviations, if the mismatch is confusing rename it.
 
+========================
+There was Toffer's suggestion to separate religious/cultural techs to RELIGION_/CULTURE_ tag types. Techs like Drama, Petroglyphs, Karma, Polytheism etc.
+That is some religious/cultural techs would be in separate tree - Maybe that could fit Ideas project?
+========================
 
 CODE CHANGES
 
 Mark up sections of code with the @SAVEBREAK tag to indicate changes that should happen to code:
 
-    // @SAVEBREAK DELETE 8/7/2018
-    // Delete this code at the next save break.
-    // Legacy for FreeTradeRegionBuilding. We need to write out something here to keep save compatibility, so just write out the free area building one again
-    WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeAreaBuilding);
-    // SAVEBREAK@
-
-    // @SAVEBREAK REPLACE 8/7/2018
-    // Update this code at the next save break.
-    // We determined that the answer was not what we thought, there could be galactic consequences.
-    m_fragileSaveData = 42;
-    // REPLACE WITH
-    // m_fragileSaveData = "towel";
-    // SAVEBREAK@
-
-    // @SAVEBREAK ADD 8/7/2018
-    // Add this code at the next save break.
-    // WRITE_SAVE_DATA(m_newData);
-    // SAVEBREAK@
 
 When it comes times to break the save we need to apply all the changes that are marked like this.
 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+Toffer
+
+Review CIV4PlayerColorInfos.xml and CIV4ColorVals.xml. 
+Reduce amount of excess colour definitions, many duplicates and unused ones currently.
+Would cause issues with old saves without some extra recalc code for civ colours.
+
+Currently we can't tell the exe that the last playable slot is slot 39, because NPC's at slots higher than 40 will then get an empty city bar that never upddates.
+I'm thinking we may have to give neadnerthals and higher NPC slots a unique dll/python handled city bar, perhaps not use the city object at all for their cities.
+That way we could fix the bug where the exe allows the player to define regular starting players in the NPC slots by telling the exe that slot 39 is the last playable one.
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
