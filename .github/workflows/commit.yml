@@ -1,7 +1,7 @@
 name: Commit jobs
 on: [push, pull_request]
 jobs:
-#    Pylint fails before our files are checked
+#    Pylint fails before linting for our files begins
 #    https://github.com/caveman2cosmos/Caveman2Cosmos/issues/1162
 #
 #    pylint:
