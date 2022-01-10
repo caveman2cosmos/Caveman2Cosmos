@@ -2075,8 +2075,6 @@ m_eReplacesUnitCombat(NO_UNITCOMBAT),
 m_eDomainCargoChange(NO_DOMAIN),
 m_eSpecialCargoChange(NO_SPECIALUNIT),
 m_eSpecialCargoPrereq(NO_SPECIALUNIT),
-m_eSMSpecialCargoChange(NO_SPECIALUNIT),
-m_eSMSpecialCargoPrereq(NO_SPECIALUNIT),
 m_eSMNotSpecialCargoChange(NO_SPECIALUNIT),
 m_eSMNotSpecialCargoPrereq(NO_SPECIALUNIT),
 m_eSetSpecialUnit(NO_SPECIALUNIT),
@@ -2797,16 +2795,6 @@ SpecialUnitTypes CvPromotionInfo::getSpecialCargoChange() const
 SpecialUnitTypes CvPromotionInfo::getSpecialCargoPrereq() const
 {
 	return m_eSpecialCargoPrereq;
-}
-
-SpecialUnitTypes CvPromotionInfo::getSMSpecialCargoChange() const
-{
-	return m_eSMSpecialCargoChange;
-}
-
-SpecialUnitTypes CvPromotionInfo::getSMSpecialCargoPrereq() const
-{
-	return m_eSMSpecialCargoPrereq;
 }
 
 SpecialUnitTypes CvPromotionInfo::getSMNotSpecialCargoChange() const
@@ -4912,12 +4900,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SpecialCargoPrereq");
 	m_eSpecialCargoPrereq = (SpecialUnitTypes) pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"SMSpecialCargoChange");
-	m_eSMSpecialCargoChange = (SpecialUnitTypes) pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"SMSpecialCargoPrereq");
-	m_eSMSpecialCargoPrereq = (SpecialUnitTypes) pXML->GetInfoClass(szTextVal);
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SMNotSpecialCargoChange");
 	m_eSMNotSpecialCargoChange = (SpecialUnitTypes) pXML->GetInfoClass(szTextVal);
 
@@ -5713,8 +5695,6 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (getDomainCargoChange() == NO_DOMAIN) m_eDomainCargoChange = pClassInfo->getDomainCargoChange();
 	if (getSpecialCargoChange() == NO_SPECIALUNIT) m_eSpecialCargoChange = pClassInfo->getSpecialCargoChange();
 	if (getSpecialCargoPrereq() == NO_SPECIALUNIT) m_eSpecialCargoPrereq = pClassInfo->getSpecialCargoPrereq();
-	if (getSMSpecialCargoChange() == NO_SPECIALUNIT) m_eSMSpecialCargoChange = pClassInfo->getSMSpecialCargoChange();
-	if (getSMSpecialCargoPrereq() == NO_SPECIALUNIT) m_eSMSpecialCargoPrereq = pClassInfo->getSMSpecialCargoPrereq();
 	if (getSMNotSpecialCargoChange() == NO_SPECIALUNIT) m_eSMNotSpecialCargoChange = pClassInfo->getSMNotSpecialCargoChange();
 	if (getSMNotSpecialCargoPrereq() == NO_SPECIALUNIT) m_eSMNotSpecialCargoPrereq = pClassInfo->getSMNotSpecialCargoPrereq();
 	if (setSpecialUnit() == NO_SPECIALUNIT) m_eSetSpecialUnit = pClassInfo->setSpecialUnit();
@@ -6410,8 +6390,6 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_eDomainCargoChange);
 	CheckSum(iSum, m_eSpecialCargoChange);
 	CheckSum(iSum, m_eSpecialCargoPrereq);
-	CheckSum(iSum, m_eSMSpecialCargoChange);
-	CheckSum(iSum, m_eSMSpecialCargoPrereq);
 	CheckSum(iSum, m_eSMNotSpecialCargoChange);
 	CheckSum(iSum, m_eSMNotSpecialCargoPrereq);
 	CheckSum(iSum, m_eSetSpecialUnit);

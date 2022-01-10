@@ -1294,7 +1294,6 @@
 			</NotOnUnitCombatTypes>
 			<DomainCargoChange>DOMAIN_LAND</DomainCargoChange>
 			<SpecialCargoChange>SPECIALUNIT_PEOPLE</SpecialCargoChange>
-			<SMSpecialCargoChange>SPECIALUNIT_PEOPLE</SMSpecialCargoChange>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
@@ -1382,7 +1381,6 @@
 			</NotOnUnitCombatTypes>
 			<DomainCargoChange>DOMAIN_AIR</DomainCargoChange>
 			<SpecialCargoChange>SPECIALUNIT_MISSILE</SpecialCargoChange>
-			<SMSpecialCargoChange>SPECIALUNIT_MISSILE</SMSpecialCargoChange>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
@@ -1466,7 +1464,6 @@
 			</NotOnUnitCombatTypes>
 			<DomainCargoChange>DOMAIN_AIR</DomainCargoChange>
 			<SpecialCargoChange>SPECIALUNIT_SEAPLANE</SpecialCargoChange>
-			<SMSpecialCargoChange>SPECIALUNIT_SEAPLANE</SMSpecialCargoChange>
 			<SMNotSpecialCargoChange>SPECIALUNIT_MISSILE</SMNotSpecialCargoChange>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -16165,7 +16162,6 @@
 			<iLinePriority>1</iLinePriority>
 			<DomainCargoChange>DOMAIN_LAND</DomainCargoChange>
 			<SpecialCargoChange>SPECIALUNIT_CAPTIVE</SpecialCargoChange>
-			<SMSpecialCargoChange>SPECIALUNIT_CAPTIVE</SMSpecialCargoChange>
 			<iCargoChange>3</iCargoChange>
 			<iSMCargoChange>27</iSMCargoChange>
 			<Button>art/Buttons/Promotions/BountyHunter1Promotion.dds</Button>

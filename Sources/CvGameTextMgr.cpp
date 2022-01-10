@@ -14173,13 +14173,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
 		{
 			eDomainCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getDomainCargoChange();
-			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSpecialCargoChange();
+
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSpecialCargoChange();
-			}
-			else
-			{
-				eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMSpecialCargoChange();
 				eNotSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMNotSpecialCargoChange();
 			}
 			eSpecialUnit = GC.getPromotionInfo(linePromotionsOwned[iI]).setSpecialUnit();

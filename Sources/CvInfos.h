@@ -695,8 +695,6 @@ public:
 	DomainTypes getDomainCargoChange() const;
 	SpecialUnitTypes getSpecialCargoChange() const;
 	SpecialUnitTypes getSpecialCargoPrereq() const;
-	SpecialUnitTypes getSMSpecialCargoChange() const;
-	SpecialUnitTypes getSMSpecialCargoPrereq() const;
 	SpecialUnitTypes getSMNotSpecialCargoChange() const;
 	SpecialUnitTypes getSMNotSpecialCargoPrereq() const;
 	SpecialUnitTypes setSpecialUnit() const;
@@ -1199,8 +1197,6 @@ protected:
 	DomainTypes m_eDomainCargoChange;
 	SpecialUnitTypes m_eSpecialCargoChange;
 	SpecialUnitTypes m_eSpecialCargoPrereq;
-	SpecialUnitTypes m_eSMSpecialCargoChange;
-	SpecialUnitTypes m_eSMSpecialCargoPrereq;
 	SpecialUnitTypes m_eSMNotSpecialCargoChange;
 	SpecialUnitTypes m_eSMNotSpecialCargoPrereq;
 	SpecialUnitTypes m_eSetSpecialUnit;
