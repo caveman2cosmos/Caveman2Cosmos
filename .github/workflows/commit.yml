@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-20.04
         strategy:
             matrix:
-                python-version: [2]
+                python-version: []
         steps:
             - name: Check out code
               uses: actions/checkout@v2
