@@ -6586,10 +6586,8 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 	int iCargoCount = 0;
 
 	// first pass, count but ignore special cargo units
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+	foreach_(const CvUnit* unitX, units())
 	{
-		const CvUnit* unitX = *unitItr;
-
 		if (unitX->AI_getUnitAIType() == eUnitAI)
 		{
 			iCargoCount += unitX->cargoSpaceAvailable(eSpecialCargo, eDomainCargo);
