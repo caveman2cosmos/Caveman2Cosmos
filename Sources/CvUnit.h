@@ -858,6 +858,9 @@ public:
 	UnitTypes getCaptureUnitType() const;
 	UnitCombatTypes getUnitCombatType() const;
 	InvisibleTypes getSeeInvisibleType(int i) const;
+	InvisibleTypes getInvisibleType() const;
+	int getNumSeeInvisibleTypes() const;
+
 	int flavorValue(FlavorTypes eFlavor) const;
 
 	bool isBarbarian() const;
