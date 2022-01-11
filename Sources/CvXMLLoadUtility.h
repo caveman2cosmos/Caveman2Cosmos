@@ -129,29 +129,49 @@ public:
 	// TO DO - unsafe
 	bool GetOptionalChildXmlValByName(wchar_t* pszVal, const wchar_t* szName, wchar_t* pszDefault = NULL);
 
-	template <typename T>
-	void GetOptionalTypeEnum(T& pVal, const wchar_t* szName)
+	template <typename Enum_t>
+	void GetOptionalTypeEnum(Enum_t& val, const wchar_t* szName)
+	{
+		SetOptionalInfoTypeEnum<Enum_t, NO_DELAYED_RESOLUTION>(val, szName);
+	}
+
+	template <typename Enum_t>
+	void GetOptionalTypeEnumWithDelayedResolution(Enum_t& val, const wchar_t* szName)
+	{
+		SetOptionalInfoTypeEnum<Enum_t, USE_DELAYED_RESOLUTION>(val, szName);
+	}
+
+	template <typename Enum_t, DelayedResolutionTypes delayedResolutionOption>
+	void SetOptionalInfoTypeEnum(Enum_t& val, const wchar_t* szName)
 	{
 		if (TryMoveToXmlFirstChild(szName))
 		{
 			CvString szTextVal;
 			GetXmlVal(szTextVal);
-			pVal = static_cast<T>(GC.getInfoTypeForString(szTextVal));
+			SetInfoTypeEnum<delayedResolutionOption>(val, szTextVal);
 			MoveToXmlParent();
 		}
 	}
 
-	template <typename T>
-	void GetOptionalTypeEnumWithDelayedResolution(T& pVal, const wchar_t* szName)
+	template <DelayedResolutionTypes = NO_DELAYED_RESOLUTION>
+	struct SetInfoTypeEnum
 	{
-		if (TryMoveToXmlFirstChild(szName))
+		template <typename Enum_t>
+		SetInfoTypeEnum(Enum_t& val, const CvString& szTextVal)
 		{
-			CvString szTextVal;
-			GetXmlVal(szTextVal);
-			GC.addDelayedResolution((int*)&pVal, szTextVal);
-			MoveToXmlParent();
+			val = static_cast<Enum_t>(GC.getInfoTypeForString(szTextVal));
 		}
-	}
+	};
+
+	template <>
+	struct SetInfoTypeEnum<USE_DELAYED_RESOLUTION>
+	{
+		template <typename Enum_t>
+		SetInfoTypeEnum(Enum_t& val, const CvString& szTextVal)
+		{
+			GC.addDelayedResolution((int*)&val, szTextVal);
+		}
+	};
 
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name

@@ -40,6 +40,12 @@ struct IDValueMap
 
 	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
+		readPairedArrays(pXML, szRootTagName, firstChildTag, secondChildTag);
+	}
+
+	template <DelayedResolutionTypes delayedResolutionRequirement_>
+	void _readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
+	{
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
 			const int iNumChildren = pXML->GetXmlChildrenNumber();
@@ -48,15 +54,11 @@ struct IDValueMap
 			{
 				for (int j = 0; j < iNumChildren; ++j)
 				{
-					CvString szTextVal;
-					pXML->GetChildXmlValByName(szTextVal, firstChildTag);
 					value_type pair = value_type();
-					pair.first = static_cast<ID_>(GC.getInfoTypeForString(szTextVal));
-					if (pair.first > -1)
-					{
-						pXML->set(pair.second, secondChildTag);
-						m_map.push_back(pair);
-					}
+					pXML->SetOptionalInfoTypeEnum<ID_, delayedResolutionRequirement_>(pair.first, firstChildTag);
+					pXML->Set(pair.second, secondChildTag);
+					m_map.push_back(pair);
+
 					if (!pXML->TryMoveToXmlNextSibling())
 						break;
 				}
@@ -79,7 +81,7 @@ struct IDValueMap
 					{
 						CvString szTextVal;
 						pXML->GetXmlVal(szTextVal);
-						int value = defaultValue;
+						Value_ value = defaultValue;
 						pXML->GetNextXmlVal(&value);
 						m_map.push_back(std::make_pair(static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal)), value));
 						pXML->MoveToXmlParent();
@@ -146,17 +148,6 @@ struct IDValueMap
 			dst[i] = src[i];							 \
 	}
 
-	void copyNonDefaultPairedArrays(const IDValueMap& other)
-	{
-		foreach_(const value_type& otherPair, other)
-		{
-			if (!hasValue(otherPair.first))
-			{
-				m_map.push_back(otherPair);
-			}
-		}
-	}
-
 	void copyNonDefaultDelayedResolution(const IDValueMap& other)
 	{
 		if (m_map.empty())
@@ -209,18 +200,18 @@ struct IDValueMap
 
 private:
 	template <typename T>
-	struct DefaultValue
+	struct ValueTypeImplementation
 	{
-		static T create(const T& value)
+		static T defaultValue(const T& value)
 		{
 			return value;
 		}
 	};
 
 	template <typename T, size_t ArraySize>
-	struct DefaultValue<bst::array<T, ArraySize> >
+	struct ValueTypeImplementation<bst::array<T, ArraySize> >
 	{
-		static bst::array<T, ArraySize> create(const T& value)
+		static bst::array<T, ArraySize> defaultValue(const T& value)
 		{
 			bst::array<T, ArraySize> a;
 			a.fill(value);

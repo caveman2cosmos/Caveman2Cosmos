@@ -141,6 +141,12 @@ class CvMapInfo;
 
 extern CvDLLUtilityIFaceBase* gDLL;
 
+enum DelayedResolutionTypes
+{
+	NO_DELAYED_RESOLUTION,
+	USE_DELAYED_RESOLUTION
+};
+
 class cvInternalGlobals
 	: private bst::noncopyable
 {
