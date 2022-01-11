@@ -695,8 +695,6 @@ public:
 	DomainTypes getDomainCargoChange() const;
 	SpecialUnitTypes getSpecialCargoChange() const;
 	SpecialUnitTypes getSpecialCargoPrereq() const;
-	SpecialUnitTypes getSMSpecialCargoChange() const;
-	SpecialUnitTypes getSMSpecialCargoPrereq() const;
 	SpecialUnitTypes getSMNotSpecialCargoChange() const;
 	SpecialUnitTypes getSMNotSpecialCargoPrereq() const;
 	SpecialUnitTypes setSpecialUnit() const;
@@ -1199,8 +1197,6 @@ protected:
 	DomainTypes m_eDomainCargoChange;
 	SpecialUnitTypes m_eSpecialCargoChange;
 	SpecialUnitTypes m_eSpecialCargoPrereq;
-	SpecialUnitTypes m_eSMSpecialCargoChange;
-	SpecialUnitTypes m_eSMSpecialCargoPrereq;
 	SpecialUnitTypes m_eSMNotSpecialCargoChange;
 	SpecialUnitTypes m_eSMNotSpecialCargoPrereq;
 	SpecialUnitTypes m_eSetSpecialUnit;
@@ -1707,7 +1703,6 @@ public:
 	int getBombRate() const;
 	int getBombardRate() const;
 	int getSpecialCargo() const;
-	int getSMSpecialCargo() const;
 	int getSMNotSpecialCargo() const;
 	int getDomainCargo() const;
 	int getCargoSpace() const;
@@ -2133,8 +2128,6 @@ public:
 
 	virtual const wchar_t* getExtraHoverText() const;
 
-	void getCheckSum(uint32_t& iSum) const;
-
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	const BoolExpr* getTrainCondition() const;
@@ -2255,8 +2248,12 @@ public:
 	int getLeaderExperience() const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
+	int getNumActionOutcomes() const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
 	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
-	const std::vector<const CvOutcomeMission*>& getActionOutcomes() const;
 
 	const char* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setEarlyArtDefineTag(int i, const char* szVal);
@@ -2277,11 +2274,14 @@ public:
 	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	bool m_bDCMFighterEngage;
@@ -2335,7 +2335,6 @@ protected:
 	int m_iBombRate;
 	int m_iBombardRate;
 	int m_iSpecialCargo;
-	int m_iSMSpecialCargo;
 	int m_iSMNotSpecialCargo;
 	int m_iDomainCargo;
 	int m_iCargoSpace;
@@ -3906,10 +3905,13 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvBuildInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	//----------------------PRIVATE MEMBER VARIABLES----------------------------
 
-protected:
+private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bDisabled;
 	bool m_bKill;
 
@@ -4228,6 +4230,11 @@ public:
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
+	ImprovementTypes getProvidedByImprovementType(const int i) const;
+	int getNumProvidedByImprovementTypes() const;
+	bool isProvidedByImprovementType(const ImprovementTypes i) const;
+	void setProvidedByImprovementTypes(const ImprovementTypes eType);
+
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -4280,6 +4287,8 @@ private:
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 	volatile std::vector<std::pair<ImprovementTypes,BuildTypes> >* m_tradeProvidingImprovements;
+
+	std::vector<ImprovementTypes> m_providedByImprovementTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5412,10 +5421,11 @@ public:
 	int* getStateReligionCommerceArray() const;
 	int getFlavorValue(int i) const;
 
+	const std::vector<BuildingTypes>& getShrineBuildings() const { return m_shrineBuildings; }
+	void addShrineBuilding(BuildingTypes eBuilding) { m_shrineBuildings.push_back(eBuilding); }
+
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvReligionInfo* pClassInfo);
-
 	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -5423,7 +5433,6 @@ public:
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
@@ -5448,6 +5457,8 @@ protected:
 	int* m_paiHolyCityCommerce;
 	int* m_paiStateReligionCommerce;
 	int* m_piFlavorValue;
+
+	std::vector<BuildingTypes> m_shrineBuildings;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5820,12 +5831,13 @@ public:
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 	bool** m_ppbFreePromotionUnitCombats;
@@ -8608,8 +8620,12 @@ public:
 	void getCheckSum(uint32_t& iSum) const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
+	int getNumActionOutcomes() const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
 	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
-	const std::vector<const CvOutcomeMission*>& getActionOutcomes() const;
 
 protected:
 	CvOutcomeList m_KillOutcomeList;

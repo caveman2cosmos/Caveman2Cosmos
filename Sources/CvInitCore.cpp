@@ -2094,11 +2094,8 @@ void CvInitCore::setPathNames()
 }
 // BUG - EXE/DLL Paths - end
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+// Afforess - 01/12/10
 void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 {
 	if ( checkBounds(eOldID, 0, MAX_PC_PLAYERS) && checkBounds(eNewID, 0, MAX_PC_PLAYERS) )
@@ -2169,46 +2166,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		}
 	}
 }
-
-void CvInitCore::checkInitialCivics()
-{
-	for (int iI = 0; iI < GC.getNumCivilizationInfos(); iI++)
-	{
-		for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-		{
-			//No Initial Civic Found
-			const CivicTypes eCivic = (CivicTypes)GC.getCivilizationInfo((CivilizationTypes)iI).getCivilizationInitialCivics(iJ);
-
-			if (eCivic == NO_CIVIC || GC.getCivicInfo(eCivic).getCivicOptionType() != iJ)
-			{
-				bool bFound = false;
-				for (int iK = 0; iK < GC.getNumCivicInfos(); iK++)
-				{
-					if (GC.getCivicInfo((CivicTypes)iK).getCivicOptionType() == iJ)
-					{
-						if (GC.getCivicInfo((CivicTypes)iK).getTechPrereq() == NO_TECH)
-						{
-							bFound = true;
-							break;
-						}
-					}
-				}
-				if (bFound)
-				{
-					GC.getCivilizationInfo((CivilizationTypes)iI).setCivilizationInitialCivics(iJ, iK);
-				}
-				else
-				{
-					//Should not get here, having no initial civic is very bad
-					FErrorMsg("Error, No Valid Civic Was Found!");
-				}
-			}
-		}
-	}
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+// ! Afforess
 
 unsigned int CvInitCore::getAssetCheckSum() const
 {

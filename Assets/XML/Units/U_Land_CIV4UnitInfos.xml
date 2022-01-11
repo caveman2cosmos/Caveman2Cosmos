@@ -28875,7 +28875,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>25</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -29092,7 +29091,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>30</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -29310,7 +29308,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>40</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -29515,7 +29512,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>50</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -29729,7 +29725,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>60</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
@@ -29931,7 +29926,6 @@
 			<iTradeMultiplier>2</iTradeMultiplier>
 			<iInsidiousness>75</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
@@ -30136,7 +30130,6 @@
 			<iTradeMultiplier>2</iTradeMultiplier>
 			<iInsidiousness>100</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
@@ -30339,7 +30332,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>75</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
@@ -30888,7 +30880,6 @@
 			<iLunge>10</iLunge>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -31054,7 +31045,6 @@
 			<iConscription>6</iConscription>
 			<iCaptureProbabilityModifier>15</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -31224,7 +31214,6 @@
 			<iLunge>10</iLunge>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -31416,7 +31405,6 @@
 			<iLunge>15</iLunge>
 			<iCaptureProbabilityModifier>10</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -31618,7 +31606,6 @@
 			<iCaptureProbabilityModifier>15</iCaptureProbabilityModifier>
 			<iInsidiousness>30</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -32678,7 +32665,6 @@
 			<iEnclose>16</iEnclose>
 			<iLunge>16</iLunge>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>

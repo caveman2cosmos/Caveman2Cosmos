@@ -195,9 +195,7 @@ protected:
 	// Super Forts end
 	bool AI_guardCitySite();
 	bool AI_guardSpy(int iRandomPercent);
-	bool AI_destroySpy();
-	bool AI_sabotageSpy();
-	bool AI_pickupTargetSpy();
+
 	bool AI_chokeDefend();
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();

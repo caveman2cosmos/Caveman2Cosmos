@@ -1079,15 +1079,10 @@ public:
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const;
 	int domainModifier(DomainTypes eDomain) const;
 
-	SpecialUnitTypes specialCargo() const;
-	SpecialUnitTypes SMspecialCargo() const;
-	SpecialUnitTypes SMnotSpecialCargo() const;
-	DomainTypes domainCargo() const;
 	int cargoSpace() const;
 	void changeCargoSpace(int iChange);
 	bool isFull() const;
 	int cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo = NO_SPECIALUNIT, DomainTypes eDomainCargo = NO_DOMAIN) const;
-	int SMcargoSpaceAvailable(SpecialUnitTypes eSpecialCargo = NO_SPECIALUNIT, DomainTypes eDomainCargo = NO_DOMAIN) const;
 	bool hasCargo() const;
 	bool canCargoAllMove() const;
 	bool canCargoEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const;
@@ -2612,12 +2607,10 @@ public:
 	SpecialUnitTypes getSpecialCargo() const;
 	void setNewSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMSpecialCargo() const;
-	void setNewSMSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMNotSpecialCargo() const;
 	void setNewSMNotSpecialCargo(SpecialUnitTypes eSpecialUnit);
 
 	void changeSMCargoSpace(int iChange);
-	int SMcargoSpace() const;
 	int SMcargoSpaceFilter() const;
 	int SMcargoCapacityPreCheck() const;
 	int getSMCargoCapacity() const;

@@ -2184,7 +2184,6 @@
 			</BonusProductionModifiers>
 			<iBombardRate>7</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -3160,7 +3159,6 @@
 			</UnitCombatMods>
 			<iBombardRate>18</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3267,7 +3265,6 @@
 			</UnitCombatMods>
 			<iBombardRate>20</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3523,7 +3520,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>6</iAsset>
@@ -3632,7 +3628,6 @@
 			</UnitCombatMods>
 			<iBombardRate>22</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>4</iCargo>
 			<iAsset>4</iAsset>
@@ -3767,7 +3762,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>6</iCargo>
 			<iAsset>4</iAsset>
@@ -4210,7 +4204,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -5501,7 +5494,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5649,7 +5641,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5797,7 +5788,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -5948,7 +5938,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>4</iAsset>
@@ -6110,7 +6099,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -6262,7 +6250,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>

@@ -94,8 +94,8 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("bombardRate", &CyUnit::bombardRate, "int ()")
 
-		.def("specialCargo", &CyUnit::specialCargo, "int ()")
-		.def("domainCargo", &CyUnit::domainCargo, "int ()")
+		.def("specialCargo", &CyUnit::getSpecialCargo, "int ()")
+		.def("domainCargo", &CyUnit::getDomainCargo, "int ()")
 		.def("cargoSpace", &CyUnit::cargoSpace, "int ()")
 		.def("changeCargoSpace", &CyUnit::changeCargoSpace, "void (int)")
 		.def("isFull", &CyUnit::isFull, "bool ()")

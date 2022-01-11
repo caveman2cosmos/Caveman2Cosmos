@@ -509,6 +509,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	const bool bCtrl = gDLL->ctrlKey();
 	const bool bAlt = gDLL->altKey();
 
+	const bool bSizeMatters = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
 	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
 
 	//In this case, these views mean, in addition to debugging info displays from bShift and bAlt:
@@ -527,7 +528,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	{
 		if (pUnit->airBaseCombatStr() > 0)
 		{
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (bSizeMatters)
 			{
 				float fBase = (float)pUnit->airBaseCombatStr();
 				fBase /= 100;
@@ -544,29 +545,25 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				{
 					szTempBuffer.Format(L"%.2f%c, ", fBase, gDLL->getSymbolID(STRENGTH_CHAR));
 				}
-				szString.append(szTempBuffer);
+			}
+			else if (pUnit->isFighting())
+			{
+				szTempBuffer.Format(L"?/%d%c, ", pUnit->airBaseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
+			}
+			else if (pUnit->isHurt())
+			{
+				szTempBuffer.Format(L"%.2f/%d%c, ", (((float)(pUnit->airBaseCombatStr() * pUnit->getHP())) / ((float)(pUnit->getMaxHP()))), pUnit->airBaseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
 			}
 			else
 			{
-				if (pUnit->isFighting())
-				{
-					szTempBuffer.Format(L"?/%d%c, ", pUnit->airBaseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
-				}
-				else if (pUnit->isHurt())
-				{
-					szTempBuffer.Format(L"%.2f/%d%c, ", (((float)(pUnit->airBaseCombatStr() * pUnit->getHP())) / ((float)(pUnit->getMaxHP()))), pUnit->airBaseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
-				}
-				else
-				{
-					szTempBuffer.Format(L"%d%c, ", pUnit->airBaseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
-				}
-				szString.append(szTempBuffer);
+				szTempBuffer.Format(L"%d%c, ", pUnit->airBaseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
 			}
+			szString.append(szTempBuffer);
 		}
 	}
 	else if (pUnit->canFight())
 	{
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (bSizeMatters)
 		{
 			float fBase = (float)pUnit->baseCombatStr();
 			fBase /= 100;
@@ -583,24 +580,20 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			{
 				szTempBuffer.Format(L"%.2f%c, ", fBase, gDLL->getSymbolID(STRENGTH_CHAR));
 			}
-			szString.append(szTempBuffer);
+		}
+		else if (pUnit->isFighting())
+		{
+			szTempBuffer.Format(L"?/%d%c, ", pUnit->baseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
+		}
+		else if (pUnit->isHurt())
+		{
+			szTempBuffer.Format(L"%.2f/%d%c, ", (((float)(pUnit->baseCombatStr() * pUnit->getHP())) / ((float)(pUnit->getMaxHP()))), pUnit->baseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
 		}
 		else
 		{
-			if (pUnit->isFighting())
-			{
-				szTempBuffer.Format(L"?/%d%c, ", pUnit->baseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
-			}
-			else if (pUnit->isHurt())
-			{
-				szTempBuffer.Format(L"%.2f/%d%c, ", (((float)(pUnit->baseCombatStr() * pUnit->getHP())) / ((float)(pUnit->getMaxHP()))), pUnit->baseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
-			}
-			else
-			{
-				szTempBuffer.Format(L"%d%c, ", pUnit->baseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
-			}
-			szString.append(szTempBuffer);
+			szTempBuffer.Format(L"%d%c, ", pUnit->baseCombatStr(), gDLL->getSymbolID(STRENGTH_CHAR));
 		}
+		szString.append(szTempBuffer);
 	}
 
 	const int iCurrMoves = pUnit->movesLeft() / GC.getMOVE_DENOMINATOR() + (pUnit->movesLeft() % GC.getMOVE_DENOMINATOR() > 0 ? 1 : 0);
@@ -2282,31 +2275,20 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_TEMP_REVOLT_PROTECTION", pUnit->revoltProtectionTotal()));
 			}
 			//Cargo
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (pUnit->cargoSpace() > 0)
 			{
-				if (pUnit->SMcargoSpace() > 0)
+				if (bSizeMatters)
 				{
 					if (pUnit->getTeam() == GC.getGame().getActiveTeam())
 					{
-						szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pUnit->SMgetCargo(), pUnit->SMcargoSpace());
+						szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pUnit->SMgetCargo(), pUnit->cargoSpace());
 					}
 					else
 					{
-						szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN", pUnit->SMcargoSpace());
-					}
-					szString.append(szTempBuffer);
-
-					if (pUnit->specialCargo() != NO_SPECIALUNIT)
-					{
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->specialCargo()).getTextKeyWide()));
+						szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN", pUnit->cargoSpace());
 					}
 				}
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SIZE_MATTERS", pUnit->SMCargoVolume()));
-			}
-			else if (pUnit->cargoSpace() > 0)
-			{
-				if (pUnit->getTeam() == GC.getGame().getActiveTeam())
+				else if (pUnit->getTeam() == GC.getGame().getActiveTeam())
 				{
 					szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pUnit->getCargo(), pUnit->cargoSpace());
 				}
@@ -2316,10 +2298,15 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 				szString.append(szTempBuffer);
 
-				if (pUnit->specialCargo() != NO_SPECIALUNIT)
+				if (pUnit->getSpecialCargo() != NO_SPECIALUNIT)
 				{
-					szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->specialCargo()).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo(pUnit->getSpecialCargo()).getTextKeyWide()));
 				}
+			}
+			if (bSizeMatters)
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SIZE_MATTERS", pUnit->SMCargoVolume()));
 			}
 			//Healing
 			if (pUnit->hasNoSelfHeal())
@@ -9173,7 +9160,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 
 			if (pPlot->getOwner() == GC.getGame().getActivePlayer()
-			&& (pPlot->getImprovementType() == NO_IMPROVEMENT || !GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eBonus)))
+			&& (pPlot->getImprovementType() == NO_IMPROVEMENT || !bonus.isProvidedByImprovementType(pPlot->getImprovementType())))
 			{
 				bool bKnowsValid = false;
 				TechTypes eMostRecentObsoletingTech = NO_TECH;
@@ -9181,12 +9168,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				TechTypes eClosestUnlockingTech = NO_TECH;
 				int iClosestX = MAX_INT;
 
-				for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+				for (int iI = bonus.getNumProvidedByImprovementTypes() - 1; iI > -1; iI--)
 				{
-					const CvImprovementInfo& improvement = GC.getImprovementInfo((ImprovementTypes)iJ);
+					const ImprovementTypes eTypeX = bonus.getProvidedByImprovementType(iI);
 
-					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, eActiveTeam, true))
+					if (pPlot->canHaveImprovement(eTypeX, eActiveTeam, true))
 					{
+						const CvImprovementInfo& improvement = GC.getImprovementInfo(eTypeX);
+
 						foreach_(const BuildTypes& eBuild, improvement.getBuildTypes())
 						{
 							const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
@@ -14171,13 +14160,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
 		{
 			eDomainCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getDomainCargoChange();
-			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSpecialCargoChange();
+
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSpecialCargoChange();
-			}
-			else
-			{
-				eSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMSpecialCargoChange();
 				eNotSpecialCargoChange = GC.getPromotionInfo(linePromotionsOwned[iI]).getSMNotSpecialCargoChange();
 			}
 			eSpecialUnit = GC.getPromotionInfo(linePromotionsOwned[iI]).setSpecialUnit();
@@ -18590,38 +18576,39 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	}
 
 	//bTBUnitView2 = (Civil)
-	int iCargoValue = kUnit.getCargoSpace();
 	if (bTBUnitView2)
 	{
-		//Cargo
-		if (game.isOption(GAMEOPTION_SIZE_MATTERS))
 		{
+			const int iCargoValue = kUnit.getCargoSpace();
+			//Cargo
 			if (iCargoValue > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM", iCargoValue));
 
-				if (kUnit.getSMSpecialCargo() != NO_SPECIALUNIT)
+				if (game.isOption(GAMEOPTION_SIZE_MATTERS))
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSMSpecialCargo()).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM", iCargoValue));
+
+					if (kUnit.getSpecialCargo() != NO_SPECIALUNIT)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSpecialCargo()).getTextKeyWide()));
+					}
+					if (kUnit.getSMNotSpecialCargo() != NO_SPECIALUNIT)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSMNotSpecialCargo()).getTextKeyWide()));
+					}
 				}
-				if (kUnit.getSMNotSpecialCargo() != NO_SPECIALUNIT)
+				else
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSMNotSpecialCargo()).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN", iCargoValue));
+
+					if (kUnit.getSpecialCargo() != NO_SPECIALUNIT)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSpecialCargo()).getTextKeyWide()));
+					}
 				}
 			}
 		}
-		else if (iCargoValue > 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN", iCargoValue));
-
-			if (kUnit.getSpecialCargo() != NO_SPECIALUNIT)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnit.getSpecialCargo()).getTextKeyWide()));
-			}
-		}
-
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (game.isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{

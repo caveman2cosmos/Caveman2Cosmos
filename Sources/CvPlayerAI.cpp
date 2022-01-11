@@ -849,7 +849,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
 
 				// Only normal transports
-				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->specialCargo() == NO_SPECIALUNIT) )
+				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->getSpecialCargo() == NO_SPECIALUNIT) )
 				{
 					bValid = (bAnyWar || bUnderBudget);
 				}
@@ -1382,7 +1382,7 @@ int CvPlayerAI::AI_movementPriority(const CvSelectionGroup* pGroup) const
 	if (pHeadUnit->hasCargo())
 	{
 		// General transport before specialized
-		return pHeadUnit->specialCargo() == NO_SPECIALUNIT ? 1 : 2;
+		return pHeadUnit->getSpecialCargo() == NO_SPECIALUNIT ? 1 : 2;
 	}
 
 	if (pHeadUnit->getDomainType() == DOMAIN_AIR)
@@ -27156,11 +27156,11 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			}
 
 			//	Also check their action outcomes (in the capital)
-			foreach_(const CvOutcomeMission* outcomeMission, kUnit.getActionOutcomes())
+			for (int iI = 0; iI < kUnit.getNumActionOutcomes(); iI++)
 			{
-				if (outcomeMission->getMission() != NO_MISSION)
+				if (kUnit.getActionOutcomeMission(iI) != NO_MISSION)
 				{
-					const CvOutcomeList* pOutcomeList = outcomeMission->getOutcomeList();
+					const CvOutcomeList* pOutcomeList = kUnit.getActionOutcomeList(iI);
 					if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 					{
 						const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
@@ -27176,11 +27176,12 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			{
 				if (pUnit->isHasUnitCombat((UnitCombatTypes)iJ))
 				{
-					foreach_(const CvOutcomeMission* outcomeMission, GC.getUnitCombatInfo((UnitCombatTypes)iJ).getActionOutcomes())
+					const CvUnitCombatInfo& kInfo = GC.getUnitCombatInfo((UnitCombatTypes)iJ);
+					for (int iI = 0; iI < kInfo.getNumActionOutcomes(); iI++)
 					{
-						if (outcomeMission->getMission() != NO_MISSION)
+						if (kInfo.getActionOutcomeMission(iI) != NO_MISSION)
 						{
-							const CvOutcomeList* pOutcomeList = outcomeMission->getOutcomeList();
+							const CvOutcomeList* pOutcomeList = kInfo.getActionOutcomeList(iI);
 							if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 							{
 								const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);

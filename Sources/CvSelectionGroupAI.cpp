@@ -1098,16 +1098,16 @@ bool CvSelectionGroupAI::AI_isFull() const
 	{
 		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
 		{
-			if (pLoopUnit->cargoSpace() > 0 || pLoopUnit->SMcargoSpace() > 0)
+			if (pLoopUnit->cargoSpace() > 0)
 			{
 				iCargoCount++;
 			}
 
-			if (pLoopUnit->specialCargo() != NO_SPECIALUNIT)
+			if (pLoopUnit->getSpecialCargo() != NO_SPECIALUNIT)
 			{
 				iSpecialCargoCount++;
 			}
-			else if (!(pLoopUnit->isFull()))
+			else if (!pLoopUnit->isFull())
 			{
 				return false;
 			}

@@ -13405,7 +13405,6 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<iAnimalCombat>250</iAnimalCombat>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>1</iAsset>
@@ -21205,7 +21204,6 @@
 			<iTradeMultiplier>2</iTradeMultiplier>
 			<iInsidiousness>75</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
@@ -21387,7 +21385,6 @@
 			<iLunge>10</iLunge>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -23060,7 +23057,6 @@
 			<iLunge>10</iLunge>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -31733,7 +31729,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>30</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -32266,7 +32261,6 @@
 			<iLunge>15</iLunge>
 			<iCaptureProbabilityModifier>10</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -33156,7 +33150,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>50</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -47106,7 +47099,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>25</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
 				<FreePromotion>
@@ -48950,7 +48942,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>

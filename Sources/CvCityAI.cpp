@@ -651,23 +651,19 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 			bool bNeedProphet = false;
 			int iBestSpreadValue = 0;
 
-
 			for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 			{
-				ReligionTypes eReligion = (ReligionTypes)iJ;
+				const ReligionTypes eReligion = (ReligionTypes)iJ;
 
 				if (isHolyCity(eReligion) && !hasShrine(eReligion)
 					&& ((iCurrentEra < iTotalEras / 2) || GC.getGame().countReligionLevels(eReligion) >= 10))
 				{
-					UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
+					const UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
 					if (eGreatPeopleUnit != NO_UNIT)
 					{
 						// note, for normal XML, this count will be one (there is only 1 shrine building for each religion)
-						int	shrineBuildingCount = GC.getGame().getShrineBuildingCount(eReligion);
-						for (int iI = 0; iI < shrineBuildingCount; iI++)
+						foreach_(const BuildingTypes eBuilding, GC.getReligionInfo(eReligion).getShrineBuildings())
 						{
-							int eBuilding = (int)GC.getGame().getShrineBuilding(iI, eReligion);
-
 							// if this unit builds or forceBuilds this building
 							if (GC.getUnitInfo(eGreatPeopleUnit).getHasBuilding(eBuilding))
 							{
@@ -681,7 +677,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 			if (bNeedProphet)
 			{
-				iTempValue += ((iGreatPeopleRate * iBestSpreadValue));
+				iTempValue += (iGreatPeopleRate * iBestSpreadValue);
 			}
 		}
 
