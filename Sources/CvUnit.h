@@ -2607,12 +2607,10 @@ public:
 	SpecialUnitTypes getSpecialCargo() const;
 	void setNewSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMSpecialCargo() const;
-	void setNewSMSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMNotSpecialCargo() const;
 	void setNewSMNotSpecialCargo(SpecialUnitTypes eSpecialUnit);
 
 	void changeSMCargoSpace(int iChange);
-	int SMcargoSpace() const;
 	int SMcargoSpaceFilter() const;
 	int SMcargoCapacityPreCheck() const;
 	int getSMCargoCapacity() const;

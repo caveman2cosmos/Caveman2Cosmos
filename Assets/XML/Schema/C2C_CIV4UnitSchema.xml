@@ -1632,8 +1632,6 @@
 	<ElementType name="DomainCargoChange" content="textOnly"/>
 	<ElementType name="SpecialCargoChange" content="textOnly"/>
 	<ElementType name="SpecialCargoPrereq" content="textOnly"/>
-	<ElementType name="SMSpecialCargoChange" content="textOnly"/>
-	<ElementType name="SMSpecialCargoPrereq" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargoChange" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargoPrereq" content="textOnly"/>
 	<ElementType name="bCargoPrereq" content="textOnly" dt:type="boolean"/>
@@ -2530,8 +2528,6 @@
 		<element type="DomainCargoChange" minOccurs="0"/>
 		<element type="SpecialCargoChange" minOccurs="0"/>
 		<element type="SpecialCargoPrereq" minOccurs="0"/>
-		<element type="SMSpecialCargoChange" minOccurs="0"/>
-		<element type="SMSpecialCargoPrereq" minOccurs="0"/>
 		<element type="SMNotSpecialCargoPrereq" minOccurs="0"/>
 		<element type="bCargoPrereq" minOccurs="0"/>
 		<element type="iCargoChange" minOccurs="0"/>

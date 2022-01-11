@@ -13405,7 +13405,6 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<iAnimalCombat>250</iAnimalCombat>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>1</iAsset>
@@ -21205,7 +21204,6 @@
 			<iTradeMultiplier>2</iTradeMultiplier>
 			<iInsidiousness>75</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
@@ -48944,7 +48942,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>

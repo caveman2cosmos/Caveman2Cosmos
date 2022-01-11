@@ -695,8 +695,6 @@ public:
 	DomainTypes getDomainCargoChange() const;
 	SpecialUnitTypes getSpecialCargoChange() const;
 	SpecialUnitTypes getSpecialCargoPrereq() const;
-	SpecialUnitTypes getSMSpecialCargoChange() const;
-	SpecialUnitTypes getSMSpecialCargoPrereq() const;
 	SpecialUnitTypes getSMNotSpecialCargoChange() const;
 	SpecialUnitTypes getSMNotSpecialCargoPrereq() const;
 	SpecialUnitTypes setSpecialUnit() const;
@@ -1199,8 +1197,6 @@ protected:
 	DomainTypes m_eDomainCargoChange;
 	SpecialUnitTypes m_eSpecialCargoChange;
 	SpecialUnitTypes m_eSpecialCargoPrereq;
-	SpecialUnitTypes m_eSMSpecialCargoChange;
-	SpecialUnitTypes m_eSMSpecialCargoPrereq;
 	SpecialUnitTypes m_eSMNotSpecialCargoChange;
 	SpecialUnitTypes m_eSMNotSpecialCargoPrereq;
 	SpecialUnitTypes m_eSetSpecialUnit;
@@ -2257,7 +2253,7 @@ public:
 	MissionTypes getActionOutcomeMission(int index) const;
 	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
 	const CvOutcomeMission* getOutcomeMission(int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 	const char* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setEarlyArtDefineTag(int i, const char* szVal);
@@ -2479,7 +2475,7 @@ private:
 	std::vector<int> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
 
 	//TB Combat Mods Start  TB SubCombat Mod begin
 	//integers
@@ -8629,11 +8625,11 @@ public:
 	MissionTypes getActionOutcomeMission(int index) const;
 	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
 	const CvOutcomeMission* getOutcomeMission(int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
 	CvOutcomeList m_KillOutcomeList;
-	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
+	std::vector<const CvOutcomeMission*> m_aOutcomeMissions;
 
 public:
 	// Textual References

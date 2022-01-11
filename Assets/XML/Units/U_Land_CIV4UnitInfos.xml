@@ -29725,7 +29725,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>60</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
@@ -29927,7 +29926,6 @@
 			<iTradeMultiplier>2</iTradeMultiplier>
 			<iInsidiousness>75</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
@@ -30132,7 +30130,6 @@
 			<iTradeMultiplier>2</iTradeMultiplier>
 			<iInsidiousness>100</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
@@ -30335,7 +30332,6 @@
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>75</iInsidiousness>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
