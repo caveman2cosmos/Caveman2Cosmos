@@ -193,6 +193,7 @@
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
+    <ClCompile Include="CvPlotService.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
     <ClCompile Include="CvValueService.cpp" />
@@ -356,6 +357,7 @@
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
+    <ClInclude Include="CvPlotService.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="CvSettlerAI.h" />
     <ClInclude Include="CvValueService.h" />

@@ -540,6 +540,9 @@
     <ClCompile Include="CvWorkerService.cpp">
       <Filter>Source Files\Services</Filter>
     </ClCompile>
+    <ClCompile Include="CvPlotService.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvMapExternal.h">
@@ -1041,6 +1044,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvWorkerService.h">
+      <Filter>Header Files\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPlotService.h">
       <Filter>Header Files\Services</Filter>
     </ClInclude>
   </ItemGroup>
