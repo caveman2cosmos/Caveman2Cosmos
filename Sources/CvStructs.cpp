@@ -16,6 +16,8 @@
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlot.h"
+#include "CvOutcomeMission.h"
+#include "CvInfos.h"
 
 XYCoords::XYCoords(int x, int y)
 	: iX(x)
