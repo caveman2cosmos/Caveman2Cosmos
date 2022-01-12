@@ -43,6 +43,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingMinYields, "Building - check yields", "Check if buildings with yield income have at least minimum yield as derived from era")
+		self.main.addTestCode(screen, self.checkTechCosts, "Tech - check costs", "Check if techs have correct costs")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitCosts, "Unit - check costs", "Check if unit costs are within sane limits")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
@@ -2756,6 +2757,15 @@ class TestCode:
 						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 6 "+GC.getYieldInfo(iYield).getType())
 					if iYieldChange < 7 and iEra == 12: # Transcendent
 						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 7 "+GC.getYieldInfo(iYield).getType())
+
+	#Tech - Check if techs have proper costs
+	def checkTechCosts(self):
+		aBaseCostList = [0, 3, 4, 5, 7, 9, 11, 13, 15, 17, 20, 23, 26, 30, 34, 39, 45, 52, 60, 74, 84, 96, 110, 126, 144, 164, 187, 213, 242, 274, 309, 348, 401, 448, 499, 554, 614, 679, 749, 824, 904, 1040, 1132, 1230, 1334, 1445, 1563, 1688, 1820, 1960, 2208, 2364, 2528, 2701, 2883, 3074, 3274, 3484, 3704, 3934, 4174, 4925, 5187, 5460, 5745, 6042, 6351, 6673, 7008, 7356, 7718, 9094, 9484, 9889, 10309, 10744, 11196, 11665, 12152, 12657, 13181, 13724, 14287, 14870, 15474, 16099, 19246, 19916, 20610, 21329, 22074, 22847, 23650, 24485, 25354, 26259, 27203, 28189, 29220, 35299, 36429, 37614, 38858, 40165, 41539, 42984, 44505, 46107, 47795, 49574, 61449, 63426, 65511, 67710, 70029, 72474, 75052, 77770, 80635, 83654, 86834, 90183, 93709, 122420, 126324, 130429, 134744, 139278, 144040, 149039, 154284, 159944, 166029, 172549, 179514, 186934, 194821, 253187, 262044, 271404, 281279, 291683, 302630, 314134, 326209, 338869, 352130, 366008, 480519, 495679, 511504, 528012, 545221, 563149, 581814, 601234, 621429, 642419, 664224, 686864, 960359] #Tech cost depends on its GridX
+		for iTech in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(iTech)
+
+			if CvTechInfo.getResearchCost() != aBaseCostList[CvTechInfo.getGridX()]:
+				self.log(CvTechInfo.getType()+" should have Cost of "+str(aBaseCostList[CvTechInfo.getGridX()]))
 
 	#Building - Check if buildings have proper costs
 	def checkBuildingCosts(self):

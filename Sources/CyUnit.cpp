@@ -417,9 +417,9 @@ int CyUnit::getExperience() const
 	return m_pUnit->getExperience();
 }
 
-void CyUnit::setExperience(int iNewValue, int iMax)
+void CyUnit::setExperience(int iNewValue)
 {
-	m_pUnit->setExperience(iNewValue, iMax);
+	m_pUnit->setExperience(iNewValue);
 }
 
 void CyUnit::changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)

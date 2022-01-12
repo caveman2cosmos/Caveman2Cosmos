@@ -1514,10 +1514,6 @@
 		<fDefineFloatVal>0.43</fDefineFloatVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_SCREEN_FOG_ENABLED</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>AI_CAN_DISBAND_UNITS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>

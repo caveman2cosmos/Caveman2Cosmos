@@ -4743,7 +4743,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_MESOPOTAMISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
-			<iCost>110</iCost>
+			<iCost>126</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
@@ -5152,7 +5152,7 @@ Current techs which are not in this file:-
 			<Description>TXT_KEY_TECH_KEMETISM</Description>
 			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>309</iCost>
+			<iCost>144</iCost>
 			<bGlobal>1</bGlobal>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>

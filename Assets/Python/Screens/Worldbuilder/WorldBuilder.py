@@ -1241,7 +1241,7 @@ class WorldBuilder:
 						pNewUnit = pPlayer.initUnit(loopUnit.getUnitType(), self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 						pNewUnit.setName(loopUnit.getNameNoDesc())
 						pNewUnit.setLevel(loopUnit.getLevel())
-						pNewUnit.setExperience(loopUnit.getExperience(), -1)
+						pNewUnit.setExperience(loopUnit.getExperience())
 						pNewUnit.setBaseCombatStr(loopUnit.baseCombatStr())
 						for iPromotion in xrange(GC.getNumPromotionInfos()):
 							pNewUnit.setHasPromotion(iPromotion, loopUnit.isHasPromotion(iPromotion))

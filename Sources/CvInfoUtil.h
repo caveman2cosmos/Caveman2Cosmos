@@ -315,12 +315,12 @@ struct CvInfoUtil
 			CheckSumC(iSum, ref());
 		}
 
-		void readXml(CvXMLLoadUtility* pXML)
+		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
 			ref().read(pXML, m_tag.c_str());
 		}
 
-		void copyNonDefaults(const WrappedVar* source)
+		virtual void copyNonDefaults(const WrappedVar* source)
 		{
 			ref().copyNonDefaults(static_cast<const IDValueMapWrapper*>(source)->ref());
 		}
@@ -328,10 +328,10 @@ struct CvInfoUtil
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
-	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& add(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
+	template <typename T1, int default_>
+	CvInfoUtil& add(IDValueMap<T1, int, default_>& map, const wchar_t* tag)
 	{
-		m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, T2, default_> >(map, tag));
+		m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, int, default_> >(map, tag));
 		return *this;
 	}
 
@@ -340,23 +340,19 @@ struct CvInfoUtil
 	///============================================
 
 	template <typename IDValueMap_T>
-	struct IDValueMapWithDelayedResolutionWrapper : WrappedVar
+	struct IDValueMapWithDelayedResolutionWrapper
+		: public IDValueMapWrapper<IDValueMap_T>
 	{
 		friend struct CvInfoUtil;
 
 	protected:
 		IDValueMapWithDelayedResolutionWrapper(IDValueMap_T& var, const wchar_t* tag)
-			: WrappedVar(static_cast<void*>(&var), tag)
+			: IDValueMapWrapper<IDValueMap_T>(var, tag)
 		{}
 
 		void uninitVar()
 		{
 			ref().removeDelayedResolution();
-		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			CheckSumC(iSum, ref());
 		}
 
 		void readXml(CvXMLLoadUtility* pXML)
@@ -369,13 +365,18 @@ struct CvInfoUtil
 			ref().copyNonDefaultDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
 		}
 
+		void checkSum(uint32_t& iSum) const
+		{
+			CheckSumC(iSum, ref());
+		}
+
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
-	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& addDelayedResolution(IDValueMap<T1, T2, default_>& map, const wchar_t* rootTag)
+	template <typename T1, int default_>
+	CvInfoUtil& addDelayedResolution(IDValueMap<T1, int, default_>& map, const wchar_t* rootTag)
 	{
-		m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, T2, default_> >(map, rootTag));
+		m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, int, default_> >(map, rootTag));
 		return *this;
 	}
 
@@ -383,39 +384,27 @@ struct CvInfoUtil
 	/// IDValueMap of paired arrays wrapper
 	///=====================================
 
-	template <typename IDValueMap_T>
+	template <typename IDValueMap_T, DelayedResolutionTypes delayedRes_>
 	struct IDValueMapOfPairedArrayWrapper : WrappedVar
 	{
 		friend struct CvInfoUtil;
 
 	protected:
-		IDValueMapOfPairedArrayWrapper(IDValueMap_T& var, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
+		IDValueMapOfPairedArrayWrapper(IDValueMap_T& var, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 			: WrappedVar(static_cast<void*>(&var), rootTag)
-			, m_pairedArraySize(pairedArraySize)
 			, m_firstChildTag(firstChildTag)
 			, m_secondChildTag(secondChildTag)
 		{}
 
 		void uninitVar()
 		{
-			//foreach_(const IDValueMap_T::pair_t& pair, ref())
-			//{
-			//	SAFE_DELETE_ARRAY(pair.second);
-			//}
-		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			foreach_(const IDValueMap_T::pair_t& pair, ref())
-			{
-				CheckSum(iSum, pair.first);
-				CheckSum(iSum, pair.second, m_pairedArraySize);
-			}
+			if (delayedRes_ == USE_DELAYED_RESOLUTION)
+				ref().removeDelayedResolution();
 		}
 
 		void readXml(CvXMLLoadUtility* pXML)
 		{
-			ref().readPairedArrays(pXML, m_tag.c_str(), m_firstChildTag.c_str(), m_secondChildTag.c_str(), m_pairedArraySize);
+			ref()._readPairedArrays<delayedRes_>(pXML, m_tag.c_str(), m_firstChildTag.c_str(), m_secondChildTag.c_str());
 		}
 
 		void copyNonDefaults(const WrappedVar* source)
@@ -423,22 +412,29 @@ struct CvInfoUtil
 			ref().copyNonDefaultPairedArrays(static_cast<const IDValueMapOfPairedArrayWrapper*>(source)->ref());
 		}
 
-		void sendVarToPython(const char* file)
+		void checkSum(uint32_t& iSum) const
 		{
+			CheckSumC(iSum, ref());
 		}
 
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 
 	private:
-		const int m_pairedArraySize;
 		const std::wstring m_firstChildTag;
 		const std::wstring m_secondChildTag;
 	};
 
-	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& add(IDValueMap<T1, T2, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
+	template <typename T1, size_t arraySize_, int default_>
+	CvInfoUtil& add(IDValueMap<T1, bst::array<int, arraySize_>, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
-		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, T2, default_> >(map, rootTag, firstChildTag, secondChildTag, pairedArraySize));
+		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, NO_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
+		return *this;
+	}
+
+	template <typename T1, size_t arraySize_, int default_>
+	CvInfoUtil& addWithDelayedResolution(IDValueMap<T1, bst::array<int, arraySize_>, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
+	{
+		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, USE_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
 		return *this;
 	}
 

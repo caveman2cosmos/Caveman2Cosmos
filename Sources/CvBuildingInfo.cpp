@@ -779,29 +779,31 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 	return m_ppaiBonusYieldModifier == NULL ? NULL : m_ppaiBonusYieldModifier[i];
 }
 
-int CvBuildingInfo::getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const
+int CvBuildingInfo::getGlobalBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
+	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
 	{
-		if (pChange.eBuilding == (BuildingTypes)iBuilding && pChange.eCommerce == (CommerceTypes)iCommerce)
+		if (pair.first == eBuilding)
 		{
-			return pChange.iChange;
+			return pair.second[eCommerce];
 		}
 	}
-
 	return 0;
-}
-
-const std::vector<BuildingCommerceChange>& CvBuildingInfo::getGlobalBuildingCommerceChanges() const
-{
-	return m_aGlobalBuildingCommerceChanges;
 }
 
 const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 {
 	python::list pyList = python::list();
-	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
-		pyList.append(pChange);
+
+	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
+	{
+		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+		{
+			const int iValue = pair.second[i];
+			if (iValue != 0)
+				pyList.append(BuildingCommerceChange(pair.first, (CommerceTypes)i, iValue));
+		}
+	}
 	return pyList;
 }
 
@@ -2019,13 +2021,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	//	m_pExprFreePromotionCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) end
 
-	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
-	{
-		CheckSum(iSum, it.eBuilding);
-		CheckSum(iSum, it.eCommerce);
-		CheckSum(iSum, it.iChange);
-	}
-
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxTeamInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
@@ -2050,6 +2045,7 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_religionChange, L"ReligionChanges")
 		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
+		.addWithDelayedResolution(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
 		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
 	;
 }
@@ -3311,54 +3307,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	CvString szTextVal;
-
-	m_aGlobalBuildingCommerceChanges.clear();
-	if (pXML->TryMoveToXmlFirstChild(L"GlobalBuildingExtraCommerces"))
-	{
-		const int iNumChildren = pXML->GetXmlChildrenNumber();
-
-		if (0 < iNumChildren)
-		{
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				for (int j = 0; j < iNumChildren; ++j)
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						BuildingCommerceChange kChange;
-						kChange.eBuilding = (BuildingTypes)pXML->GetInfoClass(szTextVal);
-						pXML->GetNextXmlVal(szTextVal);
-						kChange.eCommerce = (CommerceTypes)pXML->GetInfoClass(szTextVal);
-						pXML->GetNextXmlVal(&kChange.iChange);
-						m_aGlobalBuildingCommerceChanges.push_back(kChange);
-
-						pXML->MoveToXmlParent();
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-
-		pXML->MoveToXmlParent();
-	}
-
-	return true;
-}
-
 bool CvBuildingInfo::readPass3()
 {
 	m_pbPrereqOrCivics = new bool[GC.getNumCivicInfos()];
@@ -4447,41 +4395,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_techCommerceModifiers.copyNonDefaults(pClassInfo->getTechCommerceModifiers());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 	m_aPlotYieldChanges.copyNonDefaults(pClassInfo->getPlotYieldChanges());
-}
-
-void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	int iDefault = 0;
-	bool bNoDuplicate = true;
-
-	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-	{
-		foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
-		{
-			if (it.eBuilding == (BuildingTypes)j)
-			{
-				//obviously some modder already set this Building to some value
-				//we don't want to overwrite his settings with the older(assuming he added
-				//his tag on purpose)
-				bNoDuplicate = false;
-				break;
-			}
-		}
-		if (bNoDuplicate)
-		{
-			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; iCommerce++)
-			{
-				if (pClassInfo->getGlobalBuildingCommerceChange(j, iCommerce) != 0)
-				{
-					BuildingCommerceChange kChange;
-					kChange.eBuilding = (BuildingTypes)j;
-					kChange.eCommerce = (CommerceTypes)iCommerce;
-					kChange.iChange = pClassInfo->getGlobalBuildingCommerceChange(j, iCommerce);
-					m_aGlobalBuildingCommerceChanges.push_back(kChange);
-				}
-			}
-		}
-	}
 }
 
 bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject) const

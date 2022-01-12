@@ -120,7 +120,7 @@ public:
 	void changeMoves(int iChange);
 	void finishMoves();
 	int getExperience() const;
-	void setExperience(int iNewValue, int iMax);
+	void setExperience(int iNewValue);
 	void changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);
 	int getLevel() const;
 	void setLevel(int iNewLevel);
