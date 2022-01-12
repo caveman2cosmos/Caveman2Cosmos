@@ -403,7 +403,7 @@ struct CvInfoUtil
 
 		void readXml(CvXMLLoadUtility* pXML)
 		{
-			ref().readPairedArrays<delayedResolutionRequirement_>(pXML, m_tag.c_str(), m_firstChildTag.c_str(), m_secondChildTag.c_str());
+			ref()._readPairedArrays<delayedResolutionRequirement_>(pXML, m_tag.c_str(), m_firstChildTag.c_str(), m_secondChildTag.c_str());
 		}
 
 		void copyNonDefaults(const WrappedVar* source)

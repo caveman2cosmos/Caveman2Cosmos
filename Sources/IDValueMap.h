@@ -16,6 +16,12 @@
 #include "CvXMLLoadUtility.h"
 #include "CyIterator.h"
 
+enum DelayedResolutionTypes
+{
+	NO_DELAYED_RESOLUTION,
+	USE_DELAYED_RESOLUTION
+};
+
 // The maps are assumed to be small, so a vector of pairs is used
 
 template <class ID_, class Value_, int defaultValue = 0>
@@ -40,7 +46,7 @@ struct IDValueMap
 
 	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
-		readPairedArrays(pXML, szRootTagName, firstChildTag, secondChildTag);
+		_readPairedArrays<NO_DELAYED_RESOLUTION>(pXML, szRootTagName, firstChildTag, secondChildTag);
 	}
 
 	template <DelayedResolutionTypes delayedResolutionRequirement_>
@@ -200,18 +206,18 @@ struct IDValueMap
 
 private:
 	template <typename T>
-	struct ValueTypeImplementation
+	struct DefaultValue
 	{
-		static T defaultValue(const T& value)
+		static T create(const T& value)
 		{
 			return value;
 		}
 	};
 
 	template <typename T, size_t ArraySize>
-	struct ValueTypeImplementation<bst::array<T, ArraySize> >
+	struct DefaultValue<bst::array<T, ArraySize> >
 	{
-		static bst::array<T, ArraySize> defaultValue(const T& value)
+		static bst::array<T, ArraySize> create(const T& value)
 		{
 			bst::array<T, ArraySize> a;
 			a.fill(value);
