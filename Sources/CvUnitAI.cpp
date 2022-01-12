@@ -22175,8 +22175,8 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 							bDoImprove = false;
 						}
 
-						// Super Forts begin *AI_worker* (No need to loop through builds if the improvement is permanent)
-						if (bDoImprove && eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isPermanent())
+						// Super Forts begin *AI_worker*
+						if (bDoImprove && eImprovement != NO_IMPROVEMENT)
 						{
 							bDoImprove = false;
 						}

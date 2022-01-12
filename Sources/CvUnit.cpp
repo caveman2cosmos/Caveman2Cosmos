@@ -9390,10 +9390,6 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 			return false;
 		}
 	}
-	else if (GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-	{
-		return false;
-	}
 
 	if (pPlot->isOwned() && !potentialWarAction(pPlot)
 	&& (pPlot->getImprovementType() == NO_IMPROVEMENT || pPlot->getOwner() != getOwner()))
@@ -16423,8 +16419,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		if (isPillageOnMove() && pNewPlot->isOwned()
 		&& GET_PLAYER(pNewPlot->getOwner()).getTeam() != myPlayer.getTeam()
-		&& pNewPlot->getImprovementType() != NO_IMPROVEMENT
-		&& !GC.getImprovementInfo((ImprovementTypes)pNewPlot->getImprovementType()).isPermanent())
+		&& pNewPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
 			if (atWar(getTeam(), GET_PLAYER(pNewPlot->getOwner()).getTeam()))
 			{

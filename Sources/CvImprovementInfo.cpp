@@ -43,7 +43,6 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bPeakImprovement(false),
 	m_bWaterImprovement(false),
 	m_bGoody(false),
-	m_bPermanent(false),
 	m_bOutsideBorders(false),
 	m_bMilitaryStructure(false),
 	m_bPlacesBonus(false),
@@ -269,11 +268,6 @@ bool CvImprovementInfo::isWaterImprovement() const
 bool CvImprovementInfo::isGoody() const
 {
 	return m_bGoody;
-}
-
-bool CvImprovementInfo::isPermanent() const
-{
-	return m_bPermanent;
 }
 
 const char* CvImprovementInfo::getArtDefineTag() const
@@ -577,7 +571,6 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPeakImprovement);
 	CheckSum(iSum, m_bWaterImprovement);
 	CheckSum(iSum, m_bGoody);
-	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
 	CheckSum(iSum, m_bMilitaryStructure);
 	CheckSum(iSum, m_bPlacesBonus);
@@ -711,7 +704,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPeakImprovement, L"bPeakImprovement");
 	pXML->GetOptionalChildXmlValByName(&m_bWaterImprovement, L"bWaterImprovement");
 	pXML->GetOptionalChildXmlValByName(&m_bGoody, L"bGoody");
-	pXML->GetOptionalChildXmlValByName(&m_bPermanent, L"bPermanent");
 	pXML->GetOptionalChildXmlValByName(&m_iTilesPerGoody, L"iTilesPerGoody");
 	pXML->GetOptionalChildXmlValByName(&m_iGoodyUniqueRange, L"iGoodyRange");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureGrowthProbability, L"iFeatureGrowth");
@@ -995,7 +987,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isPeakImprovement() == bDefault) m_bPeakImprovement = pClassInfo->isPeakImprovement();
 	if (isWaterImprovement() == bDefault) m_bWaterImprovement = pClassInfo->isWaterImprovement();
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
-	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
 	if (m_bMilitaryStructure == bDefault) m_bMilitaryStructure = pClassInfo->isMilitaryStructure();
 	if (m_bPlacesBonus == bDefault) m_bPlacesBonus = pClassInfo->isPlacesBonus();
