@@ -1278,12 +1278,9 @@
 	<ElementType name="BonusDefenseChanges" content="eltOnly">
 		<element type="BonusDefenseChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="CommerceType" content="textOnly"/>
-	<ElementType name="iExtraCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingExtraCommerce" content="eltOnly">
 		<element type="BuildingType"/>
-		<element type="CommerceType"/>
-		<element type="iExtraCommerce"/>
+		<element type="CommerceChanges"/>
 	</ElementType>
 	<ElementType name="GlobalBuildingExtraCommerces" content="eltOnly">
 		<element type="BuildingExtraCommerce" minOccurs="0" maxOccurs="*"/>

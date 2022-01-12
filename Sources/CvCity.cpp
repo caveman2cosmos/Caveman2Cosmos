@@ -5384,9 +5384,12 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		changeBuildingProductionModifier(modifier.first, modifier.second * iChange);
 	}
-	foreach_(const BuildingCommerceChange& kChange, kBuilding.getGlobalBuildingCommerceChanges())
+	foreach_(const BuildingCommerce& kChange, kBuilding.getGlobalBuildingCommerceChanges())
 	{
-		GET_PLAYER(getOwner()).changeBuildingCommerceChange(kChange.eBuilding, kChange.eCommerce, kChange.iChange * iChange);
+		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+		{
+			GET_PLAYER(getOwner()).changeBuildingCommerceChange(kChange.first, (CommerceTypes)i, kChange.second[i] * iChange);
+		}
 	}
 /*
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
