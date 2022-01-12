@@ -43,21 +43,23 @@ struct IDValueMap
 		_readPairedArrays<NO_DELAYED_RESOLUTION>(pXML, szRootTagName, firstChildTag, secondChildTag);
 	}
 
-	template <DelayedResolutionTypes delayedResolutionRequirement_>
+	template <DelayedResolutionTypes delayedRes_>
 	void _readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
+		FAssert(m_map.empty());
+
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
-			const int iNumChildren = pXML->GetXmlChildrenNumber();
+			const int iNumSibs = pXML->GetXmlChildrenNumber();
 
 			if (pXML->TryMoveToXmlFirstChild())
 			{
-				for (int j = 0; j < iNumChildren; ++j)
+				m_map.resize(iNumSibs);
+
+				foreach_(value_type& pair, m_map)
 				{
-					value_type pair = value_type();
-					pXML->SetOptionalInfoTypeEnum<ID_, delayedResolutionRequirement_>(pair.first, firstChildTag);
+					CvXMLLoadUtility::SetOptionalInfoType<delayedRes_>(pXML, pair.first, firstChildTag);
 					pXML->set(pair.second, secondChildTag);
-					m_map.push_back(pair);
 
 					if (!pXML->TryMoveToXmlNextSibling())
 						break;
@@ -146,6 +148,17 @@ struct IDValueMap
 		dst = new typeName[iNum];						 \
 		for (int i = 0; i < iNum; i++)					 \
 			dst[i] = src[i];							 \
+	}
+
+	void copyNonDefaultPairedArrays(const IDValueMap& other)
+	{
+		foreach_(const value_type& otherPair, other)
+		{
+			if (!hasValue(otherPair.first))
+			{
+				m_map.push_back(otherPair);
+			}
+		}
 	}
 
 	void copyNonDefaultDelayedResolution(const IDValueMap& other)
