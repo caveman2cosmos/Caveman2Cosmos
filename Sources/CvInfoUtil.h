@@ -58,19 +58,6 @@ struct CvInfoUtil
 			m_wrappedVars[i]->copyNonDefaults(otherUtil.m_wrappedVars[i]);
 	}
 
-	void sendDataMembersToPython(const std::string file) const
-	{
-		foreach_(const WrappedVar* wrapper, m_wrappedVars)
-			wrapper->sendVarToPython(file.c_str());
-	}
-
-	static void publishPythonInterface()
-	{
-		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvInfoBase*>())
-			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
-		;
-	}
-
 	///=============================
 	/// Variable wrapper base class
 	///=============================
@@ -432,11 +419,28 @@ struct CvInfoUtil
 		return *this;
 	}
 
+	///==================
+	/// Python interface
+	///==================
+
+	void sendDataMembersToPython(const std::string file) const
+	{
+		foreach_(const WrappedVar* wrapper, m_wrappedVars)
+			wrapper->sendVarToPython(file.c_str());
+	}
+
+private:
+	static void publishPythonInterface()
+	{
+		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvInfoBase*>())
+			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
+		;
+	}
+
 	///========================================================
 	/// Wrapped pointers to the data members of an info object
 	///========================================================
 
-private:
 	std::vector<WrappedVar*> m_wrappedVars;
 };
 
