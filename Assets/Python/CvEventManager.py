@@ -535,7 +535,7 @@ class CvEventManager:
 						CyCity.addProductionExperience(CyUnit, True)
 					else:
 						if iData4 > 0:
-							CyUnit.setExperience(iData4, iData4)
+							CyUnit.setExperience(iData4)
 						if ID == 906 and self.PROMO_GUARDIAN_TRIBAL > -1:
 							CyUnit.setHasPromotion(self.PROMO_GUARDIAN_TRIBAL, True)
 					CyUnit.setMoves(CyUnit.maxMoves()-1)
@@ -790,7 +790,7 @@ class CvEventManager:
 						elif bMajor:
 							CyUnit.setBaseCombatStr(CyUnit.baseCombatStr() + 1)
 						else:
-							CyUnit.setExperience(CyUnit.getExperience() + 3, -1)
+							CyUnit.setExperience(CyUnit.getExperience() + 3)
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -2457,7 +2457,7 @@ class CvEventManager:
 					iUnitTG = GC.getInfoTypeForString("UNIT_TRIBAL_GUARDIAN")
 				CyUnitTG = CyPlayer.initUnit(iUnitTG, CyUnit.getX(), CyUnit.getY(), UnitAITypes.UNITAI_PROPERTY_CONTROL, DirectionTypes.DIRECTION_SOUTH)
 				iExp = CyUnit.getExperience()
-				CyUnitTG.setExperience(iExp, iExp)
+				CyUnitTG.setExperience(iExp)
 		if iPop:
 			CyCity.changePopulation(iPop)
 			if self.GO_1_CITY_TILE_FOUNDING:

@@ -969,7 +969,7 @@ class WBUnitScreen:
 			if iChangeType == 0:
 				loopUnit.setLevel(pUnit.getLevel())
 			elif iChangeType == 1:
-				loopUnit.setExperience(pUnit.getExperience(), -1)
+				loopUnit.setExperience(pUnit.getExperience())
 			elif iChangeType == 2:
 				loopUnit.setBaseCombatStr(pUnit.baseCombatStr())
 			elif iChangeType == 3:

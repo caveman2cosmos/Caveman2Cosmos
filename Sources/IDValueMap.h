@@ -260,6 +260,7 @@ typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
+typedef std::pair<BuildingTypes, CommerceArray> BuildingCommerce;
 typedef std::pair<TechTypes, CommerceArray> TechCommerceArray;
 typedef std::pair<TechTypes, YieldArray> TechArray;
 typedef std::pair<TerrainTypes, YieldArray> TerrainArray;

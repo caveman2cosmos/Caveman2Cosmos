@@ -21022,15 +21022,16 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
 				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+				const int iChange = kBuilding.getGlobalBuildingCommerceChange(eLoopBuilding, (CommerceTypes)iJ);
 
-				if (kBuilding.getGlobalBuildingCommerceChange(iI, iJ) != 0)
+				if (iChange != 0)
 				{
-					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_COMMERCE_CHANGE", kBuilding.getGlobalBuildingCommerceChange(iI, iJ), GC.getCommerceInfo((CommerceTypes)iJ).getChar()).c_str());
+					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_COMMERCE_CHANGE", iChange, GC.getCommerceInfo((CommerceTypes)iJ).getChar()).c_str());
 					CvWString szBuilding;
-					szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getGlobalBuildingCommerceChange(iI, iJ) != iLast));
-					if (iLast == kBuilding.getGlobalBuildingCommerceChange(iI, iJ)) iCount++;
-					iLast = kBuilding.getGlobalBuildingCommerceChange(iI, iJ);
+					szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).c_str(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+					setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", iChange != iLast);
+					if (iLast == iChange) iCount++;
+					iLast = iChange;
 					if (iCount > 3) iCount = iLast = 0;
 				}
 			}
