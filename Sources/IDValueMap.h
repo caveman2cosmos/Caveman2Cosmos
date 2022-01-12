@@ -16,12 +16,6 @@
 #include "CvXMLLoadUtility.h"
 #include "CyIterator.h"
 
-enum DelayedResolutionTypes
-{
-	NO_DELAYED_RESOLUTION,
-	USE_DELAYED_RESOLUTION
-};
-
 // The maps are assumed to be small, so a vector of pairs is used
 
 template <class ID_, class Value_, int defaultValue = 0>
@@ -62,7 +56,7 @@ struct IDValueMap
 				{
 					value_type pair = value_type();
 					pXML->SetOptionalInfoTypeEnum<ID_, delayedResolutionRequirement_>(pair.first, firstChildTag);
-					pXML->Set(pair.second, secondChildTag);
+					pXML->set(pair.second, secondChildTag);
 					m_map.push_back(pair);
 
 					if (!pXML->TryMoveToXmlNextSibling())
