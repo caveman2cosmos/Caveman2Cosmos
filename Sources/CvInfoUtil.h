@@ -315,12 +315,12 @@ struct CvInfoUtil
 			CheckSumC(iSum, ref());
 		}
 
-		void readXml(CvXMLLoadUtility* pXML)
+		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
 			ref().read(pXML, m_tag.c_str());
 		}
 
-		void copyNonDefaults(const WrappedVar* source)
+		virtual void copyNonDefaults(const WrappedVar* source)
 		{
 			ref().copyNonDefaults(static_cast<const IDValueMapWrapper*>(source)->ref());
 		}
@@ -340,13 +340,14 @@ struct CvInfoUtil
 	///============================================
 
 	template <typename IDValueMap_T>
-	struct IDValueMapWithDelayedResolutionWrapper : WrappedVar
+	struct IDValueMapWithDelayedResolutionWrapper
+		: public IDValueMapWrapper<IDValueMap_T>
 	{
 		friend struct CvInfoUtil;
 
 	protected:
 		IDValueMapWithDelayedResolutionWrapper(IDValueMap_T& var, const wchar_t* tag)
-			: WrappedVar(static_cast<void*>(&var), tag)
+			: IDValueMapWrapper<IDValueMap_T>(var, tag)
 		{}
 
 		void uninitVar()
@@ -417,8 +418,8 @@ struct CvInfoUtil
 		}
 
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
-	private:
 
+	private:
 		const std::wstring m_firstChildTag;
 		const std::wstring m_secondChildTag;
 	};

@@ -498,17 +498,6 @@ void CvPlot::setupGraphical()
 
 	showRequiredGraphics();
 
-	//if ( !shouldHaveGraphics() )
-	//{
-	//	return;
-	//}
-
-	////updateSymbols();
-	//
-	//updateFeatureSymbol();
-	//updateRiverSymbol();
-	//updateMinimapColor();
-
 	updateVisibility();
 }
 
@@ -608,13 +597,13 @@ float CvPlot::getSymbolSize() const
 
 float CvPlot::getSymbolOffsetX(int iOffset) const
 {
-	return ((40.0f + (((float)iOffset) * 28.0f * getSymbolSize())) - (GC.getPLOT_SIZE() / 2.0f));
+	return 40.0f + iOffset * 28.0f * getSymbolSize() - GC.getPLOT_SIZE() / 2.0f;
 }
 
 
 float CvPlot::getSymbolOffsetY(int iOffset) const
 {
-	return (-(GC.getPLOT_SIZE() / 2.0f) + 50.0f);
+	return 50.0f - GC.getPLOT_SIZE() / 2.0f;
 }
 
 
@@ -940,26 +929,24 @@ void CvPlot::updateFog()
 	}
 	FAssert(GC.getGame().getActiveTeam() != NO_TEAM);
 
-	if (!isRevealed(GC.getGame().getActiveTeam(), false))
+	if (isRevealed(GC.getGame().getActiveTeam(), false))
 	{
-		gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
-	}
-	else if (gDLL->getInterfaceIFace()->isBareMapMode())
-	{
-		gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
-	}
-	else if (GC.getDefineINT("CITY_SCREEN_FOG_ENABLED") && gDLL->getInterfaceIFace()->isCityScreenUp() && (gDLL->getInterfaceIFace()->getHeadSelectedCity() != getWorkingCity()))
-	{
-		gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
-	}
-	else if (isActiveVisible(false))
-	{
-		gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
-	}
-	else
-	{
-		gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
-	}
+		if (
+			gDLL->getInterfaceIFace()->isBareMapMode()
+			||
+			(
+				isActiveVisible(false)
+				&&
+				(
+					!gDLL->getInterfaceIFace()->isCityScreenUp()
+					||
+					// City screen - only lighten plots belonging to the city's current workable area.
+					gDLL->getInterfaceIFace()->getHeadSelectedCity() == getWorkingCity()
+				)
+			)
+		) gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
+		else gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+	} else gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
 }
 
 

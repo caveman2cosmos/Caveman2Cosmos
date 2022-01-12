@@ -83,7 +83,7 @@ struct IDValueMap
 					{
 						CvString szTextVal;
 						pXML->GetXmlVal(szTextVal);
-						int value = defaultValue;
+						Value_ value = defaultValue;
 						pXML->GetNextXmlVal(&value);
 						m_map.push_back(std::make_pair(static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal)), value));
 						pXML->MoveToXmlParent();

@@ -1140,11 +1140,6 @@ int CyGame::getHighToLowCounter() const
 	return m_pGame.getHighToLowCounter();
 }
 
-void CyGame::setVictoryValid(int iVictory, bool bNewVal)
-{
-	m_pGame.setVictoryValid((VictoryTypes)iVictory, bNewVal);
-}
-
 bool CyGame::isModderGameOption(ModderGameOptionTypes eIndex) const
 {
 	return m_pGame.isModderGameOption(eIndex);
