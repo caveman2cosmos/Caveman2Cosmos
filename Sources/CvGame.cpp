@@ -259,7 +259,6 @@ void CvGame::init(HandicapTypes eHandicap)
 
 		setEstimateEndTurn(iEstimateEndTurn);
 
-//Sevo Begin--VCM
 	// This looks like a reasonable place for me to place my own interrupts for the victory conditions
 	// I need to ensure that the AI understands it has to go after everything, so ALL the victory options
 	// need to be "enabled" so starships can be built, etc. etc.
@@ -285,16 +284,31 @@ void CvGame::init(HandicapTypes eHandicap)
 	// The TV condition overrides the others but requires they be "on"
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
-		if (GC.getVictoryInfo((VictoryTypes)iI).isTotalVictory() && isVictoryValid((VictoryTypes)iI))
+		if (GC.getVictoryInfo((VictoryTypes)iI).isTotalVictory())
 		{
-			for (iI = 0; iI < GC.getNumVictoryInfos(); iI++)
+			if (isVictoryValid((VictoryTypes)iI))
 			{
-				setVictoryValid((VictoryTypes)iI, true);
+				for (int iJ = 0; iJ < GC.getNumVictoryInfos(); iJ++)
+				{
+					setVictoryValid((VictoryTypes)iJ, true);
+				}
 			}
 			break;
 		}
 	}
-//Sevo End VCM
+	if (isOption(GAMEOPTION_UNITED_NATIONS))
+	{
+		//Find the diplomatic victory
+		for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
+		{
+			if (GC.getVictoryInfo((VictoryTypes)iI).isDiploVote())
+			{
+				m_bDiploVictoryEnabled = isVictoryValid((VictoryTypes)iI); // This is to remember what it originally was due to some game rule distinction derived from it.
+				setVictoryValid((VictoryTypes)iI, true);
+				break;
+			}
+		}
+	}
 
 	m_plotGroupHashesInitialized = false;
 
@@ -311,20 +325,6 @@ void CvGame::init(HandicapTypes eHandicap)
 			if (info->isGreatGeneral())
 			{
 				info->setPowerValue(info->getPowerValue() / 10);
-			}
-		}
-	}
-
-	if (isOption(GAMEOPTION_UNITED_NATIONS))
-	{
-		//Find the diplomatic victory
-		foreach_(const CvBuildingInfo* info, GC.getBuildingInfos())
-		{
-			if (info->getVictoryPrereq() != NO_VICTORY && info->getVoteSourceType() != NO_VOTESOURCE)
-			{
-				m_bDiploVictoryEnabled = isVictoryValid((VictoryTypes) info->getVictoryPrereq());
-				setVictoryValid((VictoryTypes) info->getVictoryPrereq(), true);
-				break;
 			}
 		}
 	}
@@ -491,6 +491,35 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::setInitialItems()
 {
 	PROFILE_FUNC();
+
+	// Toffer - Some victory conditions make no sense for games without competitors.
+	if (countCivPlayersAlive() < 2)
+	{
+		// However, don't interfere with mastery logic.
+		bool bMastery = false;
+		for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
+		{
+			if (GC.getVictoryInfo((VictoryTypes)iI).isTotalVictory())
+			{
+				if (isVictoryValid((VictoryTypes)iI))
+				{
+					bMastery = true;
+				}
+				break;
+			}
+		}
+		if (!bMastery)
+		{
+			for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
+			{
+				if (GC.getVictoryInfo((VictoryTypes)iI).isConquest())
+				{
+					setVictoryValid((VictoryTypes)iI, false);
+					break;
+				}
+			}
+		}
+	}
 
 	initFreeState();
 	assignStartingPlots();
@@ -2933,7 +2962,7 @@ int CvGame::countCivPlayersAlive() const
 int CvGame::countCivPlayersEverAlive() const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)//Might be best to USE CIV rather than PC but it's hard to guess.  The exe could be accessing for a loop setup and that could make this the ultimate variable that CIV is supposed to represent.  But what's inside the dll referencing this does not jive with that and better fits a PC count.
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kPlayer.isEverAlive() && kPlayer.getParent() == NO_PLAYER)
@@ -7447,152 +7476,156 @@ void CvGame::testVictory()
 		}
 	}
 
-	bool bForceEndGame = false;
-	for (int iJ = 0; iJ < GC.getNumVictoryInfos(); iJ++)
+	int iVictoryTypeMastery = 0; // Mercy rule will need to use a victory type, so if mastery is missing from xml for some reason it will just default to type 0.
+	bool bMastery = false;
+	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
-		if (!GC.getVictoryInfo((VictoryTypes)iJ).isTotalVictory() || !isVictoryValid((VictoryTypes)iJ))
+		if (GC.getVictoryInfo((VictoryTypes)iI).isTotalVictory())
 		{
-			continue;
-		}
-		aaiWinners.clear(); // sorry, folks, no winners today by usual means, only Mastery Victory is achievable;)
-		if (getMaxTurns() == 0)
-		{
-			break;
-		}//There's more game yet to play.
-		if (getElapsedGameTurns() < getMaxTurns())
-		{
-			if (isModderGameOption(MODDERGAMEOPTION_MERCY_RULE))
+			if (isVictoryValid((VictoryTypes)iI))
 			{
-				int64_t iTotalScore = 0;
-				int64_t iTopScore = 0;
-
-				TeamTypes eBestTeam = (TeamTypes)0;
-				for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+				// sorry, folks, no winners today by usual means, only Mastery Victory is achievable;)
+				aaiWinners.clear();
+				if (getMaxTurns() > 0 && getElapsedGameTurns() >= getMaxTurns())
 				{
-					if (GET_TEAM((TeamTypes)iI).isAlive()
-					&& (!GET_TEAM((TeamTypes)iI).isMinorCiv() || isOption(GAMEOPTION_START_AS_MINORS)))
-					{
-						const int64_t iTempScore = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
-						iTotalScore += iTempScore;
-						if (iTempScore > iTopScore)
-						{
-							iTopScore = iTempScore;
-							eBestTeam = (TeamTypes)iI;
-						}
-					}
+					bMastery = true;
 				}
-				//Remove the top player
-				iTotalScore -= iTopScore;
-				//One player is dominating! Mercy Rule!
-				if (iTopScore > iTotalScore)
-				{
-					if (getMercyRuleCounter() == 0)
-					{
-						// Ten Turns remain! (on normal gamespeed)
-						setMercyRuleCounter(GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 10);
-						// Inform Players
-						for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-						{
-							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
-							{
-								if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
-								{
-									AddDLLMessage(
-										(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_WINNER_MERCY_RULE_HAS_BEGUN", getMercyRuleCounter()).GetCString(),
-										"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_GREEN()
-									);
-								}
-								else
-								{
-									AddDLLMessage(
-										(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_LOSER_MERCY_RULE_HAS_BEGUN", getMercyRuleCounter()).GetCString(),
-										"AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED()
-									);
-								}
-							}
-						}
-					}
-					else
-					{
-						changeMercyRuleCounter(-1);
-						//Times Up!
-						if (getMercyRuleCounter() != 0)
-						{
-							for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-							{
-								if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
-								{
+				break;
+			}
+			iVictoryTypeMastery = iI;
+		}
+	}
 
-									if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
-									{
-										AddDLLMessage(
-											(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_WINNER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(),
-											"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_GREEN()
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_LOSER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(),
-											"AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT()
-										);
-									}
-								}
-							}
-						}
-						else bForceEndGame = true;
-					}
-				}
-				//Abort any existing mercy countdown
-				else if (getMercyRuleCounter() > 0)
+	// Mercy Rule
+	bool bMercy = false;
+	if (!bMastery && getElapsedGameTurns() < getMaxTurns() && isModderGameOption(MODDERGAMEOPTION_MERCY_RULE))
+	{
+		int64_t iTotalScore = 0;
+		int64_t iTopScore = 0;
+
+		int iBestTeam = 0;
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+		{
+			if (GET_TEAM((TeamTypes)iI).isAlive()
+			&& (!GET_TEAM((TeamTypes)iI).isMinorCiv() || isOption(GAMEOPTION_START_AS_MINORS)))
+			{
+				const int64_t iTempScore = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+				iTotalScore += iTempScore;
+				if (iTempScore > iTopScore)
 				{
-					setMercyRuleCounter(0);
-					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+					iTopScore = iTempScore;
+					iBestTeam = iI;
+				}
+			}
+		}
+		//One player is dominating! Mercy Rule!
+		if (iTopScore > iTotalScore / 2)
+		{
+			if (getMercyRuleCounter() == 0)
+			{
+				// Ten Turns remain! (on normal gamespeed)
+				setMercyRuleCounter(GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 10);
+				// Inform Players
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+				{
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+						if (GET_PLAYER((PlayerTypes)iI).getTeam() == iBestTeam)
 						{
 							AddDLLMessage(
 								(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MERCY_RULE_ABORTED").GetCString(),
+								gDLL->getText("TXT_KEY_WINNER_MERCY_RULE_HAS_BEGUN", getMercyRuleCounter()).GetCString(),
 								"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_GREEN()
+							);
+						}
+						else
+						{
+							AddDLLMessage(
+								(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_LOSER_MERCY_RULE_HAS_BEGUN", getMercyRuleCounter()).GetCString(),
+								"AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED()
 							);
 						}
 					}
 				}
 			}
-			else break;
-		}
-		if (getElapsedGameTurns() >= getMaxTurns() || bForceEndGame)
-		{
-			int64_t topScore = 0;
-			// End of game and Total Victory is selected.  Calculate the topscore
-			for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+			else
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+				changeMercyRuleCounter(-1);
+				//Times Up!
+				if (getMercyRuleCounter() != 0)
 				{
-					const int64_t score1 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
-					if (score1 > topScore)
+					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 					{
-						topScore = score1;
+						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+						{
+
+							if (GET_PLAYER((PlayerTypes)iI).getTeam() == iBestTeam)
+							{
+								AddDLLMessage(
+									(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_WINNER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(),
+									"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_GREEN()
+								);
+							}
+							else
+							{
+								AddDLLMessage(
+									(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_LOSER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(),
+									"AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT()
+								);
+							}
+						}
 					}
 				}
+				else bMercy = true;
 			}
-			for (int iI = 0; iI < MAX_PC_TEAMS; iI++) // have to do again because of ties, determine winners
+		}
+		//Abort any existing mercy countdown
+		else if (getMercyRuleCounter() > 0)
+		{
+			setMercyRuleCounter(0);
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					const int64_t score2 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
-					if (score2 >= topScore)
-					{
-						std::vector<int> aWinner;
-						aWinner.push_back(iI);
-						aWinner.push_back(iJ);
-						aaiWinners.push_back(aWinner);
-					}
+					AddDLLMessage(
+						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MERCY_RULE_ABORTED").GetCString(),
+						"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_GREEN()
+					);
+				}
+			}
+		}
+	}
+
+	if (bMastery || bMercy)
+	{
+		int64_t topScore = 0;
+		// Total Victory is selected. Calculate the topscore
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+		{
+			if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+			{
+				const int64_t score1 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+				if (score1 > topScore)
+				{
+					topScore = score1;
+				}
+			}
+		}
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++) // have to do again because of ties, determine winners
+		{
+			if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+			{
+				const int64_t score2 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+				if (score2 >= topScore)
+				{
+					std::vector<int> aWinner;
+					aWinner.push_back(iI);
+					aWinner.push_back(iVictoryTypeMastery);
+					aaiWinners.push_back(aWinner);
 				}
 			}
 		}
