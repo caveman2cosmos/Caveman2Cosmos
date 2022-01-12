@@ -8,7 +8,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
-		<English>Remains - Elasmotherium</English>
+		<English>Remains - Giant Rhinoceros</English>
 		<French>Restes d'Elasmotherium</French>
 		<Polish>Resztki - Elasmoterium</Polish>
 		<Russian>Ïàìÿòü î ýëàñìîòåðèè</Russian>
@@ -27,7 +27,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICANELEPHANT</Tag>
-		<English>Folklore - Elephant, African</English>
+		<English>Folklore - African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
 		<Russian>Ìèô îá àôð. ñëîíå</Russian>
 	</TEXT>
@@ -104,13 +104,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARMADILLO</Tag>
-		<English>Folklore - Armadillo</English>
+		<English>Folklore - Nine-banded Armadillo</English>
 		<French>Mythe du Tatou</French>
 		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIANELEPHANT</Tag>
-		<English>Folklore - Elephant, Asian</English>
+		<English>Folklore - Asian Elephant</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
 		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
 	</TEXT>
@@ -122,28 +122,28 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
-		<English>Folklore - Tapir, Baird's</English>
+		<English>Folklore - Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
 		<Polish>Mit - Tapir Panamski</Polish>
 		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
-		<English>Folklore - Rhinoceros, Black</English>
+		<English>Folklore - Black Rhinoceros</English>
 		<French>Mythe du Rhinocéros noir</French>
 		<Polish>Mit - Nosorożec Czarny</Polish>
 		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Tag>
-		<English>Folklore - Tapir, Brazilian</English>
+		<English>Folklore - Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
 		<Polish>Mit - Tapir</Polish>
 		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAIMAN</Tag>
-		<English>Folklore - Caiman</English>
+		<English>Folklore - Black Caiman</English>
 		<French>
 			<Text>Mythe du Caïman</Text>
 			<Gender>Male</Gender>
@@ -182,7 +182,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CUSCUS</Tag>
-		<English>Folklore - Cuscus</English>
+		<English>Folklore - Spotted Cuscus</English>
 		<French>Mythe du Couscous</French>
 		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
@@ -194,7 +194,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DHOLE</Tag>
-		<English>Folklore - Dhole</English>
+		<English>Folklore - Ussuri Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
 		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
 	</TEXT>
@@ -212,7 +212,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELASMOTHERIUM</Tag>
-		<English>Folklore - Elasmotherium</English>
+		<English>Folklore - Giant Rhinoceros</English>
 		<French>Mythe de l'Elasmotherium</French>
 		<Polish>Mit - Elasmoterium</Polish>
 		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
@@ -311,7 +311,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_WOLF</Tag>
-		<English>Folklore - Wolf, Grey</English>
+		<English>Folklore - Wolf</English>
 		<French>Mythe du Loup gris</French>
 		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
@@ -335,20 +335,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_IBEX</Tag>
-		<English>Folklore - Ibex</English>
+		<English>Folklore - Walia Ibex</English>
 		<French>Mythe du Bouquetin</French>
 		<Russian>Ìèô î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINO</Tag>
-		<English>Folklore - Rhinoceros, Indian</English>
+		<English>Folklore - Indian Rhinoceros</English>
 		<French>Mythe du Rhinocéros indien</French>
 		<Polish>Mit - Nosorożec Indyjski</Polish>
 		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Tag>
-		<English>Folklore - Rhinoceros, Java</English>
+		<English>Folklore - Java Rhinoceros</English>
 		<French>Mythe du Rhinocéros de Java</French>
 		<Polish>Mit - Nosorożec Jawajski</Polish>
 		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
@@ -380,7 +380,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Tag>
-		<English>Folklore - Tapir, Malayan</English>
+		<English>Folklore - Malayan Tapir</English>
 		<French>Mythe du Tapir Malais</French>
 		<Polish>Mit - Tapir Malajski</Polish>
 		<Russian>Ìèô î ìàë. òàïèðå</Russian>
@@ -412,7 +412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Tag>
-		<English>Folklore - Tapir, Mountain</English>
+		<English>Folklore - Mountain Tapir</English>
 		<French>Mythe du Tapir des Montagnes</French>
 		<Polish>Mit - Tapir Górski</Polish>
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
@@ -491,13 +491,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_POSSUM</Tag>
-		<English>Folklore - Possum</English>
+		<English>Folklore - Brushtail Possum</English>
 		<French>Mythe du Phalanger commun</French>
 		<Russian>Ìèô î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Tag>
-		<English>Folklore - Pygmy Hippopotamus</English>
+		<English>Folklore - Pygmy Hippo</English>
 		<French>Mythe de l'Hippopotame nain</French>
 		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
@@ -522,7 +522,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
-		<English>Folklore - River Crocodile</English>
+		<English>Folklore - Crocodile</English>
 		<French>
 			<Text>Mythe du Crocodile de rivière</Text>
 			<Gender>Male</Gender>
@@ -546,7 +546,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SAIGA</Tag>
-		<English>Folklore - Saiga</English>
+		<English>Folklore - Saiga Antelope</English>
 		<French>Mythe de l'Antilope Saiga</French>
 		<Russian>Ìèô î ñàéãàêå</Russian>
 	</TEXT>
@@ -631,13 +631,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TREESLOTH</Tag>
-		<English>Folklore - Tree Sloth</English>
+		<English>Folklore - Three-toed Sloth</English>
 		<French>Mythe du paresseux</French>
 		<Russian>Ìèô î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TURKEY</Tag>
-		<English>Folklore - Turkey</English>
+		<English>Folklore - Wild Turkey</English>
 		<French>Mythe de la Dinde</French>
 		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
@@ -649,7 +649,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHITE_RHINO</Tag>
-		<English>Folklore - Rhinoceros, White</English>
+		<English>Folklore - White Rhinoceros</English>
 		<French>Mythe du Rhinocéros blanc</French>
 		<Polish>Mit - Nosorożec Biały</Polish>
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>

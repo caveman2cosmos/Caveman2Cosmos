@@ -684,7 +684,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
-		<English>Folklore - Beluga Whale</English>
+		<English>Folklore - Beluga</English>
 		<French>
 			<Text>Mythe de la Baleine Beluga</Text>
 			<Gender>Male</Gender>
@@ -700,7 +700,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BOAR</Tag>
-		<English>Folklore - Boar</English>
+		<English>Folklore - Wild Boar</English>
 		<French>
 			<Text>Mythe du Sanglier</Text>
 			<Gender>Male</Gender>
@@ -748,7 +748,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN</Tag>
-		<English>Folklore - Capuchin</English>
+		<English>Folklore - Capuchin Monkey</English>
 		<French>Mythe du Capucin</French>
 		<Russian>Ìèô î êàïóöèå</Russian>
 	</TEXT>
@@ -778,7 +778,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CRAB</Tag>
-		<English>Folklore - Crabs</English>
+		<English>Folklore - Crab</English>
 		<French>
 			<Text>Mythe- crabe</Text>
 			<Gender>Male</Gender>
@@ -902,7 +902,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GOAT</Tag>
-		<English>Folklore - Goat</English>
+		<English>Folklore - Mouflon</English>
 		<French>
 			<Text>Mythe de la Chèvre</Text>
 			<Gender>Male</Gender>
@@ -966,7 +966,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
-		<English>Folklore - Kraken</English>
+		<English>Folklore - Giant Squid</English>
 		<French>
 			<Text>Mythe du Kraken</Text>
 			<Gender>Male</Gender>
@@ -1014,7 +1014,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
-		<English>Folklore - Llama</English>
+		<English>Folklore - Guanaco</English>
 		<French>Mythe du Lama</French>
 		<Italian>
 			<Text>Mito del lama</Text>
