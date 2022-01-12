@@ -139,6 +139,12 @@ class CvMapInfo;
 #include "GlobalDefines.h"
 #include <stack>
 
+enum DelayedResolutionTypes
+{
+	NO_DELAYED_RESOLUTION,
+	USE_DELAYED_RESOLUTION
+};
+
 extern CvDLLUtilityIFaceBase* gDLL;
 
 class cvInternalGlobals

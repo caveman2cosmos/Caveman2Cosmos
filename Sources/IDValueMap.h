@@ -40,23 +40,27 @@ struct IDValueMap
 
 	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
+		_readPairedArrays<NO_DELAYED_RESOLUTION>(pXML, szRootTagName, firstChildTag, secondChildTag);
+	}
+
+	template <DelayedResolutionTypes delayedRes_>
+	void _readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
+	{
+		FAssert(m_map.empty());
+
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
-			const int iNumChildren = pXML->GetXmlChildrenNumber();
+			const int iNumSibs = pXML->GetXmlChildrenNumber();
 
 			if (pXML->TryMoveToXmlFirstChild())
 			{
-				for (int j = 0; j < iNumChildren; ++j)
+				m_map.resize(iNumSibs);
+
+				foreach_(value_type& pair, m_map)
 				{
-					CvString szTextVal;
-					pXML->GetChildXmlValByName(szTextVal, firstChildTag);
-					value_type pair = value_type();
-					pair.first = static_cast<ID_>(GC.getInfoTypeForString(szTextVal));
-					if (pair.first > -1)
-					{
-						pXML->set(pair.second, secondChildTag);
-						m_map.push_back(pair);
-					}
+					CvXMLLoadUtility::SetOptionalInfoType<delayedRes_>(pXML, pair.first, firstChildTag);
+					pXML->set(pair.second, secondChildTag);
+
 					if (!pXML->TryMoveToXmlNextSibling())
 						break;
 				}
@@ -79,7 +83,7 @@ struct IDValueMap
 					{
 						CvString szTextVal;
 						pXML->GetXmlVal(szTextVal);
-						int value = defaultValue;
+						Value_ value = defaultValue;
 						pXML->GetNextXmlVal(&value);
 						m_map.push_back(std::make_pair(static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal)), value));
 						pXML->MoveToXmlParent();

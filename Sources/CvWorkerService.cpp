@@ -1,6 +1,6 @@
 ﻿#include "CvGlobals.h"
 #include "CvWorkerService.h"
-#include "CvPlot.H"
+#include "CvPlot.h"
 
 
 bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
