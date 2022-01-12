@@ -323,8 +323,8 @@ public:
 	int getBonusYieldModifier(int i, int j) const;
 	int* getBonusYieldModifierArray(int i) const;
 
-	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
-	const std::vector<BuildingCommerceChange>& getGlobalBuildingCommerceChanges() const;
+	int getGlobalBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const;
+	const IDValueMap<BuildingTypes, CommerceArray>& getGlobalBuildingCommerceChanges() const { return m_aGlobalBuildingCommerceChanges; }
 	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
@@ -499,10 +499,8 @@ public:
 	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
 	void doPostLoadCaching(uint32_t eThis);
 
@@ -790,7 +788,6 @@ private:
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
 	std::vector<AidRateChanges> m_aAidRateChanges;
-	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
 	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
@@ -814,6 +811,7 @@ private:
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
+	IDValueMap<BuildingTypes, CommerceArray> m_aGlobalBuildingCommerceChanges;
 	IDValueMap<TechTypes, YieldArray> m_techYieldChanges;
 	IDValueMap<TechTypes, YieldArray> m_techYieldModifiers;
 	IDValueMap<TechTypes, CommerceArray> m_techCommerceChanges;

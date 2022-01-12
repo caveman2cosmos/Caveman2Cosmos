@@ -83,7 +83,7 @@ struct IDValueMap
 					{
 						CvString szTextVal;
 						pXML->GetXmlVal(szTextVal);
-						Value_ value = defaultValue;
+						int value = defaultValue;
 						pXML->GetNextXmlVal(&value);
 						m_map.push_back(std::make_pair(static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal)), value));
 						pXML->MoveToXmlParent();
@@ -260,6 +260,7 @@ typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
+typedef std::pair<BuildingTypes, CommerceArray> BuildingCommerce;
 typedef std::pair<TechTypes, CommerceArray> TechCommerceArray;
 typedef std::pair<TechTypes, YieldArray> TechArray;
 typedef std::pair<TerrainTypes, YieldArray> TerrainArray;
