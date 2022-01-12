@@ -22174,12 +22174,6 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 						{
 							bDoImprove = false;
 						}
-
-						// Super Forts begin *AI_worker*
-						if (bDoImprove && eImprovement != NO_IMPROVEMENT)
-						{
-							bDoImprove = false;
-						}
 					}
 					else bDoImprove = eImprovement == eRuins;
 					// ! Super Forts
