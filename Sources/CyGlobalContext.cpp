@@ -94,12 +94,7 @@ CyTeam* CyGlobalContext::getCyTeam(TeamTypes eTeam) const
 	return eTeam < MAX_TEAMS ? &g_cyTeams[eTeam] : NULL;
 }
 
-int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
-{
-	return GC.getInfoTypeForString(szInfoType);
-}
-
-int CyGlobalContext::getInfoTypeForStringWithHiddenAssert(const char* szInfoType, bool bHideAssert) const
+int CyGlobalContext::getInfoTypeForString(const char* szInfoType, bool bHideAssert) const
 {
 	return GC.getInfoTypeForString(szInfoType, bHideAssert);
 }
