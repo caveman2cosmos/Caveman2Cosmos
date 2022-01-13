@@ -626,8 +626,6 @@ public:
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
-	int getRandomMinExperienceTimes100() const;
-
 	//Great Commanders... By KillmePlease
 
 	//for combat units:
@@ -658,8 +656,10 @@ public:
 
 	void doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes);
 
-	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion, bool bDefPromotion);
-	void applyDynamicXP(const int iLoseOdds, const int iInitialDamage, const bool bHomeTerritory, const int iMaxXP, int iMaxTotalXP);
+	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion = false, bool bDefPromotion = false);
+	void applyDynamicXP(const int iExperience, const bool bHomeTerritory, int iMaxTotalXP);
+	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
+	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamage, const int iInitialDamageEnemy, const int iMaxXP) const;
 
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;
