@@ -2617,13 +2617,13 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 						flankingStrikeCombat(pPlot, iAttackerStrength, iAttackerFirepower, iAttackerKillOdds, iDefenderDamage, pDefender);
 						bAttackerWithdrawn = true;
 
-						changeExperience100(getExperiencefromWithdrawal(AdjustedAttWithdrawal) * 10, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
+						changeExperience100(getExperiencefromWithdrawal(AdjustedAttWithdrawal) * 10, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
 
 						int iExperience = defenseXPValue();
 						iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
 						iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
-						changeExperience100(iExperience * 10, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
-						pDefender->changeExperience100(10, MAX_INT, true, pPlot->getOwner() == pDefender->getOwner(), true);
+						changeExperience100(iExperience * 10, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
+						pDefender->changeExperience100(10, 100 * pDefender->maxXPValue(this), true, pPlot->getOwner() == pDefender->getOwner(), true);
 						bDoDynamic = false;
 
 // BUG - Combat Events - start
@@ -2693,7 +2693,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 						m_combatResult.bAttackerRepelled = true;
 						m_combatResult.bDeathMessaged = false;
 
-						pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedRepel) * 15, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
+						pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedRepel) * 15, 100 * pDefender->maxXPValue(this), true, pPlot->getOwner() == getOwner(), true);
 						bDoDynamic = false;
 
 						break;
@@ -2764,11 +2764,10 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 						int iWithdrawOdds = 100 - pDefender->pursuitVSOpponentProbTotal(this);
 						changeExperience100(getExperiencefromWithdrawal(iWithdrawOdds) * 100, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
 
-						int iExperience = defenseXPValue();
-						iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
+						int iExperience = defenseXPValue() * iInitialAttackerStrength / iInitialDefenderStrength;
 						iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
-						changeExperience100(iExperience * 10, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
-						pDefender->changeExperience100(10, MAX_INT, true, pPlot->getOwner() == pDefender->getOwner(), true);
+						changeExperience100(iExperience * 10, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
+						pDefender->changeExperience100(10, 100 * pDefender->maxXPValue(this), true, pPlot->getOwner() == pDefender->getOwner(), true);
 						bDoDynamic = false;
 
 						if (temporarypursuit == 0)
@@ -2809,8 +2808,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							m_combatResult.bDefenderWithdrawn = true;
 							m_combatResult.bDeathMessaged = false;
 
-							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, -1, true, pPlot->getOwner() == pDefender->getOwner(), true);
-							changeExperience100(10, -1, true, pPlot->getOwner() == getOwner(), true);
+							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, 100 * pDefender->maxXPValue(this), true, pPlot->getOwner() == pDefender->getOwner(), true);
+							changeExperience100(10, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
 							return;
 						}
 					}
@@ -2885,7 +2884,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
 								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, pDefender).get_value_or(nullptr);
-								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
+								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
 								return;
 							}
 							else if ((KnockbackRollResult < iAttackerKnockback) && (KnockbackRollResult > AdjustedKnockback))
@@ -29789,50 +29788,58 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 		}
 	}
 }
-void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion, bool bDefPromotion)
+
+
+void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iAttackerWinOdds, int iDefenderInitialDamage, bool bPromotion, bool bDefPromotion)
 {
-	if (!isDead() && !bPromotion && getUnitCombatType() != NO_UNITCOMBAT)
+	if (!isDead() && !bPromotion && attackXPValue() > 0)
 	{
-		FAssertMsg(getMaxHP() - iAttackerInitialDamage > 0, "Attacker is Dead!");
-		int iHealthPercentLost = 100 - (getMaxHP() - getDamage()) * 100 / std::max(1, getMaxHP() - iAttackerInitialDamage);
-		int iExperienceModifier = iHealthPercentLost * iHealthPercentLost / getMaxHP();
-		//Chance of losing
-		int iOdds = GC.getCOMBAT_DIE_SIDES() - iWinningOdds;
-		int iExperience = iOdds * (100 + iExperienceModifier) / 100;
-		if (attackXPValue() > 0)
-		{
-			iExperience = range(iExperience, getRandomMinExperienceTimes100(), attackXPValue() * 100);
-
-			int iMaxXP = 100 * maxXPValue(pDefender);
-			// Toffer - Allow a little xp aganst animals and barbs if above the max with dynamic XP.
-			//	The diminshing return of dynamic XP makes it somewhat of a natural xp limiter against weak foes even before reaching the limit.
-			if (iMaxXP > -1) iMaxXP += iExperience / 4;
-
-			changeExperience100(iExperience, iMaxXP, true, pPlot->getOwner() == getOwner(), true);
-		}
+		applyDynamicXP(
+			GC.getCOMBAT_DIE_SIDES() - iAttackerWinOdds,
+			iAttackerInitialDamage,
+			pPlot->getOwner() == getOwner(),
+			100 * attackXPValue(),
+			100 * maxXPValue(pDefender)
+		);
 	}
-	if (!pDefender->isDead() && !bDefPromotion && pDefender->getUnitCombatType() != NO_UNITCOMBAT)
+	if (!pDefender->isDead() && !bDefPromotion && pDefender->defenseXPValue() > 0)
 	{
-		FAssertMsg(pDefender->getMaxHP() - iDefenderInitialDamage > 0, "Defender is Dead!");
-		int iHealthPercentLost = 100 - (pDefender->getMaxHP() - pDefender->getDamage()) * 100 / std::max(1,(pDefender->getMaxHP() - iDefenderInitialDamage));
-		int iExperienceModifier = iHealthPercentLost * iHealthPercentLost / pDefender->getMaxHP();
-		//Chance of losing
-		int iExperience = iWinningOdds * (100 + iExperienceModifier) / 100;
-
-		if (pDefender->defenseXPValue() > 0)
-		{
-			iExperience = range(iExperience, getRandomMinExperienceTimes100(), pDefender->defenseXPValue() * 100);
-			int iMaxXP = 100 * pDefender->maxXPValue(this);
-			if (iMaxXP > -1) iMaxXP += iExperience / 4;
-			pDefender->changeExperience100(iExperience, iMaxXP, true, pPlot->getOwner() == pDefender->getOwner(), true);
-		}
+		pDefender->applyDynamicXP(
+			iAttackerWinOdds,
+			iDefenderInitialDamage,
+			pPlot->getOwner() == pDefender->getOwner(),
+			100 * pDefender->defenseXPValue(),
+			100 * pDefender->maxXPValue(this)
+		);
 	}
+}
+
+void CvUnit::applyDynamicXP(const int iLoseOdds, const int iInitialDamage, const bool bHomeTerritory, const int iMaxXP, int iMaxTotalXP)
+{
+	const int iMaxHP = getMaxHP();
+	FAssertMsg(iMaxHP - iInitialDamage > 0, "Applying exp to a dead unit!");
+	// Chance of losing
+	// Modified by: Hardship of winning + An outworn unit doesn't learn as much from hardship as a combat ready unit.
+	const int iHealthPercentLost = 1000 - (iMaxHP - getDamage()) * 1000 / (iMaxHP - iInitialDamage);
+	const int iMod = 10 * iHealthPercentLost * iMaxHP / (iMaxHP + 10 * iInitialDamage);
+	//... First factor of 10 means that if the unit lose 99.9% of its max life it will get 10 times more XP.
+	// Results in
+	const int iExperience = range(iLoseOdds * (1000 + iMod) / 1000, getRandomMinExperienceTimes100(), iMaxXP);
+
+	// Toffer - Allow a little xp aganst animals and barbs if above the max with dynamic XP.
+	//	The diminshing return of dynamic XP makes it somewhat of a natural xp limiter against weak foes even before reaching the limit.
+	if (iMaxTotalXP > -1 && getExperience100() + iExperience > iMaxTotalXP)
+	{
+		iMaxTotalXP = std::max(iMaxTotalXP, getExperience100() + iExperience / 10);
+	}
+	changeExperience100(iExperience, iMaxTotalXP, true, bHomeTerritory, true);
 }
 
 int CvUnit::getRandomMinExperienceTimes100() const
 {
-	return GC.getGame().getSorenRandNum(26, "Random Min XP") + (GC.getMIN_EXPERIENCE_PER_COMBAT() * 25);
+	return GC.getMIN_EXPERIENCE_PER_COMBAT() + GC.getGame().getSorenRandNum(15, "Random Min XP");
 }
+
 
 bool CvUnit::isTerrainProtected(TerrainTypes eIndex) const
 {
