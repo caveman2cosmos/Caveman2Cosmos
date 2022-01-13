@@ -22168,21 +22168,14 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 						bDoImprove = true;
 					}
 
-					if (bDoImprove)
+					if (!bDoImprove)
 					{
-						if (bSafeAutomation && eImprovement != NO_IMPROVEMENT && eImprovement != eRuins)
-						{
-							bDoImprove = false;
-						}
-
-						// Super Forts begin *AI_worker* (No need to loop through builds if the improvement is permanent)
-						if (bDoImprove && eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isPermanent())
-						{
-							bDoImprove = false;
-						}
+						bDoImprove = eImprovement == eRuins;
 					}
-					else bDoImprove = eImprovement == eRuins;
-					// ! Super Forts
+					else if (bSafeAutomation && eImprovement != NO_IMPROVEMENT && eImprovement != eRuins)
+					{
+						bDoImprove = false;
+					}
 
 					const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 					BuildTypes eBestTempBuild = NO_BUILD;

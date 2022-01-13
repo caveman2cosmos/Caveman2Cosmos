@@ -2736,8 +2736,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 		if (getImprovementType() != NO_IMPROVEMENT)
 		{
-			if (getImprovementType() == eImprovement
-			|| GC.getImprovementInfo(getImprovementType()).isPermanent())
+			if (getImprovementType() == eImprovement)
 			{
 				return false;
 			}
@@ -6951,8 +6950,6 @@ bool CvPlot::isImprovementDestructible() const
 {
 	return (
 		m_eImprovementType > -1
-		&&
-		!GC.getImprovementInfo(getImprovementType()).isPermanent()
 		&&
 		GC.getImprovementInfo(getImprovementType()).getAirBombDefense() > -1
 	);

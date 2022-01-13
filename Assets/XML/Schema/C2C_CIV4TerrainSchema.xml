@@ -623,7 +623,6 @@
 	<ElementType name="bPeakImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWaterImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGoody" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPermanent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iGoodyRange" content="textOnly" dt:type="int"/>
 	<!--Afforess-->
 	<ElementType name="bDepletedMine" content="textOnly" dt:type="boolean"/>
@@ -715,7 +714,6 @@
 		<element type="bPeakImprovement" minOccurs="0"/>
 		<element type="bWaterImprovement" minOccurs="0"/>
 		<element type="bGoody" minOccurs="0"/>
-		<element type="bPermanent" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
 		<element type="iTilesPerGoody" minOccurs="0"/>
 		<element type="iGoodyRange" minOccurs="0"/>
