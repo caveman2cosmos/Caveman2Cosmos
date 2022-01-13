@@ -3,7 +3,7 @@
 #ifndef idinfo_iterator_h__
 #define idinfo_iterator_h__
 
-#include "LinkedList.h"
+//#include "LinkedList.h"
 
 struct IDInfo;
 
@@ -48,12 +48,12 @@ private:
 			} while (m_ptr == nullptr && m_node != nullptr);
 		}
 	}
-	
+
 	bool equal(idinfo_iterator_base const& other) const
 	{
 		return this->m_ptr == other.m_ptr;
 	}
-	
+
 	Value* dereference() const { return m_ptr; }
 
 	Derived& derived()

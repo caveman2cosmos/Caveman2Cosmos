@@ -76,7 +76,7 @@ class Forgetful:
 		screen.addPanel("", "", "", True, False, -10, -10, self.xRes + 20, self.yRes + 20, PanelStyles.PANEL_STYLE_MAIN)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.setLabel("", "", "<font=4b>TXT_KEY_XML_TAGS", 1<<2, self.xRes/2, 12, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
-		screen.setText("", "", "<font=4b>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 12, 12, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("", "", "<font=4b>" + CyTranslator().getText("TXT_WORD_EXIT", ()), 1<<1, self.xRes - 12, 12, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		self.setDropDown()
 

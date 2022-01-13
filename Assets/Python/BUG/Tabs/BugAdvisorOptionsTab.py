@@ -15,7 +15,7 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "Advisors", "Advisors")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 
@@ -31,12 +31,10 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextDropdown(screen, None, comboBox, "Advisors__EFAGlanceAttitudes")
 		self.addCheckbox(screen, left, "Advisors__EFAImprovedInfo")
 		self.addCheckbox(screen, left, "Advisors__EFADealTurnsLeft")
-		self.addCheckbox(screen, left, "MiscHover__TechTradeDenial")
 		self.addCheckbox(screen, left, "MiscHover__BonusTradeDenial")
 
 		self.addLabel(screen, center, "Technology_Advisor", "Technology [F6]:")
 		self.addCheckbox(screen, center, "Advisors__GPTechPrefs")
-		self.addCheckbox(screen, center, "MiscHover__SpedUpTechs")
 		self.addCheckbox(screen, center, "Advisors__WideTechScreen")
 		self.addCheckbox(screen, center, "Advisors__ShowTechEra")
 
@@ -53,8 +51,6 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addSpacer(screen, right, "Advisors_Tab")
 
 		self.addLabel(screen, right, "Info_Screens", "Info [F9]:")
-		self.addCheckbox(screen, right, "Advisors__BugGraphsTab")
 		self.addCheckbox(screen, right, "Advisors__BugGraphsLogScale")
 		self.addCheckbox(screen, right, "Advisors__BugStatsTab")
-		self.addCheckbox(screen, right, "Advisors__BugInfoWonders")
-		self.addCheckbox(screen, right, "Advisors__BugInfoWondersPlayerColor", True)
+		self.addCheckbox(screen, right, "Advisors__BugInfoWondersPlayerColor")

@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvRandom.h"
 
 #ifndef __INTELLISENSE__
 #include <boost/python/overloads.hpp>

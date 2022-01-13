@@ -11,3 +11,5 @@ if not exist "%PYTHON%" (
 %PYTHON% Tools\XMLTools\SortByTag.py %*
 
 POPD
+
+PAUSE

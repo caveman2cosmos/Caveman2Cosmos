@@ -1,24 +1,40 @@
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
+#include "CvBugOptions.h"
+#include "CvCity.h"
+#include "CvGame.h"
+#include "CvGameTextMgr.h"
+#include "CvGlobals.h"
+#include "CvImprovementInfo.h"
+#include "CvInfos.h"
+#include "CvInitCore.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
+#include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 void CvGame::updateColoredPlots()
 {
 	PROFILE_FUNC();
 
 	CLLNode<IDInfo>* pSelectedCityNode;
-	CLLNode<IDInfo>* pSelectedUnitNode;
 	CvCity* pHeadSelectedCity;
 	CvCity* pSelectedCity;
 	CvCity* pCity;
 	CvUnit* pHeadSelectedUnit;
-	CvUnit* pSelectedUnit;
 	CvPlot* pRallyPlot;
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
 	CvPlot* pNextBestPlot;
-	int iMaxAirRange;
-	int iRange;
-	int iDX, iDY;
-	int iI;
 
 	gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_BASE);
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_CITY_RADIUS);
@@ -30,33 +46,19 @@ void CvGame::updateColoredPlots()
 		gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 	}
 
-	if (Cy::call<bool>(PYGameModule, "updateColoredPlots"))
-	{
-		return;
-	}
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
 	// City circles for debugging
 	if (isDebugMode())
 	{
 		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
-
+			const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
 			if (pLoopPlot != NULL)
 			{
-				for( int iI = 0; iI < MAX_PC_PLAYERS; iI++ )
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).AI_isPlotCitySite(pLoopPlot))
 					{
-						if (GET_PLAYER((PlayerTypes)iI).AI_isPlotCitySite(pLoopPlot))
-						{
-							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER((PlayerTypes)iI).getPlayerColor()).getColorTypePrimary()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
-						}
+						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER((PlayerTypes)iI).getPlayerColor()).getColorTypePrimary()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
 			}
@@ -68,74 +70,69 @@ void CvGame::updateColoredPlots()
 	{
 		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
-
+			const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
 			if (pLoopPlot != NULL)
 			{
-				CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
-				ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+				const CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
+				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 
-				if( pWorkingCity != NULL && eImprovement != NO_IMPROVEMENT )
+				if (pWorkingCity != NULL && eImprovement != NO_IMPROVEMENT)
 				{
-					int iPlotIndex = pWorkingCity->getCityPlotIndex(pLoopPlot);
-					//int iBuildValue = pWorkingCity->AI_getBestBuildValue(iPlotIndex);
-					BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(iPlotIndex);
+					const BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(pWorkingCity->getCityPlotIndex(pLoopPlot));
 
-					if (NO_BUILD != eBestBuild)
+					if (NO_BUILD != eBestBuild && GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement())
 					{
-						if( GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement() )
-						{
-							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
-						}
+						gDLL->getEngineIFace()->addColoredPlot(
+							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
+							GC.getColorInfo(GC.getCOLOR_RED()).getColor(),
+							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE
+						);
 					}
 				}
 			}
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
 
 	// City circles when in Advanced Start
 	if (gDLL->getInterfaceIFace()->isInAdvancedStart())
 	{
 		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
+			const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot != NULL && GET_PLAYER(getActivePlayer()).getAdvancedStartCityCost(true, pLoopPlot) > 0)
 			{
-				if (GET_PLAYER(getActivePlayer()).getAdvancedStartCityCost(true, pLoopPlot) > 0)
+				bool bStartingPlot = false;
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					bool bStartingPlot = false;
-					for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+					if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getActiveTeam())
+					&&  GET_PLAYER((PlayerTypes)iI).getStartingPlot() == pLoopPlot)
 					{
-						CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
-						if (kPlayer.isAlive() && getActiveTeam() == kPlayer.getTeam())
-						{
-							if (pLoopPlot == kPlayer.getStartingPlot())
-							{
-								bStartingPlot = true;
-								break;
-							}
-						}
+						bStartingPlot = true;
+						break;
 					}
-					if (bStartingPlot)
-					{
-						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
-					}
-					else if (GET_PLAYER(getActivePlayer()).AI_isPlotCitySite(pLoopPlot))
-					{
-						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
-					}
-
-					if (pLoopPlot->isRevealed(getActiveTeam(), false))
-					{
-						NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
-						color.a = 0.4f;
-						gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
-					}
+				}
+				if (bStartingPlot)
+				{
+					gDLL->getEngineIFace()->addColoredPlot(
+						pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
+						GC.getColorInfo(GC.getCOLOR_WARNING_TEXT()).getColor(),
+						PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
+					);
+				}
+				else if (GET_PLAYER(getActivePlayer()).AI_isPlotCitySite(pLoopPlot))
+				{
+					gDLL->getEngineIFace()->addColoredPlot(
+						pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
+						GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(),
+						PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
+					);
+				}
+				if (pLoopPlot->isRevealed(getActiveTeam(), false))
+				{
+					NiColorA color(GC.getColorInfo(GC.getCOLOR_WHITE()).getColor());
+					color.a = 0.4f;
+					gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 				}
 			}
 		}
@@ -148,7 +145,7 @@ void CvGame::updateColoredPlots()
 	{
 		if (gDLL->getInterfaceIFace()->isCityScreenUp())
 		{
-			for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+			for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 			{
 				if (pHeadSelectedCity->isWorkingPlot(iI))
 				{
@@ -156,7 +153,7 @@ void CvGame::updateColoredPlots()
 
 					if (pLoopPlot != NULL)
 					{
-						NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+						NiColorA color(GC.getColorInfo(GC.getCOLOR_WHITE()).getColor());
 						color.a = 0.7f;
 						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
 					}
@@ -165,13 +162,12 @@ void CvGame::updateColoredPlots()
 		}
 		else
 		{
-// BUG - City Controlled Plots - start
 			if (getBugOptionBOOL("CityBar__CityControlledPlots", true, "BUG_CITY_CONTROLLED_PLOTS"))
 			{
-				NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_CONTROLLED_PLOTS_COLOR", "COLOR_HIGHLIGHT_TEXT"))).getColor());
-				color.a = getDefineFLOAT("BUG_CITY_CONTROLLED_PLOTS_ALPHA", 1.0);
+				NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_CONTROLLED_PLOTS_COLOR", "COLOR_HIGHLIGHT_TEXT"))).getColor());
+				color.a = GC.getDefineFLOAT("BUG_CITY_CONTROLLED_PLOTS_ALPHA", 1.0);
 
-				for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+				for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 				{
 					pLoopPlot = pHeadSelectedCity->getCityIndexPlot(iI);
 
@@ -181,49 +177,47 @@ void CvGame::updateColoredPlots()
 					}
 				}
 			}
-// BUG - City Controlled Plots - end
 
-// BUG - City Plot Status - start
 			if (getBugOptionBOOL("CityBar__CityPlotStatus", true, "BUG_CITY_PLOT_STATUS"))
 			{
 				bool bShowWorkingImprovedTile = getBugOptionBOOL("CityBar__WorkingImprovedPlot", false, "BUG_CITY_WORKING_IMPROVED_PLOT");
-				NiColorA workingImprovedTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_WORKING_IMPROVED_PLOT_COLOR", "COLOR_WHITE"))).getColor());
-				float fAlpha = getDefineFLOAT("BUG_CITY_WORKING_IMPROVED_PLOT_ALPHA", 0.0);
+				NiColorA workingImprovedTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_WORKING_IMPROVED_PLOT_COLOR", "COLOR_WHITE"))).getColor());
+				float fAlpha = GC.getDefineFLOAT("BUG_CITY_WORKING_IMPROVED_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) workingImprovedTile.a = fAlpha;
-				
+
 				bool bShowWorkingImprovableTile = getBugOptionBOOL("CityBar__WorkingImprovablePlot", true, "BUG_CITY_WORKING_IMPROVABLE_PLOT");
-				NiColorA workingImprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_WORKING_IMPROVABLE_PLOT_COLOR", "COLOR_RED"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_WORKING_IMPROVABLE_PLOT_ALPHA", 0.0);
+				NiColorA workingImprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_WORKING_IMPROVABLE_PLOT_COLOR", "COLOR_RED"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_WORKING_IMPROVABLE_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) workingImprovableTile.a = fAlpha;
-				
+
 				bool bShowWorkingImprovableBonusTile = getBugOptionBOOL("CityBar__WorkingImprovableBonusPlot", true, "BUG_CITY_WORKING_IMPROVABLE_BONUS_PLOT");
-				NiColorA workingImprovableBonusTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_WORKING_IMPROVABLE_BONUS_PLOT_COLOR", "COLOR_RED"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_WORKING_IMPROVABLE_BONUS_BONUS_PLOT_ALPHA", 0.0);
+				NiColorA workingImprovableBonusTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_WORKING_IMPROVABLE_BONUS_PLOT_COLOR", "COLOR_RED"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_WORKING_IMPROVABLE_BONUS_BONUS_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) workingImprovableBonusTile.a = fAlpha;
-				
+
 				bool bShowWorkingUnimprovableTile = getBugOptionBOOL("CityBar__WorkingUnimprovablePlot", true, "BUG_CITY_WORKING_UNIMPROVABLE_PLOT");
-				NiColorA workingUnimprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_WORKING_UNIMPROVABLE_PLOT_COLOR", "COLOR_YELLOW"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_WORKING_UNIMPROVABLE_PLOT_ALPHA", 0.0);
+				NiColorA workingUnimprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_WORKING_UNIMPROVABLE_PLOT_COLOR", "COLOR_YELLOW"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_WORKING_UNIMPROVABLE_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) workingUnimprovableTile.a = fAlpha;
-				
+
 				bool bShowNotWorkingImprovedTile = getBugOptionBOOL("CityBar__NotWorkingImprovedPlot", true, "BUG_CITY_NOT_WORKING_IMPROVED_PLOT");
-				NiColorA notWorkingImprovedTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_NOT_WORKING_IMPROVED_PLOT_COLOR", "COLOR_GREEN"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_NOT_WORKING_IMPROVED_PLOT_ALPHA", 0.0);
+				NiColorA notWorkingImprovedTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_NOT_WORKING_IMPROVED_PLOT_COLOR", "COLOR_GREEN"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_NOT_WORKING_IMPROVED_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) notWorkingImprovedTile.a = fAlpha;
-				
+
 				bool bShowNotWorkingImprovableTile = getBugOptionBOOL("CityBar__NotWorkingImprovablePlot", true, "BUG_CITY_NOT_WORKING_IMPROVABLE_PLOT");
-				NiColorA notWorkingImprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_NOT_WORKING_IMPROVABLE_PLOT_COLOR", "COLOR_PLAYER_DARK_CYAN"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_NOT_WORKING_IMPROVABLE_PLOT_ALPHA", 0.0);
+				NiColorA notWorkingImprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_NOT_WORKING_IMPROVABLE_PLOT_COLOR", "COLOR_PLAYER_DARK_CYAN"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_NOT_WORKING_IMPROVABLE_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) notWorkingImprovableTile.a = fAlpha;
-				
+
 				bool bShowNotWorkingImprovableBonusTile = getBugOptionBOOL("CityBar__NotWorkingImprovableBonusPlot", true, "BUG_CITY_NOT_WORKING_IMPROVABLE_BONUS_PLOT");
-				NiColorA notWorkingImprovableBonusTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_NOT_WORKING_IMPROVABLE_BONUS_PLOT_COLOR", "COLOR_CYAN"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_NOT_WORKING_IMPROVABLE_BONUS_PLOT_ALPHA", 0.0);
+				NiColorA notWorkingImprovableBonusTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_NOT_WORKING_IMPROVABLE_BONUS_PLOT_COLOR", "COLOR_CYAN"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_NOT_WORKING_IMPROVABLE_BONUS_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) notWorkingImprovableBonusTile.a = fAlpha;
-				
+
 				bool bShowNotWorkingUnimprovableTile = getBugOptionBOOL("CityBar__NotWorkingUnimprovablePlot", false, "BUG_CITY_NOT_WORKING_UNIMPROVABLE_PLOT");
-				NiColorA notWorkingUnimprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(getDefineSTRING("BUG_CITY_NOT_WORKING_UNIMPROVABLE_PLOT_COLOR", "COLOR_BLACK"))).getColor());
-				fAlpha = getDefineFLOAT("BUG_CITY_NOT_WORKING_UNIMPROVABLE_PLOT_ALPHA", 0.0);
+				NiColorA notWorkingUnimprovableTile(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(GC.getDefineSTRING("BUG_CITY_NOT_WORKING_UNIMPROVABLE_PLOT_COLOR", "COLOR_BLACK"))).getColor());
+				fAlpha = GC.getDefineFLOAT("BUG_CITY_NOT_WORKING_UNIMPROVABLE_PLOT_ALPHA", 0.0);
 				if (fAlpha != 0) notWorkingUnimprovableTile.a = fAlpha;
 
 				pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
@@ -237,7 +231,7 @@ void CvGame::updateColoredPlots()
 					{
 						TeamTypes eOwnerTeam = pSelectedCity->getTeam();
 
-						for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+						for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 						{
 							pLoopPlot = pSelectedCity->getCityIndexPlot(iI);
 
@@ -261,11 +255,11 @@ void CvGame::updateColoredPlots()
 									ImprovementTypes ePlotImprovement = pLoopPlot->getImprovementType();
 									RouteTypes ePlotRoute = pLoopPlot->getRouteType();
 
-									if (ePlotImprovement == CvImprovementInfo::getImprovementRuins())
+									if (ePlotImprovement == GC.getIMPROVEMENT_CITY_RUINS())
 									{
 										ePlotImprovement = NO_IMPROVEMENT;
 									}
-									
+
 									BuildTypes eBestBuild = pSelectedCity->AI_getBestBuild(iI);
 									ImprovementTypes eBestImprovement = NO_IMPROVEMENT;
 									RouteTypes eBestRoute = NO_ROUTE;
@@ -273,8 +267,8 @@ void CvGame::updateColoredPlots()
 
 									if (eBestBuild != NO_BUILD)
 									{
-										CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
-										eBestImprovement = (ImprovementTypes)kBestBuild.getImprovement();
+										const CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
+										eBestImprovement = kBestBuild.getImprovement();
 										eBestRoute = (RouteTypes)kBestBuild.getRoute();
 
 										if (ePlotFeature != NO_FEATURE && kBestBuild.isFeatureRemove(ePlotFeature))
@@ -304,7 +298,7 @@ void CvGame::updateColoredPlots()
 										{
 											if (eBestBuild != NO_BUILD)
 											{
-												CvImprovementInfo& kPlotImprovement = GC.getImprovementInfo(ePlotImprovement);
+												const CvImprovementInfo& kPlotImprovement = GC.getImprovementInfo(ePlotImprovement);
 
 												if (eBestRoute != NO_ROUTE)
 												{
@@ -335,53 +329,47 @@ void CvGame::updateColoredPlots()
 												else if (eBestImprovement == NO_IMPROVEMENT)
 												{
 													// does the best build clear a bad feature?
-													if (bBestBuildRemovesFeature && !kPlotImprovement.isRequiresFeature() 
+													if (bBestBuildRemovesFeature && !kPlotImprovement.isRequiresFeature()
 															&& GC.getFeatureInfo(ePlotFeature).isOnlyBad())
 													{
 														bCanBeImproved = true;
 													}
 												}
 											}
-											
 											bImproved = !bCanBeImproved;
 										}
-										else // no improvement
+										// no improvement
+										else if (eBestBuild != NO_BUILD)
 										{
-											if (eBestBuild != NO_BUILD)
+											if (bBestBuildRemovesFeature)
 											{
-												if (bBestBuildRemovesFeature)
+												if (ePlotBonus != NO_BONUS && eBestImprovement != NO_IMPROVEMENT
+												&& GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
 												{
-													if (ePlotBonus != NO_BONUS && eBestImprovement != NO_IMPROVEMENT 
-														&& GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
-													{
-														// does the best build provide a bonus
-														bCanBeImproved = true;
-														bCanProvideBonus = true;
-													}
-													else if (GC.getFeatureInfo(ePlotFeature).isOnlyBad())
-													{
-														// does the best build clear a bad feature?
-														bCanBeImproved = true;
-													}
-													else if (eBestImprovement != NO_IMPROVEMENT)
-													{
-														//Fuyu: count chops too if an improvement is placed instead
-														bCanBeImproved = true;
-													}
+													// does the best build provide a bonus
+													bCanBeImproved = true;
+													bCanProvideBonus = true;
 												}
-												else if (eBestRoute == NO_ROUTE)
+												else if (GC.getFeatureInfo(ePlotFeature).isOnlyBad())
 												{
-													// any other non-feature-clearing, non-route build is okay
+													// does the best build clear a bad feature?
+													bCanBeImproved = true;
+												}
+												else if (eBestImprovement != NO_IMPROVEMENT)
+												{
+													//Fuyu: count chops too if an improvement is placed instead
 													bCanBeImproved = true;
 												}
 											}
-											else
+											else if (eBestRoute == NO_ROUTE)
 											{
-												if (ePlotFeature != NO_FEATURE && GC.getFeatureInfo(ePlotFeature).isNoImprovement())
-												{
-													bCanNeverBeImproved = true;
-												}
+												// any other non-feature-clearing, non-route build is okay
+												bCanBeImproved = true;
 											}
+										}
+										else if (ePlotFeature != NO_FEATURE && GC.getFeatureInfo(ePlotFeature).isNoImprovement())
+										{
+											bCanNeverBeImproved = true;
 										}
 									}
 								}
@@ -430,7 +418,6 @@ void CvGame::updateColoredPlots()
 					}
 				}
 			}
-// BUG - City Plot Status - end
 
 			pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
 
@@ -445,7 +432,7 @@ void CvGame::updateColoredPlots()
 
 					if (pRallyPlot != NULL)
 					{
-						gDLL->getEngineIFace()->addColoredPlot(pRallyPlot->getViewportX(), pRallyPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
+						gDLL->getEngineIFace()->addColoredPlot(pRallyPlot->getViewportX(), pRallyPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
 			}
@@ -453,40 +440,30 @@ void CvGame::updateColoredPlots()
 	}
 	else if (pHeadSelectedUnit != NULL)
 	{
-		if (gDLL->getGraphicOption(GRAPHICOPTION_CITY_RADIUS))
+		if (gDLL->getGraphicOption(GRAPHICOPTION_CITY_RADIUS) && gDLL->getInterfaceIFace()->canSelectionListFound())
 		{
-			if (gDLL->getInterfaceIFace()->canSelectionListFound())
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				for (iI = 0; iI < GC.getMap().numPlots(); iI++)
-				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
+				pLoopPlot = GC.getMap().plotByIndex(iI);
 
-					if (pLoopPlot->getOwner() == pHeadSelectedUnit->getOwner())
-					{
-						if (pLoopPlot->getWorkingCity() != NULL)
-						{
-							NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")/*(GC.getPlayerColorInfo(GET_PLAYER(pHeadSelectedUnit->getOwner()).getPlayerColor()).getColorTypePrimary())*/).getColor());
-							color.a = 1.0f;
-							gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
-						}
-					}
+				if (pLoopPlot->getOwner() == pHeadSelectedUnit->getOwner() && pLoopPlot->getWorkingCity() != NULL)
+				{
+					NiColorA color(GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor());
+					color.a = 1.0f;
+					gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 				}
 			}
 		}
 
 		// Dale - RB: Field Bombard START
-		if(GC.isDCM_RANGE_BOMBARD())
+		if (GC.isDCM_RANGE_BOMBARD())
 		{
-			iMaxAirRange = 0;
+			int iMaxAirRange = 0;
 
-			pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-			while (pSelectedUnitNode != NULL)
+			foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 			{
-				pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-				if (pSelectedUnit != NULL)
+				FAssert(pSelectedUnit != NULL);
+				//if (pSelectedUnit != NULL)
 				{
 					iMaxAirRange = std::max(iMaxAirRange, pSelectedUnit->getDCMBombRange());
 				}
@@ -494,21 +471,26 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				for (iDX = -(iMaxAirRange); iDX <= iMaxAirRange; iDX++)
-				{
-					for (iDY = -(iMaxAirRange); iDY <= iMaxAirRange; iDY++)
-					{
-						pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
+				const CvPlot* pFromPlot = pHeadSelectedUnit->plot();
+				const CvSelectionGroup* pGroup = pHeadSelectedUnit->getGroup();
 
-						if (pLoopPlot != NULL)
+				foreach_(const CvPlot* pLoopPlot, pFromPlot->rect(iMaxAirRange, iMaxAirRange))
+				{
+					if (pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false) && plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
+					{
+						NiColorA color(GC.getColorInfo(GC.getCOLOR_WHITE()).getColor());
+						if (pGroup->canBombardAtRanged(pFromPlot, pLoopPlot->getX(), pLoopPlot->getY()))
 						{
-							if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
+							if (pLoopPlot->getNumVisibleEnemyCombatUnits(pHeadSelectedUnit->getOwner()))
 							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
-								color.a = 0.4f;
-								gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
+								color.r = 0.0f;
+								color.b = 0.0f;
 							}
+							else color.b = 0.0f;
 						}
+						else color.a = 0.33f;
+
+						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
 			}
@@ -517,16 +499,12 @@ void CvGame::updateColoredPlots()
 
 		if (pHeadSelectedUnit->getDomainType() == DOMAIN_AIR)
 		{
-			iMaxAirRange = 0;
+			int iMaxAirRange = 0;
 
-			pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-			while (pSelectedUnitNode != NULL)
+			foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 			{
-				pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-				if (pSelectedUnit != NULL)
+				FAssert(pSelectedUnit != NULL);
+				//if (pSelectedUnit != NULL)
 				{
 					iMaxAirRange = std::max(iMaxAirRange, pSelectedUnit->airRange());
 				}
@@ -534,46 +512,29 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				for (iDX = -(iMaxAirRange); iDX <= iMaxAirRange; iDX++)
+				foreach_(const CvPlot* pLoopPlot, pHeadSelectedUnit->plot()->rect(iMaxAirRange, iMaxAirRange))
 				{
-					for (iDY = -(iMaxAirRange); iDY <= iMaxAirRange; iDY++)
+					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 					{
-						pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL)
-						{
-							if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
-							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
-								color.a = 0.5f;
-								gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
-							}
-						}
+						NiColorA color(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor());
+						color.a = 0.5f;
+						gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
 					}
 				}
 			}
 		}
 		else if(pHeadSelectedUnit->airRange() > 0) //other ranged units
 		{
-			int iRange = pHeadSelectedUnit->airRange();
-			for (iDX = -(iRange); iDX <= iRange; iDX++)
+			const int iRange = pHeadSelectedUnit->airRange();
+			foreach_(CvPlot* pTargetPlot, pHeadSelectedUnit->plot()->rect(iRange, iRange))
 			{
-				for (iDY = -(iRange); iDY <= iRange; iDY++)
+				if (pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
+				&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
+				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange, pHeadSelectedUnit->getFacingDirection(true)))
 				{
-					CvPlot* pTargetPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-					if (pTargetPlot != NULL && pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
-					{
-						if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange)
-						{
-							if (pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange, pHeadSelectedUnit->getFacingDirection(true)))
-							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
-								color.a = 0.5f;
-								gDLL->getEngineIFace()->fillAreaBorderPlot(pTargetPlot->getX(), pTargetPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
-							}
-						}
-					}
+					NiColorA color(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor());
+					color.a = 0.5f;
+					gDLL->getEngineIFace()->fillAreaBorderPlot(pTargetPlot->getX(), pTargetPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
 				}
 			}
 		}
@@ -582,62 +543,47 @@ void CvGame::updateColoredPlots()
 
 		if (!(GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS)))
 		{
-			if ((pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER) || (pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA))
+			if ((pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+			&& pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
 			{
-				if (pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
+				pCity = pHeadSelectedUnit->plot()->getWorkingCity();
+
+				if (pCity != NULL && pHeadSelectedUnit->AI_bestCityBuild(pCity, &pBestPlot))
 				{
-					pCity = pHeadSelectedUnit->plot()->getWorkingCity();
+					FAssert(pBestPlot != NULL);
+					gDLL->getEngineIFace()->addColoredPlot(pBestPlot->getViewportX(), pBestPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 
-					if (pCity != NULL)
+					if (pHeadSelectedUnit->AI_bestCityBuild(pCity, &pNextBestPlot, NULL, pBestPlot))
 					{
-						if (pHeadSelectedUnit->AI_bestCityBuild(pCity, &pBestPlot))
-						{
-							FAssert(pBestPlot != NULL);
-							gDLL->getEngineIFace()->addColoredPlot(pBestPlot->getViewportX(), pBestPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
-
-							if (pHeadSelectedUnit->AI_bestCityBuild(pCity, &pNextBestPlot, NULL, pBestPlot))
-							{
-								FAssert(pNextBestPlot != NULL);
-								gDLL->getEngineIFace()->addColoredPlot(pNextBestPlot->getViewportX(), pNextBestPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
-							}
-						}
+						FAssert(pNextBestPlot != NULL);
+						gDLL->getEngineIFace()->addColoredPlot(pNextBestPlot->getViewportX(), pNextBestPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 					}
 				}
 			}
 
-			iRange = 4;
+			const int iRange = 4;
 
-			for (iDX = -(iRange); iDX <= iRange; iDX++)
+			foreach_(const CvPlot* pLoopPlot, pHeadSelectedUnit->plot()->rect(iRange, iRange))
 			{
-				for (iDY = -(iRange); iDY <= iRange; iDY++)
+				if (pLoopPlot->area() == pHeadSelectedUnit->area() || pLoopPlot->isAdjacentToArea(pHeadSelectedUnit->area()))
 				{
-					pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL)
+					if (pHeadSelectedUnit->canFound(pLoopPlot) && GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(pLoopPlot))
 					{
-						if ((pLoopPlot->area() == pHeadSelectedUnit->area()) || pLoopPlot->isAdjacentToArea(pHeadSelectedUnit->area()))
-						{
-							if (pHeadSelectedUnit->canFound(pLoopPlot))
-							{
-								if (GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(pLoopPlot))
-								{
-									gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getX(), pLoopPlot->getY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
-								}
-							}
-							if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getViewportX(), pLoopPlot->getViewportY(), pLoopPlot->getY()) <= iRange)
-							{
-								if (pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
-								{
-									if (pHeadSelectedUnit->isNoBadGoodies())
-									{
-										if (pLoopPlot->isRevealedGoody(pHeadSelectedUnit->getTeam()))
-										{
-											gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
-										}
-									}
-								}
-							}
-						}
+						gDLL->getEngineIFace()->addColoredPlot(
+							pLoopPlot->getX(), pLoopPlot->getY(),
+							GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(),
+							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
+						);
+					}
+					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getViewportX(), pLoopPlot->getViewportY(), pLoopPlot->getY()) <= iRange
+					&& pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false) && pHeadSelectedUnit->isNoBadGoodies()
+					&& pLoopPlot->isRevealedGoody(pHeadSelectedUnit->getTeam()))
+					{
+						gDLL->getEngineIFace()->addColoredPlot(
+							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
+							GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(),
+							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
+						);
 					}
 				}
 			}
@@ -649,44 +595,27 @@ void CvGame::updateColoredPlots()
 
 			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 			{
-				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+				const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 
 				if (kPlayer.getTeam() == getActiveTeam())
 				{
-					int iLoop;
-					for (CvUnit* pLoopUnit = kPlayer.firstUnit(&iLoop); NULL != pLoopUnit; pLoopUnit = kPlayer.nextUnit(&iLoop))
+					foreach_(const CvUnit* pLoopUnit, kPlayer.units()
+					| filtered(CvUnit::fn::isBlockading()))
 					{
-						if (pLoopUnit->isBlockading())
+						foreach_(const CvPlot* pLoopPlot, pLoopUnit->plot()->rect(iBlockadeRange, iBlockadeRange)
+						| filtered(CvPlot::fn::isRevealed(getActiveTeam(), false)))
 						{
-							for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
+							if (GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange)
 							{
-								for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
-								{
-									CvPlot* pLoopPlot = ::plotXY(pLoopUnit->getX(), pLoopUnit->getY(), i, j);
-									if (NULL != pLoopPlot && pLoopPlot->isRevealed(getActiveTeam(), false))
-									{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      12/11/08                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-										if( GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange )
-										{
-											// No blockading on other side of an isthmus
-											continue;
-										}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+								// No blockading on other side of an isthmus
+								continue;
+							}
 
-										if (pLoopPlot->isWater() && pLoopPlot->area() == pLoopUnit->area())
-										{
-											NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());
-											color.a = 0.5f;
-											gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_BLOCKADING);
-										}
-									}
-								}
+							if (pLoopPlot->isWater() && pLoopPlot->area() == pLoopUnit->area())
+							{
+								NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());
+								color.a = 0.5f;
+								gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_BLOCKADING);
 							}
 						}
 					}
@@ -695,6 +624,7 @@ void CvGame::updateColoredPlots()
 		}
 	}
 }
+
 
 void CvGame::updateBlockadedPlots()
 {
@@ -711,13 +641,12 @@ void CvGame::updateBlockadedPlots()
 
 		if (pLoopPlot->getBlockadedCount(getActiveTeam()) > 0 && pLoopPlot->isRevealed(getActiveTeam(), false))
 		{
-			NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLACK")).getColor());
+			NiColorA color(GC.getColorInfo(GC.getCOLOR_BLACK()).getColor());
 			color.a = 0.35f;
 			gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_BLOCKADED);
 		}
 	}
 }
-
 
 
 void CvGame::updateSelectionList()
@@ -732,7 +661,7 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 		return;
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
 	{
@@ -757,70 +686,54 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 void CvGame::updateTestEndTurn()
 {
 	PROFILE_FUNC();
-	
-	bool bAny;
+	const CvPlayer& player = GET_PLAYER(getActivePlayer());
+	FAssertMsg(player.isHuman(), "Why would exe call this for AI players?")
 
-	bAny = ((gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL) && !(GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_CYCLING)));
-
-	if (GET_PLAYER(getActivePlayer()).isTurnActive())
+	if (!player.isTurnActive())
 	{
-		if (gDLL->getInterfaceIFace()->isEndTurnMessage())
+		return;
+	}
+
+	if (gDLL->getInterfaceIFace()->isEndTurnMessage())
+	{
+		if (player.hasReadyUnit(gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL && !player.isOption(PLAYEROPTION_NO_UNIT_CYCLING)))
 		{
-			if (GET_PLAYER(getActivePlayer()).hasReadyUnit(bAny))
+			gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+		}
+	}
+	else if (!player.hasBusyUnit()
+	&& !player.hasReadyUnit(gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL
+	&& !player.isOption(PLAYEROPTION_NO_UNIT_CYCLING)))
+	{
+		if (!gDLL->getInterfaceIFace()->isForcePopup())
+		{
+			gDLL->getInterfaceIFace()->setForcePopup(true);
+		}
+		else if (!player.hasAutoUnit())
+		{
+			const bool bDecisionlessTurn = !player.getTurnHadUIInteraction();
+
+			if (isHotSeat() || isPbem()
+			|| bDecisionlessTurn && !getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false)
+			|| !bDecisionlessTurn && player.isOption(PLAYEROPTION_WAIT_END_TURN))
 			{
-				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+				gDLL->getInterfaceIFace()->setEndTurnMessage(true);
+				return;
+			}
+
+			if (gDLL->getInterfaceIFace()->getEndTurnCounter() > 0)
+			{
+				gDLL->getInterfaceIFace()->changeEndTurnCounter(-1);
+			}
+			else
+			{
+				CvMessageControl::getInstance().sendTurnComplete();
+				gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 			}
 		}
-		else
+		else if (!gDLL->shiftKey())
 		{
-			if (!(GET_PLAYER(getActivePlayer()).hasBusyUnit()) && !(GET_PLAYER(getActivePlayer()).hasReadyUnit(bAny)))
-			{
-				if (!(gDLL->getInterfaceIFace()->isForcePopup()))
-				{
-					gDLL->getInterfaceIFace()->setForcePopup(true);
-				}
-				else
-				{
-					if (GET_PLAYER(getActivePlayer()).hasAutoUnit())
-					{
-						if (!(gDLL->shiftKey()))
-						{
-							CvMessageControl::getInstance().sendAutoMoves();
-						}
-					}
-					else
-					{
-						bool	bDisplayEndTurn = GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_WAIT_END_TURN) || !(gDLL->getInterfaceIFace()->isHasMovedUnit());
-
-						if (GET_PLAYER(getActivePlayer()).isHuman() &&
-							!GET_PLAYER(getActivePlayer()).getTurnHadUIInteraction() &&
-							getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false))
-						{
-							//OutputDebugString("Auto-ending turn (no UI interaction detected)\n");
-							bDisplayEndTurn = false;
-						}
-
-						if (bDisplayEndTurn || isHotSeat() || isPbem())
-						{
-							gDLL->getInterfaceIFace()->setEndTurnMessage(true);
-
-							//stopProfilingDLL(true);
-						}
-						else
-						{
-							if (gDLL->getInterfaceIFace()->getEndTurnCounter() > 0)
-							{
-								gDLL->getInterfaceIFace()->changeEndTurnCounter(-1);
-							}
-							else
-							{
-								CvMessageControl::getInstance().sendTurnComplete();
-								gDLL->getInterfaceIFace()->setEndTurnCounter(3); // XXX
-							}
-						}
-					}
-				}
-			}
+			CvMessageControl::getInstance().sendAutoMoves();
 		}
 	}
 }
@@ -829,62 +742,42 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 {
 	PROFILE_FUNC();
 
-	PlayerTypes activePlayer = getActivePlayer();
-	TeamTypes activeTeam = getActiveTeam();
-
 	if (pPlot != NULL)
 	{
+		const PlayerTypes activePlayer = getActivePlayer();
+		const TeamTypes activeTeam = getActiveTeam();
 		int iCount = 0;
-
 		for (int iPass = 0; iPass < 2; iPass++)
 		{
-			CLLNode<IDInfo>* pUnitNode1 = pPlot->headUnitNode();
-
-			while (pUnitNode1 != NULL)
+			foreach_(CvUnit* pLoopUnit1, pPlot->units())
 			{
-				CvUnit* pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
-
-				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
+				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo()
+				&& (pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
 				{
-					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
+					if (iCount == iIndex)
 					{
-						if (iCount == iIndex)
-						{
-							return pLoopUnit1;
-						}
+						return pLoopUnit1;
+					}
+					iCount++;
 
-						iCount++;
-
-						//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+					if (pLoopUnit1->hasCargo())
+					{
+						foreach_(CvUnit* pLoopUnit2, pPlot->units())
 						{
-							if (pLoopUnit1->hasCargo())
+							if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 							{
-								CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
-
-								while (pUnitNode2 != NULL)
+								if (iCount == iIndex)
 								{
-									CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
-
-									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
-									{
-										if (iCount == iIndex)
-										{
-											return pLoopUnit2;
-										}
-
-										iCount++;
-									}
-									pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
+									return pLoopUnit2;
 								}
+								iCount++;
 							}
 						}
 					}
 				}
-				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
 			}
 		}
 	}
-
 	return NULL;
 }
 
@@ -893,42 +786,27 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 	PROFILE_FUNC();
 	plotUnits.erase(plotUnits.begin(), plotUnits.end());
 
-	PlayerTypes activePlayer = getActivePlayer();
-	TeamTypes activeTeam = getActiveTeam();
-
 	if (pPlot != NULL)
 	{
+		const PlayerTypes activePlayer = getActivePlayer();
+		const TeamTypes activeTeam = getActiveTeam();
+
 		for (int iPass = 0; iPass < 2; iPass++)
 		{
-			CLLNode<IDInfo>* pUnitNode1 = pPlot->headUnitNode();
-
-			while (pUnitNode1 != NULL)
+			foreach_(CvUnit* pLoopUnit1, pPlot->units())
 			{
-				CvUnit* pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
-				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
-
-				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
+				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo()
+				&& (pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
 				{
-					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
+					plotUnits.push_back(pLoopUnit1);
+
+					if (pLoopUnit1->hasCargo())
 					{
-						plotUnits.push_back(pLoopUnit1);
-
-						//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+						foreach_(CvUnit* pLoopUnit2, pPlot->units())
 						{
-							if (pLoopUnit1->hasCargo())
+							if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 							{
-								CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
-
-								while (pUnitNode2 != NULL)
-								{
-									CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
-									pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
-
-									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
-									{
-										plotUnits.push_back(pLoopUnit2);
-									}
-								}
+								plotUnits.push_back(pLoopUnit2);
 							}
 						}
 					}
@@ -940,57 +818,41 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 
 void CvGame::cycleCities(bool bForward, bool bAdd) const
 {
-	CvCity* pHeadSelectedCity;
-	CvCity* pSelectCity;
-	CvCity* pLoopCity;
+	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	CvCity* pSelectCity = NULL;
 	int iLoop;
-
-	pSelectCity = NULL;
-
-	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if ((pHeadSelectedCity != NULL) && ((pHeadSelectedCity->getTeam() == getActiveTeam()) || isDebugMode()))
+	if (pHeadSelectedCity != NULL && (pHeadSelectedCity->getTeam() == getActiveTeam() || isDebugMode()))
 	{
-		iLoop = pHeadSelectedCity->getIndex();
-		iLoop += (bForward ? 1 : -1);
+		iLoop = pHeadSelectedCity->getIndex() + (bForward ? 1 : -1);
 
-		pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).nextCity(&iLoop, !bForward);
+		CvCity* pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).nextCity(&iLoop, !bForward);
 
 		if (pLoopCity == NULL)
 		{
 			pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).firstCity(&iLoop, !bForward);
 		}
 
-		if ((pLoopCity != NULL) && (pLoopCity != pHeadSelectedCity))
+		if (pLoopCity != NULL && pLoopCity != pHeadSelectedCity)
 		{
 			pSelectCity = pLoopCity;
 		}
 	}
-	else
-	{
-		pSelectCity = GET_PLAYER(getActivePlayer()).firstCity(&iLoop, !bForward);
-	}
+	else pSelectCity = GET_PLAYER(getActivePlayer()).firstCity(&iLoop, !bForward);
 
 	if (pSelectCity != NULL)
 	{
-		if ( GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getViewportSelectionBorder()) )
+		if (GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 		{
 			if (bAdd)
 			{
 				gDLL->getInterfaceIFace()->clearSelectedCities();
 				gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity);
 			}
-			else
-			{
-				gDLL->getInterfaceIFace()->selectCity(pSelectCity);
-			}
+			else gDLL->getInterfaceIFace()->selectCity(pSelectCity);
 
 			gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 		}
-		else
-		{
-			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
-		}
+		else GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
 	}
 }
 
@@ -1004,11 +866,7 @@ void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers) con
 void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
 {
 	CvSelectionGroup* pNextSelectionGroup;
-	CvPlot* pPlot;
-	CvUnit* pCycleUnit;
-	bool bWrap;
-
-	pCycleUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pCycleUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pCycleUnit != NULL)
 	{
@@ -1016,63 +874,51 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 		{
 			pCycleUnit = NULL;
 		}
-
+		bool bWrap;
 		pNextSelectionGroup = GET_PLAYER(getActivePlayer()).cycleSelectionGroups(pCycleUnit, bForward, bWorkers, &bWrap, bAllowViewportSwitch);
 
-		if (bWrap)
+		if (bWrap && GET_PLAYER(getActivePlayer()).hasAutoUnit())
 		{
-			if (GET_PLAYER(getActivePlayer()).hasAutoUnit())
-			{
-				CvMessageControl::getInstance().sendAutoMoves();
-			}
+			CvMessageControl::getInstance().sendAutoMoves();
 		}
 	}
 	else
 	{
-		pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
+		const CvPlot* pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
 		pNextSelectionGroup = GC.getMap().findSelectionGroupInternal(((pPlot != NULL) ? pPlot->getX() : 0), ((pPlot != NULL) ? pPlot->getY() : 0), getActivePlayer(), true, bWorkers, bAllowViewportSwitch);
 	}
 
-	bool bViewportSwitched = false;
-
 	if (pNextSelectionGroup != NULL)
 	{
-		if ( !GC.getCurrentViewport()->isInViewport(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), GC.getViewportSelectionBorder()) )
+		if (!GC.getCurrentViewport()->isInViewport(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 		{
-			CvUnit*	pSelectionUnit = pNextSelectionGroup->getHeadUnit();
-
-			bool bLookatUnit = (bSetCamera && ((pCycleUnit != pSelectionUnit) || ((pCycleUnit != NULL) && pCycleUnit->getGroup()->readyToSelect())));
-
-			bViewportSwitched = true;
-
-			GC.getCurrentViewport()->bringIntoView(pNextSelectionGroup->getX(),
-												   pNextSelectionGroup->getY(),
-												   pSelectionUnit,
-												   bLookatUnit);
+			// Switch viewport
+			GC.getCurrentViewport()->bringIntoView(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), pNextSelectionGroup->getHeadUnit());
+			return;
 		}
-		//	If we switched viewport then the asynchronous viewport switching will also handle the unit selection
+		// If we switched viewport then the asynchronous viewport switching will also handle the unit selection
 		else
 		{
 			FAssert(pNextSelectionGroup->getOwner() == getActivePlayer());
 			gDLL->getInterfaceIFace()->selectUnit(pNextSelectionGroup->getHeadUnit(), bClear);
 		}
 	}
-
-	//	If we switched viewport then the asynchronous viewport switching will also handle the lookat
-	if (!bViewportSwitched &&
-		bSetCamera &&
-		((pCycleUnit != gDLL->getInterfaceIFace()->getHeadSelectedUnit()) || ((pCycleUnit != NULL) && pCycleUnit->getGroup()->readyToSelect())))
-	{
-		gDLL->getInterfaceIFace()->lookAtSelectionPlot();
-	}
+	// If we switched viewport then the asynchronous viewport switching will also handle the lookat
+	if (bSetCamera
+		&&
+		(
+			pCycleUnit != gDLL->getInterfaceIFace()->getHeadSelectedUnit()
+			||
+			pCycleUnit != NULL && pCycleUnit->getGroup()->readyToSelect()
+		)
+	) gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 }
 
 
 // Returns true if unit was cycled...
-bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pSelectedUnit;
 	CvUnit* pLoopUnit = NULL;
 
 	FAssertMsg(iCount >= -1, "iCount expected to be >= -1");
@@ -1089,7 +935,6 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 			{
 				break;
 			}
-
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		}
 	}
@@ -1101,16 +946,14 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 		{
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 
-			if ((iCount - 1) == 0)
+			if (iCount == 1)
 			{
 				break;
 			}
-
 			if (iCount > 0)
 			{
 				iCount--;
 			}
-
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		}
 
@@ -1127,7 +970,7 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 
 	if (pUnitNode != NULL)
 	{
-		pSelectedUnit = pLoopUnit;
+		CvUnit* pSelectedUnit = pLoopUnit;
 
 		while (true)
 		{
@@ -1150,27 +993,21 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 
-			if (iCount == -1)
+			if (iCount == -1 && pLoopUnit == pSelectedUnit)
 			{
-				if (pLoopUnit == pSelectedUnit)
-				{
-					break;
-				}
+				break;
 			}
 
 			if (pLoopUnit->getOwner() == getActivePlayer())
 			{
-				if (bAuto)
-				{
-					if (pLoopUnit->getGroup()->readyToSelect())
-					{
-						gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true);
-						return true;
-					}
-				}
-				else
+				if (!bAuto)
 				{
 					gDLL->getInterfaceIFace()->insertIntoSelectionList(pLoopUnit, true, false);
+					return true;
+				}
+				if (pLoopUnit->getGroup()->readyToSelect())
+				{
+					gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true);
 					return true;
 				}
 			}
@@ -1199,16 +1036,14 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 
 	if (bAlt)
 	{
-		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwner()).nextCity(&iLoop))
+		foreach_(CvCity* pLoopCity, GET_PLAYER(pSelectCity->getOwner()).cities())
 		{
 			gDLL->getInterfaceIFace()->addSelectedCity(pLoopCity);
 		}
 	}
 	else if (bCtrl)
 	{
-		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwner()).nextCity(&iLoop))
+		foreach_(CvCity* pLoopCity, GET_PLAYER(pSelectCity->getOwner()).cities())
 		{
 			if (pLoopCity->getArea() == pSelectCity->getArea())
 			{
@@ -1216,34 +1051,20 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 			}
 		}
 	}
-	else
-	{
-		gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity, bShift);
-	}
+	else gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity, bShift);
 
 	return true;
 }
 
 void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const
 {
-	CLLNode<IDInfo>* pSelectedUnitNode;
-	CvUnit* pHeadSelectedUnit;
-	CvUnit* pSelectedUnit;
-	TeamTypes eRivalTeam;
-
 	if (pPlot == NULL)
 	{
 		return;
 	}
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if (Cy::call<bool>(PYGameModule, "cannotSelectionListMove", Cy::Args() << pPlot << bAlt << bShift << bCtrl))
-	{
-		return;
-	}
-
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-
-	if ((pHeadSelectedUnit == NULL) || (pHeadSelectedUnit->getOwner() != getActivePlayer()))
+	if (pHeadSelectedUnit == NULL || pHeadSelectedUnit->getOwner() != getActivePlayer())
 	{
 		return;
 	}
@@ -1256,23 +1077,14 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 	{
 		gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, true, false);
 	}
+	const bool bAskToDeclareWar = getBugOptionBOOL("Actions__AskDeclareWarUnits", true, "BUG_ASK_DECLARE_WAR_UNITS");
 
-// BUG - Declare War - start
-	bool bAskToDeclareWar = getBugOptionBOOL("Actions__AskDeclareWarUnits", true, "BUG_ASK_DECLARE_WAR_UNITS");
-// BUG - Declare War - end
-
-	pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-	while (pSelectedUnitNode != NULL)
+	foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 	{
-		pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
+		const TeamTypes eRivalTeam = pSelectedUnit->getDeclareWarMove(pPlot);
 
-		eRivalTeam = pSelectedUnit->getDeclareWarMove(pPlot);
-
-// BUG - Declare War - start
 		// only ask if option is off or moving into rival territory without open borders
 		if (eRivalTeam != NO_TEAM && (pPlot->getTeam() == eRivalTeam || bAskToDeclareWar))
-// BUG - Declare War - end
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DECLAREWARMOVE);
 			if (NULL != pInfo)
@@ -1286,8 +1098,6 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 			}
 			return;
 		}
-
-		pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
 	}
 
 	selectionListGameNetMessageInternal(GAMEMESSAGE_PUSH_MISSION, MISSION_MOVE_TO, pPlot->getX(), pPlot->getY(), 0, false, bShift, false);
@@ -1301,196 +1111,152 @@ void CvGame::selectionListGameNetMessage(int eMessage, int iData2, int iData3, i
 
 void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift, bool bInViewportCoordinates) const
 {
-	CLLNode<IDInfo>* pSelectedUnitNode;
-	CvUnit* pHeadSelectedUnit;
-	CvUnit* pSelectedUnit;
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if (Cy::call<bool>(PYGameModule, "cannotSelectionListGameNetMessage", Cy::Args() 
-		<< eMessage << iData2 << iData3 << iData4 << iFlags << bAlt << bShift))
+	if (pHeadSelectedUnit == NULL || pHeadSelectedUnit->getOwner() != getActivePlayer())
 	{
 		return;
 	}
 
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-
-	if (pHeadSelectedUnit != NULL)
+	switch(eMessage)
 	{
-		if (pHeadSelectedUnit->getOwner() == getActivePlayer())
+		case GAMEMESSAGE_JOIN_GROUP:
 		{
-			if (eMessage == GAMEMESSAGE_JOIN_GROUP)
+			foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 			{
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-				while (pSelectedUnitNode != NULL)
+				if (bShift || pSelectedUnit == pHeadSelectedUnit)
 				{
-					pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-					pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-					if (bShift)
-					{
-						CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), FFreeList::INVALID_INDEX);
-					}
-					else
-					{
-						if (pSelectedUnit == pHeadSelectedUnit)
-						{
-							CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), FFreeList::INVALID_INDEX);
-						}
-
-						CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), pHeadSelectedUnit->getID());
-					}
-				}
-
-				if (bShift)
-				{
-					gDLL->getInterfaceIFace()->selectUnit(pHeadSelectedUnit, true);
-				}
-			}
-			else if (eMessage == GAMEMESSAGE_DO_COMMAND)
-			{
-// BUG - All Units Actions - start
-				if ((iData2 == COMMAND_DELETE) && bAlt)
-				{
-					CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwner());
-					int iLoop;
-					pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-					pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-					UnitTypes kType = pSelectedUnit->getUnitType();
-
-					for (CvUnit* pLoopUnit = kPlayer.firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = kPlayer.nextUnit(&iLoop))
-					{
-						if (pLoopUnit->getUnitType() == kType)
-						{
-							CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), ((CommandTypes)iData2), iData3, iData4, bAlt);
-						}
-					}
+					CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), FFreeList::INVALID_INDEX);
 				}
 				else
 				{
-					// unchanged
-					pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-					while (pSelectedUnitNode != NULL)
-					{
-						pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-						pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-						CvMessageControl::getInstance().sendDoCommand(pSelectedUnit->getID(), ((CommandTypes)iData2), iData3, iData4, bAlt);
-					}
+					CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), pHeadSelectedUnit->getID());
 				}
-// BUG - All Units Actions - end
 			}
-			else if ((eMessage == GAMEMESSAGE_PUSH_MISSION) || (eMessage == GAMEMESSAGE_AUTO_MISSION))
+			if (bShift)
 			{
-				if (!(gDLL->getInterfaceIFace()->mirrorsSelectionGroup()))
-				{
-					selectionListGameNetMessage(GAMEMESSAGE_JOIN_GROUP);
-				}
+				gDLL->getInterfaceIFace()->selectUnit(pHeadSelectedUnit, true);
+			}
+			break;
+		}
+		case GAMEMESSAGE_DO_COMMAND:
+		{
+			if (iData2 == COMMAND_DELETE && bAlt)
+			{
+				const UnitTypes eType = pHeadSelectedUnit->getUnitType();
 
-				if (eMessage == GAMEMESSAGE_PUSH_MISSION)
+				foreach_(const CvUnit* pLoopUnit, GET_PLAYER(pHeadSelectedUnit->getOwner()).units())
 				{
-// BUG - All Units Actions - start
-					if (((iData2 == MISSION_FORTIFY) || (iData2 == MISSION_SLEEP) || /*(iData2 == MISSION_ESTABLISH) || (iData2 == MISSION_ESCAPE) ||*/ (iData2 == MISSION_BUILDUP) || (iData2 == MISSION_AUTO_BUILDUP))&& bAlt)
+					if (pLoopUnit->getUnitType() == eType)
 					{
-						CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwner());
-						int iLoop;
-						pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-						pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-						UnitTypes eUnit = pSelectedUnit->getUnitType();
-
-						for(CvSelectionGroup* pLoopSelectionGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = kPlayer.nextSelectionGroup(&iLoop))
-						{
-							if (pLoopSelectionGroup->allMatch(eUnit))
-								CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
-						}
+						CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), (CommandTypes)iData2, iData3, iData4, bAlt);
 					}
-					else
-					{
-						//	For missions that take plot coordinates, convert to map coordinates
-						if ( bInViewportCoordinates )
-						{
-							switch(iData2)
-							{
-							case MISSION_MOVE_TO:
-							case MISSION_ROUTE_TO:
-							case MISSION_NUKE:
-							case MISSION_RECON:
-							case MISSION_PARADROP:
-							case MISSION_AIRLIFT:
-							case MISSION_AIRBOMB:
-							case MISSION_RANGE_ATTACK:
-							case MISSION_AIRBOMB1:
-							case MISSION_AIRBOMB2:
-							case MISSION_AIRBOMB3:
-							case MISSION_AIRBOMB4:
-							case MISSION_AIRBOMB5:
-							case MISSION_RBOMBARD:
-							case MISSION_FENGAGE:
-							case MISSION_CLAIM_TERRITORY:
-							case MISSION_PRETARGET_NUKE:
-								iData3 = GC.getCurrentViewport()->getMapXFromViewportX(iData3);
-								iData4 = GC.getCurrentViewport()->getMapYFromViewportY(iData4);
-								break;
-							default:
-								break;
-							}
-						}
-						// unchanged
-						CvMessageControl::getInstance().sendPushMission(pHeadSelectedUnit->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
-					}
-// BUG - All Units Actions - end
-				}
-				else
-				{
-					CvMessageControl::getInstance().sendAutoMission(pHeadSelectedUnit->getID());
 				}
 			}
 			else
 			{
-				FAssert(false);
+				foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
+				{
+					CvMessageControl::getInstance().sendDoCommand(pSelectedUnit->getID(), (CommandTypes)iData2, iData3, iData4, bAlt);
+				}
 			}
+			break;
 		}
+		case GAMEMESSAGE_PUSH_MISSION:
+		case GAMEMESSAGE_AUTO_MISSION:
+		{
+			if (!gDLL->getInterfaceIFace()->mirrorsSelectionGroup())
+			{
+				selectionListGameNetMessage(GAMEMESSAGE_JOIN_GROUP);
+			}
+
+			if (eMessage != GAMEMESSAGE_PUSH_MISSION)
+			{
+				CvMessageControl::getInstance().sendAutoMission(pHeadSelectedUnit->getID());
+			}
+			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
+			{
+				const UnitTypes eUnit = pHeadSelectedUnit->getUnitType();
+
+				foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(pHeadSelectedUnit->getOwner()).groups())
+				{
+					if (pLoopSelectionGroup->allMatch(eUnit))
+					{
+						CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), (MissionTypes)iData2, iData3, iData4, iFlags, bShift);
+					}
+				}
+			}
+			else
+			{
+				//	For missions that take plot coordinates, convert to map coordinates
+				if (bInViewportCoordinates)
+				{
+					switch(iData2)
+					{
+						case MISSION_MOVE_TO:
+						case MISSION_ROUTE_TO:
+						case MISSION_NUKE:
+						case MISSION_RECON:
+						case MISSION_PARADROP:
+						case MISSION_AIRLIFT:
+						case MISSION_AIRBOMB:
+						case MISSION_RANGE_ATTACK:
+						case MISSION_AIRBOMB1:
+						case MISSION_AIRBOMB2:
+						case MISSION_AIRBOMB3:
+						case MISSION_AIRBOMB4:
+						case MISSION_AIRBOMB5:
+						case MISSION_RBOMBARD:
+						case MISSION_FENGAGE:
+						case MISSION_CLAIM_TERRITORY:
+						{
+							iData3 = GC.getCurrentViewport()->getMapXFromViewportX(iData3);
+							iData4 = GC.getCurrentViewport()->getMapYFromViewportY(iData4);
+							break;
+						}
+						default: break;
+					}
+				}
+				CvMessageControl::getInstance().sendPushMission(pHeadSelectedUnit->getID(), (MissionTypes)iData2, iData3, iData4, iFlags, bShift);
+			}
+			break;
+		}
+		default: FErrorMsg("error");
 	}
 }
 
 
 void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, int iData4, bool bOption, bool bAlt, bool bShift, bool bCtrl) const
 {
-	CLLNode<IDInfo>* pSelectedCityNode;
-	CvCity* pSelectedCity;
-
-	pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
+	CLLNode<IDInfo>* pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
 
 	while (pSelectedCityNode != NULL)
 	{
-		pSelectedCity = ::getCity(pSelectedCityNode->m_data);
+		CvCity* pSelectedCity = ::getCity(pSelectedCityNode->m_data);
 		pSelectedCityNode = gDLL->getInterfaceIFace()->nextSelectedCitiesNode(pSelectedCityNode);
 
-		if (pSelectedCity != NULL)
+		if (pSelectedCity != NULL && pSelectedCity->getOwner() == getActivePlayer())
 		{
-			if (pSelectedCity->getOwner() == getActivePlayer())
+			switch (eMessage)
 			{
-				switch (eMessage)
+			case GAMEMESSAGE_PUSH_ORDER:
+				cityPushOrder(pSelectedCity, (OrderTypes)iData2, iData3, bAlt, bShift, bCtrl);
+				break;
+
+			case GAMEMESSAGE_POP_ORDER:
+				if (pSelectedCity->getOrderQueueLength() > 1)
 				{
-				case GAMEMESSAGE_PUSH_ORDER:
-					cityPushOrder(pSelectedCity, ((OrderTypes)iData2), iData3, bAlt, bShift, bCtrl);
-					break;
-
-				case GAMEMESSAGE_POP_ORDER:
-					if (pSelectedCity->getOrderQueueLength() > 1)
-					{
-						CvMessageControl::getInstance().sendPopOrder(pSelectedCity->getID(), iData2);
-					}
-					break;
-
-				case GAMEMESSAGE_DO_TASK:
-					CvMessageControl::getInstance().sendDoTask(pSelectedCity->getID(), ((TaskTypes)iData2), iData3, iData4, bOption, bAlt, bShift, bCtrl);
-					break;
-
-				default:
-					FAssert(false);
-					break;
+					CvMessageControl::getInstance().sendPopOrder(pSelectedCity->getID(), iData2);
 				}
+				break;
+
+			case GAMEMESSAGE_DO_TASK:
+				CvMessageControl::getInstance().sendDoTask(pSelectedCity->getID(), ((TaskTypes)iData2), iData3, iData4, bOption, bAlt, bShift, bCtrl);
+				break;
+
+			default:
+				FErrorMsg("error");
+				break;
 			}
 		}
 	}
@@ -1501,25 +1267,10 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pSelectedGroup;
-	CvUnit* pHeadSelectedUnit;
-	CvPlot* pMissionPlot;
-	bool bShift = gDLL->shiftKey();
-
-	if(GC.getUSE_CANNOT_HANDLE_ACTION_CALLBACK())
+	if (GC.getActionInfo(iAction).getControlType() != NO_CONTROL
+	&& canDoControl((ControlTypes)GC.getActionInfo(iAction).getControlType()))
 	{
-		if (Cy::call<bool>(PYGameModule, "cannotHandleAction", Cy::Args() << pPlot << iAction << bTestVisible))
-		{
-			return false;
-		}
-	}
-
-	if (GC.getActionInfo(iAction).getControlType() != NO_CONTROL)
-	{
-		if (canDoControl((ControlTypes)(GC.getActionInfo(iAction).getControlType())))
-		{
-			return true;
-		}
+		return true;
 	}
 
 	if (gDLL->getInterfaceIFace()->isCitySelection())
@@ -1527,65 +1278,53 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 		return false; // XXX hack!
 	}
 
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if (pHeadSelectedUnit != NULL)
+	if (pHeadSelectedUnit != NULL && pHeadSelectedUnit->getOwner() == getActivePlayer()
+	&& (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GET_PLAYER(pHeadSelectedUnit->getOwner()).isTurnActive()))
 	{
-		if (pHeadSelectedUnit->getOwner() == getActivePlayer())
+		CvSelectionGroup* pSelectedInterfaceList = gDLL->getInterfaceIFace()->getSelectionList();
+
+		if (GC.getActionInfo(iAction).getMissionType() != NO_MISSION)
 		{
-			if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GET_PLAYER(pHeadSelectedUnit->getOwner()).isTurnActive())
+			CvPlot* pMissionPlot = NULL;
+
+			if (gDLL->getInterfaceIFace()->mirrorsSelectionGroup())
 			{
-				CvSelectionGroup* pSelectedInterfaceList = gDLL->getInterfaceIFace()->getSelectionList();
+				CvSelectionGroup* pSelectedGroup = pHeadSelectedUnit->getGroup();
 
-				if (GC.getActionInfo(iAction).getMissionType() != NO_MISSION)
+				if (pPlot != NULL)
 				{
-					if (gDLL->getInterfaceIFace()->mirrorsSelectionGroup())
-					{
-						pSelectedGroup = pHeadSelectedUnit->getGroup();
-
-						if (pPlot != NULL)
-						{
-							pMissionPlot = pPlot;
-						}
-						else if (bShift)
-						{
-							pMissionPlot = pSelectedGroup->lastMissionPlot();
-						}
-						else
-						{
-							pMissionPlot = NULL;
-						}
-
-						if ((pMissionPlot == NULL) || !(pMissionPlot->isVisible(pHeadSelectedUnit->getTeam(), false)))
-						{
-							pMissionPlot = pSelectedGroup->plot();
-						}
-
-					}
-					else
-					{
-						pMissionPlot = pSelectedInterfaceList->plot();
-					}
-
-					if (pSelectedInterfaceList->canStartMission(GC.getActionInfo(iAction).getMissionType(), GC.getActionInfo(iAction).getMissionData(), -1, pMissionPlot, bTestVisible, bUseCache))
-					{
-						return true;
-					}
+					pMissionPlot = pPlot;
+				}
+				else if (gDLL->shiftKey())
+				{
+					pMissionPlot = pSelectedGroup->lastMissionPlot();
 				}
 
-				if (GC.getActionInfo(iAction).getCommandType() != NO_COMMAND)
+				if (pMissionPlot == NULL || !pMissionPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
 				{
-					if (pSelectedInterfaceList->canDoCommand(((CommandTypes)(GC.getActionInfo(iAction).getCommandType())), GC.getActionInfo(iAction).getCommandData(), -1, bTestVisible, bUseCache))
-					{
-						return true;
-					}
-				}
-
-				if (gDLL->getInterfaceIFace()->canDoInterfaceMode(((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType()), pSelectedInterfaceList))
-				{
-					return true;
+					pMissionPlot = pSelectedGroup->plot();
 				}
 			}
+			else pMissionPlot = pSelectedInterfaceList->plot();
+
+
+			if (pSelectedInterfaceList->canStartMission(GC.getActionInfo(iAction).getMissionType(), GC.getActionInfo(iAction).getMissionData(), -1, pMissionPlot, bTestVisible, bUseCache))
+			{
+				return true;
+			}
+		}
+
+		if (GC.getActionInfo(iAction).getCommandType() != NO_COMMAND
+		&& pSelectedInterfaceList->canDoCommand((CommandTypes)GC.getActionInfo(iAction).getCommandType(), GC.getActionInfo(iAction).getCommandData(), -1, bTestVisible, bUseCache))
+		{
+			return true;
+		}
+
+		if (gDLL->getInterfaceIFace()->canDoInterfaceMode((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType(), pSelectedInterfaceList))
+		{
+			return true;
 		}
 	}
 
@@ -1691,11 +1430,6 @@ void CvGame::handleAction(int iAction)
 
 bool CvGame::canDoControl(ControlTypes eControl) const
 {
-	if (Cy::call<bool>(PYGameModule, "cannotHandleAction", Cy::Args() << eControl))
-	{
-		return false;
-	}
-
 	switch (eControl)
 	{
 	case CONTROL_SELECTYUNITTYPE:
@@ -1741,12 +1475,10 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_PING:
 	case CONTROL_SIGN:
 	case CONTROL_GRID:
-	case CONTROL_BARE_MAP:
 	case CONTROL_YIELDS:
 	case CONTROL_RESOURCE_ALL:
 	case CONTROL_UNIT_ICONS:
 	case CONTROL_GLOBELAYER:
-	case CONTROL_SCORES:
 	case CONTROL_FREE_COLONY:
 		if (!gDLL->getInterfaceIFace()->isFocusedWidget())
 		{
@@ -1770,15 +1502,9 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_INFO:
 	case CONTROL_DETAILS:
 	case CONTROL_SAVE_NORMAL:
+	case CONTROL_ESPIONAGE_SCREEN:
 		return true;
 		break;
-	case CONTROL_ESPIONAGE_SCREEN:
-		if (!isOption(GAMEOPTION_NO_ESPIONAGE))
-		{
-			return true;
-		}
-		break;
-
 	case CONTROL_NEXTCITY:
 	case CONTROL_PREVCITY:
 		if (!gDLL->getInterfaceIFace()->isSpaceshipScreenUp())
@@ -1806,27 +1532,21 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		break;
 
 	case CONTROL_RETIRE:
-		if ((getGameState() == GAMESTATE_ON) || isGameMultiPlayer())
+		if ((getGameState() == GAMESTATE_ON || isGameMultiPlayer()) && GET_PLAYER(getActivePlayer()).isAlive())
 		{
-			if (GET_PLAYER(getActivePlayer()).isAlive())
+			if (!isPbem() && !isHotSeat())
 			{
-				if (isPbem() || isHotSeat())
-				{
-					if (!GET_PLAYER(getActivePlayer()).isEndTurn())
-					{
-						return true;
-					}
-				}
-				else
-				{
-					return true;
-				}
+				return true;
+			}
+			if (!GET_PLAYER(getActivePlayer()).isEndTurn())
+			{
+				return true;
 			}
 		}
 		break;
 
 	case CONTROL_WORLD_BUILDER:
-		if (!(isGameMultiPlayer()) && GC.getInitCore().getAdminPassword().empty() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+		if (!isGameMultiPlayer() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 		{
 			return true;
 		}
@@ -1841,21 +1561,21 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		break;
 
 	default:
-		FAssertMsg(false, "eControl did not match any valid options");
+		FErrorMsg("eControl did not match any valid options");
 		break;
 	}
-
 	return false;
 }
+
 
 static void selectClosestCity(bool bAdd)
 {
 	CvCity* pSelectCity = GET_PLAYER(GC.getGame().getActivePlayer()).findClosestCity(gDLL->getInterfaceIFace()->getLookAtPlot());
 	if (pSelectCity != NULL)
 	{
-		if ( GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getViewportSelectionBorder()) )
+		if (GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 		{
-			if ( bAdd )
+			if (bAdd)
 			{
 				gDLL->getInterfaceIFace()->clearSelectedCities();
 				gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity);
@@ -1868,7 +1588,7 @@ static void selectClosestCity(bool bAdd)
 		}
 		else
 		{
-			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, !bAdd, true, bAdd);
+			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, !bAdd, true, bAdd);
 		}
 	}
 }
@@ -1895,7 +1615,7 @@ void CvGame::doControl(ControlTypes eControl)
 		{
 			if ( !pPlot->isInViewport(GC.getViewportCenteringBorder()) )
 			{
-				GC.getCurrentViewport()->bringIntoView(pPlot->getX(), pPlot->getY(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true, true);
+				GC.getCurrentViewport()->bringIntoView(pPlot->getX(), pPlot->getY(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
 			}
 			else
 			{
@@ -1977,13 +1697,13 @@ void CvGame::doControl(ControlTypes eControl)
 		pCapitalCity = GET_PLAYER(getActivePlayer()).getCapitalCity();
 		if (pCapitalCity != NULL)
 		{
-			if ( GC.getCurrentViewport()->isInViewport(pCapitalCity->getX(), pCapitalCity->getY(), GC.getViewportSelectionBorder()) )
+			if (GC.getCurrentViewport()->isInViewport(pCapitalCity->getX(), pCapitalCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 			{
 				gDLL->getInterfaceIFace()->selectCity(pCapitalCity);
 			}
 			else
 			{
-				GC.getCurrentViewport()->bringIntoView(pCapitalCity->getX(), pCapitalCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp());
+				GC.getCurrentViewport()->bringIntoView(pCapitalCity->getX(), pCapitalCity->getY(), NULL, true, gDLL->getInterfaceIFace()->isCityScreenUp());
 			}
 		}
 		break;
@@ -2081,10 +1801,6 @@ void CvGame::doControl(ControlTypes eControl)
 		gDLL->getEngineIFace()->SetGridMode(!(gDLL->getEngineIFace()->GetGridMode()));
 		break;
 
-	case CONTROL_BARE_MAP:
-		gDLL->getInterfaceIFace()->toggleBareMapMode();
-		break;
-
 	case CONTROL_YIELDS:
 		gDLL->getInterfaceIFace()->toggleYieldVisibleMode();
 		break;
@@ -2100,10 +1816,6 @@ void CvGame::doControl(ControlTypes eControl)
 
 	case CONTROL_GLOBELAYER:
 		gDLL->getEngineIFace()->toggleGlobeview();
-		break;
-
-	case CONTROL_SCORES:
-		gDLL->getInterfaceIFace()->toggleScoresVisible();
 		break;
 
 	case CONTROL_LOAD_GAME:
@@ -2127,17 +1839,14 @@ void CvGame::doControl(ControlTypes eControl)
 				gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 			}
 		}
+		else if (isNetworkMultiPlayer())
+		{
+			gDLL->sendMPRetire();
+			gDLL->getInterfaceIFace()->exitingToMainMenu();
+		}
 		else
 		{
-			if (isNetworkMultiPlayer())
-			{
-				gDLL->sendMPRetire();
-				gDLL->getInterfaceIFace()->exitingToMainMenu();
-			}
-			else
-			{
-				gDLL->handleRetirement(getActivePlayer());
-			}
+			gDLL->handleRetirement(getActivePlayer());
 		}
 		break;
 
@@ -2278,7 +1987,7 @@ void CvGame::doControl(ControlTypes eControl)
 		break;
 
 	case CONTROL_INFO:
-		Cy::call(PYScreensModule, "showInfoScreen", Cy::Args() << 0 << (getGameState() == GAMESTATE_ON ? 0 : 1));
+		Cy::call(PYScreensModule, "showInfoScreen", Cy::Args() << -1 << (getGameState() == GAMESTATE_ON ? 0 : 1));
 		break;
 
 	case CONTROL_GLOBE_VIEW:
@@ -2312,7 +2021,7 @@ void CvGame::doControl(ControlTypes eControl)
 	case CONTROL_WORLD_BUILDER:
 		if (GC.getInitCore().getAdminPassword().empty())
 		{
-			gDLL->getInterfaceIFace()->setWorldBuilder(!(gDLL->GetWorldBuilderMode()));
+			gDLL->getInterfaceIFace()->setWorldBuilder(!gDLL->GetWorldBuilderMode());
 		}
 		else
 		{
@@ -2348,7 +2057,7 @@ void CvGame::doControl(ControlTypes eControl)
 		break;
 
 	default:
-		FAssertMsg(false, "eControl did not match any valid options");
+		FErrorMsg("eControl did not match any valid options");
 		break;
 	}
 }
@@ -2393,41 +2102,28 @@ void CvGame::getGlobeLayers(std::vector<CvGlobeLayerData>& aLayers) const
 	kReligion.m_iNumOptions = GC.getNumReligionInfos();
 	kReligion.m_bShouldCitiesZoom = true;
 	aLayers.push_back(kReligion);
-
-	CvGlobeLayerData kDebug(GLOBE_LAYER_DEBUG);
-	kDebug.m_strName = "DEBUG";
-	kDebug.m_strButtonHelpTag = "TXT_KEY_GLOBELAYER_DEBUG";
-	kDebug.m_strButtonStyle = "Button_HUDGlobeDebug_Style";
-	kDebug.m_iNumOptions = 1;
-	kDebug.m_bGlobeViewRequired = false;
-	aLayers.push_back(kDebug);
 }
 
 void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>& aFlyoutItems) const
 {
-	int iI;
-
 	aFlyoutItems.clear();
 
 	bool bUnits = false;
 	bool bFortifyUnit = false;
 	bool bSleepUnit = false;
 	bool bWakeUnit = false;
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
+	{
 		if (pLoopUnit->getOwner() == getActivePlayer())
 		{
 			bUnits = true;
 
-			if (pLoopUnit->canFortify(pPlot))
+			if (pLoopUnit->canFortify())
 			{
 				bFortifyUnit = true;
 			}
-			else if (pLoopUnit->canSleep(pPlot))
+			else if (pLoopUnit->canSleep())
 			{
 				bSleepUnit = true;
 			}
@@ -2437,91 +2133,88 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 			}
 		}
 	}
-
 	CvWString szBuffer;
-	CvCity* pCity = pPlot->getPlotCity();
-	if (pCity != NULL)
+	const CvCity* pCity = pPlot->getPlotCity();
+
+	if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 	{
-		if (pCity->getOwner() == getActivePlayer())
+		szBuffer = gDLL->getText("TXT_KEY_CHANGE_PRODUCTION");
+		aFlyoutItems.push_back(CvFlyoutMenuData(NO_FLYOUT, -1, -1, -1, szBuffer));
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			szBuffer = gDLL->getText("TXT_KEY_CHANGE_PRODUCTION");
-			aFlyoutItems.push_back(CvFlyoutMenuData(NO_FLYOUT, -1, -1, -1, szBuffer));
-			for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+			if (pCity->canTrain((UnitTypes) iI))
 			{
-				if (pCity->canTrain((UnitTypes) iI))
-				{
-					szBuffer.Format(L"%s (%d)", GC.getUnitInfo((UnitTypes) iI).getDescription(), pCity->getProductionTurnsLeft((UnitTypes) iI, 0));
-					aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_TRAIN, (UnitTypes) iI, pPlot->getX(), pPlot->getY(), szBuffer));
-				}
+				szBuffer.Format(L"%s (%d)", GC.getUnitInfo((UnitTypes) iI).getDescription(), pCity->getProductionTurnsLeft((UnitTypes) iI, 0));
+				aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_TRAIN, (UnitTypes) iI, pPlot->getX(), pPlot->getY(), szBuffer));
 			}
+		}
 
-			for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		{
+			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+			if (pCity->canConstruct(eLoopBuilding))
 			{
-				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-				if (pCity->canConstruct(eLoopBuilding))
-				{
-					szBuffer.Format(L"%s (%d)", GC.getBuildingInfo(eLoopBuilding).getDescription(), pCity->getProductionTurnsLeft(eLoopBuilding, 0));
-					aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_CONSTRUCT, eLoopBuilding, pPlot->getX(), pPlot->getY(), szBuffer));
-				}
+				szBuffer.Format(L"%s (%d)", GC.getBuildingInfo(eLoopBuilding).getDescription(), pCity->getProductionTurnsLeft(eLoopBuilding, 0));
+				aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_CONSTRUCT, eLoopBuilding, pPlot->getX(), pPlot->getY(), szBuffer));
 			}
+		}
 
-			for (iI = 0; iI < GC.getNumProjectInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
+		{
+			ProjectTypes eProject = (ProjectTypes) iI;
+			if (pCity->canCreate(eProject))
 			{
-				ProjectTypes eProject = (ProjectTypes) iI;
-				if (pCity->canCreate(eProject))
-				{
-					szBuffer.Format(L"%s (%d)", GC.getProjectInfo(eProject).getDescription(), pCity->getProductionTurnsLeft(eProject, 0));
-					aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_CREATE, eProject, pPlot->getX(), pPlot->getY(), szBuffer));
-				}
+				szBuffer.Format(L"%s (%d)", GC.getProjectInfo(eProject).getDescription(), pCity->getProductionTurnsLeft(eProject, 0));
+				aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_CREATE, eProject, pPlot->getX(), pPlot->getY(), szBuffer));
 			}
+		}
 
-			for (iI = 0; iI < GC.getNumProcessInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumProcessInfos(); iI++)
+		{
+			if (pCity->canMaintain((ProcessTypes)iI))
 			{
-				if (pCity->canMaintain((ProcessTypes)iI))
-				{
-					szBuffer = GC.getProcessInfo((ProcessTypes)iI).getDescription();
-					aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_MAINTAIN, iI, pPlot->getX(), pPlot->getY(), szBuffer));
-				}
+				szBuffer = GC.getProcessInfo((ProcessTypes)iI).getDescription();
+				aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_MAINTAIN, iI, pPlot->getX(), pPlot->getY(), szBuffer));
 			}
+		}
 
 
-			aFlyoutItems.push_back(CvFlyoutMenuData(NO_FLYOUT, -1, -1, -1, L""));
+		aFlyoutItems.push_back(CvFlyoutMenuData(NO_FLYOUT, -1, -1, -1, L""));
 
-			for (iI = 0; iI < GC.getNumHurryInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumHurryInfos(); iI++)
+		{
+			if (pCity->canHurry((HurryTypes)iI))
 			{
-				if (pCity->canHurry((HurryTypes)iI))
+				szBuffer = gDLL->getText("TXT_KEY_HURRY_PRODUCTION");
+
+				const int64_t iHurryGold = pCity->getHurryGold((HurryTypes)iI);
+				if (iHurryGold > 0)
 				{
-					szBuffer = gDLL->getText("TXT_KEY_HURRY_PRODUCTION");
-
-					int iHurryGold = pCity->hurryGold((HurryTypes)iI);
-					if (iHurryGold > 0)
-					{
-						szBuffer += gDLL->getText("TXT_KEY_HURRY_PRODUCTION_GOLD", iHurryGold);
-					}
-
-					int iHurryPopulation = pCity->hurryPopulation((HurryTypes)iI);
-					if (iHurryPopulation > 0)
-					{
-						szBuffer += gDLL->getText("TXT_KEY_HURRY_PRODUCTION_POP", iHurryPopulation);
-					}
-
-					aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_HURRY, iI, pPlot->getX(), pPlot->getY(), szBuffer));
+					szBuffer += gDLL->getText("TXT_KEY_HURRY_PRODUCTION_GOLD", iHurryGold);
 				}
+
+				const int iHurryPopulation = pCity->hurryPopulation((HurryTypes)iI);
+				if (iHurryPopulation > 0)
+				{
+					szBuffer += gDLL->getText("TXT_KEY_HURRY_PRODUCTION_POP", iHurryPopulation);
+				}
+
+				aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_HURRY, iI, pPlot->getX(), pPlot->getY(), szBuffer));
 			}
+		}
 
-			if (pCity->canConscript())
+		if (pCity->canConscript())
+		{
+			UnitTypes eConscriptUnit = pCity->getConscriptUnit();
+			if (eConscriptUnit != NO_UNIT)
 			{
-				UnitTypes eConscriptUnit = pCity->getConscriptUnit();
-				if (eConscriptUnit != NO_UNIT)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_DRAFT_UNIT", GC.getUnitInfo(eConscriptUnit).getDescription(), pCity->getConscriptPopulation());
-					aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_CONSCRIPT, iI, pPlot->getX(), pPlot->getY(), szBuffer));
-				}
+				szBuffer = gDLL->getText("TXT_KEY_DRAFT_UNIT", GC.getUnitInfo(eConscriptUnit).getDescription(), pCity->getConscriptPopulation());
+				aFlyoutItems.push_back(CvFlyoutMenuData(FLYOUT_CONSCRIPT, iI, pPlot->getX(), pPlot->getY(), szBuffer));
 			}
 		}
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 	if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->atPlot(pPlot))
 	{
 		gDLL->getFAStarIFace()->SetData(&GC.getInterfacePathFinder(), gDLL->getInterfaceIFace()->getSelectionList());
@@ -2581,100 +2274,79 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 {
 	CvPlot* pPlot = GC.getMap().plot(kItem.m_iX, kItem.m_iY);
-	if (pPlot != NULL)
+	if (pPlot == NULL) return;
+
+	switch (kItem.m_eFlyout)
 	{
-		switch (kItem.m_eFlyout)
-		{
-		case NO_FLYOUT:
-		default:
-			FAssert(false);
-			break;
-
 		case FLYOUT_HURRY:
+		{
+			const CvCity* pCity = pPlot->getPlotCity();
+
+			if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 			{
-				CvCity* pCity = pPlot->getPlotCity();
-				if (pCity != NULL)
-				{
-					if (pCity->getOwner() == getActivePlayer())
-					{
-						CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_HURRY, kItem.m_iID, -1, false, false, false, false);
-					}
-				}
+				CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_HURRY, kItem.m_iID, -1, false, false, false, false);
 			}
 			break;
-
+		}
 		case FLYOUT_CONSCRIPT:
+		{
+			const CvCity* pCity = pPlot->getPlotCity();
+
+			if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 			{
-				CvCity* pCity = pPlot->getPlotCity();
-				if (pCity != NULL)
-				{
-					if (pCity->getOwner() == getActivePlayer())
-					{
-						CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CONSCRIPT, -1, -1, false, false, false, false);
-					}
-				}
+				CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CONSCRIPT, -1, -1, false, false, false, false);
 			}
 			break;
-
+		}
 		case FLYOUT_TRAIN:
+		{
+			const CvCity* pCity = pPlot->getPlotCity();
+
+			if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 			{
-				CvCity* pCity = pPlot->getPlotCity();
-				if (pCity != NULL)
-				{
-					if (pCity->getOwner() == getActivePlayer())
-					{
-						cityPushOrder(pCity, ORDER_TRAIN, kItem.m_iID);
-					}
-				}
+				cityPushOrder(pCity, ORDER_TRAIN, kItem.m_iID);
 			}
 			break;
-
+		}
 		case FLYOUT_CONSTRUCT:
+		{
+			const CvCity* pCity = pPlot->getPlotCity();
+
+			if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 			{
-				CvCity* pCity = pPlot->getPlotCity();
-				if (pCity != NULL)
-				{
-					if (pCity->getOwner() == getActivePlayer())
-					{
-						cityPushOrder(pCity, ORDER_CONSTRUCT, kItem.m_iID);
-					}
-				}
+				cityPushOrder(pCity, ORDER_CONSTRUCT, kItem.m_iID);
 			}
 			break;
-
+		}
 		case FLYOUT_CREATE:
+		{
+			const CvCity* pCity = pPlot->getPlotCity();
+
+			if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 			{
-				CvCity* pCity = pPlot->getPlotCity();
-				if (pCity != NULL)
-				{
-					if (pCity->getOwner() == getActivePlayer())
-					{
-						cityPushOrder(pCity, ORDER_CREATE, kItem.m_iID);
-					}
-				}
+				cityPushOrder(pCity, ORDER_CREATE, kItem.m_iID);
 			}
 			break;
-
+		}
 		case FLYOUT_MAINTAIN:
+		{
+			const CvCity* pCity = pPlot->getPlotCity();
+
+			if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 			{
-				CvCity* pCity = pPlot->getPlotCity();
-				if (pCity != NULL)
-				{
-					if (pCity->getOwner() == getActivePlayer())
-					{
-						cityPushOrder(pCity, ORDER_MAINTAIN, kItem.m_iID);
-					}
-				}
+				cityPushOrder(pCity, ORDER_MAINTAIN, kItem.m_iID);
 			}
 			break;
-
+		}
 		case FLYOUT_MOVE_TO:
+		{
 			selectionListMove(pPlot, false, false, false);
 			break;
-
+		}
 		case FLYOUT_SELECT_UNIT:
 			{
 				CvUnit* pUnit = GET_PLAYER(getActivePlayer()).getUnit(kItem.m_iID);
+
 				if (pUnit != NULL)
 				{
 					gDLL->getInterfaceIFace()->selectUnit(pUnit, true);
@@ -2683,38 +2355,30 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 			break;
 
 		case FLYOUT_SELECT_ALL:
+		{
 			gDLL->getInterfaceIFace()->selectAll(pPlot);
 			break;
-
+		}
 		case FLYOUT_WAKE_ALL:
+		{
+			foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::isGroupHead()))
 			{
-				CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-				while (pUnitNode != NULL)
-				{
-					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pPlot->nextUnitNode(pUnitNode);
-					if (pLoopUnit->isGroupHead())
-					{
-						CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), COMMAND_WAKE, -1, -1, false);
-					}
-				}
+				CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), COMMAND_WAKE, -1, -1, false);
 			}
 			break;
-
+		}
 		case FLYOUR_FORTIFY_ALL:
 		case FLYOUR_SLEEP_ALL:
+		{
+			foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::isGroupHead()))
 			{
-				CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-				while (pUnitNode != NULL)
-				{
-					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pPlot->nextUnitNode(pUnitNode);
-					if (pLoopUnit->isGroupHead())
-					{
-						CvMessageControl::getInstance().sendPushMission(pLoopUnit->getID(), ((pLoopUnit->isFortifyable()) ? MISSION_FORTIFY : MISSION_SLEEP), -1, -1, 0, false);
-					}
-				}
+				CvMessageControl::getInstance().sendPushMission(pLoopUnit->getID(), (pLoopUnit->isFortifyable() ? MISSION_FORTIFY : MISSION_SLEEP), -1, -1, 0, false);
 			}
+			break;
+		}
+		default:
+		{
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -2722,72 +2386,59 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 
 CvPlot* CvGame::getNewHighlightPlot() const
 {
-	CvPlot* pNewPlot = NULL;
 	if (gDLL->GetWorldBuilderMode())
 	{
 		bool bOK = false;
 		std::vector<int> coords = Cy::call< std::vector<int> >(PYScreensModule, "WorldBuilderGetHighlightPlot", Cy::Args() << 0, &bOK);
+
 		if (bOK && !coords.empty())
 		{
 			FAssertMsg(coords.size() >= 2, "Python callback WorldBuilderGetHighlightPlot didn't return valid coords array");
-			pNewPlot = GC.getMap().plot(coords[0], coords[1]);
+			return GC.getMap().plot(coords[0], coords[1]);
 		}
 	}
-	else
+	else if (GC.getInterfaceModeInfo(gDLL->getInterfaceIFace()->getInterfaceMode()).getHighlightPlot())
 	{
-		if (GC.getInterfaceModeInfo(gDLL->getInterfaceIFace()->getInterfaceMode()).getHighlightPlot())
-		{
-			pNewPlot = gDLL->getInterfaceIFace()->getMouseOverPlot();
-		}
+		return gDLL->getInterfaceIFace()->getMouseOverPlot();
 	}
-	return pNewPlot;
+	return NULL;
 }
 
 
 ColorTypes CvGame::getPlotHighlightColor(CvPlot* pPlot) const
 {
-	ColorTypes eColor = NO_COLOR;
+	if (pPlot == NULL) return NO_COLOR;
 
-	if (pPlot != NULL)
+	if (gDLL->GetWorldBuilderMode())
 	{
-		eColor = (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
-		if (!gDLL->GetWorldBuilderMode())
+		return (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
+	}
+	switch (gDLL->getInterfaceIFace()->getInterfaceMode())
+	{
+		case INTERFACEMODE_PING:
+		case INTERFACEMODE_SIGN:
 		{
-			switch (gDLL->getInterfaceIFace()->getInterfaceMode())
+			if (pPlot->isRevealed(getActiveTeam(), true))
 			{
-			case INTERFACEMODE_PING:
-			case INTERFACEMODE_SIGN:
-				if (!pPlot->isRevealed(getActiveTeam(), true))
-				{
-					eColor = NO_COLOR;
-				}
-				break;
-			case INTERFACEMODE_PYTHON_PICK_PLOT:
-				if (!pPlot->isRevealed(getActiveTeam(), true))
-				{
-					eColor = NO_COLOR;
-				}
-				else
-				{
-					if (!Cy::call<bool>(PYGameModule, "canPickPlot", Cy::Args() << pPlot))
-					{
-						eColor = NO_COLOR;
-					}
-				}
-				break;
-			case INTERFACEMODE_SAVE_PLOT_NIFS:
-				eColor = (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
-				break;
-			default:
-				if (!gDLL->getInterfaceIFace()->getSelectionList()->canDoInterfaceModeAt(gDLL->getInterfaceIFace()->getInterfaceMode(), pPlot))
-				{
-					eColor = (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
-				}
-				break;
+				return (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
 			}
 		}
+		case INTERFACEMODE_DOTMAP: break;
+
+		case INTERFACEMODE_SAVE_PLOT_NIFS:
+		{
+			return (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
+		}
+		default:
+		{
+			if (gDLL->getInterfaceIFace()->getSelectionList()->canDoInterfaceModeAt(gDLL->getInterfaceIFace()->getInterfaceMode(), pPlot))
+			{
+				return (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
+			}
+			return (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
+		}
 	}
-	return eColor;
+	return NO_COLOR;
 }
 
 void CvGame::loadBuildQueue(const CvString& strItem) const
@@ -2832,8 +2483,8 @@ void CvGame::cheatSpaceship() const
 	CvTeam& kTeam = GET_TEAM(getActiveTeam());
 	for (int i = 0; i < GC.getNumProjectInfos(); i++)
 	{
-		ProjectTypes eProject = (ProjectTypes) i;
-		CvProjectInfo& kProject = GC.getProjectInfo(eProject);
+		const ProjectTypes eProject = (ProjectTypes) i;
+		const CvProjectInfo& kProject = GC.getProjectInfo(eProject);
 		if (kProject.isSpaceship())
 		{
 			//cheat required projects
@@ -2848,7 +2499,7 @@ void CvGame::cheatSpaceship() const
 			}
 
 			//cheat required techs
-			TechTypes eRequiredTech = (TechTypes) kProject.getTechPrereq();
+			const TechTypes eRequiredTech = kProject.getTechPrereq();
 			if (!kTeam.isHasTech(eRequiredTech))
 			{
 				kTeam.setHasTech(eRequiredTech, true, getActivePlayer(), true, true);
@@ -2869,7 +2520,7 @@ void CvGame::cheatSpaceship() const
 
 DomainTypes CvGame::getUnitDomain(UnitTypes eUnit) const
 {
-	return (DomainTypes) GC.getUnitInfo(eUnit).getDomainType();
+	return GC.getUnitInfo(eUnit).getDomainType();
 }
 
 const CvArtInfoBuilding* CvGame::getBuildingArtInfo(BuildingTypes eBuilding) const
@@ -2884,55 +2535,32 @@ bool CvGame::isWaterBuilding(BuildingTypes eBuilding) const
 
 CivilopediaWidgetShowTypes CvGame::getWidgetShow(BonusTypes eBonus) const
 {
-	// Don't show the widget if it's an abstract bonus that doesn't have any terrain (or art) associated with it.
+	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
+
+	// Don't show the widget if it's an abstract bonus that doesn't belong on the map.
 	// Hit singles, movies, musicals, in our case
-	bool bShowWidget = false;
-
-	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
-	{
-		if (GC.getBonusInfo(eBonus).isTerrain(i))
-		{
-			bShowWidget = true;
-			break;
-		}
-	}
-
-	if (!bShowWidget)
-	{
-		for (int i = 0; i < GC.getNumFeatureInfos(); i++)
-		{
-			if (GC.getBonusInfo(eBonus).isFeature(i))
-			{
-				bShowWidget = true;
-				break;
-			}
-		}
-	}
-
-	if (!bShowWidget)
+	if (bonus.getPlacementOrder() < 1)
 	{
 		return CIVILOPEDIA_WIDGET_SHOW_NONE;
 	}
 
-	CivilopediaWidgetShowTypes eType = CIVILOPEDIA_WIDGET_SHOW_LAND;
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{
-		if (GC.getTerrainInfo((TerrainTypes) i).isWaterTerrain() && GC.getBonusInfo(eBonus).isTerrain(i))
+		if (GC.getTerrainInfo((TerrainTypes) i).isWaterTerrain() && bonus.isTerrain(i))
 		{
-			eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
+			return CIVILOPEDIA_WIDGET_SHOW_WATER;
 		}
 	}
-	return eType;
+	return CIVILOPEDIA_WIDGET_SHOW_LAND;
 }
 
 CivilopediaWidgetShowTypes CvGame::getWidgetShow(ImprovementTypes eImprovement) const
 {
-	CivilopediaWidgetShowTypes eType = CIVILOPEDIA_WIDGET_SHOW_LAND;
 	if (GC.getImprovementInfo(eImprovement).isWaterImprovement())
 	{
-		eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
+		return CIVILOPEDIA_WIDGET_SHOW_WATER;
 	}
-	return eType;
+	return CIVILOPEDIA_WIDGET_SHOW_LAND;
 }
 
 VictoryTypes CvGame::getSpaceVictory() const
@@ -2940,7 +2568,7 @@ VictoryTypes CvGame::getSpaceVictory() const
 	VictoryTypes eVictory = NO_VICTORY;
 	for (int i=0; i < GC.getNumProjectInfos(); i++)
 	{
-		ProjectTypes eProject = (ProjectTypes) i;
+		const ProjectTypes eProject = (ProjectTypes) i;
 		if (GC.getProjectInfo(eProject).isSpaceship())
 		{
 			eVictory = (VictoryTypes) GC.getProjectInfo(eProject).getVictoryPrereq();
@@ -2955,20 +2583,17 @@ VictoryTypes CvGame::getSpaceVictory() const
 void CvGame::nextActivePlayer(bool bForward)
 {
 	int iNewPlayer = getActivePlayer();
-	for (int i = 1; i < MAX_PLAYERS; ++i)
+	for (int i = 1; i < MAX_PC_PLAYERS; ++i)
 	{
 		if (bForward)
-		{
 			iNewPlayer += 1;
-		}
-		else
-		{
-			iNewPlayer += MAX_PLAYERS - 1;
-		}
-		iNewPlayer %= MAX_PLAYERS;
+		else iNewPlayer += MAX_PC_PLAYERS - 1;
 
-		PlayerTypes eNewPlayer = (PlayerTypes) iNewPlayer;
-		if (GET_PLAYER(eNewPlayer).isAlive() && !(GET_PLAYER(eNewPlayer).isNPC()))
+		iNewPlayer %= MAX_PC_PLAYERS;
+
+		const PlayerTypes eNewPlayer = (PlayerTypes) iNewPlayer;
+
+		if (GET_PLAYER(eNewPlayer).isAlive())
 		{
 			GC.getInitCore().setSlotStatus(getActivePlayer(), SS_COMPUTER);
 			GC.getInitCore().setSlotStatus(eNewPlayer, SS_TAKEN);
@@ -2983,20 +2608,18 @@ void CvGame::nextActivePlayer(bool bForward)
 
 int CvGame::getNextSoundtrack(EraTypes eLastEra, int iLastSoundtrack) const
 {
-	EraTypes eCurEra = GET_PLAYER(getActivePlayer()).getCurrentEra();
-	CvEraInfo& kCurrentEra = GC.getEraInfo(eCurEra);
+	const EraTypes eCurEra = GET_PLAYER(getActivePlayer()).getCurrentEra();
+	const CvEraInfo& kCurrentEra = GC.getEraInfo(eCurEra);
+
 	if (kCurrentEra.getNumSoundtracks() == 0)
 	{
 		return -1;
 	}
-	else if (kCurrentEra.getNumSoundtracks() == 1 || (eLastEra != eCurEra && kCurrentEra.isFirstSoundtrackFirst()))
+	if (kCurrentEra.getNumSoundtracks() == 1 || (eLastEra != eCurEra && kCurrentEra.isFirstSoundtrackFirst()))
 	{
 		return kCurrentEra.getSoundtracks(0);
 	}
-	else 
-	{
-		return kCurrentEra.getSoundtracks(GC.getASyncRand().get(kCurrentEra.getNumSoundtracks(), "Pick Song ASYNC"));
-	}
+	return kCurrentEra.getSoundtracks(GC.getASyncRand().get(kCurrentEra.getNumSoundtracks(), "Pick Song ASYNC"));
 }
 
 int CvGame::getSoundtrackSpace() const
@@ -3006,83 +2629,50 @@ int CvGame::getSoundtrackSpace() const
 
 bool CvGame::isSoundtrackOverride(CvString& strSoundtrack) const
 {
-	if (GC.getDefineINT("VICTORY_SOUNDTRACK_AVAILABLE") != 0)
-	{
-		if (getGameState() == GAMESTATE_EXTENDED || getGameState() == GAMESTATE_OVER)
-		{
-			if (getWinner() == getActiveTeam())
-			{
-				strSoundtrack = "AS2D_VICTORY";
-			}
-			else
-			{
-				strSoundtrack = "AS2D_DEFEAT";
-			}
-			return true;
-		}
-	}
 	return false;
 }
 
 void CvGame::initSelection() const
 {
-	bool bSelected = false;
 	CvUnit* pSelectionUnit = NULL;
 
-	int iLoop;
-	for (CvUnit* pLoopUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getActivePlayer()).nextUnit(&iLoop))
+	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getActivePlayer()).units())
 	{
-		if (pLoopUnit->getGroup()->readyToSelect())
+		if (pLoopUnit->getGroup()->readyToSelect() && pLoopUnit->canFight())
 		{
-			if (pLoopUnit->canFight())
-			{
-				pSelectionUnit = pLoopUnit;
-				//selectUnit(pLoopUnit, true);
-				bSelected = true;
-				break;
-			}
+			pSelectionUnit = pLoopUnit;
+			break;
 		}
 	}
 
-	if (!bSelected)
+	if (pSelectionUnit == NULL)
 	{
-		for (CvUnit* pLoopUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getActivePlayer()).nextUnit(&iLoop))
+		foreach_(CvUnit* pLoopUnit, GET_PLAYER(getActivePlayer()).units())
 		{
 			if (pLoopUnit->getGroup()->readyToSelect())
 			{
 				pSelectionUnit = pLoopUnit;
-				//selectUnit(pLoopUnit, true);
-				bSelected = true;
 				break;
 			}
 		}
 	}
-
-	if (!bSelected)
+	if (pSelectionUnit == NULL) // Last resort
 	{
-		// Last resort
+		int iLoop;
 		pSelectionUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop);
 	}
 
-	if ( pSelectionUnit != NULL )
+	if (pSelectionUnit != NULL)
 	{
-		GC.getCurrentViewport()->bringIntoView(pSelectionUnit->getX(), pSelectionUnit->getY(), pSelectionUnit, true);
+		GC.getCurrentViewport()->bringIntoView(pSelectionUnit->getX(), pSelectionUnit->getY(), pSelectionUnit);
 	}
 }
 
 bool CvGame::canDoPing(CvPlot* pPlot, PlayerTypes ePlayer) const
 {
-	if (pPlot == NULL || !pPlot->isRevealed(getActiveTeam(), false))
-	{
-		return false;
-	}
-
-	if (GET_PLAYER(ePlayer).getTeam() != getActiveTeam())
-	{
-		return false;
-	}
-
-	return true;
+	return pPlot != NULL
+		&& pPlot->isRevealed(getActiveTeam(), false)
+		&& GET_PLAYER(ePlayer).getTeam() == getActiveTeam();
 }
 
 bool CvGame::shouldDisplayReturn() const
@@ -3092,7 +2682,7 @@ bool CvGame::shouldDisplayReturn() const
 
 bool CvGame::shouldDisplayEndTurn() const
 {
-	return (!gDLL->getInterfaceIFace()->isCitySelection() && GET_PLAYER(getActivePlayer()).isTurnActive());
+	return !gDLL->getInterfaceIFace()->isCitySelection() && GET_PLAYER(getActivePlayer()).isTurnActive();
 }
 
 bool CvGame::shouldDisplayWaitingOthers() const
@@ -3103,7 +2693,6 @@ bool CvGame::shouldDisplayWaitingOthers() const
 		{
 			return true;
 		}
-
 		if (gDLL->getInterfaceIFace()->isInAdvancedStart() && GET_PLAYER(getActivePlayer()).getAdvancedStartPoints() < 0)
 		{
 			return true;
@@ -3114,115 +2703,76 @@ bool CvGame::shouldDisplayWaitingOthers() const
 
 bool CvGame::shouldDisplayWaitingYou() const
 {
-	if (!gDLL->getInterfaceIFace()->isCitySelection())
+	if (isNetworkMultiPlayer() && shouldDisplayEndTurn())
 	{
-		if (GET_PLAYER(getActivePlayer()).isTurnActive())
+		if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && 1 == countNumHumanGameTurnActive())
 		{
-			if (isNetworkMultiPlayer())
-			{
-				if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && 1 == countNumHumanGameTurnActive())
-				{
-					return true;
-				}
-
-				if (isSimultaneousTeamTurns() && 1 == GET_TEAM(getActiveTeam()).countNumHumanGameTurnActive() && GET_TEAM(getActiveTeam()).getAliveCount() > 1)
-				{
-					return true;
-				}
-			}
+			return true;
+		}
+		if (isSimultaneousTeamTurns() && 1 == GET_TEAM(getActiveTeam()).countNumHumanGameTurnActive() && GET_TEAM(getActiveTeam()).getAliveCount() > 1)
+		{
+			return true;
 		}
 	}
-
 	return false;
 }
 
 bool CvGame::shouldDisplayEndTurnButton() const
 {
-	if (!gDLL->getInterfaceIFace()->isCitySelection())
-	{
-		if (!gDLL->GetWorldBuilderMode())
-		{
-			if (GET_PLAYER(getActivePlayer()).isTurnActive())
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
+	return shouldDisplayEndTurn() && !gDLL->GetWorldBuilderMode();
 }
 
 bool CvGame::shouldDisplayFlag() const
 {
-	if (gDLL->getInterfaceIFace()->isCitySelection() ||
-		gDLL->getInterfaceIFace()->getHeadSelectedCity() != NULL ||
-		gDLL->isDiplomacy() ||
-		gDLL->isMPDiplomacyScreenUp() ||
-		gDLL->GetWorldBuilderMode())
+	if(gDLL->getInterfaceIFace()->isCitySelection()
+	|| gDLL->getInterfaceIFace()->getHeadSelectedCity() != NULL
+	|| gDLL->isDiplomacy()
+	|| gDLL->isMPDiplomacyScreenUp()
+	|| gDLL->GetWorldBuilderMode())
 	{
 		return false;
 	}
-
 	return true;
 }
 
 bool CvGame::shouldDisplayUnitModel() const
 {
-	if (gDLL->isDiplomacy() ||
-		gDLL->isMPDiplomacyScreenUp() ||
-		gDLL->GetWorldBuilderMode())
+	if (gDLL->isDiplomacy() || gDLL->isMPDiplomacyScreenUp() || gDLL->GetWorldBuilderMode())
 	{
 		return false;
 	}
-
 	if (gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL || gDLL->getInterfaceIFace()->isCityScreenUp())
 	{
 		return true;
 	}
-
 	return false;
 }
 
 bool CvGame::shouldShowResearchButtons() const
 {
-	if (!gDLL->GetWorldBuilderMode())
-	{
-		if (GET_PLAYER(getActivePlayer()).isAlive())
-		{
-			if (!gDLL->getInterfaceIFace()->isCityScreenUp())
-			{
-				if (GET_PLAYER(getActivePlayer()).getCurrentResearch() == NO_TECH)
-				{
-					return true;
-				}
-			}
-		}
-	}
-
-	return false;
+	return !gDLL->GetWorldBuilderMode()
+		&& GET_PLAYER(getActivePlayer()).isAlive()
+		&& !gDLL->getInterfaceIFace()->isCityScreenUp()
+		&& GET_PLAYER(getActivePlayer()).getCurrentResearch() == NO_TECH;
 }
 
 bool CvGame::shouldCenterMinimap() const
 {
-	return (isDebugMode() || GET_TEAM(getActiveTeam()).isMapCentering());
+	return isDebugMode() || GET_TEAM(getActiveTeam()).isMapCentering();
 }
 
 EndTurnButtonStates CvGame::getEndTurnState() const
 {
-	EndTurnButtonStates eNewState = END_TURN_GO;
-
-	if ((isNetworkMultiPlayer() && 
-		(isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && 1 == countNumHumanGameTurnActive() || 
-		(!isSimultaneousTeamTurns() && 1 == GET_TEAM(getActiveTeam()).countNumHumanGameTurnActive() && GET_TEAM(getActiveTeam()).getAliveCount() > 1))))
+	if (isNetworkMultiPlayer())
 	{
-		eNewState = END_TURN_OVER_HIGHLIGHT;
+		const CvTeamAI& team = GET_TEAM(getActiveTeam());
+		if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && 1 == countNumHumanGameTurnActive()
+		|| !isSimultaneousTeamTurns() && 1 == team.countNumHumanGameTurnActive() && team.getAliveCount() > 1)
+		{
+			return END_TURN_OVER_HIGHLIGHT;
+		}
 	}
-	else
-	{
-		eNewState = END_TURN_GO;
-	}
-
-	return eNewState;
+	return END_TURN_GO;
 }
 
 void CvGame::handleCityScreenPlotPicked(CvCity* pCity, CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const
@@ -3249,23 +2799,18 @@ void CvGame::handleCityScreenPlotPicked(CvCity* pCity, CvPlot* pPlot, bool bAlt,
 
 void CvGame::handleCityScreenPlotDoublePicked(CvCity* pCity, CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const
 {
-	if (pCity != NULL)
+	if (pCity != NULL && pCity->plot() == pPlot)
 	{
-		if (pCity->plot() == pPlot)
-		{
-			gDLL->getInterfaceIFace()->clearSelectedCities();
-		}
+		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
 }
 
 void CvGame::handleCityScreenPlotRightPicked(CvCity* pCity, CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const
 {
-	if (pCity != NULL && pPlot != NULL)
+	if (pCity != NULL && pPlot != NULL
+	&& pCity->getOwner() == getActivePlayer() && pPlot->getOwner() == getActivePlayer() && pCity->getCityPlotIndex(pPlot) != -1)
 	{
-		if ((pCity->getOwner() == getActivePlayer()) && (pPlot->getOwner() == getActivePlayer()) && (pCity->getCityPlotIndex(pPlot) != -1))
-		{
-			CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CLEAR_WORKING_OVERRIDE, pCity->getCityPlotIndex(pPlot), -1, false, bAlt, bShift, bCtrl);
-		}
+		CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CLEAR_WORKING_OVERRIDE, pCity->getCityPlotIndex(pPlot), -1, false, bAlt, bShift, bCtrl);
 	}
 }
 
@@ -3273,20 +2818,17 @@ void CvGame::handleCityPlotRightPicked(CvCity* pCity, CvPlot* pPlot, bool bAlt, 
 {
 	if (pPlot != NULL)
 	{
-		if ((pCity != NULL) && gDLL->getInterfaceIFace()->isCitySelected(pCity))
+		if (pCity != NULL && gDLL->getInterfaceIFace()->isCitySelected(pCity))
 		{
 			selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_CLEAR_RALLY_PLOT);
 		}
+		else if (bShift)
+		{
+			selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_RALLY_PLOT, pPlot->getX(), pPlot->getY());
+		}
 		else
 		{
-			if (bShift)
-			{
-				selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_RALLY_PLOT, pPlot->getX(), pPlot->getY());
-			}
-			else
-			{
-				gDLL->getInterfaceIFace()->clearSelectedCities();
-			}
+			gDLL->getInterfaceIFace()->clearSelectedCities();
 		}
 	}
 }
@@ -3297,29 +2839,26 @@ void CvGame::handleMiddleMouse(bool bCtrl, bool bAlt, bool bShift)
 	{
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
+	else if (bAlt)
+	{
+		doControl(CONTROL_SELECTYUNITALL);
+	}
+	else if (bCtrl)
+	{
+		doControl(CONTROL_SELECTYUNITTYPE);
+	}
 	else
 	{
-		if (bAlt)
-		{
-			doControl(CONTROL_SELECTYUNITALL);
-		}
-		else if (bCtrl)
-		{
-			doControl(CONTROL_SELECTYUNITTYPE);
-		}
-		else
-		{
-			doControl(CONTROL_CENTERONSELECTION); 
-		}
+		doControl(CONTROL_CENTERONSELECTION);
 	}
 }
 
 void CvGame::handleDiplomacySetAIComment(DiploCommentTypes eComment) const
 {
-	PlayerTypes eOtherPlayer = (PlayerTypes) gDLL->getDiplomacyPlayer();
+	const PlayerTypes eOtherPlayer = (PlayerTypes) gDLL->getDiplomacyPlayer();
 	FAssert(eOtherPlayer != NO_PLAYER);
-	if (GC.getInfoTypeForString("AI_DIPLOCOMMENT_ACCEPT_ASK") == eComment || 
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_ACCEPT_DEMAND") == eComment)
+	if (GC.getInfoTypeForString("AI_DIPLOCOMMENT_ACCEPT_ASK") == eComment
+	|| GC.getInfoTypeForString("AI_DIPLOCOMMENT_ACCEPT_DEMAND") == eComment)
 	{
 		if (!GET_TEAM(getActiveTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eOtherPlayer).getTeam()).isAVassal())
 		{

@@ -3,14 +3,12 @@
 #ifndef CvReachablePlotSet_h__
 #define CvReachablePlotSet_h__
 
-#include <queue>
-#include "FProfiler.h"
+//#include <queue>
 
 //	Activity ids against which enumerated plot info can be stored
 #define	ACTIVITY_ID_ANY_ATTACK	0
 #define	ACTIVITY_ID_EXPLORE		1
 #define	ACTIVITY_ID_PILLAGE		2
-
 #define	NUM_ACTIVITY_IDS		3
 
 typedef struct CvReachablePlotInfo
@@ -19,6 +17,9 @@ typedef struct CvReachablePlotInfo
 	int iOutsideOwnedDistance;
 	int	iOpaqueInfo[NUM_ACTIVITY_IDS];
 } CvReachablePlotInfo;
+
+class CvPlot;
+class CvSelectionGroup;
 
 class CvReachablePlotSet
 {
@@ -32,11 +33,11 @@ public:
 	public:
 		const_iterator& operator++();
 
-		bool operator==(const_iterator& other);
+		bool operator==(const const_iterator& other) const;
 
-		bool operator!=(const_iterator& other);
+		bool operator!=(const const_iterator& other) const;
 
-		const_iterator& operator=(const_iterator& other);
+		const_iterator& operator=(const const_iterator& other);
 
 		CvPlot*	plot() const;
 
@@ -64,7 +65,7 @@ public:
 
 	static void ClearCache();
 private:
-	
+
 	static bool canMoveBetweenWithFlags(const CvSelectionGroup* group, const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags);
 
 	void enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*, int> >& prevRing);

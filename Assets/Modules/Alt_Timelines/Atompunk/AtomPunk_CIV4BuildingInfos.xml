@@ -1,23 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_ATOMPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ATOMPUNK_EMBASSY</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -27,7 +19,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -36,72 +27,311 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VIDEOPHONE_NETWORK</Type>
-			<Description>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_STRATEGY</Strategy>
+			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
-			<ObsoleteTech>TECH_KNOWLEDGE_MANAGEMENT</ObsoleteTech>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
+			<ArtDefineTag>ART_DEF_BUILDING_CLEAN_NUCLEAR_REACTOR</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HI_TECH_NUCLEAR_REACTOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_URANIUM</Bonus>
+			</PrereqBonuses>
 			<ConstructCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COPPER_WIRES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_TELEVISIONS</ID>
+						<ID>BONUS_HEAVY_WATER</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
+			<bPower>1</bPower>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
-			<iHappiness>2</iHappiness>
-			<iTradeRoutes>2</iTradeRoutes>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>30</iYield>
+			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GOOD_ATOM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
+			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<Bonus>BONUS_ATOMPUNK</Bonus>
+			<bPower>1</bPower>
+			<bNeverCapture>1</bNeverCapture>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>200</iYield>
+			</YieldChanges>
+			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_HIGH_ENERGY_LAB</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_ATOMPUNK</Bonus>
+			<iCost>1345</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<CommerceChanges>
+				<iCommerce>-100</iCommerce>
+				<iCommerce>25</iCommerce>
+			</CommerceChanges>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<TechType>TECH_SUPERCONDUCTORS</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_WIRELESS_ELECTRICITY</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_LASER</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_QUANTUM_TELEPORTATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_CONTROLLED_PLASMA</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TESLA_INFANTRY</UnitType>
+					<iProductionModifier>10</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</PrereqOrBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
+			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_GENERATION_IV_REACTOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_ATOMPUNK</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_URANIUM</Bonus>
+			</PrereqBonuses>
+			<bPower>1</bPower>
+			<iCost>1845</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
+			<Bonus>BONUS_ATOMPUNK</Bonus>
+			<iHealth>-3</iHealth>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>4</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PUSHBUTTON_AUTOMAT</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VIDEOPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA4_SDMW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
+			<bFreshWater>1</bFreshWater>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_POWERCOMPLEX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NUCLEAR_POWERCOMPLEX</MovieDefineTag>
+			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_ATOMPUNK</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_URANIUM</Bonus>
+			</PrereqBonuses>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_HEAVY_WATER</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
+			<FreeBuilding>BUILDING_GOOD_ATOM</FreeBuilding>
+			<bRiver>1</bRiver>
+			<bPower>1</bPower>
+			<iCost>4010</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceChanges>
+				<iCommerce>-15000</iCommerce>
+			</CommerceChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>200</iYield>
+			</YieldModifiers>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
+			<iPrereqPopulation>13</iPrereqPopulation>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUSHBUTTON_AUTOMAT</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114,7 +344,6 @@
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
 				<iYield>5</iYield>
@@ -419,325 +648,22 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CANNERY</BuildingType>
-			</PrereqInCityBuildings>
-			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
-			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iHealth>-3</iHealth>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>4</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUSHBUTTON_AUTOMAT</BuildingType>
-				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIDEOPHONE_NETWORK</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
 			</PrereqOrBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HOUSE_ERA4_SDMW</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-			<bAutoBuild>1</bAutoBuild>
-			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
-			<Description>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLEAN_NUCLEAR_REACTOR</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_URANIUM</Bonus>
-			</PrereqBonuses>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEAVY_WATER</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
-			<bPower>1</bPower>
-			<iCost>1345</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>30</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
-			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
-			<Description>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
-			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			</TechTypes>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_URANIUM</Bonus>
-			</PrereqBonuses>
-			<bPower>1</bPower>
-			<iCost>1845</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>50</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>-25</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
-			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NUCLEAR_PLANT</Type>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_POWERCOMPLEX</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
-			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-			</TechTypes>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_URANIUM</Bonus>
-			</PrereqBonuses>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEAVY_WATER</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
-			<FreeBuilding>BUILDING_GOOD_ATOM</FreeBuilding>
-			<bRiver>1</bRiver>
-			<bPower>1</bPower>
-			<iCost>4010</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-15000</iCommerce>
-			</CommerceChanges>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>200</iYield>
-			</YieldModifiers>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_URANIUM_MINE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
-			</PrereqInCityBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
-			<Description>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIGH_ENERGY_LAB</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iCost>1345</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-				<iCommerce>25</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LASER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_CONTROLLED_PLASMA</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<UnitProductionModifiers>
-				<UnitProductionModifier>
-					<UnitType>UNIT_TESLA_INFANTRY</UnitType>
-					<iProductionModifier>25</iProductionModifier>
-				</UnitProductionModifier>
-			</UnitProductionModifiers>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
-			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMALL_REACTOR_FACTORY</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -755,7 +681,6 @@
 			</ConstructCondition>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -769,7 +694,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -786,21 +711,20 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENTURE_INDUSTRIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENTURE_INDUSTRIES</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
+			<MovieDefineTag>ART_DEF_MOVIE_VENTURE_INDUSTRIES</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
@@ -811,71 +735,91 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_LUNAR_EXPLORATION</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_SPACE_STATIONS</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_ROBOTICS</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ROBOTICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_CLONING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
+					<TechType>TECH_CLONING</TechType>
+					<CommercePercents>
+						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
+					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_ATOM</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GOOD_ATOM_STRATEGY</Strategy>
+			<Type>BUILDING_VIDEOPHONE_NETWORK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
-			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-			</TechTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COMPUTER_NETWORK</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<bPower>1</bPower>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_COPPER_WIRES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_TELEVISIONS</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
+			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>200</iYield>
-			</YieldChanges>
+			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iHappiness>2</iHappiness>
+			<iHealth>-1</iHealth>
+			<iTradeRoutes>2</iTradeRoutes>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</ReplacementBuildings>
+			<bPrereqPower>1</bPrereqPower>
+			<iPrereqPopulation>7</iPrereqPopulation>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

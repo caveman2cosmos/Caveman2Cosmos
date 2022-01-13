@@ -19,83 +19,77 @@ class CyGame
 {
 public:
 	CyGame();
-	explicit CyGame(CvGame* pGame);			// Call from C++
-	explicit CyGame(CvGameAI* pGame);		// Call from C++;
+	explicit CyGame(CvGame& pGame);			// Call from C++
+	explicit CyGame(CvGameAI& pGame);		// Call from C++;
 
-	CvGame* getGame() { return m_pGame;	}	// Call from C++
-	bool isNone() { return (m_pGame==NULL); }
+	MapTypes getCurrentMap() const;
 
-	bool isMultiplayer();
+	bool isMultiplayer() const;
 
 	void updateScore(bool bForce);
 	void cycleCities(bool bForward, bool bAdd);
 	void cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers);
-	bool cyclePlotUnits(CyPlot* pPlot, bool bForward, bool bAuto, int iCount);
+	bool cyclePlotUnits(const CyPlot* pPlot, bool bForward, bool bAuto, int iCount);
 
-	void selectionListMove(CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl);
+	void selectionListMove(const CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl);
 	void selectionListGameNetMessage(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift);
 	void selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, int iData4, bool bOption, bool bAlt, bool bShift, bool bCtrl);
-	void cityPushOrder(CyCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl);
+	void cityPushOrder(const CyCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl);
 
-	int getSymbolID(int iSymbol);
+	int getSymbolID(int iSymbol) const;
 
-	int getProductionPerPopulation(int /*HurryTypes*/ eHurry);
+	int getProductionPerPopulation(HurryTypes eHurry) const;
 
-	int getAdjustedPopulationPercent(int /*VictoryTypes*/ eVictory);
-	int getAdjustedLandPercent(int /* VictoryTypes*/ eVictory);
+	int getAdjustedPopulationPercent(VictoryTypes eVictory) const;
+	int getAdjustedLandPercent( VictoryTypes eVictory) const;
 
-	bool isTeamVote(int /*VoteTypes*/ eVote) const;
-	bool isChooseElection(int /*VoteTypes*/ eVote) const;
-	bool isTeamVoteEligible(int /*TeamTypes*/ eTeam, int /*VoteSourceTypes*/ eVoteSource) const;
-	int countPossibleVote(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const;
-	int getVoteRequired(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const;
-	int getSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
-	bool canHaveSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
-	int getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const;
-	void setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce);
+	bool isTeamVote(VoteTypes eVote) const;
+	bool isChooseElection(VoteTypes eVote) const;
+	bool isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) const;
+	int countPossibleVote(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
+	int getVoteRequired(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
+	int getSecretaryGeneral(VoteSourceTypes eVoteSource) const;
+	bool canHaveSecretaryGeneral(VoteSourceTypes eVoteSource) const;
+	int getVoteSourceReligion(VoteSourceTypes eVoteSource) const;
 
-	int countCivPlayersAlive();
-	int countCivPlayersEverAlive();
-	int countCivTeamsAlive();
-	int countCivTeamsEverAlive();
-	int countHumanPlayersAlive();
+	int countCivPlayersAlive() const;
+	int countCivPlayersEverAlive() const;
+	int countCivTeamsAlive() const;
+	int countCivTeamsEverAlive() const;
 
-	int countTotalCivPower();
-	int countTotalNukeUnits();
-	int countKnownTechNumTeams(int /*TechTypes*/ eTech);
-	int getNumFreeBonuses(int /*BuildingTypes*/ eBuilding);
+	int countTotalCivPower() const;
+	int countTotalNukeUnits() const;
+	int countKnownTechNumTeams(TechTypes eTech) const;
+	int getNumFreeBonuses(BuildingTypes eBuilding) const;
 
-	int countReligionLevels(int /*ReligionTypes*/ eReligion);
-	int calculateReligionPercent(int /* ReligionTypes*/ eReligion);
-	int countCorporationLevels(int /*CorporationTypes*/ eCorporation);
+	int countReligionLevels(ReligionTypes eReligion) const;
+	int calculateReligionPercent(ReligionTypes eReligion) const;
+	int countCorporationLevels(CorporationTypes eCorporation) const;
 
-	int goldenAgeLength();
-	int victoryDelay(int /*VictoryTypes*/ eVictory);
-	int getImprovementUpgradeTime(int /* ImprovementTypes*/ eImprovement);
-	bool canTrainNukes();
+	int goldenAgeLength() const;
+	int victoryDelay(VictoryTypes eVictory) const;
+	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
+	bool canTrainNukes() const;
 
-	int /* EraTypes */ getHighestEra();
-	int /* EraTypes */ getCurrentEra();
+	EraTypes getHighestEra() const;
+	EraTypes getCurrentEra() const;
 
-	int getActiveTeam();
-	int /* CivilizationTypes */ getActiveCivilizationType();
-	bool isNetworkMultiPlayer();
-	bool isGameMultiPlayer();
-	bool isTeamGame();
+	int getActiveTeam() const;
+	CivilizationTypes  getActiveCivilizationType() const;
+	bool isNetworkMultiPlayer() const;
+	bool isGameMultiPlayer() const;
+	bool isTeamGame() const;
 
-	bool isModem();
+	bool isModem() const;
 	void setModem(bool bModem);
 
-	void reviveActivePlayer();
-	void revivePlayer(int /*PlayerTypes*/ iPlayer);
-
-	int getNumHumanPlayers();
-	int getGameTurn();
+	int getNumHumanPlayers() const;
+	int getGameTurn() const;
 	void setGameTurn(int iNewValue);
-	int getTurnYear(int iGameTurn);
-	int getGameTurnYear();
+	int getTurnYear(int iGameTurn) const;
+	int getGameTurnYear() const;
 
-	int getElapsedGameTurns();
+	int getElapsedGameTurns() const;
 	int getMaxTurns() const;
 	void setMaxTurns(int iNewValue);
 	void changeMaxTurns(int iChange);
@@ -113,11 +107,11 @@ public:
 	int getTargetScore() const;
 	void setTargetScore(int iNewValue);
 
-	int getNumGameTurnActive();
-	int countNumHumanGameTurnActive();
-	int getNumCities();
-	int getNumCivCities();
-	int getTotalPopulation();
+	int getNumGameTurnActive() const;
+	int countNumHumanGameTurnActive() const;
+	int getNumCities() const;
+	int getNumCivCities() const;
+	int getTotalPopulation() const;
 
 	int getTradeRoutes() const;
 	void changeTradeRoutes(int iChange);
@@ -141,9 +135,6 @@ public:
 	int getInitTech() const;
 	int getInitWonders() const;
 
-	CyPlot* getLastNukeStrikePlot();
-	void setLastNukeStrikePlot(CyPlot* pPlot);
-
 	int getAIAutoPlay(int iPlayer) const;
 	void setAIAutoPlay(int iPlayer, int iNewValue);
 
@@ -151,129 +142,116 @@ public:
 	int getForcedAIAutoPlay(int iPlayer) const;
 	void setForcedAIAutoPlay(int iPlayer, int iNewValue, bool bForced = false);
 
-	// < Water Animals Start >
-	int getWaterAnimalSpawnChance() const;
-	void setWaterAnimalSpawnChance(int iNewValue);
-	void changeWaterAnimalSpawnChance(int iChange);
-
-	int getXResolution() const;
-	void setXResolution(int iNewValue);
-	void changeXResolution(int iChange);
-
-	int getYResolution() const;
-	void setYResolution(int iNewValue);
-	void changeYResolution(int iChange);
-	// < Water Animals End   >
-
 	bool isScoreDirty() const;
 	void setScoreDirty(bool bNewValue);
-	bool isCircumnavigated() const;
-	bool isDiploVote(int /*VoteSourceTypes*/ eVoteSource) const;
-	void changeDiploVote(int /*VoteSourceTypes*/ eVoteSource, int iChange);
+
+	int getCircumnavigatedTeam() const;
+	void setCircumnavigatedTeam(int iTeamType);
+
+	bool isDiploVote(VoteSourceTypes eVoteSource) const;
+	void changeDiploVote(VoteSourceTypes eVoteSource, int iChange);
 	bool isDebugMode() const;
 	void toggleDebugMode();
 
 	int getChtLvl() const;
 
-	int getPitbossTurnTime();
+	int getPitbossTurnTime() const;
 	void setPitbossTurnTime(int iHours);
-	bool isHotSeat();
-	bool isPbem();
-	bool isPitboss();
-	bool isSimultaneousTeamTurns();
+	bool isHotSeat() const;
+	bool isPbem() const;
+	bool isPitboss() const;
+	bool isSimultaneousTeamTurns() const;
 
-	bool isFinalInitialized();
+	bool isFinalInitialized() const;
 
-	int /*PlayerTypes*/ getActivePlayer();
-	void setActivePlayer(int /*PlayerTypes*/ eNewValue, bool bForceHotSeat);
-	int getPausePlayer();
-	bool isPaused();
-	int /*UnitTypes*/ getBestLandUnit();
-	int getBestLandUnitCombat();
+	PlayerTypes getActivePlayer() const;
+	void setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat);
+	int getPausePlayer() const;
+	bool isPaused() const;
+	UnitTypes getBestLandUnit() const;
+	int getBestLandUnitCombat() const;
 
-	bool getStarshipLaunched(int ID);
-	bool getDiplomaticVictoryAchieved(int ID);
+	bool getStarshipLaunched(int ID) const;
+	bool getDiplomaticVictoryAchieved(int ID) const;
 
-	int /*TeamTypes*/ getWinner();
-	int /*VictoryTypes*/ getVictory();
-	void setWinner(int /*TeamTypes*/ eNewWinner, int /*VictoryTypes*/ eNewVictory);
-	int /*GameStateTypes*/ getGameState();
-	int /*HandicapTypes*/ getHandicapType();
+	TeamTypes getWinner() const;
+	VictoryTypes getVictory() const;
+	void setWinner(TeamTypes eNewWinner, VictoryTypes eNewVictory);
+	GameStateTypes getGameState() const;
+	HandicapTypes getHandicapType() const;
 	CalendarTypes getCalendar() const;
-	int /*EraTypes*/ getStartEra();
-	int /*GameSpeedTypes*/ getGameSpeedType();
-	/*PlayerTypes*/ int getRankPlayer(int iRank);
-	int getPlayerRank(int /*PlayerTypes*/ iIndex);
-	int getPlayerScore(int /*PlayerTypes*/ iIndex);
-	int /*TeamTypes*/ getRankTeam(int iRank);
-	int getTeamRank(int /*TeamTypes*/ iIndex);
-	int getTeamScore(int /*TeamTypes*/ iIndex);
-	bool isOption(int /*GameOptionTypes*/ eIndex);
-	void setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled);
-	bool isMPOption(int /*MultiplayerOptionTypes*/ eIndex);
-	bool isForcedControl(int /*ForceControlTypes*/ eIndex);
-	int getUnitCreatedCount(int /*UnitTypes*/ eIndex);
-	int getBuildingCreatedCount(int /*BuildingTypes*/ eIndex) const;
-	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra);
-	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
+	EraTypes getStartEra() const;
+	GameSpeedTypes getGameSpeedType() const;
+	PlayerTypes getRankPlayer(int iRank) const;
+	int getPlayerRank(PlayerTypes iIndex) const;
+	int getPlayerScore(PlayerTypes iIndex) const;
+	TeamTypes getRankTeam(int iRank) const;
+	int getTeamRank(TeamTypes iIndex) const;
+	int getTeamScore(TeamTypes iIndex) const;
+	bool isOption(GameOptionTypes eIndex) const;
+	void setOption(GameOptionTypes eIndex, bool bEnabled);
+	bool isMPOption(MultiplayerOptionTypes eIndex) const;
+	bool isForcedControl(ForceControlTypes eIndex) const;
+	int getUnitCreatedCount(UnitTypes eIndex) const;
+	int getBuildingCreatedCount(BuildingTypes eIndex) const;
+	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const;
+	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra) const;
 
-	int getProjectCreatedCount(int /*ProjectTypes*/ eIndex);
-	bool isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra);
+	int getProjectCreatedCount(ProjectTypes eIndex) const;
+	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra) const;
 
-	int getForceCivicCount(int /*CivicTypes*/ eIndex);
-	bool isForceCivic(int /*CivicTypes*/ eIndex);
-	bool isForceCivicOption(int /*CivicOptionTypes*/ eCivicOption);
+	int getForceCivicCount(CivicTypes eIndex) const;
+	bool isForceCivic(CivicTypes eIndex) const;
+	bool isForceCivicOption(CivicOptionTypes eCivicOption) const;
 
-	int getVoteOutcome(int /*VoteTypes*/ eIndex);
+	int getVoteOutcome(VoteTypes eIndex) const;
 
-	int getReligionGameTurnFounded(int /*ReligionTypes*/ eIndex);
-	bool isReligionFounded(int /*ReligionTypes*/ eIndex);
-	bool isReligionSlotTaken(int /*ReligionTypes*/ eIndex);
+	int getReligionGameTurnFounded(ReligionTypes eIndex) const;
+	bool isReligionFounded(ReligionTypes eIndex) const;
+	bool isReligionSlotTaken(ReligionTypes eIndex) const;
 
-	bool isGameStart();
-	int countNumReligionsFounded();
-	int countNumReligionTechsDiscovered();
-	bool isTechCanFoundReligion(int /*TechTypes*/ eIndex);
+	bool isGameStart() const;
+	int countNumReligionsFounded() const;
+	int countNumReligionTechsDiscovered() const;
+	bool isTechCanFoundReligion(TechTypes eIndex) const;
 
-	int getCorporationGameTurnFounded(int /*CorporationTypes*/ eIndex);
-	bool isCorporationFounded(int /*CorporationTypes*/ eIndex);
-	bool isVotePassed(int /*VoteTypes*/ eIndex) const;
-	bool isVictoryValid(int /*VictoryTypes*/ eIndex);
-	bool isSpecialUnitValid(int /*SpecialUnitTypes*/ eSpecialUnitType);
-	void makeSpecialUnitValid(int /*SpecialUnitTypes*/ eSpecialUnitType);
-	bool isSpecialBuildingValid(int /*SpecialBuildingTypes*/ eIndex);
-	void makeSpecialBuildingValid(int /*SpecialBuildingTypes*/ eIndex);
-	//TB Nukefix (Reversal) The following 2 lines should be commented out
-	//bool isNukesValid();
-	//void makeNukesValid(bool bValid);
-	bool isInAdvancedStart();
+	int getCorporationGameTurnFounded(CorporationTypes eIndex) const;
+	bool isCorporationFounded(CorporationTypes eIndex) const;
+	bool isVotePassed(VoteTypes eIndex) const;
+	bool isVictoryValid(VictoryTypes eIndex) const;
+	bool isSpecialUnitValid(SpecialUnitTypes eSpecialUnitType) const;
+	void makeSpecialUnitValid(SpecialUnitTypes eSpecialUnitType);
+	bool isSpecialBuildingValid(SpecialBuildingTypes eIndex) const;
+	void makeSpecialBuildingValid(SpecialBuildingTypes eIndex);
 
-	CyCity* getHolyCity(int /*ReligionTypes*/ eIndex);
-	void setHolyCity(int /*ReligionTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce);
-	void clearHolyCity(int /*ReligionTypes*/ eIndex);
+	bool isInAdvancedStart() const;
 
-	CyCity* getHeadquarters(int /*CorporationTypes*/ eIndex);
-	void setHeadquarters(int /*CorporationTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce);
-	void clearHeadquarters(int /*CorporationTypes*/ eIndex);
+	CyCity* getHolyCity(ReligionTypes eIndex) const;
+	void setHolyCity(ReligionTypes eIndex, CyCity* pNewValue, bool bAnnounce);
+	void clearHolyCity(ReligionTypes eIndex);
 
-	int getPlayerVote(int /*PlayerTypes*/ eOwnerIndex, int iVoteId);
+	CyCity* getHeadquarters(CorporationTypes eIndex) const;
+	void setHeadquarters(CorporationTypes eIndex, CyCity* pNewValue, bool bAnnounce);
+	void clearHeadquarters(CorporationTypes eIndex);
+
+	int getPlayerVote(PlayerTypes eOwnerIndex, int iVoteId) const;
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
 
-	void setName(TCHAR* szName);
-	std::wstring getName();
-	int getIndexAfterLastDeal();
-	int getNumDeals();
-	CyDeal* getDeal(int iID);
+	void setName(const char* szName);
+	std::wstring getName() const;
+	int getIndexAfterLastDeal() const;
+	int getNumDeals() const;
+	CyDeal* getDeal(int iID) const;
 	CyDeal* addDeal();
 	void deleteDeal(int iID);
-	CvRandom& getMapRand();
-	int getMapRandNum(int iNum, TCHAR* pszLog);
-	CvRandom& getSorenRand();
-	int getSorenRandNum(int iNum, TCHAR* pszLog);
-	int calculateSyncChecksum();
-	int calculateOptionsChecksum();
+	CvRandom& getMapRand() const;
+	int getMapRandNum(int iNum, const char* pszLog) const;
+	CvRandom& getSorenRand() const;
+	int getSorenRandNum(int iNum, const char* pszLog) const;
+	int calculateSyncChecksum() const;
+	int calculateOptionsChecksum() const;
 	bool GetWorldBuilderMode() const;				// remove once CvApp is exposed
 	bool isPitbossHost() const;				// remove once CvApp is exposed
 	int getCurrentLanguage() const;				// remove once CvApp is exposed
@@ -288,28 +266,26 @@ public:
 	std::wstring getReplayMessageText(int i) const;
 	uint getNumReplayMessages() const;
 	CyReplayInfo* getReplayInfo() const;
+	void saveReplay(PlayerTypes ePlayer);
+	void addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std::wstring pszText, int iPlotX, int iPlotY, ColorTypes eColor);
+
 	bool hasSkippedSaveChecksum() const;
 
-	void saveReplay(int iPlayer);
+	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive);
+	void changeHumanPlayer(PlayerTypes eOldHuman, PlayerTypes eNewHuman);
 
-	void addPlayer(int /*PlayerTypes*/ eNewPlayer, int /*LeaderHeadTypes*/ eLeader, int /*CivilizationTypes*/ eCiv, bool bSetAlive );
-	void changeHumanPlayer( int /*PlayerTypes*/ eOldHuman , int /*PlayerTypes*/ eNewHuman );
-	void addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor);
-	void log(TCHAR* str);
+	void log(const char* file, char* str);
 	void logw(std::wstring str);
 
-	void drawBattleEffects();
+	int getCultureThreshold(CultureLevelTypes eLevel) const;
 
-	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel);
+	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
 
-	void setPlotExtraYield(int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield);
-	void changePlotExtraCost(int iX, int iY, int iExtraCost);
+	bool isCivEverActive(CivilizationTypes eCivilization) const;
+	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;
 
-	bool isCivEverActive(int /*CivilizationTypes*/ eCivilization);
-	bool isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader);
-
-	bool isEventActive(int /*EventTriggerTypes*/ eTrigger);
-	void doControl(int iControl);
+	bool isEventActive(EventTriggerTypes eTrigger) const;
+	void doControl(ControlTypes iControl);
 
 	bool canRegenerateMap() const;
 	bool regenerateMap();
@@ -321,20 +297,22 @@ public:
 
 	int getCutLosersCounter() const;
 	int getHighToLowCounter() const;
-	bool cheatCodesEnabled();
-	void setVictoryValid(int iVictory, bool bNewVal);
-	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex);
-	int getModderGameOption(int /*ModderGameOptionTypes*/ eIndex);
-	void setModderGameOption(int /*ModderGameOptionTypes*/ eIndex, int iNewValue);
-	void setFutureEras();
-	bool canEverResearch(int iTech) const;
-	bool canEverConstruct(int iBuilding) const;
-	bool canEverTrain(int iUnit) const;
-	bool canEverSpread(int iCorporation) const;
+
+	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
+	int getModderGameOption(ModderGameOptionTypes eIndex) const;
+	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
+
+	bool canEverResearch(TechTypes iTech) const;
+	bool canEverConstruct(BuildingTypes iBuilding) const;
+	bool canEverTrain(UnitTypes iUnit) const;
+	bool canEverSpread(CorporationTypes iCorporation) const;
 
 	const char* getC2CVersion() const;
+
+	void assignStartingPlots(bool bScenario, bool bMapScript);
+
 protected:
-	CvGame* m_pGame;
+	CvGame& m_pGame;
 };
 
 #endif	// #ifndef CyGame

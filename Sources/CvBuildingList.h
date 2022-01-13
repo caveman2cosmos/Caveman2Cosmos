@@ -11,9 +11,13 @@
 
 #ifndef CV_BUILDING_LIST_H
 #define CV_BUILDING_LIST_H
+
 #include "CvBuildingFilters.h"
 #include "CvBuildingGrouping.h"
 #include "CvBuildingSort.h"
+
+class CvCity;
+class CvPlayer;
 
 class CvBuildingList
 {
@@ -22,11 +26,11 @@ public:
 	void init();
 	void setPlayerToOwner();
 	void setInvalid();
-	bool getFilterActive(BuildingFilterTypes eFilter);
+	bool getFilterActive(BuildingFilterTypes eFilter) const;
 	void setFilterActive(BuildingFilterTypes eFilter, bool bActive);
-	BuildingGroupingTypes getGroupingActive();
+	BuildingGroupingTypes getGroupingActive() const;
 	void setGroupingActive(BuildingGroupingTypes eGrouping);
-	BuildingSortTypes getSortingActive();
+	BuildingSortTypes getSortingActive() const;
 	void setSortingActive(BuildingSortTypes eSorting);
 	int getGroupNum();
 	int getNumInGroup(int iGroup);
@@ -35,8 +39,8 @@ public:
 	int getWonderSelectionRow();
 	void setSelectedBuilding(BuildingTypes eSelectedBuilding);
 	void setSelectedWonder(BuildingTypes eSelectedWonder);
-	BuildingTypes getSelectedBuilding();
-	BuildingTypes getSelectedWonder();
+	BuildingTypes getSelectedBuilding() const;
+	BuildingTypes getSelectedWonder() const;
 protected:
 	void doFilter();
 	void doGroup();

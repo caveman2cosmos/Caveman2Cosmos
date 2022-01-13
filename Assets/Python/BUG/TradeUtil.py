@@ -57,21 +57,10 @@
 ##   getCorporationBonuses(playerOrID)
 ##     Returns the set of bonus IDs that <player> can receive due to their corporations.
 ##
-##   getSurplusBonuses(playerOrID, minimum=1
-##     Returns a list of bonus IDs of which <player> has at least <minimum>.
 ##
 ##   getTradeableBonuses(fromPlayerOrID, toPlayerOrID)
 ##     Returns two sets of bonus IDs that <fromPlayer> will and won't trade to <toPlayer>.
 ##
-## Trade Routes
-##
-##   calculateTotalTradeRouteYield(city, yieldType)
-##     Returns the total <yieldType> for all trade routes in <city>.
-##
-##   calculateTradeRoutes(playerOrID, withPlayerOrID=None)
-##     Returns the domestic and foreign trade route yields and counts for <playerOrID>:
-##     domestic yield, domestic count, foreign yield, and foreign count.
-##     If <withPlayerOrID> is given, only counts trade routes to their cities.
 ##
 ## TradeData
 ##
@@ -91,20 +80,11 @@
 
 from CvPythonExtensions import *
 import BugUtil
-import PlayerUtil
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
 
 CORP_BONUSES = {}
-
-DOMESTIC_TRADE = 0
-DOMESTIC_OVERSEAS_TRADE = 1
-FOREIGN_TRADE = 2
-FOREIGN_OVERSEAS_TRADE = 3
-
-MAX_TRADE_ROUTES = GC.getDefineINT("MAX_TRADE_ROUTES")
-
 TRADE_FORMATS = {}
 
 
@@ -114,42 +94,34 @@ def canTrade(playerX, playerY):
 	"""
 	Returns True if <playerX> can trade with <playerY>.
 	"""
-	if isinstance(playerX, int):
-		iPlayerX = playerX
-		CyPlayerX = GC.getPlayer(playerX)
-	else:
-		iPlayerX = playerX.getID()
-		CyPlayerX = playerX
-
-	if isinstance(playerY, int):
-		iPlayerY = playerY
-		CyPlayerY = GC.getPlayer(playerY)
-	else:
-		iPlayerY = playerY.getID()
-		CyPlayerY = playerY
-
+	iPlayerX = playerX.getID()
+	iPlayerY = playerY.getID()
 	if (iPlayerX == iPlayerY
-	or not CyPlayerX.isAlive() or CyPlayerX.isNPC() or CyPlayerX.isMinorCiv()
-	or not CyPlayerY.isAlive() or CyPlayerY.isNPC() or CyPlayerY.isMinorCiv()
+	or not playerX.isAlive() or playerX.isNPC() or playerX.isMinorCiv()
+	or not playerY.isAlive() or playerY.isNPC() or playerY.isMinorCiv()
 	):
 		return False
-	iTeamX = CyPlayerX.getTeam()
-	iTeamY = CyPlayerY.getTeam()
+
+	iTeamX = playerX.getTeam()
+	iTeamY = playerY.getTeam()
 	if iTeamX == iTeamY:
 		return True
+
 	CyTeamX = GC.getTeam(iTeamX)
 	if not CyTeamX.isHasMet(iTeamY) or CyTeamX.isAtWar(iTeamY):
 		return False
-	bHumanX = CyPlayerX.isHuman()
-	bHumanY = CyPlayerY.isHuman()
+
+	bHumanX = playerX.isHuman()
+	bHumanY = playerY.isHuman()
 	if bHumanX or bHumanY:
 		if bHumanX and bHumanY:
 			return True
-		elif bHumanX:
-			return CyPlayerY.AI_isWillingToTalk(iPlayerX)
-		else:
-			return CyPlayerX.AI_isWillingToTalk(iPlayerY)
-	return CyPlayerX.AI_isWillingToTalk(iPlayerY) and CyPlayerY.AI_isWillingToTalk(iPlayerX)
+		if bHumanX:
+			return playerY.AI_isWillingToTalk(iPlayerX)
+
+		return playerX.AI_isWillingToTalk(iPlayerY)
+
+	return playerX.AI_isWillingToTalk(iPlayerY) and playerY.AI_isWillingToTalk(iPlayerX)
 
 
 def getTechTradePartners(playerOrID):
@@ -160,11 +132,11 @@ def getTechTradePartners(playerOrID):
 		return ()
 	return getTradePartnersByTeam(playerOrID, lambda fromTeam, toTeam: fromTeam.isTechTrading() or toTeam.isTechTrading())
 
-def getBonusTradePartners(playerOrID):
+def getBonusTradePartners(CyPlayer):
 	"""
 	Returns a list of CyPlayers that can trade bonuses with <player>.
 	"""
-	return getTradePartnersByPlayer(playerOrID, lambda fromPlayer, toPlayer: fromPlayer.canTradeNetworkWith(toPlayer.getID()))
+	return getTradePartnersByPlayer(CyPlayer, lambda fromPlayer, toPlayer: fromPlayer.canTradeNetworkWith(toPlayer.getID()))
 
 def getGoldTradePartners(playerOrID):
 	"""
@@ -291,22 +263,21 @@ def canAcceptVassal(masterTeam, vassalTeam, bAtWar):
 	return masterTeam.isVassalStateTrading()
 
 
-def tradeParters(playerOrID):
+def tradeParters(player):
 	"""
 	Iterates over all of <player>'s possible trade partners, yielding each CyPlayer in turn.
 	"""
-	player = PlayerUtil.getPlayer(playerOrID)
-	for partner in PlayerUtil.players(alive=True, barbarian=False, minor=False):
+	for iPartner in xrange(GC.getMAX_PC_PLAYERS()):
+		partner = GC.getPlayer(iPartner)
 		if canTrade(player, partner):
 			yield partner
 
-def getTradePartnersByPlayer(playerOrID, testFunction, *args):
+def getTradePartnersByPlayer(player, testFunction, *args):
 	"""
 	Returns a list of CyPlayers that can trade with <player>.
 
 	<testFunction> is passed two CyPlayers plus <args> for each viable pairing and should return a boolean value.
 	"""
-	player = PlayerUtil.getPlayer(playerOrID)
 	partners = []
 	for partner in tradeParters(player):
 		if testFunction(player, partner, *args):
@@ -319,22 +290,21 @@ def getTradePartnersByTeam(playerOrID, testFunction, *args):
 
 	<testFunction> is passed two CyTeams plus <args> for each viable pairing and should return a boolean value.
 	"""
-	player = PlayerUtil.getPlayer(playerOrID)
-	team = PlayerUtil.getTeam(player.getTeam())
+	player = getPlayer(playerOrID)
+	team = GC.getTeam(player.getTeam())
 	partners = []
 	for partner in tradeParters(player):
-		if testFunction(team, PlayerUtil.getTeam(partner.getTeam()), *args):
+		if testFunction(team, GC.getTeam(partner.getTeam()), *args):
 			partners.append(partner)
 	return partners
 
 
 ## Trade Items
 
-def getDesiredBonuses(playerOrID):
+def getDesiredBonuses(player, team):
 	"""
 	Returns a set of bonus IDs that <player> can receive in trade.
 	"""
-	player, team = PlayerUtil.getPlayerAndTeam(playerOrID)
 	bonuses = set()
 	for eBonus in range(GC.getNumBonusInfos()):
 		if player.getNumAvailableBonuses(eBonus) == 0:
@@ -348,7 +318,7 @@ def getCorporationBonuses(playerOrID):
 	Returns the set of bonus IDs that <player> can receive due to their corporations.
 	Takes into account anything (e.g. civics) that alters <player>'s ability to run corporations.
 	"""
-	player = PlayerUtil.getPlayer(playerOrID)
+	player = getPlayer(playerOrID)
 	bonuses = set()
 	for eCorp, inputs in CORP_BONUSES.iteritems():
 		if player.getHasCorporationCount(eCorp) > 0:
@@ -363,31 +333,16 @@ def initCorporationBonuses():
 	for eCorp in range(GC.getNumCorporationInfos()):
 		corp = GC.getCorporationInfo(eCorp)
 		bonuses = set()
-		for i in range(GC.getNUM_CORPORATION_PREREQ_BONUSES()):
-			eBonus = corp.getPrereqBonus(i)
-			if eBonus != -1:
-				bonuses.add(eBonus)
+		for eBonus in corp.getPrereqBonuses():
+			bonuses.add(eBonus)
 		CORP_BONUSES[eCorp] = bonuses
 
-def getSurplusBonuses(playerOrID, minimum=1):
-	"""
-	Returns a list of bonus IDs of which <player> has at least <minimum> available to export.
-	"""
-	player = PlayerUtil.getPlayer(playerOrID)
-	available = []
-	for eBonus in range(GC.getNumBonusInfos()):
-		if player.getNumTradeableBonuses(eBonus) >= minimum:
-			available.append(eBonus)
-	return available
-
-def getTradeableBonuses(fromPlayerOrID, toPlayerOrID):
+def getTradeableBonuses(fromPlayer, eToPlayer):
 	"""
 	Returns two sets of bonus IDs that <fromPlayer> will and won't trade to <toPlayer>.
 
 	Assumes that the two players can trade bonuses.
 	"""
-	fromPlayer = PlayerUtil.getPlayer(fromPlayerOrID)
-	eToPlayer = PlayerUtil.getPlayerID(toPlayerOrID)
 	fromPlayerIsHuman = fromPlayer.isHuman()
 	will = set()
 	wont = set()
@@ -401,45 +356,6 @@ def getTradeableBonuses(fromPlayerOrID, toPlayerOrID):
 			else:
 				wont.add(eBonus)
 	return will, wont
-
-
-## Trade Routes
-def calculateTotalTradeRouteYield(CyCity, yieldType):
-	"""
-	Returns the total <yieldType> for all trade routes in a city.
-
-	If Fractional Trade Routes is active, the total is rounded down and returned as a regular number.
-	"""
-	trade = 0
-	for route in range(CyCity.getTradeRoutes()):
-		trade += CyCity.calculateTradeYield(yieldType, CyCity.calculateTradeProfitTimes100(CyCity.getTradeCity(route)))
-	trade /= 100
-	return trade
-
-
-def calculateTradeRoutes(playerOrID, withPlayerOrID=None):
-	"""
-	Returns the domestic and foreign trade route yields and counts for <playerOrID>:
-	domestic yield, domestic count, foreign yield, and foreign count.
-
-	If <withPlayerOrID> is given, only counts trade routes to their cities.
-	If Fractional Trade Routes is active, the value returned is fractional (times 100).
-	"""
-	domesticTrade = domesticCount = foreignTrade = foreignCount = 0
-	eTeam = PlayerUtil.getPlayerTeam(playerOrID)
-	eWithPlayer = PlayerUtil.getPlayerID(withPlayerOrID)
-	for city in PlayerUtil.playerCities(playerOrID):
-		for i in range(city.getTradeRoutes()):
-			tradeCity = city.getTradeCity(i)
-			if tradeCity and tradeCity.getOwner() >= 0 and (eWithPlayer == -1 or eWithPlayer == tradeCity.getOwner()):
-				trade = city.calculateTradeYield(YieldTypes.YIELD_COMMERCE, city.calculateTradeProfitTimes100(tradeCity))
-				if tradeCity.getTeam() == eTeam:
-					domesticTrade += trade
-					domesticCount += 1
-				else:
-					foreignTrade += trade
-					foreignCount += 1
-	return domesticTrade, domesticCount, foreignTrade, foreignCount
 
 
 class Trade(object):
@@ -520,11 +436,13 @@ def format(player, trade):
 	"""
 	if isinstance(trade, list) or isinstance(trade, tuple) or isinstance(trade, set):
 		return ", ".join([format(player, t) for t in trade])
-	elif trade.ItemType in TRADE_FORMATS:
+
+	if trade.ItemType in TRADE_FORMATS:
 		return TRADE_FORMATS[trade.ItemType].format(player, trade)
-	else:
-		BugUtil.warn("TradeUtil - unknown item type %d", trade.ItemType)
-		return ""
+
+	print "[WARNING] TradeUtil - unknown item type %d" % trade.ItemType
+	return ""
+
 
 def initTradeableItems():
 	addSimpleTrade("gold", TradeableItems.TRADE_GOLD, "TXT_KEY_TRADE_GOLD_NUM")
@@ -591,7 +509,7 @@ def getTradeBonus(player, trade):
 	return GC.getBonusInfo(trade.iData).getDescription()
 
 def getTradeCity(player, trade):
-	return PlayerUtil.getPlayer(player).getCity(trade.iData).getName()
+	return getPlayer(player).getCity(trade.iData).getName()
 
 def getTradeCivic(player, trade):
 	return GC.getCivicInfo(trade.iData).getDescription()
@@ -600,22 +518,22 @@ def getTradeReligion(player, trade):
 	return GC.getReligionInfo(trade.iData).getDescription()
 
 def getTradePlayer(player, trade):
-	return PlayerUtil.getPlayer(trade.iData).getName()
+	return getPlayer(trade.iData).getName()
 
 def getTradePeaceDeal(player, trade):
-	BugUtil.debug("TradeUtil - peace treaty has iData %d", trade.iData)
+	print "TradeUtil - peace treaty has iData %d" % trade.iData
 	return BugUtil.getText("TXT_KEY_TRADE_PEACE_TREATY_STRING", (GC.getDefineINT("PEACE_TREATY_LENGTH"),))
 
-#Afforess
+
 def getTradeUnits(player, trade):
-	return PlayerUtil.getPlayer(player).getUnit(trade.iData).getName()
+	return getPlayer(player).getUnit(trade.iData).getName()
 
 def getTradeWorkers(player, trade):
-	return PlayerUtil.getPlayer(player).getUnit(trade.iData).getName()
+	return getPlayer(player).getUnit(trade.iData).getName()
 
 def getTradeContacts(player, trade):
-	return PlayerUtil.getPlayerTeam(trade.iData).getName()
-#Afforess End
+	return GC.getTeam(trade.iData).getName()
+
 ## Classes for Formatting TradeData
 
 class BaseTradeFormat(object):
@@ -669,96 +587,10 @@ def init():
 	initTradeableItems()
 
 
-## Testing
-
-def makeTrade(type, value=-1):
-	trade = TradeData()
-	trade.ItemType = TradeableItems(type)
-	if value != -1:
-		trade.iData = value
-	return trade
-
-def test(player, type, value):
-	print format(player, makeTrade(type, value))
-
-def testAll():
-	for i in TRADE_FORMATS.keys():
-		test(2, i, 1)
-
-def testList():
-	print format(2, [
-		makeTrade(TradeableItems.TRADE_GOLD, 53),
-		makeTrade(TradeableItems.TRADE_MAPS),
-		makeTrade(TradeableItems.TRADE_PEACE, 1),
-		makeTrade(TradeableItems.TRADE_CITY, 1),
-		makeTrade(TradeableItems.TRADE_GOLD_PER_TURN, 6),
-	])
-
-STATUS_TRADE_ITEMS = (
-	(TradeableItems.TRADE_MAPS, "Map"),
-	(TradeableItems.TRADE_VASSAL, "Vassal"),
-	(TradeableItems.TRADE_SURRENDER, "Surrender"),
-	(TradeableItems.TRADE_OPEN_BORDERS, "Borders"),
-	(TradeableItems.TRADE_DEFENSIVE_PACT, "Pact"),
-	(TradeableItems.TRADE_PERMANENT_ALLIANCE, "Alliance"),
-	(TradeableItems.TRADE_PEACE_TREATY, "Peace"),
-)
-DENIALS = {
-	DenialTypes.NO_DENIAL : "None",
-	DenialTypes.DENIAL_UNKNOWN : "Unknown",
-	DenialTypes.DENIAL_NEVER : "Never",
-	DenialTypes.DENIAL_TOO_MUCH : "Too Much",
-	DenialTypes.DENIAL_MYSTERY : "Mystery",
-	DenialTypes.DENIAL_JOKING : "Joking",
-	DenialTypes.DENIAL_ANGER_CIVIC : "Anger Civic",
-	DenialTypes.DENIAL_FAVORITE_CIVIC : "Favorite Civic",
-	DenialTypes.DENIAL_MINORITY_RELIGION : "Minority Religion",
-	DenialTypes.DENIAL_CONTACT_THEM : "Contact Them",
-	DenialTypes.DENIAL_VICTORY : "Victory",
-	DenialTypes.DENIAL_ATTITUDE : "Attitude",
-	DenialTypes.DENIAL_ATTITUDE_THEM : "Attitude Them",
-	DenialTypes.DENIAL_TECH_WHORE : "Tech Whore",
-	DenialTypes.DENIAL_TECH_MONOPOLY : "Tech Monopoly",
-	DenialTypes.DENIAL_POWER_US : "Power Us",
-	DenialTypes.DENIAL_POWER_YOU : "Power You",
-	DenialTypes.DENIAL_POWER_THEM : "Power Them",
-	DenialTypes.DENIAL_TOO_MANY_WARS : "WHEOOH",
-	DenialTypes.DENIAL_NO_GAIN : "No Gain",
-	DenialTypes.DENIAL_NOT_ALLIED : "Not Allied",
-	DenialTypes.DENIAL_RECENT_CANCEL : "Recent Cancel",
-	DenialTypes.DENIAL_WORST_ENEMY : "Worst Enemy",
-	DenialTypes.DENIAL_POWER_YOUR_ENEMIES : "Power Your Enemies",
-	DenialTypes.DENIAL_TOO_FAR : "Too Far",
-	# these aren't available during startup (dunno about later)
-	#DenialTypes.DENIAL_VASSAL : "Vassal",
-	#DenialTypes.DENIAL_WAR_NOT_POSSIBLE_US : "War Not Possible Us",
-	#DenialTypes.DENIAL_WAR_NOT_POSSIBLE_THEM : "War Not Possible Them",
-	#DenialTypes.DENIAL_PEACE_NOT_POSSIBLE_US : "Peace Not Possible Us",
-	#DenialTypes.DENIAL_PEACE_NOT_POSSIBLE_THEM : "Peace Not Possible Them",
-}
-
-def printStatus(ePlayer, eAskingPlayer=None):
-	player = PlayerUtil.getPlayer(ePlayer)
-	if eAskingPlayer is None:
-		eAskingPlayer = PlayerUtil.getActivePlayerID()
-	print "Trade Status -- %s" % player.getName()
-	for eItem, name in STATUS_TRADE_ITEMS:
-		tradeData = TradeData()
-		tradeData.ItemType = eItem
-		can = player.canTradeItem(eAskingPlayer, tradeData, False)
-		denial = player.getTradeDenial(eAskingPlayer, tradeData)
-		will = denial == DenialTypes.NO_DENIAL
-		if denial in DENIALS:
-			denial = DENIALS[denial]
-		else:
-			denial = str(denial)
-		if not can:
-			if will:
-				print "%s: can't but will" % (name)
-			else:
-				print "%s: can't and won't because %s" % (name, denial)
-		else:
-			if will:
-				print "%s: will" % (name)
-			else:
-				print "%s: won't because %s" % (name, denial)
+def getPlayer(playerOrID):
+	"""Returns the CyPlayer for the given player."""
+	if playerOrID is None or playerOrID == -1:
+		return None
+	if isinstance(playerOrID, int):
+		return GC.getPlayer(playerOrID)
+	return playerOrID

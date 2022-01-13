@@ -1,8 +1,4 @@
-<?xml version="1.0"?>
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright C2C team 2016 and Firaxis Games 2016 -->
-	<!-- -->
-	<!-- Map Category -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4MapCategoryInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<MapCategoryInfos>
 		<MapCategoryInfo>
@@ -57,15 +53,15 @@
 			<Type>MAPCATEGORY_GALACTIC</Type>
 			<Description>TXT_KEY_MAPCATEGORY_GALACTIC</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_MILKY_WAY</Type>
 			<Description>TXT_KEY_MAPCATEGORY_MILKY_WAY</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_UNIVERSAL</Type>
 			<Description>TXT_KEY_MAPCATEGORY_UNIVERSAL</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_DISTANT</Type>
 			<Description>TXT_KEY_MAPCATEGORY_DISTANT</Description>
 		</MapCategoryInfo>

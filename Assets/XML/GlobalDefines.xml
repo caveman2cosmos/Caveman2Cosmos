@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Tim McCracken (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Global Defines -->
+<!--
+	BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP
+	BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP
+		By default each population provides 1 gold of free unit upkeep.
+		These values modify how much free upkeep gold each pop gives.
+		A value of 100 means each pop provides 2 gold in free upkeep.
+		a value of -100 means each pop provides 0.5 gold in free upkeep.
+		Civics and traits modifies this factor further.
+		Currently they are set to very low values (-200 and -100) as most units still only cost 1 gold in upkeep.
+		The plan is to have increasing unit upkeep values as unit technology develops,
+		and when that plan is fulfilled these values will likely be set higher too.
+ -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<DefineName>CIV4_VERSION</DefineName>
@@ -17,20 +24,13 @@
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>302</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>MAX_NUM_LANGUAGES</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-
 	<!-- GRAPHICS PAGING OPTIONS -->
-
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
 		<iDefineIntVal>2000000</iDefineIntVal>
 	</Define>
-
-	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
+	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test
 		allocations will be performed to test for low memory conditions -->
 	<!-- Size of each test allocation -->
 	<!-- <Define>
@@ -42,16 +42,16 @@
 		<DefineName>PAGING_TEST_ALLOC_NUM</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define> -->
-
 	<!-- Maximum amount of time in a frame that can be spent on paging operations.
 		Higher values mean faster paging in at the expense of more stuttering.
-	 -->
+		Currently this define is unused
+	-->
 	<Define>
 		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
-	 <Define>
+	<Define>
 		<DefineName>PAGE_IN_DIST_SYMBOLS</DefineName>
 		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
@@ -75,12 +75,10 @@
 		<DefineName>PAGE_IN_DIST_CITY</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
-	
 	<!-- GRAPHICS PAGING OPTIONS END -->
-
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
-	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
+		All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
 	-->
 	<Define>
 		<DefineName>LANGUAGE</DefineName>
@@ -111,11 +109,7 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -307,14 +301,6 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>SEAWATER_SEE_FROM_CHANGE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>SEAWATER_SEE_THROUGH_CHANGE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_YIELD_STACK</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
@@ -337,11 +323,6 @@
 	<Define>
 		<DefineName>MIN_CIV_STARTING_DISTANCE</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Not in use, commented out in the dll -->
-		<DefineName>MIN_ANIMAL_STARTING_DISTANCE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_BARBARIAN_STARTING_DISTANCE</DefineName>
@@ -388,84 +369,32 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NUM_OR_TECH_PREREQS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_UNIT_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_BUILDING_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_RESEARCH_RATE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_UNIT_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_BUILDING_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_CORPORATION_PREREQ_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_ROUTE_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_WORLD_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_TEAM_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>31</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY_FOR_OCC</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_AI_CITY_PRODUCTION</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_CITY_GROWTH_THRESHOLD</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>124</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CITY_GROWTH_MULTIPLIER</DefineName>
-		<iDefineIntVal>24</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FOOD_CONSUMPTION_PER_POPULATION</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NEW_HURRY_MODIFIER</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<DefineName>FOOD_CONSUMPTION_PER_POPULATION_PERCENT</DefineName>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
@@ -480,16 +409,7 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>DIRTY_POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-4</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Change name of this one to BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS -->
-		<DefineName>MAX_DISTANCE_CITY_MAINTENANCE</DefineName>
+		<DefineName>BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS</DefineName>
 		<iDefineIntVal>64</iDefineIntVal>
 	</Define>
 	<Define>
@@ -594,7 +514,7 @@
 	</Define>
 	<Define>
 		<DefineName>GREAT_GENERALS_THRESHOLD</DefineName>
-		<iDefineIntVal>30</iDefineIntVal>
+		<iDefineIntVal>11</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_SPY_SABOTAGE_COST</DefineName>
@@ -641,28 +561,20 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>LAKE_MAX_AREA_SIZE</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN</DefineName>
+		<iDefineIntVal>28</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_BASE_FREE_UNITS</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY</DefineName>
+		<iDefineIntVal>16</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_BASE_FREE_MILITARY_UNITS</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP</DefineName>
+		<iDefineIntVal>-150</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_FREE_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>INITIAL_GOLD_PER_UNIT</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP</DefineName>
+		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_OUTSIDE_UNITS</DefineName>
@@ -747,14 +659,6 @@
 	<Define>
 		<DefineName>FORTIFY_MODIFIER_PER_TURN</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ESCAPE_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ESTABLISH_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_FORTIFY_TURNS</DefineName>
@@ -857,30 +761,12 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>GLOBAL_WARMING_POWER_WEIGHT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>GLOBAL_WARMING_NUKE_WEIGHT</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Research rate boost for knowing first OR tech prereq. -->
-		<DefineName>TECH_COST_FIRST_KNOWN_PREREQ_MODIFIER</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Research rate boost for knowing additional OR tech prereqs. -->
-		<DefineName>TECH_COST_KNOWN_PREREQ_MODIFIER</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PEACE_TREATY_LENGTH</DefineName>
@@ -995,10 +881,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>FORCED_WAR_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -1028,7 +910,7 @@
 	</Define>
 	<Define>
 		<DefineName>UNIT_PRODUCTION_PERCENT_SM</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PROJECT_PRODUCTION_PERCENT</DefineName>
@@ -1071,6 +953,11 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Toffer - Perhaps make this a handicap tag,
+			AI has strong combat mod against barbs on high difficulty,
+			so why not allow NPC to be more on par with tech leader on high difficulty.
+			This can never give barbs techs that no other player has, it just determines how fast they catch up.
+		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
@@ -1113,10 +1000,6 @@
 	<Define>
 		<DefineName>EXPERIENCE_FROM_WITHDRAWL</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
@@ -1168,11 +1051,11 @@
 	</Define>
 	<!--
  How is visual city size computed from the real city size?
-	     Two approaches are possible:
-	         METHOD_EXPONENTIAL
-	         METHOD_LINMAP
-	     Set the following GAME_CITY_SIZE_METHOD to one of the above tags
-	     to control how big your cities look in the game world.
+		Two approaches are possible:
+			METHOD_EXPONENTIAL
+			METHOD_LINMAP
+		Set the following GAME_CITY_SIZE_METHOD to one of the above tags
+		to control how big your cities look in the game world.
 	-->
 	<Define>
 		<DefineName>GAME_CITY_SIZE_METHOD</DefineName>
@@ -1288,9 +1171,9 @@
 	</Define>
 	<!--
  Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the camera to move back different amounts
-	     There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
-	     To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML  and adjust the
-	     CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
+		There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
+		To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML and adjust the
+		CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
 	-->
 	<Define>
 		<DefineName>CAMERA_SMALLEST_MAX_DISTANCE</DefineName>
@@ -1538,10 +1421,6 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>VICTORY_SOUNDTRACK_AVAILABLE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_WITHDRAWAL_PROBABILITY</DefineName>
 		<iDefineIntVal>90</iDefineIntVal>
 	</Define>
@@ -1556,10 +1435,6 @@
 	<Define>
 		<DefineName>PLAYER_ALWAYS_RAZES_CITIES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MIN_WATER_SIZE_FOR_OCEAN</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_CITY_ATTACK_MODIFIER_FOR_SIEGE_TOWER</DefineName>
@@ -1639,10 +1514,6 @@
 		<fDefineFloatVal>0.43</fDefineFloatVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_SCREEN_FOG_ENABLED</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>AI_CAN_DISBAND_UNITS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -1669,10 +1540,6 @@
 	<Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>
@@ -1723,10 +1590,6 @@
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ADVANCED_START_CULTURE_COST_INCREASE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>ADVANCED_START_VISIBILITY_COST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -1753,10 +1616,6 @@
 	<Define>
 		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CIVILOPEDIA_SHOW_ACTIVE_CIVS_ONLY</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>
@@ -1791,18 +1650,9 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>BONUS_OBSOLETE_VALUE_MODIFIER</DefineName>
-		<iDefineIntVal>150</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
-	<!-- Super Forts begin -->
 	<Define>
 		<DefineName>AI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
@@ -1811,11 +1661,8 @@
 		<DefineName>SUPER_FORTS_DURATION_BEFORE_REVOLT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
-	<!-- Super Forts end -->
-	<!-- More Rivers begin -->
-	<!--
- Valid results on this divisor will never exceed 12
-	the higher the divisor the more rivers
+	<!-- More Rivers
+	Valid results on this divisor will never exceed 12, higher divisor = more rivers.
 	-->
 	<Define>
 		<DefineName>PLOTS_PER_RIVER_EDGE_DIVISOR</DefineName>
@@ -1826,14 +1673,11 @@
 		<DefineName>RIVER_RAND_ON_MORE_RIVERS</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
-	<!-- More Rivers end -->
-	<!-- More Resources begin -->
+	<!-- ! More Rivers -->
 	<Define>
 		<DefineName>BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
-	<!-- More Resources end -->
-	<!-- Size Matters Most begin -->
 	<Define>
 		<DefineName>SIZE_MATTERS_MOST_MULTIPLIER</DefineName>
 		<iDefineIntVal>150</iDefineIntVal>
@@ -1842,33 +1686,26 @@
 		<DefineName>SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER</DefineName>
 		<iDefineIntVal>300</iDefineIntVal>
 	</Define>
-	<!-- Size Matters Most end -->
-	<!-- AI Gold Slider Safety Percent begin -->
-	<!-- This is the BASE amount of slider allocation required towards gold that the AI feels comfortable with -->
-	<!-- It noteworthily affects how much tolerance the AI has where it feels ready to grow -->
-	<!-- Reduce to make the AI more sensitive to gold concerns and increase for more reckless behavior -->
-	<!-- This may be rather interesting to convert to an AI personality matter or at least give a personality based modifier eventually -->
-	<!-- Original Value was set to 50 - I've adjusted to 40.-->
+	<!-- AI Gold Slider Safety Percent
+	This is the BASE income to expense ratio that the AI feels comfortable with.
+	e.g. a value of 10 would mean that the AI feels confortable if their net income is only 10% of gross income.
+	It noteworthily affects how much tolerance the AI has where it feels ready to grow.
+	Increase to make the AI more sensitive to gold concerns and reduce for more reckless behavior.
+	This may be rather interesting to convert to an AI personality matter or at least give a personality based modifier eventually
+	Original Value: 50 -->
 	<Define>
-		<DefineName>SAFE_GOLD_PERCENT</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
+		<DefineName>SAFE_PROFIT_MARGIN_BASE_PERCENT</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
-	<!-- AI Gold Slider Safety Percent -->
-	<!-- More XP to Level begin -->
 	<Define>
 		<DefineName>MORE_XP_TO_LEVEL_MODIFIER</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
-	<!-- More XP to Level end -->
 	<!-- A way to directly enhance the value of bombarding units in city attack stacks (+%) -->
 	<!-- The structure should still keep them in a ratio according to the rest of the stack... this can simply help them to NOT be ignored EVER -->
 	<Define>
 		<DefineName>C2C_ROUGH_BOMBARD_VALUE_MODIFIER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<!-- Minimum number of property control units per property for the AI -->
 	<Define>
@@ -1876,24 +1713,16 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>GREATER_COMMERCE_SWITCH_POINT</DefineName>
-		<iDefineIntVal>1000000</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>WORKER_TRADE_VALUE_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
-		<iDefineIntVal>-70</iDefineIntVal>
+		<iDefineIntVal>-200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CIVIC_ANARCHY_QTY_DISCOUNT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
@@ -1902,5 +1731,17 @@
 	<Define>
 		<DefineName>ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_FOOD_WEIGHT</DefineName>
+		<iDefineIntVal>16</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_PRODUCTION_WEIGHT</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>AI_BASE_COMMERCE_WEIGHT</DefineName>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 </Civ4Defines>

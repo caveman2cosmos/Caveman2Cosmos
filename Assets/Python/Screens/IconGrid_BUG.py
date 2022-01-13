@@ -1,11 +1,5 @@
-
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
-import CvScreenEnums
 import BugUtil
-import math
-
 
 # globals
 gc = CyGlobalContext()
@@ -335,7 +329,7 @@ class IconGrid_BUG:
 				currentY += self.rowHeaderHeight
 				text = "<font=%i>%s</font>" % (rowData.font, rowData.rowHeader)
 				self.screen.setLabel(self.rowName + str(rowIndex) + "name", "",
-									 text, CvUtil.FONT_LEFT_JUSTIFY,
+									 text, 1<<0,
 									 self.xStart + 5, self.firstRowY + (self.totalRowHeight + self.rowSpace) * rowIndex - 3,
 									 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
@@ -381,7 +375,7 @@ class IconGrid_BUG:
 							textY += self.rowHeaderHeight
 						text = "<font=%i>%s</font>" % (rowData.cells[startIndex + offset].font, rowData.cells[startIndex + offset].text)
 						self.screen.setLabel( self.rowName + str(rowIndex) + "_" + str(startIndex + offset), ""
-											, text, CvUtil.FONT_LEFT_JUSTIFY
+											, text, 1<<0
 											, currentX + 6, textY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 						currentX += self.textColWidth[startIndex + offset] + self.colSpace
 
@@ -424,7 +418,7 @@ class IconGrid_BUG:
 							if stackedbarData.text != "":
 								text = "<font=%i>%s</font>" % (stackedbarData.font, stackedbarData.text)
 								self.screen.setLabel (szTxt_ID, "",
-													  text, CvUtil.FONT_CENTER_JUSTIFY,
+													  text, 1<<2,
 													  currentX + 6 + width / 2, textY - iSBarOffset_Y,
 													  -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 							else:
@@ -463,7 +457,7 @@ class IconGrid_BUG:
 				elif (self.columns[startIndex + offset] == GRID_TEXT_COLUMN):
 					text = "<font=%i>%s</font>" % (rowData.cells[startIndex + offset].font, rowData.cells[startIndex + offset].text)
 					self.screen.setLabel(self.rowName + str(rowIndex) + "_" + str(startIndex + offset), "",
-										 text, CvUtil.FONT_LEFT_JUSTIFY,
+										 text, 1<<0,
 										 currentX + 6, self.firstRowY + (self.totalRowHeight + self.rowSpace) * rowIndex + 28,
 										 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					currentX += self.textColWidth[startIndex + offset] + self.colSpace
@@ -502,7 +496,7 @@ class IconGrid_BUG:
 						if stackedbarData.text != "":
 							text = "<font=%i>%s</font>" % (stackedbarData.font, stackedbarData.text)
 							self.screen.setLabel (szTxt_ID, "",
-												  text, CvUtil.FONT_CENTER_JUSTIFY,
+												  text, 1<<2,
 												  currentX + 6 + width / 2, textY - iSBarOffset_Y,
 												  -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 						else:

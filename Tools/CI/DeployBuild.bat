@@ -56,14 +56,29 @@ call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
 call %SVN% --quiet checkout %svn_url% "%build_dir%"
+if %ERRORLEVEL% neq 0 goto checkoutLoopSetup
+goto OK
+
+:checkoutLoopSetup
+echo SVN checkout failed... Cleanup
+call %SVN% --non-interactive cleanup "%build_dir%"
+echo Make 25 more attempts...
+set /a count = 0
+set /a max = 25
+:checkoutLoop
+set /a count += 1
+call %SVN% --quiet checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
-    call %SVN% cleanup --non-interactive
-    call %SVN% checkout %svn_url% "%build_dir%"
-    if %ERRORLEVEL% neq 0 (
-        echo SVN checkout failed, aborting...
-        exit /B 3
-    )
+	if %count% GTR %max% (
+		echo SVN checkout failed, aborting...
+		exit /B 3
+	)
+	echo Attempt %count% failed... cleanup
+	call %SVN% --non-interactive cleanup "%build_dir%"
+	goto checkoutLoop
 )
+:OK
+echo Successfull checkout...
 
 :: PACK FPKS ---------------------------------------------------
 :: We copy built FPKs and the fpklive token back from SVN 

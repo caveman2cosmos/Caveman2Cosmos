@@ -620,7 +620,7 @@
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
-					<iThreshold>160000</iThreshold>
+					<iThreshold>1600000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
@@ -641,7 +641,6 @@
 			<iMaxNationalWonders>25</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>25</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Alberts2 high iThreshold can lead to integer overflows
 		<CultureLevelInfo>
 			<Type>CULTURELEVEL_MONUMENTAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MONUMENTAL</Description>
@@ -649,27 +648,39 @@
 			<SpeedThresholds>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
-					<iThreshold>8000000</iThreshold>
+					<iThreshold>16000000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
-					<iThreshold>7000000</iThreshold>
+					<iThreshold>12800000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_SNAIL</GameSpeedType>
-					<iThreshold>5000000</iThreshold>
+					<iThreshold>9600000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
-					<iThreshold>3000000</iThreshold>
+					<iThreshold>6400000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
-					<iThreshold>2000000</iThreshold>
+					<iThreshold>4800000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
+					<iThreshold>3200000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
-					<iThreshold>1000000</iThreshold>
+					<iThreshold>1600000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_BLITZ</GameSpeedType>
+					<iThreshold>800000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ULTRAFAST</GameSpeedType>
+					<iThreshold>400000</iThreshold>
 				</SpeedThreshold>
 			</SpeedThresholds>
 			<iCityRadius>3</iCityRadius>
@@ -677,6 +688,6 @@
 			<iMaxTeamWonders>16</iMaxTeamWonders>
 			<iMaxNationalWonders>31</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>31</iMaxNationalWondersOCC>
-		</CultureLevelInfo>-->
+		</CultureLevelInfo>
 	</CultureLevelInfos>
 </Civ4CultureLevelInfo>

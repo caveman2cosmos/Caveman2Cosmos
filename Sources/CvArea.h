@@ -3,12 +3,12 @@
 #ifndef CvArea_h__
 #define CvArea_h__
 
-#include "CvGameCoreDLL.h"
+//#include "CvEnums.h"
 
 class CvCity;
 class CvPlot;
 
-//	Koshling - record of a single combat result
+// Koshling - record of a single combat result
 typedef struct CombatResultRecord
 {
 	PlayerTypes	eLoser;
@@ -18,11 +18,15 @@ typedef struct CombatResultRecord
 
 typedef std::vector<CombatResultRecord> TurnCombatResults;
 
-//	Rolling record of this number of turns combat are kept for AI analysis
-#define	COMBAT_RECORD_LENGTH	20
+// Rolling record of this number of turns combat are kept for AI analysis
+#define COMBAT_RECORD_LENGTH 20
 
 class CvArea
+	: private bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
+//
+// Functions
+//
 public:
 
 	CvArea();
@@ -33,70 +37,74 @@ public:
 	void uninit();
 	void reset(int iID = 0, bool bWater = false, bool bConstructorCall = false);
 
-	int calculateTotalBestNatureYield() const;																// Exposed to Python
+	void clearModifierTotals();
 
-	int countCoastalLand() const;																							// Exposed to Python
-	int countNumUniqueBonusTypes() const;																			// Exposed to Python
-	int countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner = NO_PLAYER) const;		// Exposed to Python
-	int countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwner = NO_PLAYER) const;		// Exposed to Python
+	// for serialization
+	virtual void read(FDataStreamBase* pStream);
+	virtual void write(FDataStreamBase* pStream);
 
-	int getID() const;																							// Exposed to Python
+	int calculateTotalBestNatureYield() const;
+
+	int countCoastalLand() const;
+	int countNumUniqueBonusTypes() const;
+	int countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner = NO_PLAYER) const;
+	int countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwner = NO_PLAYER) const;
+
+	int getID() const;
 	void setID(int iID);
 
-	int getNumTiles() const;																									// Exposed to Python
-	bool isLake() const;																											// Exposed to Python
+	int getNumTiles() const;
 	void changeNumTiles(int iChange);
 
-	int getNumOwnedTiles() const;																							// Exposed to Python
-	int getNumUnownedTiles() const;																						// Exposed to Python
+	int getNumOwnedTiles() const;
+	int getNumUnownedTiles() const;
 	void changeNumOwnedTiles(int iChange);
 
-	int getNumRiverEdges() const;																							// Exposed to Python
+	bool isLake() const;
+
+	int getNumRiverEdges() const;
 	void changeNumRiverEdges(int iChange);
 
-	int getNumCities() const;																									// Exposed to Python
+	int getNumCities() const;
+	int getNumUnits() const;
+	int getTotalPopulation() const;
 
-	int getNumUnits() const;																									// Exposed to Python
-
-	int getTotalPopulation() const;																						// Exposed to Python
-
-	int getNumStartingPlots() const;																					// Exposed to Python
+	int getNumStartingPlots() const;
 	void changeNumStartingPlots(int iChange);
 
-	bool isWater() const;																											// Exposed to Python
+	bool isWater() const;
 
-	int getUnitsPerPlayer(PlayerTypes eIndex) const;													// Exposed to Python
+	int getUnitsPerPlayer(PlayerTypes eIndex) const;
 	void changeUnitsPerPlayer(PlayerTypes eIndex, int iChange);
 
-	int getAnimalsPerPlayer(PlayerTypes eIndex) const;												// Exposed to Python
+	int getAnimalsPerPlayer(PlayerTypes eIndex) const;
 	void changeAnimalsPerPlayer(PlayerTypes eIndex, int iChange);
 
-	int getCitiesPerPlayer(PlayerTypes eIndex) const;													// Exposed to Python
+	int getCitiesPerPlayer(PlayerTypes eIndex) const;
 	void changeCitiesPerPlayer(PlayerTypes eIndex, int iChange);
 
-	int getPopulationPerPlayer(PlayerTypes eIndex) const;											// Exposed to Python
+	int getPopulationPerPlayer(PlayerTypes eIndex) const;
 	void changePopulationPerPlayer(PlayerTypes eIndex, int iChange);
 
-	int getBuildingGoodHealth(PlayerTypes eIndex) const;											// Exposed to Python
+	int getBuildingGoodHealth(PlayerTypes eIndex) const;
 	void changeBuildingGoodHealth(PlayerTypes eIndex, int iChange);
 
-	int getBuildingBadHealth(PlayerTypes eIndex) const;												// Exposed to Python
+	int getBuildingBadHealth(PlayerTypes eIndex) const;
 	void changeBuildingBadHealth(PlayerTypes eIndex, int iChange);
 
-	int getBuildingHappiness(PlayerTypes eIndex) const;												// Exposed to Python
+	int getBuildingHappiness(PlayerTypes eIndex) const;
 	void changeBuildingHappiness(PlayerTypes eIndex, int iChange);
 
-	int getFreeSpecialist(PlayerTypes eIndex) const;													// Exposed to Python
+	int getFreeSpecialist(PlayerTypes eIndex) const;
 	void changeFreeSpecialist(PlayerTypes eIndex, int iChange);
 
-	int getPower(PlayerTypes eIndex) const;																		// Exposed to Python
+	int getPower(PlayerTypes eIndex) const;
 	void changePower(PlayerTypes eIndex, int iChange);
 
 	bool hasBestFoundValue(PlayerTypes eIndex) const;
-	int getBestFoundValue(PlayerTypes eIndex) const;													// Exposed to Python
+	int getBestFoundValue(PlayerTypes eIndex) const;
 	void setBestFoundValue(PlayerTypes eIndex, int iNewValue);
 
-	//DPII < Maintenance Modifiers >
 	int getMaintenanceModifier(PlayerTypes eIndex) const;
 	void changeMaintenanceModifier(PlayerTypes eIndex, int iChange);
 
@@ -112,54 +120,57 @@ public:
 
 	bool isHomeArea(PlayerTypes eIndex) const;
 	void setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea);
-	//DPII < Maintenance Modifiers >
 
-	int getNumRevealedTiles(TeamTypes eIndex) const;													// Exposed to Python
-	int getNumUnrevealedTiles(TeamTypes eIndex) const;												// Exposed to Python
+	int getNumRevealedTiles(TeamTypes eIndex) const;
+	int getNumUnrevealedTiles(TeamTypes eIndex) const;
 	void changeNumRevealedTiles(TeamTypes eIndex, int iChange);
 	int getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const;
 	int getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) const;
 
-	int getCleanPowerCount(TeamTypes eIndex) const;
-	bool isCleanPower(TeamTypes eIndex) const;																// Exposed to Python
+	bool isCleanPower(TeamTypes eIndex) const;
 	void changeCleanPowerCount(TeamTypes eIndex, int iChange);
 
 	int getBorderObstacleCount(TeamTypes eIndex) const;
-	bool isBorderObstacle(TeamTypes eIndex) const;																// Exposed to Python
+	bool isBorderObstacle(TeamTypes eIndex) const;
 	void changeBorderObstacleCount(TeamTypes eIndex, int iChange);
 
-	AreaAITypes getAreaAIType(TeamTypes eIndex) const;												// Exposed to Python
+	AreaAITypes getAreaAIType(TeamTypes eIndex) const;
 	void setAreaAIType(TeamTypes eIndex, AreaAITypes eNewValue);
 
-	CvCity* getTargetCity(PlayerTypes eIndex) const;													// Exposed to Python
-	void setTargetCity(PlayerTypes eIndex, CvCity* pNewValue);
+	CvCity* getTargetCity(PlayerTypes eIndex) const;
+	void setTargetCity(PlayerTypes eIndex, const CvCity* pNewValue);
 
-	int getYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2) const;	// Exposed to Python
+	int getYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2) const;
 	void changeYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2, int iChange);
 
-	int getNumTrainAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2) const;		// Exposed to Python
+	int getNumTrainAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2) const;
 	void changeNumTrainAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2, int iChange);
 
-	int getNumAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2) const;				// Exposed to Python
+	int getNumAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2) const;
 	void changeNumAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2, int iChange);
 
-	int getNumBonuses(BonusTypes eBonus) const;																// Exposed to Python
-	int getNumTotalBonuses() const;																						// Exposed to Python
+	int getNumBonuses(BonusTypes eBonus) const;
+	int getNumTotalBonuses() const;
 	void changeNumBonuses(BonusTypes eBonus, int iChange);
 
-	int getNumImprovements(ImprovementTypes eImprovement) const;							// Exposed to Python
+	int getNumImprovements(ImprovementTypes eImprovement) const;
 	void changeNumImprovements(ImprovementTypes eImprovement, int iChange);
-
-	void clearModifierTotals();
 
 	void setNumValidPlotsbySpawn(SpawnTypes eSpawn, int iAmount);
 	int getNumValidPlotsbySpawn(SpawnTypes eSpawn) const;
 
-private:
-	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvArea(const CvArea&);
-	CvArea& operator=(const CvArea&);
+	//	Koshling - record rolling history of the last N turns of our combat losses and what we lost to
+	void recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, UnitTypes lostToUnitType);
+	//	Return the number of units of the specified type recently lost per 100 turns (normalised figure)
+	//	If eUnit is NO_UNIT all types will be tallied
+	int	getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const;
+	//	Return the number of units of the specified AI type recently lost per 100 turns (normalised figure)
+	//	If eUnit is NO_UNITAI all types will be tallied
+	int	getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const;
 
+//
+// Variables
+//
 protected:
 
 	int m_iID;
@@ -183,16 +194,17 @@ protected:
 	int* m_aiFreeSpecialist;
 	int* m_aiPower;
 	int* m_aiBestFoundValue;
-	//DPII < Maintenance Modifiers >
 	int* m_aiMaintenanceModifier;
 	int* m_aiHomeAreaMaintenanceModifier;
 	int* m_aiOtherAreaMaintenanceModifier;
-	bool* m_abHomeArea;
-	//DPII < Maintenance Modifiers >
 	int* m_aiNumRevealedTiles;
 	int* m_aiCleanPowerCount;
 	int* m_aiBorderObstacleCount;
 	int* m_aiSpawnValidPlotCount;
+	int* m_paiNumBonuses;
+	int* m_paiNumImprovements;
+
+	bool* m_abHomeArea;
 
 	AreaAITypes* m_aeAreaAIType;
 
@@ -202,42 +214,30 @@ protected:
 	int** m_aaiNumTrainAIUnits;
 	int** m_aaiNumAIUnits;
 
-	int* m_paiNumBonuses;
-	int* m_paiNumImprovements;
+	mutable TeamTypes m_eCachedTeamPlotTypeCounts;
+	mutable int m_iCachedTurnPlotTypeCounts;
 
-	mutable TeamTypes	m_eCachedTeamPlotTypeCounts;
-	mutable int			m_iCachedTurnPlotTypeCounts;
-	mutable std::map<FeatureTypes,int>	m_plotFeatureCountCache;
-	mutable std::map<TerrainTypes,int>	m_plotTerrainCountCache;
-
-public:
-
-	// for serialization
-	virtual void read(FDataStreamBase* pStream);
-	virtual void write(FDataStreamBase* pStream);
-
-	//	Koshling - record rolling history of the last N turns of our combat losses and what we lost to
-	void recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, UnitTypes lostToUnitType);
-	//	Return the number of units of the specified type recently lost per 100 turns (normalised figure)
-	//	If eUnit is NO_UNIT all types will be tallied
-	int	getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const;
-	//	Return the number of units of the specified AI type recently lost per 100 turns (normalised figure)
-	//	If eUnit is NO_UNITAI all types will be tallied
-	int	getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const;
+	mutable std::map<FeatureTypes,int> m_plotFeatureCountCache;
+	mutable std::map<TerrainTypes,int> m_plotTerrainCountCache;
 
 private:
-	int					m_iLastGameTurnRecorded;
-	TurnCombatResults	m_combatRecord[COMBAT_RECORD_LENGTH];
+	int m_iLastGameTurnRecorded;
+	TurnCombatResults m_combatRecord[COMBAT_RECORD_LENGTH];
 
+//
+// Algorithm/range helpers
+//
 public:
-	//
-	// Algorithm/range helpers
-	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvArea, bool, isWater);
-		DECLARE_MAP_FUNCTOR(CvArea, int, getNumTiles);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getBestFoundValue, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
+		DECLARE_MAP_FUNCTOR(CvArea, void, clearModifierTotals);
+
+		DECLARE_MAP_FUNCTOR_2(CvArea, void, setBestFoundValue, PlayerTypes, int);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, int, getNumTiles);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getBestFoundValue, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
 	};
 };
 

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_CIVICS</Tag>
+		<English>Civics Advisor</English>
+		<French>Conseiller des Doctrines</French>
+		<German>Gesellschaft</German>
+		<Russian>Парадигмы</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_CORPORATE</Tag>
+		<English>Corporate Advisor</English>
+		<French>Conseiller des Corporations</French>
+		<German>Kapitalgesellschaften</German>
+		<Russian>Корпорации</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_DOMESTIC</Tag>
+		<English>Domestic Advisor</English>
+		<French>Conseiller Interne</French>
+		<German>Inland</German>
+		<Russian>Главный советник</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FINANCE</Tag>
+		<English>Finance Advisor</English>
+		<French>Conseiller Financier</French>
+		<German>Finanzen</German>
+		<Russian>Советник по финансам</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FOREIGN</Tag>
+		<English>Foreign Advisor</English>
+		<French>Conseiller des Affaires Etrangères</French>
+		<German>Ausland</German>
+		<Russian>Советник МИД</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE</Tag>
+		<English>Intelligence Advisor</English>
+		<French>Conseiller d'Espionnage</French>
+		<German>Geheimdienst</German>
+		<Russian>Советник по шпионажу</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_MILITARY</Tag>
+		<English>Military Advisor</English>
+		<French>Conseiller Militaire</French>
+		<German>Militär</German>
+		<Russian>Военный советник</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_PARTISAN</Tag>
+		<English>Partisan Advisor</English>
+		<French>Conseiller des Partis</French>
+		<German>Revolutionen</German>
+		<Russian>Революции</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_RELIGIOUS</Tag>
+		<English>Religious Advisor</English>
+		<French>Conseiller Religieux</French>
+		<German>Glaube</German>
+		<Russian>Советник по религиям</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_TECHNOLOGY</Tag>
+		<English>Technology Advisor</English>
+		<French>Conseiller Technologique</French>
+		<German>Technologien</German>
+		<Russian>Научный советник</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Toggle bare map [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Makes it easier to see the landscape.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_SCORE</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list[COLOR_REVERT][NEWLINE]Click your own list entry to minimize score list.</English>
+	</TEXT>
+</Civ4GameText>

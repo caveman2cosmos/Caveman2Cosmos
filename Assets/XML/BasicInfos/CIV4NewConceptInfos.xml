@@ -4,595 +4,413 @@
 	<NewConceptInfos>
 		<NewConceptInfo>
 			<Type>CONCEPT_ACTIVE_DEFENSE</Type>
-			<Description>TXT_KEY_CONCEPT_ACTIVE_DEFENSE_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ACTIVE_DEFENSE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ACTIVE_DEFENSE_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_COMBAT_ODDS</Type>
-			<Description>TXT_KEY_CONCEPT_ADVANCED_COMBAT_ODDS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ADVANCED_COMBAT_ODDS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ADVANCED_COMBAT_ODDS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_DIPLOMACY</Type>
-			<Description>TXT_KEY_CONCEPT_DIPLOMACY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ADVDIPLOMACY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_DIPLOMACY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_ESPIONAGE</Type>
-			<Description>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_AIAUTOPLAY</Type>
-			<Description>TXT_KEY_CONCEPT_AIAUTOPLAY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_AIAUTOPLAY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_AIAUTOPLAY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_AIR_BOMBING</Type>
-			<Description>TXT_KEY_CONCEPT_AIR_BOMBING_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_AIR_BOMBING</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_AIR_BOMBING_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_AUTO_BUILDINGS</Type>
-			<Description>TXT_KEY_CONCEPT_AUTO_BUILDINGS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_AUTO_BUILDINGS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_AUTO_BUILDINGS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_BATTLE_EFFECTS</Type>
-			<Description>TXT_KEY_CONCEPT_BATTLE_EFFECTS_TEXT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_BATTLE_EFFECTS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_BUG_CITY_CYCLE_ARROWS</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_IMPROVED_GLANCE_TAB</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_MILITARY_ADVISOR</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_OVERLAY</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_OVERLAY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_OVERLAY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_OVERLAY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_RAW_YIELDS</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_RAW_YIELDS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_RAW_YIELDS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_RAW_YIELDS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_REMINDERS</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_REMINDERS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_REMINDERS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_REMINDERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_WHIP_ASSISTANT</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_C2C_TERRAINS</Type>
-			<Description>TXT_KEY_CONCEPT_C2C_TERRAINS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_C2C_TERRAINS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_C2C_TERRAINS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_CASTLE_IMPROVEMENTS</Type>
-			<Description>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_CHANGECIV</Type>
-			<Description>TXT_KEY_CONCEPT_CHANGECIV_TEXT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_CHANGECIV_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_CRIME</Type>
-			<Description>TXT_KEY_CONCEPT_CRIME_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_CRIME</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CRIME_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_DYNAMIC_EXPERIENCE</Type>
-			<Description>TXT_KEY_CONCEPT_DYNAMIC_EXPERIENCE_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_DYNAMIC_EXPERIENCE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_DYNAMIC_EXPERIENCE_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_EMPLOYED_CITIZENS</Type>
-			<Description>TXT_KEY_CONCEPT_EMPLOYED_CITIZENS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_EMPLOYED_CITIZENS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_EMPLOYED_CITIZENS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ENHANCED_TECH_CONQUEST</Type>
-			<Description>TXT_KEY_CONCEPT_ENHANCED_TECH_CONQUEST_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ENHANCED_TECH_CONQUEST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ENHANCED_TECH_CONQUEST_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ETHNIC_CITYSTYLES</Type>
-			<Description>TXT_KEY_CONCEPT_ETHNIC_CITYSTYLES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ETHNIC_CITYSTYLES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ETHNIC_CITYSTYLES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_FENGAGE</Type>
-			<Description>TXT_KEY_CONCEPT_FENGAGE_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_FENGAGE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_FENGAGE_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_FIXED_BORDERS</Type>
-			<Description>TXT_KEY_CONCEPT_FIXED_BORDERS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_FIXED_BORDERS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_FIXED_BORDERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_GREAT_COMMANDERS</Type>
-			<Description>TXT_KEY_CONCEPT_GREAT_COMMANDERS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_GREAT_COMMANDERS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_COMMANDERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_HOUSING</Type>
-			<Description>TXT_KEY_CONCEPT_HOUSING_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_HOUSING</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_HOUSING_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_INFLUENCE_DRIVEN_WAR</Type>
-			<Description>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_INQUISITION</Type>
-			<Description>TXT_KEY_CONCEPT_INQUISITION_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_INQUISITION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_INQUISITION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_LARGER_CITIES</Type>
-			<Description>TXT_KEY_CONCEPT_LARGER_CITIES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_LARGER_CITIES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_LARGER_CITIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_MASTERY</Type>
-			<Description>TXT_KEY_CONCEPT_MASTERY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_MASTERY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_MASTERY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_MOUNTAINS</Type>
-			<Description>TXT_KEY_CONCEPT_MOUNTAINS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_MOUNTAINS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_MOUNTAINS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_MULTIPLE_PRODUCTION</Type>
-			<Description>TXT_KEY_CONCEPT_MULTIPLE_PRODUCTION_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_MULTIPLE_PRODUCTION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_MULTIPLE_PRODUCTION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_MYTHS_LEGENDS_STORIES</Type>
-			<Description>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_OCCASIONAL_PROMOTIONS</Type>
-			<Description>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_OPP_FIRE</Type>
-			<Description>TXT_KEY_CONCEPT_OPP_FIRE_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_OPP_FIRE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_OPP_FIRE_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ORBITAL</Type>
-			<Description>TXT_KEY_CONCEPT_ORBITAL_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ORBITAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ORBITAL_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_PSEUDO_NATIONAL_WONDERS</Type>
-			<Description>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS_TEXT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_POLLUTION</Type>
-			<Description>TXT_KEY_CONCEPT_POLLUTION_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_POLLUTION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_RBOMBARD</Type>
-			<Description>TXT_KEY_CONCEPT_RBOMBARD_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_RBOMBARD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RBOMBARD_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REALISTIC_CORPORATIONS</Type>
-			<Description>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REALISTIC_CULTURES_SPREAD</Type>
-			<Description>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REVDCM</Type>
-			<Description>TXT_KEY_CONCEPT_REVDCM_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_REVDCM</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REVDCM_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REV_BARBARIANCIV</Type>
-			<Description>TXT_KEY_CONCEPT_REV_BARBARIANCIV_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_REV_BARBARIANCIV</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REV_BARBARIANCIV_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REV_DYNAMIC_NAMES</Type>
-			<Description>TXT_KEY_CONCEPT_REV_DYNAMIC_NAMES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_REV_DYNAMIC_NAMES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REV_DYNAMIC_NAMES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REV_TECH_DIFFUSION</Type>
-			<Description>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_AUTOLOG</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_AUTOLOG_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_AUTOLOG</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_AUTOLOG_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_BETTER_BTS_AI</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_BUILDING_UPGRADE_LINES</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_BUILDING_UPGRADE_LINES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_BUILDING_UPGRADE_LINES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_BUILDING_UPGRADE_LINES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_CIV4LERTS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_CIV4LERTS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_CIV4LERTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_CIV4LERTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_CIVICS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_CIVICS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_CIVICS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_CIVICS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_CIVIC_SPECIFIC_BUILDINGS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_CIVIC_SPECIFIC_BUILDINGS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_CIVIC_SPECIFIC_BUILDINGS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_CIVIC_SPECIFIC_BUILDINGS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_IMPROVEMENTS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_LIMITED_RELIGION</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_MAPS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_MAPS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_MAPS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MAPS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_MAPSCRIPTS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARSTYLES</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_HOLY_WARS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_STATIC_LH</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_UN_FORCES</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_NO_BUILDING_GRAPHICS</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_RELIGION</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_RELIGION_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_RELIGION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_RELIGION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_RELIGIOUS_VICTORY</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_SCIENTIFIC_VICTORY</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_SPECIALIST_STACKER</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_SPECIALIST_STACKER_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_SPECIALIST_STACKER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_SPECIALIST_STACKER_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_SUPER_SPIES</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_SUPER_SPIES_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_SUPER_SPIES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_SUPER_SPIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_UNIT_NAMING</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_UNIT_NAMING_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_UNIT_NAMING</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_UNIT_NAMING_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_WIDER_CITY_BAR</Type>
-			<Description>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_RUTHLESS_AI</Type>
-			<Description>TXT_KEY_CONCEPT_RUTHLESS_AI_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_RUTHLESS_AI</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RUTHLESS_AI_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_SAD</Type>
-			<Description>TXT_KEY_CONCEPT_SAD_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_SAD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SAD_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_SEA_TUNNELS</Type>
-			<Description>TXT_KEY_CONCEPT_SEA_TUNNELS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_SEA_TUNNELS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SEA_TUNNELS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_STACK_ATTACK</Type>
-			<Description>TXT_KEY_CONCEPT_STACK_ATTACK_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_STACK_ATTACK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_STACK_ATTACK_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_SUBDUED_ANIMALS</Type>
-			<Description>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_TERRAFORMING</Type>
-			<Description>TXT_KEY_CONCEPT_TERRAFORMING_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_TERRAFORMING</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TERRAFORMING_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_VICINITY</Type>
-			<Description>TXT_KEY_CONCEPT_VICINITY_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_VICINITY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_VICINITY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_VIEWPORTS</Type>
-			<Description>TXT_KEY_CONCEPT_VIEWPORTS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_VIEWPORTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_VIEWPORTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_VOLCANO</Type>
-			<Description>TXT_KEY_CONCEPT_VOLCANO_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_VOLCANO</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_VOLCANO_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_WATER_TERRAINS</Type>
-			<Description>TXT_KEY_CONCEPT_WATER_TERRAINS_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_WATER_TERRAINS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_WATER_TERRAINS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_WORLD_TECH</Type>
-			<Description>TXT_KEY_CONCEPT_WORLD_TECH_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_WORLD_TECH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_WORLD_TECH_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_WORLD_VIEW</Type>
-			<Description>TXT_KEY_CONCEPT_WORLD_VIEW_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_WORLD_VIEW</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_WORLD_VIEW_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<!-- Traits Infos -->
-		<!-- Modders: These must be kept in sync and sorted if you add/remove any traits -->
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_AGGRESSIVE</Type>
-			<Description>TXT_KEY_TRAIT_AGGRESSIVE</Description>
-			<Civilopedia>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_AGRICULTURAL</Type>
-			<Description>TXT_KEY_TRAIT_AGRICULTURAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_ANTI_CLERICAL</Type>
-			<Description>TXT_KEY_TRAIT_ANTI_CLERICAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_BARBARIAN</Type>
-			<Description>TXT_KEY_TRAIT_BARBARIAN</Description>
-			<Civilopedia>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_BARBARIC</Type>
-			<Description>TXT_KEY_TRAIT_BARBARIC</Description>
-			<Civilopedia>TXT_KEY_TRAIT_BARBARIC_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_CHARISMATIC</Type>
-			<Description>TXT_KEY_TRAIT_CHARISMATIC</Description>
-			<Civilopedia>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_CREATIVE</Type>
-			<Description>TXT_KEY_TRAIT_CREATIVE</Description>
-			<Civilopedia>TXT_KEY_TRAIT_CREATIVE_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_CRUEL</Type>
-			<Description>TXT_KEY_TRAIT_CRUEL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_CRUEL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_DECEIVER</Type>
-			<Description>TXT_KEY_TRAIT_DECEIVER</Description>
-			<Civilopedia>TXT_KEY_TRAIT_DECEIVER_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_EXCESSIVE</Type>
-			<Description>TXT_KEY_TRAIT_EXCESSIVE</Description>
-			<Civilopedia>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_EXPANSIVE</Type>
-			<Description>TXT_KEY_TRAIT_EXPANSIVE</Description>
-			<Civilopedia>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_FANATICAL</Type>
-			<Description>TXT_KEY_TRAIT_FANATICAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_FANATICAL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_FINANCIAL</Type>
-			<Description>TXT_KEY_TRAIT_FINANCIAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_FOREIGN</Type>
-			<Description>TXT_KEY_TRAIT_FOREIGN</Description>
-			<Civilopedia>TXT_KEY_TRAIT_FOREIGN_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_HUMANITARIAN</Type>
-			<Description>TXT_KEY_TRAIT_HUMANITARIAN</Description>
-			<Civilopedia>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_HUNTER_GATHERER</Type>
-			<Description>TXT_KEY_TRAIT_HUNTER_GATHERER</Description>
-			<Civilopedia>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_IDEALISTIC</Type>
-			<Description>TXT_KEY_TRAIT_IDEALISTIC</Description>
-			<Civilopedia>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_IMPERIALIST</Type>
-			<Description>TXT_KEY_TRAIT_IMPERIALIST</Description>
-			<Civilopedia>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_INDUSTRIOUS</Type>
-			<Description>TXT_KEY_TRAIT_INDUSTRIOUS</Description>
-			<Civilopedia>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_ISOLATIONIST</Type>
-			<Description>TXT_KEY_TRAIT_ISOLATIONIST</Description>
-			<Civilopedia>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_MEGALOMANIAC</Type>
-			<Description>TXT_KEY_TRAIT_MEGALOMANIAC</Description>
-			<Civilopedia>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_NOMAD</Type>
-			<Description>TXT_KEY_TRAIT_NOMAD</Description>
-			<Civilopedia>TXT_KEY_TRAIT_NOMAD_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_ORGANIZED</Type>
-			<Description>TXT_KEY_TRAIT_ORGANIZED</Description>
-			<Civilopedia>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_PHILOSOPHICAL</Type>
-			<Description>TXT_KEY_TRAIT_PHILOSOPHICAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_POLITICIAN</Type>
-			<Description>TXT_KEY_TRAIT_POLITICIAN</Description>
-			<Civilopedia>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_POPULIST</Type>
-			<Description>TXT_KEY_TRAIT_POPULIST</Description>
-			<Civilopedia>TXT_KEY_TRAIT_POPULIST_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_PROGRESSIST</Type>
-			<Description>TXT_KEY_TRAIT_PROGRESSIST</Description>
-			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_PROTECTIVE</Type>
-			<Description>TXT_KEY_TRAIT_PROTECTIVE</Description>
-			<Civilopedia>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_REVOLUTIONARY</Type>
-			<Description>TXT_KEY_TRAIT_REVOLUTIONARY</Description>
-			<Civilopedia>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_SCIENTIFIC</Type>
-			<Description>TXT_KEY_TRAIT_SCIENTIFIC</Description>
-			<Civilopedia>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_SEAFARING</Type>
-			<Description>TXT_KEY_TRAIT_SEAFARING</Description>
-			<Civilopedia>TXT_KEY_TRAIT_SEAFARING_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_SPIRITUAL</Type>
-			<Description>TXT_KEY_TRAIT_SPIRITUAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_TEMPERAMENTAL</Type>
-			<Description>TXT_KEY_TRAIT_TEMPERAMENTAL</Description>
-			<Civilopedia>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<!-- Shortcut Infos -->
 		<NewConceptInfo>
@@ -622,7 +440,7 @@
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_SHORTCUTS_GAME</Type>
-			<Description>TXT_KEY_SHORTCUTS_GAME</Description>
+			<Description>TXT_WORD_GAME</Description>
 			<Civilopedia>TXT_KEY_SHORTCUTS_GAME_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
@@ -772,6 +590,11 @@
 			<Civilopedia>TXT_KEY_STRATEGY_NAVAL_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
+			<Type>CONCEPT_STRATEGY_SPACE_EXPLORATION</Type>
+			<Description>TXT_KEY_STRATEGY_SPACE_EXPLORATION</Description>
+			<Civilopedia>TXT_KEY_STRATEGY_SPACE_EXPLORATION_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_STRATEGY_OCC</Type>
 			<Description>TXT_KEY_STRATEGY_OCC</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_OCC_PEDIA</Civilopedia>
@@ -870,6 +693,11 @@
 			<Type>CONCEPT_STRATEGY_WORLD_WAR</Type>
 			<Description>TXT_KEY_STRATEGY_WORLD_WAR</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_WORLD_WAR_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_NATURAL_WONDERS</Type>
+			<Description>TXT_KEY_NATURAL_WONDERS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 	</NewConceptInfos>
 </Civ4NewConceptInfos>

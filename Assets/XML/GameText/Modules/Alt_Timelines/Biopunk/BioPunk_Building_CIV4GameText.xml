@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_DESIGNER</Tag>
+		<English>Animal Designer</English>
+		<French>Concepteur d'Animaux</French>
+		<Polish>Projektant Zwierząt</Polish>
+		<Russian>Ñòóäèÿ çîîäèçàéíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_DESIGNER_PEDIA</Tag>
+		<English>Animals are designed by gene manipulation.</English>
+		<Polish>Zwierzęta tworzone przez manipulacje genami.</Polish>
+		<Russian>Ñîçäàåò æèâîòíûõ ïðè ïîìîùè ãåíåòè÷åñêèõ ìàíèïóëÿöèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIOPUNK_EMBASSY</Tag>
+		<English>Culture (Biopunk)</English>
+		<Italian>Cultura (Biopunk)</Italian>
+		<Polish>Kultura (Biopunk)</Polish>
+		<Russian>Áèîïàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] is a subgenre of speculative fiction, emerged during the 1990s and focusing on the near-future unintended consequences of the biotechnology revolution, following the discovery of recombinant DNA. Biopunk fiction typically describes the struggles of individuals or groups, often the product of ruthless human experimentation, against a backdrop of totalitarian governments or megacorporations which misuse biotechnologies as means of social control or profiteering.</English>
+		<Italian>Il [COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica, emerso negli anni novanta del XX secolo e che si concentra sulle conseguenze indesiderate della imminente rivoluzione biotecnologica, dovuta alla scoperta del DNA ricombinante. La narrativa biopunk solitamente descrive le lotte di singoli individui o piccoli gruppi, spesso prodotti di sperimentazioni senza scrupoli sugli esseri umani, che combattono contro governi totalitari o megacorporazioni che usano impropriamente le biotecnologie come mezzi di controllo sociale o per ottenere profitti.</Italian>
+		<Russian>Áèîïàíê - ýòî ïðîãðåññèâíîå âûñîêîòåõíîëîãè÷íîå äâèæåíèå, â çàùèòó îòêðûòîãî äîñòóïà ê ãåíåòè÷åñêîé èíôîðìàöèè. Ñòîðîííèêè áèîïàíêà èëè áèîõàêåðû ýêñïåðèìåíòèðóþò ñ ÄÍÊ è äðóãèìè àñïåêòàìè ãåíåòèêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIOPUNK_LAB</Tag>
+		<English>Biopunk Lab</English>
+		<French>Laboratoire Biopunk</French>
+		<Polish>Laboratorium Biopunk</Polish>
+		<Russian>Ëàá. áèîïàíêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIOPUNK_LAB_PEDIA</Tag>
+		<English>Biopunk (a portmanteau synthesizing "biotechnology" and "punk") is a techno-progressive movement advocating open access to genetic information. Biopunk hobbyists or biohackers experiment with DNA and other aspects of genetics. The related biopunk science fiction genre focuses on biotechnology and subversives.</English>
+		<Polish>Laboratorium opracowujące technologie Biopunk</Polish>
+		<Russian>Áèîïàíê - ýòî ïðîãðåññèâíîå âûñîêîòåõíîëîãè÷íîå äâèæåíèå, â çàùèòó îòêðûòîãî äîñòóïà ê ãåíåòè÷åñêîé èíôîðìàöèè.Ñòîðîííèêè áèîïàíêà èëè áèîõàêåðû ýêñïåðèìåíòèðóþò ñ ÄÍÊ è äðóãèìè àñïåêòàìè ãåíåòèêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC</Tag>
+		<English>Chimera Surgery Clinic</English>
+		<French>Clinique de Chirurgie Chimérique</French>
+		<Polish>Klinika Chimer</Polish>
+		<Russian>Êëèíèêà õèìåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_PEDIA</Tag>
+		<English>People come here to get some body parts of animals.</English>
+		<Polish>Ludzie w tej klinice przeszczepiają sobie części ciał zwierząt.</Polish>
+		<Russian>Ëþäè îáðàùàþòñÿ ñþäà äëÿ äîáàâëåíèÿ ñåáå ðàçëè÷íûõ æèâîòíûõ îðãàíîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Tag>
+		<English>Designed Animal Battle Arena</English>
+		<French>Arène de Combat pour Animaux élaborés</French>
+		<Polish>Arena Walk Projektowanych Zwierząt</Polish>
+		<Russian>Àðåíà çîîìîðôîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA_PEDIA</Tag>
+		<English>Animal Designers come here to let their creations fight against each others.</English>
+		<Polish>Arena na której walczą zwierzęta zaprojektowane w laboratoriach.</Polish>
+		<Russian>Çîîäèçàéíåðû ïðèåçæàþò ñþäà, ÷òîáû èõ òâîðåíèÿ ñðàæàëèñü äðóã ñ äðóãîì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW</Tag>
+		<English>Designed Animal Show</English>
+		<French>Spectacle d'Animaux élaborés</French>
+		<Polish>Wystawa Projektowanych Zwierząt</Polish>
+		<Russian>Øîó çîîäèçàéíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_PEDIA</Tag>
+		<English>Animal Designer from the whole World come to this event to show their creations.</English>
+		<Polish>Wystawa projektowanych genetycznie zwierząt z całego świata.</Polish>
+		<Russian>Çîîäèçàéíåðû ñî âñåãî ìèðà ïðèåçæàþò íà ýòî ìåðîïðèÿòèå, ÷òîáû ïîêàçàòü ñâîè òâîðåíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO</Tag>
+		<English>Designed Animal Zoo</English>
+		<French>Zoo d'Animaux élaborés</French>
+		<Polish>Zoo Projektowanych Zwierząt</Polish>
+		<Russian>Ïàðê çîîìîðôîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO_PEDIA</Tag>
+		<English>Animals are designed by gene manipulation and exposed in zoos.</English>
+		<Russian>Ãåíåòè÷åñêè ìîäèôèöèðîâàííûå æèâîòíûå âûñòàâëÿþòñÿ íà ïîêàç â ïàðêå çîîìîðôîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST</Tag>
+		<English>Microbiology Artist</English>
+		<French>Artiste Microbiologiste</French>
+		<Polish>Artysta Mikrobiologii</Polish>
+		<Russian>Ñòóäèÿ ìèêðîáèîëîãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST_PEDIA</Tag>
+		<English>Microbiology Artists create new microorganisms whose only purpose is that they look beautiful under a microscope.</English>
+		<Polish>Artyści Mikrobiologii tworzą nowe mikroorganizmy, których celem jest wyglądanie pięknie pod mikroskopem.</Polish>
+		<Russian>Â ñòóäèè ìèêðîáèîëîãèè ñîçäàþò íîâûå ìèêðîîðãàíèçìû, ÷üå åäèíñòâåííîå ïðåäíàçíà÷åíèå ñîñòîèò â òîì, ÷òîáû êðàñèâî âûãëÿäåòü ïîä ìèêðîñêîïîì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PHEROMONE_LAB</Tag>
+		<English>Pheromone Lab</English>
+		<French>Laboratoire de Phéromones</French>
+		<Polish>Laboratorium Fromonów</Polish>
+		<Russian>Ëàá. ôåðàìîíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PHEROMONE_LAB_PEDIA</Tag>
+		<English>A pheromone is a secreted or excreted chemical factor that triggers a social response in members of the same species. Pheromones are chemicals capable of acting outside the body of the secreting individual to impact the behavior of the receiving individual. There are alarm pheromones, food trail pheromones, sex pheromones, and many others that affect behavior or physiology. Pheromones are used from basic unicellular prokaryotes to complex multicellular eukaryotes. Their use among insects has been particularly well documented. In addition, some vertebrates and plants communicate by using pheromones.</English>
+		<Russian>Ôåðîìîíû - ñîáèðàòåëüíîå íàçâàíèå âåùåñòâ - ïðîäóêòîâ âíåøíåé ñåêðåöèè, âûäåëÿåìûõ íåêîòîðûìè âèäàìè æèâîòíûõ è îáåñïå÷èâàþùèõ õèìè÷åñêóþ êîììóíèêàöèþ ìåæäó îñîáÿìè îäíîãî âèäà.[PARAGRAPH:1]Ôåðîìîíû - áèîëîãè÷åñêèå ìàðêåðû ñîáñòâåííîãî âèäà, ëåòó÷èå õåìîñèãíàëû, óïðàâëÿþùèå íåéðîýíäîêðèííûìè ïîâåäåí÷åñêèìè ðåàêöèÿìè, ïðîöåññàìè ðàçâèòèÿ, à òàêæå ìíîãèìè äðóãèìè ïðîöåññàìè, ñâÿçàííûìè ñ ñîöèàëüíûì ïîâåäåíèåì è ðàçìíîæåíèåì. Ôåðîìîíû ìîäèôèöèðóþò ïîâåäåíèå, ôèçèîëîãè÷åñêîå è ýìîöèîíàëüíîå ñîñòîÿíèå èëè ìåòàáîëèçì äðóãèõ îñîáåé òîãî æå âèäà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTEIN_ARTIST</Tag>
+		<English>Protein Artist</English>
+		<French>Artiste des protéines</French>
+		<Polish>Artysta Protein</Polish>
+		<Russian>Áåëêîâàÿ ñòóäèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTEIN_ARTIST_PEDIA</Tag>
+		<English>Protein Artists create new proteins whose only purpose is that they look beautiful under a microscope.</English>
+		<Polish>Artyści Protein tworzą nowe białka, których celem jest wyglądanie pięknie pod mikroskopem.</Polish>
+		<Russian>Â áåëêîâîé ñòóäèè ñîçäàþò íîâûå áåëêè, ÷üå åäèíñòâåííîå ïðåäíàçíà÷åíèå ñîñòîèò â òîì, ÷òîáû êðàñèâî âûãëÿäåòü ïîä ìèêðîñêîïîì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PURE_ORGANIC_CITY</Tag>
+		<English>Pure Organic City</English>
+		<French>Ville Organique Pure</French>
+		<Polish>Bio-Miasto</Polish>
+		<Russian>Çåëåíûé ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PURE_ORGANIC_CITY_PEDIA</Tag>
+		<English>The idea is to turn your whole city into green: You life in designed trees, use designed Animals for transport, basically everything is grown naturally.</English>
+		<Polish>Całe miasto zamienione w jeden wielki bio-organizm.</Polish>
+		<Russian>Èäåÿ ñîñòîèò â òîì, ÷òîáû ñäåëàòü âåñü ãîðîä çåëåíûì: èñïîëüçîâàòü äåðåâÿííûå êîíñòðóêöèè äëÿ æèçíè, æèâîòíûõ äëÿ òðàíñïîðòà, âûðàùèâàòü âñå íàòóðàëüíîå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB</Tag>
+		<English>Species Revival Lab</English>
+		<French>Laboratoire de Résurrection d'espèces</French>
+		<Polish>Laboratorium Odtwarzania Wymarłych Zwierząt</Polish>
+		<Russian>Ëàá. âîçðîæäåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB_PEDIA</Tag>
+		<English>In biology, cloning is the process of producing similar populations of genetically identical individuals that occurs in nature when organisms such as bacteria, insects or plants reproduce asexually. Cloning in biotechnology refers to processes used to create copies of DNA fragments (molecular cloning), cells (cell cloning), or organisms. The term also refers to the production of multiple copies of a product such as digital media or software.</English>
+		<Russian>Êëîíèðîâàíèå â áèîëîãèè - ïîÿâëåíèå åñòåñòâåííûì ïóòåì èëè ïîëó÷åíèå íåñêîëüêèõ ãåíåòè÷åñêè èäåíòè÷íûõ îðãàíèçìîâ ïóòåì áåñïîëîãî (â òîì ÷èñëå âåãåòàòèâíîãî) ðàçìíîæåíèÿ.[PARAGRAPH:1]Òåðìèí "êëîíèðîâàíèå" â òîì æå ñìûñëå íåðåäêî ïðèìåíÿþò è ïî îòíîøåíèþ ê êëåòêàì ìíîãîêëåòî÷íûõ îðãàíèçìîâ. Êëîíèðîâàíèåì íàçûâàþò òàêæå ïîëó÷åíèå íåñêîëüêèõ èäåíòè÷íûõ êîïèé íàñëåäñòâåííûõ ìîëåêóë (ìîëåêóëÿðíîå êëîíèðîâàíèå). Íàêîíåö, êëîíèðîâàíèåì òàêæå ÷àñòî íàçûâàþò áèîòåõíîëîãè÷åñêèå ìåòîäû, èñïîëüçóåìûå äëÿ èñêóññòâåííîãî ïîëó÷åíèÿ êëîíîâ îðãàíèçìîâ, êëåòîê èëè ìîëåêóë.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WEAPONIZED_FLORA</Tag>
+		<English>Weaponized Flora</English>
+		<French>Végétation Défensive</French>
+		<Polish>Uzbrojona Flora</Polish>
+		<Russian>Âîåííàÿ îðàíæåðåÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WEAPONIZED_FLORA_PEDIA</Tag>
+		<English>Weaponizing the plants allows users to grasp and strike continuously with vines and roots, project thorns at a distance, and quickly regenerate the withering weapons at the user's will. They can cause horticulture found, i.e. wrap of vines, to grow and climb around a target's neck, causing choking, or even strike with plants. A more subtle technique is to release damaging toxins and pheromones, affecting targets in which conditions should be treated quickly with ailments.</English>
+		<Russian>Âîåííàÿ îðàíæåðåÿ ïîçâîëÿåò èñïîëüçîâàòü ïëþùè è êîðíè äëÿ çàõâàòà è àòàêè, øèïû äëÿ äèñòàíöèîííîé àòàêè è áûñòðóþ ðåãåíåðàöèþ. Ìîæåò óïðàâëÿòü ñîçäàííûìè àãðîêóëüòóðàìè, ò.å. èñïîëüçîâàòü ïëþùè äëÿ óäóøåíèÿ àòàêóþùåãî ïðîòèâíèêà è àòàêîâàòü ïðè ïîìîùè ðàñòåíèé. Íàèáîëåå êîâàðåí ñïîñîá íàíåñåíèÿ ïîâðåæäåíèé ïðè ïîìîùè òîêñèíîâ è ôåðîìîíîâ, âûçûâàþùèõ íåäîìîãàíèå, âëèÿþùåå íà õàðàêòåðèñòèêè ïîðàæåííîãî îáúåêòà, êîòîðîå ñòîèò ëå÷èòü íåçàìåäëèòåëüíî.</Russian>
+	</TEXT>
+</Civ4GameText>

@@ -10,29 +10,34 @@
 #ifndef CV_OUTCOME_MISSION_H
 #define CV_OUTCOME_MISSION_H
 
-#include "CvXMLLoadUtilityModTools.h"
 #include "CvOutcomeList.h"
+#include "CvProperties.h"
+
+class CvUnit;
+class CvXMLLoadUtility;
+class BoolExpr;
+class IntExpr;
 
 class CvOutcomeMission
 {
 public:
 	CvOutcomeMission();
 	~CvOutcomeMission();
-	MissionTypes getMission();
-	CvOutcomeList* getOutcomeList();
-	CvProperties* getPropertyCost();
-	bool isKill();
-//	IntExpr* getCost();
-	GameObjectTypes getPayerType();
+	MissionTypes getMission() const;
+	const CvOutcomeList* getOutcomeList() const;
+	const CvProperties* getPropertyCost() const;
+	bool isKill() const;
+//	const IntExpr* getCost() const;
+	GameObjectTypes getPayerType() const;
 
-	bool isPossible(CvUnit* pUnit, bool bTestVisible = false);
-	void buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit);
-	void execute(CvUnit* pUnit);
+	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
+	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const;
+	void execute(CvUnit* pUnit) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);
 
-	void getCheckSum(unsigned int& iSum);
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	MissionTypes m_eMission;
@@ -40,9 +45,9 @@ protected:
 	CvProperties m_PropertyCost;
 	GameObjectTypes m_ePayerType;
 	bool m_bKill;
-	IntExpr* m_iCost;
-	BoolExpr* m_pPlotCondition;
-	BoolExpr* m_pUnitCondition;
+	const IntExpr* m_iCost;
+	const BoolExpr* m_pPlotCondition;
+	const BoolExpr* m_pUnitCondition;
 };
 
 #endif

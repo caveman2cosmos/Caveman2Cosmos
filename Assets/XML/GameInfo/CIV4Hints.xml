@@ -423,6 +423,9 @@
 			<Description>TXT_KEY_HINT_65</Description>
 		</HintInfo>
 		<HintInfo>
+			<Description>TXT_KEY_HINT_66</Description>
+		</HintInfo>
+		<HintInfo>
 			<Description>TXT_KEY_HINT_67</Description>
 		</HintInfo>
 		<HintInfo>
@@ -644,7 +647,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_4</Description>
 		</HintInfo>
-			<HintInfo>
+		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_5</Description>
 		</HintInfo>
 		<HintInfo>
@@ -659,7 +662,7 @@
 		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_9</Description>
 		</HintInfo>
-			<HintInfo>
+		<HintInfo>
 			<Description>TXT_KEY_REVDCM_HINT_10</Description>
 		</HintInfo>
 		<HintInfo>

@@ -9,9 +9,10 @@ class CyReplayInfo
 {
 public:
 	CyReplayInfo();
-	CyReplayInfo(CvReplayInfo* pInfo);
+	explicit CyReplayInfo(CvReplayInfo* pInfo);
+
 	const CvReplayInfo* getReplayInfo() const { return m_pHoF; }
-	bool isNone() { return (NULL == m_pHoF); }
+	bool isNone() const { return m_pHoF == NULL; }
 
 	void createInfo(int iPlayer);
 	int getActivePlayer() const;
@@ -34,10 +35,10 @@ public:
 	bool isMultiplayer() const;
 
 	int getNumPlayers() const;
-	int getPlayerScore(int iPlayer, int iTurn) const;
-	int getPlayerEconomy(int iPlayer, int iTurn) const;
-	int getPlayerIndustry(int iPlayer, int iTurn) const;
-	int getPlayerAgriculture(int iPlayer, int iTurn) const;
+	int64_t getPlayerScore(int iPlayer, int iTurn) const;
+	int64_t getPlayerEconomy(int iPlayer, int iTurn) const;
+	int64_t getPlayerIndustry(int iPlayer, int iTurn) const;
+	int64_t getPlayerAgriculture(int iPlayer, int iTurn) const;
 
 	int getNormalizedScore() const;
 
@@ -56,10 +57,10 @@ public:
 	const std::wstring getFinalDate() const;
 	int getCalendar() const;
 
-	int getFinalScore() const;
-	int getFinalEconomy() const;
-	int getFinalIndustry() const;
-	int getFinalAgriculture() const;
+	int64_t getFinalScore() const;
+	int64_t getFinalEconomy() const;
+	int64_t getFinalIndustry() const;
+	int64_t getFinalAgriculture() const;
 
 	int getMapWidth() const;
 	int getMapHeight() const;

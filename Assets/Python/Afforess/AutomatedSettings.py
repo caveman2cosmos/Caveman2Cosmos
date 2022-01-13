@@ -8,9 +8,9 @@ import CvUtil
 GC = CyGlobalContext()
 AutomatedOpts = BugCore.game.AutomatedSettings
 
-MODDEROPTION_EVENT_ID = CvUtil.getNewEventID("Modder Options")
-CANAUTOBUILD_EVENT_ID = CvUtil.getNewEventID("CanAutoBuild")
-CANPLAYERAUTOBUILD_EVENT_ID = CvUtil.getNewEventID("CanPlayerAutoBuild")
+MODDEROPTION_EVENT_ID = CvUtil.getNewEventID()
+CANAUTOBUILD_EVENT_ID = CvUtil.getNewEventID()
+CANPLAYERAUTOBUILD_EVENT_ID = CvUtil.getNewEventID()
 
 class AutomatedSettings:
 	def __init__(self, eventManager):

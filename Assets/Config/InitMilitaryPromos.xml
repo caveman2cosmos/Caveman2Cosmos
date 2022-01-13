@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!--
-    Initial Military Promotions python
+	Initial Military Promotions python
 -->
 <mod id="InitMilitaryPromos" module="InitMilitaryPromos">
-   	<event type="unitBuilt" function="onUnitBuilt"/>
+	<event type="unitBuilt" function="onUnitBuilt"/>
 
 	<init/>
 </mod>

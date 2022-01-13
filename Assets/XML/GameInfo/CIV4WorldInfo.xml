@@ -2,7 +2,6 @@
 <!-- NOTE: If you remove any of these you need to update Interface/WorldPickerInfos.xml
 * Text Tags:
 			Description	= The name of the map type.
-			Help		= A description of the map type.
 			Type		= The internal tag for the map type.
 * Integer Tags:
 			iDefaultPlayers					= The default number of players for the map type. For Play Now! mode, this is the number of players in the game.
@@ -25,8 +24,6 @@
 			iTradeProfitPercent				= A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce.
 												(This may also effect Great Merchant trade missions)
 			iDistanceMaintenancePercent		= The amount of maintenance that city distance generates. It is a percentage, so 100 means full maintenance from city distance.
-			iNumCitiesMaintenancePercent	= Unused in code, dead tag. The amount of maintenance the number of cities possessed generates. It is a percentage, so 100 means full number
-												of cities maintenance. (Note: the highest default setting for iNumCitiesMaintenancePercent occurs in Quick mode, and is only 45%, not 100%)
 			iNumCitiesAnarchyPercent		= iAnarchyLength += getNumCities() * WorldSize.getNumCitiesAnarchyPercent() / 100
 -->
 <Civ4WorldInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
@@ -34,17 +31,18 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_DUEL</Type>
 			<Description>TXT_KEY_WORLD_DUEL</Description>
-			<Help/>
 			<iDefaultPlayers>2</iDefaultPlayers>
 			<iUnitNameModifier>50</iUnitNameModifier>
 			<iTargetNumCities>2</iTargetNumCities>
 			<iNumFreeBuildingBonuses>1</iNumFreeBuildingBonuses>
+			<iBuildingPrereqModifier>-120</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-75</iMaxConscriptModifier>
 			<iWarWearinessModifier>30</iWarWearinessModifier>
 			<iGridWidth>12</iGridWidth>
 			<iGridHeight>8</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
+			<iOceanMinAreaSize>6</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
@@ -62,17 +60,18 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_TINY</Type>
 			<Description>TXT_KEY_WORLD_TINY</Description>
-			<Help/>
 			<iDefaultPlayers>4</iDefaultPlayers>
 			<iUnitNameModifier>40</iUnitNameModifier>
 			<iTargetNumCities>3</iTargetNumCities>
 			<iNumFreeBuildingBonuses>1</iNumFreeBuildingBonuses>
+			<iBuildingPrereqModifier>-80</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-50</iMaxConscriptModifier>
 			<iWarWearinessModifier>20</iWarWearinessModifier>
 			<iGridWidth>18</iGridWidth>
 			<iGridHeight>12</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
+			<iOceanMinAreaSize>8</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
@@ -90,16 +89,16 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_SMALL</Type>
 			<Description>TXT_KEY_WORLD_SMALL</Description>
-			<Help/>
 			<iDefaultPlayers>6</iDefaultPlayers>
 			<iUnitNameModifier>30</iUnitNameModifier>
 			<iTargetNumCities>4</iTargetNumCities>
 			<iNumFreeBuildingBonuses>2</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>25</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>-40</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>-25</iMaxConscriptModifier>
 			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iGridWidth>21</iGridWidth>
 			<iGridHeight>14</iGridHeight>
+			<iOceanMinAreaSize>10</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
@@ -117,14 +116,13 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_STANDARD</Type>
 			<Description>TXT_KEY_WORLD_STANDARD</Description>
-			<Help/>
 			<iDefaultPlayers>8</iDefaultPlayers>
 			<iUnitNameModifier>20</iUnitNameModifier>
 			<iTargetNumCities>6</iTargetNumCities>
 			<iNumFreeBuildingBonuses>3</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>25</iBuildingPrereqModifier>
 			<iGridWidth>24</iGridWidth>
 			<iGridHeight>16</iGridHeight>
+			<iOceanMinAreaSize>14</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>370</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
@@ -142,16 +140,16 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_LARGE</Type>
 			<Description>TXT_KEY_WORLD_LARGE</Description>
-			<Help/>
 			<iDefaultPlayers>10</iDefaultPlayers>
 			<iUnitNameModifier>10</iUnitNameModifier>
 			<iTargetNumCities>8</iTargetNumCities>
 			<iNumFreeBuildingBonuses>4</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>50</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>40</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>25</iMaxConscriptModifier>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iGridWidth>27</iGridWidth>
 			<iGridHeight>18</iGridHeight>
+			<iOceanMinAreaSize>18</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
@@ -171,16 +169,16 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_HUGE</Type>
 			<Description>TXT_KEY_WORLD_HUGE</Description>
-			<Help/>
 			<iDefaultPlayers>12</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>11</iTargetNumCities>
 			<iNumFreeBuildingBonuses>5</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>75</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>80</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>50</iMaxConscriptModifier>
 			<iWarWearinessModifier>-20</iWarWearinessModifier>
 			<iGridWidth>30</iGridWidth>
 			<iGridHeight>20</iGridHeight>
+			<iOceanMinAreaSize>22</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
@@ -200,18 +198,18 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_GIANT</Type>
 			<Description>TXT_KEY_WORLD_GIANT</Description>
-			<Help/>
 			<iDefaultPlayers>14</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>14</iTargetNumCities>
 			<iNumFreeBuildingBonuses>7</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>100</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>120</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>75</iMaxConscriptModifier>
 			<iWarWearinessModifier>-30</iWarWearinessModifier>
 			<iGridWidth>33</iGridWidth>
 			<iGridHeight>22</iGridHeight>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
+			<iOceanMinAreaSize>26</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>55</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>85</iDistanceMaintenancePercent>
@@ -229,16 +227,16 @@
 		<WorldInfo>
 			<Type>WORLDSIZE_GIGANTIC</Type>
 			<Description>TXT_KEY_WORLD_GIGANTIC</Description>
-			<Help/>
 			<iDefaultPlayers>16</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>18</iTargetNumCities>
 			<iNumFreeBuildingBonuses>10</iNumFreeBuildingBonuses>
-			<iBuildingPrereqModifier>125</iBuildingPrereqModifier>
+			<iBuildingPrereqModifier>160</iBuildingPrereqModifier>
 			<iMaxConscriptModifier>100</iMaxConscriptModifier>
 			<iWarWearinessModifier>-40</iWarWearinessModifier>
 			<iGridWidth>36</iGridWidth>
 			<iGridHeight>24</iGridHeight>
+			<iOceanMinAreaSize>30</iOceanMinAreaSize>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>

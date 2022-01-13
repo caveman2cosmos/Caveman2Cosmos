@@ -7,9 +7,6 @@
 // abstract class containing CvInterface functions that the DLL needs
 //
 
-//#include "CvStructs.h"
-#include "LinkedList.h"
-
 class CvUnit;
 class CvCity;
 class CvPlot;
@@ -54,7 +51,7 @@ public:
 	virtual CvPlot* getSingleMoveGotoPlot() = 0;
 	virtual CvPlot* getOriginalPlot() = 0;
 
-	virtual void playGeneralSound(LPCTSTR pszSound, NiPoint3 vPos = NiPoint3(-1.0f, -1.0f, -1.0f)) = 0;
+	virtual void playGeneralSound(const char* pszSound, NiPoint3 vPos = NiPoint3(-1.0f, -1.0f, -1.0f)) = 0;
 	virtual void playGeneralSound(int iSoundId, int iSoundType = 1, NiPoint3 vPos = NiPoint3(-1.0f, -1.0f, -1.0f)) = 0;
 	virtual void clearQueuedPopups() = 0;
 
@@ -79,7 +76,7 @@ public:
 	virtual CLLNode<IDInfo>* nextSelectedCitiesNode(CLLNode<IDInfo>* pNode) = 0;
 	virtual CLLNode<IDInfo>* headSelectedCitiesNode() = 0;
 
-	virtual void addMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
+	virtual void addMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound = NULL,
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
 		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false) = 0;
 	virtual void addCombatMessage(PlayerTypes ePlayer, CvWString szString) = 0;
@@ -136,7 +133,7 @@ public:
 	virtual bool isDiplomacyLocked() = 0;
 
 	virtual void setMinimapColor(MinimapModeTypes eMinimapMode, int iX, int iY, ColorTypes eColor, float fAlpha) = 0;
-	virtual unsigned char* getMinimapBaseTexture() const = 0;
+	virtual uint8_t* getMinimapBaseTexture() const = 0;
 	virtual void setEndTurnMessage(bool bNewValue) = 0;
 
 	virtual bool isHasMovedUnit() = 0;
@@ -159,7 +156,7 @@ public:
 
 	virtual void showDetails(bool bPasswordOnly = false) = 0;
 	virtual void showAdminDetails() = 0;
-	
+
 	virtual void toggleClockAlarm(bool bValue, int iHour = 0, int iMin = 0) = 0;
 	virtual bool isClockAlarmOn() = 0;
 
@@ -167,7 +164,7 @@ public:
 	virtual bool isExitingToMainMenu() = 0;
 	virtual void exitingToMainMenu(const char* szLoadFile=NULL) = 0;
 	virtual void setWorldBuilder(bool bTurnOn) = 0;
-	
+
 	virtual int getFontLeftJustify() = 0;
 	virtual int getFontRightJustify() = 0;
 	virtual int getFontCenterJustify() = 0;
@@ -177,14 +174,14 @@ public:
 	virtual void popupSetHeaderString( CvPopup* pPopup, CvWString szText, uint uiFlags = DLL_FONT_CENTER_JUSTIFY ) = 0;
 	virtual void popupSetBodyString( CvPopup* pPopup, CvWString szText, uint uiFlags = DLL_FONT_LEFT_JUSTIFY, char *szName = NULL, CvWString szHelpText = CvWString()) = 0;
 	virtual void popupLaunch( CvPopup* pPopup, bool bCreateOkButton = true, PopupStates bState = POPUPSTATE_QUEUED, int iNumPixelScroll = 0 ) = 0;
-	virtual void popupSetPopupType( CvPopup* pPopup, PopupEventTypes ePopupType, LPCTSTR szArtFileName = NULL ) = 0;
+	virtual void popupSetPopupType(CvPopup* pPopup, PopupEventTypes ePopupType, const char* szArtFileName = NULL) = 0;
 	virtual void popupSetStyle( CvPopup* pPopup, const char* styleId ) = 0;
 
 	virtual void popupAddDDS( CvPopup* pPopup, const char* szIconFilename, int iWidth = 0, int iHeight = 0, CvWString szHelpText = CvWString()) = 0;
 
 	virtual void popupAddSeparator( CvPopup* pPopup, int iSpace = 0) = 0;
 
-	virtual void popupAddGenericButton( CvPopup* pPopup, CvWString szText, const char* szIcon = 0, int iButtonId = -1, WidgetTypes eWidgetType = WIDGET_GENERAL, int iData1 = MAX_INT, int iData2 = MAX_INT, 
+	virtual void popupAddGenericButton( CvPopup* pPopup, CvWString szText, const char* szIcon = 0, int iButtonId = -1, WidgetTypes eWidgetType = WIDGET_GENERAL, int iData1 = MAX_INT, int iData2 = MAX_INT,
 		bool bOption = true, PopupControlLayout ctrlLayout = POPUP_LAYOUT_CENTER, unsigned int textJustifcation = DLL_FONT_LEFT_JUSTIFY ) = 0;
 
 	virtual void popupCreateEditBox( CvPopup* pPopup, CvWString szDefaultString = CvWString(), WidgetTypes eWidgetType = WIDGET_GENERAL, CvWString szHelpText = CvWString(), int iGroup = 0,

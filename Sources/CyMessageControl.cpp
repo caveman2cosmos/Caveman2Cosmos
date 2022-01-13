@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
+#include "CvMessageControl.h"
 #include "CyMessageControl.h"
 
 void CyMessageControl::sendPushOrder(int iCityID, int eOrder, int iData, bool bAlt, bool bShift, bool bCtrl)
@@ -11,27 +13,11 @@ void CyMessageControl::sendDoTask(int iCity, int eTask, int iData1, int iData2, 
 	CvMessageControl::getInstance().sendDoTask(iCity, (TaskTypes) eTask, iData1, iData2, bOption, bAlt, bShift, bCtrl);
 }
 
-void CyMessageControl::sendTurnComplete()
+void CyMessageControl::sendUpdateCivics(const python::list& lCivics)
 {
-	CvMessageControl::getInstance().sendTurnComplete();
-}
-
-void CyMessageControl::sendUpdateCivics(boost::python::list& iCivics)
-{
-	int *PYiCivics = NULL;		//	do not delete this memory
-	gDLL->getPythonIFace()->putSeqInArray(iCivics.ptr(), &PYiCivics);
-	std::vector<CivicTypes> aiCivics;
-	for (int i = 0; i < GC.getNumCivicOptionInfos(); ++i)
-	{
-		aiCivics.push_back((CivicTypes) PYiCivics[i]);
-	}
-	CvMessageControl::getInstance().sendUpdateCivics(aiCivics);
-	delete[] PYiCivics;
-}
-
-void CyMessageControl::sendConvert(int  iReligion)
-{
-	CvMessageControl::getInstance().sendConvert( (ReligionTypes) iReligion);
+	std::vector<CivicTypes> v;
+	python::container_utils::extend_container(v, lCivics);
+	CvMessageControl::getInstance().sendUpdateCivics(v);
 }
 
 void CyMessageControl::sendEmpireSplit(int /*PlayerTypes*/ ePlayer, int iAreaId)
@@ -39,7 +25,7 @@ void CyMessageControl::sendEmpireSplit(int /*PlayerTypes*/ ePlayer, int iAreaId)
 	CvMessageControl::getInstance().sendEmpireSplit((PlayerTypes) ePlayer, iAreaId);
 }
 
-void CyMessageControl::sendResearch( int eTech, bool bShift)
+void CyMessageControl::sendResearch(int eTech, bool bShift)
 {
 	CvMessageControl::getInstance().sendResearch((TechTypes)eTech, -1, bShift);
 }
@@ -67,32 +53,12 @@ void CyMessageControl::sendModNetMessage(int iData1, int iData2, int iData3, int
 //
 // return true if succeeded
 //
-int CyMessageControl::GetFirstBadConnection()
+int CyMessageControl::GetFirstBadConnection() const
 {
 	return gDLL->getFirstBadConnection();
 }
 
-int CyMessageControl::GetConnState(int iPlayer)
+int CyMessageControl::GetConnState(int iPlayer) const
 {
 	return gDLL->getConnState((PlayerTypes)iPlayer);
-}
-
-void CyMessageControl::sendChooseTrait(int  iTrait, bool bNewValue)
-{
-	CvMessageControl::getInstance().sendChooseTrait((TraitTypes)iTrait, bNewValue);
-}
-
-void CyMessageControl::sendMergeUnit(int  iUnitID)
-{
-	CvMessageControl::getInstance().sendMergeUnit(iUnitID);
-}
-
-void CyMessageControl::sendSplitUnit(bool bConfirm)
-{
-	CvMessageControl::getInstance().sendSplitUnit(bConfirm);
-}
-
-void CyMessageControl::sendImprovementUpgrade(int iImprovement, int iX, int iY, bool bConfirm)
-{
-	CvMessageControl::getInstance().sendImprovementUpgrade((ImprovementTypes)iImprovement, iX, iY, bConfirm);
 }

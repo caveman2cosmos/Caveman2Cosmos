@@ -6,6 +6,7 @@
 x = 0
 y = 0
 aFontList = ["<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+iFontScale = 2
 
 def init(dir):
 	global x, y
@@ -40,13 +41,18 @@ def init(dir):
 	print "No custom resolution found.\nValue stored in profileName.pfl will be used instead.\nScreenResolution.init - END"
 
 def calibrate():
-	global aFontList
+	global aFontList, iFontScale
 	if x > 1700:
 		if x > 2500:
 			aFontList = ["<font=4b>", "<font=4b>", "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			iFontScale = 3
 		else:
 			aFontList = ["<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			iFontScale = 2
+
 	elif x > 1400:
 		aFontList = ["<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0b>"]
+		iFontScale = 1
 	else:
 		aFontList = ["<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>", "<font=0>", "<font=0>"]
+		iFontScale = 0

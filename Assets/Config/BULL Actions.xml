@@ -2,10 +2,10 @@
 <!--
 	BULL City Bar
 	by EmperorFool
-	
+
 	Copyright (c) 2009 The BUG Mod.
 -->
-<mod id="Actions" name="BULL Actions" author="EmperorFool" version="1.0" 
+<mod id="Actions" name="BULL Actions" author="EmperorFool" version="1.0"
 	date="04/20/2009" url="http://forums.civfanatics.com/showthread.php?t=307951">
 
 	<options id="Actions" file="BUG Actions.ini">

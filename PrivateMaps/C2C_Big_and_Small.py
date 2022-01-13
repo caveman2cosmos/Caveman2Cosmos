@@ -8,9 +8,7 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 
@@ -23,7 +21,7 @@ def isAdvancedMap():
 
 def getNumCustomMapOptions():
 	return 3
-	
+
 def getCustomMapOptionName(argsList):
 	[iOption] = argsList
 	option_names = {
@@ -33,7 +31,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -42,7 +40,7 @@ def getNumCustomMapOptionValues(argsList):
 		2:	2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -62,7 +60,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -109,15 +107,15 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 				tinyHeight = int(self.iH * 0.15)
 
 				self.generatePlotsInRegion(80,
-				                           tinyWidth, tinyHeight,
-				                           tinyWestX, tinySouthY,
-				                           4, 3,
-				                           0, self.iTerrainFlags,
-				                           6, 5,
-				                           True, 3,
-				                           -1, False,
-				                           False
-				                           )
+										   tinyWidth, tinyHeight,
+										   tinyWestX, tinySouthY,
+										   4, 3,
+										   0, self.iTerrainFlags,
+										   6, 5,
+										   True, 3,
+										   -1, False,
+										   False
+										   )
 
 		# North and South dimensions always fill the entire vertical span for this script.
 		iSouthY = 0
@@ -154,15 +152,15 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		print("Cont West: ", iWestX, "Cont East: ", iEastX, "Cont Width: ", iWidth)
 
 		self.generatePlotsInRegion(iWater,
-		                           iWidth, iHeight,
-		                           iWestX, iSouthY,
-		                           iContinentsGrain, 4,
-		                           self.iRoundFlags, self.iTerrainFlags,
-		                           xExp, 6,
-		                           True, 15,
-		                           -1, False,
-		                           False
-		                           )
+								   iWidth, iHeight,
+								   iWestX, iSouthY,
+								   iContinentsGrain, 4,
+								   self.iRoundFlags, self.iTerrainFlags,
+								   xExp, 6,
+								   True, 15,
+								   -1, False,
+								   False
+								   )
 
 		# Add the Islands.
 		iWestX = 0
@@ -195,15 +193,15 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 
 
 		self.generatePlotsInRegion(iWater,
-		                           iWidth, iHeight,
-		                           iWestX, iSouthY,
-		                           iIslandsGrain, 5,
-		                           self.iRoundFlags, self.iTerrainFlags,
-		                           xExp, 6,
-		                           True, 15,
-		                           -1, False,
-		                           False
-		                           )
+								   iWidth, iHeight,
+								   iWestX, iSouthY,
+								   iIslandsGrain, 5,
+								   self.iRoundFlags, self.iTerrainFlags,
+								   xExp, 6,
+								   True, 15,
+								   -1, False,
+								   False
+								   )
 
 		# All regions have been processed. Plot Type generation completed.
 		print "Done"
@@ -243,4 +241,3 @@ def addFeatures():
 
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
-	

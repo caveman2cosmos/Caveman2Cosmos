@@ -36,7 +36,8 @@ def onNewPlayer():
 '''
 
 def onGoodyReceived(argsList):
-	iPlayer, pPlot, pUnit, iGoodyType = argsList
+	#iPlayer, pPlot, pUnit, iGoodyType = argsList
+	pPlot = argsList[1]
 
 	# just in case
 	if gb_NoGoodyHuts or pPlot.isWater(): return
@@ -47,8 +48,9 @@ def onGoodyReceived(argsList):
 
 
 def onImprovementDestroyed(argsList):
-	iImprovement, iOwner, iX, iY = argsList
-#	iPlot = CyMap().plotNum(iX,iY)
+	#iImprovement, iOwner, iX, iY = argsList
+	iImprovement = argsList[0]
+	#iPlot = CyMap().plotNum(iX,iY)
 
 	if (not iImprovement == giIndigenousPeopleImprovement):
 		return

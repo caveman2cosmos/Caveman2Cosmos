@@ -3,7 +3,6 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- ReModified by StrategyOnly -->
-<!-- -->
 <!-- Promotion Line Infos -->
 <Civ4PromotionLineInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<PromotionLineInfos>
@@ -21,7 +20,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_MISSIONARY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -29,7 +28,6 @@
 			<Description>TXT_KEY_PROMOTIONLINE_BERZERKER</Description>
 			<Button>,Art/Interface/Buttons/Promotions/Berzerker1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,6,2</Button>
 			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
@@ -57,11 +55,21 @@
 			<Type>PROMOTIONLINE_TRANSPORT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT</Description>
 			<Button>,Art/Interface/Buttons/Promotions/transport.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,3,13</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_STEAM_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_AIR_TO_AIR</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_AIR_TO_AIR</Description>
 			<Button>,Art/Interface/Buttons/Promotions/jetplane.dds,Art/RoM_Promotions_atlas.dds,1,2</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_JET_FIGHTERS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_STEALTH</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_DRILL</Type>
@@ -115,6 +123,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -131,6 +146,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -147,6 +169,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -163,6 +192,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -256,6 +292,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_FIELD</Description>
 			<Button>,Art/Interface/Buttons/Promotions/Field1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,2,5</Button>
 			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
@@ -265,6 +302,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -394,6 +433,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -438,7 +479,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_WHEELED</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_WORKER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_SETTLER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CRIMINAL</NotOnUnitCombatType>
@@ -500,27 +541,6 @@
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_SIEGE_GATECRASHER</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SPEED</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SPEED</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Navigation1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,7,4</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_WHEELED</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_TRACKED</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_AIR</DomainType>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PATROL</Type>
@@ -952,46 +972,30 @@
 			<Type>PROMOTIONLINE_SEA_CREATURE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SEA_CREATURE</Description>
 			<Button>Art/Interface/Buttons/Promotions/seacreature1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_SEA_ANIMAL</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_LEVIATHAN</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_LEVIATHAN</Description>
 			<Button>Art/Interface/Buttons/Promotions/leviathan1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_SEA_ANIMAL</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BARD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BARD</Description>
 			<Button>Art/Interface/Buttons/Promotions/Bard1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SCOUT_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SCOUT_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/ReconAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_MELEE_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_MELEE_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/MeleeAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ARCHER_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ARCHER_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/ArcherAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_MOUNTED_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_MOUNTED_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/MountedAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SIEGE_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SIEGE_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/SiegeAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_HEROIC</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_HEROIC</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Hero3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,3,7</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SIDESTEP</Type>
@@ -1014,12 +1018,22 @@
 			<Type>PROMOTIONLINE_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/hunter1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SEA_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SEA_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/seahunter1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_STEAM_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
+		<!-- Those are used by TraitInfos -->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PHILOSOPHICAL</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PHILOSOPHICAL</Description>
@@ -1178,95 +1192,88 @@
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HUNTER_GATHERER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTER_GATHERER</Description>
-			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
+			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BARBARIAN</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BARBARIAN</Description>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
 		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_LIVE</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_LIVE</Description>
-			<Button>Art/Interface/Buttons/Promotions/Phoenix1.dds</Button>
-		</PromotionLineInfo>
+		<!-- End of TraitInfo promotionlines -->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_TROOPS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_TROOPS</Description>
 			<Button>art/Buttons/Promotions/TransportTroops.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_EXPLORER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_PEOPLE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_PEOPLE</Description>
 			<Button>art/Buttons/Promotions/TransportPeople.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_MISSILES</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_MISSILES</Description>
 			<Button>art/Buttons/Promotions/TransportMissiles.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_SEAPLANES</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_SEAPLANES</Description>
 			<Button>art/Buttons/Promotions/TransportSeaplanes.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_FIGHTERS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_FIGHTERS</Description>
 			<Button>art/Buttons/Promotions/TransportFighters.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_FLAMING</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_FLAMING</Description>
-			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_CHIVALRY</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_CHIVALRY</Description>
-			<Button>Art/Interface/Buttons/Promotions/chivalry1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ENGINEERCORPS</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ENGINEERCORPS</Description>
-			<Button>Art/Interface/Buttons/Promotions/engineercorps1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SEAMANSHIP</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SEAMANSHIP</Description>
-			<Button>Art/Interface/Buttons/Promotions/seamanship1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_COASTAL</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_COASTAL</Description>
-			<Button>Art/Interface/Buttons/Promotions/coastal1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_IMPERIAL</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_IMPERIAL</Description>
-			<Button>Art/Interface/Buttons/Promotions/imperial1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_GUERILLAWAR</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_GUERILLAWAR</Description>
-			<Button>Art/Interface/Buttons/Promotions/guerillawar1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_CRUISER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_DESTROYER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_BATTLESHIP</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PATRIOTIC</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PATRIOTIC</Description>
 			<Button>Art/Interface/Buttons/Promotions/patriotic1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ATTRITION</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ATTRITION</Description>
-			<Button>Art/Interface/Buttons/Promotions/attrition1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_MARKSMAN</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_MARKSMAN</Description>
-			<Button>Art/Interface/Buttons/Promotions/marksman1.dds</Button>
 			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1283,46 +1290,73 @@
 			<Type>PROMOTIONLINE_PROJECTION</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PROJECTION</Description>
 			<Button>Art/Interface/Buttons/Promotions/Projection1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SILVERTONGUE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SILVERTONGUE</Description>
 			<Button>Art/Interface/Buttons/Promotions/silvertongue1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_DIPLOMAT</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PARAMEDIC</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PARAMEDIC</Description>
 			<Button>Art/Interface/Buttons/Promotions/paramedic1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PACK_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PACK_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/packhunting1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_RACING_DOG</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_RACING_DOG</Description>
 			<Button>Art/Interface/Buttons/Promotions/racingdog1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HUNTING_DOG</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTING_DOG</Description>
 			<Button>Art/Interface/Buttons/Promotions/huntingdog1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRACK_SCENT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRACK_SCENT</Description>
 			<Button>Art/Interface/Buttons/Promotions/trackscent1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_RESCUE_DOG</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_RESCUE_DOG</Description>
 			<Button>Art/Interface/Buttons/Promotions/rescuedog1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BLOODHOUND</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BLOODHOUND</Description>
 			<Button>Art/Interface/Buttons/Promotions/bloodhound1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SHADOWSTALKER</Type>
@@ -1337,24 +1371,44 @@
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
@@ -1480,6 +1534,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_BALLOON</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_STALL</Type>
@@ -1496,6 +1553,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_STINGING_INSULTS</Type>
@@ -1715,10 +1775,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SIZE_MICROSCOPIC</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1735,10 +1793,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SIZE_COLOSSAL</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1753,10 +1809,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_GROUP_SOLO</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1775,10 +1829,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_GROUP_COUNTLESS</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -1792,7 +1844,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HEALS_AS_NANOMORPH</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -1812,7 +1864,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HEALS_AS_TECH</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -1911,120 +1963,6 @@
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
 		</PromotionLineInfo>
-		<!-- Commented out and likely to be removed<PromotionLineInfo>
-			<Type>PROMOTIONLINE_STANDARD_MIGHT</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_STANDARD_MIGHT</Description>
-			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_QUALITY_STANDARD</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SUPERIOR_MIGHT</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SUPERIOR_MIGHT</Description>
-			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_QUALITY_SUPERIOR</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_EXCEPTIONAL_MIGHT</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_EXCEPTIONAL_MIGHT</Description>
-			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_QUALITY_EXCEPTIONAL</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ELITE_MIGHT</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ELITE_MIGHT</Description>
-			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_QUALITY_ELITE</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_EPIC_MIGHT</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_EPIC_MIGHT</Description>
-			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_QUALITY_EPIC</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_DIVINE_MIGHT</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_DIVINE_MIGHT</Description>
-			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_QUALITY_DIVINE</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-		</PromotionLineInfo>-->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_MIGHT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_MIGHT</Description>
@@ -2033,7 +1971,7 @@
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -2053,7 +1991,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SPEED_FAST</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -2115,7 +2053,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -2159,31 +2097,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_AIR</DomainType>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
-			<bBuildUp>1</bBuildUp>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_BUILD_UP_FORTIFY</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Description>
-			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY_HELP</Help>
-			<Button>Art/Buttons/Promotions/Fortify1BuildUp.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
@@ -2207,7 +2122,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SPEED_FAST</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -2266,7 +2181,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
@@ -2420,21 +2335,27 @@
 			<Type>PROMOTIONLINE_MARTIAL_ARTS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_MARTIAL_ARTS</Description>
 			<Button>art/Sports/Buttons/Martial_Arts1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_AVIATION_DECEPTION</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_AVIATION_DECEPTION</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Deception1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_ENTRAPMENT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_ENTRAPMENT</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CRIMINAL</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SLAVE_MASTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SLAVE_MASTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TAKE_PRISONERS</Type>
@@ -2450,6 +2371,9 @@
 			<Type>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_NON_LETHAL_FORCE</Type>
@@ -2464,26 +2388,41 @@
 			<Type>PROMOTIONLINE_TO_THE_DEATH</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_DARING_ESCAPE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_DARING_ESCAPE</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HERDING</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HERDING</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PREDATORIAL_BLOODLUST</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PREDATORIAL_BLOODLUST</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_FELINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_LIVE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_LIVE</Description>
 			<Button>Art/Interface/Buttons/Promotions/Phoenix1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HERO</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BOUNTY_HUNTER</Type>
@@ -2504,6 +2443,11 @@
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -2650,7 +2594,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
@@ -2869,6 +2813,10 @@
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_SPY</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
@@ -2941,10 +2889,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_MOTILITY_DRIVING</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTAIN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CRIMINAL</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_STRIKE_TEAM</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_RUFFIAN</NotOnUnitCombatType>
@@ -3082,6 +3028,14 @@
 			</NotOnDomainTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_TRESPASS</Type>
+			<Description>TXT_KEY_STATUS_TRESPASS</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_EXILE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<Button>Art/Interface/buttons/Promotions/StatusTrespass.dds</Button>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_STAY_THE_HAND</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_STAY_THE_HAND</Description>
 			<UnitCombatPrereqTypes>
@@ -3204,15 +3158,6 @@
 			<bBuildUp>1</bBuildUp>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_WORKER_TRADITIONS</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_WORKER_TRADITIONS</Description>
-			<Button>Art/Interface/Buttons/Promotions/tradition.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_WORKER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_COMBAT_WORKER</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_ARMED_GUARD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Description>
 			<Button>Art/Interface/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
@@ -3306,11 +3251,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_MASTER_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter1.dds</Button>
 		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SEA_MASTER_HUNTER</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SEA_MASTER_HUNTER</Description>
-			<Button>Art/Interface/Buttons/Promotions/Master_seahunter1.dds</Button>
-		</PromotionLineInfo>
+		<!-- Is that TB experiment? -->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Description>
@@ -3385,6 +3326,25 @@
 				<DomainType>DOMAIN_AIR</DomainType>
 			</NotOnDomainTypes>
 			<bBuildUp>1</bBuildUp>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_BUSHIDO</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_BUSHIDO</Description>
+			<Button>Art/Interface/Buttons/Promotions/Bushido1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_WIND_HORSE</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_WIND_HORSE</Description>
+			<Button>Art/Interface/Buttons/Promotions/Windhorse1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 	</PromotionLineInfos>
 </Civ4PromotionLineInfos>

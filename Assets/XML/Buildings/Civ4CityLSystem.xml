@@ -62,19 +62,19 @@ You can add the following items to a node or production:
 		<!-- 1x1 GENERIC ANCIENT -->
 		<ArtRef Name="generic:an_eu_farm02.nif">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.75</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu_farm03.nif">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>2.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x2_01">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.75</Scale>
 		</ArtRef>
@@ -90,19 +90,19 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_04">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.25</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_05">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_06">
@@ -117,7 +117,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_08">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_09">
@@ -128,31 +128,31 @@ You can add the following items to a node or production:
 		<!-- 1x1 GENERIC INDUSTRIAL/MODERN -->
 		<ArtRef Name="generic:mod_eu.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::1x1_01">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::1x1_02">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 -		<ArtRef Name="generic:ind_eu.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::1x1_04">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -229,47 +229,47 @@ You can add the following items to a node or production:
 		<!-- 1x1 ANGLO/EUROPEAN CLASSICAL -->
 		<ArtRef Name="generic:an_eu.nif::1x1_01">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_02">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_04">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_05">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_06">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_07">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_08">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x1_09">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<!-- 1x1 NORSE ANCIENT/CLASSICAL/MEDIEVAL -->
@@ -306,28 +306,28 @@ You can add the following items to a node or production:
 		<!-- 1x1 ANGLO/EUROPEAN MEDIEVAL -->
 		<ArtRef Name="generic:med_europe.nif::1x1_01">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x1_02">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x1_04">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
@@ -366,25 +366,25 @@ You can add the following items to a node or production:
 		<!-- 1x1 EUROPEAN RENAISSANCE -->
 		<ArtRef Name="generic:ren_europe.nif::1x1_01">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x1_02">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x1_04">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
@@ -1041,7 +1041,7 @@ You can add the following items to a node or production:
 		<!-- 1x1 EUROPEAN INDUSTRIAL -->
 		<ArtRef Name="generic:ind_europe.nif::park_1x1">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Scalar">fCurvatureBias:24</Attribute>
@@ -1049,25 +1049,25 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::1x1_01">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::1x1_02">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::1x1_03">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.4</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::1x1_04">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef>
@@ -1858,7 +1858,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_SCOTLAND_YARD">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/ScotlandYard/Euro_ScotlandYard.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_SCOTLAND_YARD">
@@ -1871,7 +1871,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_SCOTLAND_YARD">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/ScotlandYard/BigBen.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
 			<Scale>0.75</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_GRANARY">
@@ -1963,7 +1963,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIBRARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Library/Europe_Library/Library_Ancient/cottage_freeze0001.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.65</Scale>
@@ -2011,14 +2011,14 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_AQUEDUCT">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Aqueduct/Europe_Aqueduct/clas_Aqueduct.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.75</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_AQUEDUCT">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Aqueduct/Europe_Aqueduct/ren_Aqueduct.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.75</Scale>
 		</ArtRef>
@@ -2033,28 +2033,28 @@ You can add the following items to a node or production:
 		<!-- 2x1 GENERIC INDUSTRIAL/MODERN -->
 		<ArtRef Name="generic:mod_eu.nif::1x2_03">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:mod_eu.nif::1x2_05">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:mod_eu.nif::2x1_02">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:mod_eu.nif::park_2x1">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">fCurvatureBias:68</Attribute>
@@ -2063,7 +2063,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:mod_eu.nif::park_2x1">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Scalar">fCurvatureBias:68</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -2073,14 +2073,14 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::1x2_01">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::1x2_02">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.1</Scale>
@@ -2094,7 +2094,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::2x1_01">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.1</Scale>
@@ -2108,14 +2108,14 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::2x1_03">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::2x1_04">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
@@ -2136,7 +2136,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="generic:an_eu.nif::2x1_02">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x1_03">
@@ -3436,43 +3436,43 @@ You can add the following items to a node or production:
 		<ArtRef Name="generic:an_eu.nif::1x2_01">
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<!-- <ArtRef Name="generic:an_eu.nif::1x2_02">
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef> -->
 		<ArtRef Name="generic:an_eu.nif::2x1_01">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x1_02">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x1_03">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x1_04">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<!-- 2x1 ANGLO/EUROPEAN MEDIEVAL -->
 		<ArtRef Name="generic:med_europe.nif::1x2_01">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3480,7 +3480,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x2_02">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3488,7 +3488,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x2_03">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3496,7 +3496,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x2_04">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3504,7 +3504,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x1_01">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3512,7 +3512,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x1_02">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3520,7 +3520,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x1_03">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3528,7 +3528,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x1_04">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3685,56 +3685,56 @@ You can add the following items to a node or production:
 		<!-- 2x1 EUROPEAN RENAISSANCE -->
 		<ArtRef Name="generic:ren_europe.nif::1x2_01">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x2_02">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x2_03">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x2_04">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::2x1_01">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::2x1_02">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::2x1_03">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::2x1_04">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.85</Scale>
@@ -3742,7 +3742,7 @@ You can add the following items to a node or production:
 		<!-- 2x1 EUROPEAN INDUSTRIAL -->
 		<ArtRef Name="generic:ind_europe.nif::park_2x1">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
@@ -3752,35 +3752,35 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<!-- <ArtRef Name="generic:ind_europe.nif::1x2_02">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef> -->
 		<ArtRef Name="generic:ind_europe.nif::1x2_03">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::1x2_04">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::1x2_05">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::park_2x1">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
@@ -3789,35 +3789,35 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::park_2x1_05">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::2x1_01">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.3</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::2x1_02">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.2</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::2x1_03">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_europe.nif::2x1_04">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.2</Scale>
@@ -5320,7 +5320,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/NationalEpic/Crescent_NationalEpic/ishtargate.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA,ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
-		<Scale>0.66</Scale>
+			<Scale>0.66</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_NATIONAL_EPIC">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/NationalEpic/Asia_NationalEpic/NationalEpic.nif</Attribute>
@@ -5477,7 +5477,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_GRANARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/granary/Warehouse1x2.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5506,7 +5506,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIBRARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Library/Europe_Library/Library_Medieval.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5514,7 +5514,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIBRARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Library/Europe_Library/Library_Renaissance.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.9</Scale>
@@ -5543,7 +5543,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_BANK">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Bank/Europe_Bank/Tavern.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">ERA_ALL,!C2C_ERA_INDUSTRIAL,!C2C_ERA_ATOMIC,!C2C_ERA_INFORMATION,!C2C_ERA_NANOTECH,!C2C_ERA_TRANSHUMAN,!C2C_ERA_GALACTIC,!C2C_ERA_COSMIC,!C2C_ERA_TRANSCENDENT,!C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Rotate>45</Rotate>
@@ -5573,7 +5573,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_BANK">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Bank/Bank.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.77</Scale>
@@ -5598,7 +5598,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="generic:an_eu.nif::3x1_01">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::1x3_01">
@@ -5797,19 +5797,19 @@ You can add the following items to a node or production:
 		<ArtRef Name="generic:an_eu.nif::1x3_01">
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::3x1_01">
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<!-- 3x1 ANGLO/EUROPEAN MEDIEVAL -->
 		<ArtRef Name="generic:med_europe.nif::3x1_01">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5817,7 +5817,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::3x1_02">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5825,7 +5825,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x3_01">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5833,7 +5833,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::1x3_02">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5842,28 +5842,28 @@ You can add the following items to a node or production:
 		<!-- 3x1 EUROPEAN RENAISSANCE -->
 		<ArtRef Name="generic:ren_europe.nif::3x1_01">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::3x1_02">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x3_01">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::1x3_02">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.85</Scale>
@@ -6213,7 +6213,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_GRANARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/granary/spichlerz.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Rotate>90</Rotate>
@@ -6226,25 +6226,25 @@ You can add the following items to a node or production:
 		<!-- 2x2 GENERIC INDUSTRIAL/MODERN -->
 		<ArtRef Name="generic:mod_eu.nif::2x2_01">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::2x2x3_01">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::2x2x4_01">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ind_eu.nif::2x2x4_02">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
@@ -6658,46 +6658,46 @@ You can add the following items to a node or production:
 		<!-- 2x2 GENERIC ANCIENT/CLASSICAL -->
 		<ArtRef Name="generic:an_eu.nif::1x2_02">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x2_01">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x1_04">
 			<!-- <Attribute Class="Rotation">0,180</Attribute> -->
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 		<!-- 2x2 ANGLO/EUROPEAN MEDIEVAL -->
 		<ArtRef Name="generic:med_europe.nif::2x2_01">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x2_02">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x2_03">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:med_europe.nif::2x2_04">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.1</Scale>
@@ -6733,13 +6733,13 @@ You can add the following items to a node or production:
 		<!-- 2x2 EUROPEAN RENAISSANCE -->
 		<ArtRef Name="generic:ren_europe.nif::2x2_01">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_europe.nif::2x2_02">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
@@ -7158,14 +7158,14 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_PALACE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/palace/Palace.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<!-- EUROPEAN MEDIEVAL PALACE -->
 		<ArtRef Name="building:LSYSTEM_PALACE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/palace/med_eu_palace.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<!-- AFRO PALACE -->
@@ -7315,7 +7315,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_ACADEMY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Academy/Europe_Academy/hilmon.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -7422,13 +7422,13 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_BARRACKS">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Barracks/Barracks.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_BARRACKS">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Barracks/Europe_Barracks/Barracks_eu.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_BARRACKS">
@@ -7539,7 +7539,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIBRARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Library/Europe_Library/default.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.25</Scale>
@@ -7558,7 +7558,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_STABLE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Stable/Stable.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -7576,7 +7576,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_STABLE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Stable/Stable_Renaissance.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
 			<Scale>1.2</Scale>
 		</ArtRef>
@@ -7601,7 +7601,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_STABLE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Stable/Stable_Industrial/Stable.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>2.0</Scale>
@@ -7634,7 +7634,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_FORGE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Forge/Forge_Industrial/Ironworks.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
@@ -7689,7 +7689,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_THEATRE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/GlobeTheater/GlobeTheater.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
@@ -7779,7 +7779,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_MARKET">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Market/Europe_Market/ts_church.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.45</Scale>
@@ -7832,7 +7832,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_BANK">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Bank/European_Bank_Ind.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Scale>0.85</Scale>
 		</ArtRef>
@@ -7987,7 +7987,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/palace/clas_eu_palace.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.15</Scale>
 		</ArtRef>
@@ -7995,7 +7995,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/palace/ren_eu_palace.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.15</Scale>
 		</ArtRef>
@@ -8071,7 +8071,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_ACADEMY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Academy/Europe_Academy/Academy_Medieval.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.65</Scale>
@@ -8092,7 +8092,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_MILITARY_ACADEMY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Military_Academy/Military_Academy.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.58</Scale>
 		</ArtRef>
@@ -8127,7 +8127,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIBRARY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Library/Library_Modern/Library_Modern.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_AFRICA,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_AFRICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -8156,7 +8156,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_COURTHOUSE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Courthouse/Europe_Courthouse/Courthouse_Medieval.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Era">ERA_ALL,!C2C_ERA_INDUSTRIAL,!C2C_ERA_ATOMIC,!C2C_ERA_INFORMATION,!C2C_ERA_NANOTECH,!C2C_ERA_TRANSHUMAN,!C2C_ERA_GALACTIC,!C2C_ERA_COSMIC,!C2C_ERA_TRANSCENDENT,!C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.0</Scale>
@@ -8171,7 +8171,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_COURTHOUSE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Courthouse/Courthouse.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>2.0</Scale>
@@ -8223,7 +8223,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Market/Market.nif</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL</Attribute>
 			<Scale>0.95</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_MARKET">
@@ -8299,7 +8299,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_INTELLIGENCE_AGENCY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Intelligence_Agency/city_hall.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>2.1</Scale>
 		</ArtRef>
@@ -8373,7 +8373,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_THEATRE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Theatre/Europe_Theatre/Bourla.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>1.1</Scale>
@@ -8401,7 +8401,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_MARKET">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Market/newcorp2.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.2</Scale>
@@ -8416,7 +8416,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_UNIVERSITY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/University/University.nif</Attribute>
 			<Attribute Class="Era">ERA_ALL,!C2C_ERA_NANOTECH,!C2C_ERA_TRANSHUMAN,!C2C_ERA_FUTURE</Attribute>
-			<Attribute Class="Artstyle">ARTSTYLE_AFRICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC</Attribute>
+			<Attribute Class="Artstyle">ARTSTYLE_AFRICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -8438,7 +8438,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_BATH_HOUSE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/bath_europe/bath_europe.nif</Attribute>
 			<Attribute Class="Era">ERA_ALL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_MONGOLIA,ARTSTYLE_JAPAN,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_MONGOLIA,ARTSTYLE_JAPAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -8491,7 +8491,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_GREAT_PALACE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/ForbiddenPalace/Europe_GreatPalace/GreatPalace.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
 			<Attribute Class="Era">ERA_ALL,!C2C_ERA_ATOMIC,!C2C_ERA_INFORMATION,!C2C_ERA_NANOTECH,!C2C_ERA_TRANSHUMAN,!C2C_ERA_GALACTIC,!C2C_ERA_COSMIC,!C2C_ERA_TRANSCENDENT,!C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.0</Scale>
@@ -8535,7 +8535,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_MT_RUSHMORE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/MtRushmore/MtRushmore.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_BARBARIAN,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_BARBARIAN,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -8572,7 +8572,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_BARRACKS">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Barracks/Barracks_Industrial/Barracks.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>1.05</Scale>
@@ -8593,7 +8593,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_MARKET">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Market/Harrods.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -8692,7 +8692,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/palace/ind_Anglo_palace.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -8738,7 +8738,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_GLOBE_THEATRE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/GlobeTheater/Europe_GlobeTheatre/Semperoper.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE</Attribute>
 			<Scale>1.25</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_GLOBE_THEATRE">
@@ -8784,7 +8784,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_HERMITAGE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Hermitage/Hermitage.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_HERMITAGE">
@@ -8805,7 +8805,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_GLOBE_THEATRE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/GlobeTheater/Europe_GlobeTheatre/hvezda.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.15</Scale>
@@ -8857,7 +8857,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_ACADEMY">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Academy/Europe_Academy/mta.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.35</Scale>
 		</ArtRef>
@@ -8921,14 +8921,14 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_COLOSSEUM">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Colosseum/Colosseum_early/Colosseum_wood.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>2.0</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_COLOSSEUM">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Colosseum/Europe_Colosseum/Colosseum_ren.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>2.0</Scale>
 		</ArtRef>
@@ -8967,7 +8967,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_CASTLE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Improvements/Fort/palisades.nif</Attribute>
 			<Attribute Class="Era">ERA_ALL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_ARABIA,ARTSTYLE_ASIA,ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_INDIA,ARTSTYLE_IBERIA,ARTSTYLE_JAPAN,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_EAST_ASIA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_ARABIA,ARTSTYLE_ASIA,ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_INDIA,ARTSTYLE_IBERIA,ARTSTYLE_JAPAN,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_EAST_ASIA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
@@ -9050,7 +9050,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/palace/ModernPalace_Europe/Berlaymont.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
 		<!-- RUSSIAN PALACE -->
@@ -9070,7 +9070,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_GLOBE_THEATRE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/GlobeTheater/Olimpia_1936.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ALL,!ARTSTYLE_ANGLO_AMERICA,!ARTSTYLE_EUROPE,!ARTSTYLE_GRECO_ROMAN,!ARTSTYLE_IBERIA,!ARTSTYLE_NORSE,!ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ALL,!ARTSTYLE_ANGLO_AMERICA,!ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,!ARTSTYLE_GRECO_ROMAN,!ARTSTYLE_IBERIA,!ARTSTYLE_NORSE,!ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.75</Scale>
 		</ArtRef>
@@ -9311,7 +9311,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIGHTHOUSE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Lighthouse/Europe_Lighthouse/port_tower.nif</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">bNoWaterTest:1</Attribute>
 			<!-- this bypasses water testing -->
@@ -9416,7 +9416,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_HARBOR">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Harbor/Europe_Harbor/Drydock.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
-			<Attribute Class="Artstyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Artstyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bNoWaterTest:1</Attribute>
 			<!-- this bypasses water testing -->
 			<Attribute Class="Scalar">szSpecialLayout:Coast</Attribute>
@@ -9437,7 +9437,7 @@ You can add the following items to a node or production:
 		<ArtRef Name="building:LSYSTEM_HARBOR">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Harbor/Europe_Harbor/Shipyard.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
-			<Attribute Class="Artstyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Artstyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bNoWaterTest:1</Attribute>
 			<!-- this bypasses water testing -->
 			<Attribute Class="Scalar">szSpecialLayout:Coast</Attribute>
@@ -9828,7 +9828,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::4x2">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_4x2.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -9936,7 +9936,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::3x2">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_3x2.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10022,7 +10022,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::4x1">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_4x1.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10115,7 +10115,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::3x1">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_3x1.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10162,7 +10162,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::3x1">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_3x1.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10207,7 +10207,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::2x2">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_2x2.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10300,7 +10300,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::2x1">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_2x1.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10344,7 +10344,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::2x1">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_2x1.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -10389,7 +10389,7 @@ You can add the following items to a node or production:
 		</ArtRef>
 		<ArtRef Name="decoration:native_lot.nif::2x1">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_EUROPE,ARTSTYLE_NEANDERTHAL,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_RUSSIA,ARTSTYLE_NORSE,ARTSTYLE_SOUTH_PACIFIC,ARTSTYLE_BARBARIAN</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:all_city_lot_2x1.nif">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>

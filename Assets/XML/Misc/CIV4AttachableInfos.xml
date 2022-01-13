@@ -1,12 +1,6 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Greg Cunningham (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Attachables -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4AttachableInfos xmlns="x-schema:../Schema/C2C_CIV4MiscSchema.xml">
 	<AttachableInfos>
-		<!-- Units: -->
 		<AttachableInfo>
 			<Type>ATTACHABLE_SMOKE</Type>
 			<Description>ATTACHABLE_SMOKE</Description>
@@ -416,7 +410,6 @@
 			<fScale>1.0</fScale>
 			<Path>Art/Effects/fire_torch/fx_fire_torch.nif</Path>
 		</AttachableInfo>
-		<!-- Final Frontier: -->
 		<AttachableInfo>
 			<Type>ATTACHABLE_INVASIONSHIP_GLOW</Type>
 			<Description>Invasion Ship Engine Glow</Description>

@@ -1,0 +1,1031 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIVILOPEDIA_BACKGROUND</Tag>
+		<English>Background:[NEWLINE]</English>
+		<French>Contexte:[NEWLINE]</French>
+		<German>Hintergrund:[NEWLINE]</German>
+		<Russian>Описание:[PARAGRAPH:1]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVILOPEDIA_STRATEGY</Tag>
+		<English>Strategy:[NEWLINE]</English>
+		<French>Stratégie:[NEWLINE]</French>
+		<German>Strategie:[NEWLINE]</German>
+		<Italian>Strategia:[NEWLINE]</Italian>
+		<Spanish>Estrategia:[NEWLINE]</Spanish>
+		<Russian>Стратегия:[PARAGRAPH:1]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_AND_BUILD_TIME</Tag>
+		<English>and build time is</English>
+		<French>et le temps de construction est :\n</French>
+		<German>[NEWLINE][ICON_BULLET]Dauer:</German>
+		<Russian> и строится</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
+		<English>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Warmonger Respect)[NEWLINE]</English>
+		<French>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Respect du Seigneur de Guerre)[NEWLINE]</French>
+		<German>Attitüde: [BOLD]%d1%[\BOLD] (Basis) + [BOLD]%d2%[\BOLD] (gegenüber Kriegstreibern)[NEWLINE]</German>
+		<Spanish>Actitud: [BOLD]%d1%[\BOLD] (base) + [BOLD]%d2%[\BOLD] (estima bélica)[NEWLINE]</Spanish>
+		<Polish>Podstawa: [BOLD]%d1%%[\BOLD] (Baza) + [BOLD]%d2%[\BOLD] (Podżegacz Wojenny)[NEWLINE]</Polish>
+		<Russian>Îòíîøåíèå: [BOLD]%d1%[\BOLD] (áàçîâîå) + [BOLD]%d2%[\BOLD] (ìèëèòàðèçì)[NEWLINE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_AUTOBUILD</Tag>
+		<English>Auto-Build</English>
+		<French>Auto-construction</French>
+		<German>automatisch</German>
+		<Russian>Автом. строительство</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE</Tag>
+		<English>Reveal</English>
+		<French>Révélé par :</French>
+		<German>enthüllt</German>
+		<Italian>Rivela</Italian>
+		<Spanish>Revela</Spanish>
+		<Russian>Развернуть</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
+		<English>Reveal/Enable</English>
+		<French>Révélé et utilisable dès :</French>
+		<German>enthüllt/verfügbar</German>
+		<Spanish>Revelado y activado</Spanish>
+		<Polish>Odkryte i Włączone</Polish>
+		<Russian>Òðåáóåìàÿ òåõíîëîãèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
+		<English>Locally</English>
+		<French>Local</French>
+		<German>lokal</German>
+		<Russian>(вблизи ресурса)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_NATIONWIDE</Tag>
+		<English>Nationwide</English>
+		<French>Au Niveau Nation</French>
+		<German>landesweit</German>
+		<Russian>доступная линейка</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_OBSOLETE</Tag>
+		<English>Obsolete</English>
+		<French>Obsolète</French>
+		<German>veraltet</German>
+		<Polish>Przestarzałe</Polish>
+		<Russian>Óñòàðåâøèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
+		<English>Enable</English>
+		<French>Utilisable dès</French>
+		<German>verfügbar</German>
+		<Italian>Abilita</Italian>
+		<Spanish>Permite</Spanish>
+		<Russian>Включить</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BUILD</Tag>
+		<English>Build:</English>
+		<French>Est construit par :</French>
+		<German>gebaut durch</German>
+		<Russian>Здания:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BUILD_TIME</Tag>
+		<English>Build time is</English>
+		<French>Le temps de construction est :\n</French>
+		<Russian>Время строительства</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CAPABLE_UNITS</Tag>
+		<English>Capable Units:</English>
+		<French>Unités compétentes:</French>
+		<German>kann ausgeführt werden von</German>
+		<Russian>Связанные юниты:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
+		<English>(P) Afflictions</English>
+		<French>(P) Afflictions</French>
+		<German>Beschwerden</German>
+		<Spanish>Alteraciones de estado</Spanish>
+		<Polish>Osłabienia</Polish>
+		<Russian>Êàòàñòðîôû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
+		<English>All Eras</English>
+		<French>Toutes les Eres</French>
+		<German>Alle Zeitalter</German>
+		<Russian>Все эпохи</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
+		<English>Animalistic</English>
+		<French>Animalier</French>
+		<German>Tiere</German>
+		<Russian>Предания</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALS</Tag>
+		<English>Animals</English>
+		<French>Animaux</French>
+		<German>Tiere</German>
+		<Russian>Животные</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS</Tag>
+		<English>Resources</English>
+		<French>
+			<Text>Ressources</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ressourcen</German>
+		<Italian>
+			<Text>Risorse</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Recursos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Surowce</Polish>
+		<Russian>Ðåñóðñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_CULTURE</Tag>
+		<English>Culture Bonuses</English>
+		<French>Bonus de Culture</French>
+		<German>Kulturboni</German>
+		<Spanish>Recursos culturales</Spanish>
+		<Polish>Bonusy Kulturowe</Polish>
+		<Russian>Íàðîäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
+		<English>Technocultural Bonuses</English>
+		<German>Technokulturboni</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
+		<English>Manufactured Bonuses</English>
+		<German>Güter</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
+		<English>Map Bonuses</English>
+		<French>Bonus de Carte</French>
+		<German>Rohstoffe</German>
+		<Spanish>Recursos del mapa</Spanish>
+		<Polish>Bonusy Mapy</Polish>
+		<Russian>Ðåñóðñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
+		<English>Unique Bonuses</English>
+		<German>Spezialboni</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
+		<English>Special</English>
+		<French>Spéciaux</French>
+		<German>Besonderheiten</German>
+		<Russian>Особые</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE</Tag>
+		<English>Building Tree</English>
+		<French>Améliorations des Bâtiments</French>
+		<German>Gebäude</German>
+		<Italian>Miglioramenti degli edifici</Italian>
+		<Spanish>Árbol de edificios</Spanish>
+		<Polish>Ulepszenia Budynków</Polish>
+		<Russian>Ðîñò æèëüÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES</Tag>
+		<English>Cultures</English>
+		<German>Kulturen</German>
+		<Italian>Culture</Italian>
+		<Spanish>Culturas</Spanish>
+		<Polish>Kultury</Polish>
+		<Russian>Êóëüòóðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CHRONOLOGY</Tag>
+		<English>Chronology</English>
+		<French>Chronologie</French>
+		<German>Chronologisch</German>
+		<Russian>Хронология</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CIV</Tag>
+		<English>Civilizations</English>
+		<French>
+			<Text>Civilisations</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Zivilisationen</German>
+		<Italian>
+			<Text>Civiltà</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Civilizaciones</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Cywilizacje</Polish>
+		<Russian>Öèâèëèçàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CIVIC</Tag>
+		<English>Civics</English>
+		<French>
+			<Text>Doctrines</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Gesellschaft</German>
+		<Italian>
+			<Text>Forme di governo</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Principios</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Doktryny</Polish>
+		<Russian>Ïàðàäèãìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CONCEPT</Tag>
+		<English>Game Concepts</English>
+		<French>
+			<Text>Concepts du jeu</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Spielkonzepte</German>
+		<Italian>
+			<Text>Nozioni di gioco</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Conceptos del juego</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Pojęcia gry</Polish>
+		<Russian>Êîíöåïöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CONCEPT_NEW</Tag>
+		<English>C2C Concepts</English>
+		<French>Concepts C2C</French>
+		<German>C2C-Konzepte</German>
+		<Italian>Concetti di C2C</Italian>
+		<Spanish>Conceptos de C2C</Spanish>
+		<Polish>Koncepcje BtS</Polish>
+		<Russian>Íîâîå â C2C</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS</Tag>
+		<English>Cultural Units</English>
+		<French>Unités Culturelles</French>
+		<German>Kulturspezifisch</German>
+		<Russian>Культур. юниты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION</Tag>
+		<English>(P) Equipments</English>
+		<French>(P) Equipements</French>
+		<German>Ausrüstung</German>
+		<Spanish>Equipamiento</Spanish>
+		<Polish>Ekwipunek</Polish>
+		<Russian>Ñíàðÿæåíèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
+		<English>Eras</English>
+		<French>Eres</French>
+		<German>Zeitalter</German>
+		<Russian>Эпохи</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_FEATURE</Tag>
+		<English>Features</English>
+		<French>
+			<Text>Caractéristiques du terrain</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Merkmale</German>
+		<Italian>
+			<Text>Caratteristiche del terreno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Características del terreno</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Cechy Terenu</Polish>
+		<Russian>Ñâîéñòâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS</Tag>
+		<English>Great Wonders</English>
+		<French>Merveilles Mondiales</French>
+		<German>Weltwunder</German>
+		<Italian>Grandi Merav.</Italian>
+		<Spanish>Maravillas del mundo</Spanish>
+		<Polish>Wielkie Cuda</Polish>
+		<Russian>Âåëèêèå ÷óäåñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_GROUP_WONDERS</Tag>
+		<English>Group Wonders</English>
+		<French>Groupes de Merveilles</French>
+		<German>Gruppenwunder</German>
+		<Russian>Групп. Чудеса</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_HERO</Tag>
+		<English>Heroes</English>
+		<French>Héros</French>
+		<German>Helden</German>
+		<Italian>Eroi</Italian>
+		<Spanish>Héroes</Spanish>
+		<Polish>Bohaterowie</Polish>
+		<Russian>Ãåðîè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_HINTS</Tag>
+		<English>Hints</English>
+		<French>
+			<Text>Conseils</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Tipps</German>
+		<Italian>
+			<Text>Suggerimenti</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Consejos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Porady</Polish>
+		<Russian>Ïîäñêàçêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT</Tag>
+		<English>Improvements</English>
+		<French>
+			<Text>Aménagements</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Verbesserungen</German>
+		<Italian>
+			<Text>Miglioramenti</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mejoras</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Ulepszenia</Polish>
+		<Russian>Óëó÷øåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
+		<English>Landscape</English>
+		<French>Paysage</French>
+		<German>Landschaft</German>
+		<Russian>Типы ландшафта</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADER</Tag>
+		<English>Leaders</English>
+		<French>
+			<Text>Leaders</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Oberhäupter</German>
+		<Italian>
+			<Text>Leader</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Líderes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Przywódcy</Polish>
+		<Russian>Ëèäåðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADERSHIP</Tag>
+		<English>Leadership</English>
+		<French>Gouvernement</French>
+		<German>Regierung</German>
+		<Russian>Лидерство</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_MISC_UNITS</Tag>
+		<English>Misc Units</English>
+		<French>Unités Diverses</French>
+		<German>Sonstige</German>
+		<Russian>Прочие юниты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS</Tag>
+		<English>National Wonders</English>
+		<French>Merveilles Nationales</French>
+		<German>Nationale Wunder</German>
+		<Italian>Merav. Naz.</Italian>
+		<Spanish>Maravillas nacionales</Spanish>
+		<Polish>Cuda Narodowe</Polish>
+		<Russian>Íàö. ÷óäåñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_PROJECT</Tag>
+		<English>Projects</English>
+		<French>
+			<Text>Projets</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Projekte</German>
+		<Italian>
+			<Text>Progetti</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Proyectos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Projekty</Polish>
+		<Russian>Ïðîåêòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION</Tag>
+		<English>Promotions</English>
+		<French>
+			<Text>Promotions</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Beförderungen</German>
+		<Italian>
+			<Text>Promozioni</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ascensos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Promocje</Polish>
+		<Russian>Êâàëèôèêàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE</Tag>
+		<English>Promotion Tree</English>
+		<French>Arborescence des Promotions</French>
+		<German>Beförderungen</German>
+		<Italian>Albero Promoz.</Italian>
+		<Spanish>Árbol de ascensos</Spanish>
+		<Polish>Drzewko prom.</Polish>
+		<Russian>Ðàçâèòèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGION</Tag>
+		<English>Religions</English>
+		<French>
+			<Text>Religions</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Religionen</German>
+		<Italian>
+			<Text>Religioni</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Religiones</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Religie</Polish>
+		<Russian>Ðåëèãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
+		<English>Religious</English>
+		<French>Religieux</French>
+		<German>Religion</German>
+		<Russian>Культовые</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
+		<English>Resources</English>
+		<French>Ressources</French>
+		<German>Ressourcen</German>
+		<Russian>Ресурсы</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
+		<English>Routes</English>
+		<French>Routes</French>
+		<German>Verkehr</German>
+		<Spanish>Caminos</Spanish>
+		<Polish>Drogi</Polish>
+		<Russian>Äîðîãè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SHORTCUTS</Tag>
+		<English>Shortcuts</English>
+		<French>Raccourcis</French>
+		<German>Referenzen</German>
+		<Italian>Scorciatoie</Italian>
+		<Spanish>Atajos de teclado</Spanish>
+		<Polish>Skróty</Polish>
+		<Russian>Óïðàâëåíèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
+		<English>Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL</Tag>
+		<English>Special</English>
+		<French>Spéciaux</French>
+		<German>Weiteres</German>
+		<Russian>Особое</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIALIST</Tag>
+		<English>Specialists</English>
+		<French>
+			<Text>Spécialistes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Spezialisten</German>
+		<Italian>
+			<Text>Specialisti</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Especialistas</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Specjaliści</Polish>
+		<Russian>Ñïåöèàëèñòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
+		<English>Special Buildings</English>
+		<French>Bâtiments Spéciaux</French>
+		<German>Spezialgebäude</German>
+		<Russian>Особые постройки</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
+		<English>Special Units</English>
+		<French>Unités Spéciales</French>
+		<German>Spezialeinheiten</German>
+		<Russian>Особые юниты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
+		<English>Spreading Units</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
+		<English>Sub Combat Types</English>
+		<French>Type de Spé-Combat</French>
+		<German>Unterkategorien</German>
+		<Spanish>Subtipos de combate</Spanish>
+		<Polish>Typy Walki</Polish>
+		<Russian>Âèäû ñðàæåíèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_TECH</Tag>
+		<English>Technologies</English>
+		<French>
+			<Text>Technologies</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Technologien</German>
+		<Italian>
+			<Text>Tecnologie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tecnologías</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Technologie</Polish>
+		<Russian>Òåõíîëîãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_TERRAIN</Tag>
+		<English>Terrains</English>
+		<French>
+			<Text>Terrains de base</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Gelände</German>
+		<Italian>
+			<Text>Terreno base</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Terreno base</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Rodzaje Terenu</Polish>
+		<Russian>Ëàíäøàôò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT</Tag>
+		<English>Units</English>
+		<French>
+			<Text>Unités</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Einheiten</German>
+		<Italian>
+			<Text>Unità</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unidades</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Jednostki</Polish>
+		<Russian>Þíèòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
+		<English>Combat Types</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
+		<English>Unit Upgrades</English>
+		<French>Améliorations des Unités</French>
+		<German>Einheiten</German>
+		<Italian>Avanzamenti</Italian>
+		<Spanish>Árbol de unidades</Spanish>
+		<Polish>Ulepszenia jedn.</Polish>
+		<Russian>Ðîñò þíèòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADE_TREES</Tag>
+		<English>Upgrade Trees</English>
+		<French>Arbre des Améliorations</French>
+		<German>Upgrades</German>
+		<Russian>Древо развития</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_WORKER_BUILDS</Tag>
+		<English>Worker Builds</English>
+		<French>Constructions des Ouvriers</French>
+		<German>Arbeitsaufträge</German>
+		<Russian>Задания рабочим</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CONSTRUCT</Tag>
+		<English>Construct:</English>
+		<French>Construit :</French>
+		<German>Ergebnis</German>
+		<Russian>Результат:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CONSUMES_WORKER</Tag>
+		<English>Consumes the worker.</English>
+		<French>Détruit l'Ouvrier.</French>
+		<German>Arbeitstrupp wird zerstört</German>
+		<Russian>Тратит рабочих</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_COSTS</Tag>
+		<English>Costs</English>
+		<French>Coûte</French>
+		<German>Kosten:</German>
+		<Russian>Цена</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_DOGPILE</Tag>
+		<English>Dogpile War: [BOLD]%d1[\BOLD]</English>
+		<French>Gestion de Guerre: [BOLD]%d1[\BOLD]</French>
+		<German>Krieg beitreten: [BOLD]%d1[\BOLD]</German>
+		<Spanish>Guerra de pelotón: [BOLD]%d1[\BOLD]</Spanish>
+		<Polish>Wojna Totalna: [BOLD]%d1%%[\BOLD]</Polish>
+		<Russian>Грязная война: [BOLD]%d1[\BOLD]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FAV_CIVIC_AND_RELIGION</Tag>
+		<English>Favorite Civic and Religion</English>
+		<French>Doctrine et Religion Préférée</French>
+		<German>Bevorzugte Gesellschaftsform und Religion</German>
+		<Italian>Forme di governo e Religioni preferite</Italian>
+		<Spanish>Principio y religión favoritos</Spanish>
+		<Polish>Ulubione doktryny i religie</Polish>
+		<Russian>Ëþáèìûå ïàðàäèãìû è ðåëèãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FROM_GAME_SPEED</Tag>
+		<English>from game speed)</English>
+		<French>de la vitesse du jeu)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FROM_STARING_ERA</Tag>
+		<English>from staring era)</English>
+		<French>de l'ère)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FULL_WAR</Tag>
+		<English>Full War: [BOLD]%d1[\BOLD] (%d2%% Ratio Near, %d3%% Ratio Far, %d4%% Adjacent)[NEWLINE]</English>
+		<French>Guerre Totale: [BOLD]%d1[\BOLD] (%d2%% Ratio Près, %d3%% Ratio Loin, %d4%% Adjacent)[NEWLINE]</French>
+		<German>Totaler Krieg: [BOLD]%d1[\BOLD] (Schlagkraft: %d2%% für nahe Gegner, %d3%% für ferne Gegner, %d4%% für Nachbarn)[NEWLINE]</German>
+		<Spanish>Guerra total: [BOLD]%d1[\BOLD] (Ratio cercano: %d2%%, ratio lejano: %d3%%, adyacente: %d4%%)[NEWLINE]</Spanish>
+		<Polish>Pełna Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek Bliski, %d3%% Stosunek Daleki, %d4%% Sąsiadujące)[NEWLINE]</Polish>
+		<Russian>Полная война: [BOLD]%d1[\BOLD] (%d2%% прим. коэфф., %d3%% Отдал. коэфф., %d4%% - смежный)[NEWLINE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_HISTORY</Tag>
+		<English>History</English>
+		<French>Historique</French>
+		<German>Geschichte</German>
+		<Italian>Storia</Italian>
+		<Spanish>Historia</Spanish>
+		<Polish>Historia</Polish>
+		<Russian>Èñòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_IMPROVEMENT_AIR_DEFENSE</Tag>
+		<English>%% Air Defense</English>
+		<French>%% Défense aérienne</French>
+		<German>%% Luftverteidigung</German>
+		<Italian>%% di difesa anti-aerea</Italian>
+		<Spanish>%% de defensa antiaérea</Spanish>
+		<Polish>%% Obrona Przeciwlotnicza</Polish>
+		<Russian>%% çàùèòû îò àâèàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_IMPROVEMENT_BUILD_OUTSIDE_BORDERS</Tag>
+		<English>Can be built outside cultural borders</English>
+		<French>Peut être construit en dehors du territoire</French>
+		<German>Kann außerhalb der Kulturgrenzen errichtet werden</German>
+		<Italian>Può essere costruito all'esterno dei confini culturali</Italian>
+		<Spanish>Se puede construir fuera de las fronteras de la civilización</Spanish>
+		<Polish>Może zostać zbudowany wewnątrz granic kulturowych</Polish>
+		<Russian>Ìîæåò áûòü âîçâåäåí çà ïðåäåëàìè êóëüòóðíûõ ãðàíèö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_LATITUDE</Tag>
+		<English>Exist in latitude:</English>
+		<French>Existe en latitude:</French>
+		<German>Geografische Breite:</German>
+		<Russian>Ареал размещения:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_LIMITED_WAR</Tag>
+		<English>Limited War: [BOLD]%d1[\BOLD] (%d2%% Power Ratio)[NEWLINE]</English>
+		<French>Guerre Limitée: [BOLD]%d1[\BOLD] (%d2%% Power Ratio)[NEWLINE]</French>
+		<German>Eingeschränkter Krieg: [BOLD]%d1[\BOLD] (%d2%% Schlagkraft)[NEWLINE]</German>
+		<Spanish>Guerra limitada: [BOLD]%d1[\BOLD] (Ratio de poder del %d2%%)[NEWLINE]</Spanish>
+		<Polish>Limitowana Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek sił)[NEWLINE]</Polish>
+		<Russian>Огранич. война: [BOLD]%d1[\BOLD] (%d2%% Коэффициент мощи)[NEWLINE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_NO_PLOT_YIELD_CHANGE</Tag>
+		<English>No Change</English>
+		<French>Pas de Modif.</French>
+		<Spanish>Sin cambios</Spanish>
+		<Polish>Bez zmian</Polish>
+		<Russian>Íå èçìåíÿòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
+		<English>Quote</English>
+		<French>Citations</French>
+		<German>Zitat</German>
+		<Spanish>Cita</Spanish>
+		<Polish>Wpis</Polish>
+		<Russian>Öèòàòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REPLACED_BY</Tag>
+		<English>Replaced By</English>
+		<French>Remplacé par</French>
+		<German>ersetzt durch</German>
+		<Spanish>Reemplazado por</Spanish>
+		<Polish>Zastąpione przez</Polish>
+		<Russian>Çàìåíåí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REPLACEMENT_FOR</Tag>
+		<English>Replacement for:</English>
+		<French>Remplacement de :</French>
+		<German>ersetzt</German>
+		<Russian>Заменяет:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
+		<English>Requires:</English>
+		<French>Requiert :</French>
+		<German>benötigt</German>
+		<Russian>Требуется:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_RESOURCE_SOURCE</Tag>
+		<English>Source of Bonus</English>
+		<French>Source de Bonus</French>
+		<German>Ursprung</German>
+		<Spanish>Fuente del recurso</Spanish>
+		<Polish>Zródło surowca</Polish>
+		<Russian>Áîíóñ èñòî÷íèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_ROUTE_IMPROVEMENT_YIELD_CHANGE</Tag>
+		<English>Improvement Yield Change</English>
+		<French>Chang. taux de rendement</French>
+		<Spanish>Cambios al rendimiento de la mejora</Spanish>
+		<Polish>Wydajność ulepszenia uległa zmianie</Polish>
+		<Russian>Ýôôåêò óëó÷øåíèÿ èçìåíåí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SCREEN_BACK</Tag>
+		<English>Back</English>
+		<French>Retour</French>
+		<German>Zurück</German>
+		<Italian>Indietro</Italian>
+		<Spanish>Atrás</Spanish>
+		<Russian>Назад</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SCREEN_CONTENTS</Tag>
+		<English>Contents</English>
+		<French>Matières</French>
+		<German>Inhalt</German>
+		<Italian>Contenuto</Italian>
+		<Spanish>Contenido</Spanish>
+		<Polish>TreŚć</Polish>
+		<Russian>Ñîäåðæàíèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SCREEN_FORWARD</Tag>
+		<English>Next</English>
+		<French>Suivant</French>
+		<German>Vor</German>
+		<Italian>Successivo</Italian>
+		<Spanish>Siguiente</Spanish>
+		<Russian>Далее</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SCREEN_INDEX</Tag>
+		<English>Index</English>
+		<Italian>[SPACE][SPACE][SPACE][SPACE][SPACE]Indice</Italian>
+		<Spanish>Índice</Spanish>
+		<Polish>Indeks</Polish>
+		<Russian>Èíäåêñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_STRATEGY</Tag>
+		<English>Strategy</English>
+		<French>Stratégie</French>
+		<German>Strategie</German>
+		<Spanish>Estrategia</Spanish>
+		<Polish>Strategia</Polish>
+		<Russian>Ñòðàòåãèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SYNERGY</Tag>
+		<English>Synergy</English>
+		<French>Synergie</French>
+		<German>beeinflusst von</German>
+		<Russian>Синергия</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
+		<English>Tech Required:</English>
+		<French>Tech Requise :</French>
+		<Russian>Технология:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TECH_WORKER_SPEED</Tag>
+		<English>% Worker Speed</English>
+		<French>% Vitesse des Ouvriers</French>
+		<Russian>% скорость рабочего</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
+		<English>turns + feature build time)</English>
+		<French>tours + temps de constr. de l'aménagement)</French>
+		<German> Runde(n) zusätzlich)</German>
+		<Russian>ходов + время строительства)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>
+		<English>[ICON_BULLET]Can be captured</English>
+		<French>[ICON_BULLET]Peut être capturé</French>
+		<German>[ICON_BULLET]kann gefangen werden</German>
+		<Italian>[ICON_BULLET]Può essere catturata</Italian>
+		<Spanish>[ICON_BULLET]Se puede capturar</Spanish>
+		<Polish>[ICON_BULLET]Może zostać przejęty</Polish>
+		<Russian>[ICON_BULLET]Ìîæåò áûòü çàõâà÷åí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_UNIT_DRAFTABLE</Tag>
+		<English>[ICON_BULLET]Can be drafted when requirements are met</English>
+		<French>[ICON_BULLET]Peut être recrutés lorsque les conditions sont réunies</French>
+		<German>[ICON_BULLET]Einheit kann rekrutiert werden, wenn die Bedingungen erfüllt sind</German>
+		<Italian>[ICON_BULLET]Può essere reclutata quando i requisiti sono soddisfatti</Italian>
+		<Spanish>[ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
+		<Polish>[ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
+		<Russian>[ICON_BULLET]Ïîäðàçäåëåíèå ìîæåò áûòü ïðèçâàíî, êîãäà âûïîëíåíû íåîáõîäèìûå óñëîâèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE</Tag>
+		<English>[ICON_BULLET]Ignores Building Defense</English>
+		<French>[ICON_BULLET]Ignore les Protections des Bâtiments</French>
+		<German>[ICON_BULLET]Ignoriert Verteidigung durch Gebäude</German>
+		<Italian>[ICON_BULLET]Ignora le difese degli edifici</Italian>
+		<Spanish>[ICON_BULLET]Ignora la defensa por edificios</Spanish>
+		<Polish>[ICON_BULLET]Ignoruje Obronę Budynku</Polish>
+		<Russian>[ICON_BULLET]Èãíîðèðóåò çàùèòó çäàíèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
+		<English>«Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.» - Italo Calvino, Six Memos For the Next Millennium</English>
+		<French>« Qui sommes-nous, qu'est chacun de nous, sinon une combinaison d'expériences, d'informations, de lectures, de rêveries ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, un échantillonnage de styles, où tout peut se mêler et se réorganiser de toutes les manières possibles. » - Italo Calvino, Leçons américaines : Six propositions pour le prochain millénaire</French>
+		<German>„Wer sind wir denn, wer ist jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann.“ - Italo Calvino, Sechs Vorschläge für das nächste Jahrtausend</German>
+		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinatoria d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, Lezioni americane. Sei proposte per il prossimo millennio</Italian>
+		<Russian>Кто мы, кто есть каждый из нас, если не сочетание опыта, информации, книг, которые мы прочли, вещей, которые мы воображали? Любая жизнь сродни энциклопедии, библиотеке, инвентарю предметов, ряду стилей. Все можно постоянно перетасовывать и переупорядочивать любыми доступными способами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WONDER</Tag>
+		<English>Wonder Construction: [BOLD]%d1%%[\BOLD] Chance[NEWLINE]</English>
+		<French>Construction de Merveilles: [BOLD]%d1%%[\BOLD] Chance[NEWLINE]</French>
+		<German>Weltwunder: [BOLD]%d1%%[\BOLD] Wahrscheinlichkeit[NEWLINE]</German>
+		<Spanish>Construcción de maravillas: probabilidad del [BOLD]%d1%%[\BOLD][NEWLINE]</Spanish>
+		<Polish>Ukończenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
+		<Russian>Ñòðîèòåëüñòâî ÷óäà: [BOLD]%d1%%[\BOLD] øàíñ[NEWLINE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WORKRATE</Tag>
+		<English>Work Rate: %d1</English>
+		<French>Taux de travail: %d1</French>
+		<German>Arbeitstempo: %d1</German>
+		<Spanish>Velocidad de trabajo: %d1</Spanish>
+		<Polish>Ocena pracy: %d1</Polish>
+		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
+		<English>Non-Combat</English>
+		<Russian>Небоевой</Russian>
+	</TEXT>
+</Civ4GameText>

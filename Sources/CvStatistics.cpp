@@ -1,4 +1,7 @@
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
+#include "CvPlayerAI.h"
+#include "CvStatistics.h"
 
 CvGameRecord::CvGameRecord()
 {
@@ -34,27 +37,24 @@ void CvGameRecord::setMapName(const char * szMapName)
 }
 
 const CvString& CvGameRecord::getMapName() const
-{ 
-	return m_szMapName; 
+{
+	return m_szMapName;
 }
 
 void CvGameRecord::setEra( EraTypes eEra )
-{ 
-	m_eEra = eEra; 
+{
+	m_eEra = eEra;
 }
 
 EraTypes CvGameRecord::getEra() const
-{ 
-	return m_eEra; 
+{
+	return m_eEra;
 }
 
 void CvGameRecord::read(FDataStreamBase* pStream)
 {
 	// reset before loading
 	reset();
-
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
 
 	pStream->Read((int*)&m_eEra);
 
@@ -63,9 +63,6 @@ void CvGameRecord::read(FDataStreamBase* pStream)
 
 void CvGameRecord::write(FDataStreamBase* pStream)
 {
-	uint uiFlag=0;
-	pStream->Write(uiFlag);	// flags for expansion
-
 	pStream->Write(m_eEra);
 
 	pStream->WriteString(m_szMapName);
@@ -108,7 +105,7 @@ void CvPlayerRecord::reset()
 
 	m_iID = -1;
 	m_iTime = 0;
-	
+
 	m_eVictory = NO_VICTORY;
 	m_eLeader = NO_LEADER;
 
@@ -192,73 +189,73 @@ bool CvPlayerRecord::getReligionFounded( ReligionTypes eReligion ) const
 }
 
 void CvPlayerRecord::setPlayerID( int iID )
-{ 
-	m_iID = iID; 
+{
+	m_iID = iID;
 }
 
 int CvPlayerRecord::getPlayerID() const
-{ 
-	return m_iID; 
+{
+	return m_iID;
 }
 
 void CvPlayerRecord::setVictory(VictoryTypes eVictory)
-{ 
-	m_eVictory = eVictory; 
+{
+	m_eVictory = eVictory;
 }
 
 int CvPlayerRecord::getVictory() const
-{ 
-	return m_eVictory; 
+{
+	return m_eVictory;
 }
 
 void CvPlayerRecord::setTimePlayed( int iTime )
-{ 
-	m_iTime = iTime; 
+{
+	m_iTime = iTime;
 }
 
 int CvPlayerRecord::getMinutesPlayed() const
-{ 
-	return m_iTime; 
+{
+	return m_iTime;
 }
 
 void CvPlayerRecord::setLeader( LeaderHeadTypes eLeader )
-{ 
-	m_eLeader = eLeader; 
+{
+	m_eLeader = eLeader;
 }
 
 LeaderHeadTypes CvPlayerRecord::getLeader() const
-{ 
-	return m_eLeader; 
+{
+	return m_eLeader;
 }
 
 void CvPlayerRecord::cityBuilt()
-{ 
-	++m_iNumCitiesBuilt; 
+{
+	++m_iNumCitiesBuilt;
 }
 
 int CvPlayerRecord::getNumCitiesBuilt() const
-{ 
-	return m_iNumCitiesBuilt; 
+{
+	return m_iNumCitiesBuilt;
 }
 
 void CvPlayerRecord::cityRazed()
-{ 
-	++m_iNumCitiesRazed; 
+{
+	++m_iNumCitiesRazed;
 }
 
 int CvPlayerRecord::getNumCitiesRazed() const
-{ 
-	return m_iNumCitiesRazed; 
+{
+	return m_iNumCitiesRazed;
 }
 
 void CvPlayerRecord::goldenAge()
-{ 
-	++m_iNumGoldenAges; 
+{
+	++m_iNumGoldenAges;
 }
 
 int CvPlayerRecord::getNumGoldenAges() const
-{ 
-	return m_iNumGoldenAges; 
+{
+	return m_iNumGoldenAges;
 }
 
 void CvPlayerRecord::read(FDataStreamBase* pStream)
@@ -271,9 +268,6 @@ void CvPlayerRecord::read(FDataStreamBase* pStream)
 
 	// reset before loading
 	reset();
-
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlayerRecord", &uiFlag);	// flags for expansion
 
 	WRAPPER_READ(wrapper, "CvPlayerRecord", &m_iID);
 	WRAPPER_READ(wrapper, "CvPlayerRecord", &m_iTime);
@@ -302,9 +296,6 @@ void CvPlayerRecord::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvPlayerRecord", uiFlag);	// flags for expansion
-
 	WRAPPER_WRITE(wrapper, "CvPlayerRecord", m_iID);
 	WRAPPER_WRITE(wrapper, "CvPlayerRecord", m_iTime);
 
@@ -328,9 +319,9 @@ void CvPlayerRecord::write(FDataStreamBase* pStream)
 // CvStatistics
 ///////////////////////////////////////////////////////////////////
 
-CvStatistics::~CvStatistics() 
-{ 
-	uninit();	
+CvStatistics::~CvStatistics()
+{
+	uninit();
 }
 
 //
@@ -342,9 +333,9 @@ void CvStatistics::init()
 }
 void CvStatistics::uninit()
 {
-	for(int i=0;i<(int)m_PlayerRecords.size();i++)
+	foreach_(const CvPlayerRecord* pRecord, m_PlayerRecords)
 	{
-		SAFE_DELETE(m_PlayerRecords[i]);	// free memory - MT
+		SAFE_DELETE(pRecord);
 	}
 	m_PlayerRecords.clear();
 }
@@ -353,7 +344,7 @@ void CvStatistics::reset()
 	uninit();
 }
 
-// 
+//
 // Setting game-specific stats
 //
 void CvStatistics::setMapName(const char * szMapName)
@@ -365,7 +356,7 @@ void CvStatistics::setEra(EraTypes eEra)
 	m_GameRecord.setEra(eEra);
 }
 
-// 
+//
 // Setting player-specific stats
 //
 void CvStatistics::setVictory( TeamTypes eWinner, VictoryTypes eVictory )
@@ -399,7 +390,7 @@ void CvStatistics::setLeader( PlayerTypes ePlayer, LeaderHeadTypes eLeader )
 	getPlayerRecord((int)ePlayer)->setLeader(eLeader);
 }
 
-// 
+//
 // Player-specific stat events
 //
 void CvStatistics::unitBuilt( CvUnit *pUnit )
@@ -415,7 +406,7 @@ void CvStatistics::cityBuilt( CvCity *pCity )
 {
 	getPlayerRecord( pCity->getOwner() )->cityBuilt();
 }
-void CvStatistics::cityRazed( CvCity * pCity, PlayerTypes ePlayer )
+void CvStatistics::cityRazed(PlayerTypes ePlayer)
 {
 	getPlayerRecord( ePlayer )->cityRazed();
 }
@@ -462,13 +453,12 @@ void CvStatistics::write(FDataStreamBase* pStream)
 	}
 }
 
-// 
+//
 // Player record accessor
 //
 CvPlayerRecord *CvStatistics::getPlayerRecord(int iIndex)
 {
-	FAssert(iIndex >= 0);
-	FAssert(iIndex < MAX_PLAYERS);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, iIndex);
 
 	if ( iIndex >= (int)m_PlayerRecords.size() || m_PlayerRecords[iIndex] == NULL )
 	{

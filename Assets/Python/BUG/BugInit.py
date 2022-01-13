@@ -25,11 +25,6 @@ def init():
 		print "BugInit.init - already complete"
 		return True
 
-	BugOptions.initUserSettings()
-
-	import BugPath
-	BugPath.init()
-
 	loadMod("init")
 	import BugCore
 	BugCore.initDone()
@@ -37,7 +32,7 @@ def init():
 	callInits()
 
 	g_initDone = True
-	CyGlobalContext().setIsBug(True)
+	CyGlobalContext().setIsBug()
 
 	return True
 

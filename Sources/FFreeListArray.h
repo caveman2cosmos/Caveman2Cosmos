@@ -16,7 +16,7 @@ public:
 
 	void init(int iNumSlots = 8);
 	void uninit();
-	T* getAt(int iIndex);
+	T* getAt(int iIndex) const;
 	T* operator[](int iIndex) const { return getAt(iIndex); }
 
 	// start at the beginning of the list and return the first item or NULL when done
@@ -41,9 +41,9 @@ public:
 	void insertAt(T data, int iIndex);
 	void insertFirst(T data);
 
-	int getIndex(T data);
+	int getIndex(const T data) const;
 
-	bool remove(T data);
+	bool remove(const T data);
 	bool removeAt(int iIndex);
 	void removeAll();
 
@@ -180,13 +180,13 @@ template <class T>
 void FFreeListArray<T>::insert(T data)
 {
 
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
 
-	if ((m_iLastIndex == m_iNumSlots - 1) && 
-		(m_iFreeListCount == 0)) 
+	if ((m_iLastIndex == m_iNumSlots - 1) &&
+		(m_iFreeListCount == 0))
 	{
 		growArray();
 	}
@@ -212,7 +212,7 @@ void FFreeListArray<T>::insert(T data)
 template <class T>
 void FFreeListArray<T>::insertAt(T data, int iIndex)
 {
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
@@ -258,7 +258,7 @@ void FFreeListArray<T>::insertAt(T data, int iIndex)
 			int iTempIndex = m_iFreeListHead;
 			while (iTempIndex != FFreeList::FREE_LIST_INDEX)
 			{
-				assert(iTempIndex != FFreeList::INVALID_INDEX);
+				FAssert(iTempIndex != FFreeList::INVALID_INDEX);
 				if (m_pArray[iTempIndex].iNextFreeIndex == iIndex)
 				{
 					m_pArray[iTempIndex].iNextFreeIndex = m_pArray[iIndex].iNextFreeIndex;
@@ -277,20 +277,18 @@ void FFreeListArray<T>::insertAt(T data, int iIndex)
 template <class T>
 void FFreeListArray<T>::insertFirst(T data)
 {
-	int iI;
-
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
 
-	if ((m_iLastIndex == m_iNumSlots - 1) && 
-		(m_iFreeListCount == 0)) 
+	if ((m_iLastIndex == m_iNumSlots - 1) &&
+		(m_iFreeListCount == 0))
 	{
 		growArray();
 	}
 
-	for (iI = 0; iI <= m_iLastIndex; iI++)
+	for (int iI = 0; iI <= m_iLastIndex; iI++)
 	{
 		if (m_pArray[iI].iNextFreeIndex != FFreeList::INVALID_INDEX)
 		{
@@ -304,14 +302,14 @@ void FFreeListArray<T>::insertFirst(T data)
 
 
 template <class T>
-T* FFreeListArray<T>::getAt(int iIndex)
+T* FFreeListArray<T>::getAt(int iIndex) const
 {
 	if ((m_pArray == NULL) || (iIndex == FFreeList::INVALID_INDEX))
 	{
 		return NULL;
 	}
 
-	if ((iIndex >= 0) && (iIndex <= m_iLastIndex)) 
+	if ((iIndex >= 0) && (iIndex <= m_iLastIndex))
 	{
 		if (m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX)
 		{
@@ -324,16 +322,14 @@ T* FFreeListArray<T>::getAt(int iIndex)
 
 
 template <class T>
-int FFreeListArray<T>::getIndex(T data)
+int FFreeListArray<T>::getIndex(const T data) const
 {
-	int iI;
-
 	if (m_pArray == NULL)
 	{
 		return FFreeList::INVALID_INDEX;
 	}
 
-	for (iI = 0; iI <= m_iLastIndex; iI++)
+	for (int iI = 0; iI <= m_iLastIndex; iI++)
 	{
 		if (m_pArray[iI].iNextFreeIndex == FFreeList::INVALID_INDEX)
 		{
@@ -349,13 +345,11 @@ int FFreeListArray<T>::getIndex(T data)
 
 
 template <class T>
-bool FFreeListArray<T>::remove(T data)
+bool FFreeListArray<T>::remove(const T data)
 {
-	int iI;
+	FAssert(m_pArray != NULL);
 
-	assert(m_pArray != NULL);
-
-	for (iI = 0; iI <= m_iLastIndex; iI++)
+	for (int iI = 0; iI <= m_iLastIndex; iI++)
 	{
 		if (m_pArray[iI].iNextFreeIndex == FFreeList::INVALID_INDEX)
 		{
@@ -373,7 +367,7 @@ bool FFreeListArray<T>::remove(T data)
 template <class T>
 bool FFreeListArray<T>::removeAt(int iIndex)
 {
-	assert(m_pArray != NULL);
+	FAssert(m_pArray != NULL);
 
 	if ((iIndex >= 0) && (iIndex <= m_iLastIndex))
 	{
@@ -394,8 +388,6 @@ bool FFreeListArray<T>::removeAt(int iIndex)
 template <class T>
 void FFreeListArray<T>::removeAll()
 {
-	int iI;
-
 	if (m_pArray == NULL)
 	{
 		return;
@@ -405,7 +397,7 @@ void FFreeListArray<T>::removeAll()
 	m_iFreeListCount = 0;
 	m_iLastIndex = FFreeList::INVALID_INDEX;
 
-	for (iI = 0; iI < m_iNumSlots; iI++)
+	for (int iI = 0; iI < m_iNumSlots; iI++)
 	{
 		m_pArray[iI].iNextFreeIndex = FFreeList::INVALID_INDEX;
 	}
@@ -416,17 +408,13 @@ void FFreeListArray<T>::removeAll()
 template <class T>
 void FFreeListArray<T>::growArray()
 {
-	DArrayNode* pOldArray;
-	int iOldNumSlots;
-	int iI;
-
-	pOldArray = m_pArray;
-	iOldNumSlots = m_iNumSlots;
+	DArrayNode* pOldArray = m_pArray;
+	int iOldNumSlots = m_iNumSlots;
 
 	m_iNumSlots *= 2;
 	m_pArray = new DArrayNode[m_iNumSlots];
 
-	for (iI = 0; iI < m_iNumSlots; iI++)
+	for (int iI = 0; iI < m_iNumSlots; iI++)
 	{
 		if (iI < iOldNumSlots)
 		{

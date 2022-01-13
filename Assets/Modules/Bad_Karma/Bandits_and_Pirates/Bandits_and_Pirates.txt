@@ -1,10 +1,7 @@
 The compressed file contains the art for bandit and Pirates.
 
-The idea is to have events like "Illirian Pirates" spawn the ships and a pirate base somewhere which then spawns those pirate ships until defeated.  The same goes for Bandit hidouts in ancient forest.
+The idea is to have events like "Illirian Pirates" spawn the ships and a pirate base somewhere which then spawns those pirate ships until defeated. The same goes for Bandit hideouts in ancient forest.
 
-The idea is to have some of these spawn inside someones territory. The pirate base on an unimproved single plot island and the bandit hideout in an ancient forest in an out of the way corner of the nation.  They may also spawn outside any nation.
+The idea is to have some of these spawn inside someones territory. The pirate base on an unimproved single plot island and the bandit hideout in an ancient forest in an out of the way corner of the nation. They may also spawn outside any nation.
 
 There is also one we can use for locusts.
-
-
- 

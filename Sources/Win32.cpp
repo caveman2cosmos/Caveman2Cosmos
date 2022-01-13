@@ -61,9 +61,8 @@ void Win32::update_hooks()
 	EnumWindowsCallbackArgs args(::GetCurrentProcessId());
 	if (::EnumWindows(&EnumWindowsCallback, (LPARAM)&args))
 	{
-		for (std::vector<HWND>::const_iterator itr = args.handles.begin(); itr != args.handles.end(); ++itr)
+		foreach_(HWND& hwnd, args.handles)
 		{
-			HWND hwnd = *itr;
 			if(g_prev_wnd_proc.find(hwnd) == g_prev_wnd_proc.end())
 			{
 				g_prev_wnd_proc[hwnd] = (WNDPROC)SetWindowLongPtr(hwnd, GWL_WNDPROC, (LONG_PTR)&WndProcWrapper);
@@ -90,7 +89,7 @@ bool Win32::isFocused()
 	{
 		return NULL;
 	}
-	return std::find(args.handles.begin(), args.handles.end(), GetFocus()) != args.handles.end();
+	return algo::any_of_equal(args.handles, GetFocus());
 }
 
 POINT Win32::getCursorPos()
@@ -134,11 +133,11 @@ int Win32::registerMouseWheelListener()
 
 void Win32::unregisterMouseWheelListener(int handle)
 {
-	for (std::vector<MouseWheelInfo>::iterator itr = g_mouse_wheel_cumulative.begin(); itr != g_mouse_wheel_cumulative.end(); ++itr)
+	foreach_(MouseWheelInfo& info, g_mouse_wheel_cumulative)
 	{
-		if (itr->handle == handle)
+		if (info.handle == handle)
 		{
-			g_mouse_wheel_cumulative.erase(itr);
+			g_mouse_wheel_cumulative.erase(&info);
 			break;
 		}
 	}
@@ -147,12 +146,12 @@ void Win32::unregisterMouseWheelListener(int handle)
 
 float Win32::getMouseWheelDiff(int handle)
 {
-	for (std::vector<MouseWheelInfo>::iterator itr = g_mouse_wheel_cumulative.begin(); itr != g_mouse_wheel_cumulative.end(); ++itr)
+	foreach_(MouseWheelInfo& info, g_mouse_wheel_cumulative)
 	{
-		if (itr->handle == handle)
+		if (info.handle == handle)
 		{
-			float w = itr->cumulative;
-			itr->cumulative = 0;
+			const float w = info.cumulative;
+			info.cumulative = 0;
 			return w;
 		}
 	}

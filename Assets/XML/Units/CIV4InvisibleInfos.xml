@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Basic Infos -->
 <Civ4InvisibleInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<InvisibleInfos>
@@ -70,6 +69,7 @@
 			<Type>INVISIBLE_SIZE</Type>
 			<Description>TXT_KEY_INVISIBLE_SIZE</Description>
 			<FontButtonIndex>12</FontButtonIndex>
+			<bIntrinsic>1</bIntrinsic>
 		</InvisibleInfo>
 		<InvisibleInfo>
 			<Type>INVISIBLE_NAVAL_DISGUISE</Type>

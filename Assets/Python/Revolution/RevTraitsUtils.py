@@ -4,163 +4,125 @@
 # Version 1.5
 
 from CvPythonExtensions import *
-import CvUtil
-import PyHelpers
-try:
-	import cPickle as pickle
-except:
-	import pickle
-# --------- Revolution mod -------------
-import RevDefs
-import RevData
-import RevInstances
 
-
-# globals
-gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
-PyInfo = PyHelpers.PyInfo
-game = CyGame()
-localText = CyTranslator()
-
+GC = CyGlobalContext()
 
 ########################## Traits effect helper functions #####################
 
-def getTraitsRevIdxLocal( iPlayer ) :
-	pPlayer = gc.getPlayer(iPlayer)
+def getTraitsRevIdxLocal(iPlayer):
+	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
-		return [0,list(),list()]
-
-	if( pPlayer.getNumCities() == 0 ) :
-		return [0,list(),list()]
+	if pPlayer is None or not pPlayer.getNumCities():
+		return [0, [], []]
 
 	localRevIdx = 0
-	posList = list()
-	negList = list()
+	posList = []
+	negList = []
 
-	for i in range(gc.getNumTraitInfos()):
+	for i in range(GC.getNumTraitInfos()):
 		if pPlayer.hasTrait(i):
-			kTrait = gc.getTraitInfo(i)
+			kTrait = GC.getTraitInfo(i)
 			traitEffect = kTrait.getRevIdxLocal()
-			if( traitEffect > 0 ) :
-				negList.append( (traitEffect, kTrait.getDescription()) )
-			elif( traitEffect < 0 ) :
-				posList.append( (traitEffect, kTrait.getDescription()) )
-
-			#CvUtil.pyPrint("  Rev - %s local effect: %d"%(kTrait.getDescription(),traitEffect))
+			if traitEffect > 0:
+				negList.append((traitEffect, kTrait.getDescription()))
+			elif traitEffect < 0:
+				posList.append((traitEffect, kTrait.getDescription()))
 
 			localRevIdx += traitEffect
 
-	return [localRevIdx,posList,negList]
+	return [localRevIdx, posList, negList]
 
 
-def getTraitsCivStabilityIndex( iPlayer ) :
-	pPlayer = gc.getPlayer(iPlayer)
+def getTraitsCivStabilityIndex(iPlayer):
+	pPlayer = GC.getPlayer(iPlayer)
 
 	civStabilityIdx = 0
 	posList = list()
 	negList = list()
 
-	if( pPlayer.isNone() ) :
-		return [civStabilityIdx,posList,negList]
+	if pPlayer is None:
+		return [civStabilityIdx, posList, negList]
 
-	for iTrait in range(0,gc.getNumTraitInfos()) :
-		kTrait = gc.getTraitInfo(iTrait)
+	for iTrait in range(GC.getNumTraitInfos()):
+		kTrait = GC.getTraitInfo(iTrait)
 		traitEffect = -kTrait.getRevIdxNational()
 
-		if( pPlayer.hasTrait(iTrait) ) :
-			if( traitEffect > 0 ) :
-				posList.append( (traitEffect, kTrait.getDescription()) )
-			elif( traitEffect < 0 ) :
-				negList.append( (traitEffect, kTrait.getDescription()) )
-
-			#CvUtil.pyPrint("  Rev - %s local effect: %d"%(kTrait.getDescription(),traitEffect))
+		if pPlayer.hasTrait(iTrait):
+			if traitEffect > 0:
+				posList.append((traitEffect, kTrait.getDescription()))
+			elif traitEffect < 0:
+				negList.append((traitEffect, kTrait.getDescription()))
 
 			civStabilityIdx += traitEffect
 
-	return [civStabilityIdx,posList,negList]
+	return [civStabilityIdx, posList, negList]
 
 
-def getTraitsHolyCityEffects( iPlayer ) :
+def getTraitsHolyCityEffects(iPlayer):
 
-	pPlayer = gc.getPlayer(iPlayer)
+	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
-		return [0,0]
-
-	if( pPlayer.getNumCities() == 0 ) :
-		return [0,0]
+	if pPlayer is None or not pPlayer.getNumCities():
+		return [0, 0]
 
 	goodEffect = 0
 	badEffect = 0
 
-	for i in range(gc.getNumTraitInfos()):
+	for i in range(GC.getNumTraitInfos()):
 		if pPlayer.hasTrait(i):
-			kTrait = gc.getTraitInfo(i)
+			kTrait = GC.getTraitInfo(i)
 			goodEffect += kTrait.getRevIdxHolyCityGood()
 			badEffect += kTrait.getRevIdxHolyCityBad()
 
-	return [goodEffect,badEffect]
+	return [goodEffect, badEffect]
 
 
-def getTraitsNationalityMod( iPlayer ) :
+def getTraitsNationalityMod(iPlayer):
 
-	pPlayer = gc.getPlayer(iPlayer)
+	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
-		return 0
-
-	if( pPlayer.getNumCities() == 0 ) :
+	if pPlayer is None or not pPlayer.getNumCities():
 		return 0
 
 	natMod = 0
 
-	for i in range(gc.getNumTraitInfos()):
+	for i in range(GC.getNumTraitInfos()):
 		if pPlayer.hasTrait(i):
-			kTrait = gc.getTraitInfo(i)
-			natMod += kTrait.getRevIdxNationalityMod()
+			natMod += GC.getTraitInfo(i).getRevIdxNationalityMod()
 
 	return natMod
 
 
-def getTraitsReligionMods( iPlayer ) :
+def getTraitsReligionMods(iPlayer):
 
-	pPlayer = gc.getPlayer(iPlayer)
+	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
-		return [0,0]
-
-	if( pPlayer.getNumCities() == 0 ) :
+	if pPlayer is None or not pPlayer.getNumCities():
 		return [0,0]
 
 	goodMod = 0
 	badMod = 0
 
-	for i in range(gc.getNumTraitInfos()):
+	for i in range(GC.getNumTraitInfos()):
 		if pPlayer.hasTrait(i):
-			kTrait = gc.getTraitInfo(i)
+			kTrait = GC.getTraitInfo(i)
 			goodMod += kTrait.getRevIdxGoodReligionMod()
 			badMod += kTrait.getRevIdxBadReligionMod()
 
-	return [goodMod,badMod]
+	return [goodMod, badMod]
 
 
 def getTraitsDistanceMod( iPlayer ) :
 
-	pPlayer = gc.getPlayer(iPlayer)
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.getNumCities():
+		return 0
+
 	distModifier = 0
 
-	if( pPlayer.isNone() ) :
-		return 0
-
-	if( pPlayer.getNumCities() == 0 ) :
-		return 0
-
-
-	for i in range(gc.getNumTraitInfos()):
+	for i in range(GC.getNumTraitInfos()):
 		if pPlayer.hasTrait(i):
-			kTrait = gc.getTraitInfo(i)
-			distModifier += kTrait.getRevIdxDistanceModifier()
+			distModifier += GC.getTraitInfo(i).getRevIdxDistanceModifier()
 
 	return distModifier

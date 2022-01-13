@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Upkeep -->
+<Civ4OutcomeInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
+	<OutcomeInfos>
+		<OutcomeInfo>
+			<Type>OUTCOME_NOMAD_DEFENDER</Type>
+			<Description>TXT_KEY_OUTCOME_NOMAD_DEFENDER</Description>
+			<Message>TXT_KEY_OUTCOME_NOMAD_DEFENDER_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_NOMAD_RESEARCH</Type>
+			<Description>TXT_KEY_OUTCOME_NOMAD_RESEARCH</Description>
+			<Message>TXT_KEY_OUTCOME_NOMAD_RESEARCH_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_NOMAD_BREAKTHROUGH</Type>
+			<Description>TXT_KEY_OUTCOME_NOMAD_BREAKTHROUGH</Description>
+			<Message>TXT_KEY_OUTCOME_NOMAD_BREAKTHROUGH_MESSAGE</Message>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_NOMAD_RECON</Type>
+			<Description>TXT_KEY_OUTCOME_NOMAD_RECON</Description>
+			<Message>TXT_KEY_OUTCOME_NOMAD_RECON_MESSAGE</Message>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
+		</OutcomeInfo>
+	</OutcomeInfos>
+</Civ4OutcomeInfos>

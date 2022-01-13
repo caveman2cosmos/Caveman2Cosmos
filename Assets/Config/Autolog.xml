@@ -17,7 +17,7 @@
 			<list id="BBAILevel" key="BBAILevel" type="int" default="0" listType="int" values="0,1,2,3" get="getBBAILevel" set="setBBAILevel"/>
 
 			<!-- Log file -->
-			<option id="DefaultFileName" key="Default File Name" type="boolean" default="True" get="isUseDefaultFileName" set="setUseDefaultFileName" 
+			<option id="DefaultFileName" key="Default File Name" type="boolean" default="True" get="isUseDefaultFileName" set="setUseDefaultFileName"
 				label="Use Default File Name" help="When checked, the default (playername.txt) will be used, ignores log file name option.">
 
 				<change module="autologEventManager" function="setDefaultFileName"/>
@@ -33,15 +33,15 @@
 				<change module="autologEventManager" function="setFileName"/>
 			</option>
 			<!-- Log format -->
-			<list id="Format" key="Format Style" type="int" default="2" listType="string" 
+			<list id="Format" key="Format Style" type="int" default="2" listType="string"
 				values="Plain|HTML Tags|Forum Tags, with '' around color codes|Forum Tags, no '' around color codes"
 				get="getFormatStyle" set="setFormatStyle" label="Format Style" help="The format of the log output."/>
 
 			<option id="ColorCoding" key="Color Coding" type="boolean" default="True" get="isColorCoding" set="setColorCoding" label="Color Coding"
 				help="When checked, comments are color-coded for forum posts."/>
 
-			<list id="4000BC" key="4000BC" type="int" default="0" listType="int" values="0, 1" get="get4000BCTurn" set="set4000BCTurn" label="6000BC is Turn"
-				help="Select which turn number 6000BC should be."/>
+			<list id="StartDate" key="StartDate" type="int" default="0" listType="int" values="0, 1" get="getStartDateTurn" set="setStartDateTurn" label="200000BC is Turn"
+				help="Select which turn number 200000BC should be."/>
 
 			<option id="IBT" key="Show IBT" type="boolean" default="True" get="isShowIBT" set="setShowIBT" label="Show IBT"
 				help="When checked, the logger inserts IBT (in between turns) at the end of the player's turn."/>
@@ -98,19 +98,19 @@
 			<option id="LogGP" key="Great People" type="boolean" default="True" and="LoggingOn" get="isLogGreatPeople" set="setLogGreatPeople"
 				label="Great People" help="When checked, will log the birth of great people (in your cities)."/>
 
-			<option id="LogGA" key="Golden Age" type="boolean" default="True" and="LoggingOn" get="isLogGoldenAge" set="setLogGoldenAge" 
+			<option id="LogGA" key="Golden Age" type="boolean" default="True" and="LoggingOn" get="isLogGoldenAge" set="setLogGoldenAge"
 				label="Golden Age" help="When checked, will log begin and end of your Golden Ages."/>
 			<!-- Politics -->
 			<option id="LogContact" key="Contact" type="boolean" default="True" and="LoggingOn" get="isLogContact" set="setLogContact"
 				label="Contact" help="When checked, will log first contact with other civs."/>
 
-			<option id="LogAttitude" key="Attitude" type="boolean" default="True" and="LoggingOn" get="isLogAttitude" set="setLogAttitude" 
+			<option id="LogAttitude" key="Attitude" type="boolean" default="True" and="LoggingOn" get="isLogAttitude" set="setLogAttitude"
 				label="Attitude" help="When checked, will log any change in attitude between civs known to you."/>
 
 			<option id="LogWar" key="War" type="boolean" default="True" and="LoggingOn" get="isLogWar" set="setLogWar"
 				label="War" help="When checked, will log start and end of wars between civs known to you."/>
 
-			<option id="LogVassals" key="Vassals" type="boolean" default="True" and="LoggingOn" get="isLogVassals" set="setLogVassals" 
+			<option id="LogVassals" key="Vassals" type="boolean" default="True" and="LoggingOn" get="isLogVassals" set="setLogVassals"
 				label="Vassal States" help="When checked, will log when any civ becomes a vassal state of or frees itself from another."/>
 
 			<option id="LogCivics" key="Civics" type="boolean" default="True" and="LoggingOn" get="isLogCivics" set="setLogCivics"
@@ -122,7 +122,7 @@
 			<option id="LogPromotions" key="Promotions" type="boolean" default="True" and="LoggingOn" get="isLogPromotion" set="setLogPromotion"
 				label="Promotions" help="When checked, will log when you promote one of your units."/>
 
-			<option id="LogPillage" key="Pillage" type="boolean" default="True" and="LoggingOn" get="isLogPillage" set="setLogPillage" 
+			<option id="LogPillage" key="Pillage" type="boolean" default="True" and="LoggingOn" get="isLogPillage" set="setLogPillage"
 				label="Pillaging" help="When checked, will log when you pillage or your improvements are pillaged."/>
 			<!-- Trades and Demands -->
 			<option id="LogTradeOffer" key="TradeOffer" type="boolean" default="True" and="LoggingOn" get="isLogTradeOffer" set="setLogTradeOffer"

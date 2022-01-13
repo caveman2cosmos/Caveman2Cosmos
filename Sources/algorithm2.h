@@ -4,11 +4,16 @@
 #define algorithm2_h__
 
 #include "flatten_range.h"
+#include <boost155/algorithm/cxx11/all_of.hpp>
+#include <boost155/algorithm/cxx11/any_of.hpp>
+#include <boost155/algorithm/cxx11/copy_if.hpp>
+#include <boost155/algorithm/cxx11/find_if_not.hpp>
+#include <boost155/algorithm/cxx11/none_of.hpp>
 
-// We wrap some existing range algorithms here to make them easier to use without auto keyword.
-// Instead of returning the complicated iterator type we return an optional of a value for direct use.
+/// We wrap some existing range algorithms here to make them easier to use without auto keyword.
+/// Instead of returning the complicated iterator type we return an optional of a value for direct use.
 
-// Declare a bst::optional version of an existing algorithm (e.g. bst::find)
+/// Declare a bst::optional version of an existing algorithm (e.g. bst::find)
 #define DECLARE_OPT_RANGE_ALGO(src_algo_name_, opt_algo_name_) \
 	template< class Range_ > \
 	bst::optional<typename bst::range_value<Range_>::type> opt_algo_name_(Range_ rng) \
@@ -21,7 +26,7 @@
 		return *itr; \
 	}
 
-// Declare a bst::optional version of an existing algorithm that takes a single argument (e.g. bst::find_if)
+/// Declare a bst::optional version of an existing algorithm that takes a single argument (e.g. bst::find_if)
 #define DECLARE_OPT_RANGE_ALGO_ARG(src_algo_name_, opt_algo_name_) \
 	template< class Range_, class Arg_ > \
 	bst::optional<typename bst::range_value<Range_>::type> opt_algo_name_(Range_& rng, Arg_& arg) \
@@ -49,7 +54,7 @@ namespace detail {
 	};
 
 	template <class O, class R, class D>
-	struct is_algo_functor< algo_functor<O, R, D> > : bst::integral_constant<bool, true> 
+	struct is_algo_functor< algo_functor<O, R, D> > : bst::integral_constant<bool, true>
 	{
 		static const bool value = true;
 	};
@@ -70,7 +75,7 @@ namespace detail {
 		return logical_not<O, D>(static_cast<const D&>(f));
 	}
 
-	// relational operators
+	/// relational operators
 #define DEFINE_ALGO_FUNCTOR_FUNCTOR_OPERATOR( op, name ) \
 	template < class ObjType_, class Derived1_, class Derived2_ > \
 	struct name : algo_functor< ObjType_, bool, name<ObjType_, Derived1_, Derived2_> > \
@@ -136,27 +141,27 @@ namespace detail {
 
 }
 
-//
-// Declares a functor that will can be used in range adaptors, and algorithms.
-// e.g.
-// class CvUnit {
-//     ...
-//     struct algo
-//     {
-//         DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
-//     };
-//     ...
-// };
-// 
-// Results in usage like: 
-//   CvUnit::fn::getID()
-//
-// The functors generated can be combined using comparison and boolean operators
-// defined above like so:
-//   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
-// or
-//   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
-// 
+///
+/// Declares a functor that will can be used in range adaptors, and algorithms.
+/// e.g.
+/// class CvUnit {
+///     ...
+///     struct algo
+///     {
+///         DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getID);
+///     };
+///     ...
+/// };
+///
+/// Results in usage like:
+///   CvUnit::fn::getID()
+///
+/// The functors generated can be combined using comparison and boolean operators
+/// defined above like so:
+///   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
+/// or
+///   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
+///
 namespace map_fun_details {
 
 	template < class Ty_, class Enable_ = void >
@@ -182,12 +187,49 @@ namespace map_fun_details {
 }
 
 #define DECLARE_MAP_FUNCTOR(obj_type_, result_type_, mem_fn_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(); \
+		} \
+	};
+#define DECLARE_MAP_FUNCTOR_1(obj_type_, result_type_, mem_fn_, val_type_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value) : val(val) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val); \
+		} \
+		val_type_ val; \
+	};
+#define DECLARE_MAP_FUNCTOR_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val), val2(other.val2) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value) : val(val), val2(val2) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val, val2); \
+		} \
+		val_type_ val; \
+		val_type2_ val2; \
+	};
+#define DECLARE_MAP_FUNCTOR_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
+	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val), val2(other.val2), val3(other.val3) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value, val_type3_ val3 = map_fun_details::default_value<val_type3_>::value) : val(val), val2(val2), val3(val3) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val, val2, val3); \
+		} \
+		val_type_ val; \
+		val_type2_ val2; \
+		val_type3_ val3; \
+	};
+
+#define DECLARE_MAP_FUNCTOR_CONST(obj_type_, result_type_, mem_fn_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		result_type_ operator()(const obj_type_* obj) const { \
 			return obj->mem_fn_(); \
 		} \
 	};
-#define DECLARE_MAP_FUNCTOR_1(obj_type_, result_type_, mem_fn_, val_type_) \
+#define DECLARE_MAP_FUNCTOR_CONST_1(obj_type_, result_type_, mem_fn_, val_type_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val) {} \
 		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value) : val(val) {} \
@@ -196,7 +238,7 @@ namespace map_fun_details {
 		} \
 		val_type_ val; \
 	};
-#define DECLARE_MAP_FUNCTOR_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
+#define DECLARE_MAP_FUNCTOR_CONST_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val), val2(other.val2) {} \
 		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value) : val(val), val2(val2) {} \
@@ -206,7 +248,7 @@ namespace map_fun_details {
 		val_type_ val; \
 		val_type2_ val2; \
 	};
-#define DECLARE_MAP_FUNCTOR_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
+#define DECLARE_MAP_FUNCTOR_CONST_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val), val2(other.val2), val3(other.val3) {} \
 		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value, val_type3_ val3 = map_fun_details::default_value<val_type3_>::value) : val(val), val2(val2), val3(val3) {} \
@@ -219,11 +261,12 @@ namespace map_fun_details {
 	};
 
 namespace algo {
-	// Bring in boost range algorithms we want
+	/// Bring in boost range algorithms we want
 
-	// Mutating
+	/// Mutating
 	using bst::copy;
 	using bst::copy_backward;
+	using bst::algorithm::copy_if;
 	using bst::fill;
 	using bst::fill_n;
 	using bst::generate;
@@ -253,9 +296,13 @@ namespace algo {
 	using bst::unique;
 	using bst::unique_copy;
 
-	// Non mutating
+	/// Non mutating
 	//using bst::adjacent_find;
 	//using bst::binary_search;
+	using bst::algorithm::all_of;
+	using bst::algorithm::all_of_equal;
+	using bst::algorithm::any_of;
+	using bst::algorithm::any_of_equal;
 	using bst::count;
 	using bst::count_if;
 	using bst::equal;
@@ -267,6 +314,7 @@ namespace algo {
 	//using bst::find_first_of;
 	//using bst::find_if;
 	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::find_if, find_if);
+	using bst::algorithm::find_if_not;
 	using bst::lexicographical_compare;
 	using bst::lower_bound;
 	//using bst::max_element;
@@ -276,193 +324,27 @@ namespace algo {
 	DECLARE_OPT_RANGE_ALGO(bst::range::min_element, min_element);
 	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::min_element, min_element);
 	using bst::mismatch;
+	using bst::algorithm::none_of;
+	using bst::algorithm::none_of_equal;
 	using bst::search;
 	using bst::search_n;
 	using bst::upper_bound;
 
-	// Set algorithms
+	/// Set algorithms
 	using bst::includes;
 	using bst::set_union;
 	using bst::set_intersection;
 	using bst::set_difference;
 	using bst::set_symmetric_difference;
-	// Numeric algorithms;
+
+	/// Numeric algorithms;
 	using bst::accumulate;
 	using bst::adjacent_difference;
 	using bst::inner_product;
 	using bst::partial_sum;
 
-	// Other
+	/// Other
 	using bst::push_back;
-
-	// Custom
-	// FUNCTION TEMPLATE contains
-	// test if an element exists in a range
-	template< class _Range, class Item_ >
-	bool contains(const _Range& rng, const Item_& item) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (*_First == item) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	// FUNCTION TEMPLATE all_of
-	// test if all elements are true
-	template< class _Range >
-	bool all_of(const _Range& rng) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (!*_First) {
-				return false;
-			}
-		}
-		return true;
-	}
-	// FUNCTION TEMPLATE all_of
-	// test if all elements satisfy _Pred
-	template< class _Range, class _Pr >
-	bool all_of(const _Range& rng, _Pr& _Pred) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (!_Pred(*_First)) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	// FUNCTION TEMPLATE any_of
-	// test if any element satisfies _Pred
-	template< class _Range>
-	bool any_of(const _Range& rng) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (*_First) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	// FUNCTION TEMPLATE any_of
-	// test if any element satisfies _Pred
-	template< class _Range, class _Pr>
-	bool any_of(const _Range& rng, _Pr& _Pred) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (_Pred(*_First)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	// FUNCTION TEMPLATE none_of
-	// test if no elements satisfy _Pred
-	template< class _Range>
-	bool none_of(const _Range& rng) {
-		return !any_of(rng);
-	}
-
-	// FUNCTION TEMPLATE none_of
-	// test if no elements satisfy _Pred
-	template< class _Range, class _Pr>
-	bool none_of(const _Range& rng, _Pr& _Pred) {
-		return !any_of(rng, _Pred);
-	}
-
-	// FUNCTION TEMPLATE count_all
-	// return number of items in a range, specialized for ranges with random_access_traversal_tag
-	template< class _Range >
-	typename bst::enable_if<
-		typename bst::is_convertible<
-			typename bst::iterator_category_to_traversal<typename bst::range_iterator<_Range>::type::iterator_category>::type,
-			bst::random_access_traversal_tag
-		>,
-		size_t
-	>::type
-	count_all(const _Range& rng) {
-		return bst::size(rng);
-	}
-
-	template < class _Range >
-	typename bst::disable_if<
-		typename bst::is_convertible<
-			typename bst::iterator_category_to_traversal<typename bst::range_iterator<_Range>::type::iterator_category>::type,
-			bst::random_access_traversal_tag
-		>,
-		size_t
-	>::type 
-	count_all(const _Range& rng) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng), _Last = bst::end(rng);
-		size_t size = 0;
-		for (; _First != _Last; ++_First, ++size) {}
-		return size;
-	}
 }
-
-//namespace std {
-//	// FUNCTION TEMPLATE all_of
-//	template <class _InIt, class _Pr>
-//	bool all_of(_InIt _First, _InIt _Last, _Pr _Pred) { // test if all elements satisfy _Pred
-//		for (; _First != _Last; ++_First) {
-//			if (!_Pred(*_First)) {
-//				return false;
-//			}
-//		}
-//
-//		return true;
-//	}
-//
-//	// FUNCTION TEMPLATE any_of
-//	template <class _InIt, class _Pr>
-//	bool any_of(_InIt _First, const _InIt _Last, _Pr _Pred) { // test if any element satisfies _Pred
-//		
-//		for (; _First != _Last; ++_First) {
-//			if (_Pred(*_First)) {
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-//
-//	// FUNCTION TEMPLATE none_of
-//	template <class _InIt, class _Pr>
-//	bool none_of(_InIt _First, const _InIt _Last, _Pr _Pred) { // test if no elements satisfy _Pred
-//		for (; _First != _Last; ++_First) {
-//			if (_Pred(*_First)) {
-//				return false;
-//			}
-//		}
-//
-//		return true;
-//	}
-//
-//	// FUNCTION TEMPLATE copy_if
-//	template <class _InIt, class _OutIt, class _Pr>
-//	_OutIt copy_if(_InIt _First, _InIt _Last, _OutIt _Dest, _Pr _Pred) { // copy each satisfying _Pred
-//		for (; _First != _Last; ++_First) {
-//			if (_Pred(*_First)) {
-//				*_Dest = *_First;
-//				++_Dest;
-//			}
-//		}
-//		return _Dest;
-//	}
-//};
 
 #endif // algorithm2_h__

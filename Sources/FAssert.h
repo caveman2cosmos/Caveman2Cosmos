@@ -150,6 +150,13 @@ enum AssertScopeTypes
 #define FAssertInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth != 0, "Expected to be in a " #_id_ " scope!")
 #define FAssertNotInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth == 0, "Expected to not be in a " #_id_ " scope!")
 
+#define FASSERT_BOUNDS(lower, upper, index) \
+	FAssertMsg(index >= lower, (bst::format("Index value (%d) is expected to be >= %d") % index % lower).str().c_str()); \
+	FAssertMsg(index < upper, (bst::format("Index value (%d) is expected to be < %d") % index % upper).str().c_str());
+
+#define FASSERT_NOT_NEGATIVE(value) \
+	FAssertMsg(value >= 0, (bst::format("Value (%d) is expected to be >= 0") % value).str().c_str())
+
 #else
 // FASSERT_ENABLE not defined
 #define FAssert( expr )
@@ -164,6 +171,9 @@ enum AssertScopeTypes
 #define FAssertDeclareScope(_id_)
 #define FAssertInScope(_id_)
 #define FAssertNotInScope(_id_)
+
+#define FASSERT_BOUNDS(lower, upper, index)
+#define FASSERT_NOT_NEGATIVE(value)
 
 #endif
 

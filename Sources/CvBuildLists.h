@@ -12,7 +12,7 @@
 #ifndef CV_BUILD_LISTS_H
 #define CV_BUILD_LISTS_H
 
-#include "CvStructs.h"
+//#include "CvStructs.h"
 
 struct BuildList
 {
@@ -28,24 +28,24 @@ public:
 	~CvBuildLists();
 
 	// current list is async, rest is synced
-	int getCurrentList();
+	int getCurrentList() const;
 	void setCurrentList(int i);
-	
+
 	void clearQueue(int iID);
 	void pushOrder(int iID, OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend);
 	void popOrder(int iID, int iNum = -1);
 
-	int getNumLists();
-	int getIndexByID(int iID);
-	int getID(int index);
-	CvString getListName(int index);
-	int getListLength(int index);
-	OrderData* getOrder(int index, int iQIndex);
+	int getNumLists() const;
+	int getIndexByID(int iID) const;
+	int getID(int index) const;
+	const CvString getListName(int index) const;
+	int getListLength(int index) const;
+	const OrderData* getOrder(int index, int iQIndex) const;
 
-	int addList(CvString szName, int iID = -1);
+	int addList(const CvString szName, int iID = -1);
 	void removeList(int iID);
-	void renameList(int iID, CvString szName);
-	
+	void renameList(int iID, const CvString szName);
+
 	void readFromFile();
 	void writeToFile();
 
@@ -54,7 +54,7 @@ public:
 
 	void readSubset( FDataStreamBase* pStream );
 	void writeSubset( FDataStreamBase* pStream, int iList, int index, int iNum );
-	
+
 protected:
 	int m_iMaxID;
 	int m_iCurrentList;

@@ -3,8 +3,8 @@
 import codecs
 import os
 import os.path
+import SystemPaths as SP
 import BugCore
-import BugPath
 import BugConfigTracker
 
 BugFile = BugCore.game.Autolog
@@ -44,7 +44,7 @@ class BugFileInstance:
 
 		szPath = BugFile.getFilePath()
 		if (not szPath or szPath == "Default"):
-			szPath = BugPath.findOrMakeDir("Autolog")
+			szPath = SP.joinModDir("Autolog")
 		if (not os.path.isdir(szPath)):
 			os.makedirs(szPath)
 

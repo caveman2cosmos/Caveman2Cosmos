@@ -7,8 +7,7 @@
 			<Help>TXT_KEY_HANDICAP_SETTLER_HELP</Help>
 			<iAdvancedStartPointsMod>160</iAdvancedStartPointsMod>
 			<iGold>32</iGold>
-			<iFreeUnits>36</iFreeUnits>
-			<iUnitCostPercent>40</iUnitCostPercent>
+			<iUnitUpkeepPercent>40</iUnitUpkeepPercent>
 			<iTrainPercent>40</iTrainPercent>
 			<iConstructPercent>40</iConstructPercent>
 			<iResearchPercent>40</iResearchPercent>
@@ -53,7 +52,6 @@
 			<iNoTechTradeModifier>150</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>10</iStartingLocPercent>
 			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
@@ -78,7 +76,7 @@
 			<iAIWorldCreatePercent>124</iAIWorldCreatePercent>
 			<iAIResearchPercent>112</iAIResearchPercent>
 			<iAICivicUpkeepPercent>130</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>130</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>130</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>130</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>130</iAIUnitUpgradePercent>
 			<iAIInflationPercent>130</iAIInflationPercent>
@@ -220,7 +218,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -229,7 +227,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -262,8 +260,7 @@
 			<Help>TXT_KEY_HANDICAP_CHIEFTAIN_HELP</Help>
 			<iAdvancedStartPointsMod>140</iAdvancedStartPointsMod>
 			<iGold>28</iGold>
-			<iFreeUnits>28</iFreeUnits>
-			<iUnitCostPercent>60</iUnitCostPercent>
+			<iUnitUpkeepPercent>60</iUnitUpkeepPercent>
 			<iTrainPercent>60</iTrainPercent>
 			<iConstructPercent>60</iConstructPercent>
 			<iResearchPercent>60</iResearchPercent>
@@ -314,7 +311,6 @@
 			<iNoTechTradeModifier>100</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>20</iStartingLocPercent>
 			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
@@ -339,7 +335,7 @@
 			<iAIWorldCreatePercent>116</iAIWorldCreatePercent>
 			<iAIResearchPercent>108</iAIResearchPercent>
 			<iAICivicUpkeepPercent>120</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>120</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>120</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>120</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>120</iAIUnitUpgradePercent>
 			<iAIInflationPercent>120</iAIInflationPercent>
@@ -515,7 +511,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -524,7 +520,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -556,8 +552,7 @@
 			<Help>TXT_KEY_HANDICAP_WARLORD_HELP</Help>
 			<iAdvancedStartPointsMod>120</iAdvancedStartPointsMod>
 			<iGold>24</iGold>
-			<iFreeUnits>21</iFreeUnits>
-			<iUnitCostPercent>80</iUnitCostPercent>
+			<iUnitUpkeepPercent>80</iUnitUpkeepPercent>
 			<iTrainPercent>80</iTrainPercent>
 			<iConstructPercent>80</iConstructPercent>
 			<iResearchPercent>80</iResearchPercent>
@@ -602,7 +597,6 @@
 			<iNoTechTradeModifier>50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>30</iStartingLocPercent>
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
@@ -626,7 +620,7 @@
 			<iAIWorldCreatePercent>108</iAIWorldCreatePercent>
 			<iAIResearchPercent>104</iAIResearchPercent>
 			<iAICivicUpkeepPercent>110</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>110</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>110</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>110</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>110</iAIUnitUpgradePercent>
 			<iAIInflationPercent>110</iAIInflationPercent>
@@ -804,7 +798,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -829,8 +823,7 @@
 			<Help>TXT_KEY_HANDICAP_NOBLE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>20</iGold>
-			<iFreeUnits>15</iFreeUnits>
-			<iUnitCostPercent>100</iUnitCostPercent>
+			<iUnitUpkeepPercent>100</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -877,7 +870,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>40</iStartingLocPercent>
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
@@ -896,7 +888,7 @@
 			<iAIWorldCreatePercent>100</iAIWorldCreatePercent>
 			<iAIResearchPercent>100</iAIResearchPercent>
 			<iAICivicUpkeepPercent>100</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>100</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>100</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>100</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>100</iAIUnitUpgradePercent>
 			<iAIInflationPercent>100</iAIInflationPercent>
@@ -1111,7 +1103,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -1135,8 +1127,7 @@
 			<Help>TXT_KEY_HANDICAP_PRINCE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>16</iGold>
-			<iFreeUnits>10</iFreeUnits>
-			<iUnitCostPercent>120</iUnitCostPercent>
+			<iUnitUpkeepPercent>120</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -1181,7 +1172,6 @@
 			<iNoTechTradeModifier>-10</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>50</iStartingLocPercent>
 			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
@@ -1205,7 +1195,7 @@
 			<iAIWorldCreatePercent>92</iAIWorldCreatePercent>
 			<iAIResearchPercent>96</iAIResearchPercent>
 			<iAICivicUpkeepPercent>90</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>90</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>90</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>90</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>90</iAIUnitUpgradePercent>
 			<iAIInflationPercent>90</iAIInflationPercent>
@@ -1442,8 +1432,7 @@
 			<Help>TXT_KEY_HANDICAP_MONARCH_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>12</iGold>
-			<iFreeUnits>6</iFreeUnits>
-			<iUnitCostPercent>140</iUnitCostPercent>
+			<iUnitUpkeepPercent>140</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -1494,7 +1483,6 @@
 			<iNoTechTradeModifier>-20</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>60</iStartingLocPercent>
 			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
@@ -1519,7 +1507,7 @@
 			<iAIWorldCreatePercent>84</iAIWorldCreatePercent>
 			<iAIResearchPercent>92</iAIResearchPercent>
 			<iAICivicUpkeepPercent>80</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>80</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>80</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>80</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>80</iAIUnitUpgradePercent>
 			<iAIInflationPercent>80</iAIInflationPercent>
@@ -1771,8 +1759,7 @@
 			<Help>TXT_KEY_HANDICAP_EMPEROR_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>8</iGold>
-			<iFreeUnits>3</iFreeUnits>
-			<iUnitCostPercent>160</iUnitCostPercent>
+			<iUnitUpkeepPercent>160</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -1817,7 +1804,6 @@
 			<iNoTechTradeModifier>-30</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>70</iStartingLocPercent>
 			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
@@ -1842,7 +1828,7 @@
 			<iAIWorldCreatePercent>76</iAIWorldCreatePercent>
 			<iAIResearchPercent>88</iAIResearchPercent>
 			<iAICivicUpkeepPercent>70</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>70</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>70</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>70</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>70</iAIUnitUpgradePercent>
 			<iAIInflationPercent>70</iAIInflationPercent>
@@ -2120,8 +2106,7 @@
 			<Help>TXT_KEY_HANDICAP_IMMORTAL_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>4</iGold>
-			<iFreeUnits>1</iFreeUnits>
-			<iUnitCostPercent>180</iUnitCostPercent>
+			<iUnitUpkeepPercent>180</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -2172,7 +2157,6 @@
 			<iNoTechTradeModifier>-40</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>80</iStartingLocPercent>
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
@@ -2197,7 +2181,7 @@
 			<iAIWorldCreatePercent>68</iAIWorldCreatePercent>
 			<iAIResearchPercent>84</iAIResearchPercent>
 			<iAICivicUpkeepPercent>60</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>60</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>60</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>60</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>60</iAIUnitUpgradePercent>
 			<iAIInflationPercent>60</iAIInflationPercent>
@@ -2474,7 +2458,7 @@
 			<Description>TXT_KEY_HANDICAP_DEITY</Description>
 			<Help>TXT_KEY_HANDICAP_DEITY_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
-			<iUnitCostPercent>200</iUnitCostPercent>
+			<iUnitUpkeepPercent>200</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -2517,7 +2501,6 @@
 			<iNoTechTradeModifier>-50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>90</iStartingLocPercent>
 			<iAnimalAttackProb>80</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
@@ -2542,7 +2525,7 @@
 			<iAIWorldCreatePercent>60</iAIWorldCreatePercent>
 			<iAIResearchPercent>80</iAIResearchPercent>
 			<iAICivicUpkeepPercent>50</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>50</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>50</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>50</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>50</iAIUnitUpgradePercent>
 			<iAIInflationPercent>50</iAIInflationPercent>
@@ -2844,7 +2827,7 @@
 			<Description>TXT_KEY_HANDICAP_NIGHTMARE</Description>
 			<Help>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
-			<iUnitCostPercent>240</iUnitCostPercent>
+			<iUnitUpkeepPercent>240</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -2888,7 +2871,6 @@
 			<iNoTechTradeModifier>-70</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>100</iStartingLocPercent>
 			<iAnimalAttackProb>90</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
@@ -2913,7 +2895,7 @@
 			<iAIWorldCreatePercent>44</iAIWorldCreatePercent>
 			<iAIResearchPercent>72</iAIResearchPercent>
 			<iAICivicUpkeepPercent>30</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>30</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>30</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>30</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>30</iAIUnitUpgradePercent>
 			<iAIInflationPercent>30</iAIInflationPercent>

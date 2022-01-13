@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_HELP</Help>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</MovieDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			<iCost>4080</iCost>
+			<iConquestProb>66</iConquestProb>
+			<iHappiness>-1</iHappiness>
+			<iAsset>6</iAsset>
+			<iPower>2</iPower>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_FACTORY</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

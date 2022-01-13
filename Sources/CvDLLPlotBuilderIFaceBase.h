@@ -5,12 +5,14 @@
 
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvGlobals.h"	// for gDLL
+#include "CvGlobals.h"
+
+class CvEntity;
+class CvPlotBuilder;
 
 //
 // abstract interface for CvPlotBuilder functions used by DLL
 //
-class CvPlotBuilder;
 class CvDLLPlotBuilderIFaceBase : public CvDLLEntityIFaceBase
 {
 public:

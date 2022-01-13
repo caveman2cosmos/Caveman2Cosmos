@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_AQUATIC</Tag>
+		<English>Aquatic Plot</English>
+		<German>Wasserfeld</German>
+		<French>Case aquatique</French>
+		<Russian>Морской участок</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_CISLUNAR</Tag>
+		<English>Cislunar Plot</English>
+		<French>Case Cislunaire</French>
+		<German>Weltraumfeld</German>
+		<Russian>Лунная орбита</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_DISTANT</Tag>
+		<English>Distant Plot</English>
+		<French>Case Distante</French>
+		<Russian>Дальний сектор</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_EARTH</Tag>
+		<English>Earth Plot</English>
+		<German>Erdfeld</German>
+		<French>Case terrienne</French>
+		<Russian>Земля</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_GALACTIC</Tag>
+		<English>Galactic Plot</English>
+		<German>Galaxiefeld</German>
+		<French>Case galactique</French>
+		<Russian>Сектор галактики</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_HYPERSPACE</Tag>
+		<English>Hyperspace Plot</English>
+		<French>Case d'Hyperspace</French>
+		<Russian>Гиперкосмос</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Tag>
+		<English>Interstellar Plot</English>
+		<French>Case Interstellaire</French>
+		<Russian>Межзвездное простр-во</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_JOVIAN</Tag>
+		<English>Jovian Plot</English>
+		<German>Jupiterfeld</German>
+		<French>Case jovienne</French>
+		<Russian>Атмосфера Юпитера</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_LUNAR</Tag>
+		<English>Lunar Plot</English>
+		<German>Mondfeld</German>
+		<French>Case lunaire</French>
+		<Russian>Луна</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_MARTIAN</Tag>
+		<English>Martian Plot</English>
+		<German>Marsfeld</German>
+		<French>Case martienne</French>
+		<Russian>Марс</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_MILKY_WAY</Tag>
+		<English>Milky Way Plot</English>
+		<French>Case de Voie lactée</French>
+		<Russian>Млечный Путь</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_PLASMA</Tag>
+		<English>Plasma Plot</English>
+		<German>Plasmafeld</German>
+		<French>Case de plasma</French>
+		<Russian>Плазма</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_SOLAR_SYSTEM</Tag>
+		<English>Solar System Plot</English>
+		<German>Sonnensystemfeld</German>
+		<French>Case du système solaire</French>
+		<Russian>Солнечная система</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_SUBTERRANEAN</Tag>
+		<English>Subterranean Plot</English>
+		<German>unterirdisches Feld</German>
+		<French>Case souterraine</French>
+		<Russian>Земные недра</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_TITANIC</Tag>
+		<English>Titanic Plot</English>
+		<French>Case de Titan</French>
+		<Russian>Титан</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_UNIVERSAL</Tag>
+		<English>Universal Plot</English>
+		<French>Case Universelle</French>
+		<Russian>Вселенная</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPCATEGORY_VENUSIAN</Tag>
+		<English>Venusian Plot</English>
+		<German>Venusfeld</German>
+		<French>Case vénusienne</French>
+		<Russian>Венера</Russian>
+	</TEXT>
+</Civ4GameText>

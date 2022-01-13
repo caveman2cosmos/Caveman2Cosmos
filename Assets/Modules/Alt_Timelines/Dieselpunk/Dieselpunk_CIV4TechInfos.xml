@@ -6,7 +6,6 @@
 			<Type>TECH_DIESELPUNK</Type>
 			<Description>TXT_KEY_TECH_DIESELPUNK</Description>
 			<Civilopedia>TXT_KEY_TECH_DIESELPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_DIESELPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<Quote>TXT_KEY_TECH_DIESELPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_DIESELPUNK</Sound>
