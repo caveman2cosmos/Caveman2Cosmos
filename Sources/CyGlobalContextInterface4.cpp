@@ -2,7 +2,6 @@
 #include "CyGlobalContext.h"
 #include "CvInfos.h"
 
-//using namespace boost::python;
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(CyGlobalContext_getInfoTypeForString_overloads, CyGlobalContext::getInfoTypeForString, 1, 2)
 
 //
