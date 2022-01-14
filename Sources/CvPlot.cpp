@@ -5162,12 +5162,9 @@ bool CvPlot::isTradeNetwork(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (!isOwned())
+	if (!isOwned() && !isRevealed(eTeam, false))
 	{
-		if (!isRevealed(eTeam, false))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return isBonusNetwork(eTeam);
@@ -7087,7 +7084,6 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			// Add/remove Zobrist contributuns for all local plot groups
 			ToggleInPlotGroupsZobristContributors();
 		}
-
 		updateIrrigated();
 		updateYield();
 
@@ -8263,8 +8259,6 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 {
 	PROFILE_FUNC();
 
-	int iI;
-
 	CvPlotGroup* pOldPlotGroup = getPlotGroup(ePlayer);
 
 	//	The id-level check is to handle correction of an old buggy state where
@@ -8282,7 +8276,7 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 			}
 		}
 
-		if ( bRecalculateEffect )
+		if (bRecalculateEffect)
 		{
 			pCity = getPlotCity();
 
@@ -8292,18 +8286,12 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 				updatePlotGroupBonus(false);
 			}
 
-			if (pOldPlotGroup != NULL)
+			if (pOldPlotGroup != NULL && pCity != NULL && pCity->getOwner() == ePlayer)
 			{
-				if (pCity != NULL)
+				FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
+				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					if (pCity->getOwner() == ePlayer)
-					{
-						FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
-						for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-						{
-							pCity->changeNumBonuses(((BonusTypes)iI), -(pOldPlotGroup->getNumBonuses((BonusTypes)iI)));
-						}
-					}
+					pCity->changeNumBonuses(((BonusTypes)iI), -(pOldPlotGroup->getNumBonuses((BonusTypes)iI)));
 				}
 			}
 		}
@@ -8317,20 +8305,15 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 			m_aiPlotGroup[ePlayer] = pNewValue->getID();
 		}
 
-		if ( bRecalculateEffect )
+		if (bRecalculateEffect)
 		{
-			if (getPlotGroup(ePlayer) != NULL)
+			if (pCity != NULL && getPlotGroup(ePlayer) != NULL && pCity->getOwner() == ePlayer)
 			{
-				if (pCity != NULL)
+				FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
+
+				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					if (pCity->getOwner() == ePlayer)
-					{
-						FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
-						for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-						{
-							pCity->changeNumBonuses(((BonusTypes)iI), getPlotGroup(ePlayer)->getNumBonuses((BonusTypes)iI));
-						}
-					}
+					pCity->changeNumBonuses((BonusTypes)iI, getPlotGroup(ePlayer)->getNumBonuses((BonusTypes)iI));
 				}
 			}
 			if (ePlayer == getOwner())
@@ -8348,7 +8331,7 @@ void CvPlot::updatePlotGroup()
 {
 	PROFILE_FUNC();
 
-	if ( bDeferPlotGroupRecalculation )
+	if (bDeferPlotGroupRecalculation)
 	{
 		m_bPlotGroupsDirty = true;
 	}
@@ -12831,13 +12814,11 @@ void CvPlot::removeSignForAllPlayers()
 
 void CvPlot::ToggleInPlotGroupsZobristContributors()
 {
-	int	iI;
-
-	for( iI= 0; iI < MAX_PLAYERS; iI++ )
+	for (int iI= 0; iI < MAX_PLAYERS; iI++)
 	{
 		CvPlotGroup* p_plotGroup = getPlotGroup((PlayerTypes)iI);
 
-		if ( p_plotGroup != NULL )
+		if (p_plotGroup != NULL)
 		{
 			//	Add the zobrist contribution of this plot to the hash
 			p_plotGroup->m_zobristHashes.resourceNodesHash ^= getZobristContribution();

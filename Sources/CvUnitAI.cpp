@@ -11206,12 +11206,9 @@ void CvUnitAI::AI_SeeInvisibleMove()
 				return;
 			}
 		}
-		else
+		else if (AI_moveIntoNearestOwnedCity())
 		{
-			if (AI_moveIntoNearestOwnedCity())
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -19339,88 +19336,65 @@ bool CvUnitAI::AI_pillage(int iBonusValueThreshold)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pBestPillagePlot;
-	CvPlot* endTurnPlot = NULL;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestPillagePlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestPillagePlot = NULL;
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
-		pLoopPlot = itr.plot();
+		CvPlot* plotX = itr.plot();
 
-		if (pLoopPlot->area() == area())
+		if (plotX->area() == area()
+		&&  plotX->isOwned()
+		&&  isEnemy(plotX->getTeam(), plotX))
 		{
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  02/22/10								jdog5000	  */
-			/*																							  */
-			/* Unit AI, Efficiency																		  */
-			/************************************************************************************************/
-						//if (potentialWarAction(pLoopPlot))
-			if (pLoopPlot->isOwned() && isEnemy(pLoopPlot->getTeam(), pLoopPlot))
+			CvCity* pWorkingCity = plotX->getWorkingCity();
+
+			if (pWorkingCity != NULL
+			&&  pWorkingCity != area()->getTargetCity(getOwner())
+			&&  getGroup()->canPillage(plotX)
+			&&  plotX->isRevealed(getTeam(), false)
+			&& (!plotX->isVisible(getTeam(), false) || !plotX->isVisibleEnemyUnit(this))
+			&&  GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plotX, MISSIONAI_PILLAGE, getGroup(), 1) == 0)
 			{
-				CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
+				int iValue = 1000 * AI_pillageValue(plotX, iBonusValueThreshold);
 
-				if (pWorkingCity != NULL)
+				// if not at war with this plot owner, then devalue plot if we already inside this owner's borders
+				// (because declaring war will pop us some unknown distance away)
+				if (getCombatOwner(plotX->getTeam(), plotX) == getOwner()
+				&& !isEnemy(plotX->getTeam())
+				&& plot()->getTeam() == plotX->getTeam())
 				{
-					if (!(pWorkingCity == area()->getTargetCity(getOwner())) && getGroup()->canPillage(pLoopPlot))
+					iValue /= 10;
+				}
+
+				if (iValue > iBestValue)
+				{
+					int iPathTurns;
+					if (generatePath(plotX, 0, true, &iPathTurns))
 					{
-						if (pLoopPlot->isRevealed(getTeam(), false) &&
-							(!pLoopPlot->isVisible(getTeam(), false) || !pLoopPlot->isVisibleEnemyUnit(this)))
+						iValue /= iPathTurns + 1;
+
+						if (iValue > iBestValue)
 						{
-							if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PILLAGE, getGroup(), 1) == 0)
+							CvPlot* endTurnPlot = getPathEndTurnPlot();
+
+							if (endTurnPlot == plotX || !exposedToDanger(endTurnPlot, 70))
 							{
-								iValue = AI_pillageValue(pLoopPlot, iBonusValueThreshold);
-								iValue *= 1000;
-
-								// if not at war with this plot owner, then devalue plot if we already inside this owner's borders
-								// (because declaring war will pop us some unknown distance away)
-								if (getCombatOwner(pLoopPlot->getTeam(), pLoopPlot) == getOwner() &&
-									!isEnemy(pLoopPlot->getTeam()) &&
-									plot()->getTeam() == pLoopPlot->getTeam())
-								{
-									iValue /= 10;
-								}
-
-								if (iValue > iBestValue)
-								{
-									if (generatePath(pLoopPlot, 0, true, &iPathTurns))
-									{
-										iValue /= (iPathTurns + 1);
-
-										if (iValue > iBestValue)
-										{
-											endTurnPlot = getPathEndTurnPlot();
-
-											if (endTurnPlot == pLoopPlot || !exposedToDanger(endTurnPlot, 70))
-											{
-												iBestValue = iValue;
-												pBestPlot = endTurnPlot;
-												pBestPillagePlot = pLoopPlot;
-											}
-										}
-									}
-								}
+								iBestValue = iValue;
+								pBestPlot = endTurnPlot;
+								pBestPillagePlot = plotX;
 							}
 						}
 					}
 				}
 			}
 		}
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
 	}
 
-	if ((pBestPlot != NULL) && (pBestPillagePlot != NULL))
+	if (pBestPlot != NULL && pBestPillagePlot != NULL)
 	{
 		if (atPlot(pBestPillagePlot) && !isEnemy(pBestPillagePlot->getTeam()))
 		{
@@ -26103,11 +26077,9 @@ bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 
 int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) const
 {
-	ImprovementTypes eImprovement;
-
 	FAssert(getGroup()->canPillage(pPlot) || canAirBombAt(plot(), pPlot->getX(), pPlot->getY()) || (getGroup()->getCargo() > 0));
 	//A count is all that's necessary here
-	if (!(pPlot->isOwned()))
+	if (!pPlot->isOwned())
 	{
 		return 0;
 	}
@@ -26116,61 +26088,38 @@ int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) con
 	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(pPlot->getTeam());
 	if (eNonObsoleteBonus != NO_BONUS)
 	{
-		iBonusValue = (GET_PLAYER(pPlot->getOwner()).AI_bonusVal(eNonObsoleteBonus));
+		iBonusValue = GET_PLAYER(pPlot->getOwner()).AI_bonusVal(eNonObsoleteBonus);
 	}
 
-	if (iBonusValueThreshold > 0)
+	if (iBonusValueThreshold > 0
+	&& (eNonObsoleteBonus == NO_BONUS || iBonusValue < iBonusValueThreshold))
 	{
-		if (eNonObsoleteBonus == NO_BONUS)
-		{
-			return 0;
-		}
-		else if (iBonusValue < iBonusValueThreshold)
-		{
-			return 0;
-		}
+		return 0;
 	}
-
 	int iValue = 0;
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							05/24/08								Glider1	 */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-		// RevolutionDCM - ranged bombardment plot
-		// Dale - RB: Field Bombard START
-		//if (getDomainType() != DOMAIN_AIR && getDCMBombRange() < 1)
-		// Dale - RB: Field Bombard END
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							END									 Glider1	 */
-	/************************************************************************************************/
+
+	if (pPlot->isRoute())
 	{
-		if (pPlot->isRoute())
+		iValue++;
+		if (eNonObsoleteBonus != NO_BONUS)
 		{
-			iValue++;
-			if (eNonObsoleteBonus != NO_BONUS)
+			iValue += iBonusValue * 4;
+		}
+
+		foreach_(const CvPlot * pAdjacentPlot, plot()->adjacent() | filtered(CvPlot::fn::getTeam() == pPlot->getTeam()))
+		{
+			if (pAdjacentPlot->isCity())
 			{
-				iValue += iBonusValue * 4;
+				iValue += 10;
 			}
 
-			foreach_(const CvPlot * pAdjacentPlot, plot()->adjacent()
-			| filtered(CvPlot::fn::getTeam() == pPlot->getTeam()))
+			if (!pAdjacentPlot->isRoute() && !pAdjacentPlot->isWater() && !pAdjacentPlot->isImpassable(getTeam()))
 			{
-				if (pAdjacentPlot->isCity())
-				{
-					iValue += 10;
-				}
-
-				if (!(pAdjacentPlot->isRoute()))
-				{
-					if (!(pAdjacentPlot->isWater()) && !(pAdjacentPlot->isImpassable(getTeam())))
-					{
-						iValue += 2;
-					}
-				}
+				iValue += 2;
 			}
 		}
 	}
+	ImprovementTypes eImprovement;
 
 	if (pPlot->getImprovementDuration() > ((pPlot->isWater()) ? 20 : 5))
 	{
@@ -26185,42 +26134,21 @@ int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) con
 	{
 		if (pPlot->getWorkingCity() != NULL)
 		{
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwner()) * 5);
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwner()) * 4);
-			iValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwner()) * 3);
+			iValue += 5 * pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwner());
+			iValue += 4 * pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwner());
+			iValue += 3 * pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwner());
 		}
-		/************************************************************************************************/
-		/* REVOLUTIONDCM							05/24/08								Glider1	 */
-		/*																							  */
-		/*																							  */
-		/************************************************************************************************/
-				// RevolutionDCM - ranged bombardment plot
-				// Dale - RB: Field Bombard START
-				//if (getDomainType() != DOMAIN_AIR && getDCMBombRange() < 1)
-				// Dale - RB: Field Bombard END
-		/************************************************************************************************/
-		/* REVOLUTIONDCM							END									 Glider1	 */
-		/************************************************************************************************/
-		{
-			iValue += GC.getImprovementInfo(eImprovement).getPillageGold();
-		}
+		iValue += GC.getImprovementInfo(eImprovement).getPillageGold();
 
-		if (eNonObsoleteBonus != NO_BONUS)
+		if (eNonObsoleteBonus != NO_BONUS && GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 		{
-			if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
+			if (pPlot->isConnectedToCapital() && pPlot->getPlotGroupConnectedBonus(pPlot->getOwner(), eNonObsoleteBonus) == 1)
 			{
-				int iTempValue = iBonusValue * 4;
-
-				if (pPlot->isConnectedToCapital() && (pPlot->getPlotGroupConnectedBonus(pPlot->getOwner(), eNonObsoleteBonus) == 1))
-				{
-					iTempValue *= 2;
-				}
-
-				iValue += iTempValue;
+				iValue += iBonusValue * 8;
 			}
+			else iValue += iBonusValue * 4;
 		}
 	}
-
 	return iValue;
 }
 
