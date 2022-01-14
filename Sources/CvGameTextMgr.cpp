@@ -23568,7 +23568,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (bCity && GC.getGame().isDebugMode() && gDLL->ctrlKey())
 		{
-			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding)));
+			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding, 0, false, true)));
 		}
 	}
 
