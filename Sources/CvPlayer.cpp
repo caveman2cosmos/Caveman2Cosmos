@@ -4,6 +4,7 @@
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
@@ -25815,12 +25816,12 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	CvWStringBuffer szBuffer;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		const PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
+		const CvPlot* plotX = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
+		if (plotX->isRevealed(getTeam(), true) && plotX->isInViewport())
 		{
-			const BonusTypes eCurType = pLoopPlot->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
+			const PlayerTypes eOwner = plotX->getRevealedOwner(getTeam(), true);
+			const BonusTypes eCurType = plotX->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
 			if (eCurType != NO_BONUS)
 			{
 				const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
@@ -25850,6 +25851,9 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 				case SHOW_RESOURCES_MISC:
 					bOfInterest = kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_MISC");
 					break;
+				case SHOW_RESOURCES_UNCLAIMED:
+					bOfInterest = !plotX->isBonusExtracted(getTeam());
+					break;
 				}
 
 				if (bOfInterest)
@@ -25859,8 +25863,8 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 					kData.m_eVisibility = PLOT_INDICATOR_VISIBLE_ONSCREEN_ONLY;
 					kData.m_strIcon = GC.getBonusInfo(eCurType).getButton();
 
-					int x = pLoopPlot->getViewportX();
-					int y = pLoopPlot->getViewportY();
+					int x = plotX->getViewportX();
+					int y = plotX->getViewportY();
 					kData.m_Target = NiPoint2(GC.getCurrentViewport()->plotXToPointX(x), GC.getCurrentViewport()->plotYToPointY(y));
 
 					if (eOwner == NO_PLAYER)

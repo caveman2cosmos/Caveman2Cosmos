@@ -159,7 +159,6 @@
 					<iAmountPerTurn>13</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSECT_MANIPULATION_LAB</Type>

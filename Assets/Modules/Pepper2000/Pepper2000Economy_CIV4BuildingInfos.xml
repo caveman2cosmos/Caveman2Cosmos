@@ -72,7 +72,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -149,7 +148,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -242,7 +240,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -323,7 +320,6 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -408,7 +404,6 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>

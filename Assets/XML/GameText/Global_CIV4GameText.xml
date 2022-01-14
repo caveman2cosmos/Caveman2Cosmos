@@ -31098,4 +31098,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNCLAIMED</Tag>
+		<English>Unclaimed</English>
+	</TEXT>
 </Civ4GameText>

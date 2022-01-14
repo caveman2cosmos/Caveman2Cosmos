@@ -43,7 +43,6 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOPUNK_EMBASSY</Type>
@@ -101,7 +100,6 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMERA_SURGERY_CLINIC</Type>

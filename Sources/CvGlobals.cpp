@@ -6,6 +6,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvInitCore.h"

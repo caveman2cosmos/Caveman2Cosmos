@@ -14,6 +14,7 @@
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CounterSet.h"
@@ -34448,6 +34449,9 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 			break;
 		case SHOW_RESOURCES_MISC:
 			strName = gDLL->getText("TXT_KEY_MISC");
+			break;
+		case SHOW_RESOURCES_UNCLAIMED:
+			strName = gDLL->getText("TXT_KEY_UNCLAIMED");
 			break;
 		}
 		break;

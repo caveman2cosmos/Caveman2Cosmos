@@ -1464,7 +1464,6 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 	{
 		return;
 	}
-
 	CvPlotGroup* pPlotGroup = getPlotGroup(getOwner());
 
 	if (pPlotGroup != NULL)
@@ -1479,7 +1478,7 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 			{
 				if (!GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)iI))
 				{
-					pPlotGroup->changeNumBonuses(((BonusTypes)iI), (pPlotCity->getFreeBonus((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
+					pPlotGroup->changeNumBonuses((BonusTypes)iI, (pPlotCity->getFreeBonus((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
 				}
 			}
 
@@ -1489,35 +1488,45 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 
 				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					pPlotGroup->changeNumBonuses(((BonusTypes)iI), (GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI) * ((bAdd) ? -1 : 1)));
-					pPlotGroup->changeNumBonuses(((BonusTypes)iI), (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
+					pPlotGroup->changeNumBonuses((BonusTypes)iI, (GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI) * ((bAdd) ? -1 : 1)));
+					pPlotGroup->changeNumBonuses((BonusTypes)iI, (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
 				}
 			}
 		}
 
-		const BonusTypes eNonObsoleteBonus = getNonObsoleteBonusType(getTeam());
-
-		if (eNonObsoleteBonus != NO_BONUS)
+		if (isBonusExtracted())
 		{
-			PROFILE("CvPlot::updatePlotGroupBonus.NonObsoletePlotBonus");
-
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(eNonObsoleteBonus).getTechCityTrade())))
-			{
-// Super forts C2C adaptation
-				//	Now that improvements are separately tagged as to whether they are universal resource providers
-				//	the 'fort' check here is not needed
-				if (isCity(false, getTeam()) ||
-// Super forts C2C adaptation end
-					((getImprovementType() != NO_IMPROVEMENT) && GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus)))
-				{
-					if ((pPlotGroup != NULL) && isBonusNetwork(getTeam()))
-					{
-						pPlotGroup->changeNumBonuses(eNonObsoleteBonus, ((bAdd) ? 1 : -1));
-					}
-				}
-			}
+			pPlotGroup->changeNumBonuses(getBonusType(), ((bAdd) ? 1 : -1));
 		}
 	}
+}
+
+bool CvPlot::isBonusExtracted(const TeamTypes eTeamPerspective) const
+{
+	PROFILE("CvPlot::isBonusExtracted");
+
+	const TeamTypes eOwnerTeam = (
+		eTeamPerspective == NO_TEAM
+		?
+		getTeam()
+		:
+		getRevealedTeam(eTeamPerspective, true)
+	);
+	if (eOwnerTeam == NO_TEAM)
+	{
+		return false;
+	}
+	const BonusTypes eRelevantBonus = getNonObsoleteBonusType(eOwnerTeam);
+
+	if (eRelevantBonus == NO_BONUS || !GET_TEAM(eOwnerTeam).isHasTech((TechTypes)GC.getBonusInfo(eRelevantBonus).getTechCityTrade()))
+	{
+		return false;
+	}
+	if (!isCity(false, eOwnerTeam) && (getImprovementType() == NO_IMPROVEMENT || !GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(eRelevantBonus)))
+	{
+		return false;
+	}
+	return isBonusNetwork(eOwnerTeam);
 }
 
 
@@ -5162,12 +5171,9 @@ bool CvPlot::isTradeNetwork(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (!isOwned())
+	if (!isOwned() && !isRevealed(eTeam, false))
 	{
-		if (!isRevealed(eTeam, false))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return isBonusNetwork(eTeam);
@@ -5193,28 +5199,19 @@ bool CvPlot::isTradeNetworkConnected(const CvPlot* pPlot, TeamTypes eTeam) const
 		return false;
 	}
 
-	if (!isOwned())
+	if (!isOwned() && (!isRevealed(eTeam, false) || !pPlot->isRevealed(eTeam, false)))
 	{
-		if (!isRevealed(eTeam, false) || !(pPlot->isRevealed(eTeam, false)))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (isRoute())
+	if (isRoute() && pPlot->isRoute())
 	{
-		if (pPlot->isRoute())
-		{
-			return true;
-		}
+		return true;
 	}
 
-	if (isCity(true, eTeam))
+	if (isCity(true, eTeam) && pPlot->isNetworkTerrain(eTeam))
 	{
-		if (pPlot->isNetworkTerrain(eTeam))
-		{
-			return true;
-		}
+		return true;
 	}
 
 	if (isNetworkTerrain(eTeam))
@@ -5229,31 +5226,23 @@ bool CvPlot::isTradeNetworkConnected(const CvPlot* pPlot, TeamTypes eTeam) const
 			return true;
 		}
 
-		if (pPlot->isRiverNetwork(eTeam))
+		if (pPlot->isRiverNetwork(eTeam) && pPlot->isRiverConnection(directionXY(pPlot, this)))
 		{
-			if (pPlot->isRiverConnection(directionXY(pPlot, this)))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
 	if (isRiverNetwork(eTeam))
 	{
-		if (pPlot->isNetworkTerrain(eTeam))
+		if (pPlot->isNetworkTerrain(eTeam) && isRiverConnection(directionXY(this, pPlot)))
 		{
-			if (isRiverConnection(directionXY(this, pPlot)))
-			{
-				return true;
-			}
+			return true;
 		}
 
-		if (isRiverConnection(directionXY(this, pPlot)) || pPlot->isRiverConnection(directionXY(pPlot, this)))
+		if (pPlot->isRiverNetwork(eTeam)
+		&& (isRiverConnection(directionXY(this, pPlot)) || pPlot->isRiverConnection(directionXY(pPlot, this))))
 		{
-			if (pPlot->isRiverNetwork(eTeam))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -7081,13 +7070,24 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 		}
 		updateSight(true, true);
 
-		if (getBonusType() != NO_BONUS && (eNewImprovement == NO_IMPROVEMENT) != (eOldImprovement == NO_IMPROVEMENT))
+		if (getBonusType() != NO_BONUS)
 		{
-			// Newly added or removed improvement on a bonus
-			// Add/remove Zobrist contributuns for all local plot groups
-			ToggleInPlotGroupsZobristContributors();
-		}
+			if ((eNewImprovement == NO_IMPROVEMENT) != (eOldImprovement == NO_IMPROVEMENT))
+			{
+				// Newly added or removed improvement on a bonus
+				// Add/remove Zobrist contributuns for all local plot groups
+				ToggleInPlotGroupsZobristContributors();
+			}
 
+			// Building or removing a fort will now force a plotgroup update to verify resource connections.
+			if (
+				(NO_IMPROVEMENT != eNewImprovement && GC.getImprovementInfo(eNewImprovement).isImprovementBonusTrade(getBonusType()))
+				!=
+				(NO_IMPROVEMENT != eOldImprovement && GC.getImprovementInfo(eOldImprovement).isImprovementBonusTrade(getBonusType())))
+			{
+				updatePlotGroup();
+			}
+		}
 		updateIrrigated();
 		updateYield();
 
@@ -7110,12 +7110,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			}
 		}
 
-		// Building or removing a fort will now force a plotgroup update to verify resource connections.
-		if ( (NO_IMPROVEMENT != eNewImprovement && GC.getImprovementInfo(eNewImprovement).isUniversalTradeBonusProvider()) !=
-			 (NO_IMPROVEMENT != eOldImprovement && GC.getImprovementInfo(eOldImprovement).isUniversalTradeBonusProvider()) )
-		{
-			updatePlotGroup();
-		}
+		gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 
 		if (NO_IMPROVEMENT != eOldImprovement && GC.getImprovementInfo(eOldImprovement).isActsAsCity())
 		{
@@ -8263,8 +8258,6 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 {
 	PROFILE_FUNC();
 
-	int iI;
-
 	CvPlotGroup* pOldPlotGroup = getPlotGroup(ePlayer);
 
 	//	The id-level check is to handle correction of an old buggy state where
@@ -8282,7 +8275,7 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 			}
 		}
 
-		if ( bRecalculateEffect )
+		if (bRecalculateEffect)
 		{
 			pCity = getPlotCity();
 
@@ -8292,18 +8285,12 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 				updatePlotGroupBonus(false);
 			}
 
-			if (pOldPlotGroup != NULL)
+			if (pOldPlotGroup != NULL && pCity != NULL && pCity->getOwner() == ePlayer)
 			{
-				if (pCity != NULL)
+				FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
+				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					if (pCity->getOwner() == ePlayer)
-					{
-						FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
-						for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-						{
-							pCity->changeNumBonuses(((BonusTypes)iI), -(pOldPlotGroup->getNumBonuses((BonusTypes)iI)));
-						}
-					}
+					pCity->changeNumBonuses(((BonusTypes)iI), -(pOldPlotGroup->getNumBonuses((BonusTypes)iI)));
 				}
 			}
 		}
@@ -8317,20 +8304,15 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 			m_aiPlotGroup[ePlayer] = pNewValue->getID();
 		}
 
-		if ( bRecalculateEffect )
+		if (bRecalculateEffect)
 		{
-			if (getPlotGroup(ePlayer) != NULL)
+			if (pCity != NULL && getPlotGroup(ePlayer) != NULL && pCity->getOwner() == ePlayer)
 			{
-				if (pCity != NULL)
+				FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
+
+				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					if (pCity->getOwner() == ePlayer)
-					{
-						FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
-						for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-						{
-							pCity->changeNumBonuses(((BonusTypes)iI), getPlotGroup(ePlayer)->getNumBonuses((BonusTypes)iI));
-						}
-					}
+					pCity->changeNumBonuses((BonusTypes)iI, getPlotGroup(ePlayer)->getNumBonuses((BonusTypes)iI));
 				}
 			}
 			if (ePlayer == getOwner())
@@ -8348,7 +8330,7 @@ void CvPlot::updatePlotGroup()
 {
 	PROFILE_FUNC();
 
-	if ( bDeferPlotGroupRecalculation )
+	if (bDeferPlotGroupRecalculation)
 	{
 		m_bPlotGroupsDirty = true;
 	}
@@ -8361,7 +8343,7 @@ void CvPlot::updatePlotGroup()
 				updatePlotGroup((PlayerTypes)iI);
 			}
 		}
-
+		gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		m_bPlotGroupsDirty = false;
 	}
 }
@@ -12831,13 +12813,11 @@ void CvPlot::removeSignForAllPlayers()
 
 void CvPlot::ToggleInPlotGroupsZobristContributors()
 {
-	int	iI;
-
-	for( iI= 0; iI < MAX_PLAYERS; iI++ )
+	for (int iI= 0; iI < MAX_PLAYERS; iI++)
 	{
 		CvPlotGroup* p_plotGroup = getPlotGroup((PlayerTypes)iI);
 
-		if ( p_plotGroup != NULL )
+		if (p_plotGroup != NULL)
 		{
 			//	Add the zobrist contribution of this plot to the hash
 			p_plotGroup->m_zobristHashes.resourceNodesHash ^= getZobristContribution();
@@ -12986,7 +12966,7 @@ void CvPlot::setNull(bool bNull)
 
 bool CvPlot::bDeferPlotGroupRecalculation = false;
 
-void	CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
+void CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
 {
 	if ( bDeferPlotGroupRecalculation != bDefer )
 	{
