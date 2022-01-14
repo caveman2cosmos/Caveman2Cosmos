@@ -74,7 +74,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_ATOM</Type>
@@ -224,7 +223,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
@@ -323,7 +321,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
@@ -654,7 +651,6 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>

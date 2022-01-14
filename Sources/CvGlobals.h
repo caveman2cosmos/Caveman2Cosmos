@@ -138,6 +138,7 @@ class CvMapInfo;
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
+#include <vector>
 
 enum DelayedResolutionTypes
 {

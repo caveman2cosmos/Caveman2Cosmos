@@ -10,6 +10,7 @@
 #include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvBonusInfo.h"
 #include "CvXMLLoadUtility.h"
 #include "BoolExpr.h"
 #include "IntExpr.h"

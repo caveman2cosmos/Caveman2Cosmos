@@ -666,7 +666,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -758,7 +757,6 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_RAIL</Type>
@@ -1073,7 +1071,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1496,7 +1493,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_GEMINI</Type>

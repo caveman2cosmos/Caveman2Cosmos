@@ -10,6 +10,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlot.h"
@@ -11452,12 +11453,11 @@ void CvCity::changeExtraYield(YieldTypes eYield, int iChange)
 		onYieldChange();
 	}
 }
+
 int CvCity::getExtraYield(YieldTypes eYield) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
 	return getExtraYield100(eYield) / 100;
 }
-
 
 
 void CvCity::onYieldChange()
@@ -11599,6 +11599,18 @@ void CvCity::changeBonusYieldRateModifier(YieldTypes eIndex, int iChange)
 	}
 }
 
+void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex);
+
+	const int iOldValue = m_aiTradeYield[eIndex];
+
+	if (iOldValue != iNewValue)
+	{
+		m_aiTradeYield[eIndex] = iNewValue;
+		FASSERT_NOT_NEGATIVE(m_aiTradeYield[eIndex]);
+	}
+}
 
 int CvCity::getTradeYield(YieldTypes eIndex) const
 {
@@ -11832,22 +11844,6 @@ int CvCity::calculateTotalTradeYield(YieldTypes eIndex, PlayerTypes eWithPlayer,
 	return iDomesticYield + iForeignRoutes;
 }
 // BUG - Trade Totals - end
-
-
-void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex);
-
-	const int iOldValue = getTradeYield(eIndex);
-
-	if (iOldValue != iNewValue)
-	{
-		m_aiTradeYield[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(getTradeYield(eIndex));
-
-		changeExtraYield(eIndex, iNewValue - iOldValue);
-	}
-}
 
 
 int CvCity::getExtraSpecialistYield(YieldTypes eIndex) const
@@ -23464,7 +23460,7 @@ bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 
 int CvCity::getBaseYieldRate(YieldTypes eIndex) const
 {
-	int iBaseYield = getPlotYield(eIndex) + GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
+	int iBaseYield = getPlotYield(eIndex) + getTradeYield(eIndex) + GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
 
 	if (GET_PLAYER(getOwner()).isGoldenAge() && GET_PLAYER(getOwner()).getGoldenAgeYield(eIndex) > 0)
 	{

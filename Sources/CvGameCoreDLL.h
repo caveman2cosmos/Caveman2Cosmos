@@ -212,7 +212,7 @@ struct ECacheAccess
 		ReadWrite = Read | Write
 	};
 };
-DECLARE_FLAGS(ECacheAccess::flags);
+int DECLARE_FLAGS(ECacheAccess::flags);
 
 //
 // Feature macros

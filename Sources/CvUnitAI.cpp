@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
@@ -2042,59 +2043,65 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
+	const bool bAbroad = IsAbroad();
 	// If worker (or captive) is not defended, and is outside own borders.
-	if (!getGroup()->canDefend() && IsAbroad())
+	if (bAbroad)
 	{
-		// If I can reach safety on my own this turn then don't bother other units with our escape.
-		if (AI_reachHome())
+		if (!getGroup()->canDefend())
 		{
-			return;
-		}
-		// Look for a local group we can join to be safe!
-		// We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
-		AI_setLeaderPriority(LEADER_PRIORITY_MAX);
+			// If I can reach safety on my own this turn then don't bother other units with our escape.
+			if (AI_reachHome())
+			{
+				return;
+			}
+			// Look for a local group we can join to be safe!
+			// We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
+			AI_setLeaderPriority(LEADER_PRIORITY_MAX);
 
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
-		{
-			return;
-		}
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_HUNTER).ignoreOwnUnitType().maxPathTurns(1)))
-		{
-			return;
-		}
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
-		{
-			return;
-		}
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_COUNTER).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
-		{
-			return;
-		}
-		AI_setLeaderPriority(-1); // We didn't get to group so back to normal
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
+			{
+				return;
+			}
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_HUNTER).ignoreOwnUnitType().maxPathTurns(1)))
+			{
+				return;
+			}
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
+			{
+				return;
+			}
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_COUNTER).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
+			{
+				return;
+			}
+			AI_setLeaderPriority(-1); // We didn't get to group so back to normal
 
-		// Nobody can join us and we cannot join anyone else - leg it!
-		if (AI_retreatToCity())
+			// Nobody can join us and we cannot join anyone else - leg it!
+			if (AI_retreatToCity())
+			{
+				return;
+			}
+		}
+		else if (AI_workerReleaseDefenderIfNotNeeded())
+		{
+			return;
+		}
+		// Toffer - After reaching this point the worker will always start making route from here to friendly territory... May be better things to do elsewhere.
+		//	Should check if improving this neutal plot is worthwhile and if not just start going to a more worthwhile plot/job.
+	}
+	else if (!isHuman() && !isNPC()) // NPC rarely has anything better to do with military unit than be a hinder against other players capturing workers from them.
+	{
+		if (AI_workerReleaseDefenderIfNotNeeded())
 		{
 			return;
 		}
 	}
 	//ls612: Combat Worker Danger Evaluation
-	const bool bWorkerDanger =
-		(IsAbroad() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) ||
-		 !IsAbroad() && exposedToDanger(plot(), 80, false));
-
+	const bool bWorkerDanger = bAbroad && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !bAbroad && exposedToDanger(plot(), 80, false);
 
 	if (bWorkerDanger && (!canDefend() || GetNumberOfUnitsInGroup() == 1)) {
 		// in this order, either retreat to safety, or go into a city
 		if (AI_safety() || AI_retreatToCity()) {
-			return;
-		}
-	}
-
-	if (!isHuman() && !isNPC())
-	{
-		if (AI_workerReleaseDefenderIfNotNeeded())
-		{
 			return;
 		}
 	}
@@ -2129,11 +2136,15 @@ void CvUnitAI::AI_workerMove()
 
 	bool bCanRoute = canBuildRoute();
 	// Workboats don't build Sea Tunnels over Resources
-	if (bCanRoute && getDomainType() != DOMAIN_SEA && !IsAbroad())
+	if (bCanRoute && !bAbroad && getDomainType() != DOMAIN_SEA)
 	{
 		const BonusTypes eNonObsoleteBonus = plot()->getNonObsoleteBonusType(getTeam());
 
-		if (NO_BONUS != eNonObsoleteBonus && !plot()->isConnectedToCapital() && NO_IMPROVEMENT != plot()->getImprovementType() && GC.getImprovementInfo(plot()->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus) && AI_connectPlot(plot()))
+		if (NO_BONUS != eNonObsoleteBonus
+		&& !plot()->isConnectedToCapital()
+		&& NO_IMPROVEMENT != plot()->getImprovementType()
+		&& GC.getImprovementInfo(plot()->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus)
+		&& AI_connectPlot(plot()))
 		{
 			return;
 		}
@@ -2142,11 +2153,6 @@ void CvUnitAI::AI_workerMove()
 	CvPlot* pBestBonusPlot = NULL;
 	BuildTypes eBestBonusBuild = NO_BUILD;
 	int iBestBonusValue = 0;
-
-	if (AI_improveBonus(25, &pBestBonusPlot, &eBestBonusBuild, &iBestBonusValue))
-	{
-		return;
-	}
 
 	if (bCanRoute && !isNPC() && AI_connectCity())
 	{
@@ -2177,73 +2183,74 @@ void CvUnitAI::AI_workerMove()
 
 	CvCity* pCity = NULL;
 
-	if (!IsAbroad())
+	if (!bAbroad)
 	{
 		pCity = plot()->getPlotCity(); //get city on plot
+
 		if (pCity == NULL) //if city is not on same plot
 		{
 			pCity = plot()->getWorkingCity(); //get city that is owning this plot
 		}
-	}
 
+		if (pCity != NULL)
+		{
+			if (CvWorkerService::ShouldImproveCity(pCity) && AI_improveCity(pCity))
+			{
+				return;
+			}
 
-	if (pCity != NULL)
-	{
-		if (CvWorkerService::ShouldImproveCity(pCity)) {
-			if (AI_improveCity(pCity)) {
+			if (pCity->AI_getWorkersNeeded() > 0 && (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3) && AI_improveCity(pCity))
+			{
 				return;
 			}
 		}
-	}
-
-
-	if (pCity != NULL && pCity->AI_getWorkersNeeded() > 0 && (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3) && AI_improveCity(pCity))
-	{
-		return;
 	}
 
 	if (AI_improveLocalPlot(2, pCity))
 	{
 		return;
 	}
-	// Super Forts end
-
+	// find bonuses within 2 moves to upgrade3
+	if (CvWorkerService::ImproveBonus(this, plot(), 2))
+	{
+		return;
+	}
 
 	if (bCanRoute && isBarbarian() && AI_connectCity())
 	{
 		return;
 	}
 
-
-	bool bNextCity = false;
-
-	if (pCity == NULL || pCity->AI_getWorkersNeeded() == 0 || pCity->AI_getWorkersHave() > pCity->AI_getWorkersNeeded() + 1)
 	{
-		if (pBestBonusPlot != NULL && iBestBonusValue >= 15 && AI_improvePlot(pBestBonusPlot, eBestBonusBuild))
+		const bool bNextCity = pCity == NULL || pCity->AI_getWorkersNeeded() == 0 || pCity->AI_getWorkersHave() > pCity->AI_getWorkersNeeded() + 1;
+
+		if (bNextCity)
+		{
+			if (pBestBonusPlot != NULL && iBestBonusValue >= 15 && AI_improvePlot(pBestBonusPlot, eBestBonusBuild))
+			{
+				return;
+			}
+
+			if (AI_nextCityToImprove(pCity))
+			{
+				return;
+			}
+		}
+
+		if (pBestBonusPlot != NULL && AI_improvePlot(pBestBonusPlot, eBestBonusBuild))
 		{
 			return;
 		}
 
-		if (AI_nextCityToImprove(pCity))
+		if (pCity != NULL && AI_improveCity(pCity))
 		{
 			return;
 		}
-		bNextCity = true;
-	}
 
-	if (pBestBonusPlot != NULL && AI_improvePlot(pBestBonusPlot, eBestBonusBuild))
-	{
-		return;
-	}
-
-	if (pCity != NULL && AI_improveCity(pCity))
-	{
-		return;
-	}
-
-	if (!bNextCity && AI_nextCityToImprove(pCity))
-	{
-		return;
+		if (!bNextCity && AI_nextCityToImprove(pCity))
+		{
+			return;
+		}
 	}
 
 	if (bCanRoute)
@@ -2273,33 +2280,6 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
-	// Super Forts begin *canal* *choke*
-	//bool bBuildFort = false;
-
-	//if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
-	//{
-	//	const CvPlayerAI &player = GET_PLAYER(getOwner());
-	//	const bool bCanal = player.countNumCoastalCities() > 0;
-	//	const bool bAirbase = player.AI_totalUnitAIs(UNITAI_PARADROP) || player.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || player.AI_totalUnitAIs(UNITAI_MISSILE_AIR);
-
-	//	if (AI_fortTerritory(bCanal, bAirbase))
-	//	{
-	//		return;
-	//	}
-	//	bBuildFort = bCanal && bAirbase;
-	//}
-
-	//// Super Forts begin *canal* *choke*
-	//if (!bBuildFort && AI_fortTerritory(true, true /*bCanal, bAirbase*/))
-	//{
-	//	return;
-	//}
-	// Super Forts end
-
-	//if (AI_StrategicForts())
-	//{
-	//	return;
-	//}
 
 	if (bCanRoute && AI_routeTerritory())
 	{
@@ -2341,7 +2321,7 @@ void CvUnitAI::AI_workerMove()
 
 	if (!isHuman() && !isNPC())
 	{
-		if (!IsAbroad() && AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, 2, -1, -1, 0, MOVE_SAFE_TERRITORY))
+		if (!bAbroad && AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, 2, -1, -1, 0, MOVE_SAFE_TERRITORY))
 		{
 			return;
 		}
@@ -11404,7 +11384,7 @@ void CvUnitAI::AI_networkAutomated()
 	}
 
 	if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS)
-	&& AI_improveBonus())
+	&& CvWorkerService::ImproveBonus(this, plot(), 2))
 	{
 		return;
 	}
@@ -16270,11 +16250,15 @@ bool CvUnitAI::AI_safety(int iRange)
 	return false;
 }
 
-// Returns true if a mission was pushed...
-bool CvUnitAI::AI_reachHome()
+// Returns true if a mission was pushed... unless it's a mock run.
+bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 {
 	PROFILE_FUNC();
 
+	if (bMockRun && plot()->getOwner() == getOwner())
+	{
+		return true;
+	}
 	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
@@ -16296,7 +16280,7 @@ bool CvUnitAI::AI_reachHome()
 
 		if (cityNear != NULL)
 		{
-			iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
+			iValue /= plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
 		}
 
 		foreach_(const CvUnit * unitX, plotX->units())
@@ -16311,10 +16295,15 @@ bool CvUnitAI::AI_reachHome()
 				}
 			}
 		}
+		// Diversify, don't always do the same in a given situation.
+		iValue += GC.getGame().getSorenRandNum(iValue / 5, "AI Safety");
+
 		if (iValue > iBestValue)
 		{
 			iBestValue = iValue;
 			pBestPlot = plotX;
+
+			if (bMockRun) return true;
 		}
 	}
 	if (pBestPlot != NULL)
@@ -22718,23 +22707,20 @@ bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 			return false;
 		}
 
-		if (getGroup()->canDefend() && plot()->getOwner() == getOwner())
+		if (getGroup()->canDefend() && !AI_workerNeedsDefender(plot()) && AI_reachHome(true))
 		{
-			if (!AI_workerNeedsDefender(plot()))
+			if (gUnitLogLevel >= 3)
 			{
-				if (gUnitLogLevel >= 3)
-				{
-					logBBAI("	Worker for player %d (%S) at (%d,%d) releasing escort",
-							getOwner(),
-							GET_PLAYER(getOwner()).getCivilizationDescription(0),
-							getX(),
-							getY());
-				}
-
-				getGroup()->AI_makeForceSeparate();
-
-				return true;
+				logBBAI("	Worker for player %d (%S) at (%d,%d) releasing escort",
+						getOwner(),
+						GET_PLAYER(getOwner()).getCivilizationDescription(0),
+						getX(),
+						getY());
 			}
+
+			getGroup()->AI_makeForceSeparate();
+
+			return true;
 		}
 	}
 
@@ -22964,11 +22950,9 @@ bool CvUnitAI::AI_connectCity()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-
 	// XXX how do we make sure that we can build roads???
 
-	pLoopCity = plot()->getWorkingCity();
+	CvCity* pLoopCity = plot()->getWorkingCity();
 	if (pLoopCity != NULL)
 	{
 		if (AI_plotValid(pLoopCity->plot()))

@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 //
 // Python interface for info classes (formerly structs)
 // These are simple enough to be exposed directly - no wrappers
