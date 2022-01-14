@@ -10736,23 +10736,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
 
-		BuildTypes eBestBuild = NO_BUILD;
-		int iBestTempBuildValue = 0;
-		// find fastest build for improvement
-		foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
-		{
-			//this check must check if improvement is already there, because canbuild will return false (you cant build same improvement that is already there)
-			if (player.canBuild(pPlot, eBuildType, false, false) || ePotentialImprovement == plotInfo->currentImprovement)
-			{
-				const int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
-
-				if (iSpeedValue > iBestTempBuildValue)
-				{
-					iBestTempBuildValue = iSpeedValue;
-					eBestBuild = eBuildType;
-				}
-			}
-		}
+		BuildTypes eBestBuild = CvWorkerService::GetFastestBuildForImprovementType(player, ePotentialImprovement, pPlot);
 
 		// if we cannot build any of the valid builds for the improvement, skip to next improvement
 		if (eBestBuild == NO_BUILD) continue;
