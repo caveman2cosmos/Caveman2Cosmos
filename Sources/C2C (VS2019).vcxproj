@@ -362,6 +362,7 @@
     <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="CvWorkerService.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="enum_iterator.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
     <ClInclude Include="GroupingParams.h" />

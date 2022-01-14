@@ -309,6 +309,7 @@ const std::string getModDir();
 // Our code
 //
 #include "logging.h"
+#include "enum_iterator.h"
 #include "algorithm2.h"
 #include "scoring.h"
 #include "FAssert.h"
