@@ -46,7 +46,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
@@ -178,7 +177,6 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIOPLEX</Type>

@@ -38,7 +38,6 @@
 			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
@@ -155,7 +154,6 @@
 				<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCHESTRION_THEATER</Type>
@@ -199,7 +197,6 @@
 			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STEPRECKONER_MANUFACTORY</Type>

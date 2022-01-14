@@ -391,7 +391,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -464,7 +463,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -537,7 +535,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -610,7 +607,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -689,7 +685,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -762,7 +757,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -835,7 +829,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -908,7 +901,6 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<iAIWeight>2</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>

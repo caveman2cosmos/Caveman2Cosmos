@@ -4913,7 +4913,6 @@
 			</PropertyManipulators>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
-			<iAIWeight>10</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
