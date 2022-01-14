@@ -34449,6 +34449,9 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 		case SHOW_RESOURCES_MISC:
 			strName = gDLL->getText("TXT_KEY_MISC");
 			break;
+		case SHOW_RESOURCES_UNCLAIMED:
+			strName = gDLL->getText("TXT_KEY_UNCLAIMED");
+			break;
 		}
 		break;
 	case GLOBE_LAYER_RELIGION:

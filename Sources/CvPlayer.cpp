@@ -25821,6 +25821,7 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
 		{
 			const BonusTypes eCurType = pLoopPlot->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
+			const ImprovementTypes eCurImprovement = pLoopPlot->getImprovementType();
 			if (eCurType != NO_BONUS)
 			{
 				const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
@@ -25849,6 +25850,9 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 					break;
 				case SHOW_RESOURCES_MISC:
 					bOfInterest = kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_MISC");
+					break;
+				case SHOW_RESOURCES_UNCLAIMED:
+					bOfInterest = !kBonusInfo.isProvidedByImprovementType(eCurImprovement);
 					break;
 				}
 
