@@ -2010,9 +2010,6 @@ int CvUnitAI::AI_minSettlerDefense() const
 			)
 	);
 }
-bool CvUnitAI::Worker_CanDefend() {
-	return getGroup()->canDefend();
-}
 
 bool CvUnitAI::IsAbroad() {
 	return plot()->getOwner() != getOwner();
@@ -2036,6 +2033,7 @@ int CvUnitAI::GetNumberOfUnitsInGroup() {
 	return getGroup()->getNumUnits();
 }
 
+
 void CvUnitAI::AI_workerMove()
 {
 	PROFILE_FUNC();
@@ -2044,11 +2042,18 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
-	// If worker (or captive) cannot defend itself, and is outside own borders.
-	if (!Worker_CanDefend() && IsAbroad())
+	// If worker (or captive) is not defended, and is outside own borders.
+	if (!getGroup()->canDefend() && IsAbroad())
 	{
+		// If I can reach safety on my own this turn then don't bother other units with our escape.
+		if (AI_reachHome())
+		{
+			return;
+		}
 		// Look for a local group we can join to be safe!
-		AI_setLeaderPriority(LEADER_PRIORITY_MAX); // We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
+		// We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
+		AI_setLeaderPriority(LEADER_PRIORITY_MAX);
+
 		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
@@ -2065,10 +2070,9 @@ void CvUnitAI::AI_workerMove()
 		{
 			return;
 		}
-
 		AI_setLeaderPriority(-1); // We didn't get to group so back to normal
 
-		// Nobody can join us and we cannot join anyone else - run for it!
+		// Nobody can join us and we cannot join anyone else - leg it!
 		if (AI_retreatToCity())
 		{
 			return;
@@ -2080,7 +2084,7 @@ void CvUnitAI::AI_workerMove()
 		 !IsAbroad() && exposedToDanger(plot(), 80, false));
 
 
-	if (canDefend() && GetNumberOfUnitsInGroup() == 1 && bWorkerDanger) {
+	if (bWorkerDanger && (!canDefend() || GetNumberOfUnitsInGroup() == 1)) {
 		// in this order, either retreat to safety, or go into a city
 		if (AI_safety() || AI_retreatToCity()) {
 			return;
@@ -2118,7 +2122,7 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
-	if (!Worker_CanDefend() && (isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !isHuman() && AI_workerNeedsDefender(plot())) && AI_retreatToCity() /*XXX maybe not do this??? could be working productively somewhere else...*/)
+	if (!getGroup()->canDefend() && (isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !isHuman() && AI_workerNeedsDefender(plot())) && AI_retreatToCity() /*XXX maybe not do this??? could be working productively somewhere else...*/)
 	{
 		return;
 	}
@@ -15996,7 +16000,7 @@ bool CvUnitAI::AI_defend()
 		return true;
 	}
 
-	const int iSearchRange = AI_searchRange(1);
+	const int iSearchRange = AI_searchRange();
 
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
@@ -16037,7 +16041,6 @@ bool CvUnitAI::AI_defend()
 
 	return false;
 }
-
 
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_safety(int iRange)
@@ -16270,6 +16273,59 @@ bool CvUnitAI::AI_safety(int iRange)
 	return false;
 }
 
+// Returns true if a mission was pushed...
+bool CvUnitAI::AI_reachHome()
+{
+	PROFILE_FUNC();
+
+	const CvPlot* pBestPlot = NULL;
+	int iBestValue = 0;
+
+	// baseMoves() is enough, this function is not supposed to send the unit far through hostile land.
+	foreach_(const CvPlot * plotX, plot()->rect(baseMoves(), baseMoves()))
+	{
+		if (plotX == NULL || plotX->getOwner() != getOwner() || GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plotX, 1) || atPlot(plotX))
+		{
+			continue;
+		}
+		int iPathTurns; 
+		if (!generatePath(plotX, 0, true, &iPathTurns, 1) || iPathTurns > 1)
+		{
+			continue;
+		}
+		int iValue = 1000;
+
+		const CvCity* cityNear = GC.getMap().findCity(plotX->getX(), plotX->getY(), getOwner(), NO_TEAM, true);
+
+		if (cityNear != NULL)
+		{
+			iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
+		}
+
+		foreach_(const CvUnit * unitX, plotX->units())
+		{
+			if (unitX->getOwner() == getOwner() && unitX->canDefend())
+			{
+				const CvUnit* pHeadUnit = unitX->getGroup()->getHeadUnit();
+
+				if (pHeadUnit != this && (pHeadUnit->isWaiting() || !pHeadUnit->canMove()))
+				{
+					iValue += unitX->currEffectiveStr(plotX, NULL);;
+				}
+			}
+		}
+		if (iValue > iBestValue)
+		{
+			iBestValue = iValue;
+			pBestPlot = plotX;
+		}
+	}
+	if (pBestPlot != NULL)
+	{
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0);
+	}
+	return false;
+}
 
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_hide()
@@ -16283,7 +16339,7 @@ bool CvUnitAI::AI_hide()
 	int iPathTurns;
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	const int iSearchRange = AI_searchRange(1);
+	const int iSearchRange = AI_searchRange();
 
 	foreach_(const CvPlot * plotX, plot()->rect(iSearchRange, iSearchRange))
 	{
@@ -16994,7 +17050,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 					//	have been considered).  We will only actually consider this value if we can get
 					//	there this turn however, since units move!
 					if (AI_plotValid(pAdjacentPlot) &&
-							stepDistance(pLoopPlot->getX(), pLoopPlot->getY(), getX(), getY()) <= AI_searchRange(1))
+							stepDistance(pLoopPlot->getX(), pLoopPlot->getY(), getX(), getY()) <= AI_searchRange())
 					{
 						foreach_(const CvUnit * pLoopUnit, pAdjacentPlot->units())
 						{
@@ -26232,7 +26288,7 @@ int CvUnitAI::AI_searchRange(int iRange) const
 	{
 		return 0;
 	}
-	else if (iRange == MAX_INT)
+	if (iRange >= MAX_SEARCH_RANGE)
 	{
 		return MAX_SEARCH_RANGE;
 	}
@@ -26241,10 +26297,7 @@ int CvUnitAI::AI_searchRange(int iRange) const
 	{
 		return std::min(MAX_SEARCH_RANGE, iRange * baseMoves());
 	}
-	else
-	{
-		return std::min(MAX_SEARCH_RANGE, (iRange + 1) * (baseMoves() + 1));
-	}
+	return std::min(MAX_SEARCH_RANGE, (iRange + 1) * (baseMoves() + 1));
 }
 
 
@@ -28445,10 +28498,7 @@ bool CvUnitAI::AI_returnToBorders()
 			FAssert(!atPlot(pBestPlot));
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP);
-		}
+		return getGroup()->pushMissionInternal(MISSION_SKIP);
 	}
 
 	return false;
