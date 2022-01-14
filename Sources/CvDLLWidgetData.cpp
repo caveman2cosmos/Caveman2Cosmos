@@ -2,6 +2,7 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDLLWidgetData.h"

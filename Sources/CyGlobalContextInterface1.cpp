@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvRandom.h"
 #include "CyGame.h"

@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvGlobals.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvOutcome.h"

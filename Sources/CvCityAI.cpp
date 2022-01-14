@@ -4,6 +4,7 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvCityAI.h"
 #include <string>
@@ -25,6 +26,7 @@
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 #include "CvValueService.h"
+#include "CvWorkerService.h"
 
 
 //	KOSHLING MOD - calculate all possible building focuses at once
