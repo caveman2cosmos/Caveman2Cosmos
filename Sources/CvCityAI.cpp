@@ -5802,16 +5802,14 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += (kBuilding.getDomesticGreatGeneralRateModifier() / 10);
 					}
 
-					if (kBuilding.isAreaBorderObstacle() && !(pArea->isBorderObstacle(getTeam())))
+					if (kBuilding.isAreaBorderObstacle() && !pArea->isBorderObstacle(getTeam())
+					&& !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 					{
-						if (!GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
+						iValue += iNumCitiesInArea;
+
+						if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
 						{
 							iValue += iNumCitiesInArea;
-
-							if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
-							{
-								iValue += iNumCitiesInArea;
-							}
 						}
 					}
 
@@ -13889,26 +13887,30 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				{
 					// Spares doesn't do anything that scales by city count, only the first one does that.
 					// Furthermore as spares rack up even their trade value decreases.
-					iValue +=
-						(
-							kBuilding.getNumFreeBonuses()
-							*
-							kOwner.AI_bonusVal((BonusTypes)kBuilding.getFreeBonus(), 1)
-							*
-							(kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()) == 0 ? iNumCities : 1)
-							/
-							std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()))
-							);
+					iValue += (
+						kBuilding.getNumFreeBonuses()
+						*
+						kOwner.AI_bonusVal((BonusTypes)kBuilding.getFreeBonus(), 1)
+						*
+						(kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()) == 0 ? iNumCities : 1)
+						/
+						std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()))
+					);
 				}
 
 				for (int iI = 0; iI < kBuilding.getNumExtraFreeBonuses(); iI++)
 				{
-					//	If we have spares adding another doesn't do anything that scales by city count - only
-					//	the first one does that.  Furthermore as spares rack up even their trade value decreases
-					iValue += (kOwner.AI_bonusVal((BonusTypes)(kBuilding.getExtraFreeBonus(iI)), 1) *
-						((kOwner.getNumTradeableBonuses((BonusTypes)(kBuilding.getExtraFreeBonus(iI))) == 0) ? iNumCities : 1) *
-						kBuilding.getExtraFreeBonusNum(iI) *
-						100) / (100 * std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)(kBuilding.getExtraFreeBonus(iI)))));
+					// Spares doesn't do anything that scales by city count, only the first one does that.
+					// Furthermore as spares rack up even their trade value decreases.
+					iValue += (
+						kBuilding.getExtraFreeBonusNum(iI)
+						*
+						kOwner.AI_bonusVal((BonusTypes)kBuilding.getExtraFreeBonus(iI), 1)
+						*
+						(kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI)) == 0 ? iNumCities : 1)
+						/
+						std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI)))
+					);
 				}
 
 				if (kBuilding.getNoBonus() != NO_BONUS)
@@ -14858,13 +14860,11 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 	const CvProperties* cityProperties = getPropertiesConst();
 	const int iCurrentValue = cityProperties->getValueByProperty(eProperty);
 	const int iWouldBeValue = iCurrentValue + iSourceValue;
-	FErrorMsg(CvString::format("iPropertySource=%d, iPropertyCurrent=%d, iWouldBeValue=%d", iSourceValue, iCurrentValue, iWouldBeValue).c_str());
 
 	// Normalize it to between zero and operational range
 	int iCurrentNormalizedValue = (range(iCurrentValue, iOperationalLow, iOperationalHigh) - iOperationalLow) * 10000 / iOperationalRange;
 	int iWouldBeNormalizedValue = (range(iWouldBeValue, iOperationalLow, iOperationalHigh) - iOperationalLow) * 10000 / iOperationalRange;
 
-	FErrorMsg(CvString::format("Check 0: iCurrentNormalizedValue=%d, iWouldBeNormalizedValue=%d", iCurrentNormalizedValue, iWouldBeNormalizedValue).c_str());
 	int iValue = kProperty.getAIWeight() * (iWouldBeNormalizedValue - iCurrentNormalizedValue); // value is scaled up by 10 000 at this point.
 
 	// Increase value as we move towards the nasty end of the range (cautious approach)
@@ -14878,12 +14878,9 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 	{
 		nastiness = std::max(iCurrentNormalizedValue, iWouldBeNormalizedValue);
 	}
-	FErrorMsg(CvString::format("Check 1: iValue=%d, nastiness=%d", iValue, nastiness).c_str());
 
 	// Toffer, if 0 nastiness, halve value, if max nastiness double value
 	iValue = (iValue * (iOperationalRange/2 + nastiness) / iOperationalRange) / 100; // value is scaled up by 100 at this point.
-
-	FErrorMsg(CvString::format("Check 2: iValue=%d", iValue).c_str());
 
 	switch (kProperty.getAIScaleType())
 	{
@@ -14899,7 +14896,6 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 		iValue *= GET_TEAM(getTeam()).getNumCities();
 		break;
 	}
-	FErrorMsg(CvString::format("iPropertySource=%d, iPropertyCurrent=%d, iValue=%d", iSourceValue, iCurrentValue, iValue / 100).c_str());
 
 	// Don't trust the math above, so I don't assume iValue will always be above zero even though the property change is a good thing
 	if (iSourceValue * kProperty.getAIWeight() > 0) 
