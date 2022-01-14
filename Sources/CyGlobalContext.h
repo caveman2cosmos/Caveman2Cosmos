@@ -32,8 +32,7 @@ public:
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(TeamTypes eTeam) const;
 
-	int getInfoTypeForString(const char* szInfoType) const;
-	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
+	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
