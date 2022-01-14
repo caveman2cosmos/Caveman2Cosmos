@@ -25821,7 +25821,6 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 		{
 			const PlayerTypes eOwner = plotX->getRevealedOwner(getTeam(), true);
 			const BonusTypes eCurType = plotX->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
-			const ImprovementTypes eCurImprovement = plotX->getImprovementType();
 			if (eCurType != NO_BONUS)
 			{
 				const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
