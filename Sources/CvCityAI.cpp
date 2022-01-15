@@ -4726,12 +4726,8 @@ public:
 };
 
 
-int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bUncached)
+int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech)
 {
-	if (bUncached)
-	{
-		return AI_buildingValueThresholdOriginalUncached(eBuilding, iFocusFlags, 0, false, false, bForTech);
-	}
 	if (bForTech)
 	{
 		PROFILE("AI_buildingValue.ForTech");
@@ -5673,33 +5669,32 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue += (kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4);
 				}
 
-				if ((iFocusFlags & BUILDINGFOCUS_MAINTENANCE) || (iFocusFlags & BUILDINGFOCUS_GOLD) || (iPass > 0))
+				if (((iFocusFlags & BUILDINGFOCUS_MAINTENANCE) || (iFocusFlags & BUILDINGFOCUS_GOLD) || iPass > 0)
+				&& kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 				{
-					PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Maintenance");
-
-					const int iExtraMaintenance =
-						(
-							(kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-							?
-							-kBuilding.getCommerceChange(COMMERCE_GOLD) * 100
-							:
-							0
-							);
 					const int iBaseMaintenance = getMaintenanceTimes100();
 					const int iMaintenanceMod = getEffectiveMaintenanceModifier();
 
-					int iTempValue = (
-						(
+					const int iCost =
+					(
+						std::min(
+							-1,
 							getModifiedIntValue(iBaseMaintenance, iMaintenanceMod)
 							-
-							getModifiedIntValue(iBaseMaintenance + iExtraMaintenance, iMaintenanceMod + kBuilding.getMaintenanceModifier())
-							) / 16
-						);
-					if (bFinancialTrouble)
-						iTempValue *= 2;
-					else iTempValue = iTempValue * iGoldValueAssessmentModifier / 100;
+							getModifiedIntValue(
+								iBaseMaintenance - kBuilding.getCommerceChange(COMMERCE_GOLD) * 100,
+								iMaintenanceMod + kBuilding.getMaintenanceModifier()
+							)
+						)
+					);
 
-					iValue += iTempValue;
+					if (bFinancialTrouble)
+					{
+						FAssertMsg(iCost * 5 < iCost * (24 + iGoldValueAssessmentModifier) / 125, "If this assert happen, then the else below can handle financial trouble as well");
+
+						iValue += iCost * 5;
+					}
+					else iValue += std::min(-1, iCost * (24 + iGoldValueAssessmentModifier) / 125);
 				}
 
 				if ((iFocusFlags & BUILDINGFOCUS_SPECIALIST) || iPass > 0)
@@ -13726,32 +13721,32 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, false);
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, true);
 			}
+			if (kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 			{
 				PROFILE("CalculateAllBuildingValues.Maintenance");
-
-				const int iExtraMaintenance =
-					(
-						(kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-						?
-						-kBuilding.getCommerceChange(COMMERCE_GOLD) * 100
-						:
-						0
-						);
 				const int iBaseMaintenance = getMaintenanceTimes100();
 				const int iMaintenanceMod = getEffectiveMaintenanceModifier();
 
-				int maintainanceValue = (
-					(
+				int iCost =
+				(
+					std::min(
+						-1,
 						getModifiedIntValue(iBaseMaintenance, iMaintenanceMod)
 						-
-						getModifiedIntValue(iBaseMaintenance + iExtraMaintenance, iMaintenanceMod + kBuilding.getMaintenanceModifier())
-						) / 16
-					);
-				if (bFinancialTrouble)
-					maintainanceValue *= 2;
-				else maintainanceValue = maintainanceValue * iGoldValueAssessmentModifier / 100;
+						getModifiedIntValue(
+							iBaseMaintenance - kBuilding.getCommerceChange(COMMERCE_GOLD) * 100,
+							iMaintenanceMod + kBuilding.getMaintenanceModifier()
+						)
+					)
+				);
 
-				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, maintainanceValue);
+				if (bFinancialTrouble)
+				{
+					iCost *= 5;
+				}
+				else iCost = std::min(-1, iCost * (24 + iGoldValueAssessmentModifier) / 125);
+
+				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, iCost);
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Specialist");
