@@ -2828,7 +2828,7 @@ class TestCode:
 			if CvUnitInfo.getProductionCost() > 0 and GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvUnitInfo.getMapCategories() and bAndSpaceRequirement + bOrSpaceRequirement + bGOMAndSpaceRequirement + bGOMOrSpaceRequirement == 0:
 				iTechLoc = self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[0]
 
-				if CvUnitInfo.getType().find("UNIT_EXECUTIVE_") == -1 and CvUnitInfo.getType().find("_MISSIONARY") == -1 and CvUnitInfo.getType().find("UNIT_UNDEAD_WORKER") == -1:
+				if CvUnitInfo.getType().find("_EXECUTIVE") == -1 and CvUnitInfo.getType().find("_MISSIONARY") == -1 and CvUnitInfo.getType().find("UNIT_UNDEAD_WORKER") == -1:
 					if CvUnitInfo.getProductionCost() < 0.75*aBaseCostList[iTechLoc] and CvUnitInfo.getMaxGlobalInstances() == -1:
 						self.log(CvUnitInfo.getType()+" is way too cheap, actual cost/min cost derived from XGrid: "+str(CvUnitInfo.getProductionCost())+"/"+str(1+(0.75*aBaseCostList[iTechLoc])))
 
