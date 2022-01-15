@@ -16280,7 +16280,7 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 
 		if (cityNear != NULL)
 		{
-			iValue /= plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
+			iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
 		}
 
 		foreach_(const CvUnit * unitX, plotX->units())
@@ -29862,27 +29862,23 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 	{
 		foreach_(const CvPropertySource * pSource, pMani->getSources())
 		{
-			if (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty)
+			if ((eProperty == NO_PROPERTY || pSource->getProperty() == eProperty)
+
+			// Sources that deliver to the city or the plot are both considered since the city plot diffuses to the city for most properties anyway
+			&& pSource->getType() == PROPERTYSOURCE_CONSTANT && (pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT))
 			{
-				//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
-		//	to the city for most properties anyway
-				if (pSource->getType() == PROPERTYSOURCE_CONSTANT &&
-					(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT))
-				{
-					const PropertyTypes eProperty = pSource->getProperty();
-					int iCurrentSourceSize = pCity->getTotalBuildingSourcedProperty(eProperty) + pCity->getTotalUnitSourcedProperty(eProperty) + pCity->getPropertyNonBuildingSource(eProperty);
-					int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
-					int iDecayPercent = pCity->getPropertyDecay(eProperty);
+				const PropertyTypes eProperty = pSource->getProperty();
+				const int iCurrentSourceSize = pCity->getTotalBuildingSourcedProperty(eProperty) + pCity->getTotalUnitSourcedProperty(eProperty) + pCity->getPropertyNonBuildingSource(eProperty);
+				const int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
+				const int iDecayPercent = pCity->getPropertyDecay(eProperty);
 
-					//	Steady state occurs at a level where the decay removes as much per turn as the sources add
-					//	Decay can be 0 if the current level is below the threshold at which decay cuts in, so for the
-					//	purposes of calculation just treat this as very slow decay
-					int	iCurrentSteadyStateLevel = (100 * iCurrentSourceSize) / std::max(1, iDecayPercent);
-					int	iNewSteadyStateLevel = (100 * iNewSourceSize) / std::max(1, iDecayPercent);
+				//	Steady state occurs at a level where the decay removes as much per turn as the sources add
+				//	Decay can be 0 if the current level is below the threshold at which decay cuts in, so for the
+				//	purposes of calculation just treat this as very slow decay
+				const int iCurrentSteadyStateLevel = (100 * iCurrentSourceSize) / std::max(1, iDecayPercent);
+				const int iNewSteadyStateLevel = (100 * iNewSourceSize) / std::max(1, iDecayPercent);
 
-					*iValue += pCity->getPropertySourceValue(eProperty,
-						iNewSteadyStateLevel - iCurrentSteadyStateLevel) / 100;
-				}
+				*iValue += pCity->getPropertySourceValue(eProperty, iNewSteadyStateLevel - iCurrentSteadyStateLevel);
 			}
 		}
 	}
