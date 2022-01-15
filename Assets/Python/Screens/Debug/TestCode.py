@@ -54,6 +54,8 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
 		self.main.addTestCode(screen, self.checkCivicImprovementReplacements, "Civic - check potential improvement replacements", "Checks replacements of improvements in civics")
 		self.main.addTestCode(screen, self.checkTraitImprovementReplacements, "Trait - check potential improvement replacements", "Checks replacements of improvements in traits")
+		self.main.addTestCode(screen, self.checkBuildImprovementTechAligment, "Improvement and Build - check if they are unlocked on same tech", "Checks if improvement and build have same tech unlock")
+		self.main.addTestCode(screen, self.checkImprovementResourceTechUnlocks, "Improvement - check its unlock tech along with its resource tech enable", "Checks if earliest valid improvement isn't unlocked after resource tech enable")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
@@ -1150,7 +1152,7 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getImprovementInfo(iImprovement).getType()+" Improvement free Specialist "+str(aImprovementFreeSpecialists[BASE][iImprovement])+"/"+str(aImprovementFreeSpecialists[REPLACED][iImprovement]))
 
 				#=================================================================================================
-				#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses> - base
+				#<BonusHappinessChanges>, <BonusHealthChanges>, <ExtraFreeBonuses> - base
 				aBonusHappinessChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aBonusHealthChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aExtraFreeBonuses = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
@@ -1158,21 +1160,17 @@ class TestCode:
 					aBonusHappinessChanges[BASE][iBonus] += iHappiness
 				for iBonus, iHealth in CvBuildingInfo.getBonusHealthChanges():
 					aBonusHealthChanges[BASE][iBonus] += iHealth
-				if CvBuildingInfo.getFreeBonus() != -1:
-					aExtraFreeBonuses[BASE][CvBuildingInfo.getFreeBonus()] += CvBuildingInfo.getNumFreeBonuses()
 				for iBonus in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					aExtraFreeBonuses[BASE][CvBuildingInfo.getExtraFreeBonus(iBonus)] += CvBuildingInfo.getExtraFreeBonusNum(iBonus)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>
+					#<BonusHappinessChanges>, <BonusHealthChanges>, <ExtraFreeBonuses>
 					for iBonus, iHappiness in CvReplacedBuildingInfo.getBonusHappinessChanges():
 						aBonusHappinessChanges[REPLACED][iBonus] += iHappiness
 					for iBonus, iHealth in CvReplacedBuildingInfo.getBonusHealthChanges():
 						aBonusHealthChanges[REPLACED][iBonus] += iHealth
-					if CvReplacedBuildingInfo.getFreeBonus() != -1:
-						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getFreeBonus()] += CvReplacedBuildingInfo.getNumFreeBonuses()
 					for iBonus in xrange(CvReplacedBuildingInfo.getNumExtraFreeBonuses()):
 						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getExtraFreeBonus(iBonus)] += CvReplacedBuildingInfo.getExtraFreeBonusNum(iBonus)
 
@@ -2118,14 +2116,6 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
-			#Singular <FreeBonus>
-			iBonus = CvBuildingInfo.getFreeBonus()
-			if iBonus != -1 and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Natural wonder giving bonus is secondary effect - ignore natural wonders
-				if aBonusList[iBonus] == -1:
-					aBonusList[iBonus] = iTechLoc
-				elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
-					aBonusList[iBonus] = iTechLoc
-
 			#<ExtraFreeBonuses>
 			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements - those are subdued animal rewards most commonly
 				for iBuildingProducer in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
@@ -2713,10 +2703,6 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" has zero rate change of "+GC.getUnitInfo(CvBuildingInfo.getGreatPeopleUnitType()).getType())
 
 			#FreeBonus must be present if iNumFreeBonuses is present and viceversa.
-			if CvBuildingInfo.getFreeBonus() != -1 and CvBuildingInfo.getNumFreeBonuses() == 0:
-				self.log(CvBuildingInfo.getType()+" has free bonus tag, but actually doesn't give bonus")
-			if CvBuildingInfo.getFreeBonus() == -1 and CvBuildingInfo.getNumFreeBonuses() != 0:
-				self.log(CvBuildingInfo.getType()+" has unspecified free bonus type")
 			for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 				if CvBuildingInfo.getExtraFreeBonus(i) != -1 and CvBuildingInfo.getExtraFreeBonusNum(i) == 0:
 					self.log(CvBuildingInfo.getType()+" has extra free bonus tag, but actually doesn't give bonus")
@@ -3208,13 +3194,10 @@ class TestCode:
 					#Earth bonus producers should always have replacements, if its regular manufactured one, ignore wonders in this case
 					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding):
 						bIsBonusPoducer = False
-						if CvBuildingInfo.getFreeBonus() == iBonus:
-							bIsBonusPoducer = True
-						else:
-							for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-								if CvBuildingInfo.getExtraFreeBonus(i) == iBonus:
-									bIsBonusPoducer = True
-									break
+						for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+							if CvBuildingInfo.getExtraFreeBonus(i) == iBonus:
+								bIsBonusPoducer = True
+								break
 
 						if bIsBonusPoducer and CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0:
 							self.log(CvBonusInfo.getType()+" producer "+CvBuildingInfo.getType()+" is standalone")
@@ -3320,6 +3303,44 @@ class TestCode:
 
 				if len(aImprovementsList) > 0:
 					self.log(CvTraitInfo.getType()+" should have improvement upgrades for ImprovementYieldChanges "+str(aImprovementsList))
+
+	#Checks if improvement and build have same tech unlock
+	def checkBuildImprovementTechAligment(self):
+		for iImprovement in xrange(GC.getNumImprovementInfos()):
+			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+			iImprovementTechID = self.HF.checkImprovementTechRequirementLocation(CvImprovementInfo)[2] #Tech ID
+			aBuildTechID = []
+			aBuildType = []
+
+			for iBuild in xrange(GC.getNumBuildInfos()):
+				CvBuildInfo = GC.getBuildInfo(iBuild)
+				if CvBuildInfo.getImprovement() == iImprovement: #Multiple builds can create same improvement (kill and no kill variants), some builds have no improvements
+					aBuildTechID.append(self.HF.checkBuildTechRequirementLocation(CvBuildInfo)[2]) #Tech ID
+					aBuildType.append(CvBuildInfo.getType())
+
+			if len(aBuildTechID) > 0 and iImprovementTechID != min(aBuildTechID): #Improvement tech position is equal to earliest build tech position
+				self.log(aBuildType[aBuildTechID.index(min(aBuildTechID))]+" and "+CvImprovementInfo.getType()+" have different techs "+str(min(aBuildTechID))+"/"+str(iImprovementTechID))
+
+	#Checks if earliest valid improvement isn't unlocked after resource tech enable
+	def checkImprovementResourceTechUnlocks(self):
+		for iBonus in xrange(GC.getNumBonusInfos()):
+			CvBonusInfo = GC.getBonusInfo(iBonus)
+			if CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
+				iBonusTechLoc = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2] #Tech Enable XGrid
+				iBonusTechID = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[5] #Tech Enable ID
+				aImprovementTechLoc = []
+				aImprovementTechID = []
+				aImprovementType = []
+
+				for iImprovement in xrange(GC.getNumImprovementInfos()):
+					CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+					if CvImprovementInfo.isImprovementBonusMakesValid(iBonus) or CvImprovementInfo.isImprovementBonusTrade(iBonus):
+						aImprovementTechLoc.append(self.HF.checkImprovementTechRequirementLocation(CvImprovementInfo)[0])
+						aImprovementTechID.append(self.HF.checkImprovementTechRequirementLocation(CvImprovementInfo)[2])
+						aImprovementType.append(CvImprovementInfo.getType())
+
+				if iBonusTechLoc < min(aImprovementTechLoc) or (iBonusTechLoc == min(aImprovementTechLoc) and iBonusTechID != min(aImprovementTechID)):
+					self.log(CvBonusInfo.getType()+" tech enable is before, or on same column but different tech with earliest improvement: "+aImprovementType[aImprovementTechLoc.index(min(aImprovementTechLoc))])
 
 	#Improvement - yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoostLocation(self):

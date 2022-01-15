@@ -4003,11 +4003,12 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 	int64_t iNetIncome;
 	int64_t iNetExpenses;
 	short iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
+	FASSERT_NOT_NEGATIVE(iProfitMargin);
 
 	// Toffer - Things should absolutly be worse off than this before one can claim financial trouble.
 	if (iProfitMargin > 25)
 	{
-		return 10001;
+		return 200;
 	}
 	// Koshling - Never in financial difficulties if we can fund our ongoing expenses with zero taxation
 	if (iNetIncome - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
@@ -4044,7 +4045,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 		}
 		if (iValue > 9999)
 		{
-			return 10000; // Funding level at 10 000% will be more than adequate to conclude that funding is a non-issue.
+			return 10001; // Funding level at 10 000% will be more than adequate to conclude that funding is a non-issue.
 		}
 		return static_cast<short>(iValue);
 	}
@@ -4053,6 +4054,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 	//	if it is *50* it means your expenditure is half the size of your income at 100% taxation.
 	//	A value of 100 is close to impossible to reach, as that either means expenditure is zero, or that income is severeal orders of magnitude greater than your expenditure.
 	//	Multiplying with 2.5 may not be needed, but it is to signify that 10% iProfitMargin is not actually all that bad.
+	//	Max return value here is 62 as iProfitMargin is guaranteed 25 or less at this point.
 	return iProfitMargin * 5/2;
 }
 
@@ -4061,7 +4063,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 int CvPlayerAI::AI_goldValueAssessmentModifier() const
 {
 	// If we're only just funding at the safety level that's not good - rate that as 150% valuation for gold
-	return 150 * AI_safeFunding() / std::max<short>(1, AI_fundingHealth());
+	return std::max(1, 150 * AI_safeFunding() / std::max<short>(1, AI_fundingHealth()));
 }
 
 

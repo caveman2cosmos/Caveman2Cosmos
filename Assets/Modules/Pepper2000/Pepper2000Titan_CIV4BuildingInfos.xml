@@ -255,8 +255,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_HYDROCARBON_REFINERY</Type>
@@ -279,8 +283,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_NITROGEN_EXPORTER</Type>
