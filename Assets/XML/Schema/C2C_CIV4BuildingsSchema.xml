@@ -784,9 +784,7 @@
 		<element type="EnabledCivilizationTypes" minOccurs="0"/>
 		<element type="NoBonus" minOccurs="0"/>
 		<element type="PowerBonus" minOccurs="0"/>
-		<element type="FreeBonus" minOccurs="0"/>
 		<element type="ExtraFreeBonuses" minOccurs="0"/>
-		<element type="iNumFreeBonuses" minOccurs="0"/>
 		<element type="FreeBuilding" minOccurs="0"/>
 		<element type="FreeAreaBuilding" minOccurs="0"/>
 		<element type="FreePromotion" minOccurs="0"/>

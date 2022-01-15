@@ -16280,7 +16280,7 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 
 		if (cityNear != NULL)
 		{
-			iValue /= plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
+			iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
 		}
 
 		foreach_(const CvUnit * unitX, plotX->units())

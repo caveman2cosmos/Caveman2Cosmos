@@ -607,8 +607,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_NANOMORPHIC_HABITATS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOMORPHIC_HABITATS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLD_FUSION2</Type>
@@ -663,8 +667,12 @@
 				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_HYDROPONICS</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_DEEP_SPACE_LIFEFORMS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DEEP_SPACE_LIFEFORMS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -729,8 +737,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_SUPERINTELLIGENT_COMPUTERS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SUPERINTELLIGENT_COMPUTERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_ASSEMBLER</Type>
@@ -892,8 +904,12 @@
 				<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_DEEP_SPACE_NANOBOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DEEP_SPACE_NANOBOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_FARM</Type>
@@ -1026,8 +1042,12 @@
 				<BuildingType>BUILDING_DEEP_SPACE_MAGLEV</BuildingType>
 				<BuildingType>BUILDING_ORGANIC_VOLATILE_EXTRACTION</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ADVANCED_REPLICATORS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ADVANCED_REPLICATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_PLASTEEL_FACTORY</Type>
@@ -1053,8 +1073,12 @@
 				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_PLASTEEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASTEEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_PRISON</Type>
@@ -1985,8 +2009,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOTUBES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUPITER_CORE</Type>
@@ -2063,11 +2091,13 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2432,8 +2462,12 @@
 				<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_CITY</Type>
@@ -4781,8 +4815,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_HELIUM3</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HELIUM3</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VERTICAL_REEF</Type>
