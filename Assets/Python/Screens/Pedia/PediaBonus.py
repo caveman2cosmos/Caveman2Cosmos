@@ -110,10 +110,8 @@ class PediaBonus:
 						if iBuilding not in aAffectedBuildings:
 							aAffectedBuildings.append(iBuilding)
 							bValid = False
-			for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-				if (CvBuildingInfo.getExtraFreeBonus(i) == iTheBonus):
-					aSourceOfBonus.append(iBuilding)
-					break
+			if iTheBonus in CvBuildingInfo.getFreeBonuses():
+				aSourceOfBonus.append(iBuilding)
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():

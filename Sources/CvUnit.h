@@ -659,7 +659,7 @@ public:
 	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion = false, bool bDefPromotion = false);
 	void applyDynamicXP(const int iExperience, const bool bHomeTerritory, int iMaxTotalXP);
 	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
-	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamage, const int iInitialDamageEnemy, const int iMaxXP) const;
+	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamageEnemy, const int iInitialDamage, const int iMaxXP) const;
 
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;

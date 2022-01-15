@@ -3067,16 +3067,6 @@ int CvGame::countKnownTechNumTeams(TechTypes eTech) const
 }
 
 
-int CvGame::getNumFreeBonuses(BuildingTypes eBuilding) const
-{
-	if (GC.getBuildingInfo(eBuilding).getNumFreeBonuses() == -1)
-	{
-		return GC.getWorldInfo(GC.getMap().getWorldSize()).getNumFreeBuildingBonuses();
-	}
-	return GC.getBuildingInfo(eBuilding).getNumFreeBonuses();
-}
-
-
 int CvGame::countReligionLevels(ReligionTypes eReligion) const
 {
 	int iCount = 0;

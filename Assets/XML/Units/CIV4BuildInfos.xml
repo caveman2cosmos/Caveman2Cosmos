@@ -10236,7 +10236,7 @@
 		<BuildInfo>
 			<Type>BUILD_FISHING_BOATS</Type>
 			<Description>TXT_KEY_BUILD_FISHING_BOATS</Description>
-			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -10285,7 +10285,7 @@
 		<BuildInfo>
 			<Type>BUILD_FISHING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_FISHING_CAMP_KILL</Description>
-			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ObsoleteTech>TECH_RUDDER</ObsoleteTech>
 			<iTime>210</iTime>
 			<iCost>3</iCost>

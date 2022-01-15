@@ -54,7 +54,6 @@ void CyGamePythonInterface()
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
 		.def("countKnownTechNumTeams", &CyGame::countKnownTechNumTeams, "int (int eTech)")
-		.def("getNumFreeBonuses", &CyGame::getNumFreeBonuses, "int (int eBonus)")
 
 		.def("countReligionLevels", &CyGame::countReligionLevels, "int (int eReligion)")
 		.def("calculateReligionPercent", &CyGame::calculateReligionPercent, "int (int eReligion)")
