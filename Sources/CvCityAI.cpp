@@ -13142,7 +13142,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			if (isWorldWonder(eBuilding) && aiYieldRank[YIELD_PRODUCTION] <= 3)
 			{
-				valuesCache->Accumulate(BUILDINGFOCUSINDEX_WORLDWONDER, 1);
+				valuesCache->Accumulate(BUILDINGFOCUSINDEX_WORLDWONDER, 10);
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Defense");
