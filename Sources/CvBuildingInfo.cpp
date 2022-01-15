@@ -414,11 +414,6 @@ int CvBuildingInfo::getVictoryThreshold(int i) const
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
 }
 
-bool CvBuildingInfo::isFreeBonus(BonusTypes eBonus) const
-{
-	return algo::any_of_equal(getFreeBonuses() | map_keys, eBonus);
-}
-
 int CvBuildingInfo::getYieldChange(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
@@ -1550,14 +1545,14 @@ namespace CvBuildingInternal
 				}
 			}
 
-			if (kBuilding.isFreeBonus((BonusTypes)kUnit.getPrereqAndBonus()))
+			if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 			{
 				return true;
 			}
 
 			foreach_(const BonusTypes eBonus, kUnit.getPrereqOrBonuses())
 			{
-				if (kBuilding.isFreeBonus(eBonus))
+				if (kBuilding.getFreeBonuses().hasValue(eBonus))
 				{
 					return true;
 				}
@@ -1956,7 +1951,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
-	CheckSumC(iSum, m_aExtraFreeBonuses);
+	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
@@ -1996,7 +1991,7 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_religionChange, L"ReligionChanges")
 		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
-		.add(m_aExtraFreeBonuses, L"ExtraFreeBonuses")
+		.add(m_freeBonuses, L"ExtraFreeBonuses")
 		.addWithDelayedResolution(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
 	;
 }
@@ -2092,7 +2087,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		int iNumFreeBonuses = 0;
 		pXML->GetOptionalChildXmlValByName(&iNumFreeBonuses, L"iNumFreeBonuses");
-		m_aExtraFreeBonuses.push_back(std::make_pair((BonusTypes)iFreeBonus, iNumFreeBonuses));
+		m_freeBonuses.push_back(std::make_pair((BonusTypes)iFreeBonus, iNumFreeBonuses));
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion");

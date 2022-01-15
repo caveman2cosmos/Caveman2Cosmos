@@ -81,7 +81,6 @@ public:
 	int getPrereqAndTech() const					{ return m_iPrereqAndTech; }
 	int getNoBonus() const							{ return m_iNoBonus; }
 	int getPowerBonus() const						{ return m_iPowerBonus; }
-	int getNumExtraFreeBonuses() const				{ return m_aExtraFreeBonuses.size(); }
 	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
 	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
 	int getFreePromotion() const					{ return m_iFreePromotion; }
@@ -345,8 +344,7 @@ public:
 	const IDValueMap<PlotTypes, YieldArray>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
 	const python::list cyGetPlotYieldChanges() const;
 
-	const IDValueMap<BonusTypes, int>& getFreeBonuses() const { return m_aExtraFreeBonuses; }
-	bool isFreeBonus(BonusTypes eBonus) const;
+	const IDValueMap<BonusTypes, int>& getFreeBonuses() const { return m_freeBonuses; }
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
@@ -802,7 +800,7 @@ private:
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatFreeExperience;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
-	IDValueMap<BonusTypes, int> m_aExtraFreeBonuses;
+	IDValueMap<BonusTypes, int> m_freeBonuses;
 	IDValueMap<BuildingTypes, CommerceArray> m_aGlobalBuildingCommerceChanges;
 	IDValueMap<TechTypes, YieldArray> m_techYieldChanges;
 	IDValueMap<TechTypes, YieldArray> m_techYieldModifiers;

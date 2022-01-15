@@ -9141,7 +9141,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	// Bonus
 	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappinessChanges())
 	{
-		if ((hasBonus(modifier.first) || kBuilding.isFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
+		if ((hasBonus(modifier.first) || kBuilding.getFreeBonuses().hasValue(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
 			addGoodOrBad(modifier.second, iGood, iBad);
 		}
@@ -9316,7 +9316,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 	// Bonus
 	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealthChanges())
 	{
-		if ((hasBonus(modifier.first) || kBuilding.isFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
+		if ((hasBonus(modifier.first) || kBuilding.getFreeBonuses().hasValue(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
 			addGoodOrBad(modifier.second, iGood, iBad);
 		}
@@ -20878,18 +20878,13 @@ static bool bonusAvailableFromBuildings(BonusTypes eBonus)
 
 	if (bBonusAvailability == NULL)
 	{
-		bBonusAvailability = new bool[GC.getNumBonusInfos()];
+		CvXMLLoadUtility::InitList<bool>(&bBonusAvailability, GC.getNumBonusInfos(), false);
 
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			bBonusAvailability[iI] = false;
-		}
-
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			foreach_(const CvBuildingInfo* kBuilding, GC.getBuildingInfos())
+			foreach_(const CvBuildingInfo* pBuilding, GC.getBuildingInfos())
 			{
-				if (kBuilding->isFreeBonus((BonusTypes)iI))
+				if (pBuilding->getFreeBonuses().hasValue((BonusTypes)iI))
 				{
 					bBonusAvailability[iI] = true;
 					break;
@@ -20963,7 +20958,7 @@ bool CvCity::hasVicinityBonus(BonusTypes eBonus) const
 		{
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isFreeBonus(eBonus)
+				if (GC.getBuildingInfo((BuildingTypes)iI).getFreeBonuses().hasValue(eBonus)
 				&& getNumActiveBuilding((BuildingTypes)iI) > 0)
 				{
 					bResult = true;
@@ -21040,7 +21035,7 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 	{
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iI).isFreeBonus(eBonus)
+			if (GC.getBuildingInfo((BuildingTypes)iI).getFreeBonuses().hasValue(eBonus)
 			&& getNumActiveBuilding((BuildingTypes)iI) > 0)
 			{
 				bResult = true;

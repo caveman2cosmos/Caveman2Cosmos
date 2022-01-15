@@ -5481,7 +5481,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								bool bUnitIsBonusEnabled = true;
 								if (kUnit.getPrereqAndBonus() != NO_BONUS && !hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 								{
-									if (kBuilding.isFreeBonus((BonusTypes)kUnit.getPrereqAndBonus()))
+									if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 									{
 										bUnitIsEnabler = true;
 									}
@@ -5503,7 +5503,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 									{
 										bHasORBonusAlready = true;
 									}
-									else if (kBuilding.isFreeBonus(eXtraFreeBonus))
+									else if (kBuilding.getFreeBonuses().hasValue(eXtraFreeBonus))
 									{
 										bFreeBonusIsORBonus = true;
 									}
@@ -13522,7 +13522,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							bool bUnitIsBonusEnabled = true;
 							if (kUnit.getPrereqAndBonus() != NO_BONUS && !hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 							{
-								if (kBuilding.isFreeBonus((BonusTypes)kUnit.getPrereqAndBonus()))
+								if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 								{
 									bUnitIsEnabler = true;
 								}
@@ -13541,7 +13541,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								{
 									bHasORBonusAlready = true;
 								}
-								else if (kBuilding.isFreeBonus(eXtraFreeBonus))
+								else if (kBuilding.getFreeBonuses().hasValue(eXtraFreeBonus))
 								{
 									bFreeBonusIsORBonus = true;
 								}
