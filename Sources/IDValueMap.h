@@ -190,12 +190,9 @@ struct IDValueMap
 		return defaultValue;
 	}
 
-	bool hasValue(ID_ type) const
+	bool hasValue(ID_ id) const
 	{
-		foreach_(const value_type& pair, m_map)
-			if (pair.first == type)
-				return true;
-		return false;
+		return algo::any_of_equal(m_map | map_keys, id);
 	}
 
 	bool empty() const
