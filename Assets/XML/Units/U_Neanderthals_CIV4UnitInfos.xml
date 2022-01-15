@@ -1952,7 +1952,7 @@
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
-			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
@@ -1961,7 +1961,7 @@
 				<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>56</iCost>
+			<iCost>96</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>200</iWorkRate>
