@@ -315,6 +315,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -349,6 +350,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MARS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -391,6 +393,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_NEUTRON_STAR</ArtDefineTag>
+			<PrereqTech>TECH_INDUCED_SUPERNOVA</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -415,6 +418,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_HYPERSPACE</ArtDefineTag>
+			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -441,6 +445,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PAST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PAST</ArtDefineTag>
+			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -467,6 +472,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_FUTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_FUTURE</ArtDefineTag>
+			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -493,6 +499,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_BRANESPACE</ArtDefineTag>
+			<PrereqTech>TECH_STRING_MANIPULATION</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -519,6 +526,7 @@
 			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_ASTEROID</ArtDefineTag>
+			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_ASTEROIDS</FeatureType>
@@ -553,6 +561,7 @@
 			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_GALAXY</ArtDefineTag>
+			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<bExtraterresial>1</bExtraterresial>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_GALAXY</FeatureType>

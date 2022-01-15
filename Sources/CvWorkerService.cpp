@@ -84,11 +84,11 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 
 		const bool haveBonus = ownerReference.hasBonus(nonObsoleteBonusType);
 		tempBonusValue = ownerReference.AI_bonusVal(nonObsoleteBonusType) + bestDefenseValue;
-		
+
 		const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
 
 		if (!unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns)) continue;
-		
+
 		tempBonusValue = tempBonusValue / std::max(1, numberOfMoveTurns);
 
 		if (numberOfMoveTurns <= allowedMovementTurns) {

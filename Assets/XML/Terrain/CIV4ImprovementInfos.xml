@@ -12,6 +12,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SANITIZE_WATER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SANITIZE_WATER</ArtDefineTag>
+			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -6958,7 +6959,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bHillsMakesValid>1</bHillsMakesValid>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>20</iPillageGold>
@@ -10955,6 +10956,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -10995,6 +10997,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_SAVANNA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_SAVANNA</ArtDefineTag>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11035,6 +11038,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</ArtDefineTag>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
@@ -11072,6 +11076,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11094,6 +11099,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!-- <bOutsideBorders>1</bOutsideBorders> -->
@@ -11112,6 +11118,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PLAINS</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11146,6 +11153,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11172,6 +11180,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11190,6 +11199,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11208,6 +11218,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11226,6 +11237,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11244,6 +11256,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11266,6 +11279,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11284,6 +11298,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<!--bOutsideBorders>1</bOutsideBorders-->
@@ -11415,7 +11430,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_FISHING_BOATS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>

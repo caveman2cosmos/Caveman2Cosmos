@@ -2007,8 +2007,8 @@
 				<BuildType>BUILD_BEACON_REEF</BuildType>
 				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<iCost>61</iCost>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<iCost>56</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>

@@ -16269,7 +16269,7 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 		{
 			continue;
 		}
-		int iPathTurns; 
+		int iPathTurns;
 		if (!generatePath(plotX, 0, true, &iPathTurns, 1) || iPathTurns > 1)
 		{
 			continue;
