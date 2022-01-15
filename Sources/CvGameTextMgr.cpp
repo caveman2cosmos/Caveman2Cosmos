@@ -23565,11 +23565,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH", CvWString(GC.getTechInfo(GC.getSpecialBuildingInfo(kBuilding.getSpecialBuilding()).getObsoleteTech()).getType()).c_str(), GC.getTechInfo(GC.getSpecialBuildingInfo(kBuilding.getSpecialBuilding()).getObsoleteTech()).getTextKeyWide()));
 			}
 		}
+	}
 
-		if (bCity && GC.getGame().isDebugMode() && gDLL->ctrlKey())
-		{
-			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding)));
-		}
+	if (bCity && gDLL->ctrlKey() && GC.getGame().isDebugMode())
+	{
+		szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding)));
 	}
 
 	if (bStrategyText && !CvWString(kBuilding.getStrategy()).empty()
