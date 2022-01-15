@@ -4728,55 +4728,68 @@ public:
 
 int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech)
 {
+	int iValue;
 	if (bForTech)
 	{
 		PROFILE("AI_buildingValue.ForTech");
 
-		return AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, 0, false, false, bForTech);
+		iValue = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, 0, false, false, bForTech);
 	}
-	return AI_buildingValueThreshold(eBuilding, iFocusFlags, 0);
+	else iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, 0);
+
+	// Toffer - Unsure why we don't cache this as well.
+	// Post process value with leader flavour.
+	if (iValue > 0 && !isHuman()) // Human assigned governors won't use leader flavour.
+	{
+		const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
+		for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
+		{
+			iValue += kOwner.AI_getFlavorValue((FlavorTypes)iI) * kBuilding.getFlavorValue(iI);
+		}
+		return std::max(1, iValue); // flavour can't make building worthless.
+	}
+	return iValue;
 }
 
 int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct)
 {
 	PROFILE_FUNC();
+
+	// Other requests (with 0 flags) can occur occassionally from other areas (such as civic evaluation) without implying a lot of locality of reference that makes the caching worthwhile.
+	if (!bIgnoreCanConstruct && !canConstruct(eBuilding) || cachedBuildingValues == NULL && iFocusFlags == 0)
+	{
+		PROFILE("AI_buildingValueThreshold.CacheMiss");
+
+		return AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold);
+	}
+	// We only pre-calculate and cache values for buildings this city can build.
+	// Only trigger a change in cache from iFocusFlags != 0 which happens at the start of building search to choose construction.
 	int iResult = -1;
 
-	// We only pre-calculate and cache values for buildings this city can build
-	// Only trigger a change in cached city from iFocusFlags != 0 which happens at the start
-	//	of building search to choose construction.  Other requests (with 0 flags) can occur
-	//	occassionally from other areas (such as civic evaluation) without implying a lot of locality
-	//	of reference that makes the caching worthwhile
-	if ((bIgnoreCanConstruct || canConstruct(eBuilding)) && (cachedBuildingValues != NULL || iFocusFlags != 0))
+	if (cachedBuildingValues == NULL)
 	{
-		if (cachedBuildingValues == NULL)
-		{
-			OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
-			cachedBuildingValues = new BuildingValueCache(this);
-		}
+		OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
+		cachedBuildingValues = new BuildingValueCache(this);
+	}
 
-		if (iFocusFlags == 0)
-		{
-			iFocusFlags = BUILDINGFOCUS_CONSIDER_ANY;
-		}
-		if ((cachedBuildingValues->m_iCachedFlags & iFocusFlags) != iFocusFlags)
-		{
-			CalculateAllBuildingValues(~cachedBuildingValues->m_iCachedFlags & iFocusFlags);
-		}
+	if (iFocusFlags == 0)
+	{
+		iFocusFlags = BUILDINGFOCUS_CONSIDER_ANY;
+	}
 
-	retry:
-		iResult = cachedBuildingValues->GetValue(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+	if ((cachedBuildingValues->m_iCachedFlags & iFocusFlags) != iFocusFlags)
+	{
+		CalculateAllBuildingValues(~cachedBuildingValues->m_iCachedFlags & iFocusFlags);
+	}
 
-		if (iResult != -1)
-		{
-#ifdef VALIDATE_BUILDING_CACHE_CONSISTENCY
-			FAssertMsg(
-				AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold) == iResult,
-				"Cached building value result mismatch!!\n"
-			);
-#endif
-		}
-		else if (cachedBuildingValues->m_bIncomplete)
+retry:
+	iResult = cachedBuildingValues->GetValue(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+
+	if (iResult == -1)
+	{
+		if (cachedBuildingValues->m_bIncomplete)
 		{
 			const int iCachedFlags = cachedBuildingValues->m_iCachedFlags;
 			cachedBuildingValues->m_iCachedFlags = 0;
@@ -4786,39 +4799,26 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 			cachedBuildingValues->m_bIncomplete = false;
 			goto retry;
 		}
-		else if (bIgnoreCanConstruct)
+		if (!bIgnoreCanConstruct)
 		{
-			iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+			return 0;
 		}
-		else iResult = 0;
+		return AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
 	}
-	else
-	{
-		PROFILE("AI_buildingValueThreshold.CacheMiss");
-
-		iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold);
-	}
-	if (!isHuman() && iResult > 0)
-	{
-		const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
-		for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
-		{
-			iResult = std::max(1, iResult + kOwner.AI_getFlavorValue((FlavorTypes)iI) * kBuilding.getFlavorValue(iI));
-		}
-	}
+	// Note: this assert trigger a lot.
+#ifdef VALIDATE_BUILDING_CACHE_CONSISTENCY
+	FAssertMsg(AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold) == iResult, "Cached building value result mismatch!!\n");
+#endif
 	return iResult;
 }
 
 // XXX should some of these count cities, buildings, etc. based on teams (because wonders are shared...)
 // XXX in general, this function needs to be more sensitive to what makes this city unique (more likely to build airports if there already is a harbor...)
 //
-// KOSHLING - this routine is no longer used for most building evaluations during city production
-// determination.  For efficiency reasons this now pre-calculates most of the needed values and then
-// assembles the final result from cached partial results.  For this reason if you are making changes to this routine
-// you must also make equivalent changes to CalculateAllBuildingValues() also in this file (it mirriors the calculations
-// in a fairly obvious and direct way)
+// KOSHLING - this routine is no longer used for most building evaluations during city production determination.
+//	For efficiency reasons this now pre-calculates most of the needed values and then assembles the final result from cached partial results.
+//	For this reason if you are making changes to this routine you must also make equivalent changes to CalculateAllBuildingValues() also in this file
+//	It mirriors the calculations in a fairly obvious and direct way.
 int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanBuildReplacement, bool bForTech)
 {
 	PROFILE_FUNC();
