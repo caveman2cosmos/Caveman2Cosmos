@@ -26,7 +26,7 @@
 			<Description>TXT_KEY_BUILD_JUMPLANE</Description>
 			<PrereqTech>TECH_TELEPORTATION</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>130</iCost>
+			<iCost>150</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_JUMPLANE</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -42,7 +42,7 @@
 			<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
 			<!-- <ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech> -->
 			<iTime>1000</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -626,7 +626,7 @@
 			<Description>TXT_KEY_BUILD_SANITIZE</Description>
 			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 			<iTime>600</iTime>
-			<iCost>130</iCost>
+			<iCost>150</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -685,7 +685,7 @@
 			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -708,7 +708,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -1520,7 +1520,7 @@
 			<Description>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Description>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>130</iCost>
+			<iCost>150</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2480,7 +2480,7 @@
 			<Description>TXT_KEY_BUILD_CORE_MINE</Description>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iTime>1600</iTime>
-			<iCost>330</iCost>
+			<iCost>300</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -3236,7 +3236,7 @@
 			<Description>TXT_KEY_BUILD_HYBRID_FOREST</Description>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYBRID_FOREST</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -3313,7 +3313,7 @@
 			<Description>TXT_KEY_BUILD_SUBURBS</Description>
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>270</iCost>
+			<iCost>250</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3568,7 +3568,7 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>130</iCost>
+			<iCost>150</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3823,7 +3823,7 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_LIFESTYLE</ObsoleteTech>
 			<iTime>800</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_VILLAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4830,7 +4830,7 @@
 			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Description>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6215,7 +6215,7 @@
 			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6299,7 +6299,7 @@
 			<Description>TXT_KEY_BUILD_COMMAND_CENTER</Description>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6315,7 +6315,7 @@
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<iTime>1200</iTime>
-			<iCost>330</iCost>
+			<iCost>300</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6331,7 +6331,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -7399,7 +7399,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_LUSH</ImprovementType>
 			<TerrainChange>TERRAIN_LUSH</TerrainChange>
@@ -7641,7 +7641,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_GRASS</ImprovementType>
 			<TerrainChange>TERRAIN_GRASSLAND</TerrainChange>
@@ -7883,7 +7883,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PLAINS</ImprovementType>
 			<TerrainChange>TERRAIN_PLAINS</TerrainChange>
@@ -8125,7 +8125,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_ROCKY</ImprovementType>
 			<TerrainChange>TERRAIN_ROCKY</TerrainChange>
@@ -8367,7 +8367,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_MUDDY</ImprovementType>
 			<TerrainChange>TERRAIN_MUDDY</TerrainChange>
@@ -8609,7 +8609,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TAIGA</ImprovementType>
 			<TerrainChange>TERRAIN_TAIGA</TerrainChange>
@@ -8851,7 +8851,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TUNDRA</ImprovementType>
 			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
@@ -9093,7 +9093,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PERMAFROST</ImprovementType>
 			<TerrainChange>TERRAIN_PERMAFROST</TerrainChange>
@@ -9335,7 +9335,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_SCRUB</ImprovementType>
 			<TerrainChange>TERRAIN_SCRUB</TerrainChange>
@@ -9577,7 +9577,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_DESERT</ImprovementType>
 			<TerrainChange>TERRAIN_DESERT</TerrainChange>
@@ -9819,7 +9819,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>670</iCost>
+			<iCost>700</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_DUNES</ImprovementType>
 			<TerrainChange>TERRAIN_DUNES</TerrainChange>
@@ -10062,7 +10062,7 @@
 			<Description>TXT_KEY_BUILD_TUNNEL</Description>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>270</iCost>
+			<iCost>250</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_TUNNEL</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -10785,7 +10785,7 @@
 			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN</Description>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>65</iCost>
+			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10902,7 +10902,7 @@
 			<Help>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>330</iCost>
+			<iCost>300</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>

@@ -88,6 +88,7 @@ enum DirectionTypes
 	DIRECTION_WEST_MASK = 1 << DIRECTION_WEST,
 	DIRECTION_NORTHWEST_MASK = 1 << DIRECTION_NORTHWEST,
 };
+typedef fixed_enum_range<DirectionTypes, int, DIRECTION_NORTH, NUM_DIRECTION_TYPES> DirectionTypesRange;
 
 enum CardinalDirectionTypes
 {
@@ -100,6 +101,8 @@ enum CardinalDirectionTypes
 
 	NUM_CARDINALDIRECTION_TYPES
 };
+typedef fixed_enum_range<CardinalDirectionTypes, int, CARDINALDIRECTION_NORTH, NUM_CARDINALDIRECTION_TYPES> CardinalDirectionTypesRange;
+
 
 enum RotationTypes
 {
@@ -114,6 +117,8 @@ enum RotationTypes
 	ROTATE_180CW_MASK	= 1 << ROTATE_180CW,
 	ROTATE_270CW_MASK	= 1 << ROTATE_270CW,
 };
+typedef fixed_enum_range<RotationTypes, int, ROTATE_NONE, NUM_ROTATION_TYPES> RotationTypesRange;
+
 
 // camera wrap helper
 enum WrapDirection
@@ -1176,11 +1181,17 @@ enum TeamTypes
 {
 	NO_TEAM = -1,
 };
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_TEAMS> TeamTypesRange;
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_PC_TEAMS> TeamTypesPCRange;
+typedef fixed_enum_range<TeamTypes, int, NPC1_TEAM, MAX_TEAMS> TeamTypesNPCRange;
 
 enum PlayerTypes
 {
 	NO_PLAYER = -1,
 };
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PLAYERS> PlayerTypesRange;
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PC_PLAYERS> PlayerTypesPCRange;
+typedef fixed_enum_range<PlayerTypes, int, NPC1_PLAYER, MAX_PLAYERS> PlayerTypesNPCRange;
 
 enum TraitTypes
 {
@@ -3118,6 +3129,7 @@ enum GlobeLayerResourceOptionTypes
 	SHOW_RESOURCES_GROWTH,
 	SHOW_RESOURCES_PRODUCTION,
 	SHOW_RESOURCES_MISC,
+	SHOW_RESOURCES_UNCLAIMED,
 
 	NUM_RESOURCE_OPTION_TYPES
 };

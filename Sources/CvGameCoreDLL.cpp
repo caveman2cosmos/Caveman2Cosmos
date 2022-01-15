@@ -2,6 +2,10 @@
 #include "CvGlobals.h"
 #include <psapi.h>
 
+#ifdef USE_INTERNAL_PROFILER
+static CRITICAL_SECTION cSampleSection;
+#endif
+
 std::string modDir;
 
 // BUG - EXE/DLL Paths - start
@@ -43,6 +47,10 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 
 		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up
 		OutputDebugString("[C2C] DLL_PROCESS_ATTACH\n");
+
+#ifdef USE_INTERNAL_PROFILER
+		InitializeCriticalSectionAndSpinCount(&cSampleSection, 2000);
+#endif
 
 		// set timer precision
 		MMRESULT iTimeSet = timeBeginPeriod(1);		// set timeGetTime and sleep resolution to 1 ms, otherwise it's 10-16ms

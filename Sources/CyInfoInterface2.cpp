@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 //
 // Python interface for info classes (formerly structs)
 // These are simple enough to be exposed directly - no wrappers
@@ -170,7 +171,6 @@ void CyInfoPythonInterface2()
 		.def("isPeakImprovement", &CvImprovementInfo::isPeakImprovement, "bool ()")
 		.def("isWaterImprovement", &CvImprovementInfo::isWaterImprovement, "bool ()")
 		.def("isGoody", &CvImprovementInfo::isGoody, "bool ()")
-		.def("isPermanent", &CvImprovementInfo::isPermanent, "bool ()")
 		.def("isOutsideBorders", &CvImprovementInfo::isOutsideBorders, "bool ()")
 		.def("getArtDefineTag", &CvImprovementInfo::getArtDefineTag, "string ()")
 

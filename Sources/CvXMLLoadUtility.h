@@ -18,6 +18,7 @@
 
 #include "CvGlobals.h"
 #include "FVariableSystem.h"
+#include "CvGameCoreDll.h"
 
 class CvGameText;
 class CvCacheObject;

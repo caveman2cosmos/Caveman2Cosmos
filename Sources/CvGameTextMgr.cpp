@@ -14,6 +14,7 @@
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CounterSet.h"
@@ -5410,16 +5411,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 
 						//XP calculations
-
-						int iExperience;
-						int iWithdrawXP;//thanks to phungus420
 						int iAttackerWithdrawalProbability = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 						int iCombatLimitWithdrawalProbability = 100 - pDefender->pursuitVSOpponentProbTotal(pAttacker);
-						iWithdrawXP = pAttacker->getExperiencefromWithdrawal(iAttackerWithdrawalProbability);//thanks to phungus420
+						int iWithdrawXP = pAttacker->getExperiencefromWithdrawal(iAttackerWithdrawalProbability) / 100; //thanks to phungus420
 
+						int iExperience;
 						if (pAttacker->combatLimit() < 100)
 						{
-							iExperience = pAttacker->getExperiencefromWithdrawal(iCombatLimitWithdrawalProbability);
+							iExperience = pAttacker->getExperiencefromWithdrawal(iCombatLimitWithdrawalProbability) / 100;
 						}
 						else
 						{
@@ -5435,9 +5434,9 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 								GC.getMAX_EXPERIENCE_PER_COMBAT()
 							)
 						);
-						int iBonusAttackerXP = (iExperience * iAttackerExperienceModifier) / 100;
-						int iBonusDefenderXP = (iDefExperienceKill * iDefenderExperienceModifier) / 100;
-						int iBonusWithdrawXP = (pAttacker->getExperiencefromWithdrawal(iAttackerWithdrawalProbability) * iAttackerExperienceModifier) / 100;
+						int iBonusAttackerXP = iExperience * iAttackerExperienceModifier / 100;
+						int iBonusDefenderXP = iDefExperienceKill * iDefenderExperienceModifier / 100;
+						int iBonusWithdrawXP = pAttacker->getExperiencefromWithdrawal(iAttackerWithdrawalProbability) * iAttackerExperienceModifier;
 
 						// Toffer - Note: Doesn't take into account that some units ignore this limit.
 						if (pDefender->isNPC())
@@ -5783,9 +5782,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						}
 						else
 						{
-							int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
-							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
-								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * PullOutOdds, pAttacker->getExperiencefromWithdrawal(iWithdr));
+							const int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
+							szTempBuffer.Format(
+								L": " SETCOLR L"%.2f%% " L"%.2f" ENDCOLR,
+								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * PullOutOdds,
+								pAttacker->getExperiencefromWithdrawal(iWithdr) / 100.0f
+							);
 							//iExperience,TEXT_COLOR("COLOR_POSITIVE_TEXT"), E_HP_Att_Victory/AttackerKillOdds);
 							szString.append(gDLL->getText("TXT_ACO_WITHDRAW"));
 							szString.append(szTempBuffer.GetCString());
@@ -5823,8 +5825,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szString.append(NEWLINE);
-							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " ENDCOLR SETCOLR L"%d" ENDCOLR,
-								TEXT_COLOR("COLOR_UNIT_TEXT"), 100.0f * RetreatOdds, TEXT_COLOR("COLOR_POSITIVE_TEXT"), pAttacker->getExperiencefromWithdrawal(iWithdr));
+							szTempBuffer.Format(
+								L": " SETCOLR L"%.2f%% " ENDCOLR SETCOLR L"%.2f" ENDCOLR,
+								TEXT_COLOR("COLOR_UNIT_TEXT"), 100.0f * RetreatOdds, TEXT_COLOR("COLOR_POSITIVE_TEXT"),
+								pAttacker->getExperiencefromWithdrawal(iWithdr) / 100.0f
+							);
 							szString.append(gDLL->getText("TXT_ACO_RETREAT"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
@@ -23563,7 +23568,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (bCity && GC.getGame().isDebugMode() && gDLL->ctrlKey())
 		{
-			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding)));
+			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", pCity->AI_buildingValue(eBuilding, 0, false, true)));
 		}
 	}
 
@@ -34444,6 +34449,9 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 			break;
 		case SHOW_RESOURCES_MISC:
 			strName = gDLL->getText("TXT_KEY_MISC");
+			break;
+		case SHOW_RESOURCES_UNCLAIMED:
+			strName = gDLL->getText("TXT_KEY_UNCLAIMED");
 			break;
 		}
 		break;

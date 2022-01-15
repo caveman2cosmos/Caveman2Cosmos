@@ -2372,7 +2372,6 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-			<bPermanent>1</bPermanent>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -9594,7 +9593,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
-			<bPermanent>1</bPermanent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>

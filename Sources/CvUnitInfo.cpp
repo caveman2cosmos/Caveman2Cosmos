@@ -12,6 +12,7 @@
 #include "CvArtFileMgr.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvInfoUtil.h"
 #include "CvPlayerAI.h"

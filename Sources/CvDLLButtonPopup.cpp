@@ -10,6 +10,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"

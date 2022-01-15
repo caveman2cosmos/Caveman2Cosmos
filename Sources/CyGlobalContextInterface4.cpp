@@ -2,9 +2,10 @@
 #include "CyGlobalContext.h"
 #include "CvInfos.h"
 
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(CyGlobalContext_getInfoTypeForString_overloads, CyGlobalContext::getInfoTypeForString, 1, 2)
+
 //
 // published python interface for CyGlobalContext
-// Author - Mustafa Thamer
 //
 
 void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
@@ -68,8 +69,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getColorInfo", &CyGlobalContext::getColorInfo, python::return_value_policy<python::reference_existing_object>(), "ColorInfo (int id)")
 
-		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, "int (string) - returns the info index with the matching type string")
-		.def("getInfoTypeForStringWithHiddenAssert", &CyGlobalContext::getInfoTypeForStringWithHiddenAssert, "int (string) - returns the info index with the matching type string")
+		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, CyGlobalContext_getInfoTypeForString_overloads())
 
 		.def("getNumPlayerColorInfos", &CyGlobalContext::getNumPlayerColorInfos, "int () - Returns number of PlayerColorInfos")
 		.def("getPlayerColorInfo", &CyGlobalContext::getPlayerColorInfo, python::return_value_policy<python::reference_existing_object>(), "PlayerColorInfo (int id)")

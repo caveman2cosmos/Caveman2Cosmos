@@ -11,6 +11,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
@@ -2119,8 +2120,8 @@ int CvPlayerAI::AI_yieldWeight(YieldTypes eYield) const
 {
 	if (eYield == YIELD_PRODUCTION)
 	{
-		int iProductionModifier = 100 + (30 * std::max(0, GC.getGame().getCurrentEra() - 1) / std::max(1, (GC.getNumEraInfos() - 2)));
-		return (GC.getYieldInfo(eYield).getAIWeightPercent() * iProductionModifier) / 100;
+		const int iMod = 100 + 30 * std::max(0, GC.getGame().getCurrentEra() - 1) / std::max(1, GC.getNumEraInfos() - 2);
+		return GC.getYieldInfo(eYield).getAIWeightPercent() * iMod / 100;
 	}
 	return GC.getYieldInfo(eYield).getAIWeightPercent();
 }

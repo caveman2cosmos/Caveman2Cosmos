@@ -94,14 +94,9 @@ CyTeam* CyGlobalContext::getCyTeam(TeamTypes eTeam) const
 	return eTeam < MAX_TEAMS ? &g_cyTeams[eTeam] : NULL;
 }
 
-int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
+int CyGlobalContext::getInfoTypeForString(const char* szInfoType, bool bHideAssert) const
 {
-	return GC.getInfoTypeForString(szInfoType);
-}
-
-int CyGlobalContext::getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const
-{
-	return GC.getInfoTypeForString(szInfoType, true);
+	return GC.getInfoTypeForString(szInfoType, bHideAssert);
 }
 
 const CvMapInfo& CyGlobalContext::getMapInfo(MapTypes eMap) const

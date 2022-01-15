@@ -35,7 +35,6 @@ public:
 	bool isRequiresFeature() const;
 	bool isPeakImprovement() const;
 	bool isWaterImprovement() const;
-	bool isPermanent() const;
 	bool isOutsideBorders() const;
 	bool isMilitaryStructure() const { return m_bMilitaryStructure; }
 	bool isPlacesBonus() const { return m_bPlacesBonus; }
@@ -145,7 +144,6 @@ private:
 	bool m_bPeakImprovement;
 	bool m_bWaterImprovement;
 	bool m_bGoody;
-	bool m_bPermanent;
 	bool m_bOutsideBorders;
 	bool m_bMilitaryStructure;
 	bool m_bPlacesBonus;
