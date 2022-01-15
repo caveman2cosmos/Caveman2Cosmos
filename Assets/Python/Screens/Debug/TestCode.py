@@ -1172,8 +1172,8 @@ class TestCode:
 						aBonusHappinessChanges[REPLACED][iBonus] += iHappiness
 					for iBonus, iHealth in CvReplacedBuildingInfo.getBonusHealthChanges():
 						aBonusHealthChanges[REPLACED][iBonus] += iHealth
-					for pair in CvReplacedBuildingInfo.getFreeBonuses():
-						aExtraFreeBonuses[REPLACED][pair.first] += pair.second
+					for iBonus, iNumFree in CvReplacedBuildingInfo.getFreeBonuses():
+						aExtraFreeBonuses[REPLACED][iBonus] += iNumFree
 
 				#Building shouldn't be worse than replaced one!
 				for iBonus in xrange(GC.getNumBonusInfos()):
