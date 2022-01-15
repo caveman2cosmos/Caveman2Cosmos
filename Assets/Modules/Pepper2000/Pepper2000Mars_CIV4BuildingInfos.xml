@@ -73,8 +73,10 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_MARTIAN_ALGAE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MARTIAN_ALGAE</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -237,11 +239,13 @@
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
-			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -273,8 +277,10 @@
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MARTIAN_CROPS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MARTIAN_CROPS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -301,8 +307,10 @@
 				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
-			<FreeBonus>BONUS_MARTIAN_ELECTRONICS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MARTIAN_ELECTRONICS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -345,8 +353,10 @@
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -470,8 +480,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MARTIAN_ROCKS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MARTIAN_ROCKS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_MONUMENT</Type>
@@ -572,8 +584,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_FISH</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_ALGAE</FreeBonus>
@@ -585,6 +595,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CRAB</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FISH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -771,8 +785,10 @@
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 				<BuildingType>BUILDING_MARS_BIOFACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1021,8 +1037,10 @@
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1121,8 +1139,10 @@
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1431,8 +1451,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_LFTR</Type>
@@ -1566,8 +1588,10 @@
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1802,11 +1826,13 @@
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_MARTIAN_FRUIT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1839,8 +1865,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ZOO</Type>

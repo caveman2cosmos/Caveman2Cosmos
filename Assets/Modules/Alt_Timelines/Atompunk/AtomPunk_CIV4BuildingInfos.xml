@@ -14,8 +14,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<VicinityBonus>BONUS_URANIUM</VicinityBonus>
-			<FreeBonus>BONUS_ATOMPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_ATOMPUNK</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

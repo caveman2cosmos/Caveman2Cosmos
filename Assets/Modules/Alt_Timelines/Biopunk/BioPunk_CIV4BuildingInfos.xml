@@ -56,8 +56,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_BIOPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_BIOPUNK</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>21990</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

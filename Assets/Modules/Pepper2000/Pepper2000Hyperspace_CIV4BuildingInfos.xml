@@ -1080,8 +1080,10 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_PERSONAL_HYPERCRAFT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_PERSONAL_HYPERCRAFT</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PICARD_HORN</Type>
@@ -1379,8 +1381,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_TESSERACT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_TESSERACT</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>

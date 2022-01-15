@@ -139,9 +139,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_IRON_ORE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IRON_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TIN_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -195,11 +197,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_GOLD_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1287,8 +1291,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MITHRIL</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MITHRIL</FreeBonus>
+				<iNumFreeBonuses>3</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1311,8 +1317,10 @@
 				<iCommerce>-10</iCommerce>
 				<iCommerce>40</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEO_PYRAMID</Type>

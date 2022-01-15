@@ -1155,8 +1155,10 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BONE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_BONE</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bCenterInCity>1</bCenterInCity>
@@ -1270,8 +1272,10 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1298,8 +1302,10 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
+				<iNumFreeBonuses>3</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1768,8 +1774,10 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIDE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_HIDE</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1840,8 +1848,10 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIDE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_HIDE</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3306,8 +3316,10 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
+				<iNumFreeBonuses>3</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3344,8 +3356,10 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
+				<iNumFreeBonuses>3</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>

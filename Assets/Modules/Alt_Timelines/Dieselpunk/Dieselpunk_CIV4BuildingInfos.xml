@@ -60,8 +60,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<VicinityBonus>BONUS_OIL</VicinityBonus>
-			<FreeBonus>BONUS_DIESELPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_DIESELPUNK</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -245,8 +247,10 @@
 				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
-			<FreeBonus>BONUS_THEREMIN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonus>
+				<FreeBonus>BONUS_THEREMIN</FreeBonus>
+				<iNumFreeBonuses>1</iNumFreeBonuses>
+			</ExtraFreeBonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>

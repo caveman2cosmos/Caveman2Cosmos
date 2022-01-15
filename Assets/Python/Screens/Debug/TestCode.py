@@ -2733,6 +2733,12 @@ class TestCode:
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
 
+			if CvBuildingInfo.getFreeBonus() != -1:
+				if CvBuildingInfo.getNumExtraFreeBonuses() == 0:
+					self.log(CvBuildingInfo.getType()+" has loose free bonus")
+				elif CvBuildingInfo.getNumExtraFreeBonuses() > 0:
+					self.log(CvBuildingInfo.getType()+" has loose free bonus and extra bonuses tag")
+
 	#Check if buildings with yield income have at least minimum yield as derived from era
 	def checkBuildingMinYields(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
