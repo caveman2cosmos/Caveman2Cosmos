@@ -2713,10 +2713,6 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" has zero rate change of "+GC.getUnitInfo(CvBuildingInfo.getGreatPeopleUnitType()).getType())
 
 			#FreeBonus must be present if iNumFreeBonuses is present and viceversa.
-			if CvBuildingInfo.getFreeBonus() != -1 and CvBuildingInfo.getNumFreeBonuses() == 0:
-				self.log(CvBuildingInfo.getType()+" has free bonus tag, but actually doesn't give bonus")
-			if CvBuildingInfo.getFreeBonus() == -1 and CvBuildingInfo.getNumFreeBonuses() != 0:
-				self.log(CvBuildingInfo.getType()+" has unspecified free bonus type")
 			for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 				if CvBuildingInfo.getExtraFreeBonus(i) != -1 and CvBuildingInfo.getExtraFreeBonusNum(i) == 0:
 					self.log(CvBuildingInfo.getType()+" has extra free bonus tag, but actually doesn't give bonus")

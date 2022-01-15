@@ -167,11 +167,6 @@ int CyGame::countKnownTechNumTeams(TechTypes eTech) const
 	return m_pGame.countKnownTechNumTeams(eTech);
 }
 
-int CyGame::getNumFreeBonuses(BuildingTypes eBuilding) const
-{
-	return m_pGame.getNumFreeBonuses(eBuilding);
-}
-
 int CyGame::countReligionLevels(ReligionTypes eReligion) const
 {
 	return m_pGame.countReligionLevels(eReligion);

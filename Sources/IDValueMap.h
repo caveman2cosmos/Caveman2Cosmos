@@ -203,6 +203,16 @@ struct IDValueMap
 		return m_map.empty();
 	}
 
+	size_t size() const
+	{
+		return m_map.size();
+	}
+
+	void push_back(value_type& pair)
+	{
+		return m_map.push_back(pair);
+	}
+
 	const python::list makeList() const
 	{
 		python::list l = python::list();

@@ -3127,7 +3127,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (!bTestVisible && kBuilding.getConstructCondition() && !bExposed)
 	{
-		CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+		const CvGameObjectCity* pObject = getGameObject();
 		if (withExtraBuilding != NO_BUILDING)
 		{
 			// add the extra building and its bonuses to the override to see if they influence the construct condition of this building
@@ -3135,16 +3135,10 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			GOMOverride query = { pObject, GOM_BUILDING, withExtraBuilding, true };
 			queries.push_back(query);
 
-			const CvBuildingInfo& extraBuilding = GC.getBuildingInfo(withExtraBuilding);
 			query.GOM = GOM_BONUS;
-			query.id = extraBuilding.getFreeBonus();
-			if (query.id != NO_BONUS)
+			foreach_(const BonusModifier2& pair, GC.getBuildingInfo(withExtraBuilding).getFreeBonuses())
 			{
-				queries.push_back(query);
-			}
-			for (int iJ = 0; iJ < extraBuilding.getNumExtraFreeBonuses(); iJ++)
-			{
-				query.id = extraBuilding.getExtraFreeBonus(iJ);
+				query.id = pair.first;
 				queries.push_back(query);
 			}
 
@@ -4831,19 +4825,11 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeNoBonusCount((BonusTypes)kBuilding.getNoBonus(), iChange);
 		}
 
-		if (kBuilding.getFreeBonus() != NO_BONUS)
+		foreach_(const BonusModifier2& pair, kBuilding.getFreeBonuses())
 		{
-			changeFreeBonus((BonusTypes)kBuilding.getFreeBonus(), GC.getGame().getNumFreeBonuses(eBuilding) * iChange);
-			clearVicinityBonusCache((BonusTypes)kBuilding.getFreeBonus());
-			clearRawVicinityBonusCache((BonusTypes)kBuilding.getFreeBonus());
-		}
-
-		const int iNum = kBuilding.getNumExtraFreeBonuses();
-		for (int iI = 0; iI < iNum; iI++)
-		{
-			changeFreeBonus(kBuilding.getExtraFreeBonus(iI), kBuilding.getExtraFreeBonusNum(iI) * iChange);
-			clearVicinityBonusCache(kBuilding.getExtraFreeBonus(iI));
-			clearRawVicinityBonusCache(kBuilding.getExtraFreeBonus(iI));
+			changeFreeBonus(pair.first, pair.second * iChange);
+			clearVicinityBonusCache(pair.first);
+			clearRawVicinityBonusCache(pair.first);
 		}
 
 		if (kBuilding.getFreePromotion() != NO_PROMOTION)
@@ -9155,7 +9141,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	// Bonus
 	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappinessChanges())
 	{
-		if ((hasBonus(modifier.first) || kBuilding.getFreeBonus() == modifier.first || kBuilding.hasExtraFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
+		if ((hasBonus(modifier.first) || kBuilding.isFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
 			addGoodOrBad(modifier.second, iGood, iBad);
 		}
@@ -9330,7 +9316,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 	// Bonus
 	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealthChanges())
 	{
-		if ((hasBonus(modifier.first) || kBuilding.getFreeBonus() == modifier.first || kBuilding.hasExtraFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
+		if ((hasBonus(modifier.first) || kBuilding.isFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
 			addGoodOrBad(modifier.second, iGood, iBad);
 		}
@@ -20901,9 +20887,9 @@ static bool bonusAvailableFromBuildings(BonusTypes eBonus)
 
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			foreach_(const CvBuildingInfo* kBuilding, GC.getBuildingInfos())
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iJ).getFreeBonus() == iI || GC.getBuildingInfo((BuildingTypes)iJ).hasExtraFreeBonus((BonusTypes)iI))
+				if (kBuilding->isFreeBonus((BonusTypes)iI))
 				{
 					bBonusAvailability[iI] = true;
 					break;
@@ -20977,9 +20963,7 @@ bool CvCity::hasVicinityBonus(BonusTypes eBonus) const
 		{
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-
-				if ((kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
+				if (GC.getBuildingInfo((BuildingTypes)iI).isFreeBonus(eBonus)
 				&& getNumActiveBuilding((BuildingTypes)iI) > 0)
 				{
 					bResult = true;
@@ -21056,9 +21040,7 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 	{
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-
-			if ((kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
+			if (GC.getBuildingInfo((BuildingTypes)iI).isFreeBonus(eBonus)
 			&& getNumActiveBuilding((BuildingTypes)iI) > 0)
 			{
 				bResult = true;
