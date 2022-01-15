@@ -6487,8 +6487,9 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 			iBaseRate += iPlotChange * 3 / 4;
 		}
 	}
+
 	{
-		const int iYield = 8 * (100 * iFreeSpecialistYield + getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding));
+		const int iYield = 8 * (100 * iFreeSpecialistYield + getBaseYieldRateFromBuilding100(eYield, eBuilding));
 		if (iYield > 0)
 		{
 			iValue += std::max(1, iYield / 100);
@@ -6498,6 +6499,7 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 			iValue += std::min(-1, iYield / 100);
 		}
 	}
+
 	{
 		int iMod = kBuilding.getYieldModifier(eYield) + GET_TEAM(getTeam()).getBuildingYieldTechModifier(eYield, eBuilding);
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
@@ -14468,7 +14470,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 		(iSemiModifiedBase + aiFreeSpecialistYield[YIELD_COMMERCE]) / 8
 		+
 		getBaseYieldRateFromBuilding100(YIELD_COMMERCE, eBuilding) * 8 / 100
-		);
+	);
 
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{
