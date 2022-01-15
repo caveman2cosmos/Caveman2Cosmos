@@ -14895,7 +14895,7 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 	}
 
 	// Don't trust the math above, so I don't assume iValue will always be above zero even though the property change is a good thing
-	if (iSourceValue * kProperty.getAIWeight() > 0) 
+	if (iSourceValue * kProperty.getAIWeight() > 0)
 	{
 		return std::max(1, iValue / 100);
 	}
