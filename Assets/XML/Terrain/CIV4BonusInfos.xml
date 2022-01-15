@@ -3993,7 +3993,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CLAM</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4042,7 +4042,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CRAB</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -4101,7 +4101,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FISH</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -4183,7 +4183,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LOBSTER</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4368,7 +4368,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHRIMP</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
