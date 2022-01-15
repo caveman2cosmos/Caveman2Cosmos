@@ -3202,7 +3202,7 @@
 		<BuildInfo>
 			<Type>BUILD_STONE_TOOLS_WORKSHOP_KILL</Type>
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Description>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
@@ -10236,7 +10236,7 @@
 		<BuildInfo>
 			<Type>BUILD_FISHING_BOATS</Type>
 			<Description>TXT_KEY_BUILD_FISHING_BOATS</Description>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
