@@ -1291,10 +1291,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_MITHRIL</FreeBonus>
-				<iNumFreeBonuses>3</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MITHRIL</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1317,10 +1319,12 @@
 				<iCommerce>-10</iCommerce>
 				<iCommerce>40</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEO_PYRAMID</Type>

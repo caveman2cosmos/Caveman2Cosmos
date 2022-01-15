@@ -26,10 +26,12 @@
 				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
 				<BuildingType>BUILDING_STELLAR_FUSION_POWER_PLANT</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_AB_MATTER</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_AB_MATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADAPTED_HUMAN</Type>
@@ -644,10 +646,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_KUGELBLITZ</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_KUGELBLITZ</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKHOLE_POWER</Type>
@@ -1214,10 +1218,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_COMPUTRONIUM</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COMPUTRONIUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_PLANET</Type>
@@ -1268,10 +1274,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_CONSCIOUS_MATERIALS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CONSCIOUS_MATERIALS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSCIOUS_STAR</Type>
@@ -2258,10 +2266,12 @@
 				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BLACK_HOLE_COMPUTER</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_TIME_CRYSTALS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TIME_CRYSTALS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EVENT_HORIZON_CITY</Type>
@@ -4977,10 +4987,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARADISE_PLANET</Type>
@@ -5085,10 +5097,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_PERSONAL_STARCRAFT</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PERSONAL_STARCRAFT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHILOTE_PRODUCER</Type>
@@ -5968,10 +5982,12 @@
 				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ADVANCED_REPLICATORS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ADVANCED_REPLICATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHKADOV_THRUSTER</Type>
@@ -7039,10 +7055,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_UNOBTAINIUM</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_UNOBTAINIUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UTOPIAN_SPACE_COLONY</Type>
@@ -7093,10 +7111,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_WARP_DRIVES</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WARP_DRIVES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHITE_DWARF_COLONY</Type>
@@ -7231,10 +7251,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AEROPONICS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_YGGDRASIL_SEEDS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_YGGDRASIL_SEEDS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_BEACON</Type>

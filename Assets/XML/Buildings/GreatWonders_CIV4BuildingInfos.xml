@@ -3054,10 +3054,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iAsset>18</iAsset>
@@ -4952,10 +4954,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_CRYSTALPUNK</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CRYSTALPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_ISLAND</Type>
@@ -5800,10 +5804,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
@@ -6802,10 +6808,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_CARVED_EMU_EGGS</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARVED_EMU_EGGS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -9899,10 +9907,12 @@
 			</PrereqOrBuildings>
 			<iCost>1008</iCost>
 			<iHappiness>1</iHappiness>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_FAKE_GEMS</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FAKE_GEMS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -10555,10 +10565,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -11207,10 +11219,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_JADE_DEATH_MASKS</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_JADE_DEATH_MASKS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -12717,10 +12731,12 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_MACHU_PICCHU_PLANS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MACHU_PICCHU_PLANS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -13847,10 +13863,12 @@
 			</PrereqOrBuildings>
 			<iCost>2550</iCost>
 			<iHappiness>1</iHappiness>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_MING_VASE</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MING_VASE</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14212,10 +14230,12 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>2640</iCost>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_CRYSTAL_GLASSWARE</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CRYSTAL_GLASSWARE</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14409,10 +14429,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_GEOGLYPH_PLANS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GEOGLYPH_PLANS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -15006,10 +15028,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_NOK_SCULPTURES</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NOK_SCULPTURES</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iAsset>10</iAsset>
@@ -15470,10 +15494,12 @@
 				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16999,10 +17025,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_RED_AND_BLACK_CERAMICS</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RED_AND_BLACK_CERAMICS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -17088,10 +17116,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_RIVERROUGE</MovieDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
-				<iNumFreeBonuses>10</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
+					<iNumFreeBonuses>10</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bRiver>1</bRiver>
@@ -17191,10 +17221,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -18853,10 +18885,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_SPACEPUNK</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SPACEPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_ELEVATOR</Type>
@@ -19489,10 +19523,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_STARPUNK</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STARPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARTRAM</Type>
@@ -19656,10 +19692,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_FINE_STONEWARE</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FINE_STONEWARE</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -19873,10 +19911,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HAWAIIAN_SURFBOARDS</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HAWAIIAN_SURFBOARDS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -20596,10 +20636,12 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1296</iCost>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
-				<iNumFreeBonuses>6</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -22260,10 +22302,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
-				<iNumFreeBonuses>3</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -22468,10 +22512,12 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>7080</iCost>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
-				<iNumFreeBonuses>3</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>

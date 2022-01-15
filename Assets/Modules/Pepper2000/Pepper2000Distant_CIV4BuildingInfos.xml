@@ -43,10 +43,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ARTISAN_PLANETS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ARTISAN_PLANETS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BASILISK</Type>
@@ -830,10 +832,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NON_ORIENTABLE_WORMHOLE</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAYERED_WORLD</Type>

@@ -58,10 +58,12 @@
 				<Bonus>BONUS_HUMAN_MOD_LUNARIS</Bonus>
 				<Bonus>BONUS_HUMAN_MOD_MARTIAN</Bonus>
 			</PrereqBonuses>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_ALIEN_HYBRID</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ALIEN_HYBRID</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -133,10 +135,12 @@
 				<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_ARCHAILECT</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ARCHAILECT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -155,10 +159,12 @@
 			<PrereqTech>TECH_ATEMPORAL_BEINGS</PrereqTech>
 			<iCost>53910</iCost>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_ATEMPORAL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ATEMPORAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Type>
@@ -203,10 +209,12 @@
 			<iCost>10110</iCost>
 			<FreeBuilding>BUILDING_APPLIED_PSYCHOLOGY_LAB</FreeBuilding>
 			<Bonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLD_TOLERANCE</Type>
@@ -238,10 +246,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
@@ -266,10 +276,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			</PrereqBonuses>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -288,10 +300,12 @@
 			<PrereqTech>TECH_GENE_JURISPRUDENCE</PrereqTech>
 			<iCost>7050</iCost>
 			<Bonus>BONUS_HUMAN_MOD_GENE_EDITING</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_IDENTITY</Type>
@@ -313,10 +327,12 @@
 				<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -344,10 +360,12 @@
 				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_CELLPHONES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -416,10 +434,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			</PrereqBonuses>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_ENLIGHTENED</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ENLIGHTENED</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENE_EDITING</Type>
@@ -440,10 +460,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STEM_CELL_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -470,10 +492,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_GILLS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_GILLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEAT_TOLERANCE</Type>
@@ -499,10 +523,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
@@ -550,10 +576,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROGEN_PEROXIDE_LIFE</Type>
@@ -649,10 +677,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Bonus>
 			</PrereqBonuses>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_IMMORTAL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_IMMORTAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
@@ -674,10 +704,12 @@
 				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -704,10 +736,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NANOMORPHISM</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_INFORMATION_BASED</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_INFORMATION_BASED</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUPITER_CLOUD_LIFE</Type>
@@ -810,10 +844,12 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_LUNARIS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_LUNARIS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN</Type>
@@ -863,10 +899,12 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -951,10 +989,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_METAPHYSICAL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_METAPHYSICAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METHANE_LIFE</Type>
@@ -1020,10 +1060,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_NANOMORPHISM</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NANOMORPHISM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NONSPATIAL</Type>
@@ -1049,10 +1091,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOVEL_SENSES</Type>
@@ -1073,10 +1117,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_NEUROIMPLANTS</Bonus>
 			</PrereqBonuses>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_NOVEL_SENSES</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NOVEL_SENSES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAN_DIMENSIONAL_LIFE</Type>
@@ -1157,10 +1203,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_INFORMATION_BASED</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_PURE_ENERGY</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_PURE_ENERGY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
@@ -1186,10 +1234,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROBOTIC_BODY</Type>
@@ -1221,10 +1271,12 @@
 				<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1441,10 +1493,12 @@
 				<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_INFORMATION_BASED</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_TRANSAPIENT</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_TRANSAPIENT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1497,10 +1551,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_WINGS</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_WINGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_G_ADAPTATION</Type>
@@ -1526,10 +1582,12 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

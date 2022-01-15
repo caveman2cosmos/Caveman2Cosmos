@@ -180,10 +180,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ASTEROID_MINE</Type>
@@ -431,10 +433,12 @@
 				<BuildingType>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_GOV</Type>
@@ -768,10 +772,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SATELLITE_FACTORY</Type>

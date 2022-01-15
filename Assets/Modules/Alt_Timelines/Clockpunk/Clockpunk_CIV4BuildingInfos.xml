@@ -96,10 +96,12 @@
 			</MapCategoryTypes>
 			<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<ExtraFreeBonus>
-				<FreeBonus>BONUS_CLOCKPUNK</FreeBonus>
-				<iNumFreeBonuses>1</iNumFreeBonuses>
-			</ExtraFreeBonus>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CLOCKPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>2280</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>5</iAsset>
