@@ -5440,20 +5440,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 				if ((!isDevelopingCity() || isCapital()) && kBuilding.EnablesUnits())
 				{
-					CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+					const CvGameObjectCity* pObject = getGameObject();
 					// add the extra building and its bonuses to the override to see if they influence the train condition of a unit
 					std::vector<GOMOverride> queries;
 					GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 					queries.push_back(query);
 					query.GOM = GOM_BONUS;
-					query.id = kBuilding.getFreeBonus();
-					if (query.id != NO_BONUS)
+					foreach_(const BonusTypes eFreeBonus, kBuilding.getFreeBonuses() | map_keys)
 					{
-						queries.push_back(query);
-					}
-					for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-					{
-						query.id = kBuilding.getExtraFreeBonus(iJ);
+						query.id = eFreeBonus;
 						queries.push_back(query);
 					}
 
@@ -5485,7 +5480,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							bool bUnitIsBonusEnabled = true;
 							if (kUnit.getPrereqAndBonus() != NO_BONUS && !hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 							{
-								if (isFreeBonusOfBuilding(kBuilding, (BonusTypes)kUnit.getPrereqAndBonus()))
+								if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 								{
 									bUnitIsEnabler = true;
 								}
@@ -5507,7 +5502,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									bHasORBonusAlready = true;
 								}
-								else if (isFreeBonusOfBuilding(kBuilding, eXtraFreeBonus))
+								else if (kBuilding.getFreeBonuses().hasValue(eXtraFreeBonus))
 								{
 									bFreeBonusIsORBonus = true;
 								}
@@ -5805,26 +5800,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue++;
 				}
 
-				if (kBuilding.getFreeBonus() != NO_BONUS)
+				foreach_(const BonusModifier2& pair, kBuilding.getFreeBonuses())
 				{
 					//	If we have spares adding another doesn't do anything that scales by city count - only
 					//	the first one does that.  Furthermore as spares rack up even their trade value decreases
 					iValue += (
-						100 * kOwner.AI_bonusVal((BonusTypes)kBuilding.getFreeBonus(), 1) * kBuilding.getNumFreeBonuses()
-						* (kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()) == 0 ? iNumCities : 1)
+						100 * kOwner.AI_bonusVal(pair.first, 1) * pair.second
+						* (kOwner.getNumTradeableBonuses(pair.first) == 0 ? iNumCities : 1)
 						)
-						/ (100 * std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus())));
-				}
-
-				for (int iI = 0; iI < kBuilding.getNumExtraFreeBonuses(); iI++)
-				{
-					//	If we have spares adding another doesn't do anything that scales by city count - only
-					//	the first one does that.  Furthermore as spares rack up even their trade value decreases
-					iValue += (
-						100 * kOwner.AI_bonusVal((BonusTypes)kBuilding.getExtraFreeBonus(iI), 1) * kBuilding.getExtraFreeBonusNum(iI)
-						* (kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI)) == 0 ? iNumCities : 1)
-						)
-						/ (100 * std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI))));
+						/ (100 * std::max(1, kOwner.getNumTradeableBonuses(pair.first)));
 				}
 
 				if (kBuilding.getNoBonus() != NO_BONUS)
