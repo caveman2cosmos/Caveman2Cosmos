@@ -2080,16 +2080,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
 
-	// Matt: Todo - Switch any use of the FreeBonus tag in the xml to ExtraFreeBonuses. Delete the following code when complete.
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeBonus");
-	const int iFreeBonus = pXML->GetInfoClass(szTextVal);
-	if (iFreeBonus > NO_BONUS)
-	{
-		int iNumFreeBonuses = 0;
-		pXML->GetOptionalChildXmlValByName(&iNumFreeBonuses, L"iNumFreeBonuses");
-		m_freeBonuses.push_back(std::make_pair((BonusTypes)iFreeBonus, iNumFreeBonuses));
-	}
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion");
 	m_iFreePromotion = pXML->GetInfoClass(szTextVal);
 
