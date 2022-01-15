@@ -4726,12 +4726,8 @@ public:
 };
 
 
-int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bUncached)
+int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech)
 {
-	if (bUncached)
-	{
-		return AI_buildingValueThresholdOriginalUncached(eBuilding, iFocusFlags, 0, false, false, bForTech);
-	}
 	if (bForTech)
 	{
 		PROFILE("AI_buildingValue.ForTech");
