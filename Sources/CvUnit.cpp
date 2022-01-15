@@ -29811,7 +29811,7 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 		{
 			applyDynamicXP(
 				getEngagementDynamicXP(
-					pDefender, iAttackerWinOdds,
+					pDefender, GC.getCOMBAT_DIE_SIDES() - iAttackerWinOdds,
 					iDefenderInitialDamage,
 					iAttackerInitialDamage,
 					50 * defenseXPValue()
@@ -29825,8 +29825,8 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 			pDefender->applyDynamicXP(
 				pDefender->getEngagementDynamicXP(
 					this, iAttackerWinOdds,
-					iDefenderInitialDamage,
 					iAttackerInitialDamage,
+					iDefenderInitialDamage,
 					50 * pDefender->defenseXPValue()
 				),
 				pPlot->getOwner() == pDefender->getOwner(),
@@ -29856,7 +29856,7 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 	}
 }
 
-int CvUnit::getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamage, const int iInitialDamageEnemy, const int iMaxXP) const
+int CvUnit::getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamageEnemy, const int iInitialDamage, const int iMaxXP) const
 {
 	const int iHealthPercentLost = 1000 - (getMaxHP() - getDamage()) * 1000 / (getMaxHP() - iInitialDamage);
 	const int iHealthPercentLostEnemy = 1000 - (enemy->getMaxHP() - enemy->getDamage()) * 1000 / (enemy->getMaxHP() - iInitialDamageEnemy);
