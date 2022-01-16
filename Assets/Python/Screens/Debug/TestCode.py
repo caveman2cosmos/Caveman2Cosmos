@@ -50,6 +50,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirementsReplacements, "Unit - check building requirement replacements", "Checks if unit has building requirement, that gets replaced")
+		self.main.addTestCode(screen, self.checkUnitAis, "Unit - Check default and general unit AIs", "Checks if unit default AI is listed in unit AIs")
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
 		self.main.addTestCode(screen, self.checkCivicImprovementReplacements, "Civic - check potential improvement replacements", "Checks replacements of improvements in civics")
@@ -1161,8 +1162,8 @@ class TestCode:
 					aBonusHappinessChanges[BASE][iBonus] += iHappiness
 				for iBonus, iHealth in CvBuildingInfo.getBonusHealthChanges():
 					aBonusHealthChanges[BASE][iBonus] += iHealth
-				for iBonus in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-					aExtraFreeBonuses[BASE][CvBuildingInfo.getExtraFreeBonus(iBonus)] += CvBuildingInfo.getExtraFreeBonusNum(iBonus)
+				for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
+					aExtraFreeBonuses[BASE][iBonus] += iNumFree
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
@@ -1172,8 +1173,8 @@ class TestCode:
 						aBonusHappinessChanges[REPLACED][iBonus] += iHappiness
 					for iBonus, iHealth in CvReplacedBuildingInfo.getBonusHealthChanges():
 						aBonusHealthChanges[REPLACED][iBonus] += iHealth
-					for iBonus in xrange(CvReplacedBuildingInfo.getNumExtraFreeBonuses()):
-						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getExtraFreeBonus(iBonus)] += CvReplacedBuildingInfo.getExtraFreeBonusNum(iBonus)
+					for iBonus, iNumFree in CvReplacedBuildingInfo.getFreeBonuses():
+						aExtraFreeBonuses[REPLACED][iBonus] += iNumFree
 
 				#Building shouldn't be worse than replaced one!
 				for iBonus in xrange(GC.getNumBonusInfos()):
@@ -2119,8 +2120,7 @@ class TestCode:
 
 			#<ExtraFreeBonuses>
 			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements - those are subdued animal rewards most commonly
-				for iBuildingProducer in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-					iBonus = CvBuildingInfo.getExtraFreeBonus(iBuildingProducer)
+				for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
 					if aBonusList[iBonus] == -1:
 						aBonusList[iBonus] = iTechLoc
 					elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
@@ -2704,10 +2704,10 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" has zero rate change of "+GC.getUnitInfo(CvBuildingInfo.getGreatPeopleUnitType()).getType())
 
 			#FreeBonus must be present if iNumFreeBonuses is present and viceversa.
-			for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-				if CvBuildingInfo.getExtraFreeBonus(i) != -1 and CvBuildingInfo.getExtraFreeBonusNum(i) == 0:
+			for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
+				if iBonus != -1 and iNumFree == 0:
 					self.log(CvBuildingInfo.getType()+" has extra free bonus tag, but actually doesn't give bonus")
-				if CvBuildingInfo.getExtraFreeBonus(i) == -1 and CvBuildingInfo.getExtraFreeBonusNum(i) != 0:
+				if iBonus == -1 and iNumFree != 0:
 					self.log(CvBuildingInfo.getType()+" has unspecified extra free bonus type")
 
 			#GlobalBuildingExtraCommerces is meant to be placed on wonders
@@ -3128,6 +3128,16 @@ class TestCode:
 			if len(aBuildingTypeList) > 0:
 				self.log(CvUnitInfo.getType()+" requires (GOM OR) "+str(aBuildingTypeList))
 
+	#Checks if unit default AI is listed in unit AIs
+	def checkUnitAis(self):
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+
+			iDefaultAI = CvUnitInfo.getDefaultUnitAIType()
+			if not CvUnitInfo.getUnitAIType(iDefaultAI):
+				self.log(CvUnitInfo.getType()+" doesn't have UnitAi of DefaultAI")
+
+
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
@@ -3195,13 +3205,7 @@ class TestCode:
 
 					#Earth bonus producers should always have replacements, if its regular manufactured one, ignore wonders in this case
 					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding):
-						bIsBonusPoducer = False
-						for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-							if CvBuildingInfo.getExtraFreeBonus(i) == iBonus:
-								bIsBonusPoducer = True
-								break
-
-						if bIsBonusPoducer and CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0:
+						if iBonus in CvBuildingInfo.getFreeBonuses() and CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0:
 							self.log(CvBonusInfo.getType()+" producer "+CvBuildingInfo.getType()+" is standalone")
 
 	#Civic - check if civic yield bonus for improvement is carried into its upgrade

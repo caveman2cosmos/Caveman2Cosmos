@@ -43,8 +43,6 @@ m_iObsoleteTech(NO_TECH),
 m_iPrereqAndTech(NO_TECH),
 m_iNoBonus(NO_BONUS),
 m_iPowerBonus(NO_BONUS),
-m_iFreeBonus(NO_BONUS),
-m_iNumFreeBonuses(0),
 m_iFreeBuilding(NO_BUILDING),
 m_iFreeAreaBuilding(NO_BUILDING),
 m_iFreePromotion(NO_PROMOTION),
@@ -414,26 +412,6 @@ int CvBuildingInfo::getVictoryThreshold(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i);
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
-}
-
-BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
-{
-	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
-	return m_aExtraFreeBonuses[i].first;
-}
-
-int CvBuildingInfo::getExtraFreeBonusNum(int i) const
-{
-	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i);
-	return m_aExtraFreeBonuses[i].second;
-}
-
-bool CvBuildingInfo::hasExtraFreeBonus(BonusTypes eBonus) const
-{
-	for(unsigned int i=0; i<m_aExtraFreeBonuses.size(); i++)
-		if (m_aExtraFreeBonuses[i].first == eBonus)
-			return true;
-	return false;
 }
 
 int CvBuildingInfo::getYieldChange(int i) const
@@ -1488,24 +1466,6 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 	return m_bEnablesOtherBuildings;
 }
 
-bool CvBuildingInfo::isFreeBonusOfBuilding(BonusTypes eBonus) const
-{
-	if ( getFreeBonus() == eBonus )
-	{
-		return true;
-	}
-
-	for( int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++ )
-	{
-		if ( getExtraFreeBonus(iJ) == eBonus )
-		{
-			return true;
-		}
-	}
-
-	return false;
-}
-
 
 namespace CvBuildingInternal
 {
@@ -1518,14 +1478,9 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
+			query.id = kFreeBonus.first;
 			queries.push_back(query);
 		}
 
@@ -1538,9 +1493,7 @@ namespace CvBuildingInternal
 			}
 		}
 
-		const BonusTypes eFreeBonus = (BonusTypes)kBuilding.getFreeBonus();
-
-		if (eFreeBonus != NO_BONUS)
+		foreach_(const BonusTypes eFreeBonus, kBuilding.getFreeBonuses() | map_keys)
 		{
 			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 			{
@@ -1563,14 +1516,9 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
+			query.id = kFreeBonus.first;
 			queries.push_back(query);
 		}
 
@@ -1597,14 +1545,14 @@ namespace CvBuildingInternal
 				}
 			}
 
-			if (kUnit.getPrereqAndBonus() != NO_BONUS && kBuilding.isFreeBonusOfBuilding((BonusTypes)kUnit.getPrereqAndBonus()))
+			if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 			{
 				return true;
 			}
 
-			foreach_(const BonusTypes eXtraFreeBonus, kUnit.getPrereqOrBonuses())
+			foreach_(const BonusTypes eBonus, kUnit.getPrereqOrBonuses())
 			{
-				if (kBuilding.isFreeBonusOfBuilding(eXtraFreeBonus))
+				if (kBuilding.getFreeBonuses().hasValue(eBonus))
 				{
 					return true;
 				}
@@ -1637,8 +1585,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPrereqAndTech);
 	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
-	CheckSum(iSum, m_iFreeBonus);
-	CheckSum(iSum, m_iNumFreeBonuses);
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
 	CheckSum(iSum, m_iFreePromotion);
@@ -2005,7 +1951,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
-	CheckSumC(iSum, m_aExtraFreeBonuses);
+	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
@@ -2045,8 +1991,8 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_religionChange, L"ReligionChanges")
 		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
+		.add(m_freeBonuses, L"ExtraFreeBonuses")
 		.addWithDelayedResolution(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
-		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
 	;
 }
 
@@ -2133,31 +2079,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeBonus");
-	m_iFreeBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(&m_iNumFreeBonuses, L"iNumFreeBonuses");
-
-	if(pXML->TryMoveToXmlFirstChild(L"ExtraFreeBonuses"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"ExtraFreeBonus"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"FreeBonus");
-					BonusTypes eBonus = (BonusTypes) pXML->GetInfoClass(szTextVal);
-					int iNum;
-					pXML->GetChildXmlValByName(&iNum, L"iNumFreeBonuses");
-					m_aExtraFreeBonuses.push_back(std::pair<BonusTypes,int>(eBonus, iNum));
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion");
 	m_iFreePromotion = pXML->GetInfoClass(szTextVal);
@@ -3434,18 +3355,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getNoBonus() == iTextDefault) m_iNoBonus = pClassInfo->getNoBonus();
 	if (getPowerBonus() == iTextDefault) m_iPowerBonus = pClassInfo->getPowerBonus();
-	if (getFreeBonus() == iTextDefault) m_iFreeBonus = pClassInfo->getFreeBonus();
-	if (getNumFreeBonuses() == iDefault) m_iNumFreeBonuses = pClassInfo->getNumFreeBonuses();
-
-	if (m_aExtraFreeBonuses.empty())
-	{
-		int iNum = pClassInfo->getNumExtraFreeBonuses();
-		for (int i = 0; i < iNum; i++)
-		{
-			m_aExtraFreeBonuses.push_back(std::pair<BonusTypes,int>(pClassInfo->getExtraFreeBonus(i),pClassInfo->getExtraFreeBonusNum(i)));
-		}
-	}
-
 	if (getFreePromotion() == iTextDefault) m_iFreePromotion = pClassInfo->getFreePromotion();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
 	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();

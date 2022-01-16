@@ -555,32 +555,12 @@ void CvPlayerAI::AI_doTurnPost()
 {
 	PROFILE_FUNC();
 
-	if (isHuman())
-	{
-		return;
-	}
-
-	if (isNPC())
-	{
-		return;
-	}
-
-	if (isMinorCiv())
+	if (isHuman() || isNPC() || isMinorCiv())
 	{
 		return;
 	}
 
 	AI_doDiplo();
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   06/16/09								jdog5000	  */
-/*																							  */
-/* Bugfix																					   */
-/************************************************************************************************/
-	// Moved per alexman's suggestion
-	//AI_doSplit();
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
 
 	for (int i = 0; i < GC.getNumVictoryInfos(); ++i)
 	{
@@ -3995,27 +3975,27 @@ short CvPlayerAI::AI_safeFunding() const
 short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) const
 {
 	PROFILE_FUNC();
-	if (isAnarchy())
+	if (isAnarchy() || isNPC())
 	{
 		return 100;
 	}
-	int iTotalCommerce;
-	int64_t iNetIncome;
+	int64_t iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
 	int64_t iNetExpenses;
-	short iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
+	short iProfitMargin = getProfitMargin(iNetExpenses, iExtraExpense, iExtraExpenseMod);
 	FASSERT_NOT_NEGATIVE(iProfitMargin);
 
+	//FErrorMsg(CvString::format("iNetIncome=%I64d - iNetExpenses=%I64d - iProfitMargin: %d", iNetIncome, iNetExpenses, (int)iProfitMargin).c_str());
+
+	// Koshling - Never in financial difficulties if we can fund our ongoing expenses with zero taxation
+	if (getMinTaxIncome() >= iNetExpenses)
+	{
+		return 10000; // A magic number in case we want this state to have some kind of significance.
+	}
 	// Toffer - Things should absolutly be worse off than this before one can claim financial trouble.
 	if (iProfitMargin > 25)
 	{
 		return 200;
 	}
-	// Koshling - Never in financial difficulties if we can fund our ongoing expenses with zero taxation
-	if (iNetIncome - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
-	{
-		return 10002; // A magic number in case we want this state to have some kind of significance.
-	}
-
 	// Toffer - At low to mid tax levels, and with some profit margin to go on, evaluate treasury rather than profit margin.
 	if (iProfitMargin > 15 && getCommercePercent(COMMERCE_GOLD) < 50)
 	{
@@ -4053,9 +4033,9 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 	//	if it is zero it means your expenditure is equal to, or greater than, your income at 100% taxation
 	//	if it is *50* it means your expenditure is half the size of your income at 100% taxation.
 	//	A value of 100 is close to impossible to reach, as that either means expenditure is zero, or that income is severeal orders of magnitude greater than your expenditure.
-	//	Multiplying with 2.5 may not be needed, but it is to signify that 10% iProfitMargin is not actually all that bad.
-	//	Max return value here is 62 as iProfitMargin is guaranteed 25 or less at this point.
-	return iProfitMargin * 5/2;
+	//	Multiplying with 2 may not be needed, but it is to signify that 10% iProfitMargin is not actually all that bad.
+	//	Max return value here is 50 as iProfitMargin is guaranteed 25 or less at this point.
+	return iProfitMargin * 2;
 }
 
 
@@ -4063,7 +4043,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 int CvPlayerAI::AI_goldValueAssessmentModifier() const
 {
 	// If we're only just funding at the safety level that's not good - rate that as 150% valuation for gold
-	return std::max(1, 150 * AI_safeFunding() / std::max<short>(1, AI_fundingHealth()));
+	return std::max(1,  AI_safeFunding() * 100 / std::max<short>(1, AI_fundingHealth()));
 }
 
 
@@ -17102,13 +17082,12 @@ void CvPlayerAI::AI_doMilitary()
 	if (AI_isFinancialTrouble() && GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
 	{
 		const short iSafePercent = AI_safeFunding();
-		int iTotalCommerce;
-		int64_t iNetIncome;
+		int64_t iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
 		int64_t iNetExpenses;
 
 		for (int iPass = 0; iPass < 4; iPass++)
 		{
-			short iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses);
+			short iProfitMargin = getProfitMargin(iNetExpenses);
 
 			while (iNetIncome < iNetExpenses && iProfitMargin < iSafePercent && getUnitUpkeepMilitaryNet() > 0)
 			{
@@ -17127,7 +17106,8 @@ void CvPlayerAI::AI_doMilitary()
 					break;
 				}
 				// Recalculate funding
-				iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses);
+				iProfitMargin = getProfitMargin(iNetExpenses);
+				iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
 			}
 		}
 	}

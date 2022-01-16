@@ -16514,7 +16514,6 @@ CvWorldInfo::CvWorldInfo() :
  m_iDefaultPlayers(0)
 ,m_iUnitNameModifier(0)
 ,m_iTargetNumCities(0)
-,m_iNumFreeBuildingBonuses(0)
 ,m_iBuildingPrereqModifier(0)
 ,m_iMaxConscriptModifier(0)
 ,m_iWarWearinessModifier(0)
@@ -16558,11 +16557,6 @@ int CvWorldInfo::getUnitNameModifier() const
 int CvWorldInfo::getTargetNumCities() const
 {
 	return m_iTargetNumCities;
-}
-
-int CvWorldInfo::getNumFreeBuildingBonuses() const
-{
-	return m_iNumFreeBuildingBonuses;
 }
 
 int CvWorldInfo::getBuildingPrereqModifier() const
@@ -16657,7 +16651,6 @@ int CvWorldInfo::getPercent(int iID) const
 
 bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -16666,7 +16659,6 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iDefaultPlayers, L"iDefaultPlayers");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitNameModifier, L"iUnitNameModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iTargetNumCities, L"iTargetNumCities");
-	pXML->GetOptionalChildXmlValByName(&m_iNumFreeBuildingBonuses, L"iNumFreeBuildingBonuses");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildingPrereqModifier, L"iBuildingPrereqModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxConscriptModifier, L"iMaxConscriptModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iWarWearinessModifier, L"iWarWearinessModifier");
@@ -16699,7 +16691,6 @@ void CvWorldInfo::copyNonDefaults(const CvWorldInfo* pClassInfo)
 	if (getDefaultPlayers() == iDefault) m_iDefaultPlayers = pClassInfo->getDefaultPlayers();
 	if (getUnitNameModifier() == iDefault) m_iUnitNameModifier = pClassInfo->getUnitNameModifier();
 	if (getTargetNumCities() == iDefault) m_iTargetNumCities = pClassInfo->getTargetNumCities();
-	if (getNumFreeBuildingBonuses() == iDefault) m_iNumFreeBuildingBonuses = pClassInfo->getNumFreeBuildingBonuses();
 	if (getBuildingPrereqModifier() == iDefault) m_iBuildingPrereqModifier = pClassInfo->getBuildingPrereqModifier();
 	if (getMaxConscriptModifier() == iDefault) m_iMaxConscriptModifier = pClassInfo->getMaxConscriptModifier();
 	if (getWarWearinessModifier() == iDefault) m_iWarWearinessModifier = pClassInfo->getWarWearinessModifier();
@@ -16726,7 +16717,6 @@ void CvWorldInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iDefaultPlayers);
 	CheckSum(iSum, m_iUnitNameModifier);
 	CheckSum(iSum, m_iTargetNumCities);
-	CheckSum(iSum, m_iNumFreeBuildingBonuses);
 	CheckSum(iSum, m_iBuildingPrereqModifier);
 	CheckSum(iSum, m_iMaxConscriptModifier);
 	CheckSum(iSum, m_iWarWearinessModifier);

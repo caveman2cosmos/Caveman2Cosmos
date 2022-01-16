@@ -50,30 +50,30 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_PREHISTORIC -->
-				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
+				<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
-				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
-				<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
-				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
-				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
-				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
-				<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
-				<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
-				<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
-				<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_NOMADIC_HERD</BuildType>
+				<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
+				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
+				<BuildType>BUILD_WOOD_GATHERER</BuildType>
 			</Builds>
 			<iCost>12</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

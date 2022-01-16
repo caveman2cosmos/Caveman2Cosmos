@@ -60,14 +60,6 @@
 
 #define NUM_ALL_BUILDINGFOCUS_FLAGS				20
 
-//	Helper function to detrmine if a given bonus is provided by a building
-static bool isFreeBonusOfBuilding(const CvBuildingInfo& kBuilding, BonusTypes eBonus)
-{
-	return kBuilding.isFreeBonusOfBuilding(eBonus);
-}
-
-// Public Functions...
-
 
 CvCityAI::CvCityAI()
 {
@@ -4381,14 +4373,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 				queries.push_back(query);
 				query.GOM = GOM_BONUS;
-				query.id = buildingInfo.getFreeBonus();
-				if (query.id != NO_BONUS)
+				foreach_(const BonusModifier& pair, buildingInfo.getFreeBonuses())
 				{
-					queries.push_back(query);
-				}
-				for (int iJ = 0; iJ < buildingInfo.getNumExtraFreeBonuses(); iJ++)
-				{
-					query.id = buildingInfo.getExtraFreeBonus(iJ);
+					query.id = pair.first;
 					queries.push_back(query);
 				}
 
@@ -4726,8 +4713,12 @@ public:
 };
 
 
-int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech)
+int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bDebug)
 {
+	if (bDebug)
+	{
+		return AI_buildingValueThresholdOriginalUncached(eBuilding, 0, -123, false, true);
+	}
 	int iValue;
 	if (bForTech)
 	{
@@ -4885,24 +4876,24 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
-	int iBadHealthFromBuilding = std::max(0, (-iBuildingActualHealth));
-	int iUnhealthyPopulationFromBuilding = std::min(0, (-iBaseHealthLevel)) + iBadHealthFromBuilding;
+	int iBadHealthFromBuilding = std::max(0, -iBuildingActualHealth);
+	int iUnhealthyPopulationFromBuilding = std::min(0, -iBaseHealthLevel) + iBadHealthFromBuilding;
 
 	// Allow a bit of shrinking:
 	// Population is expendable if angry, working a bad tile, or running a not-so-good specialist
 	int iAllowedShrinkRate =
+	(
+		getFoodConsumedPerPopulation100()
+		*
 		(
-			getFoodConsumedPerPopulation100()
-			*
-			(
-				std::max(0, -iBaseHappinessLevel - getPopulation() * getAngerPercent() / GC.getPERCENT_ANGER_DIVISOR())
-				+
-				std::min(1, std::max(0, getWorkingPopulation() - AI_countGoodTiles(true, false, 50)))
-				+
-				std::max(0, visiblePopulation() - AI_countGoodSpecialists(false))
-				)
-			/ 100
-			);
+			std::max(0, -iBaseHappinessLevel - getPopulation() * getAngerPercent() / GC.getPERCENT_ANGER_DIVISOR())
+			+
+			std::min(1, std::max(0, getWorkingPopulation() - AI_countGoodTiles(true, false, 50)))
+			+
+			std::max(0, visiblePopulation() - AI_countGoodSpecialists(false))
+			)
+		/ 100
+	);
 	if (iUnhealthyPopulationFromBuilding > 0 && (iBaseFoodDifference + iAllowedShrinkRate < iUnhealthyPopulationFromBuilding))
 	{
 		return 0;
@@ -5453,20 +5444,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 				if ((!isDevelopingCity() || isCapital()) && kBuilding.EnablesUnits())
 				{
-					CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+					const CvGameObjectCity* pObject = getGameObject();
 					// add the extra building and its bonuses to the override to see if they influence the train condition of a unit
 					std::vector<GOMOverride> queries;
 					GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 					queries.push_back(query);
 					query.GOM = GOM_BONUS;
-					query.id = kBuilding.getFreeBonus();
-					if (query.id != NO_BONUS)
+					foreach_(const BonusTypes eFreeBonus, kBuilding.getFreeBonuses() | map_keys)
 					{
-						queries.push_back(query);
-					}
-					for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-					{
-						query.id = kBuilding.getExtraFreeBonus(iJ);
+						query.id = eFreeBonus;
 						queries.push_back(query);
 					}
 
@@ -5498,7 +5484,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							bool bUnitIsBonusEnabled = true;
 							if (kUnit.getPrereqAndBonus() != NO_BONUS && !hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 							{
-								if (isFreeBonusOfBuilding(kBuilding, (BonusTypes)kUnit.getPrereqAndBonus()))
+								if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 								{
 									bUnitIsEnabler = true;
 								}
@@ -5520,7 +5506,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									bHasORBonusAlready = true;
 								}
-								else if (isFreeBonusOfBuilding(kBuilding, eXtraFreeBonus))
+								else if (kBuilding.getFreeBonuses().hasValue(eXtraFreeBonus))
 								{
 									bFreeBonusIsORBonus = true;
 								}
@@ -5686,14 +5672,13 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						)
 					)
 				);
+				const int iTempValue = std::min(-1, iCost * iGoldValueAssessmentModifier / 500);
 
 				if (bFinancialTrouble)
 				{
-					FAssertMsg(iCost * 5 < iCost * (24 + iGoldValueAssessmentModifier) / 125, "If this assert happen, then the else below can handle financial trouble as well");
-
-					iValue += iCost * 5;
+					iValue += 4 * iTempValue;
 				}
-				else iValue += std::min(-1, iCost * (24 + iGoldValueAssessmentModifier) / 125);
+				else iValue += iTempValue;
 			}
 
 			if ((iFocusFlags & BUILDINGFOCUS_SPECIALIST) || iPass > 0)
@@ -5818,26 +5803,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue++;
 				}
 
-				if (kBuilding.getFreeBonus() != NO_BONUS)
+				foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 				{
 					//	If we have spares adding another doesn't do anything that scales by city count - only
 					//	the first one does that.  Furthermore as spares rack up even their trade value decreases
 					iValue += (
-						100 * kOwner.AI_bonusVal((BonusTypes)kBuilding.getFreeBonus(), 1) * kBuilding.getNumFreeBonuses()
-						* (kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()) == 0 ? iNumCities : 1)
+						100 * kOwner.AI_bonusVal(pair.first, 1) * pair.second
+						* (kOwner.getNumTradeableBonuses(pair.first) == 0 ? iNumCities : 1)
 						)
-						/ (100 * std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus())));
-				}
-
-				for (int iI = 0; iI < kBuilding.getNumExtraFreeBonuses(); iI++)
-				{
-					//	If we have spares adding another doesn't do anything that scales by city count - only
-					//	the first one does that.  Furthermore as spares rack up even their trade value decreases
-					iValue += (
-						100 * kOwner.AI_bonusVal((BonusTypes)kBuilding.getExtraFreeBonus(iI), 1) * kBuilding.getExtraFreeBonusNum(iI)
-						* (kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI)) == 0 ? iNumCities : 1)
-						)
-						/ (100 * std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI))));
+						/ (100 * std::max(1, kOwner.getNumTradeableBonuses(pair.first)));
 				}
 
 				if (kBuilding.getNoBonus() != NO_BONUS)
@@ -6433,6 +6407,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 		{
 			iValue = std::max(1, iValue / (8 - getPopulation()));
 		}
+	}
+	if (iThreshold == -123) // Debug UI - magic number.
+	{
+		return iValue;
 	}
 	return std::max(0, iValue);
 }
@@ -12996,14 +12974,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 				queries.push_back(query);
 				query.GOM = GOM_BONUS;
-				query.id = GC.getBuildingInfo(eBuilding).getFreeBonus();
-				if (query.id != NO_BONUS)
+				foreach_(const BonusModifier& pair, GC.getBuildingInfo(eBuilding).getFreeBonuses())
 				{
-					queries.push_back(query);
-				}
-				for (int iJ = 0; iJ < GC.getBuildingInfo(eBuilding).getNumExtraFreeBonuses(); iJ++)
-				{
-					query.id = GC.getBuildingInfo(eBuilding).getExtraFreeBonus(iJ);
+					query.id = pair.first;
 					queries.push_back(query);
 				}
 
@@ -13510,14 +13483,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 					queries.push_back(query);
 					query.GOM = GOM_BONUS;
-					query.id = kBuilding.getFreeBonus();
-					if (query.id != NO_BONUS)
+					foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 					{
-						queries.push_back(query);
-					}
-					for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-					{
-						query.id = kBuilding.getExtraFreeBonus(iJ);
+						query.id = pair.first;
 						queries.push_back(query);
 					}
 
@@ -13559,7 +13527,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							bool bUnitIsBonusEnabled = true;
 							if (kUnit.getPrereqAndBonus() != NO_BONUS && !hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 							{
-								if (isFreeBonusOfBuilding(kBuilding, (BonusTypes)kUnit.getPrereqAndBonus()))
+								if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 								{
 									bUnitIsEnabler = true;
 								}
@@ -13578,7 +13546,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								{
 									bHasORBonusAlready = true;
 								}
-								else if (isFreeBonusOfBuilding(kBuilding, eXtraFreeBonus))
+								else if (kBuilding.getFreeBonuses().hasValue(eXtraFreeBonus))
 								{
 									bFreeBonusIsORBonus = true;
 								}
@@ -13725,7 +13693,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				const int iBaseMaintenance = getMaintenanceTimes100();
 				const int iMaintenanceMod = getEffectiveMaintenanceModifier();
 
-				int iCost =
+				const int iCost =
 				(
 					std::min(
 						-1,
@@ -13737,14 +13705,13 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						)
 					)
 				);
+				int iTempValue = std::min(-1, iCost * iGoldValueAssessmentModifier / 500);
 
 				if (bFinancialTrouble)
 				{
-					iCost *= 5;
+					iTempValue *= 4;
 				}
-				else iCost = std::min(-1, iCost * (24 + iGoldValueAssessmentModifier) / 125);
-
-				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, iCost);
+				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, iTempValue);
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Specialist");
@@ -13878,33 +13845,18 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					iValue++;
 				}
 
-				if (kBuilding.getFreeBonus() != NO_BONUS)
+				foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 				{
 					// Spares doesn't do anything that scales by city count, only the first one does that.
 					// Furthermore as spares rack up even their trade value decreases.
 					iValue += (
-						kBuilding.getNumFreeBonuses()
+						pair.second
 						*
-						kOwner.AI_bonusVal((BonusTypes)kBuilding.getFreeBonus(), 1)
+						kOwner.AI_bonusVal(pair.first, 1)
 						*
-						(kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()) == 0 ? iNumCities : 1)
+						(kOwner.getNumTradeableBonuses(pair.first) == 0 ? iNumCities : 1)
 						/
-						std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getFreeBonus()))
-					);
-				}
-
-				for (int iI = 0; iI < kBuilding.getNumExtraFreeBonuses(); iI++)
-				{
-					// Spares doesn't do anything that scales by city count, only the first one does that.
-					// Furthermore as spares rack up even their trade value decreases.
-					iValue += (
-						kBuilding.getExtraFreeBonusNum(iI)
-						*
-						kOwner.AI_bonusVal((BonusTypes)kBuilding.getExtraFreeBonus(iI), 1)
-						*
-						(kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI)) == 0 ? iNumCities : 1)
-						/
-						std::max(1, kOwner.getNumTradeableBonuses((BonusTypes)kBuilding.getExtraFreeBonus(iI)))
+						std::max(1, kOwner.getNumTradeableBonuses(pair.first))
 					);
 				}
 

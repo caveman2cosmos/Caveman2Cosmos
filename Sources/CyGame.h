@@ -60,7 +60,6 @@ public:
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
 	int countKnownTechNumTeams(TechTypes eTech) const;
-	int getNumFreeBonuses(BuildingTypes eBuilding) const;
 
 	int countReligionLevels(ReligionTypes eReligion) const;
 	int calculateReligionPercent(ReligionTypes eReligion) const;
