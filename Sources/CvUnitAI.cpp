@@ -2052,8 +2052,10 @@ void CvUnitAI::AI_workerMove()
 			// If I can reach safety on my own this turn then don't bother other units with our escape.
 			if (AI_reachHome())
 			{
+				OutputDebugString(CvString::format("%S (%d) AI_reachHome true (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 				return;
 			}
+			OutputDebugString(CvString::format("%S (%d) AI_reachHome false (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 			// Look for a local group we can join to be safe!
 			// We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
 			AI_setLeaderPriority(LEADER_PRIORITY_MAX);
@@ -2084,17 +2086,15 @@ void CvUnitAI::AI_workerMove()
 		}
 		else if (AI_workerReleaseDefenderIfNotNeeded())
 		{
+			OutputDebugString(CvString::format("%S (%d) AI_workerReleaseDefenderIfNotNeeded 1 (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 			return;
 		}
 		// Toffer - After reaching this point the worker will always start making route from here to friendly territory... May be better things to do elsewhere.
 		//	Should check if improving this neutal plot is worthwhile and if not just start going to a more worthwhile plot/job.
 	}
-	else if (!isHuman() && !isNPC()) // NPC rarely has anything better to do with military unit than be a hinder against other players capturing workers from them.
+	else if (!isHuman() && AI_workerReleaseDefenderIfNotNeeded())
 	{
-		if (AI_workerReleaseDefenderIfNotNeeded())
-		{
-			return;
-		}
+		return;
 	}
 	//ls612: Combat Worker Danger Evaluation
 	const bool bWorkerDanger = bAbroad && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !bAbroad && exposedToDanger(plot(), 80, false);
@@ -16255,6 +16255,8 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 {
 	PROFILE_FUNC();
 
+	OutputDebugString(CvString::format("%S (%d) AI_reachHome (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+
 	if (bMockRun && plot()->getOwner() == getOwner())
 	{
 		return true;
@@ -22688,8 +22690,7 @@ bool CvUnitAI::AI_workerNeedsDefender(const CvPlot* pPlot) const
 	}
 
 	//	Also for non-owned territory check for nearby enemies
-	if (pPlot->getOwner() != getOwner() &&
-		 GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(pPlot, 2, false))
+	if (pPlot->getOwner() != getOwner() && GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(pPlot, 2, false))
 	{
 		return true;
 	}
@@ -22699,7 +22700,13 @@ bool CvUnitAI::AI_workerNeedsDefender(const CvPlot* pPlot) const
 
 bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 {
-	//	Never release on the same turn we contracted or an infinite loop can result
+	if (isNPC())
+	{
+		// NPC rarely has anything better to do with military unit than be a hinder against other players capturing workers from them.
+		// NPC always return false on AI_workerNeedsDefender, so may get stuck in an infinite loop of grouping/ungrouping with defenders.
+		return false;
+	}
+	// Never release on the same turn we contracted or an infinite loop can result
 	if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
 	{
 		if (getDomainType() != DOMAIN_LAND)
