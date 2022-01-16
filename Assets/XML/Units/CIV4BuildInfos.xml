@@ -3119,7 +3119,7 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-		</BuildInfo>		
+		</BuildInfo>
 		<!-- Hybrid Forest | End -->
 		<BuildInfo>
 			<Type>BUILD_HYBRID_FOREST</Type>
