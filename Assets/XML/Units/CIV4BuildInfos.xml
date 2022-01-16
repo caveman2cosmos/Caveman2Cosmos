@@ -857,10 +857,10 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildPasture.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,7</Button>
 		</BuildInfo>
-		<!-- Nomadic Herd (Kill) -> Pasture -->
+		<!-- Nomadic Herd -> Pasture -->
 		<BuildInfo>
-			<Type>BUILD_NOMADIC_HERD_KILL</Type>
-			<Description>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Description>
+			<Type>BUILD_NOMADIC_HERD</Type>
+			<Description>TXT_KEY_BUILD_NOMADIC_HERD</Description>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iTime>300</iTime>
 			<iCost>5</iCost>
@@ -895,10 +895,10 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/nomadic_herd.dds</Button>
 		</BuildInfo>
-		<!-- Scavenging Camp (Kill) -> Nomadic Herd (Kill) OR Hunting Camp -->
+		<!-- Scavenging Camp -> Nomadic Herd OR Hunting Camp -->
 		<BuildInfo>
-			<Type>BUILD_SCAVENGING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Description>
+			<Type>BUILD_SCAVENGING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP</Description>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -1169,10 +1169,10 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
 		</BuildInfo>
-		<!-- Fruit Gathering Camp (Kill) -> Fruit Picker -->
+		<!-- Fruit Gathering Camp -> Fruit Picker -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_GATHERING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Description>
+			<Type>BUILD_FRUIT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -1214,10 +1214,10 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
 		</BuildInfo>
-		<!-- Grape Gathering Camp (Kill) -> Grape Picker -->
+		<!-- Grape Gathering Camp -> Grape Picker -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_GATHERING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Description>
+			<Type>BUILD_GRAPE_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -1360,10 +1360,10 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</BuildInfo>
-		<!-- Plant Gathering Camp (Kill) -> Plant Picking Camp -->
+		<!-- Plant Gathering Camp -> Plant Picking Camp -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_GATHERING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_KILL</Description>
+			<Type>BUILD_PLANT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -3181,10 +3181,10 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Lumber_camp.dds</Button>
 		</BuildInfo>
-		<!-- Wood Gatherer (Kill) -> Lumberjack -->
+		<!-- Wood Gatherer -> Lumberjack -->
 		<BuildInfo>
-			<Type>BUILD_WOOD_GATHERER_KILL</Type>
-			<Description>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Description>
+			<Type>BUILD_WOOD_GATHERER</Type>
+			<Description>TXT_KEY_BUILD_WOOD_GATHERER</Description>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -6222,10 +6222,10 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
-		<!-- Abatis (Kill) -> Palisade -->
+		<!-- Abatis -> Palisade -->
 		<BuildInfo>
-			<Type>BUILD_ABATIS_THORN_HEDGE_KILL</Type>
-			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Description>
+			<Type>BUILD_ABATIS_THORN_HEDGE</Type>
+			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
