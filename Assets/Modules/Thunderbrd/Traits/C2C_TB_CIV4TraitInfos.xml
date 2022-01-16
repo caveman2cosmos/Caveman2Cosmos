@@ -4156,6 +4156,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
