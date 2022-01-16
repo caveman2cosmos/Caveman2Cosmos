@@ -230,16 +230,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_DESERT_CAMP]Ïóñòûííûé ëàãåðü[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_DESERT_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consommé)</French>
-		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_DESERT_CAMP]Пустынный лагерь[\LINK] (Собиратель)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_DRAIN_SWAMP</Tag>
 		<English>Remove [LINK=FEATURE_SWAMP]Swamp[\LINK]</English>
 	</TEXT>
@@ -542,16 +532,6 @@
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_JUNGLE_CAMP]ëàãåðü â äæóíãëÿõ[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Détruit)</French>
-		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_JUNGLE_CAMP]campo nella giungla[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_JUNGLE_CAMP]Campamento selvático[\LINK] (Consumed)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_JUNGLE_CAMP]Стоянку в джунглях[\LINK] (Собиратель)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
 		<English>Create [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Lighthouse[\LINK] (Coral)</English>
 		<French>Construire un [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
@@ -660,16 +640,6 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK]</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Ñáîð ãðèáîâ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Verschleiß)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
-		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Сбор грибов[\LINK] (Собиратель)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE</Tag>
@@ -827,10 +797,6 @@
 		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK] (Consumed)</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE</Tag>
 		<English>Remove [LINK=FEATURE_INFECTIOUS_SMOG]Biological Contamination[\LINK]</English>
 	</TEXT>
@@ -863,12 +829,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK] (Consumed)</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SEA_MILL]Moulin maritime[\LINK]</French>
@@ -882,11 +842,6 @@
 		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK]</English>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK] (Consumed)</English>
-		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Verschleiß)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SHAFT_MINE</Tag>
@@ -938,16 +893,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Ìàñòåðñêóþ êàìåíîòåñà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK] (Consumed)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Мастерскую каменных орудий[\LINK] (Собиратель)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_WATCHTOWER</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONE_WATCHTOWER]Stone Watchtower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_STONE_WATCHTOWER]Tour d'observation en pierres[\LINK]</French>
@@ -985,16 +930,6 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_TAR_GATHERER]Ñáîð ñìîëû[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_TAR_GATHERER_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK] (Détruit)</French>
-		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
-		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK] (Consumed)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_TAR_GATHERER]Сбор смолы[\LINK] (Собиратель)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT</Tag>
@@ -1141,16 +1076,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WETLANDS_CAMP]Áîëîòíûé ëàãåðü[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Détruit)</French>
-		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK] (Consumed)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_WETLANDS_CAMP]Болотный лагерь[\LINK] (Собиратель)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_WHALING_BOATS</Tag>
 		<English>Build [LINK=IMPROVEMENT_WHALING_BOATS]Whaling Boats[\LINK]</English>
 		<French>construire des [LINK=IMPROVEMENT_WHALING_BOATS]baleiniers[\LINK]</French>
@@ -1194,15 +1119,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_PALISADE]×àñòîêîë[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois (Cueilleuse)[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_PALISADE]palizzata in legno[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_PALISADE]×àñòîêîë[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK]</French>
@@ -1210,15 +1126,6 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Äåðåâÿííóþ ñòîðîæêó[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK] (Cueilleuse)</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]torre d'osservazione in legno[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Ñòîðîæ. âûøêó[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Tag>
