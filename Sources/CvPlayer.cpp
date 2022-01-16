@@ -14500,17 +14500,12 @@ int CvPlayer::getCivicUpkeep(bool bIgnoreAnarchy) const
 int64_t CvPlayer::getTreasuryUpkeep() const
 {
 	const int64_t iTreasury = getGold();
-	if (iTreasury < 3)
-	{
-		return 0;
-	}
-	int64_t iUpkeep = iTreasury / 1000 + intSqrt64(iTreasury / 10);
-
-	// Scale by gamespeed as gold is worth less on slower speeds, expected treasury size is different.
-	iUpkeep *= 100;
-	iUpkeep /= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-
-	return iUpkeep;
+	return (
+		(iTreasury + 250 * intSqrt64(iTreasury))
+		/
+		// Scale by gamespeed as gold is worth less on slower speeds, expected treasury size is different.
+		(25 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
+	);
 }
 
 
