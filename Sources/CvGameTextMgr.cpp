@@ -10510,7 +10510,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		// Extra Happiness by Bonuses
-		foreach_(const BonusModifier2& pair, kTrait.getBonusHappinessChanges())
+		foreach_(const BonusModifier& pair, kTrait.getBonusHappinessChanges())
 		{
 			if (algo::none_of_equal(iIterationValues, pair.second))
 			{
@@ -10520,7 +10520,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		foreach_(const int itrValue, iIterationValues)
 		{
 			bFirst = true;
-			foreach_(const BonusModifier2& pair, kTrait.getBonusHappinessChanges())
+			foreach_(const BonusModifier& pair, kTrait.getBonusHappinessChanges())
 			{
 				iCurrentModifier = pair.second;
 				if (iCurrentModifier == itrValue)
@@ -21125,7 +21125,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_DISABLES", CvWString(kBonus.getType()).GetCString(), kBonus.getTextKeyWide(), kBonus.getChar()));
 	}
 
-	foreach_(const BonusModifier2& pair, kBuilding.getFreeBonuses())
+	foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 	{
 		const CvBonusInfo& kBonus = GC.getBonusInfo(pair.first);
 		szBuffer.append(NEWLINE);
@@ -22741,7 +22741,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealthChanges())
+		foreach_(const BonusModifier& modifier, kBuilding.getBonusHealthChanges())
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE", abs(modifier.second), (modifier.second > 0 ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
 			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo(modifier.first).getType()).GetCString(), GC.getBonusInfo(modifier.first).getDescription());
@@ -22812,7 +22812,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 
 		iLast = 0;
-		foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappinessChanges())
+		foreach_(const BonusModifier& modifier, kBuilding.getBonusHappinessChanges())
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE", abs(modifier.second), modifier.second ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)).c_str());
 			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo(modifier.first).getType()).GetCString(), GC.getBonusInfo(modifier.first).getDescription());

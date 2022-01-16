@@ -4373,7 +4373,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 				queries.push_back(query);
 				query.GOM = GOM_BONUS;
-				foreach_(const BonusModifier2& pair, buildingInfo.getFreeBonuses())
+				foreach_(const BonusModifier& pair, buildingInfo.getFreeBonuses())
 				{
 					query.id = pair.first;
 					queries.push_back(query);
@@ -5800,7 +5800,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue++;
 				}
 
-				foreach_(const BonusModifier2& pair, kBuilding.getFreeBonuses())
+				foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 				{
 					//	If we have spares adding another doesn't do anything that scales by city count - only
 					//	the first one does that.  Furthermore as spares rack up even their trade value decreases
@@ -12967,7 +12967,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 				queries.push_back(query);
 				query.GOM = GOM_BONUS;
-				foreach_(const BonusModifier2& pair, GC.getBuildingInfo(eBuilding).getFreeBonuses())
+				foreach_(const BonusModifier& pair, GC.getBuildingInfo(eBuilding).getFreeBonuses())
 				{
 					query.id = pair.first;
 					queries.push_back(query);
@@ -13476,7 +13476,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
 					queries.push_back(query);
 					query.GOM = GOM_BONUS;
-					foreach_(const BonusModifier2& pair, kBuilding.getFreeBonuses())
+					foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 					{
 						query.id = pair.first;
 						queries.push_back(query);
@@ -13839,7 +13839,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					iValue++;
 				}
 
-				foreach_(const BonusModifier2& pair, kBuilding.getFreeBonuses())
+				foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 				{
 					// Spares doesn't do anything that scales by city count, only the first one does that.
 					// Furthermore as spares rack up even their trade value decreases.
