@@ -1577,6 +1577,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>

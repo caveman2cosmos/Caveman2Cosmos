@@ -131,7 +131,7 @@
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iTime>6000</iTime>
 			<iCost>250</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV1</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -150,7 +150,7 @@
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
 			<iTime>9000</iTime>
 			<iCost>500</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV2</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -169,7 +169,7 @@
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
 			<iTime>12000</iTime>
 			<iCost>800</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV3</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -539,7 +539,7 @@
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>30</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLACE_ASTEROID</ImprovementType>
 			<FeatureChange>FEATURE_ASTEROIDS</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -554,7 +554,7 @@
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>30</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLACE_GALAXY</ImprovementType>
 			<FeatureChange>FEATURE_GALAXY</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1330,7 +1330,7 @@
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>700</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1350,7 +1350,7 @@
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>1500</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_OUTPOST</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1369,7 +1369,7 @@
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>3000</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_HABITATION_COMPLEX</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1408,7 +1408,7 @@
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>2000</iTime>
 			<iCost>700</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_MINING_OUTPOST</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
