@@ -44,7 +44,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -131,7 +131,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -214,7 +214,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -306,7 +306,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -412,7 +412,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -548,7 +548,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -675,7 +675,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -784,7 +784,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -892,7 +892,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -983,7 +983,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1069,7 +1069,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1154,7 +1154,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1243,7 +1243,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1329,7 +1329,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1415,7 +1415,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1503,7 +1503,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1590,7 +1590,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1677,7 +1677,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1760,7 +1760,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1847,7 +1847,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -1929,7 +1929,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2017,7 +2017,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2104,7 +2104,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2193,7 +2193,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2282,7 +2282,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2371,7 +2371,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2460,7 +2460,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2545,7 +2545,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2641,7 +2641,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2727,7 +2727,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2813,7 +2813,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2899,7 +2899,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -2984,7 +2984,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3068,7 +3068,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3152,7 +3152,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3236,7 +3236,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3319,7 +3319,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3418,7 +3418,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3517,7 +3517,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3633,7 +3633,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
@@ -3755,7 +3755,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
                 <UnitAI>
-                    <UnitAIType>UNITAI_EXPLORER</UnitAIType>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
