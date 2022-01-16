@@ -1375,7 +1375,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
 		</BuildInfo>
-		<!-- Mushroom Gatherer (No Kill) -> Vertical Farm -->
+		<!-- Mushroom Gatherer -> Vertical Farm -->
 		<BuildInfo>
 			<Type>BUILD_MUSHROOM_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER</Description>
@@ -1762,7 +1762,7 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWell.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,8</Button>
 		</BuildInfo>
-		<!-- Tar Gatherer* (No Kill) -> Hydrocarbon Well -->
+		<!-- Tar Gatherer* -> Hydrocarbon Well -->
 		<BuildInfo>
 			<Type>BUILD_TAR_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_TAR_GATHERER</Description>
@@ -1806,7 +1806,7 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
 		</BuildInfo>
-		<!-- Salt Gatherer* (No Kill) -> Quarry (Information Lifestyle Obsolete) -->
+		<!-- Salt Gatherer* -> Quarry (Information Lifestyle Obsolete) -->
 		<BuildInfo>
 			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
@@ -2334,7 +2334,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildFarm.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,7</Button>
 		</BuildInfo>
-		<!-- Seed Camp (No Kill) -> (Various, Classical) -->
+		<!-- Seed Camp -> (Various, Classical) -->
 		<BuildInfo>
 			<Type>BUILD_SEED_CAMP</Type>
 			<Description>TXT_KEY_BUILD_SEED_CAMP</Description>
@@ -2349,7 +2349,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
 		</BuildInfo>
-		<!-- Seasonal Camp (No Kill) -> (Various, Medieval Lifestyle) -->
+		<!-- Seasonal Camp -> (Various, Medieval Lifestyle) -->
 		<BuildInfo>
 			<Type>BUILD_SEASONAL_CAMP</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
@@ -3088,7 +3088,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
-		<!-- Stone Tools Workshop (No Kill) -> Mine OR Early Quarry, Classical Lifestyle -->
+		<!-- Stone Tools Workshop -> Mine OR Early Quarry, Classical Lifestyle -->
 		<BuildInfo>
 			<Type>BUILD_STONE_TOOLS_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
@@ -5419,7 +5419,7 @@
 			<Button>Art/Interface/Buttons/Improvements/Machu.dds</Button>
 		</BuildInfo>
 		<!-- PREHISTORIC CAMPS -->
-		<!-- Jungle Camp (No Kill) | End - Information Lifestyle -->
+		<!-- Jungle Camp | End - Information Lifestyle -->
 		<BuildInfo>
 			<Type>BUILD_JUNGLE_CAMP</Type>
 			<Description>TXT_KEY_BUILD_JUNGLE_CAMP</Description>
@@ -5432,7 +5432,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<Button>Art/Interface/Buttons/builds/junglecamp.dds</Button>
 		</BuildInfo>
-		<!-- Desert Camp (No Kill) | End - Information Lifestyle -->
+		<!-- Desert Camp | End - Information Lifestyle -->
 		<BuildInfo>
 			<Type>BUILD_DESERT_CAMP</Type>
 			<Description>TXT_KEY_BUILD_DESERT_CAMP</Description>
@@ -5445,7 +5445,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<Button>Art/Interface/Buttons/Builds/desert_camp.dds</Button>
 		</BuildInfo>
-		<!-- Wetlands Camp (No Kill) | End - Information Lifestyle -->
+		<!-- Wetlands Camp | End - Information Lifestyle -->
 		<BuildInfo>
 			<Type>BUILD_WETLANDS_CAMP</Type>
 			<Description>TXT_KEY_BUILD_WETLANDS_CAMP</Description>
@@ -6110,7 +6110,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/stone_tower.dds</Button>
 		</BuildInfo>
-		<!-- Wooden Watchtower (No Kill) -> Stone Watchtower -->
+		<!-- Wooden Watchtower -> Stone Watchtower -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Description>
@@ -6190,7 +6190,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/interface/buttons/builds/fortified_cave_cache.dds</Button>
 		</BuildInfo>
-		<!-- Fortified Cave (No Kill) -> Fortified Cave w/Cache -->
+		<!-- Fortified Cave -> Fortified Cave w/Cache -->
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE</Description>
@@ -6206,7 +6206,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
-		<!-- Palisade (No Kill) -> Fort -->
+		<!-- Palisade -> Fort -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_PALISADE</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_PALISADE</Description>
