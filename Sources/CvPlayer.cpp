@@ -271,6 +271,9 @@ m_cachedBonusCount(NULL)
 	m_iFocusPlotX = -1;
 	m_iFocusPlotY = -1;
 
+	m_iMinTaxIncome = 0;
+	m_iMaxTaxIncome = 0;
+
 	for (int i = 0; i < NUM_COMMERCE_TYPES; ++i)
 	{
 		m_cachedTotalCityBaseCommerceRate[i] = MAX_INT;
@@ -1496,6 +1499,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iNumCivicSwitches = 0;
 	m_iNumCivicsSwitched = 0;
 	m_unitConstructionCounts.clear();
+
+	m_iMinTaxIncome = 0;
+	m_iMaxTaxIncome = 0;
 
 	m_bMaintenanceDirty = false;
 	m_orbitalInfrastructureCountDirty = true;
@@ -3919,6 +3925,12 @@ void CvPlayer::doTurn()
 	gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 
 	AI_doTurnPost();
+
+	// Toffer - Completely acceptable to only cache these once per turn.
+	if (!isNPC())
+	{
+		cacheKeyFinanceNumbers();
+	}
 
 	if (GC.getGame().isDebugMode())
 	{
@@ -7926,7 +7938,7 @@ int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovem
 
 int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 {
-	return algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate(eYield)), 0);
+	return (algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate100(eYield)), 0)) / 100;
 }
 
 
@@ -8145,16 +8157,37 @@ int64_t CvPlayer::getFinalExpense() const
 	return isAnarchy() ? 0 : calculatePreInflatedCosts() * getInflationMod10000() / 10000;
 }
 
-short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense, int iExtraExpenseMod) const
+
+void CvPlayer::cacheKeyFinanceNumbers()
+{
+	m_iMinTaxIncome = std::max(0, getGoldPerTurn());
+	m_iMaxTaxIncome = m_iMinTaxIncome;
+
+	foreach_(CvCity* cityX, cities())
+	{
+		m_iMinTaxIncome += cityX->getCommerceRateAtSliderPercent(COMMERCE_GOLD, 0) / 100;
+		m_iMaxTaxIncome += cityX->getCommerceRateAtSliderPercent(COMMERCE_GOLD, 100) / 100;
+	}
+}
+
+int64_t CvPlayer::getMinTaxIncome() const
+{
+	return m_iMinTaxIncome;
+}
+
+int64_t CvPlayer::getMaxTaxIncome() const
+{
+	return m_iMaxTaxIncome;
+}
+
+short CvPlayer::getProfitMargin(int64_t &iNetExpenses, int iExtraExpense, int iExtraExpenseMod) const
 {
 	PROFILE_FUNC();
-	if (isAnarchy())
+
+	if (isAnarchy() || isNPC())
 	{
 		return 100;
 	}
-	iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
-	iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-
 	// Afforess - iExtraExpense lets us "extrapolate" our cost percents if we have extra future expenses
 	// iExtraExpense should be between 0 (default) and some positive extra gold per turn cost to us
 	iNetExpenses = getFinalExpense() + std::max(0, iExtraExpense);
@@ -8167,8 +8200,11 @@ short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_
 	// Mainly gold per turn from trade.
 	iNetExpenses += std::max(0, -getGoldPerTurn());
 
+	const int64_t iMaxTaxIncome = getMaxTaxIncome();
+
+	//FErrorMsg(CvString::format("iNetExpenses=%I64d - iMaxTaxIncome=%I64d - iMinTaxIncome=%I64d", iNetExpenses, iMaxTaxIncome, getMinTaxIncome()).c_str());
+
 	// Toffer - Profit margin at 100% taxation
-	const int64_t iMaxTaxIncome = iNetIncome + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
 	if (iNetExpenses >= iMaxTaxIncome)
 	{
 		return 0;
@@ -8178,10 +8214,8 @@ short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_
 
 short CvPlayer::getProfitMargin(int iExtraExpense, int iExtraExpenseMod) const
 {
-	int iTotalCommerce;
-	int64_t iNetIncome;
 	int64_t iNetExpenses;
-	return getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
+	return getProfitMargin(iNetExpenses, iExtraExpense, iExtraExpenseMod);
 }
 
 int64_t CvPlayer::calculateBaseNetGold() const
@@ -12226,11 +12260,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
 
 				//	Calculate plot danger values for this player
-				CvPlot* pLoopPlot;
-
 				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
+					CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Decay danger count from the previous turn
 					pLoopPlot->setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3);
@@ -12238,7 +12270,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
+					CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Add in known dangers from visible enemy units
 					if (pLoopPlot->isVisible(getTeam(), false))
@@ -13161,11 +13193,11 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 
-	const int iOldValue = getCommercePercent(eIndex);
+	const int iOldValue = m_aiCommercePercent[eIndex];
 
 	m_aiCommercePercent[eIndex] = range(iNewValue, 0, 100);
 
-	if (iOldValue != getCommercePercent(eIndex))
+	if (iOldValue != m_aiCommercePercent[eIndex])
 	{
 		int iTotalCommercePercent = 0;
 
@@ -13187,7 +13219,6 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 				iTotalCommercePercent -= iAdjustment;
 			}
 		}
-
 		FAssert(100 == iTotalCommercePercent);
 
 		setCommerceDirty();
@@ -13207,7 +13238,7 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 
 void CvPlayer::changeCommercePercent(CommerceTypes eIndex, int iChange)
 {
-	setCommercePercent(eIndex, (getCommercePercent(eIndex) + iChange));
+	setCommercePercent(eIndex, getCommercePercent(eIndex) + iChange);
 }
 
 int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
@@ -13227,12 +13258,9 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 
 	if (m_cachedTotalCityBaseCommerceRate[eIndex] == MAX_INT)
 	{
-		const int iResult = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0);
-
-		m_cachedTotalCityBaseCommerceRate[eIndex] = iResult / 100;
+		m_cachedTotalCityBaseCommerceRate[eIndex] = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0) / 100;
 	}
 	return m_cachedTotalCityBaseCommerceRate[eIndex];
-	// return iResult/100;
 }
 
 void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
@@ -19895,6 +19923,19 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 		}
+
+		double fMinTaxIncome = -1;
+		WRAPPER_READ(wrapper, "CvPlayer", &fMinTaxIncome);
+		m_iMinTaxIncome = static_cast<int64_t>(fMinTaxIncome + 0.01);
+
+		double fMaxTaxIncome = -1;
+		WRAPPER_READ(wrapper, "CvPlayer", &fMaxTaxIncome);
+		m_iMaxTaxIncome = static_cast<int64_t>(fMaxTaxIncome + 0.01);
+
+		if (fMaxTaxIncome < 0) // Old save.
+		{
+			cacheKeyFinanceNumbers();
+		}
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -19926,6 +19967,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	}
 	// Toffer - To stop auto end turn on decision-less turns from kicking in immediately when loading a save
 	setTurnHadUIInteraction(true);
+
 }
 
 //
@@ -20702,6 +20744,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "UnitCountSM");
 			}
 		}
+		double fMinTaxIncome = static_cast<double>(m_iMinTaxIncome);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fMinTaxIncome);
+		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
 	}
 	//	Use condensed format now - only save non-default array elements
 
@@ -27982,7 +28028,6 @@ void CvPlayer::updateCache()
 			}
 		}
 	}*/
-
 }
 
 void CvPlayer::clearTileCulture()

@@ -11955,16 +11955,23 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 }
 
 
-int CvCity::getCommerceFromPercent(CommerceTypes eIndex, int iYieldRate) const
+int CvCity::getCommerceFromPercent(CommerceTypes eIndex) const
 {
-	int iCommerce = ((iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(eIndex)) / 100);
+	const int iYieldRate = getYieldRate100(YIELD_COMMERCE);
 
 	if (eIndex == COMMERCE_GOLD)
 	{
-		iCommerce += (iYieldRate - iCommerce - getCommerceFromPercent(COMMERCE_RESEARCH, iYieldRate) - getCommerceFromPercent(COMMERCE_CULTURE, iYieldRate) - getCommerceFromPercent(COMMERCE_ESPIONAGE, iYieldRate));
+		return (
+			(
+				iYieldRate
+				- iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(COMMERCE_RESEARCH)
+				- iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(COMMERCE_CULTURE)
+				- iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(COMMERCE_ESPIONAGE)
+			)
+			/ 100
+		);
 	}
-
-	return iCommerce;
+	return iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(eIndex) / 100;
 }
 
 
@@ -11982,38 +11989,75 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 		updateCommerce(eIndex);
 	}
 
-	//STEP 1 : Slider
-	int iBaseCommerceRate = getCommerceFromPercent(eIndex, getYieldRate100(YIELD_COMMERCE));
+	//STEP 1 : Slider + remaining steps.
+	return getCommerceFromPercent(eIndex) + getBaseCommerceRateExtra(eIndex);
+}
 
+int CvCity::getBaseCommerceRateExtra(CommerceTypes eIndex) const
+{
+	//STEP 1 : Slider
 	//STEP 2 : Commerce Changes from specialists
-	iBaseCommerceRate += 100 * (getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex));
+	int iBaseExtraRate = 100 * (getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex));
 
 	//STEP 3 : Religion Commerce
-	iBaseCommerceRate += 100 * getReligionCommerce(eIndex);
+	iBaseExtraRate += 100 * getReligionCommerce(eIndex);
 
 	//STEP 4 : Corporation Commerce
-	iBaseCommerceRate += 100 * getCorporationCommerce(eIndex);
+	iBaseExtraRate += 100 * getCorporationCommerce(eIndex);
 
 	//STEP 5 : Building Commerce
-	iBaseCommerceRate += getBuildingCommerce100(eIndex);
+	iBaseExtraRate += getBuildingCommerce100(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
-	iBaseCommerceRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
+	iBaseExtraRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
 
 	//STEP 7 : Minted Commerce
 	if (eIndex == COMMERCE_GOLD)
 	{
-		iBaseCommerceRate += getMintedCommerceTimes100();
+		iBaseExtraRate += getMintedCommerceTimes100();
 	}
 
 	//STEP 8 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
 	if (GET_PLAYER(getOwner()).isGoldenAge())
 	{
-		iBaseCommerceRate += 100 * (GET_PLAYER(getOwner()).getGoldenAgeCommerce(eIndex));
+		iBaseExtraRate += 100 * GET_PLAYER(getOwner()).getGoldenAgeCommerce(eIndex);
 	}
-	return iBaseCommerceRate;
+	return iBaseExtraRate;
 }
 
+int CvCity::getCommerceRateAtSliderPercent(CommerceTypes eIndex, int iSliderPercent) const
+{
+	PROFILE_FUNC();
+
+	if (isDisorder())
+	{
+		return 0;
+	}
+	if (m_abCommerceRateDirty[eIndex])
+	{
+		updateCommerce(eIndex);
+	}
+	int iRate = getYieldRate100(YIELD_COMMERCE) * iSliderPercent / 100 + getBaseCommerceRateExtra(eIndex);
+
+	// Don't apply rate modifiers to negative commerce or you get counter-intuitive results
+	//	like intelligence agencies making your negative espionage worse!
+	if (iRate > 0)
+	{
+		iRate = iRate * getTotalCommerceRateModifier(eIndex) / 100;
+	}
+	else
+	{
+		iRate = iRate * 100 / getTotalCommerceRateModifier(eIndex);
+	}
+	iRate += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
+
+	// Culture and science cannot be negative
+	if (iRate < 0 && (eIndex == COMMERCE_CULTURE || eIndex == COMMERCE_RESEARCH))
+	{
+		return 0;
+	}
+	return iRate;
+}
 
 int CvCity::getTotalCommerceRateModifier(CommerceTypes eIndex) const
 {
@@ -12100,32 +12144,8 @@ void CvCity::updateCommerce(CommerceTypes eIndex, bool bForce) const
 			if (bForce || m_abCommerceRateDirty[eIndex])
 			{
 				m_abCommerceRateDirty[eIndex] = false;
-
 				const int iOldCommerce = m_aiCommerceRate[eIndex];
-				int iNewCommerce = 0;
-
-				if (!isDisorder())
-				{
-					iNewCommerce = getBaseCommerceRateTimes100(eIndex);
-
-					//	Don't apply rate modifiers to negative commerce or you get counter-intuitive results
-					//	like intelligence agencies makign your negative espionage worse!
-					if (iNewCommerce > 0)
-					{
-						iNewCommerce = (iNewCommerce * getTotalCommerceRateModifier(eIndex)) / 100;
-					}
-					else
-					{
-						iNewCommerce = (iNewCommerce * 100) / getTotalCommerceRateModifier(eIndex);
-					}
-					iNewCommerce += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
-				}
-
-				//	Culture and science cannot be negative
-				if (iNewCommerce < 0 && (eIndex == COMMERCE_CULTURE || eIndex == COMMERCE_RESEARCH))
-				{
-					iNewCommerce = 0;
-				}
+				const int iNewCommerce = getCommerceRateAtSliderPercent(eIndex, GET_PLAYER(getOwner()).getCommercePercent(eIndex));
 
 				if (iOldCommerce != iNewCommerce)
 				{
@@ -12133,7 +12153,7 @@ void CvCity::updateCommerce(CommerceTypes eIndex, bool bForce) const
 
 					GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
 
-					GET_PLAYER(getOwner()).changeCommerceRate(eIndex, (iNewCommerce - iOldCommerce));
+					GET_PLAYER(getOwner()).changeCommerceRate(eIndex, iNewCommerce - iOldCommerce);
 
 					if (isCitySelected())
 					{

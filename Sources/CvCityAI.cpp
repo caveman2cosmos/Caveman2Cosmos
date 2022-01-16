@@ -4713,8 +4713,12 @@ public:
 };
 
 
-int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech)
+int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bDebug)
 {
+	if (bDebug)
+	{
+		return AI_buildingValueThresholdOriginalUncached(eBuilding, 0, -123, false, true);
+	}
 	int iValue;
 	if (bForTech)
 	{
@@ -4872,24 +4876,24 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
-	int iBadHealthFromBuilding = std::max(0, (-iBuildingActualHealth));
-	int iUnhealthyPopulationFromBuilding = std::min(0, (-iBaseHealthLevel)) + iBadHealthFromBuilding;
+	int iBadHealthFromBuilding = std::max(0, -iBuildingActualHealth);
+	int iUnhealthyPopulationFromBuilding = std::min(0, -iBaseHealthLevel) + iBadHealthFromBuilding;
 
 	// Allow a bit of shrinking:
 	// Population is expendable if angry, working a bad tile, or running a not-so-good specialist
 	int iAllowedShrinkRate =
+	(
+		getFoodConsumedPerPopulation100()
+		*
 		(
-			getFoodConsumedPerPopulation100()
-			*
-			(
-				std::max(0, -iBaseHappinessLevel - getPopulation() * getAngerPercent() / GC.getPERCENT_ANGER_DIVISOR())
-				+
-				std::min(1, std::max(0, getWorkingPopulation() - AI_countGoodTiles(true, false, 50)))
-				+
-				std::max(0, visiblePopulation() - AI_countGoodSpecialists(false))
-				)
-			/ 100
-			);
+			std::max(0, -iBaseHappinessLevel - getPopulation() * getAngerPercent() / GC.getPERCENT_ANGER_DIVISOR())
+			+
+			std::min(1, std::max(0, getWorkingPopulation() - AI_countGoodTiles(true, false, 50)))
+			+
+			std::max(0, visiblePopulation() - AI_countGoodSpecialists(false))
+			)
+		/ 100
+	);
 	if (iUnhealthyPopulationFromBuilding > 0 && (iBaseFoodDifference + iAllowedShrinkRate < iUnhealthyPopulationFromBuilding))
 	{
 		return 0;
@@ -5668,14 +5672,13 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						)
 					)
 				);
+				const int iTempValue = std::min(-1, iCost * iGoldValueAssessmentModifier / 500);
 
 				if (bFinancialTrouble)
 				{
-					FAssertMsg(iCost * 5 < iCost * (24 + iGoldValueAssessmentModifier) / 125, "If this assert happen, then the else below can handle financial trouble as well");
-
-					iValue += iCost * 5;
+					iValue += 4 * iTempValue;
 				}
-				else iValue += std::min(-1, iCost * (24 + iGoldValueAssessmentModifier) / 125);
+				else iValue += iTempValue;
 			}
 
 			if ((iFocusFlags & BUILDINGFOCUS_SPECIALIST) || iPass > 0)
@@ -6404,6 +6407,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 		{
 			iValue = std::max(1, iValue / (8 - getPopulation()));
 		}
+	}
+	if (iThreshold == -123) // Debug UI - magic number.
+	{
+		return iValue;
 	}
 	return std::max(0, iValue);
 }
@@ -13686,7 +13693,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				const int iBaseMaintenance = getMaintenanceTimes100();
 				const int iMaintenanceMod = getEffectiveMaintenanceModifier();
 
-				int iCost =
+				const int iCost =
 				(
 					std::min(
 						-1,
@@ -13698,14 +13705,13 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						)
 					)
 				);
+				int iTempValue = std::min(-1, iCost * iGoldValueAssessmentModifier / 500);
 
 				if (bFinancialTrouble)
 				{
-					iCost *= 5;
+					iTempValue *= 4;
 				}
-				else iCost = std::min(-1, iCost * (24 + iGoldValueAssessmentModifier) / 125);
-
-				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, iCost);
+				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, iTempValue);
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Specialist");
