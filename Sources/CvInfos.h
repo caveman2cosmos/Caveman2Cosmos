@@ -4846,14 +4846,12 @@ class CvWorldInfo
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvWorldInfo();
 	virtual ~CvWorldInfo();
 
 	DllExport int getDefaultPlayers() const;
 	int getUnitNameModifier() const;
 	int getTargetNumCities() const;
-	int getNumFreeBuildingBonuses() const;
 	int getBuildingPrereqModifier() const;
 	int getMaxConscriptModifier() const;
 	int getWarWearinessModifier() const;
@@ -4872,21 +4870,17 @@ public:
 	int getCommandersLevelThresholdsPercent() const;
 	int getOceanMinAreaSize() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
 	int getPercent(int iID) const;
 
+	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvWorldInfo* pClassInfo);
-
 	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
-
+private:
 	int m_iDefaultPlayers;
 	int m_iUnitNameModifier;
 	int m_iTargetNumCities;
-	int m_iNumFreeBuildingBonuses;
 	int m_iBuildingPrereqModifier;
 	int m_iMaxConscriptModifier;
 	int m_iWarWearinessModifier;
