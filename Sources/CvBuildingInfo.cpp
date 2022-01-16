@@ -1478,7 +1478,7 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		foreach_(const BonusModifier2& kFreeBonus, kBuilding.getFreeBonuses())
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
 			query.id = kFreeBonus.first;
 			queries.push_back(query);
@@ -1516,7 +1516,7 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		foreach_(const BonusModifier2& kFreeBonus, kBuilding.getFreeBonuses())
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
 			query.id = kFreeBonus.first;
 			queries.push_back(query);
