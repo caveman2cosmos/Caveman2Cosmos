@@ -50,6 +50,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirementsReplacements, "Unit - check building requirement replacements", "Checks if unit has building requirement, that gets replaced")
+		self.main.addTestCode(screen, self.checkUnitAis, "Unit - Check default and general unit AIs", "Checks if unit default AI is listed in unit AIs")
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
 		self.main.addTestCode(screen, self.checkCivicImprovementReplacements, "Civic - check potential improvement replacements", "Checks replacements of improvements in civics")
@@ -3126,6 +3127,16 @@ class TestCode:
 				aBuildingTypeList.append(GC.getBuildingInfo(aReplacedUniqueRequirements[iBuilding]).getType())
 			if len(aBuildingTypeList) > 0:
 				self.log(CvUnitInfo.getType()+" requires (GOM OR) "+str(aBuildingTypeList))
+
+	#Checks if unit default AI is listed in unit AIs
+	def checkUnitAis(self):
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+
+			iDefaultAI = CvUnitInfo.getDefaultUnitAIType()
+			if not CvUnitInfo.getUnitAIType(iDefaultAI):
+				self.log(CvUnitInfo.getType()+" doesn't have UnitAi of DefaultAI")
+
 
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
