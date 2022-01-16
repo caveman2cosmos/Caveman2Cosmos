@@ -325,15 +325,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FORTIFIED_CAVE]Óêðåïëåííóþ ïåùåðó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée (Ouvrier Détruit)[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
-		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
-		<Russian>Óêðåïèòü [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ïåùåðó[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_WITH_CACHE</Tag>
 		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Fortified Cave with Cache[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Caverne fortifiée, avec cache[\LINK]</French>

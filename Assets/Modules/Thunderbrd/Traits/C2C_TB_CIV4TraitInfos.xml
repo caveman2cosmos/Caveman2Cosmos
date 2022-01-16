@@ -3931,10 +3931,6 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4162,10 +4158,6 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4372,10 +4364,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4590,10 +4578,6 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4783,10 +4767,6 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4971,10 +4951,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -5166,10 +5142,6 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -5358,10 +5330,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

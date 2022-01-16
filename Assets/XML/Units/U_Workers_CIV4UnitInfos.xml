@@ -57,7 +57,7 @@
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<BuildType>BUILD_DESERT_CAMP</BuildType>
-				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
 				<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 				<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
