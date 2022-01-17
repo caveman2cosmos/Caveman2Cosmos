@@ -160,7 +160,7 @@ public:
 
 	CyUnit* getTransportUnit() const;
 	bool isCargo() const;
-	void setTransportUnit(const CyUnit& kTransportUnit);
+	void setTransportUnit(const CyUnit& kTransportUnit, const bool bLoad);
 
 	std::wstring getName() const;
 	std::wstring getNameForm(int iForm) const;
