@@ -607,11 +607,6 @@ public:
 	int getOwnershipDuration() const;
 	bool isOwnershipScore() const;
 	void setOwnershipDuration(int iNewValue);
-	void changeOwnershipDuration(int iChange);
-
-	int getImprovementDuration() const;
-	void setImprovementDuration(int iNewValue);
-	void changeImprovementDuration(int iChange);
 
 	int getImprovementUpgradeProgress() const;
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const;
@@ -925,7 +920,6 @@ protected:
 	mutable CvArea *m_pPlotArea;
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
-	short m_iImprovementDuration;
 	short m_iUpgradeProgress;
 	short m_iForceUnownedTimer;
 	short m_iCityRadiusCount;

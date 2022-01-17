@@ -229,7 +229,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_pPlotArea = NULL;
 	m_iFeatureVariety = 0;
 	m_iOwnershipDuration = 0;
-	m_iImprovementDuration = 0;
 	m_iUpgradeProgress = 0;
 	m_iForceUnownedTimer = 0;
 	m_iCityRadiusCount = 0;
@@ -624,13 +623,9 @@ void CvPlot::doTurn()
 
 	if (isOwned())
 	{
-		changeOwnershipDuration(1);
-	}
+		setOwnershipDuration(getOwnershipDuration() + 1);
 
-	if (getImprovementType() != NO_IMPROVEMENT)
-	{
-		changeImprovementDuration(1);
-		if (isOwned())
+		if (getImprovementType() != NO_IMPROVEMENT)
 		{
 			doImprovement();
 		}
@@ -5525,49 +5520,23 @@ int CvPlot::getOwnershipDuration() const
 
 bool CvPlot::isOwnershipScore() const
 {
-	return (getOwnershipDuration() >= GC.getDefineINT("OWNERSHIP_SCORE_DURATION_THRESHOLD"));
+	return getOwnershipDuration() >= GC.getDefineINT("OWNERSHIP_SCORE_DURATION_THRESHOLD");
 }
 
 
 void CvPlot::setOwnershipDuration(int iNewValue)
 {
-	if (getOwnershipDuration() != iNewValue)
+	if (m_iOwnershipDuration != iNewValue)
 	{
-		const bool bOldOwnershipScore = isOwnershipScore();
+		FASSERT_NOT_NEGATIVE(iNewValue);
 
 		m_iOwnershipDuration = iNewValue;
-		FASSERT_NOT_NEGATIVE(getOwnershipDuration());
 
-		if (bOldOwnershipScore != isOwnershipScore() && isOwned() && !isWater())
+		if (isOwned() && !isWater())
 		{
 			GET_PLAYER(getOwner()).changeTotalLandScored(isOwnershipScore() ? 1 : -1);
 		}
 	}
-}
-
-
-void CvPlot::changeOwnershipDuration(int iChange)
-{
-	setOwnershipDuration(getOwnershipDuration() + iChange);
-}
-
-
-int CvPlot::getImprovementDuration() const
-{
-	return m_iImprovementDuration;
-}
-
-
-void CvPlot::setImprovementDuration(int iNewValue)
-{
-	m_iImprovementDuration = iNewValue;
-	FASSERT_NOT_NEGATIVE(getImprovementDuration());
-}
-
-
-void CvPlot::changeImprovementDuration(int iChange)
-{
-	setImprovementDuration(getImprovementDuration() + iChange);
 }
 
 
@@ -7037,11 +7006,6 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 		{
 			updatePlotGroupBonus(true);
 			GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
-		}
-
-		if (eNewImprovement == NO_IMPROVEMENT)
-		{
-			setImprovementDuration(0);
 		}
 
 		for (int iI = 0; iI < MAX_TEAMS; ++iI)
@@ -10579,7 +10543,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_iFeatureVariety);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iOwnershipDuration);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iImprovementDuration);
+	// @SAVEBREAK DELETE
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_iImprovementDuration, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCityRadiusCount);
@@ -11012,7 +10978,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 //
 void CvPlot::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -11024,7 +10990,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementDuration);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCityRadiusCount);
