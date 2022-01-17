@@ -4071,21 +4071,27 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 #else
 		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
 		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
-		if ((pLoopUnit->canMove()
-			&& ((bCombat
-				&& (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit)))
-				? pLoopUnit->canMoveOrAttackInto(pPlot)
-				: pLoopUnit->canMoveInto(pPlot)))
-			|| pLoopUnit == pCombatUnit)
+		if (
+			pLoopUnit->canMove()
+		&&	(
+				bCombat && (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))
+				?
+				pLoopUnit->canMoveOrAttackInto(pPlot)
+				:
+				pLoopUnit->canMoveInto(pPlot)
+			)
+		||	pLoopUnit == pCombatUnit)
 #endif
 // BUG - Sentry Actions - end
 		{
-			pLoopUnit->move(pPlot, true);//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
+			pLoopUnit->move(pPlot, true);
+			//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
 			if (pLoopUnit->isDead())
 			{
-				pLoopUnit->joinGroup(NULL,true);
+				// Toffer - Shouldn't this be handled when pLoopUnit actually dies in the above pLoopUnit->move(pPlot, true);
+				//	rather than after it has died here below.
+				pLoopUnit->joinGroup(NULL, true);
 				pLoopUnit->finishMoves();
-				continue;
 			}
 		}
 		else
