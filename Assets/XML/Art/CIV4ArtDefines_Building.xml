@@ -46972,7 +46972,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_horse.dds</Button>
+			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_donkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LLAMA_NATIONAL</Type>
@@ -46982,7 +46982,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_camel.dds</Button>
+			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_llama.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
