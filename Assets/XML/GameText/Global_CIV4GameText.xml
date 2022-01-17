@@ -25717,11 +25717,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BUDDHISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Buddhist</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Buddhist</English>
 		<French>
 			<Text>bouddhiste:bouddhiste:bouddhistes:bouddhistes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -25834,11 +25830,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHRISTIANITY_ADJECTIVE</Tag>
-		<English>
-			<Text>Christian</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Christian</English>
 		<French>
 			<Text>chrétien:chrétienne:chrétiens:chrétiennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -25902,11 +25894,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONFUCIANISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Confucian</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Confucian</English>
 		<French>
 			<Text>confucéen:confucéenne:confucéens:confucéennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26078,11 +26066,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HINDUISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Hindu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Hindu</English>
 		<French>
 			<Text>hindou:hindoue:hindous:hindoues</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26145,11 +26129,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ISLAM_ADJECTIVE</Tag>
-		<English>
-			<Text>Islamic</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Islamic</English>
 		<French>
 			<Text>musulman:musulmane:musulmans:musulmanes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26235,11 +26215,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JUDAISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Jewish</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Jewish</English>
 		<French>
 			<Text>juif:juive:juifs:juives</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26673,11 +26649,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TAOISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Taoist</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Taoist</English>
 		<French>
 			<Text>taoïste:taoïste:taoïstes:taoïstes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
