@@ -12983,6 +12983,9 @@ namespace {
 }
 bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) const
 {
+	FAssert(getX() != INVALID_PLOT_COORD);
+	FAssert(getY() != INVALID_PLOT_COORD);
+
 	const TeamTypes attackerTeam = GET_PLAYER(attacker.getOwner()).getTeam();
 
 	return
@@ -16111,6 +16114,10 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			{
 				foreach_(CvUnit* unitX, pNewPlot->units_safe())
 				{
+					// Matt: todo - temporary debug code, delete later.
+					FAssert(unitX->getX() != INVALID_PLOT_COORD);
+					FAssert(unitX->getY() != INVALID_PLOT_COORD);
+
 					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam()))
 					&& !unitX->canCoexistWithAttacker(*this))
 					{
