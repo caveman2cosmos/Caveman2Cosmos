@@ -2,6 +2,23 @@
 <!-- Notes:
 	- Ordering of entries roughly mimics that of CIV4BuildInfos
 	- SUBMERGED_TOWN unlocks the ability to build at lower depths with tech advancement.
+
+	<BonusTypeStruct>
+		<iDiscoverRand>
+			Affects the chance of discoverig this bonus, sensible values range from 1 to 80 000.
+			value of 1 gives the highest possible chance of discovering the bonus, Higher values reduce chance of discovery.
+			Bonuses that does not have this value will default to use a iDiscoverRand = 40 000 if a city is working the plot.
+			So setting this value higher than 40 000 is the same as reducing the chance of discovering bonuses on plots worked by a city,
+			while it will add a small chance of discovering a bonus on a plot not worked by any city.
+			Bonuses can only be discovered in land owned by a player.
+		</iDiscoverRand>
+		<iDepletionRand>
+			Requires bug option to be enabled.
+			value of 1 gives the highest possible chance of depleting the bonus.
+			Higher values reduce chance of depletion, no hard upper limit, but should be comparable to typical iDiscoverRand values.
+			Bonuses can only be depleted if the improvement actually provides a bonus for a civ.
+		</iDepletionRand>
+	</BonusTypeStruct>
 -->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
