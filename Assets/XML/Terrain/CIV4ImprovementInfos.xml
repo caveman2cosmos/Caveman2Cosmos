@@ -11411,7 +11411,6 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_WHALING_SHIPS</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -11436,7 +11435,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -11552,165 +11550,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Fishing Camp -> (Various, Wireless Electricity obsolete) -->
-		<!-- Kill Switchpoint: Rudder -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_FISHING_CAMP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<bWaterImprovement>1</bWaterImprovement>
-			<iUpgradeTime>2</iUpgradeTime>
-			<ImprovementUpgrade>IMPROVEMENT_FISHING_BOATS</ImprovementUpgrade>
-			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
-				<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
-				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
-				<ImprovementType>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_MARINE_PRESERVE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
-				<ImprovementType>IMPROVEMENT_TIDAL_HARNESS</ImprovementType>
-			</AlternativeImprovementUpgradeTypes>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SEA</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LAKE</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<!-- Trench & ocean too far away from shore... also disabled because it also makes this build able to obsolete -->
-				<!-- <TerrainMakesValid>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid> -->
-			</TerrainMakesValids>
-			<BonusTypeStructs>
-				<BonusTypeStruct>
-					<BonusType>BONUS_CLAM</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_CRAB</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_FISH</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_LOBSTER</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_MUREX</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_PEARLS</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_SHRIMP</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_WHALE</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_METHANE_ICE</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_NATURAL_GAS</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_OIL</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-			</BonusTypeStructs>
-		</ImprovementInfo>
 		<!-- Harvest Kelp -->
 		<!-- Kill Switchpoint: Rudder -->
 		<ImprovementInfo>
@@ -11719,7 +11558,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HARVEST_KELP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HARVEST_KELP</ArtDefineTag>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<YieldChanges>
 				<iYield>1</iYield>
 				<iYield>0</iYield>
@@ -11880,7 +11718,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -11928,7 +11765,6 @@
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -11978,7 +11814,6 @@
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -12202,7 +12037,6 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>

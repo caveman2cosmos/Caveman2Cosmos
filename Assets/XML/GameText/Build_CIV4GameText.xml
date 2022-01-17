@@ -295,16 +295,6 @@
 		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK]</English>
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_FOREST_PRESERVE]Ëåñíîé çàïîâåäíèê[\LINK]</Russian>

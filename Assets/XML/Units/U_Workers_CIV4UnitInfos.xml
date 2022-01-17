@@ -2003,7 +2003,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
@@ -2109,7 +2108,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<BuildType>BUILD_BEACON_CORAL</BuildType>
@@ -2258,8 +2256,6 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
@@ -2397,8 +2393,6 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
@@ -2499,8 +2493,6 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>

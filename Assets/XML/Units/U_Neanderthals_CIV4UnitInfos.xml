@@ -1975,7 +1975,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->

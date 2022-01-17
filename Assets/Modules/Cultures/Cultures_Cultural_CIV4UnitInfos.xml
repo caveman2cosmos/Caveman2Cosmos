@@ -45199,7 +45199,6 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<BuildType>BUILD_WHALING_SHIPS</BuildType>
