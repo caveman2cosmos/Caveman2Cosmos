@@ -4128,7 +4128,7 @@
 				<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-		</ImprovementInfo>		
+		</ImprovementInfo>
 		<!-- Mountain Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MOUNTAIN_MINE</Type>
@@ -6218,6 +6218,7 @@
 					<BonusType>BONUS_NATRON</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -6711,6 +6712,18 @@
 						<iYieldChange>9</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OLIVES</BonusType>
+					<iDiscoverRand>5000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TEA</BonusType>
+					<iDiscoverRand>5000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<iDiscoverRand>5000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<TechYieldChanges>

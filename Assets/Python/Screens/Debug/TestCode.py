@@ -3433,21 +3433,37 @@ class TestCode:
 	def checkImprovementBonusSpawnChance(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
-			
+
 			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0: #Check improvements, that can upgrade
 				aBaseBonusChance = [999999]*GC.getNumBonusInfos()
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					if CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus) != 0:
 						aBaseBonusChance[iBonus] = CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus)
-						self.log(CvImprovementInfo.getType()+" discovery: "+GC.getBonusInfo(iBonus).getType()+" "+str(CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus)))
 
 				#Main upgrade
 				CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
+				aUpgradeBonusChance = [999999]*GC.getNumBonusInfos()
+				for jBonus in xrange(GC.getNumBonusInfos()):
+					if CvImprovementUpgradeInfo.getImprovementBonusDiscoverRand(jBonus) != 0:
+						aUpgradeBonusChance[jBonus] = CvImprovementUpgradeInfo.getImprovementBonusDiscoverRand(jBonus)
+
+				#Compare rand chances of improvement and main upgrade
+				for i in xrange(len(aBaseBonusChance)):
+					if aBaseBonusChance[i] < aUpgradeBonusChance[i]:
+						self.log(CvImprovementInfo.getType()+" -> "+CvImprovementUpgradeInfo.getType()+" Bonus: "+GC.getBonusInfo(i).getType()+" Rand: "+str(aBaseBonusChance[i])+"->"+str(aUpgradeBonusChance[i]))
 
 				#Alt upgrades
 				for iImprovementUpgrade in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
 					CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementUpgrade))
+					aAltUpgradeBonusChance = [999999]*GC.getNumBonusInfos()
+					for kBonus in xrange(GC.getNumBonusInfos()):
+						if CvImprovementAltUpgradeInfo.getImprovementBonusDiscoverRand(kBonus) != 0:
+							aAltUpgradeBonusChance[kBonus] = CvImprovementAltUpgradeInfo.getImprovementBonusDiscoverRand(kBonus)
 
+					#Compare rand chances of improvement and alt upgrades
+					for j in xrange(len(aBaseBonusChance)):
+						if aBaseBonusChance[j] < aAltUpgradeBonusChance[j]:
+							self.log(CvImprovementInfo.getType()+" A-> "+CvImprovementAltUpgradeInfo.getType()+" Bonus: "+GC.getBonusInfo(j).getType()+" Rand: "+str(aBaseBonusChance[j])+"->"+str(aAltUpgradeBonusChance[j]))
 
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
 	def checkBuildingWonderMovies(self):

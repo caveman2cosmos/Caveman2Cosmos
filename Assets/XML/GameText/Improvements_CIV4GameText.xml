@@ -1913,7 +1913,7 @@
 		<Spanish>Un Campamento de recolección proporciona alimentos adicionales. Si se construye sobre un recurso animal (como las [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT]) proporciona también dicho recurso. Mejora, si se trabaja la casilla, a un Pastizal nómada con la [COLOR_TECH_TEXT]Domesticación de mastodontes[COLOR_REVERT].</Spanish>
 		<Polish>Padlina - określenie zwierzęcych zwłok. Określenia tego nie używa się w stosunku do zwłok ludzkich. Padlina jest podstawowym pokarmem wielu drapieżników i zwierząt wszystkożernych, takich jak diabły tasmańskie, hieny, kondory i sępy. Padlina to także siedlisko występowania bezkręgowców zaliczanych do nekrofauny. Niektóre rośliny potrafią wytwarzać zapach rozkładającej się padliny, by zwabić zapylające je owady, takie jak muchy.</Polish>
 		<Russian>Лагерь свежевания обеспечивает ваш народ дополнительной пищей на ранних стадиях игры. Если он построен на животном ресурсе (например, на [COLOR_HIGHLIGHT_TEXT]коровах[COLOR_REVERT]) он также предоставит этот ресурс в город.</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
 		<English>Sea Mill</English>
