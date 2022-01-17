@@ -2227,7 +2227,6 @@ class CvMainInterface:
 				# Treasury and income info.
 				iGold = CyPlayer.getGold()
 				iGoldRate = CyPlayer.calculateGoldRate()
-				print ("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW", iGoldRate)
 				szTxt = "<font=3>"
 				if iGold < 0:
 					szTxt += "<color=255,0,0,255>"

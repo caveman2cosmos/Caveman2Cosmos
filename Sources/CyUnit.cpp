@@ -573,9 +573,9 @@ bool CyUnit::isCargo() const
 	return m_pUnit->isCargo();
 }
 
-void CyUnit::setTransportUnit(const CyUnit& kTransportUnit)
+void CyUnit::setTransportUnit(const CyUnit& kTransportUnit, const bool bLoad)
 {
-	m_pUnit->setTransportUnit(kTransportUnit.getUnit());
+	m_pUnit->setTransportUnit(bLoad ? kTransportUnit.getUnit() : NULL);
 }
 
 std::wstring CyUnit::getName() const
