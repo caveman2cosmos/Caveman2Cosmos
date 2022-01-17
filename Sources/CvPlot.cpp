@@ -702,43 +702,40 @@ bool CvPlot::doBonusDiscovery()
 	{
 		const BonusTypes eBonus = GC.getMapBonus(iIndex); 
 
-		if (GC.getBonusInfo(eBonus).getPlacementOrder() > -1) // Would not be needed if we had a cached array for only map bonuses.
+		int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(eBonus) : 0;
+
+		if (bWorked && iOdds < 1)
 		{
-			int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(eBonus) : 0;
+			iOdds = 30000; // small chance always there when worked by city.
+		}
 
-			if (bWorked && iOdds < 1)
+		if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
+		{
+			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+			iOdds /= 100;
+			// Bonus density normalization
+			iOdds *= 10 * (GC.getMap().getNumBonuses(eBonus) + 1);
+			iOdds /= 25 * (GC.getMap().getWorldSize() + 4);
+
+			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 			{
-				iOdds = 30000; // small chance always there when worked by city.
-			}
+				setBonusType(eBonus);
 
-			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
-			{
-				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-				iOdds /= 100;
-				// Bonus density normalization
-				iOdds *= 10 * (GC.getMap().getNumBonuses(eBonus) + 1);
-				iOdds /= 25 * (GC.getMap().getWorldSize() + 4);
+				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
-				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+				if (pCity != NULL && isInViewport())
 				{
-					setBonusType(eBonus);
-
-					const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-					if (pCity != NULL && isInViewport())
-					{
-						AddDLLMessage(
-							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
-								GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey()
-							),
-							"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
-							GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
-						);
-					}
-					return true;
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+							GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey()
+						),
+						"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
+						GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
+					);
 				}
+				return true;
 			}
 		}
 		if (++iIndex == iNumBonuses)
