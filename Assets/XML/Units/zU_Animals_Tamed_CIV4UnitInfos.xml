@@ -3608,6 +3608,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
