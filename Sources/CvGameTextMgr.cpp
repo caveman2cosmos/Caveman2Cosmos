@@ -21142,6 +21142,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szTempBuffer.Format(L", +%d%c", abs(kBonus.getHappiness()), (kBonus.getHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR));
 			szBuffer.append(szTempBuffer);
 		}
+
+		if (player != NULL)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1", player->getNumAvailableBonuses(pair.first)));
+		}
 	}
 
 	const BuildingTypes eFreeBuilding = kBuilding.getFreeBuilding();

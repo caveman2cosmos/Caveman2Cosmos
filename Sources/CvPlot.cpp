@@ -684,10 +684,8 @@ bool CvPlot::doBonusDiscovery()
 	PROFILE_FUNC();
 
 	// Toffer - ToDo - Make a cached array of map bonuses, where manufacture and other such bonuses are filtered out.
-	int iMaxAttempts = 100;
-	//	iMaxAttempts wouldn't be needed if we had such a cache.
 	const bool bWorked = isBeingWorked();
-	
+
 	const CvImprovementInfo* improvement = (
 		getImprovementType() != NO_IMPROVEMENT
 		?
@@ -699,50 +697,52 @@ bool CvPlot::doBonusDiscovery()
 	const int iNumBonuses = GC.getNumBonusInfos();
 	int iBonus = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
 	int iCount = 0;
-	while (iCount < iMaxAttempts && iCount < iNumBonuses)
+	while (iCount++ < iNumBonuses)
 	{
-		int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(iBonus) : 0;
-
-		if (bWorked && iOdds < 1)
+		if (GC.getBonusInfo((BonusTypes)iBonus).getPlacementOrder() > -1) // Would not be needed if we had a cached array for only map bonuses.
 		{
-			iOdds = 40000; // small chance always there when worked by city.
-		}
+			int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(iBonus) : 0;
 
-		if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
-		{
-			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-			iOdds /= 100;
-			// Bonus density normalization
-			iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
-			iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
-
-			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+			if (bWorked && iOdds < 1)
 			{
-				setBonusType((BonusTypes) iBonus);
-
-				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-				if (pCity != NULL && isInViewport())
-				{
-					AddDLLMessage(
-						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText(
-							"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
-							GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey()
-						),
-						"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes)iBonus).getButton(),
-						GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
-					);
-				}
-				return true;
+				iOdds = 40000; // small chance always there when worked by city.
 			}
-			return false;
+
+			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
+			{
+				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+				iOdds /= 100;
+				// Bonus density normalization
+				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
+				iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
+
+				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+				{
+					setBonusType((BonusTypes) iBonus);
+
+					const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+					if (pCity != NULL && isInViewport())
+					{
+						AddDLLMessage(
+							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+								GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey()
+							),
+							"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes)iBonus).getButton(),
+							GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
+						);
+					}
+					return true;
+				}
+				return false;
+			}
 		}
 		if (++iBonus == iNumBonuses)
 		{
 			iBonus = 0;
 		}
-		iCount += 1;
 	}
 	return false;
 }

@@ -2480,6 +2480,10 @@
 		<Spanish>[SPACE](%s2_player tiene %d1_num_bonus)[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1</Tag>
+		<English>[SPACE](Have %d1)[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_HEALTHY</Tag>
 		<English>Healthy: +%d1_Change[ICON_HEALTHY]</English>
 		<French>Santé : +%d1_Change[ICON_HEALTHY]</French>
