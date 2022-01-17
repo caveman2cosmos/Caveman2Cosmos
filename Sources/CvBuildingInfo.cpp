@@ -1898,11 +1898,11 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iMaxPopAllowed);
 
 	//Structs
-	foreach_(const FreePromoTypes& kFreePromotion, m_aFreePromoTypes)
+	foreach_(const FreePromoTypes& freePromotion, m_aFreePromoTypes)
 	{
-		CheckSum(iSum, kFreePromotion.ePromotion);
-		if (kFreePromotion.m_pExprFreePromotionCondition)
-			kFreePromotion.m_pExprFreePromotionCondition->getCheckSum(iSum);
+		CheckSum(iSum, freePromotion.ePromotion);
+		if (freePromotion.m_pExprFreePromotionCondition)
+			freePromotion.m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
 	int iNumElements = m_aHealUnitCombatTypes.size();

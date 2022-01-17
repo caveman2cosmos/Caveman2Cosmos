@@ -21192,11 +21192,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		const bool bVisit = kBuilding.isApplyFreePromotionOnMove();
 
-		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
+		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
 		{
-			if (kFreePromo.m_pExprFreePromotionCondition == NULL)
+			if (freePromo.m_pExprFreePromotionCondition == NULL)
 			{
-				setFreePromoBuildingHelp(kFreePromo.ePromotion, bVisit, szBuffer);
+				setFreePromoBuildingHelp(freePromo.ePromotion, bVisit, szBuffer);
 			}
 		}
 	}
@@ -22063,10 +22063,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (!bRelDisabled)
 	{
-		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
+		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
 		{
-			const PromotionTypes ePromo = kFreePromo.ePromotion;
-			const BoolExpr* pExpr = kFreePromo.m_pExprFreePromotionCondition;
+			const PromotionTypes ePromo = freePromo.ePromotion;
+			const BoolExpr* pExpr = freePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(GC.getPromotionInfo(ePromo).getType()).GetCString(), GC.getPromotionInfo(ePromo).getTextKeyWide()));
