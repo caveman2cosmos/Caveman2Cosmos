@@ -30261,7 +30261,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>U.N. Election (Secretary-General - Can Propose U.N. Resolutions)</English>
 		<French>Election ONU (Secrétaire général - peut proposer des résolutions de l'ONU)</French>
 		<German>U.N.-Wahl (Generalsekretär - Kann U.N.-Resolutionen vorschlagen)</German>
-		<Italian>Elezione ONU (Segretario generale)</Italian>
+		<Italian>Elezione ONU (Segretario generale - può proporre risoluzioni ONU)</Italian>
 		<Spanish>Votación en la ONU (Secretario General - puede proponer resoluciones de la ONU)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30274,7 +30274,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>U.N. Resolution #104 (Single Currency - +1 Trade Route ([ICON_TRADE]) in All Cities)</English>
 		<French>Résolution de l'ONU n° 104 (Monnaie unique - + route commerciale dans toutes les villes)</French>
 		<German>U.N.-Resolution Nr. 104 (Einheitswährung - +1 Handelsweg in allen Städten)</German>
-		<Italian>Mozione #104 dell'ONU (Moneta unica - +1 alle rotte commerciali in tutte le città)</Italian>
+		<Italian>Mozione #104 dell'ONU (Moneta unica - +1 alle rotte commerciali [ICON_TRADE] in tutte le città)</Italian>
 		<Spanish>Resolución nº 104 de la ONU (moneda única - +1 ruta comercial en todas las ciudades)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -31101,5 +31101,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNCLAIMED</Tag>
 		<English>Unclaimed</English>
+		<Italian>Non reclamato</Italian>
 	</TEXT>
 </Civ4GameText>

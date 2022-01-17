@@ -3,32 +3,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
 		<English>Enclosure - Amphibian Pond</English>
-		<French>
-			<Text>Enclos - Mare à amphibiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Stagno per anfibi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Mare à amphibiens</French>
+		<Italian>Gabbia - Stagno per anfibi</Italian>
 		<Polish>Klatka - Płazy</Polish>
 		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM</Tag>
 		<English>Military Standard (Animal mascot)</English>
-		<French>
-			<Text>Mascotte de L'Armée de Terre</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mascotte dell'esercito</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mascotte de L'Armée de Terre</French>
+		<Italian>Mascotte dell'esercito</Italian>
 		<Polish>Sztandar Wojskowy (Zwierzęca Maskotka)</Polish>
 		<Russian>Çâåðèíûé òîòåì</Russian>
 	</TEXT>
@@ -36,11 +20,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Tag>
 		<English>Military Standard (Canines)</English>
 		<French>Standards Militaires (Canins)</French>
-		<Italian>
-			<Text>Mascotte dell'esercito (Cani)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mascotte dell'esercito (Canidi)</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
@@ -56,11 +36,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
 		<French>Standards Militaires (Ouvriers)</French>
-		<Italian>
-			<Text>Tradizioni - Mascotte dei lavoratori</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Mascotte dei lavoratori</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
 	</TEXT>
@@ -74,127 +50,67 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
 		<English>Enclosure - Bad Boys</English>
-		<French>
-			<Text>Enclos - Animaux nuisibles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Cattivi ragazzi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Animaux nuisibles</French>
+		<Italian>Gabbia - Cattivi ragazzi</Italian>
 		<Polish>Klatka - Groźne Zwierzęta</Polish>
 		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
 		<English>Enclosure - Bear</English>
-		<French>
-			<Text>Enclos - Ours</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Orsi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Ours</French>
+		<Italian>Gabbia - Orsi</Italian>
 		<Polish>Klatka - Niedźwiedź</Polish>
 		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
 		<English>Enclosure - Big Cat</English>
-		<French>
-			<Text>Enclos - Félins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Felini</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Félins</French>
+		<Italian>Gabbia - Felini</Italian>
 		<Polish>Klatka - Wielki kot</Polish>
 		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
 		<English>Enclosure - Bird</English>
-		<French>
-			<Text>Enclos - Oiseaux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Uccelli</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Oiseaux</French>
+		<Italian>Gabbia - Uccelli</Italian>
 		<Polish>Klatka - Ptaki</Polish>
 		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_HERD</Tag>
 		<English>Herd (Bison)</English>
-		<French>
-			<Text>Troupeau de Bisons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Bisonti</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Bisons</French>
+		<Italian>Branco - Bisonti</Italian>
 		<Polish>Stado - Bizony</Polish>
 		<Russian>Ñòàäî áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
 		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
-		<French>
-			<Text>Kangourou Boxeur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Pugilato fra canguri</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Kangourou Boxeur</French>
+		<Italian>Pugilato fra canguri</Italian>
 		<Polish>Mit Kangura</Polish>
 		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD</Tag>
 		<English>Herd (Buffalo)</English>
-		<French>
-			<Text>Troupeau de Buffles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Bufali</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Buffles</French>
+		<Italian>Branco - Bufali</Italian>
 		<Polish>Stado - Bawołów</Polish>
 		<Russian>Ñòàäî áóéâîëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER</Tag>
 		<English>Animal Trainer (Buffalo)</English>
-		<French>
-			<Text>Dresseur de Buffles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Dresseur de Buffles</French>
 		<Italian>
-			<Text>Addestratore di bufali</Text>
+			<Text>Addestratore di bufali:Addestratori di bufali</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Treser Bawołów</Polish>
 		<Russian>Äðåññ. áóéâîëîâ</Russian>
@@ -202,16 +118,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAMEL_HERD</Tag>
 		<English>Herd (Camel)</English>
-		<French>
-			<Text>Troupeau de Chameaux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Cammelli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Chameaux</French>
+		<Italian>Branco - Cammelli</Italian>
 		<Polish>Stado - Wielbłądy</Polish>
 		<Russian>Ñòàäî âåðáëþäîâ</Russian>
 	</TEXT>
@@ -224,108 +132,56 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Jahrmarkt</German>
-		<Italian>
-			<Text>Carnevale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fiera</Italian>
 		<Polish>Karnawał</Polish>
 		<Russian>Êàðíàâàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Tag>
 		<English>Unit Reward - Center for Cephalopod Studies</English>
-		<French>
-			<Text>Centre d'étude des Céphalopodes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Centro per gli studi sui cefalopodi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Centre d'étude des Céphalopodes</French>
+		<Italian>Centro per gli studi sui cefalopodi</Italian>
 		<Polish>Centrum Badań Głowonogów</Polish>
 		<Russian>Öåíòð èçó÷. êàëüìàðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Tag>
 		<English>Unit Reward - Center for Whale Studies</English>
-		<French>
-			<Text>Centre d'étude des Baleines</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Centro per gli studi sulle balene</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Centre d'étude des Baleines</French>
+		<Italian>Centro per gli studi sulle balene</Italian>
 		<Polish>Centrum Badań Wielorybów</Polish>
 		<Russian>Öåíòð èçó÷. êèòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
 		<English>Unit Reward - Coastal Fish Farm</English>
-		<French>
-			<Text>Ferme à Poissons du Littoral</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Allevamento costiero di pesce</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Ferme à Poissons du Littoral</French>
+		<Italian>Allevamento costiero di pesci</Italian>
 		<Polish>Farma Ryb Przybrzeżnych</Polish>
 		<Russian>Ðûáíàÿ ôåðìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COW_HERD</Tag>
 		<English>Herd (Cow)</English>
-		<French>
-			<Text>Troupeau de Vaches</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Bovini</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Vaches</French>
+		<Italian>Branco - Bovini</Italian>
 		<Polish>Stado - Krowy</Polish>
 		<Russian>Ñòàäî êîðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
 		<English>Unit Reward - Crab Nets</English>
-		<French>
-			<Text>Pièges à Crabes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Italian>
-			<Text>Reti per granchi</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<French>Pièges à Crabes</French>
+		<Italian>Reti per granchi</Italian>
 		<Polish>Sieci na kraby</Polish>
 		<Russian>Ñåòè íà êðàáîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR</Tag>
 		<English>Unit Reward - Carnival (Dancing Bear)</English>
-		<French>
-			<Text>Carnaval - Ours Dansant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Carnaval - Ours Dansant</French>
 		<German>Jahrmarkt - Tanzbär</German>
-		<Italian>
-			<Text>Carnevale - Orso ballerino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fiera dell'Orso ballerino</Italian>
 		<Spanish>Carnival - Oso Pisador</Spanish>
 		<Polish>Karnawał - Tańczący Niedźwiedź</Polish>
 		<Russian>Òàíöóþùèé ìåäâåäü</Russian>
@@ -333,31 +189,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_HERD</Tag>
 		<English>Herd (Deer)</English>
-		<French>
-			<Text>Troupeau de Cerfs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Cervi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Cerfs</French>
+		<Italian>Branco - Cervi</Italian>
 		<Polish>Stado - Jelenie</Polish>
 		<Russian>Ñòàäî îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNEL</Tag>
 		<English>Dog Kennels</English>
-		<French>
-			<Text>Chenils pour Chiens</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
+		<French>Chenils pour Chiens</French>
 		<Italian>
-			<Text>Canili</Text>
+			<Text>Canile:Canili</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Psie budy</Polish>
 		<Russian>Ñîáà÷èé âîëüåð</Russian>
@@ -365,96 +209,48 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DONKEY_HERD</Tag>
 		<English>Herd (Donkey)</English>
-		<French>
-			<Text>Troupeau d'Ânes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Asini</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau d'Ânes</French>
+		<Italian>Branco - Asini</Italian>
 		<Polish>Stado - Osły</Polish>
 		<Russian>Ñòàäî îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD</Tag>
 		<English>Herd (Elephant)</English>
-		<French>
-			<Text>Troupeau d'Eléphants</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Elefanti</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau d'Eléphants</French>
+		<Italian>Branco - Elefanti</Italian>
 		<Polish>Stado - Słonie</Polish>
 		<Russian>Ñòàäî ñëîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Tag>
 		<English>Enclosure - Exotic Herbivore</English>
-		<French>
-			<Text>Enclos - Herbivores exotiques</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Erbivori esotici</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Herbivores exotiques</French>
+		<Italian>Gabbia - Erbivori esotici</Italian>
 		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
 		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
 		<English>Unit Reward - Feather Worker</English>
-		<French>
-			<Text>Atelier de Plumes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Lavoratore di piume</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Atelier de Plumes</French>
+		<Italian>Lavoratore di piume</Italian>
 		<Polish>Pierzarz</Polish>
 		<Russian>Ìàñòåð ïåðüåâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
 		<English>Unit Reward - Fish Pens</English>
-		<French>
-			<Text>Enclos à Poissons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Pinne di pesce</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<French>Enclos à Poissons</French>
+		<Italian>Pinne di pesce</Italian>
 		<Polish>Zagroda Rybna</Polish>
 		<Russian>Çàòîí äëÿ ðûáû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
 		<English>Unit Reward - Fur Farm</English>
-		<French>
-			<Text>Ferme de Fourrures</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Allevamento di animali da pelliccia</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Ferme de Fourrures</French>
+		<Italian>Allevamento di animali da pelliccia</Italian>
 		<Polish>Ferma Futer</Polish>
 		<Russian>Ìåõîâàÿ ôåðìà</Russian>
 	</TEXT>
@@ -477,16 +273,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
 		<English>Unit Reward - Governor's Menagerie</English>
-		<French>
-			<Text>Ménagerie du Gouverneur</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Serraglio del governatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Ménagerie du Gouverneur</French>
+		<Italian>Serraglio del governatore</Italian>
 		<Polish>Menażeria Gubernatora</Polish>
 		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
 	</TEXT>
@@ -620,7 +408,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
-		<English>Animal Trainer (Mule)</English>
+		<English>Animal Trainer (Donkey)</English>
 		<French>
 			<Text>Elevage de Mules</Text>
 			<Gender>Male</Gender>
