@@ -12,6 +12,9 @@ class CvPlot;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
+typedef bst::array<int, NUM_COMMERCE_TYPES> CommerceArray;
+typedef bst::array<int, NUM_YIELD_TYPES> YieldArray;
+
 //TB Combat Mod
 typedef std::vector< std::pair<UnitCombatTypes, int> > UnitCombatModifierArray;
 typedef std::vector< std::pair<TechTypes, int> > TechModifierArray;
@@ -25,23 +28,6 @@ typedef std::vector< std::pair<PromotionLineTypes, int> > PromotionLineModifierA
 typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
 typedef std::vector< std::pair<EraTypes, int> > EraArray;
 typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
-
-struct plotInfo
-{
-	plotInfo();
-	std::string ToJSON();
-
-	int index;
-	bool worked;
-	bool owned;
-	bool bonusImproved;
-	int yieldValue;
-	short yields[NUM_YIELD_TYPES];
-	BonusTypes currentBonus;
-	ImprovementTypes currentImprovement;
-	FeatureTypes currentFeature;
-	BuildTypes currentBuild;
-};
 
 struct AidStruct
 {
@@ -130,20 +116,6 @@ struct UnitCombatModifier
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const UnitCombatModifier& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
-struct BonusModifier
-{
-	BonusTypes eBonus;
-	int iModifier;
-	operator int() const {return (int)eBonus;}
-	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
-};
-struct ImprovementModifier
-{
-	ImprovementTypes eImprovement;
-	int iModifier;
-	operator int() const {return (int)eImprovement;}
-	bool operator< (const ImprovementModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
-};
 struct DisallowedTraitType
 {
 	TraitTypes eTrait;
@@ -171,13 +143,6 @@ struct BuildingModifier
 	int* operator&() {return reinterpret_cast<int*>(&eBuilding);}
 	operator int() const {return (int)eBuilding;}
 	bool operator< (const BuildingModifier& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
-};
-struct SpecialBuildingModifier
-{
-	SpecialBuildingTypes eSpecialBuilding;
-	int iModifier;
-	operator int() const {return (int)eSpecialBuilding;}
-	bool operator< (const SpecialBuildingModifier& rhs) const {return (int)eSpecialBuilding < (int)rhs.eSpecialBuilding;}
 };
 struct UnitModifier
 {
@@ -696,22 +661,6 @@ struct PlotExtraYield
 	void write(FDataStreamBase* pStream);
 };
 
-struct PlotExtraCost
-{
-	int m_iX;
-	int m_iY;
-	int m_iCost;
-
-	PlotExtraCost()
-		: m_iX(0)
-		, m_iY(0)
-		, m_iCost(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
 typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
 struct BuildingYieldChange
@@ -736,10 +685,10 @@ struct BuildingCommerceChange
 	CommerceTypes eCommerce;
 	int iChange;
 
-	BuildingCommerceChange()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	BuildingCommerceChange(BuildingTypes eBuilding = NO_BUILDING, CommerceTypes eCommerce = NO_COMMERCE, int iChange = 0)
+		: eBuilding(eBuilding)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
 	void read(FDataStreamBase* pStream);
@@ -759,36 +708,18 @@ struct PropertySpawns
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
-struct BuildingYieldModifier
-{
-	BuildingTypes eBuilding;
-	YieldTypes eYield;
-	int iChange;
 
-	BuildingYieldModifier()
-		: eBuilding(NO_BUILDING)
-		, eYield(NO_YIELD)
-		, iChange(0)
+const struct TechYieldChange
+{
+	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)
+		: eTech(eTech)
+		, eYield(eYield)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
-struct BuildingCommerceModifier
-{
-	BuildingTypes eBuilding;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	BuildingCommerceModifier()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const YieldTypes eYield;
+	const int iChange;
 };
 
 const struct TechCommerceChange
@@ -815,6 +746,19 @@ const struct TerrainYieldChange
 	const TerrainTypes eTerrain;
 	const YieldTypes eYield;
 	const int iChange;
+};
+
+const struct GenericTrippleInt
+{
+	GenericTrippleInt(int iType, int iIndex, int iValue)
+		: iType(iType)
+		, iIndex(iIndex)
+		, iValue(iValue)
+	{}
+
+	const int iType;
+	const int iIndex;
+	const int iValue;
 };
 
 struct DllExport PBGameSetupData

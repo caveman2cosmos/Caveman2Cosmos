@@ -11,8 +11,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_DONKEY</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -30,8 +30,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_HORSE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -49,8 +49,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_ELEPHANTS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -68,8 +68,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BISON</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -87,8 +87,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_CAMEL</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -106,8 +106,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COW</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -125,8 +125,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_DEER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -144,8 +144,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BEAVERS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -163,8 +163,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_KANGAROO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -182,8 +182,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_LLAMA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -201,8 +201,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MAMMOTH</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -220,8 +220,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PIG</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -239,8 +239,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_POULTRY</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -258,8 +258,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RABBIT</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -277,8 +277,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -296,8 +296,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SHEEP</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -315,8 +315,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_WALRUS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -334,8 +334,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_GUINEA_PIGS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -353,8 +353,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PARROTS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -372,8 +372,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BARLEY</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -391,8 +391,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_CORN</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -410,8 +410,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_FLAX</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -429,8 +429,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_POMEGRANATE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -448,8 +448,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_KAVA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -467,8 +467,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_GUAVAS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -486,8 +486,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MELONS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -505,8 +505,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_POTATOES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -524,8 +524,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PUMPKIN</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -543,8 +543,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RICE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -562,8 +562,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SQUASH</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -581,8 +581,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_WHEAT</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -600,8 +600,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_ALMONDS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -619,8 +619,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_APPLE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -638,8 +638,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BANANA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -657,8 +657,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COCONUT</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -676,8 +676,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_DATES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -695,8 +695,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_FIG</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -714,8 +714,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_LEMONS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -733,8 +733,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MANGO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -752,8 +752,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_OLIVES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -771,8 +771,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PAPAYA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -790,8 +790,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PISTACHIO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -809,8 +809,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_GRAPES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -828,8 +828,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_HENNA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -847,8 +847,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_INDIGO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -866,8 +866,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RUBBER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -885,8 +885,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PRIME_TIMBER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -904,8 +904,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_HEMP</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -923,8 +923,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COCA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -942,8 +942,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COCOA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -961,8 +961,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COFFEE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -980,8 +980,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COTTON</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -999,8 +999,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_INCENSE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1018,8 +1018,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MUSHROOMS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1037,8 +1037,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_OPIUM</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1056,8 +1056,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PAPYRUS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1075,8 +1075,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PEYOTE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1094,8 +1094,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PRICKLY_PEAR</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1113,8 +1113,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RESIN</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1132,8 +1132,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SILK</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1151,8 +1151,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SPICES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1170,8 +1170,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SUGAR</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1189,8 +1189,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_TEA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1208,8 +1208,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_TOBACCO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1227,8 +1227,8 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
-			<bKill>1</bKill>
+			<iCost>30</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_VANILLA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>

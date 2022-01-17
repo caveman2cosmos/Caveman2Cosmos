@@ -95,7 +95,7 @@ class PediaBonus:
 				aGOMBonusReqList.append([])
 			self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
-			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
+			if iTheBonus in CvBuildingInfo.getBonusHealthChanges() or iTheBonus in CvBuildingInfo.getBonusHappinessChanges() or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
 				bValid = False
 			if CvBuildingInfo.isAnyBonusYieldChanges() or CvBuildingInfo.isAnyVicinityBonusYieldChanges() or CvBuildingInfo.isAnyBonusYieldModifiers():
@@ -110,13 +110,8 @@ class PediaBonus:
 						if iBuilding not in aAffectedBuildings:
 							aAffectedBuildings.append(iBuilding)
 							bValid = False
-			if CvBuildingInfo.getFreeBonus() == iTheBonus:
+			if iTheBonus in CvBuildingInfo.getFreeBonuses():
 				aSourceOfBonus.append(iBuilding)
-			else:
-				for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-					if (CvBuildingInfo.getExtraFreeBonus(i) == iTheBonus):
-						aSourceOfBonus.append(iBuilding)
-						break
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():

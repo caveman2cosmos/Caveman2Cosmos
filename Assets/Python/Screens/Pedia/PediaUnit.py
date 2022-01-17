@@ -59,7 +59,6 @@ class PediaUnit:
 		eWidJuToBonus		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
 		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 		eWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToCombat		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT
 		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		eWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
 		eWidJuToCivic		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC
@@ -90,18 +89,19 @@ class PediaUnit:
 		iCombatType = CvTheUnitInfo.getUnitCombatType()
 		if iCombatType != -1:
 			if szfontEdge == "<font=4b>":
-				aSize = 28
+				aSize = 22
 			elif szfontEdge == "<font=3b":
-				aSize = 26
-			else:
 				aSize = 18
+			else:
+				aSize = 16
 			CvCombatInfo = GC.getUnitCombatInfo(iCombatType)
 			szText += " - " + '<img=%s size=%d></img>' %(CvCombatInfo.getButton(), aSize) + " " + CvCombatInfo.getDescription()
-			del CvCombatInfo
-			iWidget = eWidJuToCombat
+
+			Txt = "JumpTo|COMBAT" + str(iCombatType)
+			self.main.aWidgetBucket.append(Txt)
 		else:
-			iWidget = eWidGen
-		screen.setText(aName(), "", szfontEdge + szText, 1<<0, X_COL_1, 0, 0, eFontTitle, iWidget, iCombatType, 0)
+			Txt = aName()
+		screen.setText(Txt, "", szfontEdge + szText, 1<<0, X_COL_1, 0, 0, eFontTitle, eWidGen, iCombatType, 0)
 
 		Pnl = aName()
 		screen.addPanel(Pnl, "", "", False, False, X_COL_1 - 3, Y_TOP_ROW_1 + 2, W_COL_1 + 8, H_TOP_ROW + 2, PanelStyles.PANEL_STYLE_MAIN)
@@ -113,17 +113,17 @@ class PediaUnit:
 		screen.addListBoxGFC(szName, "", self.X_STATS, self.Y_STATS, self.W_STATS, self.H_STATS, TableStyles.TABLE_STYLE_EMPTY)
 		screen.enableSelect(szName, False)
 
-		szText = ""
-		iType = CvTheUnitInfo.getCombat()
+		import TextUtil
+
+		if CvTheUnitInfo.getDomainType() == DomainTypes.DOMAIN_AIR:
+			iType = CvTheUnitInfo.getTotalModifiedAirCombatStrength100()
+		else: iType = CvTheUnitInfo.getTotalModifiedCombatStrength100()
+
 		if iType > 0:
-			szText = "%d " %iType
-		iType = CvTheUnitInfo.getAirCombat()
-		if iType > 0:
-			if szText:
-				szText += "/ "
-			szText += "%d (Air) " %iType
-		if szText:
-			szText += unichr(8855)
+			szText = TextUtil.floatToString(iType / 100.0) + " " + unichr(8855)
+		else: szText = ""
+
+
 		iType = CvTheUnitInfo.getMoves()
 		if iType > 0:
 			szTemp = "%d" %iType + unichr(8856)
@@ -155,25 +155,44 @@ class PediaUnit:
 			screen.appendListBoxStringNoUpdate(szName, szfont3 + szText, eWidGen, 0, 0, 1<<0)
 		screen.updateListBox(szName)
 
-		#Combat types
+		PF = "ToolTip|JumpTo|"
 		aList0 = []
 		aList1 = []
 		aList2 = []
 		aList3 = []
+		#Combat types
 		for k in xrange(GC.getNumUnitCombatInfos()):
 			if CvTheUnitInfo.isSubCombatType(k):
 				CvUnitCombatInfo = GC.getUnitCombatInfo(k)
 				if not CvUnitCombatInfo.isGraphicalOnly():
 					aList0.append((CvUnitCombatInfo.getButton(), k))
 		if aList0:
-			szTemp = TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE", ())
-			screen.addPanel(aName(), szTemp, "", True, True, X_COL_2, Y_TOP_ROW_1, W_COL_2 - 4, H_TOP_ROW, ePnlBlue50)
-			aSize = H_TOP_ROW / 3
-			aSize = aSize - aSize % 8
-			szName = aName()
-			screen.addMultiListControlGFC(szName, "", X_COL_2 + 8, Y_TOP_ROW_1 + 32, W_COL_2 - 12, H_TOP_ROW - 36, 1, aSize, aSize, TableStyles.TABLE_STYLE_STANDARD)
-			for BTN, iCombat in aList0:
-				screen.appendMultiListButton(szName, BTN, 0, eWidJuToCombat, iCombat, -1, False)
+			Pnl = aName()
+			screen.addPanel(Pnl, "", "", True, True, X_COL_2, Y_TOP_ROW_1, W_COL_2 - 4, H_TOP_ROW, ePnlBlue50)
+			szTxt = szfont3b + TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE", ())
+			screen.setLabelAt("", Pnl, szTxt, 1<<2, (W_COL_2 - 4) / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
+			ScrlPnl = aName()
+			screen.addScrollPanel(ScrlPnl, "", X_COL_2 - 2, Y_TOP_ROW_1, W_COL_2, H_TOP_ROW - 26, ePnlBlue50)
+			screen.setStyle(ScrlPnl, "ScrollPanel_Alt_Style")
+			aSize = (H_TOP_ROW - 48) / 2
+			aSize = aSize - aSize % 4
+			szChild = PF + "COMBAT"
+			iDelta = aSize + 4
+			x = 4
+			y2 = H_TOP_ROW - 20 - aSize
+			y1 = y2 - iDelta
+			y = y1
+			i = 0
+			for BTN, iUnitCombat in aList0:
+				screen.setImageButtonAt(szChild + str(iUnitCombat), ScrlPnl, BTN, x, y, aSize, aSize, eWidGen, 1, 2)
+
+				if i % 2:
+					x += iDelta
+					y = y1
+				else:
+					y = y2
+				i += 1
+
 			aList0 = []
 
 		# Graphic
@@ -182,7 +201,6 @@ class PediaUnit:
 		self.main.aWidgetBucket.append("Preview|Min")
 
 		# Requires
-		PF = "ToolTip|JumpTo|"
 		AND = ["TXT", "<font=4b>&#38", 1<<2, 10, 14]
 		OR = ["TXT", "<font=4b>||", 1<<2, 6, 10]
 		braL = ["TXT", "<font=4b> {", 1<<0, 0, 14]

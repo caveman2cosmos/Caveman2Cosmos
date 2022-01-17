@@ -344,7 +344,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_BFM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BFM</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIODOME</Type>
@@ -553,8 +552,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GENFARM_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -563,7 +564,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -599,7 +599,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_NATIONAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAMEL_NATIONAL</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPITAL_ADMINISTRATION</Type>
@@ -651,7 +650,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPITAL_ADMINISTRATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPITAL_ADMINISTRATION</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_FIRE</Type>
@@ -662,9 +660,10 @@
 			<Description>TXT_KEY_BUILDING_CAPTURED_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_FIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EARTH_OVEN</ObsoleteTech>
 			<iCost>40</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -681,19 +680,19 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_IMU</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BONFIRE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<bNeverCapture>1</bNeverCapture>
@@ -778,13 +777,15 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_INTUITIVE_ALGORITHMS</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -818,13 +819,15 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -864,13 +867,17 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -1179,14 +1186,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1218,7 +1226,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBERSECURITY_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYBERSECURITY_CENTER</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1322,7 +1329,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_EDUCATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_EDUCATION</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_ENERGY</Type>
@@ -1358,7 +1364,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_ENERGY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_ENERGY</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_FOREIGN</Type>
@@ -1404,7 +1409,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_FOREIGN_WONDER</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_VEHICLES</Type>
@@ -1438,29 +1442,32 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreePromotion>PROMOTION_URBAN_TACTICS1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_FREIGHT</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_MOTORCYCLE</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_JEEP</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_HUMVEE</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_VEHICLES</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1504,7 +1511,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_WATER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_WATER</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_EMBASSY</Type>
@@ -1555,7 +1561,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>-30</iMaintenanceModifier>
+			<iMaintenanceModifier>-15</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1590,7 +1596,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DISTRICT_COURTHOUSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DISTRICT_COURTHOUSE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUTCH_DIKE</Type>
@@ -1708,7 +1713,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_NATIONAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELEPHANT_NATIONAL</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMANCIPATION_PROCLAMATION</Type>
@@ -1727,7 +1731,6 @@
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<iCost>1310</iCost>
 			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEDERAL_PRISON</Type>
@@ -1790,7 +1793,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_FEDERAL_PRISON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FEDERAL_PRISON</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FERTILITYFESTIVAL</Type>
@@ -1819,7 +1821,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FERTILITYFESTIVAL</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAK_TOWER</Type>
@@ -1875,8 +1876,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -1885,7 +1887,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2024,7 +2025,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GCA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GCA</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GPS</Type>
@@ -2055,7 +2055,6 @@
 				<BuildingType>BUILDING_MILITARY_SATELLITES</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRANDCENTRAL_STATION</Type>
@@ -2093,7 +2092,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GRANDCENTRAL_STATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GRANDCENTRAL_STATION</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_BONFIRE</Type>
@@ -2125,7 +2123,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_BONFIRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_BONFIRE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_PALACE</Type>
@@ -2224,18 +2221,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PHARMACY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
@@ -2284,8 +2284,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
@@ -2329,13 +2330,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAKERY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
@@ -2380,18 +2383,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FORGE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FOUNDRY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
@@ -2435,18 +2441,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
@@ -2493,8 +2502,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
@@ -2539,18 +2549,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2595,18 +2608,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2652,23 +2668,27 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2712,13 +2732,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
@@ -2762,13 +2784,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FISHMONGER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2814,18 +2838,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2869,13 +2896,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_JEWELER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2920,18 +2949,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GROCER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -2975,13 +3007,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AGROFOREST</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
@@ -3026,18 +3060,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
@@ -3082,18 +3119,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -3138,18 +3178,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -3205,13 +3248,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -3255,13 +3300,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -3309,18 +3356,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PUB</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_DIVE_BAR</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -3355,8 +3405,12 @@
 				<iCommerce>3</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HEAVY_WATER</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HEAVY_WATER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<iAsset>6</iAsset>
 			<iPower>30</iPower>
@@ -3375,7 +3429,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEROIC_EPIC</Type>
@@ -3448,7 +3501,11 @@
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<FreePromotion>PROMOTION_HUNTER2</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_HUNTER2</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -3491,8 +3548,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIERACOSPHINX</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIERACOSPHINX</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HIERACOSPHINX_BREEDER</ArtDefineTag>
@@ -3628,7 +3689,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_NATIONAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HORSE_NATIONAL</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_OF_PARLIMENT</Type>
@@ -3710,13 +3770,16 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MECHATRONICS_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -3744,8 +3807,12 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_IRONWORKS</ConstructSound>
 			<iHealth>-2</iHealth>
-			<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -3827,8 +3894,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_JACKALOPE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_JACKALOPE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_JACKALOPE_BREEDER</ArtDefineTag>
@@ -4098,7 +4169,6 @@
 				<BuildingType>BUILDING_MINING_NANOBOT_CONTROL_CENTER</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4139,7 +4209,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_DATABASE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METI</Type>
@@ -4188,7 +4257,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MICROLITH_WORKSHOP</Type>
@@ -4424,7 +4492,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MOVIE_STUDIO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MOVIE_STUDIO</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NASA</Type>
@@ -4464,7 +4531,7 @@
 			<DomainProductionModifiers>
 				<DomainProductionModifier>
 					<DomainType>DOMAIN_AIR</DomainType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</DomainProductionModifier>
 			</DomainProductionModifiers>
 			<HealUnitCombatTypes>
@@ -4487,7 +4554,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NASA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NASA</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ACADEMIC_DATABASE</Type>
@@ -4519,7 +4585,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ACADEMIC_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ACADEMIC_DATABASE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_AQUA</Type>
@@ -4568,7 +4633,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AQUA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_AQUA</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_CENSUS</Type>
@@ -4588,8 +4652,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
@@ -4700,7 +4765,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_FIRE_SERVICE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_LEGAL_DATABASE</Type>
@@ -4728,7 +4792,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LEGAL_DATABASE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_LIBRARY_SERVICE</Type>
@@ -4789,7 +4852,6 @@
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LIBRARY_SERVICE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_MINT</Type>
@@ -4838,38 +4900,38 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_GOLD_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_SILVER_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_PLATINUM_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-				<BonusCommerceModifier>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_ELECTRUM_WARES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<iAsset>8</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -5005,8 +5067,12 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5055,13 +5121,17 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5107,13 +5177,17 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5164,8 +5238,12 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5211,13 +5289,17 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LEAD_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LEAD_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5268,8 +5350,12 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5315,13 +5401,17 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SILVER_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SILVER_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5367,13 +5457,17 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TIN_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TIN_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5424,8 +5518,12 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -5519,14 +5617,14 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
 					<BonusType>BONUS_HIT_MOVIES</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+					<CommercePercents>
+						<iCommercePercent>100</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<iGlobalGreatPeopleRateModifier>10</iGlobalGreatPeopleRateModifier>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
@@ -5651,7 +5749,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ZOO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ZOO</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUROIMPLANT_EXPORTER</Type>
@@ -5676,7 +5773,6 @@
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_NEUROIMPLANTS</Bonus>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOBLEGARDEN</Type>
@@ -5830,7 +5926,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bCapital>1</bCapital>
 			<bGovernmentCenter>1</bGovernmentCenter>
-			<iMaintenanceModifier>-25</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5888,8 +5984,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PEGASUS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PEGASUS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PEGASUS_BREEDER</ArtDefineTag>
@@ -5925,8 +6025,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PHOENIX</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PHOENIX</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_BREEDER</ArtDefineTag>
@@ -6006,7 +6110,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_POLICE_ACADEMY</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROPAGANDA_NET</Type>
@@ -6095,8 +6198,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_QILIN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_QILIN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_QILIN_BREEDER</ArtDefineTag>
@@ -6132,8 +6239,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_QUETZALCOATL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_QUETZALCOATL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_QUETZALCOATL_BREEDER</ArtDefineTag>
@@ -6286,8 +6397,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RAINBOW_SERPENT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RAINBOW_SERPENT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_RAINBOW_SERPENT_BREEDER</ArtDefineTag>
@@ -6328,7 +6443,11 @@
 			</PropertyManipulators>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreePromotion>PROMOTION_FIRST_AID_PEOPLE1</FreePromotion>
+			<FreePromoTypes>
+				<FreePromoType>
+					<PromotionType>PROMOTION_FIRST_AID_PEOPLE1</PromotionType>
+				</FreePromoType>
+			</FreePromoTypes>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
@@ -6371,8 +6490,12 @@
 				<iCommerce>-50</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6397,7 +6520,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_RESEARCH_HOSPITAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RESEARCH_HOSPITAL</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Type>
@@ -6545,13 +6667,16 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_NATURAL_LANGUAGE_ALGORITHMS</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -6842,7 +6967,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6917,7 +7041,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>-20</iMaintenanceModifier>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6954,7 +7078,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_SUPREME_COURT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SUPREME_COURT</MovieDefineTag>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_ISIS</Type>
@@ -7196,18 +7319,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrBuildings>
@@ -7391,87 +7517,95 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_VACATION_RESORT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CRUISE_PORT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_UNESCO_SITE</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WATER_PARK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TOURIST_TRAP</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PUBLIC_BEACH</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CAMP_GROUNDS</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLAR_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_OUTBACK_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SAFARI_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_JUNGLE_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WILDWEST_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_RIVER_RAFTING_DOCK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TOURISM_MEGACOMPLEX</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iAsset>2</iAsset>

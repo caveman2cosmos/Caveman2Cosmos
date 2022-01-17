@@ -549,28 +549,6 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_BUTCHERED_NEUTRAL</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_NEUTRAL</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_NEUTRAL_MESSAGE</Message>
-			<bFriendlyTerritory>0</bFriendlyTerritory>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_BUTCHERED_FRIENDLY</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bNotCity>1</bNotCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_BUTCHERED_CITY</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_CITY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_CITY_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_LAWYER_LITIGATION</Type>
 			<Description>TXT_KEY_OUTCOME_LAWYER_LITIGATION</Description>
 			<Message>TXT_KEY_OUTCOME_LAWYER_LITIGATION_MESSAGE</Message>
@@ -612,14 +590,6 @@
 			<Type>OUTCOME_HURRY_PRODUCTION_CARAVAN</Type>
 			<Description>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN</Description>
 			<Message>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_HURRY_PRODUCTION</Type>
-			<Description>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Description>
-			<Message>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Message>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
@@ -711,6 +681,21 @@
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_ARCHER_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER_MESSAGE</Message>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_TO_AXEMAN</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN_MESSAGE</Message>
@@ -723,6 +708,37 @@
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN_MESSAGE</Message>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT2</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN_MESSAGE</Message>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN</OutcomeType>
+				<OutcomeType>OUTCOME_UPGRADE_TO_AXEMAN_REPLACEMENT1</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_TO_SPEARMAN</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN_MESSAGE</Message>
@@ -733,6 +749,37 @@
 			<PrereqBuildings>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
 			</PrereqBuildings>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN_MESSAGE</Message>
+			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT2</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN_MESSAGE</Message>
+			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN</OutcomeType>
+				<OutcomeType>OUTCOME_UPGRADE_TO_SPEARMAN_REPLACEMENT1</OutcomeType>
+			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_JOIN_CITY_FREED_SLAVE</Type>
@@ -884,7 +931,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT2</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<BuildingType>BUILDING_ARENA</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -898,38 +945,47 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_ARENA</BuildingType>
+				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_STUDY1</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_STUDY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_STUDY</Message>
+			<Type>OUTCOME_ANIMAL_COMBAT4</Type>
+			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Description>
+			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_BUTCHERY</BuildingType>
-			</PrereqBuildings>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_STUDY2</Type>
-			<Description>TXT_KEY_OUTCOME_ANIMAL_STUDY</Description>
-			<Message>TXT_KEY_OUTCOME_ANIMAL_STUDY_MESSAGE</Message>
-			<PrereqBuildings>
-				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<ReplaceOutcomes>
-				<OutcomeType>OUTCOME_ANIMAL_STUDY1</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_ANIMAL_COMBAT5</Type>
+			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Description>
+			<Message>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Message>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+			</PrereqBuildings>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_COMBAT4</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1038,8 +1094,22 @@
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
-		<!--
- Removed until they can only improve military production
+		<OutcomeInfo>
+			<Type>OUTCOME_JOIN_AS_SLAVE_TUTOR_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR</Description>
+			<Message>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_JOIN_AS_SLAVE_TUTOR</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_JOIN_AS_SLAVE_MILITARY</Type>
 			<Description>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_MILITARY</Description>
@@ -1050,19 +1120,6 @@
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
-			</PrereqBuildings>
-		</OutcomeInfo>
-		-->
-		<OutcomeInfo>
-			<Type>OUTCOME_JOIN_AS_SLAVE_SANITATION</Type>
-			<Description>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Description>
-			<Message>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Message>
-			<PrereqTech>NONE</PrereqTech>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1154,6 +1211,41 @@
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</Type>
+			<Description>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Description>
+			<Message>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</Type>
+			<Description>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Description>
+			<Message>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_REMOVE_WV_CANNIBALISM</Type>
 			<Description>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM</Description>
 			<Message>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM_MESSAGE</Message>
@@ -1206,6 +1298,7 @@
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>

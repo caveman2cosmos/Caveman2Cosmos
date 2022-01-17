@@ -1,11 +1,20 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
-#include "CvDllPythonEvents.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
+#include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDllPythonEvents.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "NiPoint.h"
 
 
 namespace logging {
@@ -214,18 +223,18 @@ struct EventArgs
 		return *this;
 	}
 
-	template < class Ty_ >
-	EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
-	{
-		pyArgs.add(value);
-		std::vector<Ty_> arr;
-		for (int idx = 0; idx < value.len; ++idx)
-		{
-			arr.push_back(value.vals[idx]);
-		}
-		jsonArgs << logging::JsonValue(name, arr);
-		return *this;
-	}
+	//template < class Ty_ >
+	//EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
+	//{
+	//	pyArgs.add(value);
+	//	std::vector<Ty_> arr;
+	//	for (int idx = 0; idx < value.len; ++idx)
+	//	{
+	//		arr.push_back(value.vals[idx]);
+	//	}
+	//	jsonArgs << logging::JsonValue(name, arr);
+	//	return *this;
+	//}
 
 	template < class Ty_, class Ty2_ >
 	EventArgs& arg(const std::string& name, const Ty_& value, const Ty2_& valueJson)
@@ -1174,7 +1183,6 @@ void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, R
 	postEvent(eventData, "playerChangeStateReligion");
 }
 
-
 void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount)
 {
 	EventArgs eventData;
@@ -1185,20 +1193,6 @@ void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTyp
 		.arg("iAmount", iAmount);
 	postEvent(eventData, "playerGoldTrade");
 }
-
-// BUG - Revolution Event - start
-void CvDllPythonEvents::reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "playerRevolution")
-		.arg("ePlayerID", ePlayerID)
-		.arg("iAnarchyLength", iAnarchyLength)
-		.arg("paeOldCivics", Cy::Array<int>((const int*)paeOldCivics, GC.getNumCivicOptionInfos()))
-		.arg("paeNewCivics", Cy::Array<int>((const int*)paeNewCivics, GC.getNumCivicOptionInfos()));
-	postEvent(eventData, "playerRevolution");
-}
-// BUG - Revolution Event - end
 
 void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs)
 {
@@ -1217,7 +1211,6 @@ void CvDllPythonEvents::preSave()
 		.arg("event", "OnPreSave");
 	postEvent(eventData, "OnPreSave");
 }
-
 
 void CvDllPythonEvents::reportChangeTeam(TeamTypes eOld, TeamTypes eNew)
 {

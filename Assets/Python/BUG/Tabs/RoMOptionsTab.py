@@ -81,11 +81,11 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ImprovedXP"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__WarPrizes"), bCanAdjustSettings)
 
-		if GC.getInfoTypeForStringWithHiddenAssert("VICTORY_TOTAL") > 0 and GAME.isVictoryValid(GC.getInfoTypeForString("VICTORY_TOTAL")):
-			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoStorms"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
 

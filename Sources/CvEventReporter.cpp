@@ -297,16 +297,16 @@ void CvEventReporter::gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 	m_kPythonEventMgr.reportGotoPlotSet(pPlot, ePlayer);
 }
 
-void CvEventReporter::cityBuilt( CvCity *pCity, CvUnit *pUnit )
+void CvEventReporter::cityBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportCityBuilt(pCity, pUnit);
 	m_kStatistics.cityBuilt(pCity);
 }
 
-void CvEventReporter::cityRazed( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityRazed(pCity, ePlayer);
-	m_kStatistics.cityRazed(pCity, ePlayer);
+	m_kStatistics.cityRazed(ePlayer);
 }
 
 void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes iPlayer, CvCity* pCity, bool bConquest, bool bTrade)
@@ -552,13 +552,6 @@ void CvEventReporter::playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPl
 {
 	m_kPythonEventMgr.reportPlayerGoldTrade(eFromPlayer, eToPlayer, iAmount);
 }
-
-// BUG - Revolution Event - start
-void CvEventReporter::playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	m_kPythonEventMgr.reportPlayerRevolution(ePlayerID, iAnarchyLength, paeOldCivics, paeNewCivics);
-}
-// BUG - Revolution Event - end
 
 void CvEventReporter::chat(CvWString szString)
 {

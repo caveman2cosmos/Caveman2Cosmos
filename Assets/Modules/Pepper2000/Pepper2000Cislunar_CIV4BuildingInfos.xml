@@ -134,26 +134,26 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -180,8 +180,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ASTEROID_MINE</Type>
@@ -235,7 +239,7 @@
 					<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -268,7 +272,7 @@
 				<iYield>10</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ORGANIC_COLONY</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
@@ -314,7 +318,7 @@
 				<iYield>0</iYield>
 				<iYield>75</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
@@ -429,8 +433,12 @@
 				<BuildingType>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_GOV</Type>
@@ -494,7 +502,7 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
@@ -528,7 +536,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -596,21 +604,21 @@
 					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -764,8 +772,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SATELLITE_FACTORY</Type>
@@ -961,7 +973,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -990,7 +1002,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 						<iYield>0</iYield>
 					</TechYield>
 				</TechYieldChange>
@@ -1050,7 +1062,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
 					<TechYield>
-						<iYield>1</iYield>
+						<iYield>100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1120,7 +1132,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1270,7 +1282,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>3</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1474,8 +1486,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -1511,8 +1524,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -1695,7 +1709,7 @@
 					<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>10</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1783,8 +1797,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>

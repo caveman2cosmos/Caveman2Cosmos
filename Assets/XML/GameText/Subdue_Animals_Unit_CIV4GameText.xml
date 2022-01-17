@@ -184,7 +184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO</Tag>
-		<English>Subdued Water Buffalo</English>
+		<English>Subdued Cape Buffalo</English>
 		<French>Buffle d'eau (App.)</French>
 		<Italian>
 			<Text>Bufalo d'acqua addomesticato</Text>
@@ -210,7 +210,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAPUCHIN</Tag>
-		<English>Subdued Capuchin Mon</English>
+		<English>Subdued Capuchin Monkey</English>
 		<French>Singe Capucin (App.)</French>
 		<Italian>
 			<Text>Scimmia cappuccino addomesticata</Text>
@@ -378,7 +378,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DIREWOLF</Tag>
-		<English>Subdued Direwolf</English>
+		<English>Subdued Dire Wolf</English>
 		<French>Loup primitif (App.)</French>
 		<Italian>
 			<Text>Lupo nero addomesticato</Text>
@@ -496,7 +496,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GAZELLE</Tag>
-		<English>Subdued Gazelle</English>
+		<English>Subdued Thomson's Gazelle</English>
 		<French>
 			<Text>Gazelle (App.)</Text>
 			<Gender>Female</Gender>
@@ -512,7 +512,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GELADA</Tag>
-		<English>Subdued Gelada Baboon</English>
+		<English>Subdued Gelada Monkey</English>
 		<French>Babouin Gélada (App.)</French>
 		<Italian>
 			<Text>Babbuino Gelada addomesticato</Text>
@@ -586,6 +586,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Giraffe:Gefangenen Giraffe:Gefangenen Giraffe:Gefangene Giraffe:Gefangene Giraffen:Gefangenen Giraffen:Gefangenen Giraffen:Gefangenen Giraffen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Giraffa addomesticata</Text>
 			<Gender>Female</Gender>
@@ -730,7 +735,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HYENA</Tag>
-		<English>Subdued Hyena</English>
+		<English>Subdued Striped Hyena</English>
 		<French>
 			<Text>Hyène (App.)</Text>
 			<Gender>Female</Gender>
@@ -746,7 +751,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IBEX</Tag>
-		<English>Subdued Ibex</English>
+		<English>Subdued Walia Ibex</English>
 		<French>Bouquetin (App.)</French>
 		<Italian>
 			<Text>Stambecco addomesticato</Text>
@@ -854,7 +859,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LEMUR</Tag>
-		<English>Subdued Lemur</English>
+		<English>Subdued Ring-tailed Lemur</English>
 		<French>Lémurien (App.)</French>
 		<Italian>
 			<Text>Lemure addomesticato</Text>
@@ -878,7 +883,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA</Tag>
-		<English>Subdued Llama</English>
+		<English>Subdued Guanaco</English>
 		<French>Lama (App.)</French>
 		<Italian>
 			<Text>Lama addomesticato</Text>
@@ -1199,7 +1204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIG_NEW</Tag>
-		<English>Subdued Pig</English>
+		<English>Subdued Swine</English>
 		<French>Cochon (App.)</French>
 		<Italian>
 			<Text>Maiale addomesticato</Text>
@@ -1402,7 +1407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA</Tag>
-		<English>Subdued Saiga</English>
+		<English>Subdued Saiga Antelope</English>
 		<French>Saiga (App.)</French>
 		<Italian>
 			<Text>Saiga addomesticato</Text>
@@ -1635,7 +1640,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TURKEY</Tag>
-		<English>Subdued Turkey</English>
+		<English>Subdued Wild Turkey</English>
 		<French>
 			<Text>Dinde (App.)</Text>
 			<Gender>Female</Gender>
@@ -1666,6 +1671,10 @@
 		<Russian>Ãàäþêà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_CHAIN</Tag>
+		<English>Subdued Chain Viper</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VULTURE</Tag>
 		<English>Subdued Vulture</English>
 		<French>Vautour (App.)</French>
@@ -1679,7 +1688,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLABY</Tag>
-		<English>Subdued Wallaby</English>
+		<English>Subdued Ring-tailed Wallaby</English>
 		<French>Wallaby (App.)</French>
 		<German>
 			<Text>Gefangenes Wallaby:Gefangenen Wallabys:Gefangenen Wallaby:Gefangene Wallaby:Gefangene Wallabys:Gefangenen Wallabys:Gefangenen Wallabys:Gefangenen Wallabys</Text>

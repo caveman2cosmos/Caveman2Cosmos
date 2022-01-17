@@ -253,6 +253,10 @@
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_JAIL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
@@ -381,6 +385,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -749,6 +757,10 @@
 					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -774,7 +786,7 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -1061,6 +1073,26 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -1676,6 +1708,14 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -2054,10 +2094,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HAWKING</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -2217,11 +2253,11 @@
 			</BonusHappinessChanges>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+					<BuildType>BUILD_NOMADIC_HERD</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -2370,6 +2406,14 @@
 					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -2385,7 +2429,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -2397,7 +2441,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4198,6 +4242,10 @@
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_JAIL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
@@ -4315,6 +4363,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -4678,6 +4730,10 @@
 					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -4703,7 +4759,7 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4980,6 +5036,26 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -5580,6 +5656,14 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -5955,10 +6039,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HAWKING</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -6118,11 +6198,11 @@
 			</BonusHappinessChanges>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+					<BuildType>BUILD_NOMADIC_HERD</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -6273,6 +6353,14 @@
 					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -6288,7 +6376,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -6300,7 +6388,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

@@ -43,7 +43,7 @@
 				<iYield>50</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CO2_REMOVAL</BuildingType>
 			</PrereqInCityBuildings>
@@ -93,8 +93,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -175,7 +176,7 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -202,8 +203,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CALCIUM_CARBONATE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -302,11 +304,13 @@
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOTUBES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -337,7 +341,7 @@
 				<iYield>50</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -737,8 +741,12 @@
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SKY_ARCOLOGY</Type>
@@ -762,7 +770,7 @@
 				<iYield>50</iYield>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
@@ -821,7 +829,7 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
@@ -852,8 +860,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE_PROBE</Type>

@@ -106,21 +106,12 @@
 #define DIRECTION_RADIUS								(1)
 #define DIRECTION_DIAMETER								((DIRECTION_RADIUS * 2) + 1)
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//#define NUM_CITY_PLOTS								(21)
 #define NUM_CITY_PLOTS_1								(9)
 #define NUM_CITY_PLOTS_2								(21)
 #define NUM_CITY_PLOTS									(37)
 #define CITY_HOME_PLOT									(0)
-//#define CITY_PLOTS_RADIUS								(2)
+#define SKIP_CITY_HOME_PLOT								(1)
 #define CITY_PLOTS_RADIUS								(3)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 #define CITY_PLOTS_DIAMETER								((CITY_PLOTS_RADIUS*2) + 1)
 
 #define GAME_NAME										("Game")

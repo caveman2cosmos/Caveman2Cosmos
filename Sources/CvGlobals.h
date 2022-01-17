@@ -23,7 +23,6 @@ class CvInitCore;
 class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
-class CvDLLInterfaceIFaceBase;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
@@ -139,12 +138,19 @@ class CvMapInfo;
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
+#include <vector>
+
+enum DelayedResolutionTypes
+{
+	NO_DELAYED_RESOLUTION,
+	USE_DELAYED_RESOLUTION
+};
 
 extern CvDLLUtilityIFaceBase* gDLL;
 
-class cvInternalGlobals : bst::noncopyable
+class cvInternalGlobals
+	: private bst::noncopyable
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 public:
 
@@ -259,7 +265,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
-		foreach_(T type, vector)
+		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
@@ -419,6 +425,7 @@ public:
 
 	int getNumUnitInfos() const;
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
+	const std::vector<CvUnitInfo*>& getUnitInfos() const { return m_paUnitInfo; }
 
 	int getNumSpawnInfos() const;
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
@@ -492,6 +499,7 @@ private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
 public:
+	void registerPlotTypes();
 	void registerUnitAIs();
 	void registerAIScales();
 	void registerGameObjects();
@@ -558,6 +566,7 @@ public:
 
 	int getNumBuildingInfos() const;
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
+	const std::vector<CvBuildingInfo*>& getBuildingInfos() const { return m_paBuildingInfo; }
 
 	int getNumSpecialBuildingInfos() const;
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
@@ -632,14 +641,6 @@ public:
 	int getNumUnitArtStyleTypeInfos() const;
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
-	//
-	// Global Types
-	// All type strings are upper case and are kept in this hash map for fast lookup
-	// The other functions are kept for convenience when enumerating, but most are not used
-	//
-	int getTypesEnum(const char* szType) const;				// use this when searching for a type
-	void setTypesEnum(const char* szType, int iEnum);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -680,7 +681,7 @@ public:
 	CvString& getFootstepAudioTags(int i) const;
 
 	const CvString& getCurrentXMLFile() const;
-	void setCurrentXMLFile(const TCHAR* szFileName);
+	void setCurrentXMLFile(const char* szFileName);
 
 	//
 	///////////////// BEGIN global defines
@@ -791,6 +792,8 @@ public:
 	uint32_t getAssetCheckSum() const;
 
 	void deleteInfoArrays();
+
+	void checkInitialCivics();
 
 protected:
 	void doPostLoadCaching();
@@ -1061,10 +1064,6 @@ protected:
 	// GLOBAL TYPES
 	//////////////////////////////////////////////////////////////////////////
 
-	// all type strings are upper case and are kept in this hash map for fast lookup, Moose
-	typedef stdext::hash_map<std::string /* type string */, int /*enum value */> TypesMap;
-	TypesMap m_typesMap;
-
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
@@ -1148,11 +1147,11 @@ extern const char* fnName;
 class ProxyTracker
 {
 public:
-	ProxyTracker(const CvGlobals* proxy, const char* name);
+	ProxyTracker(const char* name);
 	~ProxyTracker();
 };
 
-#define PROXY_TRACK(x)	ProxyTracker tracker(this,x);
+#define PROXY_TRACK(x)	ProxyTracker tracker(x);
 
 #else
 #define	PROXY_TRACK(x)	;
@@ -1802,7 +1801,7 @@ public:
 	DllExport int getTypesEnum(const char* szType) const				// use this when searching for a type
 	{
 		PROXY_TRACK("getTypesEnum");
-		return gGlobals->getTypesEnum(szType);
+		return gGlobals->getInfoTypeForString(szType);
 	}
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
@@ -2237,35 +2236,5 @@ inline CvGlobals& CvGlobals::getInstance()
 {
 	return gGlobalsProxy;
 }
-
-#endif
-
-/**********************************************************************
-
-File:		BugMod.h
-Author:		EmperorFool
-Created:	2009-01-22
-
-Defines common constants and functions for use throughout the BUG Mod.
-
-		Copyright (c) 2009 The BUG Mod. All rights reserved.
-
-**********************************************************************/
-
-#pragma once
-
-#ifndef BUG_MOD_H
-#define BUG_MOD_H
-
-// Increment this by 1 each time you commit new/changed functions/constants in the Python API.
-#define BUG_DLL_API_VERSION		6
-
-// Used to signal the BULL saved game format is used
-#define BUG_DLL_SAVE_FORMAT		64
-
-// These are display-only values, and the version should be changed for each release.
-#define BUG_DLL_NAME			L"BULL"
-#define BUG_DLL_VERSION			L"1.3"
-#define BUG_DLL_BUILD			L"219"
 
 #endif

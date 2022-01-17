@@ -1,19 +1,25 @@
 #pragma once
 #ifndef CV_IMPROVEMENTINFO_H
 #define CV_IMPROVEMENTINFO_H
+
+#include "CvInfos.h"
 #include <vector>
 
-#include "CvGameCoreDLL.h"
-#include "CvInfos.h"
-class CvImprovementInfo :
-	public CvInfoBase
+class CvArtInfoImprovement;
+class CvXMLLoadUtility;
+struct CvInfoUtil;
+
+class CvImprovementInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvImprovementInfo();
 	virtual ~CvImprovementInfo();
 
+	DllExport bool isGoody() const;
+	DllExport bool isRequiresRiverSide() const;
 	bool isBombardable() const;
 	bool isUpgradeRequiresFortify() const;
 	bool isUniversalTradeBonusProvider() const;
@@ -24,15 +30,17 @@ public:
 	bool isRiverSideMakesValid() const;
 	bool isNoFreshWater() const;
 	bool isRequiresFlatlands() const;
-	DllExport bool isRequiresRiverSide() const;
 	bool isRequiresIrrigation() const;
 	bool isCarriesIrrigation() const;
 	bool isRequiresFeature() const;
 	bool isPeakImprovement() const;
 	bool isWaterImprovement() const;
-	DllExport bool isGoody() const;
-	bool isPermanent() const;
 	bool isOutsideBorders() const;
+	bool isMilitaryStructure() const { return m_bMilitaryStructure; }
+	bool isPlacesBonus() const { return m_bPlacesBonus; }
+	bool isPlacesFeature() const { return m_bPlacesFeature; }
+	bool isPlacesTerrain() const { return m_bPlacesTerrain; }
+	bool isExtraterresial() const { return m_bExtraterresial; }
 	bool isCanMoveSeaUnits() const;
 	bool isChangeRemove() const;
 	bool isNotOnAnyBonus() const;
@@ -59,10 +67,9 @@ public:
 	ImprovementTypes getImprovementUpgrade() const	{ return m_iImprovementUpgrade; }
 	BonusTypes getBonusChange() const				{ return m_iBonusChange; }
 
-	const TCHAR* getArtDefineTag() const;
+	const char* getArtDefineTag() const;
 
 	int getPrereqNatureYield(int i) const;
-	int* getPrereqNatureYieldArray() const;
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
 	int getRiverSideYieldChange(int i) const;
@@ -84,13 +91,10 @@ public:
 	bool isImprovementBonusTrade(int i) const;
 	int getImprovementBonusDiscoverRand(int i) const;
 
-	int getNumBuildTypes() const { return m_improvementBuildTypes.size(); };
 	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
-	BuildTypes getImprovementBuildType(int iIndex) const;
-
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
-	const TCHAR* getButton() const;
+	const char* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
 
 	int getHealthPercent() const;
@@ -117,8 +121,11 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvImprovementInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bPeakMakesValid;
 	bool m_bBombardable;
 	bool m_bUpgradeRequiresFortify;
@@ -137,8 +144,12 @@ private:
 	bool m_bPeakImprovement;
 	bool m_bWaterImprovement;
 	bool m_bGoody;
-	bool m_bPermanent;
 	bool m_bOutsideBorders;
+	bool m_bMilitaryStructure;
+	bool m_bPlacesBonus;
+	bool m_bPlacesFeature;
+	bool m_bPlacesTerrain;
+	bool m_bExtraterresial;
 	bool m_bCanMoveSeaUnits;
 	bool m_bChangeRemove;
 	bool m_bNotOnAnyBonus;

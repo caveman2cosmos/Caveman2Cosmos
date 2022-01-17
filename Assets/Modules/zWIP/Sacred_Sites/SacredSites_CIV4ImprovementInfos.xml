@@ -10,9 +10,6 @@
 		<!-- Meosoamerican Temple -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MESOAMERICAN_TEMPLE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MESOAMERICAN_TEMPLE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MESOAMERICAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ANCIENT_TEMPLE</ArtDefineTag>
@@ -21,7 +18,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -99,9 +95,6 @@
 		<!-- Stone Circle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_CIRCLE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_STONE_CIRCLE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_CIRCLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONEHENGE</ArtDefineTag>
@@ -110,7 +103,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<bNoFreshWater>1</bNoFreshWater>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -189,9 +181,6 @@
 		<!-- Pyramids -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PYRAMIDS</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_PYRAMIDS</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PYRAMIDS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PYRAMIDS</ArtDefineTag>
@@ -200,7 +189,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -275,9 +263,6 @@
 		<!-- Asian Temple -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ASIAN_TEMPLE</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ASIAN_TEMPLE</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ASIAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ASIAN_TEMPLE</ArtDefineTag>
@@ -286,7 +271,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -357,9 +341,6 @@
 		<!-- Ziggurat -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ZIGGURAT</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_ZIGGURAT</CreatingBuild>
-			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ZIGGURAT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ZIGGARUT</ArtDefineTag>
@@ -368,7 +349,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>30</iAdvancedStartCost>

@@ -4829,24 +4829,6 @@
 		<Russian>Ýôôåêòû çäîðîâüÿ îò îñîáåííîñòåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_HOVER</Tag>
-		<English>When checked, hovering over a technology in the "Won't Trade" column of the Foreign Advisor's TECHS page will show you the AI's reason for denying the trade.</English>
-		<French>Lorsque activé, La raison qu'a l'IA pour refuser l'échange d'une technologie sera disponible en infobulle dans l'écran du Conseiller aux relations étrangères.</French>
-		<German>Zeigt die Gründe für die Verweigerung eines Handels an, wenn der Mauszeiger über eine Technologie in der Spalte "Unverhandelbar" auf der Seite "Technologien" des Auslandsberaters bewegt wird</German>
-		<Italian>Quando è selezionato, posizionando il cursore su una Tecnologia nella colonna 'Non commercia' della pagina delle Tecnologie del Consigliere Estero verrà visualizzata la ragione per cui l'AI rifiuta di commerciare tale Tecnologia.</Italian>
-		<Spanish>Cuando se activa, mostrará la razón por la que la IA no comerciará una tecnología pasando el ratón por encima de ella en la columna de 'No comercia' en la pantalla de Tecnología en el Consejero de Exteriores.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïåðåìåùåíèå íàä òåõíîëîãèåé â êîëîíêå "Íå ìîæåò òîðãîâàòü" íà ñòðàíèöå òåõíîëîãèé ñîâåòíèêà ïî èíîñòðàííûì äåëàì áóäåò ïîêàçûâàòü âàì ïðè÷èíó îòêàçà ÈÈ â òîðãîâëå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_TEXT</Tag>
-		<English>Technology Trade Denial</English>
-		<French>Refus d'échange de Technologies</French>
-		<German>Verweigerung von Technologien</German>
-		<Italian>Rifiuto di commercio di Tecnologie</Italian>
-		<Spanish>Rechazo a comerciar tecnología</Spanish>
-		<Russian>Îòêàç òîðãîâëè òåõíîëîãèÿìè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__UNITEXPERIENCEMODIFIERS_HOVER</Tag>
 		<English>When checked, displays the experience point modifiers (buildings, military instructors, civics, and wonders) in the Train Unit button hover.</English>
 		<French>Lorsque activé, affiche les modificateurs (bâtiments, instructeurs, doctrines, Merveilles) des points d'expérience initiaux.</French>
@@ -5523,11 +5505,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_ENABLED_TEXT</Tag>
-		<English>IDW Enabled</English>
-		<French>Activation IDW</French>
-		<German>EbK aktiviert</German>
-		<Spanish>IDW activado</Spanish>
-		<Russian>Âêë. êóëüò. ýêñïàíñèþ</Russian>
+		<English>Influence Driven War (IDW)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_NO_BARBARIAN_INFLUENCE_HOVER</Tag>
@@ -7044,6 +7022,26 @@
 		<Italian>Riforestazione</Italian>
 		<Spanish>Reforestación</Spanish>
 		<Russian>Âêë. ëåñîïîñàäêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_HOVER</Tag>
+		<English>Cities with many religions may have less popular ones slowly decay.</English>
+		<French>Les Villes avec plusieurs religions peuvent voir leur influence décroître. Les religions les moins populaires sont amenées à disparaitre lentement.</French>
+		<German>In Städten mit vielen Religionen können die unpopuläreren nach und nach in Vergessenheit geraten.</German>
+		<Italian>Nelle città con più religioni, quelle meno popolari svaniranno.</Italian>
+		<Spanish>En ciudades con muchas religiones, las menos populares podrían ir decayendo lentamente y desaparecer.</Spanish>
+		<Polish>Miasta z dużą ilością religii w którym jest przewaga jednej religii najmniejsze z nich mogą zniknąć.</Polish>
+		<Russian>Ó ãîðîäîâ ñî ìíîãèìè ðåëèãèÿìè, ìåíåå ïîïóëÿðíûå ìåäëåííî ðàñïàäàþòñÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT</Tag>
+		<English>Religion Decay</English>
+		<French>Décadence des Religions</French>
+		<German>Religionsverfall</German>
+		<Italian>Decadenza delle religioni</Italian>
+		<Spanish>Decadencia de religiones</Spanish>
+		<Polish>Zanikanie Religii</Polish>
+		<Russian>Ðàñïàä ðåëèãèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESET_HOVER</Tag>

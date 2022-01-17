@@ -22206,7 +22206,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
-					<UnitType>UNIT_SUBDUED_VIPER</UnitType>
+					<UnitType>UNIT_SUBDUED_VIPER_CHAIN</UnitType>
 					<bUnitToCity>
 						<Has>
 							<GOMType>GOM_TECH</GOMType>

@@ -9,9 +9,12 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
+#include "CvGameObject.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
+#include "CvPropertySource.h"
 #include "IntExpr.h"
 
 CvPropertySource::CvPropertySource()

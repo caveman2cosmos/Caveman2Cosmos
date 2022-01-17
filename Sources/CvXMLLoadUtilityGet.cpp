@@ -831,7 +831,7 @@ bool CvXMLLoadUtility::GetChildXmlValByName(std::wstring& pszVal, const wchar_t*
 //				doesn't exist.
 //
 //------------------------------------------------------------------------------------------------------
-int CvXMLLoadUtility::GetHotKeyInt(const TCHAR* pszHotKeyVal)
+int CvXMLLoadUtility::GetHotKeyInt(const char* pszHotKeyVal)
 {
 	// SPEEDUP
 	PROFILE("GetHotKeyInt");
@@ -839,7 +839,7 @@ int CvXMLLoadUtility::GetHotKeyInt(const TCHAR* pszHotKeyVal)
 
 	struct CvKeyBoardMapping
 	{
-		TCHAR szDefineString[25];
+		char szDefineString[25];
 		int iIntVal;
 	};
 

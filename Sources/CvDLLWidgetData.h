@@ -23,7 +23,6 @@ public:
 	DllExport bool isLink(const CvWidgetDataStruct &widgetDataStruct) const;
 
 	//	Actions to be executed
-	void doPlotList(CvWidgetDataStruct &widgetDataStruct);
 	void doLiberateCity();
 	void doRenameCity();
 	void doRenameUnit();
@@ -79,7 +78,6 @@ public:
 	void doPediaTraitJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaMain(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaPromotionJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaUnitCombatJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaImprovementJump(CvWidgetDataStruct &widgetDataStruct, bool bData2 = false);
 	void doPediaRouteJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaCivicJump(CvWidgetDataStruct &widgetDataStruct);
@@ -208,7 +206,6 @@ public:
 	void parseBuildUpHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseTraitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseEventHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseUnitCombatHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bCivilopediaText = false);
 	void parseImprovementHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseRouteHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bCivilopediaText = false);
 	void parseCivicHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);

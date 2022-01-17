@@ -8,25 +8,19 @@ GC = CyGlobalContext()
 class NaturalWonders:
 	def __init__(self,):
 		self.iFirstGold = 50					## Gold Granted to First Team to Discover
-		self.iDiscoverHappiness = 1				## Happiness Granted to Any Team to Discover
 		self.lBigWonder = ["FEATURE_PLATY_GREAT_BARRIER"]	## List of Natural Wonders that occupy 2 Tiles
-		self.iNoNearbyRadius = 2				## Cannot have another Natural Wonders or Revealed Tile within X Tiles
-		self.iPlaceChance = (CyMap().getWorldSize() +1) * 10	## Chance of Spawning each Natural Wonder
-		self.iMaxYield = 4					## (0 to X) Yield
 		self.lLatitude = [("FEATURE_PLATY_AURORA", 70, 90)]	## Min Latitude, Max Latitude
 
 	def placeNaturalWonders(self):
 		GAME = GC.getGame()
 		for iFeature in xrange(GC.getNumFeatureInfos()):
-			FeatureInfo = GC.getFeatureInfo(iFeature)
-			sType = FeatureInfo.getType()
-			if sType.find("FEATURE_PLATY_") == -1: continue
-			if GAME.getSorenRandNum(100, "Random Plot") >= self.iPlaceChance: continue
-
+			sType = GC.getFeatureInfo(iFeature).getType()
+			if sType.find("FEATURE_PLATY_") == -1:
+				continue
 			WonderPlot = []
 			for pPlot in CyMap().plots():
-				if pPlot.getBonusType(-1) > -1: continue
-
+				if pPlot.getBonusType(-1) > -1:
+					continue
 				## Nearby Plot Check ##
 				bUnsuitable = False
 				iRadius = 2
@@ -40,85 +34,51 @@ class NaturalWonders:
 				for x in xrange(pPlot.getX() - iRadius, pPlot.getX() + iRadius + 1):
 					for y in xrange(pPlot.getY() - iRadius, pPlot.getY() + iRadius + 1):
 						pAdjacentPlot = CyMap().plot(x, y)
-						# if not bAllRevealed and pAdjacentPlot.isRevealed(-1, False):
-							# bUnsuitable = True
-							# break
+
 						if pAdjacentPlot.getFeatureType() > -1 and GC.getFeatureInfo(pAdjacentPlot.getFeatureType()).getType().find("FEATURE_PLATY_") > -1:
 							bUnsuitable = True
 							break
-					## Big Wonders ##
-						if bAdjacentPlot == False and pAdjacentPlot.canHaveFeature(iFeature):
-							if abs(pAdjacentPlot.getX() - pPlot.getX()) > 1: continue
-							if abs(pAdjacentPlot.getY() - pPlot.getY()) > 1: continue
-							if pAdjacentPlot.getBonusType(-1) > -1: continue
-							# if not bAllRevealed and pAdjacentPlot.isRevealed(-1, False): continue
-							bAdjacentPlot = True
+						## Big Wonders ##
+						if (not bAdjacentPlot and pAdjacentPlot.canHaveFeature(iFeature)
+						and abs(pAdjacentPlot.getX() - pPlot.getX()) < 2
+						and abs(pAdjacentPlot.getY() - pPlot.getY()) < 2
+						and pAdjacentPlot.getBonusType(-1) == -1
+						): bAdjacentPlot = True
+
 					if bUnsuitable: break
-				if bUnsuitable: continue
+				if bUnsuitable or not bAdjacentPlot or not pPlot.canHaveFeature(iFeature):
+					continue
 
 				## Latitude Check ##
 				for i in self.lLatitude:
-					if sType == i[0]:
-						if pPlot.getLatitude() < i[1] or pPlot.getLatitude() > i[2]:
-							bUnsuitable = True
-							break
-				if bUnsuitable: continue
-
+					if sType == i[0] and (pPlot.getLatitude() < i[1] or pPlot.getLatitude() > i[2]):
+						break
 				## Suitable Plot ##
-				if pPlot.canHaveFeature(iFeature) and bAdjacentPlot:
-					WonderPlot.append(pPlot)
+				else: WonderPlot.append(pPlot)
 
-			bWonder = False
-			while len(WonderPlot) > 0:
-				iWonderPlot = GAME.getSorenRandNum(len(WonderPlot), "Random Plot")
-				pPlot = WonderPlot[iWonderPlot]
+			while WonderPlot:
+				pPlot = WonderPlot.pop(GAME.getSorenRandNum(len(WonderPlot), "Random Plot"))
 
 				## Big Wonders ##
 				if sType in self.lBigWonder:
 					AdjacentPlot = []
 					for x in xrange(pPlot.getX() - 1, pPlot.getX() + 2):
 						for y in xrange(pPlot.getY() - 1, pPlot.getY() + 2):
+							if x == pPlot.getX() and y == pPlot.getY():
+								continue
 							pAdjacentPlot = CyMap().plot(x, y)
-							if x == pPlot.getX() and y == pPlot.getY(): continue
 							if pAdjacentPlot.canHaveFeature(iFeature):
-								if pAdjacentPlot.getBonusType(-1) > -1: continue
-								# if not bAllRevealed and pAdjacentPlot.isRevealed(-1, False): continue
+								if pAdjacentPlot.getBonusType(-1) > -1:
+									continue
 								AdjacentPlot.append(pAdjacentPlot)
-					if len(AdjacentPlot) == 0:
-						del WonderPlot[iWonderPlot]
+					if not AdjacentPlot:
 						continue
-					pAdjacentPlot = AdjacentPlot[GAME.getSorenRandNum(len(AdjacentPlot), "Random Plot")]
-					pAdjacentPlot.setFeatureType(iFeature, 0)
-					# GAME.setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_FOOD, GAME.getSorenRandNum(self.iMaxYield, "Adds Food"))
-					# GAME.setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_PRODUCTION, GAME.getSorenRandNum(self.iMaxYield, "Adds Production"))
-					# GAME.setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_COMMERCE, GAME.getSorenRandNum(self.iMaxYield, "Adds Commerce"))
-					bWonder = True
-					break
+					AdjacentPlot[GAME.getSorenRandNum(len(AdjacentPlot), "Random Plot")].setFeatureType(iFeature, 0)
 
 				## Standard Wonders ##
-				bWonder = True
+				pPlot.setFeatureType(iFeature, 0)
 				break
 
-			if bWonder:
-				pPlot.setFeatureType(iFeature, 0)
-				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_FOOD, GAME.getSorenRandNum(self.iMaxYield, "Adds Food"))
-				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_PRODUCTION, GAME.getSorenRandNum(self.iMaxYield, "Adds Production"))
-				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_COMMERCE, GAME.getSorenRandNum(self.iMaxYield, "Adds Commerce"))
-		return
-
-	# def checkAllRevealTech(self):
-		# iRevealTech = -1
-		# for iTech in xrange(GC.getNumTechInfos()):
-			# TechInfo = GC.getTechInfo(iTech)
-			# if TechInfo.isMapVisible():
-				# iRevealTech = iTech
-				# break
-		# if iRevealTech > 0:
-			# for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
-				# pTeamX = GC.getTeam(iTeamX)
-				# if pTeamX.isHasTech(iRevealTech):
-					# return True
-		# return False
 
 	def checkReveal(self, pPlot, iTeam):
 

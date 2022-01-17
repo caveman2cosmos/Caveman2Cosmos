@@ -3,6 +3,7 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvXMLLoadUtility.h"
 
 //------------------------------------------------------------------------------------------------------
@@ -14,20 +15,15 @@
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen)
 {
-	// SPEEDUP
-	PROFILE_FUNC();
-	int i;	// loop counter
-	CvImprovementBonusInfo* paImprovementBonus;
-
 	FAssertMsg(*ppImprovementBonus == NULL,"memory leak?");
 	FAssertMsg((0 < iListLen),"list size to allocate is less than 1");
 	// allocate memory for the bonus type pointer based on the list length parameter
 	*ppImprovementBonus = new CvImprovementBonusInfo[iListLen];
 	// set the local pointer to the memory we just allocated
-	paImprovementBonus = *ppImprovementBonus;
+	CvImprovementBonusInfo* paImprovementBonus = *ppImprovementBonus;
 
 	// loop through all the bonus structs
-	for (i=0;i<iListLen;i++)
+	for (int i = 0; i < iListLen; i++)
 	{
 		paImprovementBonus[i].m_bBonusMakesValid = false;
 		paImprovementBonus[i].m_bBonusTrade = false;

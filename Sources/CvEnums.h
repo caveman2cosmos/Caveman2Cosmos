@@ -88,6 +88,7 @@ enum DirectionTypes
 	DIRECTION_WEST_MASK = 1 << DIRECTION_WEST,
 	DIRECTION_NORTHWEST_MASK = 1 << DIRECTION_NORTHWEST,
 };
+typedef fixed_enum_range<DirectionTypes, int, DIRECTION_NORTH, NUM_DIRECTION_TYPES> DirectionTypesRange;
 
 enum CardinalDirectionTypes
 {
@@ -100,6 +101,8 @@ enum CardinalDirectionTypes
 
 	NUM_CARDINALDIRECTION_TYPES
 };
+typedef fixed_enum_range<CardinalDirectionTypes, int, CARDINALDIRECTION_NORTH, NUM_CARDINALDIRECTION_TYPES> CardinalDirectionTypesRange;
+
 
 enum RotationTypes
 {
@@ -114,6 +117,8 @@ enum RotationTypes
 	ROTATE_180CW_MASK	= 1 << ROTATE_180CW,
 	ROTATE_270CW_MASK	= 1 << ROTATE_270CW,
 };
+typedef fixed_enum_range<RotationTypes, int, ROTATE_NONE, NUM_ROTATION_TYPES> RotationTypesRange;
+
 
 // camera wrap helper
 enum WrapDirection
@@ -440,7 +445,7 @@ enum WidgetTypes
 	WIDGET_HELP_RELIGION_CITY,
 	WIDGET_HELP_CORPORATION_CITY,
 	WIDGET_HELP_NATIONALITY,
-	WIDGET_UNUSED_40, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
+	WIDGET_UNUSED_65, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_HELP_HEALTH,
 	WIDGET_HELP_HAPPINESS,
 	WIDGET_HELP_POPULATION,
@@ -513,7 +518,7 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_BONUS,
 	WIDGET_PEDIA_MAIN,
 	WIDGET_PEDIA_JUMP_TO_PROMOTION,
-	WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT,
+	WIDGET_UNUSED_111, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_PEDIA_JUMP_TO_IMPROVEMENT,
 	WIDGET_PEDIA_JUMP_TO_CIVIC,
 	WIDGET_PEDIA_JUMP_TO_CIV,
@@ -795,7 +800,7 @@ enum GameOptionTypes
 	GAMEOPTION_LEAD_ANY_CIV, // This must always be the eight option as the exe has hardcoded it as such.
 	GAMEOPTION_UNITED_NATIONS,
 	GAMEOPTION_ADVANCED_DIPLOMACY,
-	GAMEOPTION_ADVANCED_ECONOMY,
+	GAMEOPTION_ADVANCED_ECONOMY, // @SAVEBREAK DELETE
 	GAMEOPTION_REALISTIC_CORPORATIONS,
 	GAMEOPTION_ADVANCED_ESPIONAGE,
 	GAMEOPTION_NO_CITY_RAZING,
@@ -826,7 +831,7 @@ enum GameOptionTypes
 	GAMEOPTION_PICK_RELIGION,
 	GAMEOPTION_LIMITED_RELIGIONS,
 	GAMEOPTION_INQUISITIONS,
-	GAMEOPTION_RELIGION_DECAY,
+	GAMEOPTION_RELIGION_DECAY, // @SAVEBREAK DELETE - Deprecated
 	GAMEOPTION_DIVINE_PROPHETS,
 	GAMEOPTION_RELIGIOUS_DISABLING,
 	GAMEOPTION_RANDOM_PERSONALITIES,
@@ -1176,11 +1181,17 @@ enum TeamTypes
 {
 	NO_TEAM = -1,
 };
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_TEAMS> TeamTypesRange;
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_PC_TEAMS> TeamTypesPCRange;
+typedef fixed_enum_range<TeamTypes, int, NPC1_TEAM, MAX_TEAMS> TeamTypesNPCRange;
 
 enum PlayerTypes
 {
 	NO_PLAYER = -1,
 };
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PLAYERS> PlayerTypesRange;
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PC_PLAYERS> PlayerTypesPCRange;
+typedef fixed_enum_range<PlayerTypes, int, NPC1_PLAYER, MAX_PLAYERS> PlayerTypesNPCRange;
 
 enum TraitTypes
 {
@@ -1706,8 +1717,6 @@ enum MissionTypes
 	MISSION_LAWYER_REMOVE_CORPORATIONS,
 	MISSION_JOIN_CITY_POPULATION,
 	MISSION_CURE,
-	MISSION_ESTABLISH,
-	MISSION_ESCAPE,
 	MISSION_BUILDUP,
 	MISSION_AUTO_BUILDUP,
 	MISSION_HEAL_BUILDUP,
@@ -3120,6 +3129,7 @@ enum GlobeLayerResourceOptionTypes
 	SHOW_RESOURCES_GROWTH,
 	SHOW_RESOURCES_PRODUCTION,
 	SHOW_RESOURCES_MISC,
+	SHOW_RESOURCES_UNCLAIMED,
 
 	NUM_RESOURCE_OPTION_TYPES
 };
@@ -3233,6 +3243,7 @@ enum ModderGameOptionTypes
 	MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS,
 	MODDERGAMEOPTION_NO_STORMS,
 	MODDERGAMEOPTION_IMPROVED_XP,
+	MODDERGAMEOPTION_RELIGION_DECAY,
 	MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD,
 	MODDERGAMEOPTION_TERRAIN_DAMAGE,
 	MODDERGAMEOPTION_STRATEGIC_EVENTS,
@@ -3479,5 +3490,23 @@ enum InfoClassTypes
 
 	NUM_INFO_CLASSES
 };
+
+enum RiverModelTypes { };
+enum WaterPlaneTypes { };
+enum TerrainPlaneTypes { };
+enum UnitFormationTypes { };
+enum LandscapeTypes { };
+enum ThroneRoomTypes { };
+enum ThroneRoomStyleTypes { };
+enum SlideShowTypes { };
+enum SlideShowRandomTypes { };
+enum WorldPickerTypes { };
+enum SpaceShipTypes { };
+enum RouteModelTypes { };
+enum ActionTypes { };
+enum DiplomacyTypes { };
+enum MainMenuTypes { };
+enum ModLoadControlTypes { };
+enum HintTypes { };
 
 #endif	// CVENUMS_h

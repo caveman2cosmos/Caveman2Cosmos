@@ -415,9 +415,7 @@ class PediaBuilding:
 			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
 
 		# Empire building requirements
-		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
-			eBuildingX = pair.id
-			iPrereqNumOfBuilding = pair.value
+		for eBuildingX, iPrereqNumOfBuilding in CvTheBuildingInfo.getPrereqNumOfBuildings():
 			if iPrereqNumOfBuilding > 0:
 				if CyPlayer:
 					aList3.append((eBuildingX, CyPlayer.getBuildingPrereqBuilding(iTheBuilding, eBuildingX, 0)))
@@ -555,9 +553,8 @@ class PediaBuilding:
 			aList2 = []
 		# Improvement Req
 		szChild = PF + "IMP"
-		for i in range(GC.getNumImprovementInfos()):
-			if CvTheBuildingInfo.isPrereqOrImprovement(i):
-				aList2.append(i)
+		for iPrereqOrImprovement in CvTheBuildingInfo.getPrereqOrImprovements():
+			aList2.append(iPrereqOrImprovement)
 		if aList2:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

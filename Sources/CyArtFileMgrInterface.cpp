@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfos.h"
 #include "CyArtFileMgr.h"
 
 //

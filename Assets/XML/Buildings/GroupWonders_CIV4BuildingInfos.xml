@@ -532,9 +532,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -580,9 +581,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>936</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -628,9 +630,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -680,9 +683,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -731,9 +735,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -782,9 +787,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>864</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -830,9 +836,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -882,9 +889,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -934,9 +942,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -984,9 +993,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>936</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -1037,9 +1047,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -1091,9 +1102,10 @@
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>900</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -1112,7 +1124,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iDistanceMaintenanceModifier>-25</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-10</iDistanceMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1143,8 +1155,12 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BONE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bCenterInCity>1</bCenterInCity>
@@ -1258,8 +1274,12 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1286,8 +1306,12 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1449,7 +1473,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGlobalMaintenanceModifier>-20</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-10</iGlobalMaintenanceModifier>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_POLICING1</PromotionType>
@@ -1756,8 +1780,12 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIDE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIDE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1828,8 +1856,12 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIDE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIDE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2654,7 +2686,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGlobalMaintenanceModifier>-20</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-10</iGlobalMaintenanceModifier>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_POLICING1</PromotionType>
@@ -3220,7 +3252,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGlobalMaintenanceModifier>-20</iGlobalMaintenanceModifier>
+			<iGlobalMaintenanceModifier>-10</iGlobalMaintenanceModifier>
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_POLICING1</PromotionType>
@@ -3294,8 +3326,12 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3332,8 +3368,12 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>

@@ -4,6 +4,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvRandom.h"
+#include "CvTaggedSaveFormatWrapper.h"
 
 #define RANDOM_A      (1103515245)
 #define RANDOM_C      (12345)
@@ -49,7 +50,7 @@ void CvRandom::reset(unsigned long ulSeed)
 }
 
 
-uint16_t CvRandom::get(uint16_t usNum, const TCHAR* pszLog)
+uint16_t CvRandom::get(uint16_t usNum, const char* pszLog)
 {
 
 /*************************************************************************************************/
@@ -65,7 +66,7 @@ uint16_t CvRandom::get(uint16_t usNum, const TCHAR* pszLog)
 		{
 			if (GC.getGame().getTurnSlice() > 0)
 			{
-				TCHAR szOut[1024];
+				char szOut[1024];
 				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGame().getActivePlayer());
 				//gDLL->messageControlLog(szOut);
 				logging::logMsg(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGame().getTurnSlice(), pszLog);

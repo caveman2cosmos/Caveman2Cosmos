@@ -1107,7 +1107,7 @@ def canTriggerIndependentFilms(argsList):
 
 	iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 	for i in xrange(GC.getNumBuildingInfos()):
-		if GC.getBuildingInfo(i).getFreeBonus() == iBonus and player.hasBuilding(i) > 0:
+		if iBonus in CvBuildingInfo.getFreeBonuses() and player.hasBuilding(i):
 			return False
 	return True
 
@@ -2157,7 +2157,8 @@ def applyMasterBlacksmithDone1(argsList):
 	data = argsList[1]
 
 	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
-	GC.getMap().plot(data.iPlotX, data.iPlotY).setBonusType(iBonus)
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	plot.setBonusType(iBonus)
 
 	CyInterface().addMessage(
 		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
@@ -3585,22 +3586,22 @@ def getHelpCarnation2(argsList):
 #####  SYNTHETIC_FUELS  #####
 
 def canTriggerSyntheticFuels(argsList):
-  data = argsList[0]
-  pPlayer = GC.getPlayer(data.ePlayer)
+	data = argsList[0]
+	pPlayer = GC.getPlayer(data.ePlayer)
 
-  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
-  if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
-    return False
-  bOil = GC.getInfoTypeForString("BONUS_OIL")
-  if pPlayer.hasBonus(bOil) > 0:
-    return False
-  bCoal = GC.getInfoTypeForString("BONUS_COAL")
-  if pPlayer.hasBonus(bCoal) < 1:
-    return False
-  for i in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(i).getFreeBonus() == bOil and pPlayer.hasBuilding(i):
-      return False
-  return True
+	iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
+	if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
+		return False
+	eOil = GC.getInfoTypeForString("BONUS_OIL")
+	if pPlayer.hasBonus(eOil):
+		return False
+	eCoal = GC.getInfoTypeForString("BONUS_COAL")
+	if not pPlayer.hasBonus(eCoal):
+		return False
+	for i in xrange(GC.getNumBuildingInfos()):
+		if eOil in CvBuildingInfo.getFreeBonuses() and pPlayer.hasBuilding(i):
+			return False
+	return True
 
 def canTriggerCitySyntheticFuels(argsList):
 	iCity = argsList[2]

@@ -1287,18 +1287,15 @@ class FeatureGenerator:
 		lat = self.getLatitudeAtPlot(iX, iY)
 		pPlot = self.map.sPlot(iX, iY)
 
-		for iI in range(self.GC.getNumFeatureInfos()):
-#			print self.GC.getFeatureInfo(iI).getDescription()
-			if pPlot.canHaveFeature(iI):
-#				print "Can have feature with probability: %d" % self.GC.getFeatureInfo(iI).getAppearanceProbability()
-				if self.mapRand.get(10000, "Add Feature PYTHON") < self.GC.getFeatureInfo(iI).getAppearanceProbability():
-#					print "Setting feature"
-					variety = -1
-					varietynum = self.GC.getFeatureInfo(iI).getNumVarieties()
-					if varietynum > 1:
-						variety = self.mapRand.get(varietynum, "Add Feature PYTHON")
-						#print "Variety choice: %d" % varietynum
-					pPlot.setFeatureType(iI, variety)
+		for iI in xrange(self.GC.getNumFeatureInfos()):
+			if (self.GC.getFeatureInfo(iI).getAppearanceProbability() > -1
+			and pPlot.canHaveFeature(iI)
+			and self.mapRand.get(10000, "Add Feature PYTHON") < self.GC.getFeatureInfo(iI).getAppearanceProbability()):
+				variety = -1
+				varietynum = self.GC.getFeatureInfo(iI).getNumVarieties()
+				if varietynum > 1:
+					variety = self.mapRand.get(varietynum, "Add Feature PYTHON")
+				pPlot.setFeatureType(iI, variety)
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
 			self.addIceAtPlot(pPlot, iX, iY, lat)

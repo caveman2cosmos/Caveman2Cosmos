@@ -1262,26 +1262,6 @@ Only affects SmartMap if terrain options is:
 		<Russian>Óâåëè÷èâàåò âåðîÿòíîñòü àòàêè æèâîòíîãî áåçîòíîñèòåëüíî øàíñîâ íà ïîáåäó èëè åãî âèäà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DECAY</Tag>
-		<English>Religion Decay</English>
-		<French>Décadence des Religions</French>
-		<German>Religionsverfall</German>
-		<Italian>Decadenza delle religioni</Italian>
-		<Spanish>Decadencia de religiones</Spanish>
-		<Polish>Zanikanie Religii</Polish>
-		<Russian>Ðàñïàä ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DECAY_HELP</Tag>
-		<English>Cities with many religions may have less popular ones slowly decay.</English>
-		<French>Les Villes avec plusieurs religions peuvent voir leur influence décroître. Les religions les moins populaires sont amenées à disparaitre lentement.</French>
-		<German>In Städten mit vielen Religionen können die unpopuläreren nach und nach in Vergessenheit geraten.</German>
-		<Italian>Nelle città con più religioni, quelle meno popolari svaniranno.</Italian>
-		<Spanish>En ciudades con muchas religiones, las menos populares podrían ir decayendo lentamente y desaparecer.</Spanish>
-		<Polish>Miasta z dużą ilością religii w którym jest przewaga jednej religii najmniejsze z nich mogą zniknąć.</Polish>
-		<Russian>Ó ãîðîäîâ ñî ìíîãèìè ðåëèãèÿìè, ìåíåå ïîïóëÿðíûå ìåäëåííî ðàñïàäàþòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING</Tag>
 		<English>Religious Disabling</English>
 		<French>Désactivation des bâtiments Religieux</French>
