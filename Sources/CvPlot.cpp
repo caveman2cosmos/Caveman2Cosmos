@@ -683,10 +683,11 @@ bool CvPlot::doBonusDiscovery()
 {
 	PROFILE_FUNC();
 
-	// Toffer - Can't check all bonuses for all valid plots every turn
-	int iMaxAttempts = 30;
 	const bool bWorked = isBeingWorked();
-
+	if (getImprovementType() == NO_IMPROVEMENT && !bWorked)
+	{
+		return false;
+	}
 	const CvImprovementInfo* improvement = (
 		getImprovementType() != NO_IMPROVEMENT
 		?
@@ -694,30 +695,49 @@ bool CvPlot::doBonusDiscovery()
 		:
 		NULL
 	);
+	/* Toffer ToDo - would be nice to filter out all improvements that don't have a single bonus discovery rand with some cache...
+	if (!bWorked && getImprovementType() != NO_IMPROVEMENT && !improvement.canDiscover())
+	{
+		return false;
+	}
+	*/
+	CvGame& game = GC.getGame();
+	const CvMap& map = GC.getMap();
 	const CvTeam& team = GET_TEAM(getTeam());
+	const int iWorldSizeFactor = map.getWorldSize() + 4;
+	const int iGameSpeedFactor = GC.getGameSpeedInfo(game.getGameSpeedType()).getHammerCostPercent();
 	const int iNumBonuses = GC.getNumMapBonuses();
-	int iIndex = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
+	// Toffer - Can't check all bonuses for all valid plots every turn
+	//	bWorked is more likely to be true for plots in late game, which is when optimization is most dire.
+	int iMaxAttempts = bWorked ? 20 : 50;
+	int iAttempts = 0;
+	int iIndex = game.getSorenRandNum(iNumBonuses, "Random start index");
 	int iCount = 0;
-	while (iCount < iMaxAttempts && iCount++ < iNumBonuses)
+	while (iAttempts < iMaxAttempts && iCount++ < iNumBonuses)
 	{
 		const BonusTypes eBonus = GC.getMapBonus(iIndex); 
 
+		bool bImpBonus = false;
 		int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(eBonus) : 0;
 
-		if (bWorked && iOdds < 1)
+		if (iOdds > 0)
+		{
+			bImpBonus = true;
+		}
+		else if (bWorked)
 		{
 			iOdds = 30000; // small chance always there when worked by city.
 		}
 
 		if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
 		{
-			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+			iOdds *= iGameSpeedFactor;
 			iOdds /= 100;
 			// Bonus density normalization
-			iOdds *= 10 * (GC.getMap().getNumBonuses(eBonus) + 1);
-			iOdds /= 25 * (GC.getMap().getWorldSize() + 4);
+			iOdds *= 10 * (map.getNumBonuses(eBonus) + 1);
+			iOdds /= 25 * iWorldSizeFactor;
 
-			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+			if (iOdds < 2 || game.getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 			{
 				setBonusType(eBonus);
 
@@ -737,6 +757,11 @@ bool CvPlot::doBonusDiscovery()
 				}
 				return true;
 			}
+			if (bImpBonus)
+			{
+				return false;
+			}
+			iAttempts++;
 		}
 		if (++iIndex == iNumBonuses)
 		{
