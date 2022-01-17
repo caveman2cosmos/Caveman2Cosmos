@@ -384,6 +384,9 @@ public:
 	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 
+	int getNumMapBonuses() const;
+	BonusTypes getMapBonus(const int i) const;
+
 	int getNumFeatureInfos() const;
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
 
@@ -1115,6 +1118,8 @@ protected:
 	const char* m_szAlternateProfilSampleName;
 	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
+
+	std::vector<BonusTypes> m_mapBonuses;
 
 // BBAI Options
 public:

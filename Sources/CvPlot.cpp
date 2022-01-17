@@ -683,7 +683,8 @@ bool CvPlot::doBonusDiscovery()
 {
 	PROFILE_FUNC();
 
-	// Toffer - ToDo - Make a cached array of map bonuses, where manufacture and other such bonuses are filtered out.
+	// Toffer - Can't check all bonuses for all valid plots every turn
+	int iMaxAttempts = 30;
 	const bool bWorked = isBeingWorked();
 
 	const CvImprovementInfo* improvement = (
@@ -694,31 +695,33 @@ bool CvPlot::doBonusDiscovery()
 		NULL
 	);
 	const CvTeam& team = GET_TEAM(getTeam());
-	const int iNumBonuses = GC.getNumBonusInfos();
-	int iBonus = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
+	const int iNumBonuses = GC.getNumMapBonuses();
+	int iIndex = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
 	int iCount = 0;
-	while (iCount++ < iNumBonuses)
+	while (iCount < iMaxAttempts && iCount++ < iNumBonuses)
 	{
-		if (GC.getBonusInfo((BonusTypes)iBonus).getPlacementOrder() > -1) // Would not be needed if we had a cached array for only map bonuses.
+		const BonusTypes eBonus = GC.getMapBonus(iIndex); 
+
+		if (GC.getBonusInfo(eBonus).getPlacementOrder() > -1) // Would not be needed if we had a cached array for only map bonuses.
 		{
-			int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(iBonus) : 0;
+			int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(eBonus) : 0;
 
 			if (bWorked && iOdds < 1)
 			{
-				iOdds = 40000; // small chance always there when worked by city.
+				iOdds = 30000; // small chance always there when worked by city.
 			}
 
-			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
+			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
 			{
 				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 				iOdds /= 100;
 				// Bonus density normalization
-				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
-				iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
+				iOdds *= 10 * (GC.getMap().getNumBonuses(eBonus) + 1);
+				iOdds /= 25 * (GC.getMap().getWorldSize() + 4);
 
 				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 				{
-					setBonusType((BonusTypes) iBonus);
+					setBonusType(eBonus);
 
 					const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
@@ -728,20 +731,19 @@ bool CvPlot::doBonusDiscovery()
 							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText(
 								"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
-								GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey()
+								GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey()
 							),
-							"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes)iBonus).getButton(),
+							"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
 							GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
 						);
 					}
 					return true;
 				}
-				return false;
 			}
 		}
-		if (++iBonus == iNumBonuses)
+		if (++iIndex == iNumBonuses)
 		{
-			iBonus = 0;
+			iIndex = 0;
 		}
 	}
 	return false;
@@ -771,8 +773,8 @@ void CvPlot::doBonusDepletion()
 	iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iOdds /= 100;
 	// Bonus density normalization.
-	iOdds *= 2 * (GC.getMap().getWorldSize() + 9);
-	iOdds /= 7 * (GC.getMap().getNumBonuses(eBonus) + 2);
+	iOdds *= 25 * (GC.getMap().getWorldSize() + 4);
+	iOdds /= 10 * (GC.getMap().getNumBonuses(eBonus) + 1);
 
 	// This routine is only called for owned plots, no need to check if NO_PLAYER.
 	const int iValue = GET_PLAYER(getOwner()).getResourceConsumption(eBonus);
