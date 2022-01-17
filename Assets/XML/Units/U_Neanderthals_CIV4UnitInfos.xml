@@ -880,7 +880,6 @@
 				<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<BuildType>BUILD_SEED_CAMP</BuildType>
 				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<BuildType>BUILD_TAR_GATHERER</BuildType>

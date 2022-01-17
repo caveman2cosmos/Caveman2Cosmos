@@ -66,7 +66,6 @@
 				<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<BuildType>BUILD_SEED_CAMP</BuildType>
 				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<BuildType>BUILD_TAR_GATHERER</BuildType>
@@ -157,7 +156,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -285,7 +283,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -447,7 +444,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -621,7 +617,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -800,7 +795,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -964,7 +958,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -1138,7 +1131,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -2781,7 +2773,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>

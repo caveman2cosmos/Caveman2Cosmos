@@ -804,12 +804,6 @@
 		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SEA_MILL]Moulin maritime[\LINK]</French>
