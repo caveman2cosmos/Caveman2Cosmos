@@ -2514,13 +2514,13 @@
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_OIL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -3025,7 +3025,7 @@
 					<BonusType>BONUS_SALT</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -3036,7 +3036,7 @@
 					<BonusType>BONUS_NATRON</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -3103,7 +3103,7 @@
 					<BonusType>BONUS_CORN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
@@ -3114,7 +3114,7 @@
 					<BonusType>BONUS_RICE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>6</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -3125,7 +3125,7 @@
 					<BonusType>BONUS_WHEAT</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
@@ -3134,7 +3134,7 @@
 					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
@@ -3143,7 +3143,7 @@
 					<BonusType>BONUS_BARLEY</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -3154,7 +3154,7 @@
 					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -3165,7 +3165,7 @@
 					<BonusType>BONUS_PUMPKIN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -3176,7 +3176,7 @@
 					<BonusType>BONUS_SQUASH</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -4150,7 +4150,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4161,7 +4161,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_COAL</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4172,7 +4172,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4183,7 +4183,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4194,7 +4194,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4204,7 +4204,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4215,7 +4215,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_URANIUM</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4226,7 +4226,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_SULPHUR</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4237,7 +4237,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4248,7 +4248,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4259,7 +4259,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4270,7 +4270,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_DIAMOND</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4281,7 +4281,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4292,7 +4292,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4303,7 +4303,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4314,7 +4314,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_JADE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4325,7 +4325,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_MARBLE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4336,7 +4336,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_STONE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4346,7 +4346,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_OBSIDIAN</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4357,7 +4357,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_TURQUOISE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4368,7 +4368,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_MANGANESE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4720,7 +4720,7 @@
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4732,7 +4732,7 @@
 					<BonusType>BONUS_COAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4743,7 +4743,7 @@
 					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4755,7 +4755,7 @@
 					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4767,7 +4767,7 @@
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4778,7 +4778,7 @@
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4790,7 +4790,7 @@
 					<BonusType>BONUS_URANIUM</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4802,7 +4802,7 @@
 					<BonusType>BONUS_SULPHUR</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4814,7 +4814,7 @@
 					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4824,13 +4824,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_AMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4842,7 +4842,7 @@
 					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4854,7 +4854,7 @@
 					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4866,7 +4866,7 @@
 					<BonusType>BONUS_DIAMOND</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4878,7 +4878,7 @@
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4890,7 +4890,7 @@
 					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4902,7 +4902,7 @@
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4914,7 +4914,7 @@
 					<BonusType>BONUS_GEODE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4926,7 +4926,7 @@
 					<BonusType>BONUS_MARBLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4938,7 +4938,7 @@
 					<BonusType>BONUS_STONE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4950,7 +4950,7 @@
 					<BonusType>BONUS_SALT</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
@@ -4962,7 +4962,7 @@
 					<BonusType>BONUS_NATRON</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4974,7 +4974,7 @@
 					<BonusType>BONUS_OBSIDIAN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4986,7 +4986,7 @@
 					<BonusType>BONUS_FINE_CLAY</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4998,7 +4998,7 @@
 					<BonusType>BONUS_TURQUOISE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5010,7 +5010,7 @@
 					<BonusType>BONUS_JADE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5021,7 +5021,7 @@
 				<BonusTypeStruct>
 					<BonusType>BONUS_MANGANESE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5101,7 +5101,7 @@
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5113,7 +5113,7 @@
 					<BonusType>BONUS_COAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5124,7 +5124,7 @@
 					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5136,7 +5136,7 @@
 					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5148,7 +5148,7 @@
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5159,7 +5159,7 @@
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5171,7 +5171,7 @@
 					<BonusType>BONUS_URANIUM</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5183,7 +5183,7 @@
 					<BonusType>BONUS_SULPHUR</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5195,7 +5195,7 @@
 					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5205,13 +5205,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_AMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5223,7 +5223,7 @@
 					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5235,7 +5235,7 @@
 					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5247,7 +5247,7 @@
 					<BonusType>BONUS_DIAMOND</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5259,7 +5259,7 @@
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5271,7 +5271,7 @@
 					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5283,7 +5283,7 @@
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5295,7 +5295,7 @@
 					<BonusType>BONUS_GEODE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5307,7 +5307,7 @@
 					<BonusType>BONUS_MANGANESE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5418,7 +5418,7 @@
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5430,7 +5430,7 @@
 					<BonusType>BONUS_COAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5441,7 +5441,7 @@
 					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5453,7 +5453,7 @@
 					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5465,7 +5465,7 @@
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5476,7 +5476,7 @@
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5488,7 +5488,7 @@
 					<BonusType>BONUS_URANIUM</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5500,7 +5500,7 @@
 					<BonusType>BONUS_SULPHUR</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5512,7 +5512,7 @@
 					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5522,13 +5522,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_AMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5540,7 +5540,7 @@
 					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5552,7 +5552,7 @@
 					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5564,7 +5564,7 @@
 					<BonusType>BONUS_DIAMOND</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5576,7 +5576,7 @@
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5588,7 +5588,7 @@
 					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5600,7 +5600,7 @@
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5612,7 +5612,7 @@
 					<BonusType>BONUS_GEODE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5624,7 +5624,7 @@
 					<BonusType>BONUS_MANGANESE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5770,7 +5770,7 @@
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5782,7 +5782,7 @@
 					<BonusType>BONUS_COAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5793,7 +5793,7 @@
 					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5805,7 +5805,7 @@
 					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5817,7 +5817,7 @@
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5828,7 +5828,7 @@
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5840,7 +5840,7 @@
 					<BonusType>BONUS_URANIUM</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5852,7 +5852,7 @@
 					<BonusType>BONUS_SULPHUR</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5864,7 +5864,7 @@
 					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5874,13 +5874,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_AMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5892,7 +5892,7 @@
 					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5904,7 +5904,7 @@
 					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5916,7 +5916,7 @@
 					<BonusType>BONUS_DIAMOND</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5928,7 +5928,7 @@
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5940,7 +5940,7 @@
 					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5952,7 +5952,7 @@
 					<BonusType>BONUS_GEODE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -5964,7 +5964,7 @@
 					<BonusType>BONUS_MANGANESE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -6183,7 +6183,7 @@
 					<BonusType>BONUS_MARBLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -6195,7 +6195,7 @@
 					<BonusType>BONUS_STONE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -6206,7 +6206,7 @@
 					<BonusType>BONUS_SALT</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
@@ -6218,7 +6218,7 @@
 					<BonusType>BONUS_NATRON</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -6229,7 +6229,7 @@
 					<BonusType>BONUS_OBSIDIAN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -6241,6 +6241,7 @@
 					<BonusType>BONUS_FINE_CLAY</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
@@ -6251,7 +6252,7 @@
 					<BonusType>BONUS_TURQUOISE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -6263,7 +6264,7 @@
 					<BonusType>BONUS_JADE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -6273,7 +6274,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>500</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_EARLY_QUARRY</ImprovementPillage>
@@ -6673,7 +6674,7 @@
 					<BonusType>BONUS_APPLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>7</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -6684,7 +6685,7 @@
 					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>8</iYieldChange>
@@ -6695,7 +6696,7 @@
 					<BonusType>BONUS_RESIN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>6</iYieldChange>
@@ -6706,7 +6707,7 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>9</iYieldChange>
@@ -6715,15 +6716,15 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_OLIVES</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>625</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<TechYieldChanges>
@@ -6856,7 +6857,7 @@
 					<BonusType>BONUS_APPLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -6867,7 +6868,7 @@
 					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>6</iYieldChange>
@@ -6876,17 +6877,17 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_OLIVES</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_RESIN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
@@ -6895,13 +6896,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>7</iYieldChange>
@@ -7037,7 +7038,7 @@
 					<BonusType>BONUS_APPLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -7048,7 +7049,7 @@
 					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
@@ -7057,17 +7058,17 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_OLIVES</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_RESIN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
@@ -7076,13 +7077,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
@@ -7379,7 +7380,7 @@
 					<BonusType>BONUS_RESIN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>10000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
@@ -7388,13 +7389,13 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>5000</iDiscoverRand>
+					<iDiscoverRand>10000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
