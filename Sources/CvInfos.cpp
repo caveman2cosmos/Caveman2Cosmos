@@ -21330,12 +21330,12 @@ namespace PureTraits
 	}
 };
 
-const IDValueMap<ImprovementTypes>::filtered CvTraitInfo::getImprovementUpgradeModifiers() const
+const IDValueMap<ImprovementTypes, int>::filtered CvTraitInfo::getImprovementUpgradeModifiers() const
 {
 	return filter(m_aImprovementUpgradeModifierTypes, PureTraits::getPredicate<ImprovementTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<BuildTypes>::filtered CvTraitInfo::getBuildWorkerSpeedModifiers() const
+const IDValueMap<BuildTypes, int>::filtered CvTraitInfo::getBuildWorkerSpeedModifiers() const
 {
 	return filter(m_aBuildWorkerSpeedModifierTypes, PureTraits::getPredicate<BuildTypes, int>(m_bNegativeTrait));
 }
@@ -21352,32 +21352,32 @@ DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
 	return m_aDisallowedTraitTypes[iTrait];
 }
 
-const IDValueMap<DomainTypes>::filtered CvTraitInfo::getDomainFreeExperience() const
+const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainFreeExperience() const
 {
 	return filter(m_aDomainFreeExperiences, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<DomainTypes>::filtered CvTraitInfo::getDomainProductionModifiers() const
+const IDValueMap<DomainTypes, int>::filtered CvTraitInfo::getDomainProductionModifiers() const
 {
 	return filter(m_aDomainProductionModifiers, PureTraits::getPredicate<DomainTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<BuildingTypes>::filtered CvTraitInfo::getBuildingProductionModifiers() const
+const IDValueMap<BuildingTypes, int>::filtered CvTraitInfo::getBuildingProductionModifiers() const
 {
 	return filter(m_aBuildingProductionModifiers, PureTraits::getPredicate<BuildingTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<TechTypes>::filtered CvTraitInfo::getTechResearchModifiers() const
+const IDValueMap<TechTypes, int>::filtered CvTraitInfo::getTechResearchModifiers() const
 {
 	return filter(m_aTechResearchModifiers, PureTraits::getPredicate<TechTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<SpecialBuildingTypes>::filtered CvTraitInfo::getSpecialBuildingProductionModifiers() const
+const IDValueMap<SpecialBuildingTypes, int>::filtered CvTraitInfo::getSpecialBuildingProductionModifiers() const
 {
 	return filter(m_aSpecialBuildingProductionModifiers, PureTraits::getPredicate<SpecialBuildingTypes, int>(m_bNegativeTrait));
 }
 
-const IDValueMap<BuildingTypes>::filtered CvTraitInfo::getBuildingHappinessModifiers() const
+const IDValueMap<BuildingTypes, int>::filtered CvTraitInfo::getBuildingHappinessModifiers() const
 {
 	return filter(m_aBuildingHappinessModifiers, PureTraits::getPredicate<BuildingTypes, int>(m_bNegativeTrait));
 }
@@ -21508,7 +21508,7 @@ UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
 	return m_aUnitCombatProductionModifiers[iUnitCombat];
 }
 
-const IDValueMap<BonusTypes>::filtered CvTraitInfo::getBonusHappinessChanges() const
+const IDValueMap<BonusTypes, int>::filtered CvTraitInfo::getBonusHappinessChanges() const
 {
 	return filter(m_aBonusHappinessChanges, PureTraits::getPredicate<BonusTypes, int>(m_bNegativeTrait));
 }

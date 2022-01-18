@@ -18,7 +18,7 @@
 
 // The maps are assumed to be small, so a vector of pairs is used
 
-template <class ID_, class Value_ = int, Value_ defaultValue = 0>
+template <class ID_, class Value_, int defaultValue = 0>
 struct IDValueMap
 {
 	typedef std::pair<ID_, Value_>																	value_type;

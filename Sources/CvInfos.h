@@ -5637,23 +5637,23 @@ public:
 
 	// int vector utilizing struct with delayed resolution
 
-	const IDValueMap<ImprovementTypes>::filtered getImprovementUpgradeModifiers() const;
-	const IDValueMap<BuildTypes>::filtered getBuildWorkerSpeedModifiers() const;
+	const IDValueMap<ImprovementTypes, int>::filtered getImprovementUpgradeModifiers() const;
+	const IDValueMap<BuildTypes, int>::filtered getBuildWorkerSpeedModifiers() const;
 
 	int getNumDisallowedTraitTypes() const;
 	DisallowedTraitType isDisallowedTraitType(int iTrait) const;
 
-	const IDValueMap<DomainTypes>::filtered getDomainFreeExperience() const;
-	const IDValueMap<DomainTypes>::filtered getDomainProductionModifiers() const;
-	const IDValueMap<TechTypes>::filtered getTechResearchModifiers() const;
+	const IDValueMap<DomainTypes, int>::filtered getDomainFreeExperience() const;
+	const IDValueMap<DomainTypes, int>::filtered getDomainProductionModifiers() const;
+	const IDValueMap<TechTypes, int>::filtered getTechResearchModifiers() const;
 
-	const IDValueMap<BuildingTypes>& getBuildingProductionModifiersUnfiltered() const { return m_aBuildingProductionModifiers; }
-	const IDValueMap<BuildingTypes>::filtered getBuildingProductionModifiers() const;
+	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiersUnfiltered() const { return m_aBuildingProductionModifiers; }
+	const IDValueMap<BuildingTypes, int>::filtered getBuildingProductionModifiers() const;
 
-	const IDValueMap<SpecialBuildingTypes>::filtered getSpecialBuildingProductionModifiers() const;
+	const IDValueMap<SpecialBuildingTypes, int>::filtered getSpecialBuildingProductionModifiers() const;
 
-	const IDValueMap<BuildingTypes>::filtered getBuildingHappinessModifiers() const;
-	const IDValueMap<BuildingTypes>& getBuildingHappinessModifiersUnfiltered() const { return m_aBuildingHappinessModifiers; }
+	const IDValueMap<BuildingTypes, int>::filtered getBuildingHappinessModifiers() const;
+	const IDValueMap<BuildingTypes, int>& getBuildingHappinessModifiersUnfiltered() const { return m_aBuildingHappinessModifiers; }
 
 	int getNumUnitProductionModifiers() const;
 	UnitModifier getUnitProductionModifier(int iUnit) const;
@@ -5670,7 +5670,7 @@ public:
 	int getNumUnitCombatProductionModifiers() const;
 	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat) const;
 
-	const IDValueMap<BonusTypes>::filtered getBonusHappinessChanges() const;
+	const IDValueMap<BonusTypes, int>::filtered getBonusHappinessChanges() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
