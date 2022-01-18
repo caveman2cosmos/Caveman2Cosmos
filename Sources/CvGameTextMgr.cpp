@@ -21194,9 +21194,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
 		{
-			if (freePromo.m_pExprFreePromotionCondition == NULL)
+			setFreePromoBuildingHelp(freePromo.ePromotion, bVisit, szBuffer);
+
+			if (const BoolExpr* condition = freePromo.m_pExprFreePromotionCondition)
 			{
-				setFreePromoBuildingHelp(freePromo.ePromotion, bVisit, szBuffer);
+				condition->buildDisplayString(szBuffer);
 			}
 		}
 	}
