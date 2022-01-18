@@ -363,4 +363,19 @@
 		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
 		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
+		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
+		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
+		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
+		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
+		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
+		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
+		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
+		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
+		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
+	</TEXT>
 </Civ4GameText>

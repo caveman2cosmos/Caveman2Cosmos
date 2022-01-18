@@ -25,27 +25,12 @@
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
-		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
-		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
-		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
-		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
-		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
 		<French>Standards Militaires (Ouvriers)</French>
 		<Italian>Mascotte dei lavoratori</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
-		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
-		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
-		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
-		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
@@ -377,6 +362,20 @@
 		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
+		<English>Remains - Dire Wolf</English>
+		<French>Restes de Loup sinistre</French>
+		<Italian>Resti di lupo paleolitico</Italian>
+		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
+		<English>Remains - Ground Sloth</English>
+		<French>Restes de Xénarthre</French>
+		<Italian>Resti di bradipo paleolitico</Italian>
+		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
 		<English>Remains - Mammoth</English>
 		<French>Restes de Mammouths</French>
@@ -440,6 +439,14 @@
 		<Russian>Ñòàäî êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
+		<English>Remains - Sabretooth</English>
+		<French>Restes de Tigre à dents de sabre</French>
+		<Italian>Resti di tigre dai denti a sciabola</Italian>
+		<Polish>Resztki - Tygrys Szablozębny</Polish>
+		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
 		<English>Unit Reward - Center for Shark Studies</English>
 		<French>Centre d'étude des Requins</French>
@@ -477,6 +484,13 @@
 		<Italian>Fossa dei serpenti</Italian>
 		<Polish>Dół z wężami</Polish>
 		<Russian>ßìà ñî çìåÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
+		<English>Remains - Thylacine</English>
+		<French>Restes de Thylacine</French>
+		<Italian>Resti di tilacino</Italian>
+		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
@@ -1412,6 +1426,52 @@
 		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RHINO_TAXONOMY</Tag>
+		<English>Folklore (T) - Rhinoceroses</English>
+		<French>Mythe du Rhinocéros (T)</French>
+		<Italian>Mito dei rinoceronti (T)</Italian>
+		<Polish>Mit (T) - Rhinoceroses</Polish>
+		<Russian>Ìèô î íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
+		<English>Folklore - Crocodile</English>
+		<French>Mythe du Crocodile de rivière</French>
+		<Italian>Mito del coccodrillo di fiume</Italian>
+		<Polish>Mit - Krokodyl Błotny</Polish>
+		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</Tag>
+		<English>Folklore - Rockhopper Penguin</English>
+		<French>Mythe du Gorfou sauteur</French>
+		<Italian>Mito del pinguino saltarocce</Italian>
+		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SABRETOOTH</Tag>
+		<English>Folklore - Sabretooth</English>
+		<French>Mythe du Tigre à dents de sabre</French>
+		<Italian>Mito della tigre dai denti a sciabola</Italian>
+		<Polish>Mit - Tygrys Szablozębny</Polish>
+		<Russian>Ìèô î ñàáë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SAIGA</Tag>
+		<English>Folklore - Saiga Antelope</English>
+		<French>Mythe de l'Antilope Saiga</French>
+		<Italian>Mito della saiga</Italian>
+		<Russian>Ìèô î ñàéãàêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC</Tag>
+		<English>Folklore - Saltwater Crocodile</English>
+		<French>Mythe du Crocodile de mer</French>
+		<Italian>Mito del coccodrillo di mare</Italian>
+		<Polish>Mit - Krokodyl Różańcowy</Polish>
+		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
 		<English>Folklore - Scavenger</English>
 		<French>Mythe du Mendiant</French>
@@ -1428,12 +1488,26 @@
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEALION</Tag>
+		<English>Folklore - Sea Lion</English>
+		<French>Mythe du Lion des mers</French>
+		<Italian>Mito del leone di mare</Italian>
+		<Russian>Ìèô î ìîðñêîì ëüâå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEATURTLE</Tag>
 		<English>Folklore - Sea Turtle</English>
 		<French>Mythe de la Tortue de mer</French>
 		<Italian>Mito della tartaruga di mare</Italian>
 		<Polish>Mit Żółwia Morskiego</Polish>
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Tag>
+		<English>Folklore - Sea Otter</English>
+		<French>Mythe de la Loutre de mer</French>
+		<Italian>Mito della lontra di mare</Italian>
+		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
@@ -1444,12 +1518,33 @@
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SIBERIAN_TIGER</Tag>
+		<English>Folklore - Siberian Tiger</English>
+		<French>Mythe du Tigre de Sibérie</French>
+		<Italian>Mito della tigre siberiana</Italian>
+		<Russian>Ìèô î ñèá. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKUNK</Tag>
+		<English>Folklore - Skunk</English>
+		<French>Mythe de la Moufette</French>
+		<Italian>Mito della puzzola</Italian>
+		<Russian>Ìèô î ñêóíñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKY</Tag>
 		<English>Folklore (E) - Sky</English>
 		<French>Mythe du Ciel (E)</French>
 		<Italian>Mito del cielo (E)</Italian>
 		<Polish>Mit Nieba</Polish>
 		<Russian>Ìèô î íåáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNOW_LEOPARD</Tag>
+		<English>Folklore - Snow Leopard</English>
+		<French>Mythe du Léopard des neiges</French>
+		<Italian>Mito del leopardo delle nevi</Italian>
+		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CAT</Tag>
@@ -1460,12 +1555,63 @@
 		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_STONE</Tag>
+		<English>Folklore (E) - Stone</English>
+		<French>Mythe de la Pierre (E)</French>
+		<Italian>Mito della Pietra (E)</Italian>
+		<Polish>Mit (E) - Kamień</Polish>
+		<Russian>Ìèô î êàìíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TAPIR</Tag>
+		<English>Folklore (T) - Tapir</English>
+		<French>Mythe du Tapir (T)</French>
+		<Italian>Mito del tapiro (T)</Italian>
+		<Polish>Mit (T) - Tapir</Polish>
+		<Russian>Ìèô î òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA</Tag>
+		<English>Folklore - Tarantula</English>
+		<French>Mythe de la Tarentule</French>
+		<Italian>Mito della tarantola</Italian>
+		<Russian>Ìèô î òàðàíòóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TERN</Tag>
+		<English>Folklore - Arctic Tern</English>
+		<French>Mythe du Sterne Arctique</French>
+		<Italian>Mito della sterna artica</Italian>
+		<Russian>Ìèô î ïîë. êðà÷êå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_THYLACINE</Tag>
+		<English>Folklore - Thylacine</English>
+		<French>Mythe du Thylacine</French>
+		<Italian>Mito del tilacino</Italian>
+		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
 		<English>Folklore - Tiger</English>
 		<French>Mythe du Tigre</French>
 		<Italian>Mito della tigre</Italian>
 		<Polish>Mit Tygrysa</Polish>
 		<Russian>Ìèô î òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TOUCAN</Tag>
+		<English>Folklore - Toucan</English>
+		<French>Mythe du Toucan</French>
+		<Italian>Mito del tucano</Italian>
+		<Russian>Ìèô î òóêàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TREESLOTH</Tag>
+		<English>Folklore - Three-toed Sloth</English>
+		<French>Mythe du paresseux</French>
+		<Italian>Mito del bradipo tridattilo</Italian>
+		<Russian>Ìèô î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TUNA</Tag>
@@ -1476,12 +1622,26 @@
 		<Russian>Ìèô î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TURKEY</Tag>
+		<English>Folklore - Wild Turkey</English>
+		<French>Mythe de la Dinde</French>
+		<Italian>Mito del tacchino</Italian>
+		<Russian>Ìèô îá èíäåéêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_UNICORN</Tag>
 		<English>Folklore (E) - Unicorn</English>
 		<French>Mythe de la Licorne (E)</French>
 		<Italian>Mito dell'unicorno (E)</Italian>
 		<Polish>Mit Jednorożca</Polish>
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VULTURE</Tag>
+		<English>Folklore - Vulture</English>
+		<French>Mythe du Vautour</French>
+		<Italian>Mito dell'avvoltoio</Italian>
+		<Russian>Ìèô î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
@@ -1506,5 +1666,34 @@
 		<Italian>Mito dello squalo balena</Italian>
 		<Polish>Mit Rekina Wielorybiego</Polish>
 		<Russian>Ìèô î êèò. àêóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHITE_RHINO</Tag>
+		<English>Folklore - White Rhinoceros</English>
+		<French>Mythe du Rhinocéros blanc</French>
+		<Italian>Mito del rinoceronte bianco</Italian>
+		<Polish>Mit - Nosorożec Biały</Polish>
+		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLVERINE</Tag>
+		<English>Folklore - Wolverine</English>
+		<French>Mythe du Carcajou</French>
+		<Italian>Mito del ghiottone</Italian>
+		<Russian>Ìèô î ðîñîìàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOMBAT</Tag>
+		<English>Folklore - Wombat</English>
+		<French>Mythe du Wombat</French>
+		<Italian>Mito del vombato</Italian>
+		<Russian>Ìèô î âîìáàòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ZEBRA</Tag>
+		<English>Folklore - Zebra</English>
+		<French>Mythe du Zèbre</French>
+		<Italian>Mito della zebra</Italian>
+		<Russian>Ìèô î çåáðå</Russian>
 	</TEXT>
 </Civ4GameText>
