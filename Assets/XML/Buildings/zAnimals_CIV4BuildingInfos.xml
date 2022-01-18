@@ -1633,8 +1633,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
@@ -1676,8 +1676,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>

@@ -132,14 +132,14 @@
 		<Polish>Badania genetyczne współczesnych kóz ujawniają, że chociaż zostały one oswojone równolegle w kilku częściach świata to geny tych pionierów zmieszały się w całej populacji. Pewnie wynika to z tego, że kozy są doskonałymi towarzyszami podróży nie przeszkadzają im ciężkie warunki środowiskowe i nie mają wygórowanych wymagań pokarmowych. Dużym plusem owych zwierząt były ich małe wymiary ułatwiające sprzedaż kóz pomiędzy sąsiadującymi nawet w dużych odległościach osadami. W starożytności podawano całkiem słuszny przykład popierający tę tezę "posiadanie czterech kóz daje ci większy zasięg w handlu i mniejsze ryzyko niż posiadanie jednej krowy". Bez tych zwierząt migracje plemion ludzkich mogłyby wyglądać zupełnie inaczej, gdyż przybycie koczowniczych pasterzy zapewne mobilizowało miejscową ludność do udomowiania także innych ras zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_PEDIA</Tag>
-		<English>If one wild animal is a status symbol what better than many to boost your standing among your fellows and foreigners alike.</English>
-		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di molti per aumentare la tua posizione tra i tuoi sudditi e gli stranieri?</Italian>
-		<Polish>Jeśli jedno zwierzę to za mało to dlaczego nie stworzyć całej menażerii?.</Polish>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Tag>
+		<English>If one wild animal is a status symbol, what's better than having many to boost your standing among your fellows and foreigners alike?</English>
+		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di averne molti per aumentare il tuo stato sociale tra i tuoi sudditi e gli stranieri?</Italian>
+		<Polish>Jeśli jedno zwierzę to za mało to dlaczego nie stworzyć całej menażerii?</Polish>
 		<Russian>Åñëè îäíî äèêîå æèâîòíîå ÿâëÿåòñÿ ñèìâîëîì ñòàòóñà, ÷òî ëó÷øå, ÷åì ìíîãèå, ïîâûñèòü âàøó ðåïóòàöèþ ñðåäè âàøèõ ñîïëåìåííèêîâ è èíîñòðàíöåâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVENORS_PETS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Tag>
 		<English>As a status symbol a live wild, dangerous, large or exotic animal is a boon for any leader.</English>
 		<Italian>Come status symbol, un animale selvatico pericoloso, grande o esotico è una manna per qualsiasi leader.</Italian>
 		<Polish>Jako symbol statusu, dziko żyjące zwierzęta, wielkie lub egzotyczne zwierzęta są ozdobą każdej kolekcji nowoczesnego przywódcy.</Polish>
