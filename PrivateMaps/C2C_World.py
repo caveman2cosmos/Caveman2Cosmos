@@ -60,7 +60,7 @@ class MapConstants:
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus bonuses.
 		#People often want lots of bonuses, and for those people, this variable is definately a bonus.
-		self.fBonusMult = 1.0
+		self.fBonusMult = 0.8
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.

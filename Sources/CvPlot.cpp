@@ -229,7 +229,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_pPlotArea = NULL;
 	m_iFeatureVariety = 0;
 	m_iOwnershipDuration = 0;
-	m_iImprovementDuration = 0;
 	m_iUpgradeProgress = 0;
 	m_iForceUnownedTimer = 0;
 	m_iCityRadiusCount = 0;
@@ -624,15 +623,26 @@ void CvPlot::doTurn()
 
 	if (isOwned())
 	{
-		changeOwnershipDuration(1);
-	}
+		setOwnershipDuration(getOwnershipDuration() + 1);
 
-	if (getImprovementType() != NO_IMPROVEMENT)
-	{
-		changeImprovementDuration(1);
-		if (isOwned())
+		bool bBonusDiscovery = getBonusType() == NO_BONUS;
+
+		if (bBonusDiscovery)
 		{
-			doImprovement();
+			bBonusDiscovery = doBonusDiscovery();
+		}
+		if (getImprovementType() != NO_IMPROVEMENT)
+		{
+			if (!bBonusDiscovery)
+			{
+				// Bonus on plot that was not discovered this turn.
+				doBonusDepletion();
+			}
+
+			if (isImprovementUpgradable() && (isBeingWorked() || GC.getImprovementInfo(getImprovementType()).isUpgradeRequiresFortify()))
+			{
+				doImprovementUpgrade(getImprovementType());
+			}
 		}
 	}
 
@@ -669,108 +679,156 @@ void CvPlot::doTurn()
 #endif
 }
 
-
-void CvPlot::doImprovement()
+bool CvPlot::doBonusDiscovery()
 {
 	PROFILE_FUNC();
 
-	const ImprovementTypes eType = getImprovementType();
-	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eType);
-
-	// Discover bonus
-	if (getBonusType() == NO_BONUS)
+	const bool bWorked = isBeingWorked();
+	if (getImprovementType() == NO_IMPROVEMENT && !bWorked)
 	{
-		const CvTeam& team = GET_TEAM(getTeam());
-		const int iNumBonuses = GC.getNumBonusInfos();
-		int iBonus = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
-		int iCount = 0;
-		while (iCount++ < iNumBonuses)
-		{
-			int iOdds = pInfo.getImprovementBonusDiscoverRand(iBonus);
-			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
-			{
-				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-				iOdds /= 100;
-				// Bonus density normalization
-				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
-				iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
-
-				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
-				{
-					setBonusType((BonusTypes) iBonus);
-
-					const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-					if (pCity != NULL && isInViewport())
-					{
-
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
-							GC.getBonusInfo((BonusTypes)iBonus).getButton(), GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true);
-					}
-				}
-				break;
-			}
-			if (++iBonus == iNumBonuses)
-			{
-				iBonus = 0;
-			}
-		}
+		return false;
 	}
-	// Deplete Bonus
-	else if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
+	const CvImprovementInfo* improvement = (
+		getImprovementType() != NO_IMPROVEMENT
+		?
+		&GC.getImprovementInfo(getImprovementType())
+		:
+		NULL
+	);
+	/* Toffer ToDo - would be nice to filter out all improvements that don't have a single bonus discovery rand with some cache...
+	if (!bWorked && getImprovementType() != NO_IMPROVEMENT && !improvement.canDiscover())
 	{
-		const BonusTypes eBonus = getNonObsoleteBonusType(getTeam());
+		return false;
+	}
+	*/
+	CvGame& game = GC.getGame();
+	const CvMap& map = GC.getMap();
+	const CvTeam& team = GET_TEAM(getTeam());
+	const int iWorldSizeFactor = map.getWorldSize() + 4;
+	const int iGameSpeedFactor = GC.getGameSpeedInfo(game.getGameSpeedType()).getHammerCostPercent();
+	const int iNumBonuses = GC.getNumMapBonuses();
+	// Toffer - Can't check all bonuses for all valid plots every turn
+	//	bWorked is more likely to be true for plots in late game, which is when optimization is most dire.
+	int iMaxAttempts = bWorked ? 20 : 50;
+	int iAttempts = 0;
+	int iIndex = game.getSorenRandNum(iNumBonuses, "Random start index");
+	int iCount = 0;
+	while (iAttempts < iMaxAttempts && iCount++ < iNumBonuses)
+	{
+		const BonusTypes eBonus = GC.getMapBonus(iIndex);
 
-		// We know it's owned by a player because this function is only called if it is.
-		if (eBonus == NO_BONUS || !pInfo.isImprovementBonusTrade(eBonus) || !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(eBonus).getTechCityTrade())))
+		bool bImpBonus = false;
+		int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(eBonus) : 0;
+
+		if (iOdds > 0)
 		{
-			return;
+			bImpBonus = true;
+		}
+		else if (bWorked)
+		{
+			iOdds = 30000; // small chance always there when worked by city.
 		}
 
-		int iOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
-		if (iOdds < 0)
+		if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
 		{
-			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+			iOdds *= iGameSpeedFactor;
 			iOdds /= 100;
-			// Bonus density normalization.
-			iOdds *= 2 * (GC.getMap().getWorldSize() + 9);
-			iOdds /= 7 * (GC.getMap().getNumBonuses(eBonus) + 2);
+			// Bonus density normalization
+			iOdds *= 10 * (map.getNumBonuses(eBonus) + 1);
+			iOdds /= 25 * iWorldSizeFactor;
 
-			// This routine is only called for owned plots, no need to check if NO_PLAYER.
-			const int iValue = GET_PLAYER(getOwner()).getResourceConsumption(eBonus);
-			if (iValue > 0)
+			if (iOdds < 2 || game.getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 			{
-				iOdds *= 100;
-				iOdds /= iValue;
+				setBonusType(eBonus);
+
+				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+				if (pCity != NULL && isInViewport())
+				{
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+							GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey()
+						),
+						"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
+						GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
+					);
+				}
+				return true;
 			}
-			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Depletion") == 0)
+			if (bImpBonus)
 			{
-				{
-
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(eBonus).getTextKeyWide(), pInfo.getDescription());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
-						GC.getBonusInfo(eBonus).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
-				}
-				logging::logMsg("C2C.log", "Resource Depleted! Resource was %d, The odds were 1 in %d\n", eBonus, iOdds);
-
-				setBonusType(NO_BONUS);
-
-				CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-				if (pCity != NULL) pCity->AI_setAssignWorkDirty(true);
-
-				if (!canHaveImprovement(eType, getTeam()))
-				{
-					setImprovementType(NO_IMPROVEMENT);
-				}
+				return false;
 			}
+			iAttempts++;
+		}
+		if (++iIndex == iNumBonuses)
+		{
+			iIndex = 0;
 		}
 	}
-	// Upgrade?
-	if (isImprovementUpgradable() && (isBeingWorked() || pInfo.isUpgradeRequiresFortify()))
+	return false;
+}
+
+void CvPlot::doBonusDepletion()
+{
+	PROFILE_FUNC();
+
+	if (!GC.getGame().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
 	{
-		doImprovementUpgrade(eType);
+		return;
+	}
+	const BonusTypes eBonus = getNonObsoleteBonusType(getTeam());
+
+	if (eBonus == NO_BONUS
+	|| !GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(eBonus)
+	|| !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(eBonus).getTechCityTrade())))
+	{
+		return;
+	}
+	int iOdds = GC.getImprovementInfo(getImprovementType()).getImprovementBonusDepletionRand(eBonus);
+	if (iOdds < 1)
+	{
+		return;
+	}
+	iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+	iOdds /= 100;
+	// Bonus density normalization.
+	iOdds *= 25 * (GC.getMap().getWorldSize() + 4);
+	iOdds /= 10 * (GC.getMap().getNumBonuses(eBonus) + 1);
+
+	// This routine is only called for owned plots, no need to check if NO_PLAYER.
+	const int iValue = GET_PLAYER(getOwner()).getResourceConsumption(eBonus);
+	if (iValue > 0)
+	{
+		iOdds *= 100;
+		iOdds /= iValue;
+	}
+	if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Depletion") == 0)
+	{
+		AddDLLMessage(
+			getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+			gDLL->getText(
+				"TXT_KEY_MISC_RESOURCE_DEPLETED",
+				GC.getBonusInfo(eBonus).getTextKeyWide(),
+				GC.getImprovementInfo(getImprovementType()).getDescription()
+			),
+			NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
+			GC.getCOLOR_RED(), getX(), getY(), true, true
+		);
+		logging::logMsg("C2C.log", "Resource Depleted! Resource was %d, The odds were 1 in %d\n", eBonus, iOdds);
+
+		setBonusType(NO_BONUS);
+
+		CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+		if (pCity != NULL) pCity->AI_setAssignWorkDirty(true);
+
+		if (!canHaveImprovement(getImprovementType(), getTeam()))
+		{
+			setImprovementType(NO_IMPROVEMENT);
+		}
 	}
 }
 
@@ -5525,49 +5583,24 @@ int CvPlot::getOwnershipDuration() const
 
 bool CvPlot::isOwnershipScore() const
 {
-	return (getOwnershipDuration() >= GC.getDefineINT("OWNERSHIP_SCORE_DURATION_THRESHOLD"));
+	return m_iOwnershipDuration >= GC.getDefineINT("OWNERSHIP_SCORE_DURATION_THRESHOLD");
 }
 
 
 void CvPlot::setOwnershipDuration(int iNewValue)
 {
-	if (getOwnershipDuration() != iNewValue)
+	if (m_iOwnershipDuration != iNewValue)
 	{
 		const bool bOldOwnershipScore = isOwnershipScore();
 
+		FASSERT_NOT_NEGATIVE(iNewValue);
 		m_iOwnershipDuration = iNewValue;
-		FASSERT_NOT_NEGATIVE(getOwnershipDuration());
 
 		if (bOldOwnershipScore != isOwnershipScore() && isOwned() && !isWater())
 		{
 			GET_PLAYER(getOwner()).changeTotalLandScored(isOwnershipScore() ? 1 : -1);
 		}
 	}
-}
-
-
-void CvPlot::changeOwnershipDuration(int iChange)
-{
-	setOwnershipDuration(getOwnershipDuration() + iChange);
-}
-
-
-int CvPlot::getImprovementDuration() const
-{
-	return m_iImprovementDuration;
-}
-
-
-void CvPlot::setImprovementDuration(int iNewValue)
-{
-	m_iImprovementDuration = iNewValue;
-	FASSERT_NOT_NEGATIVE(getImprovementDuration());
-}
-
-
-void CvPlot::changeImprovementDuration(int iChange)
-{
-	setImprovementDuration(getImprovementDuration() + iChange);
 }
 
 
@@ -7037,11 +7070,6 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 		{
 			updatePlotGroupBonus(true);
 			GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
-		}
-
-		if (eNewImprovement == NO_IMPROVEMENT)
-		{
-			setImprovementDuration(0);
 		}
 
 		for (int iI = 0; iI < MAX_TEAMS; ++iI)
@@ -10579,7 +10607,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_iFeatureVariety);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iOwnershipDuration);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iImprovementDuration);
+	// @SAVEBREAK DELETE
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_iImprovementDuration, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCityRadiusCount);
@@ -11012,7 +11042,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 //
 void CvPlot::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -11024,7 +11054,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementDuration);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCityRadiusCount);

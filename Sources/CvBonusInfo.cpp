@@ -18,7 +18,7 @@ CvBonusInfo::CvBonusInfo() :
 	, m_iMinAreaSize(0)
 	, m_iMinLatitude(0)
 	, m_iMaxLatitude(90)
-	, m_iPlacementOrder(0)
+	, m_iPlacementOrder(-1)
 	, m_iConstAppearance(0)
 	, m_iRandAppearance1(0)
 	, m_iRandAppearance2(0)
@@ -405,7 +405,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");
 	pXML->GetOptionalChildXmlValByName(&m_iMinLatitude, L"iMinLatitude");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxLatitude, L"iMaxLatitude", 90);
-	pXML->GetOptionalChildXmlValByName(&m_iPlacementOrder, L"iPlacementOrder");
+	pXML->GetOptionalChildXmlValByName(&m_iPlacementOrder, L"iPlacementOrder", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iConstAppearance, L"iConstAppearance");
 
 	// if we can set the current xml node to it's next sibling

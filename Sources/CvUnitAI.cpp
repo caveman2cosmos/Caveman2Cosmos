@@ -26110,16 +26110,7 @@ int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) con
 			}
 		}
 	}
-	ImprovementTypes eImprovement;
-
-	if (pPlot->getImprovementDuration() > ((pPlot->isWater()) ? 20 : 5))
-	{
-		eImprovement = pPlot->getImprovementType();
-	}
-	else
-	{
-		eImprovement = pPlot->getRevealedImprovementType(getTeam(), false);
-	}
+	const ImprovementTypes eImprovement = pPlot->getRevealedImprovementType(getTeam(), false);
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -27099,56 +27090,44 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 {
 	PROFILE_FUNC();
 
-	int iValue = 0;
-	int iBestValue = 0;
-	const CvPlot* pBestPlot = NULL;
-
 	if (!GC.isDCM_RANGE_BOMBARD())
 	{
 		return false;
 	}
+	int iBestValue = 0;
+	const CvPlot* pBestPlot = NULL;
 
-	const int iSearchRange = AI_searchRange(iRange);
-
-	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
+	foreach_(const CvPlot * plotX, plot()->rect(iRange, iRange))
 	{
-		if (AI_plotValid(pLoopPlot) && !pLoopPlot->isCity() && pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getTeam() != getTeam())
+		if (AI_plotValid(plotX) && !plotX->isCity() && plotX->getTeam() != getTeam()
+		&& plotX->getImprovementType() != NO_IMPROVEMENT
+		&& getGroup()->canBombardAtRanged(plot(), plotX->getX(), plotX->getY()))
 		{
-			if (getGroup()->canBombardAtRanged(plot(), pLoopPlot->getX(), pLoopPlot->getY()))
+			int iValue = 0;
+			if (iBonusValueThreshold > 0)
 			{
-				if (iBonusValueThreshold > 0)
+				const ImprovementTypes eImprovement = plotX->getRevealedImprovementType(getTeam(), false);
+
+				if (eImprovement != NO_IMPROVEMENT)
 				{
-					ImprovementTypes eImprovement;
-					if (pLoopPlot->getImprovementDuration() > ((pLoopPlot->isWater()) ? 20 : 5))
+					iValue = std::max(0, GC.getImprovementInfo(eImprovement).getPillageGold() - 10); // cottages = 0, hamlets = 5, villages = 10, towns = 15
+					iValue *= 100;
+					iValue /= 15; // cottages = 0, hamlets = 33, villages = 67, towns = 100
+					if (plotX->getWorkingCity() == NULL)
 					{
-						eImprovement = pLoopPlot->getImprovementType();
+						iValue *= 50;
+						iValue /= 100;
 					}
-					else
-					{
-						eImprovement = pLoopPlot->getRevealedImprovementType(getTeam(), false);
-					}
-					if (eImprovement != NO_IMPROVEMENT)
-					{
-						iValue = std::max(0, GC.getImprovementInfo(eImprovement).getPillageGold() - 10); // cottages = 0, hamlets = 5, villages = 10, towns = 15
-						iValue *= 100;
-						iValue /= 15; // cottages = 0, hamlets = 33, villages = 67, towns = 100
-						if (pLoopPlot->getWorkingCity() == NULL)
-						{
-							iValue *= 50;
-							iValue /= 100;
-						}
-						if (iValue < iBonusValueThreshold) iValue = 0;
-					}
+					if (iValue < iBonusValueThreshold) iValue = 0;
 				}
-				else
-				{
-					iValue = AI_pillageValue(pLoopPlot, 0); // returns any improvement with highest pillage value
-				}
-				if (iValue > iBestValue)
-				{
-					iBestValue = iValue;
-					pBestPlot = pLoopPlot;
-				}
+			}
+			else iValue = AI_pillageValue(plotX, 0); // returns any improvement with highest pillage value
+
+
+			if (iValue > iBestValue)
+			{
+				iBestValue = iValue;
+				pBestPlot = plotX;
 			}
 		}
 	}

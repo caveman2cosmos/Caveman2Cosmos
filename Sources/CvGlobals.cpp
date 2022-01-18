@@ -1002,6 +1002,17 @@ CvBonusInfo& cvInternalGlobals::getBonusInfo(BonusTypes eBonusNum) const
 	return *(m_paBonusInfo[eBonusNum]);
 }
 
+int cvInternalGlobals::getNumMapBonuses() const
+{
+	return (int)m_mapBonuses.size();
+}
+
+BonusTypes cvInternalGlobals::getMapBonus(const int i) const
+{
+	FASSERT_BOUNDS(0, (int)m_mapBonuses.size(), i);
+	return m_mapBonuses[i];
+}
+
 int cvInternalGlobals::getNumFeatureInfos() const
 {
 	return (int)m_paFeatureInfo.size();
@@ -2992,7 +3003,7 @@ void cvInternalGlobals::doPostLoadCaching()
 		for (int iI = getNumImprovementInfos() - 1; iI > -1; iI--)
 		{
 			const ImprovementTypes eType = static_cast<ImprovementTypes>(iI);
-			const CvImprovementInfo& improvement = GC.getImprovementInfo(eType);
+			const CvImprovementInfo& improvement = getImprovementInfo(eType);
 
 			for (int iBonus = 0; iBonus < iNumBonusInfos; iBonus++)
 			{
@@ -3000,6 +3011,13 @@ void cvInternalGlobals::doPostLoadCaching()
 				{
 					getBonusInfo((BonusTypes)iBonus).setProvidedByImprovementTypes(eType);
 				}
+			}
+		}
+		for (int iBonus = 0; iBonus < iNumBonusInfos; iBonus++)
+		{
+			if (getBonusInfo(static_cast<BonusTypes>(iBonus)).getPlacementOrder() > -1)
+			{
+				m_mapBonuses.push_back(static_cast<BonusTypes>(iBonus));
 			}
 		}
 	}

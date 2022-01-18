@@ -412,26 +412,6 @@ void CyPlot::setOwnershipDuration(int iNewValue)
 	if (m_pPlot) m_pPlot->setOwnershipDuration(iNewValue);
 }
 
-void CyPlot::changeOwnershipDuration(int iChange)
-{
-	if (m_pPlot) m_pPlot->changeOwnershipDuration(iChange);
-}
-
-int CyPlot::getImprovementDuration() const
-{
-	return m_pPlot ? m_pPlot->getImprovementDuration() : -1;
-}
-
-void CyPlot::setImprovementDuration(int iNewValue)
-{
-	if (m_pPlot) m_pPlot->setImprovementDuration(iNewValue);
-}
-
-void CyPlot::changeImprovementDuration(int iChange)
-{
-	if (m_pPlot) m_pPlot->changeImprovementDuration(iChange);
-}
-
 int /*BonusTypes*/ CyPlot::getBonusType(int /*TeamTypes*/ eTeam) const
 {
 	return m_pPlot ? m_pPlot->getBonusType((TeamTypes)eTeam) : -1;

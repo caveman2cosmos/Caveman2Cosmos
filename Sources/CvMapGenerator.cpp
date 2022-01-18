@@ -565,21 +565,23 @@ void CvMapGenerator::addBonuses()
 	{
 		return; // Python override
 	}
-	for (int iOrder = 1; iOrder < 25; iOrder++) // 24 orders are more than enough
+	const int iNumMapBonuses = GC.getNumMapBonuses();
+	for (int iOrder = 0; iOrder < 16; iOrder++) // 16 orders are more than enough
 	{
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		for (int iI = 0; iI < iNumMapBonuses; iI++)
 		{
+			const BonusTypes eBonus = GC.getMapBonus(iI);
 			gDLL->callUpdater();
-			if (GC.getBonusInfo((BonusTypes)iI).getPlacementOrder() == iOrder
-			&& !Cy::call_override(GC.getMap().getMapScript(), "addBonusType", Cy::Args() << iI))
+			if (GC.getBonusInfo(eBonus).getPlacementOrder() == iOrder
+			&& !Cy::call_override(GC.getMap().getMapScript(), "addBonusType", Cy::Args() << static_cast<int>(eBonus)))
 			{
-				if (GC.getBonusInfo((BonusTypes)iI).isOneArea())
+				if (GC.getBonusInfo(eBonus).isOneArea())
 				{
-					addUniqueBonusType((BonusTypes)iI);
+					addUniqueBonusType(eBonus);
 				}
 				else
 				{
-					addNonUniqueBonusType((BonusTypes)iI);
+					addNonUniqueBonusType(eBonus);
 				}
 			}
 		}

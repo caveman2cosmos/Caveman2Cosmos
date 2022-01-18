@@ -2510,7 +2510,6 @@
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
 			<iAIStartingDefenseUnits>5</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
 			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
@@ -2880,7 +2879,6 @@
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
 			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
 			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>

@@ -1120,10 +1120,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_SPY</Tag>
-		<English>
-			<Text>Great Spy / Spy Specialist:Great Spies / Spy Specialists</Text>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Spy Specialist and Great Spies</English>
 		<French>
 			<Text>Espion illustre / Spécialiste de l'espionnage:Espions illustres / Spécialistes de l'espionnages</Text>
 			<Gender>Male</Gender>

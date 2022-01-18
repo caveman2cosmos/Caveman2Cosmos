@@ -45,7 +45,6 @@ m_iNoBonus(NO_BONUS),
 m_iPowerBonus(NO_BONUS),
 m_iFreeBuilding(NO_BUILDING),
 m_iFreeAreaBuilding(NO_BUILDING),
-m_iFreePromotion(NO_PROMOTION),
 m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
 m_iProductionCost(-1),
@@ -196,8 +195,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iPrereqVicinityBonus(NO_BONUS)
 ,m_iPrereqRawVicinityBonus(NO_BONUS)
 ,m_iPillageGoldModifier(0)
-,m_iFreePromotion_2(NO_PROMOTION)
-,m_iFreePromotion_3(NO_PROMOTION)
 ,m_iWorldTradeRoutes(0)
 ,m_iLineOfSight(0)
 ,m_iInflationModifier(0)
@@ -1587,7 +1584,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPowerBonus);
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
-	CheckSum(iSum, m_iFreePromotion);
 	CheckSum(iSum, m_iCivicOption);
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iProductionCost);
@@ -1777,8 +1773,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPrereqVicinityBonus);
 	CheckSum(iSum, m_iPrereqRawVicinityBonus);
 	CheckSum(iSum, m_iPillageGoldModifier);
-	CheckSum(iSum, m_iFreePromotion_2);
-	CheckSum(iSum, m_iFreePromotion_3);
 	CheckSum(iSum, m_iWorldTradeRoutes);
 	CheckSum(iSum, m_iLineOfSight);
 	CheckSum(iSum, m_iInflationModifier);
@@ -1904,15 +1898,14 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iMaxPopAllowed);
 
 	//Structs
-	int iNumElements = m_aFreePromoTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
+	foreach_(const FreePromoTypes& freePromotion, m_aFreePromoTypes)
 	{
-		CheckSum(iSum, m_aFreePromoTypes[i].ePromotion);
-		if (m_aFreePromoTypes[i].m_pExprFreePromotionCondition)
-			m_aFreePromoTypes[i].m_pExprFreePromotionCondition->getCheckSum(iSum);
+		CheckSum(iSum, freePromotion.ePromotion);
+		if (freePromotion.m_pExprFreePromotionCondition)
+			freePromotion.m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
-	iNumElements = m_aHealUnitCombatTypes.size();
+	int iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aHealUnitCombatTypes[i].eUnitCombat);
@@ -2079,9 +2072,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion");
-	m_iFreePromotion = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivicOption");
 	m_iCivicOption = pXML->GetInfoClass(szTextVal);
@@ -2640,12 +2630,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqCultureLevel");
 	m_iPrereqCultureLevel = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion_2");
-	m_iFreePromotion_2 = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion_3");
-	m_iFreePromotion_3 = pXML->GetInfoClass(szTextVal);
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VicinityBonus");
 	m_iPrereqVicinityBonus = pXML->GetInfoClass(szTextVal);
 
@@ -3062,6 +3046,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PromotionType");
 					m_aFreePromoTypes[i].ePromotion = (PromotionTypes)pXML->GetInfoClass(szTextVal);
+					FAssert(m_aFreePromoTypes[i].ePromotion > -1);
 					if (pXML->TryMoveToXmlFirstChild(L"FreePromotionCondition"))
 					{
 						m_aFreePromoTypes[i].m_pExprFreePromotionCondition = BoolExpr::read(pXML);
@@ -3355,7 +3340,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getNoBonus() == iTextDefault) m_iNoBonus = pClassInfo->getNoBonus();
 	if (getPowerBonus() == iTextDefault) m_iPowerBonus = pClassInfo->getPowerBonus();
-	if (getFreePromotion() == iTextDefault) m_iFreePromotion = pClassInfo->getFreePromotion();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
 	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
 	if (getVoteSourceType() == iTextDefault) m_iVoteSourceType = pClassInfo->getVoteSourceType();
@@ -3787,8 +3771,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (isPrereqPower() == bDefault) m_bPrereqPower = pClassInfo->isPrereqPower();
 	if (getGlobalPopulationgrowthratepercentage() == iDefault) m_iGlobalPopulationgrowthratepercentage = pClassInfo->getGlobalPopulationgrowthratepercentage();
 	if (getPopulationgrowthratepercentage() == iDefault) m_iPopulationgrowthratepercentage = pClassInfo->getPopulationgrowthratepercentage();
-	if (getFreePromotion_2() == iTextDefault) m_iFreePromotion_2 = pClassInfo->getFreePromotion_2();
-	if (getFreePromotion_3() == iTextDefault) m_iFreePromotion_3 = pClassInfo->getFreePromotion_3();
 	if (getLineOfSight() == iDefault) m_iLineOfSight = pClassInfo->getLineOfSight();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
 	if (getInvasionChance() == iDefault) m_iInvasionChance = pClassInfo->getInvasionChance();
@@ -4135,7 +4117,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	{
 		m_bDamageAttackerCapable = true;
 	}
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->m_aFreePromoTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->getFreePromoTypes());
 	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqNotInCityBuildings, pClassInfo->m_vPrereqNotInCityBuildings);
@@ -4254,12 +4236,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_pabHurry[i] = pClassInfo->isHurry(i);
 		}
 	}
-
-	//if (!m_pExprFreePromotionCondition)
-	//{
-	//	m_pExprFreePromotionCondition = pClassInfo->m_pExprFreePromotionCondition;
-	//	pClassInfo->m_pExprFreePromotionCondition = NULL;
-	//}
 	//TB Combat Mods (Buildings) end
 
 	//Alberts2 PrereqBonuses
@@ -4315,13 +4291,6 @@ const BoolExpr* CvBuildingInfo::getConstructCondition() const
 {
 	return m_pExprConstructCondition;
 }
-
-//TB Building Tags
-//const BoolExpr* CvBuildingInfo::getFreePromotionCondition()
-//{
-//	return m_pExprFreePromotionCondition;
-//}
-
 
 bool CvBuildingInfo::getNotShowInCity() const
 {

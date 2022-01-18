@@ -258,11 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CATHERINE</Tag>
-		<English>
-			<Text>Catherine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Catherine</English>
 		<German>
 			<Text>Katharina</Text>
 			<Gender>Female</Gender>
@@ -513,11 +509,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ELIZABETH</Tag>
-		<English>
-			<Text>Elizabeth</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Elizabeth</English>
 		<German>Elisabeth</German>
 		<Italian>
 			<Text>Elisabetta</Text>
@@ -747,11 +739,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HATSHEPSUT</Tag>
-		<English>
-			<Text>Hatshepsut</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Hatshepsut</English>
 		<French>
 			<Text>Hatchepsout</Text>
 			<Gender>Female</Gender>
@@ -804,11 +792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ISABELLA</Tag>
-		<English>
-			<Text>Isabella</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Isabella</English>
 		<French>
 			<Text>Isabelle</Text>
 			<Gender>Female</Gender>
@@ -1801,11 +1785,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_VICTORIA</Tag>
-		<English>
-			<Text>Victoria</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Victoria</English>
 		<German>Viktoria</German>
 		<Italian>
 			<Text>Vittoria</Text>
