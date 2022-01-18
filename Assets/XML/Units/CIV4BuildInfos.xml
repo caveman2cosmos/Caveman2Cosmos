@@ -863,7 +863,7 @@
 			<Description>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Description>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>5</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -902,7 +902,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>5</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1176,7 +1176,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1221,7 +1221,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1367,7 +1367,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1397,7 +1397,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1800,7 +1800,7 @@
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1861,7 +1861,7 @@
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2403,7 +2403,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>202</iTime>
-			<iCost>3</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3173,7 +3173,7 @@
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>5</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3266,7 +3266,7 @@
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5517,7 +5517,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>405</iTime>
-			<iCost>5</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5543,7 +5543,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>405</iTime>
-			<iCost>5</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5569,7 +5569,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>405</iTime>
-			<iCost>5</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6251,7 +6251,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>205</iTime>
-			<iCost>1</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6347,7 +6347,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>15</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6379,7 +6379,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>15</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6395,7 +6395,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
