@@ -1385,77 +1385,76 @@ class BonusBalancer:
 	def __init__(self):
 		self.GC = CyGlobalContext()
 		self.map = CyMap()
-
-		# Rise of Mankind mod start
 		self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_COAL', 'BONUS_COPPER_ORE', 'BONUS_HORSE', 'BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM', 'BONUS_SULPHUR', 'BONUS_RUBBER')
-		# Rise of Mankind mod end
-
-		self.resourcesToEliminate = ('BONUS_MARBLE', )
-
-	def isSkipBonus(self, iBonusType):
-		type_string = self.GC.getBonusInfo(iBonusType).getType()
-
-		return ((type_string in self.resourcesToBalance) or (type_string in self.resourcesToEliminate))
 
 
 	def isBonusValid(self, eBonus, pPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent):
 		"Returns True if we can place a bonus here"
 
-		iX, iY = pPlot.getX(), pPlot.getY()
+		if (not bIgnoreOneArea
+		and self.GC.getBonusInfo(eBonus).isOneArea()
+		and self.map.getNumBonuses(eBonus) > 0
+		and self.map.getArea(pPlot.getArea()).getNumBonuses(eBonus) == 0
+		):
+			return False
 
-		if (not bIgnoreOneArea) and self.GC.getBonusInfo(eBonus).isOneArea():
-			if self.map.getNumBonuses(eBonus) > 0:
-				if self.map.getArea(pPlot.getArea()).getNumBonuses(eBonus) == 0:
-					return False
+		if bIgnoreAdjacent and bIgnoreUniqueRange:
+			return True
+
+		iX, iY = pPlot.getX(), pPlot.getY()
 
 		if not bIgnoreAdjacent:
 			for iI in range(DirectionTypes.NUM_DIRECTION_TYPES):
-				pLoopPlot = plotDirection(iX, iY, DirectionTypes(iI))
-				if not pLoopPlot.isNone():
-					if (pLoopPlot.getBonusType(-1) != -1) and (pLoopPlot.getBonusType(-1) != eBonus):
-						return False
+				plotX = plotDirection(iX, iY, DirectionTypes(iI))
+				if plotX and plotX.getBonusType(-1) != -1 and plotX.getBonusType(-1) != eBonus:
+					return False
 
 		if not bIgnoreUniqueRange:
 			uniqueRange = self.GC.getBonusInfo(eBonus).getUniqueRange()
 			for iDX in range(-uniqueRange, uniqueRange+1):
 				for iDY in range(-uniqueRange, uniqueRange+1):
-					pLoopPlot = plotXY(iX, iY, iDX, iDY)
-					if not pLoopPlot.isNone() and pLoopPlot.getBonusType(-1) == eBonus:
+					plotX = plotXY(iX, iY, iDX, iDY)
+					if plotX and plotX.getBonusType(-1) == eBonus:
 						return False
 
 		return True
 
 	def normalizeAddExtras(self):
+		GC = self.GC
+		for i in xrange(GC.getMAX_PC_PLAYERS()):
+			if not GC.getPlayer(i).isAlive():
+				continue
+			start_plot = GC.getPlayer(i).getStartingPlot() # returns a CyPlot
+			x, y = start_plot.getX(), start_plot.getY()
 
-		for i in range(self.GC.getMAX_PC_PLAYERS()):
-			if (self.GC.getPlayer(i).isAlive()):
-				start_plot = self.GC.getPlayer(i).getStartingPlot() # returns a CyPlot
-				startx, starty = start_plot.getX(), start_plot.getY()
+			plots = [] # build a list of the plots near the starting plot
+			for dx in xrange(-5,6):
+				for dy in range(-5,6):
+					plotX = self.map.plot(x + dx, y + dy)
+					if plotX and plotX.getBonusType(-1) < 0:
+						plots.append(plotX)
 
-				plots = [] # build a list of the plots near the starting plot
-				for dx in range(-5,6):
-					for dy in range(-5,6):
-						x,y = startx+dx, starty+dy
-						pLoopPlot = self.map.plot(x,y)
-						if not pLoopPlot.isNone():
-							plots.append(pLoopPlot)
+			resources_placed = []
 
-				resources_placed = []
-				for pass_num in range(4):
-					bIgnoreUniqueRange  = pass_num >= 1
-					bIgnoreOneArea 		= pass_num >= 2
-					bIgnoreAdjacent 	= pass_num >= 3
+			while plots:
+				plotX = plots.pop()
+				bBonus = False
 
-					for bonus in range(self.GC.getNumBonusInfos()):
-						type_string = self.GC.getBonusInfo(bonus).getType()
-						if (type_string not in resources_placed) and (type_string in self.resourcesToBalance):
-							for (pLoopPlot) in plots:
-								if (pLoopPlot.canHaveBonus(bonus, True)):
-									if self.isBonusValid(bonus, pLoopPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent):
-										pLoopPlot.setBonusType(bonus)
-										resources_placed.append(type_string)
-										#print "placed", type_string, "on pass", pass_num
-										break # go to the next bonus
+				for pass_num in xrange(4):
+
+					for i in range(GC.getNumMapBonuses()):
+						iBonus = GC.getMapBonus(i)
+						szType = GC.getBonusInfo(iBonus).getType()
+						if szType in resources_placed or szType not in self.resourcesToBalance:
+							continue
+
+						if plotX.canHaveBonus(iBonus, True) and self.isBonusValid(iBonus, plotX, pass_num >= 1, pass_num >= 2, pass_num >= 3):
+							plotX.setBonusType(iBonus)
+							resources_placed.append(szType)
+							bBonus = True
+							#print "placed", szType, "on pass", pass_num
+							break # go to the next bonus
+					if bBonus: break
 
 
 ###############################################################################
