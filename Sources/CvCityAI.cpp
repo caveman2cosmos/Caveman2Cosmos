@@ -5386,32 +5386,17 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 					iValue += kBuilding.getDomainFreeExperience(iI) * (bMetAnyCiv ? iDomainExpValue : iDomainExpValue / 2);
 				}
-				int iPromoValue = 0;
 				bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
-				if (kBuilding.getFreePromotion() != NO_PROMOTION)
-				{
-					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion());
-				}
-				if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
-				{
-					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_2());
-				}
-				if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
-				{
-					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
-				}
+				int iPromoValue = 0;
 				foreach_(const FreePromoTypes & freePromoType, kBuilding.getFreePromoTypes())
 				{
-					if (freePromoType.ePromotion)
+					if (freePromoType.m_pExprFreePromotionCondition)
 					{
-						if (freePromoType.m_pExprFreePromotionCondition)
-						{
-							iPromoValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
-						}
-						else
-						{
-							iPromoValue += AI_getPromotionValue(freePromoType.ePromotion);
-						}
+						iPromoValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
+					}
+					else
+					{
+						iPromoValue += AI_getPromotionValue(freePromoType.ePromotion);
 					}
 				}
 				foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
@@ -12754,11 +12739,8 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		if (kBuilding.getFreeExperience() > 0 ||
 			kBuilding.getGlobalFreeExperience() > 0 ||
-			kBuilding.getFreePromotion() != NO_PROMOTION ||
 			!kBuilding.getUnitCombatFreeExperience().empty() ||
 			kBuilding.getDomainFreeExperience(NO_DOMAIN) > 0 ||
-			kBuilding.getFreePromotion_2() != NO_PROMOTION ||
-			kBuilding.getFreePromotion_3() != NO_PROMOTION ||
 			kBuilding.isApplyFreePromotionOnMove() ||
 			kBuilding.EnablesUnits() ||
 			!kBuilding.getFreePromoTypes().empty() ||
@@ -13402,28 +13384,13 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				}
 
 				int iPromoValue = 0;
-				if (kBuilding.getFreePromotion() != NO_PROMOTION)
-				{
-					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion());
-				}
-				if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
-				{
-					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_2());
-				}
-				if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
-				{
-					iPromoValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
-				}
 				foreach_(const FreePromoTypes & freePromoType, kBuilding.getFreePromoTypes())
 				{
-					if (freePromoType.ePromotion)
+					if (freePromoType.m_pExprFreePromotionCondition)
 					{
-						if (freePromoType.m_pExprFreePromotionCondition)
-						{
-							iPromoValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
-						}
-						else iPromoValue += AI_getPromotionValue(freePromoType.ePromotion);
+						iPromoValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
 					}
+					else iPromoValue += AI_getPromotionValue(freePromoType.ePromotion);
 				}
 				foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
 				{

@@ -317,11 +317,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BABYLON_ADJECTIVE</Tag>
-		<English>
-			<Text>Babylonian:Babylonians</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Babylonian</English>
 		<French>
 			<Text>babylonien:babylonienne:babyloniens:babyloniennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -452,11 +448,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>
-		<English>
-			<Text>Byzantine:Byzantines</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Byzantine</English>
 		<French>
 			<Text>byzantin:byzantine;byzantins:bizantines</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -530,11 +522,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CARTHAGE_ADJECTIVE</Tag>
-		<English>
-			<Text>Carthaginian:Carthaginians</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Carthaginian</English>
 		<French>
 			<Text>carthaginois:carthaginoise:carthaginois:carthaginoises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -612,11 +600,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CELT_ADJECTIVE</Tag>
-		<English>
-			<Text>Celtic:Celts</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Celtic</English>
 		<French>
 			<Text>celte:celtique:celtes:celtiques</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -951,11 +935,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ETHIOPIA_ADJECTIVE</Tag>
-		<English>
-			<Text>Ethiopian:Ethiopians</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Ethiopian</English>
 		<French>
 			<Text>éthiopien:éthiopienne:éthiopiens:éthiopiennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1297,11 +1277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HOLY_ROMAN_ADJECTIVE</Tag>
-		<English>
-			<Text>Holy Roman:Holy Romans</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Holy Roman</English>
 		<French>
 			<Text>romain:romaine:romains:romaines</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1672,11 +1648,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_KHMER_ADJECTIVE</Tag>
-		<English>
-			<Text>Khmer:Khmer</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Khmer</English>
 		<French>
 			<Text>khmer:khmer:khmers:khmers</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1750,11 +1722,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_KOREA_ADJECTIVE</Tag>
-		<English>
-			<Text>Korean:Koreans</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Korean</English>
 		<French>
 			<Text>coréen:coréenne:coréens:coréennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1904,11 +1872,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MAYA_ADJECTIVE</Tag>
-		<English>
-			<Text>Maya:Maya</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Maya</English>
 		<French>
 			<Text>maya:maya:mayas:mayas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2055,11 +2019,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_ADJECTIVE</Tag>
-		<English>
-			<Text>Sioux:Sioux's</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Sioux</English>
 		<French>
 			<Text>amérindien:amérindienne:amérindiens:amérindiennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2097,11 +2057,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NETHERLANDS_ADJECTIVE</Tag>
-		<English>
-			<Text>Dutch:Dutch</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Dutch</English>
 		<French>
 			<Text>néerlandais:néerlandaise:néerlandais:néerlandaises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2201,11 +2157,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Tag>
-		<English>
-			<Text>Turkish:Turks</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Turkish</English>
 		<French>
 			<Text>turc:turque:turcs:turques</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2398,11 +2350,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Tag>
-		<English>
-			<Text>Portuguese:Portuguese</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Portuguese</English>
 		<French>
 			<Text>portugais:portugaise:portugais:portugaises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2742,11 +2690,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SUMERIA_ADJECTIVE</Tag>
-		<English>
-			<Text>Sumerian:Sumerians</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Sumerian</English>
 		<French>
 			<Text>sumérien:sumérienne:sumériens:sumériennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2942,11 +2886,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ZULU_ADJECTIVE</Tag>
-		<English>
-			<Text>Zulu:Zulu</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Zulu</English>
 		<French>
 			<Text>zoulou:zouloue:zoulous:zouloues</Text>
 			<Gender>Male:Female:Male:Female</Gender>

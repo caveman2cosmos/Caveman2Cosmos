@@ -4435,7 +4435,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (bAdvance && getGroup() != NULL)
 				{
 					PROFILE("CvUnit::updateCombat.Advance");
-					getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
+					getGroup()->groupMove(pPlot, true, this);
 				}
 			}
 			//TB Combat Mods End
@@ -6730,41 +6730,30 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 	changeMoves(pPlot->movementCost(this, pOldPlot));
 
 	//GC.getGame().logOOSSpecial(16, getID(), pPlot->getX(), pPlot->getY());
+	OutputDebugString(CvString::format("%S (%d) CvUnit::move (%d,%d)-->(%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY, pPlot->getX(), pPlot->getY()).c_str());
+
 	setXY(pPlot->getX(), pPlot->getY(), true, true, bShow && pPlot->isVisibleToWatchingHuman(), bShow);
-	if (isDead())
-	{
-		return;
-	}
-	//TBFIXHERE it's very possible for the unit to be dead from this point and there are further move aspects taking place such as the python reporting which may include more than python
-	//change feature
+
+	//TBFIXHERE it's very possible for the unit to be dead from this point and there are further move aspects taking place that would make little sense if unit is dead.
+	if (isDead()) return;
+
 	const FeatureTypes featureType = pPlot->getFeatureType();
-	if(featureType != NO_FEATURE)
+	if (featureType != NO_FEATURE)
 	{
 		const CvString featureString(GC.getFeatureInfo(featureType).getOnUnitChangeTo());
-		if(!featureString.IsEmpty())
+		if (!featureString.IsEmpty())
 		{
-			FeatureTypes newFeatureType = (FeatureTypes) GC.getInfoTypeForString(featureString);
-			pPlot->setFeatureType(newFeatureType);
+			pPlot->setFeatureType((FeatureTypes)GC.getInfoTypeForString(featureString));
+		}
+		//spawn birds if trees present - JW
+		else if (!pPlot->isOwned() && getOwner() == GC.getGame().getActivePlayer()
+		&& GC.getASyncRand().get(100) < GC.getFeatureInfo(featureType).getEffectProbability())
+		{
+			EffectTypes eEffect = (EffectTypes)GC.getInfoTypeForString(GC.getFeatureInfo(featureType).getEffectType());
+			gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)(GC.getASyncRand().get(360)));
+			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
-
-	if (getOwner() == GC.getGame().getActivePlayer())
-	{
-		if (!(pPlot->isOwned()))
-		{
-			//spawn birds if trees present - JW
-			if (featureType != NO_FEATURE)
-			{
-				if (GC.getASyncRand().get(100) < GC.getFeatureInfo(featureType).getEffectProbability())
-				{
-					EffectTypes eEffect = (EffectTypes)GC.getInfoTypeForString(GC.getFeatureInfo(featureType).getEffectType());
-					gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)(GC.getASyncRand().get(360)));
-					gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
-				}
-			}
-		}
-	}
-
 	CvEventReporter::getInstance().unitMove(pPlot, this, pOldPlot);
 }
 
@@ -16109,10 +16098,15 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			//This might be necessary for the trap segment below, to rerun this.
 			if (!bInit && pOldPlot != NULL)
 			{
+				OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 				foreach_(CvUnit* unitX, pNewPlot->units_safe())
 				{
-					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam()))
-					&& !unitX->canCoexistWithAttacker(*this))
+					OutputDebugString(CvString::format("DEAD=%d - DD=%d - CvUnit::setXY...unitX\n", (int)unitX->isDead(), (int)unitX->isDelayedDeath()).c_str());
+					if (unitX->isDead() || unitX->isDelayedDeath())
+						continue; // isDead() happens for cargo on non-debug dll, while isDelayedDeath() happens for cargo on the debug dll.
+					OutputDebugString(CvString::format("CvUnit::setXY...unitX=%S\n", unitX->getDescription().c_str()).c_str());
+
+					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this))
 					{
 						if (unitX->isArmedTrap())
 						{

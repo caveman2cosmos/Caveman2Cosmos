@@ -21142,6 +21142,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szTempBuffer.Format(L", +%d%c", abs(kBonus.getHappiness()), (kBonus.getHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR));
 			szBuffer.append(szTempBuffer);
 		}
+
+		if (player != NULL)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1", player->getNumAvailableBonuses(pair.first)));
+		}
 	}
 
 	const BuildingTypes eFreeBuilding = kBuilding.getFreeBuilding();
@@ -21191,9 +21196,16 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	if (!bRelDisabled)
 	{
 		const bool bVisit = kBuilding.isApplyFreePromotionOnMove();
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion(), bVisit, szBuffer);
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_2(), bVisit, szBuffer);
-		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_3(), bVisit, szBuffer);
+
+		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
+		{
+			setFreePromoBuildingHelp(freePromo.ePromotion, bVisit, szBuffer);
+
+			if (const BoolExpr* condition = freePromo.m_pExprFreePromotionCondition)
+			{
+				condition->buildDisplayString(szBuffer);
+			}
+		}
 	}
 
 	if (kBuilding.isProvidesFreshWater())
@@ -22058,10 +22070,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (!bRelDisabled)
 	{
-		foreach_(const FreePromoTypes& kFreePromo, kBuilding.getFreePromoTypes())
+		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
 		{
-			const PromotionTypes ePromo = kFreePromo.ePromotion;
-			const BoolExpr* pExpr = kFreePromo.m_pExprFreePromotionCondition;
+			const PromotionTypes ePromo = freePromo.ePromotion;
+			const BoolExpr* pExpr = freePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(GC.getPromotionInfo(ePromo).getType()).GetCString(), GC.getPromotionInfo(ePromo).getTextKeyWide()));
@@ -23572,28 +23584,25 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 void CvGameTextMgr::setFreePromoBuildingHelp(const PromotionTypes ePromo, bool bApplyToVisitingUnits, CvWStringBuffer &szBuffer)
 {
-	if (ePromo != NO_PROMOTION)
-	{
-		bool bFirst = true;
-		const CvPromotionInfo& promo = GC.getPromotionInfo(ePromo);
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide()));
+	bool bFirst = true;
+	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromo);
+	szBuffer.append(NEWLINE);
+	szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide()));
 
-		for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
-		{
-			const UnitCombatTypes eUnitCombat = (UnitCombatTypes)promo.getQualifiedUnitCombatType(iI);
-			CvWString szFirstBuffer;
-			CvWString szTempBuffer;
-			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo(eUnitCombat).getDescription());
-			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-			bFirst = false;
-		}
-		if (bApplyToVisitingUnits)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_1"));
-		}
-		else szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_0"));
+	for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+	{
+		const UnitCombatTypes eUnitCombat = (UnitCombatTypes)promo.getQualifiedUnitCombatType(iI);
+		CvWString szFirstBuffer;
+		CvWString szTempBuffer;
+		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo(eUnitCombat).getDescription());
+		setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+		bFirst = false;
 	}
+	if (bApplyToVisitingUnits)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_1"));
+	}
+	else szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_0"));
 }
 
 

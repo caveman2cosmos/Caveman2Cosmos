@@ -880,7 +880,6 @@
 				<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<BuildType>BUILD_SEED_CAMP</BuildType>
 				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<BuildType>BUILD_TAR_GATHERER</BuildType>
@@ -1975,7 +1974,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->

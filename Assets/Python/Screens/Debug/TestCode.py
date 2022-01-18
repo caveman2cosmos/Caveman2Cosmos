@@ -60,6 +60,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementResourceTechUnlocks, "Improvement - check its unlock tech along with its resource tech enable", "Checks if earliest valid improvement isn't unlocked after resource tech enable")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
+		self.main.addTestCode(screen, self.checkImprovementBonusSpawnChance, "Improvement - check bonus chance", "Checks if upgrade of improvement is more likely to spawn resource")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listStandaloneBuildings, "Building - list stand-alone buildings", "List regular non religious/civic buildings, that aren't part of replacement chain")
@@ -3344,7 +3345,7 @@ class TestCode:
 			if len(aBuildTechID) > 0 and iImprovementTechID != min(aBuildTechID): #Improvement tech position is equal to earliest build tech position
 				self.log(aBuildType[aBuildTechID.index(min(aBuildTechID))]+" and "+CvImprovementInfo.getType()+" have different techs "+str(min(aBuildTechID))+"/"+str(iImprovementTechID))
 
-	#Checks if earliest valid improvement isn't unlocked after resource tech enable
+	#Improvement - Checks if earliest valid improvement isn't unlocked after resource tech enable
 	def checkImprovementResourceTechUnlocks(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
@@ -3365,7 +3366,7 @@ class TestCode:
 				if iBonusTechLoc < min(aImprovementTechLoc) or (iBonusTechLoc == min(aImprovementTechLoc) and iBonusTechID != min(aImprovementTechID)):
 					self.log(CvBonusInfo.getType()+" tech enable is before, or on same column but different tech with earliest improvement: "+aImprovementType[aImprovementTechLoc.index(min(aImprovementTechLoc))])
 
-	#Improvement - yield boosts should be between improvement unlock and upgrade
+	#Improvement - Yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoostLocation(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
@@ -3395,7 +3396,7 @@ class TestCode:
 						if iImpAltUpgradeTechLoc and aTechBoost and iImpAltUpgradeTechLoc <= max(aTechBoost):
 							self.log(CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)+" Alt Upgrade: "+CvImprovementAltUpgradeInfo.getType()+": "+str(iImpAltUpgradeTechLoc))
 
-	#Improvement - base + tech improvement yields compared to upgraded improvement
+	#Improvement - Base + tech improvement yields compared to upgraded improvement
 	def checkImprovementYieldValues(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
@@ -3427,6 +3428,43 @@ class TestCode:
 						aBaseAltUpgradeImprovementYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
 					if aTotalImprovementYield[0] > aBaseAltUpgradeImprovementYield[0] or aTotalImprovementYield[1] > aBaseAltUpgradeImprovementYield[1] or aTotalImprovementYield[2] > aBaseAltUpgradeImprovementYield[2]:
 						self.log(CvImprovementInfo.getType()+" Total Yield: "+str(aTotalImprovementYield)+", "+CvImprovementAltUpgradeInfo.getType()+" Alt Upgrade Yield: "+str(aBaseAltUpgradeImprovementYield))
+
+	#Improvement - Checks if upgrade of improvement is more likely to spawn resource
+	def checkImprovementBonusSpawnChance(self):
+		for iImprovement in xrange(GC.getNumImprovementInfos()):
+			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+			iNoDiscovery = 999999
+
+			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0: #Check improvements, that can upgrade
+				aBaseBonusChance = [iNoDiscovery]*GC.getNumBonusInfos()
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					if CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus) != 0:
+						aBaseBonusChance[iBonus] = CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus)
+
+				#Main upgrade
+				CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
+				aUpgradeBonusChance = [iNoDiscovery]*GC.getNumBonusInfos()
+				for jBonus in xrange(GC.getNumBonusInfos()):
+					if CvImprovementUpgradeInfo.getImprovementBonusDiscoverRand(jBonus) != 0:
+						aUpgradeBonusChance[jBonus] = CvImprovementUpgradeInfo.getImprovementBonusDiscoverRand(jBonus)
+
+				#Compare rand chances of improvement and main upgrade
+				for i in xrange(len(aBaseBonusChance)):
+					if aBaseBonusChance[i] < aUpgradeBonusChance[i] or aBaseBonusChance[i] != 2*aUpgradeBonusChance[i] and aBaseBonusChance[i] != iNoDiscovery:
+						self.log(CvImprovementInfo.getType()+" -> "+CvImprovementUpgradeInfo.getType()+" Bonus: "+GC.getBonusInfo(i).getType()+" Rand: "+str(aBaseBonusChance[i])+"->"+str(aUpgradeBonusChance[i]))
+
+				#Alt upgrades
+				for iImprovementUpgrade in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+					CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementUpgrade))
+					aAltUpgradeBonusChance = [iNoDiscovery]*GC.getNumBonusInfos()
+					for kBonus in xrange(GC.getNumBonusInfos()):
+						if CvImprovementAltUpgradeInfo.getImprovementBonusDiscoverRand(kBonus) != 0:
+							aAltUpgradeBonusChance[kBonus] = CvImprovementAltUpgradeInfo.getImprovementBonusDiscoverRand(kBonus)
+
+					#Compare rand chances of improvement and alt upgrades
+					for j in xrange(len(aBaseBonusChance)):
+						if aBaseBonusChance[j] < aAltUpgradeBonusChance[j] or aBaseBonusChance[j] != 2*aAltUpgradeBonusChance[j] and aBaseBonusChance[j] != iNoDiscovery:
+							self.log(CvImprovementInfo.getType()+" A-> "+CvImprovementAltUpgradeInfo.getType()+" Bonus: "+GC.getBonusInfo(j).getType()+" Rand: "+str(aBaseBonusChance[j])+"->"+str(aAltUpgradeBonusChance[j]))
 
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
 	def checkBuildingWonderMovies(self):

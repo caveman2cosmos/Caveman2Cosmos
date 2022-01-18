@@ -83,7 +83,6 @@ public:
 	int getPowerBonus() const						{ return m_iPowerBonus; }
 	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
 	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
-	int getFreePromotion() const					{ return m_iFreePromotion; }
 	int getCivicOption() const						{ return m_iCivicOption; }
 	int getAIWeight() const							{ return m_iAIWeight; }
 	int getProductionCost() const					{ return m_iProductionCost; }
@@ -172,8 +171,6 @@ public:
 	void setMissionType(int iNewType)				{ m_iMissionType = iNewType; }
 	int getVoteSourceType() const					{ return m_iVoteSourceType; }
 	int getDCMAirbombMission() const				{ return m_iDCMAirbombMission; }
-	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
-	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
 	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
 	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
 	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
@@ -543,8 +540,6 @@ private:
 	bool m_bEnablesOtherBuildings;
 	bool m_bEnablesUnits;
 
-	int m_iFreePromotion_2;
-	int m_iFreePromotion_3;
 	int m_iPrereqVicinityBonus;
 	int m_iPrereqRawVicinityBonus;
 	int m_iGlobalPopulationgrowthratepercentage;
@@ -577,7 +572,6 @@ private:
 	int m_iPowerBonus;
 	BuildingTypes m_iFreeBuilding;
 	BuildingTypes m_iFreeAreaBuilding;
-	int m_iFreePromotion;
 	int m_iCivicOption;
 	int m_iAIWeight;
 	int m_iProductionCost;
@@ -707,7 +701,6 @@ private:
 	UnitTypes m_ePropertySpawnUnit;
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
-	//TechTypes m_eFreeSpecialTech;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
@@ -762,7 +755,6 @@ private:
 	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	std::vector<TechTypes> m_piPrereqAndTechs;
-	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
 	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
@@ -820,7 +812,6 @@ private:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
-	//const BoolExpr* m_pExprFreePromotionCondition;
 };
 
 #endif

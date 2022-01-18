@@ -90,11 +90,6 @@ public:
 	int getOwnershipDuration() const;
 	bool isOwnershipScore() const;
 	void setOwnershipDuration(int iNewValue);
-	void changeOwnershipDuration(int iChange);
-
-	int getImprovementDuration() const;
-	void setImprovementDuration(int iNewValue);
-	void changeImprovementDuration(int iChange);
 
 	int getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*PlayerTypes*/ ePlayer) const;
 	void changeImprovementUpgradeProgress(int iChange);
