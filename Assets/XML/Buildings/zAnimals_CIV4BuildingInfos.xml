@@ -379,7 +379,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -1366,8 +1366,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -2645,7 +2645,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PRIMATE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_PRIMATE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRIMATE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2787,7 +2787,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2836,7 +2836,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>

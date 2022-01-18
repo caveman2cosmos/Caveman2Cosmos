@@ -845,7 +845,7 @@
 		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Tag>
+		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Tag>
 		<English>Enclosure - Exotic Herbivore</English>
 		<French>Enclos - Herbivores exotiques</French>
 		<Italian>Gabbia degli erbivori esotici</Italian>
@@ -853,7 +853,7 @@
 		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
 		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici addomesticati.</Italian>
 		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
