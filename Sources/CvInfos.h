@@ -3441,11 +3441,7 @@ public:
 	DllExport const char* getFlagTexture() const;
 	const char* getArtDefineTag() const;
 
-	// Arrays
-
-	int getCivilizationFreeUnits(int i) const;
 	int getCivilizationInitialCivics(int i) const;
-	// Afforess 04/05/10
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
 
 	DllExport bool isLeaders(int i) const;
@@ -3499,7 +3495,6 @@ protected:
 	CvWString m_szShortDescriptionKey;
 	CvWString m_szAdjectiveKey;
 
-	int* m_piCivilizationFreeUnits;
 	int* m_piCivilizationInitialCivics;
 
 	bool* m_pbLeaders;
@@ -3665,7 +3660,6 @@ public:
 	int getStartingDefenseUnits() const;
 	int getStartingWorkerUnits() const;
 	int getStartingExploreUnits() const;
-	int getAIStartingUnitMultiplier() const;
 	int getAIStartingDefenseUnits() const;
 	int getAIStartingWorkerUnits() const;
 	int getAIStartingExploreUnits() const;
@@ -3740,7 +3734,6 @@ private:
 	int m_iStartingDefenseUnits;
 	int m_iStartingWorkerUnits;
 	int m_iStartingExploreUnits;
-	int m_iAIStartingUnitMultiplier;
 	int m_iAIStartingDefenseUnits;
 	int m_iAIStartingWorkerUnits;
 	int m_iAIStartingExploreUnits;

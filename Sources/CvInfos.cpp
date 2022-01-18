@@ -11105,7 +11105,6 @@ m_iActionSoundScriptId(0),
 m_iDerivativeCiv(NO_CIVILIZATION),
 m_bPlayable(false),
 m_bAIPlayable(false),
-m_piCivilizationFreeUnits(NULL),
 m_piCivilizationInitialCivics(NULL),
 m_pbLeaders(NULL),
 m_pbCivilizationFreeTechs(NULL),
@@ -11126,7 +11125,6 @@ m_bStronglyRestricted(false)
 //------------------------------------------------------------------------------------------------------
 CvCivilizationInfo::~CvCivilizationInfo()
 {
-	SAFE_DELETE_ARRAY(m_piCivilizationFreeUnits);
 	SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
 	SAFE_DELETE_ARRAY(m_pbLeaders);
 	SAFE_DELETE_ARRAY(m_pbCivilizationFreeTechs);
@@ -11228,13 +11226,6 @@ const char* CvCivilizationInfo::getArtDefineTag() const
 	return m_szArtDefineTag;
 }
 
-// Arrays
-
-int CvCivilizationInfo::getCivilizationFreeUnits(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i);
-	return m_piCivilizationFreeUnits ? m_piCivilizationFreeUnits[i] : 0;
-}
 
 int CvCivilizationInfo::getCivilizationInitialCivics(int i) const
 {
@@ -11328,7 +11319,6 @@ void CvCivilizationInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iSpawnRateModifier);
 	CheckSum(iSum, m_iSpawnRateNPCPeaceModifier);
 	CheckSum(iSum, m_bStronglyRestricted);
-	CheckSumI(iSum, GC.getNumUnitInfos(), m_piCivilizationFreeUnits);
 	CheckSumI(iSum, GC.getNumCivicOptionInfos(), m_piCivilizationInitialCivics);
 	CheckSumI(iSum, GC.getNumLeaderHeadInfos(), m_pbLeaders);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_pbCivilizationFreeTechs);
@@ -11368,7 +11358,6 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalVector(&m_aiCivilizationBuildings, L"FreeBuildings");
 
-	pXML->SetVariableListTagPair(&m_piCivilizationFreeUnits, L"FreeUnits", GC.getNumUnitInfos());
 	pXML->SetVariableListTagPair(&m_pbCivilizationFreeTechs, L"FreeTechs", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_pbCivilizationDisableTechs, L"DisableTechs", GC.getNumTechInfos());
 
@@ -11484,18 +11473,6 @@ void CvCivilizationInfo::copyNonDefaults(const CvCivilizationInfo* pClassInfo)
 	}
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCivilizationBuildings, pClassInfo->m_aiCivilizationBuildings);
-
-	for ( int i = 0; i < GC.getNumUnitInfos(); i++)
-	{
-		if (getCivilizationFreeUnits(i) == iDefault && pClassInfo->getCivilizationFreeUnits(i) != iDefault)
-		{
-			if (NULL == m_piCivilizationFreeUnits)
-			{
-				CvXMLLoadUtility::InitList(&m_piCivilizationFreeUnits, GC.getNumUnitInfos(), iDefault);
-			}
-			m_piCivilizationFreeUnits[i] = pClassInfo->getCivilizationFreeUnits(i);
-		}
-	}
 
 	for ( int i = 0; i < GC.getNumTechInfos(); i++)
 	{
@@ -11898,7 +11875,6 @@ m_iAIBarbarianCombatModifier(0),
 m_iStartingDefenseUnits(0),
 m_iStartingWorkerUnits(0),
 m_iStartingExploreUnits(0),
-m_iAIStartingUnitMultiplier(1),
 m_iAIStartingDefenseUnits(0),
 m_iAIStartingWorkerUnits(0),
 m_iAIStartingExploreUnits(0),
@@ -12102,11 +12078,6 @@ int CvHandicapInfo::getStartingExploreUnits() const
 	return m_iStartingExploreUnits;
 }
 
-int CvHandicapInfo::getAIStartingUnitMultiplier() const
-{
-	return m_iAIStartingUnitMultiplier;
-}
-
 int CvHandicapInfo::getAIStartingDefenseUnits() const
 {
 	return m_iAIStartingDefenseUnits;
@@ -12275,7 +12246,6 @@ void CvHandicapInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iStartingDefenseUnits);
 	CheckSum(iSum, m_iStartingWorkerUnits);
 	CheckSum(iSum, m_iStartingExploreUnits);
-	CheckSum(iSum, m_iAIStartingUnitMultiplier);
 	CheckSum(iSum, m_iAIStartingDefenseUnits);
 	CheckSum(iSum, m_iAIStartingWorkerUnits);
 	CheckSum(iSum, m_iAIStartingExploreUnits);
@@ -12348,7 +12318,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iStartingDefenseUnits, L"iStartingDefenseUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingWorkerUnits, L"iStartingWorkerUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingExploreUnits, L"iStartingExploreUnits");
-	pXML->GetOptionalChildXmlValByName(&m_iAIStartingUnitMultiplier, L"iAIStartingUnitMultiplier");
 	pXML->GetOptionalChildXmlValByName(&m_iAIStartingDefenseUnits, L"iAIStartingDefenseUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iAIStartingWorkerUnits, L"iAIStartingWorkerUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iAIStartingExploreUnits, L"iAIStartingExploreUnits");
@@ -12424,7 +12393,6 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 	if (getStartingDefenseUnits() == iDefault) m_iStartingDefenseUnits = pClassInfo->getStartingDefenseUnits();
 	if (getStartingWorkerUnits() == iDefault) m_iStartingWorkerUnits = pClassInfo->getStartingWorkerUnits();
 	if (getStartingExploreUnits() == iDefault) m_iStartingExploreUnits = pClassInfo->getStartingExploreUnits();
-	if (getAIStartingUnitMultiplier() == iDefault) m_iAIStartingUnitMultiplier = pClassInfo->getAIStartingUnitMultiplier();
 	if (getAIStartingDefenseUnits() == iDefault) m_iAIStartingDefenseUnits = pClassInfo->getAIStartingDefenseUnits();
 	if (getAIStartingWorkerUnits() == iDefault) m_iAIStartingWorkerUnits = pClassInfo->getAIStartingWorkerUnits();
 	if (getAIStartingExploreUnits() == iDefault) m_iAIStartingExploreUnits = pClassInfo->getAIStartingExploreUnits();

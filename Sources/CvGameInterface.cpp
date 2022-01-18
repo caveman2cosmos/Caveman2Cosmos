@@ -2539,8 +2539,8 @@ CivilopediaWidgetShowTypes CvGame::getWidgetShow(BonusTypes eBonus) const
 	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 	// Don't show the widget if it's an abstract bonus that doesn't belong on the map.
-	// Hit singles, movies, musicals, in our case
-	if (bonus.getPlacementOrder() < 1)
+	//	I.e. Manufactured bonuses, cultures and such.
+	if (bonus.getPlacementOrder() < 0)
 	{
 		return CIVILOPEDIA_WIDGET_SHOW_NONE;
 	}

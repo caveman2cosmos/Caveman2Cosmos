@@ -6238,7 +6238,7 @@ def doVolcanoAdjustFertility(argsList):
   iY = pPlot.getY()
 
   for i in xrange(8):
-    tPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
+    tPlot = plotDirection(iX, iY, DirectionTypes(i))
     if not tPlot.isNone():
       if not tPlot.isCity():
         GAME.setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
@@ -6299,7 +6299,7 @@ def doVolcanoNeighbouringPlots(pPlot):
 
 	# Sets up lists for plots that are adjacent to the volcano
 	for i in xrange(8):
-		plot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
+		plot = plotDirection(iX, iY, DirectionTypes(i))
 		if not plot.isNone():
 			listVolcanoPlots.append(plot)
 			listVolcanoPlotsX.append(plot.getX())
@@ -6309,10 +6309,10 @@ def doVolcanoNeighbouringPlots(pPlot):
 	targetplot = listVolcanoPlots[GAME.getSorenRandNum(len(listVolcanoPlots), "Volcano direction")]
 	listAffectedPlots.append(targetplot)
 
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_NORTH))
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_SOUTH))
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_EAST))
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_WEST))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_NORTH))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_SOUTH))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_EAST))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_WEST))
 
 	# If plot is in the ring around the volcano, add to the list of affected plots
 	for plot in listAdjacentPlots:
@@ -6403,7 +6403,7 @@ def doVolcanoPlot(pPlot):
       iX = pPlot.getX()
       iY = pPlot.getY()
       for i in xrange(8):
-        sPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
+        sPlot = plotDirection(iX, iY, DirectionTypes(i))
         if not sPlot.isNone():
           if pPlotUnit.canMoveInto(sPlot, False, False, True):
             pPlotUnit.setXY(sPlot.getX(), sPlot.getY(), False, True, True)
@@ -7221,5 +7221,7 @@ def applyCivilWar(argsList):
 
 ################ BEST HUNTERS ################
 def canDoBestHunters1(argsList):
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
-	return False
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING)
+
+def canDoBestHunters2(argsList):
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_HIDE_AND_SEEK) and GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
