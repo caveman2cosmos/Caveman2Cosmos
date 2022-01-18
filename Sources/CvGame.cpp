@@ -1876,7 +1876,7 @@ void CvGame::normalizeAddExtras()
 				{
 					CvPlot* plotX = plotCity(pStartingPlot->getX(), pStartingPlot->getY(), aiShuffle[iJ]);
 
-					if (plotX != NULL && plotX != pStartingPlot 
+					if (plotX != NULL && plotX != pStartingPlot
 					&& (!bLandBias || plotX->isWater() && getSorenRandNum(2, "Placing Bonuses") == 0))
 					{
 						if (iOtherCount * 3 + iOceanFoodCount * 2 + iCoastFoodCount * 2 >= 12
@@ -1886,7 +1886,7 @@ void CvGame::normalizeAddExtras()
 						}
 						const bool bCoast = plotX->isWater() && plotX->isAdjacentToLand();
 						const bool bOcean = !bCoast && plotX->isWater();
-						if (plotX != pStartingPlot 
+						if (plotX != pStartingPlot
 						&& (!bCoast || iCoastFoodCount < 3)
 						&& (!bOcean || iOceanFoodCount < 3))
 						{

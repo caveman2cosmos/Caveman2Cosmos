@@ -3118,4 +3118,24 @@
 		<English>[ICON_BULLET]Can construct various animal related buildings</English>
 		<Italian>[ICON_BULLET]Può costruire vari edifici legati agli animali</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
+		<English>Folklore - Aurochs</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLABY</Tag>
+		<English>Folklore - Ring-tailed Wallaby</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
+		<English>Folklore - Tasmanian Devil</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
+		<English>Folklore - Wild Boar</English>
+	</TEXT>
 </Civ4GameText>
