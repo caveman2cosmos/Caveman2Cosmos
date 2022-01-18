@@ -1905,20 +1905,6 @@ void CvPlayer::initFreeUnits()
 			std::max(1, GC.getEraInfo(startEra).getStartingUnitMultiplier())
 		);
 
-/*	Toffer: Currently not needed for anything...
-Consider removing freeUnit from civilization info as this is the only place that would have used it.
-
-		const CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-		{
-			int iFreeCount = kCivilizationInfo.getCivilizationFreeUnits(iI) * iMult;
-
-			for (int iJ = 0; iJ < iFreeCount; iJ++)
-			{
-				addFreeUnit((UnitTypes)iI);
-			}
-		}
-*/
 		// Settler units, can't start a game without one.
 		addStartUnitAI(UNITAI_SETTLE, iMult);
 

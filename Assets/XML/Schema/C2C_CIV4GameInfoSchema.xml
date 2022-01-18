@@ -618,7 +618,6 @@
 	<ElementType name="iStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingWorkerUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingExploreUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iAIStartingUnitMultiplier" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingWorkerUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingExploreUnits" content="textOnly" dt:type="int"/>
@@ -689,7 +688,6 @@
 		<element type="iStartingDefenseUnits" minOccurs="0"/>
 		<element type="iStartingWorkerUnits" minOccurs="0"/>
 		<element type="iStartingExploreUnits" minOccurs="0"/>
-		<element type="iAIStartingUnitMultiplier" minOccurs="0"/>
 		<element type="iAIStartingDefenseUnits" minOccurs="0"/>
 		<element type="iAIStartingWorkerUnits" minOccurs="0"/>
 		<element type="iAIStartingExploreUnits" minOccurs="0"/>
