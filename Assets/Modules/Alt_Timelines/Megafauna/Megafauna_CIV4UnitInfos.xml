@@ -344,6 +344,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
@@ -474,7 +490,7 @@
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
-			<iCost>190</iCost>
+			<iCost>130</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -961,7 +977,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -1130,7 +1145,7 @@
 				<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPEAR_MAKING</ObsoleteTech>
-			<iCost>100</iCost>
+			<iCost>62</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -1216,7 +1231,7 @@
 				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-			<iCost>110</iCost>
+			<iCost>70</iCost>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -1302,7 +1317,7 @@
 				<UnitType>UNIT_MAPINGUARI</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-			<iCost>140</iCost>
+			<iCost>92</iCost>
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1393,7 +1408,7 @@
 				<UnitType>UNIT_MAPINGUARI_PIKE</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
-			<iCost>275</iCost>
+			<iCost>182</iCost>
 			<iBaseUpkeep>18</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -1480,7 +1495,7 @@
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
-			<iCost>480</iCost>
+			<iCost>315</iCost>
 			<iBaseUpkeep>25</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>

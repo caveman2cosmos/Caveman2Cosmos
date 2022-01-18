@@ -5235,11 +5235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HTN</Tag>
-		<English>
-			<Text>Henry the Navigator</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Henry the Navigator</English>
 		<French>
 			<Text>Henry le Navigateur</Text>
 			<Gender>Male</Gender>
@@ -5369,11 +5365,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN</Tag>
-		<English>
-			<Text>Logan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Logan</English>
 		<Russian>Ëîãàí</Russian>
 	</TEXT>
 	<TEXT>

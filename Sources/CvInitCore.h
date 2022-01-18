@@ -7,7 +7,8 @@
 
 //#include "CvEnums.h"
 
-class CvInitCore : bst::noncopyable
+class CvInitCore
+	: private bst::noncopyable
 {
 
 public:
@@ -288,10 +289,6 @@ public:
 	CvString getExePath() const;
 	CvString getExeName() const;
 // BUG - EXE/DLL Paths - end
-
-//Afforess
-	void checkInitialCivics();
-//End
 
 	void handleOldGameSpeed();
 

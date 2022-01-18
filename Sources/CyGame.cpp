@@ -1,18 +1,20 @@
-//
-// Python wrapper class for CvGame
-//
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyCity.h"
 #include "CyDeal.h"
 #include "CyGame.h"
 #include "CyPlot.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
+
+//
+// Python wrapper class for CvGame
+//
 
 CyGame::CyGame() : m_pGame(GC.getGame()) {}
 
@@ -163,11 +165,6 @@ int CyGame::countTotalNukeUnits() const
 int CyGame::countKnownTechNumTeams(TechTypes eTech) const
 {
 	return m_pGame.countKnownTechNumTeams(eTech);
-}
-
-int CyGame::getNumFreeBonuses(BuildingTypes eBuilding) const
-{
-	return m_pGame.getNumFreeBonuses(eBuilding);
 }
 
 int CyGame::countReligionLevels(ReligionTypes eReligion) const
@@ -899,7 +896,7 @@ void CyGame::setScriptData(std::string szNewValue)
 	m_pGame.setScriptData(szNewValue);
 }
 
-void CyGame::setName(TCHAR* szNewValue)
+void CyGame::setName(const char* szNewValue)
 {
 	m_pGame.setName(szNewValue);
 }
@@ -939,7 +936,7 @@ CvRandom& CyGame::getMapRand() const
 	return (m_pGame.getMapRand());
 }
 
-int CyGame::getMapRandNum(int iNum, TCHAR* pszLog) const
+int CyGame::getMapRandNum(int iNum, const char* pszLog) const
 {
 	return m_pGame.getMapRandNum(iNum, pszLog);
 }
@@ -949,7 +946,7 @@ CvRandom& CyGame::getSorenRand() const
 	return (m_pGame.getSorenRand());
 }
 
-int CyGame::getSorenRandNum(int iNum, TCHAR* pszLog) const
+int CyGame::getSorenRandNum(int iNum, const char* pszLog) const
 {
 	return m_pGame.getSorenRandNum(iNum, pszLog);
 }
@@ -1041,7 +1038,7 @@ void CyGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std
 
 bool CyGame::hasSkippedSaveChecksum() const
 {
-	return m_pGame.hasSkippedSaveChecksum();
+	return gDLL->hasSkippedSaveChecksum();
 }
 
 void CyGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
@@ -1076,11 +1073,6 @@ int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
-}
-
-void CyGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	m_pGame.changePlotExtraCost(iX, iY, iCost);
 }
 
 bool CyGame::isCivEverActive(CivilizationTypes eCivilization) const
@@ -1141,11 +1133,6 @@ int CyGame::getCutLosersCounter() const
 int CyGame::getHighToLowCounter() const
 {
 	return m_pGame.getHighToLowCounter();
-}
-
-void CyGame::setVictoryValid(int iVictory, bool bNewVal)
-{
-	m_pGame.setVictoryValid((VictoryTypes)iVictory, bNewVal);
 }
 
 bool CyGame::isModderGameOption(ModderGameOptionTypes eIndex) const

@@ -9,10 +9,89 @@
 //
 
 //
+// Compiler warnings
+//
+#pragma warning( disable: 4510 ) // default constructor could not be generated
+#pragma warning( disable: 4511 ) // copy constructor could not be generated
+#pragma warning( disable: 4512 ) // assignment operator could not be generated
+#pragma warning( disable: 4800 ) // forcing value to bool 'true' or 'false' (performance warning)
+
+#pragma warning( disable: 4530 ) // (bts) C++ exception handler used, but unwind semantics are not enabled
+
+#pragma warning( push )
+#pragma warning( disable: 4100 ) // unreferenced formal parameter
+#pragma warning( disable: 4121 ) // alignment of a member was sensitive to packing
+#pragma warning( disable: 4127 ) // conditional expression is constant
+#pragma warning( disable: 4610 ) // struct/class can never be instantiated - user defined constructor required
+
+//
+// Boost
+//
+#define BOOST_155_USE_WINDOWS_H
+#define BOOST_155_ALL_NO_LIB
+#include <boost155/scoped_ptr.hpp>
+#include <boost155/scoped_array.hpp>
+#include <boost155/shared_ptr.hpp>
+#include <boost155/shared_array.hpp>
+#include <boost155/lambda/lambda.hpp>
+#include <boost155/bind.hpp>
+#include <boost155/optional.hpp>
+#include <boost155/algorithm/string.hpp>
+#include <boost155/format.hpp>
+#include <boost155/function.hpp>
+#include <boost155/array.hpp>
+#include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+#include <boost155/functional.hpp>
+#include <boost155/detail/algorithm.hpp>
+
+//
+// Boost Range
+//
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+#include <boost155/range/algorithm_ext/push_back.hpp>
+#include <boost155/range/numeric.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_		 BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
+
+// Alias our latest boost version
+namespace bst = boost155;
+
+// Bring range adaptors into global namespace
+using namespace bst::adaptors;
+
+// Bring bind into global namespace
+using bst::bind;
+
+//
+// Boost Python
+//
+#ifndef __INTELLISENSE__
+#define BOOST_BIND_NO_PLACEHOLDERS // Disable the boost 1.32 placeholders, we won't be using them
+#include <boost/python/detail/wrap_python.hpp>
+#include <boost/python/list.hpp>
+#include <boost/python/tuple.hpp>
+#include <boost/python/class.hpp>
+#include <boost/python/object.hpp>
+#include <boost/python/overloads.hpp>
+#include <boost/python/def.hpp>
+#include <boost/python/enum.hpp>
+#include <boost/python/manage_new_object.hpp>
+#include <boost/python/return_value_policy.hpp>
+#include <boost/python/to_python_converter.hpp>
+#include <boost/python/suite/indexing/container_utils.hpp>
+namespace python = boost::python;
+#endif
+
+//
 // WINDOWS
 //
-#pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
-
 //#ifdef __INTELLISENSE__
 //// #undef _MSC_VER
 //#define _MSC_VER 1310
@@ -133,7 +212,7 @@ struct ECacheAccess
 		ReadWrite = Read | Write
 	};
 };
-DECLARE_FLAGS(ECacheAccess::flags);
+int DECLARE_FLAGS(ECacheAccess::flags);
 
 //
 // Feature macros
@@ -194,79 +273,6 @@ int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
 const std::string getModDir();
 
 //
-// Python
-//
-#ifdef _DEBUG
-  #undef _DEBUG
-  #include "Python.h"
-  #define _DEBUG
-#else
-  #include "Python.h"
-#endif
-
-//
-// Boost
-//
-#define BOOST_155_USE_WINDOWS_H
-#define BOOST_155_ALL_NO_LIB
-#include <boost155/scoped_ptr.hpp>
-#include <boost155/scoped_array.hpp>
-#include <boost155/shared_ptr.hpp>
-#include <boost155/shared_array.hpp>
-#include <boost155/lambda/lambda.hpp>
-#include <boost155/bind.hpp>
-#include <boost155/optional.hpp>
-#include <boost155/algorithm/string.hpp>
-#include <boost155/format.hpp>
-#include <boost155/function.hpp>
-#include <boost155/array.hpp>
-#include <boost155/utility.hpp>
-#include <boost155/foreach.hpp>
-#include <boost155/functional.hpp>
-#include <boost155/detail/algorithm.hpp>
-
-// Ranges
-#include <boost155/range.hpp>
-#include <boost155/range/adaptor/filtered.hpp>
-#include <boost155/range/adaptor/transformed.hpp>
-#include <boost155/range/any_range.hpp>
-#include <boost155/range/algorithm.hpp>
-#include <boost155/range/algorithm_ext/push_back.hpp>
-#include <boost155/range/numeric.hpp>
-
-// Make boost foreach look nice enough to actually use
-#define foreach_		 BOOST_155_FOREACH
-#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
-
-// Alias our latest boost version
-namespace bst = boost155;
-
-// Bring range adaptors into global namespace
-using namespace bst::adaptors;
-
-// Bring bind into global namespace
-using bst::bind;
-
-//
-// Boost Python
-//
-#ifndef __INTELLISENSE__
-// Disable the boost 1.32 placeholders, we won't be using them
-#define BOOST_BIND_NO_PLACEHOLDERS
-#include <boost/python/list.hpp>
-#include <boost/python/tuple.hpp>
-#include <boost/python/class.hpp>
-#include <boost/python/object.hpp>
-#include <boost/python/def.hpp>
-#include <boost/python/enum.hpp>
-#include <boost/python/manage_new_object.hpp>
-#include <boost/python/return_value_policy.hpp>
-#include <boost/python/to_python_converter.hpp>
-#include <boost/python/suite/indexing/container_utils.hpp>
-namespace python = boost::python;
-#endif
-
-//
 // Xercesc
 //
 #include <xercesc/dom/DOM.hpp>
@@ -282,14 +288,10 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
+#pragma warning( pop )
+
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
-
-//
-// Compiler warnings
-//
-#pragma warning( 3: 4100 ) // unreferenced formal parameter
-//#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
 
 //
 // Json
@@ -306,9 +308,8 @@ namespace python = boost::python;
 //
 // Our code
 //
-#include "copy_iterator.h"
-#include "index_iterator_base.h"
 #include "logging.h"
+#include "enum_iterator.h"
 #include "algorithm2.h"
 #include "scoring.h"
 #include "FAssert.h"
@@ -325,15 +326,15 @@ namespace python = boost::python;
 #include "CvStructs.h"
 
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvDLLEngineIFaceBase.h"
+//#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
-#include "CvDLLInterfaceIFaceBase.h"
+//#include "CvDLLInterfaceIFaceBase.h"
 
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
-#include "CvInfos.h"
-#include "CvInfoWater.h"
+//#include "CvInfos.h"
+//#include "CvInfoWater.h"
 #include "CvViewport.h"
 #include "FProfiler.h"
 

@@ -36,6 +36,11 @@
 		<Russian>, %d1 дальности</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_ALWAYS_VISIBLE</Tag>
+		<English>[ICON_BULLET]Always Visible</English>
+		<German>[ICON_BULLET]immer sichtbar</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Civilian Branch</English>
 		<German>[ICON_BULLET]ziviler Zweig</German>

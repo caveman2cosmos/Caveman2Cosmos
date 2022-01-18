@@ -14,6 +14,7 @@
 			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -65,7 +66,6 @@
 				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
 				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
@@ -98,6 +98,7 @@
 			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -155,7 +156,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -228,6 +228,7 @@
 			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -282,7 +283,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -389,6 +389,7 @@
 			<Capture>UNIT_WORKBUFFALO</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -443,7 +444,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -562,6 +562,7 @@
 			<Capture>UNIT_WORKMULE</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -616,7 +617,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -691,12 +691,16 @@
 				<BuildType>BUILD_RADIO_TOWER</BuildType>
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
-			<BonusType>BONUS_DONKEY</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_DONKEY</BonusType>
+				<BonusType>BONUS_HORSE</BonusType>
+			</PrereqBonuses>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -736,6 +740,7 @@
 			<Capture>UNIT_WORKELEPHANT</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -790,7 +795,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -899,6 +903,7 @@
 			<Capture>UNIT_WORKLLAMA</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -953,7 +958,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -1072,6 +1076,7 @@
 			<Capture>UNIT_WORKCAMEL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -1126,7 +1131,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
@@ -1245,6 +1249,7 @@
 			<Capture>UNIT_WORKER_INDUSTRIAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -1499,6 +1504,7 @@
 			<Capture>UNIT_WORKER_MODERN</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -1634,7 +1640,7 @@
 			</Builds>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
 			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
-			<iCost>650</iCost>
+			<iCost>848</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>350</iWorkRate>
@@ -1662,6 +1668,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CLONES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -1789,6 +1796,7 @@
 			<Capture>UNIT_WORKER_ANDROID</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -1929,6 +1937,7 @@
 			<Capture>UNIT_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -1986,7 +1995,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
@@ -1995,7 +2003,7 @@
 				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<iCost>48</iCost>
+			<iCost>61</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>
@@ -2037,6 +2045,7 @@
 			<Capture>UNIT_WORKBOAT_CLASSIC</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -2091,7 +2100,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<BuildType>BUILD_BEACON_CORAL</BuildType>
@@ -2109,7 +2117,7 @@
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -2177,6 +2185,7 @@
 			<Capture>UNIT_WORKBOAT_MIDDLE</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -2239,8 +2248,6 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
@@ -2251,7 +2258,7 @@
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
-			<iCost>132</iCost>
+			<iCost>233</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>200</iWorkRate>
@@ -2319,6 +2326,7 @@
 			<Capture>UNIT_WORKBOAT_MODERN</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -2377,8 +2385,6 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
@@ -2398,7 +2404,7 @@
 				<BuildType>BUILD_SANITIZE_WATER</BuildType>
 			</Builds>
 			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-			<iCost>396</iCost>
+			<iCost>492</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iWorkRate>300</iWorkRate>
@@ -2423,6 +2429,7 @@
 			<Capture>UNIT_CONSTRUCT_SHIP</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -2478,8 +2485,6 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_FISHING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
@@ -2505,7 +2510,7 @@
 				<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 			</Builds>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
-			<iCost>1200</iCost>
+			<iCost>1729</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iWorkRate>500</iWorkRate>
@@ -2529,6 +2534,7 @@
 			<Type>UNIT_OFFSHORE_PLATFORM</Type>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -2586,6 +2592,7 @@
 			<Type>UNIT_EXTRACTION_FACILITY</Type>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -2649,6 +2656,7 @@
 			<Type>UNIT_SUBMERGED_TOWN_PLATFORM</Type>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -2712,6 +2720,7 @@
 			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -2764,7 +2773,6 @@
 				<BuildType>BUILD_COTTAGE</BuildType>
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>

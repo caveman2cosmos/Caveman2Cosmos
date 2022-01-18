@@ -8,7 +8,7 @@
 
 from CvPythonExtensions import *
 from CvEventInterface import getEventManager
-import CvUtil
+import TextUtil
 # --------- Revolution mod -------------
 import SdToolKit as SDTK
 import RevUtils
@@ -221,9 +221,9 @@ def nameForNewPlayer(iPlayer):
 			if cityString is not None and len(cityString) < 10:
 				try:
 					if cityString in curAdj or cityString in curShort:
-						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_REBELS_OF", ())%(CvUtil.convertToStr(cityString))
+						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_REBELS_OF", ())%(TextUtil.convertToStr(cityString))
 					else:
-						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS_OF", ())%(curAdj,CvUtil.convertToStr(cityString))
+						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS_OF", ())%(curAdj,TextUtil.convertToStr(cityString))
 				except:
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS", ())%(curAdj)
 			else:
@@ -299,7 +299,7 @@ def newNameByCivics(iPlayer):
 		try :
 			# Silly game to force ascii encoding now
 			cityString =	pPlayer.getCivilizationDescription(0)
-			cityString += "&" + CvUtil.convertToStr(capital.getName())
+			cityString += "&" + TextUtil.convertToStr(capital.getName())
 			cityString =	cityString.split('&',1)[-1]
 		except :
 			pass

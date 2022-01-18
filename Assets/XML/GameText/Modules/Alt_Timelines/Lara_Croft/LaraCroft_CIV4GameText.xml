@@ -2,11 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LARA_CROFT</Tag>
-		<English>
-			<Text>Lara Croft</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Lara Croft</English>
 		<French>
 			<Text>Lara Croft</Text>
 			<Gender>Female</Gender>

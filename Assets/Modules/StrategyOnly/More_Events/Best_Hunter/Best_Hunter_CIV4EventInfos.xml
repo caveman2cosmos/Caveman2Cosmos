@@ -45,6 +45,7 @@
 					<Promotion>PROMOTION_HUNTING_SIGHT1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
+			<PythonCanDo>canDoBestHunters2</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>

@@ -10,7 +10,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AIRCRAFT</ArtDefineTag>
 			<TechReveal>TECH_FLIGHT</TechReveal>
 			<TechCityTrade>TECH_FLIGHT</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Alcohol -->
 		<BonusInfo>
@@ -22,7 +21,6 @@
 			<TechReveal>TECH_FERMENTATION</TechReveal>
 			<TechCityTrade>TECH_FERMENTATION</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Algae -->
 		<BonusInfo>
@@ -33,7 +31,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALGAE</ArtDefineTag>
 			<TechReveal>TECH_AQUACULTURE</TechReveal>
 			<TechCityTrade>TECH_AQUACULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Aluminum Ingots -->
 		<BonusInfo>
@@ -45,7 +42,6 @@
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Ammunition -->
 		<BonusInfo>
@@ -57,7 +53,6 @@
 			<TechReveal>TECH_EXPLOSIVES</TechReveal>
 			<TechCityTrade>TECH_EXPLOSIVES</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Androids -->
 		<BonusInfo>
@@ -68,7 +63,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANDROIDS</ArtDefineTag>
 			<TechReveal>TECH_ANDROIDS</TechReveal>
 			<TechCityTrade>TECH_ANDROIDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Antigravity Field Generators -->
 		<BonusInfo>
@@ -79,7 +73,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</ArtDefineTag>
 			<TechReveal>TECH_ANTI_GRAVITY_FIELDS</TechReveal>
 			<TechCityTrade>TECH_ANTI_GRAVITY_FIELDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Antigrav Generators -->
 		<BonusInfo>
@@ -90,7 +83,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEVITATION_GENERATORS</ArtDefineTag>
 			<TechReveal>TECH_LEVITATION</TechReveal>
 			<TechCityTrade>TECH_LEVITATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Antimatter -->
 		<BonusInfo>
@@ -101,7 +93,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANTIMATTER</ArtDefineTag>
 			<TechReveal>TECH_ANTIMATTER_PRODUCTION</TechReveal>
 			<TechCityTrade>TECH_ANTIMATTER_PRODUCTION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Automobiles -->
 		<BonusInfo>
@@ -112,7 +103,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AUTOMOBILES</ArtDefineTag>
 			<TechReveal>TECH_MOTORIZED_TRANSPORTATION</TechReveal>
 			<TechCityTrade>TECH_MOTORIZED_TRANSPORTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bamboo -->
 		<BonusInfo>
@@ -123,7 +113,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BAMBOO</ArtDefineTag>
 			<TechReveal>TECH_WEAVING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bark -->
 		<BonusInfo>
@@ -134,7 +123,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BARK</ArtDefineTag>
 			<TechReveal>TECH_BARK_WORKING</TechReveal>
 			<TechCityTrade>TECH_BARK_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Barrels -->
 		<BonusInfo>
@@ -145,7 +133,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BARRELS</ArtDefineTag>
 			<TechReveal>TECH_FERMENTATION</TechReveal>
 			<TechCityTrade>TECH_FERMENTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Baskets -->
 		<BonusInfo>
@@ -156,7 +143,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BASKETS</ArtDefineTag>
 			<TechReveal>TECH_BASKETRY</TechReveal>
 			<TechCityTrade>TECH_BASKETRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Beads -->
 		<BonusInfo>
@@ -167,7 +153,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BEADS</ArtDefineTag>
 			<TechReveal>TECH_BEAD_MAKING</TechReveal>
 			<TechCityTrade>TECH_BEAD_MAKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Berlinite -->
 		<BonusInfo>
@@ -178,7 +163,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BERLINITE</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Berries -->
 		<BonusInfo>
@@ -189,7 +173,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BERRIES</ArtDefineTag>
 			<TechReveal>TECH_IRRIGATION</TechReveal>
 			<TechCityTrade>TECH_IRRIGATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bicycles -->
 		<BonusInfo>
@@ -200,7 +183,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BICYCLES</ArtDefineTag>
 			<TechReveal>TECH_BICYCLES</TechReveal>
 			<TechCityTrade>TECH_BICYCLES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Biofuel -->
 		<BonusInfo>
@@ -213,7 +195,6 @@
 			<TechCityTrade>TECH_BIOMATERIALS</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bionic Suits -->
 		<BonusInfo>
@@ -224,7 +205,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BIONIC_SUITS</ArtDefineTag>
 			<TechReveal>TECH_BIONICS</TechReveal>
 			<TechCityTrade>TECH_BIONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Biopolymers -->
 		<BonusInfo>
@@ -235,7 +215,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BIOPOLYMERS</ArtDefineTag>
 			<TechReveal>TECH_BIOMATERIALS</TechReveal>
 			<TechCityTrade>TECH_BIOMATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Blender -->
 		<BonusInfo>
@@ -246,7 +225,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BLENDER</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bone -->
 		<BonusInfo>
@@ -257,7 +235,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BONE</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Books -->
 		<BonusInfo>
@@ -268,7 +245,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BOOKS</ArtDefineTag>
 			<TechReveal>TECH_PRINTING_PRESS</TechReveal>
 			<TechCityTrade>TECH_PRINTING_PRESS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Borax -->
 		<BonusInfo>
@@ -279,7 +255,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BORAX</ArtDefineTag>
 			<TechReveal>TECH_SALT_PROCESSING</TechReveal>
 			<TechCityTrade>TECH_SALT_PROCESSING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Brass Instruments -->
 		<BonusInfo>
@@ -290,7 +265,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRASS_INSTRUMENTS</ArtDefineTag>
 			<TechReveal>TECH_FOLK_MUSIC</TechReveal>
 			<TechCityTrade>TECH_FOLK_MUSIC</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bread -->
 		<BonusInfo>
@@ -301,7 +275,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BREAD</ArtDefineTag>
 			<TechReveal>TECH_BREAD_MAKING</TechReveal>
 			<TechCityTrade>TECH_BREAD_MAKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bricks -->
 		<BonusInfo>
@@ -312,7 +285,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRICKS</ArtDefineTag>
 			<TechReveal>TECH_MASONRY</TechReveal>
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bugs -->
 		<BonusInfo>
@@ -323,7 +295,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BUGS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Caesium Ore -->
 		<BonusInfo>
@@ -334,7 +305,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CAESIUM_ORE</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Calculators -->
 		<BonusInfo>
@@ -345,7 +315,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CALCULATORS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Candles -->
 		<BonusInfo>
@@ -356,7 +325,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANDLES</ArtDefineTag>
 			<TechReveal>TECH_CANDLE_MAKING</TechReveal>
 			<TechCityTrade>TECH_CANDLE_MAKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Candy -->
 		<BonusInfo>
@@ -367,7 +335,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANDY</ArtDefineTag>
 			<TechReveal>TECH_APICULTURE</TechReveal>
 			<TechCityTrade>TECH_APICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Canned Food -->
 		<BonusInfo>
@@ -378,7 +345,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANNED_FOOD</ArtDefineTag>
 			<TechReveal>TECH_FOOD_PRESERVATION</TechReveal>
 			<TechCityTrade>TECH_FOOD_PRESERVATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Carcass -->
 		<BonusInfo>
@@ -389,7 +355,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARCASS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Carpets -->
 		<BonusInfo>
@@ -400,7 +365,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARPETS</ArtDefineTag>
 			<TechReveal>TECH_AESTHETICS</TechReveal>
 			<TechCityTrade>TECH_AESTHETICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cat -->
 		<BonusInfo>
@@ -411,7 +375,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CAT</ArtDefineTag>
 			<TechReveal>TECH_FELINE_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_FELINE_DOMESTICATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cellphones -->
 		<BonusInfo>
@@ -422,7 +385,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CELLPHONES</ArtDefineTag>
 			<TechReveal>TECH_COMMUNICATION_NETWORKS</TechReveal>
 			<TechCityTrade>TECH_COMMUNICATION_NETWORKS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cellulase Capsules -->
 		<BonusInfo>
@@ -433,7 +395,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CELLULASE_CAPSULES</ArtDefineTag>
 			<TechReveal>TECH_BACTERIUM_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_BACTERIUM_ENGINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cement -->
 		<BonusInfo>
@@ -444,7 +405,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CEMENT</ArtDefineTag>
 			<TechReveal>TECH_CONCRETE</TechReveal>
 			<TechCityTrade>TECH_CONCRETE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Chalk -->
 		<BonusInfo>
@@ -455,7 +415,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHALK</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Charcoal -->
 		<BonusInfo>
@@ -466,7 +425,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHARCOAL</ArtDefineTag>
 			<TechReveal>TECH_CONTROLLED_FIRE</TechReveal>
 			<TechCityTrade>TECH_CONTROLLED_FIRE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cheese -->
 		<BonusInfo>
@@ -477,7 +435,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHEESE</ArtDefineTag>
 			<TechReveal>TECH_CUISINE</TechReveal>
 			<TechCityTrade>TECH_CUISINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Chemicals -->
 		<BonusInfo>
@@ -491,7 +448,6 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iAIObjective>10</iAIObjective>
 			<iHealth>-1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Chocolate -->
 		<BonusInfo>
@@ -502,7 +458,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHOCOLATE</ArtDefineTag>
 			<TechReveal>TECH_SPICE_TRADE</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Chromite Ore -->
 		<BonusInfo>
@@ -513,7 +468,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHROMITE_ORE</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cinnabar Ore -->
 		<BonusInfo>
@@ -524,7 +478,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CINNABAR_ORE</ArtDefineTag>
 			<TechReveal>TECH_LEAD_WORKING</TechReveal>
 			<TechCityTrade>TECH_LEAD_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Common Clay -->
 		<BonusInfo>
@@ -535,7 +488,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CLAY</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cloth -->
 		<BonusInfo>
@@ -546,7 +498,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CLOTH</ArtDefineTag>
 			<TechReveal>TECH_WEAVING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Clothing -->
 		<BonusInfo>
@@ -557,7 +508,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CLOTHING</ArtDefineTag>
 			<TechReveal>TECH_SEWING</TechReveal>
 			<TechCityTrade>TECH_SEWING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cobalt Ore -->
 		<BonusInfo>
@@ -568,7 +518,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COBALT_ORE</ArtDefineTag>
 			<TechReveal>TECH_GUNPOWDER</TechReveal>
 			<TechCityTrade>TECH_GUNPOWDER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Computers -->
 		<BonusInfo>
@@ -579,7 +528,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COMPUTERS</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_COMPUTERS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_COMPUTERS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Copper Wires -->
 		<BonusInfo>
@@ -590,7 +538,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COPPER_WIRES</ArtDefineTag>
 			<TechReveal>TECH_ELECTRICITY</TechReveal>
 			<TechCityTrade>TECH_ELECTRICITY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cotton Fibers -->
 		<BonusInfo>
@@ -601,7 +548,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COTTON_FIBERS</ArtDefineTag>
 			<TechReveal>TECH_AGRICULTURE</TechReveal>
 			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Cybernetic Chloroplasts -->
 		<BonusInfo>
@@ -612,7 +558,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CYBERNETIC_CHLOROPLASTS</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_PHOTOSYNTHESIS</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_PHOTOSYNTHESIS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Oil Products -->
 		<BonusInfo>
@@ -624,7 +569,6 @@
 			<TechReveal>TECH_REFINING</TechReveal>
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Digitized Membranes -->
 		<BonusInfo>
@@ -635,7 +579,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DIGITIZED_MEMBRANES</ArtDefineTag>
 			<TechReveal>TECH_INTERACTIVE_GLASS</TechReveal>
 			<TechCityTrade>TECH_INTERACTIVE_GLASS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dishwashers -->
 		<BonusInfo>
@@ -646,7 +589,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DISHWASHERS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Diskettes -->
 		<BonusInfo>
@@ -657,7 +599,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DISKETTES</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_COMPUTERS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_COMPUTERS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dog -->
 		<BonusInfo>
@@ -668,7 +609,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DOG</ArtDefineTag>
 			<TechReveal>TECH_CANINE_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_CANINE_DOMESTICATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dried Fish -->
 		<BonusInfo>
@@ -679,7 +619,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DRIED_FISH</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dried Fruit -->
 		<BonusInfo>
@@ -690,7 +629,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DRIED_FRUIT</ArtDefineTag>
 			<TechReveal>TECH_ORCHARDS</TechReveal>
 			<TechCityTrade>TECH_ORCHARDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dried Meat -->
 		<BonusInfo>
@@ -701,7 +639,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DRIED_MEAT</ArtDefineTag>
 			<TechReveal>TECH_DRYING</TechReveal>
 			<TechCityTrade>TECH_DRYING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Drugs -->
 		<BonusInfo>
@@ -712,7 +649,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DRUGS</ArtDefineTag>
 			<TechReveal>TECH_NATUROPATHY</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dye -->
 		<BonusInfo>
@@ -725,7 +661,6 @@
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Ecstasy -->
 		<BonusInfo>
@@ -736,7 +671,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ECSTASY</ArtDefineTag>
 			<TechReveal>TECH_URBAN_CULTURE</TechReveal>
 			<TechCityTrade>TECH_URBAN_CULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Eggs -->
 		<BonusInfo>
@@ -747,7 +681,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_EGGS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Electroactive Polymers -->
 		<BonusInfo>
@@ -758,7 +691,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ELECTROACTIVE_POLYMERS</ArtDefineTag>
 			<TechReveal>TECH_BIOMECHANICAL_HARVESTING</TechReveal>
 			<TechCityTrade>TECH_BIOMECHANICAL_HARVESTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Electrolyte Cells -->
 		<BonusInfo>
@@ -769,7 +701,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ELECTROLYTIC_CELLS</ArtDefineTag>
 			<TechReveal>TECH_FUEL_CELLS</TechReveal>
 			<TechCityTrade>TECH_FUEL_CELLS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Energy Drink -->
 		<BonusInfo>
@@ -780,7 +711,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ENERGY_DRINK</ArtDefineTag>
 			<TechReveal>TECH_GASTRONOMY</TechReveal>
 			<TechCityTrade>TECH_GASTRONOMY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Enzymes -->
 		<BonusInfo>
@@ -791,7 +721,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ENZYMES</ArtDefineTag>
 			<TechReveal>TECH_MOLECULAR_BIOLOGY</TechReveal>
 			<TechCityTrade>TECH_MOLECULAR_BIOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Exoskeletons -->
 		<BonusInfo>
@@ -802,7 +731,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_EXOSKELETONS</ArtDefineTag>
 			<TechReveal>TECH_POWERED_EXOSKELETON</TechReveal>
 			<TechCityTrade>TECH_POWERED_EXOSKELETON</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Feathers -->
 		<BonusInfo>
@@ -814,7 +742,6 @@
 			<TechReveal>TECH_BONE_WORKING</TechReveal>
 			<TechCityTrade>TECH_BONE_WORKING</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Fertilizers -->
 		<BonusInfo>
@@ -828,7 +755,6 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iAIObjective>10</iAIObjective>
 			<iHealth>3</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Fiberglass -->
 		<BonusInfo>
@@ -839,7 +765,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FIBERGLASS</ArtDefineTag>
 			<TechReveal>TECH_PHYSICAL_CHEMISTRY</TechReveal>
 			<TechCityTrade>TECH_PHYSICAL_CHEMISTRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Fiber Optic Cables -->
 		<BonusInfo>
@@ -850,7 +775,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FIBER_OPTIC_CABLES</ArtDefineTag>
 			<TechReveal>TECH_FIBER_OPTICS</TechReveal>
 			<TechCityTrade>TECH_FIBER_OPTICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Firearms -->
 		<BonusInfo>
@@ -861,7 +785,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FIREARMS</ArtDefineTag>
 			<TechReveal>TECH_MATCHLOCK</TechReveal>
 			<TechCityTrade>TECH_MATCHLOCK</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Firecrackers -->
 		<BonusInfo>
@@ -872,7 +795,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FIRECRACKERS</ArtDefineTag>
 			<TechReveal>TECH_GUNPOWDER</TechReveal>
 			<TechCityTrade>TECH_GUNPOWDER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Fish Oil -->
 		<BonusInfo>
@@ -883,7 +805,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FISH_OIL</ArtDefineTag>
 			<TechReveal>TECH_OIL_LAMPS</TechReveal>
 			<TechCityTrade>TECH_OIL_LAMPS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Flash Memory Devices -->
 		<BonusInfo>
@@ -894,7 +815,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLASH_MEMORY_DEVICES</ArtDefineTag>
 			<TechReveal>TECH_FLASH_MEMORY</TechReveal>
 			<TechCityTrade>TECH_FLASH_MEMORY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Flax Fibers -->
 		<BonusInfo>
@@ -905,7 +825,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLAX_FIBERS</ArtDefineTag>
 			<TechReveal>TECH_FLORISTRY</TechReveal>
 			<TechCityTrade>TECH_FLORISTRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Flint -->
 		<BonusInfo>
@@ -916,7 +835,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLINT</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Flour -->
 		<BonusInfo>
@@ -927,7 +845,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLOUR</ArtDefineTag>
 			<TechReveal>TECH_GROUND_STONE</TechReveal>
 			<TechCityTrade>TECH_GROUND_STONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Flowers -->
 		<BonusInfo>
@@ -938,7 +855,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLOWERS</ArtDefineTag>
 			<TechReveal>TECH_FLORISTRY</TechReveal>
 			<TechCityTrade>TECH_FLORISTRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Fossils -->
 		<BonusInfo>
@@ -949,7 +865,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FOSSILS</ArtDefineTag>
 			<TechReveal>TECH_PALEONTOLOGY</TechReveal>
 			<TechCityTrade>TECH_PALEONTOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Fruit -->
 		<BonusInfo>
@@ -960,7 +875,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FRUIT</ArtDefineTag>
 			<TechReveal>TECH_ORCHARDS</TechReveal>
 			<TechCityTrade>TECH_ORCHARDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Furniture -->
 		<BonusInfo>
@@ -971,7 +885,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FURNITURE</ArtDefineTag>
 			<TechReveal>TECH_CARPENTRY</TechReveal>
 			<TechCityTrade>TECH_CARPENTRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Furs -->
 		<BonusInfo>
@@ -982,7 +895,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FUR</ArtDefineTag>
 			<TechReveal>TECH_SKINNING</TechReveal>
 			<TechCityTrade>TECH_SKINNING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Gems -->
 		<BonusInfo>
@@ -994,7 +906,6 @@
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_SOFT_HAMMER_PERCUSSION</TechCityTrade>
 			<iAITradeModifier>7</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Geoglyph Plans -->
 		<BonusInfo>
@@ -1005,7 +916,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GEOGLYPH_PLANS</ArtDefineTag>
 			<TechReveal>TECH_MATHEMATICS</TechReveal>
 			<TechCityTrade>TECH_MATHEMATICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Ghee Oil -->
 		<BonusInfo>
@@ -1016,7 +926,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GHEE_OIL</ArtDefineTag>
 			<TechReveal>TECH_OIL_LAMPS</TechReveal>
 			<TechCityTrade>TECH_OIL_LAMPS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Glassware -->
 		<BonusInfo>
@@ -1029,7 +938,6 @@
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Grain -->
 		<BonusInfo>
@@ -1040,7 +948,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GRAINS</ArtDefineTag>
 			<TechReveal>TECH_GROUND_STONE</TechReveal>
 			<TechCityTrade>TECH_GROUND_STONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Graphene -->
 		<BonusInfo>
@@ -1051,7 +958,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GRAPHENE</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Graphite -->
 		<BonusInfo>
@@ -1062,7 +968,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GRAPHITE</ArtDefineTag>
 			<TechReveal>TECH_STEAM_POWER</TechReveal>
 			<TechCityTrade>TECH_STEAM_POWER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Grass -->
 		<BonusInfo>
@@ -1073,7 +978,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GRASS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Gravity Generators -->
 		<BonusInfo>
@@ -1084,7 +988,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GRAVITY_GENERATORS</ArtDefineTag>
 			<TechReveal>TECH_GRAVITY_CONTROL</TechReveal>
 			<TechCityTrade>TECH_GRAVITY_CONTROL</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hats -->
 		<BonusInfo>
@@ -1095,7 +998,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HATS</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Heavy Water -->
 		<BonusInfo>
@@ -1108,7 +1010,6 @@
 			<TechCityTrade>TECH_QUANTUM_PHYSICS</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iAIObjective>8</iAIObjective>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Helicopters -->
 		<BonusInfo>
@@ -1119,7 +1020,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HELICOPTERS</ArtDefineTag>
 			<TechReveal>TECH_VERTICAL_FLIGHT</TechReveal>
 			<TechCityTrade>TECH_VERTICAL_FLIGHT</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hematite Ore -->
 		<BonusInfo>
@@ -1130,7 +1030,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HAEMATITE_ORE</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hemp Fibers -->
 		<BonusInfo>
@@ -1141,7 +1040,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HEMP_FIBERS</ArtDefineTag>
 			<TechReveal>TECH_AGRICULTURE</TechReveal>
 			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hide -->
 		<BonusInfo>
@@ -1152,7 +1050,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIDE</ArtDefineTag>
 			<TechReveal>TECH_SKINNING</TechReveal>
 			<TechCityTrade>TECH_SKINNING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Holographic Projectors -->
 		<BonusInfo>
@@ -1163,7 +1060,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HOLOGRAPHIC_PROJECTORS</ArtDefineTag>
 			<TechReveal>TECH_HOLOGRAPHICS</TechReveal>
 			<TechCityTrade>TECH_HOLOGRAPHICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Honey -->
 		<BonusInfo>
@@ -1174,7 +1070,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HONEY</ArtDefineTag>
 			<TechReveal>TECH_APICULTURE</TechReveal>
 			<TechCityTrade>TECH_APICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hovercrafts -->
 		<BonusInfo>
@@ -1185,7 +1080,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HOVERCRAFTS</ArtDefineTag>
 			<TechReveal>TECH_AMPHIBIOUS_WARFARE</TechReveal>
 			<TechCityTrade>TECH_AMPHIBIOUS_WARFARE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hydrogen -->
 		<BonusInfo>
@@ -1196,7 +1090,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HYDROGEN</ArtDefineTag>
 			<TechReveal>TECH_THERMODYNAMICS</TechReveal>
 			<TechCityTrade>TECH_THERMODYNAMICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Hyposprays -->
 		<BonusInfo>
@@ -1208,7 +1101,6 @@
 			<TechReveal>TECH_PERSONALIZED_HEALTH</TechReveal>
 			<TechCityTrade>TECH_PERSONALIZED_HEALTH</TechCityTrade>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Ice Cream -->
 		<BonusInfo>
@@ -1219,7 +1111,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ICE_CREAM</ArtDefineTag>
 			<TechReveal>TECH_REFRIGERATION</TechReveal>
 			<TechCityTrade>TECH_REFRIGERATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Immunity Drugs -->
 		<BonusInfo>
@@ -1231,7 +1122,6 @@
 			<TechReveal>TECH_MOLECULAR_MEDICINE</TechReveal>
 			<TechCityTrade>TECH_MOLECULAR_MEDICINE</TechCityTrade>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Brass Ingots -->
 		<BonusInfo>
@@ -1242,7 +1132,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRASS_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_BRASS_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRASS_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Copper Ingots -->
 		<BonusInfo>
@@ -1253,7 +1142,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COPPER_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_COPPER_WORKING</TechReveal>
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Electrum Ingots -->
 		<BonusInfo>
@@ -1264,7 +1152,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ELECTRUM_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_BRASS_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRASS_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Gold Ingots -->
 		<BonusInfo>
@@ -1275,7 +1162,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GOLD_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_METAL_CASTING</TechReveal>
 			<TechCityTrade>TECH_METAL_CASTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Iron Ingots -->
 		<BonusInfo>
@@ -1286,7 +1172,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRON_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lead Ingots -->
 		<BonusInfo>
@@ -1297,7 +1182,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEAD_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_LEAD_WORKING</TechReveal>
 			<TechCityTrade>TECH_LEAD_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Platinum Ingots -->
 		<BonusInfo>
@@ -1308,7 +1192,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PLATINUM_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Silver Ingots -->
 		<BonusInfo>
@@ -1319,7 +1202,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SILVER_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_METAL_CASTING</TechReveal>
 			<TechCityTrade>TECH_METAL_CASTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tin Ingots -->
 		<BonusInfo>
@@ -1330,7 +1212,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIN_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_BRONZE_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Titanium Ingots -->
 		<BonusInfo>
@@ -1341,7 +1222,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TITANIUM_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_ADVANCED_METALLURGY</TechReveal>
 			<TechCityTrade>TECH_ADVANCED_METALLURGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Ivory -->
 		<BonusInfo>
@@ -1352,7 +1232,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_IVORY</ArtDefineTag>
 			<TechReveal>TECH_BONE_WORKING</TechReveal>
 			<TechCityTrade>TECH_BONE_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Jet Engines -->
 		<BonusInfo>
@@ -1363,7 +1242,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_JET_ENGINES</ArtDefineTag>
 			<TechReveal>TECH_JET_PROPULSION</TechReveal>
 			<TechCityTrade>TECH_JET_PROPULSION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Jewelry -->
 		<BonusInfo>
@@ -1374,7 +1252,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_JEWELRY</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Kerosene -->
 		<BonusInfo>
@@ -1385,7 +1262,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KEROSENE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Kevlar -->
 		<BonusInfo>
@@ -1396,7 +1272,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KEVLAR</ArtDefineTag>
 			<TechReveal>TECH_MANUFACTURING</TechReveal>
 			<TechCityTrade>TECH_MANUFACTURING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lacquerware -->
 		<BonusInfo>
@@ -1408,7 +1283,6 @@
 			<TechReveal>TECH_SIMPLE_WOOD_WORKING</TechReveal>
 			<TechCityTrade>TECH_SIMPLE_WOOD_WORKING</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lard -->
 		<BonusInfo>
@@ -1419,7 +1293,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LARD</ArtDefineTag>
 			<TechReveal>TECH_COOKING</TechReveal>
 			<TechCityTrade>TECH_COOKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lazulite Ore -->
 		<BonusInfo>
@@ -1430,7 +1303,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LAZULITE_ORE</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Leather -->
 		<BonusInfo>
@@ -1441,7 +1313,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEATHER</ArtDefineTag>
 			<TechReveal>TECH_TANNING</TechReveal>
 			<TechCityTrade>TECH_TANNING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lithium -->
 		<BonusInfo>
@@ -1452,7 +1323,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LITHIUM</ArtDefineTag>
 			<TechReveal>TECH_GEOLOGY</TechReveal>
 			<TechCityTrade>TECH_GEOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lizards -->
 		<BonusInfo>
@@ -1463,7 +1333,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIZARDS</ArtDefineTag>
 			<TechReveal>TECH_TRACKING</TechReveal>
 			<TechCityTrade>TECH_TRACKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- LSD -->
 		<BonusInfo>
@@ -1474,7 +1343,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LSD</ArtDefineTag>
 			<TechReveal>TECH_COUNTERCULTURE</TechReveal>
 			<TechCityTrade>TECH_COUNTERCULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lye -->
 		<BonusInfo>
@@ -1485,7 +1353,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LYE</ArtDefineTag>
 			<TechReveal>TECH_SOAP_MAKING</TechReveal>
 			<TechCityTrade>TECH_SOAP_MAKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Magnesium Ore -->
 		<BonusInfo>
@@ -1496,7 +1363,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAGNESIUM_ORE</ArtDefineTag>
 			<TechReveal>TECH_GEOLOGY</TechReveal>
 			<TechCityTrade>TECH_GEOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Mars Rocks -->
 		<BonusInfo>
@@ -1507,7 +1373,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ROCKS</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_EXTRACTION</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_EXTRACTION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Marzipan -->
 		<BonusInfo>
@@ -1518,7 +1383,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARZIPAN</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Mascagnite -->
 		<BonusInfo>
@@ -1529,7 +1393,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MASCAGNITE</ArtDefineTag>
 			<TechReveal>TECH_STEAM_POWER</TechReveal>
 			<TechCityTrade>TECH_STEAM_POWER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Masks -->
 		<BonusInfo>
@@ -1540,7 +1403,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MASKS</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Mechs -->
 		<BonusInfo>
@@ -1551,7 +1413,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MECHS</ArtDefineTag>
 			<TechReveal>TECH_POWERED_EXOSKELETON</TechReveal>
 			<TechCityTrade>TECH_POWERED_EXOSKELETON</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Medical Tricoders -->
 		<BonusInfo>
@@ -1563,7 +1424,6 @@
 			<TechReveal>TECH_PERSONALIZED_HEALTH</TechReveal>
 			<TechCityTrade>TECH_PERSONALIZED_HEALTH</TechCityTrade>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Meth -->
 		<BonusInfo>
@@ -1574,7 +1434,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_METHAMPHETAMINE</ArtDefineTag>
 			<TechReveal>TECH_URBAN_CULTURE</TechReveal>
 			<TechCityTrade>TECH_URBAN_CULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Microgenerators -->
 		<BonusInfo>
@@ -1585,7 +1444,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MICROGENERATORS</ArtDefineTag>
 			<TechReveal>TECH_MICROGENERATORS</TechReveal>
 			<TechCityTrade>TECH_MICROGENERATORS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Microwave Ovens -->
 		<BonusInfo>
@@ -1596,7 +1454,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MICROWAVE_OVENS</ArtDefineTag>
 			<TechReveal>TECH_MICROWAVES</TechReveal>
 			<TechCityTrade>TECH_MICROWAVES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Milk -->
 		<BonusInfo>
@@ -1607,7 +1464,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MILK</ArtDefineTag>
 			<TechReveal>TECH_ANIMAL_HUSBANDRY</TechReveal>
 			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Moon Rocks -->
 		<BonusInfo>
@@ -1618,7 +1474,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOON_ROCKS</ArtDefineTag>
 			<TechReveal>TECH_LUNAR_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_LUNAR_EXPLORATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nanoactuators -->
 		<BonusInfo>
@@ -1629,7 +1484,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NANOACTUATORS</ArtDefineTag>
 			<TechReveal>TECH_NANOELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_NANOELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nanobots -->
 		<BonusInfo>
@@ -1643,7 +1497,6 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iAIObjective>10</iAIObjective>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nanogenerators -->
 		<BonusInfo>
@@ -1654,7 +1507,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NANOGENERATORS</ArtDefineTag>
 			<TechReveal>TECH_NANOGENERATORS</TechReveal>
 			<TechCityTrade>TECH_NANOGENERATORS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nanotubes -->
 		<BonusInfo>
@@ -1668,7 +1520,6 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iAIObjective>10</iAIObjective>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nets -->
 		<BonusInfo>
@@ -1679,7 +1530,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NETS</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Neuroimplants -->
 		<BonusInfo>
@@ -1690,7 +1540,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NEUROIMPLANTS</ArtDefineTag>
 			<TechReveal>TECH_BRAIN_MACHINE_INTERFACE</TechReveal>
 			<TechCityTrade>TECH_BRAIN_MACHINE_INTERFACE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Newspapers -->
 		<BonusInfo>
@@ -1701,7 +1550,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NEWSPAPERS</ArtDefineTag>
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nickel Ore -->
 		<BonusInfo>
@@ -1712,7 +1560,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NICKEL_ORE</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Novus Chemicals -->
 		<BonusInfo>
@@ -1723,7 +1570,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NOVUS_CHEMICALS</ArtDefineTag>
 			<TechReveal>TECH_NOVUS_CHEMISTRY</TechReveal>
 			<TechCityTrade>TECH_NOVUS_CHEMISTRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nutella -->
 		<BonusInfo>
@@ -1735,7 +1581,6 @@
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nuts -->
 		<BonusInfo>
@@ -1746,7 +1591,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NUTS</ArtDefineTag>
 			<TechReveal>TECH_ORCHARDS</TechReveal>
 			<TechCityTrade>TECH_ORCHARDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nylon -->
 		<BonusInfo>
@@ -1757,7 +1601,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NYLON</ArtDefineTag>
 			<TechReveal>TECH_POLYMERIZATION</TechReveal>
 			<TechCityTrade>TECH_POLYMERIZATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Olive Oil -->
 		<BonusInfo>
@@ -1768,7 +1611,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_OLIVE_OIL</ArtDefineTag>
 			<TechReveal>TECH_FERMENTATION</TechReveal>
 			<TechCityTrade>TECH_FERMENTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Omega Acids -->
 		<BonusInfo>
@@ -1779,7 +1621,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_OMEGA_FATTY_ACID</ArtDefineTag>
 			<TechReveal>TECH_MOLECULAR_BIOLOGY</TechReveal>
 			<TechCityTrade>TECH_MOLECULAR_BIOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Organic Computers -->
 		<BonusInfo>
@@ -1790,7 +1631,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ORGANIC_COMPUTERS</ArtDefineTag>
 			<TechReveal>TECH_AUGMENTED_CONSUMABLES</TechReveal>
 			<TechCityTrade>TECH_AUGMENTED_CONSUMABLES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Organic Photonic Cells -->
 		<BonusInfo>
@@ -1801,7 +1641,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ORGANIC_PHOTONIC_CELLS</ArtDefineTag>
 			<TechReveal>TECH_ORGANIC_PHOTONICS</TechReveal>
 			<TechCityTrade>TECH_ORGANIC_PHOTONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Paper -->
 		<BonusInfo>
@@ -1812,7 +1651,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PAPER</ArtDefineTag>
 			<TechReveal>TECH_PAPER</TechReveal>
 			<TechCityTrade>TECH_PAPER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Parts -->
 		<BonusInfo>
@@ -1823,7 +1661,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PARTS</ArtDefineTag>
 			<TechReveal>TECH_MACHINE_TOOLS</TechReveal>
 			<TechCityTrade>TECH_MACHINE_TOOLS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pasta -->
 		<BonusInfo>
@@ -1834,7 +1671,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PASTA</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Peat -->
 		<BonusInfo>
@@ -1845,7 +1681,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PEAT</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pelts -->
 		<BonusInfo>
@@ -1856,7 +1691,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PELTS</ArtDefineTag>
 			<TechReveal>TECH_TRAPPING</TechReveal>
 			<TechCityTrade>TECH_TRAPPING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pencils -->
 		<BonusInfo>
@@ -1867,7 +1701,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PENCILS</ArtDefineTag>
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Percussion Instruments -->
 		<BonusInfo>
@@ -1878,7 +1711,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERCUSSION_INSTRUMENTS</ArtDefineTag>
 			<TechReveal>TECH_PREHISTORIC_MUSIC</TechReveal>
 			<TechCityTrade>TECH_PREHISTORIC_MUSIC</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Perfume -->
 		<BonusInfo>
@@ -1889,7 +1721,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERFUME</ArtDefineTag>
 			<TechReveal>TECH_SPICE_TRADE</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Personal Electronics -->
 		<BonusInfo>
@@ -1900,7 +1731,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_ELECTRONICS</ArtDefineTag>
 			<TechReveal>TECH_MICROPROCESSOR</TechReveal>
 			<TechCityTrade>TECH_MICROPROCESSOR</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Replicators -->
 		<BonusInfo>
@@ -1915,7 +1745,6 @@
 			<iAIObjective>10</iAIObjective>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pharmaceuticals -->
 		<BonusInfo>
@@ -1926,7 +1755,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PHARMACEUTICALS</ArtDefineTag>
 			<TechReveal>TECH_MEDICINE</TechReveal>
 			<TechCityTrade>TECH_MEDICINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Phonographs -->
 		<BonusInfo>
@@ -1937,7 +1765,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PHONOGRAPHS</ArtDefineTag>
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Plasma Generators -->
 		<BonusInfo>
@@ -1948,7 +1775,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PLASMA_GENERATORS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRIC_ARC_WEAPONRY</TechReveal>
 			<TechCityTrade>TECH_ELECTRIC_ARC_WEAPONRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Plastic -->
 		<BonusInfo>
@@ -1959,7 +1785,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PLASTIC</ArtDefineTag>
 			<TechReveal>TECH_PLASTICS</TechReveal>
 			<TechCityTrade>TECH_PLASTICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Poison -->
 		<BonusInfo>
@@ -1970,7 +1795,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POISON</ArtDefineTag>
 			<TechReveal>TECH_POISON_CRAFTING</TechReveal>
 			<TechCityTrade>TECH_POISON_CRAFTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Potash -->
 		<BonusInfo>
@@ -1981,7 +1805,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POTASH</ArtDefineTag>
 			<TechReveal>TECH_GLASS_BLOWING</TechReveal>
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Potato Chips -->
 		<BonusInfo>
@@ -1992,7 +1815,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POTATO_CHIPS</ArtDefineTag>
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pottery -->
 		<BonusInfo>
@@ -2005,7 +1827,6 @@
 			<TechCityTrade>TECH_POTTERY</TechCityTrade>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Power Tools -->
 		<BonusInfo>
@@ -2016,7 +1837,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POWER_TOOLS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pumice Stone -->
 		<BonusInfo>
@@ -2027,7 +1847,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PUMICE_STONE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pyrite -->
 		<BonusInfo>
@@ -2038,7 +1857,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PYRITE</ArtDefineTag>
 			<TechReveal>TECH_GUNPOWDER</TechReveal>
 			<TechCityTrade>TECH_GUNPOWDER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Radios -->
 		<BonusInfo>
@@ -2049,7 +1867,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_RADIOS</ArtDefineTag>
 			<TechReveal>TECH_RADIO</TechReveal>
 			<TechCityTrade>TECH_RADIO</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Raw Fish -->
 		<BonusInfo>
@@ -2060,7 +1877,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_RAW_FISH</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Raw Meat -->
 		<BonusInfo>
@@ -2071,7 +1887,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_RAW_MEAT</ArtDefineTag>
 			<TechReveal>TECH_COOKING</TechReveal>
 			<TechCityTrade>TECH_COOKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Reeds -->
 		<BonusInfo>
@@ -2082,7 +1897,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_REEDS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Refrigerators -->
 		<BonusInfo>
@@ -2093,7 +1907,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_REFRIGERATORS</ArtDefineTag>
 			<TechReveal>TECH_REFRIGERATION</TechReveal>
 			<TechCityTrade>TECH_REFRIGERATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Replacement Organs -->
 		<BonusInfo>
@@ -2105,7 +1918,6 @@
 			<TechReveal>TECH_REPLACEMENT_ORGANS</TechReveal>
 			<TechCityTrade>TECH_REPLACEMENT_ORGANS</TechCityTrade>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Roasted Coffee -->
 		<BonusInfo>
@@ -2116,7 +1928,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ROASTED_COFFEE</ArtDefineTag>
 			<TechReveal>TECH_SPICE_TRADE</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Rocket Fuel -->
 		<BonusInfo>
@@ -2127,7 +1938,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ROCKET_FUEL</ArtDefineTag>
 			<TechReveal>TECH_ROCKETRY</TechReveal>
 			<TechCityTrade>TECH_ROCKETRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Rope -->
 		<BonusInfo>
@@ -2138,7 +1948,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ROPE</ArtDefineTag>
 			<TechReveal>TECH_BINDING</TechReveal>
 			<TechCityTrade>TECH_BINDING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Saddles -->
 		<BonusInfo>
@@ -2149,7 +1958,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SADDLES</ArtDefineTag>
 			<TechReveal>TECH_ANIMAL_RIDING</TechReveal>
 			<TechCityTrade>TECH_ANIMAL_RIDING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Sails -->
 		<BonusInfo>
@@ -2160,7 +1968,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAILS</ArtDefineTag>
 			<TechReveal>TECH_SAILING</TechReveal>
 			<TechCityTrade>TECH_SAILING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Sand -->
 		<BonusInfo>
@@ -2171,7 +1978,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAND</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Sausage -->
 		<BonusInfo>
@@ -2182,7 +1988,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAUSAGE</ArtDefineTag>
 			<TechReveal>TECH_CUISINE</TechReveal>
 			<TechCityTrade>TECH_CUISINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Scrolls -->
 		<BonusInfo>
@@ -2193,7 +1998,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SCROLLS</ArtDefineTag>
 			<TechReveal>TECH_WRITING</TechReveal>
 			<TechCityTrade>TECH_WRITING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Nok Sculptures -->
 		<BonusInfo>
@@ -2205,7 +2009,6 @@
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
 			<TechCityTrade>TECH_ORNAMENTATION</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Sculptures -->
 		<BonusInfo>
@@ -2216,7 +2019,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SCULPTURES</ArtDefineTag>
 			<TechReveal>TECH_SCULPTURE</TechReveal>
 			<TechCityTrade>TECH_SCULPTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Seasoning -->
 		<BonusInfo>
@@ -2227,7 +2029,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SEASONING</ArtDefineTag>
 			<TechReveal>TECH_SPICE_TRADE</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Microchips -->
 		<BonusInfo>
@@ -2241,7 +2042,6 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iAIObjective>10</iAIObjective>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Service Bots -->
 		<BonusInfo>
@@ -2252,7 +2052,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SERVICE_BOTS</ArtDefineTag>
 			<TechReveal>TECH_DISASTER_ROBOTS</TechReveal>
 			<TechCityTrade>TECH_DISASTER_ROBOTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Shellfish -->
 		<BonusInfo>
@@ -2263,7 +2062,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SHELLFISH</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Shockwave Engines -->
 		<BonusInfo>
@@ -2274,7 +2072,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SHOCKWAVE_ENGINES</ArtDefineTag>
 			<TechReveal>TECH_INTERNAL_SHOCKWAVE_ENGINE</TechReveal>
 			<TechCityTrade>TECH_INTERNAL_SHOCKWAVE_ENGINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Shoes -->
 		<BonusInfo>
@@ -2285,7 +2082,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SHOES</ArtDefineTag>
 			<TechReveal>TECH_TANNING</TechReveal>
 			<TechCityTrade>TECH_TANNING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Silk Fibers -->
 		<BonusInfo>
@@ -2296,7 +2092,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SILK_FIBERS</ArtDefineTag>
 			<TechReveal>TECH_SERICULTURE</TechReveal>
 			<TechCityTrade>TECH_SERICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Skis -->
 		<BonusInfo>
@@ -2307,7 +2102,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SKIS</ArtDefineTag>
 			<TechReveal>TECH_MODERN_SPORTS</TechReveal>
 			<TechCityTrade>TECH_MODERN_SPORTS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Smart Medicine -->
 		<BonusInfo>
@@ -2320,7 +2114,6 @@
 			<TechCityTrade>TECH_SMART_DRUGS</TechCityTrade>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Soap -->
 		<BonusInfo>
@@ -2331,7 +2124,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SOAP</ArtDefineTag>
 			<TechReveal>TECH_SOAP_MAKING</TechReveal>
 			<TechCityTrade>TECH_SOAP_MAKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Soda Pop -->
 		<BonusInfo>
@@ -2342,7 +2134,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SODA_POP</ArtDefineTag>
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Soylent Green -->
 		<BonusInfo>
@@ -2353,7 +2144,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SOYLENT_GREEN</ArtDefineTag>
 			<TechReveal>TECH_SIMULATED_REALITY</TechReveal>
 			<TechCityTrade>TECH_SIMULATED_REALITY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Sponges -->
 		<BonusInfo>
@@ -2364,7 +2154,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SPONGES</ArtDefineTag>
 			<TechReveal>TECH_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Steel Ingots -->
 		<BonusInfo>
@@ -2376,7 +2165,6 @@
 			<TechReveal>TECH_CRUCIBLE_STEEL</TechReveal>
 			<TechCityTrade>TECH_CRUCIBLE_STEEL</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Stim Packs -->
 		<BonusInfo>
@@ -2387,7 +2175,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_STIM_PACKS</ArtDefineTag>
 			<TechReveal>TECH_PERSONALIZED_HEALTH</TechReveal>
 			<TechCityTrade>TECH_PERSONALIZED_HEALTH</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Stone Tools -->
 		<BonusInfo>
@@ -2399,7 +2186,6 @@
 			<TechReveal>TECH_TOOL_MAKING</TechReveal>
 			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
 			<TechObsolete>TECH_IRON_WORKING</TechObsolete>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Straw -->
 		<BonusInfo>
@@ -2410,7 +2196,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_STRAW</ArtDefineTag>
 			<TechReveal>TECH_AGRICULTURE</TechReveal>
 			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- String Instruments -->
 		<BonusInfo>
@@ -2421,7 +2206,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_STRING_INSTRUMENTS</ArtDefineTag>
 			<TechReveal>TECH_FOLK_MUSIC</TechReveal>
 			<TechCityTrade>TECH_FOLK_MUSIC</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Synthetic Rubber -->
 		<BonusInfo>
@@ -2433,7 +2217,6 @@
 			<TechReveal>TECH_POLYMERIZATION</TechReveal>
 			<TechCityTrade>TECH_POLYMERIZATION</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tablets -->
 		<BonusInfo>
@@ -2444,7 +2227,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TABLETS</ArtDefineTag>
 			<TechReveal>TECH_IDEOGRAMS</TechReveal>
 			<TechCityTrade>TECH_IDEOGRAMS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tanks -->
 		<BonusInfo>
@@ -2455,7 +2237,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TANKS</ArtDefineTag>
 			<TechReveal>TECH_ARMORED_VEHICLES</TechReveal>
 			<TechCityTrade>TECH_ARMORED_VEHICLES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tannin -->
 		<BonusInfo>
@@ -2466,7 +2247,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TANNIN</ArtDefineTag>
 			<TechReveal>TECH_TANNING</TechReveal>
 			<TechCityTrade>TECH_TANNING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tapestries -->
 		<BonusInfo>
@@ -2477,7 +2257,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAPESTRIES</ArtDefineTag>
 			<TechReveal>TECH_TEXTILE_LOOM</TechReveal>
 			<TechCityTrade>TECH_TEXTILE_LOOM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tar -->
 		<BonusInfo>
@@ -2488,7 +2267,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAR</ArtDefineTag>
 			<TechReveal>TECH_ADHESIVES</TechReveal>
 			<TechCityTrade>TECH_ADHESIVES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Televisions -->
 		<BonusInfo>
@@ -2500,7 +2278,6 @@
 			<TechReveal>TECH_TELEVISION</TechReveal>
 			<TechCityTrade>TECH_TELEVISION</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tires -->
 		<BonusInfo>
@@ -2511,7 +2288,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIRES</ArtDefineTag>
 			<TechReveal>TECH_MOTORIZED_TRANSPORTATION</TechReveal>
 			<TechCityTrade>TECH_MOTORIZED_TRANSPORTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tools -->
 		<BonusInfo>
@@ -2522,7 +2298,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOOLS</ArtDefineTag>
 			<TechReveal>TECH_METAL_CASTING</TechReveal>
 			<TechCityTrade>TECH_METAL_CASTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Toys -->
 		<BonusInfo>
@@ -2533,7 +2308,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOYS</ArtDefineTag>
 			<TechReveal>TECH_BOARD_GAMES</TechReveal>
 			<TechCityTrade>TECH_BOARD_GAMES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Transistors -->
 		<BonusInfo>
@@ -2544,7 +2318,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TRANSISTORS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tungsten Ore -->
 		<BonusInfo>
@@ -2555,7 +2328,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUNGSTEN</ArtDefineTag>
 			<TechReveal>TECH_GEOLOGY</TechReveal>
 			<TechCityTrade>TECH_GEOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Typewriters -->
 		<BonusInfo>
@@ -2566,7 +2338,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TYPEWRITERS</ArtDefineTag>
 			<TechReveal>TECH_MACHINE_TOOLS</TechReveal>
 			<TechCityTrade>TECH_MACHINE_TOOLS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Unmanned Aircrafts -->
 		<BonusInfo>
@@ -2577,7 +2348,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_UNMANNED_AIRCRAFTS</ArtDefineTag>
 			<TechReveal>TECH_UNMANNED_AIR_VEHICLES</TechReveal>
 			<TechCityTrade>TECH_UNMANNED_AIR_VEHICLES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Ultrafuel -->
 		<BonusInfo>
@@ -2590,7 +2360,6 @@
 			<TechCityTrade>TECH_AUGMENTED_CONSUMABLES</TechCityTrade>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iAIObjective>5</iAIObjective>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Vacuum cleaners -->
 		<BonusInfo>
@@ -2601,7 +2370,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VACUUM_CLEANERS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Vegetables -->
 		<BonusInfo>
@@ -2612,7 +2380,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VEGETABLES</ArtDefineTag>
 			<TechReveal>TECH_PLOUGH</TechReveal>
 			<TechCityTrade>TECH_PLOUGH</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Video Games -->
 		<BonusInfo>
@@ -2623,7 +2390,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VIDEO_GAMES</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_COMPUTERS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_COMPUTERS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Vines -->
 		<BonusInfo>
@@ -2634,7 +2400,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VINES</ArtDefineTag>
 			<TechReveal>TECH_BINDING</TechReveal>
 			<TechCityTrade>TECH_BINDING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Vulcanized Rubber -->
 		<BonusInfo>
@@ -2646,7 +2411,6 @@
 			<TechReveal>TECH_REFINING</TechReveal>
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Aluminum Wares -->
 		<BonusInfo>
@@ -2657,7 +2421,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALUMINUM_WARES</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Brass Wares -->
 		<BonusInfo>
@@ -2668,7 +2431,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRASS_WARES</ArtDefineTag>
 			<TechReveal>TECH_BRASS_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRASS_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Bronze Wares -->
 		<BonusInfo>
@@ -2679,7 +2441,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRONZE_WARES</ArtDefineTag>
 			<TechReveal>TECH_BRONZE_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Copper Wares -->
 		<BonusInfo>
@@ -2690,7 +2451,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COPPER_WARES</ArtDefineTag>
 			<TechReveal>TECH_COPPER_WORKING</TechReveal>
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Electrum Wares -->
 		<BonusInfo>
@@ -2701,7 +2461,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ELECTRUM_WARES</ArtDefineTag>
 			<TechReveal>TECH_BRASS_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRASS_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Gold Wares -->
 		<BonusInfo>
@@ -2712,7 +2471,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GOLD_WARES</ArtDefineTag>
 			<TechReveal>TECH_METAL_CASTING</TechReveal>
 			<TechCityTrade>TECH_METAL_CASTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Iron Wares -->
 		<BonusInfo>
@@ -2723,7 +2481,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRON_WARES</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Lead Wares -->
 		<BonusInfo>
@@ -2734,7 +2491,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEAD_WARES</ArtDefineTag>
 			<TechReveal>TECH_LEAD_WORKING</TechReveal>
 			<TechCityTrade>TECH_LEAD_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Platinum Wares -->
 		<BonusInfo>
@@ -2745,7 +2501,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PLATINUM_WARES</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Silver Wares -->
 		<BonusInfo>
@@ -2756,7 +2511,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SILVER_WARES</ArtDefineTag>
 			<TechReveal>TECH_METAL_CASTING</TechReveal>
 			<TechCityTrade>TECH_METAL_CASTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Steel Wares -->
 		<BonusInfo>
@@ -2767,7 +2521,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_STEEL_WARES</ArtDefineTag>
 			<TechReveal>TECH_CRUCIBLE_STEEL</TechReveal>
 			<TechCityTrade>TECH_CRUCIBLE_STEEL</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Tin Wares -->
 		<BonusInfo>
@@ -2778,7 +2531,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIN_WARES</ArtDefineTag>
 			<TechReveal>TECH_BRONZE_WORKING</TechReveal>
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Titanium Wares -->
 		<BonusInfo>
@@ -2789,7 +2541,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TITANIUM_WARES</ArtDefineTag>
 			<TechReveal>TECH_ADVANCED_METALLURGY</TechReveal>
 			<TechCityTrade>TECH_ADVANCED_METALLURGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Liquid Metal Wares -->
 		<BonusInfo>
@@ -2800,7 +2551,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIQUID_METAL</ArtDefineTag>
 			<TechReveal>TECH_LIQUID_METALS</TechReveal>
 			<TechCityTrade>TECH_LIQUID_METALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Megastrong Alloy Wares -->
 		<BonusInfo>
@@ -2811,7 +2561,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MEGASTRONG_ALLOYS</ArtDefineTag>
 			<TechReveal>TECH_MEGASTRONG_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_MEGASTRONG_ALLOYS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Metamaterial Wares -->
 		<BonusInfo>
@@ -2822,7 +2571,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_METAMATERIALS</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_METAMATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Porcelain Wares -->
 		<BonusInfo>
@@ -2833,7 +2581,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PORCELAIN</ArtDefineTag>
 			<TechReveal>TECH_AESTHETICS</TechReveal>
 			<TechCityTrade>TECH_AESTHETICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Superstrong Alloy Wares -->
 		<BonusInfo>
@@ -2844,7 +2591,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUPERSTRONG_ALLOYS</ArtDefineTag>
 			<TechReveal>TECH_SUPERSTRONG_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Terracotta Wares -->
 		<BonusInfo>
@@ -2855,7 +2601,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TERRACOTTA</ArtDefineTag>
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
 			<TechCityTrade>TECH_ORNAMENTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Washer Dryer -->
 		<BonusInfo>
@@ -2866,7 +2611,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WASHER_DRYER</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Water Bottles -->
 		<BonusInfo>
@@ -2877,7 +2621,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WATER_BOTTLES</ArtDefineTag>
 			<TechReveal>TECH_ASSEMBLY_LINE</TechReveal>
 			<TechCityTrade>TECH_ASSEMBLY_LINE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Wax -->
 		<BonusInfo>
@@ -2888,7 +2631,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WAX</ArtDefineTag>
 			<TechReveal>TECH_APICULTURE</TechReveal>
 			<TechCityTrade>TECH_APICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Whale Oil -->
 		<BonusInfo>
@@ -2899,7 +2641,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WHALE_OIL</ArtDefineTag>
 			<TechReveal>TECH_COMMERCIAL_WHALING</TechReveal>
 			<TechCityTrade>TECH_COMMERCIAL_WHALING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Wood -->
 		<BonusInfo>
@@ -2910,7 +2651,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WOOD</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Woodwind Instruments -->
 		<BonusInfo>
@@ -2921,7 +2661,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WOODWIND_INSTRUMENTS</ArtDefineTag>
 			<TechReveal>TECH_SIMPLE_WOOD_WORKING</TechReveal>
 			<TechCityTrade>TECH_SIMPLE_WOOD_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Wool -->
 		<BonusInfo>
@@ -2932,7 +2671,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WOOL</ArtDefineTag>
 			<TechReveal>TECH_ANIMAL_HUSBANDRY</TechReveal>
 			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Zinc Ore -->
 		<BonusInfo>
@@ -2943,7 +2681,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZINC_ORE</ArtDefineTag>
 			<TechReveal>TECH_COPPER_WORKING</TechReveal>
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Unsorted -->
 		<BonusInfo>
@@ -2954,7 +2691,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIERACOSPHINX</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JACKALOPE</Type>
@@ -2964,7 +2700,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_JACKALOPE</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PEGASUS</Type>
@@ -2974,7 +2709,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PEGASUS</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PHOENIX</Type>
@@ -2984,7 +2718,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PHOENIX</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QILIN</Type>
@@ -2994,7 +2727,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QILIN</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUETZALCOATL</Type>
@@ -3004,7 +2736,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUETZALCOATL</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RAINBOW_SERPENT</Type>
@@ -3014,7 +2745,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_RAINBOW_SERPENT</ArtDefineTag>
 			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
 			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PUNCH_CARDS</Type>
@@ -3024,7 +2754,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PUNCH_CARDS</ArtDefineTag>
 			<TechReveal>TECH_ENCRYPTION_MACHINES</TechReveal>
 			<TechCityTrade>TECH_ENCRYPTION_MACHINES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARBON_FIBER</Type>
@@ -3034,7 +2763,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARBON_FIBER</ArtDefineTag>
 			<TechReveal>TECH_COMPOSITES</TechReveal>
 			<TechCityTrade>TECH_COMPOSITES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RARE_EARTH_MINERALS</Type>
@@ -3044,7 +2772,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_RARE_EARTH_MINERALS</ArtDefineTag>
 			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_MODERN_SEISMOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CERMET</Type>
@@ -3054,7 +2781,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CERMET</ArtDefineTag>
 			<TechReveal>TECH_COMPOSITES</TechReveal>
 			<TechCityTrade>TECH_COMPOSITES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUANTUM_DOTS</Type>
@@ -3064,7 +2790,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUANTUM_DOTS</ArtDefineTag>
 			<TechReveal>TECH_QUANTUM_TELEPORTATION</TechReveal>
 			<TechCityTrade>TECH_QUANTUM_TELEPORTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AEROGEL</Type>
@@ -3074,7 +2799,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AEROGEL</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_METAMATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_METALLIC_HYDROGEN</Type>
@@ -3084,7 +2808,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_METALLIC_HYDROGEN</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_METAMATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SYNTHETIC_DIAMOND</Type>
@@ -3094,7 +2817,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SYNTHETIC_DIAMOND</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FULLERENE</Type>
@@ -3104,7 +2826,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FULLERENE</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_METAL_FOAM</Type>
@@ -3114,7 +2835,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_METAL_FOAM</ArtDefineTag>
 			<TechReveal>TECH_LIQUID_METALS</TechReveal>
 			<TechCityTrade>TECH_LIQUID_METALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NANOTRUSSES</Type>
@@ -3124,7 +2844,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NANOTRUSSES</ArtDefineTag>
 			<TechReveal>TECH_NANO_ARCHITECTURE</TechReveal>
 			<TechCityTrade>TECH_NANO_ARCHITECTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TRANSPARENT_ALUMINUM</Type>
@@ -3134,7 +2853,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TRANSPARENT_ALUMINUM</ArtDefineTag>
 			<TechReveal>TECH_NANO_ARCHITECTURE</TechReveal>
 			<TechCityTrade>TECH_NANO_ARCHITECTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_VEGETABLES</Type>
@@ -3144,7 +2862,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_VEGETABLES</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_COLONIZATION</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_COLONIZATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_MANUFACTURED_GOODS</Type>
@@ -3154,7 +2871,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_MANUFACTURED_GOODS</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_MANUFACTURING</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_MANUFACTURING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARBYNE</Type>
@@ -3164,7 +2880,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARBYNE</ArtDefineTag>
 			<TechReveal>TECH_SUPERSTRONG_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_ELECTRONICS</Type>
@@ -3174,7 +2889,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ELECTRONICS</ArtDefineTag>
 			<TechReveal>TECH_ION_BEAMS</TechReveal>
 			<TechCityTrade>TECH_ION_BEAMS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_ALGAE</Type>
@@ -3184,7 +2898,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ALGAE</ArtDefineTag>
 			<TechReveal>TECH_DYSTOPIA_PATHOGENS</TechReveal>
 			<TechCityTrade>TECH_DYSTOPIA_PATHOGENS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DIAMOND_NANOTHREADS</Type>
@@ -3194,7 +2907,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DIAMOND_NANOTHREADS</ArtDefineTag>
 			<TechReveal>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</TechReveal>
 			<TechCityTrade>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PLASTEEL</Type>
@@ -3204,7 +2916,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PLASTEEL</ArtDefineTag>
 			<TechReveal>TECH_HYPERMAGNETICS</TechReveal>
 			<TechCityTrade>TECH_HYPERMAGNETICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_FRUIT</Type>
@@ -3214,7 +2925,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_FRUIT</ArtDefineTag>
 			<TechReveal>TECH_BOTANICAL_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_BOTANICAL_ALCHEMY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUPERINTELLIGENT_COMPUTERS</Type>
@@ -3224,7 +2934,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUPERINTELLIGENT_COMPUTERS</ArtDefineTag>
 			<TechReveal>TECH_TECHNOLOGICAL_SINGULARITY</TechReveal>
 			<TechCityTrade>TECH_TECHNOLOGICAL_SINGULARITY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CLAYTRONIC_ATOMS</Type>
@@ -3234,7 +2943,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CLAYTRONIC_ATOMS</ArtDefineTag>
 			<TechReveal>TECH_ANIMAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_ANIMAMATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DEEP_SPACE_NANOBOTS</Type>
@@ -3244,7 +2952,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DEEP_SPACE_NANOBOTS</ArtDefineTag>
 			<TechReveal>TECH_ANIMAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_ANIMAMATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DEEP_SPACE_LIFEFORMS</Type>
@@ -3254,7 +2961,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DEEP_SPACE_LIFEFORMS</ArtDefineTag>
 			<TechReveal>TECH_GAIA_ECOLOGY</TechReveal>
 			<TechCityTrade>TECH_GAIA_ECOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUPERSOLID_MATERIAL</Type>
@@ -3264,7 +2970,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUPERSOLID_MATERIAL</ArtDefineTag>
 			<TechReveal>TECH_FRICTIONLESS_FLIGHT</TechReveal>
 			<TechCityTrade>TECH_FRICTIONLESS_FLIGHT</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NANOMORPHIC_HABITATS</Type>
@@ -3274,7 +2979,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NANOMORPHIC_HABITATS</ArtDefineTag>
 			<TechReveal>TECH_NANOMORPHIC_TROIDS</TechReveal>
 			<TechCityTrade>TECH_NANOMORPHIC_TROIDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_CROPS</Type>
@@ -3284,7 +2988,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_CROPS</ArtDefineTag>
 			<TechReveal>TECH_EXTRATERRESTRIAL_AGRICULTURE</TechReveal>
 			<TechCityTrade>TECH_EXTRATERRESTRIAL_AGRICULTURE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ADVANCED_REPLICATORS</Type>
@@ -3294,7 +2997,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ADVANCED_REPLICATORS</ArtDefineTag>
 			<TechReveal>TECH_FORGE_WORLDS</TechReveal>
 			<TechCityTrade>TECH_FORGE_WORLDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ATOMICALLY_PRECISE_ALLOYS</Type>
@@ -3304,7 +3006,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ATOMICALLY_PRECISE_ALLOYS</ArtDefineTag>
 			<TechReveal>TECH_ATOMIC_SCALE_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_ATOMIC_SCALE_ENGINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PERSONAL_SPACECRAFT</Type>
@@ -3314,7 +3015,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_SPACECRAFT</ArtDefineTag>
 			<TechReveal>TECH_FUSION_SPACECRAFT</TechReveal>
 			<TechCityTrade>TECH_FUSION_SPACECRAFT</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YGGDRASIL_SEEDS</Type>
@@ -3324,7 +3024,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_YGGDRASIL_SEEDS</ArtDefineTag>
 			<TechReveal>TECH_ECOSYNTHESIS</TechReveal>
 			<TechCityTrade>TECH_ECOSYNTHESIS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_COMPUTRONIUM</Type>
@@ -3334,7 +3033,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_COMPUTRONIUM</ArtDefineTag>
 			<TechReveal>TECH_PICOTECHNOLOGY</TechReveal>
 			<TechCityTrade>TECH_PICOTECHNOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUGELBLITZ</Type>
@@ -3344,7 +3042,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUGELBLITZ</ArtDefineTag>
 			<TechReveal>TECH_SINGULARITY_STABILIZATION</TechReveal>
 			<TechCityTrade>TECH_SINGULARITY_STABILIZATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WARP_DRIVES</Type>
@@ -3354,7 +3051,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WARP_DRIVES</ArtDefineTag>
 			<TechReveal>TECH_FOLDING_SPACE</TechReveal>
 			<TechCityTrade>TECH_FOLDING_SPACE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AB_MATTER</Type>
@@ -3364,7 +3060,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AB_MATTER</ArtDefineTag>
 			<TechReveal>TECH_FEMTOTECHNOLOGY</TechReveal>
 			<TechCityTrade>TECH_FEMTOTECHNOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FEMTOBOTS</Type>
@@ -3374,7 +3069,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FEMTOBOTS</ArtDefineTag>
 			<TechReveal>TECH_PARTICLE_GENETICS</TechReveal>
 			<TechCityTrade>TECH_PARTICLE_GENETICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PERSONAL_STARCRAFT</Type>
@@ -3384,7 +3078,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_STARCRAFT</ArtDefineTag>
 			<TechReveal>TECH_REACTIONLESS_DRIVE</TechReveal>
 			<TechCityTrade>TECH_REACTIONLESS_DRIVE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TIME_CRYSTALS</Type>
@@ -3394,7 +3087,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIME_CRYSTALS</ArtDefineTag>
 			<TechReveal>TECH_IMMORTALITY</TechReveal>
 			<TechCityTrade>TECH_IMMORTALITY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VIBRANIUM</Type>
@@ -3404,7 +3096,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VIBRANIUM</ArtDefineTag>
 			<TechReveal>TECH_ZEPTOTECHNOLOGY</TechReveal>
 			<TechCityTrade>TECH_ZEPTOTECHNOLOGY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DARK_MATTER</Type>
@@ -3414,7 +3105,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DARK_MATTER</ArtDefineTag>
 			<TechReveal>TECH_DARK_MATTER_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_DARK_MATTER_ENGINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MAGNETIC_MONOPOLES</Type>
@@ -3424,7 +3114,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAGNETIC_MONOPOLES</ArtDefineTag>
 			<TechReveal>TECH_ELECTROWEAK_MATTER</TechReveal>
 			<TechCityTrade>TECH_ELECTROWEAK_MATTER</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALICE_MATTER</Type>
@@ -3434,7 +3123,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALICE_MATTER</ArtDefineTag>
 			<TechReveal>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</TechReveal>
 			<TechCityTrade>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHRONOTON</Type>
@@ -3444,7 +3132,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHRONOTON</ArtDefineTag>
 			<TechReveal>TECH_OMEGA_MINUS_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_OMEGA_MINUS_ENGINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MITHRIL</Type>
@@ -3454,7 +3141,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MITHRIL</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CONSCIOUS_MATERIALS</Type>
@@ -3464,7 +3150,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CONSCIOUS_MATERIALS</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ORICHALCUM</Type>
@@ -3474,7 +3159,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ORICHALCUM</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NEUTRONIUM</Type>
@@ -3484,7 +3168,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NEUTRONIUM</ArtDefineTag>
 			<TechReveal>TECH_NEUTRONIUM</TechReveal>
 			<TechCityTrade>TECH_NEUTRONIUM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHAOS_WANDS</Type>
@@ -3494,7 +3177,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHAOS_WANDS</ArtDefineTag>
 			<TechReveal>TECH_MENSIOKINESIS</TechReveal>
 			<TechCityTrade>TECH_MENSIOKINESIS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARTISAN_PLANETS</Type>
@@ -3504,7 +3186,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARTISAN_PLANETS</ArtDefineTag>
 			<TechReveal>TECH_HYPERSTRUCTURE_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_HYPERSTRUCTURE_ENGINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PERSONAL_HYPERCRAFT</Type>
@@ -3514,7 +3195,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_HYPERCRAFT</ArtDefineTag>
 			<TechReveal>TECH_ENDOGENOUS_EUCLIDEAN_PROPULSION</TechReveal>
 			<TechCityTrade>TECH_ENDOGENOUS_EUCLIDEAN_PROPULSION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TESSERACT</Type>
@@ -3524,7 +3204,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TESSERACT</ArtDefineTag>
 			<TechReveal>TECH_TESSERACT_CONSTRUCTION</TechReveal>
 			<TechCityTrade>TECH_TESSERACT_CONSTRUCTION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POCKET_UNIVERSE</Type>
@@ -3534,7 +3213,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POCKET_UNIVERSE</ArtDefineTag>
 			<TechReveal>TECH_SUBDIMENSIONAL_UNIVERSE</TechReveal>
 			<TechCityTrade>TECH_SUBDIMENSIONAL_UNIVERSE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_UNOBTAINIUM</Type>
@@ -3544,7 +3222,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_UNOBTAINIUM</ArtDefineTag>
 			<TechReveal>TECH_SIMULATION_AWARENESS</TechReveal>
 			<TechCityTrade>TECH_SIMULATION_AWARENESS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WATERPROOF_CEMENT</Type>
@@ -3554,7 +3231,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WATERPROOF_CEMENT</ArtDefineTag>
 			<TechReveal>TECH_WATERPROOF_CONCRETE</TechReveal>
 			<TechCityTrade>TECH_WATERPROOF_CONCRETE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_THEREMIN</Type>
@@ -3565,7 +3241,6 @@
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MACHU_PICCHU_PLANS</Type>
@@ -3575,7 +3250,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MACHU_PICCHU_PLANS</ArtDefineTag>
 			<TechReveal>TECH_MOUNTAINEERING</TechReveal>
 			<TechCityTrade>TECH_MOUNTAINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

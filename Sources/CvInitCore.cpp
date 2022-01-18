@@ -2,12 +2,15 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 // BUG - EXE/DLL Paths - start
 //#include <shlobj.h>
@@ -22,6 +25,9 @@ bool CvInitCore::bPathsSet;
 //	Koshling - save game compataibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_TAGGED_FORMAT	0x00000002
+
+// Used to signal the BULL saved game format is used
+#define BUG_DLL_SAVE_FORMAT		64
 
 // Public Functions...
 
@@ -2054,15 +2060,13 @@ void CvInitCore::setPathNames()
 	exePath = new CvString();
 	exeName = new CvString();
 
-	TCHAR pathBuffer[4096];
-	DWORD result;
-	TCHAR* pos;
+	char pathBuffer[4096];
 
-	result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
-	pos = strchr(pathBuffer, '\\');
+	DWORD result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
+	char* pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
 	{
-		TCHAR* next = strchr(pos + 1, '\\');
+		char* next = strchr(pos + 1, '\\');
 		if (!next)
 		{
 			*pos = 0;
@@ -2076,7 +2080,7 @@ void CvInitCore::setPathNames()
 	pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
 	{
-		TCHAR* next = strchr(pos + 1, '\\');
+		char* next = strchr(pos + 1, '\\');
 		if (!next)
 		{
 			*pos = 0;
@@ -2090,11 +2094,8 @@ void CvInitCore::setPathNames()
 }
 // BUG - EXE/DLL Paths - end
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+// Afforess - 01/12/10
 void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 {
 	if ( checkBounds(eOldID, 0, MAX_PC_PLAYERS) && checkBounds(eNewID, 0, MAX_PC_PLAYERS) )
@@ -2165,46 +2166,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		}
 	}
 }
-
-void CvInitCore::checkInitialCivics()
-{
-	for (int iI = 0; iI < GC.getNumCivilizationInfos(); iI++)
-	{
-		for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-		{
-			//No Initial Civic Found
-			const CivicTypes eCivic = (CivicTypes)GC.getCivilizationInfo((CivilizationTypes)iI).getCivilizationInitialCivics(iJ);
-
-			if (eCivic == NO_CIVIC || GC.getCivicInfo(eCivic).getCivicOptionType() != iJ)
-			{
-				bool bFound = false;
-				for (int iK = 0; iK < GC.getNumCivicInfos(); iK++)
-				{
-					if (GC.getCivicInfo((CivicTypes)iK).getCivicOptionType() == iJ)
-					{
-						if (GC.getCivicInfo((CivicTypes)iK).getTechPrereq() == NO_TECH)
-						{
-							bFound = true;
-							break;
-						}
-					}
-				}
-				if (bFound)
-				{
-					GC.getCivilizationInfo((CivilizationTypes)iI).setCivilizationInitialCivics(iJ, iK);
-				}
-				else
-				{
-					//Should not get here, having no initial civic is very bad
-					FErrorMsg("Error, No Valid Civic Was Found!");
-				}
-			}
-		}
-	}
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+// ! Afforess
 
 unsigned int CvInitCore::getAssetCheckSum() const
 {

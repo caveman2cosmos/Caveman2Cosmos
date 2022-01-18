@@ -1020,7 +1020,7 @@ class CvUnitDesc:
 		if self.level != -1:
 			unit.setLevel(self.level)
 		if self.experience != -1:
-			unit.setExperience(self.experience, -1)
+			unit.setExperience(self.experience)
 		for promo in self.promotionType:
 			iPromo = GC.getInfoTypeForString(promo)
 			if iPromo > -1:

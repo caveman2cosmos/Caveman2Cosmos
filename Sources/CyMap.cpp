@@ -90,7 +90,7 @@ void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, 
 
 void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
-	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bLookAt, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
+	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
 }
 
 void CyMap::erasePlots()

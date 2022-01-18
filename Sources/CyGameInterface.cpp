@@ -54,7 +54,6 @@ void CyGamePythonInterface()
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
 		.def("countKnownTechNumTeams", &CyGame::countKnownTechNumTeams, "int (int eTech)")
-		.def("getNumFreeBonuses", &CyGame::getNumFreeBonuses, "int (int eBonus)")
 
 		.def("countReligionLevels", &CyGame::countReligionLevels, "int (int eReligion)")
 		.def("calculateReligionPercent", &CyGame::calculateReligionPercent, "int (int eReligion)")
@@ -265,7 +264,6 @@ void CyGamePythonInterface()
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
 
 		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
-		.def("changePlotExtraCost", &CyGame::changePlotExtraCost, "void (int iX, int iY, int iCost)")
 
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
 		.def("isLeaderEverActive", &CyGame::isLeaderEverActive, "bool (int /*LeaderHeadTypes*/ eLeader)")
@@ -285,11 +283,10 @@ void CyGamePythonInterface()
 		.def("getDiplomaticVictoryAchieved", &CyGame::getDiplomaticVictoryAchieved, "bool ()")
 		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
-		.def("setVictoryValid", &CyGame::setVictoryValid, "(int iVictoryType, bool bNewVal)")
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
-		.def("setModderGameOption", &CyGame::setModderGameOption, "void ()")
+		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 
 		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")

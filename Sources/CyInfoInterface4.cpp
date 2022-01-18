@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInfos.h"
 
 //
 // Python interface for info classes (formerly structs)
@@ -9,34 +10,34 @@ void CyInfoPythonInterface4()
 {
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface4\n");
 
-	python::class_<CvAutomateInfo, python::bases<CvInfoBase> >("CvAutomateInfo", python::no_init)
+	python::class_<CvAutomateInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvAutomateInfo", python::no_init)
 		;
 
-	python::class_<CvCommandInfo, python::bases<CvInfoBase> >("CvCommandInfo", python::no_init)
+	python::class_<CvCommandInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCommandInfo", python::no_init)
 		;
 
-	python::class_<CvGameOptionInfo, python::bases<CvInfoBase> >("CvGameOptionInfo", python::no_init)
+	python::class_<CvGameOptionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvGameOptionInfo", python::no_init)
 		.def("getDefault", &CvGameOptionInfo::getDefault, "bool ()")
 		.def("getVisible", &CvGameOptionInfo::getVisible, "bool ()")
 		;
 
-	python::class_<CvMPOptionInfo, python::bases<CvInfoBase> >("CvMPOptionInfo", python::no_init)
+	python::class_<CvMPOptionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvMPOptionInfo", python::no_init)
 		.def("getDefault", &CvMPOptionInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvForceControlInfo, python::bases<CvInfoBase> >("CvForceControlInfo", python::no_init)
+	python::class_<CvForceControlInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvForceControlInfo", python::no_init)
 		.def("getDefault", &CvForceControlInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvPlayerOptionInfo, python::bases<CvInfoBase> >("CvPlayerOptionInfo", python::no_init)
+	python::class_<CvPlayerOptionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPlayerOptionInfo", python::no_init)
 		.def("getDefault", &CvPlayerOptionInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvGraphicOptionInfo, python::bases<CvInfoBase> >("CvGraphicOptionInfo", python::no_init)
+	python::class_<CvGraphicOptionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvGraphicOptionInfo", python::no_init)
 		.def("getDefault", &CvGraphicOptionInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvEventTriggerInfo, python::bases<CvInfoBase> >("CvEventTriggerInfo", python::no_init)
+	python::class_<CvEventTriggerInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvEventTriggerInfo", python::no_init)
 		.def("getNumUnits", &CvEventTriggerInfo::getNumUnits, "int ()")
 		.def("getNumBuildings", &CvEventTriggerInfo::getNumBuildings, "int ()")
 		.def("getCivic", &CvEventTriggerInfo::getCivic, "int ()")
@@ -55,7 +56,7 @@ void CyInfoPythonInterface4()
 		.def("isStateReligion", &CvEventTriggerInfo::isStateReligion, "bool ()")
 		;
 
-	python::class_<CvEventInfo, python::bases<CvInfoBase> >("CvEventInfo", python::no_init)
+	python::class_<CvEventInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvEventInfo", python::no_init)
 		.def("isQuest", &CvEventInfo::isQuest, "bool ()")
 		.def("isTeam", &CvEventInfo::isTeam, "bool ()")
 		.def("isGoldenAge", &CvEventInfo::isGoldenAge, "bool ()")
@@ -87,7 +88,7 @@ void CyInfoPythonInterface4()
 		.def("getBuildingHealthChange", &CvEventInfo::getBuildingHealthChange, "int (int /*BuildingTypes*/)")
 		;
 
-	python::class_<CvEspionageMissionInfo, python::bases<CvInfoBase> >("CvEspionageMissionInfo", python::no_init)
+	python::class_<CvEspionageMissionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvEspionageMissionInfo", python::no_init)
 		.def("getCost", &CvEspionageMissionInfo::getCost, "int ()")
 		.def("isPassive", &CvEspionageMissionInfo::isPassive, "bool ()")
 		.def("isTargetsCity", &CvEspionageMissionInfo::isTargetsCity, "bool ()")
@@ -98,17 +99,17 @@ void CyInfoPythonInterface4()
 		.def("getCounterespionageMod", &CvEspionageMissionInfo::getCounterespionageMod, "int ()")
 		;
 
-	python::class_<CvVoteSourceInfo, python::bases<CvInfoBase> >("CvVoteSourceInfo", python::no_init)
+	python::class_<CvVoteSourceInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvVoteSourceInfo", python::no_init)
 		.def("getCivic", &CvVoteSourceInfo::getCivic, "int ()")
 		.def("getFreeSpecialist", &CvVoteSourceInfo::getFreeSpecialist, "int ()")
 		.def("getReligionCommerce", &CvVoteSourceInfo::getReligionCommerce, "int (int)")
 		.def("getSecretaryGeneralText", &CvVoteSourceInfo::pyGetSecretaryGeneralText, "wstring ()")
 		;
 
-	python::class_<CvMainMenuInfo, python::bases<CvInfoBase> >("CvMainMenuInfo", python::no_init)
+	python::class_<CvMainMenuInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvMainMenuInfo", python::no_init)
 		;
 
-	python::class_<CvPropertyInfo, python::bases<CvInfoBase> >("CvPropertyInfo", python::no_init)
+	python::class_<CvPropertyInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPropertyInfo", python::no_init)
 		.def("getChar", &CvPropertyInfo::getChar, "int ()")
 		;
 }

@@ -3,6 +3,11 @@
 #ifndef CvDLLEngineIFaceBase_h
 #define CvDLLEngineIFaceBase_h
 
+#include "NiPoint.h"
+
+class CvPlot;
+class CvCity;
+
 //
 // abstract interface for CvEngine functions used by DLL
 //

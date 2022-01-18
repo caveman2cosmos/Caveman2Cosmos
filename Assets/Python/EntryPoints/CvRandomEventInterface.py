@@ -1107,7 +1107,7 @@ def canTriggerIndependentFilms(argsList):
 
 	iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 	for i in xrange(GC.getNumBuildingInfos()):
-		if GC.getBuildingInfo(i).getFreeBonus() == iBonus and player.hasBuilding(i) > 0:
+		if iBonus in CvBuildingInfo.getFreeBonuses() and player.hasBuilding(i):
 			return False
 	return True
 
@@ -2157,7 +2157,8 @@ def applyMasterBlacksmithDone1(argsList):
 	data = argsList[1]
 
 	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
-	GC.getMap().plot(data.iPlotX, data.iPlotY).setBonusType(iBonus)
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	plot.setBonusType(iBonus)
 
 	CyInterface().addMessage(
 		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
@@ -3585,22 +3586,22 @@ def getHelpCarnation2(argsList):
 #####  SYNTHETIC_FUELS  #####
 
 def canTriggerSyntheticFuels(argsList):
-  data = argsList[0]
-  pPlayer = GC.getPlayer(data.ePlayer)
+	data = argsList[0]
+	pPlayer = GC.getPlayer(data.ePlayer)
 
-  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
-  if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
-    return False
-  bOil = GC.getInfoTypeForString("BONUS_OIL")
-  if pPlayer.hasBonus(bOil) > 0:
-    return False
-  bCoal = GC.getInfoTypeForString("BONUS_COAL")
-  if pPlayer.hasBonus(bCoal) < 1:
-    return False
-  for i in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(i).getFreeBonus() == bOil and pPlayer.hasBuilding(i):
-      return False
-  return True
+	iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
+	if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
+		return False
+	eOil = GC.getInfoTypeForString("BONUS_OIL")
+	if pPlayer.hasBonus(eOil):
+		return False
+	eCoal = GC.getInfoTypeForString("BONUS_COAL")
+	if not pPlayer.hasBonus(eCoal):
+		return False
+	for i in xrange(GC.getNumBuildingInfos()):
+		if eOil in CvBuildingInfo.getFreeBonuses() and pPlayer.hasBuilding(i):
+			return False
+	return True
 
 def canTriggerCitySyntheticFuels(argsList):
 	iCity = argsList[2]
@@ -6237,7 +6238,7 @@ def doVolcanoAdjustFertility(argsList):
   iY = pPlot.getY()
 
   for i in xrange(8):
-    tPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
+    tPlot = plotDirection(iX, iY, DirectionTypes(i))
     if not tPlot.isNone():
       if not tPlot.isCity():
         GAME.setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
@@ -6298,7 +6299,7 @@ def doVolcanoNeighbouringPlots(pPlot):
 
 	# Sets up lists for plots that are adjacent to the volcano
 	for i in xrange(8):
-		plot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
+		plot = plotDirection(iX, iY, DirectionTypes(i))
 		if not plot.isNone():
 			listVolcanoPlots.append(plot)
 			listVolcanoPlotsX.append(plot.getX())
@@ -6308,10 +6309,10 @@ def doVolcanoNeighbouringPlots(pPlot):
 	targetplot = listVolcanoPlots[GAME.getSorenRandNum(len(listVolcanoPlots), "Volcano direction")]
 	listAffectedPlots.append(targetplot)
 
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_NORTH))
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_SOUTH))
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_EAST))
-	listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_WEST))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_NORTH))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_SOUTH))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_EAST))
+	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_WEST))
 
 	# If plot is in the ring around the volcano, add to the list of affected plots
 	for plot in listAdjacentPlots:
@@ -6402,7 +6403,7 @@ def doVolcanoPlot(pPlot):
       iX = pPlot.getX()
       iY = pPlot.getY()
       for i in xrange(8):
-        sPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
+        sPlot = plotDirection(iX, iY, DirectionTypes(i))
         if not sPlot.isNone():
           if pPlotUnit.canMoveInto(sPlot, False, False, True):
             pPlotUnit.setXY(sPlot.getX(), sPlot.getY(), False, True, True)
@@ -7220,5 +7221,7 @@ def applyCivilWar(argsList):
 
 ################ BEST HUNTERS ################
 def canDoBestHunters1(argsList):
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
-	return False
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING)
+
+def canDoBestHunters2(argsList):
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_HIDE_AND_SEEK) and GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)

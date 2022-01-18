@@ -110,7 +110,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, (int)m_aaiGroupedBuildingList.size(), iGroup)
+	FASSERT_BOUNDS(0, static_cast<int>(m_aaiGroupedBuildingList.size()), iGroup);
 	return m_aaiGroupedBuildingList[iGroup].size();
 }
 
@@ -120,8 +120,8 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
-	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return m_aaiGroupedBuildingList[iGroup][iPos];
 }
 
@@ -185,7 +185,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (algo::contains(m_aaiGroupedBuildingList[i], m_eSelectedBuilding))
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedBuilding))
 				return i;
 		}
 		m_eSelectedBuilding = NO_BUILDING;
@@ -208,7 +208,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (algo::contains(m_aaiGroupedBuildingList[i], m_eSelectedWonder))
+			if (algo::any_of_equal(m_aaiGroupedBuildingList[i], m_eSelectedWonder))
 				return i;
 		}
 		m_eSelectedWonder = NO_BUILDING;

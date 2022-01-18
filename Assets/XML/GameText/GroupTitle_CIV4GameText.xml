@@ -184,7 +184,7 @@
 		<Tag>TXT_KEY_GROUPTITLE_COURT</Tag>
 		<English>Court of %s1</English>
 		<French>court de %s1</French>
-		<German>Verband %1:5</German>
+		<German>Verband %s1:5</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CRASH</Tag>

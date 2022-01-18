@@ -1,4 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!--
+	<iPlacementOrder>
+		This tag is a placement priority value, default Value is -1 and it signifies that this is not a map bonus.
+		Higher order value means the bonus will be placed on maps after all bonuses with lower order value has populated the map.
+		Bonuses with value=0 will populate the map first, maximum valid value is 15,
+		values above 15 will cause bugs with mapscripts that use the generic dll bonus placer algorithm.
+	</iPlacementOrder>
+-->
 <Civ4BonusInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<BonusInfos>
 		<BonusInfo>
@@ -1329,7 +1337,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>15</iAITradeModifier>
-			<iPlacementOrder>2</iPlacementOrder>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMaxLatitude>20</iMaxLatitude>
@@ -2177,7 +2185,7 @@
 			</YieldChanges>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
@@ -2764,7 +2772,7 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>1</iPlacementOrder>
+			<iPlacementOrder>0</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
 			<iMinAreaSize>4</iMinAreaSize>
 			<iMaxLatitude>65</iMaxLatitude>
@@ -3012,7 +3020,7 @@
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>1</iPlacementOrder>
+			<iPlacementOrder>0</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
 			<iMinAreaSize>4</iMinAreaSize>
 			<Rands>
@@ -3993,7 +4001,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CLAM</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4042,7 +4050,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CRAB</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -4101,7 +4109,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FISH</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -4183,7 +4191,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LOBSTER</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4368,7 +4376,7 @@
 			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHRIMP</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
+			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -5327,7 +5335,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>2</iPlacementOrder>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -6734,7 +6742,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>2</iPlacementOrder>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>

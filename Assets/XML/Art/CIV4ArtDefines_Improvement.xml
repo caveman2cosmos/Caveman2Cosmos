@@ -958,15 +958,6 @@
 			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SEASONAL_CAMP</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Camp/Camp.nif</NIF>
-			<KFM>Art/Structures/Improvements/Camp/Camp.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_FOSSIL_DIG_SITE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>

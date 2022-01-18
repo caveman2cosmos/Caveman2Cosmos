@@ -16,14 +16,7 @@ public:
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
-	// inlined for performance reasons, only in the dll
-	static CvTeamAI& getTeam(TeamTypes eTeam)
-	{
-		FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
-		return m_aTeams[eTeam];
-	}
-
-	DllExport static CvTeamAI& getTeamNonInl(TeamTypes eTeam);
+	DllExport static CvTeamAI& getTeam(TeamTypes eTeam);
 
 	static void initStatics();
 	static void freeStatics();
