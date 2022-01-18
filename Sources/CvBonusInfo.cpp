@@ -497,14 +497,14 @@ void CvBonusInfo::copyNonDefaults(const CvBonusInfo* pClassInfo)
 			m_piYieldChange[i] = pClassInfo->getYieldChange(i);
 		}
 	}
-	if (getAITradeModifier() == iTextDefault) m_iAITradeModifier = pClassInfo->getAITradeModifier();
-	if (getAIObjective() == iTextDefault) m_iAIObjective = pClassInfo->getAIObjective();
-	if (getHealth() == iTextDefault) m_iHealth = pClassInfo->getHealth();
-	if (getHappiness() == iTextDefault) m_iHappiness = pClassInfo->getHappiness();
+	if (getAITradeModifier() == iDefault) m_iAITradeModifier = pClassInfo->getAITradeModifier();
+	if (getAIObjective() == iDefault) m_iAIObjective = pClassInfo->getAIObjective();
+	if (getHealth() == iDefault) m_iHealth = pClassInfo->getHealth();
+	if (getHappiness() == iDefault) m_iHappiness = pClassInfo->getHappiness();
 	if (getMinAreaSize() == iDefault) m_iMinAreaSize = pClassInfo->getMinAreaSize();
 	if (getMinLatitude() == iDefault) m_iMinLatitude = pClassInfo->getMinLatitude();
 	if (getMaxLatitude() == 90) m_iMaxLatitude = pClassInfo->getMaxLatitude();
-	if (getPlacementOrder() == iDefault) m_iPlacementOrder = pClassInfo->getPlacementOrder();
+	if (getPlacementOrder() == -1) m_iPlacementOrder = pClassInfo->getPlacementOrder();
 	if (getConstAppearance() == iDefault) m_iConstAppearance = pClassInfo->getConstAppearance();
 	if (getRandAppearance1() == iDefault) m_iRandAppearance1 = pClassInfo->getRandAppearance1();
 	if (getRandAppearance2() == iDefault) m_iRandAppearance2 = pClassInfo->getRandAppearance2();

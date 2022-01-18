@@ -408,34 +408,14 @@
 		<Russian>Дает бесплатно [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] в каждом городе на одном материке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_0</Tag>
-		<English>[SPACE]built in the City</English>
-		<French>[SPACE]construit dans la ville</French>
-		<German>, die in der Stadt gebaut werden</German>
-		<Italian>[SPACE]costruito in città</Italian>
-		<Spanish>[SPACE]entrenada en la ciudad</Spanish>
-		<Polish>[SPACE]wyszkolone w tym mieście</Polish>
-		<Russian>[SPACE]Ïîñòðîéêà â ãîðîäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_1</Tag>
-		<English>[SPACE]built or ending its turn in the City</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START</Tag>
-		<English>[ICON_BULLET]Free [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
-		<French>[ICON_BULLET] Promotion [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
-		<German>[ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] für alle[SPACE]</German>
-		<Italian>[ICON_BULLET]Promozione [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuita per[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]Ascenso a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] para cualquier[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]Darmowa promocja [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] dla:[SPACE]</Polish>
-		<Russian>[ICON_BULLET]Áåñïëàòíàÿ [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] êâàëèôèêàöèÿ äëÿ[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION</Tag>
-		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1_PromoType]%s2_PromoName[\LINK][COLOR_REVERT] promotion</English>
-		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1_PromoType]%s2_PromoName[\LINK][COLOR_REVERT]</German>
+		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] promotion for[SPACE]</English>
+		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1]%s2[\LINK][COLOR_REVERT]</German>
 		<Russian>[ICON_BULLET]Äàåò îòðÿäó %s1_Promotion åñëè âûïîëíåíû âñå íóæíûå òðåáîâàíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION_ADDON</Tag>
+		<English>[SPACE]new units that are[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS</Tag>

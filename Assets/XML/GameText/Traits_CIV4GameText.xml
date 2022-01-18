@@ -656,7 +656,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
-		<English>TBD</English>
+		<English>This leaders likes agriculture</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_SHORT</Tag>
@@ -1247,7 +1247,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Deception is favourite past time of leader</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_SHORT</Tag>
@@ -1544,7 +1544,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Humanitarian leaders try to make everyone happy and healthy</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
@@ -1877,7 +1877,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
-		<English>TBD</English>
+		<English>This leader dislikes being stationary</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_SHORT</Tag>
@@ -2262,7 +2262,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
-		<English>TBD</English>
+		<English>This leader gets boost to research</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</Tag>
@@ -2293,7 +2293,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
-		<English>TBD</English>
+		<English>This leader specializes in seafaring</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_SHORT</Tag>

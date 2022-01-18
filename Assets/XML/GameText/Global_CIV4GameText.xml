@@ -1,18 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-	<!-- Code placeholders
-	<TEXT>
-		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
-		<English>UNKNOWN CIV</English>
-	</TEXT>
+	<!-- Code placeholders	
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_LESS_GROWTH</Tag>
-		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN</Tag>
 		<English>TBD</English>
@@ -70,6 +62,10 @@
 		<English>TBD</English>
 	</TEXT>
 -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
+		<English>UNKNOWN CIV</English>
+	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_ANARCHY</Tag>
 		<English>Anarchy!!! (%d1)</English>
@@ -9455,6 +9451,10 @@
 		<German>[ICON_BULLET]Dient als Standort für militärische Zwecke</German>
 		<Italian>[ICON_BULLET]Ai fini dei combattimenti, equivalgono a una città</Italian>
 		<Spanish>[ICON_BULLET]Hace las veces de ciudad a efectos de combate.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_LESS_GROWTH</Tag>
+		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_MORE_GROWTH</Tag>

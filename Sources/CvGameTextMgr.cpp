@@ -21193,21 +21193,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	if (!bRelDisabled)
-	{
-		const bool bVisit = kBuilding.isApplyFreePromotionOnMove();
-
-		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
-		{
-			setFreePromoBuildingHelp(freePromo.ePromotion, bVisit, szBuffer);
-
-			if (const BoolExpr* condition = freePromo.m_pExprFreePromotionCondition)
-			{
-				condition->buildDisplayString(szBuffer);
-			}
-		}
-	}
-
 	if (kBuilding.isProvidesFreshWater())
 	{
 		szBuffer.append(NEWLINE);
@@ -22072,20 +22057,30 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
 		{
-			const PromotionTypes ePromo = freePromo.ePromotion;
+			const CvPromotionInfo& promo = GC.getPromotionInfo(freePromo.ePromotion);
+
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide()));
+			if (!kBuilding.isApplyFreePromotionOnMove())
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION_ADDON"));
+			}
 			const BoolExpr* pExpr = freePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION", CvWString(GC.getPromotionInfo(ePromo).getType()).GetCString(), GC.getPromotionInfo(ePromo).getTextKeyWide()));
-				szBuffer.append(" (");
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES"));
 				pExpr->buildDisplayString(szBuffer);
-				szBuffer.append(gDLL->getText("TXT_KEY_REVERT_COLOR"));
-				szBuffer.append(")");
 			}
-			else
+			else // List all unitcombats that allows the promo in general.
 			{
-				setFreePromoBuildingHelp(ePromo, kBuilding.isApplyFreePromotionOnMove(), szBuffer);
+				bool bFirst = true;
+				for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+				{
+					const UnitCombatTypes eUnitCombat = (UnitCombatTypes)promo.getQualifiedUnitCombatType(iI);
+					CvWString szFirstBuffer;
+					CvWString szTempBuffer;
+					szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo(eUnitCombat).getDescription());
+					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+					bFirst = false;
+				}
 			}
 		}
 
@@ -23579,30 +23574,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
-}
-
-
-void CvGameTextMgr::setFreePromoBuildingHelp(const PromotionTypes ePromo, bool bApplyToVisitingUnits, CvWStringBuffer &szBuffer)
-{
-	bool bFirst = true;
-	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromo);
-	szBuffer.append(NEWLINE);
-	szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_START", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide()));
-
-	for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
-	{
-		const UnitCombatTypes eUnitCombat = (UnitCombatTypes)promo.getQualifiedUnitCombatType(iI);
-		CvWString szFirstBuffer;
-		CvWString szTempBuffer;
-		szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo(eUnitCombat).getDescription());
-		setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-		bFirst = false;
-	}
-	if (bApplyToVisitingUnits)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_1"));
-	}
-	else szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_PROMOTION_END_0"));
 }
 
 

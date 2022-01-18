@@ -3987,12 +3987,12 @@ class BonusBalancer:
 		return boniInRange
 
 	# build a shuffled list of the plots in the same area near the starting plot
-	def getFreePlots(self, x, y, areaID, ran ):
+	def getFreePlots(self, x, y, areaID, ran):
 		plots = []
 		for dx in range(-ran,ran+1):
 			for dy in range(-ran,ran+1):
 				if plotDistance( x, y, x+dx, y+dy ) <= ran:
-					pLoopPlot = plotXY(x, y, dx, dy)							# use build-in plotXY()
+					pLoopPlot = plotXY(x, y, dx, dy) # use built-in plotXY()
 					# no extra boni outside map
 					if not pLoopPlot.isNone():
 						dArea = pLoopPlot.getArea()
@@ -4003,14 +4003,14 @@ class BonusBalancer:
 								if pLoopPlot.getBonusType(-1)<0:
 									plots.append(pLoopPlot)
 		randomList.shuffle( plots )
-		return plots																# return list
+		return plots # return list
 
 	# calculate number of desired boni
 	# - like CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType) in CvMapGenerator.cpp
 	def calcNumBoniToAdd(self, iBonus):
-		bonusInfo = GC.getBonusInfo( iBonus )
-		if bonusInfo.getPlacementOrder()<0:	return 0
-		if bonusInfo.getType() in self.resourcesToEliminate: return 0
+		bonusInfo = GC.getBonusInfo(iBonus)
+		if bonusInfo.getPlacementOrder() < 0 or bonusInfo.getType() in self.resourcesToEliminate:
+			return 0
 
 		rand1 = chooseNumber( bonusInfo.getRandAppearance1() )
 		rand2 = chooseNumber( bonusInfo.getRandAppearance2() )
