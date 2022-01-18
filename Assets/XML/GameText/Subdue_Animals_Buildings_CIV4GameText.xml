@@ -592,6 +592,17 @@
 		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
+		<English>Flocks of Peacock</English>
+		<Italian>Branco di fagiani</Italian>
+		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Peacocks.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
 		<English>Herd (Pig)</English>
 		<French>Troupeau de Cochons</French>
@@ -615,6 +626,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Tag>
 		<English>A poultry herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
+		<English>Remains - Procoptodon</English>
+		<French>Remains - Procoptodon</French>
+		<Italian>Resti di procoptodonte</Italian>
+		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
