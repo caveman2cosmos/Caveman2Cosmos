@@ -261,7 +261,7 @@
 		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
 		<English>Remains - Glyptodon</English>
 		<French>Restes de Glyptodon</French>
-		<Italian>Resti - Glittodonte</Italian>
+		<Italian>Resti di glittodonte</Italian>
 		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -830,6 +830,21 @@
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
+		<English>Folklore - Deer</English>
+		<French>Mythe du Cerf</French>
+		<Italian>Mito del cervo</Italian>
+		<Polish>Mit Jelenia</Polish>
+		<Russian>Ìèô îá îëåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TORTOISE</Tag>
+		<English>Folklore - Desert Tortoise</English>
+		<French>Mythe de la Tortue du désert</French>
+		<Italian>Mito della tartaruga del deserto</Italian>
+		<Russian>Ìèô î ãîôåðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DHOLE</Tag>
 		<English>Folklore - Ussuri Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
@@ -840,29 +855,76 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DINGO</Tag>
 		<English>Folklore - Dingo</English>
 		<French>Mythe du Dingo</French>
-		<Italian>Folklore - Dingo</Italian>
+		<Italian>Mito del dingo</Italian>
 		<Russian>Ìèô î äèíãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
+		<English>Folklore - Dolphin</English>
+		<French>Mythe du Dauphin</French>
+		<Italian>Mito del delfino</Italian>
+		<Polish>Mit Delfina</Polish>
+		<Russian>Ìèô î äåëüôèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DRAGON</Tag>
+		<English>Folklore (E) - Dragon</English>
+		<French>Mythe du Dragon (E)</French>
+		<Italian>Mito del dragone (E)</Italian>
+		<Polish>Mit (E) Smoka</Polish>
+		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUCK</Tag>
 		<English>Folklore - Duck</English>
 		<French>Mythe du Canard</French>
-		<Italian>Folklore - Anatra</Italian>
+		<Italian>Mito dell'anatra</Italian>
 		<Russian>Ìèô îá óòêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUGONG</Tag>
+		<English>Folklore - Dugong</English>
+		<French>Mythe du Dugong</French>
+		<Italian>Mito del dugongo</Italian>
+		<Polish>Mit Dugonga</Polish>
+		<Russian>Ìèô î äþãîíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE_BALD</Tag>
+		<English>Folklore - Bald Eagle</English>
+		<French>Mythe du Pygargue à tête blanche</French>
+		<Italian>Mito dell'aquila testabianca</Italian>
+		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EARTH</Tag>
+		<English>Folklore (E) - Earth</English>
+		<French>Mythe de la Terre (E)</French>
+		<Italian>Mito della Terra (E)</Italian>
+		<Polish>Mit (E) Ziemi</Polish>
+		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELASMOTHERIUM</Tag>
 		<English>Folklore - Giant Rhinoceros</English>
 		<French>Mythe de l'Elasmotherium</French>
-		<Italian>Folklore - Grande rinoceronte</Italian>
+		<Italian>Mito del grande rinoceronte</Italian>
 		<Polish>Mit - Elasmoterium</Polish>
 		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
+		<English>Folklore (T) - Elephant</English>
+		<French>Mythe de l'Eléphant (T)</French>
+		<Italian>Mito dell'elefante (T)</Italian>
+		<Polish>Mit (T) Słonia</Polish>
+		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEMENTAL_PEDIA</Tag>
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They become fables.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie.</French>
-		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che diventano oggetto di fiabe.</Italian>
+		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
 	</TEXT>
@@ -870,41 +932,43 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
 		<English>Folklore - Emperor Penguin</English>
 		<French>Mythe du Manchot Empereur</French>
-		<Italian>Folklore - Pinguino imperatore</Italian>
+		<Italian>Mito del pinguino imperatore</Italian>
 		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EWOLF</Tag>
 		<English>Folklore - Ethiopian Wolf</English>
 		<French>Mythe du loup d'Éthiopie</French>
-		<Italian>Folklore - Lupo etiope</Italian>
+		<Italian>Mito del lupo etiope</Italian>
 		<Russian>Ìèô îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FENNECFOX</Tag>
 		<English>Folklore - Fennec Fox</English>
 		<French>Mythe du Fennec</French>
-		<Italian>Folklore - Fennec</Italian>
+		<Italian>Mito del fennec</Italian>
 		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FIRE</Tag>
 		<English>Folklore (E) - Fire</English>
-		<French>Mythe du Feu</French>
-		<Italian>Folklore - Fuoco</Italian>
-		<Polish>Mit - Ogień</Polish>
+		<French>Mythe du Feu (E)</French>
+		<Italian>Mito del Fuoco (E)</Italian>
+		<Polish>Mit (E) - Ogień</Polish>
 		<Russian>Ìèô îá îãíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLAMINGO</Tag>
 		<English>Folklore - Flamingo</English>
 		<French>Mythe du Flamant rose</French>
+		<Italian>Mito del fenicottero</Italian>
 		<Russian>Ìèô î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR</Tag>
 		<English>Folklore - American Alligator</English>
 		<French>Mythe de l'Alligator d'Amérique</French>
+		<Italian>Mito dell'alligatore americano</Italian>
 		<Polish>Mit - Aligator Amerykański</Polish>
 		<Russian>Ìèô îá àëëèãàòîðå</Russian>
 	</TEXT>
@@ -912,6 +976,7 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR_ASIAN</Tag>
 		<English>Folklore - Chinese Alligator</English>
 		<French>Mythe de l'Alligator de Chine</French>
+		<Italian>Mito dell'alligatore asiatico</Italian>
 		<Polish>Mit - Aligator Chiński</Polish>
 		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
 	</TEXT>
@@ -919,6 +984,7 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
 		<English>Folklore - Gharial</English>
 		<French>Mythe du Gavial du Gange</French>
+		<Italian>Mito del gaviale</Italian>
 		<Polish>Mit - Gawial</Polish>
 		<Russian>Ìèô î ãàâèàëå</Russian>
 	</TEXT>
@@ -926,19 +992,37 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIRAFFE</Tag>
 		<English>Folklore - Giraffe</English>
 		<French>Mythe de la Girafe</French>
-		<Italian>Folklore - Giraffa</Italian>
+		<Italian>Mito della giraffa</Italian>
 		<Russian>Ìèô î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTO</Tag>
 		<English>Folklore - Paleolithic Glyptodon</English>
 		<French>Mythe du Glyptodon</French>
+		<Italian>Mito del glittodonte</Italian>
 		<Russian>Ìèô î ãëèïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GOAT</Tag>
+		<English>Folklore - Mouflon</English>
+		<French>Mythe de la Chèvre</French>
+		<Italian>Mito della capra</Italian>
+		<Polish>Mit Kóz</Polish>
+		<Russian>Ìèô î êîçëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREATWHITE_SHARK</Tag>
+		<English>Folklore - Great White Shark</English>
+		<French>Mythe - Grand Requin Blanc</French>
+		<Italian>Mito del grande squalo bianco</Italian>
+		<Polish>Mit Żarłacza Białego</Polish>
+		<Russian>Ìèô î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_WOLF</Tag>
 		<English>Folklore - Wolf</English>
 		<French>Mythe du Loup gris</French>
+		<Italian>Mito del lupo grigio</Italian>
 		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
