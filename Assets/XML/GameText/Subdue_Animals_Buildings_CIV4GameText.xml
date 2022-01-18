@@ -1,54 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Tag>
-		<English>Folklore - Hammerhead Shark</English>
-		<French>Mythe - Requin marteau</French>
-		<Italian>Mito dello squalo martello</Italian>
-		<Polish>Mit Rekina-młota</Polish>
-		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
-		<English>Folklore (T) - Humpback Whale</English>
-		<French>Mythe de la Baleine à Bosses (T)</French>
-		<Italian>Mito della megattera (T)</Italian>
-		<Polish>Mit (T) Humpbaka</Polish>
-		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
-		<English>Folklore - Giant Squid</English>
-		<French>Mythe du Kraken</French>
-		<Italian>Mito del kraken</Italian>
-		<Polish>Mit Krakena</Polish>
-		<Russian>Ìèô î Êðàêåíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
-		<English>Folklore - Leviathan</English>
-		<French>Mythe du Léviathan</French>
-		<Italian>Mito del leviatano</Italian>
-		<Polish>Mit Lewiatana</Polish>
-		<Russian>Ìèô î Ëåâèàôàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LION</Tag>
-		<English>Folklore - Lion</English>
-		<French>Mythe du Lion</French>
-		<Italian>Mito del leone</Italian>
-		<Polish>Mit Lwa</Polish>
-		<Russian>Ìèô î ëüâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
-		<English>Folklore - Guanaco</English>
-		<French>Mythe du Lama</French>
-		<Italian>Mito del lama</Italian>
-		<Polish>Mit Lam</Polish>
-		<Russian>Ìèô î ëàìå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MACKEREL</Tag>
 		<English>Folklore - Mackerel</English>
 		<French>Mythe du Maquereau</French>
@@ -275,6 +227,13 @@
 		<Italian>Mito dello squalo balena</Italian>
 		<Polish>Mit Rekina Wielorybiego</Polish>
 		<Russian>Ìèô î êèò. àêóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
+		<English>Folklore associated with formations found in the landscape.</English>
+		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
+		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
+		<Polish>Mity związane z formacjami terenu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COD_PEDIA</Tag>

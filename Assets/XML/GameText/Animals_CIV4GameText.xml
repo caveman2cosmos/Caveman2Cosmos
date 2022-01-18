@@ -132,7 +132,7 @@
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
 		<English>Remains - Cave Lion</English>
 		<French>Restes de Lion des cavernes</French>
-		<Italian>Resti - Leone delle caverne</Italian>
+		<Italian>Resti di leone delle caverne</Italian>
 		<Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
@@ -213,7 +213,7 @@
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
 		<English>Remains - Giant Rhinoceros</English>
 		<French>Restes d'Elasmotherium</French>
-		<Italian>Resti - Grande rinoceronte</Italian>
+		<Italian>Resti di grande rinoceronte</Italian>
 		<Polish>Resztki - Elasmoterium</Polish>
 		<Russian>Ïàìÿòü î ýëàñìîòåðèè</Russian>
 	</TEXT>
@@ -1026,33 +1026,54 @@
 		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Tag>
+		<English>Folklore - Hammerhead Shark</English>
+		<French>Mythe - Requin marteau</French>
+		<Italian>Mito dello squalo martello</Italian>
+		<Polish>Mit Rekina-młota</Polish>
+		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HIPPOPOTAMUS</Tag>
 		<English>Folklore - Hippopotamus</English>
 		<French>Mythe de l'Hippopotame</French>
+		<Italian>Mito dell'ippopotamo</Italian>
 		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HIPPOS</Tag>
 		<English>Folklore (T) - Hippos</English>
-		<French>Mythe de l'Hippopotame</French>
+		<French>Mythe de l'Hippopotame (T)</French>
+		<Italian>Mito dell'ippopotamo (T)</Italian>
 		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORNED_OWL</Tag>
 		<English>Folklore - Great Horned Owl</English>
 		<French>Mythe du Hibou grand duc</French>
+		<Italian>Mito del gufo della Virginia</Italian>
 		<Russian>Ìèô î ôèëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
+		<English>Folklore (T) - Humpback Whale</English>
+		<French>Mythe de la Baleine à Bosses (T)</French>
+		<Italian>Mito della megattera (T)</Italian>
+		<Polish>Mit (T) Humpbaka</Polish>
+		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_IBEX</Tag>
 		<English>Folklore - Walia Ibex</English>
 		<French>Mythe du Bouquetin</French>
+		<Italian>Mito dello stambecco del Semien</Italian>
 		<Russian>Ìèô î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINO</Tag>
 		<English>Folklore - Indian Rhinoceros</English>
 		<French>Mythe du Rhinocéros indien</French>
+		<Italian>Mito del rinoceronte indiano</Italian>
 		<Polish>Mit - Nosorożec Indyjski</Polish>
 		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
 	</TEXT>
@@ -1060,33 +1081,62 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Tag>
 		<English>Folklore - Java Rhinoceros</English>
 		<French>Mythe du Rhinocéros de Java</French>
+		<Italian>Mito del rinoceronte di Giava</Italian>
 		<Polish>Mit - Nosorożec Jawajski</Polish>
 		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
-		<English>Folklore associated with formations found in the landscape.</English>
-		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
-		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
-		<Polish>Mity związane z formacjami terenu.</Polish>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
+		<English>Folklore - Giant Squid</English>
+		<French>Mythe du Kraken</French>
+		<Italian>Mito del kraken</Italian>
+		<Polish>Mit Krakena</Polish>
+		<Russian>Ìèô î Êðàêåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
+		<English>Folklore - Leviathan</English>
+		<French>Mythe du Léviathan</French>
+		<Italian>Mito del leviatano</Italian>
+		<Polish>Mit Lewiatana</Polish>
+		<Russian>Ìèô î Ëåâèàôàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LION</Tag>
+		<English>Folklore - Lion</English>
+		<French>Mythe du Lion</French>
+		<Italian>Mito del leone</Italian>
+		<Polish>Mit Lwa</Polish>
+		<Russian>Ìèô î ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LIZARD</Tag>
 		<English>Folklore - Lizard</English>
 		<French>Mythe du lézard</French>
+		<Italian>Mito della lucertola</Italian>
 		<Polish>Mit - Jaszczurka</Polish>
 		<Russian>Ìèô î ÿùåðèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
+		<English>Folklore - Guanaco</English>
+		<French>Mythe du Lama</French>
+		<Italian>Mito del lama</Italian>
+		<Polish>Mit Lam</Polish>
+		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOON</Tag>
 		<English>Folklore - Loon</English>
 		<French>Mythe du Plongeon</French>
+		<Italian>Mito della strolaga</Italian>
 		<Russian>Ìèô î ãàãàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LYNX</Tag>
 		<English>Folklore - Lynx</English>
 		<French>Mythe du Lynx</French>
+		<Italian>Mito della lince</Italian>
 		<Russian>Ìèô î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
