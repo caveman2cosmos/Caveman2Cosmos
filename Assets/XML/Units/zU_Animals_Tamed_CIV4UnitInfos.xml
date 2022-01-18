@@ -56,8 +56,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -146,8 +146,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -234,8 +234,8 @@
 				<BuildingType>BUILDING_CAMEL_HERD</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -326,8 +326,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_LLAMA_HERD</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -434,8 +434,8 @@
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -571,8 +571,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -701,8 +701,8 @@
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -812,8 +812,8 @@
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -923,8 +923,8 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1015,8 +1015,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
@@ -1103,8 +1103,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -1190,8 +1190,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_PIG_HERD</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -1283,8 +1283,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -1372,8 +1372,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1461,8 +1461,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -1548,8 +1548,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -1635,8 +1635,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1723,8 +1723,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1807,8 +1807,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -1894,8 +1894,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1977,8 +1977,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_RACCOON_TRAPS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -2066,8 +2066,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -2154,8 +2154,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -2243,8 +2243,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -2332,8 +2332,8 @@
 				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -2423,8 +2423,8 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -2510,8 +2510,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_HIPPO_CAMP</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -2600,8 +2600,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
 				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
@@ -2703,8 +2703,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -2792,8 +2792,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -2881,8 +2881,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -2970,8 +2970,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -3058,8 +3058,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -3143,8 +3143,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -3228,8 +3228,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -3313,8 +3313,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -3396,8 +3396,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -3498,8 +3498,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
@@ -3600,8 +3600,8 @@
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -3715,8 +3715,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -3842,8 +3842,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
 				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
