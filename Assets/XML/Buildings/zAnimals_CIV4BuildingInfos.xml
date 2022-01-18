@@ -271,7 +271,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -326,7 +326,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
@@ -383,7 +383,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
@@ -1629,18 +1629,18 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOAT_HERD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVERNOR_MENAGERIE</Type>
+			<Type>BUILDING_GOVENORS_MENAGERIE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1664,10 +1664,10 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVERNOR_MENAGERIE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_MENAGERIE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVERNOR_PETS</Type>
+			<Type>BUILDING_GOVENORS_PETS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -1676,8 +1676,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVENORS_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
@@ -1700,7 +1700,7 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVERNOR_PETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_PETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAAST_EAGLE_REMAINS</Type>
@@ -3458,7 +3458,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>

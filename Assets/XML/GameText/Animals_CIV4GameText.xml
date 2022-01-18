@@ -273,7 +273,7 @@
 		<Russian>Ñòàäî êîçëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
 		<English>Unit Reward - Governor's Menagerie</English>
 		<French>Ménagerie du Gouverneur</French>
 		<Italian>Serraglio del governatore</Italian>
@@ -281,7 +281,7 @@
 		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVENORS_PETS</Tag>
 		<English>Unit Reward - Governor's Pets</English>
 		<French>Animaux du Gouverneurs</French>
 		<Italian>Animali del governatore</Italian>
