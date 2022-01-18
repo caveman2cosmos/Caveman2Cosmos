@@ -167,7 +167,7 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 
 	if (!bConstructorCall)
 	{
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvArea::reset");
+		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvArea::reset");
 		m_paiNumBonuses = new int[GC.getNumBonusInfos()];
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
@@ -433,9 +433,9 @@ int CvArea::countNumUniqueBonusTypes() const
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	for (int iI = GC.getNumMapBonuses() - 1; iI > -1; iI--)
 	{
-		if (getNumBonuses((BonusTypes)iI) > 0 && GC.getBonusInfo((BonusTypes)iI).isOneArea())
+		if (GC.getBonusInfo(GC.getMapBonus(iI)).isOneArea() && getNumBonuses(GC.getMapBonus(iI)) > 0)
 		{
 			iCount++;
 		}
@@ -1125,7 +1125,7 @@ void CvArea::changeNumBonuses(BonusTypes eBonus, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 	m_paiNumBonuses[eBonus] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumBonuses(eBonus));
+	FASSERT_NOT_NEGATIVE(m_paiNumBonuses[eBonus]);
 }
 
 

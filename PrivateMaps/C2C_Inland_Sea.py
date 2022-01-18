@@ -28,7 +28,7 @@
 
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
+import CvMapGeneratorUtil as MGU
 
 ################################################################
 ## MapScriptTools by Temudjin
@@ -232,24 +232,6 @@ def getWrapX():
 
 def getWrapY():
 	return ( CyMap().getCustomMapOption(0) in [2,3] )
-
-############### Temudjin START - not needed as original bonusBalancer has been replaced
-#def normalizeAddExtras():
-#	if (CyMap().getCustomMapOption(1) == 1):
-#		balancer.normalizeAddExtras()
-#	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
-
-#def addBonusType(argsList):
-#	[iBonusType] = argsList
-#	gc = CyGlobalContext()
-#	type_string = gc.getBonusInfo(iBonusType).getType()
-#
-#	if (CyMap().getCustomMapOption(1) == 1):
-#		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-#			return None # don't place any of this bonus randomly
-#
-#	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
-############### Temudjin END
 
 def beforeGeneration2():
 	"Set up global variables for start point templates"
@@ -796,7 +778,7 @@ def getGridSize(argsList):
 ########## Temudjin END
 
 # Subclasses to fix the FRAC_POLAR zero row bugs.
-class ISFractalWorld(CvMapGeneratorUtil.FractalWorld):
+class ISFractalWorld(MGU.FractalWorld):
 	def generatePlotTypes(self, water_percent=78, shift_plot_types=True,
 						  grain_amount=3):
 		# Check for changes to User Input variances.
@@ -838,7 +820,7 @@ class ISFractalWorld(CvMapGeneratorUtil.FractalWorld):
 
 		return self.plotTypes
 
-class ISHintedWorld(CvMapGeneratorUtil.HintedWorld, ISFractalWorld):
+class ISHintedWorld(MGU.HintedWorld, ISFractalWorld):
 	def __doInitFractal(self):
 		self.shiftHintsToMap()
 
@@ -898,18 +880,18 @@ def generatePlotTypes():
 	return hinted_world.generatePlotTypes()
 
 # subclass TerrainGenerator to eliminate arctic, equatorial latitudes
-class ISTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class ISTerrainGenerator(MGU.TerrainGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
-		lat = CvMapGeneratorUtil.TerrainGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
+		lat = MGU.TerrainGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
 		lat = 0.07 + 0.56*lat				# range [0.07, 0.57]
 		return lat
 
 # subclass FeatureGenerator to eliminate arctic, equatorial latitudes
-class ISFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class ISFeatureGenerator(MGU.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
-		lat = CvMapGeneratorUtil.FeatureGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
+		lat = MGU.FeatureGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
 		lat = 0.07 + 0.56*lat				# range [0.07, 0.57]
 		return lat
 
@@ -943,4 +925,4 @@ def getRiverAltitude(argsList):
 	return ((abs(pPlot.getX() - (map.getGridWidth() / 2)) + abs(pPlot.getY() - (map.getGridHeight() / 2))) * 20)
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

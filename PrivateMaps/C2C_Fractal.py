@@ -8,13 +8,8 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
-
-#balancer = BonusBalancer()
+import CvMapGeneratorUtil as MGU
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_FRACTAL_DESCR"
@@ -87,7 +82,7 @@ def getWrapY():
 	return (map.getCustomMapOption(0) == 2)
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(1) == 1):
+	if CyMap().getCustomMapOption(1) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
@@ -96,29 +91,28 @@ def addBonusType(argsList):
 	gc = CyGlobalContext()
 	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(1) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(1) == 1 and type_string in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def generatePlotTypes():
 	NiTextOut("Setting Plot Types (Python Fractal) ...")
-	fractal_world = FractalWorld()
+	fractal_world = MGU.FractalWorld()
 	fractal_world.initFractal(rift_grain = -1, has_center_rift = False, polar = True)
 	return fractal_world.generatePlotTypes()
 
 def generateTerrainTypes():
 	NiTextOut("Generating Terrain (Python Fractal) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
 def addFeatures():
 	NiTextOut("Adding Features (Python Fractal) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

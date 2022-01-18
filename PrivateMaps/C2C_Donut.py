@@ -8,14 +8,8 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
+import CvMapGeneratorUtil as MGU
 from math import sqrt
-#from CvMapGeneratorUtil import FractalWorld
-#from CvMapGeneratorUtil import TerrainGenerator
-#from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
-
-#balancer = BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_DONUT_DESCR"
@@ -103,18 +97,15 @@ def getWrapY():
 	return (map.getCustomMapOption(2) == 2)
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(3) == 1):
-		balancer.normalizeAddExtras()
+	if CyMap().getCustomMapOption(3) == 1:
+		MGU.BonusBalancer().normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(3) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(3) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in MGU.BonusBalancer().resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
@@ -149,7 +140,8 @@ def getGridSize(argsList):
 def minStartingDistanceModifier():
 	return -12
 
-class DonutFractalWorld(CvMapGeneratorUtil.FractalWorld):
+class DonutFractalWorld(MGU.FractalWorld):
+
 	def generatePlotTypes(self, water_percent=78, shift_plot_types=True, grain_amount=3):
 		self.hillsFrac.fracInit(self.iNumPlotsX, self.iNumPlotsY, grain_amount, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
 		self.peaksFrac.fracInit(self.iNumPlotsX, self.iNumPlotsY, grain_amount+1, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
@@ -206,9 +198,10 @@ def generatePlotTypes():
 	return fractal_world.generatePlotTypes()
 
 # subclass TerrainGenerator to create a lush grassland utopia.
-class DonutTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class DonutTerrainGenerator(MGU.TerrainGenerator):
+
 	def __init__(self, fracXExp=-1, fracYExp=-1, grain_amount=5):
-		CvMapGeneratorUtil.TerrainGenerator.__init__(self, 5, 25, 15, 0.7, 0.6, 0.1, 0.2, 0.5, fracXExp, fracYExp, grain_amount)
+		MGU.TerrainGenerator.__init__(self, 5, 25, 15, 0.7, 0.6, 0.1, 0.2, 0.5, fracXExp, fracYExp, grain_amount)
 		self.iCenterX = int(self.map.getGridWidth() / 2)
 		self.iCenterY = int(self.map.getGridHeight() / 2)
 		self.iRadius = min((self.iCenterX - 4), (self.iCenterY - 4))
@@ -243,7 +236,7 @@ class DonutTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 			else:
 				terrainVal = self.terrainGrass
 		else:
-			terrainVal = CvMapGeneratorUtil.TerrainGenerator.generateTerrainAtPlot(self,iX,iY)
+			terrainVal = MGU.TerrainGenerator.generateTerrainAtPlot(self,iX,iY)
 
 		if (terrainVal == TerrainTypes.NO_TERRAIN):
 			return self.map.plot(iX, iY).getTerrainType()
@@ -256,7 +249,8 @@ def generateTerrainTypes():
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
-class DonutFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class DonutFeatureGenerator(MGU.FeatureGenerator):
+
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
 		return
@@ -282,7 +276,7 @@ def findStartingPlot(argsList):
 		pWaterArea = CyMap().plot(x, y).waterArea()
 		return pWaterArea is not None and not pWaterArea.isLake()
 
-	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+	return MGU.findStartingPlot(playerID, isValid)
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
