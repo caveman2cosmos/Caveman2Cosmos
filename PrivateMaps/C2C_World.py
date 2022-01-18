@@ -2986,16 +2986,11 @@ class BonusPlacer:
 		# Create and shuffle the bonus list.
 		n = 0
 		pOrderDict = {}
-		iNumBonusInfos = GC.getNumBonusInfos()
-		self.bonusDict = array('H', [0] * iNumBonusInfos)
+		self.iNumBonuses = iNumBonuses = GC.getNumMapBonuses()
 		plotIndexList = range(mc.iArea)
-		for iBonus in xrange(iNumBonusInfos):
+		for i in xrange(iNumBonuses):
+			iBonus = GC.getMapBonus(i)
 			CvBonusInfo = GC.getBonusInfo(iBonus)
-			iPlaceOrder = CvBonusInfo.getPlacementOrder()
-			# Filter out bonuses with iPlacementOrder at -1 or below.
-			if iPlaceOrder < 1:
-				n += 1
-				continue
 			bonus = BonusArea()
 			bonus.indeXML = iBonus
 			# Calculate desired amount
@@ -3012,8 +3007,8 @@ class BonusPlacer:
 			fDensityCount = 0
 			if iTilesPer > 0:
 				iNumPossible = 0
-				for i in plotIndexList:
-					plot = MAP.plotByIndex(i)
+				for j in plotIndexList:
+					plot = MAP.plotByIndex(j)
 					if self.PlotCanHaveBonus(plot, iBonus, True, False):
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
@@ -3025,15 +3020,40 @@ class BonusPlacer:
 
 			bonusList.append(bonus)
 			# Check which placement orders are used.
+			iPlaceOrder = CvBonusInfo.getPlacementOrder()
 			if iPlaceOrder in pOrderDict:
 				pOrderDict[iPlaceOrder].append(iBonus)
 			else:
 				pOrderDict[iPlaceOrder] = [iBonus]
 
 		shuffle(bonusList)
-		self.iNumBonuses = iNumBonuses = iNumBonusInfos - n
-		self.AssignBonusAreas(iNumBonuses, bonusList)
-		bonusDictLoc = self.bonusDict
+		self.bonusDict = bonusDictLoc = {}
+
+		# Assign Bonus Areas
+		self.areas = areas = MAP.areas()
+
+		for i in xrange(iNumBonuses):
+			indeXML = bonusList[i].indeXML
+			bonusDictLoc[indeXML] = i
+			bonusInfo = GC.getBonusInfo(indeXML)
+			if not bonusInfo.isOneArea():
+				continue # Only assign areas to area bonuses.
+			areaSuitabilityList = []
+			minAreaSize = bonusInfo.getMinAreaSize()
+			for area in self.areas:
+				if area.getNumTiles() >= minAreaSize:
+					aS = AreaSuitability(area.getID())
+					aS.suitability, aS.numPossible = self.CalculateAreaSuitability(area, indeXML)
+					areaSuitabilityList.append(aS)
+			# Calculate how many areas to assign.
+			#Sort areaSuitabilityList best first
+			areaSuitabilityList.sort(lambda a, b:cmp(b.numPossible, a.numPossible))
+
+			# Assign the best area to this bonus, and also areas that have high suitability
+			for n in xrange(len(areaSuitabilityList)):
+				if n == 0 or areaSuitabilityList[n].suitability > 0.3:
+					self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
+
 		# Shuffle the list of map indices.
 		shuffle(plotIndexList)
 		startAtIndex = 0
@@ -3174,37 +3194,6 @@ class BonusPlacer:
 		return CyMap().plot(x, y)
 
 
-	def AssignBonusAreas(self, numBonuses, bonusListLoc):
-		GC = CyGlobalContext()
-		MAP = GC.getMap()
-		self.areas = areas = MAP.areas()
-
-		bonusDictLoc = self.bonusDict
-		for i in xrange(numBonuses):
-			indeXML = bonusListLoc[i].indeXML
-			bonusDictLoc[indeXML] = i
-			bonusInfo = GC.getBonusInfo(indeXML)
-			if not bonusInfo.isOneArea():
-				continue # Only assign areas to area bonuses.
-			areaSuitabilityList = []
-			minAreaSize = bonusInfo.getMinAreaSize()
-			for area in self.areas:
-				if area.getNumTiles() >= minAreaSize:
-					aS = AreaSuitability(area.getID())
-					aS.suitability, aS.numPossible = self.CalculateAreaSuitability(area, indeXML)
-					areaSuitabilityList.append(aS)
-			# Calculate how many areas to assign.
-			areasPerBonus = 1
-			#Sort areaSuitabilityList best first
-			areaSuitabilityList.sort(lambda a, b:cmp(b.numPossible, a.numPossible))
-			#assign the best areas to this bonus
-			for n in xrange(areasPerBonus):
-				self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
-			#assign areas that have a high suitability also
-			for n in xrange(areasPerBonus,len(areaSuitabilityList)):
-				if areaSuitabilityList[n].suitability > 0.3:
-					self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
-		self.bonusDict = bonusDictLoc
 
 
 	def CanPlaceBonus(self, CyPlot, indeXML, bIgnoreArea):
@@ -3297,12 +3286,10 @@ class BonusPlacer:
 			if iTemp > 1 and plot.area().getNumTiles() < iTemp:
 				return False
 
-		if not bIgnoreArea and bonusInfo.isOneArea():
-			if plot.getArea() not in self.aBonusList[self.bonusDict[indeXML]].areaList:
-				return False
-
-		if not plot.isPotentialCityWork():
-			return False
+		if (not bIgnoreArea and bonusInfo.isOneArea()
+		and plot.getArea() not in self.aBonusList[self.bonusDict[indeXML]].areaList
+		or not plot.isPotentialCityWork()
+		): return False
 
 		return True
 

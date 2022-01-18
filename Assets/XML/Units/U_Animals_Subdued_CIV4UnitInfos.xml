@@ -10810,6 +10810,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_LEMUR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>

@@ -2514,7 +2514,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Adventurers are ready for every situation</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADZE_WARRIOR</Tag>
@@ -5008,7 +5008,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A blimp, or non-rigid airship, is an airship (dirigible) without an internal structural framework or a keel. Unlike semi-rigid and rigid airships (e.g. Zeppelins), blimps rely on the pressure of the lifting gas (usually helium, rather than hydrogen) inside the envelope and the strength of the envelope itself to maintain their shape. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLOOD_WARRIOR</Tag>
@@ -6284,7 +6284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Cherooke unique unit</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER</Tag>
@@ -6576,7 +6576,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Early meele unit</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA</Tag>
@@ -7657,7 +7657,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A shuttlecraft, also known as a shuttle spacecraft, shuttle ship, drop shuttle, drop spacecraft, or dropship, is a type of spacecraft described in theory and science fiction. Serving the same purpose as a ship's tender, it is a smaller vessel that is launched from a mother ship, and has the ability to transport people or cargo between ships, or to and from a planet's surface without being damaged or destroyed. It has a secondary purpose as an evacuation ship if the mother ship is destroyed. While the Space Shuttle was envisioned to make this type of craft a reality and reduce the cost of going into space, it ultimately failed in its goal and expendable launch systems remained a more cost-effective option.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DR_PEDIA</Tag>
@@ -9560,7 +9560,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUTURE_ARMOR_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Advanced tank</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN</Tag>
@@ -20723,7 +20723,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_SAM_INFANTRY_PEDIA</Tag>
-		<English>TBD</English>
+		<English>SAM infantry, that uses EMP as weapon</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_CONQUISTADOR</Tag>
