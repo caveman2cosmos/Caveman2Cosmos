@@ -1140,9 +1140,17 @@
 		<Russian>Ìèô î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MACKEREL</Tag>
+		<English>Folklore - Mackerel</English>
+		<French>Mythe du Maquereau</French>
+		<Italian>Mito dello sgombro</Italian>
+		<Russian>Ìèô î ìàêðåëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Tag>
 		<English>Folklore - Malayan Tapir</English>
 		<French>Mythe du Tapir Malais</French>
+		<Italian>Mito del tapiro malese</Italian>
 		<Polish>Mit - Tapir Malajski</Polish>
 		<Russian>Ìèô î ìàë. òàïèðå</Russian>
 	</TEXT>
@@ -1150,31 +1158,67 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANEDWOLF</Tag>
 		<English>Folklore - Maned Wolf</English>
 		<French>Mythe du Loup à crinière</French>
+		<Italian>Mito del lupo dalla criniera</Italian>
 		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARLIN</Tag>
+		<English>Folklore - Marlin</English>
+		<French>Mythe du Marlin</French>
+		<Italian>Mito del marlin</Italian>
+		<Russian>Ìèô î ìàðëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
+		<English>Folklore - Marsupial</English>
+		<French>Mythe du Marsupial</French>
+		<Italian>Mito dei marsupiali</Italian>
+		<Polish>Mit Torbacza</Polish>
+		<Russian>Ìèô î ñóì÷àòîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MERMAID</Tag>
+		<English>Folklore (E) - Mermaid</English>
+		<French>Mythe des Sirènes (E)</French>
+		<Italian>Mito delle sirene (E)</Italian>
+		<Polish>Mit (E) Syreny</Polish>
+		<Russian>Ìèô î ðóñàëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
+		<English>Folklore (T) - Minke Whale</English>
+		<French>Mythe du Rorqual (T)</French>
+		<Italian>Mito della balenottera minore (T)</Italian>
+		<Polish>Mit (T) Płetwala</Polish>
+		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_METAL</Tag>
 		<English>Folklore (E) - Metal</English>
-		<French>Mythe du Métal</French>
-		<Polish>Mit - Metal</Polish>
+		<French>Mythe du Métal (E)</French>
+		<Italian>Mito del Metallo (E)</Italian>
+		<Polish>Mit (E) - Metal</Polish>
 		<Russian>Ìèô î ìåòàëëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MONOTREMES</Tag>
 		<English>Folklore (T) - Monotremes</English>
-		<French>Mythe de l'Échidné</French>
+		<French>Mythe de l'Échidné (T)</French>
+		<Italian>Mito dei monotremi (T)</Italian>
 		<Russian>Ìèô î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOOSE</Tag>
 		<English>Folklore - Moose</English>
 		<French>Mythe de l'Elan</French>
+		<Italian>Mito dell'alce</Italian>
 		<Russian>Ìèô î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Tag>
 		<English>Folklore - Mountain Tapir</English>
 		<French>Mythe du Tapir des Montagnes</French>
+		<Italian>Mito del tapiro delle Ande</Italian>
 		<Polish>Mit - Tapir Górski</Polish>
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
 	</TEXT>
@@ -1182,12 +1226,22 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MUSKOX</Tag>
 		<English>Folklore - Muskox</English>
 		<French>Mythe du Bœuf musqué</French>
+		<Italian>Mito del bue muschiato</Italian>
 		<Russian>Ìèô îá îâöåáûêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NARWHAL</Tag>
+		<English>Folklore (T) - Narwhal</English>
+		<French>Mythe du Narval (T)</French>
+		<Italian>Mito del narvalo (T)</Italian>
+		<Polish>Mit (T) Narwala</Polish>
+		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILECROC</Tag>
 		<English>Folklore - Nile Crocodile</English>
 		<French>Mythe du Crocodile du Nil</French>
+		<Italian>Mito del coccodrillo del Nilo</Italian>
 		<Polish>Mit - Krokodyl Nilowy</Polish>
 		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
 	</TEXT>
@@ -1195,67 +1249,126 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NUMBAT</Tag>
 		<English>Folklore - Numbat</English>
 		<French>Mythe du Numbat</French>
+		<Italian>Mito del numbat</Italian>
 		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
+		<English>Folklore - Old Man of the Forest</English>
+		<French>Mythe de l'Ancien de la Forêt</French>
+		<Italian>Mito del Vecchio della foresta</Italian>
+		<Polish>Mit Starego człowieka z lasu</Polish>
+		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OPOSSUM</Tag>
 		<English>Folklore - Opossum</English>
 		<French>Mythe de l'Opossum</French>
+		<Italian>Mito dell'opossum</Italian>
 		<Russian>Ìèô îá îïîññóìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
+		<English>Folklore (T) - Orca</English>
+		<French>Mythe de l'Orque (T)</French>
+		<Italian>Mito dell'orca (T)</Italian>
+		<Polish>Mit (T) Orki</Polish>
+		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRD</Tag>
 		<English>Folklore - Paleolithic Birds</English>
 		<French>Mythe des oiseaux du paléolithique</French>
+		<Italian>Mito dell'uccello paleolitico</Italian>
 		<Polish>Mit - Ptaki Kopalne</Polish>
 		<Russian>Ìèô î äðåâíåé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_CAT</Tag>
+		<English>Folklore - Paleolithic Cat</English>
+		<French>Mythe du Félin Paléolithique</French>
+		<Italian>Mito del felino paleolitico</Italian>
+		<Polish>Mit Lew Jaskiniowy</Polish>
+		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_DOG</Tag>
 		<English>Folklore - Dire Wolf</English>
 		<French>Mythe du Loup sinistre</French>
+		<Italian>Mito del lupo paleolitico</Italian>
 		<Russian>Ìèô î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Tag>
 		<English>Folklore - Paleolithic Ground Sloth</English>
 		<French>Mythe du Xénarthre</French>
+		<Italian>Mito del bradipo paleolitico</Italian>
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
+		<English>Folklore - Paleolithic Mammoth</English>
+		<French>Mythe du Mammouth Paléolithique</French>
+		<Italian>Mito del mammut paleolitico</Italian>
+		<Polish>Mit Mamutów</Polish>
+		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
+		<English>Folklore - Paleolithic Marsupial</English>
+		<French>Mythe du Marsupial Paléolithique</French>
+		<Italian>Mito del marsupiale paleolitico</Italian>
+		<Polish>Mit Paleolitycznych Torbaczy</Polish>
+		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PANTHER</Tag>
 		<English>Folklore - Panther</English>
 		<French>Mythe de la Panthère</French>
+		<Italian>Mito della pantera</Italian>
 		<Russian>Ìèô î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHEASANT</Tag>
 		<English>Folklore - Pheasant</English>
 		<French>Mythe du Faisan</French>
+		<Italian>Mito del fagiano</Italian>
 		<Russian>Ìèô î ôàçàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHOENIX</Tag>
+		<English>Folklore (E) - Phoenix</English>
+		<French>Mythe du Phoenix (E)</French>
+		<Italian>Mito della fenice (E)</Italian>
+		<Polish>Mit (E) Feniksa</Polish>
+		<Russian>Ìèô î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PIGEON</Tag>
 		<English>Folklore - Pigeon</English>
 		<French>Mythe du Pigeon</French>
+		<Italian>Mito del piccione</Italian>
 		<Russian>Ìèô î ãîëóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PLATYPUS</Tag>
 		<English>Folklore - Platypus</English>
 		<French>Mythe de l'Ornithorynque</French>
+		<Italian>Mito dell'ornitorinco</Italian>
 		<Russian>Ìèô îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_POSSUM</Tag>
 		<English>Folklore - Brushtail Possum</English>
 		<French>Mythe du Phalanger commun</French>
+		<Italian>Mito del tricosuro volpino</Italian>
 		<Russian>Ìèô î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Tag>
 		<English>Folklore - Pygmy Hippo</English>
 		<French>Mythe de l'Hippopotame nain</French>
+		<Italian>Mito dell'ippopotamo pigmeo</Italian>
 		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
