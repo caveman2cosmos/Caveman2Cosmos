@@ -3665,7 +3665,6 @@ public:
 	int getStartingDefenseUnits() const;
 	int getStartingWorkerUnits() const;
 	int getStartingExploreUnits() const;
-	int getAIStartingUnitMultiplier() const;
 	int getAIStartingDefenseUnits() const;
 	int getAIStartingWorkerUnits() const;
 	int getAIStartingExploreUnits() const;
@@ -3740,7 +3739,6 @@ private:
 	int m_iStartingDefenseUnits;
 	int m_iStartingWorkerUnits;
 	int m_iStartingExploreUnits;
-	int m_iAIStartingUnitMultiplier;
 	int m_iAIStartingDefenseUnits;
 	int m_iAIStartingWorkerUnits;
 	int m_iAIStartingExploreUnits;

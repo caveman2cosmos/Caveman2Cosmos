@@ -1899,12 +1899,11 @@ void CvPlayer::initFreeUnits()
 	else // Create Starting units
 	{
 		const EraTypes startEra = GC.getGame().getStartEra();
-		int iMult = GC.getEraInfo(startEra).getStartingUnitMultiplier();
-		if (!isHuman())
-		{
-			iMult *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingUnitMultiplier();
-		}
-		iMult = std::max(1, iMult);
+		const int iMult = (
+			GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1
+			:
+			std::max(1, GC.getEraInfo(startEra).getStartingUnitMultiplier())
+		);
 
 /*	Toffer: Currently not needed for anything...
 Consider removing freeUnit from civilization info as this is the only place that would have used it.
@@ -1920,9 +1919,8 @@ Consider removing freeUnit from civilization info as this is the only place that
 			}
 		}
 */
-
 		// Settler units, can't start a game without one.
-		addStartUnitAI(UNITAI_SETTLE, GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1 : iMult);
+		addStartUnitAI(UNITAI_SETTLE, iMult);
 
 		// Defensive units
 		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();

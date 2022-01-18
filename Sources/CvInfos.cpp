@@ -11898,7 +11898,6 @@ m_iAIBarbarianCombatModifier(0),
 m_iStartingDefenseUnits(0),
 m_iStartingWorkerUnits(0),
 m_iStartingExploreUnits(0),
-m_iAIStartingUnitMultiplier(1),
 m_iAIStartingDefenseUnits(0),
 m_iAIStartingWorkerUnits(0),
 m_iAIStartingExploreUnits(0),
@@ -12102,11 +12101,6 @@ int CvHandicapInfo::getStartingExploreUnits() const
 	return m_iStartingExploreUnits;
 }
 
-int CvHandicapInfo::getAIStartingUnitMultiplier() const
-{
-	return m_iAIStartingUnitMultiplier;
-}
-
 int CvHandicapInfo::getAIStartingDefenseUnits() const
 {
 	return m_iAIStartingDefenseUnits;
@@ -12275,7 +12269,6 @@ void CvHandicapInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iStartingDefenseUnits);
 	CheckSum(iSum, m_iStartingWorkerUnits);
 	CheckSum(iSum, m_iStartingExploreUnits);
-	CheckSum(iSum, m_iAIStartingUnitMultiplier);
 	CheckSum(iSum, m_iAIStartingDefenseUnits);
 	CheckSum(iSum, m_iAIStartingWorkerUnits);
 	CheckSum(iSum, m_iAIStartingExploreUnits);
@@ -12348,7 +12341,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iStartingDefenseUnits, L"iStartingDefenseUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingWorkerUnits, L"iStartingWorkerUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingExploreUnits, L"iStartingExploreUnits");
-	pXML->GetOptionalChildXmlValByName(&m_iAIStartingUnitMultiplier, L"iAIStartingUnitMultiplier");
 	pXML->GetOptionalChildXmlValByName(&m_iAIStartingDefenseUnits, L"iAIStartingDefenseUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iAIStartingWorkerUnits, L"iAIStartingWorkerUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iAIStartingExploreUnits, L"iAIStartingExploreUnits");
@@ -12424,7 +12416,6 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 	if (getStartingDefenseUnits() == iDefault) m_iStartingDefenseUnits = pClassInfo->getStartingDefenseUnits();
 	if (getStartingWorkerUnits() == iDefault) m_iStartingWorkerUnits = pClassInfo->getStartingWorkerUnits();
 	if (getStartingExploreUnits() == iDefault) m_iStartingExploreUnits = pClassInfo->getStartingExploreUnits();
-	if (getAIStartingUnitMultiplier() == iDefault) m_iAIStartingUnitMultiplier = pClassInfo->getAIStartingUnitMultiplier();
 	if (getAIStartingDefenseUnits() == iDefault) m_iAIStartingDefenseUnits = pClassInfo->getAIStartingDefenseUnits();
 	if (getAIStartingWorkerUnits() == iDefault) m_iAIStartingWorkerUnits = pClassInfo->getAIStartingWorkerUnits();
 	if (getAIStartingExploreUnits() == iDefault) m_iAIStartingExploreUnits = pClassInfo->getAIStartingExploreUnits();
