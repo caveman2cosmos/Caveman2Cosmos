@@ -1376,6 +1376,11 @@
 		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEMUR</Tag>
+		<English>Folklore - Ring-tailed Lemur</English>
+		<Italian>Mito del lemure</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
 		<English>Folklore - Leviathan</English>
 		<French>Mythe du Léviathan</French>
