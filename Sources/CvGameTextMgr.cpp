@@ -31741,6 +31741,16 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			}
 		}
 	}
+	// Trade
+	{
+		const int iTradeYield = city.getTradeYield(eYieldType);
+		if (iTradeYield != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
+			iYield -= iTradeYield;
+		}
+	}
 	if (iYield != 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -31922,16 +31932,6 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iFreeSpecialistYield, info.getChar(), L"TXT_KEY_WB_FREE_SPECIALISTS"));
 			iYield -= iFreeSpecialistYield;
-		}
-	}
-	// Trade
-	{
-		const int iTradeYield = city.getTradeYield(eYieldType);
-		if (iTradeYield != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_BULLET_D1_F2_FROM_S3", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
-			iYield -= iTradeYield;
 		}
 	}
 	// Corporations
