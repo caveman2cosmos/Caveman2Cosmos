@@ -715,7 +715,7 @@ bool CvPlot::doBonusDiscovery()
 	int iCount = 0;
 	while (iAttempts < iMaxAttempts && iCount++ < iNumBonuses)
 	{
-		const BonusTypes eBonus = GC.getMapBonus(iIndex); 
+		const BonusTypes eBonus = GC.getMapBonus(iIndex);
 
 		bool bImpBonus = false;
 		int iOdds = improvement ? improvement->getImprovementBonusDiscoverRand(eBonus) : 0;
