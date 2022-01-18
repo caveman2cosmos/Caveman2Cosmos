@@ -23,6 +23,14 @@
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
+		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
+		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
+		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
+		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
+		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
 		<French>Standards Militaires (Ouvriers)</French>
@@ -31,36 +39,11 @@
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
-		<English>Enclosure - Bad Boys</English>
-		<French>Enclos - Animaux nuisibles</French>
-		<Italian>Gabbia dei parassiti</Italian>
-		<Polish>Klatka - Groźne Zwierzęta</Polish>
-		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
-		<English>Enclosure - Bear</English>
-		<French>Enclos - Ours</French>
-		<Italian>Gabbia degli orsi</Italian>
-		<Polish>Klatka - Niedźwiedź</Polish>
-		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
-		<English>Enclosure - Big Cat</English>
-		<French>Enclos - Félins</French>
-		<Italian>Gabbia dei grossi felini</Italian>
-		<Polish>Klatka - Wielki kot</Polish>
-		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
-		<English>Enclosure - Bird</English>
-		<French>Enclos - Oiseaux</French>
-		<Italian>Gabbia degli uccelli</Italian>
-		<Polish>Klatka - Ptaki</Polish>
-		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
+		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
+		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
+		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
+		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_HERD</Tag>
@@ -750,6 +733,38 @@
 		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
+		<English>Enclosure - Bad Boys</English>
+		<French>Enclos - Animaux nuisibles</French>
+		<Italian>Gabbia dei parassiti</Italian>
+		<Polish>Klatka - Groźne Zwierzęta</Polish>
+		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
+		<English>Enclosure - Bear</English>
+		<French>Enclos - Ours</French>
+		<Italian>Gabbia degli orsi</Italian>
+		<Polish>Klatka - Niedźwiedź</Polish>
+		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
+		<English>Enclosure - Big Cat</English>
+		<French>Enclos - Félins</French>
+		<Italian>Gabbia dei grossi felini</Italian>
+		<Polish>Klatka - Wielki kot</Polish>
+		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
+		<English>Enclosure - Bird</English>
+		<French>Enclos - Oiseaux</French>
+		<Italian>Gabbia degli uccelli</Italian>
+		<Polish>Klatka - Ptaki</Polish>
+		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Tag>
 		<English>Enclosure - Exotic Herbivore</English>
 		<French>Enclos - Herbivores exotiques</French>
@@ -831,6 +846,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
 		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
+		<English>Folklore associated with formations found in the landscape.</English>
+		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
+		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
+		<Polish>Mity związane z formacjami terenu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
