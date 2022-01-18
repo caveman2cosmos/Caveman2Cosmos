@@ -21193,21 +21193,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	if (!bRelDisabled)
-	{
-		const bool bVisit = kBuilding.isApplyFreePromotionOnMove();
-
-		foreach_(const FreePromoTypes& freePromo, kBuilding.getFreePromoTypes())
-		{
-			setFreePromoBuildingHelp(freePromo.ePromotion, bVisit, szBuffer);
-
-			if (const BoolExpr* condition = freePromo.m_pExprFreePromotionCondition)
-			{
-				condition->buildDisplayString(szBuffer);
-			}
-		}
-	}
-
 	if (kBuilding.isProvidesFreshWater())
 	{
 		szBuffer.append(NEWLINE);
