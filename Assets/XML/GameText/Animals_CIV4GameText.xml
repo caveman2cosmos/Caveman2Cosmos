@@ -551,20 +551,6 @@
 		<Russian>×óäåñà ãëóáèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
-		<English>Folklore - Aardvark</English>
-		<French>Mythe de l'Oryctérope du Cap</French>
-		<Italian>Folklore - Oritteropo</Italian>
-		<Russian>Ìèô î òðóáêîçóáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICANELEPHANT</Tag>
-		<English>Folklore - African Elephant</English>
-		<French>Mythe de l'Eléphant d'Afrique</French>
-		<Italian>Folklore - Elefante africano</Italian>
-		<Russian>Ìèô îá àôð. ñëîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
 		<English>Autobuild - Folklore Requirement</English>
 		<German>Folklore-Grundlagen</German>
@@ -577,10 +563,22 @@
 		<Italian>Presenza di corallo</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
+		<English>Autobuild - Presence of Earth</English>
+		<German>Präsenz der Erde</German>
+		<Italian>Presenza della Terra</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
 		<English>Autobuild - Presence of Crater</English>
 		<German>Präsenz von Kratern</German>
 		<Italian>Presenza di un cratere</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
+		<English>Autobuild - Presence of Fire</English>
+		<German>Präsenz des Feuers</German>
+		<Italian>Presenza del Fuoco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
@@ -619,18 +617,6 @@
 		<Italian>Presenza di un mare</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
-		<English>Autobuild - Presence of Earth</English>
-		<German>Präsenz der Erde</German>
-		<Italian>Presenza della Terra</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
-		<English>Autobuild - Presence of Fire</English>
-		<German>Präsenz des Feuers</German>
-		<Italian>Presenza del Fuoco</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
@@ -643,84 +629,189 @@
 		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
+		<English>Folklore - Aardvark</English>
+		<French>Mythe de l'Oryctérope du Cap</French>
+		<Italian>Mito dell'oritteropo</Italian>
+		<Russian>Ìèô î òðóáêîçóáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICANELEPHANT</Tag>
+		<English>Folklore - African Elephant</English>
+		<French>Mythe de l'Eléphant d'Afrique</French>
+		<Italian>Mito dell'elefante africano</Italian>
+		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMPHIBIAN</Tag>
+		<English>Folklore (T) - Amphibians</English>
+		<French>Mythe - Amphibiens (T)</French>
+		<Italian>Mito degli anfibi (T)</Italian>
+		<Polish>Mit (T) Płazów</Polish>
+		<Russian>Ìèô îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
+		<English>Folklore (T) - Antelope</English>
+		<French>Mythe de l'Antilope (T)</French>
+		<Italian>Mito dell'antilope (T)</Italian>
+		<Polish>Mit (T) Antylopy</Polish>
+		<Russian>Ìèô îá àíòèëîïå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>
 		<English>Folklore - Arctic Fox</English>
 		<French>Mythe du Renard arctique</French>
-		<Italian>Folklore - Volpe artica</Italian>
+		<Italian>Mito della volpe artica</Italian>
 		<Russian>Ìèô î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARMADILLO</Tag>
 		<English>Folklore - Nine-banded Armadillo</English>
 		<French>Mythe du Tatou</French>
-		<Italian>Folklore - Armadillo</Italian>
+		<Italian>Mito dell'armadillo</Italian>
 		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIANELEPHANT</Tag>
 		<English>Folklore - Asian Elephant</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
-		<Italian>Folklore - Elefante asiatico</Italian>
+		<Italian>Mito dell'elefante asiatico</Italian>
 		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BABIRUSA</Tag>
 		<English>Folklore - Babirusa</English>
 		<French>Mythe du babiroussas</French>
-		<Italian>Folklore - Babirussa</Italian>
+		<Italian>Mito del babirussa</Italian>
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
 		<English>Folklore - Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
-		<Italian>Folklore - Tapiro di Baird</Italian>
+		<Italian>Mito del Tapiro di Baird</Italian>
 		<Polish>Mit - Tapir Panamski</Polish>
 		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
+		<English>Folklore - Beluga</English>
+		<French>Mythe de la Baleine Beluga</French>
+		<Italian>Mito del beluga</Italian>
+		<Polish>Mit Bieługi</Polish>
+		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
 		<English>Folklore - Black Rhinoceros</English>
 		<French>Mythe du Rhinocéros noir</French>
-		<Italian>Folklore - Rinoceronte nero</Italian>
+		<Italian>Mito del rinoceronte nero</Italian>
 		<Polish>Mit - Nosorożec Czarny</Polish>
 		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BOAR</Tag>
+		<English>Folklore - Wild Boar</English>
+		<French>Mythe du Sanglier</French>
+		<Italian>Mito del cinghiale</Italian>
+		<Polish>Mit Dzika</Polish>
+		<Russian>Ìèô î êàáàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Tag>
 		<English>Folklore - Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
-		<Italian>Folklore - Tapiro amazzonico</Italian>
+		<Italian>Mito del tapiro amazzonico</Italian>
 		<Polish>Mit - Tapir</Polish>
 		<Russian>Ìèô î áðàç. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BULL</Tag>
+		<English>Folklore - Bull</English>
+		<French>Mythe du Taureau</French>
+		<Italian>Mito del toro</Italian>
+		<Polish>Mit Byka</Polish>
+		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAIMAN</Tag>
 		<English>Folklore - Black Caiman</English>
 		<French>Mythe du Caïman</French>
-		<Italian>Folklore - Caimano nero</Italian>
+		<Italian>Mito del caimano nero</Italian>
 		<Polish>Mit - Kajman</Polish>
 		<Russian>Ìèô î êàéìàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Tag>
+		<English>Folklore - Camel</English>
+		<French>Mythe du Chameau</French>
+		<Italian>Mito del cammello</Italian>
+		<Polish>Mit Wielbłąda</Polish>
+		<Russian>Ìèô î âåðáëþäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN</Tag>
+		<English>Folklore - Capuchin Monkey</English>
+		<French>Mythe du Capucin</French>
+		<Italian>Mito della scimmia cappuccina</Italian>
+		<Russian>Ìèô î êàïóöèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPYBARA</Tag>
+		<English>Folklore - Capybara</English>
+		<French>Mythe du Cabiaï</French>
+		<Italian>Mito del capibara</Italian>
+		<Russian>Ìèô î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CARIBOU</Tag>
 		<English>Folklore - Caribou</English>
 		<French>Mythe du Caribou</French>
-		<Italian>Folklore - Caribù</Italian>
+		<Italian>Mito del caribù</Italian>
 		<Russian>Ìèô î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAVE_LION</Tag>
 		<English>Folklore - Cave Lion</English>
 		<French>Mythe du Lion des cavernes</French>
-		<Italian>Folklore - Leone delle caverne</Italian>
+		<Italian>Mito del leone delle caverne</Italian>
 		<Russian>Ìèô î ïåù. ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHEETAH</Tag>
+		<English>Folklore - Cheetah</English>
+		<French>Mythe du Cheetah</French>
+		<Italian>Mito del ghepardo</Italian>
+		<Russian>Ìèô î ãåïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHIMPANZEE</Tag>
+		<English>Folklore - Chimpanzee</English>
+		<French>Mythe du Chimpanzé</French>
+		<Italian>Mito dello scimpanzé</Italian>
+		<Russian>Ìèô î øèìïàíçå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
+		<English>Folklore - Cod</English>
+		<French>Mythe de la Morue</French>
+		<Italian>Mito del merluzzo</Italian>
+		<Russian>Ìèô î òðåñêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CRAB</Tag>
+		<English>Folklore - Crab</English>
+		<French>Mythe - crabe</French>
+		<Italian>Mito del granchio</Italian>
+		<Polish>Mit Krabów</Polish>
+		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE</Tag>
 		<English>Folklore (T) - Crocodile</English>
-		<French>Mythe du Crocodile</French>
-		<Italian>Folklore - Coccodrillo</Italian>
+		<French>Mythe du Crocodile (T)</French>
+		<Italian>Mito del coccodrillo (T)</Italian>
 		<Polish>Mit - Krokodyl</Polish>
 		<Russian>Ìèô î êðîêîäèëå</Russian>
 	</TEXT>
@@ -728,21 +819,21 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CUSCUS</Tag>
 		<English>Folklore - Spotted Cuscus</English>
 		<French>Mythe du Couscous</French>
-		<Italian>Folklore - Cusco maculato</Italian>
+		<Italian>Mito del cusco maculato</Italian>
 		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DART_FROG</Tag>
 		<English>Folklore - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
-		<Italian>Folklore - Rana velenosa</Italian>
+		<Italian>Mito della rana velenosa</Italian>
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DHOLE</Tag>
 		<English>Folklore - Ussuri Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
-		<Italian>Folklore - Cuon asiatico</Italian>
+		<Italian>Mito del cuon asiatico</Italian>
 		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
