@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Tag>
+		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
+		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM</Tag>
 		<English>Military Standard (Animal mascot)</English>
 		<French>Mascotte de L'Armée de Terre</French>
@@ -44,6 +49,19 @@
 		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
 		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
 		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
+		<English>Unit Reward - Dance (Bird)</English>
+		<French>Danse des Oiseaux</French>
+		<Italian>Danza degli uccelli</Italian>
+		<Russian>Òàíåö ïòèöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Tag>
+		<English>Some birds are said to dance and these dances inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_HERD</Tag>
@@ -248,6 +266,13 @@
 		<English>Kennels is a building or a collection of building in which dogs are housed, maintained, and bred. Historically, these structures were primarily used for breeding and improving the strength, velocity and other quality of a breed. Starting with the 20th century, they were turned into formal, heavily regulated establishments for the propagation of animals.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
+		<English>Donkey Breeder</English>
+		<French>Éleveur d'ânes</French>
+		<Italian>Allevatore di asini</Italian>
+		<Russian>Îñëèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DONKEY_HERD</Tag>
 		<English>Herd (Donkey)</English>
 		<French>Troupeau d'Ânes</French>
@@ -260,6 +285,17 @@
 		<English>Asses were first domesticated around 3000 BC, or 4000 BC, probably in Egypt or Mesopotamia, and have spread around the world. They continue to fill important roles in many places today. While domesticated species are increasing in numbers, the African wild ass and another relative, the Onager, are endangered. As "beasts of burden" and companions, asses and donkeys have worked together with humans for millennia.</English>
 		<Italian>Gli asini vennero addomesticati intorno al 3000 a.C. o al 4000 a.C., probabilmente in Egitto o Mesopotamia, e vennero diffusi in tutto il mondo; al giorno d'oggi, continuano a ricoprire importanti ruoli in molti posti. Mentre le specie addomesticate sono in aumento in termini numerici, l'asino selvatico africano e un altro parente, l'onagro, sono in pericolo di estinzione. Come "bestie da soma" e compagni, gli asini hanno lavorato insieme con gli esseri umani per millenni.</Italian>
 		<Polish>Osioł został udomowiony przez człowieka wcześniej niż koń. Pierwsze informacje dotyczące udomowienia pochodzą z Doliny Nilu z ok. 4000 p.n.e. czyli 6 tys. lat temu. Na tych terenach występowały obydwa żyjące do dzisiaj podgatunki osła afrykańskiego. Przypuszcza się, że z ich krzyżówek powstał osioł domowy (Equus africanus f.asinus).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
+		<English>Flocks of Duck</English>
+		<Italian>Stormo di anatre</Italian>
+		<Russian>Ñòàÿ óòîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Duck.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
@@ -310,6 +346,19 @@
 		<English>Fish Pens were constructed by the rich to provide them with a ready source of some exotic or rare sea fish for their feasts.</English>
 		<Italian>Le pinne di pesce venivano fornite alle persone ricche per fornire loro una fonte di pesce raro ed esotico per le loro feste.</Italian>
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
+		<English>Unit Reward - Dance (Fox)</English>
+		<French>Danse du Renard</French>
+		<Italian>Danza della volpe</Italian>
+		<Russian>Òàíåö ëèñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
+		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
@@ -377,6 +426,19 @@
 		<Russian>Â êà÷åñòâå ñèìâîëà èëè ñòàòóñà äèêîå, îïàñíîå, êðóïíîå èëè ýêçîòè÷åñêîå æèâîòíîå ÿâëÿåòñÿ áëàãîì äëÿ ëþáîãî ëèäåðà.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
+		<English>Dance - Haka</English>
+		<French>Danse - Haka</French>
+		<Italian>Haka</Italian>
+		<Russian>Òàíåö Õàêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
+		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
+		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
+		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
 		<English>Unit Reward - Hawking Hut</English>
 		<French>Cabane du Fauconnier</French>
@@ -389,6 +451,13 @@
 		<English>Hawking is the practice of hunting with a trained falconry bird. Falconry is "the taking of wild quarry in its natural state and habitat by means of a trained raptor". There are two traditional terms used to describe a person involved in falconry: a falconer flies a falcon; an austringer (German origin) flies a hawk (Accipiter and some buteos and similar) or an eagle (Aquila or similar). In modern falconry the Red-tailed Hawk (Buteo jamaicensis) and the Harris hawk are often used. The words "hawking" and "hawker" have become used so much to mean petty traveling traders, that the terms "falconer" and "falconry" now apply to all use of trained birds of prey to catch game. In early English falconry literature, the word "falcon" referred to a female falcon only, while the word "hawk" or "hawke" referred to a female hawk. A male hawk or falcon was referred to as a "tiercel" (sometimes spelled "tercel") as it was roughly one third less than the female in size. Many contemporary practitioners still use these words in their original meaning.</English>
 		<Italian>La falconeria è la pratica della caccia con un falco addestrato. La falconeria è "la cattura di prede selvatiche nel suo stato naturale e habitat per mezzo di un rapace addestrato". Ci sono due termini tradizionali usati per descrivere una persona coinvolta nella falconeria: un falconiere fa volare un falco, un austringer (di origine tedesca) fa volare un falco (Accipiter e alcune poiane e simili) o un'aquila. Nella falconeria moderna vengono spesso utilizzati il falco dalla coda rossa (Buteo jamaicensis) e il falco Harris. Le parole "Falconiere" e "Venditore ambulante" sono diventate usate così tanto da definire meschini i commercianti che viaggiano, tanto che i termini "falconiere" e "falconeria" ora si applicano a tutti gli usi di uccelli rapaci addestrati a catturare selvaggina. Nell'antica letteratura inglese riguardante la falconeria, la parola "falcon" si riferiva solo a un falcone femmina, mentre le parole "hawk" o "hawke" indicavano un falco femmina. Un falco o falcone maschio veniva chiamato "tiercel" (a volte scritto "tercel") dato che aveva una taglia circa un terzo in meno rispetto alla femmina. Molti praticanti contemporanei utilizzano ancora queste parole nel loro significato originale.</Italian>
 		<Polish>Początki sokolnictwa sięgają początków ludzkiej cywilizacji i zamierzchłych czasów, kiedy to nawet u prymitywnych ludów, a zwłaszcza nomadów wiodących koczowniczy tryb życia, stało ono na bardzo wysokim poziomie. Było podstawą ich egzystencji obok zbieractwa i myślistwa. Zwiadczą o tym m.in. motywy na starożytnych malowidłach. Myśliwego z ptakiem na pięści, przedstawiają też datowane na 1500 lat p.n.e rzeźby, znalezione w Turcji.Płaskorzeźba z czasów Sargona II (722-705 p.n.e) myśliwy z orłem, potwierdza, że ten sposób polowania znali Asyryjczycy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
+		<English>Horse Breeder</English>
+		<French>Éleveur de chevaux</French>
+		<Italian>Allevatore di cavalli</Italian>
+		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_HERD</Tag>
@@ -700,6 +769,17 @@
 		<English>A carnival of seals trained for entertainment.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
+		<English>Flocks of Turkey</English>
+		<Italian>Branco di tacchini</Italian>
+		<Russian>Ñòàÿ èíäååê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Turkey.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
 		<English>Unit Reward - Wonders of the Deep</English>
 		<French>Merveilles des profondeurs</French>
@@ -955,6 +1035,14 @@
 		<Russian>Ìèô îá àìôèáèè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
+		<English>Folklore - Anteater</English>
+		<French>Mythe du Fourmilier</French>
+		<Italian>Mito del formichiere</Italian>
+		<Polish>Mit - Mrówkojad</Polish>
+		<Russian>Ìèô î ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
 		<English>Folklore (T) - Antelope</English>
 		<French>Mythe de l'Antilope (T)</French>
@@ -994,7 +1082,7 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
 		<English>Folklore - Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
-		<Italian>Mito del Tapiro di Baird</Italian>
+		<Italian>Mito del tapiro di Baird</Italian>
 		<Polish>Mit - Tapir Panamski</Polish>
 		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
 	</TEXT>
@@ -1005,6 +1093,14 @@
 		<Italian>Mito del beluga</Italian>
 		<Polish>Mit Bieługi</Polish>
 		<Russian>Ìèô î áåëóãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BIRD</Tag>
+		<English>Folklore (T) - Birds</English>
+		<French>Mythe des Oiseaux (T)</French>
+		<Italian>Mito dell'uccello (T)</Italian>
+		<Polish>Mit (T) - Ptaki</Polish>
+		<Russian>Ìèô î ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
@@ -1981,6 +2077,14 @@
 		<Italian>Mito del rinoceronte bianco</Italian>
 		<Polish>Mit - Nosorożec Biały</Polish>
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
+		<English>Folklore (T) - Wolf</English>
+		<French>Mythe des Loups (T)</French>
+		<Italian>Mito del lupo (T)</Italian>
+		<Polish>Mit (T) - Wilk</Polish>
+		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLVERINE</Tag>

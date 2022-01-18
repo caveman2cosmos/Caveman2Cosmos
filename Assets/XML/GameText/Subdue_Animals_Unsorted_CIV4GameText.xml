@@ -1,76 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Tag>
-		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
-		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
-		<English>Unit Reward - Dance (Bird)</English>
-		<French>Danse des Oiseaux</French>
-		<Russian>Òàíåö ïòèöû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Tag>
-		<English>Some birds are said to dance and these dances inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
-		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
-		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
-		<English>Donkey Breeder</English>
-		<French>Éleveur d'ânes</French>
-		<Russian>Îñëèíûé ïèòîìíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
-		<English>Flocks of Duck</English>
-		<Russian>Ñòàÿ óòîê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Tag>
-		<English>Your nation has flocks of Duck.</English>
-		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
-		<English>Unit Reward - Dance (Fox)</English>
-		<French>Danse du Renard</French>
-		<Russian>Òàíåö ëèñû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
-		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
-		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
-		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
-		<English>Dance - Haka</English>
-		<French>Danse - Haka</French>
-		<Russian>Òàíåö Õàêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
-		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
-		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
-		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
-		<English>Horse Breeder</English>
-		<French>Éleveur de chevaux</French>
-		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
-		<English>Folklore - Anteater</English>
-		<French>Mythe du Fourmilier</French>
-		<Polish>Mit - Mrówkojad</Polish>
-		<Russian>Ìèô î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
 		<English>Folklore - Badger</English>
 		<French>Mythe du Blaireau</French>
@@ -104,13 +34,6 @@
 		<French>Mythe du Tigre du Bengale</French>
 		<Polish>Mit - Tygrys Bengalski</Polish>
 		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BIRD</Tag>
-		<English>Folklore (T) - Birds</English>
-		<French>Mythe des Oiseaux</French>
-		<Polish>Mit - Ptaki</Polish>
-		<Russian>Ìèô î ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BISON</Tag>
@@ -434,22 +357,6 @@
 		<Russian>Ìèô î ãíó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
-		<English>Folklore (T) - Wolf</English>
-		<French>
-			<Text>Mythe des Loups</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del lupo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit - Wilk</Polish>
-		<Russian>Ìèô î âîëêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
 		<English>Flocks of Peacock</English>
 		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
@@ -464,34 +371,6 @@
 		<English>Remains - Procoptodon</English>
 		<French>Remains - Procoptodon</French>
 		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
-		<English>Flocks of Turkey</English>
-		<Russian>Ñòàÿ èíäååê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
-		<English>Your nation has flocks of Turkey.</English>
-		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
-		<English>Shock and Awe - Cacophony</English>
-		<French>Choc et stupeur - Cacophonie</French>
-		<Russian>Øîê è òðåïåò - êàêîôîíèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
-		<English>Shock and Awe - Haka</English>
-		<French>Choc et stupeur - Haka</French>
-		<Russian>Øîê è òðåïåò - Õàêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
-		<English>Shock and Awe - War Cry</English>
-		<French>Choc et stupeur - Cri de guerre</French>
-		<Russian>Øîê è òðåïåò - Áîåâîé êëè÷</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA_PEDIA</Tag>
