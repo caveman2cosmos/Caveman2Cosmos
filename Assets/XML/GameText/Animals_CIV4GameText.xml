@@ -312,7 +312,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTO</Tag>
-		<English>Folklore - Paleolithic Glyptodon</English>
+		<English>Folklore - Glyptodon</English>
 		<French>Mythe du Glyptodon</French>
 		<Russian>Ìèô î ãëèïòîäîíå</Russian>
 	</TEXT>
@@ -452,7 +452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRD</Tag>
-		<English>Folklore - Paleolithic Birds</English>
+		<English>Folklore (P) - Paleolithic Birds</English>
 		<French>Mythe des oiseaux du paléolithique</French>
 		<Polish>Mit - Ptaki Kopalne</Polish>
 		<Russian>Ìèô î äðåâíåé ïòèöå</Russian>
@@ -465,7 +465,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Tag>
-		<English>Folklore - Paleolithic Ground Sloth</English>
+		<English>Folklore - Ground Sloth</English>
 		<French>Mythe du Xénarthre</French>
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
 	</TEXT>
@@ -526,7 +526,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
-		<English>Folklore - Crocodile</English>
+		<English>Folklore - Crocodile (Small)</English>
+		<French>Mythe du Crocodile de rivière</French>
+		<Polish>Mit - Krokodyl Błotny</Polish>
+		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC_LARGE</Tag>
+		<English>Folklore - Crocodile (Large)</English>
 		<French>Mythe du Crocodile de rivière</French>
 		<Polish>Mit - Krokodyl Błotny</Polish>
 		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
@@ -552,7 +559,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC</Tag>
-		<English>Folklore - Saltwater Crocodile</English>
+		<English>Folklore - Saltwater Crocodile (Small)</English>
+		<French>Mythe du Crocodile de mer</French>
+		<Polish>Mit - Krokodyl Różańcowy</Polish>
+		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</Tag>
+		<English>Folklore - Saltwater Crocodile (Large)</English>
 		<French>Mythe du Crocodile de mer</French>
 		<Polish>Mit - Krokodyl Różańcowy</Polish>
 		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
@@ -603,7 +617,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA</Tag>
-		<English>Folklore - Tarantula</English>
+		<English>Folklore - Desert Tarantula</English>
+		<French>Mythe de la Tarentule</French>
+		<Russian>Ìèô î òàðàíòóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<English>Folklore - Jungle Tarantula</English>
 		<French>Mythe de la Tarentule</French>
 		<Russian>Ìèô î òàðàíòóëå</Russian>
 	</TEXT>
@@ -3097,5 +3117,25 @@
 		<Tag>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Tag>
 		<English>[ICON_BULLET]Can construct various animal related buildings</English>
 		<Italian>[ICON_BULLET]Può costruire vari edifici legati agli animali</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
+		<English>Folklore - Aurochs</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLABY</Tag>
+		<English>Folklore - Ring-tailed Wallaby</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
+		<English>Folklore - Tasmanian Devil</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
+		<English>Folklore - Wild Boar</English>
 	</TEXT>
 </Civ4GameText>

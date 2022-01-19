@@ -364,7 +364,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BOAR</Tag>
-		<English>Folklore - Wild Boar</English>
+		<English>Folklore (T) - Boar</English>
 		<French>Mythe du Sanglier</French>
 		<Italian>Mito del cinghiale</Italian>
 		<Polish>Mit Dzika</Polish>
@@ -372,7 +372,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BULL</Tag>
-		<English>Folklore - Bull</English>
+		<English>Folklore (T) - Bull</English>
 		<French>Mythe du Taureau</French>
 		<Italian>Mito del toro</Italian>
 		<Polish>Mit Byka</Polish>
@@ -517,10 +517,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
-		<English>Folklore (T) - Humpback Whale</English>
-		<French>Mythe de la Baleine à Bosses (T)</French>
-		<Italian>Mito della megattera (T)</Italian>
-		<Polish>Mit (T) Humpbaka</Polish>
+		<English>Folklore - Humpback Whale</English>
+		<French>Mythe de la Baleine à Bosses</French>
+		<Italian>Mito della megattera</Italian>
+		<Polish>Mit Humpbaka</Polish>
 		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
@@ -537,7 +537,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
-		<English>Folklore - Leviathan</English>
+		<English>Folklore (T) - Leviathan</English>
 		<French>Mythe du Léviathan</French>
 		<Italian>Mito del leviatano</Italian>
 		<Polish>Mit Lewiatana</Polish>
@@ -575,7 +575,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
-		<English>Folklore - Marsupial</English>
+		<English>Folklore (T) - Marsupial</English>
 		<French>Mythe du Marsupial</French>
 		<Italian>Mito dei marsupiali</Italian>
 		<Polish>Mit Torbacza</Polish>
@@ -591,23 +591,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
-		<English>Folklore (T) - Minke Whale</English>
-		<French>Mythe du Rorqual (T)</French>
-		<Italian>Mito della balenottera minore (T)</Italian>
-		<Polish>Mit (T) Płetwala</Polish>
+		<English>Folklore Minke Whale</English>
+		<French>Mythe du Rorqual</French>
+		<Italian>Mito della balenottera minore</Italian>
+		<Polish>Mit Płetwala</Polish>
 		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NARWHAL</Tag>
-		<English>Folklore (T) - Narwhal</English>
-		<French>Mythe du Narval (T)</French>
-		<Italian>Mito del narvalo (T)</Italian>
-		<Polish>Mit (T) Narwala</Polish>
+		<English>Folklore - Narwhal</English>
+		<French>Mythe du Narval</French>
+		<Italian>Mito del narvalo</Italian>
+		<Polish>Mit Narwala</Polish>
 		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
-		<English>Folklore - Old Man of the Forest</English>
+		<English>Folklore (T) - Old Man of the Forest</English>
 		<French>Mythe de l'Ancien de la Forêt</French>
 		<Italian>Mito del Vecchio della foresta</Italian>
 		<Polish>Mit Starego człowieka z lasu</Polish>
@@ -615,15 +615,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
-		<English>Folklore (T) - Orca</English>
-		<French>Mythe de l'Orque (T)</French>
-		<Italian>Mito dell'orca (T)</Italian>
-		<Polish>Mit (T) Orki</Polish>
+		<English>Folklore - Orca</English>
+		<French>Mythe de l'Orque</French>
+		<Italian>Mito dell'orca</Italian>
+		<Polish>Mit Orki</Polish>
 		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_CAT</Tag>
-		<English>Folklore - Paleolithic Cat</English>
+		<English>Folklore (P) - Paleolithic Cat</English>
 		<French>Mythe du Félin Paléolithique</French>
 		<Italian>Mito del felino paleolitico</Italian>
 		<Polish>Mit Lew Jaskiniowy</Polish>
@@ -631,7 +631,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
-		<English>Folklore - Paleolithic Mammoth</English>
+		<English>Folklore - Mammoth</English>
 		<French>Mythe du Mammouth Paléolithique</French>
 		<Italian>Mito del mammut paleolitico</Italian>
 		<Polish>Mit Mamutów</Polish>
@@ -639,7 +639,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
-		<English>Folklore - Paleolithic Marsupial</English>
+		<English>Folklore (P) - Paleolithic Marsupial</English>
 		<French>Mythe du Marsupial Paléolithique</French>
 		<Italian>Mito del marsupiale paleolitico</Italian>
 		<Polish>Mit Paleolitycznych Torbaczy</Polish>
@@ -655,7 +655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
-		<English>Folklore - Ray</English>
+		<English>Folklore (T) - Ray</English>
 		<French>Mythe - la Raie</French>
 		<Italian>Mito della razza</Italian>
 		<Polish>Mit Manty</Polish>
@@ -693,7 +693,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
-		<English>Folklore - Scavenger</English>
+		<English>Folklore (T) - Scavenger</English>
 		<French>Mythe du Mendiant</French>
 		<Italian>Mito dell'animale spazzino</Italian>
 		<Polish>Mit Padlinożerców</Polish>
@@ -717,7 +717,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
-		<English>Folklore - Sharks</English>
+		<English>Folklore (T) - Sharks</English>
 		<French>Histoires de Requins</French>
 		<Italian>Mito dello squalo</Italian>
 		<Polish>Mit Opowieśći o rekinach</Polish>
@@ -741,7 +741,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
-		<English>Folklore - Tiger</English>
+		<English>Folklore (T) - Tiger</English>
 		<French>Mythe du Tigre</French>
 		<Italian>Mito della tigre</Italian>
 		<Polish>Mit Tygrysa</Polish>
