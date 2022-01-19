@@ -111,3 +111,17 @@ def evalTextWidth(iMax, uFont, szTxt):
 			else:
 				return uFont + szTxt[:iMaxCrop] + "."
 	return uFont + szTxt
+
+'''
+def stripLiterals(txt, literal):
+	# The literal argument can be: "font", "color", "link", etc. Caps lock does matter.
+	start = "<%s=" % literal
+	txt = txt.replace("</%s>" % literal, "")
+	i1 = txt.find(start)
+	if i1 > -1:
+		while i1 > -1:
+			i2 = txt.find(">", i1)
+			txt = txt[:i1] + txt[i2+1:]
+			i1 = txt.find(start)
+	return txt
+'''

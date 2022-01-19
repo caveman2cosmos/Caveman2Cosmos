@@ -198,7 +198,6 @@ CvPlot* plotCity(int iX, int iY, int iIndex);
 int plotCityXY(int iDX, int iDY);
 int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);
 
-CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);
 DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);
 DllExport bool isCardinalDirection(DirectionTypes eDirection);
 DirectionTypes estimateDirection(int iDX, int iDY);
