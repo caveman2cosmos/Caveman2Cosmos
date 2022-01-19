@@ -3506,5 +3506,17 @@ enum DiplomacyTypes { };
 enum MainMenuTypes { };
 enum ModLoadControlTypes { };
 enum HintTypes { };
+enum AssetArtTypes { };
+enum MiscArtTypes { };
+enum UnitArtTypes { };
+enum BuildingArtTypes { };
+enum CivilizationArtTypes { };
+enum LeaderHeadArtTypes { };
+enum BonusArtTypes { };
+enum ImprovementArtTypes { };
+enum TerrainArtTypes { };
+enum FeatureArtTypes { };
+enum MovieArtTypes { };
+enum InterfaceArtTypes { };
 
 #endif	// CVENUMS_h
