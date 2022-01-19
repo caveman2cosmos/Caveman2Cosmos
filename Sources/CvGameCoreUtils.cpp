@@ -3958,10 +3958,14 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 	{
 		piShuffle[iI] = iI;
 	}
+	shuffle(piShuffle, iNum, rand);
+}
 
+void shuffle(int* piShuffle, int iNum, CvRandom& rand)
+{
 	for (int iI = 0; iI < iNum; iI++)
 	{
-		const int iJ = iI + rand.get(iNum - iI, NULL);
+		const int iJ = iI + rand.get(iNum - iI);
 
 		if (iI != iJ)
 		{
