@@ -1740,6 +1740,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 		// read and ignore number of game options as it's only for external tools
 		int iNumGameOptions = 0;
 		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "NUM_GAMEOPTION_TYPES");
+		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "GC.getNumGameOptionInfos()");
 	}
 // BUG - Save Format - end
 
