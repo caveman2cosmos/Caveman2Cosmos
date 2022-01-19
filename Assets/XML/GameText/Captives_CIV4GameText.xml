@@ -441,11 +441,7 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN</Tag>
 		<English>Captive - Civilian</English>
 		<French>Prisonnier - Civil</French>
-		<Italian>
-			<Text>Prigioniero - Civile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Civile</Italian>
 		<Russian>Ïëåííèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -466,22 +462,14 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_IMMIGRANT</Tag>
 		<English>Captive - Immigrant</English>
 		<French>Prisonnier - Immigrant</French>
-		<Italian>
-			<Text>Prigioniero - Immigrato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Immigrato</Italian>
 		<Russian>Ïëåííûé èììèãðàíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY</Tag>
 		<English>Captive - Military</English>
 		<French>Prisonnier - Militaire</French>
-		<Italian>
-			<Text>Prigioniero - Militare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Militare</Italian>
 		<Russian>Ïëåííûé ñîëäàò</Russian>
 	</TEXT>
 	<TEXT>
@@ -513,11 +501,7 @@
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE</Tag>
 		<English>Captive - Freed Slave</English>
 		<French>Prisonnier - Esclave libéré</French>
-		<Italian>
-			<Text>Prigioniero - Schiavo liberato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Schiavo liberato</Italian>
 		<Russian>Ïëåííûé ðàáîòíèê</Russian>
 	</TEXT>
 	<TEXT>
