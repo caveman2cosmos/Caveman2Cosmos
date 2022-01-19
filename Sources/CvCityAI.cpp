@@ -8126,13 +8126,15 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 
 	if (eBonus == NO_BONUS)
 	{
-		// for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-		// {
-		// 	if (improvement.getImprovementBonusDiscoverRand(iJ) > 0)
-		// 	{
-		// 		iValue += 0;
-		// 	}
-		// }
+		/*
+		for (int iI = GC.getNumMapBonuses() - 1; iI > -1; iI--)
+		{
+			if (improvement.getImprovementBonusDiscoverRand(GC.getMapBonus(iI)) > 0)
+			{
+				iValue += 0;
+			}
+		}
+		*/
 	}
 	else if (!GET_TEAM(getTeam()).isBonusObsolete(eBonus))
 	{
@@ -10425,70 +10427,65 @@ int CvCityAI::AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove,
 			aiYields[iI] = pPlot->getYield((YieldTypes)iI);
 		}
 	}
+	int iValue = 100 * AI_yieldValue(aiYields, NULL, bAvoidGrowth, bRemove, bIgnoreFood, bIgnoreGrowth, bIgnoreStarvation);
 
 	const ImprovementTypes eCurrentImprovement = pPlot->getImprovementType();
-	ImprovementTypes eFinalImprovement = NO_IMPROVEMENT;
 
 	if (eCurrentImprovement != NO_IMPROVEMENT)
 	{
-		eFinalImprovement = GET_TEAM(getTeam()).finalImprovementUpgrade(eCurrentImprovement);
-	}
+		const ImprovementTypes eFinalImprovement = GET_TEAM(getTeam()).finalImprovementUpgrade(eCurrentImprovement);
 
-	int iYieldValue = (AI_yieldValue(aiYields, NULL, bAvoidGrowth, bRemove, bIgnoreFood, bIgnoreGrowth, bIgnoreStarvation) * 100);
-
-	if (eFinalImprovement != NO_IMPROVEMENT)
-	{
-		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		if (eFinalImprovement != NO_IMPROVEMENT)
 		{
-			int iYieldDiff = (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iI), getOwner()) - pPlot->calculateImprovementYieldChange(eCurrentImprovement, ((YieldTypes)iI), getOwner()));
-			aiYields[iI] += iYieldDiff;
-		}
-		const int iFinalYieldValue = (AI_yieldValue(aiYields, NULL, bAvoidGrowth, bRemove, bIgnoreFood, bIgnoreGrowth, bIgnoreStarvation) * 100);
-
-		if (iFinalYieldValue > iYieldValue)
-		{
-			iYieldValue = (40 * iYieldValue + 60 * iFinalYieldValue) / 100;
-		}
-		else
-		{
-			iYieldValue = (60 * iYieldValue + 40 * iFinalYieldValue) / 100;
-		}
-	}
-	// unless we are emph food (and also food not production)
-	if (!(AI_isEmphasizeYield(YIELD_FOOD) && !isFoodProduction()))
-	{
-		// if this plot is super bad (less than 2 food and less than combined 2 prod/commerce
-		if (!AI_potentialPlot(aiYields))
-		{
-			// undervalue it even more!
-			iYieldValue /= 16;
-		}
-	}
-	int iValue = iYieldValue;
-
-	if (eCurrentImprovement != NO_IMPROVEMENT)
-	{
-		if (pPlot->getBonusType(getTeam()) == NO_BONUS) // XXX double-check CvGame::doFeature that the checks are the same...
-		{
-			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iI).getTechReveal())))
-				{
-					if (GC.getImprovementInfo(eCurrentImprovement).getImprovementBonusDiscoverRand(iI) > 0)
-					{
-						iValue += 35;
-					}
-				}
+				int iYieldDiff = (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iI), getOwner()) - pPlot->calculateImprovementYieldChange(eCurrentImprovement, ((YieldTypes)iI), getOwner()));
+				aiYields[iI] += iYieldDiff;
+			}
+			const int iFinalYieldValue = (AI_yieldValue(aiYields, NULL, bAvoidGrowth, bRemove, bIgnoreFood, bIgnoreGrowth, bIgnoreStarvation) * 100);
+
+			if (iFinalYieldValue > iValue)
+			{
+				iValue = (40 * iValue + 60 * iFinalYieldValue) / 100;
+			}
+			else
+			{
+				iValue = (60 * iValue + 40 * iFinalYieldValue) / 100;
 			}
 		}
 	}
 
-	if ((eCurrentImprovement != NO_IMPROVEMENT) && (GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementUpgrade() != NO_IMPROVEMENT))
+	// If we are not emphasizing food or use food for production)
+	if ((!AI_isEmphasizeYield(YIELD_FOOD) || isFoodProduction())
+	// and this plot is super bad (less than 2 food and less than combined 2 prod/commerce
+	&& !AI_potentialPlot(aiYields))
 	{
-		iValue += 200;
-		iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER);
+		// undervalue it even more!
+		iValue /= 16;
 	}
 
+	if (eCurrentImprovement != NO_IMPROVEMENT)
+	{
+		if (pPlot->getBonusType(getTeam()) == NO_BONUS)
+		{
+			const CvImprovementInfo& currentImprovement = GC.getImprovementInfo(eCurrentImprovement);
+			const CvTeam& team = GET_TEAM(getTeam());
+
+			for (int iI = GC.getNumMapBonuses() - 1; iI > -1; iI--)
+			{
+				if (currentImprovement.getImprovementBonusDiscoverRand(GC.getMapBonus(iI)) > 0
+				&& team.isHasTech((TechTypes)GC.getBonusInfo(GC.getMapBonus(iI)).getTechReveal()))
+				{
+					iValue += 35;
+				}
+			}
+		}
+		if (GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementUpgrade() != NO_IMPROVEMENT)
+		{
+			iValue += 200;
+			iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER);
+		}
+	}
 	return iValue;
 }
 
@@ -13113,7 +13110,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						{
 							if (hasBonus((BonusTypes)iI))
 							{
-								iValue += (kBuilding.getBonusDefenseChanges(iI) / 4);
+								iValue += kBuilding.getBonusDefenseChanges(iI) / 4;
 							}
 						}
 					}

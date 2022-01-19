@@ -9,13 +9,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-#from CvMapGeneratorUtil import FractalWorld
-#from CvMapGeneratorUtil import TerrainGenerator
-#from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-#balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_TILTED_AXIS_DESCR"
@@ -79,18 +75,15 @@ def isRandomCustomMapOption(argsList):
 	return option_random[iOption]
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(1) == 1):
+	if CyMap().getCustomMapOption(1) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(1) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(1) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
@@ -119,7 +112,7 @@ def getWrapY():
 	return True
 
 # subclass FractalWorld to enable square exponents for use with Tilted Axis.
-class TiltedAxisFractalWorld(CvMapGeneratorUtil.FractalWorld):
+class TiltedAxisFractalWorld(MGU.FractalWorld):
 	def initFractal(self, continent_grain = 2, rift_grain = 2, has_center_rift = True):
 		"For no rifts, use rift_grain = -1"
 		iFlags = CyFractal.FracVals.FRAC_WRAP_Y + CyFractal.FracVals.FRAC_POLAR
@@ -182,7 +175,7 @@ def generatePlotTypes():
 		return fractal_world.generatePlotTypes(grain_amount = 4)
 
 # subclass TerrainGenerator to make the climate "latitudes" run west to east
-class TiltedAxisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class TiltedAxisTerrainGenerator(MGU.TerrainGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		# Latitudes run vertically for a world with a tilted axis.
 		lat = abs((self.iWidth / 2) - iX)/float(self.iWidth/2) # 0.0 = equator, 1.0 = pole
@@ -205,7 +198,7 @@ def generateTerrainTypes():
 	return terrainTypes
 
 # subclass FeatureGenerator to make the climate "latitudes" run west to east
-class TiltedAxisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class TiltedAxisFeatureGenerator(MGU.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns a value in the range of 0.0 (tropical) to 1.0 (polar)"
 		return abs((self.iGridW/2) - iX)/float(self.iGridW/2) # 0.0 = equator, 1.0 = pole
@@ -217,4 +210,4 @@ def addFeatures():
 	return 0
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses() # This does not place them correctly tilted
+	MGU.placeC2CBonuses() # This does not place them correctly tilted

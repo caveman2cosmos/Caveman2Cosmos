@@ -3342,11 +3342,9 @@ featurePlacer = FeaturePlacer()
 ###   uses two tuples, which are defined within the class:
 ###   - resourcesToBalance, which the class tries to add for each player near the starting-plot,
 ###     if BonusBalancer.normalizeAddExtras() is called in normalizeAddExtras() and
-###   - resourcesToEliminate, which together with the resourcesToBalance will not be placed anywhere
-###     on the map, if BonusBalancer.isSkipBonus() is used within addBonusType()
+###     with the resourcesToBalance will not be placed anywhere on the map
 ### This BonusBalancer class:
 ###   - places all boni in the default way first
-###   - eliminates all boni in resourcesToEliminate
 ###   - eliminates most randomly placed balanced resources
 ###     - but eliminates fewer balanced resources from unsettled continents (give Barbarian Nations a chance)
 ###   - places missing boni:
@@ -3375,11 +3373,9 @@ featurePlacer = FeaturePlacer()
 #########################################################################################################
 # initialize(self, bBalanceOnOff=True, bMissingOnOff=True, bMineralsOnOff=True, bWideRange=False )
 # normalizeAddExtras( *lResources )
-# bSkip = isSkipBonus( iBonusType )
 # bValid = isBonusValid( eBonus, pPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent )
 # moveMinerals( lMineralsToMove=None )
 # --- private ---
-# eliminateBadBoni()
 # reduceBalancedBoni()
 # addMissingBoni()
 # boniMissing, boniFound, freePlots = checkAllBoniPlaced()
@@ -3400,7 +3396,6 @@ class BonusBalancer:
 	# Note: The first bonus will be ignored about half the time,
 	#       not all players will have it near their starting-plot
 	resourcesToBalance   = ( 'BONUS_BAUXITE_ORE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE', )
-	resourcesToEliminate = ('', )
 	mineralsToMove       = ( 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_SILVER_ORE', 'BONUS_GOLD_ORE', 'BONUS_URANIUM' )
 
 	def initialize(self, bBalanceOnOff=True, bMissingOnOff=True, bMineralsOnOff=True, bWideRange=False ):
@@ -3436,7 +3431,6 @@ class BonusBalancer:
 		# balanced resources depending on mod
 		if not self.bBalance:
 			self.resourcesToBalance = ('', )
-			self.resourcesToEliminate = ('', )
 		else:
 			self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE',)
 
@@ -3449,32 +3443,25 @@ class BonusBalancer:
 		sprint += " MineralMover " + iif( self.bMinerals, "active", "deactivated")
 		print sprint
 
-		# put additional boni into resourcesToBalance; or resourcesToEliminate if preceded by a '-'
+		# put additional boni into resourcesToBalance if preceded by a '-'
 		sprint = ""
 		if self.bBalance:
 			# add given additional resources to balance
-			if len(lResources)>0:
+			if lResources:
 				newRes = list(lResources)
 				print "[MST] Extra resources: %r" % ( newRes )
 				balResources = list( self.resourcesToBalance )
 				if balResources[0] == '': del balResources[0]
-				elimResources = list( self.resourcesToEliminate )
-				if elimResources[0] == '': del elimResources[0]
+
 				for res in newRes:
 					if res[0]=='-':
-						if not ( res[1:] in elimResources ):
-							if isBonus( res[1:] ):
-								elimResources.append( res[1:] )
-								removeListElement( balResources, res[1:] )
-					else:
-						if not ( res in balResources ):
-							if isBonus( res ):
-								balResources.append( res )
-								removeListElement( elimResources, res )
+						if isBonus( res[1:] ):
+							removeListElement( balResources, res[1:] )
+					elif not res in balResources and isBonus(res):
+						balResources.append( res )
 				self.resourcesToBalance = tuple( balResources )
-				self.resourcesToEliminate = tuple( elimResources )
+
 			sprint += "[MST] Resources to balance:   %r \n" % ( self.resourcesToBalance, )
-			sprint += "[MST] Resources to eliminate: %r \n" % ( self.resourcesToEliminate, )
 		if self.bMinerals:
 			sprint += "[MST] Minerals to move:       %r \n" % ( self.mineralsToMove, )
 		print sprint
@@ -3492,21 +3479,12 @@ class BonusBalancer:
 		# proceed step by step
 		self.cnt = 0
 		mapStats.showContinents( "", minContinentPlots )			# before
-		if self.bBalance:  self.eliminateBadBoni()
 		if self.bBalance:  self.reduceBalancedBoni()
 		if self.bMissing:  self.addMissingBoni()
 #		if self.bBalance:  self.balanceFarmingBoni()					# perhaps in the next version, not sure it's needed
 		if self.bBalance:  self.balanceStrategicBoni()
 		if self.bMinerals: self.moveMinerals( None, False )
 		mapStats.showContinents( "", minContinentPlots )			# after
-
-	# check if bonus is within resourcesToEliminate
-	# from Warlord CvMapGeneratorUtil.BonusBalancer; doesn't check resourcesToBalance
-	def isSkipBonus(self, iBonusType):
-#		print "[MST] ===== BonusBalancer:isSkipBonus()"
-		if not self.bBalance: return False
-		type_string = GC.getBonusInfo(iBonusType).getType()
-		return (type_string in self.resourcesToEliminate)
 
 	# return True, if bonus can be placed on plot
 	# from Warlord CvMapGeneratorUtil.BonusBalancer
@@ -3583,21 +3561,6 @@ class BonusBalancer:
 	###############
 	### Helpers ###
 	###############
-
-	# eliminate boni in resourcesToEliminate
-	def eliminateBadBoni( self ):
-		print "[MST] ======== BonusBalancer:eliminateBadBoni()"
-		if self.resourcesToEliminate[0] == '': return
-		iCnt = 0
-		for i in range( MAP.numPlots() ):
-			pl = MAP.plotByIndex(i)
-			iBonus = pl.getBonusType(-1)
-			if iBonus>=0:
-				type_string = GC.getBonusInfo(iBonus).getType()
-				if type_string in self.resourcesToEliminate:
-					self.placeBonus( pl, -1 )
-					iCnt += 1
-		print "[MST] Eliminated %2i of the boni to be eliminated:\n %r" % ( iCnt, self.resourcesToEliminate )
 
 	# eliminate most balanced boni in starting-plot areas
 	# - much lower elimination-chance on other continents
@@ -3987,12 +3950,12 @@ class BonusBalancer:
 		return boniInRange
 
 	# build a shuffled list of the plots in the same area near the starting plot
-	def getFreePlots(self, x, y, areaID, ran ):
+	def getFreePlots(self, x, y, areaID, ran):
 		plots = []
 		for dx in range(-ran,ran+1):
 			for dy in range(-ran,ran+1):
 				if plotDistance( x, y, x+dx, y+dy ) <= ran:
-					pLoopPlot = plotXY(x, y, dx, dy)							# use build-in plotXY()
+					pLoopPlot = plotXY(x, y, dx, dy) # use built-in plotXY()
 					# no extra boni outside map
 					if not pLoopPlot.isNone():
 						dArea = pLoopPlot.getArea()
@@ -4003,14 +3966,14 @@ class BonusBalancer:
 								if pLoopPlot.getBonusType(-1)<0:
 									plots.append(pLoopPlot)
 		randomList.shuffle( plots )
-		return plots																# return list
+		return plots # return list
 
 	# calculate number of desired boni
 	# - like CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType) in CvMapGenerator.cpp
 	def calcNumBoniToAdd(self, iBonus):
-		bonusInfo = GC.getBonusInfo( iBonus )
-		if bonusInfo.getPlacementOrder()<0:	return 0
-		if bonusInfo.getType() in self.resourcesToEliminate: return 0
+		bonusInfo = GC.getBonusInfo(iBonus)
+		if bonusInfo.getPlacementOrder() < 0:
+			return 0
 
 		rand1 = chooseNumber( bonusInfo.getRandAppearance1() )
 		rand2 = chooseNumber( bonusInfo.getRandAppearance2() )
@@ -6525,7 +6488,6 @@ Deal with resources. Balance them and make sure all are on the map and where the
 .........................................................................................
 initialize( bBalanceOnOff=True, bMissingOnOff=True, bMineralsOnOff=True, bWideRange=False )
 normalizeAddExtras( *lResources )
-bSkip = isSkipBonus( iBonusType )
 bValid = isBonusValid( eBonus, pPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent )
 addMissingBoni()
 moveMinerals( lMineralsToMove=None )
