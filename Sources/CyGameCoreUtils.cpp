@@ -217,3 +217,11 @@ int64_t cyIntSqrt64(uint64_t iValue)
 {
 	return intSqrt64(iValue);
 }
+
+void cyShuffleIntList(python::list& pyList, CvRandom& rand)
+{
+	std::vector<int> v;
+	python::container_utils::extend_container(v, pyList);
+	shuffle(&v[0], v.size(), rand);
+	pyList = Cy::makeList(v);
+}

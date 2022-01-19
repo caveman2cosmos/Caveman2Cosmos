@@ -65,4 +65,6 @@ int cyCalculateLevel(int iExperience, int /*PlayerTypes*/ ePlayer);
 
 int64_t cyIntSqrt64(uint64_t iValue);
 
+void cyShuffleIntList(python::list& pyList, CvRandom& rand);
+
 #endif	// CyGameCoreUtils_h
