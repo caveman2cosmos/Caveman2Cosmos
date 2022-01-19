@@ -19,7 +19,9 @@ text:
 python:
   - Assets/Python/**/*
   - Assets/Python/*
+  - Assets/Config/*
   - PrivateMaps/*.py
+  - Tools/**/*.py
 
 art:
   - UnpackedArt/**/*
@@ -28,8 +30,33 @@ art:
   - ArtSource/*
   - Assets/art/**/*
   - Assets/art/*
+  - Resource/**/*
+  - Resource/*
 
 audio:
   - Assets/Sounds/**/*
   - Assets/Sounds/*
 
+documentation:
+  - README.md
+  - Docs/**/*
+  - Docs/*
+
+github:
+  - .gitattributes
+  - .gitignore
+  - .github/**/*.yml
+  - .github/*.yml
+  - *.yml
+
+build:
+  - Sources/fbuild.bff
+  - Sources/**/*.vcxproj
+  - Sources/*.vcxproj
+  - Sources/**/*.vcxproj.filters
+  - Sources/*.vcxproj.filters
+  - Sources/**/*.sln
+  - Sources/*.sln
+  - *.sln
+  - svn_copy_exclude_list.txt
+  - svn_copy_exclude_list2.txt
