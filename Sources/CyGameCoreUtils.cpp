@@ -227,9 +227,5 @@ void cyShuffleIntList(python::list& pyList, CvRandom& rand)
 	{
 		pyList.pop();
 	}
-	foreach_(const int& i, v)
-	{
-		pyList.append(v[i]);
-		logging::logMsg("shuffle.log", "%d", i);
-	}
+	pyList.extend(Cy::makeList(v));
 }
