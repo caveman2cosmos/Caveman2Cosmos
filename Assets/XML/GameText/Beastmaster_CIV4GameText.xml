@@ -1,18 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Tag>
-		<English>Animal Tamer Complex</English>
-		<French>Centre de Dressage d'animaux</French>
-		<Polish>Kompleks Tresury Zwierząt</Polish>
-		<Russian>Äðåññ. êîìïëåêñ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_PEDIA</Tag>
-		<English>Animal taming is not domestication. Tamed animals can be further trained.</English>
-		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_AARDVARK</Tag>
 		<English>Tamed Aardvark</English>
 		<French>
