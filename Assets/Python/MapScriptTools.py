@@ -406,9 +406,11 @@ def directionName( eDir ):
 	if eDir==DirectionTypes.DIRECTION_NORTHWEST: return "NorthWest"
 	return "None"
 
-# get opposite direction ( getOppositeCardinalDirection() already exists )
-def getOppositeDirection( eDir ):
-	return DirectionTypes( (eDir + 4) % 8 )
+def getOppositeDirection(eDir):
+	return DirectionTypes((eDir + 4) % 8)
+
+def getOppositeCardinalDirection(dir):
+	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
 
 # add index to direction; clockwise -> positive
 def addDirection( eDir, index ):

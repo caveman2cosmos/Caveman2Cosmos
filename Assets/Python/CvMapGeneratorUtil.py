@@ -316,8 +316,7 @@ class HintedWorld(FractalWorld):
 		foundx, foundy = self.findValid(x,y, maxDist)
 		if (foundx == -1 and foundy == -1):
 			return None
-		else:
-			return self.__addContinentAt(numBlocks, foundx, foundy, maxRadius)
+		return self.__addContinentAt(numBlocks, foundx, foundy, maxRadius)
 
 	def __addContinentAt(self, numBlocks, x, y, maxradius=-1):
 		land_value = 192 + self.mapRand.get(64, "Add Continent At PYTHON")
