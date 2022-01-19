@@ -24,6 +24,11 @@ def RemoveSign(argsList):
 def initBUG():
 	import BugInit
 	BugInit.init()
+	# Matt: todo - delete this later
+	l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	shuffleIntList(l, CyGame().getSorenRand())
+	for i in l:
+		print str(i)
 
 # don't make this an event - Moose
 def init():
