@@ -218,7 +218,6 @@ class CvCivicsScreen:
 		iOff = 3*xRes/7
 		iCivicOption = 0
 		for civics in CivicData.civicLists:
-			print len(civics)
 			aCoordList.append([])
 			w = len(civics)*dx + 28
 			if w < wScroll:
@@ -293,8 +292,6 @@ class CvCivicsScreen:
 		iOff = 3*xRes/7
 		iCivicOption = 0
 		for civics in CivicData.civicLists:
-			print civics
-			print len(civics)
 			h = 56 + len(civics)*dy
 
 			screen.attachPanelAt(ScPnl, self.getNextWidget(), "", "", True, True, ePnlMain, 0, y, 404, h, eWidGen, 1, 1)
