@@ -2540,36 +2540,36 @@ def canTriggerGreed(argsList):
 		return False
 
 	bonuses = []
-	iCount = 0
 	iOil = GC.getInfoTypeForString("BONUS_OIL")
 	if not CyPlayer.getNumAvailableBonuses(iOil):
 		bonuses.append(iOil)
-		iCount += 1
+
 	iIron = GC.getInfoTypeForString("BONUS_IRON_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iIron):
 		bonuses.append(iIron)
-		iCount += 1
+
 	iHorse = GC.getInfoTypeForString("BONUS_HORSE")
 	if not CyPlayer.getNumAvailableBonuses(iHorse):
 		bonuses.append(iHorse)
-		iCount += 1
+
 	iCopper = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iCopper):
 		bonuses.append(iCopper)
-		iCount += 1
+
 	iSulphur = GC.getInfoTypeForString("BONUS_SULPHUR")
 	if not CyPlayer.getNumAvailableBonuses(iSulphur):
 		bonuses.append(iSulphur)
-		iCount += 1
+
 	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANTS")
 	if not CyPlayer.getNumAvailableBonuses(iElephant):
 		bonuses.append(iElephant)
-		iCount += 1
 
-	if not iCount:
+	if not bonuses:
 		return False
 
-	shuffledRange = CvUtil.shuffle(iCount, GAME.getMapRand())
+	iSize = len(bonuses)
+	shuffledRange = [0]*iSize
+	shuffleList(iSize, GAME.getMapRand(), shuffledRange)
 	MAP = GC.getMap()
 	iNumPlots = MAP.numPlots()
 	listPlots = []

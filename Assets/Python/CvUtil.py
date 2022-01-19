@@ -73,12 +73,6 @@ def pyPrint(stuff):
 def getOppositeCardinalDirection(dir):
 	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
 
-def shuffle(num, rand):
-	"returns a tuple of size num of shuffled numbers"
-	piShuffle = [0]*num
-	shuffleList(num, rand, piShuffle)	# implemented in C for speed
-	return piShuffle
-
 def spawnUnit(iUnit, pPlot, pPlayer):
 	pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 	return 1
