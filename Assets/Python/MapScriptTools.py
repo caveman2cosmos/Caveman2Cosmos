@@ -853,9 +853,8 @@ def chooseListElement(aList):
 
 # randomly pick index from list, delete index and return element
 def chooseListPop(aList):
-	if not len(aList): return None
-	iRand = GC.getGame().getMapRand().get( len(aList), "MapScriptTools.chooseListPop()" )
-	return aList.pop( iRand )
+	if not aList: return None
+	return aList.pop(GC.getGame().getMapRand().get( len(aList), "MapScriptTools.chooseListPop()" ))
 
 # get random number within [0 .. iRand-1] or [iRand .. iMax-1]
 def chooseNumber( iRand, iMax=None ):
@@ -1522,7 +1521,7 @@ class MarshMaker:
 			pList[0].setTerrainType( etMarsh, True, True )
 			sprint += "[MST] - More Marsh created @ %i,%i \n" % (pList[0].getX(),pList[0].getY())
 			if (len(pList)>2) and choose( 25, True, False ):
-				if pList[0] <> pList[1]:
+				if pList[0] != pList[1]:
 					iLat = abs( pList[1].getLatitude() )
 					if (self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop) or (self.iMarshColdBottom<=iLat and iLat<=self.iMarshColdTop):
 						pList[1].setTerrainType( etMarsh, True, True )
@@ -2951,7 +2950,7 @@ featurePlacer = FeaturePlacer()
 # addMissingBoni()
 # boniMissing, boniFound, freePlots = checkAllBoniPlaced()
 # freePlots = reduceNumerousBoni( boniFound, freePlots )
-# boniMissing = placeMissingBoni( boniMissing, boniFound, freePlots )
+# boniMissing = placeMissingBoni( boniMissing, freePlots )
 # placeBonus( plot, iBonus )
 # iVariety = transformForest2Jungle( plot )
 # txtMessage = transformJungleNeighbor( plot )
@@ -3168,9 +3167,9 @@ class BonusBalancer:
 			for i in lMissing: sprint += "[MST] %s wasn't placed randomly \n" % (GC.getBonusInfo(i[0]).getType())
 			print sprint
 			# reduce numerous boni, since some other boni are missing
-			lFree = self.reduceNumerousBoni( lFound, lFree )
+			lFree = self.reduceNumerousBoni(lFound, lFree)
 			# try to place those missing boni now
-			lMissing = self.placeMissingBoni( lMissing, lFound, lFree )
+			lMissing = self.placeMissingBoni(lMissing, lFree)
 			# print warning, if there are still missing boni
 			if len(lMissing)>0:
 				sprint = "[MST] WARNING! - not all missing boni could be placed \n"
@@ -3181,80 +3180,84 @@ class BonusBalancer:
 
 	# make lists with boni and their plots
 	def checkAllBoniPlaced( self ):
-#		print "[MST] ======== BonusBalancer:checkAllBoniPlaced()"
+		print "[MST] ======== BonusBalancer:checkAllBoniPlaced()"
 
 		iPlayer = GC.getGame().countCivPlayersAlive()
 		boniMissing = []
-		boniFound = []
+		boniFound = {}
 		freePlots = []
-		for i in range( GC.getNumBonusInfos() ): boniFound.append( [] )
 
 		# make lists for placed boni and free plots
-		for i in range( MAP.numPlots() ):
+		for i in range(MAP.numPlots()):
 			plot = MAP.plotByIndex(i)
-#			if plot.isWater(): continue				# ignore water boni
 			iBonus = plot.getBonusType(-1)
-			if iBonus<0:
-				if not plot.isWater():					# no new water boni
-					if not plot.isPeak():				# no boni on peaks
-						freePlots.append( i )
-			else:
-				boniFound[iBonus].append( i )
+			if iBonus > -1:
+				if iBonus in boniFound:
+					boniFound[iBonus].append(i)
+				else: boniFound[iBonus] = [i]
+
+			elif not plot.isWater() and not plot.isPeak(): # no new water/peak boni
+				freePlots.append(i)
 
 		# make list for missing boni
-		for iBonus in range( GC.getNumBonusInfos() ):
+		for i in range(GC.getNumMapBonuses()):
+			iBonus = GC.getMapBonus(i)
 			# find missing boni
-			if boniFound[iBonus] == []:
+			if iBonus not in boniFound:
 				# should bonus placed on the map, if so try to place half
-				iDesiredBoni = self.calcNumBoniToAdd( iBonus )
+				iDesiredBoni = self.calcNumBoniToAdd(iBonus)
 				if iDesiredBoni > 1:
-					bonusName = capWords( GC.getBonusInfo(iBonus).getType()[6:] )
+					bonusName = capWords(GC.getBonusInfo(iBonus).getType()[6:])
 					boniMissing.append( [iBonus, min(int((iDesiredBoni+1)/2),int(iPlayer/2)), bonusName] )
 			# recheck single boni, if desired are >2 then place half
-			elif len( boniFound[iBonus] )	== 1:
-				pl = MAP.plotByIndex( boniFound[iBonus][0] )
+			elif len(boniFound[iBonus]) == 1:
+				pl = MAP.plotByIndex(boniFound[iBonus][0])
 				if not pl.isWater():
 					iDesiredBoni = self.calcNumBoniToAdd( iBonus )
 					if iDesiredBoni > 2:
 						bonusName = capWords( GC.getBonusInfo(iBonus).getType()[6:] )
 						boniMissing.append( [iBonus, min(int(iDesiredBoni/2),int(iPlayer/2)), bonusName] )
-		return ( boniMissing, boniFound, freePlots )
+
+		return (boniMissing, boniFound, freePlots)
+
 
 	# delete some of the most placed boni on land, ignore balanced boni
 	def reduceNumerousBoni(self, boniFound, freePlots):
 		print "[MST] ======== BonusBalancer:reduceNumerousBoni()"
 		iPlayer = GC.getGame().countCivPlayersAlive()
 		cnt = 0
-		for i in range( len(boniFound) ):
-			actBonusPlots = boniFound[i]
-			if len(actBonusPlots)==0: continue
-			if	MAP.plotByIndex(actBonusPlots[0]).isWater(): continue
-			if not (i in self.resourcesToBalance):
+		for iBonus, plots in boniFound.items():
+
+			if not plots or MAP.plotByIndex(plots[0]).isWater():
+				continue
+
+			if iBonus not in self.resourcesToBalance:
 				passes = 0
-				if len(actBonusPlots) > int(1.60*iPlayer): passes = 1
-				if len(actBonusPlots) > int(2.40*iPlayer): passes = 2
-				if len(actBonusPlots) > int(3.20*iPlayer): passes = 3
-				if len(actBonusPlots) > int(4.00*iPlayer): passes = 4
-				if len(actBonusPlots) > 12: passes += 1
-				if len(actBonusPlots) > 16: passes += 1
-				if len(actBonusPlots) > 20: passes += 1
-				cn = 0
-				while passes>0:
+				iNumBonuses = len(plots)
+				if iNumBonuses > iPlayer * 4: passes = 4
+				elif iNumBonuses > iPlayer * 16/5: passes = 3
+				elif iNumBonuses > iPlayer * 12/5: passes = 2
+				elif iNumBonuses > iPlayer * 8/5: passes = 1
+
+				if iNumBonuses > 20: passes += 3
+				elif iNumBonuses > 16: passes += 2
+				elif iNumBonuses > 12: passes += 1
+
+				while passes > 0 and plots:
 					passes -= 1
-					inx = chooseListPop( actBonusPlots )
-					plot = MAP.plotByIndex( inx )
-					self.placeBonus( plot, -1 )
+					inx = plots.pop(GC.getGame().getMapRand().get(iNumBonuses, "MapScriptTools.chooseListPop()" ))
+					iNumBonuses -= 1
+					self.placeBonus(MAP.plotByIndex(inx), -1)
 					freePlots.append(inx)
-					cn += 1
 					cnt += 1
-				# print " killed %i of %s" % ( cn, capWords( GC.getBonusInfo(i).getType()[6:] ) )
+
 		if cnt > 0:
 			print "[MST] Eliminated %2i of the most plentiful boni" % (cnt)
 			shuffle(freePlots)
 		return freePlots
 
 	# place missing boni if at all possible
-	def placeMissingBoni(self, boniMissing, boniFound, freePlots):
+	def placeMissingBoni(self, boniMissing, freePlots):
 		print "[MST] ======== BonusBalancer:placeMissingBoni()"
 		if not boniMissing: return []
 
@@ -3275,9 +3278,9 @@ class BonusBalancer:
 		for pass_num in range(8):
 			if len(boniMissing)==0: break
 			bIgnoreLatitude			= True
-			bIgnoreUniqueRange		= (pass_num >= 1) and (pass_num <> 4)
-			bIgnoreOneArea				= (pass_num >= 2) and (pass_num <> 4) and (pass_num <> 5)
-			bIgnoreAdjacent			= (pass_num >= 3) and (pass_num <> 4) and (pass_num <> 5) and (pass_num <> 6)
+			bIgnoreUniqueRange		= (pass_num >= 1) and (pass_num != 4)
+			bIgnoreOneArea				= (pass_num >= 2) and (pass_num != 4) and (pass_num != 5)
+			bIgnoreAdjacent			= (pass_num >= 3) and (pass_num != 4) and (pass_num != 5) and (pass_num != 6)
 			bCreateTerrainFeature	= (pass_num >= 4)
 
 			lastRound = False
@@ -5349,17 +5352,17 @@ class MapStats:
 		stats_plo  = [0] * 4
 		stats_ter  = [0] * GC.getNumTerrainInfos()
 		stats_feat = [0] * GC.getNumFeatureInfos()
-		stats_bon  = [0] * GC.getNumBonusInfos()
+		stats_bon  = {}
 		stats_imp  = [0] * GC.getNumImprovementInfos()
 
 		iPlayer = GC.getGame().countCivPlayersAlive()
 		# Count stats for each plot
-		for i in range( MAP.numPlots() ):
+		for i in range(MAP.numPlots()):
 			pl = MAP.plotByIndex(i)
 			# get infos
 			gpiPlot			= pl.getPlotType()
 			gpiTerrain		= pl.getTerrainType()
-			gpiBonus			= pl.getBonusType(-1)
+			gpiBonus		= pl.getBonusType(-1)
 			gpiFeature		= pl.getFeatureType()
 			gpiImprovement	= pl.getImprovementType()
 			# add up
@@ -5371,10 +5374,13 @@ class MapStats:
 				stats_plo[2] += 1
 			elif gpiPlot == PlotTypes.PLOT_PEAK:
 				stats_plo[3] += 1
-			if gpiTerrain>(-1):     stats_ter[gpiTerrain] += 1
-			if gpiFeature>(-1):     stats_feat[gpiFeature] += 1
-			if gpiBonus>(-1):       stats_bon[gpiBonus] += 1
-			if gpiImprovement>(-1): stats_imp[gpiImprovement] += 1
+			if gpiTerrain > -1: stats_ter[gpiTerrain] += 1
+			if gpiFeature > -1: stats_feat[gpiFeature] += 1
+			if gpiBonus > -1:
+				if gpiBonus in stats_bon:
+					stats_bon[gpiBonus] += 1
+				else: stats_bon[gpiBonus] = 1
+			if gpiImprovement > -1: stats_imp[gpiImprovement] += 1
 
 		# Display Plot-Statistics
 		nOcean = 0
@@ -5424,7 +5430,7 @@ class MapStats:
 		sprint += "[MST]   Plots: #3 - PLOT_PEAK  ( %4i )  = %4.1f%s Peaks" 		% (stats_plo[3], f4, '%%') + "\n\n"
 
 		# Display available Mod-Resources
-		sprint += self.doBonusChart( stats_bon )
+		sprint += self.doBonusChart(stats_bon)
 		sprint += "\n"
 
 		# Display active Civilizations
@@ -5514,34 +5520,42 @@ class MapStats:
 		bs += "------------------"
 
 		nBoni = nHeal = nHap = nMana = 0
-		for bon in range(GC.getNumBonusInfos()):
-			type_string = GC.getBonusInfo(bon).getType()
-			if GC.getBonusInfo(bon).isTerrain( etCoast ) or GC.getBonusInfo(bon).isTerrain( etOcean ):
-				type_string = "*" + type_string
-			elif GC.getBonusInfo(bon).isFeatureTerrain( etCoast ) or GC.getBonusInfo(bon).isFeatureTerrain( etOcean ):
-				type_string = "*" + type_string
+		for iBonus in xrange(GC.getNumBonusInfos()):
+			bonus = GC.getBonusInfo(iBonus)
+			if iBonus in boni:
+				iNumBonuses = boni[iBonus]
+			else: iNumBonuses = 0
+
+			if not iNumBonuses and bonus.getPlacementOrder < 0:
+				continue
+
+			if bonus.isTerrain(etCoast) or bonus.isTerrain(etOcean):
+				type_string = "*" + bonus.getType()
+
+			elif bonus.isFeatureTerrain(etCoast) or bonus.isFeatureTerrain(etOcean):
+				type_string = "*" + bonus.getType()
 			else:
-				type_string = " " + type_string
+				type_string = " " + bonus.getType()
 
 			sHeal = sHap = ".."
 			sStrat = "."
 			nY0 = nY1 = nY2 = 0
 			sMana = "...."
 
-			iHealth    = GC.getBonusInfo(bon).getHealth()
-			if iHealth<>0: sHeal = "%2i" % iHealth
+			iHealth    = bonus.getHealth()
+			if iHealth != 0: sHeal = "%2i" % iHealth
 
-			iHappiness = GC.getBonusInfo(bon).getHappiness()
-			if iHappiness<>0: sHap = "%2i" % iHappiness
+			iHappiness = bonus.getHappiness()
+			if iHappiness != 0: sHap = "%2i" % iHappiness
 
 			if (iHealth<=0) and (iHappiness<=0) and (type_string.find("_MANA")<0):
 				sStrat = "X"
 
-			sYield0 = "%2i" % (GC.getBonusInfo(bon).getYieldChange(0))
-			sYield1 = "%2i" % (GC.getBonusInfo(bon).getYieldChange(1))
-			sYield2 = "%2i" % (GC.getBonusInfo(bon).getYieldChange(2))
+			sYield0 = "%2i" % (bonus.getYieldChange(0))
+			sYield1 = "%2i" % (bonus.getYieldChange(1))
+			sYield2 = "%2i" % (bonus.getYieldChange(2))
 
-			iTech = GC.getBonusInfo(bon).getTechReveal()
+			iTech = bonus.getTechReveal()
 			if iTech in range( GC.getNumTechInfos() ):
 				sTech = GC.getTechInfo(iTech).getType()
 				sTech = sTech.replace("_", " ")
@@ -5551,12 +5565,12 @@ class MapStats:
 				sTechEra = sTechEra.replace("_", " ")
 				sTechEra = capWords( sTechEra[4:] )
 
-			bs += "\n[MST]   | %3i  | %-27s| %4i |..%2s..|..%2s..|..%1s..|%2s,%2s,%2s|" % (bon,type_string,boni[bon],sHeal,sHap,sStrat,sYield0,sYield1,sYield2)
+			bs += "\n[MST]   | %3i  | %-27s| %4i |..%2s..|..%2s..|..%1s..|%2s,%2s,%2s|" % (iBonus, type_string, iNumBonuses, sHeal, sHap, sStrat, sYield0, sYield1, sYield2)
 
 			if iTech>0: bs += " " + sTech + ", " + sTechEra
-			nBoni += boni[bon]
-			nHeal += boni[bon] * iHealth
-			nHap  += boni[bon] * iHappiness
+			nBoni += iNumBonuses
+			nHeal += iNumBonuses * iHealth
+			nHap  += iNumBonuses * iHappiness
 
 		bs += "\n[MST]   +------+----------------------------+------+------+------+-----+--------+"
 

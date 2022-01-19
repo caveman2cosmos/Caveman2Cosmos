@@ -822,16 +822,16 @@ class SimplexNoise4D:
 	_G4 = (5.0 - sqrt(5.0)) / 20.0
 	_F4 = (sqrt(5.0) - 1.0) / 4.0
 
-	def __init__(self, iPeriod = 512):
+	def __init__(self, iPeriod = 1024):
 		# Create permutation tables.
 		self.randomize(iPeriod)
 
-	def randomize(self, iPeriod = 512):
+	def randomize(self, iPeriod = 1024):
 		"""Randomize the permutation table used by the noise functions.
 		The same value is always returned for a given coordinate unless the	permutation table changes."""
 		self.period = iPeriod
-		permTable = range(self.period)
-		shuffle(permTable)
+		permTable = [0]*iPeriod
+		shuffleList(iPeriod, CyGame().getMapRand(), permTable)
 		# Double permutation array so we don't need to wrap
 		self.perm = permTable * 2
 
