@@ -6363,52 +6363,45 @@ def doVolcanoNeighbouringPlots(pPlot):
 
 
 def doVolcanoPlot(pPlot):
-  if pPlot.isNone():
-     return
+	if pPlot.isNone():
+		return
 
-  # List of features that are volcanoes
-  listVolcanoes = [GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
-  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
-  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE')
+	# List of features that are volcanoes
+	listVolcanoes = [
+		GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
+		GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
+		GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+		GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+	]
+	ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+	ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE')
 
-  # if terrain is a hill or peak, level it by changing it to rocky flatland.
-  if pPlot.isHills() or pPlot.isPeak():
-    pPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
-    pPlot.setTerrainType(GC.getInfoTypeForString('TERRAIN_ROCKY'), True, True)
+	# if terrain is a hill or peak, level it by changing it to rocky flatland.
+	if pPlot.isHills() or pPlot.isPeak():
+		pPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
+		pPlot.setTerrainType(GC.getInfoTypeForString('TERRAIN_ROCKY'), True, True)
 
-  iFeature = pPlot.getFeatureType()
-  pPlot.setImprovementType(-1)
-  pPlot.setBonusType(-1)
+	iFeature = pPlot.getFeatureType()
+	pPlot.setImprovementType(-1)
+	pPlot.setBonusType(-1)
 
-  # if the terrain is not an active volcano make it so
-  if iFeature == ft_volcano_dormant:
-    pPlot.setFeatureType(ft_volcano_active, 0)
-  elif not(iFeature in listVolcanoes):
-    pPlot.setFeatureType(ft_volcano_active, 0)
+	# if the terrain is not an active volcano make it so
+	if iFeature == ft_volcano_dormant or iFeature not in listVolcanoes:
+		pPlot.setFeatureType(ft_volcano_active, 0)
 
-  # Wound any units on the same plot as the volcano
-  iNumberOfUnits = pPlot.getNumUnits()
-  if iNumberOfUnits > 0:
-    for i in xrange(0, iNumberOfUnits):
-      pPlotUnit = pPlot.getUnit(i)
-      if pPlotUnit.getDamage() < 90: pPlotUnit.setDamage(90, False)
-      else: pPlotUnit.setDamage(99, False)
+	# Wound any units on the same plot as the volcano
+	for pPlotUnit in pPlot.units():
+		if pPlotUnit.getDamage() < 90: pPlotUnit.setDamage(90, False)
+		else: pPlotUnit.setDamage(99, False)
 
-      # move them to safety
-      iX = pPlot.getX()
-      iY = pPlot.getY()
-      for i in xrange(8):
-        sPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
-        if not sPlot.isNone():
-          if pPlotUnit.canMoveInto(sPlot, False, False, True):
-            pPlotUnit.setXY(sPlot.getX(), sPlot.getY(), False, True, True)
+		# move them to safety
+		for sPlot in pPlot.adjacent():
+			if pPlotUnit.canMoveInto(sPlot, False, False, True):
+				pPlotUnit.setXY(sPlot.getX(), sPlot.getY(), False, True, True)
 
-  if pPlot.isWater(): pPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
+	if pPlot.isWater(): pPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
 
 def doVolcanoReport(argsList):
   pPlot = argsList[0]
