@@ -1366,7 +1366,7 @@ class Revolution:
 				natIdx = int(natIdx/2.0 + .5)
 
 			if( natIdx > 0 ) :
-				natMod = RevUtils.getCivicsNationalityMod( iPlayer )
+				natMod = RevUtils.getCivicsNationalityMod(pPlayer)
 				natIdx = int(natIdx*(1.0 + natMod) + .5)
 
 			natIdx = int(self.nationalityModifier*natIdx + .5)
@@ -1468,7 +1468,7 @@ class Revolution:
 			revIdxHist['Disorder'] = [disorderIdx] + revIdxHist['Disorder'][0:RevDefs.revIdxHistLen-1]
 
 			# Civics
-			[civicIdx, civicPosList, civicNegList] = RevUtils.getCivicsRevIdxLocal(iPlayer)
+			[civicIdx, civicPosList, civicNegList] = RevUtils.getCivicsRevIdxLocal(pPlayer)
 			localRevIdx += civicIdx
 
 			posList.extend(civicPosList)
@@ -3087,8 +3087,8 @@ class Revolution:
 
 							return
 
-				[enviroLevel,optionType] = RevUtils.getEnvironmentalProtection( iPlayer )
-				[newEnviroLevel,newCivic] = RevUtils.getBestEnvironmentalProtection( iPlayer, optionType )
+				[enviroLevel, optionType] = RevUtils.getEnvironmentalProtection(pPlayer)
+				[newEnviroLevel, newCivic] = RevUtils.getBestEnvironmentalProtection(pPlayer, optionType)
 				if( bPeaceful and newEnviroLevel > enviroLevel + 2 and not newCivic == None ) :
 					if( 30 > GAME.getSorenRandNum(100, 'Revolt - environmentalism request') ):
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change to %s, %d (environment)"%(GC.getCivicInfo(newCivic).getDescription(),newCivic)
@@ -3698,22 +3698,22 @@ class Revolution:
 										print "[REV] Revolt: Young rebel (attitude) %s in area" % playerI.getCivilizationDescription(0)
 									rebelIDList.append(i)
 
-			if( len(rebelIDList) > 0 ) :
-				for pCity in closeCityList :
+			if rebelIDList:
+				for pCity in closeCityList:
 					if self.LOG_DEBUG: print "[REV] Revolt: Checking around %s for other rebellion" % pCity.getName()
 
-					for [radius,plotI] in RevUtils.plotGenerator( pCity.plot(), 6 ) :
-						for rebelID in rebelIDList :
-							if( plotI.getNumDefenders(rebelID) > 0 ) :
+					for [radius, plotI] in RevUtils.plotGenerator(pCity.plot(), 6):
+						for rebelID in rebelIDList:
+							if plotI.getNumDefenders(rebelID) > 0:
 								pRevPlayer = GC.getPlayer(rebelID)
 								if self.LOG_DEBUG: print "[REV] Revolt: Found %s within %d, expanding their rebellion!"%(pRevPlayer.getCivilizationDescription(0),radius)
 								break
 
-						if( not pRevPlayer == None ) :
+						if pRevPlayer:
 							break
 
-					if( not pRevPlayer == None ) :
-							break
+					if pRevPlayer:
+						break
 
 		# Search around all cities in list for a dead player to reincarnate
 		if( pRevPlayer == None and bReincarnate ) :
@@ -6703,56 +6703,3 @@ class Revolution:
 			if iButton >= 0:
 				CyMessageControl().sendModNetMessage(self.netRevolutionPopupProtocol, iPlayer, iButton, iRevoltIdx, 0)
 
-
-## Additional text utilities.
-def getCityTextList(cityList, bPreCity = False, bPreCitizens = False, sep = ', ', second = '', penUlt = '', bPostIs = False):
-
-	textList = []
-	penUlt = TRNSLTR.getText("TXT_KEY_REV_AND",()) + ' '
-
-	for pCity in cityList:
-		textList.append(pCity.getName())
-
-	pre = ''
-	if bPreCity:
-		if len(cityList) > 1 and second == '':
-			pre = TRNSLTR.getText("TXT_KEY_REV_CITIES_OF",()) + ' '
-		else: pre = TRNSLTR.getText("TXT_KEY_REV_CITY_OF",()) + ' '
-
-	elif bPreCitizens:
-		pre = TRNSLTR.getText("TXT_KEY_REV_CITIZENS_OF",()) + ' '
-
-	post = ''
-	if bPostIs:
-		if bPreCitizens or len(cityList) > 1 and second == '':
-			post += ' ' + TRNSLTR.getText("TXT_KEY_REV_ARE",())
-		else:
-			post += ' ' + TRNSLTR.getText("TXT_KEY_REV_IS",())
-			if second != '':
-				post = sep.strip() + post
-
-	return getTextItemList(textList, pre = pre, sep = sep, second = second, penUlt = penUlt, post = post)
-
-def getTextItemList(textList, pre = '', sep = ', ', second = '', penUlt = '', post = ''):
-
-	str = pre
-	penUlt = localText.getText("TXT_KEY_REV_AND",()) + ' '
-
-	if not textList:
-		return str.strip()
-
-	str += textList[0]
-
-	if len(textList) > 1:
-		str += second
-		if second == '':
-			str += sep
-
-		for text in textList[1:-1] :
-			str += text + sep
-
-		if len(textList) > 2 or second == '':
-			str += penUlt
-		str += textList[-1]
-
-	return str + post

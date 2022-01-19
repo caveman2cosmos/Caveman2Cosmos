@@ -737,6 +737,8 @@ def lateInit():
 	screenMap[WB_INFO]			= WBInfoScreen.WBInfoScreen(worldBuilderScreen)
 	screenMap[WB_TRADE]			= WBTradeScreen.WBTradeScreen(worldBuilderScreen)
 
+	import CivicData
+	CivicData.initCivicData()
 
 
 def earlyInit():
