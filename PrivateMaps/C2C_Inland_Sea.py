@@ -29,6 +29,7 @@
 
 from CvPythonExtensions import *
 import CvMapGeneratorUtil as MGU
+from random import shuffle
 
 ################################################################
 ## MapScriptTools by Temudjin
@@ -143,11 +144,9 @@ def normalizeAddExtras():
 	mst.mapStats.mapStatistics()
 
 def minStartingDistanceModifier():
-	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	if numPlrs  <= 18:
+	if CyGlobalContext().getGame().countCivPlayersEverAlive() <= 18:
 		return -95
-	else:
-		return -50
+	return -50
 
 ################################################################
 
@@ -259,7 +258,8 @@ def beforeGeneration2():
 		templates = {}
 		templates[ (iPlayers,0) ] = cDict
 		print "template: %3r" % (templates)
-		shuffledPlayers = mst.randomList.randomCountList( iPlayers )
+		shuffledPlayers = range(iPlayers)
+		shuffle(shuffledPlayers)
 		return
 	########## Temudjin END
 
@@ -821,7 +821,12 @@ class ISFractalWorld(MGU.FractalWorld):
 		return self.plotTypes
 
 class ISHintedWorld(MGU.HintedWorld, ISFractalWorld):
-	def __doInitFractal(self):
+
+	def generatePlotTypes(self, water_percent=-1, shift_plot_types=False):
+		for i in range(len(self.data)):
+			if self.data[i] == None:
+				self.data[i] = self.mapRand.get(48, "Generate Plot Types PYTHON")
+
 		self.shiftHintsToMap()
 
 		# don't call base method, this overrides it.
@@ -841,12 +846,6 @@ class ISHintedWorld(MGU.HintedWorld, ISFractalWorld):
 		iFlags = self.map.getMapFractalFlags()
 		self.continentsFrac.fracInitHints(self.iNumPlotsX, self.iNumPlotsY, iGrain, self.mapRand, iFlags, self.data, self.fracXExp, self.fracYExp)
 
-	def generatePlotTypes(self, water_percent=-1, shift_plot_types=False):
-		for i in range(len(self.data)):
-			if self.data[i] == None:
-				self.data[i] = self.mapRand.get(48, "Generate Plot Types PYTHON")
-
-		self.__doInitFractal()
 		if (water_percent == -1):
 			numPlots = len(self.data)
 			numWaterPlots = 0

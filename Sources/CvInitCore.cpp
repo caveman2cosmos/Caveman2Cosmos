@@ -36,7 +36,7 @@ CvInitCore::CvInitCore()
 	OutputDebugString("Calling constructor for InitCore: Start\n");
 
 	// Moved to Init as the number is no more predetermined
-	//m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
+	//m_abOptions = new bool[GC.getNumGameOptionInfos()];
 	m_abOptions = NULL;
 	m_abMPOptions = new bool[NUM_MPOPTION_TYPES];
 	m_abForceControls = new bool[NUM_FORCECONTROL_TYPES];
@@ -128,7 +128,7 @@ void CvInitCore::init(GameMode eMode)
 	OutputDebugString("Initialize InitCore: Start\n");
 
 	if (m_abOptions == NULL)
-		m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
+		m_abOptions = new bool[GC.getNumGameOptionInfos()];
 	//--------------------------------
 	// Init saved data
 	reset(eMode);
@@ -168,7 +168,7 @@ void CvInitCore::reset(GameMode eMode)
 
 void CvInitCore::setDefaults()
 {
-	for (int i = 0; i < NUM_GAMEOPTION_TYPES; ++i)
+	for (int i = 0; i < GC.getNumGameOptionInfos(); ++i)
 	{
 		//	Allow the DLL to run against older assets that define fewer options, leaving
 		//	more recent ones turned off by default always
@@ -586,7 +586,7 @@ void CvInitCore::resetGame()
 
 	// Standard game options
 	int i;
-	for (i = 0; i < NUM_GAMEOPTION_TYPES; ++i)
+	for (i = 0; i < GC.getNumGameOptionInfos(); ++i)
 	{
 		m_abOptions[i] = false;
 	}
@@ -666,7 +666,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 
 		// Standard game options
 		int i;
-		for (i = 0; i < NUM_GAMEOPTION_TYPES; ++i)
+		for (i = 0; i < GC.getNumGameOptionInfos(); ++i)
 		{
 			setOption((GameOptionTypes)i, pSource->getOption((GameOptionTypes)i));
 		}
@@ -1124,7 +1124,7 @@ void CvInitCore::setVictory(VictoryTypes eVictoryID, bool bVictory)
 
 bool CvInitCore::getOption(GameOptionTypes eIndex) const
 {
-	const int numGameOptionTypes = NUM_GAMEOPTION_TYPES;
+	const int numGameOptionTypes = GC.getNumGameOptionInfos();
 	FASSERT_BOUNDS(0, numGameOptionTypes, eIndex);
 	FAssertMsg(m_abOptions != NULL, "Access to unconstructed game option array");
 	if ( m_abOptions != NULL && checkBounds(eIndex, 0, numGameOptionTypes) )
@@ -1136,8 +1136,8 @@ bool CvInitCore::getOption(GameOptionTypes eIndex) const
 
 void CvInitCore::setOption(GameOptionTypes eIndex, bool bOption)
 {
-	FASSERT_BOUNDS(0, NUM_GAMEOPTION_TYPES, eIndex);
-	if ( checkBounds(eIndex, 0, NUM_GAMEOPTION_TYPES) )
+	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), eIndex);
+	if (checkBounds(eIndex, 0, GC.getNumGameOptionInfos()))
 	{
 		m_abOptions[eIndex] = bOption;
 	}
@@ -1751,7 +1751,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	// Set options to default values to handle cases of loading games that pre-dated an added otpion
 	setDefaults();
 
-	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, NUM_GAMEOPTION_TYPES, m_abOptions);
+	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, GC.getNumGameOptionInfos(), m_abOptions);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
@@ -1977,10 +1977,10 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 // BUG - Save Format - start
 	// write out the number of game options for the external parser tool
-	WRAPPER_WRITE(wrapper, "CvInitCore", NUM_GAMEOPTION_TYPES);
+	WRAPPER_WRITE(wrapper, "CvInitCore", GC.getNumGameOptionInfos());
 // BUG - Save Format - end
 
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, NUM_GAMEOPTION_TYPES, m_abOptions);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, GC.getNumGameOptionInfos(), m_abOptions);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_MPOPTIONS, NUM_MPOPTION_TYPES, m_abMPOptions);
 
 	WRAPPER_WRITE(wrapper, "CvInitCore", m_bStatReporting);
