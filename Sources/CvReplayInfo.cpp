@@ -74,7 +74,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		m_eGameSpeed = game.getGameSpeedType();
 
 		m_listGameOptions.clear();
-		for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
+		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
 		{
 			const GameOptionTypes eOption = (GameOptionTypes)i;
 			if (game.isOption(eOption))

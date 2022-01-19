@@ -887,6 +887,8 @@ enum GameOptionTypes
 	GAMEOPTION_ADVANCED_ROUTES
 };
 
+#define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
+
 enum MultiplayerOptionTypes
 {
 	NO_MPOPTION = -1,

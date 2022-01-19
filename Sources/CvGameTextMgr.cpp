@@ -10283,7 +10283,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_CIVILIZATION"));
 		}
 		//On Game Option denotation
-		for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
+		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
 		{
 			if (kTrait.isOnGameOption(i))
 			{
@@ -10292,7 +10292,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 		//Not On Game Option denotation
-		for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
+		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
 		{
 			if (kTrait.isNotOnGameOption(i))
 			{

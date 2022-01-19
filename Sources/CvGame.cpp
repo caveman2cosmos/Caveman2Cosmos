@@ -185,7 +185,7 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 	//AlbertS2 set hidden options to their default setting
-	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
 		const CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
 		if (!kGameOption.getVisible())
@@ -194,7 +194,7 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 	//TB GameOption compatibility enforcement project
-	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
 		const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 		if (isOption(eGameOption))
@@ -2182,7 +2182,7 @@ void CvGame::update()
 		}
 		GC.getMap().updateSight(true, false);
 
-		for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+		for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 		{
 			const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 			if (isOption(eGameOption))
