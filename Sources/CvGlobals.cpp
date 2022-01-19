@@ -1759,7 +1759,7 @@ int cvInternalGlobals::getNumGameOptionInfos() const
 
 CvGameOptionInfo& cvInternalGlobals::getGameOptionInfo(GameOptionTypes eGameOptionNum) const
 {
-	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), eGameOptionNum);
+	FASSERT_BOUNDS(0, getNumGameOptionInfos(), eGameOptionNum);
 	return *(m_paGameOptionInfos[eGameOptionNum]);
 }
 
