@@ -3153,7 +3153,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							const BonusTypes eBonus = GC.getMapBonus(iI);
 
-							if (improvement->getImprovementBonusDiscoverRand(eBonus) > 0 
+							if (improvement->getImprovementBonusDiscoverRand(eBonus) > 0
 							&& team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()))
 							{
 								CvWString szFirstBuffer;

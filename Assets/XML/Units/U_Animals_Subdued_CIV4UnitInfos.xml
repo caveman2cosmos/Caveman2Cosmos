@@ -1926,6 +1926,7 @@
 				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILDBOAR</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -3012,7 +3013,6 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CARIBOU</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
@@ -4151,6 +4151,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -8815,6 +8816,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_PIG_HERD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SWINE</BuildingType>
 				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -12417,7 +12419,6 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOOSE</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_MOOSE_CAMP</BuildingType>
@@ -19130,6 +19131,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_TASMANIANDEVIL</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -19939,6 +19941,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WALLABY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
