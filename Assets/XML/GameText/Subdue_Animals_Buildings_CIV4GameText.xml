@@ -1090,6 +1090,11 @@
 		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
+		<English>Folklore - Aurochs</English>
+		<Italian>Mito dell'uro</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BABIRUSA</Tag>
 		<English>Folklore - Babirusa</English>
 		<French>Mythe du babiroussas</French>
@@ -1984,6 +1989,11 @@
 		<Russian>Ìèô î êàìíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+		<Italian>Mito del maiale</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TAPIR</Tag>
 		<English>Folklore (T) - Tapir</English>
 		<French>Mythe du Tapir (T)</French>
@@ -1997,6 +2007,11 @@
 		<French>Mythe de la Tarentule</French>
 		<Italian>Mito della tarantola</Italian>
 		<Russian>Ìèô î òàðàíòóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
+		<English>Folklore - Tasmanian Devil</English>
+		<Italian>Mito del diavoletto della Tasmania</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TERN</Tag>
@@ -2065,6 +2080,11 @@
 		<Russian>Ìèô î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLABY</Tag>
+		<English>Folklore - Ring-tailed Wallaby</English>
+		<Italian>Mito del wallaby delle rocce</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
 		<English>Folklore - Walrus</English>
 		<French>Mythe du Morse</French>
@@ -2095,6 +2115,11 @@
 		<Italian>Mito del rinoceronte bianco</Italian>
 		<Polish>Mit - Nosorożec Biały</Polish>
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
+		<English>Folklore - Wild Boar</English>
+		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
