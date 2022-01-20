@@ -158,7 +158,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
-		<English>Folklore (T) - Tales of Fish</English>
+		<English>Folklore (T) - Fish</English>
 		<French>
 			<Text>Mythe des Bancs de Poissons</Text>
 			<Gender>Male</Gender>
@@ -293,7 +293,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
-		<English>Folklore (T) - Fish</English>
+		<English>Folklore (T) - Tales of Fish</English>
 		<French>Mythe des Poissons (local)</French>
 		<Polish>Mit - Ryby (regionalne)</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
