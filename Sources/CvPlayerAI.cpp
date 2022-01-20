@@ -20256,24 +20256,19 @@ void CvPlayerAI::AI_doDiplo()
 
 									for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 									{
-										if (iJ != eBestReceiveBonus)
+										if (iJ != eBestReceiveBonus && getNumTradeableBonuses((BonusTypes)iJ) > 1
+										&& GET_PLAYER((PlayerTypes)iI).AI_bonusTradeVal((BonusTypes)iJ, getID(), 1) > 0)
 										{
-											if (getNumTradeableBonuses((BonusTypes)iJ) > 1)
+											setTradeItem(&item, TRADE_RESOURCES, iJ);
+
+											if (canTradeItem(((PlayerTypes)iI), item, true))
 											{
-												if (GET_PLAYER((PlayerTypes)iI).AI_bonusTradeVal(((BonusTypes)iJ), getID(), 1) > 0)
+												const int iValue = 1 + GC.getGame().getSorenRandNum(10000, "AI Bonus Trading #2");
+
+												if (iValue > iBestValue)
 												{
-													setTradeItem(&item, TRADE_RESOURCES, iJ);
-
-													if (canTradeItem(((PlayerTypes)iI), item, true))
-													{
-														const int iValue = 1 + GC.getGame().getSorenRandNum(10000, "AI Bonus Trading #2");
-
-														if (iValue > iBestValue)
-														{
-															iBestValue = iValue;
-															eBestGiveBonus = (BonusTypes)iJ;
-														}
-													}
+													iBestValue = iValue;
+													eBestGiveBonus = (BonusTypes)iJ;
 												}
 											}
 										}

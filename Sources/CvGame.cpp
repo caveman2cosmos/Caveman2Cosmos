@@ -185,7 +185,7 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 	//AlbertS2 set hidden options to their default setting
-	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
+	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
 	{
 		const CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
 		if (!kGameOption.getVisible())
@@ -194,7 +194,7 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 	//TB GameOption compatibility enforcement project
-	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
+	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
 	{
 		const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 		if (isOption(eGameOption))
@@ -1654,19 +1654,17 @@ void CvGame::normalizeAddFoodBonuses()
 
 			if (plotX != NULL && plotX != pStartingPlot && plotX->getBonusType() == NO_BONUS)
 			{
-				for (int iK = 0; iK < GC.getNumBonusInfos(); iK++)
+				for (int iK = GC.getNumMapBonuses() - 1; iK > -1; iK--)
 				{
-					const CvBonusInfo& bonus = GC.getBonusInfo((BonusTypes)iK);
+					const BonusTypes eBonus = GC.getMapBonus(iK);
+					const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 					if (bonus.isNormalize() && bonus.getYieldChange(YIELD_FOOD) > 0
 					&& (bonus.getTechCityTrade() == NO_TECH || GC.getTechInfo((TechTypes)bonus.getTechCityTrade()).getEra() <= getStartEra())
-					&& plotX->canHaveBonus(((BonusTypes)iK), bIgnoreLatitude))
+					&& plotX->canHaveBonus(eBonus, bIgnoreLatitude))
 					{
-						if (plotX->isWater())
-							iFoodBonus += 2;
-						else iFoodBonus += 3;
-
-						plotX->setBonusType((BonusTypes)iK);
+						iFoodBonus += 2 + plotX->isWater();
+						plotX->setBonusType(eBonus);
 						break;
 					}
 				}
@@ -1870,7 +1868,7 @@ void CvGame::normalizeAddExtras()
 					}
 				}
 
-				bool bLandBias = (iWaterCount > NUM_CITY_PLOTS / 2);
+				const bool bLandBias = iWaterCount > NUM_CITY_PLOTS / 2;
 
 				shuffleArray(aiShuffle, NUM_CITY_PLOTS, getMapRand());
 
@@ -1878,85 +1876,63 @@ void CvGame::normalizeAddExtras()
 				{
 					CvPlot* plotX = plotCity(pStartingPlot->getX(), pStartingPlot->getY(), aiShuffle[iJ]);
 
-					if (plotX != NULL && plotX != pStartingPlot)
+					if (plotX != NULL && plotX != pStartingPlot
+					&& (!bLandBias || plotX->isWater() && getSorenRandNum(2, "Placing Bonuses") == 0))
 					{
-						if (getSorenRandNum(((bLandBias && plotX->isWater()) ? 2 : 1), "Placing Bonuses") == 0)
+						if (iOtherCount * 3 + iOceanFoodCount * 2 + iCoastFoodCount * 2 >= 12
+						|| GET_PLAYER((PlayerTypes)iI).AI_foundValue(pStartingPlot->getX(), pStartingPlot->getY(), -1, true) >= iTargetValue)
 						{
-							if ((iOtherCount * 3 + iOceanFoodCount * 2 + iCoastFoodCount * 2) >= 12)
+							break;
+						}
+						const bool bCoast = plotX->isWater() && plotX->isAdjacentToLand();
+						const bool bOcean = !bCoast && plotX->isWater();
+						if (plotX != pStartingPlot
+						&& (!bCoast || iCoastFoodCount < 3)
+						&& (!bOcean || iOceanFoodCount < 3))
+						{
+							for (int iPass = 0; iPass < 2; iPass++)
 							{
-								break;
-							}
-
-							if (GET_PLAYER((PlayerTypes)iI).AI_foundValue(pStartingPlot->getX(), pStartingPlot->getY(), -1, true) >= iTargetValue)
-							{
-								break;
-							}
-
-							bool bCoast = (plotX->isWater() && plotX->isAdjacentToLand());
-							bool bOcean = (plotX->isWater() && !bCoast);
-							if ((plotX != pStartingPlot)
-								&& !(bCoast && (iCoastFoodCount > 2))
-								&& !(bOcean && (iOceanFoodCount > 2)))
-							{
-								for (int iPass = 0; iPass < 2; iPass++)
+								if (plotX->getBonusType() == NO_BONUS)
 								{
-									if (plotX->getBonusType() == NO_BONUS)
+									for (int iK = GC.getNumMapBonuses() - 1; iK > -1; iK--)
 									{
-										for (int iK = 0; iK < GC.getNumBonusInfos(); iK++)
+										const BonusTypes eBonus = GC.getMapBonus(iK);
+										const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
+
+										if (bonus.isNormalize() && bonus.getYieldChange(YIELD_FOOD) >= 0 && bonus.getYieldChange(YIELD_PRODUCTION) >= 0
+										&& (bonus.getTechCityTrade() == NO_TECH || GC.getTechInfo((TechTypes)bonus.getTechCityTrade()).getEra() <= getStartEra())
+										&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasTech((TechTypes)bonus.getTechReveal()))
 										{
-											if (GC.getBonusInfo((BonusTypes)iK).isNormalize())
+											if ((iPass == 0) ? CvMapGenerator::GetInstance().canPlaceBonusAt(eBonus, plotX->getX(), plotX->getY(), bIgnoreLatitude) : plotX->canHaveBonus(eBonus, bIgnoreLatitude))
 											{
-												//???no bonuses with negative yields?
-												if ((GC.getBonusInfo((BonusTypes)iK).getYieldChange(YIELD_FOOD) >= 0) &&
-													  (GC.getBonusInfo((BonusTypes)iK).getYieldChange(YIELD_PRODUCTION) >= 0))
-												{
-													if ((GC.getBonusInfo((BonusTypes)iK).getTechCityTrade() == NO_TECH) || (GC.getTechInfo((TechTypes)(GC.getBonusInfo((BonusTypes)iK).getTechCityTrade())).getEra() <= getStartEra()))
-													{
-														if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iK).getTechReveal())))
-														{
-															if ((iPass == 0) ? CvMapGenerator::GetInstance().canPlaceBonusAt(((BonusTypes)iK), plotX->getX(), plotX->getY(), bIgnoreLatitude) : plotX->canHaveBonus(((BonusTypes)iK), bIgnoreLatitude))
-															{
-																plotX->setBonusType((BonusTypes)iK);
-																iCoastFoodCount += bCoast ? 1 : 0;
-																iOceanFoodCount += bOcean ? 1 : 0;
-																iOtherCount += !(bCoast || bOcean) ? 1 : 0;
-																break;
-															}
-														}
-													}
-												}
+												plotX->setBonusType(eBonus);
+												if (bCoast) iCoastFoodCount++;
+												else if (bOcean) iOceanFoodCount++;
+												else iOtherCount++;
+												break;
 											}
 										}
+									}
 
-										if (bLandBias && !plotX->isWater() && plotX->getBonusType() == NO_BONUS)
+									if (bLandBias && !plotX->isWater() && plotX->getBonusType() == NO_BONUS
+									&& iFeatureCount > 4 && plotX->getFeatureType() != NO_FEATURE && iCoastFoodCount + iOceanFoodCount > 2
+									&& getSorenRandNum(2, "Clear feature to add bonus") == 0)
+									{
+										plotX->setFeatureType(NO_FEATURE);
+
+										for (int iK = GC.getNumMapBonuses() - 1; iK > -1; iK--)
 										{
-											if (((iFeatureCount > 4) && (plotX->getFeatureType() != NO_FEATURE))
-												&& ((iCoastFoodCount + iOceanFoodCount) > 2))
-											{
-												if (getSorenRandNum(2, "Clear feature to add bonus") == 0)
-												{
-													plotX->setFeatureType(NO_FEATURE);
+											const BonusTypes eBonus = GC.getMapBonus(iK);
+											const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
-													for (int iK = 0; iK < GC.getNumBonusInfos(); iK++)
-													{
-														if (GC.getBonusInfo((BonusTypes)iK).isNormalize())
-														{
-															//???no bonuses with negative yields?
-															if ((GC.getBonusInfo((BonusTypes)iK).getYieldChange(YIELD_FOOD) >= 0) &&
-																  (GC.getBonusInfo((BonusTypes)iK).getYieldChange(YIELD_PRODUCTION) >= 0))
-															{
-																if ((GC.getBonusInfo((BonusTypes)iK).getTechCityTrade() == NO_TECH) || (GC.getTechInfo((TechTypes)(GC.getBonusInfo((BonusTypes)iK).getTechCityTrade())).getEra() <= getStartEra()))
-																{
-																	if ((iPass == 0) ? CvMapGenerator::GetInstance().canPlaceBonusAt(((BonusTypes)iK), plotX->getX(), plotX->getY(), bIgnoreLatitude) : plotX->canHaveBonus(((BonusTypes)iK), bIgnoreLatitude))
-																	{
-																		plotX->setBonusType((BonusTypes)iK);
-																		iOtherCount++;
-																		break;
-																	}
-																}
-															}
-														}
-													}
+											if (bonus.isNormalize() && bonus.getYieldChange(YIELD_FOOD) >= 0 && bonus.getYieldChange(YIELD_PRODUCTION) >= 0
+											&& (bonus.getTechCityTrade() == NO_TECH || GC.getTechInfo((TechTypes)(bonus.getTechCityTrade())).getEra() <= getStartEra()))
+											{
+												if ((iPass == 0) ? CvMapGenerator::GetInstance().canPlaceBonusAt(eBonus, plotX->getX(), plotX->getY(), bIgnoreLatitude) : plotX->canHaveBonus(eBonus, bIgnoreLatitude))
+												{
+													plotX->setBonusType(eBonus);
+													iOtherCount++;
+													break;
 												}
 											}
 										}
@@ -2206,7 +2182,7 @@ void CvGame::update()
 		}
 		GC.getMap().updateSight(true, false);
 
-		for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
+		for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
 		{
 			const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 			if (isOption(eGameOption))

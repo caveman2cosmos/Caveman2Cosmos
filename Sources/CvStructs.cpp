@@ -713,7 +713,7 @@ PBGameSetupData::PBGameSetupData()
 	, iNumVictories(0)
 	, abVictories(NULL)
 {
-	for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
+	for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
 	{
 		abOptions.push_back(false);
 	}

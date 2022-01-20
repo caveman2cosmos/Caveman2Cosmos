@@ -316,8 +316,7 @@ class HintedWorld(FractalWorld):
 		foundx, foundy = self.findValid(x,y, maxDist)
 		if (foundx == -1 and foundy == -1):
 			return None
-		else:
-			return self.__addContinentAt(numBlocks, foundx, foundy, maxRadius)
+		return self.__addContinentAt(numBlocks, foundx, foundy, maxRadius)
 
 	def __addContinentAt(self, numBlocks, x, y, maxradius=-1):
 		land_value = 192 + self.mapRand.get(64, "Add Continent At PYTHON")
@@ -328,27 +327,27 @@ class HintedWorld(FractalWorld):
 
 	def expandContinentBy(self, cont, numBlocks):
 		# this plot is not valid; choose an in-bounds plot adjacent to an existing plot and try again:
-		#print "expand continent by", numBlocks
-		blockOrder = CvUtil.shuffle(len(cont.blocks), self.mapRand)
+		iSize = len(cont.blocks)
+		blockOrder = [0]*iSize
+		shuffleList(iSize, self.mapRand, blockOrder)
 		for blockIndex in blockOrder:
-			x,y = cont.blocks[blockIndex]
-			dirOrder = CvUtil.shuffle(len(cardinal_directions), self.mapRand)
+			x, y = cont.blocks[blockIndex]
+			iSize = len(cardinal_directions)
+			dirOrder = [0]*iSize
+			shuffleList(iSize, self.mapRand, dirOrder)
 			for dirIndex in dirOrder:
 				dx, dy = cardinal_directions[dirIndex]
 				if self.isValid(x+dx,y+dy, cont):
 					cont.addBlock(x+dx,y+dy)
 					land_value = 208 + self.mapRand.get(48, "Expand Continent PYTHON")
 					self.setValue(x+dx, y+dy, land_value)
-					#print "\tadded block", x+dx, y+dy
-					if (numBlocks > 1):
-						return self.expandContinentBy(cont, numBlocks-1)
-					else:
-						return True
+					return numBlocks < 2 or self.expandContinentBy(cont, numBlocks-1)
 
 		print "\tcould not expand continent:"
 		printMap(self.data, self.w, self.h, cont.centerx, cont.centery)
 		cont.done = True
 		return False
+
 
 	def buildAllContinents(self):
 		all_done = False
@@ -361,38 +360,27 @@ class HintedWorld(FractalWorld):
 
 	def shiftHintsToMap(self):
 		map = CyMap()
-		wrapX = map.isWrapX()
-		wrapY = map.isWrapY()
 
-		splitx, splity = 0,0
-		#self.printHints()
-		if (wrapX):
-			splitx = self.bestHintsSplitX()
-		if (wrapY):
-			splity = self.bestHintsSplitY()
-		self.shiftHintsBy(splitx, splity)
-		#self.printHints()
+		if map.isWrapX():
+			scores = [0]*self.w
+			for x in range(self.w):
+				for y in range(self.h):
+					if self.getValue(x, y) >= 192: scores[x] += 1
+					if self.getValue(x-1, y) >= 192: scores[x] += 1
+			best_split, best_score = argmin(scores)
+			splitx = best_split
+		else: splitx = 0
 
-	def bestHintsSplitX(self):
-		scores = [0]*self.w
-		for x in range(self.w):
-			for y in range(self.h):
-				if self.getValue(x, y) >= 192: scores[x] += 1
-				if self.getValue(x-1, y) >= 192: scores[x] += 1
-		best_split, best_score = argmin(scores)
-		return best_split
+		if map.isWrapY():
+			scores = [0]*self.h
+			for x in range(self.w):
+				for y in range(self.h):
+					if self.getValue(x, y) >= 192: scores[y] += 1
+					if self.getValue(x, y-1) >= 192: scores[y] += 1
+			best_split, best_score = argmin(scores)
+			splity = best_split
+		else: splity = 0
 
-	def bestHintsSplitY(self):
-		scores = [0]*self.h
-		for x in range(self.w):
-			for y in range(self.h):
-				if self.getValue(x, y) >= 192: scores[y] += 1
-				if self.getValue(x, y-1) >= 192: scores[y] += 1
-		best_split, best_score = argmin(scores)
-		return best_split
-
-	def shiftHintsBy(self, splitx, splity):
-		print "shifting hints by ", splitx, splity
 		if splitx != 0 or splity != 0:
 			buf = self.data[:]
 			# shift the values in self.data left by best_split
@@ -406,27 +394,6 @@ class HintedWorld(FractalWorld):
 				cont.blocks = [self.normalizeBlock(x-splitx, y-splity) for (x,y) in cont.blocks]
 				cont.recalculateRects()
 
-	# self.data must represent a rect where w = 2*h,
-	# and where both w and h are exponents of 2
-	def __doInitFractal(self):
-		self.shiftHintsToMap()
-
-		# don't call base method, this overrides it.
-		size = len(self.data)
-		minExp = min(self.fracXExp, self.fracYExp)
-		iGrain = None
-		for i in range(minExp):
-			width = (1 << (self.fracXExp - minExp + i))
-			height = (1 << (self.fracYExp - minExp + i))
-			if not self.iFlags & CyFractal.FracVals.FRAC_WRAP_X:
-				width += 1
-			if not self.iFlags & CyFractal.FracVals.FRAC_WRAP_Y:
-				height += 1
-			if size == width*height:
-				iGrain = i
-		assert(iGrain != None)
-		iFlags = self.map.getMapFractalFlags()
-		self.continentsFrac.fracInitHints(self.iNumPlotsX, self.iNumPlotsY, iGrain, self.mapRand, iFlags, self.data, self.fracXExp, self.fracYExp)
 
 	def isValid(self, x, y, cont=None):
 		if not self.inBounds(x, y):
@@ -446,10 +413,10 @@ class HintedWorld(FractalWorld):
 
 
 	def findValid(self, x, y, dist=-1):
-		if (dist == -1):
+		if dist == -1:
 			dist = max(self.w, self.h)
 
-		if (dist > 0):
+		if dist > 0:
 			foundx, foundy = self.findValid(x, y, dist-1)
 			if (foundx != -1 and foundy != -1):
 				return foundx, foundy
@@ -460,26 +427,47 @@ class HintedWorld(FractalWorld):
 				if max(abs(dx), abs(dy)) == dist:
 					plots.append((x+dx, y+dy))
 
-		plotOrder = CvUtil.shuffle(len(plots), self.mapRand)
+		iSize = len(plots)
+		plotOrder = [0]*iSize
+		shuffleList(iSize, self.mapRand, plotOrder)
 		for plotIndex in plotOrder:
 			tryx, tryy = plots[plotIndex]
 			if self.isValid(tryx, tryy): return tryx, tryy
 
 		return -1, -1
 
-	def printHints(self, markerx=-1, markery=-1):
-		printMap(self.data, self.w, self.h, markerx, markery)
 
 	def inBounds(self, x, y):
 		x,y = self.normalizeBlock(x,y)
 		return (0 <= x < self.w and 0 <= y < self.h)
 
+
 	def generatePlotTypes(self, water_percent=-1, shift_plot_types=False):
+
 		for i in range(len(self.data)):
 			if self.data[i] == None:
 				self.data[i] = self.mapRand.get(48, "Generate Plot Types PYTHON")
 
-		self.__doInitFractal()
+		# self.data must represent a rect where w = 2*h, and where both w and h are exponents of 2
+		self.shiftHintsToMap()
+
+		# don't call base method, this overrides it.
+		size = len(self.data)
+		minExp = min(self.fracXExp, self.fracYExp)
+		iGrain = None
+		for i in range(minExp):
+			width = (1 << (self.fracXExp - minExp + i))
+			height = (1 << (self.fracYExp - minExp + i))
+			if not self.iFlags & CyFractal.FracVals.FRAC_WRAP_X:
+				width += 1
+			if not self.iFlags & CyFractal.FracVals.FRAC_WRAP_Y:
+				height += 1
+			if size == width*height:
+				iGrain = i
+		assert(iGrain != None)
+		iFlags = self.map.getMapFractalFlags()
+		self.continentsFrac.fracInitHints(self.iNumPlotsX, self.iNumPlotsY, iGrain, self.mapRand, iFlags, self.data, self.fracXExp, self.fracYExp)
+
 		if (water_percent == -1):
 			numPlots = len(self.data)
 			numWaterPlots = 0
@@ -489,6 +477,7 @@ class HintedWorld(FractalWorld):
 			water_percent = int(100*numWaterPlots/numPlots)
 
 		return FractalWorld.generatePlotTypes(self, water_percent, shift_plot_types) # call superclass
+
 
 def printMap(data, w, h, markerx=-1, markery=-1):
 	print "-"*(w+2)
@@ -972,13 +961,15 @@ invert_heights
 class TerrainGenerator:
 	"If iDesertPercent=35, then about 35% of all land will be desert. Plains is similar. \
 	Note that all percentages are approximate, as values have to be roughened to achieve a natural look."
-	# Rise of Mankind 2.5 start
-	def __init__(self, iDesertPercent=20, iPlainsPercent=15, iMarshPercent=10,
-	             fIceLatitude=0.7, fTundraLatitude=0.6,
-	             fGrassLatitude=0.1, fDesertBottomLatitude=0.2,
-	             fDesertTopLatitude=0.5, fracXExp=-1,
-	             fracYExp=-1, grain_amount=4):
-	# Rise of Mankind 2.5 end
+
+	def __init__(
+		self, iDesertPercent=20, iPlainsPercent=15, iMarshPercent=10,
+		fIceLatitude=0.7, fTundraLatitude=0.6,
+		fGrassLatitude=0.1, fDesertBottomLatitude=0.2,
+		fDesertTopLatitude=0.5, fracXExp=-1,
+		fracYExp=-1, grain_amount=4
+	):
+
 		self.GC = CyGlobalContext()
 		self.map = CyMap()
 
@@ -997,8 +988,6 @@ class TerrainGenerator:
 
 		#C2C
 		self.rainmap=CyFractal()
-#		self.plains=CyFractal()
-#		self.marsh=CyFractal()
 		self.variation=CyFractal()
 
 		iDesertPercent += self.GC.getClimateInfo(self.map.getClimate()).getDesertPercentChange()
@@ -1016,18 +1005,6 @@ class TerrainGenerator:
 		self.LushPercent = 100 - iMarshPercent
 		self.MuddyPercent = 100 - iMarshPercent / 2
 
-		#self.iDesertTopPercent = 100
-		#self.iDesertBottomPercent = max(0,int(100-iDesertPercent))
-		# Rise of Mankind 2.5 start
-		# self.iMarshTopPercent = 100
-		# self.iMarshBottomPercent = max(0,int(100-iDesertPercent-iMarshPercent))
-		# self.iPlainsTopPercent = 100
-		# self.iPlainsBottomPercent = max(0,int(100-iDesertPercent-iMarshPercent-iPlainsPercent))
-		#self.iPlainsTopPercent = 100
-		#self.iPlainsBottomPercent = max(0,int(100-iPlainsPercent))
-		#self.iMarshTopPercent = 100
-		#self.iMarshBottomPercent = max(0,int(100-iDesertPercent-iPlainsPercent-iMarshPercent))
-		# Rise of Mankind 2.5 end
 		self.iMountainTopPercent = 75
 		self.iMountainBottomPercent = 60
 
@@ -1043,21 +1020,6 @@ class TerrainGenerator:
 
 		self.fTaigaLatitude = fTundraLatitude - (fIceLatitude - fTundraLatitude) / 2.0
 		self.fPermafrostLatitude = fTundraLatitude + (fIceLatitude - fTundraLatitude) / 3.0
-
-		#fGrassLatitude += self.GC.getClimateInfo(self.map.getClimate()).getGrassLatitudeChange()
-		#fGrassLatitude = min(fGrassLatitude, 1.0)
-		#fGrassLatitude = max(fGrassLatitude, 0.0)
-		#self.fGrassLatitude = fGrassLatitude
-
-		#fDesertBottomLatitude += self.GC.getClimateInfo(self.map.getClimate()).getDesertBottomLatitudeChange()
-		#fDesertBottomLatitude = min(fDesertBottomLatitude, 1.0)
-		#fDesertBottomLatitude = max(fDesertBottomLatitude, 0.0)
-		#self.fDesertBottomLatitude = fDesertBottomLatitude
-
-		#fDesertTopLatitude += self.GC.getClimateInfo(self.map.getClimate()).getDesertTopLatitudeChange()
-		#fDesertTopLatitude = min(fDesertTopLatitude, 1.0)
-		#fDesertTopLatitude = max(fDesertTopLatitude, 0.0)
-		#self.fDesertTopLatitude = fDesertTopLatitude
 
 		self.fracXExp = fracXExp
 		self.fracYExp = fracYExp
@@ -1079,14 +1041,6 @@ class TerrainGenerator:
 		self.grasslandThreshold = self.rainmap.getHeightFromPercent(self.GrasslandPercent)
 		self.lushThreshold = self.rainmap.getHeightFromPercent(self.LushPercent)
 		self.muddyThreshold = self.rainmap.getHeightFromPercent(self.MuddyPercent)
-
-#		self.plains.fracInit(self.iWidth, self.iHeight, self.grain_amount+1, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
-#		self.iPlainsTop = self.plains.getHeightFromPercent(self.iPlainsTopPercent)
-#		self.iPlainsBottom = self.plains.getHeightFromPercent(self.iPlainsBottomPercent)
-
-#		self.marsh.fracInit(self.iWidth, self.iHeight, self.grain_amount, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
-#		self.iMarshTop = self.marsh.getHeightFromPercent(self.iMarshTopPercent)
-#		self.iMarshBottom = self.marsh.getHeightFromPercent(self.iMarshBottomPercent)
 
 		self.variation.fracInit(self.iWidth, self.iHeight, self.grain_amount, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
 
@@ -1135,21 +1089,6 @@ class TerrainGenerator:
 				terrain = self.generateTerrainAtPlot(x, y)
 				terrainData[iI] = terrain
 
-		#remove marsh next to desert
-		#for x in range(self.iWidth):
-		#	for y in range(self.iHeight):
-		#		iIndex = y * self.iWidth + x#
-
-		#		for iDirection in range(CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES):
-		#			pPlot = plotCardinalDirection(x, y, CardinalDirectionTypes(iDirection))
-
-		#			if not pPlot.isNone():
-		#				iOtherIndex = pPlot.getY() * self.iWidth + pPlot.getX()
-
-		#				if ((terrainData[iIndex] == self.terrainDesert) and (terrainData[iOtherIndex] == self.terrainMarsh)) or ((terrainData[iIndex] == self.terrainMarsh) and (terrainData[iOtherIndex] == self.terrainDesert)):
-		#					terrainData[iIndex] = self.terrainPlains
-		#					break
-
 		return terrainData
 
 	def generateTerrainAtPlot(self,iX,iY):
@@ -1181,8 +1120,7 @@ class TerrainGenerator:
 				terrainVal = self.terrainTaiga
 		else:
 			rainmapVal = self.rainmap.getHeight(iX, iY)
-			#plainsVal = self.plains.getHeight(iX, iY)
-			#marshVal = self.marsh.getHeight(iX, iY)
+
 			if rainmapVal < self.saltflatsThreshold:
 				terrainVal = self.terrainSaltFlats
 			elif rainmapVal < self.dunesThreshold:
@@ -1215,14 +1153,6 @@ class TerrainGenerator:
 				terrainVal = self.terrainMuddy
 			else:
 				terrainVal = self.terrainMarsh
-
-
-			#if ((desertVal >= self.iDesertBottom) and (desertVal <= self.iDesertTop) and (lat >= self.fDesertBottomLatitude) and (lat < self.fDesertTopLatitude)):
-			#	terrainVal = self.terrainDesert
-			#elif ((marshVal >= self.iMarshBottom) and (marshVal <= self.iMarshTop) and plot.isFlatlands() and (lat >= self.fDesertBottomLatitude) and (lat < self.fDesertTopLatitude)):
-			#	terrainVal = self.terrainMarsh
-			#elif ((plainsVal >= self.iPlainsBottom) and (plainsVal <= self.iPlainsTop)):
-			#	terrainVal = self.terrainPlains
 
 		if (terrainVal == TerrainTypes.NO_TERRAIN):
 			return self.map.plot(iX, iY).getTerrainType()
@@ -1373,89 +1303,85 @@ def argmin(list):
 	return (best_index, best)
 
 def pointInRect(point, rect):
-	x,y=point
-	rectx,recty,rectw,recth = rect
-	if rectx <= x < rectx + rectw:
-		if recty <= y < recty + recth:
-			return True
-	return False
+	x, y = point
+	rectx, recty, rectw, recth = rect
+	return rectx <= x < rectx + rectw and recty <= y < recty + recth
 
 
 class BonusBalancer:
 	def __init__(self):
 		self.GC = CyGlobalContext()
 		self.map = CyMap()
-
-		# Rise of Mankind mod start
 		self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_COAL', 'BONUS_COPPER_ORE', 'BONUS_HORSE', 'BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM', 'BONUS_SULPHUR', 'BONUS_RUBBER')
-		# Rise of Mankind mod end
-
-		self.resourcesToEliminate = ('BONUS_MARBLE', )
-
-	def isSkipBonus(self, iBonusType):
-		type_string = self.GC.getBonusInfo(iBonusType).getType()
-
-		return ((type_string in self.resourcesToBalance) or (type_string in self.resourcesToEliminate))
 
 
 	def isBonusValid(self, eBonus, pPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent):
 		"Returns True if we can place a bonus here"
 
-		iX, iY = pPlot.getX(), pPlot.getY()
+		if (not bIgnoreOneArea
+		and self.GC.getBonusInfo(eBonus).isOneArea()
+		and self.map.getNumBonuses(eBonus) > 0
+		and self.map.getArea(pPlot.getArea()).getNumBonuses(eBonus) == 0
+		):
+			return False
 
-		if (not bIgnoreOneArea) and self.GC.getBonusInfo(eBonus).isOneArea():
-			if self.map.getNumBonuses(eBonus) > 0:
-				if self.map.getArea(pPlot.getArea()).getNumBonuses(eBonus) == 0:
-					return False
+		if bIgnoreAdjacent and bIgnoreUniqueRange:
+			return True
+
+		iX, iY = pPlot.getX(), pPlot.getY()
 
 		if not bIgnoreAdjacent:
 			for iI in range(DirectionTypes.NUM_DIRECTION_TYPES):
-				pLoopPlot = plotDirection(iX, iY, DirectionTypes(iI))
-				if not pLoopPlot.isNone():
-					if (pLoopPlot.getBonusType(-1) != -1) and (pLoopPlot.getBonusType(-1) != eBonus):
-						return False
+				plotX = plotDirection(iX, iY, DirectionTypes(iI))
+				if plotX and plotX.getBonusType(-1) != -1 and plotX.getBonusType(-1) != eBonus:
+					return False
 
 		if not bIgnoreUniqueRange:
 			uniqueRange = self.GC.getBonusInfo(eBonus).getUniqueRange()
 			for iDX in range(-uniqueRange, uniqueRange+1):
 				for iDY in range(-uniqueRange, uniqueRange+1):
-					pLoopPlot = plotXY(iX, iY, iDX, iDY)
-					if not pLoopPlot.isNone() and pLoopPlot.getBonusType(-1) == eBonus:
+					plotX = plotXY(iX, iY, iDX, iDY)
+					if plotX and plotX.getBonusType(-1) == eBonus:
 						return False
 
 		return True
 
 	def normalizeAddExtras(self):
+		GC = self.GC
+		for i in xrange(GC.getMAX_PC_PLAYERS()):
+			if not GC.getPlayer(i).isAlive():
+				continue
+			start_plot = GC.getPlayer(i).getStartingPlot() # returns a CyPlot
+			x, y = start_plot.getX(), start_plot.getY()
 
-		for i in range(self.GC.getMAX_PC_PLAYERS()):
-			if (self.GC.getPlayer(i).isAlive()):
-				start_plot = self.GC.getPlayer(i).getStartingPlot() # returns a CyPlot
-				startx, starty = start_plot.getX(), start_plot.getY()
+			plots = [] # build a list of the plots near the starting plot
+			for dx in xrange(-5,6):
+				for dy in range(-5,6):
+					plotX = self.map.plot(x + dx, y + dy)
+					if plotX and plotX.getBonusType(-1) < 0:
+						plots.append(plotX)
 
-				plots = [] # build a list of the plots near the starting plot
-				for dx in range(-5,6):
-					for dy in range(-5,6):
-						x,y = startx+dx, starty+dy
-						pLoopPlot = self.map.plot(x,y)
-						if not pLoopPlot.isNone():
-							plots.append(pLoopPlot)
+			resources_placed = []
 
-				resources_placed = []
-				for pass_num in range(4):
-					bIgnoreUniqueRange  = pass_num >= 1
-					bIgnoreOneArea 		= pass_num >= 2
-					bIgnoreAdjacent 	= pass_num >= 3
+			while plots:
+				plotX = plots.pop()
+				bBonus = False
 
-					for bonus in range(self.GC.getNumBonusInfos()):
-						type_string = self.GC.getBonusInfo(bonus).getType()
-						if (type_string not in resources_placed) and (type_string in self.resourcesToBalance):
-							for (pLoopPlot) in plots:
-								if (pLoopPlot.canHaveBonus(bonus, True)):
-									if self.isBonusValid(bonus, pLoopPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent):
-										pLoopPlot.setBonusType(bonus)
-										resources_placed.append(type_string)
-										#print "placed", type_string, "on pass", pass_num
-										break # go to the next bonus
+				for pass_num in xrange(4):
+
+					for i in range(GC.getNumMapBonuses()):
+						iBonus = GC.getMapBonus(i)
+						szType = GC.getBonusInfo(iBonus).getType()
+						if szType in resources_placed or szType not in self.resourcesToBalance:
+							continue
+
+						if plotX.canHaveBonus(iBonus, True) and self.isBonusValid(iBonus, plotX, pass_num >= 1, pass_num >= 2, pass_num >= 3):
+							plotX.setBonusType(iBonus)
+							resources_placed.append(szType)
+							bBonus = True
+							#print "placed", szType, "on pass", pass_num
+							break # go to the next bonus
+					if bBonus: break
 
 
 ###############################################################################
@@ -1479,12 +1405,12 @@ def isSinglePlotIsland(pPlot):
 
 
 def placeSealOrWalrus(iPlot, iSeaLion, iWalrus, bNorth):
-	mapRand = CyGlobalContext().getGame().getMapRand()
-	if bNorth and mapRand.get(3, 'SealionResource') == 0:
+
+	if bNorth and CyGame().getMapRand().get(3, 'SealionResource') == 0:
 		iPlot.setBonusType(iWalrus)
 	else:
 		iPlot.setBonusType(iSeaLion)
-	return
+
 
 
 def c2CMapReport(sWhen):
@@ -1493,8 +1419,8 @@ def c2CMapReport(sWhen):
 	countFeature = {}
 	countResource = {}
 	countImprovement = {}
-	map = CyMap()
 	GC = CyGlobalContext()
+	map = GC.getMap()
 	iNumPlots = map.numPlots()
 
 	iMapWidth = map.getGridWidth()
@@ -1507,8 +1433,6 @@ def c2CMapReport(sWhen):
 		iPlotType = iPlot.getPlotType()
 
 		# Identify where on the map the plot is
-		iLatitude = iPlot.getLatitude()
-		iLongitude = iPlot.getLongitude()
 		iPlotX = iPlot.getX()
 		iPlotY = iPlot.getY()
 		if iPlotY > iEquatorPlot:
@@ -1548,10 +1472,10 @@ def c2CMapReport(sWhen):
 				countFeature[iFeature] = 1
 		iResource = iPlot.getBonusType(-1)
 		if iResource > -1:
-			if (iHemisphere,iResource) in countResource:
-				countResource[iHemisphere,iResource] += 1
+			if (iHemisphere, iResource) in countResource:
+				countResource[iHemisphere, iResource] += 1
 			else:
-				countResource[iHemisphere,iResource] = 1
+				countResource[iHemisphere, iResource] = 1
 		iImprovement = iPlot.getImprovementType()
 		if iImprovement > -1:
 			if iImprovement in countImprovement:
@@ -1559,86 +1483,76 @@ def c2CMapReport(sWhen):
 			else:
 				countImprovement[iImprovement] = 1
 
-	print "[MST] ####################################################################### C2C:Map Statistics ###"
-	sprint = "[MST] %s" % (sWhen) + "\n\n"
-	sprint += "[MST]   Statistics of actual Terrain, Features etc. \n"
-	sprint += "[MST]   ------------------------------------------- \n"
-	sprint += "[MST]   %i Width x %i Height = %i Plots,  %2i Players" % (map.getGridWidth(), map.getGridHeight(), iNumPlots, GC.getGame().countCivPlayersEverAlive() ) + "\n\n"
+	print "[MGU] ####################################################################### C2C:Map Statistics ###"
+	sprint = "[MGU] %s" % (sWhen) + "\n\n"
+	sprint += "[MGU]   Statistics of actual Terrain, Features etc. \n"
+	sprint += "[MGU]   ------------------------------------------- \n"
+	sprint += "[MGU]   %i Width x %i Height = %i Plots,  %2i Players" % (map.getGridWidth(), map.getGridHeight(), iNumPlots, GC.getGame().countCivPlayersEverAlive() ) + "\n\n"
 	f1 = (countPlotType[0]*100.0) / iNumPlots
 	f2 = (countPlotType[1]*100.0) / iNumPlots
 	f3 = (countPlotType[2]*100.0) / iNumPlots
 	f4 = (countPlotType[3]*100.0) / iNumPlots
 	f5 = (countPlotType[1]+countPlotType[2])*100.0 / iNumPlots
-	sprint += "[MST]   Plots: #0 - PLOT_OCEAN ( %4i )  = %4.1f%s Water" 		% (countPlotType[0], f1, '%%') + "\n"
-	sprint += "[MST]   Plots: #1 - PLOT_LAND  ( %4i )  = %4.1f%s Land   }" 	% (countPlotType[1], f2, '%%') + "\n"
-	sprint += "[MST]   Plots: #2 - PLOT_HILLS ( %4i )  = %4.1f%s Hills  }= %4.1f%s Usable Land" % (countPlotType[2], f3, '%%', f5, '%%') + "\n"
-	sprint += "[MST]   Plots: #3 - PLOT_PEAK  ( %4i )  = %4.1f%s Peaks" 		% (countPlotType[3], f4, '%%') + "\n\n"
+	sprint += "[MGU]   Plots: #0 - PLOT_OCEAN ( %4i )  = %4.1f%s Water" 		% (countPlotType[0], f1, '%%') + "\n"
+	sprint += "[MGU]   Plots: #1 - PLOT_LAND  ( %4i )  = %4.1f%s Land   }" 	% (countPlotType[1], f2, '%%') + "\n"
+	sprint += "[MGU]   Plots: #2 - PLOT_HILLS ( %4i )  = %4.1f%s Hills  }= %4.1f%s Usable Land" % (countPlotType[2], f3, '%%', f5, '%%') + "\n"
+	sprint += "[MGU]   Plots: #3 - PLOT_PEAK  ( %4i )  = %4.1f%s Peaks" 		% (countPlotType[3], f4, '%%') + "\n\n"
 
 	# Display actual Mod-Terrain
 	for ter in countTerrain:
 		type_string = GC.getTerrainInfo(ter).getType()
-		sprint += "[MST]   Terrain: #%2i - %s ( %i ) \n" % (ter, type_string, countTerrain[ter])
+		sprint += "[MGU]   Terrain: #%2i - %s ( %i ) \n" % (ter, type_string, countTerrain[ter])
 	sprint += "\n"
 
 	# Display actual Mod-Features
 	for feat in countFeature:
 		type_string = GC.getFeatureInfo(feat).getType()
-		sprint += "[MST]   Feature: #%2i - %s ( %i ) \n" % (feat, type_string, countFeature[feat])
+		sprint += "[MGU]   Feature: #%2i - %s ( %i ) \n" % (feat, type_string, countFeature[feat])
 	sprint += "\n"
 
 	# Display actual Mod-Resources
-	# countResource.sort()
-	boni = 0
-	dontReportBonusClass = [GC.getInfoTypeForString("BONUSCLASS_CULTURE"), GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED"), GC.getInfoTypeForString("BONUSCLASS_GENMODS"), GC.getInfoTypeForString("BONUSCLASS_WONDER")]
-	while boni < GC.getNumBonusInfos():
-		type_string = GC.getBonusInfo(boni).getType()
-		class_int = GC.getBonusInfo(boni).getBonusClassType()
-		if class_int not in dontReportBonusClass:
-			region = "North American"
-			if (region,boni) in countResource:
-				sprint += "[MST]   Bonus: #%2i - %s ( %s - %i ) " % (boni, type_string, region, countResource[region,boni])
-			else:
-				sprint += "[MST]   Bonus: #%2i - %s ( %s - %i ) " % (boni, type_string, region, 0)
-			region = "European"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "Asian"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "South American"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "African"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "Oceania"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) \n" % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) \n" % (region, 0)
+	for i in xrange(GC.getNumMapBonuses()):
+		iBonus = GC.getMapBonus(i);
 
-		boni = boni + 1
+		region = "North American"
+		if (region, iBonus) in countResource:
+			sprint += "[MGU]   Bonus: #%2i - %s ( %s - %i ) " % (iBonus, GC.getBonusInfo(iBonus).getType(), region, countResource[region, iBonus])
+		else:
+			sprint += "[MGU]   Bonus: #%2i - %s ( %s - %i ) " % (iBonus, GC.getBonusInfo(iBonus).getType(), region, 0)
+		region = "European"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "Asian"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "South American"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "African"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "Oceania"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) \n" % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) \n" % (region, 0)
 
 	sprint += "\n"
 
 	# Display actual Mod-Improvements
 	for imp in countImprovement:
-		type_string = GC.getImprovementInfo(imp).getType()
-		sprint += "[MST]   Improvement: #%3i  %s ( %i ) \n" % (imp, type_string, countImprovement[imp])
-	sprint += "\n"
-
+		sprint += "[MGU]   Improvement: #%3i  %s ( %i ) \n" % (imp, GC.getImprovementInfo(imp).getType(), countImprovement[imp])
+	sprint += "\n[MGU] ####################################################################### C2C:Map Statistics ###"
 	print sprint
-	print "[MST] ####################################################################### C2C:MapStatistics ###"
 
-	return
 
 def placeC2CBonuses():
 	GC = CyGlobalContext()
@@ -1827,5 +1741,3 @@ def placeC2CBonuses():
 	import NaturalWonders
 	NaturalWonders.NaturalWonders().placeNaturalWonders()
 	## Natural Wonders ##
-
-	# c2CMapReport("After placing Natural Wonders")

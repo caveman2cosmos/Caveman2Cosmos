@@ -65,6 +65,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listStandaloneBuildings, "Building - list stand-alone buildings", "List regular non religious/civic buildings, that aren't part of replacement chain")
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
+		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -3622,3 +3623,29 @@ class TestCode:
 		for i in xrange(iTotalTechTreeLength):
 			iTotalActiveBuildings = iTotalActiveBuildings + aUnlockedBuildingsTechLoc[i] - aObsoletedBuildingsTechLoc[i]
 			self.log("XGrid: "+str(i)+" Unlocked: "+str(aUnlockedBuildingsTechLoc[i])+" Obsoleted: "+str(aObsoletedBuildingsTechLoc[i])+" Available buildings: "+str(iTotalActiveBuildings))
+
+	#List taxonomy buildings, that doesn't have all potential base folklore requirements
+	def checkTaxonomyBuildings(self):
+		aFolkloreBuildings = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE") != -1:
+				aFolkloreBuildings.append(iBuilding)
+
+		aFolkloreUnits = []
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			if CvUnitInfo.getType().find("_SUBDUED") != -1:
+				aFolkloreUnits.append(iUnit)
+
+		for i in xrange(len(aFolkloreBuildings)):
+			CvBuildingInfo = GC.getBuildingInfo(aFolkloreBuildings[i])
+			if CvBuildingInfo.getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY"):
+				for j in xrange(len(aFolkloreUnits)):
+					CvUnitInfo = GC.getUnitInfo(aFolkloreUnits[j])
+					if CvUnitInfo.getHasBuilding(aFolkloreBuildings[i]):
+						for k in xrange(CvUnitInfo.getNumBuildings()):
+							CvUnitBuilding = GC.getBuildingInfo(CvUnitInfo.getBuildings(k))
+							if CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY") and CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION") and CvUnitBuilding.getType().find("BUILDING_FOLKLORE") != -1:
+								if not CvBuildingInfo.isPrereqInCityBuilding(CvUnitInfo.getBuildings(k)) and not CvBuildingInfo.isPrereqOrBuilding(CvUnitInfo.getBuildings(k)):
+									self.log(CvBuildingInfo.getType()+" could have as req: "+CvUnitBuilding.getType())

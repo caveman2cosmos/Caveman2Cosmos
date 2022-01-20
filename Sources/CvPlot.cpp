@@ -1536,7 +1536,7 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 			{
 				if (!GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)iI))
 				{
-					pPlotGroup->changeNumBonuses((BonusTypes)iI, (pPlotCity->getFreeBonus((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
+					pPlotGroup->changeNumBonuses((BonusTypes)iI, (pPlotCity->getFreeBonus((BonusTypes)iI) * (bAdd ? 1 : -1)));
 				}
 			}
 
@@ -1546,15 +1546,15 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 
 				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					pPlotGroup->changeNumBonuses((BonusTypes)iI, (GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI) * ((bAdd) ? -1 : 1)));
-					pPlotGroup->changeNumBonuses((BonusTypes)iI, (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
+					pPlotGroup->changeNumBonuses((BonusTypes)iI, (GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI) * (bAdd ? -1 : 1)));
+					pPlotGroup->changeNumBonuses((BonusTypes)iI, (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) * (bAdd ? 1 : -1)));
 				}
 			}
 		}
 
 		if (isBonusExtracted())
 		{
-			pPlotGroup->changeNumBonuses(getBonusType(), ((bAdd) ? 1 : -1));
+			pPlotGroup->changeNumBonuses(getBonusType(), (bAdd ? 1 : -1));
 		}
 	}
 }
@@ -7301,7 +7301,6 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 			}
 		}
 	}
-
 	GET_PLAYER(getOwner()).startDeferredPlotGroupBonusCalculation();
 
 	updatePlotGroupBonus(false);
@@ -7311,10 +7310,9 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 
 		if (pPlotGroup != NULL)
 		{
-			FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotCity");
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				getPlotCity()->changeNumBonuses(((BonusTypes)iI), -(pPlotGroup->getNumBonuses((BonusTypes)iI)));
+				getPlotCity()->changeNumBonuses((BonusTypes)iI, -pPlotGroup->getNumBonuses((BonusTypes)iI));
 			}
 		}
 	}
@@ -7331,10 +7329,9 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 
 		if (pPlotGroup != NULL)
 		{
-			FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotCity");
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				getPlotCity()->changeNumBonuses(((BonusTypes)iI), pPlotGroup->getNumBonuses((BonusTypes)iI));
+				getPlotCity()->changeNumBonuses((BonusTypes)iI, pPlotGroup->getNumBonuses((BonusTypes)iI));
 			}
 		}
 	}
@@ -8288,12 +8285,10 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 
 	CvPlotGroup* pOldPlotGroup = getPlotGroup(ePlayer);
 
-	//	The id-level check is to handle correction of an old buggy state where
-	//	invalid ids could be present (which map to a NULL group if resolved through getPlotGroup())
-	if (pOldPlotGroup != pNewValue || (pNewValue == NULL && getPlotGroupId(ePlayer) != -1) )
+	// The id-level check is to handle correction of an old buggy state where
+	// invalid ids could be present (which map to a NULL group if resolved through getPlotGroup())
+	if (pOldPlotGroup != pNewValue || pNewValue == NULL && getPlotGroupId(ePlayer) != -1)
 	{
-		CvCity* pCity;
-
 		if (NULL ==  m_aiPlotGroup)
 		{
 			m_aiPlotGroup = new int[MAX_PLAYERS];
@@ -8302,6 +8297,7 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 				m_aiPlotGroup[iI] = FFreeList::INVALID_INDEX;
 			}
 		}
+		CvCity* pCity;
 
 		if (bRecalculateEffect)
 		{
@@ -8315,10 +8311,9 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 
 			if (pOldPlotGroup != NULL && pCity != NULL && pCity->getOwner() == ePlayer)
 			{
-				FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
 				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					pCity->changeNumBonuses(((BonusTypes)iI), -(pOldPlotGroup->getNumBonuses((BonusTypes)iI)));
+					pCity->changeNumBonuses((BonusTypes)iI, -pOldPlotGroup->getNumBonuses((BonusTypes)iI));
 				}
 			}
 		}
@@ -8336,8 +8331,6 @@ void CvPlot::setPlotGroup(PlayerTypes ePlayer, CvPlotGroup* pNewValue, bool bRec
 		{
 			if (pCity != NULL && getPlotGroup(ePlayer) != NULL && pCity->getOwner() == ePlayer)
 			{
-				FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotGroup");
-
 				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
 					pCity->changeNumBonuses((BonusTypes)iI, getPlotGroup(ePlayer)->getNumBonuses((BonusTypes)iI));

@@ -152,13 +152,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Tag>
-		<English>Folklore (T) - Donkey</English>
+		<English>Folklore - Donkey</English>
 		<French>Mythe de l'Ane</French>
 		<Russian>Ìèô îá îñëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
-		<English>Folklore (T) - Tales of Fish</English>
+		<English>Folklore (T) - Fish</English>
 		<French>
 			<Text>Mythe des Bancs de Poissons</Text>
 			<Gender>Male</Gender>
@@ -293,7 +293,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
-		<English>Folklore - Fish</English>
+		<English>Folklore (T) - Tales of Fish</English>
 		<French>Mythe des Poissons (local)</French>
 		<Polish>Mit - Ryby (regionalne)</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
@@ -411,6 +411,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
 		<English>Folklore - Viper</English>
+		<French>Mythe de la Vipère</French>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER_CHAIN</Tag>
+		<English>Folklore - Chain Viper</English>
 		<French>Mythe de la Vipère</French>
 		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>

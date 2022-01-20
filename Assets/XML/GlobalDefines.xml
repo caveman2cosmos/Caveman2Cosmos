@@ -1734,7 +1734,7 @@
 	</Define>
 	<Define>
 		<DefineName>AI_BASE_FOOD_WEIGHT</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
+		<iDefineIntVal>14</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>AI_BASE_PRODUCTION_WEIGHT</DefineName>

@@ -84,7 +84,7 @@
 #  - print stats of mod and map
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
+import CvMapGeneratorUtil as MGU
 
 ##################################################################################
 ## MapScriptTools Interface by Temudjin
@@ -2124,7 +2124,7 @@ def findStartingPlot(argsList):
 				return okLandPlots(x,y,10) and okMapEdge(x,y,3)
 			#-----
 
-		findstart = CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+		findstart = MGU.findStartingPlot(playerID, isValid)
 		if playerID == iCurrentPlayer:
 			iResult = findstart
 
@@ -2137,14 +2137,14 @@ def findStartingPlot(argsList):
 	return iResult
 
 
-class MediterraneanFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class MediterraneanFeatureGenerator(MGU.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
 		# 25/90 to 65/90:
 		lat = 5/float(18) + 4*(self.iGridH - iY)/float(9*self.iGridH)
 		return lat
 
-class NoIceFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class NoIceFeatureGenerator(MGU.FeatureGenerator):
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		return
 
@@ -2158,7 +2158,7 @@ def addFeatures2():
 		featuregen.addFeatures()
 		return 0
 	else:
-		featuregen = CvMapGeneratorUtil.FeatureGenerator()
+		featuregen = MGU.FeatureGenerator()
 		featuregen.addFeatures()
 		return 0
 
@@ -2186,5 +2186,5 @@ def normalizeRemovePeaks():
 	CyPythonMgr().allowDefaultImpl()
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 
