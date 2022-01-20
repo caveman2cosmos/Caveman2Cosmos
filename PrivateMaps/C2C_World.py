@@ -2987,7 +2987,8 @@ class BonusPlacer:
 		n = 0
 		pOrderDict = {}
 		self.iNumBonuses = iNumBonuses = GC.getNumMapBonuses()
-		plotIndexList = range(mc.iArea)
+		plotIndexList = [0]*mc.iArea
+		shuffleList(mc.iArea, GC.getGame().getMapRand(), plotIndexList)
 		for i in xrange(iNumBonuses):
 			iBonus = GC.getMapBonus(i)
 			CvBonusInfo = GC.getBonusInfo(iBonus)
@@ -3008,8 +3009,7 @@ class BonusPlacer:
 			if iTilesPer > 0:
 				iNumPossible = 0
 				for j in plotIndexList:
-					plot = MAP.plotByIndex(j)
-					if self.PlotCanHaveBonus(plot, iBonus, True, False):
+					if self.PlotCanHaveBonus(MAP.plotByIndex(j), iBonus, True, False):
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
 			iBonusCount = int(fBonusMult * (fBaseCount + fDensityCount))
@@ -3054,10 +3054,7 @@ class BonusPlacer:
 				if n == 0 or areaSuitabilityList[n].suitability > 0.3:
 					self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
 
-		# Shuffle the list of map indices.
-		shuffle(plotIndexList)
 		startAtIndex = 0
-
 		pOrderList = sorted(pOrderDict.items())
 		for iOrder, aList in pOrderList:
 			placementList = []
