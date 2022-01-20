@@ -43,7 +43,6 @@ EXPORTS
 ?getMap@CvGlobals@@QAEAAVCvMap@@XZ=?getMap@CvGlobals@@QAEAAVCvMapExternal@@XZ
 ?getBestDefender@CvPlot@@QBEPAVCvUnit@@W4PlayerTypes@@0PBV2@_N22@Z=?getBestDefenderExternal@CvPlot@@QBEPAVCvUnit@@W4PlayerTypes@@0PBV2@_N22@Z
 ?setAIAutoPlay@CvGame@@QAEXH@Z=?setAIAutoPlayExternal@CvGame@@QAEXH@Z
-?cyclePlotUnits@CvGame@@QAE_NPBVCvPlot@@_N1H@Z=?cyclePlotUnits@CvGame@@QBE_NPBVCvPlot@@_N1H@Z
 ?plot@CvSelectionGroup@@QBEPAVCvPlot@@XZ=?plotExternal@CvSelectionGroup@@QBEPAVCvPlot@@XZ
 ?headMissionQueueNode@CvSelectionGroup@@QBEPAV?$CLLNode@UMissionData@@@@XZ=?headMissionQueueNodeExternal@CvSelectionGroup@@QBEPAV?$CLLNode@UMissionData@@@@XZ
 ?lastMissionPlot@CvSelectionGroup@@QAEPAVCvPlot@@XZ=?lastMissionPlot@CvSelectionGroup@@QBEPAVCvPlot@@XZ
