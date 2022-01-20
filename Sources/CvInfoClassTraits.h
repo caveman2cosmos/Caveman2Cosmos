@@ -110,6 +110,19 @@
 	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes)
 
 
+#define LIST_INFO_CLASS_ENUM(_class, _classEnum, _indexType) \
+	_classEnum,
+
+enum InfoClassTypes
+{
+	NO_INFO_CLASS = -1,
+
+	EXPAND_FOR_EACH_INFO_CLASS(LIST_INFO_CLASS_ENUM);
+
+	NUM_INFO_CLASSES
+};
+
+
 class CvInfoBase;
 
 template <class InfoClass_>
