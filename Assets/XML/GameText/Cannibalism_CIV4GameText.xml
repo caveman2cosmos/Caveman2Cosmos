@@ -33,10 +33,6 @@
 		<Russian>Áîëåçíü (Êóðó)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Tag>
-		<English>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_CANNIBALISM</Tag>
 		<English>Worldview - Cannibalism</English>
 		<French>
