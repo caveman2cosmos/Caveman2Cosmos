@@ -666,10 +666,18 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 
 	if (pHeadSelectedUnit == NULL || !bForceAcceptCurrent && !pHeadSelectedUnit->getGroup()->readyToSelect(true))
 	{
-		if ((gDLL->getInterfaceIFace()->getOriginalPlot() == NULL || !cyclePlotUnits(gDLL->getInterfaceIFace()->getOriginalPlot(), true, true, gDLL->getInterfaceIFace()->getOriginalPlotCount()))
-		&& (gDLL->getInterfaceIFace()->getSelectionPlot() == NULL || !cyclePlotUnits(gDLL->getInterfaceIFace()->getSelectionPlot(), true, true)))
 		{
-			cycleSelectionGroupsInternal(true, true, false, bSetCamera, bAllowViewportSwitch);
+			const CvPlot* originalPlot = gDLL->getInterfaceIFace()->getOriginalPlot();
+
+			if (originalPlot == NULL || !nextPlotUnit(originalPlot, true, true, gDLL->getInterfaceIFace()->getOriginalPlotCount()))
+			{
+				const CvPlot* selectionPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
+
+				if (selectionPlot == NULL || !nextPlotUnit(selectionPlot, true, true))
+				{
+					cycleSelectionGroupsInternal(true, true, false, bSetCamera, bAllowViewportSwitch);
+				}
+			}
 		}
 		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
@@ -914,7 +922,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 
 
 // Returns true if unit was cycled...
-bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+bool CvGame::nextPlotUnit(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit = NULL;
@@ -1018,11 +1026,10 @@ bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int 
 	}
 	return false;
 }
-bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const // DllExport
+bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	OutputDebugString("exe is cycling units on plot ctrl+MouseWheelRoll\n");
-	const CvPlot* plot = const_cast<CvPlot*>(pPlot);
-	return cyclePlotUnits(plot, bForward, bAuto, iCount);
+	return nextPlotUnit(pPlot, bForward, bAuto, iCount);
 }
 
 
@@ -1729,7 +1736,7 @@ void CvGame::doControl(ControlTypes eControl)
 			const CvPlot* pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
 			if (pPlot != NULL)
 			{
-				cyclePlotUnits(pPlot);
+				nextPlotUnit(pPlot);
 			}
 			break;
 		}
@@ -1738,7 +1745,7 @@ void CvGame::doControl(ControlTypes eControl)
 			const CvPlot* pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
 			if (pPlot != NULL)
 			{
-				cyclePlotUnits(pPlot, false);
+				nextPlotUnit(pPlot, false);
 			}
 			break;
 		}
