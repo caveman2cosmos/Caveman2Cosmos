@@ -7,6 +7,7 @@
 // Python wrapper functions for DLL
 //
 
+class CvRandom;
 class CyCity;
 class CyPlot;
 class CyUnit;

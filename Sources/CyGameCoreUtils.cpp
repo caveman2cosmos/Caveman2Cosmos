@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameCoreUtils.h"
+#include "CvRandom.h"
 #include "CyGameCoreUtils.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -220,12 +222,16 @@ int64_t cyIntSqrt64(uint64_t iValue)
 
 void cyShuffleIntList(python::list& pyList, CvRandom& rand)
 {
-	std::vector<int> v;
-	python::container_utils::extend_container(v, pyList);
-	shuffle(&v[0], v.size(), rand);
-	for (uint32_t i = 0, num = v.size(); i < num; i++)
+	PyObject* pyObj = pyList.ptr();
+
+	for (int i = 0, size = PySequence_Length(pyObj); i < size; i++)
 	{
-		pyList.pop();
+		const int j = i + rand.get(size - i);
+		if (i != j)
+		{
+			PyObject* temp = PySequence_GetItem(pyObj, i);
+			const int success1 = PySequence_SetItem(pyObj, i, PySequence_GetItem(pyObj, j));
+			const int success2 = PySequence_SetItem(pyObj, j, temp);
+		}
 	}
-	pyList.extend(Cy::makeList(v));
 }
