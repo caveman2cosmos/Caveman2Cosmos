@@ -21,7 +21,7 @@
 
 from CvPythonExtensions import *
 from array  import array
-from random import random, uniform, randint, seed, shuffle
+from random import random, uniform, randint, seed
 from math import pi, cos, sin, sqrt
 import os, _winreg
 import cPickle as pickle
