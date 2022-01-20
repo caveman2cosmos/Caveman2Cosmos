@@ -154,10 +154,9 @@
 ##
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
 
 from array import array
-from random import random,randint,seed, shuffle
+from random import random, randint, seed
 import math
 
 class MapConstants :
@@ -856,21 +855,8 @@ def DeleteFromList(theList,oldItem):
 		return
 
 def ShuffleList(theList):
-	if (mc.UsePythonRandom):
-		shuffled = list(theList)
-		shuffle(shuffled)
-		return shuffled
-	else:
-		preshuffle = list()
-		shuffled	 = list()
-		numElements = len(theList)
-		for i in range(numElements):
-			preshuffle.append(theList[i])
-		for i in range(numElements):
-				n = PRand.randint(0, len(preshuffle) - 1)
-				shuffled.append(preshuffle[n])
-				del preshuffle[n]
-		return shuffled
+	shufflePyList(theList, CyGame().getMapRand())
+	return theList
 
 def GetInfoType(string):
 	cgc = CyGlobalContext()
@@ -5957,18 +5943,19 @@ def createIce():
 				iceChance *= .66
 
 def addBonuses():
-		bp.AddBonuses()
+	bp.AddBonuses()
 
 def assignStartingPlots():
-		spf.SetStartingPlots()
+	spf.SetStartingPlots()
 
 def beforeInit():
-		print "Initializing Custom Map Options"
-		mc.initialize()
-		mc.initInGameOptions()
+	print "Initializing Custom Map Options"
+	mc.initialize()
+	mc.initInGameOptions()
 
 def afterGeneration():
-		CvMapGeneratorUtil.placeC2CBonuses()
+	import CvMapGeneratorUtil
+	CvMapGeneratorUtil.placeC2CBonuses()
 
 ##mc.initialize()
 ##PRand.seed()

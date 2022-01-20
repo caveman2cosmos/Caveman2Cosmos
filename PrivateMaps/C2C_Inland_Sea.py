@@ -29,7 +29,6 @@
 
 from CvPythonExtensions import *
 import CvMapGeneratorUtil as MGU
-from random import shuffle
 
 ################################################################
 ## MapScriptTools by Temudjin
@@ -227,28 +226,28 @@ def isRandomCustomMapOption(argsList):
 	return option_random[iOption]
 
 def getWrapX():
-	return ( CyMap().getCustomMapOption(0) in [1,3] )
+	return CyMap().getCustomMapOption(0) in [1,3]
 
 def getWrapY():
-	return ( CyMap().getCustomMapOption(0) in [2,3] )
+	return CyMap().getCustomMapOption(0) in [2,3]
 
 def beforeGeneration2():
 	"Set up global variables for start point templates"
 	global templates
 	global shuffledPlayers
 	global iTemplateRoll
-	gc = CyGlobalContext()
-	dice = gc.getGame().getMapRand()
-	iW = CyMap().getGridWidth()
-	iH = CyMap().getGridHeight()
+	GC = CyGlobalContext()
+	GAME = GC.getGame()
 
 	# List of number of template instances, indexed by number of players.
 	configs = [0, 1, 6, 4, 3, 2, 2, 2, 4, 2, 2, 2, 1, 2, 1, 2, 1, 2, 1]
 
-	# Choose a Template to be used for this game.
-	iPlayers = gc.getGame().countCivPlayersEverAlive()
+	# Shuffle start points so that players are assigned templateIDs at random.
+	iPlayers = GAME.countCivPlayersEverAlive()
+	shuffledPlayers = [0]*iPlayers
+	shuffleList(iPlayers, GAME.getMapRand(), shuffledPlayers)
 
-	########## Temudjin START
+	# Choose a Template to be used for this game.
 	if iPlayers > 18:
 		iTemplateRoll = 0
 		coords = getStartPositions()
@@ -256,18 +255,18 @@ def beforeGeneration2():
 		for i in range( iPlayers ):
 			cDict[i] = coords[i]
 		templates = {}
-		templates[ (iPlayers,0) ] = cDict
+		templates[(iPlayers, 0)] = cDict
 		print "template: %3r" % (templates)
-		shuffledPlayers = range(iPlayers)
-		shuffle(shuffledPlayers)
 		return
-	########## Temudjin END
 
-	iNumTemplates = configs[iPlayers]
-	iTemplateRoll = dice.get(iNumTemplates, "Template Selection - Inland Sea PYTHON")
+	MAP = GC.getMap()
+	iW = MAP.getGridWidth()
+	iH = MAP.getGridHeight()
+
+	iTemplateRoll = GAME.getMapRand().get(configs[iPlayers], "Template Selection - Inland Sea PYTHON")
 
 	# Set variance for start plots according to map size vs number of players.
-	map_size = CyMap().getWorldSize()
+	map_size = MAP.getWorldSize()
 	sizevalues = {
 		WorldSizeTypes.WORLDSIZE_DUEL:		(2, 3),
 		WorldSizeTypes.WORLDSIZE_TINY:		(2, 3),
@@ -275,7 +274,7 @@ def beforeGeneration2():
 		WorldSizeTypes.WORLDSIZE_STANDARD:	(4, 7),
 		WorldSizeTypes.WORLDSIZE_LARGE:		(5, 10),
 		WorldSizeTypes.WORLDSIZE_HUGE:		(6, 15)
-		}
+	}
 #FlavourMod: Added by Jean Elcard 02/04/2009
 	if hasattr(WorldSizeTypes, "WORLDSIZE_GIANT"):
 		sizesvalues[WorldSizeTypes.WORLDSIZE_GIANT] = (7, 21)
@@ -289,39 +288,26 @@ def beforeGeneration2():
 		fVar = 1
 
 	# Templates are nested by keys: {(NumPlayers, TemplateID): {PlayerID: [X, Y, xVariance, yVariance]}}
-	templates = {(1,0): {0: [0.5, 0.5, int(0.5 * iW), int(0.5 * iH)]},
-				 (2,0): {0: [0.1, 0.5, fVar, int(0.5 * iH)],
-						 1: [0.9, 0.5, fVar, int(0.5 * iH)]},
-				 (2,1): {0: [0.5, 0.167, int(0.3 * iW), fVar],
-						 1: [0.5, 0.833, int(0.3 * iW), fVar]},
-				 (2,2): {0: [0.3, 0.167, int(0.3 * iW), fVar],
-						 1: [0.7, 0.833, int(0.3 * iW), fVar]},
-				 (2,3): {0: [0.7, 0.167, int(0.3 * iW), fVar],
-						 1: [0.3, 0.833, int(0.3 * iW), fVar]},
-				 (2,4): {0: [0.2, 0.333, int(0.2 * iW), int(0.333 * iH)],
-						 1: [0.8, 0.667, int(0.2 * iW), int(0.333 * iH)]},
-				 (2,5): {0: [0.8, 0.333, int(0.2 * iW), int(0.333 * iH)],
-						 1: [0.2, 0.677, int(0.2 * iW), int(0.333 * iH)]},
-				 (3,0): {0: [0.1, 0.5, fVar, fVar],
-						 1: [0.7, 0.167, fVar, fVar],
-						 2: [0.7, 0.833, fVar, fVar]},
-				 (3,1): {0: [0.9, 0.5, fVar, fVar],
-						 1: [0.3, 0.167, fVar, fVar],
-						 2: [0.3, 0.833, fVar, fVar]},
-				 (3,2): {0: [0.5, 0.167, fVar, fVar],
-						 1: [0.1, 0.833, fVar, fVar],
-						 2: [0.9, 0.833, fVar, fVar]},
-				 (3,3): {0: [0.5, 0.833, fVar, fVar],
-						 1: [0.1, 0.167, fVar, fVar],
-						 2: [0.9, 0.167, fVar, fVar]},
-				 (4,0): {0: [0.1, 0.5, fVar, fVar],
-						 1: [0.5, 0.167, fVar, fVar],
-						 2: [0.9, 0.5, fVar, fVar],
-						 3: [0.5, 0.833, fVar, fVar]},
-				 (4,1): {0: [0.1, 0.167, fVar, fVar],
-						 1: [0.7, 0.167, fVar, fVar],
-						 2: [0.9, 0.833, fVar, fVar],
-						 3: [0.3, 0.833, fVar, fVar]},
+	templates = {
+		(1,0): {0: [0.5, 0.500, int(0.5 * iW), int(0.5 * iH)]},
+		(2,0): {0: [0.1, 0.500, fVar, int(0.5 * iH)], 1: [0.9, 0.500, fVar, int(0.5 * iH)]},
+		(2,1): {0: [0.5, 0.167, int(0.3 * iW), fVar], 1: [0.5, 0.833, int(0.3 * iW), fVar]},
+		(2,2): {0: [0.3, 0.167, int(0.3 * iW), fVar], 1: [0.7, 0.833, int(0.3 * iW), fVar]},
+		(2,3): {0: [0.7, 0.167, int(0.3 * iW), fVar], 1: [0.3, 0.833, int(0.3 * iW), fVar]},
+		(2,4): {0: [0.2, 0.333, int(0.2 * iW), int(0.333 * iH)], 1: [0.8, 0.667, int(0.2 * iW), int(0.333 * iH)]},
+		(2,5): {0: [0.8, 0.333, int(0.2 * iW), int(0.333 * iH)], 1: [0.2, 0.677, int(0.2 * iW), int(0.333 * iH)]},
+		(3,0): {0: [0.1, 0.500, fVar, fVar], 1: [0.7, 0.167, fVar, fVar], 2: [0.7, 0.833, fVar, fVar]},
+		(3,1): {0: [0.9, 0.500, fVar, fVar], 1: [0.3, 0.167, fVar, fVar], 2: [0.3, 0.833, fVar, fVar]},
+		(3,2): {0: [0.5, 0.167, fVar, fVar], 1: [0.1, 0.833, fVar, fVar], 2: [0.9, 0.833, fVar, fVar]},
+		(3,3): {0: [0.5, 0.833, fVar, fVar], 1: [0.1, 0.167, fVar, fVar], 2: [0.9, 0.167, fVar, fVar]},
+		(4,0): {
+			0: [0.1, 0.5, fVar, fVar], 1: [0.5, 0.167, fVar, fVar],
+			2: [0.9, 0.5, fVar, fVar], 3: [0.5, 0.833, fVar, fVar]
+		},
+		(4,1): {
+			0: [0.1, 0.167, fVar, fVar], 1: [0.7, 0.167, fVar, fVar],
+			2: [0.9, 0.833, fVar, fVar], 3: [0.3, 0.833, fVar, fVar]
+		},
 				 (4,2): {0: [0.1, 0.833, fVar, fVar],
 						 1: [0.7, 0.833, fVar, fVar],
 						 2: [0.9, 0.167, fVar, fVar],
@@ -607,16 +593,6 @@ def beforeGeneration2():
 	}
 	# End of Templates data.
 
-	# Shuffle start points so that players are assigned templateIDs at random.
-	player_list = []
-	for playerLoop in range(CyGlobalContext().getGame().countCivPlayersEverAlive()):
-		player_list.append(playerLoop)
-	shuffledPlayers = []
-	for playerLoopTwo in range(gc.getGame().countCivPlayersEverAlive()):
-		iChoosePlayer = dice.get(len(player_list), "Shuffling Template IDs - Inland Sea PYTHON")
-		shuffledPlayers.append(player_list[iChoosePlayer])
-		del player_list[iChoosePlayer]
-	return 0
 
 ########## Temudjin START
 def getStartPositions():
@@ -666,12 +642,12 @@ def findStartingPlot(argsList):
 	global plotValue
 
 	def isValid(playerID, x, y):
-		gc = CyGlobalContext()
-		map = CyMap()
-		pPlot = map.plot(x, y)
-		iW = map.getGridWidth()
-		iH = map.getGridHeight()
-		iPlayers = gc.getGame().countCivPlayersEverAlive()
+		GC = CyGlobalContext()
+		MAP = GC.getMap()
+		pPlot = MAP.plot(x, y)
+		iW = MAP.getGridWidth()
+		iH = MAP.getGridHeight()
+		iPlayers = GC.getGame().countCivPlayersEverAlive()
 
 		# Use global data set up via beforeGeneration().
 		global templates
@@ -681,7 +657,7 @@ def findStartingPlot(argsList):
 		[fLat, fLon, varX, varY] = templates[(iPlayers, iTemplateRoll)][playerTemplateAssignment]
 
 		# Check to ensure the plot is on the main landmass.
-		if (pPlot.getArea() != map.findBiggestArea(False).getID()):
+		if pPlot.getArea() != MAP.findBiggestArea(False).getID():
 			return false
 
 		# Now check for eligibility according to the defintions found in the template.
@@ -691,20 +667,15 @@ def findStartingPlot(argsList):
 		eastX = min(iW - 3, iX + varX)
 		southY = max(2, iY - varY)
 		northY = min(iH - 3, iY + varY)
-		if x < westX or x > eastX or y < southY or y > northY:
-			return false
-		else:
-			return true
+		return x >= westX and x <= eastX and y >= southY and y <= northY
 
 	getStartingPlot(playerID, isValid)
 	if plotSuccess:
 		return plotValue
-	else:
-		######### Temudjin Start
-		print "--> Default StartingPlots"
-		######### Temudjin END
-		CyPythonMgr().allowDefaultImpl()
-		return
+	print "--> Default StartingPlots"
+	CyPythonMgr().allowDefaultImpl()
+
+
 
 def getStartingPlot(playerID, validFn = None):
 	gc = CyGlobalContext()

@@ -67,7 +67,7 @@ void CyGameCoreUtilsPythonInterface()
 
 	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");
 
-	python::def("shuffleIntList", cyShuffleIntList);
+	python::def("shufflePyList", cyShufflePyList);
 
 	python::def("getModDir", getModDir);
 }
