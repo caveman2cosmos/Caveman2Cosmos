@@ -3641,7 +3641,7 @@ void CvCityAI::AI_chooseProduction()
 
 	if (getHeadOrder() == NULL && !AI_chooseProcess(NO_COMMERCE, commerceWeights))
 	{
-		FErrorMsg("This shouldn't really happen");
+		FErrorMsg(CvString::format("AI could not choose production for city %S", m_szName.c_str()).c_str());
 	}
 }
 
@@ -10849,7 +10849,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	// As last resort select a process
 	if (getHeadOrder() == NULL && !AI_chooseProcess(NO_COMMERCE))
 	{
-		FErrorMsg("This shouldn't really happen");
+		FErrorMsg(CvString::format("Governor could not choose production for city %S", m_szName.c_str()).c_str());
 	}
 }
 
