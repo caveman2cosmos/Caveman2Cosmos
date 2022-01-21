@@ -2807,7 +2807,7 @@ int cvInternalGlobals::getNumMissionInfos() const
 
 CvMap& cvInternalGlobals::getMap() const
 {
-	return *m_maps[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_maps[CURRENT_MAP];
 }
 
 FAStar& cvInternalGlobals::getPathFinder() const
