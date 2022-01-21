@@ -34473,7 +34473,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 	&& pMouseOverPlot->isActiveVisible(true) && pMouseOverPlot->getTeam() != NO_TEAM
 	&& gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL
 	&& GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam())
-	&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canMoveInto(pMouseOverPlot))
+	&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canEnterPlot(pMouseOverPlot))
 	{
 		CvWString szTempBuffer;
 		szTempBuffer.clear();

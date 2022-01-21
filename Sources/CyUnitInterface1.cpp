@@ -22,7 +22,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("doCommand", &CyUnit::doCommand, "void (eCommand, iData1, iData2) - force the unit to perform eCommand")
 
-		.def("canMoveInto", &CyUnit::canMoveInto, "bool (CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad)")
+		.def("canEnterPlot", &CyUnit::canEnterPlot, "bool (CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad)")
 		.def("canHeal", &CyUnit::canHeal, "bool (CyPlot* pPlot)")
 		.def("canFound", &CyUnit::canFound, "bool (CyPlot* pPlot, bool bTestVisible)")
 		.def("canConstruct", &CyUnit::canConstruct, "bool (CyPlot* pPlot, int (BuildingTypes) eBuilding)")

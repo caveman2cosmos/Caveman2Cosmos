@@ -664,7 +664,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 				if ((!pLoopUnit->AI_getHasAttacked() || bSuprise) && (bForce || pLoopUnit->canMove()))
 				{
 					CvUnit* pBestDefender = NULL;
-					if (bForce || pLoopUnit->canMoveInto(pPlot, moveCheckFlags, &pBestDefender))
+					if (bForce || pLoopUnit->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
@@ -725,7 +725,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 		{
 			if (pLoopUnit->getDomainType() == DOMAIN_AIR ? pLoopUnit->canAirAttack() : (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
 			{
-				if (bForce || (pLoopUnit->canMove() && pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack)))
+				if (bForce || (pLoopUnit->canMove() && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack)))
 				{
 					const int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
 					FASSERT_NOT_NEGATIVE(iValue);
@@ -827,8 +827,8 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 				|| (unit->getDomainType() != DOMAIN_AIR && unit->canAttack())
 			)
 			&& (!bCheckCanMove || unit->canMove())
-			//TB: canMoveInto may need simplified here somehow.
-			&& (!bCheckCanMove || pAttackedPlot == NULL || unit->canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
+			//TB: canEnterPlot may need simplified here somehow.
+			&& (!bCheckCanMove || pAttackedPlot == NULL || unit->canEnterPlot(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
 			&& (eDomainType == NO_DOMAIN || unit->getDomainType() == eDomainType)
 			)
 		{

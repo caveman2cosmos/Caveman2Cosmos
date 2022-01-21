@@ -109,13 +109,16 @@ public:
 	int getCargo(bool bVolume = false) const;
 
 	DllExport bool canAllMove() const;
-	DllExport bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const;
-	DllExport bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false) const;
+	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false) const;
+	bool canEnterPlot(const CvPlot* pPlot, bool bAttack = false) const;
+	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
+
 	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;
 	bool hasMoved() const;
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
-	bool canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack) const;
+
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canFight() const;
 	bool canDefend() const;
