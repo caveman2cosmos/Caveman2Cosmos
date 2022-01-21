@@ -48,7 +48,5 @@ EXPORTS
 ?lastMissionPlot@CvSelectionGroup@@QAEPAVCvPlot@@XZ=?lastMissionPlot@CvSelectionGroup@@QBEPAVCvPlot@@XZ
 ?canAllMove@CvSelectionGroup@@QAE_NXZ=?canAllMove@CvSelectionGroup@@QBE_NXZ
 ?isBusy@CvSelectionGroup@@QAE_NXZ=?isBusy@CvSelectionGroup@@QBE_NXZ
-?canMoveInto@CvSelectionGroup@@QAE_NPAVCvPlot@@_N@Z=?canMoveInto@CvSelectionGroup@@QBE_NPBVCvPlot@@_N@Z
-?canMoveOrAttackInto@CvSelectionGroup@@QAE_NPAVCvPlot@@_N@Z=?canMoveOrAttackInto@CvSelectionGroup@@QBE_NPBVCvPlot@@_N@Z
 ?getNumLanguages@CvGameText@@QBEHXZ=?getNumLanguages@CvGameText@@SAHXZ
 ?setNumLanguages@CvGameText@@QAEXH@Z=?setNumLanguages@CvGameText@@SAXH@Z

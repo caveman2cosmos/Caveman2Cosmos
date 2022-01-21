@@ -15721,12 +15721,10 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				FErrorMsg("pUnit is expected to be assigned a valid unit object");
 				return;
 			}
-			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES))
+			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES)
+			&& !pUnit->canEnterPlot(plot(), MoveCheck::IgnoreLocation))
 			{
-				if (!pUnit->canMoveInto(plot(), MoveCheck::IgnoreLocation))
-				{
-					pUnit->jumpToNearestValidPlot(false);
-				}
+				pUnit->jumpToNearestValidPlot(false);
 			}
 			pUnit->finishMoves();
 

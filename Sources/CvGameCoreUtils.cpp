@@ -3380,9 +3380,9 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 					foreach_(const CvUnit* pLoopUnit2, pLoopUnit1->plot()->units())
 					{
 						if (pLoopUnit2->getTransportUnit() == pLoopUnit1 && pLoopUnit2->isGroupHead()
-						&& pLoopUnit2->getGroup()->canMoveOrAttackInto(pToPlot, (pSelectionGroup->AI_isDeclareWar(pToPlot) || (iFlags & MOVE_DECLARE_WAR))))
+						&& pLoopUnit2->getGroup()->canEnterOrAttackPlot(pToPlot, (pSelectionGroup->AI_isDeclareWar(pToPlot) || (iFlags & MOVE_DECLARE_WAR))))
 						{
-							bRequiresWar = !pLoopUnit2->getGroup()->canMoveOrAttackInto(pToPlot);
+							bRequiresWar = !pLoopUnit2->getGroup()->canEnterOrAttackPlot(pToPlot);
 							return true;
 						}
 					}
@@ -3391,12 +3391,12 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 			return false;
 		}
 
-		if (!pSelectionGroup->canMoveOrAttackInto(pToPlot, pSelectionGroup->AI_isDeclareWar(pToPlot) || (iFlags & MOVE_DECLARE_WAR)))
+		if (!pSelectionGroup->canEnterOrAttackPlot(pToPlot, pSelectionGroup->AI_isDeclareWar(pToPlot) || (iFlags & MOVE_DECLARE_WAR)))
 		{
 			return false;
 		}
 
-		bRequiresWar = !pSelectionGroup->canMoveOrAttackInto(pToPlot);
+		bRequiresWar = !pSelectionGroup->canEnterOrAttackPlot(pToPlot);
 		return true;
 	}
 
@@ -3604,7 +3604,7 @@ bool moveToValid(const CvSelectionGroup* pSelectionGroup, const CvPlot* pPlot, i
 
 		if (iFlags & MOVE_THROUGH_ENEMY)
 		{
-			if (!pSelectionGroup->canMoveOrAttackInto(pPlot))
+			if (!pSelectionGroup->canEnterOrAttackPlot(pPlot))
 			{
 				return false;
 			}

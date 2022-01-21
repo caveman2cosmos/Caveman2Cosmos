@@ -239,7 +239,7 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 
 	toKillList = []
 	for pUnit in unitList :
-		if not pUnit.getDomainType() == DomainTypes.DOMAIN_LAND or not pUnit.canMoveInto(pPlot,False,False,True):
+		if not pUnit.getDomainType() == DomainTypes.DOMAIN_LAND or not pUnit.canEnterPlot(pPlot,False,False,True):
 			if bDestroyNonLand:
 				toKillList.append(pUnit)
 
@@ -272,7 +272,7 @@ def moveEnemyUnits2( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjure
 			if bLeaveSiege and pUnit.getDomainType() == DomainTypes.DOMAIN_LAND and pUnit.bombardRate() > 0: continue
 
 			if pUnit.getDomainType() == DomainTypes.DOMAIN_AIR:
-				if pPlot.isCity() or pUnit.canMoveInto(pPlot,False,False,True):
+				if pPlot.isCity() or pUnit.canEnterPlot(pPlot,False,False,True):
 					pUnit.setXY( iMoveToX, iMoveToY, False, False, False )
 
 			else: pUnit.setXY( iMoveToX, iMoveToY, False, False, False )
@@ -305,7 +305,7 @@ def clearOutCity( pCity, pPlayer, pEnemyPlayer ) :
 			if( len(retreatPlots) > 0 ) :
 				moveXY = retreatPlots[GAME.getSorenRandNum(len(retreatPlots),'Rev')]
 				for unit in waterUnits :
-					if( unit.canMoveInto(GC.getMap().plot(moveXY[0],moveXY[1]),False,False,True) ) :
+					if( unit.canEnterPlot(GC.getMap().plot(moveXY[0],moveXY[1]),False,False,True) ) :
 						unit.setXY( moveXY[0], moveXY[1], False, False, False )
 
 

@@ -6405,7 +6405,7 @@ def doVolcanoPlot(pPlot):
       for i in xrange(8):
         sPlot = plotDirection(iX, iY, DirectionTypes(i))
         if not sPlot.isNone():
-          if pPlotUnit.canMoveInto(sPlot, False, False, True):
+          if pPlotUnit.canEnterPlot(sPlot, False, False, True):
             pPlotUnit.setXY(sPlot.getX(), sPlot.getY(), False, True, True)
 
   if pPlot.isWater(): pPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)

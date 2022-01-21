@@ -567,22 +567,9 @@ public:
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;
 
+	bool canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
 
-	bool canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
-	// Deprecated - use method above
-	//bool canMoveInto(const CvPlot* pPlot,
-	//	bool bAttack = false,
-	//	bool bDeclareWar = false,
-	//	bool bIgnoreLoad = false,
-	//	bool bIgnoreTileLimit = false,
-	//	bool bIgnoreLocation = false,
-	//	bool bIgnoreAttack = false,
-	//	CvUnit** pDefender = NULL,
-	//	bool bCheckForBest = false,
-	//	bool bAssassinate = false,
-	//	bool bSuprise = false) const;
-
-	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
 	void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
