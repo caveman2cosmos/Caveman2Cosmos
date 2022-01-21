@@ -50,3 +50,4 @@ EXPORTS
 ?isBusy@CvSelectionGroup@@QAE_NXZ=?isBusy@CvSelectionGroup@@QBE_NXZ
 ?getNumLanguages@CvGameText@@QBEHXZ=?getNumLanguages@CvGameText@@SAHXZ
 ?setNumLanguages@CvGameText@@QAEXH@Z=?setNumLanguages@CvGameText@@SAXH@Z
+?cyclePlotUnits@CvGame@@QBE_NPAVCvPlot@@_N1H@Z=?cyclePlotUnits@CvGame@@QBE_NPBVCvPlot@@_N1H@Z
