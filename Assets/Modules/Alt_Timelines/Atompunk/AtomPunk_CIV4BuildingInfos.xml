@@ -342,7 +342,7 @@
 			</PrereqBonuses>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>5</iMaintenanceModifier>
+			<iMaintenanceModifier>1</iMaintenanceModifier>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -681,7 +681,7 @@
 			</ConstructCondition>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>2</iMaintenanceModifier>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -796,7 +796,7 @@
 			</ConstructCondition>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>2</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
 			<iHealth>-1</iHealth>
 			<iTradeRoutes>2</iTradeRoutes>
