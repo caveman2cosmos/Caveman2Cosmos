@@ -2109,142 +2109,158 @@ int CvPlayerAI::AI_yieldWeight(YieldTypes eYield) const
 
 int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) const
 {
-	int iWeight;
+	int iWeight = GC.getCommerceInfo(eCommerce).getAIWeightPercent();
 
-	iWeight = GC.getCommerceInfo(eCommerce).getAIWeightPercent();
-
-	//sorry but the merchant descrimination must stop.
-	iWeight = std::min(110, iWeight);
-
-	//XXX Add something for 100%/0% type situations
 	switch (eCommerce)
 	{
-	case COMMERCE_RESEARCH:
-		if (AI_avoidScience())
+		case COMMERCE_RESEARCH:
 		{
-			if (isNoResearchAvailable())
+			if (AI_avoidScience())
+			{
+				if (isNoResearchAvailable())
+				{
+					iWeight = 0;
+				}
+				else
+				{
+					iWeight /= 8;
+				}
+			}
+			else if (!AI_isFinancialTrouble())
+			{
+				iWeight += 25;
+			}
+			break;
+		}
+		case COMMERCE_GOLD:
+		{
+			if (AI_isFinancialTrouble())
+			{
+				iWeight *= 2;
+			}
+			else if (getCommercePercent(COMMERCE_GOLD) < 25) // Low tax
+			{
+				//put more money towards other commerce types
+				if (getGoldPerTurn() > getGold() / 40)
+				{
+					iWeight -= 50 - 2 * getCommercePercent(COMMERCE_GOLD);
+				}
+			}
+			break;
+		}
+		case COMMERCE_CULTURE:
+		{
+			// COMMERCE_CULTURE AIWeightPercent is 25% in default xml
+			// Adjustments for human player going for cultural victory (who won't have AI strategy set)
+			// so that governors do smart things
+			if (pCity != NULL)
+			{
+				if (pCity->getCultureTimes100(getID()) >= 100 * GC.getGame().getCultureThreshold((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1)))
+				{
+					iWeight /= 50;
+				}
+				// Slider check works for detection of whether human player is going for cultural victory
+				else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) >= 90)
+				{
+					int iCultureRateRank = pCity->findCommerceRateRank(COMMERCE_CULTURE);
+					int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
+
+					// if one of the currently best cities, then focus hard, *4 or more
+					if (iCultureRateRank <= iCulturalVictoryNumCultureCities)
+					{
+						iWeight *= (3 + iCultureRateRank);
+					}
+					// if one of the 3 close to the top, then still emphasize culture some, *2
+					else if (iCultureRateRank <= iCulturalVictoryNumCultureCities + 3)
+					{
+						iWeight *= 2;
+					}
+					else if (isHuman())
+					{
+						iWeight *= 2;
+					}
+				}
+				else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) >= 70)
+				{
+					iWeight *= 3;
+				}
+				else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) >= 50)
+				{
+					iWeight *= 2;
+				}
+				iWeight += 2 * (100 - pCity->plot()->calculateCulturePercent(getID()));
+
+				if (pCity->getCultureLevel() < (CultureLevelTypes) 2)
+				{
+					iWeight = std::max(iWeight, 800);
+				}
+			}
+			else // pCity == NULL
+			{
+				if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) >=90 )
+				{
+					iWeight *= 3;
+					iWeight /= 4;
+				}
+				else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) >= 70 )
+				{
+					iWeight *= 2;
+					iWeight /= 3;
+				}
+				else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) >= 50 )
+				{
+					iWeight /= 2;
+				}
+				else
+				{
+					iWeight /= 3;
+				}
+			}
+			break;
+		}
+		case COMMERCE_ESPIONAGE:
+		{
+			const TeamTypes eTeam = getTeam();
+			const CvTeamAI& myTeam = GET_TEAM(eTeam);
+
+			if (!myTeam.hasMetAnyCiv())
 			{
 				iWeight = 0;
+				break;
 			}
-			else
-			{
-				iWeight /= 8;
-			}
-		}
-		break;
-	case COMMERCE_GOLD:
-		if (getCommercePercent(COMMERCE_GOLD) > 70)
-		{
-			//avoid strikes
-			if (getGoldPerTurn() < -getGold()/100)
-			{
-				iWeight += 15;
-			}
-		}
-		else if (getCommercePercent(COMMERCE_GOLD) < 25)
-		{
-			//put more money towards other commerce types
-			if (getGoldPerTurn() > -getGold()/40)
-			{
-				iWeight -= 25 - getCommercePercent(COMMERCE_GOLD);
-			}
-		}
-		break;
-	case COMMERCE_CULTURE:
-		// COMMERCE_CULTURE AIWeightPercent is 25% in default xml
-		// Adjustments for human player going for cultural victory (who won't have AI strategy set)
-		// so that governors do smart things
-		if (pCity != NULL)
-		{
-			if (pCity->getCultureTimes100(getID()) >= 100 * GC.getGame().getCultureThreshold((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1)))
-			{
-				iWeight /= 50;
-			}
-			// Slider check works for detection of whether human player is going for cultural victory
-			else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) >= 90 )
-			{
-				int iCultureRateRank = pCity->findCommerceRateRank(COMMERCE_CULTURE);
-				int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
-
-				// if one of the currently best cities, then focus hard, *4 or more
-				if (iCultureRateRank <= iCulturalVictoryNumCultureCities)
-				{
-					iWeight *= (3 + iCultureRateRank);
-				}
-				// if one of the 3 close to the top, then still emphasize culture some, *2
-				else if (iCultureRateRank <= iCulturalVictoryNumCultureCities + 3)
-				{
-					iWeight *= 2;
-				}
-				else if (isHuman())
-				{
-					iWeight *= 2;
-				}
-
-			}
-			else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) >= 70)
-			{
-				iWeight *= 3;
-			}
-			else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) >= 50)
-			{
-				iWeight *= 2;
-			}
-
-			iWeight += (100 - pCity->plot()->calculateCulturePercent(getID()));
-
-			if (pCity->getCultureLevel() <= (CultureLevelTypes) 1)
-			{
-				iWeight = std::max(iWeight, 800);
-			}
-		}
-		// pCity == NULL
-		else
-		{
-			if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) >=90 )
-			{
-				iWeight *= 3;
-				iWeight /= 4;
-			}
-			else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) >= 70 )
-			{
-				iWeight *= 2;
-				iWeight /= 3;
-			}
-			else if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) >= 50 )
-			{
-				iWeight /= 2;
-			}
-			else
-			{
-				iWeight /= 3;
-			}
-		}
-		break;
-	case COMMERCE_ESPIONAGE:
-		{
+			int iNumValidTeamsMet = 0;
 			int iEspBehindWeight = 0;
-			for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
+			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 			{
-				CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
-				if (kLoopTeam.isAlive() && iTeam != getTeam() && !kLoopTeam.isVassal(getTeam()) && !GET_TEAM(getTeam()).isVassal((TeamTypes)iTeam))
+				const TeamTypes eTeamX = static_cast<TeamTypes>(iI);
+				CvTeam& teamX = GET_TEAM(eTeamX);
+
+				if (teamX.isAlive() && eTeamX != eTeam && myTeam.isHasMet(eTeamX)
+				// Don't bother with minor civs unless we are one too.
+				&& (isMinorCiv() || !teamX.isMinorCiv())
+				// Ignore vassals
+				&& !teamX.isVassal(eTeam) && !myTeam.isVassal(eTeamX))
 				{
-					int iPointDiff = kLoopTeam.getEspionagePointsAgainstTeam(getTeam()) - GET_TEAM(getTeam()).getEspionagePointsAgainstTeam((TeamTypes)iTeam);
-					if (iPointDiff > 0)
+					iNumValidTeamsMet++;
+					// Behind in espionage
+					if (teamX.getEspionagePointsAgainstTeam(eTeam) - myTeam.getEspionagePointsAgainstTeam(eTeamX) > 0)
 					{
-						iEspBehindWeight += 1;
-						if( GET_TEAM(getTeam()).AI_getAttitude((TeamTypes)iTeam) < ATTITUDE_CAUTIOUS )
+						iEspBehindWeight++;
+
+						if (myTeam.AI_getAttitude(eTeamX) < ATTITUDE_CAUTIOUS)
 						{
-							iEspBehindWeight += 1;
+							iEspBehindWeight++;
 						}
 					}
 				}
 			}
-
-			iWeight *= 2*iEspBehindWeight + (3*GET_TEAM(getTeam()).getHasMetCivCount(true))/4 + 1;
-			iWeight *= AI_getEspionageWeight();
-			iWeight /= GET_TEAM(getTeam()).getHasMetCivCount(true) + 1;
-			iWeight /= 100;
+			if (iNumValidTeamsMet == 0)
+			{
+				iWeight = 0;
+				break;
+			}
+			iWeight *= AI_getEspionageWeight() * (3 * iEspBehindWeight + iNumValidTeamsMet / 2 + 1);
+			iWeight /= 200 * iNumValidTeamsMet;
 
 			// K-Mod
 			if (AI_isDoStrategy(AI_STRATEGY_BIG_ESPIONAGE))
@@ -2252,37 +2268,31 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 				iWeight *= 2;
 			}
 
-			if( getCommercePercent(COMMERCE_ESPIONAGE) == 0 )
+			if (getCommercePercent(COMMERCE_ESPIONAGE) == 0)
 			{
 				iWeight *= 2;
 				iWeight /= 3;
 			}
-			else if( isHuman() )
+			else if (isHuman())
 			{
 				// UNOFFICIAL_PATCH todo:  should this tweak come over in some form?
 				// There's still an issue with upping espionage slider for human player.
-				if( getCommercePercent(COMMERCE_ESPIONAGE) > 50 )
+				if (getCommercePercent(COMMERCE_ESPIONAGE) > 50)
 				{
 					iWeight *= getCommercePercent(COMMERCE_ESPIONAGE);
 					iWeight /= 50;
 				}
 			}
-			else
+			// AI Espionage slider use maxed out at 20 percent
+			else if (getCommercePercent(COMMERCE_ESPIONAGE) >= 20)
 			{
-				// AI Espionage slider use maxed out at 20 percent
-				if( getCommercePercent(COMMERCE_ESPIONAGE) >= 20 )
-				{
-					iWeight *= 3;
-					iWeight /= 2;
-				}
+				iWeight *= 3;
+				iWeight /= 2;
 			}
+			break;
 		}
-		break;
-
-	default:
-		break;
+		default: break;
 	}
-
 	return iWeight;
 }
 
@@ -11948,32 +11958,34 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea, bool bIdeal) const
 
 int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 {
-	int iCount = countUnimprovedBonuses(pArea) * 2;
-
+	int iNeeded = countUnimprovedBonuses(pArea) * 2;
+	int iHave = 0;
+	int iCities = 0;
 	foreach_(const CvCity* pLoopCity, cities())
 	{
 		if (pLoopCity->getArea() == pArea->getID())
 		{
-			iCount += pLoopCity->AI_getWorkersNeeded() * 3;
+			iNeeded += pLoopCity->AI_getWorkersNeeded() * 3;
+			iHave += pLoopCity->AI_getWorkersHave() * 3;
+			iCities++;
 		}
 	}
-
-	if (iCount == 0)
+	if (iCities == 0)
 	{
 		return 0;
 	}
+	iNeeded = std::max(iNeeded / 3, iCities + intSqrt(1 + getCurrentEra()) - iHave);
+	//OutputDebugString(CvString::format("A: Player %d, Area %d, Workers needed: %d\n", getID(), pArea->getID(), iNeeded).c_str());
 
-	if (getBestRoute() != NO_ROUTE)
+	if (iNeeded == 0)
 	{
-		iCount += pArea->getCitiesPerPlayer(getID()) / 2;
+		return 0;
 	}
+	iNeeded = std::min(iNeeded, 2 * iCities + intSqrt(iCities)); // max 2 workers per city in area + 1 workerr per city squared in area.
 
-	iCount += 1;
-	iCount /= 3;
-	iCount = std::min(iCount, 3 * pArea->getCitiesPerPlayer(getID()));
-	iCount = std::min(iCount, (1 + getTotalPopulation()) / 2);
+	//OutputDebugString(CvString::format("B: Player %d, Area %d, Workers needed: %d\n", getID(), pArea->getID(), iNeeded).c_str());
 
-	return std::max(1, iCount);
+	return std::max(1, iNeeded);
 
 }
 

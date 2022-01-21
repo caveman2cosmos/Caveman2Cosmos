@@ -1457,7 +1457,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -1968,7 +1968,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -2460,7 +2460,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -2670,7 +2670,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -2850,7 +2850,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -3236,7 +3236,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>

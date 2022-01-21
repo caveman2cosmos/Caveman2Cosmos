@@ -306,7 +306,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-15000</iCommerce>
+				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
