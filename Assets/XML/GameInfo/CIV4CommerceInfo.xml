@@ -29,7 +29,7 @@
 			<Description>TXT_KEY_COMMERCE_CULTURE</Description>
 			<iInitialPercent>0</iInitialPercent>
 			<iInitialHappiness>10</iInitialHappiness>
-			<iAIWeightPercent>25</iAIWeightPercent>
+			<iAIWeightPercent>30</iAIWeightPercent>
 			<bFlexiblePercent>0</bFlexiblePercent>
 			<Button>Art/Interface/Buttons/Process/ProcessCulture.dds</Button>
 		</CommerceInfo>
