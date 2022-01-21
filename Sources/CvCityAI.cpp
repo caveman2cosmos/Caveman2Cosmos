@@ -3639,9 +3639,9 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	if (getHeadOrder() == NULL && !AI_chooseProcess(NO_COMMERCE, commerceWeights) && !AI_finalProcessSelection())
+	if (getHeadOrder() == NULL && !AI_chooseProcess(NO_COMMERCE, commerceWeights))
 	{
-		FErrorMsg(CvString::format("AI could not choose production for city %S", m_szName.c_str()).c_str());
+		FErrorMsg("This shouldn't really happen");
 	}
 }
 
@@ -6591,13 +6591,12 @@ ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int64_t* comm
 int64_t CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType, int64_t* commerceWeights) const
 {
 	int64_t iValue = 0;
-
-	// if we own less than 50%, or we need to pop borders
+	const bool bSpecific = eCommerceType != NO_COMMERCE;
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
 		const CommerceTypes eCommerce = static_cast<CommerceTypes>(iI);
-		if (eCommerceType != NO_COMMERCE && eCommerce != eCommerceType)
+		if (bSpecific && eCommerce != eCommerceType)
 		{
 			continue;
 		}
@@ -6616,74 +6615,8 @@ int64_t CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerce
 		}
 		iValue += iTempValue;
 	}
-	return iValue;
-}
-
-bool CvCityAI::AI_finalProcessSelection()
-{
-#ifdef USE_UNIT_TENDERING
-	if (m_bRequestedBuilding /*|| m_bRequestedUnit*/)//A city isn't necessarily going to train the unit it requested but allow any qualified building to immediately override this 'last check for a process'.
-	{
-		return false;
-	}
-
-	m_iBuildPriority = m_iTempBuildPriority;
-#endif
-
-	int iBestValue = 0;
-	ProcessTypes eBestProcess = NO_PROCESS;
-
-	for (int iI = 0; iI < GC.getNumProcessInfos(); iI++)
-	{
-		const ProcessTypes eProcess = ((ProcessTypes)iI);
-		if (canMaintain(eProcess))
-		{
-			int iValue = 1;
-			if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
-			{
-				iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_GOLD);
-			}
-
-			// if we own less than 50%, or we need to pop borders
-			if ((plot()->calculateCulturePercent(getOwner()) < 50) || (getCultureLevel() <= (CultureLevelTypes)1))
-			{
-				iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
-			}
-
-			if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
-			{
-				// Final city for cultural victory will build culture to speed up victory
-				if (findCommerceRateRank(COMMERCE_CULTURE) == GC.getGame().culturalVictoryNumCultureCities())
-				{
-					iValue += 2 * GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
-				}
-			}
-
-			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-			{
-				CommerceTypes eCommerce = (CommerceTypes)iJ;
-				int iTemp = GC.getProcessInfo(eProcess).getProductionToCommerceModifier(eCommerce);
-				if (eCommerce == COMMERCE_RESEARCH && iTemp > 0)
-				{
-					iTemp *= 120;
-					iTemp /= 100;
-				}
-				iValue += iTemp;
-			}
-			if (iValue > iBestValue)
-			{
-				iBestValue = iValue;
-				eBestProcess = eProcess;
-			}
-		}
-	}
-	if (eBestProcess != NO_PROCESS)
-	{
-		pushOrder(ORDER_MAINTAIN, eBestProcess, -1, false, false, false);
-		return true;
-	}
-
-	return false;
+	// Minimum 1 value if commerce type was not specified, minimum zero value if it was.
+	return std::max<int64_t>(!bSpecific, iValue); 
 }
 
 
@@ -9163,11 +9096,10 @@ bool CvCityAI::AI_chooseProject()
 bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWeights)
 {
 #ifdef USE_UNIT_TENDERING
-	if (m_bRequestedBuilding || m_bRequestedUnit)
+	if (eCommerceType != NO_COMMERCE && (m_bRequestedBuilding || m_bRequestedUnit))
 	{
 		return false;
 	}
-
 	m_iBuildPriority = m_iTempBuildPriority;
 #endif
 
@@ -10840,9 +10772,9 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	const int iPop = getPopulation();
 
 	if (AI_countNumBonuses(NO_BONUS, false, true, 10, true, true) > 0
-		&& iPop > AI_countNumBonuses(NO_BONUS, true, false, -1, true, true)
-		&& getCommerceRate(COMMERCE_CULTURE) == 0
-		&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE))
+	&& iPop > AI_countNumBonuses(NO_BONUS, true, false, -1, true, true)
+	&& getCommerceRate(COMMERCE_CULTURE) == 0
+	&& AI_chooseBuilding(BUILDINGFOCUS_CULTURE))
 	{
 		return;
 	}
@@ -10894,29 +10826,31 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 #endif
 	{
 		if (!AI_isDanger()
-			&&
-			(
-				GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_WORKER)
-				<
-				(GET_PLAYER(getOwner()).AI_neededWorkers(area()) + 1) / 2
-				)
-			&& AI_chooseUnit("no danger optional worker", UNITAI_WORKER))
+		&& (
+			GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_WORKER)
+			<
+			(GET_PLAYER(getOwner()).AI_neededWorkers(area()) + 1) / 2
+		)
+		&& AI_chooseUnit("no danger optional worker", UNITAI_WORKER))
 		{
 			return;
 		}
 	}
 
 	if (GC.getDEFAULT_SPECIALIST() != NO_SPECIALIST
-		&& getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > 0
-		&& AI_chooseBuilding(BUILDINGFOCUS_SPECIALIST, 60)
-		|| AI_chooseBuilding(iEconomyFlags, 40, 15 / iMinValueDivisor)
-		|| AI_chooseBuilding(iEconomyFlags | BUILDINGFOCUS_CULTURE, 10, 10 / iMinValueDivisor)
-		|| AI_chooseBuilding())
+	&& getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > 0
+	&& AI_chooseBuilding(BUILDINGFOCUS_SPECIALIST, 60)
+	|| AI_chooseBuilding(iEconomyFlags, 40, 15 / iMinValueDivisor)
+	|| AI_chooseBuilding(iEconomyFlags | BUILDINGFOCUS_CULTURE, 10, 10 / iMinValueDivisor)
+	|| AI_chooseBuilding())
 	{
 		return;
 	}
 	// As last resort select a process
-	AI_finalProcessSelection();
+	if (getHeadOrder() == NULL && !AI_chooseProcess(NO_COMMERCE))
+	{
+		FErrorMsg("This shouldn't really happen");
+	}
 }
 
 int CvCityAI::AI_calculateWaterWorldPercent() const
