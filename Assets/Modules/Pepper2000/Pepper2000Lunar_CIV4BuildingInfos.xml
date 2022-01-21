@@ -39,7 +39,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
@@ -91,7 +91,7 @@
 			<iHealth>1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-250</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -294,7 +294,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
@@ -326,7 +326,7 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
@@ -383,7 +383,7 @@
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
@@ -491,9 +491,6 @@
 			<iLineOfSight>1</iLineOfSight>
 			<iBombardDefense>20</iBombardDefense>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
@@ -575,9 +572,6 @@
 			<iConquestProb>70</iConquestProb>
 			<iHealth>-1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -629,7 +623,7 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
@@ -667,7 +661,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
@@ -705,7 +699,7 @@
 				<iYield>36</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-250</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
@@ -807,7 +801,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
@@ -978,7 +972,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -1031,7 +1025,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -1184,7 +1178,7 @@
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-250</iCommerce>
+				<iCommerce>-5</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -1217,9 +1211,6 @@
 			<iCost>200</iCost>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1323,7 +1314,7 @@
 			<iHappiness>2</iHappiness>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
@@ -1786,7 +1777,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
@@ -1813,7 +1804,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
@@ -1953,7 +1944,7 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>

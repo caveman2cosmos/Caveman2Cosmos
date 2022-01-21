@@ -163,7 +163,7 @@
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iCost>5250</iCost>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
@@ -1673,7 +1673,7 @@
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -2223,9 +2223,6 @@
 			<iCost>6490</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<CommerceChanges>
-				<iCommerce>-1000</iCommerce>
-			</CommerceChanges>
 			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
@@ -2246,9 +2243,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 			<iCost>23510</iCost>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -2412,7 +2406,7 @@
 			<PrereqTech>TECH_GALACTIC_FEDERATION</PrereqTech>
 			<iCost>25310</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -2475,7 +2469,7 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>4010</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -2643,7 +2637,7 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>4010</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>

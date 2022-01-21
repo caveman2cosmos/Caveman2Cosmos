@@ -5864,9 +5864,6 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -8638,9 +8635,6 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14711,9 +14705,6 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1080</iCost>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
