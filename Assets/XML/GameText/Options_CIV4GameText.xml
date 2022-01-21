@@ -1,38 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Option related text -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>
-		<English>Hide Unconstructable Buildings</English>
-		<French>Masquer les Bâtiments non-Constructibles</French>
-		<German>Nur aktuell baubare Gebäude anzeigen</German>
+		<English>Hide non-constructible buildings</English>
+		<French>Masquer les bâtiments non constructibles</French>
+		<German>Nicht bebaubare Gebäude ausblenden</German>
 		<Italian>Nascondi edifici non costruibili</Italian>
 		<Spanish>Ocultar edificios no construibles</Spanish>
-		<Russian>Ñêðûòü íåäîñòóï. ïîñòðîéêè</Russian>
+		<Russian>Скрыть не подлежащие возведению здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS_HELP</Tag>
 		<English>Hides all buildings that cannot be constructed. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
+		<Italian>Nasconde tutti gli edifici che non possono essere costruiti. Questo è il valore predefinito utilizzato durante il caricamento di un salvataggio o l'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS</Tag>
-		<English>Hide Untrainable Units</English>
-		<French>Masquer les Unités non-Constructibles</French>
-		<German>Nur aktuell trainierbare Einheiten anzeigen</German>
-		<Italian>Nascondi unità non costruibili</Italian>
+		<English>Hide untrainable units</English>
+		<French>Masquer les unités non entraînables</French>
+		<German>Verstecke nicht trainierbare Einheiten</German>
+		<Italian>Nascondi unità non addestrabili</Italian>
 		<Spanish>Ocultar unidades no entrenables</Spanish>
-		<Russian>Ñêðûòü íåäîñò. þíèòû</Russian>
+		<Russian>Скрыть необучаемые отряды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS_HELP</Tag>
-		<English>Hides all units that cannot be constructed. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
+		<English>Hides all units that cannot be trained. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
+		<Italian>Nasconde tutti le unità che non possono essere addestrate. Questo è il valore predefinito utilizzato durante il caricamento di un salvataggio o l'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE</Tag>
 		<English>Icon size: %d1 pixels</English>
+		<Italian>Grandezza dell'icona: %d1 pixel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE_HELP</Tag>
 		<English>The size of the main city selection icons, and unit/building icons within the construction tabs.</English>
+		<Italian>La dimensione delle principali icone nelle schermate delle città e delle icone di unità/edifici nelle schermate di produzione.</Italian>
 	</TEXT>
 </Civ4GameText>

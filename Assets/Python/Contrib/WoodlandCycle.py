@@ -1,7 +1,6 @@
 
 from CvPythonExtensions import *
-import CvUtil #, BugUtil
-#from random import shuffle
+import CvUtil#, BugUtil
 
 GC = CyGlobalContext()
 MAP = GC.getMap()
@@ -38,32 +37,6 @@ class WoodlandCycle:
 
 	# Called at the beginning of the end of each turn
 	def onBeginGameTurn(self, argsList):
-		'''
-		for i in [1000, 10000, 100000]:
-			aList = [0]*i
-			timer = BugUtil.Timer('exe.shuffleList 10*' + str(i))
-			for j in xrange(10):
-				shuffleList(i, GAME.getMapRand(), aList)
-			timer.log()
-
-		for i in [1000, 10000, 100000]:
-			aList = []
-			for s in xrange(i):
-				aList.append(s)
-			timer = BugUtil.Timer('dll.shuffleIntList 10*' + str(i))
-			for j in xrange(10):
-				shuffleIntList(aList, GAME.getMapRand())
-			timer.log()
-
-		for i in [1000, 10000, 100000]:
-			aList = []
-			for s in xrange(i):
-				aList.append(s)
-			timer = BugUtil.Timer('pyLib.random.shuffle 10*' + str(i))
-			for j in xrange(10):
-				shuffle(aList)
-			timer.log()
-		'''
 		#timer = BugUtil.Timer('WoodlandCycle')
 		plotIndex = [0]*self.iMaxIndex
 		shuffleList(self.iMaxIndex, GAME.getMapRand(), plotIndex)

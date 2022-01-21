@@ -220,7 +220,7 @@ int64_t cyIntSqrt64(uint64_t iValue)
 	return intSqrt64(iValue);
 }
 
-void cyShuffleIntList(python::list& pyList, CvRandom& rand)
+void cyShufflePyList(python::list& pyList, CvRandom& rand)
 {
 	PyObject* pyObj = pyList.ptr();
 
@@ -230,8 +230,8 @@ void cyShuffleIntList(python::list& pyList, CvRandom& rand)
 		if (i != j)
 		{
 			PyObject* temp = PySequence_GetItem(pyObj, i);
-			const int success1 = PySequence_SetItem(pyObj, i, PySequence_GetItem(pyObj, j));
-			const int success2 = PySequence_SetItem(pyObj, j, temp);
+			PySequence_SetItem(pyObj, i, PySequence_GetItem(pyObj, j));
+			PySequence_SetItem(pyObj, j, temp);
 		}
 	}
 }

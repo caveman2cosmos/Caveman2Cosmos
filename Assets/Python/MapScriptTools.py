@@ -31,11 +31,10 @@
 
 from CvPythonExtensions import *
 import CvMapGeneratorUtil as MGU
-from random import shuffle
 
 GC = CyGlobalContext()
 
-DEBUG = True
+DEBUG = False
 bInitialized = False
 
 #################################################
@@ -410,7 +409,7 @@ def getOppositeDirection(eDir):
 	return DirectionTypes((eDir + 4) % 8)
 
 def getOppositeCardinalDirection(dir):
-	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
+	return CardinalDirectionTypes((dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES)
 
 # add index to direction; clockwise -> positive
 def addDirection( eDir, index ):
@@ -902,15 +901,18 @@ class MapPrettifier:
 		print "[MST] ===== MapPrettifier:connectifyLakes()"
 		wCnt = 0
 		lCnt = 0
-		edList = [ DirectionTypes.DIRECTION_NORTHWEST, DirectionTypes.DIRECTION_NORTHEAST,
-		           DirectionTypes.DIRECTION_SOUTHEAST, DirectionTypes.DIRECTION_SOUTHEAST ]
-		for x in range( 1, iNumPlotsX-1 ):
+		edList = [
+			DirectionTypes.DIRECTION_NORTHWEST, DirectionTypes.DIRECTION_NORTHEAST,
+			DirectionTypes.DIRECTION_SOUTHEAST, DirectionTypes.DIRECTION_SOUTHEAST
+		]
+		mapRand = GC.getGame().getMapRand()
+		for x in range(1, iNumPlotsX-1):
 			MAP.recalculateAreas()
-			for y in range( 1, iNumPlotsY-1 ):
+			for y in range(1, iNumPlotsY-1):
 				plot = MAP.plot(x, y)
 				if not plot.isWater(): continue
 				for eDir in edList:
-					cardPlots = self.checkDiagonalWater( x, y, eDir )
+					cardPlots = self.checkDiagonalWater(x, y, eDir)
 					if not cardPlots: continue
 					pl = plotDirection(x, y, eDir)
 					if pl.isNone(): continue
@@ -928,7 +930,7 @@ class MapPrettifier:
 							pl.setPlotType( choose(90,PlotTypes.PLOT_LAND,PlotTypes.PLOT_HILLS), False, False)
 							lCnt += 1
 					else:
-						shuffle(cardPlots)
+						shufflePyList(cardPlots, mapRand)
 						for p in cardPlots:
 							if choose( chConnect, True, False ):
 								p.setPlotType( PlotTypes.PLOT_OCEAN, False, False)
@@ -1153,6 +1155,7 @@ class MapPrettifier:
 			chTer[i] = int( round(chTer[i] * fMult) )
 			srcChList.append( (chTer[i], srcTer[i]) )
 		# five passes if necessary
+		mapRand = GC.getGame().getMapRand()
 		passes = [0,1,2,3,4]
 		for loop in passes:
 			print " - pass %i" % (loop)
@@ -1184,7 +1187,7 @@ class MapPrettifier:
 					return
 			if wantTer < cntTer:
 				# have too many already
-				if terList: shuffle(terList)
+				if terList: shufflePyList(terList, mapRand)
 				for inx in terList:
 					newTer = chooseMore( srcChList )
 					if not (newTer == None):
@@ -1196,7 +1199,7 @@ class MapPrettifier:
 							return
 			else:
 				# need some more
-				if srcList: shuffle(srcList)
+				if srcList: shufflePyList(srcList, mapRand)
 				for inx in srcList:
 					plot = MAP.plotByIndex( inx )
 					plot.setTerrainType(eTerrain, True, True)
@@ -1237,6 +1240,7 @@ class MapPrettifier:
 		# five passes if necessary
 		src = sourceDict[ targetPlotType ]
 		print "[MST] Target %r, Source %r" % (targetPlotType, src)
+		mapRand = GC.getGame().getMapRand()
 		passes = [0,1,2,3,4]
 		for loop in passes:
 			print " - pass %i" % (loop)
@@ -1269,7 +1273,7 @@ class MapPrettifier:
 					return data
 			if wantPlots < cntPlot:
 				# have too many already
-				if plotList: shuffle(plotList)
+				if plotList: shufflePyList(plotList, mapRand)
 				for inx in plotList:
 					if data==None:
 						plot = MAP.plotByIndex( inx )
@@ -1285,7 +1289,7 @@ class MapPrettifier:
 						return data
 			else:
 				# need some more
-				if srcList: shuffle(srcList)
+				if srcList: shufflePyList(srcList, mapRand)
 				for inx in srcList:
 					if data==None:
 						plot = MAP.plotByIndex( inx )
@@ -1515,7 +1519,7 @@ class MarshMaker:
 							pList.append( p )
 
 		if pList:
-			shuffle(pList)
+			shufflePyList(pList, GC.getGame().getMapRand())
 			if etTundra==pList[0].getTerrainType():
 				self.cntTundra += 1
 			else:
@@ -3255,7 +3259,7 @@ class BonusBalancer:
 
 		if cnt > 0:
 			print "[MST] Eliminated %2i of the most plentiful boni" % (cnt)
-			shuffle(freePlots)
+			shufflePyList(freePlots, GC.getGame().getMapRand())
 		return freePlots
 
 	# place missing boni if at all possible
@@ -3264,7 +3268,7 @@ class BonusBalancer:
 		if not boniMissing: return []
 
 		iPlayer = GC.getGame().countCivPlayersAlive()
-		shuffle(boniMissing)
+		shufflePyList(boniMissing, GC.getGame().getMapRand())
 
 		# try and place missing boni
 		# using several passes, increasingly ignoring conditions on placement
@@ -3406,7 +3410,7 @@ class BonusBalancer:
 						if p.getBonusType(-1)<0:
 							pList.append( p )
 		if pList:
-			shuffle(pList)
+			shufflePyList(pList, GC.getGame().getMapRand())
 			self.transformForest2Jungle(pList[0])
 			sprint += "[MST] More Jungle created @ %i,%i \n" % (pList[0].getX(),pList[0].getY())
 		return sprint
@@ -3427,7 +3431,7 @@ class BonusBalancer:
 						if p.getBonusType(-1) < 0:
 							pList.append( p )
 		if pList:
-			shuffle(pList)
+			shufflePyList(pList, GC.getGame().getMapRand())
 			pList[0].setTerrainType( eTo, True, True )
 			sprint += "[MST] More %s created @ %i,%i \n" % (	sTxt, pList[0].getX(), pList[0].getY() )
 		return sprint
@@ -3539,7 +3543,7 @@ class BonusBalancer:
 								# no extra boni on top of other boni
 								if pLoopPlot.getBonusType(-1)<0:
 									plots.append(pLoopPlot)
-		if plots: shuffle(plots)
+		if plots: shufflePyList(plots, GC.getGame().getMapRand())
 		return plots # return list
 
 	# calculate number of desired boni
@@ -4190,7 +4194,7 @@ class RiverMaker:
 			for i in range( len(rivStart)-1, -1, -1 ):
 				if rivStart[i][1].isRiver():
 					del rivStart[i]
-		if rivStart: shuffle(rivStart)
+		if rivStart: shufflePyList(rivStart, GC.getGame().getMapRand())
 		return rivStart
 
 ################################################################################
@@ -4256,7 +4260,7 @@ class TeamStart:
 			plotList = []
 			for pl in self.playerList:
 				plotList.append(pl.getStartingPlot())
-			if plotList: shuffle(plotList)
+			if plotList: shufflePyList(plotList, GC.getGame().getMapRand())
 			i = 0
 			for pl in self.playerList:
 				pl.setStartingPlot( plotList[i], False )

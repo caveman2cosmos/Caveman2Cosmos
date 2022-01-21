@@ -332,23 +332,8 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LLAMA_FARM</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
@@ -439,23 +424,8 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DONKEY_FARM</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>

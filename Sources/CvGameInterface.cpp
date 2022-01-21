@@ -1022,6 +1022,12 @@ bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int 
 
 	return false;
 }
+// Returns true if unit was cycled...
+bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+{
+	const CvPlot* plot = const_cast<CvPlot*>(pPlot);
+	return cyclePlotUnits(plot, bForward, bAuto, iCount);
+}
 
 bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const
 {
