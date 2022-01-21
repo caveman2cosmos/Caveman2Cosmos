@@ -276,9 +276,6 @@
 			<iBombardDefense>10</iBombardDefense>
 			<iLineOfSight>1</iLineOfSight>
 			<iLocalDynamicDefense>10</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
-			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ESCHER_CITY</Type>
@@ -1439,9 +1436,6 @@
 			<iDamageAttackerChance>30</iDamageAttackerChance>
 			<iDamageToAttacker>30</iDamageToAttacker>
 			<iEspionageDefense>30</iEspionageDefense>
-			<CommerceChanges>
-				<iCommerce>-40</iCommerce>
-			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOROIDAL_COLONY</Type>

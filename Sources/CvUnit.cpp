@@ -2326,7 +2326,7 @@ namespace {
 
 	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
 	{
-		return withdrawingUnit->canMoveInto(toPlot)
+		return withdrawingUnit->canEnterPlot(toPlot)
 			&& !plotHasEnemy(withdrawingUnit->getTeam(), withdrawingUnit->plot(), toPlot)
 			// && !plotHasAdjacentEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
 			;
@@ -5942,7 +5942,7 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 				return eRevealedTeam;
 			}
 		}
-		else if (pPlot->isActiveVisible(false) && canMoveInto(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
+		else if (pPlot->isActiveVisible(false) && canEnterPlot(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
 		{
 			const CvUnit* pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwner(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
 
@@ -5969,7 +5969,7 @@ bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 	return false;
 }
 
-bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCheck::None*/, CvUnit** ppDefender /*= NULL*/) const
+bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCheck::None*/, CvUnit** ppDefender /*= NULL*/) const
 {
 	FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 	if (pPlot == NULL)
@@ -6519,10 +6519,10 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 	return true;
 }
 
-bool CvUnit::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
+bool CvUnit::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar) const
 {
 	const bool ignoreLocation = stepDistance(pPlot->getX(), pPlot->getY(), getX(), getY()) != 1;
-	return canMoveInto(pPlot,
+	return canEnterPlot(pPlot,
 		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
 		(ignoreLocation ? MoveCheck::IgnoreLocation : MoveCheck::None) |
 		MoveCheck::IgnoreAttack
@@ -6531,13 +6531,13 @@ bool CvUnit::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
 
 bool CvUnit::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return canMoveInto(pPlot, (bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) | MoveCheck::IgnoreLoad);
+	return canEnterPlot(pPlot, (bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) | MoveCheck::IgnoreLoad);
 }
 
 void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
-	FAssert(plot() == pPlot || bStealth || bNoCache || canMoveInto(pPlot, MoveCheck::Attack));
+	FAssert(plot() == pPlot || bStealth || bNoCache || canEnterPlot(pPlot, MoveCheck::Attack));
 	FAssert(getCombatTimer() == 0);
 
 	m_combatResult.iTurnCount = 0;
@@ -6723,7 +6723,7 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 {
 	PROFILE_FUNC();
 
-	FAssert(canMoveOrAttackInto(pPlot) || isMadeAttack());
+	FAssert(canEnterOrAttackPlot(pPlot) || isMadeAttack());
 
 	CvPlot* pOldPlot = plot();
 
@@ -6776,7 +6776,7 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 
 		if (pLoopPlot->isValidDomainForLocation(*this))
 		{
-			if (canMoveInto(pLoopPlot))
+			if (canEnterPlot(pLoopPlot))
 			{
 				if (canEnterArea(pLoopPlot->getTeam(), pLoopPlot->area()) && !isEnemy(pLoopPlot->getTeam(), pLoopPlot))
 				{
@@ -8345,7 +8345,7 @@ bool CvUnit::canAirliftAt(const CvPlot* pPlot, int iX, int iY) const
 
 	pTargetPlot = GC.getMap().plot(iX, iY);
 
-	if (!canMoveInto(pTargetPlot))
+	if (!canEnterPlot(pTargetPlot))
 	{
 		return false;
 	}
@@ -8762,7 +8762,7 @@ bool CvUnit::canParadropAt(const CvPlot* fromPlot, int toX, int toY) const
 		return false;
 	}
 
-	if (!canMoveInto(pTargetPlot, MoveCheck::IgnoreLoad))
+	if (!canEnterPlot(pTargetPlot, MoveCheck::IgnoreLoad))
 	{
 		return false;
 	}

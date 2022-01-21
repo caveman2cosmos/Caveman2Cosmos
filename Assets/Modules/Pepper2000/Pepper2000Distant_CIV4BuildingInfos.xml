@@ -752,9 +752,6 @@
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>20</iDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>

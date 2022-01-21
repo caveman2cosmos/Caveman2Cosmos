@@ -3365,8 +3365,7 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 {
 	const CvArea* pPlotArea = pPlot->area();
 
-	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange)
-	| filtered(CvPlot::fn::area() == pPlotArea))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange) | filtered(CvPlot::fn::area() == pPlotArea))
 	{
 		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
@@ -3379,21 +3378,20 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 				}
 			}
 
-			if (pLoopUnit->isEnemy(getTeam()) && (!bAnimalOnly || (pLoopUnit->isAnimal() && pLoopUnit->canAnimalIgnoresBorders() && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))))
+			if (pLoopUnit->isEnemy(getTeam())
+			&&
+			(
+				!bAnimalOnly
+				|| pLoopUnit->isAnimal()
+				&& pLoopUnit->canAnimalIgnoresBorders()
+				&& !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT)
+			)
+			&&  pLoopUnit->canAttack()
+			&& !pLoopUnit->isInvisible(getTeam(), false)
+			&&  pLoopUnit->canEnterOrAttackPlot(pPlot)
+			&& (group == NULL || pLoopUnit->getGroup()->AI_attackOdds(pPlot,true,true) > 100 - acceptableOdds))
 			{
-				if (pLoopUnit->canAttack())
-				{
-					if (!(pLoopUnit->isInvisible(getTeam(), false)))
-					{
-						if (pLoopUnit->canMoveOrAttackInto(pPlot))
-						{
-							if ( group == NULL || pLoopUnit->getGroup()->AI_attackOdds(pPlot,true,true) > 100 - acceptableOdds )
-							{
-								return true;
-							}
-						}
-					}
-				}
+				return true;
 			}
 		}
 	}
@@ -3512,30 +3510,24 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 						}
 					}
 
-					if (pLoopUnit->isEnemy(eTeam))
+					if (pLoopUnit->isEnemy(eTeam)
+					&&  pLoopUnit->canAttack()
+					&& !pLoopUnit->isInvisible(eTeam, false)
+					&&  pLoopUnit->canEnterOrAttackPlot(pPlot))
 					{
-						if (pLoopUnit->canAttack())
+						if (!bTestMoves)
 						{
-							if (!(pLoopUnit->isInvisible(eTeam, false)))
+							bResult = true;
+							break;
+						}
+						else
+						{
+							int iDangerRange = pLoopUnit->baseMoves();
+							iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
+							if (iDangerRange >= iDistance)
 							{
-								if (pLoopUnit->canMoveOrAttackInto(pPlot))
-								{
-									if (!bTestMoves)
-									{
-										bResult = true;
-										break;
-									}
-									else
-									{
-										int iDangerRange = pLoopUnit->baseMoves();
-										iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
-										if (iDangerRange >= iDistance)
-										{
-											bResult = true;
-											break;
-										}
-									}
-								}
+								bResult = true;
+								break;
 							}
 						}
 					}
@@ -3690,38 +3682,27 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 			{
 				// No need to loop over tiles full of our own units
-				if( pLoopUnit->getTeam() == eTeam )
+				if (pLoopUnit->getTeam() == eTeam
+				&& !pLoopUnit->alwaysInvisible()
+				&&  pLoopUnit->getInvisibleType() == NO_INVISIBLE)
 				{
-					if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
-					{
-						break;
-					}
+					break;
 				}
-
-				if (pLoopUnit->isEnemy(eTeam))
+				if (pLoopUnit->isEnemy(eTeam)
+				&& (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
+				&& !pLoopUnit->isInvisible(eTeam, false)
+				&& (pLoopUnit->canEnterOrAttackPlot(pPlot) || pLoopUnit->plot() == pPlot))
 				{
-					if (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
+					if (bTestMoves)
 					{
-						if (!(pLoopUnit->isInvisible(eTeam, false)))
+						const int iDangerRange = pLoopUnit->baseMoves() + pLoopPlot->isValidRoute(pLoopUnit);
+
+						if (iDangerRange >= iDistance)
 						{
-							if (pLoopUnit->canMoveOrAttackInto(pPlot) || pLoopUnit->plot() == pPlot)
-							{
-								if (!bTestMoves)
-								{
-									iCount++;
-								}
-								else
-								{
-									int iDangerRange = pLoopUnit->baseMoves();
-									iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
-									if (iDangerRange >= iDistance)
-									{
-										iCount++;
-									}
-								}
-							}
+							iCount++;
 						}
 					}
+					else iCount++;
 				}
 			}
 		}
@@ -3787,7 +3768,7 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 							{
 								if (!(pLoopUnit->isInvisible(getTeam(), false)))
 								{
-									if (pLoopUnit->canMoveOrAttackInto(pPlot))
+									if (pLoopUnit->canEnterOrAttackPlot(pPlot))
 									{
 										if (!bTestMoves)
 										{
@@ -23768,36 +23749,28 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 
 	int iValue = 0;
 
-	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange)
-	| filtered(CvPlot::fn::area() == pPlot->area()))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange) | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
 		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
 		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			if (pLoopUnit->getOwner() == getID())
+			if (pLoopUnit->getOwner() == getID()
+			&& (bDefensiveBonuses && pLoopUnit->canDefend() || pLoopUnit->canAttack())
+			&& !pLoopUnit->isInvisible(getTeam(), false)
+			&& (pLoopUnit->atPlot(pPlot) || pLoopUnit->canEnterPlot(pPlot) || pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack)))
 			{
-				if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
+				if (!bTestMoves)
 				{
-					if (!(pLoopUnit->isInvisible(getTeam(), false)))
-					{
-						if (pLoopUnit->atPlot(pPlot) || pLoopUnit->canMoveInto(pPlot) || pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
-						{
-							if (!bTestMoves)
-							{
-								iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-							}
-							else if (pLoopUnit->baseMoves() >= iDistance)
-							{
-								iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-							}
-						}
-					}
+					iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
+				}
+				else if (pLoopUnit->baseMoves() >= iDistance)
+				{
+					iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
 				}
 			}
 		}
 	}
-
 	return iValue;
 }
 
@@ -26384,7 +26357,7 @@ bool CvPlayerAI::AI_isPlotThreatened(const CvPlot* pPlot, int iRange, bool bTest
 
 			pLoopGroup = pNextGroup;
 
-			if (pLoopGroup != NULL && pLoopGroup->canMoveOrAttackInto(pPlot))
+			if (pLoopGroup != NULL && pLoopGroup->canEnterOrAttackPlot(pPlot))
 			{
 				int iPathTurns = 0;
 				if (bTestMoves)

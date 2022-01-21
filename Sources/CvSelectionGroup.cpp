@@ -2921,14 +2921,14 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 			break;
 
 		case INTERFACEMODE_AIRSTRIKE:
-			if (pLoopUnit != NULL && pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
+			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack))
 			{
 				return true;
 			}
 			break;
 
 		case INTERFACEMODE_REBASE:
-			if (pLoopUnit != NULL && pLoopUnit->canMoveInto(pPlot))
+			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot))
 			{
 				return true;
 			}
@@ -3178,38 +3178,32 @@ bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool b
 		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
-bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
+bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 {
-	return canMoveIntoWithWar(pPlot, bAttack);
+	return getNumUnits() > 0 && algo::any_of(units(), bind(&CvUnit::canEnterPlot, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
+}
+/*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack) const
+{
+	OutputDebugString("exe is asking if group can move into a plot\n");
+	return canEnterPlot(pPlot, bAttack);
 }
 
-bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack) const
+bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return getNumUnits() > 0
-		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
-}
-
-bool CvSelectionGroup::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
-{
-	bool bTryCanAttackUnits = true;
-
-	do
+	foreach_(const CvUnit* unitX, units())
 	{
-		foreach_(const CvUnit* pLoopUnit, units())
+		if (unitX->canEnterOrAttackPlot(pPlot, bDeclareWar))
 		{
-			if ( (!bTryCanAttackUnits || pLoopUnit->canAttack()) && pLoopUnit->canMoveOrAttackInto(pPlot, bDeclareWar))
-			{
-				return true;
-			}
+			return true;
 		}
-
-		bTryCanAttackUnits = !bTryCanAttackUnits;
-	} while(!bTryCanAttackUnits);
-
-
+	}
 	return false;
 }
-
+/*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar) const
+{
+	OutputDebugString("exe is asking if group can move into or attack a plot\n");
+	return canEnterOrAttackPlot(pPlot, bDeclareWar);
+}
 
 bool CvSelectionGroup::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
@@ -3914,7 +3908,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				{
 					pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
 				}
-				if (pBestAttackUnit == NULL/* || !pBestAttackUnit->canMoveInto(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense)*/)//TB: I realize this was probably placed here for a reason, BUT, that reason may have been negated at a point by a later debug effort AND if it is NOT necessary then it is a major waste of processing time.  groupStackAttack has been getting away without it.
+				if (pBestAttackUnit == NULL/* || !pBestAttackUnit->canEnterPlot(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense)*/)//TB: I realize this was probably placed here for a reason, BUT, that reason may have been negated at a point by a later debug effort AND if it is NOT necessary then it is a major waste of processing time.  groupStackAttack has been getting away without it.
 				{
 					break;
 				}
@@ -3937,7 +3931,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					bAffixFirstDefender = false;
 				}
 
-				//if (!pBestAttackUnit->canMoveInto(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense))
+				//if (!pBestAttackUnit->canEnterPlot(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense))
 				//{
 				//	break;
 				//}//TB again, not sure this is necessary
@@ -3948,7 +3942,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					{
 						CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
 						if (pBestSacrifice != NULL
-							&& pBestSacrifice->canMoveInto(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
+							&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
 						{
 							pBestAttackUnit = pBestSacrifice;
 						}
@@ -4067,7 +4061,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 // BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 		// don't move if bSentryAlert set to true above
-		if ((!bSentryAlert && pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canMoveOrAttackInto(pPlot) : pLoopUnit->canMoveInto(pPlot))) || (pLoopUnit == pCombatUnit))
+		if ((!bSentryAlert && pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canEnterOrAttackPlot(pPlot) : pLoopUnit->canEnterPlot(pPlot))) || (pLoopUnit == pCombatUnit))
 #else
 		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
 		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
@@ -4076,9 +4070,9 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 		&&	(
 				bCombat && (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))
 				?
-				pLoopUnit->canMoveOrAttackInto(pPlot)
+				pLoopUnit->canEnterOrAttackPlot(pPlot)
 				:
-				pLoopUnit->canMoveInto(pPlot)
+				pLoopUnit->canEnterPlot(pPlot)
 			)
 		||	pLoopUnit == pCombatUnit)
 #endif
@@ -4174,7 +4168,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		if (!canMoveInto(pDestPlot) && !canMoveInto(pDestPlot, MoveCheck::Attack))
+		if (!canEnterPlot(pDestPlot) && !canEnterPlot(pDestPlot, MoveCheck::Attack))
 		{
 			return false;
 		}
@@ -4193,7 +4187,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 		//	If the first plot IS the destination it's possible that generatePath
 		//	can suceed, but the group cannot actually move there because the move
 		//	would require an attack
-		if (!canMoveInto(pPathPlot))
+		if (!canEnterPlot(pPathPlot))
 		{
 			return false;
 		}
@@ -5306,7 +5300,7 @@ bool CvSelectionGroup::canPathDirectlyToInternal(const CvPlot* pFromPlot, const 
 		if ( stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), pToPlot->getX(), pToPlot->getY()) <
 			 stepDistance(pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY()) )
 		{
-			if (canMoveInto(pAdjacentPlot, (pAdjacentPlot == pToPlot)))
+			if (canEnterPlot(pAdjacentPlot, (pAdjacentPlot == pToPlot)))
 			{
 				return pAdjacentPlot == pToPlot || canPathDirectlyToInternal(pAdjacentPlot, pToPlot, movesRemainingAfterMovingTo(movesRemaining, pFromPlot, pAdjacentPlot));
 			}

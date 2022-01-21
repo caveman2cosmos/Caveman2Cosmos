@@ -49,16 +49,6 @@ bool CySelectionGroup::hasMoved() const
 	return m_pSelectionGroup->hasMoved();
 }
 
-bool CySelectionGroup::canMoveInto(const CyPlot& kPlot, bool bAttack) const
-{
-	return m_pSelectionGroup->canMoveInto(kPlot.getPlot(), bAttack);
-}
-
-bool CySelectionGroup::canMoveOrAttackInto(const CyPlot& kPlot, bool bDeclareWar) const
-{
-	return m_pSelectionGroup->canMoveOrAttackInto(kPlot.getPlot(), bDeclareWar);
-}
-
 bool CySelectionGroup::canFight() const
 {
 	return m_pSelectionGroup->canFight();

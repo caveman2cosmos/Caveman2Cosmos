@@ -15897,7 +15897,7 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 		{
 			if (!(pAdjacentPlot->isVisibleEnemyUnit(this)))
 			{
-				if (getGroup()->canMoveInto(pAdjacentPlot, false))
+				if (getGroup()->canEnterPlot(pAdjacentPlot, false))
 					//if (generatePath(pAdjacentPlot, 0, true))
 				{
 					/*************************************************************************************************/
@@ -16783,7 +16783,7 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 			}
 
 			//	plots we can't move into are not worth considering
-			if (iValue > 0 && canMoveInto(pLoopPlot))
+			if (iValue > 0 && canEnterPlot(pLoopPlot))
 			{
 				if (!pLoopPlot->isVisible(getTeam(), false) || !(pLoopPlot->isVisibleEnemyUnit(this)))
 				{
@@ -18122,7 +18122,7 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 			{
 				if (AI_potentialEnemy(pLoopPlot->getTeam(), pLoopPlot))
 				{
-					if (!atPlot(pLoopPlot) && ((bFollow) ? canMoveOrAttackInto(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange) && (iPathTurns <= iRange))))
+					if (!atPlot(pLoopPlot) && ((bFollow) ? canEnterOrAttackPlot(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange) && (iPathTurns <= iRange))))
 					{
 						const int iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
 
@@ -18235,7 +18235,7 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 		if (((bAllowCities) || !(pLoopPlot->isCity(true))))
 			// Super Forts end
 		{
-			if (getGroup()->canMoveOrAttackInto(pLoopPlot, true))
+			if (getGroup()->canEnterOrAttackPlot(pLoopPlot, true))
 			{
 				// Super Forts begin *AI_offense* - modified if statement so forts will be attacked too
 				if ((pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->isVisibleEnemyUnit(this)) || (pLoopPlot->isCity(true) && AI_potentialEnemy(pLoopPlot->getTeam())))
@@ -18281,7 +18281,7 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 						if (iValue > iBestValue && iValue >= iAdjustedOddsThreshold)
 						{
 							PROFILE("CvUnitAI::AI_anyAttack.SearchPath");
-							if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canMoveInto(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))))
+							if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canEnterPlot(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))))
 							{
 								PROFILE("CvUnitAI::AI_anyAttack.SuccessfulPath");
 
@@ -18339,7 +18339,7 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 									if (iValue > iBestValue && iValue >= AI_finalOddsThreshold(pLoopPlot, iOddsThreshold))
 									{
 										PROFILE("CvUnitAI::AI_anyAttack.SearchPath");
-										if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canMoveInto(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns))))
+										if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canEnterPlot(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns))))
 										{
 											PROFILE("CvUnitAI::AI_anyAttack.SuccessfulPath");
 											if (iPathTurns <= iRange)
@@ -18434,7 +18434,7 @@ bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, b
 		if (((bAllowCities) || !(pLoopPlot->isCity(true))))
 			// Super Forts end
 		{
-			if (getGroup()->canMoveOrAttackInto(pLoopPlot, true))
+			if (getGroup()->canEnterOrAttackPlot(pLoopPlot, true))
 			{
 				// Super Forts begin *AI_offense* - modified if statement so forts will be attacked too
 				if ((pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->isVisibleEnemyUnit(this)) || (pLoopPlot->isCity(true) && AI_potentialEnemy(pLoopPlot->getTeam())))
@@ -18480,7 +18480,7 @@ bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, b
 						if (iValue > iBestValue && iValue >= iAdjustedOddsThreshold)
 						{
 							PROFILE("CvUnitAI::AI_anyAttack.SearchPath");
-							if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canMoveInto(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))))
+							if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canEnterPlot(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))))
 							{
 								PROFILE("CvUnitAI::AI_anyAttack.SuccessfulPath");
 
@@ -23905,7 +23905,7 @@ bool CvUnitAI::AI_airOffensiveCity()
 			||
 			plotX->isOwned() && GET_TEAM(plotX->getTeam()).isVassal(getTeam())
 			)
-		&& (atPlot(plotX) || canMoveInto(plotX)))
+		&& (atPlot(plotX) || canEnterPlot(plotX)))
 		{
 			const int iValue = AI_airOffenseBaseValue(plotX);
 
@@ -24278,7 +24278,7 @@ bool CvUnitAI::AI_airDefensiveCity()
 	foreach_(CvCity * cityX, GET_PLAYER(getOwner()).cities())
 	{
 		CvPlot* plotX = cityX->plot();
-		if (canAirDefend(plotX) && (atPlot(plotX) || canMoveInto(plotX)))
+		if (canAirDefend(plotX) && (atPlot(plotX) || canEnterPlot(plotX)))
 		{
 			const int iExistingAirDefenders =
 				(
@@ -24481,7 +24481,7 @@ bool CvUnitAI::AI_airStrike()
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (canMoveInto(pLoopPlot, MoveCheck::Attack))
+		if (canEnterPlot(pLoopPlot, MoveCheck::Attack))
 		{
 			int iValue = 0;
 			int iPotentialAttackers = GET_PLAYER(getOwner()).AI_adjacentPotentialAttackers(pLoopPlot);
@@ -24583,7 +24583,7 @@ bool CvUnitAI::AI_defensiveAirStrike()
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (canMoveInto(pLoopPlot, MoveCheck::Attack)) // Only true of plots this unit can airstrike
+		if (canEnterPlot(pLoopPlot, MoveCheck::Attack)) // Only true of plots this unit can airstrike
 		{
 			// Only attack enemy land units near our cities
 			if (pLoopPlot->isPlayerCityRadius(getOwner()) && !pLoopPlot->isWater())
@@ -24665,7 +24665,7 @@ bool CvUnitAI::AI_defendBaseAirStrike()
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (canMoveInto(pLoopPlot, MoveCheck::Attack) && !pLoopPlot->isWater()) // Only true of plots this unit can airstrike
+		if (canEnterPlot(pLoopPlot, MoveCheck::Attack) && !pLoopPlot->isWater()) // Only true of plots this unit can airstrike
 		{
 			if (plot()->area() == pLoopPlot->area())
 			{
@@ -26403,7 +26403,7 @@ bool CvUnitAI::AI_stackAttackCity(int iRange, int iPowerThreshold, bool bFollow)
 			&& !atPlot(pLoopPlot)
 			//	Allow for empty cities (so the move in is strictly not an attack)
 			&& (
-				(bFollow && getGroup()->canMoveInto(pLoopPlot, true) || getGroup()->canMoveInto(pLoopPlot, false))
+				(bFollow && getGroup()->canEnterPlot(pLoopPlot, true) || getGroup()->canEnterPlot(pLoopPlot, false))
 				||
 				(!bFollow && generatePath(pLoopPlot, 0, true, &iPathTurns, iRange) && (iPathTurns <= iRange))
 				)
@@ -26462,7 +26462,7 @@ bool CvUnitAI::AI_moveIntoCity(int iRange, bool bOpponentOnly)
 		if (AI_plotValid(pLoopPlot)
 			&& (!bOpponentOnly || isEnemy(pLoopPlot->getTeam(), pLoopPlot))
 			&& (pLoopPlot->isCity() || pLoopPlot->isCity(true))
-			&& canMoveInto(pLoopPlot)
+			&& canEnterPlot(pLoopPlot)
 			&& generatePath(pLoopPlot, 0, true, &iPathTurns, 0)
 			&& (!bOpponentOnly || pLoopPlot->getTeam() != getTeam())
 			)
@@ -26522,7 +26522,7 @@ bool CvUnitAI::AI_moveIntoNearestOwnedCity()
 			const CvPlot* pLoopPlot = pLoopCity->plot();
 			if (pLoopPlot != NULL && pLoopPlot->getArea() == getArea()
 			&& (pLoopPlot->isCity() || pLoopPlot->isCity(true))
-			&& canMoveInto(pLoopPlot) && generatePath(pLoopPlot, 0, true, &iPathTurns, 0))
+			&& canEnterPlot(pLoopPlot) && generatePath(pLoopPlot, 0, true, &iPathTurns, 0))
 			{
 				FAssert(getPathEndTurnPlot() == pLoopPlot);
 
@@ -26764,38 +26764,34 @@ bool CvUnitAI::AI_solveBlockageProblem(const CvPlot* pDestPlot, bool bDeclareWar
 			{
 				int iPathTurns;
 				const CvPlot* pStepPlot = GC.getMap().plotSorenINLINE(pStepNode->m_iX, pStepNode->m_iY);
-				if (canMoveOrAttackInto(pStepPlot) && generatePath(pStepPlot, 0, false, &iPathTurns))
+				if (canEnterOrAttackPlot(pStepPlot) && generatePath(pStepPlot, 0, false, &iPathTurns))
 				{
 					if (bDeclareWar && pStepNode->m_pPrev != NULL)
 					{
 						const CvPlot* pPlot = GC.getMap().plotSorenINLINE(pStepNode->m_pPrev->m_iX, pStepNode->m_pPrev->m_iY);
-						if (pPlot->getTeam() != NO_TEAM)
+						if (pPlot->getTeam() != NO_TEAM
+						&& !getGroup()->canEnterPlot(pPlot, true)
+						&& !isPotentialEnemy(pPlot->getTeam(), pPlot))
 						{
-							if (!getGroup()->canMoveIntoWithWar(pPlot, true))
+							CvTeamAI& kTeam = GET_TEAM(getTeam());
+							if (kTeam.canDeclareWar(pPlot->getTeam()))
 							{
-								if (!isPotentialEnemy(pPlot->getTeam(), pPlot))
+								WarPlanTypes eWarPlan = WARPLAN_LIMITED;
+								const WarPlanTypes eExistingWarPlan = kTeam.AI_getWarPlan(pDestPlot->getTeam());
+								if (eExistingWarPlan != NO_WARPLAN)
 								{
-									CvTeamAI& kTeam = GET_TEAM(getTeam());
-									if (kTeam.canDeclareWar(pPlot->getTeam()))
+									if ((eExistingWarPlan == WARPLAN_TOTAL) || (eExistingWarPlan == WARPLAN_PREPARING_TOTAL))
 									{
-										WarPlanTypes eWarPlan = WARPLAN_LIMITED;
-										const WarPlanTypes eExistingWarPlan = kTeam.AI_getWarPlan(pDestPlot->getTeam());
-										if (eExistingWarPlan != NO_WARPLAN)
-										{
-											if ((eExistingWarPlan == WARPLAN_TOTAL) || (eExistingWarPlan == WARPLAN_PREPARING_TOTAL))
-											{
-												eWarPlan = WARPLAN_TOTAL;
-											}
+										eWarPlan = WARPLAN_TOTAL;
+									}
 
-											if (!kTeam.isAtWar(pDestPlot->getTeam()))
-											{
-												kTeam.AI_setWarPlan(pDestPlot->getTeam(), NO_WARPLAN);
-											}
-										}
-										kTeam.AI_setWarPlan(pPlot->getTeam(), eWarPlan, true);
-										return (AI_goToTargetCity(MOVE_AVOID_ENEMY_WEIGHT_2));
+									if (!kTeam.isAtWar(pDestPlot->getTeam()))
+									{
+										kTeam.AI_setWarPlan(pDestPlot->getTeam(), NO_WARPLAN);
 									}
 								}
+								kTeam.AI_setWarPlan(pPlot->getTeam(), eWarPlan, true);
+								return (AI_goToTargetCity(MOVE_AVOID_ENEMY_WEIGHT_2));
 							}
 						}
 					}
@@ -28175,7 +28171,7 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 		{
 			const bool huntingAnimals = AI_getUnitAIType() == UNITAI_HUNTER && algo::any_of(potentialTargetPlot->units(), CvUnit::fn::isAnimal());
 			if ((huntingAnimals || potentialTargetPlot->isVisibleEnemyUnit(this))
-				&& getGroup()->canMoveInto(potentialTargetPlot, true)
+				&& getGroup()->canEnterPlot(potentialTargetPlot, true)
 				&& generatePath(potentialTargetPlot, 0, true, nullptr, iRange)
 				)
 			{
@@ -28551,7 +28547,7 @@ bool CvUnitAI::AI_patrolBorders()
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (canMoveInto(pLoopPlot, MoveCheck::IgnoreLoad))
+		if (canEnterPlot(pLoopPlot, MoveCheck::IgnoreLoad))
 		{
 			const DirectionTypes eNewDirection = estimateDirection(plot(), pLoopPlot);
 			int iValue = GC.getGame().getSorenRandNum(10000, "AI Border Patrol");
@@ -28858,7 +28854,7 @@ bool CvUnitAI::AI_airBombCities()
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (canMoveInto(pLoopPlot, MoveCheck::Attack))
+		if (canEnterPlot(pLoopPlot, MoveCheck::Attack))
 		{
 			int iValue = 0;
 			const int iPotentialAttackers = pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
@@ -29008,7 +29004,7 @@ bool CvUnitAI::AI_protectTarget(const CvUnit* pTarget)
 			{
 				if (pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->isVisibleEnemyUnit(this))
 				{
-					if (!atPlot(pLoopPlot) && canMoveInto(pLoopPlot, MoveCheck::Attack) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
+					if (!atPlot(pLoopPlot) && canEnterPlot(pLoopPlot, MoveCheck::Attack) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
 					{
 						if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits())
 						{
@@ -29629,7 +29625,7 @@ else
 
 	while (pNode->m_pParent != NULL)
 	{
-		if (!canMoveInto(GC.getMap().plot(pNode->m_iX, pNode->m_iY)))
+		if (!canEnterPlot(GC.getMap().plot(pNode->m_iX, pNode->m_iY)))
 		{
 			pCandidateSubPathEndNode = pNode->m_pParent;
 		}

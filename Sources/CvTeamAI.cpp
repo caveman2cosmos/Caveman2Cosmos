@@ -38,6 +38,12 @@ CvTeamAI& CvTeamAI::getTeam(TeamTypes eTeam)
 	return m_aTeams[eTeam];
 }
 
+// inlined for performance reasons
+DllExport CvTeamAI& CvTeamAI::getTeamNonInl(TeamTypes eTeam)
+{
+	return getTeam(eTeam);
+}
+
 
 // Public Functions...
 

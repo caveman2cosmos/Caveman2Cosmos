@@ -1076,9 +1076,6 @@
 			<iLineOfSight>1</iLineOfSight>
 			<iBombardDefense>20</iBombardDefense>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1175,7 +1172,7 @@
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
@@ -1273,9 +1270,6 @@
 			<iLineOfSight>1</iLineOfSight>
 			<iBombardDefense>10</iBombardDefense>
 			<iLocalDynamicDefense>10</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
