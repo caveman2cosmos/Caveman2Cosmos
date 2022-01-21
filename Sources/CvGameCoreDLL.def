@@ -16,7 +16,6 @@ EXPORTS
 ?nextUnit@CvPlayer@@QBEPAVCvUnit@@PAH_N@Z=?nextUnitExternal@CvPlayer@@QBEPAVCvUnit@@PAH_N@Z
 ?firstCity@CvPlayer@@QBEPAVCvCity@@PAH_N@Z=?firstCityExternal@CvPlayer@@QBEPAVCvCity@@PAH_N@Z
 ?nextCity@CvPlayer@@QBEPAVCvCity@@PAH_N@Z=?nextCityExternal@CvPlayer@@QBEPAVCvCity@@PAH_N@Z
-?getTeamNonInl@CvTeamAI@@SAAAV1@W4TeamTypes@@@Z=?getTeam@CvTeamAI@@SAAAV1@W4TeamTypes@@@Z
 ?erasePlots@CvMap@@QAEXXZ=?erasePlots@CvMapExternal@@QAEXXZ
 ?findCity@CvMap@@QAEPAVCvCity@@HHW4PlayerTypes@@W4TeamTypes@@_N21W4DirectionTypes@@PAV2@@Z=?findCity@CvMapExternal@@QAEPAVCvCity@@HHW4PlayerTypes@@W4TeamTypes@@_N21W4DirectionTypes@@PAV2@@Z
 ?getGridHeight@CvMap@@QBEHXZ=?getGridHeight@CvMapExternal@@QBEHXZ

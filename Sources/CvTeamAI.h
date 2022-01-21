@@ -16,7 +16,8 @@ public:
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
-	DllExport static CvTeamAI& getTeam(TeamTypes eTeam);
+	static CvTeamAI& getTeam(TeamTypes eTeam);
+	DllExport static CvTeamAI& getTeamNonInl(TeamTypes eTeam);
 
 	static void initStatics();
 	static void freeStatics();
