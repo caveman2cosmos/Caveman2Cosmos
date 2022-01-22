@@ -2672,10 +2672,18 @@ void cvInternalGlobals::infoTypeFromStringReset()
 	m_infosMap.clear();
 }
 
-void cvInternalGlobals::addToInfosVectors(void *infoVector)
+void cvInternalGlobals::addToInfosVectors(void* infoVector, InfoClassTypes eInfoClass)
 {
+	FASSERT_BOUNDS(NO_INFO_CLASS, NUM_INFO_CLASSES, eInfoClass);
+
 	std::vector<CvInfoBase *> *infoBaseVector = (std::vector<CvInfoBase *> *) infoVector;
 	m_aInfoVectors.push_back(infoBaseVector);
+
+	if (eInfoClass > NO_INFO_CLASS)
+	{
+		static uint16_t numInfoClassesLoaded = 0;
+		m_infoClassXmlLoadOrder[eInfoClass] = ++numInfoClassesLoaded;
+	}
 }
 
 void cvInternalGlobals::infosReset()
