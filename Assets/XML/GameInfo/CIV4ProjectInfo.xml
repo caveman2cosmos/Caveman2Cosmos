@@ -147,7 +147,7 @@
 		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_COCKPIT</Type>
-			<Description>TXT_KEY_PROJECT_SS_COCKPIT</Description>			
+			<Description>TXT_KEY_PROJECT_SS_COCKPIT</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_COCKPIT_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -274,7 +274,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>			
+			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_NUCLEAR_PULSE_PROPULSION</TechPrereq>
 			<iMaxTeamInstances>2</iMaxTeamInstances>
 			<iCost>62440</iCost>

@@ -24464,7 +24464,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRES_STRING_VICTORY", GC.getVictoryInfo((VictoryTypes)(kProject.getVictoryPrereq())).getTextKeyWide()));
 			}
-			
+
 			foreach_(const MapCategoryTypes eMapCategory, kProject.getMapCategories())
 			{
 				szBuffer.append(NEWLINE);
