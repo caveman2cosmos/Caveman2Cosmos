@@ -6616,7 +6616,7 @@ int64_t CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerce
 		iValue += iTempValue;
 	}
 	// Minimum 1 value if commerce type was not specified, minimum zero value if it was.
-	return std::max<int64_t>(!bSpecific, iValue); 
+	return std::max<int64_t>(!bSpecific, iValue);
 }
 
 

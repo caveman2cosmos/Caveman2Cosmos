@@ -61,7 +61,6 @@ public:
 	void doCancelCivics();
 	void applyCityEdit();
 	void doUnitModel();
-	void doFlag();
 	void doSelected(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaTechJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaUnitJump(CvWidgetDataStruct &widgetDataStruct);
@@ -128,7 +127,6 @@ public:
 	void parseEmphasizeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseTradeItem(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseHealthHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
