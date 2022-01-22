@@ -60,6 +60,7 @@ public:
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
 	std::wstring getFinanceUnitUpkeepString(int iPlayer);
 	std::wstring getDefenseHelp(CyCity* pCity);
+	std::wstring getFlagHelp();
 
 protected:
 	CvGameTextMgr* m_pGameTextMgr;

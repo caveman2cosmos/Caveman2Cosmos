@@ -3590,14 +3590,14 @@ def canTriggerSyntheticFuels(argsList):
 	data = argsList[0]
 	pPlayer = GC.getPlayer(data.ePlayer)
 
-	iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
-	if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
+	if (
+		not pPlayer.hasBonus(GC.getInfoTypeForString("BONUS_COAL"))
+	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")) > 0
+	):
 		return False
+
 	eOil = GC.getInfoTypeForString("BONUS_OIL")
 	if pPlayer.hasBonus(eOil):
-		return False
-	eCoal = GC.getInfoTypeForString("BONUS_COAL")
-	if not pPlayer.hasBonus(eCoal):
 		return False
 	for i in xrange(GC.getNumBuildingInfos()):
 		building = GC.getBuildingInfo(i)
@@ -3606,22 +3606,15 @@ def canTriggerSyntheticFuels(argsList):
 	return True
 
 def canTriggerCitySyntheticFuels(argsList):
-	iCity = argsList[2]
-	pPlayer = GC.getPlayer(argsList[1])
-	pCity = pPlayer.getCity(iCity)
-	return not pCity.isGovernmentCenter()
+	return not GC.getPlayer(argsList[1]).getCity(argsList[2]).isGovernmentCenter()
 
 def getHelpSyntheticFuels1(argsList):
 	data = argsList[1]
-	pCity = GC.getPlayer(data.ePlayer).getCity(data.iCityId)
-	oBonus = GC.getInfoTypeForString("BONUS_OIL")
-	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_1", ( 1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
+	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_1", ( 1, GC.getBonusInfo(GC.getInfoTypeForString("BONUS_OIL")).getChar(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()))
 
 def getHelpSyntheticFuels2(argsList):
 	data = argsList[1]
-	pCity = GC.getPlayer(data.ePlayer).getCity(data.iCityId)
-	oBonus = GC.getInfoTypeForString("BONUS_OIL")
-	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_2", ( 1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
+	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_2", ( 1, GC.getBonusInfo(GC.getInfoTypeForString("BONUS_OIL")).getChar(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()))
 
 def getHelpSyntheticFuels3(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_3", (1, ))

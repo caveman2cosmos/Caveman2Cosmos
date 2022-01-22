@@ -31073,7 +31073,7 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 
 	if (gDLL->shiftKey())
 	{
-		if (iDisplayCount > iPotentialDisplays)
+		if (iDisplayCount >= iPotentialDisplays)
 		{
 			kPlayer.setTraitDisplayCount(0);
 		}
@@ -35783,6 +35783,52 @@ void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_EMPLOYED", city.getNumPopulationEmployed()));
 	szBuffer.append(CvWString::format(L" %c", gDLL->getSymbolID(CITIZEN_CHAR)));
 }
+
+
+void CvGameTextMgr::setFlagHelp(CvWStringBuffer &szBuffer)
+{
+	CvGame& GAME = GC.getGame();
+	CvPlayer& player = GET_PLAYER(GAME.getActivePlayer());
+
+	szBuffer.append(CvWString::format(SETCOLR L"%s\n", TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), player.getCivilizationDescription()));
+
+	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
+
+	// Traits
+	if (player.isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GAME.isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		parsePlayerTraits(szBuffer, GAME.getActivePlayer());
+	}
+
+	// Properties
+	CvWStringBuffer szPeekBuffer;
+	player.getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+	GET_TEAM(player.getTeam()).getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+	GAME.getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+}
+
 
 void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList)
 {
