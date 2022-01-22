@@ -2812,37 +2812,37 @@ CvMap& cvInternalGlobals::getMap() const
 
 FAStar& cvInternalGlobals::getPathFinder() const
 {
-	return *m_pathFinders[CURRENT_MAP];
+	return *m_pathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getInterfacePathFinder() const
 {
-	return *m_interfacePathFinders[CURRENT_MAP];
+	return *m_interfacePathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getStepFinder() const
 {
-	return *m_stepFinders[CURRENT_MAP];
+	return *m_stepFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getRouteFinder() const
 {
-	return *m_routeFinders[CURRENT_MAP];
+	return *m_routeFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getBorderFinder() const
 {
-	return *m_borderFinders[CURRENT_MAP];
+	return *m_borderFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getAreaFinder() const
 {
-	return *m_areaFinders[CURRENT_MAP];
+	return *m_areaFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getPlotGroupFinder() const
 {
-	return *m_plotGroupFinders[CURRENT_MAP];
+	return *m_plotGroupFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
