@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef CvInfoArray_h__
-#define CvInfoArray_h__
+#ifndef CIV4_INFO_CLASS_TRAITS_H
+#define CIV4_INFO_CLASS_TRAITS_H
 
 
 #define EXPAND_FOR_EACH_INFO_CLASS(MACRO_FUNC)	\
@@ -170,7 +170,11 @@ struct InfoClassTraits<_indexType>									\
 	static const InfoClassTypes InfoClassEnum = _classEnum;			\
 };
 
+EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS);
 
-EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS)
+
+#undef LIST_INFO_CLASS_ENUM
+#undef DECLARE_INFO_CLASS_TRAITS
+#undef EXPAND_FOR_EACH_INFO_CLASS
 
 #endif
