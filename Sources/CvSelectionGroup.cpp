@@ -3182,7 +3182,7 @@ bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 {
 	return getNumUnits() > 0 && algo::any_of(units(), bind(&CvUnit::canEnterPlot, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
 }
-/*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack) const
+/*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
 {
 	OutputDebugString("exe is asking if group can move into a plot\n");
 	return canEnterPlot(pPlot, bAttack);
@@ -3199,7 +3199,7 @@ bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWa
 	}
 	return false;
 }
-/*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar) const
+/*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
 {
 	OutputDebugString("exe is asking if group can move into or attack a plot\n");
 	return canEnterOrAttackPlot(pPlot, bDeclareWar);

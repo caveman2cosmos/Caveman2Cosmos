@@ -2,7 +2,6 @@
 <!-- Notes:
 	- Ordering of entries roughly mimics that of CIV4BuildInfos
 	- SUBMERGED_TOWN unlocks the ability to build at lower depths with tech advancement.
-
 	<BonusTypeStruct>
 		<iDiscoverRand>
 			Affects the chance of discoverig this bonus, sensible values range from 1 to 80 000.

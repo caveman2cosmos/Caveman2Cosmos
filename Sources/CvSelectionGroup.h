@@ -109,8 +109,8 @@ public:
 	int getCargo(bool bVolume = false) const;
 
 	DllExport bool canAllMove() const;
-	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false) const;
-	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false) const;
+	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);
+	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
 	bool canEnterPlot(const CvPlot* pPlot, bool bAttack = false) const;
 	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 
