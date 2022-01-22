@@ -1107,7 +1107,8 @@ def canTriggerIndependentFilms(argsList):
 
 	iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 	for i in xrange(GC.getNumBuildingInfos()):
-		if iBonus in CvBuildingInfo.getFreeBonuses() and player.hasBuilding(i):
+		building = GC.getBuildingInfo(i)
+		if iBonus in building.getFreeBonuses() and player.hasBuilding(i):
 			return False
 	return True
 
@@ -3599,7 +3600,8 @@ def canTriggerSyntheticFuels(argsList):
 	if not pPlayer.hasBonus(eCoal):
 		return False
 	for i in xrange(GC.getNumBuildingInfos()):
-		if eOil in CvBuildingInfo.getFreeBonuses() and pPlayer.hasBuilding(i):
+		building = GC.getBuildingInfo(i)
+		if eOil in building.getFreeBonuses() and pPlayer.hasBuilding(i):
 			return False
 	return True
 
