@@ -60,7 +60,7 @@ class CvEventManager:
 #			'plotFeatureRemoved'		: self.onPlotFeatureRemoved,
 #			'plotPicked'				: self.onPlotPicked,
 			'nukeExplosion'				: self.onNukeExplosion,
-#			'gotoPlotSet'				: self.onGotoPlotSet,
+			'gotoPlotSet'				: self.onGotoPlotSet,
 			'BeginGameTurn'				: self.onBeginGameTurn,
 #			'EndGameTurn'				: self.onEndGameTurn,
 			'BeginPlayerTurn'			: self.onBeginPlayerTurn,
@@ -1286,10 +1286,11 @@ class CvEventManager:
 		else:
 			print "CvEventManager.onNukeExplosion\n\tNuke with no special effects: " + CyUnit.getName()
 
-	'''
+
+	# Only ever called from exe.
 	def onGotoPlotSet(self, argsList):
-		pPlot, iPlayer = argsList
-	'''
+		#pPlot, iPlayer = argsList
+		return
 
 
 	def onBuildingBuilt(self, argsList):
