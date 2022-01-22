@@ -991,7 +991,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_1</Tag>
-		<English>National Culture: %s1</English>
+		<English>National Culture[NEWLINE][ICON_BULLET]%s1[ICON_CULTURE]</English>
 		<French>Culture Nationale Obtenue: %s1</French>
 		<German>Bisheriger Kulturzuwachs: %s1</German>
 		<Italian>Cultura nazionale ottenuta: %s1</Italian>
@@ -1000,16 +1000,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_2</Tag>
-		<English>Next Level: %s1[ICON_CULTURE]</English>
-		<French>Volume de Culture pour le Niveau suivant: %s1</French>
-		<German>Benötigte Kultur für die nächste Stufe: %s1</German>
-		<Italian>Cultura da ottenere per raggiungere il prossimo livello: %s1</Italian>
-		<Polish>Potrzebna Kultura do Następnego Poziomu: %s1</Polish>
-		<Russian>Уров. культуры для достижения след. уровня: %s1</Russian>
+		<English>[ICON_BULLET]%s1[ICON_CULTURE] (Level %d2)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_3</Tag>
-		<English>Still Requires: %s1[ICON_CULTURE]</English>
+		<English>[ICON_BULLET]%s1[ICON_CULTURE] (Remaining)</English>
 		<French>Requiert: %s1 pour Choisir un nouveau Trait</French>
 		<German>Bis zur Auswahl einer neuen Eigenschaft [NUM1:wird:werden] noch %s1 [ICON_CULTURE] benötigt.</German>
 		<Italian>Richiede %s1 per selezionare un nuovo tratto</Italian>

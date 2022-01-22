@@ -15,6 +15,7 @@ ENGINE = CyEngine()
 TRNSLTR = CyTranslator()
 GAME = GC.getGame()
 CyIF = CyInterface()
+CyGTM = CyGameTextMgr()
 
 import Scoreboard
 import ReminderEventManager # Reminders
@@ -1326,7 +1327,9 @@ class CvMainInterface:
 			IFT = CyIF.getShowInterface()
 			if IFT not in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY, InterfaceVisibility.INTERFACE_ADVANCED_START):
 				print "addFlagWidgetGFC"
-				screen.addFlagWidgetGFC("CivilizationFlag", self.xMidR + 10, self.yBotBar + 30, 72, self.hBotBar + 24, iPlayerAct, WidgetTypes.WIDGET_FLAG, iPlayerAct, -1)
+				eWidGen = WidgetTypes.WIDGET_GENERAL
+				screen.addFlagWidgetGFC("CivilizationFlag", self.xMidR + 6, self.yBotBar + 28, 80, self.hBotBar + 40, iPlayerAct, eWidGen, 1, 2)
+				screen.setImageButton("CivilizationFlag0", "", self.xMidR + 8, self.yBotBar + 32, 76, self.hBotBar - 36, eWidGen, 1, 2)
 
 			CyIF.setDirty(InterfaceDirtyBits.Flag_DIRTY_BIT, False)
 		# Miscellaneous buttons (civics screen, etc)
@@ -1522,8 +1525,10 @@ class CvMainInterface:
 
 		if CyIF.shouldDisplayFlag() and IFT == InterfaceVisibility.INTERFACE_SHOW:
 			screen.show("CivilizationFlag")
+			screen.show("CivilizationFlag0")
 		else:
 			screen.hide("CivilizationFlag")
+			screen.hide("CivilizationFlag0")
 
 	def evalIFT(self, screen, IFT, bCityScreen, CyPlayerAct):
 
@@ -4559,9 +4564,9 @@ class CvMainInterface:
 										szTxt = u"<color=0,255,255>%d" %iCount
 									scores.setNumCities(szTxt)
 							if bNetworkMP:
-								scores.setNetStats(CyGameTextMgr().getNetStats(iPlayer))
+								scores.setNetStats(CyGTM.getNetStats(iPlayer))
 							if bHumanPlayer and bOutOfSync:
-								scores.setNetStats(u" <color=255,0,0>* %s *" %(CyGameTextMgr().getOOSSeeds(iPlayer)))
+								scores.setNetStats(u" <color=255,0,0>* %s *" %(CyGTM.getOOSSeeds(iPlayer)))
 							j -= 1
 					i -= 1
 				self.techIconSB = techIconSB
@@ -5095,10 +5100,10 @@ class CvMainInterface:
 				if dataTT:
 					if bCtrl != dataTT[0] or bShift != dataTT[1] or bAlt != dataTT[2]:
 						if dataTT[3]:
-							szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
+							szTxt = CyGTM.getSpecificUnitHelp(dataTT[4], False, False)
 							self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
 						else:
-							szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
+							szTxt = CyGTM.getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 							self.updateTooltip(screen, szTxt)
 						dataTT[0] = bCtrl
 						dataTT[1] = bShift
@@ -5159,13 +5164,13 @@ class CvMainInterface:
 					CyCity = self.InCity.CyCity
 					if TYPE == "UNIT":
 						self.dataTT = [bCtrl, bShift, bAlt, "", iType, CyCity]
-						szTxt = CyGameTextMgr().getUnitHelp(iType, False, True, True, CyCity)
+						szTxt = CyGTM.getUnitHelp(iType, False, True, True, CyCity)
 						self.updateTooltip(screen, szTxt)
 					elif TYPE == "BUILDING":
-						szTxt = CyGameTextMgr().getBuildingHelp(iType, True, CyCity, False, False, True)
+						szTxt = CyGTM.getBuildingHelp(iType, True, CyCity, False, False, True)
 						self.updateTooltip(screen, szTxt)
 					elif TYPE == "PROJECT":
-						szTxt = CyGameTextMgr().getProjectHelp(iType, False, CyCity)
+						szTxt = CyGTM.getProjectHelp(iType, False, CyCity)
 						self.updateTooltip(screen, szTxt)
 					elif TYPE == "PROCESS":
 						y = self.yBotBar + 12
@@ -5190,7 +5195,7 @@ class CvMainInterface:
 						if iCount > 1:
 							szTxt = "<color=144,255,72>" + TRNSLTR.getText("TXT_KEY_IN_STACK", (iCount,)) + "</color>\n"
 					print (NAME, iType, ID)
-					szTxt += CyGameTextMgr().getPromotionHelp(iType, False)
+					szTxt += CyGTM.getPromotionHelp(iType, False)
 					self.updateTooltip(screen, szTxt)
 
 				elif TYPE == "TECH":
@@ -5202,7 +5207,7 @@ class CvMainInterface:
 						iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
 					elif CASE[0] == "Score":
 						szTxt += TRNSLTR.getText("TXT_INTERFACE_TECH_HELP_RESEARCHING", ()) + " "
-					szTxt += CyGameTextMgr().getTechHelp(iType, False, True, True, True, -1)
+					szTxt += CyGTM.getTechHelp(iType, False, True, True, True, -1)
 					self.updateTooltip(screen, szTxt)
 
 				elif TYPE == "LIST":
@@ -5219,7 +5224,7 @@ class CvMainInterface:
 				if TYPE in ("Button", "Health"):
 					CyUnit = self.aPlotListList[ID][0]
 					if TYPE == "Button":
-						szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
+						szTxt = CyGTM.getSpecificUnitHelp(CyUnit, False, False)
 						x = self.xRes / 4
 						y = self.yPlotListTT
 						self.dataTT = [bCtrl, bShift, bAlt, "spcfc", CyUnit]
@@ -5234,7 +5239,7 @@ class CvMainInterface:
 				if TYPE == "Demolish":
 					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_CITY_SCREEN_DEMOLISH", ()))
 				elif TYPE == "BUILDING":
-					szTxt = CyGameTextMgr().getBuildingHelp(ID, True, CyCity, False, False, True)
+					szTxt = CyGTM.getBuildingHelp(ID, True, CyCity, False, False, True)
 					self.updateTooltip(screen, szTxt)
 				else:
 					aList = [TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
@@ -5320,13 +5325,13 @@ class CvMainInterface:
 					self.showRevStatusInfoPane(screen)
 
 				elif TYPE == "Happiness":
-					self.updateTooltip(screen, CyGameTextMgr().getHappinessHelp())
+					self.updateTooltip(screen, CyGTM.getHappinessHelp())
 
 				elif TYPE == "ProdYield":
-					self.updateTooltip(screen, CyGameTextMgr().getProductionHelpCity(self.InCity.CyCity))
+					self.updateTooltip(screen, CyGTM.getProductionHelpCity(self.InCity.CyCity))
 
 				elif TYPE == "Defense":
-					self.updateTooltip(screen, CyGameTextMgr().getDefenseHelp(self.InCity.CyCity))
+					self.updateTooltip(screen, CyGTM.getDefenseHelp(self.InCity.CyCity))
 
 			elif BASE == "MMB":
 				if TYPE == "ScoreToggle":
@@ -5365,6 +5370,9 @@ class CvMainInterface:
 
 			elif NAME == "EraIndicator":
 				self.updateTooltip(screen, GC.getEraInfo(self.CyPlayer.getCurrentEra()).getDescription())
+
+			elif NAME == "CivilizationFlag":
+				self.updateTooltip(screen, CyGTM.getFlagHelp(), -12, self.yBotBar + 8)
 
 			elif NAME == "DebugBtn":
 				self.updateTooltip(screen, "Debug screen")
@@ -5728,6 +5736,9 @@ class CvMainInterface:
 
 			elif NAME == "EraIndicator":
 				UP.pediaJumpToEra(iData1)
+
+			elif NAME == "CivilizationFlag":
+				GAME.doControl(ControlTypes.CONTROL_SELECTCAPITAL)
 
 		elif iCode == 11: # List Select
 			InCity = self.InCity

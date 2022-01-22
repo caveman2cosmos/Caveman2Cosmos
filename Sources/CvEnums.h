@@ -433,7 +433,7 @@ enum WidgetTypes
 	WIDGET_WB_REGENERATE_MAP,
 	WIDGET_TRADE_ITEM,
 	WIDGET_UNIT_MODEL,
-	WIDGET_FLAG,
+	WIDGET_UNUSED_57, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_POPUP_QUEUE,
 
 	//	This is meant for python buttons, it will call python functions for display and execution
