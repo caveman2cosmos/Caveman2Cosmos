@@ -2674,15 +2674,12 @@ void cvInternalGlobals::infoTypeFromStringReset()
 
 void cvInternalGlobals::addToInfosVectors(void* infoVector, InfoClassTypes eInfoClass)
 {
-	FASSERT_BOUNDS(NO_INFO_CLASS, NUM_INFO_CLASSES, eInfoClass);
-
-	std::vector<CvInfoBase *> *infoBaseVector = (std::vector<CvInfoBase *> *) infoVector;
-	m_aInfoVectors.push_back(infoBaseVector);
+	m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(infoVector));
 
 	if (eInfoClass > NO_INFO_CLASS)
 	{
-		static uint16_t numInfoClassesLoaded = 0;
-		m_infoClassXmlLoadOrder[eInfoClass] = ++numInfoClassesLoaded;
+		static uint16_t numClassesLoaded = 0;
+		m_infoClassXmlLoadOrder[eInfoClass] = ++numClassesLoaded;
 	}
 }
 
