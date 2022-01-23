@@ -14,7 +14,6 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 		const int plotIndex = targetCity->getCityPlotIndex(pLoopPlot);
 		if (pLoopPlot != NULL
 		&& pLoopPlot->getWorkingCity() == targetCity
-		&& pLoopPlot->isBeingWorked()
 		&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT
 		&& targetCity->AI_getBestBuildValue(plotIndex) > 0
 		&& GC.getBuildInfo((BuildTypes)targetCity->AI_getBestBuild(plotIndex)).getImprovement() != NO_IMPROVEMENT)
@@ -149,22 +148,27 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 	return false;
 }
 
-BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player,const ImprovementTypes improvementType, const CvPlot* plot, bool includeCurrentImprovement)
+BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player,const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
 {
 	int fastestTime = 10000;
 	BuildTypes fastestBuild = NO_BUILD;
 	const ImprovementTypes currentImprovementOnPlot = plot->getImprovementType();
 	CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(improvementType);
+	const bool checkUnitBuild = unit != NULL;
+
 
 	foreach_(const BuildTypes eBuildType, potentialImprovement->getBuildTypes())
 	{
 		if (player.canBuild(plot, eBuildType, false, false) || (includeCurrentImprovement && improvementType == currentImprovementOnPlot))
 		{
-			const int buildTime = GC.getBuildInfo(eBuildType).getTime();
-			if (fastestTime > buildTime) {
-				fastestTime = buildTime;
-				fastestBuild = eBuildType;
+			if (!checkUnitBuild || unit->canBuild(plot, eBuildType, false)) {
+				const int buildTime = GC.getBuildInfo(eBuildType).getTime();
+				if (fastestTime > buildTime) {
+					fastestTime = buildTime;
+					fastestBuild = eBuildType;
+				}
 			}
+
 		}
 	}
 	return fastestBuild;
