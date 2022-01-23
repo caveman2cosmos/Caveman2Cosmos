@@ -2764,7 +2764,7 @@ void cvInternalGlobals::reprocessSigns()
 
 bool cvInternalGlobals::isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const
 {
-	return m_infoClassXmlLoadOrder[eLoadingClass] > m_infoClassXmlLoadOrder[eRefClass];
+	return m_infoClassXmlLoadOrder[eLoadingClass] <= m_infoClassXmlLoadOrder[eRefClass];
 }
 
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
