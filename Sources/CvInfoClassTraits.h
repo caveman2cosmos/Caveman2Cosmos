@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef CvInfoArray_h__
-#define CvInfoArray_h__
+#ifndef CIV4_INFO_CLASS_TRAITS_H
+#define CIV4_INFO_CLASS_TRAITS_H
 
 
 #define EXPAND_FOR_EACH_INFO_CLASS(MACRO_FUNC)	\
@@ -108,7 +108,6 @@
 	MACRO_FUNC(CvUnitCombatInfo, UNIT_COMBAT_INFO, UnitCombatTypes) \
 	MACRO_FUNC(CvModLoadControlInfo, MOD_LOAD_CONTROL_INFO, ModLoadControlTypes) \
 	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes) \
-	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes) \
 	MACRO_FUNC(CvArtInfoAsset, ASSET_ART_INFO, AssetArtTypes) \
 	MACRO_FUNC(CvArtInfoMisc, MISC_ART_INFO, MiscArtTypes) \
 	MACRO_FUNC(CvArtInfoUnit, UNIT_ART_INFO, UnitArtTypes) \
@@ -170,7 +169,11 @@ struct InfoClassTraits<_indexType>									\
 	static const InfoClassTypes InfoClassEnum = _classEnum;			\
 };
 
+EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS);
 
-EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS)
+
+#undef LIST_INFO_CLASS_ENUM
+#undef DECLARE_INFO_CLASS_TRAITS
+#undef EXPAND_FOR_EACH_INFO_CLASS
 
 #endif
