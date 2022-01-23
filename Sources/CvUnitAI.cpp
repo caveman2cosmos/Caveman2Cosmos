@@ -2160,23 +2160,22 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// Afforess - worker financial trouble check
-	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER
+	&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+	&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities())
 		{
 			if (gUnitLogLevel > 2)
 			{
 				logBBAI(
 					"%S's %S at (%d,%d) is disbanding itself due to large number of workers available, and financial trouble.",
-					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
+					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY()
+				);
 			}
-			if (getUpkeep100() > 100)
-			{
-				scrap();
-			}
-
+			scrap();
 			return;
 		}
 	}
@@ -2331,7 +2330,9 @@ void CvUnitAI::AI_workerMove()
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+		if (iWorkers > 5 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities()
+		&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+		&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 		{
 			if (gUnitLogLevel > 2)
 			{
@@ -6980,12 +6981,9 @@ void CvUnitAI::AI_spyMove()
 				return;
 			}
 		}
-		else
+		else if (AI_cityOffenseSpy(10))
 		{
-			if (AI_cityOffenseSpy(10))
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -7035,15 +7033,10 @@ void CvUnitAI::AI_ICBMMove()
 
 	if (airRange() > 0)
 	{
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					  04/25/10								jdog5000	  */
-		/*																							  */
-		/* Unit AI																					  */
-		/************************************************************************************************/
 		if (plot()->isCity(true))
 		{
-			int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(), 0, true, false, true);
-			int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
+			const int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(), 0, true, false, true);
+			const int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
 
 			if (4 * iEnemyOffense > iOurDefense || iOurDefense == 0)
 			{
@@ -7054,34 +7047,21 @@ void CvUnitAI::AI_ICBMMove()
 				}
 			}
 		}
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
 
-		if (AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 2, true))
+		if (AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 2, true)
+		||  AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 1, false))
 		{
 			return;
 		}
-
-		if (AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 1, false))
+		if ((AI_getBirthmark() % 3) == 0 && AI_missileLoad(UNITAI_ATTACK_SEA, 0, false))
 		{
 			return;
 		}
-
-		if (AI_getBirthmark() % 3 == 0)
-		{
-			if (AI_missileLoad(UNITAI_ATTACK_SEA, 0, false))
-			{
-				return;
-			}
-		}
-
 		if (AI_airOffensiveCity())
 		{
 			return;
 		}
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
@@ -7089,8 +7069,6 @@ void CvUnitAI::AI_ICBMMove()
 void CvUnitAI::AI_workerSeaMove()
 {
 	PROFILE_FUNC();
-
-	CvCity* pCity;
 
 	if (AI_selectStatus(true))
 	{
@@ -7120,29 +7098,23 @@ void CvUnitAI::AI_workerSeaMove()
 		return;
 	}
 
-
 	if (AI_improveLocalPlot(2, NULL))
 	{
 		return;
 	}
 
-	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_WORKER_SEA))
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER_SEA)
 	{
-		pCity = plot()->getPlotCity();
+		const CvCity* pCity = plot()->getPlotCity();
 
-		if (pCity != NULL && pCity->getOwner() == getOwner())
+		if (pCity && pCity->getOwner() == getOwner()
+		&& (pCity->AI_neededSeaWorkers() == 0
+			|| GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+			&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0))
 		{
-			if (pCity->AI_neededSeaWorkers() != 0)
-			{
-				//Probably icelocked since it can't perform actions.
-				scrap();
-				return;
-			}
-			else if (GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
-			{
-				scrap();
-				return;
-			}
+			//Probably icelocked since it can't perform actions.
+			scrap();
+			return;
 		}
 	}
 
@@ -8270,7 +8242,7 @@ void CvUnitAI::AI_exploreSeaMove()
 		}
 	}
 
-	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_EXPLORE_SEA))
+	if (!isHuman() && (AI_getUnitAIType() == UNITAI_EXPLORE_SEA))
 	{
 		pWaterArea = plot()->waterArea();
 
@@ -28102,7 +28074,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (!isHuman() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0 && !bWithCommander)
+	if (!bWithCommander && !isHuman()
+	&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+	&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 	{
 		const int iNeededHunters = GET_PLAYER(getOwner()).AI_neededHunters(area());
 		const int iHasHunters = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);

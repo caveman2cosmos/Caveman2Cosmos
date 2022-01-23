@@ -517,28 +517,14 @@ void CvPlayerAI::AI_doTurnPre()
 
 	AI_doReligion();
 
-/************************************************************************************************/
-/* RevDCM					  Start		 12/9/09												*/
-/*																							  */
-/* Inquisitions																				 */
-/************************************************************************************************/
 	AI_setPushReligiousVictory();
 	AI_setConsiderReligiousVictory();
 	AI_setHasInquisitionTarget();
-/************************************************************************************************/
-/* RevDCM						 END															*/
-/************************************************************************************************/
 
 	AI_doCheckFinancialTrouble();
-/************************************************************************************************/
-/* Afforess					  Start		 10/29/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	AI_doMilitaryProductionCity();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if (isNPC())
 	{
 		return;
@@ -767,20 +753,20 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	CvPlot* pLastUpgradePlot = NULL;
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		foreach_(CvUnit* pLoopUnit, units())
+		foreach_(CvUnit* unitX, units())
 		{
-			if ( pLoopUnit->isDead() || pLoopUnit->isDelayedDeath() )
+			if (unitX->isDead() || unitX->isDelayedDeath())
 			{
 				continue;
 			}
-
+			CvPlot* unitPlot = unitX->plot();
 			bool bNoDisband = false;
 			bool bValid = false;
 
 			//	Koshling - never upgrade workers or subdued animals here as they typically have outcome
 			//	missions and construction capabilities that must be evaluated comparatively.  The UnitAI
 			//	processing for these AI types handles upgrade explicitly
-			switch (pLoopUnit->AI_getUnitAIType())
+			switch (unitX->AI_getUnitAIType())
 			{
 				case UNITAI_SUBDUED_ANIMAL:
 				case UNITAI_WORKER:
@@ -795,7 +781,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			{
 				// BBAI note:  Effectively only for galleys, triremes, and ironclads -
 				//		Unit types which are limited in what terrain they can operate.
-				if (AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0)
+				if (AI_unitImpassableCount(unitX->getUnitType()) > 0)
 				{
 					bValid = true;
 				}
@@ -803,24 +789,21 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 			case 1:
 			{
-				CvPlot* pUnitPlot = pLoopUnit->plot();
-
-				FAssert(pUnitPlot != NULL);
-				if (pUnitPlot->isCity())
+				if (unitPlot->isCity())
 				{
-					if (pUnitPlot->getBestDefender(getID()) == pLoopUnit)
+					if (unitPlot->getBestDefender(getID()) == unitX)
 					{
 						bNoDisband = true;
 						bValid = true;
-						pLastUpgradePlot = pUnitPlot;
+						pLastUpgradePlot = unitPlot;
 					}
 
 					// try to upgrade units which are in danger... but don't get obsessed
-					if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getAnyPlotDanger(pUnitPlot, 1, false))))
+					if (!bValid && (pLastUpgradePlot != unitPlot) && ((AI_getAnyPlotDanger(unitPlot, 1, false))))
 					{
 						bNoDisband = true;
 						bValid = true;
-						pLastUpgradePlot = pUnitPlot;
+						pLastUpgradePlot = unitPlot;
 					}
 				}
 				break;
@@ -830,12 +813,12 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
 
 				// Only normal transports
-				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->getSpecialCargo() == NO_SPECIALUNIT) )
+				if ( (unitX->cargoSpace() > 0) && (unitX->getSpecialCargo() == NO_SPECIALUNIT) )
 				{
 					bValid = (bAnyWar || bUnderBudget);
 				}
 				// Also upgrade escort ships
-				if ( pLoopUnit->AI_getUnitAIType() == UNITAI_ESCORT_SEA )
+				if ( unitX->AI_getUnitAIType() == UNITAI_ESCORT_SEA )
 				{
 					bValid = (bAnyWar || bUnderBudget);
 				}
@@ -853,53 +836,55 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				break;
 			}
 
-			if (bValid)
+			if (!bValid)
 			{
-				bool bKilled = false;
-				if (!bNoDisband)
+				continue;
+			}
+			bool bKilled = false;
+			if (!bNoDisband && unitX->canFight() && !unitX->isAnimal() && getUnitUpkeepNet(unitX->isMilitaryBranch(), unitX->getUpkeep100()) > 0)
+			{
+				CvCity* pPlotCity = unitPlot->getPlotCity();
+				if (pPlotCity && pPlotCity->getOwner() == getID())
 				{
-					if (pLoopUnit->canFight() && !pLoopUnit->isAnimal() && pLoopUnit->AI_getUnitAIType() != UNITAI_SUBDUED_ANIMAL)
+					if ((unitX->getDomainType() != DOMAIN_LAND || unitPlot->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 1)
+					&& unitPlot->getNumDefenders(getID()) > pPlotCity->AI_neededDefenders()
+					&& pPlotCity->canTrain(unitX->getUnitType())
+					&& (!unitX->canDefend() || !AI_getAnyPlotDanger(unitPlot, 2, false)))
 					{
-						int iExp = pLoopUnit->getExperience();
-						CvCity* pPlotCity = pLoopUnit->plot()->getPlotCity();
-						if (pPlotCity != NULL && pPlotCity->getOwner() == getID())
+						int iCityExp = 0;
+						if (unitX->getExperience() > 0)
 						{
-							int iCityExp = 0;
-							iCityExp += pPlotCity->getFreeExperience();
-							iCityExp += pPlotCity->getDomainFreeExperience(pLoopUnit->getDomainType());
-							iCityExp += pPlotCity->getUnitCombatFreeExperience(pLoopUnit->getUnitCombatType());
-
-							foreach_(const UnitCombatTypes eSubCombat, pLoopUnit->getUnitInfo().getSubCombatTypes())
+							iCityExp = (
+								getFreeExperience() //civics & wonders
+								+ pPlotCity->getFreeExperience()
+								+ pPlotCity->getSpecialistFreeExperience()
+								+ pPlotCity->getDomainFreeExperience(unitX->getDomainType())
+								+ pPlotCity->getUnitCombatFreeExperience(unitX->getUnitCombatType())
+							);
+							foreach_(const UnitCombatTypes eSubCombat, unitX->getUnitInfo().getSubCombatTypes())
 							{
 								iCityExp += pPlotCity->getUnitCombatFreeExperience(eSubCombat);
 							}
-
 							// Afforess - also include wonder, religion & civic experience
 							if (getStateReligion() != NO_RELIGION && pPlotCity->isHasReligion(getStateReligion()))
 							{
 								iCityExp += getStateReligionFreeExperience(); //religions
 							}
-							iCityExp += pPlotCity->getSpecialistFreeExperience(); //great generals
-							iCityExp += getFreeExperience(); //civics & wonders
-
-							if (iExp <= std::max(0, iCityExp) && getUnitUpkeepMilitaryNet() > 0
-							&& (pLoopUnit->getDomainType() != DOMAIN_LAND || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 1)
-							&& pPlotCity->canTrain(pLoopUnit->getUnitType())
-							&& pPlotCity->plot()->getNumDefenders(getID()) > pPlotCity->AI_neededDefenders()
-							&& (!pLoopUnit->canDefend() || !AI_getAnyPlotDanger(pLoopUnit->plot(), 2, false)))
-							{
-								pLoopUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-								pLoopUnit->kill(false);
-								bKilled = true;
-								pLastUpgradePlot = NULL;
-							}
+							iCityExp = std::max(0, iCityExp);
+						}
+						if (unitX->getExperience() <= iCityExp)
+						{
+							unitX->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+							unitX->kill(false);
+							bKilled = true;
+							pLastUpgradePlot = NULL;
 						}
 					}
 				}
-				if (!bKilled)
-				{
-					pLoopUnit->AI_upgrade(); // CAN DELETE UNIT!!!
-				}
+			}
+			if (!bKilled)
+			{
+				unitX->AI_upgrade(); // CAN DELETE UNIT!!!
 			}
 		}
 	}
@@ -17092,8 +17077,6 @@ void CvPlayerAI::AI_doMilitary()
 					case 2: iExperienceThreshold = 12; break;
 					case 3: iExperienceThreshold = -1; break;
 				}
-				// Toffer - Minor problem, I don't think AI_disbandUnit only disbands military units...
-				//	It should also have a boolean telling it to only disband units with upkeep cost.
 				if (!AI_disbandUnit(iExperienceThreshold))
 				{
 					break;
@@ -21726,35 +21709,42 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 	int iBestValue = MAX_INT;
 	CvUnit* pBestUnit = NULL;
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		if (!pLoopUnit->hasCargo() && !pLoopUnit->isGoldenAge() && pLoopUnit->getUnitInfo().getProductionCost() > 0
-		&& (iExpThreshold == -1 || pLoopUnit->canFight() && pLoopUnit->getExperience() <= iExpThreshold)
-		&& (!pLoopUnit->isMilitaryHappiness() || !pLoopUnit->plot()->isCity() || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 2))
+		if (unitX->getUpkeep100() < 1
+		|| !unitX->isMilitaryBranch()
+		||  unitX->hasCargo()
+		||  unitX->isGoldenAge()
+		||  unitX->getUnitInfo().getProductionCost() < 1)
+		{
+			continue;
+		}
+		if ((iExpThreshold == -1 || unitX->canFight() && unitX->getExperience() <= iExpThreshold)
+		&& (!unitX->isMilitaryHappiness() || !unitX->plot()->isCity() || unitX->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 2))
 		{
 			int iValue = (10000 + GC.getGame().getSorenRandNum(1000, "Disband Unit"));
 
-			iValue *= 100 + (pLoopUnit->getUnitInfo().getProductionCost() * 3);
+			iValue *= 100 + (unitX->getUnitInfo().getProductionCost() * 3);
 			iValue /= 100;
 
-			iValue *= 100 + (pLoopUnit->getExperience() * 10);
+			iValue *= 100 + (unitX->getExperience() * 10);
 			iValue /= 100;
 
-			iValue *= 100 + (pLoopUnit->getLevel() * 25);
+			iValue *= 100 + (unitX->getLevel() * 25);
 			iValue /= 100;
 
-			if (pLoopUnit->plot()->getTeam() == pLoopUnit->getTeam())
+			if (unitX->plot()->getTeam() == unitX->getTeam())
 			{
 				iValue *= 3;
 
-				if (pLoopUnit->canDefend() && pLoopUnit->plot()->isCity())
+				if (unitX->canDefend() && unitX->plot()->isCity())
 				{
 					iValue *= 2;
 				}
 			}
 
 			// Multiplying by higher number means unit has higher priority, less likely to be disbanded
-			switch (pLoopUnit->AI_getUnitAIType())
+			switch (unitX->AI_getUnitAIType())
 			{
 			case UNITAI_UNKNOWN:
 			case UNITAI_ANIMAL:
@@ -21771,8 +21761,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 			case UNITAI_HUNTER:
 			case UNITAI_HUNTER_ESCORT:
 				//	Treat hunters like explorers for valuation, but slightly less so
-				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-					|| pLoopUnit->plot()->getTeam() != getTeam())
+				if ((GC.getGame().getGameTurn() - unitX->getGameTurnCreated()) < 10
+					|| unitX->plot()->getTeam() != getTeam())
 				{
 					iValue *= 10;
 				}
@@ -21787,11 +21777,11 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 				break;
 
 			case UNITAI_WORKER:
-				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) > 10)
+				if ((GC.getGame().getGameTurn() - unitX->getGameTurnCreated()) > 10)
 				{
-					if (pLoopUnit->plot()->isCity())
+					if (unitX->plot()->isCity())
 					{
-						if (pLoopUnit->plot()->getPlotCity()->AI_getWorkersNeeded() == 0)
+						if (unitX->plot()->getPlotCity()->AI_getWorkersNeeded() == 0)
 						{
 							iValue *= 10;
 						}
@@ -21828,8 +21818,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 				break;
 
 			case UNITAI_EXPLORE:
-				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-					|| pLoopUnit->plot()->getTeam() != getTeam())
+				if ((GC.getGame().getGameTurn() - unitX->getGameTurnCreated()) < 10
+					|| unitX->plot()->getTeam() != getTeam())
 				{
 					iValue *= 15;
 				}
@@ -21840,8 +21830,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 				break;
 
 			case UNITAI_MISSIONARY:
-				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-					|| pLoopUnit->plot()->getTeam() != getTeam())
+				if ((GC.getGame().getGameTurn() - unitX->getGameTurnCreated()) < 10
+					|| unitX->plot()->getTeam() != getTeam())
 				{
 					iValue *= 8;
 				}
@@ -21877,8 +21867,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 				break;
 
 			case UNITAI_EXPLORE_SEA:
-				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-					|| pLoopUnit->plot()->getTeam() != getTeam())
+				if ((GC.getGame().getGameTurn() - unitX->getGameTurnCreated()) < 10
+					|| unitX->plot()->getTeam() != getTeam())
 				{
 					iValue *= 12;
 				}
@@ -21928,12 +21918,12 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 				break;
 			}
 
-			iValue /= pLoopUnit->getUnitInfo().getBaseUpkeep() + 1;
+			iValue /= unitX->getUnitInfo().getBaseUpkeep() + 1;
 
 			if (iValue < iBestValue)
 			{
 				iBestValue = iValue;
-				pBestUnit = pLoopUnit;
+				pBestUnit = unitX;
 			}
 		}
 	}
@@ -26887,10 +26877,8 @@ int CvPlayerAI::AI_workerTradeVal(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	int iValue = 0;
-	int iNeededWorkers = 0;
 
-	if (!(GC.getUnitInfo(pUnit->getUnitType()).isWorkerTrade()))
+	if (!GC.getUnitInfo(pUnit->getUnitType()).isWorkerTrade())
 	{//It's not a worker, so it's worthless
 		return 0;
 	}
@@ -26906,6 +26894,7 @@ int CvPlayerAI::AI_workerTradeVal(const CvUnit* pUnit) const
 		eBestWorker = getCapitalCity()->AI_bestUnitAI(UNITAI_WORKER, iDummyValue, true, true);
 	}
 
+	int iValue = 0;
 	if ( eBestWorker != NO_UNIT )
 	{
 		iValue = (GC.getUnitInfo(eBestWorker).getProductionCost() > 0) ? GC.getUnitInfo(eBestWorker).getProductionCost() : 500;
@@ -26924,6 +26913,7 @@ int CvPlayerAI::AI_workerTradeVal(const CvUnit* pUnit) const
 
 	//	Normalise for game speed
 	iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100;
+	int iNeededWorkers = 0;
 
 	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
@@ -26932,7 +26922,6 @@ int CvPlayerAI::AI_workerTradeVal(const CvUnit* pUnit) const
 			iNeededWorkers += AI_neededWorkers(pLoopArea);
 		}
 	}
-
 	if (iNeededWorkers > 0)
 	{
 		//	If we could use a large number of workers that dosn't means the first one
