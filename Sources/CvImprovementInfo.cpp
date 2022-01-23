@@ -194,19 +194,11 @@ bool CvImprovementInfo::isUpgradeRequiresFortify() const
 {
 	return m_bUpgradeRequiresFortify;
 }
-// Super Forts end
-// Super forts C2C adaptation
-bool CvImprovementInfo::isUniversalTradeBonusProvider() const
-{
-	return m_bIsUniversalTradeBonusProvider;
-}
 
 bool CvImprovementInfo::isZOCSource() const
 {
 	return m_bIsZOCSource;
 }
-
-// Super forts C2C adaptation end
 
 bool CvImprovementInfo::isActsAsCity() const
 {
@@ -379,12 +371,13 @@ bool CvImprovementInfo::isImprovementObsoleteBonusMakesValid(int i) const
 	return m_paImprovementBonus[i].m_bObsoleteBonusMakesValid;
 }
 
-bool CvImprovementInfo::isImprovementBonusTrade(int i) const
+bool CvImprovementInfo::isImprovementBonusTrade(int iBonus) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
-	// Super forts C2C adaptation
-	return m_bIsUniversalTradeBonusProvider || m_paImprovementBonus[i].m_bBonusTrade;
-	// Super forts C2C adaptation end
+	if (iBonus < 0)
+	{
+		return m_bIsUniversalTradeBonusProvider;
+	}
+	return m_bIsUniversalTradeBonusProvider || m_paImprovementBonus[iBonus].m_bBonusTrade;
 }
 
 int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
@@ -974,7 +967,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (getUniqueRange() == iDefault) m_iUniqueRange = pClassInfo->getUniqueRange();
 	if (isBombardable() == bDefault) m_bBombardable = pClassInfo->isBombardable();
 	if (isUpgradeRequiresFortify() == bDefault) m_bUpgradeRequiresFortify = pClassInfo->isUpgradeRequiresFortify();
-	if (isUniversalTradeBonusProvider() == bDefault) m_bIsUniversalTradeBonusProvider = pClassInfo->isUniversalTradeBonusProvider();
+	if (m_bIsUniversalTradeBonusProvider == bDefault) m_bIsUniversalTradeBonusProvider = pClassInfo->isImprovementBonusTrade();
 	if (isZOCSource() == bDefault) m_bIsZOCSource = pClassInfo->isZOCSource();
 	// Super forts C2C adaptation end
 	if (m_bActsAsCity == bDefault) m_bActsAsCity = pClassInfo->isActsAsCity();

@@ -1031,26 +1031,55 @@ void CvSelectionGroupAI::AI_noteSizeChange(int iChange, int iVolume)
 	}
 }
 
-void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit)
+void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* newPlot, const CvUnit* pNewUnit)
 {
 	PROFILE_FUNC();
+	const CvPlot* oldPlot = AI_getMissionAIPlot();
+	const MissionAITypes eOldMissionAI = m_eMissionAIType;
 
-	if ( m_eMissionAIType != NO_MISSIONAI )
+	if (oldPlot && eOldMissionAI != NO_MISSIONAI)
 	{
-		const CvPlot* pPlot = AI_getMissionAIPlot();
+		GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(eOldMissionAI, oldPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
 
-		if ( pPlot != NULL )
+		// Worker city tracking
+		if (eOldMissionAI == MISSIONAI_BUILD)
 		{
-			GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
+			CvCity* oldCity = oldPlot->getWorkingCity();
+			if (oldCity)
+			{
+				oldCity->AI_changeWorkersHave(-1);
+				if (pNewUnit)
+					OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", pNewUnit->getX(), pNewUnit->getY(), oldCity->getName().GetCString()).c_str());
+				else OutputDebugString(CvString::format("Worker detaching from mission at (%d,%d) for city %S\n", oldPlot->getX(), oldPlot->getY(), oldCity->getName().GetCString()).c_str());
+			}
 		}
 	}
 
+	// Set mission AI
 	m_eMissionAIType = eNewMissionAI;
 
-	if (pNewPlot != NULL)
+	if (newPlot)
 	{
-		m_iMissionAIX = pNewPlot->getX();
-		m_iMissionAIY = pNewPlot->getY();
+		m_iMissionAIX = newPlot->getX();
+		m_iMissionAIY = newPlot->getY();
+
+		// Worker city tracking
+		if (eNewMissionAI == MISSIONAI_BUILD)
+		{
+			CvCity* newCity = newPlot->getWorkingCity();
+			if (newCity)
+			{
+				newCity->AI_changeWorkersHave(1);
+				if (pNewUnit)
+					OutputDebugString(CvString::format("Worker at (%d,%d) attaching to mission for city %S\n", pNewUnit->getX(), pNewUnit->getY(), newCity->getName().GetCString()).c_str());
+				else OutputDebugString(CvString::format("Worker attaching to mission at (%d,%d) for city %S\n", newPlot->getX(), newPlot->getY(), newCity->getName().GetCString()).c_str());
+			}
+		}
+
+		if (eNewMissionAI != NO_MISSIONAI)
+		{
+			GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(eNewMissionAI, newPlot, getNumUnits(), plot(), getNumUnitCargoVolumeTotal());
+		}
 	}
 	else
 	{
@@ -1058,24 +1087,11 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 		m_iMissionAIY = INVALID_PLOT_COORD;
 	}
 
-	if (pNewUnit != NULL)
+	if (pNewUnit)
 	{
 		m_missionAIUnit = pNewUnit->getIDInfo();
 	}
-	else
-	{
-		m_missionAIUnit.reset();
-	}
-
-	if ( m_eMissionAIType != NO_MISSIONAI )
-	{
-		const CvPlot* pPlot = AI_getMissionAIPlot();
-
-		if ( pPlot != NULL )
-		{
-			GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, getNumUnits(), plot(), getNumUnitCargoVolumeTotal());
-		}
-	}
+	else m_missionAIUnit.reset();
 }
 
 

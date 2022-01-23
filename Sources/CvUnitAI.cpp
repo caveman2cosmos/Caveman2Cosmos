@@ -696,20 +696,14 @@ void CvUnitAI::doUnitAIMove()
 //	Note death (or capture) of a unit
 void CvUnitAI::AI_killed()
 {
-	if (UNITAI_WORKER == AI_getUnitAIType())
 	{
-		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
-
-		if (pMissionPlot != NULL && pMissionPlot->getWorkingCity() != NULL)
+		CvCity* workerAssignedCity = getWorkerAssignedCity();
+		if (workerAssignedCity)
 		{
-			if (getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD && getArea() == pMissionPlot->getArea())
-			{
-				OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
-				pMissionPlot->getWorkingCity()->AI_changeWorkersHave(-1);
-			}
+			OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), workerAssignedCity->getName().GetCString()).c_str());
+			workerAssignedCity->AI_changeWorkersHave(-1);
 		}
 	}
-
 	if (gUnitLogLevel >= 2)
 	{
 		//	Logging of death location and some mission info
@@ -2160,23 +2154,22 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// Afforess - worker financial trouble check
-	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER
+	&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+	&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities())
 		{
 			if (gUnitLogLevel > 2)
 			{
 				logBBAI(
 					"%S's %S at (%d,%d) is disbanding itself due to large number of workers available, and financial trouble.",
-					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
+					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY()
+				);
 			}
-			if (getUpkeep100() > 100)
-			{
-				scrap();
-			}
-
+			scrap();
 			return;
 		}
 	}
@@ -2331,7 +2324,9 @@ void CvUnitAI::AI_workerMove()
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+		if (iWorkers > 5 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities()
+		&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+		&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 		{
 			if (gUnitLogLevel > 2)
 			{
@@ -6980,12 +6975,9 @@ void CvUnitAI::AI_spyMove()
 				return;
 			}
 		}
-		else
+		else if (AI_cityOffenseSpy(10))
 		{
-			if (AI_cityOffenseSpy(10))
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -7035,15 +7027,10 @@ void CvUnitAI::AI_ICBMMove()
 
 	if (airRange() > 0)
 	{
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					  04/25/10								jdog5000	  */
-		/*																							  */
-		/* Unit AI																					  */
-		/************************************************************************************************/
 		if (plot()->isCity(true))
 		{
-			int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(), 0, true, false, true);
-			int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
+			const int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(), 0, true, false, true);
+			const int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
 
 			if (4 * iEnemyOffense > iOurDefense || iOurDefense == 0)
 			{
@@ -7054,34 +7041,21 @@ void CvUnitAI::AI_ICBMMove()
 				}
 			}
 		}
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
 
-		if (AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 2, true))
+		if (AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 2, true)
+		||  AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 1, false))
 		{
 			return;
 		}
-
-		if (AI_missileLoad(UNITAI_MISSILE_CARRIER_SEA, 1, false))
+		if ((AI_getBirthmark() % 3) == 0 && AI_missileLoad(UNITAI_ATTACK_SEA, 0, false))
 		{
 			return;
 		}
-
-		if (AI_getBirthmark() % 3 == 0)
-		{
-			if (AI_missileLoad(UNITAI_ATTACK_SEA, 0, false))
-			{
-				return;
-			}
-		}
-
 		if (AI_airOffensiveCity())
 		{
 			return;
 		}
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
@@ -7089,8 +7063,6 @@ void CvUnitAI::AI_ICBMMove()
 void CvUnitAI::AI_workerSeaMove()
 {
 	PROFILE_FUNC();
-
-	CvCity* pCity;
 
 	if (AI_selectStatus(true))
 	{
@@ -7120,29 +7092,23 @@ void CvUnitAI::AI_workerSeaMove()
 		return;
 	}
 
-
 	if (AI_improveLocalPlot(2, NULL))
 	{
 		return;
 	}
 
-	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_WORKER_SEA))
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER_SEA)
 	{
-		pCity = plot()->getPlotCity();
+		const CvCity* pCity = plot()->getPlotCity();
 
-		if (pCity != NULL && pCity->getOwner() == getOwner())
+		if (pCity && pCity->getOwner() == getOwner()
+		&& (pCity->AI_neededSeaWorkers() == 0
+			|| GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+			&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0))
 		{
-			if (pCity->AI_neededSeaWorkers() != 0)
-			{
-				//Probably icelocked since it can't perform actions.
-				scrap();
-				return;
-			}
-			else if (GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
-			{
-				scrap();
-				return;
-			}
+			//Probably icelocked since it can't perform actions.
+			scrap();
+			return;
 		}
 	}
 
@@ -8270,7 +8236,7 @@ void CvUnitAI::AI_exploreSeaMove()
 		}
 	}
 
-	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_EXPLORE_SEA))
+	if (!isHuman() && (AI_getUnitAIType() == UNITAI_EXPLORE_SEA))
 	{
 		pWaterArea = plot()->waterArea();
 
@@ -21402,11 +21368,8 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 							{
 								return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pLoopCity->plot());
 							}
-							else
-							{
-								getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-								return true;
-							}
+							getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+							return true;
 
 							//return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
 						}
@@ -21425,20 +21388,10 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 
 				foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 				{
-					/************************************************************************************************/
-					/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-					/*																							  */
-					/* Unit AI, Efficiency																		  */
-					/************************************************************************************************/
-										// BBAI efficiency: check same area
-										//if( (pLoopCity->area() != pPlot->area()) )
 					if (plotSet.find(pLoopCity->plot()) == plotSet.end())
 					{
 						continue;
 					}
-					/************************************************************************************************/
-					/* BETTER_BTS_AI_MOD					   END												  */
-					/************************************************************************************************/
 
 					if (!(pPlot->isConnectedTo(pLoopCity)))
 					{
@@ -21674,25 +21627,6 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 			eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
 		}
 
-
-		const CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
-
-		if (pMissionPlot != NULL && pMissionPlot->getWorkingCity() != NULL && getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", getX(), getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
-			pMissionPlot->getWorkingCity()->AI_changeWorkersHave(-1);
-		}
-		else if (plot()->getWorkingCity() != NULL)
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from local city %S\n", getX(), getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
-			plot()->getWorkingCity()->AI_changeWorkersHave(-1);
-		}
-
-		if (NULL != pBestPlot->getWorkingCity())
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) attaching mission for city %S\n", getX(), getY(), pBestPlot->getWorkingCity()->getName().GetCString()).c_str());
-			pBestPlot->getWorkingCity()->AI_changeWorkersHave(+1);
-		}
 		if (getGroup()->pushMissionInternal(eMission, pBestPlot->getX(), pBestPlot->getY(), (isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
@@ -21707,11 +21641,6 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pPlot;
-	CvPlot* pEndTurnPlot;
-	BuildTypes eBuild;
-	int iPathTurns;
-	int iValue;
 	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 
 	int iBestValue = 0;
@@ -21725,13 +21654,15 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 			int iWorkersNeeded = pLoopCity->AI_getWorkersNeeded();
 			int iWorkersHave = pLoopCity->AI_getWorkersHave();
 
-			iValue = std::max(0, iWorkersNeeded - iWorkersHave) * 100;
-			iValue += iWorkersNeeded * 10;
+			int iValue = 100 * std::max(0, iWorkersNeeded - iWorkersHave) + 10 * iWorkersNeeded;
+
 			iValue *= (iWorkersNeeded + 1);
 			iValue /= (iWorkersHave + 1);
 
 			if (iValue > 0)
 			{
+				CvPlot* pPlot;
+				BuildTypes eBuild;
 				if (AI_bestCityBuild(pLoopCity, &pPlot, &eBuild, NULL, this))
 				{
 					FAssert(pPlot != NULL);
@@ -21749,6 +21680,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 						if (iValue > iBestValue)
 						{
 							PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
+							int iPathTurns;
 							if (generatePath(pPlot, iBasePathFlags, true, &iPathTurns))
 							{
 								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
@@ -21759,7 +21691,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 									iBestValue = iValue;
 									eBestBuild = eBuild;
 									pBestPlot = pPlot;
-									pEndTurnPlot = getPathEndTurnPlot();
+									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
 									FAssert(!atPlot(pBestPlot) || NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->AI_getWorkersHave() > pCity->AI_getWorkersNeeded() + 1);
 								}
 							}
@@ -21773,26 +21705,6 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 	if (pBestPlot != NULL)
 	{
 		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
-
-		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
-
-		if (pMissionPlot != NULL && pMissionPlot->getWorkingCity() != NULL && getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", getX(), getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
-			pMissionPlot->getWorkingCity()->AI_changeWorkersHave(-1);
-		}
-		else if (plot()->getWorkingCity() != NULL)
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from local city %S\n", getX(), getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
-			plot()->getWorkingCity()->AI_changeWorkersHave(-1);
-		}
-
-		FAssert(pBestPlot->getWorkingCity() != NULL || GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT);
-		if (NULL != pBestPlot->getWorkingCity())
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) attaching mission for city %S\n", getX(), getY(), pBestPlot->getWorkingCity()->getName().GetCString()).c_str());
-			pBestPlot->getWorkingCity()->AI_changeWorkersHave(+1);
-		}
 
 		eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
 
@@ -28102,7 +28014,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (!isHuman() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0 && !bWithCommander)
+	if (!bWithCommander && !isHuman()
+	&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+	&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 	{
 		const int iNeededHunters = GET_PLAYER(getOwner()).AI_neededHunters(area());
 		const int iHasHunters = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
