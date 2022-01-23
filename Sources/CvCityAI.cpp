@@ -11621,7 +11621,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 		iWorkersHave++;
 	}
 
-	int iWorkersHaveByPlotTargetMissionAI = AI_workingCityPlotTargetMissionAIs(getOwner(), MISSIONAI_BUILD, UNITAI_WORKER, true);
+	int iWorkersHaveByPlotTargetMissionAI = AI_workingCityPlotTargetMissionAIs(getOwner(), MISSIONAI_BUILD);
 	int iWorkersHaveNewlyBuilt = 0;
 
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
@@ -11787,51 +11787,45 @@ int CvCityAI::AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAIT
 {
 	PROFILE_FUNC();
 
-	bool bCanMoveAllTerrain = bSameAreaOnly; //only check if bSameAreaOnly
 	int iCount = 0;
 
-	foreach_(const CvSelectionGroup * pLoopSelectionGroup, GET_PLAYER(ePlayer).groups())
+	foreach_(const CvSelectionGroup * groupX, GET_PLAYER(ePlayer).groups())
 	{
-		const CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+		bool bCanMoveAllTerrain = bSameAreaOnly; //only check if bSameAreaOnly
+		const CvPlot* pMissionPlot = groupX->AI_getMissionAIPlot();
 
-		if (pMissionPlot != NULL)
+		if (pMissionPlot && pMissionPlot->getWorkingCity() == this
+		&& (eMissionAI == NO_MISSIONAI || groupX->AI_getMissionAIType() == eMissionAI))
 		{
-			if (eMissionAI == NO_MISSIONAI || pLoopSelectionGroup->AI_getMissionAIType() == eMissionAI)
+			if (eUnitAI == NO_UNITAI && !bSameAreaOnly)
 			{
-				if (pMissionPlot->getWorkingCity() == this)
+				iCount += groupX->getNumUnits();
+			}
+			else
+			{
+				const CvUnit* pHeadUnit = groupX->getHeadUnit();
+				if (pHeadUnit)
 				{
-					if (eUnitAI == NO_UNITAI && !bSameAreaOnly)
+					int iCorrectUnitAICount = 0;
+					foreach_(const CvUnit * unit, groupX->units())
 					{
-						iCount += pLoopSelectionGroup->getNumUnits();
-					}
-					else
-					{
-						const CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
-						if (pHeadUnit != NULL)
+						if (bCanMoveAllTerrain && !unit->canMoveAllTerrain())
 						{
-							int iCorrectUnitAICount = 0;
-							foreach_(const CvUnit * unit, pLoopSelectionGroup->units())
-							{
-								if (bCanMoveAllTerrain && !(unit->canMoveAllTerrain()))
-								{
-									bCanMoveAllTerrain = false;
-								}
-								if (eUnitAI == NO_UNITAI || unit->AI_getUnitAIType() == eUnitAI)
-								{
-									iCorrectUnitAICount++;
-								}
-							}
-							if (!bSameAreaOnly || bCanMoveAllTerrain || pHeadUnit->getArea() == pMissionPlot->getArea())
-							{
-								iCount += iCorrectUnitAICount;
-							}
+							bCanMoveAllTerrain = false;
 						}
+						if (eUnitAI == NO_UNITAI || unit->AI_getUnitAIType() == eUnitAI)
+						{
+							iCorrectUnitAICount++;
+						}
+					}
+					if (!bSameAreaOnly || bCanMoveAllTerrain || pHeadUnit->getArea() == pMissionPlot->getArea())
+					{
+						iCount += iCorrectUnitAICount;
 					}
 				}
 			}
 		}
 	}
-
 	return iCount;
 }
 /********************************************************************************/
