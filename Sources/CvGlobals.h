@@ -260,6 +260,7 @@ public:
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
+	bool isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const;
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
