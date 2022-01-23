@@ -65,7 +65,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 		foreach_(const ImprovementTypes potentialImprovementType, plotBonusInfo->getProvidedByImprovementTypes()) {
 			potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
 			BuildTypes tempPlotBuild = NO_BUILD;
-			if (potentialImprovement->isUniversalTradeBonusProvider()) {
+			if (potentialImprovement->isImprovementBonusTrade()) {
 				bestBuildForPlot = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, plot, false);
 			}
 

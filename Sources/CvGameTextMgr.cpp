@@ -29572,7 +29572,7 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS"));
 	}
-	if (info.isUniversalTradeBonusProvider())
+	if (info.isImprovementBonusTrade())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER"));

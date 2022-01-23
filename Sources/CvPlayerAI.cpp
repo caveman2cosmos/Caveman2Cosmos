@@ -4896,7 +4896,6 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 				int iImprovementValue = 300;
 
 				iImprovementValue += ((kImprovement.isActsAsCity()) ? 75 : 0);
-				iImprovementValue += ((kImprovement.isUniversalTradeBonusProvider()) ? 75 : 0);
 				iImprovementValue += ((kImprovement.isHillsMakesValid()) ? 100 : 0);
 				iImprovementValue += ((kImprovement.isFreshWaterMakesValid()) ? 200 : 0);
 				iImprovementValue += ((kImprovement.isRiverSideMakesValid()) ? 100 : 0);

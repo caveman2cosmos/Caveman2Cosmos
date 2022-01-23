@@ -22,7 +22,6 @@ public:
 	DllExport bool isRequiresRiverSide() const;
 	bool isBombardable() const;
 	bool isUpgradeRequiresFortify() const;
-	bool isUniversalTradeBonusProvider() const;
 	bool isZOCSource() const;
 	bool isActsAsCity() const;
 	bool isHillsMakesValid() const;
@@ -88,7 +87,7 @@ public:
 	int getImprovementBonusYield(int i, int j) const;
 	bool isImprovementBonusMakesValid(int i) const;
 	bool isImprovementObsoleteBonusMakesValid(int i) const;
-	bool isImprovementBonusTrade(int i) const;
+	bool isImprovementBonusTrade(int iBonus = -1) const;
 	int getImprovementBonusDiscoverRand(int i) const;
 
 	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
