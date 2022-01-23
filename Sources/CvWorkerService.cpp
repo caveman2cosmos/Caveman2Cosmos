@@ -33,6 +33,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (unit->isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 	const bool gameOptionLeaveForests = ownerReference.isOption(PLAYEROPTION_LEAVE_FORESTS);
 	const bool gameOptionSafeAutomation = ownerReference.isOption(PLAYEROPTION_SAFE_AUTOMATION);
+	const bool gameOptionZoneOfControl = GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL);
 	const bool bCanRoute = unit->canBuildRoute();
 	const int maxDistanceFromBorder = unit->getGroup()->getNumUnits() > 1 && unit->getGroup()->canDefend() ? GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS() / 2 + 1 : -1;
 	BuildTypes overallBestBuild = NO_BUILD;
@@ -43,7 +44,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 	CvReachablePlotSet plotSet(unit->getGroup(), iBasePathFlags, MAX_INT, true, maxDistanceFromBorder);
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr) {
-		int tempBonusValue = 0;
+
 		CvPlot* loopedPlot = itr.plot();
 		const PlayerTypes plotOwner = loopedPlot->getOwner();
 		const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
@@ -51,30 +52,30 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 
 		if (!IsPlotValid(unit, plot) || loopedPlot->area() != plot->area() || plot->getWorkingCity() != NULL) continue;
 
-		if (!(unitOwner == plotOwner || plotOwner == NO_PLAYER)) continue;
+		if (unitOwner != plotOwner && plotOwner != NO_PLAYER) continue;
 
 		BonusTypes nonObsoleteBonusType = loopedPlot->getNonObsoleteBonusType(unit->getTeam());
 
-
 		if (nonObsoleteBonusType == NO_BONUS) continue;
+
 		CvBonusInfo* plotBonusInfo = &GC.getBonusInfo(nonObsoleteBonusType);
 		CvImprovementInfo* potentialImprovement = NULL;
 		BuildTypes bestBuildForPlot = NO_BUILD;
 		int bestDefenseValue = 0;
 
-
 		// TODO: Improve this evaluation, but its a start.
 		foreach_(const ImprovementTypes potentialImprovementType, plotBonusInfo->getProvidedByImprovementTypes()) {
+
 			potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
-			BuildTypes tempPlotBuild = NO_BUILD;
-			if (potentialImprovement->isImprovementBonusTrade(nonObsoleteBonusType)) {
-				tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, plot, false);
-			}
 
-			int tempDefenseValue = potentialImprovement->getAirBombDefense() / 10;
-			tempDefenseValue += potentialImprovement->getDefenseModifier() / 10;
-			tempDefenseValue += (potentialImprovement->isZOCSource() ? 3 : 0);
+			BuildTypes tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, plot, false);
 
+			const int tempDefenseValue = (
+				1
+				+ potentialImprovement->getAirBombDefense() / 10
+				+ potentialImprovement->getDefenseModifier() / 10
+				+ (gameOptionZoneOfControl && potentialImprovement->isZOCSource() ? 3 : 0)
+			);
 			if (tempPlotBuild != NO_BUILD) {
 				if (tempDefenseValue > bestDefenseValue) {
 					bestDefenseValue = tempDefenseValue;
@@ -82,18 +83,17 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 				}
 			}
 		}
-		if(bestBuildForPlot == NO_BUILD) continue;
+		if (bestBuildForPlot == NO_BUILD) continue;
 
-		const bool haveBonus = ownerReference.hasBonus(nonObsoleteBonusType);
-		tempBonusValue = ownerReference.AI_bonusVal(nonObsoleteBonusType) + bestDefenseValue;
+		//const bool haveBonus = ownerReference.hasBonus(nonObsoleteBonusType);
 
-		const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
+		//const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
 
 		if (!unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns)) continue;
 
-		tempBonusValue = tempBonusValue / std::max(1, numberOfMoveTurns);
+		const int tempBonusValue = (ownerReference.AI_bonusVal(nonObsoleteBonusType) + bestDefenseValue) / std::max(1, numberOfMoveTurns);
 
-		if (numberOfMoveTurns <= allowedMovementTurns) {
+		/*if (numberOfMoveTurns <= allowedMovementTurns)*/ {
 			if (bestBonusValue < tempBonusValue) {
 				bestBonusValue = tempBonusValue;
 				overallBestBuild = bestBuildForPlot;
