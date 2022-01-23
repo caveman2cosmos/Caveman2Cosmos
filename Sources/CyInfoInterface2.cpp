@@ -258,6 +258,7 @@ void CyInfoPythonInterface2()
 		.def("isRequiresFlatlands", &CvFeatureInfo::isRequiresFlatlands, "bool ()")
 		.def("isRequiresRiver", &CvFeatureInfo::isRequiresRiver, "bool ()")
 		.def("isImpassable", &CvFeatureInfo::isImpassable, "bool ()")
+		.def("isNoCity", &CvFeatureInfo::isNoCity, "bool ()")
 		.def("isNukeImmune", &CvFeatureInfo::isNukeImmune, "bool ()")
 
 		// Arrays
