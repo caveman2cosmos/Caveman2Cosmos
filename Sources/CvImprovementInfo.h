@@ -118,14 +118,13 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvImprovementInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 	void doPostLoadCaching(uint32_t eThis);
 
 private:
-	void getDataMembers(CvInfoUtil& util);
-
 	bool m_bPeakMakesValid;
 	bool m_bBombardable;
 	bool m_bUpgradeRequiresFortify;

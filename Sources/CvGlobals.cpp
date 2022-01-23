@@ -2762,6 +2762,11 @@ void cvInternalGlobals::reprocessSigns()
 /***** Parallel Maps - End *****/
 /*******************************/
 
+bool cvInternalGlobals::isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const
+{
+	return m_infoClassXmlLoadOrder[eLoadingClass] > m_infoClassXmlLoadOrder[eRefClass];
+}
+
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
 {
 	m_delayedResolutionMap[pType] = std::make_pair(szString,  GC.getCurrentXMLFile());
