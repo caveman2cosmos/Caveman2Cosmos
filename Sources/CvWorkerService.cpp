@@ -49,7 +49,9 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 		const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
 		const CvImprovementInfo* currentImprovementInfo = currentImprovementOnPlot != (ImprovementTypes)NO_IMPROVEMENT ? &GC.getImprovementInfo(currentImprovementOnPlot) : NULL;
 
-		if (!IsPlotValid(unit, plot) || plotOwner != NO_PLAYER || unitOwner != plotOwner || loopedPlot->area() != plot->area() || plot->getWorkingCity() != NULL) continue;
+		if (!IsPlotValid(unit, plot) || loopedPlot->area() != plot->area() || plot->getWorkingCity() != NULL) continue;
+
+		if (!(unitOwner == plotOwner || plotOwner == NO_PLAYER)) continue;
 
 		BonusTypes nonObsoleteBonusType = loopedPlot->getNonObsoleteBonusType(unit->getTeam());
 
@@ -65,8 +67,8 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 		foreach_(const ImprovementTypes potentialImprovementType, plotBonusInfo->getProvidedByImprovementTypes()) {
 			potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
 			BuildTypes tempPlotBuild = NO_BUILD;
-			if (potentialImprovement->isUniversalTradeBonusProvider()) {
-				bestBuildForPlot = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, plot, false);
+			if (potentialImprovement->isImprovementBonusTrade(nonObsoleteBonusType)) {
+				tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, plot, false);
 			}
 
 			int tempDefenseValue = potentialImprovement->getAirBombDefense() / 10;
