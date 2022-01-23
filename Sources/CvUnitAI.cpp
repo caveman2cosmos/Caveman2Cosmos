@@ -209,7 +209,7 @@ bool CvUnitAI::AI_update()
 
 	if (getDomainType() == DOMAIN_LAND)
 	{
-		if (plot()->isWater() && !canMoveAllTerrain() && !plot()->isCanMoveLandUnits())
+		if (plot()->isWater() && !canMoveAllTerrain() && !plot()->isSeaTunnel())
 		{
 			getGroup()->pushMission(MISSION_SKIP);
 			return false;
@@ -26153,7 +26153,7 @@ bool CvUnitAI::AI_plotValid(const CvPlot* pPlot) const
 
 	case DOMAIN_LAND:
 
-		if (!pPlot->isWater() || canMoveAllTerrain() || pPlot->isCanMoveLandUnits())
+		if (!pPlot->isWater() || canMoveAllTerrain() || pPlot->isSeaTunnel())
 		{
 			return true;
 		}

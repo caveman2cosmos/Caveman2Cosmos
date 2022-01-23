@@ -30371,6 +30371,11 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_NO_IMPROVEMENT"));
 	}
 
+	if (feature.isNoBonus())
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_NO_BONUS"));
+	}
+
 	if (feature.getPopDestroys() == -1)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED"));

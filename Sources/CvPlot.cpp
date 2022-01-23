@@ -2297,10 +2297,16 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		return false;
 	}
 
+	const FeatureTypes eFeature = getFeatureType();
+
+	if (eFeature != NO_FEATURE && GC.getFeatureInfo(eFeature).isNoBonus())
+	{
+		return false;
+	}
 	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 	if (!bonus.isTerrain(getTerrainType())
-	&& (getFeatureType() == NO_FEATURE || !bonus.isFeature(getFeatureType()) || !bonus.isFeatureTerrain(getTerrainType())))
+	&& (eFeature == NO_FEATURE || !bonus.isFeature(eFeature) || !bonus.isFeatureTerrain(getTerrainType())))
 	{
 		return false;
 	}
@@ -5052,29 +5058,27 @@ bool CvPlot::canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature) co
 		return false;
 	}
 
-	const CvFeatureInfo& kFeature = GC.getFeatureInfo(eFeature);
+	const CvFeatureInfo& feature = GC.getFeatureInfo(eFeature);
 
-	if (!kFeature.isTerrain(getTerrainType()))
+	if (!feature.isTerrain(getTerrainType()))
 	{
 		return false;
 	}
-	if (kFeature.isNoCoast() && isCoastalLand())
+	if (feature.isNoBonus() && getBonusType() != NO_BONUS
+	||  feature.isNoCoast() && isCoastalLand()
+	||  feature.isNoRiver() && isRiver())
 	{
 		return false;
 	}
-	if (kFeature.isNoRiver() && isRiver())
+	if (feature.isRequiresFlatlands() && isHills())
 	{
 		return false;
 	}
-	if (kFeature.isRequiresFlatlands() && isHills())
+	if (feature.isNoAdjacent() && algo::any_of(adjacent(), CvPlot::fn::getFeatureType() == eFeature))
 	{
 		return false;
 	}
-	if (kFeature.isNoAdjacent() && algo::any_of(adjacent(), CvPlot::fn::getFeatureType() == eFeature))
-	{
-		return false;
-	}
-	if (kFeature.isRequiresRiver() && !isRiver())
+	if (feature.isRequiresRiver() && !isRiver())
 	{
 		return false;
 	}
@@ -5084,59 +5088,19 @@ bool CvPlot::canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature) co
 
 bool CvPlot::isRoute() const
 {
-	return (getRouteType() != NO_ROUTE);
+	return getRouteType() != NO_ROUTE;
 }
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-bool CvPlot::isCanMoveAllUnits() const
-{
-	return false;
-}
-
-bool CvPlot::isCanMoveLandUnits() const
-{
-	//Check is only to determine if there's a tunnel.
-	if (isSeaTunnel())
-	{
-		return true;
-	}
-
-	return isCanMoveAllUnits();
-}
-
+//Check is to determine if there's a way for a sea unit to be on the plot.
 bool CvPlot::isCanMoveSeaUnits() const
 {
-	//Check is to determine if there's a way for a sea unit to be on the plot.
-	if (getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isCanMoveSeaUnits())
-	{
-		return true;
-	}
-	if (isWater())
-	{
-		return true;
-	}
-	return isCanMoveAllUnits();
-}
-
-bool CvPlot::isCanUseRouteLandUnits() const
-{
-	return true;
-}
-
-bool CvPlot::isCanUseRouteSeaUnits() const
-{
-	return !isSeaTunnel();
+	return isWater() || getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isCanMoveSeaUnits();
 }
 
 bool CvPlot::isSeaTunnel() const
 {
 	return isRoute() && GC.getRouteInfo(getRouteType()).isSeaTunnel();
 }
-
 
 bool CvPlot::isValidRoute(const CvUnit* pUnit) const
 {
@@ -5146,12 +5110,7 @@ bool CvPlot::isValidRoute(const CvUnit* pUnit) const
 
 		if (eTeam == NO_TEAM || GET_TEAM(pUnit->getTeam()).isFriendlyTerritory(eTeam) || GET_TEAM(pUnit->getTeam()).isOpenBorders(eTeam) || pUnit->isEnemyRoute())
 		{
-			if (pUnit->getDomainType() == DOMAIN_LAND && !isCanUseRouteLandUnits())
-			{
-				return false;
-			}
-
-			if (pUnit->getDomainType() == DOMAIN_SEA && !isCanUseRouteSeaUnits())
+			if (pUnit->getDomainType() == DOMAIN_SEA && isSeaTunnel())
 			{
 				return false;
 			}
@@ -5164,7 +5123,7 @@ bool CvPlot::isValidRoute(const CvUnit* pUnit) const
 
 bool CvPlot::isTradeNetworkImpassable(TeamTypes eTeam) const
 {
-	return (isImpassable(eTeam) && !isRiverNetwork(eTeam) && !isRoute());
+	return isImpassable(eTeam) && !isRiverNetwork(eTeam) && !isRoute();
 }
 
 bool CvPlot::isRiverNetwork(TeamTypes eTeam) const
@@ -5330,7 +5289,7 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 		return false;
 
 	case DOMAIN_LAND:
-		return (!isWater() || unit.canMoveAllTerrain() || isCanMoveLandUnits());
+		return (!isWater() || unit.canMoveAllTerrain() || isSeaTunnel());
 
 	case DOMAIN_IMMOBILE:
 		return (!isWater() || unit.canMoveAllTerrain());
@@ -7191,7 +7150,7 @@ void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 	}
 	const bool bOldRoute = eOldRoute != NO_ROUTE;
 	const bool bNewRoute = eNewValue != NO_ROUTE;
-	const bool bOldSeaRoute = isCanMoveLandUnits();
+	const bool bOldSeaRoute = isSeaTunnel();
 
 	if (isOwned())
 	{

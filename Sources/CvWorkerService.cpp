@@ -132,7 +132,7 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 		break;
 
 	case DOMAIN_LAND:
-		if (!plot->isWater() || unit->canMoveAllTerrain() || plot->isCanMoveLandUnits()) return true;
+		if (!plot->isWater() || unit->canMoveAllTerrain() || plot->isSeaTunnel()) return true;
 		break;
 
 	case DOMAIN_IMMOBILE:
