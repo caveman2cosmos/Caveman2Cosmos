@@ -259,6 +259,8 @@ public:
 	DllExport void getReligionDataForWB(bool bHolyCity, std::vector<CvWBData>& mapReligionData);
 	DllExport void getCorporationDataForWB(bool bHeadquarters, std::vector<CvWBData>& mapCorporationData);
 
+	void setFlagHelp(CvWStringBuffer& szBuffer);
+
 	// AIAndy: Game object relation texts
 	void getGameObjectName(CvWString& szString, GameObjectTypes eObject) const;
 	void buildGameObjectRelationString(CvWStringBuffer& szBuffer, GameObjectTypes eObject, RelationTypes eRelation, int iData) const;

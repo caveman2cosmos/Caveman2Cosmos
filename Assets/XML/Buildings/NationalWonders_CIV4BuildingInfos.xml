@@ -317,9 +317,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_PRESS_AGENCY</ConstructSound>
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -1296,9 +1293,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_SCHOOL</ConstructSound>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -1351,9 +1345,6 @@
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -1432,9 +1423,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHappiness>-1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-			</CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1563,7 +1551,7 @@
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
 			<iMaintenanceModifier>-15</iMaintenanceModifier>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -1947,9 +1935,6 @@
 			<iCost>486</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-			</CommerceChanges>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
 			</CommercePerPopChanges>
@@ -2038,7 +2023,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_GARBAGE_DUMP</ConstructSound>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<iGlobalHealth>1</iGlobalHealth>
 			<TechHealthChanges>
@@ -2079,7 +2064,7 @@
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
 			<iCost>3850</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-40</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -4264,7 +4249,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHealth>5</iHealth>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4589,7 +4574,7 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<iAirlift>1</iAirlift>
 			<DomainFreeExperiences>
@@ -4644,9 +4629,6 @@
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
-			</CommerceChanges>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -4809,7 +4791,7 @@
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-25</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<Properties>
 				<Property>
@@ -4855,9 +4837,6 @@
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
-			</CommerceChanges>
 			<FreeBuilding>BUILDING_SAFETY_NAT_LEGAL_DATABASE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
@@ -4897,7 +4876,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
+				<iCommerce>-15</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<PropertyManipulators>
@@ -6495,7 +6474,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<CommerceChanges>
-				<iCommerce>-25</iCommerce>
+				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -6557,7 +6536,7 @@
 			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
 			<iHealth>5</iHealth>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-30</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<ExtraFreeBonuses>
@@ -7519,9 +7498,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
-			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
-			</CommerceChanges>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>

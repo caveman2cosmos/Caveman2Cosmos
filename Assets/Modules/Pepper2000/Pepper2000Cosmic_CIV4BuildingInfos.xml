@@ -1078,9 +1078,6 @@
 			<iBombardDefense>10</iBombardDefense>
 			<iLineOfSight>1</iLineOfSight>
 			<iLocalDynamicDefense>10</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
-			</CommerceChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STAR_CANNON</BuildingType>
 			</ReplacementBuildings>

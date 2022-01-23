@@ -1083,9 +1083,6 @@
 			<iBombardDefense>10</iBombardDefense>
 			<iLineOfSight>1</iLineOfSight>
 			<iLocalDynamicDefense>10</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<Bonus>BONUS_CHRONOTON</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2396,9 +2393,6 @@
 			<iDamageAttackerChance>30</iDamageAttackerChance>
 			<iDamageToAttacker>30</iDamageToAttacker>
 			<iEspionageDefense>30</iEspionageDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
 			</PrereqInCityBuildings>
@@ -4463,9 +4457,6 @@
 			<iDamageAttackerChance>50</iDamageAttackerChance>
 			<iDamageToAttacker>50</iDamageToAttacker>
 			<bDamageAllAttackers>1</bDamageAllAttackers>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
 			</PrereqInCityBuildings>
@@ -5009,7 +5000,7 @@
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -5345,9 +5336,6 @@
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>-30</iCommerce>
-			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</BuildingType>
 				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
@@ -5622,9 +5610,6 @@
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>20</iDefense>
-			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 			</PrereqInCityBuildings>

@@ -1026,7 +1026,8 @@ bool CvGame::nextPlotUnit(const CvPlot* pPlot, bool bForward, bool bAuto, int iC
 	}
 	return false;
 }
-/*DllExport*/ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+
+/*DllExport*/ bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	OutputDebugString("exe is cycling units on plot ctrl+MouseWheelRoll\n");
 	return nextPlotUnit(pPlot, bForward, bAuto, iCount);

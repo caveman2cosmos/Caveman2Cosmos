@@ -443,9 +443,6 @@
 			<iLineOfSight>1</iLineOfSight>
 			<iBombardDefense>20</iBombardDefense>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
 			</PrereqInCityBuildings>

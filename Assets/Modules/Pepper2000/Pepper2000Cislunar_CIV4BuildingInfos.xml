@@ -378,9 +378,6 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iLineOfSight>1</iLineOfSight>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
@@ -573,9 +570,6 @@
 			<iBombardDefense>10</iBombardDefense>
 			<iLineOfSight>1</iLineOfSight>
 			<iLocalDynamicDefense>10</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_MATERIALS_LAB</Type>
@@ -847,9 +841,6 @@
 			<iDefense>50</iDefense>
 			<iBombardDefense>20</iBombardDefense>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Type>
@@ -1571,7 +1562,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -1616,9 +1607,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>-30</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_SHIELDING</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
@@ -1761,9 +1749,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ORBITAL_PRISON</MovieDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_PRISON_PEDIA</Civilopedia>
-			<CommerceChanges>
-				<iCommerce>-1000</iCommerce>
-			</CommerceChanges>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
