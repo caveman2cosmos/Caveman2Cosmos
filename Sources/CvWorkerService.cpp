@@ -37,7 +37,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 	const int maxDistanceFromBorder = unit->getGroup()->getNumUnits() > 1 && unit->getGroup()->canDefend() ? GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS() / 2 + 1 : -1;
 	BuildTypes overallBestBuild = NO_BUILD;
 	int bestBonusValue = 0;
-	int finalNumberOfMoveTurns = 0;
+	int numberOfMoveTurns = 0;
 	CvPlot* bestPlot = NULL;
 
 	CvReachablePlotSet plotSet(unit->getGroup(), iBasePathFlags, MAX_INT, true, maxDistanceFromBorder);
@@ -75,12 +75,6 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 			tempDefenseValue += potentialImprovement->getDefenseModifier() / 10;
 			tempDefenseValue += (potentialImprovement->isZOCSource() ? 3 : 0);
 
-			const int tempDefenseValue = (
-				1 // minimum 1 value for providing the bonus.
-				+ potentialImprovement->getAirBombDefense() / 10
-				+ potentialImprovement->getDefenseModifier() / 10
-				+ (gameOptionZoneOfControl && potentialImprovement->isZOCSource() ? 3 : 0)
-			);
 			if (tempPlotBuild != NO_BUILD) {
 				if (tempDefenseValue > bestDefenseValue) {
 					bestDefenseValue = tempDefenseValue;
@@ -95,24 +89,22 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 
 		const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
 
-		int numberOfMoveTurns = 0;
 		if (!unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns)) continue;
 
-		const int tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType) / std::max(1, numberOfMoveTurns));
+		tempBonusValue = tempBonusValue / std::max(1, numberOfMoveTurns);
 
 		if (numberOfMoveTurns <= allowedMovementTurns) {
 			if (bestBonusValue < tempBonusValue) {
 				bestBonusValue = tempBonusValue;
 				overallBestBuild = bestBuildForPlot;
 				bestPlot = loopedPlot;
-				finalNumberOfMoveTurns = numberOfMoveTurns;
 			}
 		}
 	}
 	if (overallBestBuild == NO_BUILD) return false;
 	MissionTypes eBestMission = MISSION_MOVE_TO;
 
-	if (finalNumberOfMoveTurns >= stepDistance(unit->getX(), unit->getY(), bestPlot->getX(), bestPlot->getY())) {
+	if (numberOfMoveTurns >= stepDistance(unit->getX(), unit->getY(), bestPlot->getX(), bestPlot->getY())) {
 		eBestMission = MISSION_ROUTE_TO;
 	}
 

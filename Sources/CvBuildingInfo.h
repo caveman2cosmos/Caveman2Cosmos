@@ -488,7 +488,6 @@ public:
 	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
 	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass3();
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
@@ -496,6 +495,7 @@ public:
 	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
 	void setNotShowInCity();
 
 	bool m_bNoLimit;

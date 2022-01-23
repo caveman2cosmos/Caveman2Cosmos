@@ -2269,7 +2269,6 @@ public:
 
 	const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra, UnitArtStyleTypes eStyle) const;
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
@@ -2279,6 +2278,8 @@ public:
 	void doPostLoadCaching(uint32_t eThis);
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 	int m_iDCMBombRange;
@@ -3894,7 +3895,6 @@ public:
 	const std::vector<TerrainStructs>& getTerrainStructs() const	{ return m_aTerrainStructs; }
 	const std::vector<PlaceBonusTypes>& getPlaceBonusTypes() const	{ return m_aPlaceBonusTypes; }
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvBuildInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
@@ -3903,6 +3903,8 @@ public:
 	//----------------------PRIVATE MEMBER VARIABLES----------------------------
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	bool m_bDisabled;
 	bool m_bKill;
 
@@ -5676,12 +5678,13 @@ public:
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
-	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvTraitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
 private:
+	void getDataMembers(CvInfoUtil& util);
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 	bool** m_ppbFreePromotionUnitCombats;

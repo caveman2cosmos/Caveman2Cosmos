@@ -1985,7 +1985,7 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
 		.add(m_freeBonuses, L"ExtraFreeBonuses")
-		.add(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
+		.addWithDelayedResolution(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
 	;
 }
 
