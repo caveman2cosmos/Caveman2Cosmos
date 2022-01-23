@@ -581,6 +581,7 @@ public:
 	int64_t getUnitUpkeepMilitary100() const;
 	int64_t getUnitUpkeepMilitary() const;
 	int64_t getUnitUpkeepMilitaryNet() const;
+	int64_t getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep = MAX_INT) const;
 	int64_t calcFinalUnitUpkeep(const bool bReal=true);
 	int64_t getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);

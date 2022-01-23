@@ -711,7 +711,7 @@ public:
 	bool airlift(int iX, int iY);
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
-	bool canNuke(const CvPlot* pPlot) const;
+	bool canNuke() const;
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
@@ -1737,6 +1737,7 @@ public:
 	PlayerTypes m_eOriginalOwner;
 
 	bool isWorker() const;
+	CvCity* getWorkerAssignedCity() const;
 
 protected:
 	int m_iDCMBombRange;

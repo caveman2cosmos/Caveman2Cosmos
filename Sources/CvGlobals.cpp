@@ -2672,10 +2672,15 @@ void cvInternalGlobals::infoTypeFromStringReset()
 	m_infosMap.clear();
 }
 
-void cvInternalGlobals::addToInfosVectors(void *infoVector)
+void cvInternalGlobals::addToInfosVectors(void* infoVector, InfoClassTypes eInfoClass)
 {
-	std::vector<CvInfoBase *> *infoBaseVector = (std::vector<CvInfoBase *> *) infoVector;
-	m_aInfoVectors.push_back(infoBaseVector);
+	m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(infoVector));
+
+	if (eInfoClass > NO_INFO_CLASS)
+	{
+		static uint16_t numClassesLoaded = 0;
+		m_infoClassXmlLoadOrder[eInfoClass] = ++numClassesLoaded;
+	}
 }
 
 void cvInternalGlobals::infosReset()
@@ -2756,6 +2761,11 @@ void cvInternalGlobals::reprocessSigns()
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
+
+bool cvInternalGlobals::isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const
+{
+	return m_infoClassXmlLoadOrder[eLoadingClass] <= m_infoClassXmlLoadOrder[eRefClass];
+}
 
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
 {

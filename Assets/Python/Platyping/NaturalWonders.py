@@ -12,13 +12,14 @@ class NaturalWonders:
 		self.lLatitude = [("FEATURE_PLATY_AURORA", 70, 90)]	## Min Latitude, Max Latitude
 
 	def placeNaturalWonders(self):
+		MAP = GC.getMap()
 		GAME = GC.getGame()
 		for iFeature in xrange(GC.getNumFeatureInfos()):
 			sType = GC.getFeatureInfo(iFeature).getType()
 			if sType.find("FEATURE_PLATY_") == -1:
 				continue
 			WonderPlot = []
-			for pPlot in CyMap().plots():
+			for pPlot in MAP.plots():
 				if pPlot.getBonusType(-1) > -1:
 					continue
 				## Nearby Plot Check ##
@@ -33,7 +34,7 @@ class NaturalWonders:
 
 				for x in xrange(pPlot.getX() - iRadius, pPlot.getX() + iRadius + 1):
 					for y in xrange(pPlot.getY() - iRadius, pPlot.getY() + iRadius + 1):
-						pAdjacentPlot = CyMap().plot(x, y)
+						pAdjacentPlot = MAP.plot(x, y)
 
 						if pAdjacentPlot.getFeatureType() > -1 and GC.getFeatureInfo(pAdjacentPlot.getFeatureType()).getType().find("FEATURE_PLATY_") > -1:
 							bUnsuitable = True
@@ -66,7 +67,7 @@ class NaturalWonders:
 						for y in xrange(pPlot.getY() - 1, pPlot.getY() + 2):
 							if x == pPlot.getX() and y == pPlot.getY():
 								continue
-							pAdjacentPlot = CyMap().plot(x, y)
+							pAdjacentPlot = MAP.plot(x, y)
 							if pAdjacentPlot.canHaveFeature(iFeature):
 								if pAdjacentPlot.getBonusType(-1) > -1:
 									continue
