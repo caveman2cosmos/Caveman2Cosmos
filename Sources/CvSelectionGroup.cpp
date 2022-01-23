@@ -2755,7 +2755,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			break;
 
 		case INTERFACEMODE_NUKE:
-			if (pLoopUnit->canNuke(pLoopUnit->plot()) && pLoopUnit->canMove())
+			if (pLoopUnit->canNuke() && pLoopUnit->canMove())
 			{
 				return true;
 			}

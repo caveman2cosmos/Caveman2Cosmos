@@ -13660,6 +13660,7 @@ m_bAddsFreshWater(false),
 m_bImpassable(false),
 m_bNoCity(false),
 m_bNoImprovement(false),
+m_bNoBonus(false),
 m_bVisibleAlways(false),
 m_bNukeImmune(false),
 m_bCountsAsPeak(false),
@@ -13994,6 +13995,7 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCity, L"bNoCity");
 	pXML->GetOptionalChildXmlValByName(&m_bNoImprovement, L"bNoImprovement");
+	pXML->GetOptionalChildXmlValByName(&m_bNoBonus, L"bNoBonus");
 	pXML->GetOptionalChildXmlValByName(&m_bVisibleAlways, L"bVisibleAlways");
 	pXML->GetOptionalChildXmlValByName(&m_bNukeImmune, L"bNukeImmune");
 	pXML->GetOptionalChildXmlValByName(&m_bCountsAsPeak, L"bCountsAsPeak");
@@ -14099,6 +14101,7 @@ void CvFeatureInfo::copyNonDefaults(const CvFeatureInfo* pClassInfo)
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
 	if (isNoCity() == bDefault) m_bNoCity = pClassInfo->isNoCity();
 	if (isNoImprovement() == bDefault) m_bNoImprovement = pClassInfo->isNoImprovement();
+	if (m_bNoBonus == bDefault) m_bNoBonus = pClassInfo->isNoBonus();
 	if (isVisibleAlways() == bDefault) m_bVisibleAlways = pClassInfo->isVisibleAlways();
 	if (isNukeImmune() == bDefault) m_bNukeImmune = pClassInfo->isNukeImmune();
 	if (isCountsAsPeak() == bDefault) m_bCountsAsPeak = pClassInfo->isCountsAsPeak();
@@ -14184,6 +14187,7 @@ void CvFeatureInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_bImpassable);
 	CheckSum(iSum, m_bNoCity);
 	CheckSum(iSum, m_bNoImprovement);
+	CheckSum(iSum, m_bNoBonus);
 	CheckSum(iSum, m_bVisibleAlways);
 	CheckSum(iSum, m_bNukeImmune);
 	CheckSum(iSum, m_bCountsAsPeak);

@@ -417,7 +417,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			GET_PLAYER(getOwner()).changeNumNukeUnits(1);
 		}
 
-		if (m_pUnitInfo->isMilitarySupport())
+		if (isMilitaryBranch())
 		{
 			GET_PLAYER(getOwner()).changeNumMilitaryUnits(1);
 		}
@@ -1669,7 +1669,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
 
-	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
+	owner.changeUnitUpkeep(-getUpkeep100(), isMilitaryBranch());
 
 	owner.changeUnitCount(m_eUnitType, -1);
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
@@ -1684,7 +1684,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		owner.changeNumNukeUnits(-1);
 	}
 
-	if (m_pUnitInfo->isMilitarySupport())
+	if (isMilitaryBranch())
 	{
 		owner.changeNumMilitaryUnits(-1);
 	}
@@ -1922,7 +1922,7 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 		}
 
 		// Dale - NB: A-Bomb
-		if (canNuke(pPlot))
+		if (canNuke())
 		{
 			kill(true, NO_PLAYER, true);
 			return;
@@ -5928,7 +5928,7 @@ bool CvUnit::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRigh
 // Returns the ID of the team to declare war against
 TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 {
-	FAssert(isHuman());
+	FAssert(isHuman() || GET_PLAYER(getOwner()).isHumanDisabled());
 
 	if (getDomainType() != DOMAIN_AIR)
 	{
@@ -6139,7 +6139,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 
 	case DOMAIN_LAND:
 
-		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isCanMoveLandUnits())
+		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isSeaTunnel())
 		{
 			if (!pPlot->isCity() || (pPlot->isCity() && 0 == GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES()))
 			{
@@ -7439,33 +7439,10 @@ bool CvUnit::shouldLoadOnMove(const CvPlot* pPlot) const
 	switch (getDomainType())
 	{
 	case DOMAIN_LAND:
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       10/30/09                     Mongoose & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* original bts code
-		if (pPlot->isWater())
-*/
-		// From Mongoose SDK
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-		if (pPlot->isWater() && !canMoveAllTerrain())
-*/
-		if ((pPlot->isWater() && !canMoveAllTerrain()) && !pPlot->isCanMoveLandUnits())
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		if ((pPlot->isWater() && !canMoveAllTerrain()) && !pPlot->isSeaTunnel())
 		{
 			return true;
 		}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 		break;
 	case DOMAIN_AIR:
 		if (!pPlot->isFriendlyCity(*this, true))
@@ -7972,37 +7949,26 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTypes eHealAsType) const
 {
 	PROFILE_FUNC();
-
-	CvCity* pCity;
-	CvUnit* pHealUnit = NULL;
-	int iTotalHeal;
-	int iHeal;
-	int iBestHeal;
-	int iI;
-	bool bIsValid = false;
-
-	for (iI = 0; iI < m_pUnitInfo->getNumHealAsTypes(); iI++)
 	{
-		if (m_pUnitInfo->getHealAsType(iI) == eHealAsType)
+		bool bIsValid = false;
+		for (int iI = 0; iI < m_pUnitInfo->getNumHealAsTypes(); iI++)
 		{
-			bIsValid = true;
-			break;
+			if (m_pUnitInfo->getHealAsType(iI) == eHealAsType)
+			{
+				bIsValid = true;
+				break;
+			}
+		}
+		if (!bIsValid)
+		{
+			return MAX_INT;
 		}
 	}
-
-	if (!bIsValid)
-	{
-		return MAX_INT;
-	}
-
-	pCity = pPlot->getPlotCity();
-
-	iTotalHeal = 0;
-
 	if (pPlot->getTotalTurnDamage(this) > 0)
 	{
 		return 0;
 	}
+	int iTotalHeal = 0;
 
 	if (!hasNoSelfHeal() || (getSelfHealModifierTotal() < 0))
 	{
@@ -8012,40 +7978,40 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 	if (pPlot->isCity(true, getTeam()))
 	{
 		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+
+		const CvCity* pCity = pPlot->getPlotCity();
+
 		if (pCity && !pCity->isOccupation())
 		{
-			iTotalHeal += pCity->getHealRate();
-			iTotalHeal += pCity->getHealUnitCombatTypeTotal(eHealAsType);
+			iTotalHeal += pCity->getHealRate() + pCity->getHealUnitCombatTypeTotal(eHealAsType);
 		}
 	}
 	else if (!hasNoSelfHeal())
 	{
-		if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()))
+		if (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()))
 		{
-			if (isEnemy(pPlot->getTeam(), pPlot))
-			{
-				iTotalHeal += (GC.getENEMY_HEAL_RATE() + getExtraEnemyHeal());
-			}
-			else
-			{
-				iTotalHeal += (GC.getNEUTRAL_HEAL_RATE() + getExtraNeutralHeal());
-			}
+			iTotalHeal += GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal();
+		}
+		else if (isEnemy(pPlot->getTeam(), pPlot))
+		{
+			iTotalHeal += GC.getENEMY_HEAL_RATE() + getExtraEnemyHeal();
 		}
 		else
 		{
-			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
+			iTotalHeal += GC.getNEUTRAL_HEAL_RATE() + getExtraNeutralHeal();
 		}
 	}
 
 	// XXX optimize this (save it?)
-	iBestHeal = 0;
+	int iBestHeal = 0;
+	CvUnit* pHealUnit = NULL;
 
 	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
 		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 		{
-			iHeal = pLoopUnit->getSameTileHeal();
-			iHeal += pLoopUnit->getHealUnitCombatTypeTotal(eHealAsType);
+			const int iHeal = pLoopUnit->getSameTileHeal() + pLoopUnit->getHealUnitCombatTypeTotal(eHealAsType);
+
 			//if (pLoopUnit->getSameTileHeal() > 0 || pLoopUnit->getHealUnitCombatTypeTotal(eHealAsType) > 0)
 			//{
 			//	iHeal += pLoopUnit->establishModifier();
@@ -8058,15 +8024,14 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 			}
 		}
 	}
-
 	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
 		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 		{
 			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 			{
-				iHeal = pLoopUnit->getAdjacentTileHeal();
-				iHeal += pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType);
+				const int iHeal = pLoopUnit->getAdjacentTileHeal() + pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType);
+
 				//if (pLoopUnit->getAdjacentTileHeal() > 0 || pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType) > 0)
 				//{
 				//	iHeal += pLoopUnit->establishModifier();
@@ -8080,81 +8045,56 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 			}
 		}
 	}
-
-	int iExp = 0;
 	if (pHealUnit != NULL && bHealCheck)
 	{
 		pHealUnit->changeHealSupportUsed(1);
-		iExp = (10/m_pUnitInfo->getNumHealAsTypes());
-		pHealUnit->changeExperience100(iExp);
+		pHealUnit->changeExperience100(10 / m_pUnitInfo->getNumHealAsTypes());
 	}
-
 	iTotalHeal += iBestHeal;
-	// XXX
-	if (!hasNoSelfHeal())
-	{
-		iTotalHeal = std::max(1, iTotalHeal);
-	}
-	else
-	{
-		iTotalHeal = std::max(0, iTotalHeal);
-	}
 
-	return iTotalHeal;
+	if (hasNoSelfHeal())
+	{
+		return std::max(0, iTotalHeal);
+	}
+	return std::max(1, iTotalHeal);
 }
 
 
 int CvUnit::healTurns(const CvPlot* pPlot) const
 {
-	int iHeal;
-	int iTurns = 0;
-	int iI;
-
-	if (!isHurt())
+	if (!isHurt() || pPlot->getTotalTurnDamage(this) > 0)
 	{
 		return 0;
 	}
-
-	if (pPlot->getTotalTurnDamage(this) > 0)
-	{
-		return 0;
-	}
-
-	int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
-	bool bHasHealAs = (iNumHealAs > 0);
+	const int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
 
 	//Find what will take the longest to heal and use that rate
-	int iNumTurns = 0;
-	int iBestNumTurns = 0;
-	bool bNeedsHealing = false;
-	int iHealRate = 0;
-	int iHealDamage = 0;
-	if (bHasHealAs)
+	if (iNumHealAs > 0)
 	{
-		for (iI = 0; iI < iNumHealAs; iI++)
+		bool bNeedsHealing = false;
+		int iBestNumTurns = 0;
+
+		for (int iI = 0; iI < iNumHealAs; iI++)
 		{
-			UnitCombatTypes eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
-			iHealDamage = getHealAsDamage(eHealAsType);
+			const UnitCombatTypes eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
+			const int iHealDamage = getHealAsDamage(eHealAsType);
 			if (iHealDamage > 0)
 			{
 				bNeedsHealing = true;
-				iHealRate = getHealRateAsType(pPlot, false, eHealAsType);
-				if (iHealRate > 0  && iHealRate < MAX_INT)
+				const int iHealRate = getHealRateAsType(pPlot, false, eHealAsType);
+
+				if (iHealRate > 0 && iHealRate < MAX_INT)
 				{
-					iNumTurns = (iHealDamage/ iHealRate);
-					if ((getHealAsDamage(eHealAsType) % iHealRate) != 0)
+					int iNumTurns = iHealDamage / iHealRate;
+					if ((iHealRate % iHealRate) != 0)
 					{
 						iNumTurns++;
 					}
-				}
-				else
-				{
-					iNumTurns = 0;
-				}
-				//Note we're actually looking for the slowest to heal here to use that for the # of rounds to heal total
-				if (iNumTurns > iBestNumTurns)
-				{
-					iBestNumTurns = iNumTurns;
+					//Note we're actually looking for the slowest to heal here to use that for the # of rounds to heal total
+					if (iNumTurns > iBestNumTurns)
+					{
+						iBestNumTurns = iNumTurns;
+					}
 				}
 			}
 		}
@@ -8164,45 +8104,38 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 		}
 	}
 
-	iHeal = healRate(pPlot);
+	const int iHeal = healRate(pPlot);
 
 	if (iHeal > 0)
 	{
-		iTurns = (getDamage() / iHeal);
+		int iTurns = getDamage() / iHeal;
 
 		if ((getDamage() % iHeal) != 0)
 		{
 			iTurns++;
 		}
-
 		return iTurns;
 	}
-	else
-	{
-		return MAX_INT;
-	}
+	return MAX_INT;
 }
 
 int CvUnit::healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const
 {
-	int iNumTurns = MAX_INT;
-	int iHealAs = 0;
-
-	if (getHealAsDamage(eHealAsType) > 0)
+	const int iHealDamage = getHealAsDamage(eHealAsType);
+	if (iHealDamage < 1)
 	{
-		iHealAs = getHealRateAsType(pPlot, false, eHealAsType);
-		if (iHealAs > 0)
-		{
-			iNumTurns = (getHealAsDamage(eHealAsType)/ iHealAs);
-			if ((getHealAsDamage(eHealAsType) % iHealAs) != 0)
-			{
-				iNumTurns++;
-			}
-		}
-		else
-		{
-			iNumTurns = MAX_INT;
-		}
+		return MAX_INT;
+	}
+	const int iHealAs = getHealRateAsType(pPlot, false, eHealAsType);
+	if (iHealAs < 1)
+	{
+		return MAX_INT;
+	}
+	int iNumTurns = iHealDamage / iHealAs;
+
+	if ((iHealDamage % iHealAs) != 0)
+	{
+		iNumTurns++;
 	}
 	return iNumTurns;
 }
@@ -8300,50 +8233,23 @@ void CvUnit::doAffliction(const bool bHeal)
 
 bool CvUnit::canAirlift(const CvPlot* pPlot) const
 {
-	CvCity* pCity;
-
-	if (getDomainType() != DOMAIN_LAND)
+	if (getDomainType() != DOMAIN_LAND || hasMoved())
 	{
 		return false;
 	}
+	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (hasMoved())
-	{
-		return false;
-	}
-
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
-	{
-		return false;
-	}
-
-	if (pCity->getCurrAirlift() >= pCity->getMaxAirlift())
-	{
-		return false;
-	}
-
-	if (pCity->getTeam() != getTeam())
-	{
-		return false;
-	}
-
-	return true;
+	return pCity && pCity->getCurrAirlift() < pCity->getMaxAirlift() && pCity->getTeam() == getTeam();
 }
 
 
 bool CvUnit::canAirliftAt(const CvPlot* pPlot, int iX, int iY) const
 {
-	CvPlot* pTargetPlot;
-	CvCity* pTargetCity;
-
 	if (!canAirlift(pPlot))
 	{
 		return false;
 	}
-
-	pTargetPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (!canEnterPlot(pTargetPlot))
 	{
@@ -8351,84 +8257,55 @@ bool CvUnit::canAirliftAt(const CvPlot* pPlot, int iX, int iY) const
 	}
 
 	// Super Forts begin *airlift*
-	if (pTargetPlot->getTeam() != NO_TEAM)
+	if (pTargetPlot->getTeam() != NO_TEAM
+	&& (pTargetPlot->getTeam() == getTeam() || GET_TEAM(pTargetPlot->getTeam()).isVassal(getTeam()))
+	&&  pTargetPlot->getImprovementType() != NO_IMPROVEMENT
+	&& GC.getImprovementInfo(pTargetPlot->getImprovementType()).isActsAsCity())
 	{
-		if (pTargetPlot->getTeam() == getTeam() || GET_TEAM(pTargetPlot->getTeam()).isVassal(getTeam()))
-		{
-			if (pTargetPlot->getImprovementType() != NO_IMPROVEMENT)
-			{
-				if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).isActsAsCity())
-				{
-					return true;
-				}
-			}
-		}
+		return true;
 	}
 	// Super Forts end
-
-	pTargetCity = pTargetPlot->getPlotCity();
-
-	if (pTargetCity == NULL)
 	{
-		return false;
-	}
+		const CvCity* pTargetCity = pTargetPlot->getPlotCity();
 
-	if (pTargetCity->isAirliftTargeted())
-	{
-		return false;
-	}
-
-	if (pTargetCity->getTeam() != getTeam() && !GET_TEAM(pTargetCity->getTeam()).isVassal(getTeam()))
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/7/10                                                */
-/*                                                                                              */
-/*  Airlift Range                                                                               */
-/************************************************************************************************/
-	if (!GET_TEAM(getTeam()).isRebaseAnywhere())
-	{
-		if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE))
+		if (pTargetCity == NULL || pTargetCity->isAirliftTargeted())
 		{
-			if (plotDistance(pPlot->getX(), pPlot->getY(), iX, iY) > (GC.getGame().getModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)))
-			{
-				return false;
-			}
+			return false;
+		}
+
+		if (pTargetCity->getTeam() != getTeam() && !GET_TEAM(pTargetCity->getTeam()).isVassal(getTeam()))
+		{
+			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	if (!GET_TEAM(getTeam()).isRebaseAnywhere()
+	&& GC.getGame().isModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)
+	&& plotDistance(pPlot->getX(), pPlot->getY(), iX, iY) > GC.getGame().getModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE))
+	{
+		return false;
+	}
 	return true;
 }
 
 
 bool CvUnit::airlift(int iX, int iY)
 {
-	CvCity* pCity;
-	CvCity* pTargetCity;
-	CvPlot* pTargetPlot;
-
 	if (!canAirliftAt(plot(), iX, iY))
 	{
 		return false;
 	}
+	CvCity* pCity = plot()->getPlotCity();
 
-	pCity = plot()->getPlotCity();
-	FAssert(pCity != NULL);
-	pTargetPlot = GC.getMap().plot(iX, iY);
-	FAssert(pTargetPlot != NULL);
-	pTargetCity = pTargetPlot->getPlotCity();
-	FAssert(pTargetCity != NULL);
-	FAssert(pCity != pTargetCity);
+	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+
+	FAssert(pCity != NULL && pTargetPlot != NULL);
 
 	// Super Forts begin *airlift* - added if statement to allow airlifts to plots that aren't cities
 	if (pTargetPlot->isCity())
 	{
-		pTargetCity = pTargetPlot->getPlotCity();
-		FAssert(pTargetCity != NULL);
-		FAssert(pCity != pTargetCity);
+		CvCity* pTargetCity = pTargetPlot->getPlotCity();
+
+		FAssert(pTargetCity != NULL && pCity != pTargetCity);
 
 		if (pTargetCity->getMaxAirlift() == 0)
 		{
@@ -8469,30 +8346,27 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 }
 
 
-bool CvUnit::canNuke(const CvPlot* pPlot) const
+bool CvUnit::canNuke() const
 {
-	if (nukeRange() == -1)
-	{
-		return false;
-	}
-
-	return true;
+	return nukeRange() > -1;
 }
 
 
 bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 {
-	if (!canNuke(pPlot))
+	if (!canNuke())
 	{
 		return false;
 	}
-	const int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
+	{
+		const int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
 
-	if (iDistance <= nukeRange() || airRange() > 0 && iDistance > airRange())
-	{
-		return false;
+		if (iDistance <= nukeRange() || airRange() > 0 && iDistance > airRange())
+		{
+			return false;
+		}
 	}
-	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
@@ -13004,7 +12878,7 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 			return true;
 		}
 
-		if (plot()->isCanMoveLandUnits())
+		if (plot()->isSeaTunnel())
 		{
 			const bool bIsAboveWater =
 				getDomainType() != DOMAIN_LAND
@@ -14238,7 +14112,7 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 	}
 
 	//tunnel fixes
-	if (defender.plot()->isWater() && defender.plot()->isCanMoveLandUnits())
+	if (defender.plot()->isWater() && defender.plot()->isSeaTunnel())
 	{
 		//Sea units and air units and hovering units can't be attacked by land units in tunnels (Unless the land unit is hovering)
 		if ((defender.getDomainType() != DOMAIN_LAND || defender.canMoveAllTerrain()) && getDomainType() == DOMAIN_LAND && !canMoveAllTerrain())
@@ -18125,7 +17999,7 @@ void CvUnit::calcUpkeep100()
 			// Update player total
 			if (m_iUpkeep100 != iOldUpkeep)
 			{
-				GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, m_pUnitInfo->isMilitarySupport());
+				GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, isMilitaryBranch());
 			}
 		}
 	}
@@ -39699,4 +39573,18 @@ ReligionTypes CvUnit::getReligion() const
 bool CvUnit::isWorker() const
 {
 	return m_worker != NULL;
+}
+
+CvCity* CvUnit::getWorkerAssignedCity() const
+{
+	if (getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
+	{
+		const CvPlot* missionPlot = getGroup()->AI_getMissionAIPlot();
+
+		if (missionPlot != NULL)
+		{
+			return missionPlot->getWorkingCity();
+		}
+	}
+	return NULL;
 }
