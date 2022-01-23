@@ -11615,8 +11615,8 @@ void CvCityAI::AI_updateWorkersNeededHere()
 	int iWorkersHave = 0;
 
 	if (getProductionUnit() != NO_UNIT
-		&& getProductionUnitAI() == UNITAI_WORKER
-		&& getProductionTurnsLeft() <= 2)
+	&& getProductionUnitAI() == UNITAI_WORKER
+	&& getProductionTurnsLeft() <= 2)
 	{
 		iWorkersHave++;
 	}

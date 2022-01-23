@@ -39597,3 +39597,17 @@ bool CvUnit::isWorker() const
 {
 	return m_worker != NULL;
 }
+
+CvCity* CvUnit::getWorkerAssignedCity() const
+{
+	if (getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
+	{
+		const CvPlot* missionPlot = getGroup()->AI_getMissionAIPlot();
+
+		if (missionPlot != NULL)
+		{
+			return missionPlot->getWorkingCity();
+		}
+	}
+	return NULL;
+}

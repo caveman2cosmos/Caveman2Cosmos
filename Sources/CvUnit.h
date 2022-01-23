@@ -1737,6 +1737,7 @@ public:
 	PlayerTypes m_eOriginalOwner;
 
 	bool isWorker() const;
+	CvCity* getWorkerAssignedCity() const;
 
 protected:
 	int m_iDCMBombRange;
