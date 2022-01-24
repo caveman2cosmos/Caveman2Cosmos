@@ -1114,12 +1114,44 @@
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
+		<English>Folklore - Badger</English>
+		<French>Mythe du Blaireau</French>
+		<Italian>Mito del tasso</Italian>
+		<Polish>Mit - Borsuk</Polish>
+		<Russian>Ìèô î áàðñóêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
 		<English>Folklore - Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
 		<Italian>Mito del tapiro di Baird</Italian>
 		<Polish>Mit - Tapir Panamski</Polish>
 		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALLPYTHON</Tag>
+		<English>Folklore - Ball Python</English>
+		<French>Mythe du Python royal</French>
+		<Italian>Mito del pitone reale</Italian>
+		<Polish>Mit - Pyton Królewski</Polish>
+		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARYAPE</Tag>
+		<English>Folklore - Barbary Macaque</English>
+		<French>Mythe du Macaque berbère</French>
+		<Italian>Mito della bertuccia</Italian>
+		<Polish>Mit - Magot</Polish>
+		<Russian>Ìèô î ìàãîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BEAVER</Tag>
+		<English>Folklore - Beaver</English>
+		<French>Mythe du Castor</French>
+		<Italian>Mito del castoro</Italian>
+		<Polish>Mit - Bóbr</Polish>
+		<Russian>Ìèô î áîáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
@@ -1130,12 +1162,28 @@
 		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BENGALTIGER</Tag>
+		<English>Folklore - Bengal Tiger</English>
+		<French>Mythe du Tigre du Bengale</French>
+		<Italian>Mito della tigre del Bengala</Italian>
+		<Polish>Mit - Tygrys Bengalski</Polish>
+		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BIRD</Tag>
 		<English>Folklore (T) - Birds</English>
 		<French>Mythe des Oiseaux (T)</French>
 		<Italian>Mito dell'uccello (T)</Italian>
 		<Polish>Mit (T) - Ptaki</Polish>
 		<Russian>Ìèô î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BISON</Tag>
+		<English>Folklore - Bison</English>
+		<French>Mythe du Bison</French>
+		<Italian>Mito del bisonte</Italian>
+		<Polish>Mit - Bizon</Polish>
+		<Russian>Ìèô î áèçîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
@@ -1154,12 +1202,34 @@
 		<Russian>Ìèô î êàáàíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BONGO</Tag>
+		<English>Folklore - Bongo</English>
+		<French>Mythe du Bongo</French>
+		<Italian>Mito del bongo</Italian>
+		<Russian>Ìèô î áîíãî</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Tag>
 		<English>Folklore - Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
 		<Italian>Mito del tapiro amazzonico</Italian>
 		<Polish>Mit - Tapir</Polish>
 		<Russian>Ìèô î áðàç. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUFFALO</Tag>
+		<English>Folklore - Cape Buffalo</English>
+		<French>Mythe du Buffle</French>
+		<Italian>Mito del bufalo africano</Italian>
+		<Russian>Ìèô î áóéâîëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUG</Tag>
+		<English>Folklore (T) - Bug</English>
+		<French>Mythe des insectes (T)</French>
+		<Italian>Mito degli insetti (T)</Italian>
+		<Polish>Mit (T) - Ptaki morskie</Polish>
+		<Russian>Ìèô î æóêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BULL</Tag>
@@ -1228,6 +1298,13 @@
 		<Russian>Ìèô î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_COBRA</Tag>
+		<English>Folklore - Cobra</English>
+		<French>Mythe du Cobra</French>
+		<Italian>Mito del cobra</Italian>
+		<Russian>Ìèô î êîáðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
 		<English>Folklore - Cod</English>
 		<French>Mythe de la Morue</French>
@@ -1249,6 +1326,13 @@
 		<Italian>Mito del coccodrillo (T)</Italian>
 		<Polish>Mit - Krokodyl</Polish>
 		<Russian>Ìèô î êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROW</Tag>
+		<English>Folklore - Crow</English>
+		<French>Mythe du Corbeau</French>
+		<Italian>Mito del corvo</Italian>
+		<Russian>Ìèô î âîðîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CUSCUS</Tag>
@@ -1415,6 +1499,21 @@
 		<Russian>Ìèô î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
+		<English>Folklore (T) - Flightless Birds</English>
+		<French>Mythe des Oiseaux marcheurs (T)</French>
+		<Italian>Mito degli uccelli che non volano (T)</Italian>
+		<Polish>Mit (T) - Ptaki-Nieloty</Polish>
+		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</Tag>
+		<English>Folklore - Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
+		<Italian>Mito della tartaruga delle Galapagos</Italian>
+		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR</Tag>
 		<English>Folklore - American Alligator</English>
 		<French>Mythe de l'Alligator d'Amérique</French>
@@ -1429,6 +1528,34 @@
 		<Italian>Mito dell'alligatore asiatico</Italian>
 		<Polish>Mit - Aligator Chiński</Polish>
 		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GAZELLE</Tag>
+		<English>Folklore - Thomson's Gazelle</English>
+		<French>Mythe de la Gazelle de Thomson</French>
+		<Italian>Mito della gazzella di Thomson</Italian>
+		<Russian>Ìèô î ãàçåëè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GELADA</Tag>
+		<English>Folklore - Gelada Monkey</English>
+		<French>Mythe du Babouin Gelada</French>
+		<Italian>Mito del babbuino Gelada</Italian>
+		<Russian>Ìèô î ãåëàäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GEMSBOK</Tag>
+		<English>Folklore - Gemsbok</English>
+		<French>Mythe de l'Oryx gazelle</French>
+		<Italian>Mito dell'orice gazzella</Italian>
+		<Russian>Ìèô î ñåðíîáûêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GERENUK</Tag>
+		<English>Folklore - Gerenuk</English>
+		<French>Mythe de la Gazelle de Waller</French>
+		<Italian>Mito del gerenuk</Italian>
+		<Russian>Ìèô î ãåðåíóêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
@@ -1461,6 +1588,13 @@
 		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GORILLA</Tag>
+		<English>Folklore - Gorilla</English>
+		<French>Mythe du Gorille</French>
+		<Italian>Mito del gorilla</Italian>
+		<Russian>Ìèô î ãîðèëëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREATWHITE_SHARK</Tag>
 		<English>Folklore - Great White Shark</English>
 		<French>Mythe - Grand Requin Blanc</French>
@@ -1474,6 +1608,13 @@
 		<French>Mythe du Loup gris</French>
 		<Italian>Mito del lupo grigio</Italian>
 		<Russian>Ìèô î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GULL</Tag>
+		<English>Folklore - Seagull</English>
+		<French>Mythe du Goéland</French>
+		<Italian>Mito del gabbiano</Italian>
+		<Russian>Ìèô î ÷àéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Tag>
@@ -1505,12 +1646,27 @@
 		<Russian>Ìèô î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORSE</Tag>
+		<English>Folklore - Horse</English>
+		<French>Mythe du Cheval</French>
+		<Italian>Mito del cavallo</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
 		<English>Folklore - Humpback Whale</English>
 		<French>Mythe de la Baleine à Bosses</French>
 		<Italian>Mito della megattera</Italian>
 		<Polish>Mit Humpbaka</Polish>
 		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HYENA</Tag>
+		<English>Folklore - Striped Hyena</English>
+		<French>Mythe de la Hyène rayée</French>
+		<Italian>Mito della iena striata</Italian>
+		<Russian>Ìèô î ãèåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_IBEX</Tag>
