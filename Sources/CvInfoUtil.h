@@ -5,6 +5,7 @@
 
 #include "CvInfoClassTraits.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
@@ -439,7 +440,7 @@ struct CvInfoUtil
 
 	static void publishPythonInterface()
 	{
-		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvInfoBase*>())
+		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvBuildingInfo*>())
 			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
 		;
 	}
