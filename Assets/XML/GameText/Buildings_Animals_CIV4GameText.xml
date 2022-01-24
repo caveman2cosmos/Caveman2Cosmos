@@ -1302,6 +1302,13 @@
 		<Russian>Ìèô î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Tag>
+		<English>Folklore - Donkey</English>
+		<French>Mythe de l'Ane</French>
+		<Italian>Mito dell'asino</Italian>
+		<Russian>Ìèô îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DRAGON</Tag>
 		<English>Folklore (E) - Dragon</English>
 		<French>Mythe du Dragon (E)</French>
@@ -1440,7 +1447,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTO</Tag>
-		<English>Folklore - Paleolithic Glyptodon</English>
+		<English>Folklore - Glyptodon</English>
 		<French>Mythe du Glyptodon</French>
 		<Italian>Mito del glittodonte</Italian>
 		<Russian>Ìèô î ãëèïòîäîíå</Russian>
@@ -1574,6 +1581,14 @@
 		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
+		<English>Folklore (T) - Tales of Fish</English>
+		<French>Mythe des Histoires de Poissons (T)</French>
+		<Italian>Mito dei racconti di pesca (T)</Italian>
+		<Polish>Mit (T) - Opowieści o Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOON</Tag>
 		<English>Folklore - Loon</English>
 		<French>Mythe du Plongeon</French>
@@ -1619,9 +1634,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
 		<English>Folklore (T) - Marsupial</English>
-		<French>Mythe du Marsupial</French>
-		<Italian>Mito dei marsupiali</Italian>
-		<Polish>Mit Torbacza</Polish>
+		<French>Mythe du Marsupial (T)</French>
+		<Italian>Mito dei marsupiali (T)</Italian>
+		<Polish>Mit (T) Torbacza</Polish>
 		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
@@ -1703,9 +1718,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
 		<English>Folklore (T) - Old Man of the Forest</English>
-		<French>Mythe de l'Ancien de la Forêt</French>
-		<Italian>Mito del Vecchio della foresta</Italian>
-		<Polish>Mit Starego człowieka z lasu</Polish>
+		<French>Mythe de l'Ancien de la Forêt (T)</French>
+		<Italian>Mito del Vecchio della foresta (T)</Italian>
+		<Polish>Mit (T) Starego człowieka z lasu</Polish>
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
@@ -1748,7 +1763,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Tag>
-		<English>Folklore - Paleolithic Ground Sloth</English>
+		<English>Folklore - Ground Sloth</English>
 		<French>Mythe du Xénarthre</French>
 		<Italian>Mito del bradipo paleolitico</Italian>
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
@@ -1756,8 +1771,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
 		<English>Folklore - Mammoth</English>
-		<French>Mythe du Mammouth Paléolithique</French>
-		<Italian>Mito del mammut paleolitico</Italian>
+		<French>Mythe du Mammouth</French>
+		<Italian>Mito del mammut</Italian>
 		<Polish>Mit Mamutów</Polish>
 		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
@@ -1829,9 +1844,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
 		<English>Folklore (T) - Ray</English>
-		<French>Mythe - la Raie</French>
-		<Italian>Mito della razza</Italian>
-		<Polish>Mit Manty</Polish>
+		<French>Mythe - la Raie (T)</French>
+		<Italian>Mito della razza (T)</Italian>
+		<Polish>Mit (T) Manty</Polish>
 		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1881,11 +1896,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
-		<English>Folklore - Crocodile</English>
-		<French>Mythe du Crocodile de rivière</French>
-		<Italian>Mito del coccodrillo di fiume</Italian>
-		<Polish>Mit - Krokodyl Błotny</Polish>
-		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
+		<English>Folklore - Crocodile (Small)</English>
+		<French>Mythe du Crocodile de rivière (petit)</French>
+		<Italian>Mito del coccodrillo di fiume (piccolo)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC_LARGE</Tag>
+		<English>Folklore - Crocodile (Large)</English>
+		<French>Mythe du Crocodile de rivière (grand)</French>
+		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</Tag>
@@ -1911,18 +1930,22 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC</Tag>
-		<English>Folklore - Saltwater Crocodile</English>
-		<French>Mythe du Crocodile de mer</French>
-		<Italian>Mito del coccodrillo di mare</Italian>
-		<Polish>Mit - Krokodyl Różańcowy</Polish>
-		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
+		<English>Folklore - Saltwater Crocodile (Small)</English>
+		<French>Mythe du Crocodile de mer (petit)</French>
+		<Italian>Mito del coccodrillo di mare (piccolo)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</Tag>
+		<English>Folklore - Saltwater Crocodile (Large)</English>
+		<French>Mythe du Crocodile de mer (grand)</French>
+		<Italian>Mito del coccodrillo di mare (grande)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
 		<English>Folklore (T) - Scavenger</English>
-		<French>Mythe du Mendiant</French>
-		<Italian>Mito dell'animale spazzino</Italian>
-		<Polish>Mit Padlinożerców</Polish>
+		<French>Mythe du Mendiant (T)</French>
+		<Italian>Mito dell'animale spazzino (T)</Italian>
+		<Polish>Mit (T) Padlinożerców</Polish>
 		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1958,9 +1981,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
 		<English>Folklore (T) - Sharks</English>
-		<French>Histoires de Requins</French>
-		<Italian>Mito dello squalo</Italian>
-		<Polish>Mit Opowieśći o rekinach</Polish>
+		<French>Histoires de Requins (T)</French>
+		<Italian>Mito dello squalo (T)</Italian>
+		<Polish>Mit (T) Opowieśći o rekinach</Polish>
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2023,10 +2046,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA</Tag>
-		<English>Folklore - Tarantula</English>
-		<French>Mythe de la Tarentule</French>
-		<Italian>Mito della tarantola</Italian>
-		<Russian>Ìèô î òàðàíòóëå</Russian>
+		<English>Folklore - Desert Tarantula</English>
+		<French>Mythe de la Tarentule du désert</French>
+		<Italian>Mito della tarantola del deserto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<English>Folklore - Jungle Tarantula</English>
+		<French>Mythe de la Tarentule de la jungle</French>
+		<Italian>Mito della tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
@@ -2050,9 +2078,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
 		<English>Folklore (T) - Tiger</English>
-		<French>Mythe du Tigre</French>
-		<Italian>Mito della tigre</Italian>
-		<Polish>Mit Tygrysa</Polish>
+		<French>Mythe du Tigre (T)</French>
+		<Italian>Mito della tigre (T)</Italian>
+		<Polish>Mit (T) Tygrysa</Polish>
 		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2091,6 +2119,20 @@
 		<Italian>Mito dell'unicorno (E)</Italian>
 		<Polish>Mit Jednorożca</Polish>
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
+		<English>Folklore - Viper</English>
+		<French>Mythe de la Vipère</French>
+		<Italian>Mito della vipera</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER_CHAIN</Tag>
+		<English>Folklore - Chain Viper</English>
+		<French>Mythe de la Vipère de Russell</French>
+		<Italian>Mito della vipera di Russell</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_VULTURE</Tag>

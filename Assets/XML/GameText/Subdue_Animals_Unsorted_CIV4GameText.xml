@@ -74,12 +74,6 @@
 		<Russian>Ìèô î âîðîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Tag>
-		<English>Folklore - Donkey</English>
-		<French>Mythe de l'Ane</French>
-		<Russian>Ìèô îá îñëå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
 		<English>Folklore (T) - Flightless Birds</English>
 		<French>Mythe des Oiseaux marcheurs</French>
@@ -199,13 +193,6 @@
 		<Russian>Ìèô î êóêàáàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
-		<English>Folklore (T) - Tales of Fish</English>
-		<French>Mythe des Poissons (local)</French>
-		<Polish>Mit - Ryby (regionalne)</Polish>
-		<Russian>Ìèô î ðûáå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANDRILL</Tag>
 		<English>Folklore - Mandrill</English>
 		<French>Mythe du Mandrill</French>
@@ -314,18 +301,6 @@
 		<English>Folklore (T) - Snakes</English>
 		<French>Mythe des Serpents</French>
 		<Russian>Ìèô î çìåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
-		<English>Folklore - Viper</English>
-		<French>Mythe de la Vipère</French>
-		<Russian>Ìèô î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER_CHAIN</Tag>
-		<English>Folklore - Chain Viper</English>
-		<French>Mythe de la Vipère</French>
-		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLAROO</Tag>
