@@ -25844,8 +25844,6 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	aColors.clear();
 	aIndicators.clear();
 
-	//PlayerColorTypes ePlayerColor = getPlayerColor();
-
 	CvWStringBuffer szBuffer;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -25886,6 +25884,9 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 					break;
 				case SHOW_RESOURCES_UNCLAIMED:
 					bOfInterest = !plotX->isBonusExtracted(getTeam());
+					break;
+				case SHOW_RESOURCES_CANCLAIM:
+					bOfInterest = !plotX->isBonusExtracted(getTeam()) && eOwner != NO_PLAYER && GET_TEAM(GET_PLAYER(eOwner).getTeam()).isHasTech((TechTypes)kBonusInfo.getTechCityTrade());
 					break;
 				}
 

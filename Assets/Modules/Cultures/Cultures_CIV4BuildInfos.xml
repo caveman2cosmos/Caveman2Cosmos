@@ -79,17 +79,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_S</HotKey>

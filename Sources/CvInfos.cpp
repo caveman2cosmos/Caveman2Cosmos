@@ -21545,9 +21545,9 @@ const IDValueMap<BonusTypes, int>::filtered CvTraitInfo::getBonusHappinessChange
 void CvTraitInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
-		.addDelayedResolution(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
-		.addDelayedResolution(m_aBuildWorkerSpeedModifierTypes, L"BuildWorkerSpeedModifierTypes")
-		.addDelayedResolution(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
+		.add(m_aSpecialBuildingProductionModifiers, L"SpecialBuildingProductionModifierTypes")
+		.add(m_aBuildWorkerSpeedModifierTypes, L"BuildWorkerSpeedModifierTypes")
+		.add(m_aBuildingHappinessModifiers, L"BuildingHappinessModifierTypes")
 		.add(m_aTechResearchModifiers, L"TechResearchModifiers")
 		.add(m_aBonusHappinessChanges, L"BonusHappinessChanges")
 		.add(m_aImprovementUpgradeModifierTypes, L"ImprovementUpgradeModifierTypes")

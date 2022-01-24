@@ -14,7 +14,7 @@ public:
 	static bool ShouldImproveCity(CvCity* targetCity);
 	static bool ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMovementTurns = 4);
 	static bool IsPlotValid(CvUnit* unit, CvPlot* plot);
-	static BuildTypes GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot, bool includeCurrentImprovement = true);
+	static BuildTypes GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot,const CvUnitAI* unit = NULL, bool includeCurrentImprovement = true);
 };
 
 #endif

@@ -8086,7 +8086,7 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 				if (iHealRate > 0 && iHealRate < MAX_INT)
 				{
 					int iNumTurns = iHealDamage / iHealRate;
-					if ((iHealRate % iHealRate) != 0)
+					if ((iHealDamage % iHealRate) != 0)
 					{
 						iNumTurns++;
 					}

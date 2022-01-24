@@ -2108,17 +2108,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_C</HotKey>
@@ -2364,15 +2364,15 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -3512,17 +3512,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
@@ -3767,15 +3767,15 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4022,8 +4022,8 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4095,8 +4095,8 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4147,8 +4147,8 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4394,17 +4394,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Buildings_Atlas.dds,7,2</Button>
@@ -4647,15 +4647,15 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4775,15 +4775,15 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4899,17 +4899,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
@@ -4994,15 +4994,15 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -5264,24 +5264,24 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
@@ -5315,10 +5315,10 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
@@ -5442,31 +5442,31 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_C</HotKey>
