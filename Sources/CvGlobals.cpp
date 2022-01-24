@@ -2672,10 +2672,15 @@ void cvInternalGlobals::infoTypeFromStringReset()
 	m_infosMap.clear();
 }
 
-void cvInternalGlobals::addToInfosVectors(void *infoVector)
+void cvInternalGlobals::addToInfosVectors(void* infoVector, InfoClassTypes eInfoClass)
 {
-	std::vector<CvInfoBase *> *infoBaseVector = (std::vector<CvInfoBase *> *) infoVector;
-	m_aInfoVectors.push_back(infoBaseVector);
+	m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(infoVector));
+
+	if (eInfoClass > NO_INFO_CLASS)
+	{
+		static uint16_t numClassesLoaded = 0;
+		m_infoClassXmlLoadOrder[eInfoClass] = ++numClassesLoaded;
+	}
 }
 
 void cvInternalGlobals::infosReset()
@@ -2757,6 +2762,11 @@ void cvInternalGlobals::reprocessSigns()
 /***** Parallel Maps - End *****/
 /*******************************/
 
+bool cvInternalGlobals::isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const
+{
+	return m_infoClassXmlLoadOrder[eLoadingClass] <= m_infoClassXmlLoadOrder[eRefClass];
+}
+
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
 {
 	m_delayedResolutionMap[pType] = std::make_pair(szString,  GC.getCurrentXMLFile());
@@ -2812,37 +2822,37 @@ CvMap& cvInternalGlobals::getMap() const
 
 FAStar& cvInternalGlobals::getPathFinder() const
 {
-	return *m_pathFinders[CURRENT_MAP];
+	return *m_pathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getInterfacePathFinder() const
 {
-	return *m_interfacePathFinders[CURRENT_MAP];
+	return *m_interfacePathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getStepFinder() const
 {
-	return *m_stepFinders[CURRENT_MAP];
+	return *m_stepFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getRouteFinder() const
 {
-	return *m_routeFinders[CURRENT_MAP];
+	return *m_routeFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getBorderFinder() const
 {
-	return *m_borderFinders[CURRENT_MAP];
+	return *m_borderFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getAreaFinder() const
 {
-	return *m_areaFinders[CURRENT_MAP];
+	return *m_areaFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 FAStar& cvInternalGlobals::getPlotGroupFinder() const
 {
-	return *m_plotGroupFinders[CURRENT_MAP];
+	return *m_plotGroupFinders[m_game ? CURRENT_MAP : MAP_EARTH];
 }
 
 CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }

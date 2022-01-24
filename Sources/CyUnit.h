@@ -26,7 +26,7 @@ public:
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
 	bool isActionRecommended(int i) const;
 
-	bool canMoveInto(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const;
+	bool canEnterPlot(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const;
 	bool isAutoUpgrading() const;
 	bool isAutoPromoting() const;
 	bool canHeal(const CyPlot& kPlot) const;

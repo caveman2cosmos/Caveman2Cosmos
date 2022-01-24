@@ -135,6 +135,7 @@ class CvModLoadControlInfo;
 /************************************************************************************************/
 class CvMapInfo;
 
+#include "CvInfoClassTraits.h"
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
@@ -254,11 +255,12 @@ public:
 	void setInfoTypeFromString(const char* szType, int idx);
 	void logInfoTypeMap(const char* tagMsg = "");
 	void infoTypeFromStringReset();
-	void addToInfosVectors(void *infoVector);
+	void addToInfosVectors(void* infoVector, InfoClassTypes eInfoClass);
 	void infosReset();
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
+	bool isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const;
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
@@ -908,6 +910,7 @@ protected:
 	typedef stdext::hash_map<const char* /* type */, int /* info index */, SZStringHash> InfosMap;
 	InfosMap m_infosMap;
 	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
+	bst::array<uint16_t, NUM_INFO_CLASSES> m_infoClassXmlLoadOrder;
 
 	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class)
 

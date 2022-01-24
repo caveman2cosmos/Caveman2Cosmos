@@ -1107,7 +1107,8 @@ def canTriggerIndependentFilms(argsList):
 
 	iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 	for i in xrange(GC.getNumBuildingInfos()):
-		if iBonus in CvBuildingInfo.getFreeBonuses() and player.hasBuilding(i):
+		building = GC.getBuildingInfo(i)
+		if iBonus in building.getFreeBonuses() and player.hasBuilding(i):
 			return False
 	return True
 
@@ -2540,36 +2541,36 @@ def canTriggerGreed(argsList):
 		return False
 
 	bonuses = []
-	iCount = 0
 	iOil = GC.getInfoTypeForString("BONUS_OIL")
 	if not CyPlayer.getNumAvailableBonuses(iOil):
 		bonuses.append(iOil)
-		iCount += 1
+
 	iIron = GC.getInfoTypeForString("BONUS_IRON_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iIron):
 		bonuses.append(iIron)
-		iCount += 1
+
 	iHorse = GC.getInfoTypeForString("BONUS_HORSE")
 	if not CyPlayer.getNumAvailableBonuses(iHorse):
 		bonuses.append(iHorse)
-		iCount += 1
+
 	iCopper = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iCopper):
 		bonuses.append(iCopper)
-		iCount += 1
+
 	iSulphur = GC.getInfoTypeForString("BONUS_SULPHUR")
 	if not CyPlayer.getNumAvailableBonuses(iSulphur):
 		bonuses.append(iSulphur)
-		iCount += 1
+
 	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANTS")
 	if not CyPlayer.getNumAvailableBonuses(iElephant):
 		bonuses.append(iElephant)
-		iCount += 1
 
-	if not iCount:
+	if not bonuses:
 		return False
 
-	shuffledRange = CvUtil.shuffle(iCount, GAME.getMapRand())
+	iSize = len(bonuses)
+	shuffledRange = [0]*iSize
+	shuffleList(iSize, GAME.getMapRand(), shuffledRange)
 	MAP = GC.getMap()
 	iNumPlots = MAP.numPlots()
 	listPlots = []
@@ -3589,37 +3590,31 @@ def canTriggerSyntheticFuels(argsList):
 	data = argsList[0]
 	pPlayer = GC.getPlayer(data.ePlayer)
 
-	iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
-	if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
+	if (
+		not pPlayer.hasBonus(GC.getInfoTypeForString("BONUS_COAL"))
+	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")) > 0
+	):
 		return False
+
 	eOil = GC.getInfoTypeForString("BONUS_OIL")
 	if pPlayer.hasBonus(eOil):
 		return False
-	eCoal = GC.getInfoTypeForString("BONUS_COAL")
-	if not pPlayer.hasBonus(eCoal):
-		return False
 	for i in xrange(GC.getNumBuildingInfos()):
-		if eOil in CvBuildingInfo.getFreeBonuses() and pPlayer.hasBuilding(i):
+		building = GC.getBuildingInfo(i)
+		if eOil in building.getFreeBonuses() and pPlayer.hasBuilding(i):
 			return False
 	return True
 
 def canTriggerCitySyntheticFuels(argsList):
-	iCity = argsList[2]
-	pPlayer = GC.getPlayer(argsList[1])
-	pCity = pPlayer.getCity(iCity)
-	return not pCity.isGovernmentCenter()
+	return not GC.getPlayer(argsList[1]).getCity(argsList[2]).isGovernmentCenter()
 
 def getHelpSyntheticFuels1(argsList):
 	data = argsList[1]
-	pCity = GC.getPlayer(data.ePlayer).getCity(data.iCityId)
-	oBonus = GC.getInfoTypeForString("BONUS_OIL")
-	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_1", ( 1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
+	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_1", ( 1, GC.getBonusInfo(GC.getInfoTypeForString("BONUS_OIL")).getChar(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()))
 
 def getHelpSyntheticFuels2(argsList):
 	data = argsList[1]
-	pCity = GC.getPlayer(data.ePlayer).getCity(data.iCityId)
-	oBonus = GC.getInfoTypeForString("BONUS_OIL")
-	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_2", ( 1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
+	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_2", ( 1, GC.getBonusInfo(GC.getInfoTypeForString("BONUS_OIL")).getChar(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()))
 
 def getHelpSyntheticFuels3(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_3", (1, ))
@@ -6405,7 +6400,7 @@ def doVolcanoPlot(pPlot):
       for i in xrange(8):
         sPlot = plotDirection(iX, iY, DirectionTypes(i))
         if not sPlot.isNone():
-          if pPlotUnit.canMoveInto(sPlot, False, False, True):
+          if pPlotUnit.canEnterPlot(sPlot, False, False, True):
             pPlotUnit.setXY(sPlot.getX(), sPlot.getY(), False, True, True)
 
   if pPlot.isWater(): pPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)

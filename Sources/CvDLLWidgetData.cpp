@@ -237,10 +237,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseUnitModelHelp(widgetDataStruct, szBuffer);
 		break;
 
-	case WIDGET_FLAG:
-		parseFlagHelp(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_HELP_MAINTENANCE:
 		parseMaintenanceHelp(widgetDataStruct, szBuffer);
 		break;
@@ -843,10 +839,6 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 
 	case WIDGET_UNIT_MODEL:
 		doUnitModel();
-		break;
-
-	case WIDGET_FLAG:
-		doFlag();
 		break;
 
 	case WIDGET_HELP_SELECTED:
@@ -1596,11 +1588,6 @@ void CvDLLWidgetData::doUnitModel()
 	gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 }
 
-
-void CvDLLWidgetData::doFlag()
-{
-	GC.getGame().doControl(CONTROL_SELECTCAPITAL);
-}
 
 void CvDLLWidgetData::doSelected(CvWidgetDataStruct &widgetDataStruct)
 {
@@ -5041,48 +5028,6 @@ void CvDLLWidgetData::parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, C
 	if (pHeadSelectedUnit != NULL)
 	{
 		GAMETEXT.setUnitHelp(szBuffer, pHeadSelectedUnit);
-	}
-}
-
-
-void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	szBuffer.append(CvWString::format(SETCOLR L"%s\n", TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationDescription()));
-
-	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
-
-	// Traits
-	if (GET_PLAYER(GC.getGame().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
-	{
-		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		GAMETEXT.parsePlayerTraits(szBuffer, GET_PLAYER(GC.getGame().getActivePlayer()).getID());
-	}
-
-	// Properties
-	CvWStringBuffer szPeekBuffer;
-	GET_PLAYER(GC.getGame().getActivePlayer()).getProperties()->buildDisplayString(szPeekBuffer);
-
-	if (!szPeekBuffer.isEmpty())
-	{
-		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		szBuffer.append(szPeekBuffer);
-		szPeekBuffer.clear();
-	}
-	GET_TEAM(GC.getGame().getActiveTeam()).getProperties()->buildDisplayString(szPeekBuffer);
-
-	if (!szPeekBuffer.isEmpty())
-	{
-		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		szBuffer.append(szPeekBuffer);
-		szPeekBuffer.clear();
-	}
-	GC.getGame().getProperties()->buildDisplayString(szPeekBuffer);
-
-	if (!szPeekBuffer.isEmpty())
-	{
-		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		szBuffer.append(szPeekBuffer);
-		szPeekBuffer.clear();
 	}
 }
 

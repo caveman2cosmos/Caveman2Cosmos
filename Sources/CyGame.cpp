@@ -37,21 +37,6 @@ void CyGame::updateScore(bool bForce)
 	m_pGame.updateScore(bForce);
 }
 
-void CyGame::cycleCities(bool bForward, bool bAdd)
-{
-	m_pGame.cycleCities(bForward, bAdd);
-}
-
-void CyGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers)
-{
-	m_pGame.cycleSelectionGroups(bClear, bForward, bWorkers);
-}
-
-bool CyGame::cyclePlotUnits(const CyPlot* pPlot, bool bForward, bool bAuto, int iCount)
-{
-	return m_pGame.cyclePlotUnits(pPlot->getPlot(), bForward, bAuto, iCount);
-}
-
 void CyGame::selectionListMove(const CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl)
 {
 	GC.getGame().selectionListMove(pPlot->getPlot(), bAlt, bShift, bCtrl);

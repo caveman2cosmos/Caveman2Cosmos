@@ -80,8 +80,6 @@ def init(newCustomEM, RevOptHandle):
 
 	customEM.setPopupHandler( RevDefs.assimilationPopup, ["assimilationPopup", assimilateHandler, blankHandler] )
 
-	RevUtils.initCivicsList()
-
 
 def removeEventHandlers():
 	print "Removing event handlers from RevEvents"

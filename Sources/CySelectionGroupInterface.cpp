@@ -21,7 +21,6 @@ void CySelectionGroupInterface()
 		.def("isWaiting", &CySelectionGroup::isWaiting, "bool ()")
 		.def("isFull", &CySelectionGroup::isFull, "bool ()")
 		.def("hasMoved", &CySelectionGroup::hasMoved, "bool ()")
-		.def("canMoveInto", &CySelectionGroup::canMoveInto, "bool (CyPlot* pPlot, bool bAttack) - can the group move into pPlot?")
 		.def("canFight", &CySelectionGroup::canFight, "bool ()")
 		.def("isInvisible", &CySelectionGroup::isInvisible, "bool (int eTeam)")
 

@@ -1093,9 +1093,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HOUSING_MANAGEMENT</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
@@ -2926,9 +2923,6 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iLineOfSight>1</iLineOfSight>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>

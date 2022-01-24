@@ -316,8 +316,7 @@ class HintedWorld(FractalWorld):
 		foundx, foundy = self.findValid(x,y, maxDist)
 		if (foundx == -1 and foundy == -1):
 			return None
-		else:
-			return self.__addContinentAt(numBlocks, foundx, foundy, maxRadius)
+		return self.__addContinentAt(numBlocks, foundx, foundy, maxRadius)
 
 	def __addContinentAt(self, numBlocks, x, y, maxradius=-1):
 		land_value = 192 + self.mapRand.get(64, "Add Continent At PYTHON")
@@ -328,27 +327,27 @@ class HintedWorld(FractalWorld):
 
 	def expandContinentBy(self, cont, numBlocks):
 		# this plot is not valid; choose an in-bounds plot adjacent to an existing plot and try again:
-		#print "expand continent by", numBlocks
-		blockOrder = CvUtil.shuffle(len(cont.blocks), self.mapRand)
+		iSize = len(cont.blocks)
+		blockOrder = [0]*iSize
+		shuffleList(iSize, self.mapRand, blockOrder)
 		for blockIndex in blockOrder:
-			x,y = cont.blocks[blockIndex]
-			dirOrder = CvUtil.shuffle(len(cardinal_directions), self.mapRand)
+			x, y = cont.blocks[blockIndex]
+			iSize = len(cardinal_directions)
+			dirOrder = [0]*iSize
+			shuffleList(iSize, self.mapRand, dirOrder)
 			for dirIndex in dirOrder:
 				dx, dy = cardinal_directions[dirIndex]
 				if self.isValid(x+dx,y+dy, cont):
 					cont.addBlock(x+dx,y+dy)
 					land_value = 208 + self.mapRand.get(48, "Expand Continent PYTHON")
 					self.setValue(x+dx, y+dy, land_value)
-					#print "\tadded block", x+dx, y+dy
-					if (numBlocks > 1):
-						return self.expandContinentBy(cont, numBlocks-1)
-					else:
-						return True
+					return numBlocks < 2 or self.expandContinentBy(cont, numBlocks-1)
 
 		print "\tcould not expand continent:"
 		printMap(self.data, self.w, self.h, cont.centerx, cont.centery)
 		cont.done = True
 		return False
+
 
 	def buildAllContinents(self):
 		all_done = False
@@ -414,10 +413,10 @@ class HintedWorld(FractalWorld):
 
 
 	def findValid(self, x, y, dist=-1):
-		if (dist == -1):
+		if dist == -1:
 			dist = max(self.w, self.h)
 
-		if (dist > 0):
+		if dist > 0:
 			foundx, foundy = self.findValid(x, y, dist-1)
 			if (foundx != -1 and foundy != -1):
 				return foundx, foundy
@@ -428,16 +427,20 @@ class HintedWorld(FractalWorld):
 				if max(abs(dx), abs(dy)) == dist:
 					plots.append((x+dx, y+dy))
 
-		plotOrder = CvUtil.shuffle(len(plots), self.mapRand)
+		iSize = len(plots)
+		plotOrder = [0]*iSize
+		shuffleList(iSize, self.mapRand, plotOrder)
 		for plotIndex in plotOrder:
 			tryx, tryy = plots[plotIndex]
 			if self.isValid(tryx, tryy): return tryx, tryy
 
 		return -1, -1
 
+
 	def inBounds(self, x, y):
 		x,y = self.normalizeBlock(x,y)
 		return (0 <= x < self.w and 0 <= y < self.h)
+
 
 	def generatePlotTypes(self, water_percent=-1, shift_plot_types=False):
 
@@ -1402,12 +1405,12 @@ def isSinglePlotIsland(pPlot):
 
 
 def placeSealOrWalrus(iPlot, iSeaLion, iWalrus, bNorth):
-	mapRand = CyGlobalContext().getGame().getMapRand()
-	if bNorth and mapRand.get(3, 'SealionResource') == 0:
+
+	if bNorth and CyGame().getMapRand().get(3, 'SealionResource') == 0:
 		iPlot.setBonusType(iWalrus)
 	else:
 		iPlot.setBonusType(iSeaLion)
-	return
+
 
 
 def c2CMapReport(sWhen):
@@ -1416,8 +1419,8 @@ def c2CMapReport(sWhen):
 	countFeature = {}
 	countResource = {}
 	countImprovement = {}
-	map = CyMap()
 	GC = CyGlobalContext()
+	map = GC.getMap()
 	iNumPlots = map.numPlots()
 
 	iMapWidth = map.getGridWidth()
@@ -1430,8 +1433,6 @@ def c2CMapReport(sWhen):
 		iPlotType = iPlot.getPlotType()
 
 		# Identify where on the map the plot is
-		iLatitude = iPlot.getLatitude()
-		iLongitude = iPlot.getLongitude()
 		iPlotX = iPlot.getX()
 		iPlotY = iPlot.getY()
 		if iPlotY > iEquatorPlot:
@@ -1471,10 +1472,10 @@ def c2CMapReport(sWhen):
 				countFeature[iFeature] = 1
 		iResource = iPlot.getBonusType(-1)
 		if iResource > -1:
-			if (iHemisphere,iResource) in countResource:
-				countResource[iHemisphere,iResource] += 1
+			if (iHemisphere, iResource) in countResource:
+				countResource[iHemisphere, iResource] += 1
 			else:
-				countResource[iHemisphere,iResource] = 1
+				countResource[iHemisphere, iResource] = 1
 		iImprovement = iPlot.getImprovementType()
 		if iImprovement > -1:
 			if iImprovement in countImprovement:
@@ -1510,52 +1511,45 @@ def c2CMapReport(sWhen):
 	sprint += "\n"
 
 	# Display actual Mod-Resources
-	# countResource.sort()
-	boni = 0
-	dontReportBonusClass = [GC.getInfoTypeForString("BONUSCLASS_CULTURE"), GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED"), GC.getInfoTypeForString("BONUSCLASS_GENMODS"), GC.getInfoTypeForString("BONUSCLASS_WONDER")]
-	while boni < GC.getNumBonusInfos():
-		type_string = GC.getBonusInfo(boni).getType()
-		class_int = GC.getBonusInfo(boni).getBonusClassType()
-		if class_int not in dontReportBonusClass:
-			region = "North American"
-			if (region,boni) in countResource:
-				sprint += "[MGU]   Bonus: #%2i - %s ( %s - %i ) " % (boni, type_string, region, countResource[region,boni])
-			else:
-				sprint += "[MGU]   Bonus: #%2i - %s ( %s - %i ) " % (boni, type_string, region, 0)
-			region = "European"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "Asian"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "South American"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "African"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) " % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) " % (region, 0)
-			region = "Oceania"
-			if (region,boni) in countResource:
-				sprint += "( %s - %i ) \n" % (region, countResource[region,boni])
-			else:
-				sprint += "( %s - %i ) \n" % (region, 0)
+	for i in xrange(GC.getNumMapBonuses()):
+		iBonus = GC.getMapBonus(i);
 
-		boni = boni + 1
+		region = "North American"
+		if (region, iBonus) in countResource:
+			sprint += "[MGU]   Bonus: #%2i - %s ( %s - %i ) " % (iBonus, GC.getBonusInfo(iBonus).getType(), region, countResource[region, iBonus])
+		else:
+			sprint += "[MGU]   Bonus: #%2i - %s ( %s - %i ) " % (iBonus, GC.getBonusInfo(iBonus).getType(), region, 0)
+		region = "European"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "Asian"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "South American"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "African"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) " % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) " % (region, 0)
+		region = "Oceania"
+		if (region, iBonus) in countResource:
+			sprint += "( %s - %i ) \n" % (region, countResource[region, iBonus])
+		else:
+			sprint += "( %s - %i ) \n" % (region, 0)
 
 	sprint += "\n"
 
 	# Display actual Mod-Improvements
 	for imp in countImprovement:
-		type_string = GC.getImprovementInfo(imp).getType()
-		sprint += "[MGU]   Improvement: #%3i  %s ( %i ) \n" % (imp, type_string, countImprovement[imp])
+		sprint += "[MGU]   Improvement: #%3i  %s ( %i ) \n" % (imp, GC.getImprovementInfo(imp).getType(), countImprovement[imp])
 	sprint += "\n[MGU] ####################################################################### C2C:Map Statistics ###"
 	print sprint
 

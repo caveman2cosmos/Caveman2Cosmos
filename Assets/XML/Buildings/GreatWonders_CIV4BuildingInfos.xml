@@ -3832,7 +3832,7 @@
 			</PrereqInCityBuildings>
 			<iCost>8460</iCost>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-35</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -8084,9 +8084,6 @@
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
 			<iCost>41430</iCost>
 			<iUnitUpgradePriceModifier>-5</iUnitUpgradePriceModifier>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<iGlobalHealth>1</iGlobalHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
@@ -8277,7 +8274,7 @@
 			</PrereqAmountBuildings>
 			<iCost>13830</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8909,7 +8906,7 @@
 			</PrereqInCityBuildings>
 			<iCost>4800</iCost>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -8975,9 +8972,6 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>12030</iCost>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SPY</SpecialistType>
@@ -14825,7 +14819,7 @@
 			<ObsoleteTech>TECH_QUANTUM_PHYSICS</ObsoleteTech>
 			<iCost>3090</iCost>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>25</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -16797,7 +16791,7 @@
 			</PrereqAmountBuildings>
 			<iCost>13830</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -18749,7 +18743,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

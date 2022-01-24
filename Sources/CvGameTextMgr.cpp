@@ -24464,6 +24464,12 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRES_STRING_VICTORY", GC.getVictoryInfo((VictoryTypes)(kProject.getVictoryPrereq())).getTextKeyWide()));
 			}
+
+			foreach_(const MapCategoryTypes eMapCategory, kProject.getMapCategories())
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
+			}
 		}
 	}
 
@@ -29566,7 +29572,7 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS"));
 	}
-	if (info.isUniversalTradeBonusProvider())
+	if (info.isImprovementBonusTrade())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER"));
@@ -30365,6 +30371,11 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_NO_IMPROVEMENT"));
 	}
 
+	if (feature.isNoBonus())
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_NO_BONUS"));
+	}
+
 	if (feature.getPopDestroys() == -1)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED"));
@@ -31073,7 +31084,7 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 
 	if (gDLL->shiftKey())
 	{
-		if (iDisplayCount > iPotentialDisplays)
+		if (iDisplayCount >= iPotentialDisplays)
 		{
 			kPlayer.setTraitDisplayCount(0);
 		}
@@ -31127,14 +31138,20 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 
 	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
+		const int iLevel = kPlayer.getLeaderHeadLevel();
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", kPlayer.getLeaderHeadLevel()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", iLevel));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", kPlayer.getCulture()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", CvWString::format(L"%lld", kPlayer.getCulture()).GetCString()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", kPlayer.getLeaderLevelupNextCultureTotal()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", CvWString::format(L"%llu", kPlayer.getLeaderLevelupNextCultureTotal()).GetCString(), iLevel+1));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", kPlayer.getLeaderLevelupCultureToEarn()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", CvWString::format(L"%lld", kPlayer.getLeaderLevelupCultureToEarn()).GetCString()));
+	}
+	else
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", CvWString::format(L"%lld", kPlayer.getCulture()).GetCString()));
 	}
 }
 
@@ -34409,6 +34426,9 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 		case SHOW_RESOURCES_UNCLAIMED:
 			strName = gDLL->getText("TXT_KEY_UNCLAIMED");
 			break;
+		case SHOW_RESOURCES_CANCLAIM:
+			strName = gDLL->getText("TXT_KEY_CANCLAIM");
+			break;
 		}
 		break;
 	case GLOBE_LAYER_RELIGION:
@@ -34473,7 +34493,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 	&& pMouseOverPlot->isActiveVisible(true) && pMouseOverPlot->getTeam() != NO_TEAM
 	&& gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL
 	&& GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam())
-	&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canMoveInto(pMouseOverPlot))
+	&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canEnterPlot(pMouseOverPlot))
 	{
 		CvWString szTempBuffer;
 		szTempBuffer.clear();
@@ -35777,6 +35797,52 @@ void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_EMPLOYED", city.getNumPopulationEmployed()));
 	szBuffer.append(CvWString::format(L" %c", gDLL->getSymbolID(CITIZEN_CHAR)));
 }
+
+
+void CvGameTextMgr::setFlagHelp(CvWStringBuffer &szBuffer)
+{
+	CvGame& GAME = GC.getGame();
+	CvPlayer& player = GET_PLAYER(GAME.getActivePlayer());
+
+	szBuffer.append(CvWString::format(SETCOLR L"%s\n", TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), player.getCivilizationDescription()));
+
+	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
+
+	// Traits
+	if (player.isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GAME.isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		parsePlayerTraits(szBuffer, GAME.getActivePlayer());
+	}
+
+	// Properties
+	CvWStringBuffer szPeekBuffer;
+	player.getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+	GET_TEAM(player.getTeam()).getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+	GAME.getProperties()->buildDisplayString(szPeekBuffer);
+
+	if (!szPeekBuffer.isEmpty())
+	{
+		szBuffer.append(NEWLINE L"==============================" NEWLINE);
+		szBuffer.append(szPeekBuffer);
+		szPeekBuffer.clear();
+	}
+}
+
 
 void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList)
 {

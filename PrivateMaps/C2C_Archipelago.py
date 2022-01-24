@@ -428,7 +428,7 @@ def assignStartingPlots():
 	# Obtain player numbers. (Account for possibility of Open slots!)
 	player_list = []
 	for plrCheckLoop in range(18):
-		if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
+		if gc.getPlayer(plrCheckLoop).isEverAlive():
 			player_list.append(plrCheckLoop)
 	#print "***"
 	#print "Player ID#s", player_list

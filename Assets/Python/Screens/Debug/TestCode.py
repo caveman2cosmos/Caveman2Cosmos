@@ -43,6 +43,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingMinYields, "Building - check yields", "Check if buildings with yield income have at least minimum yield as derived from era")
+		self.main.addTestCode(screen, self.checkBuildingMaxMaint, "Building - check maintenance", "Check if buildings don't take too much gold for its output")
 		self.main.addTestCode(screen, self.checkTechCosts, "Tech - check costs", "Check if techs have correct costs")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitCosts, "Unit - check costs", "Check if unit costs are within sane limits")
@@ -65,6 +66,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listStandaloneBuildings, "Building - list stand-alone buildings", "List regular non religious/civic buildings, that aren't part of replacement chain")
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
+		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -1028,7 +1030,6 @@ class TestCode:
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aYieldChangesList[BASE][iYield] += CvBuildingInfo.getYieldChange(iYield)
 					aYieldPerPopChangesList[BASE][iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
-					#aSeaPlotYieldChangesList[BASE][iYield] += CvBuildingInfo.getSeaPlotYieldChange(iYield)
 					aRiverPlotYieldChangesList[BASE][iYield] += CvBuildingInfo.getRiverPlotYieldChange(iYield)
 					aYieldModifiersList[BASE][iYield] += CvBuildingInfo.getYieldModifier(iYield)
 					aPowerYieldModifiersList[BASE][iYield] += CvBuildingInfo.getPowerYieldModifier(iYield)
@@ -2721,6 +2722,86 @@ class TestCode:
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
 
+	#Check if buildings don't take too much gold for its output
+	def checkBuildingMaxMaint(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			if CvBuildingInfo.getCommerceChange(0) < 0 and CvBuildingInfo.getProductionCost() > 0: #This building takes gold and is buildable
+				iBuildingValue = -CvBuildingInfo.getCommerceChange(0) #Gold change will be added to this
+
+				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+					iBuildingValue += CvBuildingInfo.getYieldChange(iYield)
+					iBuildingValue += CvBuildingInfo.getRiverPlotYieldChange(iYield)
+					iBuildingValue += 2*CvBuildingInfo.getYieldModifier(iYield)
+					iBuildingValue += 2*CvBuildingInfo.getPowerYieldModifier(iYield)
+				for entry in CvBuildingInfo.getTechYieldChanges100():
+					iBuildingValue += 0.01*entry.value
+				for entry in CvBuildingInfo.getTechYieldModifiers():
+					iBuildingValue += 2*entry.value
+				if CvBuildingInfo.isAnyBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							iBuildingValue += CvBuildingInfo.getBonusYieldChanges(iBonus, iYield)
+				if CvBuildingInfo.isAnyVicinityBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							iBuildingValue += CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
+				if CvBuildingInfo.isAnyBonusYieldModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							iBuildingValue += 2*CvBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+				for pPlotYieldChanges in CvBuildingInfo.getPlotYieldChange():
+					iBuildingValue += pPlotYieldChanges.iValue
+
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					iBuildingValue += CvBuildingInfo.getCommerceChange(iCommerce)
+					iBuildingValue += 2*CvBuildingInfo.getCommerceModifier(iCommerce)
+				for entry in CvBuildingInfo.getTechCommerceChanges100():
+					iBuildingValue += 0.01*entry.value
+				for entry in CvBuildingInfo.getTechCommerceModifiers():
+					iBuildingValue += 2*entry.value
+				if CvBuildingInfo.isAnyBonusCommercePercentChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							iBuildingValue += CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
+				if CvBuildingInfo.isAnyBonusCommerceModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							iBuildingValue += 2*CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
+
+				iBuildingValue += CvBuildingInfo.getGreatPeopleRateChange()
+				iBuildingValue += 2*CvBuildingInfo.getGreatPeopleRateModifier()
+
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					iBuildingValue += 5*CvBuildingInfo.getSpecialistCount(iSpecialist)
+					iBuildingValue += 5*CvBuildingInfo.getFreeSpecialistCount(iSpecialist)
+
+					if CvBuildingInfo.isAnyTechSpecialistChanges():
+						for iTech in xrange(GC.getNumTechInfos()):
+							if CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist) > 0:
+								iBuildingValue += 5*CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+					else:
+						break
+
+				iBuildingValue += CvBuildingInfo.getHappiness()
+				iBuildingValue += CvBuildingInfo.getHealth()
+
+				for iBonus, iHappiness in CvBuildingInfo.getBonusHappinessChanges():
+					iBuildingValue += iHappiness
+				for iBonus, iHealth in CvBuildingInfo.getBonusHealthChanges():
+					iBuildingValue += iHealth
+				for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
+					iBuildingValue += 1
+
+				for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
+					iBuildingValue += iHappiness
+				for iTech, iHealth in CvBuildingInfo.getTechHealthChanges():
+					iBuildingValue += iHealth
+
+				if 3*iBuildingValue < -CvBuildingInfo.getCommerceChange(0):
+					self.log(CvBuildingInfo.getType()+" gold maint: "+str(CvBuildingInfo.getCommerceChange(0))+" Suggested max: "+str(-3*iBuildingValue))
+
 	#Check if buildings with yield income have at least minimum yield as derived from era
 	def checkBuildingMinYields(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -3622,3 +3703,29 @@ class TestCode:
 		for i in xrange(iTotalTechTreeLength):
 			iTotalActiveBuildings = iTotalActiveBuildings + aUnlockedBuildingsTechLoc[i] - aObsoletedBuildingsTechLoc[i]
 			self.log("XGrid: "+str(i)+" Unlocked: "+str(aUnlockedBuildingsTechLoc[i])+" Obsoleted: "+str(aObsoletedBuildingsTechLoc[i])+" Available buildings: "+str(iTotalActiveBuildings))
+
+	#List taxonomy buildings, that doesn't have all potential base folklore requirements
+	def checkTaxonomyBuildings(self):
+		aFolkloreBuildings = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE") != -1:
+				aFolkloreBuildings.append(iBuilding)
+
+		aFolkloreUnits = []
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			if CvUnitInfo.getType().find("_SUBDUED") != -1:
+				aFolkloreUnits.append(iUnit)
+
+		for i in xrange(len(aFolkloreBuildings)):
+			CvBuildingInfo = GC.getBuildingInfo(aFolkloreBuildings[i])
+			if CvBuildingInfo.getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY"):
+				for j in xrange(len(aFolkloreUnits)):
+					CvUnitInfo = GC.getUnitInfo(aFolkloreUnits[j])
+					if CvUnitInfo.getHasBuilding(aFolkloreBuildings[i]):
+						for k in xrange(CvUnitInfo.getNumBuildings()):
+							CvUnitBuilding = GC.getBuildingInfo(CvUnitInfo.getBuildings(k))
+							if CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY") and CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION") and CvUnitBuilding.getType().find("BUILDING_FOLKLORE") != -1:
+								if not CvBuildingInfo.isPrereqInCityBuilding(CvUnitInfo.getBuildings(k)) and not CvBuildingInfo.isPrereqOrBuilding(CvUnitInfo.getBuildings(k)):
+									self.log(CvBuildingInfo.getType()+" could have as req: "+CvUnitBuilding.getType())

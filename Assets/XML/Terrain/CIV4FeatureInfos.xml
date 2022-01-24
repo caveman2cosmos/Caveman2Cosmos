@@ -2104,6 +2104,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -2210,6 +2211,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6150,6 +6152,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6269,6 +6272,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6300,6 +6304,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6339,6 +6344,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_AURORA</ArtDefineTag>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6369,6 +6375,7 @@
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6395,6 +6402,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6423,6 +6431,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6450,6 +6459,7 @@
 			<iDefense>25</iDefense>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6477,6 +6487,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6518,6 +6529,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6560,6 +6572,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6586,6 +6599,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6606,6 +6620,7 @@
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6634,6 +6649,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6661,6 +6677,7 @@
 			<iDefense>25</iDefense>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6683,6 +6700,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6706,6 +6724,7 @@
 			<bNoCoast>1</bNoCoast>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6735,6 +6754,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6760,6 +6780,7 @@
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6786,6 +6807,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -6807,6 +6829,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>

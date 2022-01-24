@@ -282,14 +282,15 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 		GC.getMap().incrementNextRiverID();
 	}
 
-	int iOtherRiverID = pStartPlot->getRiverID();
-	if (iOtherRiverID != -1 && iOtherRiverID != iThisRiverID)
 	{
-		return; // Another river already exists here; can't branch off of an existing river!
+		const int iOtherRiverID = pStartPlot->getRiverID();
+		if (iOtherRiverID != -1 && iOtherRiverID != iThisRiverID)
+		{
+			return; // Another river already exists here; can't branch off of an existing river!
+		}
 	}
 
 	CvPlot *pRiverPlot = NULL;
-	CvPlot *pAdjacentPlot = NULL;
 
 	CardinalDirectionTypes eBestCardinalDirection = NO_CARDINALDIRECTION;
 
@@ -300,12 +301,12 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 		{
 			return;
 		}
-		pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_EAST);
+		const CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_EAST);
+
 		if ((pAdjacentPlot == NULL) || pRiverPlot->isWOfRiver() || pRiverPlot->isWater() || pAdjacentPlot->isWater())
 		{
 			return;
 		}
-
 		pStartPlot->setRiverID(iThisRiverID);
 		pRiverPlot->setWOfRiver(true, eLastCardinalDirection);
 		pRiverPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_NORTH);
@@ -317,12 +318,12 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 		{
 			return;
 		}
-		pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_SOUTH);
+		const CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_SOUTH);
+
 		if ((pAdjacentPlot == NULL) || pRiverPlot->isNOfRiver() || pRiverPlot->isWater() || pAdjacentPlot->isWater())
 		{
 			return;
 		}
-
 		pStartPlot->setRiverID(iThisRiverID);
 		pRiverPlot->setNOfRiver(true, eLastCardinalDirection);
 	}
@@ -333,16 +334,15 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 		{
 			return;
 		}
-		pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_EAST);
+
+		const CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_EAST);
 		if ((pAdjacentPlot == NULL) || pRiverPlot->isWOfRiver() || pRiverPlot->isWater() || pAdjacentPlot->isWater())
 		{
 			return;
 		}
-
 		pStartPlot->setRiverID(iThisRiverID);
 		pRiverPlot->setWOfRiver(true, eLastCardinalDirection);
 	}
-
 	else if (eLastCardinalDirection==CARDINALDIRECTION_WEST)
 	{
 		pRiverPlot = pStartPlot;
@@ -350,19 +350,18 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 		{
 			return;
 		}
-		pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_SOUTH);
+		const CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_SOUTH);
+
 		if ((pAdjacentPlot == NULL) || pRiverPlot->isNOfRiver() || pRiverPlot->isWater() || pAdjacentPlot->isWater())
 		{
 			return;
 		}
-
 		pStartPlot->setRiverID(iThisRiverID);
 		pRiverPlot->setNOfRiver(true, eLastCardinalDirection);
 		pRiverPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), CARDINALDIRECTION_WEST);
 	}
 	else
 	{
-		//FErrorMsg("Illegal direction type");
 		// River is starting here, set the direction in the next step
 		pRiverPlot = pStartPlot;
 
@@ -377,7 +376,7 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 	{
 		return; // The river has flowed off the edge of the map. All is well.
 	}
-	else if (pRiverPlot->hasCoastAtSECorner())
+	if (pRiverPlot->hasCoastAtSECorner())
 	{
 		return; // The river has flowed into the ocean. All is well.
 	}
@@ -388,19 +387,18 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 
 		for (int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; iI++)
 		{
-			if (getOppositeCardinalDirection((CardinalDirectionTypes)iI) != eOriginalCardinalDirection)
+			const int iOppositeDir = ((iI + 2) % NUM_CARDINALDIRECTION_TYPES);
+
+			if (iOppositeDir != eOriginalCardinalDirection && iOppositeDir != eLastCardinalDirection)
 			{
-				if (getOppositeCardinalDirection((CardinalDirectionTypes)iI) != eLastCardinalDirection)
+				CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), (CardinalDirectionTypes)iI);
+				if (pAdjacentPlot != NULL)
 				{
-					CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), ((CardinalDirectionTypes)iI));
-					if (pAdjacentPlot != NULL)
+					const int iValue = getRiverValueAtPlot(pAdjacentPlot);
+					if (iValue < iBestValue)
 					{
-						int iValue = getRiverValueAtPlot(pAdjacentPlot);
-						if (iValue < iBestValue)
-						{
-							iBestValue = iValue;
-							eBestCardinalDirection = (CardinalDirectionTypes)iI;
-						}
+						iBestValue = iValue;
+						eBestCardinalDirection = (CardinalDirectionTypes)iI;
 					}
 				}
 			}
@@ -952,13 +950,8 @@ void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 
 // Protected functions:
 
-int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot)
+int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot) const
 {
-	CvPlot* pAdjacentPlot;
-	CvRandom riverRand;
-	int iSum;
-	int iI;
-
 	FAssert(pPlot != NULL);
 
 	long result = 0;
@@ -971,13 +964,11 @@ int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot)
 		}
 	}
 
-	iSum = result;
+	int iSum = result + (NUM_PLOT_TYPES - pPlot->getPlotType()) * 20;
 
-	iSum += ((NUM_PLOT_TYPES - pPlot->getPlotType()) * 20);
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 	{
-		pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+		const CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
 
 		if (pAdjacentPlot != NULL)
 		{
@@ -989,11 +980,10 @@ int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot)
 		}
 	}
 
+	CvRandom riverRand;
 	riverRand.init((pPlot->getX() * 43251267) + (pPlot->getY() * 8273903));
 
-	iSum += (riverRand.get(10, "River Rand"));
-
-	return iSum;
+	return iSum + riverRand.get(10, "River Rand");
 }
 
 int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)

@@ -211,7 +211,6 @@
 				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1357,7 +1356,6 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BELUGA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -4089,7 +4087,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COD</BuildingType>
 				<BuildingType>BUILDING_FISH_PENS</BuildingType>
@@ -4347,7 +4344,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CRAB</BuildingType>
 				<BuildingType>BUILDING_CRAB_NETS</BuildingType>
@@ -4934,7 +4930,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DOLPHIN</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -6334,7 +6329,6 @@
 				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -7420,7 +7414,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KRAKEN</BuildingType>
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
@@ -7879,7 +7872,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GREATWHITE_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
@@ -8290,7 +8282,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAMMERHEAD_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
@@ -9470,7 +9461,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HUMPBACK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
@@ -11427,7 +11417,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MACKEREL</BuildingType>
 				<BuildingType>BUILDING_FISH_PENS</BuildingType>
@@ -12063,7 +12052,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY_MANTA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY</BuildingType>
@@ -12121,7 +12109,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARLIN</BuildingType>
 				<BuildingType>BUILDING_COASTAL_FISH_FARM</BuildingType>
@@ -12181,7 +12168,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MINKIE_WHALE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
@@ -12964,7 +12950,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NARWHAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_UNICORN</BuildingType>
@@ -13481,7 +13466,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
@@ -14228,7 +14212,6 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PENGUIN</BuildingType>
@@ -15210,7 +15193,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY</BuildingType>
@@ -15907,7 +15889,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
@@ -16788,7 +16769,6 @@
 				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -17768,7 +17748,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEATURTLE</BuildingType>
 				<BuildingType>BUILDING_TORTOISE_SHELL_WORKER</BuildingType>
@@ -19528,7 +19507,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 				<BuildingType>BUILDING_FISH_PENS</BuildingType>
@@ -20117,7 +20095,6 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
@@ -20568,7 +20545,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BELUGA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
@@ -20612,7 +20588,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COD</BuildingType>
@@ -20656,7 +20631,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CRAB</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
@@ -20700,7 +20674,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DOLPHIN</BuildingType>
@@ -20786,7 +20759,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KRAKEN</BuildingType>
@@ -20830,7 +20802,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GREATWHITE_SHARK</BuildingType>
@@ -20875,7 +20846,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAMMERHEAD_SHARK</BuildingType>
@@ -20920,7 +20890,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HUMPBACK</BuildingType>
@@ -20966,7 +20935,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MACKEREL</BuildingType>
@@ -21009,7 +20977,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY_MANTA</BuildingType>
@@ -21053,7 +21020,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARLIN</BuildingType>
@@ -21097,7 +21063,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MINKIE_WHALE</BuildingType>
@@ -21141,7 +21106,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NARWHAL</BuildingType>
@@ -21187,7 +21151,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
@@ -21232,7 +21195,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY_EAGLE</BuildingType>
@@ -21277,7 +21239,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
@@ -21408,7 +21369,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEATURTLE</BuildingType>
@@ -21494,7 +21454,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
@@ -21538,7 +21497,6 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOCAL_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>

@@ -10439,6 +10439,15 @@ int64_t CvPlayer::getUnitUpkeepMilitaryNet() const
 	return std::max<int64_t>(0, getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
 }
 
+int64_t CvPlayer::getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep) const
+{
+	if (bMilitary)
+	{
+		return std::min<int64_t>(iUnitUpkeep, getUnitUpkeepMilitaryNet());
+	}
+	return std::min<int64_t>(iUnitUpkeep, getUnitUpkeepCivilianNet());
+}
+
 int64_t CvPlayer::getFinalUnitUpkeep() const
 {
 	return m_iFinalUnitUpkeep;
@@ -10511,7 +10520,6 @@ int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
 
 	return iChange;
 }
-
 // ! Unit Upkeep
 
 
@@ -25836,8 +25844,6 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	aColors.clear();
 	aIndicators.clear();
 
-	//PlayerColorTypes ePlayerColor = getPlayerColor();
-
 	CvWStringBuffer szBuffer;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -25878,6 +25884,9 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 					break;
 				case SHOW_RESOURCES_UNCLAIMED:
 					bOfInterest = !plotX->isBonusExtracted(getTeam());
+					break;
+				case SHOW_RESOURCES_CANCLAIM:
+					bOfInterest = !plotX->isBonusExtracted(getTeam()) && eOwner != NO_PLAYER && GET_TEAM(GET_PLAYER(eOwner).getTeam()).isHasTech((TechTypes)kBonusInfo.getTechCityTrade());
 					break;
 				}
 
@@ -26385,7 +26394,7 @@ DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) c
 		return NO_DENIAL;
 	}
 
-	if (GET_PLAYER(pUnit->getOriginalOwner()).getID() == GET_PLAYER(ePlayer).getID())
+	if (pUnit->getOriginalOwner() == ePlayer)
 	{
 		return DENIAL_JOKING;
 	}
@@ -26401,7 +26410,7 @@ DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) c
 	}
 
 	if (GET_PLAYER(ePlayer).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(ePlayer).getNumCities()
-	&& GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepCivilianNet() > 0)
+	|| getUnitUpkeepNet(pUnit->isMilitaryBranch(), pUnit->getUpkeep100()) < 1)
 	{
 		return DENIAL_NO_GAIN;
 	}
@@ -26454,8 +26463,7 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 		return DENIAL_NO_GAIN;
 	}
 
-	if (GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepMilitaryNet() > 0
-	&& !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar())
+	if (getUnitUpkeepNet(pUnit->isMilitaryBranch(), pUnit->getUpkeep100()) < 1)
 	{
 		return DENIAL_NO_GAIN;
 	}
@@ -26477,42 +26485,29 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 
 bool CvPlayer::hasValidCivics(BuildingTypes eBuilding) const
 {
-	int iI;
 	bool bValidOrCivic = false;
-	bool bNoReqOrCivic = true;
-	bool bValidAndCivic = true;
-	bool bReqAndCivic = true;
-	for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	bool bOrReq = false;
+
+	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
 		if (GC.getBuildingInfo(eBuilding).isPrereqOrCivics(iI))
 		{
-			bNoReqOrCivic = false;
+			bOrReq = true;
 			if (isCivic(CivicTypes(iI)))
 			{
 				bValidOrCivic = true;
 			}
 		}
 
-		if (GC.getBuildingInfo(eBuilding).isPrereqAndCivics(iI))
+		if (GC.getBuildingInfo(eBuilding).isPrereqAndCivics(iI) && !isCivic(CivicTypes(iI)))
 		{
-			bReqAndCivic = true;
-			if (!isCivic(CivicTypes(iI)))
-			{
-				bValidAndCivic = false;
-			}
+			return false;
 		}
 	}
-
-	if (!bNoReqOrCivic && !bValidOrCivic)
+	if (bOrReq && !bValidOrCivic)
 	{
 		return false;
 	}
-
-	if (bReqAndCivic && !bValidAndCivic)
-	{
-		return false;
-	}
-
 	return true;
 }
 
