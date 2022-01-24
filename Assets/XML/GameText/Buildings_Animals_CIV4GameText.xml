@@ -1393,6 +1393,14 @@
 		<Russian>Ìèô îá îãíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
+		<English>Folklore (T) - Fish</English>
+		<French>Mythe des Bancs de Poissons</French>
+		<Italian>Mito del pesce (T)</Italian>
+		<Polish>Mit - Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLAMINGO</Tag>
 		<English>Folklore - Flamingo</English>
 		<French>Mythe du Flamant rose</French>

@@ -80,22 +80,6 @@
 		<Russian>Ìèô îá îñëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
-		<English>Folklore (T) - Tales of Fish</English>
-		<French>
-			<Text>Mythe des Bancs de Poissons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - Storie di pesce</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit - Ryby</Polish>
-		<Russian>Ìèô î ðûáå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
 		<English>Folklore (T) - Flightless Birds</English>
 		<French>Mythe des Oiseaux marcheurs</French>
@@ -216,7 +200,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
-		<English>Folklore (T) - Fish</English>
+		<English>Folklore (T) - Tales of Fish</English>
 		<French>Mythe des Poissons (local)</French>
 		<Polish>Mit - Ryby (regionalne)</Polish>
 		<Russian>Ìèô î ðûáå</Russian>

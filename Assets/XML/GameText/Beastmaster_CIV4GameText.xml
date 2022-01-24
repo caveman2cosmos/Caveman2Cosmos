@@ -94,12 +94,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HIPPO</Tag>
-		<English>Tamed Hippopotamus</English>
-		<French>
-			<Text>Hippopotame (dompté)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<English>Tamed Hippos</English>
+		<French>Hippopotame (dompté)</French>
 		<Polish>Oswojony Hipopotam</Polish>
 		<Russian>Áåãåìîò (äîì.)</Russian>
 	</TEXT>
