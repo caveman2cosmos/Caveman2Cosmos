@@ -30872,4 +30872,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Unclaimed</English>
 		<Italian>Non reclamato</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CANCLAIM</Tag>
+		<English>Can claim</English>
+	</TEXT>
 </Civ4GameText>
