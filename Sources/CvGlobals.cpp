@@ -2919,10 +2919,6 @@ void cvInternalGlobals::setIsBug()
 
 	::setIsBug();
 
-#ifdef _DEBUG // Matt: temporary
-	Cy::call("CvInfoUtilInterface", "init");
-#endif
-
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))
 	{
