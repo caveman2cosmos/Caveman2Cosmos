@@ -5630,12 +5630,12 @@ class StartPlot :
         self.vacant = True
         self.owner = None
         self.avgDistance = 0
-        return
+
     def isCoast(self):
         gameMap = CyMap()
         plot = gameMap.plot(self.x,self.y)
         waterArea = plot.waterArea()
-        if waterArea.isNone() == True or waterArea.isLake() == True:
+        if waterArea is None or waterArea.isLake():
             return False
         return True
 
