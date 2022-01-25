@@ -282,6 +282,7 @@
 	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoImprovement" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bVisibleAlways" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCountsAsPeak" content="textOnly" dt:type="boolean"/>
@@ -338,6 +339,7 @@
 		<element type="bImpassable" minOccurs="0"/>
 		<element type="bNoCity" minOccurs="0"/>
 		<element type="bNoImprovement" minOccurs="0"/>
+		<element type="bNoBonus" minOccurs="0"/>
 		<element type="bVisibleAlways" minOccurs="0"/>
 		<element type="bNukeImmune" minOccurs="0"/>
 		<element type="bCountsAsPeak" minOccurs="0"/>

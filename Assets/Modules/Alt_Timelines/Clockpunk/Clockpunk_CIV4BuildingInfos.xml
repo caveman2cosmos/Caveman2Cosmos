@@ -179,7 +179,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>770</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>5</iMaintenanceModifier>
+			<iMaintenanceModifier>2</iMaintenanceModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

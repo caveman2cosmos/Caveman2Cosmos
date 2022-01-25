@@ -67,22 +67,6 @@ def myExceptHook(type, value, tb):
 	lines = traceback.format_exception(type, value, tb)
 	sys.stderr.write("\n".join(lines))
 
-def pyPrint(stuff):
-	sys.stdout.write('PY:' + stuff + "\n")
-
-def getOppositeCardinalDirection(dir):
-	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
-
-def shuffle(num, rand):
-	"returns a tuple of size num of shuffled numbers"
-	piShuffle = [0]*num
-	shuffleList(num, rand, piShuffle)	# implemented in C for speed
-	return piShuffle
-
-def spawnUnit(iUnit, pPlot, pPlayer):
-	pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-	return 1
-
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 	if cdUnit.iExtraCombatPercent:
 		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_EXTRA_COMBAT_PERCENT",(cdUnit.iExtraCombatPercent * iChange,))
@@ -227,17 +211,6 @@ def combatMessageBuilder(cdAttacker, cdDefender, iCombatOdds):
 	combatDetailMessageBuilder(cdAttacker,cdDefender.eOwner,-1)
 	combatDetailMessageBuilder(cdDefender,cdDefender.eOwner,1)
 
-def stripLiterals(txt, literal):
-	# The literal argument can be: "font", "color", "link", etc. Caps lock does matter.
-	start = "<%s=" % literal
-	txt = txt.replace("</%s>" % literal, "")
-	i1 = txt.find(start)
-	if i1 > -1:
-		while i1 > -1:
-			i2 = txt.find(">", i1)
-			txt = txt[:i1] + txt[i2+1:]
-			i1 = txt.find(start)
-	return txt
 
 # Centralized function for displaying messages in the message box.
 def sendMessage(szTxt, iPlayer=None, iTime=16, szIcon=None, eColor=-1, iMapX=-1, iMapY=-1, bOffArrow=False, bOnArrow=False, eMsgType=0, szSound=None, bForce=True):

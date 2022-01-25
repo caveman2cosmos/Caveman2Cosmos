@@ -43,6 +43,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingMinYields, "Building - check yields", "Check if buildings with yield income have at least minimum yield as derived from era")
+		self.main.addTestCode(screen, self.checkBuildingMaxMaint, "Building - check maintenance", "Check if buildings don't take too much gold for its output")
 		self.main.addTestCode(screen, self.checkTechCosts, "Tech - check costs", "Check if techs have correct costs")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitCosts, "Unit - check costs", "Check if unit costs are within sane limits")
@@ -60,10 +61,12 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementResourceTechUnlocks, "Improvement - check its unlock tech along with its resource tech enable", "Checks if earliest valid improvement isn't unlocked after resource tech enable")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
+		self.main.addTestCode(screen, self.checkImprovementBonusSpawnChance, "Improvement - check bonus chance", "Checks if upgrade of improvement is more likely to spawn resource")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listStandaloneBuildings, "Building - list stand-alone buildings", "List regular non religious/civic buildings, that aren't part of replacement chain")
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
+		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -1027,7 +1030,6 @@ class TestCode:
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aYieldChangesList[BASE][iYield] += CvBuildingInfo.getYieldChange(iYield)
 					aYieldPerPopChangesList[BASE][iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
-					#aSeaPlotYieldChangesList[BASE][iYield] += CvBuildingInfo.getSeaPlotYieldChange(iYield)
 					aRiverPlotYieldChangesList[BASE][iYield] += CvBuildingInfo.getRiverPlotYieldChange(iYield)
 					aYieldModifiersList[BASE][iYield] += CvBuildingInfo.getYieldModifier(iYield)
 					aPowerYieldModifiersList[BASE][iYield] += CvBuildingInfo.getPowerYieldModifier(iYield)
@@ -2720,6 +2722,86 @@ class TestCode:
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
 
+	#Check if buildings don't take too much gold for its output
+	def checkBuildingMaxMaint(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			if CvBuildingInfo.getCommerceChange(0) < 0 and CvBuildingInfo.getProductionCost() > 0: #This building takes gold and is buildable
+				iBuildingValue = -CvBuildingInfo.getCommerceChange(0) #Gold change will be added to this
+
+				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+					iBuildingValue += CvBuildingInfo.getYieldChange(iYield)
+					iBuildingValue += CvBuildingInfo.getRiverPlotYieldChange(iYield)
+					iBuildingValue += 2*CvBuildingInfo.getYieldModifier(iYield)
+					iBuildingValue += 2*CvBuildingInfo.getPowerYieldModifier(iYield)
+				for entry in CvBuildingInfo.getTechYieldChanges100():
+					iBuildingValue += 0.01*entry.value
+				for entry in CvBuildingInfo.getTechYieldModifiers():
+					iBuildingValue += 2*entry.value
+				if CvBuildingInfo.isAnyBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							iBuildingValue += CvBuildingInfo.getBonusYieldChanges(iBonus, iYield)
+				if CvBuildingInfo.isAnyVicinityBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							iBuildingValue += CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
+				if CvBuildingInfo.isAnyBonusYieldModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							iBuildingValue += 2*CvBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+				for pPlotYieldChanges in CvBuildingInfo.getPlotYieldChange():
+					iBuildingValue += pPlotYieldChanges.iValue
+
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					iBuildingValue += CvBuildingInfo.getCommerceChange(iCommerce)
+					iBuildingValue += 2*CvBuildingInfo.getCommerceModifier(iCommerce)
+				for entry in CvBuildingInfo.getTechCommerceChanges100():
+					iBuildingValue += 0.01*entry.value
+				for entry in CvBuildingInfo.getTechCommerceModifiers():
+					iBuildingValue += 2*entry.value
+				if CvBuildingInfo.isAnyBonusCommercePercentChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							iBuildingValue += CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
+				if CvBuildingInfo.isAnyBonusCommerceModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							iBuildingValue += 2*CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
+
+				iBuildingValue += CvBuildingInfo.getGreatPeopleRateChange()
+				iBuildingValue += 2*CvBuildingInfo.getGreatPeopleRateModifier()
+
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					iBuildingValue += 5*CvBuildingInfo.getSpecialistCount(iSpecialist)
+					iBuildingValue += 5*CvBuildingInfo.getFreeSpecialistCount(iSpecialist)
+
+					if CvBuildingInfo.isAnyTechSpecialistChanges():
+						for iTech in xrange(GC.getNumTechInfos()):
+							if CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist) > 0:
+								iBuildingValue += 5*CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+					else:
+						break
+
+				iBuildingValue += CvBuildingInfo.getHappiness()
+				iBuildingValue += CvBuildingInfo.getHealth()
+
+				for iBonus, iHappiness in CvBuildingInfo.getBonusHappinessChanges():
+					iBuildingValue += iHappiness
+				for iBonus, iHealth in CvBuildingInfo.getBonusHealthChanges():
+					iBuildingValue += iHealth
+				for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
+					iBuildingValue += 1
+
+				for iTech, iHappiness in CvBuildingInfo.getTechHappinessChanges():
+					iBuildingValue += iHappiness
+				for iTech, iHealth in CvBuildingInfo.getTechHealthChanges():
+					iBuildingValue += iHealth
+
+				if 3*iBuildingValue < -CvBuildingInfo.getCommerceChange(0):
+					self.log(CvBuildingInfo.getType()+" gold maint: "+str(CvBuildingInfo.getCommerceChange(0))+" Suggested max: "+str(-3*iBuildingValue))
+
 	#Check if buildings with yield income have at least minimum yield as derived from era
 	def checkBuildingMinYields(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -3344,7 +3426,7 @@ class TestCode:
 			if len(aBuildTechID) > 0 and iImprovementTechID != min(aBuildTechID): #Improvement tech position is equal to earliest build tech position
 				self.log(aBuildType[aBuildTechID.index(min(aBuildTechID))]+" and "+CvImprovementInfo.getType()+" have different techs "+str(min(aBuildTechID))+"/"+str(iImprovementTechID))
 
-	#Checks if earliest valid improvement isn't unlocked after resource tech enable
+	#Improvement - Checks if earliest valid improvement isn't unlocked after resource tech enable
 	def checkImprovementResourceTechUnlocks(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
@@ -3365,7 +3447,7 @@ class TestCode:
 				if iBonusTechLoc < min(aImprovementTechLoc) or (iBonusTechLoc == min(aImprovementTechLoc) and iBonusTechID != min(aImprovementTechID)):
 					self.log(CvBonusInfo.getType()+" tech enable is before, or on same column but different tech with earliest improvement: "+aImprovementType[aImprovementTechLoc.index(min(aImprovementTechLoc))])
 
-	#Improvement - yield boosts should be between improvement unlock and upgrade
+	#Improvement - Yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoostLocation(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
@@ -3395,7 +3477,7 @@ class TestCode:
 						if iImpAltUpgradeTechLoc and aTechBoost and iImpAltUpgradeTechLoc <= max(aTechBoost):
 							self.log(CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)+" Alt Upgrade: "+CvImprovementAltUpgradeInfo.getType()+": "+str(iImpAltUpgradeTechLoc))
 
-	#Improvement - base + tech improvement yields compared to upgraded improvement
+	#Improvement - Base + tech improvement yields compared to upgraded improvement
 	def checkImprovementYieldValues(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
@@ -3427,6 +3509,43 @@ class TestCode:
 						aBaseAltUpgradeImprovementYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
 					if aTotalImprovementYield[0] > aBaseAltUpgradeImprovementYield[0] or aTotalImprovementYield[1] > aBaseAltUpgradeImprovementYield[1] or aTotalImprovementYield[2] > aBaseAltUpgradeImprovementYield[2]:
 						self.log(CvImprovementInfo.getType()+" Total Yield: "+str(aTotalImprovementYield)+", "+CvImprovementAltUpgradeInfo.getType()+" Alt Upgrade Yield: "+str(aBaseAltUpgradeImprovementYield))
+
+	#Improvement - Checks if upgrade of improvement is more likely to spawn resource
+	def checkImprovementBonusSpawnChance(self):
+		for iImprovement in xrange(GC.getNumImprovementInfos()):
+			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+			iNoDiscovery = 999999
+
+			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0: #Check improvements, that can upgrade
+				aBaseBonusChance = [iNoDiscovery]*GC.getNumBonusInfos()
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					if CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus) != 0:
+						aBaseBonusChance[iBonus] = CvImprovementInfo.getImprovementBonusDiscoverRand(iBonus)
+
+				#Main upgrade
+				CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
+				aUpgradeBonusChance = [iNoDiscovery]*GC.getNumBonusInfos()
+				for jBonus in xrange(GC.getNumBonusInfos()):
+					if CvImprovementUpgradeInfo.getImprovementBonusDiscoverRand(jBonus) != 0:
+						aUpgradeBonusChance[jBonus] = CvImprovementUpgradeInfo.getImprovementBonusDiscoverRand(jBonus)
+
+				#Compare rand chances of improvement and main upgrade
+				for i in xrange(len(aBaseBonusChance)):
+					if aBaseBonusChance[i] < aUpgradeBonusChance[i] or aBaseBonusChance[i] != 2*aUpgradeBonusChance[i] and aBaseBonusChance[i] != iNoDiscovery:
+						self.log(CvImprovementInfo.getType()+" -> "+CvImprovementUpgradeInfo.getType()+" Bonus: "+GC.getBonusInfo(i).getType()+" Rand: "+str(aBaseBonusChance[i])+"->"+str(aUpgradeBonusChance[i]))
+
+				#Alt upgrades
+				for iImprovementUpgrade in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+					CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementUpgrade))
+					aAltUpgradeBonusChance = [iNoDiscovery]*GC.getNumBonusInfos()
+					for kBonus in xrange(GC.getNumBonusInfos()):
+						if CvImprovementAltUpgradeInfo.getImprovementBonusDiscoverRand(kBonus) != 0:
+							aAltUpgradeBonusChance[kBonus] = CvImprovementAltUpgradeInfo.getImprovementBonusDiscoverRand(kBonus)
+
+					#Compare rand chances of improvement and alt upgrades
+					for j in xrange(len(aBaseBonusChance)):
+						if aBaseBonusChance[j] < aAltUpgradeBonusChance[j] or aBaseBonusChance[j] != 2*aAltUpgradeBonusChance[j] and aBaseBonusChance[j] != iNoDiscovery:
+							self.log(CvImprovementInfo.getType()+" A-> "+CvImprovementAltUpgradeInfo.getType()+" Bonus: "+GC.getBonusInfo(j).getType()+" Rand: "+str(aBaseBonusChance[j])+"->"+str(aAltUpgradeBonusChance[j]))
 
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
 	def checkBuildingWonderMovies(self):
@@ -3584,3 +3703,29 @@ class TestCode:
 		for i in xrange(iTotalTechTreeLength):
 			iTotalActiveBuildings = iTotalActiveBuildings + aUnlockedBuildingsTechLoc[i] - aObsoletedBuildingsTechLoc[i]
 			self.log("XGrid: "+str(i)+" Unlocked: "+str(aUnlockedBuildingsTechLoc[i])+" Obsoleted: "+str(aObsoletedBuildingsTechLoc[i])+" Available buildings: "+str(iTotalActiveBuildings))
+
+	#List taxonomy buildings, that doesn't have all potential base folklore requirements
+	def checkTaxonomyBuildings(self):
+		aFolkloreBuildings = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE") != -1:
+				aFolkloreBuildings.append(iBuilding)
+
+		aFolkloreUnits = []
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			if CvUnitInfo.getType().find("_SUBDUED") != -1:
+				aFolkloreUnits.append(iUnit)
+
+		for i in xrange(len(aFolkloreBuildings)):
+			CvBuildingInfo = GC.getBuildingInfo(aFolkloreBuildings[i])
+			if CvBuildingInfo.getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY"):
+				for j in xrange(len(aFolkloreUnits)):
+					CvUnitInfo = GC.getUnitInfo(aFolkloreUnits[j])
+					if CvUnitInfo.getHasBuilding(aFolkloreBuildings[i]):
+						for k in xrange(CvUnitInfo.getNumBuildings()):
+							CvUnitBuilding = GC.getBuildingInfo(CvUnitInfo.getBuildings(k))
+							if CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY") and CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION") and CvUnitBuilding.getType().find("BUILDING_FOLKLORE") != -1:
+								if not CvBuildingInfo.isPrereqInCityBuilding(CvUnitInfo.getBuildings(k)) and not CvBuildingInfo.isPrereqOrBuilding(CvUnitInfo.getBuildings(k)):
+									self.log(CvBuildingInfo.getType()+" could have as req: "+CvUnitBuilding.getType())

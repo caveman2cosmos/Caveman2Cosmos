@@ -22179,6 +22179,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -25883,6 +25889,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -26308,10 +26320,6 @@
 				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
@@ -28441,6 +28449,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -28941,6 +28955,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -36258,6 +36278,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<BonusType>BONUS_TUCANO</BonusType>
@@ -37345,6 +37371,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<BonusType>BONUS_VALDIVIAN</BonusType>
@@ -39768,6 +39800,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<BonusType>BONUS_YOLNGU</BonusType>
@@ -40108,11 +40146,13 @@
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</UnitAIs>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -42612,11 +42652,13 @@
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</UnitAIs>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -43668,6 +43710,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -47766,6 +47814,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -48141,6 +48195,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -50385,6 +50445,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>

@@ -158,16 +158,6 @@ class PediaFeature:
 		iTemp = CvTheFeature.getWarmingDefense()
 		if iTemp:
 			szTxt += "\nGlobal Warming Defense Factor: %d" % iTemp
-		bNoCity = CvTheFeature.isNoCity()
-		bNoImpr = CvTheFeature.isNoImprovement()
-		if bNoCity or bNoImpr:
-			szTxt += "\nNo "
-			if bNoCity:
-				szTxt += "city"
-				if bNoImpr:
-					szTxt += " or "
-			if bNoImpr:
-				szTxt += "improvement"
 		if szTxt:
 			szTxt = szfont3b + szTxt + "\n"
 		szTxt += szfont3 + CyGameTextMgr().getFeatureHelp(iTheFeature, True)

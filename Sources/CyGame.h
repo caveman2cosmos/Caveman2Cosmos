@@ -27,9 +27,6 @@ public:
 	bool isMultiplayer() const;
 
 	void updateScore(bool bForce);
-	void cycleCities(bool bForward, bool bAdd);
-	void cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers);
-	bool cyclePlotUnits(const CyPlot* pPlot, bool bForward, bool bAuto, int iCount);
 
 	void selectionListMove(const CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl);
 	void selectionListGameNetMessage(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift);

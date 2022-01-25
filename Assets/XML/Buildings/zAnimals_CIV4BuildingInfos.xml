@@ -1491,7 +1491,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_FUR_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<iMinLatitude>-30</iMinLatitude>
 			<iMaxLatitude>60</iMaxLatitude>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>

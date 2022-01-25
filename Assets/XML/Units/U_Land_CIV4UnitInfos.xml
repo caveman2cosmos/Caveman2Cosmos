@@ -5489,6 +5489,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<bStateReligion>1</bStateReligion>
 			<PrereqGameOption>GAMEOPTION_INQUISITIONS</PrereqGameOption>
 			<PrereqOrCivics>
@@ -33608,6 +33614,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<PrereqTech>TECH_CORPORATION</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -33734,6 +33746,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_CARPOOL</BuildingType>
 				<BuildingType>BUILDING_SMOKE_DETECTOR</BuildingType>
@@ -37086,6 +37104,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
 					<GreatPeopleType>SPECIALIST_GREAT_MERCHANT</GreatPeopleType>
@@ -38229,6 +38253,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
 					<GreatPeopleType>SPECIALIST_GREAT_SPY</GreatPeopleType>
@@ -43300,6 +43330,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
 					<GreatPeopleType>SPECIALIST_GREAT_STATESMAN</GreatPeopleType>
@@ -43405,6 +43441,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
 					<GreatPeopleType>SPECIALIST_GREAT_SLEUTH</GreatPeopleType>
@@ -43960,6 +44002,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Flavors>
@@ -44042,6 +44090,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -44128,11 +44182,13 @@
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</UnitAIs>
+			</NotUnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
@@ -44201,11 +44257,13 @@
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</UnitAIs>
+			</NotUnitAIs>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -44283,6 +44341,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Flavors>
@@ -44384,6 +44448,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
@@ -44491,11 +44561,13 @@
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</UnitAIs>
+			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -44586,11 +44658,13 @@
 					<UnitAIType>UNITAI_ENGINEER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</UnitAIs>
+			</NotUnitAIs>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<Flavors>
 				<Flavor>

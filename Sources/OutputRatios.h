@@ -5,17 +5,21 @@
 struct OutputRatios
 {
 	OutputRatios(int food, int production, int commerce);
-	void IncreaseOutputWeights(double foodWeight, double productionWeight, double commerceWeight);
-	void IncreaseFoodWeight(const double foodWeight);
-	void DecraseFoodWeight(const double foodWeight);
-	void IncreaseProductionWeight(const double productionWeight);
-	void DecraseProductionWeight(const double productionWeight);
-	void IncreaseCommerceWeight(const double commerceWeight);
-	void DecraseCommerceWeight(const double commerceWeight);
+	void SetOutputWeights(int foodWeight, double productionWeight, double commerceWeight);
+	void IncreaseOutputWeights(int foodWeight, int productionWeight, int commerceWeight);
+	void IncreaseFoodWeight(const int foodWeight);
+	void DecraseFoodWeight(const int foodWeight);
+	void IncreaseProductionWeight(const int productionWeight);
+	void DecraseProductionWeight(const int productionWeight);
+	void IncreaseCommerceWeight(const int commerceWeight);
+	void DecraseCommerceWeight(const int commerceWeight);
 	int CalculateOutputValue(int food, int production, int commerce) const;
 	int food_ratio;
 	int production_ratio;
 	int commerce_ratio;
+	int food_weight;
+	int production_weight;
+	int commerce_weight;
 };
 
 #endif

@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
 		<English>Enclosure - Amphibian Pond</English>
 		<French>Enclos - Mare à amphibiens</French>
-		<Italian>Gabbia - Stagno per anfibi</Italian>
+		<Italian>Stagno per anfibi</Italian>
 		<Polish>Klatka - Płazy</Polish>
 		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
 	</TEXT>
@@ -12,7 +12,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM</Tag>
 		<English>Military Standard (Animal mascot)</English>
 		<French>Mascotte de L'Armée de Terre</French>
-		<Italian>Mascotte dell'esercito</Italian>
+		<Italian>Mascotte dell'esercito (animale)</Italian>
 		<Polish>Sztandar Wojskowy (Zwierzęca Maskotka)</Polish>
 		<Russian>Çâåðèíûé òîòåì</Russian>
 	</TEXT>
@@ -20,7 +20,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Tag>
 		<English>Military Standard (Canines)</English>
 		<French>Standards Militaires (Canins)</French>
-		<Italian>Mascotte dell'esercito (Canidi)</Italian>
+		<Italian>Mascotte dell'esercito (canide)</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
@@ -44,14 +44,14 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
 		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
 		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
-		<Italian>Costruisce le unità di lavoratori più velocemente.</Italian>
+		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
 		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
 		<English>Enclosure - Bad Boys</English>
 		<French>Enclos - Animaux nuisibles</French>
-		<Italian>Gabbia - Cattivi ragazzi</Italian>
+		<Italian>Gabbia dei parassiti</Italian>
 		<Polish>Klatka - Groźne Zwierzęta</Polish>
 		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
 	</TEXT>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
 		<English>Enclosure - Bear</English>
 		<French>Enclos - Ours</French>
-		<Italian>Gabbia - Orsi</Italian>
+		<Italian>Gabbia degli orsi</Italian>
 		<Polish>Klatka - Niedźwiedź</Polish>
 		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
 	</TEXT>
@@ -67,7 +67,7 @@
 		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
 		<English>Enclosure - Big Cat</English>
 		<French>Enclos - Félins</French>
-		<Italian>Gabbia - Felini</Italian>
+		<Italian>Gabbia dei grossi felini</Italian>
 		<Polish>Klatka - Wielki kot</Polish>
 		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
 	</TEXT>
@@ -75,7 +75,7 @@
 		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
 		<English>Enclosure - Bird</English>
 		<French>Enclos - Oiseaux</French>
-		<Italian>Gabbia - Uccelli</Italian>
+		<Italian>Gabbia degli uccelli</Italian>
 		<Polish>Klatka - Ptaki</Polish>
 		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_BUILDING_BISON_HERD</Tag>
 		<English>Herd (Bison)</English>
 		<French>Troupeau de Bisons</French>
-		<Italian>Branco - Bisonti</Italian>
+		<Italian>Mandria di bisonti</Italian>
 		<Polish>Stado - Bizony</Polish>
 		<Russian>Ñòàäî áèçîíîâ</Russian>
 	</TEXT>
@@ -91,7 +91,7 @@
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
 		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
 		<French>Kangourou Boxeur</French>
-		<Italian>Pugilato fra canguri</Italian>
+		<Italian>Fiera del canguro combattente</Italian>
 		<Polish>Mit Kangura</Polish>
 		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD</Tag>
 		<English>Herd (Buffalo)</English>
 		<French>Troupeau de Buffles</French>
-		<Italian>Branco - Bufali</Italian>
+		<Italian>Mandria di Bufali</Italian>
 		<Polish>Stado - Bawołów</Polish>
 		<Russian>Ñòàäî áóéâîëîâ</Russian>
 	</TEXT>
@@ -107,11 +107,7 @@
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER</Tag>
 		<English>Animal Trainer (Buffalo)</English>
 		<French>Dresseur de Buffles</French>
-		<Italian>
-			<Text>Addestratore di bufali:Addestratori di bufali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Addestratore di bufali</Italian>
 		<Polish>Treser Bawołów</Polish>
 		<Russian>Äðåññ. áóéâîëîâ</Russian>
 	</TEXT>
@@ -119,18 +115,14 @@
 		<Tag>TXT_KEY_BUILDING_CAMEL_HERD</Tag>
 		<English>Herd (Camel)</English>
 		<French>Troupeau de Chameaux</French>
-		<Italian>Branco - Cammelli</Italian>
+		<Italian>Branco di cammelli</Italian>
 		<Polish>Stado - Wielbłądy</Polish>
 		<Russian>Ñòàäî âåðáëþäîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL</Tag>
 		<English>Carnival</English>
-		<French>
-			<Text>Carnaval</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Carnaval</French>
 		<German>Jahrmarkt</German>
 		<Italian>Fiera</Italian>
 		<Polish>Karnawał</Polish>
@@ -164,7 +156,7 @@
 		<Tag>TXT_KEY_BUILDING_COW_HERD</Tag>
 		<English>Herd (Cow)</English>
 		<French>Troupeau de Vaches</French>
-		<Italian>Branco - Bovini</Italian>
+		<Italian>Mandria di bovini</Italian>
 		<Polish>Stado - Krowy</Polish>
 		<Russian>Ñòàäî êîðîâ</Russian>
 	</TEXT>
@@ -190,7 +182,7 @@
 		<Tag>TXT_KEY_BUILDING_DEER_HERD</Tag>
 		<English>Herd (Deer)</English>
 		<French>Troupeau de Cerfs</French>
-		<Italian>Branco - Cervi</Italian>
+		<Italian>Branco di cervi</Italian>
 		<Polish>Stado - Jelenie</Polish>
 		<Russian>Ñòàäî îëåíåé</Russian>
 	</TEXT>
@@ -198,11 +190,7 @@
 		<Tag>TXT_KEY_BUILDING_DOG_KENNEL</Tag>
 		<English>Dog Kennels</English>
 		<French>Chenils pour Chiens</French>
-		<Italian>
-			<Text>Canile:Canili</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Canile</Italian>
 		<Polish>Psie budy</Polish>
 		<Russian>Ñîáà÷èé âîëüåð</Russian>
 	</TEXT>
@@ -210,7 +198,7 @@
 		<Tag>TXT_KEY_BUILDING_DONKEY_HERD</Tag>
 		<English>Herd (Donkey)</English>
 		<French>Troupeau d'Ânes</French>
-		<Italian>Branco - Asini</Italian>
+		<Italian>Branco di asini</Italian>
 		<Polish>Stado - Osły</Polish>
 		<Russian>Ñòàäî îñëîâ</Russian>
 	</TEXT>
@@ -218,7 +206,7 @@
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD</Tag>
 		<English>Herd (Elephant)</English>
 		<French>Troupeau d'Eléphants</French>
-		<Italian>Branco - Elefanti</Italian>
+		<Italian>Branco di elefanti</Italian>
 		<Polish>Stado - Słonie</Polish>
 		<Russian>Ñòàäî ñëîíîâ</Russian>
 	</TEXT>
@@ -226,7 +214,7 @@
 		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Tag>
 		<English>Enclosure - Exotic Herbivore</English>
 		<French>Enclos - Herbivores exotiques</French>
-		<Italian>Gabbia - Erbivori esotici</Italian>
+		<Italian>Gabbia degli erbivori esotici</Italian>
 		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
 		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
 	</TEXT>
@@ -257,16 +245,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOAT_HERD</Tag>
 		<English>Herd (Goat)</English>
-		<French>
-			<Text>Troupeau de Chèvres</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Capre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Chèvres</French>
+		<Italian>Branco di capre</Italian>
 		<Polish>Efekt Mitu - Koza</Polish>
 		<Russian>Ñòàäî êîçëîâ</Russian>
 	</TEXT>
@@ -281,256 +261,128 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_PETS</Tag>
 		<English>Unit Reward - Governor's Pets</English>
-		<French>
-			<Text>Animaux du Gouverneurs</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Italian>
-			<Text>Animali del governatore</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<French>Animaux du Gouverneurs</French>
+		<Italian>Animali del governatore</Italian>
 		<Polish>Maskotka Gubernatora</Polish>
 		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
 		<English>Unit Reward - Hawking Hut</English>
-		<French>
-			<Text>Cabane du Fauconnier</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Capanna del falconiere</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Cabane du Fauconnier</French>
+		<Italian>Capanna del falconiere</Italian>
 		<Polish>Chata Sokolnika</Polish>
 		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_HERD</Tag>
 		<English>Herd (Horse)</English>
-		<French>
-			<Text>Troupeau de Chevaux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Cavalli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Chevaux</French>
+		<Italian>Mandria di cavalli</Italian>
 		<Polish>Stado - Konie</Polish>
 		<Russian>Òàáóí ëîøàäåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD</Tag>
 		<English>Herd (Llama)</English>
-		<French>
-			<Text>Troupeau de Lama</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Lama</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Lama</French>
+		<Italian>Branco di lama</Italian>
 		<Polish>Stado - Lam</Polish>
 		<Russian>Ñòàäî ëàì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
 		<English>Unit Reward - Marine Institute</English>
-		<French>
-			<Text>Institut de la Mer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Istituto marino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Institut de la Mer</French>
+		<Italian>Istituto marino</Italian>
 		<Polish>Instytut Morski</Polish>
 		<Russian>Ìîðñêîé èíñòèòóò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Tag>
 		<English>Enclosure - Marsupial</English>
-		<French>
-			<Text>Enclos - Marsupiaux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Marsupiali</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Marsupiaux</French>
+		<Italian>Gabbia dei marsupiali</Italian>
 		<Polish>Klatka - Torbacze</Polish>
 		<Russian>Êëåòêè ñ ñóì÷àòûìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
 		<English>Unit Reward - Master Hunter</English>
-		<French>
-			<Text>Cabane du Maître chasseur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mastro cacciatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Cabane du Maître chasseur</French>
+		<Italian>Mastro cacciatore</Italian>
 		<Polish>Wybitny Łowca</Polish>
 		<Russian>Õèæèíà îõîòíèêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
 		<English>Unit Reward - Master Sea Hunter</English>
-		<French>
-			<Text>Maître Chasseur des mers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mastro pescatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Maître Chasseur des mers</French>
+		<Italian>Mastro pescatore</Italian>
 		<Polish>Wybitny Morski Łowca</Polish>
 		<Russian>Øêîëà ðûáàëêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
 		<English>Animal Trainer (Donkey)</English>
-		<French>
-			<Text>Elevage de Mules</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Addestratore di muli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Elevage de Mules</French>
+		<Italian>Addestratore di muli</Italian>
 		<Polish>Treser Mułów</Polish>
 		<Russian>Äðåññ. ìóëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD</Tag>
 		<English>Herd (Muskox)</English>
-		<French>
-			<Text>Troupeau de Boeufs musqués</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Buoi muschiati</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Bœufs musqués</French>
+		<Italian>Branco di buoi muschiati</Italian>
 		<Polish>Stado - Woły Piżmowe</Polish>
 		<Russian>Ñòàäî îâöåáûêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMPHIBIAN</Tag>
 		<English>Folklore (T) - Amphibians</English>
-		<French>
-			<Text>Mythe - Amphibiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - Anfibi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Płazów</Polish>
+		<French>Mythe - Amphibiens (T)</French>
+		<Italian>Mito degli anfibi (T)</Italian>
+		<Polish>Mit (T) Płazów</Polish>
 		<Russian>Ìèô îá àìôèáèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
 		<English>Folklore (T) - Antelope</English>
-		<French>
-			<Text>Mythe (T) de l'Antilope</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito (T) dell'antilope</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de l'Antilope (T)</French>
+		<Italian>Mito dell'antilope (T)</Italian>
 		<Polish>Mit (T) Antylopy</Polish>
 		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
 		<English>Folklore - Beluga</English>
-		<French>
-			<Text>Mythe de la Baleine Beluga</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del beluga</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de la Baleine Beluga</French>
+		<Italian>Mito del beluga</Italian>
 		<Polish>Mit Bieługi</Polish>
 		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BOAR</Tag>
-		<English>Folklore - Wild Boar</English>
-		<French>
-			<Text>Mythe du Sanglier</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del cinghiale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Boar</English>
+		<French>Mythe du Sanglier</French>
+		<Italian>Mito del cinghiale</Italian>
 		<Polish>Mit Dzika</Polish>
 		<Russian>Ìèô î êàáàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BULL</Tag>
-		<English>Folklore - Bull</English>
-		<French>
-			<Text>Mythe du Taureau</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del toro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Bull</English>
+		<French>Mythe du Taureau</French>
+		<Italian>Mito del toro</Italian>
 		<Polish>Mit Byka</Polish>
 		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Tag>
 		<English>Folklore - Camel</English>
-		<French>
-			<Text>Mythe du Chameau</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del cammello</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Chameau</French>
+		<Italian>Mito del cammello</Italian>
 		<Polish>Mit Wielbłąda</Polish>
 		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
@@ -538,115 +390,81 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN</Tag>
 		<English>Folklore - Capuchin Monkey</English>
 		<French>Mythe du Capucin</French>
+		<Italian>Mito della scimmia cappuccina</Italian>
 		<Russian>Ìèô î êàïóöèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPYBARA</Tag>
 		<English>Folklore - Capybara</English>
 		<French>Mythe du Cabiaï</French>
+		<Italian>Mito del capibara</Italian>
 		<Russian>Ìèô î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHEETAH</Tag>
 		<English>Folklore - Cheetah</English>
 		<French>Mythe du Cheetah</French>
+		<Italian>Mito del ghepardo</Italian>
 		<Russian>Ìèô î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHIMPANZEE</Tag>
 		<English>Folklore - Chimpanzee</English>
 		<French>Mythe du Chimpanzé</French>
+		<Italian>Mito dello scimpanzé</Italian>
 		<Russian>Ìèô î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
 		<English>Folklore - Cod</English>
 		<French>Mythe de la Morue</French>
+		<Italian>Mito del merluzzo</Italian>
 		<Russian>Ìèô î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CRAB</Tag>
 		<English>Folklore - Crab</English>
-		<French>
-			<Text>Mythe- crabe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - granchi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe - crabe</French>
+		<Italian>Mito del granchio</Italian>
 		<Polish>Mit Krabów</Polish>
 		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
 		<English>Folklore - Deer</English>
-		<French>
-			<Text>Mythe (T) du Cerf</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito (T) del cervo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit (T) Jelenia</Polish>
+		<French>Mythe du Cerf</French>
+		<Italian>Mito del cervo</Italian>
+		<Polish>Mit Jelenia</Polish>
 		<Russian>Ìèô îá îëåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TORTOISE</Tag>
 		<English>Folklore - Desert Tortoise</English>
 		<French>Mythe de la Tortue du désert</French>
+		<Italian>Mito della tartaruga del deserto</Italian>
 		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
 		<English>Folklore - Dolphin</English>
-		<French>
-			<Text>Mythe du Dauphin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del delfino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Dauphin</French>
+		<Italian>Mito del delfino</Italian>
 		<Polish>Mit Delfina</Polish>
 		<Russian>Ìèô î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DRAGON</Tag>
 		<English>Folklore (E) - Dragon</English>
-		<French>
-			<Text>Mythe du Dragon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del dragone</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Smoka</Polish>
+		<French>Mythe du Dragon (E)</French>
+		<Italian>Mito del dragone (E)</Italian>
+		<Polish>Mit (E) Smoka</Polish>
 		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUGONG</Tag>
 		<English>Folklore - Dugong</English>
-		<French>
-			<Text>Mythe du Dugong</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del dugongo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Dugong</French>
+		<Italian>Mito del dugongo</Italian>
 		<Polish>Mit Dugonga</Polish>
 		<Russian>Ìèô î äþãîíè</Russian>
 	</TEXT>
@@ -654,149 +472,82 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE_BALD</Tag>
 		<English>Folklore - Bald Eagle</English>
 		<French>Mythe du Pygargue à tête blanche</French>
+		<Italian>Mito dell'aquila testabianca</Italian>
 		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EARTH</Tag>
 		<English>Folklore (E) - Earth</English>
-		<French>
-			<Text>Mythe de la Terre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito della Terra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Ziemi</Polish>
+		<French>Mythe de la Terre (E)</French>
+		<Italian>Mito della Terra (E)</Italian>
+		<Polish>Mit (E) Ziemi</Polish>
 		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
 		<English>Folklore (T) - Elephant</English>
-		<French>
-			<Text>Mythe de l'Eléphant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito dell'elefante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Słonia</Polish>
+		<French>Mythe de l'Eléphant (T)</French>
+		<Italian>Mito dell'elefante (T)</Italian>
+		<Polish>Mit (T) Słonia</Polish>
 		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GOAT</Tag>
 		<English>Folklore - Mouflon</English>
-		<French>
-			<Text>Mythe de la Chèvre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito della capra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de la Chèvre</French>
+		<Italian>Mito della capra</Italian>
 		<Polish>Mit Kóz</Polish>
 		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREATWHITE_SHARK</Tag>
 		<English>Folklore - Great White Shark</English>
-		<French>
-			<Text>Mythe - Grand Requin Blanc</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - grande squalo bianco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe - Grand Requin Blanc</French>
+		<Italian>Mito del grande squalo bianco</Italian>
 		<Polish>Mit Żarłacza Białego</Polish>
 		<Russian>Ìèô î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Tag>
 		<English>Folklore - Hammerhead Shark</English>
-		<French>
-			<Text>Mythe - Requin marteau</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - squalo martello</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe - Requin marteau</French>
+		<Italian>Mito dello squalo martello</Italian>
 		<Polish>Mit Rekina-młota</Polish>
 		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
-		<English>Folklore (T) - Humpback Whale</English>
-		<French>
-			<Text>Mythe de la Baleine à Bosses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito della megattera</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore - Humpback Whale</English>
+		<French>Mythe de la Baleine à Bosses</French>
+		<Italian>Mito della megattera</Italian>
 		<Polish>Mit Humpbaka</Polish>
 		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
 		<English>Folklore - Giant Squid</English>
-		<French>
-			<Text>Mythe du Kraken</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del kraken</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Kraken</French>
+		<Italian>Mito del kraken</Italian>
 		<Polish>Mit Krakena</Polish>
 		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEMUR</Tag>
+		<English>Folklore - Ring-tailed Lemur</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
-		<English>Folklore - Leviathan</English>
-		<French>
-			<Text>Mythe du Léviathan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del leviatano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Leviathan</English>
+		<French>Mythe du Léviathan</French>
+		<Italian>Mito del leviatano</Italian>
 		<Polish>Mit Lewiatana</Polish>
 		<Russian>Ìèô î Ëåâèàôàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LION</Tag>
 		<English>Folklore - Lion</English>
-		<French>
-			<Text>Mythe du Lion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del leone</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Lion</French>
+		<Italian>Mito del leone</Italian>
 		<Polish>Mit Lwa</Polish>
 		<Russian>Ìèô î ëüâå</Russian>
 	</TEXT>
@@ -804,11 +555,7 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
 		<English>Folklore - Guanaco</English>
 		<French>Mythe du Lama</French>
-		<Italian>
-			<Text>Mito del lama</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mito del lama</Italian>
 		<Polish>Mit Lam</Polish>
 		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
@@ -816,107 +563,61 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MACKEREL</Tag>
 		<English>Folklore - Mackerel</English>
 		<French>Mythe du Maquereau</French>
+		<Italian>Mito dello sgombro</Italian>
 		<Russian>Ìèô î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARLIN</Tag>
 		<English>Folklore - Marlin</English>
 		<French>Mythe du Marlin</French>
+		<Italian>Mito del marlin</Italian>
 		<Russian>Ìèô î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
-		<English>Folklore - Marsupial</English>
-		<French>
-			<Text>Mythe (T) du Marsupial</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito (T) dei marsupiali</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit (T) Torbacza</Polish>
+		<English>Folklore (T) - Marsupial</English>
+		<French>Mythe du Marsupial</French>
+		<Italian>Mito dei marsupiali</Italian>
+		<Polish>Mit Torbacza</Polish>
 		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MERMAID</Tag>
 		<English>Folklore (E) - Mermaid</English>
-		<French>
-			<Text>Mythe des Sirènes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito delle sirene</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Syreny</Polish>
+		<French>Mythe des Sirènes (E)</French>
+		<Italian>Mito delle sirene (E)</Italian>
+		<Polish>Mit (E) Syreny</Polish>
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
-		<English>Folklore (T) - Minke Whale</English>
-		<French>
-			<Text>Mythe du Rorqual</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito delle balenottere Minke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore Minke Whale</English>
+		<French>Mythe du Rorqual</French>
+		<Italian>Mito della balenottera minore</Italian>
 		<Polish>Mit Płetwala</Polish>
 		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NARWHAL</Tag>
-		<English>Folklore (T) - Narwhal</English>
-		<French>
-			<Text>Mythe du Narval</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del narvalo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore - Narwhal</English>
+		<French>Mythe du Narval</French>
+		<Italian>Mito del narvalo</Italian>
 		<Polish>Mit Narwala</Polish>
 		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
-		<English>Folklore - Old Man of the Forest</English>
-		<French>
-			<Text>Mythe de l'Ancien de la Forêt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito dell'uomo delle foreste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Old Man of the Forest</English>
+		<French>Mythe de l'Ancien de la Forêt</French>
+		<Italian>Mito del Vecchio della foresta</Italian>
 		<Polish>Mit Starego człowieka z lasu</Polish>
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
-		<English>Folklore (T) - Orca</English>
-		<French>
-			<Text>Mythe de l'Orque</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito dell'orca</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore - Orca</English>
+		<French>Mythe de l'Orque</French>
+		<Italian>Mito dell'orca</Italian>
 		<Polish>Mit Orki</Polish>
 		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
@@ -924,23 +625,15 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_CAT</Tag>
 		<English>Folklore - Paleolithic Cat</English>
 		<French>Mythe du Félin Paléolithique</French>
-		<Italian>
-			<Text>Mito del felino paleolitico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mito del felino paleolitico</Italian>
 		<Polish>Mit Lew Jaskiniowy</Polish>
 		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
-		<English>Folklore - Paleolithic Mammoth</English>
+		<English>Folklore - Mammoth</English>
 		<French>Mythe du Mammouth Paléolithique</French>
-		<Italian>
-			<Text>Mito del mammut paleolitico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mito del mammut paleolitico</Italian>
 		<Polish>Mit Mamutów</Polish>
 		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
@@ -948,43 +641,23 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
 		<English>Folklore - Paleolithic Marsupial</English>
 		<French>Mythe du Marsupial Paléolithique</French>
-		<Italian>
-			<Text>Mito del marsupiale paleolitico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mito del marsupiale paleolitico</Italian>
 		<Polish>Mit Paleolitycznych Torbaczy</Polish>
 		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHOENIX</Tag>
 		<English>Folklore (E) - Phoenix</English>
-		<French>
-			<Text>Mythe du Phoenix</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito della fenice</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Feniksa</Polish>
+		<French>Mythe du Phoenix (E)</French>
+		<Italian>Mito della fenice (E)</Italian>
+		<Polish>Mit (E) Feniksa</Polish>
 		<Russian>Ìèô î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
-		<English>Folklore - Ray</English>
-		<French>
-			<Text>Mythe - la Raie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - manta</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Ray</English>
+		<French>Mythe - la Raie</French>
+		<Italian>Mito della razza</Italian>
 		<Polish>Mit Manty</Polish>
 		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
@@ -992,263 +665,141 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_EAGLE</Tag>
 		<English>Folklore - Eagle Ray</English>
 		<French>Mythe de l'Aigle de mer</French>
+		<Italian>Mito della razza aquila</Italian>
 		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_MANTA</Tag>
 		<English>Folklore - Manta Ray</English>
 		<French>Mythe de la Raie manta</French>
+		<Italian>Mito della manta</Italian>
 		<Russian>Ìèô î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REEF_SHARK</Tag>
 		<English>Folklore - Reef Shark</English>
-		<French>
-			<Text>Mythe - Requin des récifs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - squalo di barriera corallina</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe - Requin des récifs</French>
+		<Italian>Mito dello squalo della barriera corallina</Italian>
 		<Polish>Mit Rekina Rafowego</Polish>
 		<Russian>Ìèô î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REPTILE</Tag>
 		<English>Folklore (T) - Reptile</English>
-		<French>
-			<Text>Mythe - Reptiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - Rettili</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Gadów</Polish>
+		<French>Mythe - Reptiles (T)</French>
+		<Italian>Mito dei rettili (T)</Italian>
+		<Polish>Mit (T) Gadów</Polish>
 		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
-		<English>Folklore - Scavenger</English>
-		<French>
-			<Text>Mythe (R) du Mendiant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito (CP) dello spazzino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit (OJ) Padlinożerców</Polish>
+		<English>Folklore (T) - Scavenger</English>
+		<French>Mythe du Mendiant</French>
+		<Italian>Mito dell'animale spazzino</Italian>
+		<Polish>Mit Padlinożerców</Polish>
 		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA</Tag>
 		<English>Folklore (E) - Sea</English>
-		<French>
-			<Text>Mythe de la Mer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del mare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Morza</Polish>
+		<French>Mythe de la Mer (E)</French>
+		<Italian>Mito del mare (E)</Italian>
+		<Polish>Mit (E) Morza</Polish>
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEATURTLE</Tag>
 		<English>Folklore - Sea Turtle</English>
-		<French>
-			<Text>Mythe de la Tortue de mer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito della tartaruga di mare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de la Tortue de mer</French>
+		<Italian>Mito della tartaruga di mare</Italian>
 		<Polish>Mit Żółwia Morskiego</Polish>
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
-		<English>Folklore - Sharks</English>
-		<French>
-			<Text>Histoires de Requins</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - Squali</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Sharks</English>
+		<French>Histoires de Requins</French>
+		<Italian>Mito dello squalo</Italian>
 		<Polish>Mit Opowieśći o rekinach</Polish>
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKY</Tag>
 		<English>Folklore (E) - Sky</English>
-		<French>
-			<Text>Mythe du Ciel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del Cielo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Ciel (E)</French>
+		<Italian>Mito del cielo (E)</Italian>
 		<Polish>Mit Nieba</Polish>
 		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CAT</Tag>
 		<English>Folklore (T) - Spotted Cat</English>
-		<French>Mythe du Chat moucheté</French>
-		<Italian>
-			<Text>Mito del felino maculato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Chat moucheté (T)</French>
+		<Italian>Mito del felino maculato (T)</Italian>
 		<Polish>Mit Plamistego Kota</Polish>
 		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
-		<English>Folklore - Tiger</English>
-		<French>
-			<Text>Mythe du Tigre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito della tigre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<English>Folklore (T) - Tiger</English>
+		<French>Mythe du Tigre</French>
+		<Italian>Mito della tigre</Italian>
 		<Polish>Mit Tygrysa</Polish>
 		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TUNA</Tag>
 		<English>Folklore - Tuna</English>
-		<French>
-			<Text>Mythe - Thon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - tonno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe - Thon</French>
+		<Italian>Mito del tonno</Italian>
 		<Polish>Mit Tuńczyka</Polish>
 		<Russian>Ìèô î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_UNICORN</Tag>
 		<English>Folklore (E) - Unicorn</English>
-		<French>
-			<Text>Mythe de la Licorne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito dell'unicorno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de la Licorne (E)</French>
+		<Italian>Mito dell'unicorno (E)</Italian>
 		<Polish>Mit Jednorożca</Polish>
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
 		<English>Folklore - Walrus</English>
-		<French>
-			<Text>Mythe du Morse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del tricheco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Morse</French>
+		<Italian>Mito del tricheco</Italian>
 		<Polish>Mit Morsa</Polish>
 		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WEASEL</Tag>
 		<English>Folklore (T) - Weasel</English>
-		<French>
-			<Text>Mythe (T) de la belette</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito (T) della donnola</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de la belette (T)</French>
+		<Italian>Mito della donnola (T)</Italian>
 		<Polish>Mit (T) Łasicy</Polish>
 		<Russian>Ìèô î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALESHARK</Tag>
 		<English>Folklore - Whale Shark</English>
-		<French>
-			<Text>Mythe - Requin-baleine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - squalo balena</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe - Requin-baleine</French>
+		<Italian>Mito dello squalo balena</Italian>
 		<Polish>Mit Rekina Wielorybiego</Polish>
 		<Russian>Ìèô î êèò. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
 		<English>Unit Reward - Naval Standard (Animal mascot)</English>
-		<French>
-			<Text>Mascotte de la Marine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mascotte della marina</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mascotte de la Marine</French>
+		<Italian>Mascotte della marina</Italian>
 		<Polish>Bandera (Zwierzęca Maskotka)</Polish>
 		<Russian>Ìîðñêîé øòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Tag>
 		<English>Enclosure - Nocturnal</English>
-		<French>
-			<Text>Enclos - Animaux Nocturnes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Animali notturni</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Animaux Nocturnes</French>
+		<Italian>Gabbia degli animali notturni</Italian>
 		<Polish>Klatka - Zwierzęta Nocne</Polish>
 		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
 	</TEXT>
@@ -1256,133 +807,70 @@
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
 		<English>Remains - Mammoth</English>
 		<French>Restes de Mammouths</French>
+		<Italian>Resti di mammut</Italian>
 		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
 		<English>Herd (Pig)</English>
-		<French>
-			<Text>Troupeau de Cochons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Maiali</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Cochons</French>
+		<Italian>Branco di maiali</Italian>
 		<Polish>Stado - Świnie</Polish>
 		<Russian>Ñòàäî ñâèíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD</Tag>
 		<English>Herd (Poultry)</English>
-		<French>
-			<Text>Troupeau de Volailles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Pollame</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Volailles</French>
+		<Italian>Branco di pollame</Italian>
 		<Polish>Stado - Drobiu</Polish>
 		<Russian>Ñòàÿ ïòèö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIMATE_CAGE</Tag>
 		<English>Enclosure - Primate</English>
-		<French>
-			<Text>Enclos - Primates</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Primati</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Primates</French>
+		<Italian>Gabbia dei primati</Italian>
 		<Polish>Klatka - Małpa</Polish>
 		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
 		<English>Herd (Ratite)</English>
-		<French>
-			<Text>Troupeau d'Autruches</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Ratiti</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau d'Autruches</French>
+		<Italian>Branco di ratiti</Italian>
 		<Polish>Stado - Strusi</Polish>
 		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_CAGE</Tag>
 		<English>Enclosure - Reptile</English>
-		<French>
-			<Text>Enclos - Reptiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Rettili</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Reptiles</French>
+		<Italian>Gabbia dei rettili</Italian>
 		<Polish>Klatka - Gady</Polish>
 		<Russian>Òåððàðèóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
 		<English>Enclosure - Rodent</English>
-		<French>
-			<Text>Enclos - Rongeurs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Roditori</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Rongeurs</French>
+		<Italian>Gabbia dei roditori</Italian>
 		<Polish>Klatka - Gryzonie</Polish>
 		<Russian>Êëåòêè ñ ãðûçóíàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROO_HERD</Tag>
 		<English>Herd (Kangaroo)</English>
-		<French>
-			<Text>Troupeau de Kangourou</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Canguri</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Troupeau de Kangourou</French>
+		<Italian>Branco di canguri</Italian>
 		<Polish>Stado - Kangurów</Polish>
 		<Russian>Ñòàäî êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
 		<English>Unit Reward - Center for Shark Studies</English>
-		<French>
-			<Text>Centre d'étude des Requins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Centro per gli studi sugli squali</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Centre d'étude des Requins</French>
+		<Italian>Centro per gli studi sugli squali</Italian>
 		<Polish>Centrum Badań Rekinów</Polish>
 		<Russian>Öåíòð èçó÷. àêóë</Russian>
 	</TEXT>
@@ -1390,69 +878,38 @@
 		<Tag>TXT_KEY_BUILDING_SEAL_CAGE</Tag>
 		<English>Enclosure - Seal</English>
 		<French>Enclos - Phoques</French>
-		<Italian>
-			<Text>Gabbia - Foche</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gabbia delle foche</Italian>
 		<Polish>Klatka - Foka</Polish>
 		<Russian>Êëåòêè ñ òþëåíÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHEEP_HERD</Tag>
 		<English>Herd (Sheep)</English>
-		<French>
-			<Text>Troupeau de Moutons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Troupeau de Moutons</French>
+		<Italian>Gregge di pecore</Italian>
 		<Russian>Îòàðà îâåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
 		<English>Unit Reward - Snake Charmer</English>
-		<French>
-			<Text>Charmeur de Serpents</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Incantatore di serpenti</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Charmeur de Serpents</French>
+		<Italian>Incantatore di serpenti</Italian>
 		<Polish>Zaklinacz Węży</Polish>
 		<Russian>Çàêëèíàòåëü çìåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
 		<English>Unit Reward - Snake Pit</English>
-		<French>
-			<Text>Fosse à Serpents</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Fossa dei serpenti</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Fosse à Serpents</French>
+		<Italian>Fossa dei serpenti</Italian>
 		<Polish>Dół z wężami</Polish>
 		<Russian>ßìà ñî çìåÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
 		<English>Unit Reward - Shell Worker's Hut</English>
-		<French>
-			<Text>Cabane du sculpteur de carapaces</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Capanna dell'intagliatore di carapaci</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Cabane du sculpteur de carapaces</French>
+		<Italian>Capanna dell'intagliatore di conchiglie</Italian>
 		<Polish>Chata Rzeźbiarza Muszli</Polish>
 		<Russian>Ëîâåö óñòðèö</Russian>
 	</TEXT>
@@ -1460,11 +917,7 @@
 		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTER</Tag>
 		<English>Tradition - Hunter</English>
 		<French>Tradition - Chasseur</French>
-		<Italian>
-			<Text>Tradizioni - Cacciatore</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Tradizione della caccia</Italian>
 		<Polish>Tradycja - Łowcy</Polish>
 		<Russian>Ñîþç îõîòíèêîâ</Russian>
 	</TEXT>
@@ -1472,11 +925,7 @@
 		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Tag>
 		<English>Tradition - Naval Mascot</English>
 		<French>Tradition - Mascotte Navale</French>
-		<Italian>
-			<Text>Tradizioni - Mascotte della marina</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Tradizione - Mascotte della marina</Italian>
 		<Polish>Tradycja - Bandera (Maskotka)</Polish>
 		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
 	</TEXT>
@@ -1484,11 +933,7 @@
 		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING</Tag>
 		<English>Tradition - Sea Hunting</English>
 		<French>Tradition - Chasse en mer</French>
-		<Italian>
-			<Text>Tradizioni - Pesca</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Tradizione della pesca</Italian>
 		<Polish>Tradycja - Polowania na morzu</Polish>
 		<Russian>Òðàäèöèè ðûáàëêè</Russian>
 	</TEXT>
@@ -1496,11 +941,7 @@
 		<Tag>TXT_KEY_BUILDING_TRADITION_TOTEM</Tag>
 		<English>Tradition - Military Standard (Mascot)</English>
 		<French>Tradition - Standard militaire (Mascotte)</French>
-		<Italian>
-			<Text>Tradizioni - Mascotte dell'esercito</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Tradizione - Stendardo militare (Mascotte)</Italian>
 		<Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
 		<Russian>Òðàäèöèè òîòåìîâ</Russian>
 	</TEXT>
@@ -1508,11 +949,7 @@
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
 		<English>Unit Reward - Carnival (Trained Seal)</English>
 		<French>Phoques dressés</French>
-		<Italian>
-			<Text>Foche ammaestrate</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Fiera delle foche ammaestrate</Italian>
 		<Polish>Tresowana Foka</Polish>
 		<Russian>Äðåññ. òþëåíåé</Russian>
 	</TEXT>
@@ -1520,38 +957,23 @@
 		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
 		<English>Enclosure - Walrus</English>
 		<French>Enclos - Morses</French>
+		<Italian>Gabbia dei trichechi</Italian>
 		<Polish>Klatka - Mors</Polish>
 		<Russian>Êëåòêè ñ ìîðæàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLF_CAGE</Tag>
 		<English>Enclosure - Wolf</English>
-		<French>
-			<Text>Enclos - Loups</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Gabbia - Lupi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Enclos - Loups</French>
+		<Italian>Gabbia dei lupi</Italian>
 		<Polish>Klatka - Wilk</Polish>
 		<Russian>Êëåòêè ñ âîëêàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
 		<English>Unit Reward - Wonders of the Deep</English>
-		<French>
-			<Text>Merveilles des profondeurs</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Italian>
-			<Text>Meraviglie degli abissi</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<French>Merveilles des profondeurs</French>
+		<Italian>Meraviglie degli abissi</Italian>
 		<Polish>Cuda Głębin</Polish>
 		<Russian>×óäåñà ãëóáèí</Russian>
 	</TEXT>

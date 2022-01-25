@@ -193,9 +193,6 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 	return buildingInfo.getMilitaryProductionModifier() > 0
 		|| buildingInfo.getFreeExperience() > 0
-		|| buildingInfo.getFreePromotion() != NO_PROMOTION
-		|| buildingInfo.getFreePromotion_2() != NO_PROMOTION
-		|| buildingInfo.getFreePromotion_3() != NO_PROMOTION
 		|| buildingInfo.getNumUnitCombatRetrainTypes() > 0
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
 		|| !buildingInfo.getFreePromoTypes().empty()

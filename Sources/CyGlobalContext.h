@@ -107,10 +107,13 @@ public:
 
 	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
 
+	int getMapBonus(int i) const { return GC.getMapBonus(i); }
+	int getNumMapBonuses() const { return GC.getNumMapBonuses(); }
+
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
 	int getNumSpecialBuildingInfos() const { return GC.getNumSpecialBuildingInfos(); }
-	int getNumBonusInfos() const { return GC.getNumBonusInfos(); };
+	int getNumBonusInfos() const { return GC.getNumBonusInfos(); }
 	int getNumPlayableCivilizationInfos() const { return GC.getNumPlayableCivilizationInfos(); }
 	int getNumCivilizatonInfos() const { return GC.getNumCivilizationInfos(); }
 	int getNumLeaderHeadInfos() const { return GC.getNumLeaderHeadInfos(); }

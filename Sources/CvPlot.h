@@ -180,7 +180,8 @@ public:
 
 	void doTurn();
 
-	void doImprovement();
+	bool doBonusDiscovery();
+	void doBonusDepletion();
 
 	void updateCulture(bool bBumpUnits, bool bUpdatePlotGroups);
 
@@ -336,11 +337,7 @@ public:
 	void setClaimingOwner(PlayerTypes eNewValue);
 
 	bool isActsAsCity() const;
-	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
-	bool isCanMoveAllUnits() const;
-	bool isCanUseRouteLandUnits() const;
-	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
 	int getRevoltProtection() const;
 	int getAverageEnemyStrength(TeamTypes eTeam) const;

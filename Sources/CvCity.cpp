@@ -812,7 +812,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			}
 		}
 
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvCity::reset");
+		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiNoBonus = new int[GC.getNumBonusInfos()];
 		m_paiFreeBonus = new int[GC.getNumBonusInfos()];
 		m_paiNumBonuses = new int[GC.getNumBonusInfos()];
@@ -3175,17 +3175,11 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 
 bool CvCity::canMaintain(ProcessTypes eProcess) const
 {
-	if (!GET_PLAYER(getOwner()).canMaintain(eProcess))
+	if (!GET_PLAYER(getOwner()).canMaintain(eProcess)
+	|| Cy::call<bool>(PYGameModule, "cannotMaintain", Cy::Args() << const_cast<CvCity*>(this) << eProcess))
 	{
 		return false;
 	}
-
-	if (Cy::call<bool>(
-			PYGameModule, "cannotMaintain", Cy::Args()
-			<< const_cast<CvCity*>(this) << eProcess
-		)
-	) return false;
-
 	return true;
 }
 
@@ -3420,7 +3414,7 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
 
-		if (getNumActiveBuilding(eBuilding) > 0 && !GC.getBuildingInfo(eBuilding).getFreePromoTypes().empty())
+		if (getNumActiveBuilding(eBuilding) > 0)
 		{
 			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eBuilding), pUnit);
 		}
@@ -4832,10 +4826,10 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			clearRawVicinityBonusCache(pair.first);
 		}
 
-		if (kBuilding.getFreePromotion() != NO_PROMOTION)
-		{
-			changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion(), iChange);
-		}
+		//if (kBuilding.getFreePromotion() != NO_PROMOTION)
+		//{
+		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion(), iChange);
+		//}
 
 		if (kBuilding.getPropertySpawnProperty() != NO_PROPERTY && kBuilding.getPropertySpawnUnit() != NO_UNIT)
 		{
@@ -4846,15 +4840,15 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnit());
 		}
 
-		if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
-		{
-			changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_2(), iChange);
-		}
+		//if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
+		//{
+		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_2(), iChange);
+		//}
 
-		if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
-		{
-			changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_3(), iChange);
-		}
+		//if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
+		//{
+		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_3(), iChange);
+		//}
 
 		changeEspionageDefenseModifier(kBuilding.getEspionageDefenseModifier() * iChange);
 
@@ -15440,7 +15434,7 @@ void CvCity::clearOrderQueue()
 		popOrder(0, false, false, false);
 	}
 
-	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
+	if (getTeam() == GC.getGame().getActiveTeam() || GC.getGame().isDebugMode())
 	{
 		setInfoDirty(true);
 	}
@@ -15721,12 +15715,10 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				FErrorMsg("pUnit is expected to be assigned a valid unit object");
 				return;
 			}
-			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES))
+			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES)
+			&& !pUnit->canEnterPlot(plot(), MoveCheck::IgnoreLocation))
 			{
-				if (!pUnit->canMoveInto(plot(), MoveCheck::IgnoreLocation))
-				{
-					pUnit->jumpToNearestValidPlot(false);
-				}
+				pUnit->jumpToNearestValidPlot(false);
 			}
 			pUnit->finishMoves();
 
@@ -16052,19 +16044,15 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 	{
 		if (getOrderQueueLength() == 0)
 		{
-			if (!isHuman() || isProductionAutomated())
-			{
-				AI_chooseProduction();
-			}
-			else
+			if (isHuman() && !isProductionAutomated())
 			{
 				if (bWasFoodProduction)
 				{
 					AI_assignWorkingPlots();
 				}
-
 				chooseProduction(eTrainUnit, eConstructBuilding, eCreateProject, bFinish);
 			}
+			else AI_chooseProduction();
 		}
 	}
 
@@ -16414,10 +16402,9 @@ void CvCity::doProduction(bool bAllowNoProduction)
 {
 	if (!isHuman() || isProductionAutomated())
 	{
-		//	Koshling - with the unit contracting system we only build units to contractual
-		//	orders (apart from a few emergency cases) and we should not change from building
-		//	them due to new techs etc
-		if (!isProduction() || isProductionProcess() || (AI_isChooseProductionDirty() && !isProductionUnit()))
+		// Koshling - with the unit contracting system we only build units to contractual orders
+		//	(apart from a few emergency cases) and we should not change from building them due to new techs, etc.
+		if (!isProduction() || isProductionProcess() || AI_isChooseProductionDirty() && !isProductionUnit())
 		{
 			AI_chooseProduction();
 		}
@@ -20153,29 +20140,13 @@ void CvCity::doPromotion()
 		}
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-		if (kBuilding.isApplyFreePromotionOnMove())
+		if (kBuilding.isApplyFreePromotionOnMove() && !kBuilding.getFreePromoTypes().empty())
 		{
-			const bool bHasFreePromofromList = !kBuilding.getFreePromoTypes().empty();
-
-			const PromotionTypes ePromotion1 = (PromotionTypes)kBuilding.getFreePromotion();
-			const PromotionTypes ePromotion2 = (PromotionTypes)kBuilding.getFreePromotion_2();
-			const PromotionTypes ePromotion3 = (PromotionTypes)kBuilding.getFreePromotion_3();
-
-			if (ePromotion1 != NO_PROMOTION || ePromotion2 != NO_PROMOTION || ePromotion3 != NO_PROMOTION || bHasFreePromofromList)
+			foreach_(CvUnit* pLoopUnit, plot()->units())
 			{
-				foreach_(CvUnit* pLoopUnit, plot()->units())
+				if (pLoopUnit->getTeam() == GET_PLAYER(getOwner()).getTeam())
 				{
-					if (GET_TEAM(pLoopUnit->getTeam()).getID() == GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getID())
-					{
-						assignPromotionChecked(ePromotion1, pLoopUnit);
-						assignPromotionChecked(ePromotion2, pLoopUnit);
-						assignPromotionChecked(ePromotion3, pLoopUnit);
-
-						if (bHasFreePromofromList)
-						{
-							assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
-						}
-					}
+					assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
 				}
 			}
 		}
@@ -20289,7 +20260,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	bool bRequiresOrFeature = false;
 	bool bHasValidFeature = false;
-	for (int iI = 0; iI < GC.getNumFeatureInfos() && !bHasValidFeature; iI++)
+	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
 		if (kBuilding.isPrereqOrFeature(iI))
 		{
@@ -20297,6 +20268,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == iI))
 			{
 				bHasValidFeature = true;
+				break;
 			}
 		}
 	}
@@ -23386,10 +23358,11 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
 
 bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
 {
-	if (promotion != NO_PROMOTION &&
-		((GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion)) ||
-			unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
-	{
+	if (unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
+#ifdef COMBAT_MOD_EQUIPTMENT
+	|| (GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion))
+#endif COMBAT_MOD_EQUIPTMENT
+	) {
 		unit->setHasPromotion(promotion, true);
 		return true;
 	}
@@ -23400,17 +23373,12 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 {
 	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
 	{
-		if (
-			freePromoType.ePromotion != NO_PROMOTION
-		&& (
-				GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)
-				||
-				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
-			)
-		)
-		{
+		if (unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
+#ifdef COMBAT_MOD_EQUIPTMENT
+		|| GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)
+#endif COMBAT_MOD_EQUIPTMENT
+		) {
 			if (!freePromoType.m_pExprFreePromotionCondition ||
-				//freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
 				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
 			{
 				unit->setHasPromotion(freePromoType.ePromotion, true);
@@ -23426,9 +23394,9 @@ bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			if (pUnit->isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).isEquipment())
+			const PromotionTypes eMayDeny = ((PromotionTypes)iI);
+			if (pUnit->isHasPromotion(eMayDeny) && GC.getPromotionInfo(eMayDeny).isEquipment())
 			{
-				const PromotionTypes eMayDeny = ((PromotionTypes)iI);
 				if (GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionInfo(eMayDeny).getPromotionLine() != NO_PROMOTIONLINE)
 				{
 					if (GC.getPromotionInfo(eEquipment).getPromotionLine() == GC.getPromotionInfo(eMayDeny).getPromotionLine())

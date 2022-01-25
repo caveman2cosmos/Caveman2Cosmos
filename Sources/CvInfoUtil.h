@@ -3,7 +3,9 @@
 #ifndef CvInfoUtil_h__
 #define CvInfoUtil_h__
 
+#include "CvInfoClassTraits.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
@@ -16,9 +18,11 @@ struct WrappedVar;
 struct CvInfoUtil
 	: private bst::noncopyable
 {
-	CvInfoUtil(const CvInfoBase* info)
+	template <class CvInfoClass_T>
+	CvInfoUtil(const CvInfoClass_T* info)
+		: m_eInfoClass(InfoClassTraits<CvInfoClass_T>::InfoClassEnum)
 	{
-		const_cast<CvInfoBase*>(info)->getDataMembers(*this);
+		const_cast<CvInfoClass_T*>(info)->getDataMembers(*this);
 	}
 
 	~CvInfoUtil()
@@ -328,13 +332,6 @@ struct CvInfoUtil
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
-	template <typename T1, int default_>
-	CvInfoUtil& add(IDValueMap<T1, int, default_>& map, const wchar_t* tag)
-	{
-		m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, int, default_> >(map, tag));
-		return *this;
-	}
-
 	///============================================
 	/// IDValueMap with delayed resolution wrapper
 	///============================================
@@ -374,9 +371,12 @@ struct CvInfoUtil
 	};
 
 	template <typename T1, int default_>
-	CvInfoUtil& addDelayedResolution(IDValueMap<T1, int, default_>& map, const wchar_t* rootTag)
+	CvInfoUtil& add(IDValueMap<T1, int, default_>& map, const wchar_t* rootTag)
 	{
-		m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, int, default_> >(map, rootTag));
+		if (GC.isDelayedResolutionRequired(m_eInfoClass, InfoClassTraits<T1>::InfoClassEnum))
+			m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, int, default_> >(map, rootTag));
+		else
+			m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, int, default_> >(map, rootTag));
 		return *this;
 	}
 
@@ -427,14 +427,10 @@ struct CvInfoUtil
 	template <typename T1, size_t arraySize_, int default_>
 	CvInfoUtil& add(IDValueMap<T1, bst::array<int, arraySize_>, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
-		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, NO_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
-		return *this;
-	}
-
-	template <typename T1, size_t arraySize_, int default_>
-	CvInfoUtil& addWithDelayedResolution(IDValueMap<T1, bst::array<int, arraySize_>, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
-	{
-		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, USE_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
+		if (GC.isDelayedResolutionRequired(m_eInfoClass, InfoClassTraits<T1>::InfoClassEnum))
+			m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, USE_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
+		else
+			m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, NO_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
 		return *this;
 	}
 
@@ -444,7 +440,7 @@ struct CvInfoUtil
 
 	static void publishPythonInterface()
 	{
-		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvInfoBase*>())
+		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvBuildingInfo*>())
 			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
 		;
 	}
@@ -460,6 +456,7 @@ private:
 	/// Wrapped pointers to the data members of an info object
 	///========================================================
 
+	const InfoClassTypes m_eInfoClass;
 	std::vector<WrappedVar*> m_wrappedVars;
 };
 

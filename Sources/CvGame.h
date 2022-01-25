@@ -97,6 +97,7 @@ public:
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
 	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
+	bool nextPlotUnit(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;
 

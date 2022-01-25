@@ -86,12 +86,9 @@ def normalizeAddExtras():
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if CyMap().getCustomMapOption(1) == 1:
-		if type_string in balancer.resourcesToBalance + balancer.resourcesToEliminate:
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(1) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
