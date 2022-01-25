@@ -1473,26 +1473,6 @@ def GetDistance(x,y,dx,dy):
     distance = math.sqrt(abs((float(x - dx) * float(x - dx)) + (float(y - dy) * float(y - dy))))
     return distance
 
-def GetOppositeDirection(direction):
-    opposite = mc.L
-    if direction == mc.N:
-        opposite = mc.S
-    elif direction == mc.S:
-        opposite = mc.N
-    elif direction == mc.E:
-        opposite = mc.W
-    elif direction == mc.W:
-        opposite = mc.E
-    elif direction == mc.NW:
-        opposite = mc.SE
-    elif direction == mc.SE:
-        opposite = mc.NW
-    elif direction == mc.SW:
-        opposite = mc.NE
-    elif direction == mc.NE:
-        opposite = mc.SW
-    return opposite
-
 def GetXYFromDirection(x,y,direction):
     xx = x
     yy = y
@@ -4090,10 +4070,10 @@ class RiverMap :
                     #never go straight when you have other choices
                     count = len(drainList)
                     if count == 3:
-                        oppDir = GetOppositeDirection(nonDrainList[0])
-                        for n in range(count):
-                            if drainList[n] == oppDir:
-                                del drainList[n]
+                        oppDir = getOppositeDirection(nonDrainList[0])
+                        for dirX in drainList:
+                            if dirX == oppDir:
+                                del dirX
                                 break
                         count = len(drainList)
 
