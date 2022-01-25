@@ -30,6 +30,7 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("plotCityXYFromCity", cyPlotCityXYFromCity,"int (CyCity* pCity, CyPlot* pPlot)");
 
 	python::def("estimateDirection", cyEstimateDirection, "DirectionTypes (int iDX, int iDY)");
+	python::def("getOppositeDirection", getOppositeDirection);
 
 	python::def("atWar", cyAtWar,"bool (int eTeamA, int eTeamB)");
 	python::def("isPotentialEnemy", cyIsPotentialEnemy,"bool (int eOurTeam, int eTheirTeam)");

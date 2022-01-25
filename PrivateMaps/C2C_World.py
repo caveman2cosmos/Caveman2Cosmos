@@ -4676,28 +4676,6 @@ def GetIndex(x, y):
 	return yy * iWidth + xx
 
 
-'''
-def GetOppositeDirection(direction):
-	opposite = 0
-	if direction == mc.N:
-		opposite = mc.S
-	elif direction == mc.S:
-		opposite = mc.N
-	elif direction == mc.E:
-		opposite = mc.W
-	elif direction == mc.W:
-		opposite = mc.E
-	elif direction == mc.NW:
-		opposite = mc.SE
-	elif direction == mc.SE:
-		opposite = mc.NW
-	elif direction == mc.SW:
-		opposite = mc.NE
-	elif direction == mc.NE:
-		opposite = mc.SW
-	return opposite
-'''
-
 def GetNeighbor(x, y, direction):
 	if direction == 0:
 		return x, y
