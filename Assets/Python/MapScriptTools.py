@@ -378,7 +378,6 @@ def removeListElement(aList, elem):
 #####################################################
 # sName = cardinalName( eCard )
 # sName = directionName( eDir )
-# eNewDir = getOppositeDirection( eDir )
 # eNewDir = addDirection( eDir, index )
 # eCardList = getCardDirsFromDir( eDir )
 # x,y = xyDirection( eDir )
@@ -404,9 +403,6 @@ def directionName( eDir ):
 	if eDir==DirectionTypes.DIRECTION_WEST:      return "West"
 	if eDir==DirectionTypes.DIRECTION_NORTHWEST: return "NorthWest"
 	return "None"
-
-def getOppositeDirection(eDir):
-	return DirectionTypes((eDir + 4) % 8)
 
 def getOppositeCardinalDirection(dir):
 	return CardinalDirectionTypes((dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES)
