@@ -7,7 +7,6 @@
 
 #include "CvMap.h"
 #include "CvGlobals.h"
-#include "CvRandom.h"
 
 class CvCity;
 class CvPathGeneratorBase;
