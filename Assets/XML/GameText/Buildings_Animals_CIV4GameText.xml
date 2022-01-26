@@ -2059,6 +2059,20 @@
 		<Russian>Ìèô î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PEACOCK</Tag>
+		<English>Folklore - Peacock</English>
+		<French>Mythe du Paon</French>
+		<Italian>Mito del pavone</Italian>
+		<Russian>Ìèô î ïàâëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PENGUIN</Tag>
+		<English>Folklore (T) - Penguin</English>
+		<French>Mythe du Pingouin (T)</French>
+		<Italian>Mito del pinguino (T)</Italian>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHEASANT</Tag>
 		<English>Folklore - Pheasant</English>
 		<French>Mythe du Faisan</French>
@@ -2095,6 +2109,20 @@
 		<Russian>Ìèô î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PROCOPTODON</Tag>
+		<English>Folklore - Procoptodon</English>
+		<French>Mythe du Procoptodon</French>
+		<Italian>Mito del procoptodonte</Italian>
+		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFFADDER</Tag>
+		<English>Folklore - Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<Italian>Mito della vipera soffiante</Italian>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Tag>
 		<English>Folklore - Pygmy Hippo</English>
 		<French>Mythe de l'Hippopotame nain</French>
@@ -2102,11 +2130,33 @@
 		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
+		<English>Folklore - Quoll</English>
+		<French>Mythe du Chat marsupial</French>
+		<Italian>Mito del quoll</Italian>
+		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RACCOON</Tag>
 		<English>Folklore - Raccoon</English>
 		<French>Mythe du Raton-Laveur</French>
 		<Italian>Mito del procione</Italian>
 		<Russian>Ìèô î åíîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAPTOR</Tag>
+		<English>Folklore (T) - Raptors</English>
+		<French>Mythe des Rapaces (T)</French>
+		<Italian>Mito dei rapaci (T)</Italian>
+		<Polish>Mit (T) - Ptaki drapieżne</Polish>
+		<Russian>Ìèô î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RATEL</Tag>
+		<English>Folklore - Ratel</English>
+		<French>Mythe du Ratel</French>
+		<Italian>Mito del tasso del miele</Italian>
+		<Russian>Ìèô î ìåäîåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
@@ -2181,6 +2231,14 @@
 		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RODENT</Tag>
+		<English>Folklore (T) - Rodent</English>
+		<French>Mythe des Rongeurs (T)</French>
+		<Italian>Mito dei roditori (T)</Italian>
+		<Polish>Mit (T) - Gryzonie</Polish>
+		<Russian>Ìèô î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SABRETOOTH</Tag>
 		<English>Folklore - Sabretooth</English>
 		<French>Mythe du Tigre à dents de sabre</French>
@@ -2239,6 +2297,14 @@
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_BIRD</Tag>
+		<English>Folklore (T) - Sea Birds</English>
+		<French>Mythe des Oiseaux marins (T)</French>
+		<Italian>Mito degli uccelli marini (T)</Italian>
+		<Polish>Mit (T) - Ptaki morskie</Polish>
+		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Tag>
 		<English>Folklore - Sea Otter</English>
 		<French>Mythe de la Loutre de mer</French>
@@ -2249,7 +2315,7 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
 		<English>Folklore (T) - Sharks</English>
 		<French>Histoires de Requins (T)</French>
-		<Italian>Mito dello squalo (T)</Italian>
+		<Italian>Mito degli squali (T)</Italian>
 		<Polish>Mit (T) Opowieśći o rekinach</Polish>
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
@@ -2274,6 +2340,13 @@
 		<Italian>Mito del cielo (E)</Italian>
 		<Polish>Mit Nieba</Polish>
 		<Russian>Ìèô î íåáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNAKES</Tag>
+		<English>Folklore (T) - Snakes</English>
+		<French>Mythe des Serpents (T)</French>
+		<Italian>Mito dei serpenti (T)</Italian>
+		<Russian>Ìèô î çìåå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNOW_LEOPARD</Tag>
@@ -2414,12 +2487,27 @@
 		<Italian>Mito del wallaby delle rocce</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLAROO</Tag>
+		<English>Folklore - Wallaroo</English>
+		<French>Mythe du Wallaroo</French>
+		<Italian>Mito del wallaroo</Italian>
+		<Russian>Ìèô î êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
 		<English>Folklore - Walrus</English>
 		<French>Mythe du Morse</French>
 		<Italian>Mito del tricheco</Italian>
 		<Polish>Mit Morsa</Polish>
 		<Russian>Ìèô î ìîðæå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WARTHOG</Tag>
+		<English>Folklore - Warthog</English>
+		<French>Mythe du Phacochère</French>
+		<Italian>Mito del facocero</Italian>
+		<Polish>Mit - Guziec</Polish>
+		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WEASEL</Tag>
@@ -2449,6 +2537,13 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
 		<English>Folklore - Wild Boar</English>
 		<Italian>Mito del cinghiale selvatico</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDEBEEST</Tag>
+		<English>Folklore - Wildebeest</English>
+		<French>Mythe du Gnou</French>
+		<Italian>Mito dello gnu</Italian>
+		<Russian>Ìèô î ãíó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
