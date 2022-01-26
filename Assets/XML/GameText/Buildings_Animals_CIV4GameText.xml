@@ -1676,6 +1676,20 @@
 		<Russian>Ìèô î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IGUANA</Tag>
+		<English>Folklore - Iguana</English>
+		<French>Mythe de l'Iguane</French>
+		<Italian>Mito dell'iguana</Italian>
+		<Russian>Ìèô î èãóàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IMPALA</Tag>
+		<English>Folklore - Impala</English>
+		<French>Mythe de l'Impala</French>
+		<Italian>Mito dell'impala</Italian>
+		<Russian>Ìèô îá èìïàëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINO</Tag>
 		<English>Folklore - Indian Rhinoceros</English>
 		<French>Mythe du Rhinocéros indien</French>
@@ -1684,12 +1698,54 @@
 		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAGUAR</Tag>
+		<English>Folklore - Jaguar</English>
+		<French>Mythe du Jaguar</French>
+		<Italian>Mito del giaguaro</Italian>
+		<Russian>Ìèô îá ÿãóàðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Tag>
 		<English>Folklore - Java Rhinoceros</English>
 		<French>Mythe du Rhinocéros de Java</French>
 		<Italian>Mito del rinoceronte di Giava</Italian>
 		<Polish>Mit - Nosorożec Jawajski</Polish>
 		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_GREY</Tag>
+		<English>Folklore - Grey Kangaroo</English>
+		<French>Mythe du Kangourou gris</French>
+		<Italian>Mito del canguro grigio</Italian>
+		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_RED</Tag>
+		<English>Folklore - Red Kangaroo</English>
+		<French>Mythe du Kangourou roux</French>
+		<Italian>Mito del canguro rosso</Italian>
+		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOALA</Tag>
+		<English>Folklore - Koala</English>
+		<French>Mythe du Koala</French>
+		<Italian>Mito del koala</Italian>
+		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
+		<English>Folklore - Komodo Dragon</English>
+		<French>Mythe du Dragon de Komodo</French>
+		<Italian>Mito del drago di Komodo</Italian>
+		<Russian>Ìèô î êîì. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOOKABURRA</Tag>
+		<English>Folklore - Kookaburra</English>
+		<French>Mythe du Kookaboura</French>
+		<Italian>Mito del kookaburra</Italian>
+		<Russian>Ìèô î êóêàáàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
@@ -1772,6 +1828,13 @@
 		<Italian>Mito del tapiro malese</Italian>
 		<Polish>Mit - Tapir Malajski</Polish>
 		<Russian>Ìèô î ìàë. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANDRILL</Tag>
+		<English>Folklore - Mandrill</English>
+		<French>Mythe du Mandrill</French>
+		<Italian>Mito del mandrillo</Italian>
+		<Russian>Ìèô î ìàíäðèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANEDWOLF</Tag>
@@ -1857,6 +1920,12 @@
 		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NEW_W_MONKEY</Tag>
+		<English>Folklore (T) - New World Monkeys</English>
+		<Italian>Mito delle scimmie del Nuovo Mondo (T)</Italian>
+		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILECROC</Tag>
 		<English>Folklore - Nile Crocodile</English>
 		<French>Mythe du Crocodile du Nil</French>
@@ -1865,11 +1934,25 @@
 		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_MONITOR</Tag>
+		<English>Folklore - Nile Monitor</English>
+		<French>Mythe du Varan du Nil</French>
+		<Italian>Mito del varano del Nilo</Italian>
+		<Russian>Ìèô î íèë. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NUMBAT</Tag>
 		<English>Folklore - Numbat</English>
 		<French>Mythe du Numbat</French>
 		<Italian>Mito del numbat</Italian>
 		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OKAPI</Tag>
+		<English>Folklore - Okapi</English>
+		<French>Mythe de l'Okapi</French>
+		<Italian>Mito dell'okapi</Italian>
+		<Russian>Ìèô îá îêàïè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
@@ -1880,11 +1963,24 @@
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_W_MONKEY</Tag>
+		<English>Folklore (T) - Old World Monkeys</English>
+		<Italian>Mito delle scimmie del Vecchio Mondo (T)</Italian>
+		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OPOSSUM</Tag>
 		<English>Folklore - Opossum</English>
 		<French>Mythe de l'Opossum</French>
 		<Italian>Mito dell'opossum</Italian>
 		<Russian>Ìèô îá îïîññóìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORANGUTAN</Tag>
+		<English>Folklore - Orangutan</English>
+		<French>Mythe de l'Orang-outan</French>
+		<Italian>Mito dell'orangutan</Italian>
+		<Russian>Ìèô îá îðàíãóòàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
@@ -1893,6 +1989,21 @@
 		<Italian>Mito dell'orca</Italian>
 		<Polish>Mit Orki</Polish>
 		<Russian>Ìèô î êàñàòêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OWL</Tag>
+		<English>Folklore (T) - Owls</English>
+		<French>Mythe des Chouettes (T)</French>
+		<Italian>Mito degli strigiformi (T)</Italian>
+		<Polish>Folklore (T) - Sowy</Polish>
+		<Russian>Ìèô î ñîâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OXPECKER</Tag>
+		<English>Folklore - Oxpecker</English>
+		<French>Mythe du Pique-bœufs</French>
+		<Italian>Mito della bufaga</Italian>
+		<Russian>Ìèô î âîëîêëþå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRD</Tag>
