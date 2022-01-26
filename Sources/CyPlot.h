@@ -171,6 +171,7 @@ public:
 	bool isInViewport() const;
 	CyPlot* cloneToViewport() const;
 
+	python::list adjacent() const;
 	python::list rect(int halfWid, int halfHgt) const;
 
 private:
