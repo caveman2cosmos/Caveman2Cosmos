@@ -64,11 +64,11 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		// TODO: Improve this evaluation, but its a start.
 		foreach_(const ImprovementTypes potentialImprovementType, plotBonusInfo->getProvidedByImprovementTypes()) {
 
-			CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
-
-			BuildTypes tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, loopedPlot, unit, false);
+			const BuildTypes tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, loopedPlot, unit, false);
 
 			if (tempPlotBuild != NO_BUILD) {
+
+				const CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
 
 				const int tempDefenseValue = (
 					1 // minimum 1 value for providing the bonus.
