@@ -608,6 +608,20 @@ CyPlot* CyPlot::cloneToViewport() const
 	return new CyPlot(m_pPlot, true);
 }
 
+python::list CyPlot::adjacent() const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->adjacent())
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
+}
+
 python::list CyPlot::rect(int halfWid, int halfHgt) const
 {
 	python::list list = python::list();

@@ -2041,7 +2041,7 @@ void CvUnitAI::AI_workerMove()
 	// If worker (or captive) is not defended, and is outside own borders.
 	if (bAbroad)
 	{
-		if (!getGroup()->canDefend())
+		if (!getGroup()->canDefend() && AI_workerNeedsDefender(plot()))
 		{
 			// If I can reach safety on my own this turn then don't bother other units with our escape.
 			if (AI_reachHome())
@@ -2078,7 +2078,7 @@ void CvUnitAI::AI_workerMove()
 				return;
 			}
 		}
-		else if (AI_workerReleaseDefenderIfNotNeeded())
+		else if (!isHuman() && AI_workerReleaseDefenderIfNotNeeded())
 		{
 			OutputDebugString(CvString::format("%S (%d) AI_workerReleaseDefenderIfNotNeeded 1 (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 			return;
@@ -2123,7 +2123,13 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
-	if (!getGroup()->canDefend() && (isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !isHuman() && AI_workerNeedsDefender(plot())) && AI_retreatToCity() /*XXX maybe not do this??? could be working productively somewhere else...*/)
+	if (!getGroup()->canDefend() && (isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !isHuman() && AI_workerNeedsDefender(plot())) && AI_retreatToCity()) // XXX maybe not do this??? could be working productively somewhere else...
+	{
+		return;
+	}
+
+	// find bonuses within 2 moves to improve
+	if (CvWorkerService::ImproveBonus(this, 2))
 	{
 		return;
 	}
@@ -2203,8 +2209,9 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
-	// find bonuses within 2 moves to upgrade3
-	if (CvWorkerService::ImproveBonus(this, plot(), 2))
+
+	// find bonuses within 4 moves to improve
+	if (CvWorkerService::ImproveBonus(this))
 	{
 		return;
 	}
@@ -11350,7 +11357,7 @@ void CvUnitAI::AI_networkAutomated()
 	}
 
 	if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS)
-	&& CvWorkerService::ImproveBonus(this, plot(), 2))
+	&& CvWorkerService::ImproveBonus(this, 2))
 	{
 		return;
 	}

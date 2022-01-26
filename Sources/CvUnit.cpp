@@ -15975,10 +15975,10 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 				foreach_(CvUnit* unitX, pNewPlot->units_safe())
 				{
-					OutputDebugString(CvString::format("DEAD=%d - DD=%d - CvUnit::setXY...unitX\n", (int)unitX->isDead(), (int)unitX->isDelayedDeath()).c_str());
+					//OutputDebugString(CvString::format("DEAD=%d - DD=%d - CvUnit::setXY...unitX\n", (int)unitX->isDead(), (int)unitX->isDelayedDeath()).c_str());
 					if (unitX->isDead() || unitX->isDelayedDeath())
 						continue; // isDead() happens for cargo on non-debug dll, while isDelayedDeath() happens for cargo on the debug dll.
-					OutputDebugString(CvString::format("CvUnit::setXY...unitX=%S\n", unitX->getDescription().c_str()).c_str());
+					//OutputDebugString(CvString::format("CvUnit::setXY...unitX=%S\n", unitX->getDescription().c_str()).c_str());
 
 					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this))
 					{

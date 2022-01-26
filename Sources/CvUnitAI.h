@@ -70,6 +70,7 @@ public:
 	bool AI_isAwaitingContract() const;
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
+	int AI_searchRange(int iRange = 1) const;
 
 	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
 
@@ -344,7 +345,6 @@ protected:
 	int AI_nukeValue(const CvCity* pCity) const;
 	bool AI_canPillage(const CvPlot& kPlot) const;
 
-	int AI_searchRange(int iRange = 1) const;
 	bool AI_plotValid(const CvPlot* pPlot) const;
 
 	int AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const;
