@@ -24,9 +24,9 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 	return false;
 }
 
-bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMovementTurns)
+bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 {
-
+	const CvPlot* unitPlot = unit->plot();
 	const PlayerTypes unitOwner = unit->getOwner();
 	const CvPlayerAI& ownerReference = GET_PLAYER(unitOwner);
 	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (unit->isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
@@ -40,42 +40,42 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 	int finalNumberOfMoveTurns = 0;
 	CvPlot* bestPlot = NULL;
 
-	CvReachablePlotSet plotSet(unit->getGroup(), iBasePathFlags, MAX_INT, true, maxDistanceFromBorder);
+	CvReachablePlotSet plotSet(unit->getGroup(), iBasePathFlags, unit->AI_searchRange(allowedMovementTurns), true, maxDistanceFromBorder);
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr) {
 
 		CvPlot* loopedPlot = itr.plot();
 		const PlayerTypes plotOwner = loopedPlot->getOwner();
-		const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
-		const CvImprovementInfo* currentImprovementInfo = currentImprovementOnPlot != (ImprovementTypes)NO_IMPROVEMENT ? &GC.getImprovementInfo(currentImprovementOnPlot) : NULL;
-
-		if (!IsPlotValid(unit, plot) || loopedPlot->area() != plot->area() || plot->getWorkingCity() != NULL) continue;
+		//const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
+		//const CvImprovementInfo* currentImprovementInfo = currentImprovementOnPlot != NO_IMPROVEMENT ? &GC.getImprovementInfo(currentImprovementOnPlot) : NULL;
 
 		if (unitOwner != plotOwner && plotOwner != NO_PLAYER) continue;
+
+		if (!IsPlotValid(unit, loopedPlot) || loopedPlot->area() != unitPlot->area() || loopedPlot->getWorkingCity() != NULL) continue;
 
 		BonusTypes nonObsoleteBonusType = loopedPlot->getNonObsoleteBonusType(unit->getTeam());
 
 		if (nonObsoleteBonusType == NO_BONUS) continue;
 
 		CvBonusInfo* plotBonusInfo = &GC.getBonusInfo(nonObsoleteBonusType);
-		CvImprovementInfo* potentialImprovement = NULL;
 		BuildTypes bestBuildForPlot = NO_BUILD;
 		int bestDefenseValue = 0;
 
 		// TODO: Improve this evaluation, but its a start.
 		foreach_(const ImprovementTypes potentialImprovementType, plotBonusInfo->getProvidedByImprovementTypes()) {
 
-			potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
+			CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(potentialImprovementType);
 
-			BuildTypes tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, plot, false);
+			BuildTypes tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, loopedPlot, unit, false);
 
-			const int tempDefenseValue = (
-				1 // minimum 1 value for providing the bonus.
-				+ potentialImprovement->getAirBombDefense() / 10
-				+ potentialImprovement->getDefenseModifier() / 10
-				+ (gameOptionZoneOfControl && potentialImprovement->isZOCSource() ? 3 : 0)
-			);
 			if (tempPlotBuild != NO_BUILD) {
+
+				const int tempDefenseValue = (
+					1 // minimum 1 value for providing the bonus.
+					+ potentialImprovement->getAirBombDefense() / 10
+					+ potentialImprovement->getDefenseModifier() / 10
+					+ (gameOptionZoneOfControl && potentialImprovement->isZOCSource() ? 3 : 0)
+				);
 				if (tempDefenseValue > bestDefenseValue) {
 					bestDefenseValue = tempDefenseValue;
 					bestBuildForPlot = tempPlotBuild;
@@ -87,12 +87,17 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, CvPlot* plot, int allowedMove
 		//const bool haveBonus = ownerReference.hasBonus(nonObsoleteBonusType);
 		//const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
 
-		const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
-
 		int numberOfMoveTurns = 0;
-		if (!unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns)) continue;
+		if (!unit->atPlot(loopedPlot) && !unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns)) continue;
 
-		const int tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType) / std::max(1, numberOfMoveTurns));
+		int tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType));
+
+		if (numberOfMoveTurns < 1)
+		{
+			tempBonusValue *= 3;
+			tempBonusValue /= 2;
+		}
+		else tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType) / numberOfMoveTurns);
 
 		/*if (numberOfMoveTurns <= allowedMovementTurns)*/ {
 			if (bestBonusValue < tempBonusValue) {
@@ -148,7 +153,7 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 	return false;
 }
 
-BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player,const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
+BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
 {
 	int fastestTime = 10000;
 	BuildTypes fastestBuild = NO_BUILD;
