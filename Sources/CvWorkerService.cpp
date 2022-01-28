@@ -12,13 +12,17 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 	foreach_(const CvPlot * pLoopPlot, targetCity->plots())
 	{
 		const int plotIndex = targetCity->getCityPlotIndex(pLoopPlot);
-		if (pLoopPlot != NULL
+		if (pLoopPlot
 		&& pLoopPlot->getWorkingCity() == targetCity
 		&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT
-		&& targetCity->AI_getBestBuildValue(plotIndex) > 0
-		&& GC.getBuildInfo((BuildTypes)targetCity->AI_getBestBuild(plotIndex)).getImprovement() != NO_IMPROVEMENT)
+		&& targetCity->AI_getBestBuildValue(plotIndex) > 0)
 		{
-			return true;
+			const BuildTypes eBuild = (BuildTypes)targetCity->AI_getBestBuild(plotIndex);
+
+			if (eBuild != NO_BUILD && GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
+			{
+				return true;
+			}
 		}
 	}
 	return false;
