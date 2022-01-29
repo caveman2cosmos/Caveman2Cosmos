@@ -22640,7 +22640,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						{
 							case PLOT_PEAK: szBuffer.append(gDLL->getText("TXT_KEY_PLOT_PEAK")); break;
 							case PLOT_HILLS: szBuffer.append(gDLL->getText("TXT_KEY_PLOT_HILLS")); break;
-							case PLOT_LAND: szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FLATLAND")); break;
+							case PLOT_LAND: szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FLAT")); break;
 							case PLOT_OCEAN: szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_WATER_PLOTS")); break;
 						}
 						bFirst = false;

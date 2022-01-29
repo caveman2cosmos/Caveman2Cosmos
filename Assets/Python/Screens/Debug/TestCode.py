@@ -1680,7 +1680,8 @@ class TestCode:
 				for iPlot in xrange(PlotTypes.NUM_PLOT_TYPES):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aPlotYieldChanges[BASE][iPlot][iYield] < aPlotYieldChanges[REPLACED][iPlot][iYield]:
-							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getPlotInfo(iPlot).getType()+" "+GC.getYieldInfo(iYield).getType()+" Plot Yields "+str(aPlotYieldChanges[BASE][iPlot])+"/"+str(aPlotYieldChanges[REPLACED][iPlot]))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+str(iPlot)+" "+GC.getYieldInfo(iYield).getType()+" Plot Yields "+str(aPlotYieldChanges[BASE][iPlot])+"/"+str(aPlotYieldChanges[REPLACED][iPlot]))
+							self.log("We don't have plot type display, so ENUM is displayed. Here is what they represent: PLOT_PEAK, PLOT_HILLS, PLOT_LAND, PLOT_OCEAN")
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base

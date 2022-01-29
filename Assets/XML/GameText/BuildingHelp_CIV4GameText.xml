@@ -1556,6 +1556,10 @@
 		<Spanish>Casillas de agua</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FLAT</Tag>
+		<English>Flat Land Tiles</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WATER_PLOTS_ALL_CITIES</Tag>
 		<English>All Cities Water Tiles</English>
 		<French>Toutes les cases d'eau des villes[SPACE]</French>
