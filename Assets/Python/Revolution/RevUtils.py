@@ -880,7 +880,6 @@ def getCivicsDistanceMod( iPlayer ) :
 
 def getCivicsNationalityMod(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
 	if pPlayer is None or pPlayer.getNumCities() < 1:
 		return 0
 
