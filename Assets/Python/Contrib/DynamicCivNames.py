@@ -390,7 +390,7 @@ def newNameByCivics(iPlayer):
 		return [newName, curShort, curAdj]
 
 	# Main naming conditions
-	if RevUtils.isCommunism(pPlayer):
+	if isCommunism(pPlayer):
 		if RevUtils.isCanDoElections(pPlayer) and not bNoRealElections:
 			if sSocRep in curDesc or sPeoplesRep in curDesc:
 				newName = curDesc
