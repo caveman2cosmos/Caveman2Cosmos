@@ -161,17 +161,12 @@ def changeHumanHandler(playerID, netUserData, popupReturn):
 		CyInterface().addImmediateMessage("You retain control of the %s"%(oldPlayer.getCivilizationDescription(0)),"")
 		return
 
-
 	print "	CP: You have selected player %d, the %s" %(newHumanIdx, newPlayer.getCivilizationDescription(0))
 
-	success = RevUtils.changeHuman(newHumanIdx, oldHumanIdx)
+	RevUtils.changeHuman(newHumanIdx, oldHumanIdx)
+	print "	CP: Active player is now %d" % GAME.getActivePlayer()
+	CyInterface().addImmediateMessage("You now control the %s"%(newPlayer.getCivilizationDescription(0)),"")
 
-	if success:
-		print "	CP: Active player is now %d" % GAME.getActivePlayer()
-		CyInterface().addImmediateMessage("You now control the %s"%(newPlayer.getCivilizationDescription(0)),"")
-	else:
-		print "	CP: Error occured, number of human players is now %d" % GAME.getNumHumanPlayers()
-		CyInterface().addImmediateMessage("An error occured in changeHuman ...", "")
 
 ##def changeCiv( playerIdx, newCivType, newLeaderType, teamIdx = -1 ):
 ##	# Changes specified players civ, leader and/or team
