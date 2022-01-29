@@ -663,23 +663,21 @@ def doRevRequestDeniedPenalty(CyCity, iHomeArea, iRevIdxInc=100, bExtraHomeland=
 		CyCity.changeRevRequestAngerTimer(iChange)
 	CyCity.changeRevolutionCounter(deniedTurns)
 
-def computeCivSizeRaw(iPlayer) :
+def computeCivSizeRaw(iOwnedPlots):
 	# Ratio of amount of land player owns to what would be equal for this map for national effects, effective radius of civ's empire for comparing with city distance
 	fPlotsRatio = 1.0*CyMap().getLandPlots() / GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	iOwnedPlots = GC.getPlayer(iPlayer).getTotalLand()
 
 	fSizeValueRaw = iOwnedPlots / fPlotsRatio
 	fCivEffRadRaw = ((.5*iOwnedPlots + .5*fPlotsRatio) / 3.4)**.5
 
 	return [fSizeValueRaw, fCivEffRadRaw]
 
-def computeCivSize(iPlayer):
-	CyPlayer = GC.getPlayer(iPlayer)
+def computeCivSize(player):
 	# Ratio of amount of land player owns to what would be equal for this map for national effects, effective radius of civ's empire for comparing with city distance
 	fPlotsRatio = 1.0*CyMap().getLandPlots() / GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	iOwnedPlots = CyPlayer.getTotalLand()
+	iOwnedPlots = player.getTotalLand()
 
-	civSizeEraMod = 0.85 - 0.20 * CyPlayer.getCurrentEra()
+	civSizeEraMod = 0.85 - 0.20 * player.getCurrentEra()
 	if civSizeEraMod < 0:
 		civSizeEraMod = 0
 	fCivSizeValue  = iOwnedPlots / fPlotsRatio + civSizeEraMod
@@ -732,7 +730,6 @@ def changePersonality(playerIdx, newPersonality = -1):
 def changeHuman(newHumanIdx, oldHumanIdx):
 	GAME.changeHumanPlayer(oldHumanIdx, newHumanIdx)
 	doRefortify(newHumanIdx)
-	return True
 
 
 ########################## Civics effect helper functions #####################
@@ -774,8 +771,7 @@ def getCivicsRevIdxLocal(pPlayer):
 	return [localRevIdx, posList, negList]
 
 
-def getCivicsCivStabilityIndex(iPlayer):
-	pPlayer = GC.getPlayer(iPlayer)
+def getCivicsCivStabilityIndex(pPlayer):
 
 	civStabilityIdx = 0
 	posList = []
@@ -814,73 +810,51 @@ def getCivicsCivStabilityIndex(iPlayer):
 	return [civStabilityIdx, posList, negList]
 
 
-def getCivicsHolyCityEffects( iPlayer ) :
+def getCivicsHolyCityEffects(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
-
-	if pPlayer is None:
-		return [0,0]
-
-	if( pPlayer.getNumCities() == 0 ) :
+	if not pPlayer or pPlayer.getNumCities() < 1:
 		return [0,0]
 
 	goodEffect = 0
 	badEffect = 0
 
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			goodEffect += kCivic.getRevIdxHolyCityGood()
-			badEffect += kCivic.getRevIdxHolyCityBad()
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		kCivic = GC.getCivicInfo(pPlayer.getCivics(i))
+		goodEffect += kCivic.getRevIdxHolyCityGood()
+		badEffect += kCivic.getRevIdxHolyCityBad()
 
-	return [goodEffect,badEffect]
+	return [goodEffect, badEffect]
 
-def getCivicsReligionMods( iPlayer ) :
+def getCivicsReligionMods(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
-
-	if pPlayer is None:
-		return [0,0]
-
-	if( pPlayer.getNumCities() == 0 ) :
-		return [0,0]
+	if not pPlayer or pPlayer.getNumCities() < 1:
+		return [0, 0]
 
 	goodMod = 0
 	badMod = 0
 
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			goodMod += kCivic.getRevIdxGoodReligionMod()
-			badMod += kCivic.getRevIdxBadReligionMod()
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		kCivic = GC.getCivicInfo(pPlayer.getCivics(i))
+		goodMod += kCivic.getRevIdxGoodReligionMod()
+		badMod += kCivic.getRevIdxBadReligionMod()
 
 	return [goodMod,badMod]
 
-def getCivicsDistanceMod( iPlayer ) :
+def getCivicsDistanceMod(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
+	if not pPlayer or pPlayer.getNumCities() < 1:
+		return 0
+
 	distModifier = 0
+	for i in xrange(GC.getNumCivicOptionInfos()):
 
-	if pPlayer is None:
-		return 0
-
-	if( pPlayer.getNumCities() == 0 ) :
-		return 0
-
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			distModifier += kCivic.getRevIdxDistanceModifier()
+		distModifier += GC.getCivicInfo(pPlayer.getCivics(i)).getRevIdxDistanceModifier()
 
 	return distModifier
 
 
 def getCivicsNationalityMod(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
 	if pPlayer is None or pPlayer.getNumCities() < 1:
 		return 0
 
@@ -891,121 +865,85 @@ def getCivicsNationalityMod(pPlayer):
 
 	return natMod
 
-def getCivicsViolentRevMod( iPlayer ) :
+def getCivicsViolentRevMod(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
-
-	if pPlayer is None:
-		return 0
-
-	if( pPlayer.getNumCities() == 0 ) :
+	if pPlayer is None or pPlayer.getNumCities() < 1:
 		return 0
 
 	vioMod = 0
+	for i in xrange(GC.getNumCivicOptionInfos()):
 
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			vioMod += kCivic.getRevViolentMod()
+		vioMod += GC.getCivicInfo(pPlayer.getCivics(i)).getRevViolentMod()
 
 	return vioMod
 
-def canDoCommunism( iPlayer ) :
-	pPlayer = GC.getPlayer(iPlayer)
+def canDoCommunism(pPlayer):
 
 	if pPlayer is None or not pPlayer.isAlive():
-		return [False,None]
+		return [False, None]
 
-	for i in range(0,GC.getNumCivicInfos()) :
-		kCivic = GC.getCivicInfo(i)
-		if( kCivic.isCommunism() and pPlayer.canDoCivics(i) ) :
-			if( not pPlayer.isCivic(i) ) :
-				return [True,i]
+	for i in xrange(GC.getNumCivicInfos()):
+		if GC.getCivicInfo(i).isCommunism() and pPlayer.canDoCivics(i) and not pPlayer.isCivic(i):
+			return [True, i]
 
-	return [False,None]
+	return [False, None]
 
-def isCommunism( iPlayer ) :
-	pPlayer = GC.getPlayer(iPlayer)
 
-	if pPlayer is None or not pPlayer.isAlive():
-		return False
+def canDoFreeSpeech(pPlayer):
 
-	for i in range(0,GC.getNumCivicInfos()) :
-		kCivic = GC.getCivicInfo(i)
-		if( kCivic.isCommunism() and pPlayer.isCivic(i) ) :
-				return True
+	if not pPlayer or not pPlayer.isAlive():
+		return [False, None]
 
-	return False
+	for iCivic in xrange(GC.getNumCivicInfos()):
 
-def canDoFreeSpeech( iPlayer ) :
-	pPlayer = GC.getPlayer(iPlayer)
+		if GC.getCivicInfo(iCivic).isFreeSpeech() and pPlayer.canDoCivics(iCivic) and not pPlayer.isCivic(iCivic):
+			return [True, iCivic]
 
-	if pPlayer is None or not pPlayer.isAlive():
-		return [False,None]
+	return [False, None]
 
-	for i in range(0,GC.getNumCivicInfos()) :
-		kCivic = GC.getCivicInfo(i)
-		if( kCivic.isFreeSpeech() and pPlayer.canDoCivics(i) ) :
-			if( not pPlayer.isCivic(i) ) :
-				return [True,i]
-
-	return [False,None]
-
-def isFreeSpeech( iPlayer ) :
-	pPlayer = GC.getPlayer(iPlayer)
+def isFreeSpeech(pPlayer):
 
 	if pPlayer is None or not pPlayer.isAlive():
 		return False
 
-	for i in range(0,GC.getNumCivicInfos()) :
-		kCivic = GC.getCivicInfo(i)
-		if( kCivic.isFreeSpeech() and pPlayer.isCivic(i) ) :
-				return True
+	for i in xrange(GC.getNumCivicInfos()):
+
+		if GC.getCivicInfo(i).isFreeSpeech() and pPlayer.isCivic(i):
+			return True
 
 	return False
 
-def isCanDoElections( iPlayer ) :
-	pPlayer = GC.getPlayer(iPlayer)
+def isCanDoElections(pPlayer):
 
 	if pPlayer is None or not pPlayer.isAlive() or pPlayer.isNPC():
 		return False
 
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			if( kCivic.isCanDoElection() ) :
-				return True
+	for i in xrange(GC.getNumCivicOptionInfos()):
 
+		if GC.getCivicInfo(pPlayer.getCivics(i)).isCanDoElection():
+			return True
 
 	return False
 
-def getReligiousFreedom( iPlayer ) :
+def getReligiousFreedom(pPlayer):
 	# Returns [freedom level, option type]
 
-	pPlayer = GC.getPlayer(iPlayer)
+	if not pPlayer or not pPlayer.isAlive():
+		return [0, None]
 
-	if pPlayer is None or not pPlayer.isAlive():
-		return [0,None]
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		iReligiousFreedom = GC.getCivicInfo(pPlayer.getCivics(i)).getRevReligiousFreedom()
+		if iReligiousFreedom:
+			return [iReligiousFreedom, i]
 
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			if( not kCivic.getRevReligiousFreedom() == 0 ) :
-				return [kCivic.getRevReligiousFreedom(),i]
-
-	return [0,None]
+	return [0, None]
 
 
-def getBestReligiousFreedom( iPlayer, relOptionType ) :
+def getBestReligiousFreedom(pPlayer, relOptionType):
 	# Returns [best level, civic type]
 
-	pPlayer = GC.getPlayer(iPlayer)
-
-	if pPlayer is None or not pPlayer.isAlive() or relOptionType == None:
-		return [0,None]
+	if not pPlayer or not pPlayer.isAlive() or relOptionType == None:
+		return [0, None]
 
 	bestFreedom = -11
 	bestCivic = None
@@ -1018,29 +956,25 @@ def getBestReligiousFreedom( iPlayer, relOptionType ) :
 
 	return [bestFreedom, bestCivic]
 
-def getDemocracyLevel(iPlayer):
+def getDemocracyLevel(pPlayer):
 	# Returns [level, option type]
 
-	pPlayer = GC.getPlayer(iPlayer)
-
-	if pPlayer is None or not pPlayer.isAlive():
+	if not pPlayer or not pPlayer.isAlive():
 		return [0, None]
 
 	for i in range(GC.getNumCivicOptionInfos()):
-		kCivic = GC.getCivicInfo(pPlayer.getCivics(i))
-		if kCivic.getRevDemocracyLevel():
-			return [kCivic.getRevDemocracyLevel(),i]
+		iDemLvl = GC.getCivicInfo(pPlayer.getCivics(i)).getRevDemocracyLevel()
+		if iDemLvl:
+			return [iDemLvl, i]
 
 	return [0, None]
 
 
-def getBestDemocracyLevel( iPlayer, optionType ) :
+def getBestDemocracyLevel(pPlayer, optionType):
 	# Returns [best level, civic type]
 
-	pPlayer = GC.getPlayer(iPlayer)
-
-	if pPlayer is None or not pPlayer.isAlive() or optionType is None:
-		return [0,None]
+	if not pPlayer or not pPlayer.isAlive() or optionType is None:
+		return [0, None]
 
 	bestLevel = -11
 	bestCivic = None
@@ -1053,28 +987,22 @@ def getBestDemocracyLevel( iPlayer, optionType ) :
 
 	return [bestLevel, bestCivic]
 
-def getLaborFreedom(iPlayer):
+def getLaborFreedom(pPlayer):
 	# Returns [level, option type]
 
-	pPlayer = GC.getPlayer(iPlayer)
+	if not pPlayer or not pPlayer.isAlive():
+		return [0, None]
 
-	if pPlayer is None or not pPlayer.isAlive():
-		return [0,None]
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		iLaborFreedom = GC.getCivicInfo(pPlayer.getCivics(i)).getRevLaborFreedom()
+		if iLaborFreedom:
+			return [iLaborFreedom, i]
 
-	for i in range(0,GC.getNumCivicOptionInfos()) :
-		iCivic = pPlayer.getCivics(i)
-		if( iCivic >= 0 ) :
-			kCivic = GC.getCivicInfo(iCivic)
-			if( not kCivic.getRevLaborFreedom() == 0 ) :
-				return [kCivic.getRevLaborFreedom(),i]
-
-	return [0,None]
+	return [0, None]
 
 
-def getBestLaborFreedom(iPlayer, optionType):
+def getBestLaborFreedom(pPlayer, optionType):
 	# Returns [best level, civic type]
-
-	pPlayer = GC.getPlayer(iPlayer)
 
 	if None in (pPlayer, optionType) or not pPlayer.isAlive():
 		return [0, None]
@@ -1094,8 +1022,6 @@ def getBestLaborFreedom(iPlayer, optionType):
 # Returns [level, option type]
 def getEnvironmentalProtection(pPlayer):
 
-	pPlayer = GC.getPlayer(iPlayer)
-
 	if pPlayer is None or not pPlayer.isAlive():
 		return [0, None]
 
@@ -1108,7 +1034,6 @@ def getEnvironmentalProtection(pPlayer):
 
 def getBestEnvironmentalProtection(pPlayer, optionType):
 	# Returns [best level, civic type]
-	pPlayer = GC.getPlayer(iPlayer)
 
 	if None in (pPlayer, optionType) or not pPlayer.isAlive():
 		return [0, None]
@@ -1126,10 +1051,9 @@ def getBestEnvironmentalProtection(pPlayer, optionType):
 
 ########################## Traits effect helper functions #####################
 
-def getTraitsRevIdxLocal(iPlayer):
-	pPlayer = GC.getPlayer(iPlayer)
+def getTraitsRevIdxLocal(pPlayer):
 
-	if pPlayer is None or not pPlayer.getNumCities():
+	if not pPlayer or pPlayer.getNumCities() < 1:
 		return [0, [], []]
 
 	localRevIdx = 0
@@ -1150,15 +1074,14 @@ def getTraitsRevIdxLocal(iPlayer):
 	return [localRevIdx, posList, negList]
 
 
-def getTraitsCivStabilityIndex(iPlayer):
-	pPlayer = GC.getPlayer(iPlayer)
+def getTraitsCivStabilityIndex(pPlayer):
+
+	if not pPlayer:
+		return [0, [], []]
 
 	civStabilityIdx = 0
-	posList = list()
-	negList = list()
-
-	if pPlayer is None:
-		return [civStabilityIdx, posList, negList]
+	posList = []
+	negList = []
 
 	for iTrait in range(GC.getNumTraitInfos()):
 		kTrait = GC.getTraitInfo(iTrait)
@@ -1175,9 +1098,7 @@ def getTraitsCivStabilityIndex(iPlayer):
 	return [civStabilityIdx, posList, negList]
 
 
-def getTraitsHolyCityEffects(iPlayer):
-
-	pPlayer = GC.getPlayer(iPlayer)
+def getTraitsHolyCityEffects(pPlayer):
 
 	if pPlayer is None or not pPlayer.getNumCities():
 		return [0, 0]
@@ -1194,9 +1115,7 @@ def getTraitsHolyCityEffects(iPlayer):
 	return [goodEffect, badEffect]
 
 
-def getTraitsReligionMods(iPlayer):
-
-	pPlayer = GC.getPlayer(iPlayer)
+def getTraitsReligionMods(pPlayer):
 
 	if pPlayer is None or not pPlayer.getNumCities():
 		return [0,0]
@@ -1213,9 +1132,7 @@ def getTraitsReligionMods(iPlayer):
 	return [goodMod, badMod]
 
 
-def getTraitsDistanceMod( iPlayer ) :
-
-	pPlayer = GC.getPlayer(iPlayer)
+def getTraitsDistanceMod(pPlayer):
 
 	if pPlayer is None or not pPlayer.getNumCities():
 		return 0
@@ -1250,10 +1167,9 @@ def getBuildingsRevIdxLocal(CyCity):
 	return [localRevIdx, posList, negList]
 
 
-def getBuildingsCivStabilityIndex(iPlayer):
+def getBuildingsCivStabilityIndex(player):
 
-	CyPlayer = GC.getPlayer(iPlayer)
-	if not CyPlayer:
+	if not player:
 		return [0, [], []]
 
 	civStabilityIdx = 0
@@ -1264,7 +1180,7 @@ def getBuildingsCivStabilityIndex(iPlayer):
 		buildingEffect = -CvBuildingInfo.getRevIdxNational()
 
 		if buildingEffect:
-			numBuildings = CyPlayer.countNumBuildings(iBuilding)
+			numBuildings = player.countNumBuildings(iBuilding)
 			if numBuildings:
 				buildingEffect *= numBuildings
 				if buildingEffect > 0:

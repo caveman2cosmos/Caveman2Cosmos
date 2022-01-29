@@ -972,9 +972,9 @@ class Revolution:
 		hasSciMethod = GC.getTeam(pPlayer.getTeam()).isHasTech(self.iSciMethodTech)
 
 		# phungus -start
-		[civSizeValue, iCivEffRadius] = RevUtils.computeCivSize(iPlayer)
+		[civSizeValue, iCivEffRadius] = RevUtils.computeCivSize(pPlayer)
 		civSizeValue *= self.civSizeModifier
-		[civSizeRawVal, iCivEffRadRaw] = RevUtils.computeCivSizeRaw(iPlayer)
+		[civSizeRawVal, iCivEffRadRaw] = RevUtils.computeCivSizeRaw(pPlayer.getTotalLand())
 		civSizeRawVal *= self.civSizeModifier
 		if self.LOG_DEBUG and not (iGameTurn % 25):
 			print "[REV] Revolt: %s have civ size value %.2f, era mod %.2f" % (pPlayer.getCivilizationDescription(0), civSizeValue, max([0, 0.85-0.20*pPlayer.getCurrentEra()]))
@@ -1144,8 +1144,8 @@ class Revolution:
 			cityDistModifier = ( 307.0*cityDistRaw / cityDistMapModifier ) / ( 1.0 + ( cityDistCommBonus / 100.0 ) )
 			cityDistModifier -= int(666 / cityDistMapModifier)
 
-			CivicsDistModifier = RevUtils.getCivicsDistanceMod( iPlayer )
-			TraitsDistModifier = RevUtils.getTraitsDistanceMod( iPlayer )
+			CivicsDistModifier = RevUtils.getCivicsDistanceMod(pPlayer)
+			TraitsDistModifier = RevUtils.getTraitsDistanceMod(pPlayer)
 			BuildingsDistModifier = RevUtils.getBuildingsDistanceMod( pCity )
 			DistModifier = (CivicsDistModifier + TraitsDistModifier + BuildingsDistModifier) / 100.0
 			distMod = 1.0
@@ -1263,7 +1263,7 @@ class Revolution:
 						else :
 							relBadIdx += 4
 
-					[holyCityGood,holyCityBad] = RevUtils.getCivicsHolyCityEffects(iPlayer)
+					[holyCityGood,holyCityBad] = RevUtils.getCivicsHolyCityEffects(pPlayer)
 					if( not hasLiberalism and stateRel >= 0 ) :
 						if( pCity.isHasReligion(stateRel) ) :
 							stateHolyCity = GAME.getHolyCity( stateRel )
@@ -1271,7 +1271,7 @@ class Revolution:
 								holyCityOwnerID = stateHolyCity.getOwner()
 								if( (not holyCityGood == 0) and (holyCityOwnerID == iPlayer) ) :
 									#phungus Rev Trait Effects
-									[traitHolyCityGood, traitHolyCityBad] = RevUtils.getTraitsHolyCityEffects(iPlayer)
+									[traitHolyCityGood, traitHolyCityBad] = RevUtils.getTraitsHolyCityEffects(pPlayer)
 									if ( traitHolyCityGood != 0 ) :
 										holyCityGood += traitHolyCityGood
 									#Rev Trait End
@@ -1279,7 +1279,7 @@ class Revolution:
 									relGoodIdx += holyCityGood
 								elif( (not holyCityBad == 0) and (not GC.getPlayer(holyCityOwnerID).getStateReligion() == stateRel) ) :
 									#phungus Rev Trait Effects
-									[traitHolyCityGood, traitHolyCityBad] = RevUtils.getTraitsHolyCityEffects(iPlayer)
+									[traitHolyCityGood, traitHolyCityBad] = RevUtils.getTraitsHolyCityEffects(pPlayer)
 									if ( traitHolyCityBad != 0 ) :
 										holyCityBad += traitHolyCityBad
 									#Rev Trait End
@@ -1288,7 +1288,7 @@ class Revolution:
 
 					[relGoodMod,relBadMod] = RevUtils.getCivicsReligionMods(iPlayer)
 					#phungus Rev Trait Effects
-					[traitRelGoodMod,traitRelBadMod] = RevUtils.getTraitsReligionMods(iPlayer)
+					[traitRelGoodMod,traitRelBadMod] = RevUtils.getTraitsReligionMods(pPlayer)
 
 					relBadIdx = int(relBadIdx*(1.0 + relBadMod + traitRelBadMod) + .5)
 					relGoodIdx = int(relGoodIdx*(1.0 + relGoodMod + traitRelGoodMod) + .5)
@@ -1475,7 +1475,7 @@ class Revolution:
 			negList.extend(civicNegList)
 
 			# Traits
-			[traitIdx, traitPosList, traitNegList] = RevUtils.getTraitsRevIdxLocal(iPlayer)
+			[traitIdx, traitPosList, traitNegList] = RevUtils.getTraitsRevIdxLocal(pPlayer)
 			localRevIdx += traitIdx
 
 			posList.extend(traitPosList)
@@ -1630,8 +1630,13 @@ class Revolution:
 
 		return totalString
 
-	def updateCivStability( self, iGameTurn, iPlayer, bIsRevWatch = False, bVerbose = False ) :
-		# Update the revolution effects for the entire empire
+	# Update the revolution effects for the entire empire
+	def updateCivStability(self, iGameTurn, iPlayer, bIsRevWatch = False, bVerbose = False):
+
+		pPlayer = GC.getPlayer(iPlayer)
+		if pPlayer.getNumCities() < 1:
+			return TRNSLTR.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
+
 		import BugUtil
 		posList = []
 		negList = []
@@ -1640,11 +1645,7 @@ class Revolution:
 		gameSpeedMod = RevUtils.getGameSpeedMod()
 		#print "Revolt - Game speed mod is ", self.gameSpeedMod
 
-		pPlayer = GC.getPlayer(iPlayer)
-		if( pPlayer.getNumCities() == 0 ) :
-			return TRNSLTR.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
-
-		pTeam = GC.getTeam( pPlayer.getTeam() )
+		pTeam = GC.getTeam(pPlayer.getTeam())
 		iEra = pPlayer.getCurrentEra()
 
 		civRevIdx = 0
@@ -1655,7 +1656,7 @@ class Revolution:
 		civSizeIdx2 = 0
 		# Size of Empire
 		# Note:  Empire size also effects modifier multiply location effects in local rev indices, so not all effects are here
-		civSizeValue = self.civSizeModifier*RevUtils.computeCivSize( iPlayer )[0]
+		civSizeValue = self.civSizeModifier * RevUtils.computeCivSize(pPlayer)[0]
 		if( civSizeValue > 2.0 ) :
 			if( bIsRevWatch ) : negList.append( (-4, TRNSLTR.getText("TXT_KEY_REV_WATCH_HUGE_EMP",())) )
 			civSizeIdx += 4
@@ -1770,21 +1771,21 @@ class Revolution:
 		civStabilityIdx += finIdx
 		BugUtil.debug("Empire Stability Marker 2, %d", civStabilityIdx)
 		# Civics
-		[civicIdx,civicPosList,civicNegList] = RevUtils.getCivicsCivStabilityIndex( iPlayer )
+		[civicIdx,civicPosList,civicNegList] = RevUtils.getCivicsCivStabilityIndex(pPlayer)
 		civStabilityIdx += civicIdx
 		BugUtil.debug("Empire Stability Marker 3, %d", civStabilityIdx)
 		posList.extend( civicPosList )
 		negList.extend( civicNegList )
 
 		# Traits
-		[traitIdx,traitPosList,traitNegList] = RevUtils.getTraitsCivStabilityIndex( iPlayer )
+		[traitIdx,traitPosList,traitNegList] = RevUtils.getTraitsCivStabilityIndex(pPlayer)
 		civStabilityIdx += -traitIdx
 		BugUtil.debug("Empire Stability Marker 4, %d", civStabilityIdx)
 		posList.extend( traitPosList )
 		negList.extend( traitNegList )
 
 		# Buildings
-		[buildingIdx,buildingPosList,buildingNegList] = RevUtils.getBuildingsCivStabilityIndex( iPlayer )
+		[buildingIdx,buildingPosList,buildingNegList] = RevUtils.getBuildingsCivStabilityIndex(pPlayer)
 		civStabilityIdx += -buildingIdx
 		BugUtil.debug("Empire Stability Marker 5, %d", civStabilityIdx)
 		posList.extend( buildingPosList )
@@ -2230,33 +2231,15 @@ class Revolution:
 				GC.getPlayer(iPlayer).changeStabilityIndex(-iScoreEffect)
 
 
-#-------------------------------------------------------------------------------------------------
-# Lemmy101 RevolutionMP edit
-#-------------------------------------------------------------------------------------------------
-	def revIndexAdjusted( self, pCity):
+	def revIndexAdjusted(self, pCity):
+		return pCity.getRevolutionIndex() - pCity.isCapital() * self.revInstigatorThreshold
 
-		if(pCity.isCapital()):
-			return pCity.getRevolutionIndex()-self.revInstigatorThreshold
-		else:
-			return pCity.getRevolutionIndex()
 
-##--- Revolution setup functions ---------------------------------------------
-#-------------------------------------------------------------------------------------------------
-# END Lemmy101 RevolutionMP edit
-#-------------------------------------------------------------------------------------------------
-
-	def pickRevolutionStyle( self, pPlayer, instigator, revReadyCities ) :
+	def pickRevolutionStyle(self, pPlayer, instigator, revReadyCities):
 		bReinstatedOnRevolution = False
-#-------------------------------------------------------------------------------------------------
-# Lemmy101 RevolutionMP edit
-#-------------------------------------------------------------------------------------------------
-	   # MOVED ELSEWHERE
-#-------------------------------------------------------------------------------------------------
-# END Lemmy101 RevolutionMP edit
-#-------------------------------------------------------------------------------------------------
 
 		iPlayer = pPlayer.getID()
-		pTeam = GC.getTeam( pPlayer.getTeam() )
+		pTeam = GC.getTeam(pPlayer.getTeam())
 
 		revCities = []
 		revCities.append(instigator)
@@ -2283,41 +2266,42 @@ class Revolution:
 		instRevIdx = instigator.getRevolutionIndex()
 		instLocalIdx = instigator.getLocalRevIndex()
 
-		if( instRevIdx > self.alwaysViolentThreshold ) :
+		if instRevIdx > self.alwaysViolentThreshold:
 			# Situation really bad
 			if self.LOG_DEBUG: print "[REV] Revolt: Violent, above always violent threshold"
 			bPeaceful = False
-		elif( instigator.getNumRevolts(iPlayer) == 0 ) :
-			bPeaceful = True
-		else :
-			if( bPeaceful ) :
-				modNumUnhappy = RevUtils.getModNumUnhappy( instigator, self.warWearinessMod )
-				if( int(200*modNumUnhappy/instigator.getPopulation()) > GAME.getSorenRandNum( 100, 'Rev' ) ) :
-					if self.LOG_DEBUG: print "[REV] Revolt: Violent due to Unhappiness"
-					bPeaceful = False
-			if( bPeaceful and instLocalIdx > self.badLocalThreshold ) :
+
+		elif instigator.getNumRevolts(iPlayer):
+
+			modNumUnhappy = RevUtils.getModNumUnhappy( instigator, self.warWearinessMod )
+
+			if int(200 * modNumUnhappy / instigator.getPopulation()) > GAME.getSorenRandNum(100, 'Rev'):
+				if self.LOG_DEBUG: print "[REV] Revolt: Violent due to Unhappiness"
+				bPeaceful = False
+
+			if bPeaceful and instLocalIdx > self.badLocalThreshold:
 				# Situation deteriorating rapidly
 				if self.LOG_DEBUG: print "[REV] Revolt: Violent due to rapidly deteriorating situation"
 				bPeaceful = False
-			if( bPeaceful and len(revCities) == 1 ) :
-				bPeaceful = True
-			elif( bPeaceful ) :
-				lowerThresh = int(.8*self.alwaysViolentThreshold)
 
-				civicsMod = RevUtils.getCivicsViolentRevMod(iPlayer)
-				lowerThresh += int(civicsMod*self.alwaysViolentThreshold  + .5)
+			if bPeaceful:
+				if len(revCities) != 1:
 
-				if instLocalIdx > self.badLocalThreshold:
-					lowerThresh -= int(.05*self.alwaysViolentThreshold + .5)
-				elif instLocalIdx < 0:
-					lowerThresh += int(.10*self.alwaysViolentThreshold + .5)
+					lowerThresh = int(.8*self.alwaysViolentThreshold)
 
-				if( instRevIdx > lowerThresh ) :
-					odds = (100*(instRevIdx - lowerThresh))/(self.alwaysViolentThreshold-lowerThresh)
-					if self.LOG_DEBUG: print "[REV] Revolt: Odds for violence are " + str(odds)
-					if( odds > GAME.getSorenRandNum( 100, 'Rev' ) ) :
-						bPeaceful = False
+					civicsMod = RevUtils.getCivicsViolentRevMod(pPlayer)
+					lowerThresh += int(civicsMod*self.alwaysViolentThreshold  + .5)
 
+					if instLocalIdx > self.badLocalThreshold:
+						lowerThresh -= int(.05*self.alwaysViolentThreshold + .5)
+					elif instLocalIdx < 0:
+						lowerThresh += int(.10*self.alwaysViolentThreshold + .5)
+
+					if instRevIdx > lowerThresh:
+						odds = (100*(instRevIdx - lowerThresh))/(self.alwaysViolentThreshold-lowerThresh)
+						if self.LOG_DEBUG: print "[REV] Revolt: Odds for violence are " + str(odds)
+						if odds > GAME.getSorenRandNum( 100, 'Rev' ):
+							bPeaceful = False
 
 		if bPeaceful:
 			if self.LOG_DEBUG: print "[REV] Revolt: Peaceful revolution"
@@ -2326,9 +2310,9 @@ class Revolution:
 #-------- Check for still existing violent revolution for instigator
 			revCivType = RevData.getCityVal(instigator, 'RevolutionCiv')
 			pRevPlayer = None
-			if( revCivType >= 0 ) :
+			if revCivType >= 0:
 				for i in xrange(GC.getMAX_PC_PLAYERS()) :
-					if( not i == pPlayer.getID() ) :
+					if i != iPlayer:
 						playerI = GC.getPlayer( i )
 						if( playerI.isAlive() and playerI.getCivilizationType() == revCivType ) :
 							if( playerI.isRebel() and GC.getTeam(playerI.getTeam()).isRebelAgainst(pTeam.getID()) ) :
@@ -2470,7 +2454,7 @@ class Revolution:
 								bOfferPeace = True
 								revArea = instigator.area()
 								revPower = revArea.getPower(pRevPlayer.getID())
-								pPower = revArea.getPower(pPlayer.getID())
+								pPower = revArea.getPower(iPlayer)
 								if( revPower > 0 ) :
 									powerFrac = pPower/(1.0*revPower)
 								else :
@@ -2498,7 +2482,7 @@ class Revolution:
 									handoverCityIdxs.append( pCity.getID() )
 
 								specialDataDict = { 'iRevPlayer' : pRevPlayer.getID(), 'bIsJoinWar' : bIsJoinWar, 'bOfferPeace' : bOfferPeace, 'HandoverCities' : handoverCityIdxs }
-								revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), joinRevCityIdxs, 'independence', bPeaceful, specialDataDict )
+								revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), joinRevCityIdxs, 'independence', bPeaceful, specialDataDict )
 
 								revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 								iRevoltIdx = len(revoltDict.keys())
@@ -2656,7 +2640,7 @@ class Revolution:
 				cityIdxs = []
 				for pCity in cultCities :
 					cityIdxs.append( pCity.getID() )
-				revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
+				revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
 
 				revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 				iRevoltIdx = len(revoltDict.keys())
@@ -2724,8 +2708,8 @@ class Revolution:
 					# Check if there are civics they would like changed
 					newRelCivic = None
 
-					[level,optionType] = RevUtils.getReligiousFreedom( iPlayer )
-					[newLevel,newRelCivic] = RevUtils.getBestReligiousFreedom( iPlayer, optionType )
+					[level,optionType] = RevUtils.getReligiousFreedom(pPlayer)
+					[newLevel,newRelCivic] = RevUtils.getBestReligiousFreedom(pPlayer, optionType)
 
 					if( not newRelCivic == None and newLevel > level ) :
 						if( level < -5 or (newLevel > 5 and level < 0) ) :
@@ -2749,7 +2733,7 @@ class Revolution:
 							cityIdxs = []
 							for pCity in relCities :
 								cityIdxs.append( pCity.getID() )
-							revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+							revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 							revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 							iRevoltIdx = len(revoltDict.keys())
@@ -2785,7 +2769,7 @@ class Revolution:
 						cityIdxs = []
 						for pCity in relCities :
 							cityIdxs.append( pCity.getID() )
-						revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'religion', bPeaceful, specialDataDict )
+						revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'religion', bPeaceful, specialDataDict )
 
 						revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 						iRevoltIdx = len(revoltDict.keys())
@@ -2835,7 +2819,7 @@ class Revolution:
 					vassalStyle = None
 					if( not pTeam.isAVassal() and pTeam.isVassalStateTrading() ) :
 						if( totalRevIdx/len(indCities) < self.revInstigatorThreshold ) :
-							if( pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_FRIENDLY or pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_PLEASED ) :
+							if( pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FRIENDLY or pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_PLEASED ) :
 								vassalStyle = 'free'
 								if self.LOG_DEBUG: print "[REV] Revolt: Vassal style %s chosen" % vassalStyle
 
@@ -2853,7 +2837,7 @@ class Revolution:
 					cityIdxs = []
 					for pCity in indCities :
 						cityIdxs.append( pCity.getID() )
-					revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
+					revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
 
 					revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 					iRevoltIdx = len(revoltDict.keys())
@@ -2903,7 +2887,7 @@ class Revolution:
 					cityIdxs = []
 					for pCity in indCities :
 						cityIdxs.append( pCity.getID() )
-					revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
+					revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
 
 					revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 					iRevoltIdx = len(revoltDict.keys())
@@ -2921,7 +2905,7 @@ class Revolution:
 				print "[REV] Revolution in homeland"
 
 			if bPeaceful and not GC.getTeam(pPlayer.getTeam()).isHasTech(self.iNationalismTech):
-				[goodEffect, badEffect] = RevUtils.getCivicsHolyCityEffects(iPlayer)
+				[goodEffect, badEffect] = RevUtils.getCivicsHolyCityEffects(pPlayer)
 				if badEffect > 0:
 					stateRel = pPlayer.getStateReligion()
 					if pPlayer.isStateReligion() and stateRel >= 0:
@@ -2960,7 +2944,7 @@ class Revolution:
 								cityIdxs = []
 								for pCity in relCities :
 									cityIdxs.append( pCity.getID() )
-								revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'war', bPeaceful, specialDataDict )
+								revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'war', bPeaceful, specialDataDict )
 
 								revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 								iRevoltIdx = len(revoltDict.keys())
@@ -2984,7 +2968,7 @@ class Revolution:
 								cityIdxs = []
 								for pCity in relCities :
 									cityIdxs.append( pCity.getID() )
-								revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'war', bPeaceful, specialDataDict )
+								revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'war', bPeaceful, specialDataDict )
 
 								revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 								iRevoltIdx = len(revoltDict.keys())
@@ -2996,9 +2980,9 @@ class Revolution:
 								return
 
 
-			if( self.civicRevolution ) :
-				[laborLevel,optionType] = RevUtils.getLaborFreedom( iPlayer )
-				[newLaborLevel,newCivic] = RevUtils.getBestLaborFreedom( iPlayer, optionType )
+			if self.civicRevolution:
+				[laborLevel,optionType] = RevUtils.getLaborFreedom(pPlayer)
+				[newLaborLevel,newCivic] = RevUtils.getBestLaborFreedom(pPlayer, optionType)
 				if( bPeaceful and laborLevel < 0 and newLaborLevel > 5 and not newCivic == None ) :
 					if( (10*abs(laborLevel) > GAME.getSorenRandNum(100, 'Revolt - emancipation request')) ):
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change to emancipation, " + str(newCivic)
@@ -3024,7 +3008,7 @@ class Revolution:
 						cityIdxs = []
 						for pCity in revCities :
 							cityIdxs.append( pCity.getID() )
-						revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+						revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 						revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 						iRevoltIdx = len(revoltDict.keys())
@@ -3076,7 +3060,7 @@ class Revolution:
 							cityIdxs = []
 							for pCity in slaveCities :
 								cityIdxs.append( pCity.getID() )
-							revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+							revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 							revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 							iRevoltIdx = len(revoltDict.keys())
@@ -3114,7 +3098,7 @@ class Revolution:
 						cityIdxs = []
 						for pCity in revCities :
 							cityIdxs.append( pCity.getID() )
-						revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+						revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 						revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 						iRevoltIdx = len(revoltDict.keys())
@@ -3127,7 +3111,7 @@ class Revolution:
 
 
 # -------------------- Special options for colonial revolutions
-		else :
+		else:
 			# Revolution based in other area
 			# These are special requests peaceful colonists may make
 			if self.LOG_DEBUG: print "[REV] Revolt: Revolution in colony"
@@ -3135,17 +3119,17 @@ class Revolution:
 			foreignCities = []
 			capitalArea = pPlayer.getCapitalCity().area().getID()
 			for pCity in revCities :
-				if( not pCity.area().getID() == capitalArea ) :
+				if not pCity.area().getID() == capitalArea:
 					if self.LOG_DEBUG: print "[REV] Revolt: %s is colony" % pCity.getName()
 					foreignCities.append( pCity )
 
 			bodStr = getCityTextList(foreignCities, bPreCity = True, bPostIs = True)
 
-			if( bPeaceful and self.civicRevolution ) :
+			if bPeaceful and self.civicRevolution:
 				# Sufferage or representation
-				[demoLevel,optionType] = RevUtils.getDemocracyLevel( iPlayer )
-				[newDemoLevel,newCivic] = RevUtils.getBestDemocracyLevel( iPlayer, optionType )
-				if( demoLevel < 0 and newDemoLevel > 0 and not newCivic == None ) :
+				[demoLevel, optionType] = RevUtils.getDemocracyLevel(pPlayer)
+				[newDemoLevel, newCivic] = RevUtils.getBestDemocracyLevel(pPlayer, optionType)
+				if demoLevel < 0 and newDemoLevel > 0 and not newCivic == None:
 
 						bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_COL_GOVT_REQUEST",())
 						if( newDemoLevel > 9 ) :
@@ -3172,7 +3156,7 @@ class Revolution:
 						cityIdxs = []
 						for pCity in foreignCities :
 							cityIdxs.append( pCity.getID() )
-						revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+						revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 						revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 						iRevoltIdx = len(revoltDict.keys())
@@ -3189,18 +3173,18 @@ class Revolution:
 
 
 #-------- If capital or majority of cities,
-		if( revInCapital or (len(revCities) >= (pPlayer.getNumCities()-1)/2 and len(revCities) > 2) ) :
+		if revInCapital or len(revCities) >= (pPlayer.getNumCities()-1)/2 and len(revCities) > 2:
 
 			bodStr = getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
-			if( bPeaceful ) :
+			if bPeaceful:
 				# If peaceful, ask change to civics ... if no civics, ask for change of leader
 				if self.LOG_DEBUG: print "[REV] Revolt: Capital or large number of cities in peaceful revolution!"
 
-				if( self.civicRevolution ) :
+				if self.civicRevolution:
 					# Emancipation
-					[laborLevel,optionType] = RevUtils.getLaborFreedom( iPlayer )
-					[newLaborLevel,newCivic] = RevUtils.getBestLaborFreedom( iPlayer, optionType )
+					[laborLevel,optionType] = RevUtils.getLaborFreedom(pPlayer)
+					[newLaborLevel,newCivic] = RevUtils.getBestLaborFreedom(pPlayer, optionType)
 					if( laborLevel < 0 and newLaborLevel > 5 and not newCivic == None ):
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change to %s, %d"%(GC.getCivicInfo(newCivic).getDescription(),newCivic)
 
@@ -3222,7 +3206,7 @@ class Revolution:
 						cityIdxs = []
 						for pCity in revCities :
 							cityIdxs.append( pCity.getID() )
-						revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+						revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 						revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 						iRevoltIdx = len(revoltDict.keys())
@@ -3233,7 +3217,7 @@ class Revolution:
 
 						return
 
-					[isCanDoCommunism,newCivic] = RevUtils.canDoCommunism( iPlayer )
+					[isCanDoCommunism,newCivic] = RevUtils.canDoCommunism(pPlayer)
 					if( isCanDoCommunism and not newCivic == None ) :
 						if( 35 > GAME.getSorenRandNum(100, 'Rev - Communist revolution') ) :
 							if self.LOG_DEBUG: print "[REV] Revolt: Communist revolution, ask change to %s, %d" % (GC.getCivicInfo(newCivic).getDescription(), newCivic)
@@ -3247,7 +3231,7 @@ class Revolution:
 							cityIdxs = []
 							for pCity in revCities :
 								cityIdxs.append( pCity.getID() )
-							revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+							revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 							revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 							iRevoltIdx = len(revoltDict.keys())
@@ -3259,8 +3243,8 @@ class Revolution:
 							return
 
 					# Sufferage or representation
-					[demoLevel,optionType] = RevUtils.getDemocracyLevel( iPlayer )
-					[newDemoLevel,newCivic] = RevUtils.getBestDemocracyLevel( iPlayer, optionType )
+					[demoLevel,optionType] = RevUtils.getDemocracyLevel(pPlayer)
+					[newDemoLevel,newCivic] = RevUtils.getBestDemocracyLevel(pPlayer, optionType )
 					if( demoLevel < 0 and newDemoLevel > 0 and not newCivic == None ) :
 
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_REQUEST",())
@@ -3288,7 +3272,7 @@ class Revolution:
 							cityIdxs = []
 							for pCity in revCities :
 								cityIdxs.append( pCity.getID() )
-							revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+							revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 							revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 							iRevoltIdx = len(revoltDict.keys())
@@ -3299,7 +3283,7 @@ class Revolution:
 
 							return
 
-					[bCanDoFreeSpeech,newCivic] = RevUtils.canDoFreeSpeech( iPlayer )
+					[bCanDoFreeSpeech,newCivic] = RevUtils.canDoFreeSpeech(pPlayer)
 					if( bCanDoFreeSpeech and not newCivic == None ) :
 						if( 50 > GAME.getSorenRandNum(100, 'Revolt - free speech request') ):
 							if self.LOG_DEBUG: print "[REV] Revolt: Asking change to Free Speech, " + str(newCivic)
@@ -3322,7 +3306,7 @@ class Revolution:
 							cityIdxs = []
 							for pCity in revCities :
 								cityIdxs.append( pCity.getID() )
-							revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
+							revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'civics', bPeaceful, specialDataDict )
 
 							revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 							iRevoltIdx = len(revoltDict.keys())
@@ -3333,14 +3317,15 @@ class Revolution:
 
 							return
 
-				if( self.leaderRevolution and not bReinstatedOnRevolution ) : #and (len(revCities) == pPlayer.getNumCities() or len(revCities) > (pPlayer.getNumCities()+1)/3) ) :
+				if self.leaderRevolution and not bReinstatedOnRevolution: #and (len(revCities) == pPlayer.getNumCities() or len(revCities) > (pPlayer.getNumCities()+1)/3) ) :
 					# All or most cities in revolt
-					if( not pPlayer.isHuman() or self.humanLeaderRevolution ) :
+					if not pPlayer.isHuman() or self.humanLeaderRevolution:
 						# Ask for change of leader
 
 						bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CAP_LEAD_REQUEST",())
-						if( not RevUtils.isCanDoElections( iPlayer ) ) :
-							if( 70 > GAME.getSorenRandNum(100, 'Revolt - cede power request') or len(revCities) == pPlayer.getNumCities() ):
+						if not RevUtils.isCanDoElections(pPlayer):
+
+							if 70 > GAME.getSorenRandNum(100, 'Revolt - cede power request') or len(revCities) == pPlayer.getNumCities():
 
 								if self.LOG_DEBUG: print "[REV] Revolt: Asking for change in leader from " + pPlayer.getName()
 								[newLeaderType,newLeaderName] = self.chooseRevolutionLeader( revCities )
@@ -3363,7 +3348,7 @@ class Revolution:
 								cityIdxs = []
 								for pCity in revCities :
 									cityIdxs.append( pCity.getID() )
-								revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'leader', bPeaceful, specialDataDict )
+								revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'leader', bPeaceful, specialDataDict )
 
 								revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 								iRevoltIdx = len(revoltDict.keys())
@@ -3396,7 +3381,7 @@ class Revolution:
 							cityIdxs = []
 							for pCity in revCities :
 								cityIdxs.append( pCity.getID() )
-							revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'leader', bPeaceful, specialDataDict )
+							revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'leader', bPeaceful, specialDataDict )
 
 							revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 							iRevoltIdx = len(revoltDict.keys())
@@ -3407,45 +3392,46 @@ class Revolution:
 
 							return
 
-			else :
+			else:
 				# If violent, demand change of leader!
 				if self.LOG_DEBUG: print "[REV] Revolt: Capital or majority of cities in violent revolution!"
 
-				if( self.leaderRevolution ) : #and (len(revCities) > 1 or len(revCities) == pPlayer.getNumCities()) ) :
-					if( not pPlayer.isHuman() or self.humanLeaderRevolution ) :
+				if self.leaderRevolution: #and (len(revCities) > 1 or len(revCities) == pPlayer.getNumCities()) ) :
+
+					if not pPlayer.isHuman() or self.humanLeaderRevolution:
 
 						if self.LOG_DEBUG: print "[REV] Revolt: Demanding change in leader from " + pPlayer.getName()
 
 						[newLeaderType,newLeaderName] = self.chooseRevolutionLeader( revCities )
 
-						if( pPlayer.isStateReligion() ) :
+						if pPlayer.isStateReligion():
 							giveRelType = pPlayer.getStateReligion()
-						else :
+						else:
 							giveRelType = None
 
 						[pRevPlayer,bIsJoinWar] = self.chooseRevolutionCiv( revCities, bJoinCultureWar = False, bReincarnate = True, bJoinRebels = True, bSpreadRebels = False, giveRelType = giveRelType, bMatchCivics = True )
 
 						bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_DEMAND",())
-						if( not RevUtils.isCanDoElections( iPlayer ) ) :
-							bIsElection = False
+
+						bIsElection = RevUtils.isCanDoElections(pPlayer)
+
+						if bIsElection:
+							#iBuyOffCost = (50 + 12*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
+							totalRevIdx = 0
+							for pCity in revCities:
+								totalRevIdx += pCity.getRevolutionIndex()
+							iBuyOffCost = totalRevIdx/(22-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(80+10*pPlayer.getCurrentEra(),'Rev')
+							if not pPlayer.isHuman(): iBuyOffCost = iBuyOffCost * 7 / 10
+							iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/8 + GAME.getSorenRandNum(50,'Rev')] )
+							bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_ELECTION",()) + ' %s!'%(newLeaderName)
+							bodStr += '\n\n' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_RISE",()) + ' %s '%(pRevPlayer.getCivilizationShortDescription(0))
+							bodStr += TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_BUYOFF",())
+						else:
 							iBuyOffCost = -1
 							bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_CEDE",()) + ' %s.'%(newLeaderName)
 							bodStr += '\n\n' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_TERRIBLE",())
 							bodStr += ' %s '%(pRevPlayer.getCivilizationShortDescription(0)) + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_FIGHT",())
 							bodStr += '  %s '%(newLeaderName) + TRNSLTR.getText("TXT_KEY_REV_CAP_LEAD_RULER",())
-
-						else :
-							bIsElection = True
-							#iBuyOffCost = (50 + 12*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
-							totalRevIdx = 0
-							for pCity in revCities :
-								totalRevIdx += pCity.getRevolutionIndex()
-							iBuyOffCost = totalRevIdx/(22-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(80+10*pPlayer.getCurrentEra(),'Rev')
-							if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-							iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/8 + GAME.getSorenRandNum(50,'Rev')] )
-							bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_ELECTION",()) + ' %s!'%(newLeaderName)
-							bodStr += '\n\n' + TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_RISE",()) + ' %s '%(pRevPlayer.getCivilizationShortDescription(0))
-							bodStr += TRNSLTR.getText("TXT_KEY_REV_CAP_RULE_BUYOFF",())
 
 						if self.LOG_DEBUG: print "[REV] Revolt: %d cities in revolution, buyoff cost %d"%(len(revCities),iBuyOffCost)
 						assert( len(revCities) > 0 )
@@ -3453,7 +3439,7 @@ class Revolution:
 						cityIdxs = []
 						for pCity in revCities :
 							cityIdxs.append( pCity.getID() )
-						revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'leader', bPeaceful, specialDataDict )
+						revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'leader', bPeaceful, specialDataDict )
 
 						revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 						iRevoltIdx = len(revoltDict.keys())
@@ -3465,7 +3451,7 @@ class Revolution:
 						return
 
 #-------- Default to ask/demand independence
-		if( not self.independenceRevolution ) :
+		if not self.independenceRevolution:
 			if self.LOG_DEBUG: print "[REV] Revolt: WARNING: default ask for independence has been disabled!"
 			return
 
@@ -3524,11 +3510,11 @@ class Revolution:
 			# othwise ask for free vassal
 			vassalStyle = None
 			if( not pTeam.isAVassal() and pTeam.isVassalStateTrading() ) :
-				if( pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_FURIOUS or pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_ANNOYED ) :
+				if( pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FURIOUS or pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_ANNOYED ) :
 					vassalStyle = None
 					if self.LOG_DEBUG: print "[REV] Revolt: Vassal style: No due to attitude"
 				elif( totalPop < pPlayer.getTotalPopulation()/3 ) :
-					if( pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_FRIENDLY or pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_PLEASED ) :
+					if( pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FRIENDLY or pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_PLEASED ) :
 						vassalStyle = 'capitulated'
 						if self.LOG_DEBUG: print "[REV] Revolt: Vassal style %s chosen from size and attitude" % vassalStyle
 					elif( totalPop < pPlayer.getTotalPopulation()/6 ) :
@@ -3537,7 +3523,7 @@ class Revolution:
 					else :
 						vassalStyle = 'free'
 						if self.LOG_DEBUG: print "[REV] Revolt: Vassal style %s chosen from size" % vassalStyle
-				elif( pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_FURIOUS or pRevPlayer.AI_getAttitude(pPlayer.getID()) == AttitudeTypes.ATTITUDE_FURIOUS ) :
+				elif( pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FURIOUS or pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FURIOUS ) :
 					vassalStyle = 'free'
 					if self.LOG_DEBUG: print "[REV] Revolt: Vassal style %s chosen from attitude" % vassalStyle
 
@@ -3581,7 +3567,7 @@ class Revolution:
 		cityIdxs = []
 		for pCity in indCities :
 			cityIdxs.append( pCity.getID() )
-		revData = RevDefs.RevoltData( pPlayer.getID(), GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
+		revData = RevDefs.RevoltData(iPlayer, GAME.getGameTurn(), cityIdxs, 'independence', bPeaceful, specialDataDict )
 
 		revoltDict = RevData.revObjectGetVal( pPlayer, 'RevoltDict' )
 		iRevoltIdx = len(revoltDict.keys())
@@ -3589,8 +3575,6 @@ class Revolution:
 		RevData.revObjectUpdateVal( pPlayer, 'RevoltDict', revoltDict )
 
 		self.makeRevolutionDecision( pPlayer, iRevoltIdx, indCities, 'independence', bPeaceful, bodStr )
-
-		return
 
 
 	def chooseRevolutionCiv(self, cityList, bJoinCultureWar = True, bReincarnate = True, bJoinRebels = True, bSpreadRebels = False, pNotThisCiv = None, giveTechs = True, giveRelType = -1, bMatchCivics = False):
