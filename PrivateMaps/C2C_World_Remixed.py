@@ -21,7 +21,7 @@
 
 from CvPythonExtensions import *
 from array  import array
-from random import random, uniform, randint, seed, shuffle
+from random import random, uniform, randint, seed
 from math import pi, cos, sin, sqrt
 import os, _winreg
 import cPickle as pickle
@@ -830,8 +830,8 @@ class SimplexNoise4D:
 		"""Randomize the permutation table used by the noise functions.
 		The same value is always returned for a given coordinate unless the	permutation table changes."""
 		self.period = iPeriod
-		permTable = range(self.period)
-		shuffle(permTable)
+		permTable = [0]*iPeriod
+		shuffleList(iPeriod, CyGame().getMapRand(), permTable)
 		# Double permutation array so we don't need to wrap
 		self.perm = permTable * 2
 
@@ -1298,7 +1298,7 @@ class ElevationMap(FloatMap):
 					if bPit:
 						landList.append((x, y, i))
 						indexList[i] = 1
-		shuffle(landList)
+		shufflePyList(landList, CyGame().getMapRand())
 		self.iNumLakes = int(self.iArea * mc.fLakesPerPlot * fLandPercent)
 		n = 0
 		while len(landList) > 0:
@@ -1619,6 +1619,7 @@ class TerrainMap:
 				else:
 					plotData[i] = PEAK
 		# Break up large clusters of hills and peaks
+		mapRand = CyGame().getMapRand()
 		i = -1
 		for y in xrange(iHeight):
 			for x in xrange(iWidth):
@@ -1633,7 +1634,7 @@ class TerrainMap:
 							if ii >= 0 and plotData[ii] == HILL:
 								hillList.append(ii)
 					if len(hillList) > 6:
-						shuffle(hillList)
+						shufflePyList(hillList, mapRand)
 						plotData[hillList.pop()] = PEAK
 						plotData[hillList.pop()] = LAND
 				elif plotData[i] == PEAK:
@@ -1644,7 +1645,7 @@ class TerrainMap:
 							if ii >= 0 and plotData[ii] == PEAK:
 								peakList.append(ii)
 					if len(peakList) > 5:
-						shuffle(peakList)
+						shufflePyList(peakList, mapRand)
 						plotData[peakList.pop()] = HILL
 						plotData[peakList.pop()] = HILL
 
@@ -2170,7 +2171,7 @@ class LakeMap:
 								total += rainData[ii]
 								count += 1.0
 					avrRainMap[i] = total / count
-		shuffle(lakePitList)
+		shufflePyList(lakePitList, CyGame().getMapRand())
 		lakeAreaMap	= AreaMap()
 		self.lakeData = array('b', [0] * iArea)
 		iMaxLakeSize = mc.iMaxLakeSize
@@ -2387,7 +2388,7 @@ class LakeMap:
 				ii = GetIndex(x - 1, y)
 			candidateList.append(ii)
 
-		shuffle(candidateList)
+		shufflePyList(candidateList, CyGame().getMapRand())
 		i = candidateList[0]
 		plotData[i] = WATER
 		print "	Made an harbour"
@@ -2559,7 +2560,8 @@ class LakeMap:
 				if em.data[i] < fTrenchEle:
 					if bDefined[i] == OCEAN:
 						trenchList.append((x, y, i))
-		shuffle(trenchList)
+		mapRand = CyGame().getMapRand()
+		shufflePyList(trenchList, mapRand)
 		iNumTrenches = em.iNumTrenches
 		print "	Desired number of trenches: %d" % em.iNumTrenches
 		print "	Available trench spots: %d" % len(trenchList)
@@ -2607,7 +2609,7 @@ class LakeMap:
 						if SurTr > 2:
 							break
 						if len(trenchExpPlots) > 2:
-							shuffle(trenchExpPlots)
+							shufflePyList(trenchExpPlots, mapRand)
 							x, y, i = trenchExpPlots.pop()
 							continue
 					break
@@ -2704,6 +2706,7 @@ class RiverMap:
 		W = mc.W
 		E = mc.E
 		# Draw imaginary rivers inland from the valid shore plots
+		mapRand = CyGame().getMapRand()
 		avrRain = lm.avrRainfallMap2x2
 		aRiverList = []
 		aSourceList = []
@@ -2730,7 +2733,7 @@ class RiverMap:
 					if random() > 0.7:
 						flowMap[i] = drainList[0], drainList[1]
 					else:
-						shuffle(drainList)
+						shufflePyList(drainList, mapRand)
 						flowMap[i] = drainList[0], -1
 				elif count == 1:
 					flowMap[i] = drainList[0], -1
@@ -2785,7 +2788,7 @@ class RiverMap:
 					del drainList[iLowest]
 					if drainList and iRestrict <= loop:
 						iRestrict = loop + 2
-						shuffle(drainList)
+						shufflePyList(drainList, mapRand)
 
 						xx, yy, ii, dir2 = drainList[0]
 						aList.append(ii)
@@ -2988,7 +2991,9 @@ class BonusPlacer:
 		pOrderDict = {}
 		iNumBonusInfos = GC.getNumBonusInfos()
 		self.bonusDict = array('H', [0] * iNumBonusInfos)
-		plotIndexList = range(mc.iArea)
+		plotIndexList = [0]*mc.iArea
+		mapRand = GC.getGame().getMapRand()
+		shuffleList(mc.iArea, mapRand, plotIndexList)
 		for iBonus in xrange(iNumBonusInfos):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			iPlaceOrder = CvBonusInfo.getPlacementOrder()
@@ -3030,12 +3035,11 @@ class BonusPlacer:
 			else:
 				pOrderDict[iPlaceOrder] = [iBonus]
 
-		shuffle(bonusList)
+		shufflePyList(bonusList, mapRand)
 		self.iNumBonuses = iNumBonuses = iNumBonusInfos - n
 		self.AssignBonusAreas(iNumBonuses, bonusList)
 		bonusDictLoc = self.bonusDict
 		# Shuffle the list of map indices.
-		shuffle(plotIndexList)
 		startAtIndex = 0
 
 		pOrderList = sorted(pOrderDict.items())
@@ -3045,7 +3049,7 @@ class BonusPlacer:
 				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount):
 					placementList.append(indeXML)
 			if len(placementList) > 0:
-				shuffle(placementList)
+				shufflePyList(placementList, mapRand)
 				for indeXML in placementList:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
 		# Now check to see that all resources have been placed at least once while ignoring area rules.
@@ -3390,6 +3394,7 @@ class StartingPlotFinder:
 	def SetStartingPlots(self):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
+		GAME = GC.getGame()
 		MAP.recalculateAreas()
 		# Cache Plot Value
 		self.plotvalueList = []
@@ -3407,7 +3412,7 @@ class StartingPlotFinder:
 				if bonusEnum != BonusTypes.NO_BONUS:
 					value += 3
 					bonusInfo = GC.getBonusInfo(bonusEnum)
-					if bonusInfo.getTechReveal() == TechTypes.NO_TECH or GC.getTechInfo(bonusInfo.getTechReveal()).getEra() < GC.getGame().getStartEra() + 2:
+					if bonusInfo.getTechReveal() == TechTypes.NO_TECH or GC.getTechInfo(bonusInfo.getTechReveal()).getEra() < GAME.getStartEra() + 2:
 						commerce	+= bonusInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)
 						food		+= bonusInfo.getYieldChange(YieldTypes.YIELD_FOOD)
 						production	+= bonusInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION)
@@ -3421,7 +3426,7 @@ class StartingPlotFinder:
 			if GC.getPlayer(i).isEverAlive():
 				player_list.append(i)
 				iNumPlayers += 1
-		shuffle(player_list)
+		shufflePyList(player_list, GAME.getMapRand())
 		print "Number of players: %d" % iNumPlayers
 
 		areas = MAP.areas()
@@ -3653,8 +3658,8 @@ class StartingPlotFinder:
 		startEra = GC.getGame().getStartEra() + 1
 		#Shuffle the bonus order so that different cities have different preferences for bonuses
 		iNumBonuses = bp.iNumBonuses
-		bonusList = range(iNumBonuses)
-		shuffle(bonusList)
+		bonusList = [0]*iNumBonuses
+		shuffleList(iNumBonuses, CyGame().getMapRand(), bonusList)
 		#Do this process in 3 passes for each yield type
 		yields = []
 		yields.append(YieldTypes.YIELD_PRODUCTION)
@@ -3663,7 +3668,7 @@ class StartingPlotFinder:
 		plotList = []
 		for i in xrange(1, 21):
 			plotList.append(plotCity(x, y, i))
-		shuffle(plotList)
+		shufflePyList(plotList, GC.getGame().getMapRand())
 		bonusCount = 0
 		for n in xrange(3 * bonuses + 1):
 			for CyPlot in plotList:
@@ -4670,28 +4675,6 @@ def GetIndex(x, y):
 		yy = y
 	return yy * iWidth + xx
 
-
-'''
-def GetOppositeDirection(direction):
-	opposite = 0
-	if direction == mc.N:
-		opposite = mc.S
-	elif direction == mc.S:
-		opposite = mc.N
-	elif direction == mc.E:
-		opposite = mc.W
-	elif direction == mc.W:
-		opposite = mc.E
-	elif direction == mc.NW:
-		opposite = mc.SE
-	elif direction == mc.SE:
-		opposite = mc.NW
-	elif direction == mc.SW:
-		opposite = mc.NE
-	elif direction == mc.NE:
-		opposite = mc.SW
-	return opposite
-'''
 
 def GetNeighbor(x, y, direction):
 	if direction == 0:

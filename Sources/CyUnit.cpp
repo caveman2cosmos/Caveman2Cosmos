@@ -38,9 +38,9 @@ void CyUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 	m_pUnit->doCommand(eCommand, iData1, iData2);
 }
 
-bool CyUnit::canMoveInto(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const
+bool CyUnit::canEnterPlot(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const
 {
-	return m_pUnit->canMoveInto(kPlot.getPlot(),
+	return m_pUnit->canEnterPlot(kPlot.getPlot(),
 		(bAttack ? MoveCheck::Attack : MoveCheck::None) |
 		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
 		(bIgnoreLoad ? MoveCheck::IgnoreLoad : MoveCheck::None)
@@ -297,14 +297,14 @@ int CyUnit::bombardRate() const
 	return m_pUnit->getBombardRate();
 }
 
-int /*SpecialUnitTypes*/ CyUnit::specialCargo() const
+int /*SpecialUnitTypes*/ CyUnit::getSpecialCargo() const
 {
-	return m_pUnit->specialCargo();
+	return m_pUnit->getSpecialCargo();
 }
 
-int /*DomainTypes*/ CyUnit::domainCargo() const
+int /*DomainTypes*/ CyUnit::getDomainCargo() const
 {
-	return m_pUnit->domainCargo();
+	return m_pUnit->getDomainCargo();
 }
 
 int CyUnit::cargoSpace() const
@@ -417,9 +417,9 @@ int CyUnit::getExperience() const
 	return m_pUnit->getExperience();
 }
 
-void CyUnit::setExperience(int iNewValue, int iMax)
+void CyUnit::setExperience(int iNewValue)
 {
-	m_pUnit->setExperience(iNewValue, iMax);
+	m_pUnit->setExperience(iNewValue);
 }
 
 void CyUnit::changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)
@@ -573,9 +573,9 @@ bool CyUnit::isCargo() const
 	return m_pUnit->isCargo();
 }
 
-void CyUnit::setTransportUnit(const CyUnit& kTransportUnit)
+void CyUnit::setTransportUnit(const CyUnit& kTransportUnit, const bool bLoad)
 {
-	m_pUnit->setTransportUnit(kTransportUnit.getUnit());
+	m_pUnit->setTransportUnit(bLoad ? kTransportUnit.getUnit() : NULL);
 }
 
 std::wstring CyUnit::getName() const

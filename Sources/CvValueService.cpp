@@ -19,7 +19,7 @@ int CvValueService::CalculateCityPlotValue(OutputRatios& ratios, short yields[],
 	int plotValue = ratios.CalculateOutputValue(yields[YIELD_FOOD], yields[YIELD_PRODUCTION], yields[YIELD_COMMERCE]);
 
 	if (hasBonus) {
-		plotValue = activatesBonus ? plotValue * 3 : plotValue / 3;
+		plotValue = activatesBonus ? plotValue * 5 : plotValue / 5;
 	}
 	return plotValue;
 }

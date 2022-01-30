@@ -880,7 +880,6 @@
 				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
 				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
@@ -1699,6 +1698,10 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -1971,7 +1974,6 @@
 				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_FISHING_BOATS</BuildType>
-				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
@@ -3473,7 +3475,13 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
 			<Description>TXT_KEY_UNIT_CAPTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTIVE_MILITARY_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Help>

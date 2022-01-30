@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 //
 // Python interface for info classes (formerly structs)
 // These are simple enough to be exposed directly - no wrappers
@@ -170,7 +171,6 @@ void CyInfoPythonInterface2()
 		.def("isPeakImprovement", &CvImprovementInfo::isPeakImprovement, "bool ()")
 		.def("isWaterImprovement", &CvImprovementInfo::isWaterImprovement, "bool ()")
 		.def("isGoody", &CvImprovementInfo::isGoody, "bool ()")
-		.def("isPermanent", &CvImprovementInfo::isPermanent, "bool ()")
 		.def("isOutsideBorders", &CvImprovementInfo::isOutsideBorders, "bool ()")
 		.def("getArtDefineTag", &CvImprovementInfo::getArtDefineTag, "string ()")
 
@@ -188,6 +188,7 @@ void CyInfoPythonInterface2()
 		.def("getImprovementBonusYield", &CvImprovementInfo::getImprovementBonusYield, "int (int i, int j)")
 		.def("isImprovementBonusMakesValid", &CvImprovementInfo::isImprovementBonusMakesValid, "bool (int i)")
 		.def("isImprovementBonusTrade", &CvImprovementInfo::isImprovementBonusTrade, "bool (int i)")
+		.def("getImprovementBonusDiscoverRand", &CvImprovementInfo::getImprovementBonusDiscoverRand, "int (int i)")
 
 		.def("getTechYieldChanges", &CvImprovementInfo::getTechYieldChanges, "int (int i, int j)")
 		.def("getRouteYieldChanges", &CvImprovementInfo::getRouteYieldChanges, "int (int i, int j)")
@@ -258,7 +259,6 @@ void CyInfoPythonInterface2()
 		.def("isRequiresRiver", &CvFeatureInfo::isRequiresRiver, "bool ()")
 		.def("isImpassable", &CvFeatureInfo::isImpassable, "bool ()")
 		.def("isNoCity", &CvFeatureInfo::isNoCity, "bool ()")
-		.def("isNoImprovement", &CvFeatureInfo::isNoImprovement, "bool ()")
 		.def("isNukeImmune", &CvFeatureInfo::isNukeImmune, "bool ()")
 
 		// Arrays

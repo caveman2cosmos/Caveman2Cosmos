@@ -4,6 +4,7 @@
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
@@ -269,6 +270,9 @@ m_cachedBonusCount(NULL)
 	m_iNumCivicsSwitched = 0;
 	m_iFocusPlotX = -1;
 	m_iFocusPlotY = -1;
+
+	m_iMinTaxIncome = 0;
+	m_iMaxTaxIncome = 0;
 
 	for (int i = 0; i < NUM_COMMERCE_TYPES; ++i)
 	{
@@ -1496,6 +1500,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iNumCivicsSwitched = 0;
 	m_unitConstructionCounts.clear();
 
+	m_iMinTaxIncome = 0;
+	m_iMaxTaxIncome = 0;
+
 	m_bMaintenanceDirty = false;
 	m_orbitalInfrastructureCountDirty = true;
 	m_iFocusPlotX = -1;
@@ -1892,30 +1899,14 @@ void CvPlayer::initFreeUnits()
 	else // Create Starting units
 	{
 		const EraTypes startEra = GC.getGame().getStartEra();
-		int iMult = GC.getEraInfo(startEra).getStartingUnitMultiplier();
-		if (!isHuman())
-		{
-			iMult *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingUnitMultiplier();
-		}
-		iMult = std::max(1, iMult);
-
-/*	Toffer: Currently not needed for anything...
-Consider removing freeUnit from civilization info as this is the only place that would have used it.
-
-		const CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-		{
-			int iFreeCount = kCivilizationInfo.getCivilizationFreeUnits(iI) * iMult;
-
-			for (int iJ = 0; iJ < iFreeCount; iJ++)
-			{
-				addFreeUnit((UnitTypes)iI);
-			}
-		}
-*/
+		const int iMult = (
+			GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1
+			:
+			std::max(1, GC.getEraInfo(startEra).getStartingUnitMultiplier())
+		);
 
 		// Settler units, can't start a game without one.
-		addStartUnitAI(UNITAI_SETTLE, GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1 : iMult);
+		addStartUnitAI(UNITAI_SETTLE, iMult);
 
 		// Defensive units
 		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();
@@ -3918,6 +3909,12 @@ void CvPlayer::doTurn()
 	gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 
 	AI_doTurnPost();
+
+	// Toffer - Completely acceptable to only cache these once per turn.
+	if (!isNPC())
+	{
+		cacheKeyFinanceNumbers();
+	}
 
 	if (GC.getGame().isDebugMode())
 	{
@@ -7925,7 +7922,7 @@ int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovem
 
 int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 {
-	return algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate(eYield)), 0);
+	return (algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate100(eYield)), 0)) / 100;
 }
 
 
@@ -8144,16 +8141,37 @@ int64_t CvPlayer::getFinalExpense() const
 	return isAnarchy() ? 0 : calculatePreInflatedCosts() * getInflationMod10000() / 10000;
 }
 
-short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense, int iExtraExpenseMod) const
+
+void CvPlayer::cacheKeyFinanceNumbers()
+{
+	m_iMinTaxIncome = std::max(0, getGoldPerTurn());
+	m_iMaxTaxIncome = m_iMinTaxIncome;
+
+	foreach_(CvCity* cityX, cities())
+	{
+		m_iMinTaxIncome += cityX->getCommerceRateAtSliderPercent(COMMERCE_GOLD, 0) / 100;
+		m_iMaxTaxIncome += cityX->getCommerceRateAtSliderPercent(COMMERCE_GOLD, 100) / 100;
+	}
+}
+
+int64_t CvPlayer::getMinTaxIncome() const
+{
+	return m_iMinTaxIncome;
+}
+
+int64_t CvPlayer::getMaxTaxIncome() const
+{
+	return m_iMaxTaxIncome;
+}
+
+short CvPlayer::getProfitMargin(int64_t &iNetExpenses, int iExtraExpense, int iExtraExpenseMod) const
 {
 	PROFILE_FUNC();
-	if (isAnarchy())
+
+	if (isAnarchy() || isNPC())
 	{
 		return 100;
 	}
-	iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
-	iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-
 	// Afforess - iExtraExpense lets us "extrapolate" our cost percents if we have extra future expenses
 	// iExtraExpense should be between 0 (default) and some positive extra gold per turn cost to us
 	iNetExpenses = getFinalExpense() + std::max(0, iExtraExpense);
@@ -8166,8 +8184,11 @@ short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_
 	// Mainly gold per turn from trade.
 	iNetExpenses += std::max(0, -getGoldPerTurn());
 
+	const int64_t iMaxTaxIncome = getMaxTaxIncome();
+
+	//FErrorMsg(CvString::format("iNetExpenses=%I64d - iMaxTaxIncome=%I64d - iMinTaxIncome=%I64d", iNetExpenses, iMaxTaxIncome, getMinTaxIncome()).c_str());
+
 	// Toffer - Profit margin at 100% taxation
-	const int64_t iMaxTaxIncome = iNetIncome + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
 	if (iNetExpenses >= iMaxTaxIncome)
 	{
 		return 0;
@@ -8177,10 +8198,8 @@ short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_
 
 short CvPlayer::getProfitMargin(int iExtraExpense, int iExtraExpenseMod) const
 {
-	int iTotalCommerce;
-	int64_t iNetIncome;
 	int64_t iNetExpenses;
-	return getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
+	return getProfitMargin(iNetExpenses, iExtraExpense, iExtraExpenseMod);
 }
 
 int64_t CvPlayer::calculateBaseNetGold() const
@@ -10420,6 +10439,15 @@ int64_t CvPlayer::getUnitUpkeepMilitaryNet() const
 	return std::max<int64_t>(0, getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
 }
 
+int64_t CvPlayer::getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep) const
+{
+	if (bMilitary)
+	{
+		return std::min<int64_t>(iUnitUpkeep, getUnitUpkeepMilitaryNet());
+	}
+	return std::min<int64_t>(iUnitUpkeep, getUnitUpkeepCivilianNet());
+}
+
 int64_t CvPlayer::getFinalUnitUpkeep() const
 {
 	return m_iFinalUnitUpkeep;
@@ -10492,7 +10520,6 @@ int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
 
 	return iChange;
 }
-
 // ! Unit Upkeep
 
 
@@ -12225,11 +12252,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
 
 				//	Calculate plot danger values for this player
-				CvPlot* pLoopPlot;
-
 				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
+					CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Decay danger count from the previous turn
 					pLoopPlot->setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3);
@@ -12237,7 +12262,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
+					CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Add in known dangers from visible enemy units
 					if (pLoopPlot->isVisible(getTeam(), false))
@@ -13160,11 +13185,11 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 
-	const int iOldValue = getCommercePercent(eIndex);
+	const int iOldValue = m_aiCommercePercent[eIndex];
 
 	m_aiCommercePercent[eIndex] = range(iNewValue, 0, 100);
 
-	if (iOldValue != getCommercePercent(eIndex))
+	if (iOldValue != m_aiCommercePercent[eIndex])
 	{
 		int iTotalCommercePercent = 0;
 
@@ -13186,7 +13211,6 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 				iTotalCommercePercent -= iAdjustment;
 			}
 		}
-
 		FAssert(100 == iTotalCommercePercent);
 
 		setCommerceDirty();
@@ -13206,7 +13230,7 @@ void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 
 void CvPlayer::changeCommercePercent(CommerceTypes eIndex, int iChange)
 {
-	setCommercePercent(eIndex, (getCommercePercent(eIndex) + iChange));
+	setCommercePercent(eIndex, getCommercePercent(eIndex) + iChange);
 }
 
 int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
@@ -13226,12 +13250,9 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 
 	if (m_cachedTotalCityBaseCommerceRate[eIndex] == MAX_INT)
 	{
-		const int iResult = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0);
-
-		m_cachedTotalCityBaseCommerceRate[eIndex] = iResult / 100;
+		m_cachedTotalCityBaseCommerceRate[eIndex] = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0) / 100;
 	}
 	return m_cachedTotalCityBaseCommerceRate[eIndex];
-	// return iResult/100;
 }
 
 void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
@@ -14471,17 +14492,12 @@ int CvPlayer::getCivicUpkeep(bool bIgnoreAnarchy) const
 int64_t CvPlayer::getTreasuryUpkeep() const
 {
 	const int64_t iTreasury = getGold();
-	if (iTreasury < 3)
-	{
-		return 0;
-	}
-	int64_t iUpkeep = iTreasury / 1000 + intSqrt64(iTreasury / 10);
-
-	// Scale by gamespeed as gold is worth less on slower speeds, expected treasury size is different.
-	iUpkeep *= 100;
-	iUpkeep /= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-
-	return iUpkeep;
+	return (
+		(iTreasury + 250 * intSqrt64(iTreasury))
+		/
+		// Scale by gamespeed as gold is worth less on slower speeds, expected treasury size is different.
+		(25 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
+	);
 }
 
 
@@ -19096,7 +19112,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
 
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
+		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -19894,6 +19910,19 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 		}
+
+		double fMinTaxIncome = -1;
+		WRAPPER_READ(wrapper, "CvPlayer", &fMinTaxIncome);
+		m_iMinTaxIncome = static_cast<int64_t>(fMinTaxIncome + 0.01);
+
+		double fMaxTaxIncome = -1;
+		WRAPPER_READ(wrapper, "CvPlayer", &fMaxTaxIncome);
+		m_iMaxTaxIncome = static_cast<int64_t>(fMaxTaxIncome + 0.01);
+
+		if (fMaxTaxIncome < 0) // Old save.
+		{
+			cacheKeyFinanceNumbers();
+		}
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -19925,6 +19954,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	}
 	// Toffer - To stop auto end turn on decision-less turns from kicking in immediately when loading a save
 	setTurnHadUIInteraction(true);
+
 }
 
 //
@@ -20701,6 +20731,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "UnitCountSM");
 			}
 		}
+		double fMinTaxIncome = static_cast<double>(m_iMinTaxIncome);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fMinTaxIncome);
+		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
 	}
 	//	Use condensed format now - only save non-default array elements
 
@@ -25810,17 +25844,15 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	aColors.clear();
 	aIndicators.clear();
 
-	//PlayerColorTypes ePlayerColor = getPlayerColor();
-
 	CvWStringBuffer szBuffer;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		const PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
+		const CvPlot* plotX = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
+		if (plotX->isRevealed(getTeam(), true) && plotX->isInViewport())
 		{
-			const BonusTypes eCurType = pLoopPlot->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
+			const PlayerTypes eOwner = plotX->getRevealedOwner(getTeam(), true);
+			const BonusTypes eCurType = plotX->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
 			if (eCurType != NO_BONUS)
 			{
 				const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
@@ -25850,6 +25882,12 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 				case SHOW_RESOURCES_MISC:
 					bOfInterest = kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_MISC");
 					break;
+				case SHOW_RESOURCES_UNCLAIMED:
+					bOfInterest = !plotX->isBonusExtracted(getTeam());
+					break;
+				case SHOW_RESOURCES_CANCLAIM:
+					bOfInterest = !plotX->isBonusExtracted(getTeam()) && eOwner != NO_PLAYER && GET_TEAM(GET_PLAYER(eOwner).getTeam()).isHasTech((TechTypes)kBonusInfo.getTechCityTrade());
+					break;
 				}
 
 				if (bOfInterest)
@@ -25859,8 +25897,8 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 					kData.m_eVisibility = PLOT_INDICATOR_VISIBLE_ONSCREEN_ONLY;
 					kData.m_strIcon = GC.getBonusInfo(eCurType).getButton();
 
-					int x = pLoopPlot->getViewportX();
-					int y = pLoopPlot->getViewportY();
+					int x = plotX->getViewportX();
+					int y = plotX->getViewportY();
 					kData.m_Target = NiPoint2(GC.getCurrentViewport()->plotXToPointX(x), GC.getCurrentViewport()->plotYToPointY(y));
 
 					if (eOwner == NO_PLAYER)
@@ -26356,7 +26394,7 @@ DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) c
 		return NO_DENIAL;
 	}
 
-	if (GET_PLAYER(pUnit->getOriginalOwner()).getID() == GET_PLAYER(ePlayer).getID())
+	if (pUnit->getOriginalOwner() == ePlayer)
 	{
 		return DENIAL_JOKING;
 	}
@@ -26372,7 +26410,7 @@ DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) c
 	}
 
 	if (GET_PLAYER(ePlayer).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(ePlayer).getNumCities()
-	&& GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepCivilianNet() > 0)
+	|| getUnitUpkeepNet(pUnit->isMilitaryBranch(), pUnit->getUpkeep100()) < 1)
 	{
 		return DENIAL_NO_GAIN;
 	}
@@ -26425,8 +26463,7 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 		return DENIAL_NO_GAIN;
 	}
 
-	if (GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepMilitaryNet() > 0
-	&& !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar())
+	if (getUnitUpkeepNet(pUnit->isMilitaryBranch(), pUnit->getUpkeep100()) < 1)
 	{
 		return DENIAL_NO_GAIN;
 	}
@@ -26448,42 +26485,29 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 
 bool CvPlayer::hasValidCivics(BuildingTypes eBuilding) const
 {
-	int iI;
 	bool bValidOrCivic = false;
-	bool bNoReqOrCivic = true;
-	bool bValidAndCivic = true;
-	bool bReqAndCivic = true;
-	for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	bool bOrReq = false;
+
+	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
 		if (GC.getBuildingInfo(eBuilding).isPrereqOrCivics(iI))
 		{
-			bNoReqOrCivic = false;
+			bOrReq = true;
 			if (isCivic(CivicTypes(iI)))
 			{
 				bValidOrCivic = true;
 			}
 		}
 
-		if (GC.getBuildingInfo(eBuilding).isPrereqAndCivics(iI))
+		if (GC.getBuildingInfo(eBuilding).isPrereqAndCivics(iI) && !isCivic(CivicTypes(iI)))
 		{
-			bReqAndCivic = true;
-			if (!isCivic(CivicTypes(iI)))
-			{
-				bValidAndCivic = false;
-			}
+			return false;
 		}
 	}
-
-	if (!bNoReqOrCivic && !bValidOrCivic)
+	if (bOrReq && !bValidOrCivic)
 	{
 		return false;
 	}
-
-	if (bReqAndCivic && !bValidAndCivic)
-	{
-		return false;
-	}
-
 	return true;
 }
 
@@ -27978,7 +28002,6 @@ void CvPlayer::updateCache()
 			}
 		}
 	}*/
-
 }
 
 void CvPlayer::clearTileCulture()

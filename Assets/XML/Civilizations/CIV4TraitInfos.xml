@@ -790,6 +790,10 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
+					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_EARLY_QUARRY</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -2422,6 +2426,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4763,6 +4771,10 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
+					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_EARLY_QUARRY</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -6369,6 +6381,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

@@ -561,6 +561,9 @@
     <ClCompile Include="CvWorkerService.cpp">
       <Filter>Source Files\Services</Filter>
     </ClCompile>
+    <ClCompile Include="CvBonusInfo.cpp">
+      <Filter>Source Files\InfoClasses</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvMapExternal.h">
@@ -1025,6 +1028,9 @@
     <ClInclude Include="idinfo_iterator_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="enum_iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="ComponentBase.h">
       <Filter>Source Files\Components</Filter>
     </ClInclude>
@@ -1099,6 +1105,9 @@
     </ClInclude>
     <ClInclude Include="CvWorkerService.h">
       <Filter>Header Files\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBonusInfo.h">
+      <Filter>Header Files\InfoClasses</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

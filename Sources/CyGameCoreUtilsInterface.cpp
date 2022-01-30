@@ -30,6 +30,7 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("plotCityXYFromCity", cyPlotCityXYFromCity,"int (CyCity* pCity, CyPlot* pPlot)");
 
 	python::def("estimateDirection", cyEstimateDirection, "DirectionTypes (int iDX, int iDY)");
+	python::def("getOppositeDirection", getOppositeDirection);
 
 	python::def("atWar", cyAtWar,"bool (int eTeamA, int eTeamB)");
 	python::def("isPotentialEnemy", cyIsPotentialEnemy,"bool (int eOurTeam, int eTheirTeam)");
@@ -58,7 +59,6 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getCombatOdds", cyGetCombatOdds, "int (CyUnit* pAttacker, CyUnit* pDefender)");
 	python::def("getEspionageModifier", cyGetEspionageModifier, "int (int /*TeamTypes*/ iOurTeam, int /*TeamTypes*/ iTargetTeam)");
 
-	python::def("getOppositeCardinalDirection", getOppositeCardinalDirection,"CardinalDirectionTypes (CardinalDirectionTypes eDir)");
 	python::def("cardinalDirectionToDirection", cardinalDirectionToDirection, "DirectionTypes (CardinalDirectionTypes eDir) - converts a CardinalDirectionType to the corresponding DirectionType");
 
 	python::def("isCardinalDirection", isCardinalDirection,"bool (DirectionTypes eDirection)");
@@ -67,6 +67,8 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 
 	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");
+
+	python::def("shufflePyList", cyShufflePyList);
 
 	python::def("getModDir", getModDir);
 }

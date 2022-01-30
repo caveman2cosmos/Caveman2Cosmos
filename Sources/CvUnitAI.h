@@ -70,6 +70,7 @@ public:
 	bool AI_isAwaitingContract() const;
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
+	int AI_searchRange(int iRange = 1) const;
 
 	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
 
@@ -109,7 +110,6 @@ protected:
 	bool AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
-	bool Worker_CanDefend();
 	bool IsAbroad();
 	int GetNumberOfUnitsInGroup();
 	bool AI_upgradeWorker();
@@ -176,8 +176,6 @@ protected:
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
 
-
-
 	// Returns true if a group was joined or a mission was pushed...
 	bool AI_group(const GroupingParams& params);
 
@@ -238,6 +236,7 @@ protected:
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
 	bool AI_safety(int iRange = 1);
+	bool AI_reachHome(const bool bMockRun = false) const;
 	bool AI_hide();
 	bool AI_goody(int iRange);
 
@@ -346,7 +345,6 @@ protected:
 	int AI_nukeValue(const CvCity* pCity) const;
 	bool AI_canPillage(const CvPlot& kPlot) const;
 
-	int AI_searchRange(int iRange) const;
 	bool AI_plotValid(const CvPlot* pPlot) const;
 
 	int AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const;

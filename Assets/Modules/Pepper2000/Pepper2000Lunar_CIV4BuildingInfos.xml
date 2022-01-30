@@ -24,8 +24,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_ALGAE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ALGAE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -35,7 +39,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
@@ -75,15 +79,19 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-250</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -115,8 +123,12 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<VicinityBonus>BONUS_BAUXITE_ORE</VicinityBonus>
-			<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -241,8 +253,12 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>3</iHealth>
 			<CommerceChanges>
@@ -278,7 +294,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
@@ -295,8 +311,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_BUGS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BUGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -306,7 +326,7 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
@@ -354,12 +374,16 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>200</iCost>
-			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CHEMICALS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
@@ -409,8 +433,12 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<FreeBonus>BONUS_CEMENT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CEMENT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>100</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -463,9 +491,6 @@
 			<iLineOfSight>1</iLineOfSight>
 			<iBombardDefense>20</iBombardDefense>
 			<iLocalDynamicDefense>20</iLocalDynamicDefense>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
@@ -485,8 +510,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_ANDROIDS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANDROIDS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -534,14 +563,15 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>200</iCost>
-			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>-1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -577,8 +607,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_RAW_FISH</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RAW_FISH</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -589,7 +623,7 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
@@ -612,8 +646,12 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<FreeBonus>BONUS_GLASSWARE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GLASSWARE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>160</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -623,7 +661,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
@@ -661,7 +699,7 @@
 				<iYield>36</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-250</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
@@ -763,7 +801,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
@@ -790,8 +828,12 @@
 				<Bonus>BONUS_ALGAE</Bonus>
 			</PrereqBonuses>
 			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
-			<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -915,8 +957,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_MAGNESIUM_ORE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MAGNESIUM_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -926,7 +972,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -964,8 +1010,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_MANGANESE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MANGANESE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -975,7 +1025,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -1030,8 +1080,12 @@
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_PARTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PARTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -1124,7 +1178,7 @@
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-250</iCommerce>
+				<iCommerce>-5</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -1157,9 +1211,6 @@
 			<iCost>200</iCost>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1195,9 +1246,11 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_PLASTIC</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASTIC</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -1261,7 +1314,7 @@
 			<iHappiness>2</iHappiness>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
@@ -1410,11 +1463,13 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_HYDROGEN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1629,8 +1684,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_MICROCHIPS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MICROCHIPS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -1718,7 +1777,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
@@ -1745,7 +1804,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
@@ -1825,8 +1884,12 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<VicinityBonus>BONUS_TITANIUM_ORE</VicinityBonus>
-			<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -1881,7 +1944,7 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
@@ -1952,8 +2015,12 @@
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LUNAR_SPACE_PORT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MITHRIL</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MITHRIL</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -53,6 +53,7 @@ DllExport void DLLPublishToPython()
 
 	registerAllowPyIntAsType<TechTypes>();
 	registerAllowPyIntAsType<BuildingTypes>();
+	registerAllowPyIntAsType<DirectionTypes>();
 	registerAllowPyIntAsType<MultiplayerOptionTypes>();
 	registerAllowPyIntAsType<CorporationTypes>();
 	registerAllowPyIntAsType<GameOptionTypes>();

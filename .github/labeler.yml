@@ -11,8 +11,8 @@ xml:
   - Assets/*.xml
 
 text:
-  - Assets/XML/Text/**/*
-  - Assets/XML/Text/*
+  - Assets/XML/GameText/**/*
+  - Assets/XML/GameText/*
   - Assets/Modules/**/*Text*.xml
   - Assets/Modules/*Text*.xml
 
@@ -32,4 +32,3 @@ art:
 audio:
   - Assets/Sounds/**/*
   - Assets/Sounds/*
-

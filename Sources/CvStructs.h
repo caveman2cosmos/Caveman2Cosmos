@@ -116,13 +116,6 @@ struct UnitCombatModifier
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const UnitCombatModifier& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
-struct BonusModifier
-{
-	BonusTypes eBonus;
-	int iModifier;
-	operator int() const {return (int)eBonus;}
-	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
-};
 struct DisallowedTraitType
 {
 	TraitTypes eTrait;
@@ -692,10 +685,10 @@ struct BuildingCommerceChange
 	CommerceTypes eCommerce;
 	int iChange;
 
-	BuildingCommerceChange()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	BuildingCommerceChange(BuildingTypes eBuilding = NO_BUILDING, CommerceTypes eCommerce = NO_COMMERCE, int iChange = 0)
+		: eBuilding(eBuilding)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
 	void read(FDataStreamBase* pStream);

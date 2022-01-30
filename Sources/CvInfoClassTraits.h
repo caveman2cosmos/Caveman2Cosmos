@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef CvInfoArray_h__
-#define CvInfoArray_h__
+#ifndef CIV4_INFO_CLASS_TRAITS_H
+#define CIV4_INFO_CLASS_TRAITS_H
 
 
 #define EXPAND_FOR_EACH_INFO_CLASS(MACRO_FUNC)	\
@@ -107,7 +107,32 @@
 	MACRO_FUNC(CvOutcomeInfo, OUTCOME_INFO, OutcomeTypes) \
 	MACRO_FUNC(CvUnitCombatInfo, UNIT_COMBAT_INFO, UnitCombatTypes) \
 	MACRO_FUNC(CvModLoadControlInfo, MOD_LOAD_CONTROL_INFO, ModLoadControlTypes) \
-	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes)
+	MACRO_FUNC(CvHintInfo, HINT_INFO, HintTypes) \
+	MACRO_FUNC(CvArtInfoAsset, ASSET_ART_INFO, AssetArtTypes) \
+	MACRO_FUNC(CvArtInfoMisc, MISC_ART_INFO, MiscArtTypes) \
+	MACRO_FUNC(CvArtInfoUnit, UNIT_ART_INFO, UnitArtTypes) \
+	MACRO_FUNC(CvArtInfoBuilding, BUILDING_ART_INFO, BuildingArtTypes) \
+	MACRO_FUNC(CvArtInfoCivilization, CIVILIZATION_ART_INFO, CivilizationArtTypes) \
+	MACRO_FUNC(CvArtInfoLeaderhead, LEADER_HEAD_ART_INFO, LeaderHeadArtTypes) \
+	MACRO_FUNC(CvArtInfoBonus, BONNUS_ART_INFO, BonusArtTypes) \
+	MACRO_FUNC(CvArtInfoImprovement, IMPROVEMENT_ART_INFO, ImprovementArtTypes) \
+	MACRO_FUNC(CvArtInfoTerrain, TERRAIN_ART_INFO, TerrainArtTypes) \
+	MACRO_FUNC(CvArtInfoFeature, FEATURE_ART_INFO, FeatureArtTypes) \
+	MACRO_FUNC(CvArtInfoMovie, MOVIE_ART_INFO, MovieArtTypes) \
+	MACRO_FUNC(CvArtInfoInterface, INTERFACE_ART_INFO, InterfaceArtTypes)
+
+
+#define LIST_INFO_CLASS_ENUM(_class, _classEnum, _indexType) \
+	_classEnum,
+
+enum InfoClassTypes
+{
+	NO_INFO_CLASS = -1,
+
+	EXPAND_FOR_EACH_INFO_CLASS(LIST_INFO_CLASS_ENUM)
+
+	NUM_INFO_CLASSES
+};
 
 
 class CvInfoBase;
@@ -144,7 +169,11 @@ struct InfoClassTraits<_indexType>									\
 	static const InfoClassTypes InfoClassEnum = _classEnum;			\
 };
 
+EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS);
 
-EXPAND_FOR_EACH_INFO_CLASS(DECLARE_INFO_CLASS_TRAITS)
+
+#undef LIST_INFO_CLASS_ENUM
+#undef DECLARE_INFO_CLASS_TRAITS
+#undef EXPAND_FOR_EACH_INFO_CLASS
 
 #endif

@@ -1065,7 +1065,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_DETECTIVE_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Great Detectives boost investigation rate in cities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_DOCTOR_PEDIA</Tag>
@@ -1120,10 +1120,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_SPY</Tag>
-		<English>
-			<Text>Great Spy / Spy Specialist:Great Spies / Spy Specialists</Text>
-			<Plural>0:1</Plural>
-		</English>
+		<English>Spy Specialist and Great Spies</English>
 		<French>
 			<Text>Espion illustre / Spécialiste de l'espionnage:Espions illustres / Spécialistes de l'espionnages</Text>
 			<Gender>Male</Gender>
@@ -2631,7 +2628,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPS_PEDIA</Tag>
-		<English>TBD</English>
+		<English>There are few Earth maps, and bunch of space scenarios. Space scenarios are a way to enjoy space content without multimaps, as we don't have mapscripts generating space zones</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES</Tag>

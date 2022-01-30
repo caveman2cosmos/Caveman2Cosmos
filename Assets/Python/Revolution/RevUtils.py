@@ -4,9 +4,7 @@
 # Version 1.5
 
 from CvPythonExtensions import *
-from RevCivicsUtils import *
-from RevTraitsUtils import *
-from RevBuildingsUtils import *
+import CivicData
 import RevData
 import BugCore
 import DynamicCivNames
@@ -54,17 +52,17 @@ def doRefortify(iPlayer):
 				headUnit.NotifyEntity(MissionTypes.MISSION_FORTIFY)
 
 
-def plotGenerator( startPlot, maxRadius ) :
-	# To be used as: for [radius,plot] in RevUtils.plotGenerator(plot,5) :
+def plotGenerator(startPlot, maxRadius):
+	# To be used as: for [radius, plot] in RevUtils.plotGenerator(plot,5):
 	# Returns plots starting at radius 1 and up to max Radius
 
 	# Start with center plot
-	yield [0,startPlot]
+	yield [0, startPlot]
 
 	radius = 1
 	gameMap = GC.getMap()
 	# Expand radius slowly, searching concentric squares
-	while( radius <= maxRadius ) :
+	while radius <= maxRadius:
 		# Top and bottom rows
 		for ix in xrange(startPlot.getX()-radius,startPlot.getX()+radius+1) :
 			for iy in [startPlot.getY() - radius, startPlot.getY() + radius] :
@@ -127,18 +125,15 @@ def getNumDefendersNearPlot( iPlotX, iPlotY, iPlayer, iRange = 2, bIncludePlot =
 	# bIncludePlot takes precedence over bIncludeCities
 	iNumUnits = 0
 
-	gameMap = GC.getMap()
-	basePlot = gameMap.plot(iPlotX,iPlotY)
+	for [radius,pPlot] in plotGenerator(GC.getMap().plot(iPlotX,iPlotY), iRange):
 
-	for [radius,pPlot] in plotGenerator( basePlot, iRange ) :
-
-		if( pPlot.getX() == iPlotX and pPlot.getY() == iPlotY ) :
-			if( not bIncludePlot ) :
+		if pPlot.getX() == iPlotX and pPlot.getY() == iPlotY:
+			if not bIncludePlot:
 				continue
-		elif( pPlot.isCity() and not bIncludeCities ) :
+		elif pPlot.isCity() and not bIncludeCities:
 			continue
 
-		iNumUnits += pPlot.getNumDefenders( iPlayer )
+		iNumUnits += pPlot.getNumDefenders(iPlayer)
 
 	return iNumUnits
 
@@ -244,7 +239,7 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 
 	toKillList = []
 	for pUnit in unitList :
-		if not pUnit.getDomainType() == DomainTypes.DOMAIN_LAND or not pUnit.canMoveInto(pPlot,False,False,True):
+		if not pUnit.getDomainType() == DomainTypes.DOMAIN_LAND or not pUnit.canEnterPlot(pPlot,False,False,True):
 			if bDestroyNonLand:
 				toKillList.append(pUnit)
 
@@ -277,7 +272,7 @@ def moveEnemyUnits2( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjure
 			if bLeaveSiege and pUnit.getDomainType() == DomainTypes.DOMAIN_LAND and pUnit.bombardRate() > 0: continue
 
 			if pUnit.getDomainType() == DomainTypes.DOMAIN_AIR:
-				if pPlot.isCity() or pUnit.canMoveInto(pPlot,False,False,True):
+				if pPlot.isCity() or pUnit.canEnterPlot(pPlot,False,False,True):
 					pUnit.setXY( iMoveToX, iMoveToY, False, False, False )
 
 			else: pUnit.setXY( iMoveToX, iMoveToY, False, False, False )
@@ -310,12 +305,11 @@ def clearOutCity( pCity, pPlayer, pEnemyPlayer ) :
 			if( len(retreatPlots) > 0 ) :
 				moveXY = retreatPlots[GAME.getSorenRandNum(len(retreatPlots),'Rev')]
 				for unit in waterUnits :
-					if( unit.canMoveInto(GC.getMap().plot(moveXY[0],moveXY[1]),False,False,True) ) :
+					if( unit.canEnterPlot(GC.getMap().plot(moveXY[0],moveXY[1]),False,False,True) ) :
 						unit.setXY( moveXY[0], moveXY[1], False, False, False )
 
 
 ########################## Revolution helper functions ###############################
-
 
 def getHandoverUnitTypes(CyCity):
 
@@ -739,3 +733,601 @@ def changeHuman(newHumanIdx, oldHumanIdx):
 	GAME.changeHumanPlayer(oldHumanIdx, newHumanIdx)
 	doRefortify(newHumanIdx)
 	return True
+
+
+########################## Civics effect helper functions #####################
+def getCivicsRevIdxLocal(pPlayer):
+
+	if pPlayer is None or pPlayer.getNumCities() < 1:
+		return [0, [], []]
+
+	civicLists = CivicData.civicLists
+	localRevIdx = 0
+	posList = []
+	negList = []
+
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		myCivic = GC.getCivicInfo(pPlayer.getCivics(i))
+		civicEffect = myCivic.getRevIdxLocal()
+		if not civicEffect: continue
+
+		if civicEffect < 0:
+			posList.append((civicEffect, myCivic.getDescription()))
+
+		else: # Effect doubles for some when a much better alternative exists
+
+			if myCivic.getRevLaborFreedom() < -1:
+				for civicX, iCivicX in civicLists[myCivic.getCivicOptionType()]:
+					if civicX.getRevLaborFreedom() > 1 and pPlayer.canDoCivics(iCivicX):
+						civicEffect *= 2
+						break
+
+			if myCivic.getRevDemocracyLevel() < -1:
+				for civicX, iCivicX in civicLists[myCivic.getCivicOptionType()]:
+					if civicX.getRevDemocracyLevel() > 1 and pPlayer.canDoCivics(iCivicX):
+						civicEffect *= 2
+						break
+			negList.append((civicEffect, myCivic.getDescription()))
+
+		localRevIdx += civicEffect
+
+	return [localRevIdx, posList, negList]
+
+
+def getCivicsCivStabilityIndex(iPlayer):
+	pPlayer = GC.getPlayer(iPlayer)
+
+	civStabilityIdx = 0
+	posList = []
+	negList = []
+
+	if pPlayer is None:
+		return [civStabilityIdx, posList, negList]
+
+	civicLists = CivicData.civicLists
+
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		myCivic = GC.getCivicInfo(pPlayer.getCivics(i))
+		civicEffect = -myCivic.getRevIdxNational()
+		if not civicEffect: continue
+
+		if civicEffect > 0:
+			posList.append( (civicEffect, myCivic.getDescription()) )
+		else:
+			# Effect doubles for some when a much better alternative exists
+			if myCivic.getRevLaborFreedom() < -1:
+				for civicX, iCivicX in civicLists[myCivic.getCivicOptionType()] :
+					if civicX.getRevLaborFreedom() > 1 and pPlayer.canDoCivics(iCivicX):
+						civicEffect *= 2
+						break
+
+			if myCivic.getRevDemocracyLevel() < -1:
+				for civicX, iCivicX in civicLists[myCivic.getCivicOptionType()] :
+					if civicX.getRevDemocracyLevel() > 1 and pPlayer.canDoCivics(iCivicX):
+						civicEffect *= 2
+						break
+
+			negList.append((civicEffect, myCivic.getDescription()))
+
+		civStabilityIdx += civicEffect
+
+	return [civStabilityIdx, posList, negList]
+
+
+def getCivicsHolyCityEffects( iPlayer ) :
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None:
+		return [0,0]
+
+	if( pPlayer.getNumCities() == 0 ) :
+		return [0,0]
+
+	goodEffect = 0
+	badEffect = 0
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			goodEffect += kCivic.getRevIdxHolyCityGood()
+			badEffect += kCivic.getRevIdxHolyCityBad()
+
+	return [goodEffect,badEffect]
+
+def getCivicsReligionMods( iPlayer ) :
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None:
+		return [0,0]
+
+	if( pPlayer.getNumCities() == 0 ) :
+		return [0,0]
+
+	goodMod = 0
+	badMod = 0
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			goodMod += kCivic.getRevIdxGoodReligionMod()
+			badMod += kCivic.getRevIdxBadReligionMod()
+
+	return [goodMod,badMod]
+
+def getCivicsDistanceMod( iPlayer ) :
+
+	pPlayer = GC.getPlayer(iPlayer)
+	distModifier = 0
+
+	if pPlayer is None:
+		return 0
+
+	if( pPlayer.getNumCities() == 0 ) :
+		return 0
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			distModifier += kCivic.getRevIdxDistanceModifier()
+
+	return distModifier
+
+
+def getCivicsNationalityMod(pPlayer):
+
+	pPlayer = GC.getPlayer(iPlayer)
+	if pPlayer is None or pPlayer.getNumCities() < 1:
+		return 0
+
+	natMod = 0
+	for i in xrange(GC.getNumCivicOptionInfos()):
+
+		natMod += GC.getCivicInfo(pPlayer.getCivics(i)).getRevIdxNationalityMod()
+
+	return natMod
+
+def getCivicsViolentRevMod( iPlayer ) :
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None:
+		return 0
+
+	if( pPlayer.getNumCities() == 0 ) :
+		return 0
+
+	vioMod = 0
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			vioMod += kCivic.getRevViolentMod()
+
+	return vioMod
+
+def canDoCommunism( iPlayer ) :
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return [False,None]
+
+	for i in range(0,GC.getNumCivicInfos()) :
+		kCivic = GC.getCivicInfo(i)
+		if( kCivic.isCommunism() and pPlayer.canDoCivics(i) ) :
+			if( not pPlayer.isCivic(i) ) :
+				return [True,i]
+
+	return [False,None]
+
+def isCommunism( iPlayer ) :
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return False
+
+	for i in range(0,GC.getNumCivicInfos()) :
+		kCivic = GC.getCivicInfo(i)
+		if( kCivic.isCommunism() and pPlayer.isCivic(i) ) :
+				return True
+
+	return False
+
+def canDoFreeSpeech( iPlayer ) :
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return [False,None]
+
+	for i in range(0,GC.getNumCivicInfos()) :
+		kCivic = GC.getCivicInfo(i)
+		if( kCivic.isFreeSpeech() and pPlayer.canDoCivics(i) ) :
+			if( not pPlayer.isCivic(i) ) :
+				return [True,i]
+
+	return [False,None]
+
+def isFreeSpeech( iPlayer ) :
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return False
+
+	for i in range(0,GC.getNumCivicInfos()) :
+		kCivic = GC.getCivicInfo(i)
+		if( kCivic.isFreeSpeech() and pPlayer.isCivic(i) ) :
+				return True
+
+	return False
+
+def isCanDoElections( iPlayer ) :
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive() or pPlayer.isNPC():
+		return False
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			if( kCivic.isCanDoElection() ) :
+				return True
+
+
+	return False
+
+def getReligiousFreedom( iPlayer ) :
+	# Returns [freedom level, option type]
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return [0,None]
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			if( not kCivic.getRevReligiousFreedom() == 0 ) :
+				return [kCivic.getRevReligiousFreedom(),i]
+
+	return [0,None]
+
+
+def getBestReligiousFreedom( iPlayer, relOptionType ) :
+	# Returns [best level, civic type]
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive() or relOptionType == None:
+		return [0,None]
+
+	bestFreedom = -11
+	bestCivic = None
+
+	for civicX, iCivicX in CivicData.civicLists[relOptionType]:
+		civicFreedom = civicX.getRevReligiousFreedom()
+		if civicFreedom > bestFreedom and pPlayer.canDoCivics(iCivicX):
+			bestFreedom = civicFreedom
+			bestCivic = iCivicX
+
+	return [bestFreedom, bestCivic]
+
+def getDemocracyLevel(iPlayer):
+	# Returns [level, option type]
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return [0, None]
+
+	for i in range(GC.getNumCivicOptionInfos()):
+		kCivic = GC.getCivicInfo(pPlayer.getCivics(i))
+		if kCivic.getRevDemocracyLevel():
+			return [kCivic.getRevDemocracyLevel(),i]
+
+	return [0, None]
+
+
+def getBestDemocracyLevel( iPlayer, optionType ) :
+	# Returns [best level, civic type]
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive() or optionType is None:
+		return [0,None]
+
+	bestLevel = -11
+	bestCivic = None
+
+	for civicX, iCivicX in CivicData.civicLists[optionType]:
+		civicLevel = civicX.getRevDemocracyLevel()
+		if civicLevel > bestLevel and pPlayer.canDoCivics(iCivicX):
+			bestLevel = civicLevel
+			bestCivic = iCivicX
+
+	return [bestLevel, bestCivic]
+
+def getLaborFreedom(iPlayer):
+	# Returns [level, option type]
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return [0,None]
+
+	for i in range(0,GC.getNumCivicOptionInfos()) :
+		iCivic = pPlayer.getCivics(i)
+		if( iCivic >= 0 ) :
+			kCivic = GC.getCivicInfo(iCivic)
+			if( not kCivic.getRevLaborFreedom() == 0 ) :
+				return [kCivic.getRevLaborFreedom(),i]
+
+	return [0,None]
+
+
+def getBestLaborFreedom(iPlayer, optionType):
+	# Returns [best level, civic type]
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if None in (pPlayer, optionType) or not pPlayer.isAlive():
+		return [0, None]
+
+	bestLevel = -11
+	bestCivic = None
+
+	for civicX, iCivicX in CivicData.civicLists[optionType]:
+		civicLevel = civicX.getRevLaborFreedom()
+		if civicLevel > bestLevel and pPlayer.canDoCivics(iCivicX):
+			bestLevel = civicLevel
+			bestCivic = iCivicX
+
+	return [bestLevel, bestCivic]
+
+
+# Returns [level, option type]
+def getEnvironmentalProtection(pPlayer):
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return [0, None]
+
+	for i in xrange(GC.getNumCivicOptionInfos()):
+		iEnvirenmentalProtection = GC.getCivicInfo(pPlayer.getCivics(i)).getRevEnvironmentalProtection()
+		if iEnvirenmentalProtection:
+			return [iEnvirenmentalProtection, i]
+
+	return [0, None]
+
+def getBestEnvironmentalProtection(pPlayer, optionType):
+	# Returns [best level, civic type]
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if None in (pPlayer, optionType) or not pPlayer.isAlive():
+		return [0, None]
+
+	bestLevel = -11
+	bestCivic = None
+
+	for civicX, iCivicX in CivicData.civicLists[optionType]:
+		civicLevel = civicX.getRevEnvironmentalProtection()
+		if civicLevel > bestLevel and pPlayer.canDoCivics(iCivicX):
+			bestLevel = civicLevel
+			bestCivic = iCivicX
+
+	return [bestLevel, bestCivic]
+
+########################## Traits effect helper functions #####################
+
+def getTraitsRevIdxLocal(iPlayer):
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.getNumCities():
+		return [0, [], []]
+
+	localRevIdx = 0
+	posList = []
+	negList = []
+
+	for i in range(GC.getNumTraitInfos()):
+		if pPlayer.hasTrait(i):
+			kTrait = GC.getTraitInfo(i)
+			traitEffect = kTrait.getRevIdxLocal()
+			if traitEffect > 0:
+				negList.append((traitEffect, kTrait.getDescription()))
+			elif traitEffect < 0:
+				posList.append((traitEffect, kTrait.getDescription()))
+
+			localRevIdx += traitEffect
+
+	return [localRevIdx, posList, negList]
+
+
+def getTraitsCivStabilityIndex(iPlayer):
+	pPlayer = GC.getPlayer(iPlayer)
+
+	civStabilityIdx = 0
+	posList = list()
+	negList = list()
+
+	if pPlayer is None:
+		return [civStabilityIdx, posList, negList]
+
+	for iTrait in range(GC.getNumTraitInfos()):
+		kTrait = GC.getTraitInfo(iTrait)
+		traitEffect = -kTrait.getRevIdxNational()
+
+		if pPlayer.hasTrait(iTrait):
+			if traitEffect > 0:
+				posList.append((traitEffect, kTrait.getDescription()))
+			elif traitEffect < 0:
+				negList.append((traitEffect, kTrait.getDescription()))
+
+			civStabilityIdx += traitEffect
+
+	return [civStabilityIdx, posList, negList]
+
+
+def getTraitsHolyCityEffects(iPlayer):
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.getNumCities():
+		return [0, 0]
+
+	goodEffect = 0
+	badEffect = 0
+
+	for i in range(GC.getNumTraitInfos()):
+		if pPlayer.hasTrait(i):
+			kTrait = GC.getTraitInfo(i)
+			goodEffect += kTrait.getRevIdxHolyCityGood()
+			badEffect += kTrait.getRevIdxHolyCityBad()
+
+	return [goodEffect, badEffect]
+
+
+def getTraitsReligionMods(iPlayer):
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.getNumCities():
+		return [0,0]
+
+	goodMod = 0
+	badMod = 0
+
+	for i in range(GC.getNumTraitInfos()):
+		if pPlayer.hasTrait(i):
+			kTrait = GC.getTraitInfo(i)
+			goodMod += kTrait.getRevIdxGoodReligionMod()
+			badMod += kTrait.getRevIdxBadReligionMod()
+
+	return [goodMod, badMod]
+
+
+def getTraitsDistanceMod( iPlayer ) :
+
+	pPlayer = GC.getPlayer(iPlayer)
+
+	if pPlayer is None or not pPlayer.getNumCities():
+		return 0
+
+	distModifier = 0
+
+	for i in range(GC.getNumTraitInfos()):
+		if pPlayer.hasTrait(i):
+			distModifier += GC.getTraitInfo(i).getRevIdxDistanceModifier()
+
+	return distModifier
+
+
+########################## Traits effect helper functions #####################
+def getBuildingsRevIdxLocal(CyCity):
+
+	localRevIdx = 0
+	posList = []
+	negList = []
+
+	for iBuilding in range(GC.getNumBuildingInfos()):
+		if CyCity.getNumActiveBuilding(iBuilding) > 0:
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			buildingEffect = CvBuildingInfo.getRevIdxLocal()
+			if buildingEffect > 0:
+				negList.append((buildingEffect, CvBuildingInfo.getDescription()))
+			elif buildingEffect < 0:
+				posList.append((buildingEffect, CvBuildingInfo.getDescription()))
+
+			localRevIdx += buildingEffect
+
+	return [localRevIdx, posList, negList]
+
+
+def getBuildingsCivStabilityIndex(iPlayer):
+
+	CyPlayer = GC.getPlayer(iPlayer)
+	if not CyPlayer:
+		return [0, [], []]
+
+	civStabilityIdx = 0
+	posList = []
+	negList = []
+	for iBuilding in xrange(GC.getNumBuildingInfos()):
+		CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+		buildingEffect = -CvBuildingInfo.getRevIdxNational()
+
+		if buildingEffect:
+			numBuildings = CyPlayer.countNumBuildings(iBuilding)
+			if numBuildings:
+				buildingEffect *= numBuildings
+				if buildingEffect > 0:
+					posList.append((buildingEffect, CvBuildingInfo.getDescription()))
+				elif buildingEffect < 0:
+					negList.append((buildingEffect, CvBuildingInfo.getDescription()))
+				civStabilityIdx += buildingEffect
+
+	return [civStabilityIdx, posList, negList]
+
+
+def getBuildingsDistanceMod(CyCity):
+
+	distModifier = 0
+
+	for iBuilding in range(GC.getNumBuildingInfos()):
+		iDistanceModifier = GC.getBuildingInfo(iBuilding).getRevIdxDistanceModifier()
+		if iDistanceModifier and CyCity.getNumActiveBuilding(iBuilding) > 0:
+			distModifier += iDistanceModifier
+
+	return distModifier
+
+
+## Text Utility
+def getCityTextList(cityList, bPreCity = False, bPreCitizens = False, sep = ', ', second = '', penUlt = '', bPostIs = False):
+
+	textList = []
+	for pCity in cityList:
+		textList.append(pCity.getName())
+
+	pre = ''
+	if bPreCity:
+		if len(cityList) > 1 and second == '':
+			pre = TRNSLTR.getText("TXT_KEY_REV_CITIES_OF",()) + ' '
+		else: pre = TRNSLTR.getText("TXT_KEY_REV_CITY_OF",()) + ' '
+
+	elif bPreCitizens:
+		pre = TRNSLTR.getText("TXT_KEY_REV_CITIZENS_OF",()) + ' '
+
+	if not textList:
+		return pre.strip()
+
+	pre += textList[0]
+
+	if len(textList) > 1:
+		pre += second
+		if second == '':
+			pre += sep
+
+		for text in textList[1:-1] :
+			pre += text + sep
+
+		if len(textList) > 2 or second == '':
+			pre += localText.getText("TXT_KEY_REV_AND",()) + ' '
+		pre += textList[-1]
+
+	post = ''
+	if bPostIs:
+		if bPreCitizens or len(cityList) > 1 and second == '':
+			post += ' ' + TRNSLTR.getText("TXT_KEY_REV_ARE",())
+		else:
+			post += ' ' + TRNSLTR.getText("TXT_KEY_REV_IS",())
+			if second != '':
+				post = sep.strip() + post
+
+	return pre + post

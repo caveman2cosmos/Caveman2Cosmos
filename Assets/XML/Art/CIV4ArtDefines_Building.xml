@@ -23604,6 +23604,16 @@
 			<Button>Art/Interface/Buttons/Units/kraken.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LEMUR</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Units/lemur.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KRAK_DES_CHEVS</Type>
 			<LSystem>LSYSTEM_CASTLE</LSystem>
 			<bAnimated>0</bAnimated>
@@ -46912,7 +46922,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Health/Art/sweatlodge.dds</Button>
+			<Button>art/Health/Art/alternative_medicine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OLD_CITY_WALLS</Type>
@@ -46932,7 +46942,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/interface/buttons/buildings/intelligent_personal_assistant.dds</Button>
+			<Button>Art/interface/buttons/buildings/cultural_enrichment.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HEALTHCARE_MEGACOMPLEX</Type>
@@ -46942,7 +46952,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Hospital.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,10</Button>
+			<Button>Art/health/art/healthcare_megacomplex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ANCIENT_CUSTOMS</Type>
@@ -46952,7 +46962,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Tweaks/art/admin_village.dds</Button>
+			<Button>art/Tweaks/art/ancient_customs.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TOURISM_MEGACOMPLEX</Type>
@@ -46962,7 +46972,27 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Vacation/Art/touristtrap.dds</Button>
+			<Button>art/Vacation/Art/tourism_megacomplex.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DONKEY_NATIONAL</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_donkey.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LLAMA_NATIONAL</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_llama.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

@@ -2230,10 +2230,9 @@ def addBonuses():
 					eligible[bonusId].append((x,y))
 
 	bonusIdsAndOrder = []
-	for bonusId in range(GC.getNumBonusInfos()):
-		bonusInfoXML = GC.getBonusInfo(bonusId)
-		if bonusInfoXML.getPlacementOrder() >= 0:
-			bonusIdsAndOrder.append((bonusId,bonusInfoXML.getPlacementOrder()))
+	for i in range(GC.getNumMapBonuses()):
+		bonusId = GC.getMapBonus(i)
+		bonusIdsAndOrder.append((bonusId, GC.getBonusInfo(bonusId).getPlacementOrder()))
 
 	bonusIdsAndOrder = sorted(bonusIdsAndOrder, key=operator.itemgetter(1))
 

@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameCoreUtils.h"
+#include "CvRandom.h"
 #include "CyGameCoreUtils.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -216,4 +218,20 @@ int cyGetEspionageModifier(int iOurTeam, int iTargetTeam)
 int64_t cyIntSqrt64(uint64_t iValue)
 {
 	return intSqrt64(iValue);
+}
+
+void cyShufflePyList(python::list& pyList, CvRandom& rand)
+{
+	PyObject* pyObj = pyList.ptr();
+
+	for (int i = 0, size = PySequence_Length(pyObj); i < size; i++)
+	{
+		const int j = i + rand.get(size - i);
+		if (i != j)
+		{
+			PyObject* temp = PySequence_GetItem(pyObj, i);
+			PySequence_SetItem(pyObj, i, PySequence_GetItem(pyObj, j));
+			PySequence_SetItem(pyObj, j, temp);
+		}
+	}
 }

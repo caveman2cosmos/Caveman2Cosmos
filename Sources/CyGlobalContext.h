@@ -32,8 +32,7 @@ public:
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(TeamTypes eTeam) const;
 
-	int getInfoTypeForString(const char* szInfoType) const;
-	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
+	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
@@ -108,10 +107,13 @@ public:
 
 	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
 
+	int getMapBonus(int i) const { return GC.getMapBonus(i); }
+	int getNumMapBonuses() const { return GC.getNumMapBonuses(); }
+
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
 	int getNumSpecialBuildingInfos() const { return GC.getNumSpecialBuildingInfos(); }
-	int getNumBonusInfos() const { return GC.getNumBonusInfos(); };
+	int getNumBonusInfos() const { return GC.getNumBonusInfos(); }
 	int getNumPlayableCivilizationInfos() const { return GC.getNumPlayableCivilizationInfos(); }
 	int getNumCivilizatonInfos() const { return GC.getNumCivilizationInfos(); }
 	int getNumLeaderHeadInfos() const { return GC.getNumLeaderHeadInfos(); }

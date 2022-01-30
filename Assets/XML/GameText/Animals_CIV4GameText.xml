@@ -4,12 +4,14 @@
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
 		<English>Remains - Cave Lion</English>
 		<French>Restes de Lion des cavernes</French>
+		<Italian>Resti - Leone delle caverne</Italian>
 		<Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
-		<English>Remains - Elasmotherium</English>
+		<English>Remains - Giant Rhinoceros</English>
 		<French>Restes d'Elasmotherium</French>
+		<Italian>Resti - Grande rinoceronte</Italian>
 		<Polish>Resztki - Elasmoterium</Polish>
 		<Russian>Ïàìÿòü î ýëàñìîòåðèè</Russian>
 	</TEXT>
@@ -17,138 +19,158 @@
 		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
 		<English>Remains - Glyptodon</English>
 		<French>Restes de Glyptodon</French>
+		<Italian>Resti - Glittodonte</Italian>
 		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
 		<English>Folklore - Aardvark</English>
 		<French>Mythe de l'Oryctérope du Cap</French>
+		<Italian>Folklore - Oritteropo</Italian>
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICANELEPHANT</Tag>
-		<English>Folklore - Elephant, African</English>
+		<English>Folklore - African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
+		<Italian>Folklore - Elefante africano</Italian>
 		<Russian>Ìèô îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
 		<English>Autobuild - Folklore Requirement</English>
 		<German>Folklore-Grundlagen</German>
+		<Italian>Requisito per il folklore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
 		<English>Autobuild - Presence of Coral</English>
 		<German>Präsenz von Korallen</German>
+		<Italian>Presenza di corallo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
 		<English>Autobuild - Presence of Crater</English>
 		<German>Präsenz von Kratern</German>
+		<Italian>Presenza di un cratere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
 		<English>Autobuild - Presence of Metal</English>
 		<German>Präsenz von Metall</German>
+		<Italian>Presenza di metallo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
 		<English>Autobuild - Presence of Oasis</English>
 		<German>Präsenz von Oasen</German>
+		<Italian>Presenza di un'oasi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
 		<English>Autobuild - Presence of Landform</English>
 		<German>Präsenz von Felsformationen</German>
+		<Italian>Presenza di un rilievo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
 		<English>Autobuild - Presence of Reef</English>
 		<German>Präsenz von Riffen</German>
+		<Italian>Presenza di una barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
 		<English>Autobuild - Presence of Volcano</English>
 		<German>Präsenz von Vulkanen</German>
+		<Italian>Presenza di un vulcano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
 		<English>Autobuild - Presence of Sea</English>
 		<German>Präsenz der See</German>
+		<Italian>Presenza di un mare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
 		<English>Autobuild - Presence of Earth</English>
 		<German>Präsenz der Erde</German>
+		<Italian>Presenza della Terra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
 		<English>Autobuild - Presence of Fire</English>
 		<German>Präsenz des Feuers</German>
+		<Italian>Presenza del Fuoco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
-		<English>Folklore Requirements autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
+		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] richiedono la lingua parlata come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 pseudoedifici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
-		<English>Folklore Presence autobuildings require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities</English>
+		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
 		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
+		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>
 		<English>Folklore - Arctic Fox</English>
 		<French>Mythe du Renard arctique</French>
+		<Italian>Folklore - Volpe artica</Italian>
 		<Russian>Ìèô î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARMADILLO</Tag>
-		<English>Folklore - Armadillo</English>
+		<English>Folklore - Nine-banded Armadillo</English>
 		<French>Mythe du Tatou</French>
+		<Italian>Folklore - Armadillo</Italian>
 		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIANELEPHANT</Tag>
-		<English>Folklore - Elephant, Asian</English>
+		<English>Folklore - Asian Elephant</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
+		<Italian>Folklore - Elefante asiatico</Italian>
 		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BABIRUSA</Tag>
 		<English>Folklore - Babirusa</English>
 		<French>Mythe du babiroussas</French>
+		<Italian>Folklore - Babirussa</Italian>
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
-		<English>Folklore - Tapir, Baird's</English>
+		<English>Folklore - Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
+		<Italian>Folklore - Tapiro di Baird</Italian>
 		<Polish>Mit - Tapir Panamski</Polish>
 		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
-		<English>Folklore - Rhinoceros, Black</English>
+		<English>Folklore - Black Rhinoceros</English>
 		<French>Mythe du Rhinocéros noir</French>
+		<Italian>Folklore - Rinoceronte nero</Italian>
 		<Polish>Mit - Nosorożec Czarny</Polish>
 		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Tag>
-		<English>Folklore - Tapir, Brazilian</English>
+		<English>Folklore - Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
+		<Italian>Folklore - Tapiro amazzonico</Italian>
 		<Polish>Mit - Tapir</Polish>
 		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAIMAN</Tag>
-		<English>Folklore - Caiman</English>
-		<French>
-			<Text>Mythe du Caïman</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<English>Folklore - Black Caiman</English>
+		<French>Mythe du Caïman</French>
+		<Italian>Folklore - Caimano nero</Italian>
 		<Polish>Mit - Kajman</Polish>
 		<Russian>Ìèô î êàéìàíå</Russian>
 	</TEXT>
@@ -156,71 +178,72 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CARIBOU</Tag>
 		<English>Folklore - Caribou</English>
 		<French>Mythe du Caribou</French>
+		<Italian>Folklore - Caribù</Italian>
 		<Russian>Ìèô î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAVE_LION</Tag>
 		<English>Folklore - Cave Lion</English>
 		<French>Mythe du Lion des cavernes</French>
+		<Italian>Folklore - Leone delle caverne</Italian>
 		<Russian>Ìèô î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE</Tag>
 		<English>Folklore (T) - Crocodile</English>
-		<French>
-			<Text>Mythe du Crocodile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del coccodrillo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe du Crocodile</French>
+		<Italian>Folklore - Coccodrillo</Italian>
 		<Polish>Mit - Krokodyl</Polish>
 		<Russian>Ìèô î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CUSCUS</Tag>
-		<English>Folklore - Cuscus</English>
+		<English>Folklore - Spotted Cuscus</English>
 		<French>Mythe du Couscous</French>
+		<Italian>Folklore - Cusco maculato</Italian>
 		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DART_FROG</Tag>
 		<English>Folklore - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
+		<Italian>Folklore - Rana velenosa</Italian>
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DHOLE</Tag>
-		<English>Folklore - Dhole</English>
+		<English>Folklore - Ussuri Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
+		<Italian>Folklore - Cuon asiatico</Italian>
 		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DINGO</Tag>
 		<English>Folklore - Dingo</English>
 		<French>Mythe du Dingo</French>
+		<Italian>Folklore - Dingo</Italian>
 		<Russian>Ìèô î äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUCK</Tag>
 		<English>Folklore - Duck</English>
 		<French>Mythe du Canard</French>
+		<Italian>Folklore - Anatra</Italian>
 		<Russian>Ìèô îá óòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELASMOTHERIUM</Tag>
-		<English>Folklore - Elasmotherium</English>
+		<English>Folklore - Giant Rhinoceros</English>
 		<French>Mythe de l'Elasmotherium</French>
+		<Italian>Folklore - Grande rinoceronte</Italian>
 		<Polish>Mit - Elasmoterium</Polish>
 		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEMENTAL_PEDIA</Tag>
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They become fables.</English>
-		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
+		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie.</French>
+		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che diventano oggetto di fiabe.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
 	</TEXT>
@@ -228,24 +251,28 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
 		<English>Folklore - Emperor Penguin</English>
 		<French>Mythe du Manchot Empereur</French>
+		<Italian>Folklore - Pinguino imperatore</Italian>
 		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EWOLF</Tag>
 		<English>Folklore - Ethiopian Wolf</English>
 		<French>Mythe du loup d'Éthiopie</French>
+		<Italian>Folklore - Lupo etiope</Italian>
 		<Russian>Ìèô îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FENNECFOX</Tag>
 		<English>Folklore - Fennec Fox</English>
 		<French>Mythe du Fennec</French>
+		<Italian>Folklore - Fennec</Italian>
 		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FIRE</Tag>
 		<English>Folklore (E) - Fire</English>
 		<French>Mythe du Feu</French>
+		<Italian>Folklore - Fuoco</Italian>
 		<Polish>Mit - Ogień</Polish>
 		<Russian>Ìèô îá îãíå</Russian>
 	</TEXT>
@@ -258,60 +285,40 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR</Tag>
 		<English>Folklore - American Alligator</English>
-		<French>
-			<Text>Mythe de l'Alligator d'Amérique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Mythe de l'Alligator d'Amérique</French>
 		<Polish>Mit - Aligator Amerykański</Polish>
 		<Russian>Ìèô îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR_ASIAN</Tag>
 		<English>Folklore - Chinese Alligator</English>
-		<French>
-			<Text>Mythe de l'Alligator de Chine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Mythe de l'Alligator de Chine</French>
 		<Polish>Mit - Aligator Chiński</Polish>
 		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
 		<English>Folklore - Gharial</English>
-		<French>
-			<Text>Mythe du Gavial du Gange</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Mythe du Gavial du Gange</French>
 		<Polish>Mit - Gawial</Polish>
 		<Russian>Ìèô î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIRAFFE</Tag>
 		<English>Folklore - Giraffe</English>
-		<French>
-			<Text>Mythe de la Girafe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - Giraffa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Mythe de la Girafe</French>
+		<Italian>Folklore - Giraffa</Italian>
 		<Russian>Ìèô î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTO</Tag>
-		<English>Folklore - Paleolithic Glyptodon</English>
+		<English>Folklore - Glyptodon</English>
 		<French>Mythe du Glyptodon</French>
 		<Russian>Ìèô î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_WOLF</Tag>
-		<English>Folklore - Wolf, Grey</English>
+		<English>Folklore - Wolf</English>
 		<French>Mythe du Loup gris</French>
 		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
@@ -335,20 +342,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_IBEX</Tag>
-		<English>Folklore - Ibex</English>
+		<English>Folklore - Walia Ibex</English>
 		<French>Mythe du Bouquetin</French>
 		<Russian>Ìèô î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINO</Tag>
-		<English>Folklore - Rhinoceros, Indian</English>
+		<English>Folklore - Indian Rhinoceros</English>
 		<French>Mythe du Rhinocéros indien</French>
 		<Polish>Mit - Nosorożec Indyjski</Polish>
 		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Tag>
-		<English>Folklore - Rhinoceros, Java</English>
+		<English>Folklore - Java Rhinoceros</English>
 		<French>Mythe du Rhinocéros de Java</French>
 		<Polish>Mit - Nosorożec Jawajski</Polish>
 		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
@@ -357,6 +364,7 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
 		<English>Folklore associated with formations found in the landscape.</English>
 		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
+		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
 		<Polish>Mity związane z formacjami terenu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -380,7 +388,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Tag>
-		<English>Folklore - Tapir, Malayan</English>
+		<English>Folklore - Malayan Tapir</English>
 		<French>Mythe du Tapir Malais</French>
 		<Polish>Mit - Tapir Malajski</Polish>
 		<Russian>Ìèô î ìàë. òàïèðå</Russian>
@@ -412,7 +420,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Tag>
-		<English>Folklore - Tapir, Mountain</English>
+		<English>Folklore - Mountain Tapir</English>
 		<French>Mythe du Tapir des Montagnes</French>
 		<Polish>Mit - Tapir Górski</Polish>
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
@@ -426,11 +434,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILECROC</Tag>
 		<English>Folklore - Nile Crocodile</English>
-		<French>
-			<Text>Mythe du Crocodile du Nil</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Mythe du Crocodile du Nil</French>
 		<Polish>Mit - Krokodyl Nilowy</Polish>
 		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
 	</TEXT>
@@ -461,7 +465,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Tag>
-		<English>Folklore - Paleolithic Ground Sloth</English>
+		<English>Folklore - Ground Sloth</English>
 		<French>Mythe du Xénarthre</French>
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
 	</TEXT>
@@ -491,13 +495,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_POSSUM</Tag>
-		<English>Folklore - Possum</English>
+		<English>Folklore - Brushtail Possum</English>
 		<French>Mythe du Phalanger commun</French>
 		<Russian>Ìèô î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Tag>
-		<English>Folklore - Pygmy Hippopotamus</English>
+		<English>Folklore - Pygmy Hippo</English>
 		<French>Mythe de l'Hippopotame nain</French>
 		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
@@ -522,12 +526,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
-		<English>Folklore - River Crocodile</English>
-		<French>
-			<Text>Mythe du Crocodile de rivière</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<English>Folklore - Crocodile (Small)</English>
+		<French>Mythe du Crocodile de rivière</French>
+		<Polish>Mit - Krokodyl Błotny</Polish>
+		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC_LARGE</Tag>
+		<English>Folklore - Crocodile (Large)</English>
+		<French>Mythe du Crocodile de rivière</French>
 		<Polish>Mit - Krokodyl Błotny</Polish>
 		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
 	</TEXT>
@@ -546,18 +553,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SAIGA</Tag>
-		<English>Folklore - Saiga</English>
+		<English>Folklore - Saiga Antelope</English>
 		<French>Mythe de l'Antilope Saiga</French>
 		<Russian>Ìèô î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC</Tag>
-		<English>Folklore - Saltwater Crocodile</English>
-		<French>
-			<Text>Mythe du Crocodile de mer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<English>Folklore - Saltwater Crocodile (Small)</English>
+		<French>Mythe du Crocodile de mer</French>
+		<Polish>Mit - Krokodyl Różańcowy</Polish>
+		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</Tag>
+		<English>Folklore - Saltwater Crocodile (Large)</English>
+		<French>Mythe du Crocodile de mer</French>
 		<Polish>Mit - Krokodyl Różańcowy</Polish>
 		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
 	</TEXT>
@@ -607,7 +617,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA</Tag>
-		<English>Folklore - Tarantula</English>
+		<English>Folklore - Desert Tarantula</English>
+		<French>Mythe de la Tarentule</French>
+		<Russian>Ìèô î òàðàíòóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<English>Folklore - Jungle Tarantula</English>
 		<French>Mythe de la Tarentule</French>
 		<Russian>Ìèô î òàðàíòóëå</Russian>
 	</TEXT>
@@ -631,13 +647,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TREESLOTH</Tag>
-		<English>Folklore - Tree Sloth</English>
+		<English>Folklore - Three-toed Sloth</English>
 		<French>Mythe du paresseux</French>
 		<Russian>Ìèô î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TURKEY</Tag>
-		<English>Folklore - Turkey</English>
+		<English>Folklore - Wild Turkey</English>
 		<French>Mythe de la Dinde</French>
 		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
@@ -649,7 +665,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHITE_RHINO</Tag>
-		<English>Folklore - Rhinoceros, White</English>
+		<English>Folklore - White Rhinoceros</English>
 		<French>Mythe du Rhinocéros blanc</French>
 		<Polish>Mit - Nosorożec Biały</Polish>
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
@@ -2596,9 +2612,9 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
-			<Text>Ornitorinco addomesticato</Text>
+			<Text>Ornitorinco addomesticato:Ornitorinchi addomesticati</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>0:1</Plural>
 		</Italian>
 		<Russian>Óòêîíîñ (ðó÷í.)</Russian>
 	</TEXT>
@@ -2699,7 +2715,11 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Zebra addomesticata</Italian>
+		<Italian>
+			<Text>Zebra addomesticata:Zebre addomesticate</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
 		<Spanish>Cebra</Spanish>
 		<Polish>Poskromiona Zebra</Polish>
 		<Russian>Çåáðà (ðó÷í.)</Russian>
@@ -2717,6 +2737,11 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Italian>
+			<Text>Tapiro di Baird addomesticato:Tapiri di Baird addomesticati</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
 		<Polish>Oswojony Baird's Tapir</Polish>
 		<Russian>Òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -2836,7 +2861,11 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Tapiro</Italian>
+		<Italian>
+			<Text>Tapiro di Baird:Tapiri di Baird</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
 		<Spanish>
 			<Text>Tapir de Baird</Text>
 			<Gender>Male</Gender>
@@ -2897,12 +2926,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Otter:Otter:Otter:Otter:Ottern:Ottern:Ottern:Ottern</Text>
+		<Italian>
+			<Text>Vipera:Vipere</Text>
 			<Gender>Female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Vipera</Italian>
+			<Plural>0:1</Plural>
+		</Italian>
 		<Spanish>
 			<Text>Víbora</Text>
 			<Gender>Female</Gender>
@@ -2967,7 +2995,6 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Canguro di montagna</Italian>
 		<Spanish>
 			<Text>Ualarú</Text>
 			<Gender>Male</Gender>
@@ -2995,7 +3022,11 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Tricheco</Italian>
+		<Italian>
+			<Text>Tricheco:Trichechi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
 		<Spanish>
 			<Text>Morsa</Text>
 			<Gender>Female</Gender>
@@ -3080,9 +3111,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Tag>
 		<English>[ICON_BULLET]Can construct Folklore, various animal related buildings, and can be converted to science/culture or used for entertainment in cities</English>
+		<Italian>[ICON_BULLET]Può costruire Folklore, vari edifici legati agli animali e può essere convertito in scienza/cultura o usato per l'intrattenimento nelle città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Tag>
 		<English>[ICON_BULLET]Can construct various animal related buildings</English>
+		<Italian>[ICON_BULLET]Può costruire vari edifici legati agli animali</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
+		<English>Folklore - Aurochs</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLABY</Tag>
+		<English>Folklore - Ring-tailed Wallaby</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
+		<English>Folklore - Tasmanian Devil</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
+		<English>Folklore - Wild Boar</English>
 	</TEXT>
 </Civ4GameText>
