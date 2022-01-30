@@ -20758,6 +20758,11 @@ const PromotionKeyedInfo* CvUnit::findPromotionKeyedInfo(PromotionTypes ePromoti
 	return &(itr->second);
 }
 
+const std::map<PromotionTypes, PromotionKeyedInfo>& CvUnit::getPromotionKeyedInfo() const
+{
+	return m_promotionKeyedInfo;
+}
+
 PromotionIterator CvUnit::getPromotionBegin()
 {
 	return m_promotionKeyedInfo.begin();

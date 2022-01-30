@@ -186,4 +186,7 @@
 #define GC				cvInternalGlobals::getInstance()
 #define ARTFILEMGR		CvArtFileMgr::GetInstance()
 
+#define STD_PAIR(T1, T2) \
+	std::pair<T1, T2>
+
 #endif	// CVDEFINES_H

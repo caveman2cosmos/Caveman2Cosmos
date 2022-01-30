@@ -29057,11 +29057,11 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 	{
 		int	iResult = 100 * baseCombatStrNonGranular();
 
-		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		foreach_(const STD_PAIR(PromotionTypes, PromotionKeyedInfo)& keyedInfo, getPromotionKeyedInfo())
 		{
-			if (isHasPromotion((PromotionTypes)iI))
+			if (keyedInfo.second.m_bHasPromotion)
 			{
-				const CvPromotionInfo& kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
+				const CvPromotionInfo& kPromotion = GC.getPromotionInfo(keyedInfo.first);
 				bool bPromotionHasAccountedValue = false;
 
 				//	Generic strength multiplier
