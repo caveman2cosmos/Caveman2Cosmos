@@ -1540,7 +1540,7 @@ class TestCode:
 						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 							if aTechSpecialistChanges[BASE][iTech][iSpecialist] < aTechSpecialistChanges[REPLACED][iTech][iSpecialist]:
 								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType())
-								
+
 					if GC.getTechInfo(iTech).getGridX() <= iTechBase:
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 							if aYieldChangesList[BASE][iYield] < aYieldChangesList[REPLACED][iYield]:
@@ -2794,13 +2794,13 @@ class TestCode:
 						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 6 "+GC.getYieldInfo(iYield).getType())
 					if iYieldChange < 7 and iEra == 12: # Transcendent
 						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 7 "+GC.getYieldInfo(iYield).getType())
-						
+
 	#Check if buildings with tech yield/commerce changes have minimum gains from techs: Ancient/Classical/... - 2/3/...
 	def checkBuildingTechChanges(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iEra = self.HF.checkBuildingEra(CvBuildingInfo)
-	
+
 			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE") == -1:
 				for entry in CvBuildingInfo.getTechYieldChanges100():
 					iTechEra = GC.getTechInfo(entry.eTech).getEra()+1 #Prehistoric enum is 0, so shifting it by 1.
