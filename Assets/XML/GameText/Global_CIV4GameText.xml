@@ -20492,14 +20492,6 @@
 		<Russian>Характер повреждения от данной области - Урон от холода</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_HILLS</Tag>
-		<English>Hills/</English>
-		<French>Collines/</French>
-		<German>Hügel/</German>
-		<Italian>Colline/</Italian>
-		<Spanish>Colina/</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_CITY_ZOC</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par la ville. Capturez la ville pour pouvoir y pénétrer.[COLOR_REVERT]</French>
@@ -20564,14 +20556,6 @@
 		<Spanish>[SPACE](no tiene riego)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_PEAK</Tag>
-		<English>Peak</English>
-		<French>Montagne</French>
-		<German>Gipfel</German>
-		<Italian>Montagna</Italian>
-		<Spanish>Pico</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES</Tag>
 		<English>, Requires: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, Requiert : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
@@ -20602,6 +20586,26 @@
 		<German>, Forschung: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
 		<Italian>, Ricerca: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
 		<Spanish>, investigar: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_FLATLAND</Tag>
+		<English>Flatland Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_HILL</Tag>
+		<English>Hill Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_PEAK</Tag>
+		<English>Peak Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_WATER</Tag>
+		<English>Water Plots</English>
+		<French>Cases d'eau[SPACE]</French>
+		<German>Wasser-Geländefelder</German>
+		<Italian>Caselle d'acqua</Italian>
+		<Spanish>Casillas de agua</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPULATION</Tag>

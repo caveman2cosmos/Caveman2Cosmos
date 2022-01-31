@@ -25,9 +25,9 @@
 					<TechType>TECH_NEUTRINO_COMMUNICATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -176,7 +176,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -184,13 +184,13 @@
 				<TechCommerceChange>
 					<TechType>TECH_HYPERMAGNETICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_PLANET_CRACKING</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -222,7 +222,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>300</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -796,7 +796,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -805,7 +805,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -814,7 +814,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -823,7 +823,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1477,7 +1477,7 @@
 					<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1550,7 +1550,7 @@
 					<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1723,7 +1723,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>300</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1900,7 +1900,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_PLANET_CRACKING</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2084,7 +2084,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>300</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -2184,7 +2184,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_PLANET_CRACKING</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3095,7 +3095,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -3128,7 +3128,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -3883,7 +3882,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_ULTIMA_ARCHITECTURE</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3918,8 +3917,6 @@
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>

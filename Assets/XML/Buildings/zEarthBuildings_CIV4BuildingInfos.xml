@@ -504,7 +504,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_ECOLOGICAL_ENGINEERING</TechType>
 					<CommercePercents>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -694,7 +694,6 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>50</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>

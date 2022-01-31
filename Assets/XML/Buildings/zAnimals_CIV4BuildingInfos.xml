@@ -36,7 +36,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -237,7 +237,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -294,7 +294,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -351,7 +351,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -379,7 +379,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -398,7 +398,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -724,7 +724,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -789,7 +789,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1272,7 +1272,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1366,8 +1366,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -1549,7 +1549,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1632,8 +1632,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
@@ -1675,8 +1675,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
@@ -1728,7 +1728,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1958,7 +1958,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2179,7 +2179,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2369,7 +2369,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2434,7 +2434,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2492,14 +2492,14 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2644,7 +2644,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PRIMATE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_PRIMATE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRIMATE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2674,7 +2674,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2706,7 +2706,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2786,7 +2786,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2827,7 +2827,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2835,7 +2835,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2865,7 +2865,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2930,7 +2930,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3199,7 +3199,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3472,7 +3472,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

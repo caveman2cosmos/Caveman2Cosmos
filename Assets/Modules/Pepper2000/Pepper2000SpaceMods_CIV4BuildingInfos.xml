@@ -407,7 +407,7 @@
 					<TechType>TECH_GRAND_UNIFICATION_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1312,13 +1312,13 @@
 				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIRECTED_PANSPERMIA</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1357,7 +1357,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1366,14 +1366,14 @@
 					<TechType>TECH_NUTRACEUTICAL_ANIMALS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ADAPTIVE_RADIATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -1381,7 +1381,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1451,13 +1451,13 @@
 				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIRECTED_PANSPERMIA</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

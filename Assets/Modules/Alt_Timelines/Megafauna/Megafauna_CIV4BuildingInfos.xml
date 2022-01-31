@@ -436,7 +436,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_TOURISM</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -507,7 +507,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -721,7 +720,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
