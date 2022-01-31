@@ -506,7 +506,7 @@
 					<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -937,13 +937,12 @@
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1097,7 +1096,7 @@
 					<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1280,13 +1279,13 @@
 				<TechCommerceChange>
 					<TechType>TECH_ARCHETYPAL_VECTOR_SPACES</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_OMEGA_POINT</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

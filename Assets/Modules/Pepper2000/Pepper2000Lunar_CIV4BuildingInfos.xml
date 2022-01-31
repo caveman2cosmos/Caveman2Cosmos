@@ -1573,7 +1573,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 					<TechYield>
-						<iYield>300</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>

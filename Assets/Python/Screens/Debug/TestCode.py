@@ -43,6 +43,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingMinYields, "Building - check yields", "Check if buildings with yield income have at least minimum yield as derived from era")
+		self.main.addTestCode(screen, self.checkBuildingTechChanges, "Building - check Tech Changes", "Check if buildings with tech yield/commerce changes have minimum gains from techs")
 		self.main.addTestCode(screen, self.checkBuildingMaxMaint, "Building - check maintenance", "Check if buildings don't take too much gold for its output")
 		self.main.addTestCode(screen, self.checkTechCosts, "Tech - check costs", "Check if techs have correct costs")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
@@ -2827,6 +2828,23 @@ class TestCode:
 						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 6 "+GC.getYieldInfo(iYield).getType())
 					if iYieldChange < 7 and iEra == 12: # Transcendent
 						self.log(CvBuildingInfo.getType()+" - "+GC.getEraInfo(iEra).getType()+" should have at least 7 "+GC.getYieldInfo(iYield).getType())
+						
+	#Check if buildings with tech yield/commerce changes have minimum gains from techs: Ancient/Classical/... - 2/3/...
+	def checkBuildingTechChanges(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iEra = self.HF.checkBuildingEra(CvBuildingInfo)
+	
+			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE") == -1:
+				for entry in CvBuildingInfo.getTechYieldChanges100():
+					iTechEra = GC.getTechInfo(entry.eTech).getEra()+1 #Prehistoric enum is 0, so shifting it by 1.
+					if entry.value > 0 and entry.value < 100*iTechEra:
+						self.log(CvBuildingInfo.getType()+" tech yield changes "+GC.getTechInfo(entry.eTech).getType()+" "+GC.getYieldInfo(entry.eYield).getType()+" current/excepted "+str(entry.value)+"/"+str(100*iTechEra))
+
+				for entry in CvBuildingInfo.getTechCommerceChanges100():
+					iTechEra = GC.getTechInfo(entry.eTech).getEra()+1
+					if entry.value > 0 and entry.value < 100*iTechEra:
+						self.log(CvBuildingInfo.getType()+" tech commerce changes "+GC.getTechInfo(entry.eTech).getType()+" "+GC.getCommerceInfo(entry.eCommerce).getType()+" current/excepted "+str(entry.value)+"/"+str(100*iTechEra))
 
 	#Tech - Check if techs have proper costs
 	def checkTechCosts(self):

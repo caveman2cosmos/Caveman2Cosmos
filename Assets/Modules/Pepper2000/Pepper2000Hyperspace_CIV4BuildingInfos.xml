@@ -116,7 +116,6 @@
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
 			<PrereqInCityBuildings>
@@ -524,7 +523,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_TRANSFINITE_COMPUTATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -807,7 +806,6 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 				<iYield>500</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bAutoBuild>1</bAutoBuild>
@@ -833,7 +831,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_SUBDIMENSIONAL_UNIVERSE</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1013,7 +1011,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>75</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
@@ -1317,7 +1314,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -1331,7 +1328,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -1345,7 +1342,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_UNIVERSAL_SINGULARITY</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

@@ -166,13 +166,13 @@
 				<TechCommerceChange>
 					<TechType>TECH_LAUNCH_ARCOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COLONY_ARCOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -271,7 +271,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_OPTRONICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -788,7 +788,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
@@ -822,7 +821,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_THERMAL_NEGATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1002,7 +1001,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>100</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>

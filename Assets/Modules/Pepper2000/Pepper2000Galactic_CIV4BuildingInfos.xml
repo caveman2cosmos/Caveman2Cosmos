@@ -126,8 +126,8 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 					<TechYield>
-						<iYield>300</iYield>
-						<iYield>300</iYield>
+						<iYield>1200</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -158,7 +158,7 @@
 					<PrereqTech>TECH_3D_PROJECTIONS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -509,19 +509,19 @@
 				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_GRAND_UNIFICATION_BIOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_PARTICLE_GENETICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -555,25 +555,25 @@
 				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_ECOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIRECTED_PANSPERMIA</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_GRAND_UNIFICATION_BIOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_PARTICLE_GENETICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -639,7 +639,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_GRAVITRONICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -865,19 +865,19 @@
 				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_FEDERATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ASTROIMPERIALISM</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_GALACTIC_WARFARE</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1403,7 +1403,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_SPIRITUAL_REALMS</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1749,7 +1749,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_MATERIALIZATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2023,28 +2023,28 @@
 					<PrereqTech>TECH_FEMTOTECHNOLOGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_GRAVITRONICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_APPLIED_RELATIVITY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -2213,7 +2213,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_SPECIES_AMALGAMATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2255,7 +2255,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_EXPERIMENTAL_COSMOLOGY</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3111,12 +3111,10 @@
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
 				<iCommerce>25</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NOOCRACY</BuildingType>
@@ -3283,35 +3281,35 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_DARK_MATTER_ENGINEERING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_PLANETS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -3319,7 +3317,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_GRAVITRONICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3448,7 +3446,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -3456,7 +3454,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -3465,13 +3463,13 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_TACHYON_COMMUNICATIONS</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -3480,7 +3478,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -3489,7 +3487,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3606,14 +3604,14 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_PLANET_SCOUTING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -4157,7 +4155,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NOOCRACY</BuildingType>
@@ -4195,21 +4192,21 @@
 				<TechCommerceChange>
 					<TechType>TECH_SPACETIME_ECONOMICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ULTRACOMPUTING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_UNIFICATION_MATHEMATICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -4217,7 +4214,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -4226,13 +4223,13 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTRONIUM_UNIVERSE</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -4827,7 +4824,7 @@
 					<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -5223,7 +5220,7 @@
 					<TechType>TECH_PARTICLE_GENETICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -5759,7 +5756,7 @@
 					<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -5951,7 +5948,7 @@
 					<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -5959,7 +5956,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_GRAVITRONICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6022,7 +6019,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_LUMINAL_BEINGS</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6419,14 +6416,13 @@
 			<YieldChanges>
 				<iYield>15</iYield>
 				<iYield>25</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_JOVIAN_TERRAFORMING</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6497,7 +6493,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_GRAVITY_CONTROL</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6548,7 +6544,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_TRANSDIMENSIONAL_COMMERCE</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6970,8 +6966,6 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>15</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
@@ -7155,7 +7149,7 @@
 					<PrereqTech>TECH_STRING_MANIPULATION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1300</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -7163,7 +7157,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -7267,7 +7261,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_METAVERSE</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -7323,7 +7317,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -7331,7 +7325,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -7339,7 +7333,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1200</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -7400,7 +7394,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_MATERIALIZATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

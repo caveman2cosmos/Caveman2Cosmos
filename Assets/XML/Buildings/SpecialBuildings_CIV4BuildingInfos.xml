@@ -247,8 +247,6 @@
 			<StateReligionCommerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</StateReligionCommerces>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3280,7 +3278,6 @@
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>-3</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<iInsidiousness>20</iInsidiousness>
 			<UnitCombatFreeExperiences>
@@ -5455,7 +5452,6 @@
 			<YieldModifiers>
 				<iYield>-2</iYield>
 				<iYield>-3</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5482,7 +5478,6 @@
 			<YieldModifiers>
 				<iYield>-1</iYield>
 				<iYield>-2</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -5676,40 +5671,40 @@
 				<TechCommerceChange>
 					<TechType>TECH_WEARABLE_COMPUTERS</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIGITIZATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_CYBERWARFARE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_AUTOMATED_TRAFFIC</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>900</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -14798,7 +14793,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -14807,7 +14802,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -14816,7 +14811,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

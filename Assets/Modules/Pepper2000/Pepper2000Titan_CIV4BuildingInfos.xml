@@ -250,7 +250,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TITAN_BASE</BuildingType>
@@ -278,7 +277,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TITAN_BASE</BuildingType>
