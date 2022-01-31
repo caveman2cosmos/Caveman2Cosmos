@@ -379,7 +379,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -1366,8 +1366,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -1632,8 +1632,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
@@ -1675,8 +1675,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
@@ -2644,7 +2644,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PRIMATE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_PRIMATE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRIMATE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2786,7 +2786,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2835,7 +2835,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
