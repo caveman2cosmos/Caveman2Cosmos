@@ -5006,12 +5006,16 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WELFARE_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqAndCivics>
+			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_SOCIALIZED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
-			</PrereqAndCivics>
+				<PrereqCivic>
+					<CivicOption>CIVIC_ECO_FRIENDLY</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iInsidiousness>1</iInsidiousness>
 			<iHappiness>-1</iHappiness>
