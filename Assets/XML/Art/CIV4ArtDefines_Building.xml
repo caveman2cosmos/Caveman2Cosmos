@@ -47002,7 +47002,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Craft/art/carrion.dds</Button>
+			<Button>art/Craft/art/carrion_processor.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
