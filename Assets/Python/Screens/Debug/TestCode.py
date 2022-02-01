@@ -67,6 +67,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listStandaloneBuildings, "Building - list stand-alone buildings", "List regular non religious/civic buildings, that aren't part of replacement chain")
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
+		self.main.addTestCode(screen, self.countBonusProducers, "Building - list amount of bonus providers", "List how many buildings provide bonuses")
 		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
 
 	#Building requirements of buildings
@@ -3670,6 +3671,7 @@ class TestCode:
 						else:
 							self.log(str(iTechLoc)+" tech column, "+CvBuildingInfo.getType()+" is stand-alone, required by "+str(iUsedBy)+" buildings, obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType())
 
+	#List how many buildings got unlocked/obsoleted
 	def countUnlockedObsoletedBuildings(self):
 		#Array length is amount of tech columns
 		iTotalTechTreeLength = GC.getTechInfo(GC.getInfoTypeForString("TECH_FUTURE_TECH")).getGridX()
@@ -3688,6 +3690,20 @@ class TestCode:
 		for i in xrange(iTotalTechTreeLength):
 			iTotalActiveBuildings = iTotalActiveBuildings + aUnlockedBuildingsTechLoc[i] - aObsoletedBuildingsTechLoc[i]
 			self.log("XGrid: "+str(i)+" Unlocked: "+str(aUnlockedBuildingsTechLoc[i])+" Obsoleted: "+str(aObsoletedBuildingsTechLoc[i])+" Available buildings: "+str(iTotalActiveBuildings))
+
+	#List how many buildings provide bonuses
+	def countBonusProducers(self):
+		aBonusEnums = [0]*GC.getNumBonusInfos()
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories(): #Count only Earthly producers
+				for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
+					aBonusEnums[iBonus] += 1
+
+		for i in xrange(len(aBonusEnums)):
+			if aBonusEnums[i] > 1: #If there are multiple providers
+				self.log(str(aBonusEnums[i])+" "+GC.getBonusInfo(i).getType()+" providers")
 
 	#List taxonomy buildings, that doesn't have all potential base folklore requirements
 	def checkTaxonomyBuildings(self):
