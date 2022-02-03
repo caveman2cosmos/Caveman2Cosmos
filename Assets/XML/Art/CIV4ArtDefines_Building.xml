@@ -47134,5 +47134,15 @@
 			<KFM/>
 			<Button>art/Fossils/art/fossilammonite.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUG_SELLER</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>art/Crops/Art/kavaplantation.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
