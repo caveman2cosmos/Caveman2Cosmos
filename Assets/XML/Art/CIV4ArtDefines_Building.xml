@@ -47124,5 +47124,15 @@
 			<KFM/>
 			<Button>art/Farming/Art/seedcamp.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FOSSIL_SELLER</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>art/Fossils/art/fossilammonite.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
