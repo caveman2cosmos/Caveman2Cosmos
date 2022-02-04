@@ -46995,7 +46995,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_llama.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARRION_PROCESSOR</Type>
+			<Type>ART_DEF_BUILDING_CARRION_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47005,7 +47005,7 @@
 			<Button>art/Craft/art/carrion_processor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BUG_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_BUG_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47015,7 +47015,7 @@
 			<Button>art/Craft/Art/bugcatcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FRUIT_SELLER</Type>
+			<Type>ART_DEF_BUILDING_FRUIT_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47025,7 +47025,7 @@
 			<Button>art/Crops/art/avocadoplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VEGETABLE_SELLER</Type>
+			<Type>ART_DEF_BUILDING_VEGETABLE_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47035,7 +47035,7 @@
 			<Button>art/Crops/Art/artichokefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEASONING_SELLER</Type>
+			<Type>ART_DEF_BUILDING_SEASONING_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47045,7 +47045,7 @@
 			<Button>art/Crops/Art/acaciagrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FEATHER_SELLER</Type>
+			<Type>ART_DEF_BUILDING_FEATHER_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47055,7 +47055,7 @@
 			<Button>Art/Interface/Buttons/Buildings/featherhut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FLOWER_SELLER</Type>
+			<Type>ART_DEF_BUILDING_FLOWER_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47065,7 +47065,7 @@
 			<Button>art/Farming/Art/florist.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PELT_SELLER</Type>
+			<Type>ART_DEF_BUILDING_PELT_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47075,7 +47075,7 @@
 			<Button>art/Craft/art/animaltraps.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GEMSTONE_SELLER</Type>
+			<Type>ART_DEF_BUILDING_GEMSTONE_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47085,7 +47085,7 @@
 			<Button>art/Craft/Art/gemcutter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IVORY_SELLER</Type>
+			<Type>ART_DEF_BUILDING_IVORY_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47095,7 +47095,7 @@
 			<Button>Art/Interface/Buttons/Buildings/elephantherd.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NUTS_SELLER</Type>
+			<Type>ART_DEF_BUILDING_NUTS_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47105,7 +47105,7 @@
 			<Button>art/Crops/art/almondgrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FISH_SELLER</Type>
+			<Type>ART_DEF_BUILDING_FISH_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47115,7 +47115,7 @@
 			<Button>art/Seafood/Art/eeltraps.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GRAIN_SELLER</Type>
+			<Type>ART_DEF_BUILDING_GRAIN_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47125,7 +47125,7 @@
 			<Button>art/Farming/Art/seedcamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOSSIL_SELLER</Type>
+			<Type>ART_DEF_BUILDING_FOSSIL_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47135,7 +47135,7 @@
 			<Button>art/Fossils/art/fossilammonite.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUG_SELLER</Type>
+			<Type>ART_DEF_BUILDING_DRUG_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47145,7 +47145,7 @@
 			<Button>art/Crops/Art/kavaplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHELLFISH_SELLER</Type>
+			<Type>ART_DEF_BUILDING_SHELLFISH_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47155,7 +47155,7 @@
 			<Button>art/Seafood/Art/lobstertraps.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGG_SELLER</Type>
+			<Type>ART_DEF_BUILDING_EGG_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47175,7 +47175,7 @@
 			<Button>art/Crops/Art/elderberryfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POISON_SELLER</Type>
+			<Type>ART_DEF_BUILDING_POISON_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47185,7 +47185,7 @@
 			<Button>art/Poison/Art/belladonna.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FLOUR_SELLER</Type>
+			<Type>ART_DEF_BUILDING_FLOUR_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47195,7 +47195,7 @@
 			<Button>art/Craft/Art/quern.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WOOD_SELLER</Type>
+			<Type>ART_DEF_BUILDING_WOOD_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47205,7 +47205,7 @@
 			<Button>art/Craft/art/lumbercamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SALT_SELLER</Type>
+			<Type>ART_DEF_BUILDING_SALT_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
