@@ -341,7 +341,7 @@
 	<ElementType name="iCombatModifierPerVolumeLessChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iSelfHealModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumHealSupport" content="textOnly" dt:type="int"/>
-	<ElementType name="iExcileChange" content="textOnly" dt:type="int"/><!-- 1 or -1 to shift to true or to remove true-->
+	<ElementType name="iExileChange" content="textOnly" dt:type="int"/><!-- 1 or -1 to shift to true or to remove true-->
 	<ElementType name="iPassageChange" content="textOnly" dt:type="int"/><!-- 1 or -1 to shift to true or to remove true-->
 	<ElementType name="iNoNonOwnedCityEntryChange" content="textOnly" dt:type="int"/><!-- 1 or -1 to shift to true or to remove true-->
 	<ElementType name="iBarbCoExistChange" content="textOnly" dt:type="int"/><!-- 1 or -1 to shift to true or to remove true-->
@@ -424,7 +424,7 @@
 	<ElementType name="bHealsAs" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoSelfHeal" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bBuildUp" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bExcile" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bExile" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPassage" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoNonOwnedCityEntry" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bBarbCoExist" content="textOnly" dt:type="boolean"/>
@@ -1866,7 +1866,7 @@
 		<element type="bFreeDrop" minOccurs="0"/><!--Unused in code-->
 		<!--TB Converted TLOTags End-->
 		<element type="bNoSelfHeal" minOccurs="0"/>
-		<element type="bExcile" minOccurs="0"/>
+		<element type="bExile" minOccurs="0"/>
 		<element type="bPassage" minOccurs="0"/>
 		<element type="bNoNonOwnedCityEntry" minOccurs="0"/>
 		<element type="bBarbCoExist" minOccurs="0"/>
@@ -2476,7 +2476,7 @@
 		<element type="iCombatModifierPerSizeLessChange" minOccurs="0"/>
 		<element type="iCombatModifierPerVolumeMoreChange" minOccurs="0"/>
 		<element type="iCombatModifierPerVolumeLessChange" minOccurs="0"/>
-		<element type="iExcileChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
+		<element type="iExileChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
 		<element type="iPassageChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
 		<element type="iNoNonOwnedCityEntryChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
 		<element type="iBarbCoExistChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
@@ -2998,7 +2998,7 @@
 		<element type="iCombatModifierPerSizeLessChange" minOccurs="0"/>
 		<element type="iCombatModifierPerVolumeMoreChange" minOccurs="0"/>
 		<element type="iCombatModifierPerVolumeLessChange" minOccurs="0"/>
-		<element type="iExcileChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
+		<element type="iExileChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
 		<element type="iPassageChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
 		<element type="iNoNonOwnedCityEntryChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->
 		<element type="iBarbCoExistChange" minOccurs="0"/><!-- 1 or -1 to shift to true or to remove true-->

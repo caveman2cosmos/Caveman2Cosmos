@@ -1891,7 +1891,7 @@ protected:
 	int m_iExtraNumHealSupport;
 	int m_iHealSupportUsed;
 	int m_iNoSelfHealCount;
-	int m_iExcileCount;
+	int m_iExileCount;
 	int m_iPassageCount;
 	int m_iNoNonOwnedCityEntryCount;
 	int m_iBarbCoExistCount;
@@ -2756,8 +2756,8 @@ public:
 	bool hasBuild(BuildTypes eBuild) const;
 	void changeExtraBuildType(bool bChange, BuildTypes eBuild);
 
-	bool isExcile() const;
-	void changeExcileCount(int iChange);
+	bool isExile() const;
+	void changeExileCount(int iChange);
 
 	bool isPassage() const;
 	void changePassageCount(int iChange);
