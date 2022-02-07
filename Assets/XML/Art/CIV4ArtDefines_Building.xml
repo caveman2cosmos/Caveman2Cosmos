@@ -46995,7 +46995,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/national_breeder_llama.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARRION_PROVIDER</Type>
+			<Type>ART_DEF_BUILDING_CARCASS_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47165,7 +47165,7 @@
 			<Button>Art/Interface/Buttons/Buildings/nestthief.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BERRIES_SELLER_FARM</Type>
+			<Type>ART_DEF_BUILDING_BERRIES_PROVIDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47213,6 +47213,16 @@
 			<NIF/>
 			<KFM/>
 			<Button>Art\Interface\Buttons\Buildings\saltevaporationpond.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BONE_PROVIDER</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>art/Craft/Art/slaughterhouse.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

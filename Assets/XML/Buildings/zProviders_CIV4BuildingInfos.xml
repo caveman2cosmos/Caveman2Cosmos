@@ -4,9 +4,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_BERRIES_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_BERRIES_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BERRIES_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BERRIES_SELLER_FARM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BERRIES_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -35,9 +35,37 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_BONE_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_BONE_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_BONE_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BLACKWATER_DRAW</BuildingType>
+				<BuildingType>BUILDING_SLAUGHTERHOUSE</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_BUG_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_BUG_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BUG_PROVIDER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_PROVIDER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -110,11 +138,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CARRION_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_CARRION_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CARRION_PROVIDER_PEDIA</Civilopedia>
+			<Type>BUILDING_CARCASS_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_CARCASS_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CARRION_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARCASS_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -205,16 +233,12 @@
 					<FreeBonus>BONUS_CARCASS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRUG_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_DRUG_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DRUG_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUG_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -251,7 +275,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EGG_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_EGG_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGG_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EGG_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -288,7 +312,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_FEATHER_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FEATHER_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
@@ -334,7 +358,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FISH_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FISH_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FISH_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -373,7 +397,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FLOWER_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FLOWER_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FLOWER_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOWER_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -418,7 +442,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FLOUR_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FLOUR_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FLOUR_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOUR_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -449,7 +473,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FOSSIL_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FOSSIL_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOSSIL_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOSSIL_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -488,7 +512,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FRUIT_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FRUIT_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FRUIT_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRUIT_PROVIDER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -558,7 +582,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GEMSTONE_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_GEMSTONE_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GEMSTONE_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GEMSTONE_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -601,7 +625,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GRAIN_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_GRAIN_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRAIN_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAIN_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -643,7 +667,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_IVORY_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IVORY_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
@@ -682,7 +706,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NUTS_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_NUTS_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NUTS_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUTS_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -722,7 +746,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PELT_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_PELT_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PELT_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PELT_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -769,7 +793,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_POISON_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_POISON_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_POISON_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POISON_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -804,7 +828,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SALT_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SALT_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
@@ -831,7 +855,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEASONING_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_SEASONING_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SEASONING_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEASONING_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -880,7 +904,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SHELLFISH_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_SHELLFISH_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHELLFISH_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELLFISH_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -916,7 +940,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_VEGETABLE_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_VEGETABLE_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VEGETABLE_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VEGETABLE_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -967,7 +991,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WOOD_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_WOOD_PROVIDER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WOOD_SELLER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOOD_PROVIDER</ArtDefineTag>
 			<MapCategoryTypes>
