@@ -24295,7 +24295,7 @@ void CvCity::doPropertyUnitSpawn()
 					if (pUnit != NULL)
 					{
 						FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-						if (pUnit->isExcile())
+						if (pUnit->isExile())
 						{
 							pUnit->jumpToNearestValidPlot(false);
 						}

@@ -305,7 +305,7 @@ m_bIgnoreZoneofControl(false),
 m_bFliesToMove(false),
 m_bRBombardForceAbility(false),
 m_bNoSelfHeal(false),
-m_bExcile(false),
+m_bExile(false),
 m_bPassage(false),
 m_bNoNonOwnedCityEntry(false),
 m_bBarbCoExist(false),
@@ -2474,9 +2474,9 @@ bool CvUnitInfo::isNoSelfHeal() const
 	return m_bNoSelfHeal;
 }
 
-bool CvUnitInfo::isExcile() const
+bool CvUnitInfo::isExile() const
 {
-	return m_bExcile;
+	return m_bExile;
 }
 
 bool CvUnitInfo::isPassage() const
@@ -3900,7 +3900,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bFliesToMove);
 	CheckSum(iSum, m_bRBombardForceAbility);
 	CheckSum(iSum, m_bNoSelfHeal);
-	CheckSum(iSum, m_bExcile);
+	CheckSum(iSum, m_bExile);
 	CheckSum(iSum, m_bPassage);
 	CheckSum(iSum, m_bNoNonOwnedCityEntry);
 	CheckSum(iSum, m_bBarbCoExist);
@@ -4571,7 +4571,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFliesToMove, L"bFliesToMove");
 	pXML->GetOptionalChildXmlValByName(&m_bRBombardForceAbility, L"bRBombardForceAbility");
 	pXML->GetOptionalChildXmlValByName(&m_bNoSelfHeal, L"bNoSelfHeal");
-	pXML->GetOptionalChildXmlValByName(&m_bExcile, L"bExcile");
+	pXML->GetOptionalChildXmlValByName(&m_bExile, L"bExile");
 	pXML->GetOptionalChildXmlValByName(&m_bPassage, L"bPassage");
 	pXML->GetOptionalChildXmlValByName(&m_bNoNonOwnedCityEntry, L"bNoNonOwnedCityEntry");
 	pXML->GetOptionalChildXmlValByName(&m_bBarbCoExist, L"bBarbCoExist");
@@ -5558,7 +5558,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bFliesToMove == bDefault ) m_bFliesToMove = pClassInfo->isFliesToMove();
 	if ( m_bRBombardForceAbility == bDefault ) m_bRBombardForceAbility = pClassInfo->isRBombardForceAbility();
 	if ( m_bNoSelfHeal == bDefault ) m_bNoSelfHeal = pClassInfo->isNoSelfHeal();
-	if ( m_bExcile == bDefault ) m_bExcile = pClassInfo->isExcile();
+	if ( m_bExile == bDefault ) m_bExile = pClassInfo->isExile();
 	if ( m_bPassage == bDefault ) m_bPassage = pClassInfo->isPassage();
 	if ( m_bNoNonOwnedCityEntry == bDefault ) m_bNoNonOwnedCityEntry = pClassInfo->isNoNonOwnedCityEntry();
 	if ( m_bBarbCoExist == bDefault ) m_bBarbCoExist = pClassInfo->isBarbCoExist();

@@ -762,6 +762,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eSpecialUnit = NO_SPECIALUNIT;
 	m_eSleepType = NO_MISSION;
 	m_iZoneOfControlCount = 0;
+	// @SAVEBREAK RENAME m_iExcileCount m_iExileCount
 	m_iExcileCount = 0;
 	m_iPassageCount = 0;
 	m_iNoNonOwnedCityEntryCount = 0;
@@ -1120,6 +1121,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_eSpecialUnit = other.m_eSpecialUnit;
 	m_eSleepType = other.m_eSleepType;
 	m_iZoneOfControlCount = other.m_iZoneOfControlCount;
+	// @SAVEBREAK RENAME m_iExcileCount m_iExileCount
 	m_iExcileCount = other.m_iExcileCount;
 	m_iPassageCount = other.m_iPassageCount;
 	m_iNoNonOwnedCityEntryCount = other.m_iNoNonOwnedCityEntryCount;
@@ -1895,7 +1897,7 @@ void CvUnit::doTurn()
 
 	setReconPlot(NULL);
 
-	if (isExcile() && (plot()->getOwner() == getOwner() || plot()->getOwner() == getOriginalOwner()))
+	if (isExile() && (plot()->getOwner() == getOwner() || plot()->getOwner() == getOriginalOwner()))
 	{
 		jumpToNearestValidPlot(false);
 	}
@@ -6011,7 +6013,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		return false;
 	}
 	// Exiled?
-	if (isExcile() && (pPlot->getOwner() == getOwner() || pPlot->getOwner() == getOriginalOwner()))
+	if (isExile() && (pPlot->getOwner() == getOwner() || pPlot->getOwner() == getOriginalOwner()))
 	{
 		return false;
 	}
@@ -21114,7 +21116,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraCombatModifierPerVolumeMore(kUnitCombat.getCombatModifierPerVolumeMoreChange() * iChange);//no merge/split
 	changeExtraCombatModifierPerVolumeLess(kUnitCombat.getCombatModifierPerVolumeLessChange() * iChange);//no merge/split
 	//
-	changeExcileCount(kUnitCombat.getExcileChange() * iChange);
+	changeExileCount(kUnitCombat.getExileChange() * iChange);
 	changePassageCount(kUnitCombat.getPassageChange() * iChange);
 	changeNoNonOwnedCityEntryCount(kUnitCombat.getNoNonOwnedCityEntryChange() * iChange);
 	changeBarbCoExistCount(kUnitCombat.getBarbCoExistChange() * iChange);
@@ -21706,7 +21708,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraBreakdownChance(kPromotion.getBreakdownChanceChange() * iChange);
 	changeExtraBreakdownDamage(kPromotion.getBreakdownDamageChange() * iChange);
 	changeExtraTaunt(kPromotion.getTauntChange() * iChange);
-	changeExcileCount(kPromotion.getExcileChange() * iChange);
+	changeExileCount(kPromotion.getExileChange() * iChange);
 	changePassageCount(kPromotion.getPassageChange() * iChange);
 	changeNoNonOwnedCityEntryCount(kPromotion.getNoNonOwnedCityEntryChange() * iChange);
 	changeBarbCoExistCount(kPromotion.getBarbCoExistChange() * iChange);
@@ -23606,6 +23608,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_bHasHNCapturePromotion);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eCapturingUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_eCapturingUnit.iID);
+	// @SAVEBREAK RENAME m_iExcileCount m_iExileCount
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExcileCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iPassageCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iNoNonOwnedCityEntryCount);
@@ -24560,6 +24563,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bHasHNCapturePromotion);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eCapturingUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eCapturingUnit.iID);
+	// @SAVEBREAK RENAME m_iExcileCount m_iExileCount
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExcileCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iPassageCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoNonOwnedCityEntryCount);
@@ -37422,18 +37426,20 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 	}
 }
 
-bool CvUnit::isExcile() const
+bool CvUnit::isExile() const
 {
+	// @SAVEBREAK RENAME m_iExcileCount m_iExileCount
 	int iCount = m_iExcileCount;
-	if (m_pUnitInfo->isExcile())
+	if (m_pUnitInfo->isExile())
 	{
 		iCount++;
 	}
 	return (iCount > 0);
 }
 
-void CvUnit::changeExcileCount(int iChange)
+void CvUnit::changeExileCount(int iChange)
 {
+	// @SAVEBREAK RENAME m_iExcileCount m_iExileCount
 	m_iExcileCount += iChange;
 }
 

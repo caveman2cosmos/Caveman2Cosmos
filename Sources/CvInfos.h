@@ -783,7 +783,7 @@ public:
 	int getCombatModifierPerVolumeLessChange() const;
 	int getSelfHealModifier() const;
 	int getNumHealSupport() const;
-	int getExcileChange() const;
+	int getExileChange() const;
 	int getPassageChange() const;
 	int getNoNonOwnedCityEntryChange() const;
 	int getBarbCoExistChange() const;
@@ -1280,7 +1280,7 @@ protected:
 	int m_iCombatModifierPerVolumeLessChange;
 	int m_iSelfHealModifier;
 	int m_iNumHealSupport;
-	int m_iExcileChange;
+	int m_iExileChange;
 	int m_iPassageChange;
 	int m_iNoNonOwnedCityEntryChange;
 	int m_iBarbCoExistChange;
@@ -1906,7 +1906,7 @@ public:
 	bool isFliesToMove() const;
 	bool isRBombardForceAbility() const;
 	bool isNoSelfHeal() const;
-	bool isExcile() const;
+	bool isExile() const;
 	bool isPassage() const;
 	bool isNoNonOwnedCityEntry() const;
 	bool isBarbCoExist() const;
@@ -2572,7 +2572,7 @@ private:
 	bool m_bFliesToMove;
 	bool m_bRBombardForceAbility;
 	bool m_bNoSelfHeal;
-	bool m_bExcile;
+	bool m_bExile;
 	bool m_bPassage;
 	bool m_bNoNonOwnedCityEntry;
 	bool m_bBarbCoExist;
@@ -8592,7 +8592,7 @@ public:
 	int getCombatModifierPerVolumeLessChange() const;
 	int getSelfHealModifier() const;
 	int getNumHealSupport() const;
-	int getExcileChange() const;
+	int getExileChange() const;
 	int getPassageChange() const;
 	int getNoNonOwnedCityEntryChange() const;
 	int getBarbCoExistChange() const;
@@ -8952,7 +8952,7 @@ protected:
 	int m_iCombatModifierPerVolumeLessChange;
 	int m_iSelfHealModifier;
 	int m_iNumHealSupport;
-	int m_iExcileChange;
+	int m_iExileChange;
 	int m_iPassageChange;
 	int m_iNoNonOwnedCityEntryChange;
 	int m_iBarbCoExistChange;
