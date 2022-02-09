@@ -14821,7 +14821,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/buttons/buildings/ExilePracticesBuilding.dds</Button>
+			<Button>art/buttons/buildings/ExcilePracticesBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EXCREMENT_HOLES</Type>
