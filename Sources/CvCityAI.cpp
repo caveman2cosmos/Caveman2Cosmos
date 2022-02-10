@@ -8092,7 +8092,11 @@ void CvCityAI::AI_updateBestBuild()
 		optimalYieldList[iPlotCounter].index = iPlotCounter;
 		CvPlot* loopedPlot = getCityIndexPlot(iPlotCounter);
 
-		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
+		if (NULL == loopedPlot || !(loopedPlot->getOwner() == getOwner()) || !(loopedPlot->getWorkingCity() == this)) {
+			m_aeBestBuild[iPlotCounter] = NO_BUILD;
+			m_aiBestBuildValue[iPlotCounter] = 0;
+			continue;
+		}
 
 		optimalYieldList[iPlotCounter].value = m_aiBestBuildValue[iPlotCounter];
 		optimalYieldList[iPlotCounter].currentBuild = m_aeBestBuild[iPlotCounter];

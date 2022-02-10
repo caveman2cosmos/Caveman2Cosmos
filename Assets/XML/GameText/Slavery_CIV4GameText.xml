@@ -3,16 +3,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVERY</Tag>
 		<English>Worldview - Slavery active</English>
-		<French>
-			<Text>Vision du monde - Activité d'Esclavage</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Concezione del mondo - Schiavismo attivo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Vision du monde - Activité d'Esclavage</French>
+		<Italian>Concezione del mondo - Schiavismo attivo</Italian>
 		<Polish>Swiatopogląd - Niewolnictwo aktywne</Polish>
 		<Russian>Ðàáû</Russian>
 	</TEXT>
@@ -20,11 +12,7 @@
 		<Tag>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Tag>
 		<English>Worldview - Slavery (Zoroastrianism I)</English>
 		<French>Vision du monde - Esclavage (Zoroastrisme I)</French>
-		<Italian>
-			<Text>Concezione del mondo - Schiavismo (Zoroastrismo I)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Concezione del mondo - Schiavismo (Zoroastrismo I)</Italian>
 		<Polish>Swiatopogląd - Niewolnictwo (Zaratusztrianizm I)</Polish>
 		<Russian>Ðàáû (çîðîàñòðèçì I)</Russian>
 	</TEXT>
@@ -32,11 +20,7 @@
 		<Tag>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Tag>
 		<English>Worldview - Slavery (Zoroastrianism II)</English>
 		<French>Vision du monde - Esclavage (Zoroastrisme II)</French>
-		<Italian>
-			<Text>Concezione del mondo - Schiavismo (Zoroastrismo II)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Concezione del mondo - Schiavismo (Zoroastrismo II)</Italian>
 		<Polish>Swiatopogląd - Niewolnictwo (Zaratusztrianizm II)</Polish>
 		<Russian>Ðàáû (çîðîàñòðèçì II)</Russian>
 	</TEXT>
@@ -50,32 +34,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND</Tag>
 		<English>Slave Compound</English>
-		<French>
-			<Text>Camp d'esclaves</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves</French>
+		<Italian>Baracca degli schiavi</Italian>
 		<Polish>Baraki Niewolników</Polish>
 		<Russian>Ðàáñêèé òðóä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_COMMERCE</Tag>
 		<English>Slave Compound - Commerce</English>
-		<French>
-			<Text>Camp d'esclaves - Commerce</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Commercio</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves - Commerce</French>
+		<Italian>Baracca degli schiavi - Commercio</Italian>
 		<Polish>Baraki Niewolników - Handel</Polish>
 		<Russian>Ðàá. òðóä (òîðãîâëÿ)</Russian>
 	</TEXT>
@@ -87,32 +55,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Tag>
 		<English>Slave Compound - Entertainment</English>
-		<French>
-			<Text>Camp d'esclaves - Divertissement</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Intrattenimento</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves - Divertissement</French>
+		<Italian>Baracca degli schiavi - Intrattenimento</Italian>
 		<Polish>Baraki Niewolników - Rozrywka</Polish>
 		<Russian>Ðàá. òðóä (ðàçâëå÷åíèÿ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_FOOD</Tag>
 		<English>Slave Compound - Food</English>
-		<French>
-			<Text>Camp d'esclaves - Nourriture</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Cibo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves - Nourriture</French>
+		<Italian>Baracca degli schiavi - Cibo</Italian>
 		<Polish>Baraki Niewolników - Produkcja Zywności</Polish>
 		<Russian>Ðàá. òðóä (ïëàíòàöèè)</Russian>
 	</TEXT>
@@ -127,16 +79,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Tag>
 		<English>Slave Compound - Military Support</English>
-		<French>
-			<Text>Camp d'esclaves - Soutien Militaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Supporto militare</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves - Soutien Militaire</French>
+		<Italian>Baracca degli schiavi - Supporto militare</Italian>
 		<Polish>Baraki Niewolników - Wsparcie Wojskowe</Polish>
 		<Russian>Ðàá. òðóä (âîåí. äåëî)</Russian>
 	</TEXT>
@@ -151,32 +95,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_PRODUCTION</Tag>
 		<English>Slave Compound - Industry</English>
-		<French>
-			<Text>Camp d'esclaves - Industrie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Industria</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves - Industrie</French>
+		<Italian>Baracca degli schiavi - Industria</Italian>
 		<Polish>Baraki Niewolników - Przemysł</Polish>
 		<Russian>Ðàá. òðóä (ìàñòåðñêèå)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_SANITATION</Tag>
 		<English>Slave Compound - Sanitation</English>
-		<French>
-			<Text>Camp d'esclaves - Assainissement</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Sanità</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Camp d'esclaves - Assainissement</French>
+		<Italian>Baracca degli schiavi - Sanità</Italian>
 		<Polish>Baraki Niewolników (Sprzątanie)</Polish>
 		<Russian>Ðàá. òðóä (óáîðêà)</Russian>
 	</TEXT>
@@ -191,16 +119,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY</Tag>
 		<English>Worldview - Slavery</English>
-		<French>
-			<Text>Vision du monde - Esclavage</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Concezione del mondo - Schiavismo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<French>Vision du monde - Esclavage</French>
+		<Italian>Concezione del mondo - Schiavismo</Italian>
 		<Polish>Swiatopogląd - Niewolnictwo</Polish>
 		<Russian>Ðàáîâëàäåíèå</Russian>
 	</TEXT>
@@ -208,7 +128,7 @@
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to sell captives into slavery.</English>
 		<French>[ICON_BULLET]vous permet de vendre les prisonniers en tant qu'esclaves.</French>
-		<Italian>Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
+		<Italian>[ICON_BULLET]Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
 		<Polish>Pozwala na sprzedaż jeńców w niewolę.</Polish>
 		<Russian>Ïîçâîëÿåò âàì ïðîäàâàòü ïëåííèêîâ â ðàáñòâî.</Russian>
 	</TEXT>
@@ -506,11 +426,7 @@
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_CITIZEN</Tag>
 		<English>Settled Citizen</English>
 		<French>Citoyen sédentaire</French>
-		<Italian>
-			<Text>Cittadino sedentario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cittadino sedentario</Italian>
 		<Polish>Osiadły Obywatel</Polish>
 		<Russian>Ïîñåëåíåö</Russian>
 	</TEXT>
@@ -525,11 +441,7 @@
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE</Tag>
 		<English>Settled Slave</English>
 		<French>Esclave sédentaire</French>
-		<Italian>
-			<Text>Schiavo sedentario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario</Italian>
 		<Polish>Osiadły Niewolnik</Polish>
 		<Russian>Ïëåííèê</Russian>
 	</TEXT>
@@ -538,11 +450,7 @@
 		<English>Settled Slave (Commerce)</English>
 		<French>Esclave sédentaire (Commerçant)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Commercio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Commercio</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Bogactwo)</Polish>
 		<Russian>Ðàá (äåíüãè)</Russian>
@@ -557,11 +465,7 @@
 		<English>Settled Slave (Entertainment)</English>
 		<French>Esclave sédentaire (Comédien)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Intrattenimento</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Intrattenimento</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Rozrywka)</Polish>
 		<Russian>Ðàá (êóëüòóðà)</Russian>
@@ -571,11 +475,7 @@
 		<English>Settled Slave (Food)</English>
 		<French>Esclave sédentaire (nourriture)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Cibo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Cibo</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Żywność)</Polish>
 		<Russian>Ðàá (ïèùà)</Russian>
@@ -585,11 +485,7 @@
 		<English>Settled Slave (Health)</English>
 		<French>Esclave sédentaire (Docteur)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Salute</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Salute</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Zdrowie)</Polish>
 		<Russian>Ðàá (çäîðîâüå)</Russian>
@@ -599,11 +495,7 @@
 		<English>Settled Slave (Military)</English>
 		<French>Esclave sédentaire (Militaire)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Militare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Militare</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Wojsko)</Polish>
 		<Russian>Ðàá (âîåí. ïðîä.)</Russian>
@@ -620,11 +512,7 @@
 		<English>Settled Slave (Production)</English>
 		<French>Esclave sédentaire (Production)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Produzione</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Produzione</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Produkcja)</Polish>
 		<Russian>Ðàá (ïðîäóêöèÿ)</Russian>
@@ -639,11 +527,7 @@
 		<English>Settled Slave (Tutor)</English>
 		<French>Esclave sédentaire (Formateur)</French>
 		<German>Settled Citizen</German>
-		<Italian>
-			<Text>Schiavo sedentario - Insegnante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Schiavo sedentario - Insegnante</Italian>
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Nauczyciel)</Polish>
 		<Russian>Ðàá (íàóêà)</Russian>

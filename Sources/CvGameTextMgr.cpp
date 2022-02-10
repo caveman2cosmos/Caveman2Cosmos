@@ -9042,7 +9042,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		{
 			if (pPlot->isPeak())
 			{
-				szString.append(gDLL->getText("TXT_KEY_PLOT_PEAK"));
+				szString.append(gDLL->getText("TXT_WORD_PEAK"));
 				szString.append(L"/");
 			}
 			else if (pPlot->isWater())
@@ -9052,7 +9052,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 			else if (pPlot->isHills())
 			{
-				szString.append(gDLL->getText("TXT_KEY_PLOT_HILLS"));
+				szString.append(gDLL->getText("TXT_WORD_HILL"));
+				szString.append(L"/");
 			}
 
 			if (pPlot->getFeatureType() != NO_FEATURE)
@@ -22638,10 +22639,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						szBuffer.append(CvWString::format(L"\n%c", gDLL->getSymbolID(BULLET_CHAR)));
 						switch (pair.first)
 						{
-							case PLOT_PEAK: szBuffer.append(gDLL->getText("TXT_KEY_PLOT_PEAK")); break;
-							case PLOT_HILLS: szBuffer.append(gDLL->getText("TXT_KEY_PLOT_HILLS")); break;
-							case PLOT_LAND: szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FLATLAND")); break;
-							case PLOT_OCEAN: szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_WATER_PLOTS")); break;
+							case PLOT_PEAK: szBuffer.append(gDLL->getText("TXT_KEY_PLOTS_PEAK")); break;
+							case PLOT_HILLS: szBuffer.append(gDLL->getText("TXT_KEY_PLOTS_HILL")); break;
+							case PLOT_LAND: szBuffer.append(gDLL->getText("TXT_KEY_PLOTS_FLATLAND")); break;
+							case PLOT_OCEAN: szBuffer.append(gDLL->getText("TXT_KEY_PLOTS_WATER")); break;
 						}
 						bFirst = false;
 

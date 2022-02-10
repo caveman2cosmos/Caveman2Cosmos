@@ -333,8 +333,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -753,14 +751,14 @@
 					<TechType>TECH_EXOPLANET_DISCOVERY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2223,70 +2221,70 @@
 					<TechType>TECH_EARLY_COMPUTING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_TELEVISION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_LASER</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTER_SCIENCE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_MICROPROCESSOR</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_RADIO_ASTRONOMY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTER_NETWORKS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ELECTRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_SOLAR_POWER</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMMUNICATION_NETWORKS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2644,9 +2642,6 @@
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -3699,12 +3694,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -4595,13 +4584,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -5214,35 +5201,35 @@
 					<TechType>TECH_AUTONOMOUS_VEHICLES</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTER_NETWORKS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_BRAIN_MACHINE_INTERFACE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -5369,8 +5356,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -5851,15 +5836,9 @@
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -6175,7 +6154,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6183,7 +6162,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6191,7 +6170,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6199,7 +6178,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6207,7 +6186,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6215,7 +6194,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6535,7 +6514,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_TOURISM</TechType>
 					<CommercePercents>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6915,12 +6894,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -7373,13 +7346,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -7602,7 +7573,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7610,7 +7581,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7618,7 +7589,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7626,7 +7597,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7634,7 +7605,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7642,7 +7613,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>400</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -7900,42 +7871,42 @@
 					<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_COMPOSITES</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>700</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>700</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -9275,7 +9246,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -9356,7 +9326,6 @@
 				<iCommerce>12</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -9773,12 +9742,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -10034,8 +9997,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ConstructSound>AS2D_BUILD_VOODOO</ConstructSound>
 			<Flavors>
@@ -12296,8 +12257,6 @@
 			<iCost>35430</iCost>
 			<YieldChanges>
 				<iYield>20</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -13214,7 +13173,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13222,7 +13181,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13230,7 +13189,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13238,7 +13197,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13246,7 +13205,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13254,7 +13213,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -13565,7 +13524,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -13778,14 +13736,14 @@
 					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ORGANIC_CHEMISTRY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>600</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -14345,12 +14303,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -14622,12 +14574,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -16864,7 +16810,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -16935,13 +16880,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -18555,7 +18498,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18563,7 +18506,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18571,7 +18514,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18579,7 +18522,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18587,7 +18530,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18595,7 +18538,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -18790,7 +18733,6 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>12</iCommerce>
 				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -19418,28 +19360,28 @@
 					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_QUANTUM_TELEPORTATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_UNIFICATION_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -19840,16 +19782,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -21120,13 +21056,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -22506,12 +22439,6 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>7080</iCost>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
-					<iNumFreeBonuses>3</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
@@ -22572,7 +22499,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>

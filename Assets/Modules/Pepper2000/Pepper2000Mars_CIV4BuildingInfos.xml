@@ -61,7 +61,7 @@
 					<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -174,7 +174,6 @@
 				<iCommerce>60</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -587,8 +586,6 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>10</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
@@ -892,7 +889,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_OPTRONICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1214,7 +1211,6 @@
 				<iCommerce>200</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<iHappiness>5</iHappiness>
 			<PrereqInCityBuildings>
@@ -1304,7 +1300,7 @@
 					<PrereqTech>TECH_ATOMIZATION_FIELD</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>1000</iYield>
+						<iYield>1100</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1450,8 +1446,6 @@
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<ReplacementBuildings>

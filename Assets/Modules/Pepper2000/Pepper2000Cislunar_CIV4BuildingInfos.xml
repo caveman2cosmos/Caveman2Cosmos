@@ -127,33 +127,31 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>5</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 					<TechYield>
-						<iYield>100</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 					<TechYield>
-						<iYield>100</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
 					<TechYield>
-						<iYield>100</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>100</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -239,7 +237,7 @@
 					<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -351,7 +349,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -460,7 +458,7 @@
 					<TechType>TECH_SOCIAL_CALCULUS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -469,7 +467,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -477,7 +475,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>1000</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -495,7 +493,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1100</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -591,28 +589,27 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>100</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>100</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>100</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -964,7 +961,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>500</iYield>
+						<iYield>1000</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -993,8 +990,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYield>
-						<iYield>100</iYield>
-						<iYield>0</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1053,7 +1049,7 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
 					<TechYield>
-						<iYield>100</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1123,7 +1119,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1273,7 +1269,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>900</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1282,7 +1278,7 @@
 					<TechType>TECH_KUIPER_BELT_EXPLORATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
