@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Tag>
+		<English>Can build Folklore, animal related buildings, fight for entertainment and spread their tales.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Tag>
+		<English>Can build animal related buildings.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIG_GAME_HUNTER</Tag>
 		<English>Big Game Hunter</English>
 		<French>Grand Chasseur</French>
