@@ -1286,7 +1286,7 @@ class Revolution:
 									negList.append( (holyCityBad, TRNSLTR.getText("TXT_KEY_REV_WATCH_HEATHENS",())) )
 									localRevIdx += holyCityBad
 
-					[relGoodMod,relBadMod] = RevUtils.getCivicsReligionMods(iPlayer)
+					[relGoodMod,relBadMod] = RevUtils.getCivicsReligionMods(pPlayer)
 					#phungus Rev Trait Effects
 					[traitRelGoodMod,traitRelBadMod] = RevUtils.getTraitsReligionMods(pPlayer)
 
