@@ -592,7 +592,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLOUR_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FLOUR_PROVIDER</Description>
