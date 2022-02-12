@@ -2,6 +2,35 @@
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
+			<Type>BUILDING_ALCOHOL_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_ALCOHOL_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ALCOHOL_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_FERMENTATION</PrereqTech>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FOOD_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BREWERY</BuildingType>
+				<BuildingType>BUILDING_CIDERHOUSE</BuildingType>
+				<BuildingType>BUILDING_DISTILLERY</BuildingType>
+				<BuildingType>BUILDING_WINERY</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ALCOHOL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ALUMINUM_INGOTS_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_ALUMINUM_INGOTS_PROVIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
@@ -259,6 +288,35 @@
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CHARCOAL_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_CHARCOAL_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CHARCOAL_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHARCOAL_FIRE</ObsoletesToBuilding>
+			<ObsoleteTech>TECH_FIRE_BRIGADES</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BONFIRE</BuildingType>
+				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
+				<BuildingType>BUILDING_IMU</BuildingType>
+				<BuildingType>BUILDING_NATURAL_WONDER_KRAKATOA</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CHARCOAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
