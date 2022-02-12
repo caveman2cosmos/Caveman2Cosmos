@@ -132,16 +132,6 @@
 			<iHappiness>1</iHappiness>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_OSTRICH_LEATHER</Type>
-			<Description>TXT_KEY_BONUS_OSTRICH_LEATHER</Description>
-			<Civilopedia>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_LEATHER</ArtDefineTag>
-			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
-			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
-			<iHappiness>1</iHappiness>
-		</BonusInfo>
-		<BonusInfo>
 			<Type>BONUS_RED_AND_BLACK_CERAMICS</Type>
 			<Description>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS</Description>
 			<Civilopedia>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS_PEDIA</Civilopedia>

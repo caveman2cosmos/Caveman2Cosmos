@@ -6448,19 +6448,6 @@
 		<Russian>Страусиные перья - одна из причин разведения страусов. Как правило, у страуса беловатые шея, голова и нижняя часть тела с толстым покровом черных или темно-коричневых перьев, венчающих всю спину. Перья самок почти однородно коричневые, а у самцов тело черное с белыми перьями на крыльях и хвосте. Страусиные перья, особенно длинные из птичьего хвоста и крыльев, были популярны на протяжении веков, в основном для шляп. Сегодня их мягкость делает их полезными для удаления пыли и очистки хрупких деталей машин.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER</Tag>
-		<English>Ostrich Leather</English>
-		<French>Cuir d'autruches</French>
-		<Italian>Pelli di struzzo</Italian>
-		<Russian>Òîíêàÿ êîæà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Tag>
-		<English>Ostrich leather is a tanned skin distinctively recognized for its pattern of bumps or vacant quill follicles, ranged across a smooth field in varying densities. Its production process is intricate, specialised and expensive. Although the first commercial farming began in South Africa in mid-19th century, by 1920s the industry was already collapsed because of a drop in demand. Other products were marketed, with each success battered by world events and droughts until 21st century, when ostrich skin is globally seen as a luxury item in high-end demand.</English>
-		<Italian>La pelle di struzzo è una pelle conciata riconoscibile per il particolare modello di protuberanze o follicoli di penna vuoti, che si estende su un campo liscio a varie densità. Il suo processo di produzione è complesso, specializzato e costoso. Sebbene le prime iniziative commerciali iniziarono in Sudafrica a metà del XIX secolo, negli anni venti del XX secolo l'industria era già crollata a causa di un calo della domanda. La commercializzazione ha continuato ad avere un andamento discontinuo fino al XXI secolo, quando la pelle di struzzo è stata considerata a livello globale come un oggetto di lusso di fascia alta.</Italian>
-		<Russian>Кожа страуса является конечным продуктом выделки шкурок, взятых из африканских страусов, выращиваемых ради их перьев, кожи и мяса. Кожа эта имеет отличительные для своего узора бугорки или свободное перо фолликул и варьируется через ровные поля в разной плотности. Она требует сложный, специализированный и дорогой производственный процесс, что делает его дорогостоящим и красивым.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OTTOMAN</Tag>
 		<English>Ottoman</English>
 		<French>Ottomane</French>
