@@ -543,12 +543,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_ADD</Tag>
-		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE</Tag>
-		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>

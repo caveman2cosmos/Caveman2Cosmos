@@ -1260,12 +1260,8 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<iCost>387</iCost>
 			<iMoves>1</iMoves>

@@ -5019,6 +5019,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MANGANESE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>250</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
