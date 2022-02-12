@@ -17053,12 +17053,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_RIVERROUGE</MovieDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
-					<iNumFreeBonuses>10</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bRiver>1</bRiver>
@@ -21753,12 +21747,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
-					<iNumFreeBonuses>3</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>

@@ -315,6 +315,32 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_CHEMICALS_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_CHEMICALS_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CHEMICALS_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICALS_DISTRICT</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CHEMICAL_PLANT</BuildingType>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CHEMICALS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_COPPER_INGOTS_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_COPPER_INGOTS_PROVIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>

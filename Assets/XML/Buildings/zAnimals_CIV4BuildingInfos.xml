@@ -908,12 +908,6 @@
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1415,12 +1409,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
