@@ -498,6 +498,32 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_FLINT_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_FLINT_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FLINT_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FLINT_QUARRY</BuildingType>
+				<BuildingType>BUILDING_NATURAL_WONDER_PAMUKKALE</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FLINT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_FLOWER_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FLOWER_PROVIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
@@ -540,7 +566,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<Type>BUILDING_FLOUR_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_FLOUR_PROVIDER</Description>
@@ -721,6 +747,33 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_GLASSWARE_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_GLASSWARE_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_GLASSWARE_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+				<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_GLASS_RECLAMATION_PLANT</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GLASSWARE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_GOLD_INGOTS_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_GOLD_INGOTS_PROVIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
@@ -781,6 +834,32 @@
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_GRAINS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GRASS_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_GRASS_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_GRASS_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_GATHERER_GRASS</BuildingType>
+				<BuildingType>BUILDING_NATURAL_WONDER_BASALT_ORGAN</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GRASS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -938,6 +1017,32 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_LIZARDS_PROVIDER</Type>
+			<Description>TXT_KEY_BUILDING_LIZARDS_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_LIZARDS_PROVIDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_LIFE</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_RE_PET_SHOP</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LIZARD_CATCHER</BuildingType>
+				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+			</PrereqOrBuildings>
+			<bAutoBuild>1</bAutoBuild>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LIZARDS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_NUTS_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_NUTS_PROVIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
@@ -1075,6 +1180,32 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PLASTIC_PROVIDER</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_PLASTIC_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_PLASTIC_FACTORY</BuildingType>
+				<BuildingType>BUILDING_PLASTIC_RECLAMATION_PLANT</BuildingType>
+			</PrereqOrBuildings>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASTIC</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+			<bAutoBuild>1</bAutoBuild>
+			<ArtDefineTag>ART_DEF_BUILDING_PLASTIC_PROVIDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLATINUM_INGOTS_PROVIDER</Type>
@@ -1301,6 +1432,32 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_SMART_MEDICINE_PROVIDER</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SMART_MEDICINE_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MEDICAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_MEDICAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_NUTRACEUTICAL_LAB</BuildingType>
+				<BuildingType>BUILDING_RESEARCH_HOSPITAL</BuildingType>
+			</PrereqOrBuildings>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+			<bAutoBuild>1</bAutoBuild>
+			<ArtDefineTag>ART_DEF_BUILDING_SMART_MEDICINE_PROVIDER</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_STEEL_INGOTS_PROVIDER</Type>
 			<Description>TXT_KEY_BUILDING_STEEL_INGOTS_PROVIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
@@ -1327,6 +1484,32 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SYNTHETIC_RUBBER_PROVIDER</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SYNTHETIC_RUBBER_PROVIDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_RUBBER_PLANT</BuildingType>
+				<BuildingType>BUILDING_RUBBER_RECLAMATION_PLANT</BuildingType>
+			</PrereqOrBuildings>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+			<bAutoBuild>1</bAutoBuild>
+			<ArtDefineTag>ART_DEF_BUILDING_SYNTHETIC_RUBBER_PROVIDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITANIUM_INGOTS_PROVIDER</Type>
