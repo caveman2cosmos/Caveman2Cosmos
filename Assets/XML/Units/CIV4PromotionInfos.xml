@@ -20083,6 +20083,19 @@
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
 		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_GREAT_HUNTER</Type>
+			<Description>TXT_KEY_PROMOTION_GREAT_HUNTER</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<iFirstStrikesChange>1</iFirstStrikesChange>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>50</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<Button>Art/Interface/Buttons/Promotions/Great_Hunter.dds</Button>
+		</PromotionInfo>
 		<!--ONLY BUILDUPS (AND LATER STATUSES) PAST THIS POINT!-->
 		<PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_CHASE_PLANS1</Type>
@@ -24196,22 +24209,22 @@
 				</UnitCombat>
 			</UnitCombats>
 			<iStrengthChange>1</iStrengthChange>
-		<PropertyManipulators>
-			<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-				<iAmountPerTurn>-3</iAmountPerTurn>
-			</PropertySource>
-			<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-				<iAmountPerTurn>-2</iAmountPerTurn>
-			</PropertySource>
-		</PropertyManipulators>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/InfluenceOfMarsPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
