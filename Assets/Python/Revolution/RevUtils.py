@@ -12,6 +12,7 @@ import DynamicCivNames
 # globals
 GC = CyGlobalContext()
 GAME = GC.getGame()
+TRNSLTR = CyTranslator()
 RevOpt = BugCore.game.Revolution
 RevDCMOpt = BugCore.game.RevDCM
 
@@ -1234,7 +1235,7 @@ def getCityTextList(cityList, bPreCity = False, bPreCitizens = False, sep = ', '
 			pre += text + sep
 
 		if len(textList) > 2 or second == '':
-			pre += localText.getText("TXT_KEY_REV_AND",()) + ' '
+			pre += TRNSLTR.getText("TXT_KEY_REV_AND",()) + ' '
 		pre += textList[-1]
 
 	post = ''
