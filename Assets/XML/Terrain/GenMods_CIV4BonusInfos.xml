@@ -7,6 +7,8 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CETACEA_SAPIENS</ArtDefineTag>
+			<TechReveal>TECH_SPECIES_UPLIFTING</TechReveal>
+			<TechCityTrade>TECH_SPECIES_UPLIFTING</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
@@ -15,7 +17,6 @@
 			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</ArtDefineTag>
 			<TechReveal>TECH_ONLINE_COMMUNITY</TechReveal>
-			<TechCityTrade>TECH_ONLINE_COMMUNITY</TechCityTrade>
 			<TechCityTrade>TECH_ONLINE_COMMUNITY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>

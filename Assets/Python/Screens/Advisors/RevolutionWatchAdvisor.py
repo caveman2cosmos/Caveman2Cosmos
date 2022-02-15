@@ -597,7 +597,7 @@ class RevolutionWatchAdvisor:
 						break
 
 			if info.getFreeExperience() > 0 or \
-				info.getFreePromotion() != -1 or \
+				info.getFreePromoTypes() or \
 				info.getGlobalFreeExperience() > 0 or \
 				info.getDomainFreeExperience(DomainTypes.DOMAIN_LAND) > 0 or \
 				info.getDomainFreeExperience(DomainTypes.DOMAIN_SEA) > 0 or \
