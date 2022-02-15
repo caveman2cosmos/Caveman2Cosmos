@@ -5953,6 +5953,14 @@
 		<Russian>Наногенератор - это технология, которая преобразует механическую/тепловую энергию, полученную в результате небольших физических изменений, в электричество. Наногенераторы имеют три типичных подхода: пьезоэлектрические, трибоэлектрические и пироэлектрические наногенераторы. И пьезоэлектрические, и трибоэлектрические наногенераторы могут преобразовывать механическую энергию в электричество. Однако пироэлектрические наногенераторы можно использовать для сбора тепловой энергии из зависящих от времени колебаний температуры.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_NANOPUNK</Tag>
+		<English>Nanopunk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_NANOPUNK_PEDIA</Tag>
+		<English>Nanopunk refers to an emerging subgenre of science fiction that is still very much in its infancy in comparison to its ancestor-genre, cyberpunk, and some of its other derivatives. The genre is especially similar to biopunk, but describes a world where nanites and bio-nanotechnologies are widely in use and nanotechnologies are the predominant technological forces in society. Currently the genre is mainly concerned with the artistic, psychological, and societal impact of nanotechnology, rather than aspects of the technology which itself is still in its infancy. Unlike cyberpunk, which can be distinguished by a gritty and low-life yet technologically advanced character, nanopunk can have a darker dystopian character that might examine potential risks by nanotechnology as well as a more optimistic outlook that might emphasize potential uses of nanotechnology.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS</Tag>
 		<English>Nanomorphic Habitats</English>
 		<French>Habitats nanomorphiques</French>
@@ -6446,19 +6454,6 @@
 		<English>Ostrich feathers are one of the reasons why ostriches are farmed. Generally, an ostrich has whitish neck, head, and underparts, with a thick covering of black or dark-brown feathers crowning the entire back. The female's feathers are almost uniformly brown, while males have a black body with white wing and tail feathers. Ostrich plumes, especially the long ones from the birds' tail and wings, have been popular for centuries, primarily for use on hats. Today, their softness makes them useful for dusting and cleaning delicate parts in machinery.</English>
 		<Italian>Le piume di struzzo sono uno dei motivi per cui gli struzzi vengono allevati. Generalmente, uno struzzo ha collo, testa e parti inferiori biancastri, con una spessa copertura di piume nere o marrone scuro che incoronano l'intera schiena. Le piume della femmina sono quasi uniformemente marroni, mentre i maschi hanno un corpo nero con ali bianche e piume di coda. I pennacchi degli struzzi, in particolare quelli più lunghi presenti sulla coda e sulle ali, sono stati popolari per secoli, principalmente per l'uso sui cappelli. Oggi, la loro morbidezza li rende utili per spolverare e pulire le parti delicate dei macchinari.</Italian>
 		<Russian>Страусиные перья - одна из причин разведения страусов. Как правило, у страуса беловатые шея, голова и нижняя часть тела с толстым покровом черных или темно-коричневых перьев, венчающих всю спину. Перья самок почти однородно коричневые, а у самцов тело черное с белыми перьями на крыльях и хвосте. Страусиные перья, особенно длинные из птичьего хвоста и крыльев, были популярны на протяжении веков, в основном для шляп. Сегодня их мягкость делает их полезными для удаления пыли и очистки хрупких деталей машин.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER</Tag>
-		<English>Ostrich Leather</English>
-		<French>Cuir d'autruches</French>
-		<Italian>Pelli di struzzo</Italian>
-		<Russian>Òîíêàÿ êîæà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Tag>
-		<English>Ostrich leather is a tanned skin distinctively recognized for its pattern of bumps or vacant quill follicles, ranged across a smooth field in varying densities. Its production process is intricate, specialised and expensive. Although the first commercial farming began in South Africa in mid-19th century, by 1920s the industry was already collapsed because of a drop in demand. Other products were marketed, with each success battered by world events and droughts until 21st century, when ostrich skin is globally seen as a luxury item in high-end demand.</English>
-		<Italian>La pelle di struzzo è una pelle conciata riconoscibile per il particolare modello di protuberanze o follicoli di penna vuoti, che si estende su un campo liscio a varie densità. Il suo processo di produzione è complesso, specializzato e costoso. Sebbene le prime iniziative commerciali iniziarono in Sudafrica a metà del XIX secolo, negli anni venti del XX secolo l'industria era già crollata a causa di un calo della domanda. La commercializzazione ha continuato ad avere un andamento discontinuo fino al XXI secolo, quando la pelle di struzzo è stata considerata a livello globale come un oggetto di lusso di fascia alta.</Italian>
-		<Russian>Кожа страуса является конечным продуктом выделки шкурок, взятых из африканских страусов, выращиваемых ради их перьев, кожи и мяса. Кожа эта имеет отличительные для своего узора бугорки или свободное перо фолликул и варьируется через ровные поля в разной плотности. Она требует сложный, специализированный и дорогой производственный процесс, что делает его дорогостоящим и красивым.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OTTOMAN</Tag>

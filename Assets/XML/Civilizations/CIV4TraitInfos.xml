@@ -166,10 +166,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -714,18 +710,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AUTOMATION_CLOCK</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_STEPRECKONER_MANUFACTORY</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -969,10 +953,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORCHESTRION_THEATER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2515,10 +2495,6 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_PANOPTICON_PRISON</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BROTHEL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -2648,18 +2624,6 @@
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<BuildingProductionModifierTypes>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ZUSE_COMPUTER</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MUNICIP_COMP</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MADSCIENTIST_CASTLE</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
@@ -4167,10 +4131,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -4699,18 +4659,6 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AUTOMATION_CLOCK</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_STEPRECKONER_MANUFACTORY</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -4944,10 +4892,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORCHESTRION_THEATER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6475,10 +6419,6 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_PANOPTICON_PRISON</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_BROTHEL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -6610,18 +6550,6 @@
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<BuildingProductionModifierTypes>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ZUSE_COMPUTER</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MUNICIP_COMP</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MADSCIENTIST_CASTLE</BuildingType>
-					<iBuildingProductionModifier>20</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>

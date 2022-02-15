@@ -38277,7 +38277,6 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>3000</iEspionagePoints>
 			<iAsset>1</iAsset>

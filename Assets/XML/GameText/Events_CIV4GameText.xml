@@ -13687,4 +13687,188 @@
 		<Italian>Gli investimenti %s1_civ_adjective nell'orticultura stanno dando frutti! A %s2_city prospera una nuova industria minore, che incrementa salute e ricerca.</Italian>
 		<Spanish>Las inversiones %s1:4_civ_adjective en horticultura han valido la pena. Una nueva industria menor está prosperando en %s2_city, lo que impulsa la salud y la investigación.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CIVIL_WAR</Tag>
+		<English>A civil war erupted within the %s1_civ_adjective Empire! Combats are raging near the city of %s2_city.</English>
+		<French>Une guerre civile a éclaté au sein de l'Empire %s1_civ_adjective, des combats font rage autour de la ville de %s2_city.</French>
+		<Italian>È scoppiata una guerra civile nell'Impero %s1_civ_adjective! I combattimenti infuriano vicino alla città di %s2_city.</Italian>
+		<Russian>Ãðàæäàíñêàÿ âîéíà ðàçðàçèëàñü â ñòðàíå %s1_civ_adjective, áîè èäóò ïðîòèâ ïîâñòàíöåâ â %s2_city.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CIVIL_WAR_PLAYER</Tag>
+		<English>Riots are breaking out in one of your cities! A new leader has arisen, and his only goal is to free the people from your cruel leadership. %s2_city is now rebelling and fighting under a new flag.</English>
+		<French>Des émeutes éclatent dans une de vos villes! Un nouveau chef est apparu et son seul objectif est de libérer le peuple de votre leadership cruel. La ville de %s2_city s'est rebellée et maintenant se bat sous un nouveau drapeau.</French>
+		<Italian>Sono scoppiati disordini in una delle tue città! Un nuovo capo si è palesato e il suo unico obiettivo è liberare le persone dalla tua crudele leadership. La città di %s2_city si è ribellata e ora combatte sotto una nuova bandiera.</Italian>
+		<Russian>Ïðîèñõîäÿò ìÿòåæè â îäíîì èç âàøèõ ãîðîäîâ! Ó ñìóòüÿíîâ ïîÿâèëñÿ íîâûé ïðåäâîäèòåëü, è åãî åäèíñòâåííàÿ öåëü - îñâîáîäèòü íàðîä îò äåñïîòè÷íîãî ðóêîâîäñòâà. %s2_city òåïåðü âîññòàë è áîðåòñÿ ïîä íîâûì çíàìåíåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CIVIL_WAR</Tag>
+		<English>Bring me his head on a pole, crush this city, I am the ruler here.</English>
+		<French>Apportez-moi sa tête sur un pique, rasez la ville, je suis le chef ici.</French>
+		<Italian>Portatemi la sua testa su un palo e distruggete la città: sono IO che comando.</Italian>
+		<Russian>Ïðèíåñèòå ìíå åãî ãîëîâó íà ïèêå, ñîêðóøèòå ýòîò ãîðîä, èáî ÿ ïðàâëþ çäåñü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CLAY</Tag>
+		<English>%s1_civ_adjective potters are now using quality clay.</English>
+		<French>Les potiers %s1_civ_adjective utilisent de l'argile de très bonne qualité.</French>
+		<Polish>Garncarze z %s1_civ_adjective uzywaja od teraz wysokiej jakosci gline.</Polish>
+		<Russian>%s1_civ_adjective ãîí÷àðû îòíûíå èñïîëüçóþò áîëåå êà÷åñòâåííóþ ãëèíó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CLAY_1</Tag>
+		<English>This is a high quality clay. We should use it in our potter's shop.</English>
+		<French>Cet argile est de très bonne qualité. Nous l'utiliserons pour nos poteries.</French>
+		<Polish>To jest glina wysokiej jakosci. Przyda sie naszemu garncarzowi.</Polish>
+		<Russian>Ýòà ãëèíà îêàçàëàñü âûñøåé ïðîáû. Íàì ñòîèò åå ïîñòàâëÿòü â íàøè ëàâêè êåðàìè÷åñêèõ èçäåëèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CLAY_1</Tag>
+		<English>Farmers have figured out how to harvest the abundant supply of clay close to the riverbed.</English>
+		<French>Des paysans ont mis à jour une source abondante d'argile près du lit de la rivière.</French>
+		<Polish>Rolnicy odkryli jak wydobywac wysokiej jakosci gline z pobliskiego brzego rzeki.</Polish>
+		<Russian>Êðåñòüÿíå ïðèäóìàëè, êàê ñîáèðàòü áîãàòûå çàïàñû ãëèíû âáëèçè ðóñëà ðåêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_CLAY_1</Tag>
+		<English>Clay</English>
+		<French>Argile</French>
+		<Italian>Argilla</Italian>
+		<Polish>Glina</Polish>
+		<Russian>ãëèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_KNOWLEDGE_INHERITANCE_1</Tag>
+		<English>An old shaman from the %s1_civ_adjective tribe has reached an understanding of the changing reality. His new ideas will help their tribe to develop faster.</English>
+		<French>Un vieux shaman de la tribu %s1_civ_adjective a réussi à comprendre la réalité de certains changements. Ses nouvelles idées aident la tribu à se développer plus vite.</French>
+		<Italian>Un vecchio sciamano della tribù %s1_civ_adjective ha raggiunto la comprensione della realtà in cambiamento. Le sue nuove idee aiuteranno la tribù a svilupparsi più velocemente.</Italian>
+		<Spanish>Un viejo chamán de la tribu %s1_civ_adjective ha alcanzado un grado de comprensión de la realidad cambiante sin parangón. Sus nuevas ideas guiarán a la tribu a un mejor desarrollo.</Spanish>
+		<Polish>Stary szaman z plemienia %s1_civ_adjective zrozumial zmieniajaca sie rzeczywistosc. Jego nowa wiedza przyda sie plemieniu w rozwoju.</Polish>
+		<Russian>Ñòàðûé øàìàí èç ïëåìåíè %s1_civ_adjective äîñòèã ïîíèìàíèÿ ìåíÿþùåéñÿ ðåàëüíîñòè. Åãî íîâûå èäåè è ïîìîæåò åãî ïëåìåíè äëÿ óñêîðåííîãî ðàçâèòèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
+		<English>A thinker? Let's see what interesting ideas he has.</English>
+		<French>Un penseur? Voyons quelles idées intéressantes il a.</French>
+		<Italian>Un pensatore? Vediamo quali idee interessanti ha.</Italian>
+		<Spanish>¿Un pensador? Veamos qué ideas interesantes tiene.</Spanish>
+		<Polish>Mysliciel? Zobaczmy jakie interesujace idee glosi.</Polish>
+		<Russian>Ìûñëèòåëü? Äàâàéòå ïîñìîòðèì, êàêèå èíòåðåñíûå èäåè ó íåãî åñòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_2</Tag>
+		<English>Just what we needed. Let him tell the entire tribe his ideas and make sure they pass from generation to generation.</English>
+		<French>Juste ce dont nous avions besoins. Demandez-lui de propager ses idées à toute la tribu, qu'elles se transmettent de génération en génération.</French>
+		<Italian>Proprio ciò di cui avevamo bisogno. Lasciategli insegnare le sue idee a tutta la tribù e fate in modo che passino di generazione in generazione.</Italian>
+		<Spanish>Justo lo que necesitábamos. Dejemos que le cuente a toda la tribu sus ideas, y asegúraos de que pasen de generación en generación.</Spanish>
+		<Polish>Tego potrzebowalismy. Przekazmy calemu plemienu jego idee i upewnijmy sie, ze beda przekazywane z pokolenia na pokolenie.</Polish>
+		<Russian>Ìû â ýòîì î÷åíü íóæäàåìñÿ. Ïóñòü îí ðàññêàæåò âñåìó ïëåìåíè ñâîè èäåè è óáåäèòñÿ, ÷òî îíè ïåðåäàäóòñÿ èç ïîêîëåíèÿ â ïîêîëåíèå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_KNOWLEDGE_INHERITANCE_1</Tag>
+		<English>An old shaman from our tribe seems to have reached an understanding of the changing reality. He says he has new ideas that can help the tribe develop faster.</English>
+		<French>Un vieux shaman votre tribu a réussi à comprendre la réalité de certains changements. Ses nouvelles idées aident la tribu à se développer plus vite.</French>
+		<Italian>Un vecchio sciamano della nostra tribù sembra aver raggiunto una comprensione della realtà in cambiamento. Dice di avere nuove idee che possono aiutare la tribù a svilupparsi più velocemente.</Italian>
+		<Spanish>Un viejo chamán de nuestra tribu parece haber alcanzado un grado de comprensión de la realidad cambiante sin parangón. Asimismo, dice tener nuevas ideas que ayudarán a la tribu desarrollarse más rápido.</Spanish>
+		<Polish>Stary szaman z naszego plemienia zrozumial zmieniajaca sie rzeczywistosc. Jego nowa wiedza przyda sie plemieniu w rozwoju.</Polish>
+		<Russian>Ñòàðûé øàìàí èç íàøåãî ïëåìåíè, ïîõîæå, äîñòèã ïîíèìàíèÿ ìåíÿþùåéñÿ ðåàëüíîñòè. Îí ãîâîðèò, ÷òî åñòü íîâûå èäåè, êîòîðûå ìîãóò ïîìî÷ü íàøåìó ïëåìåíè ðàçâèâàòüñÿ áûñòðåå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PEAT</Tag>
+		<English>%s1_civ_adjective locals are now using peat as fuel.</English>
+		<French>Des ouvriers %s1_civ_adjective utilisent à présent la tourbe comme combustible.</French>
+		<Polish>Tubylcy z %s1_civ_adjective uzywaja od teraz torfu jako opalu.</Polish>
+		<Russian>%s1_civ_adjective ìåñòíûå æèòåëè ñåé÷àñ èñïîëüçóþò òîðô â êà÷åñòâå òîïëèâà..</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PEAT_1</Tag>
+		<English>This is a high quality peat. It will boost our production.</English>
+		<French>Cette tourbe fera un très bon combustible et augmentera notre production.</French>
+		<Polish>To jest wysokoiej jakosci torf! Wzmocni nasza produkcje.</Polish>
+		<Russian>Ýòî òîðô âûñøåé ïðîáû. Îí áóäåò ñòèìóëèðîâàòü íàøå ïðîèçâîäñòâî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PEAT_1</Tag>
+		<English>Locals have figured out how to harvest the abundant supply of peat in the surrounding bogs and swamps.</English>
+		<French>Nos ouvriers ont trouvé comment utiliser une source de tourbe de nos marais.</French>
+		<Polish>Tubylcy wymyslili jak szybko wydobywac duze ilosci torfu z pobliskich bagien.</Polish>
+		<Russian>Ìåñòíûå æèòåëè ïðèäóìàëè, êàê ñîáðàòü îáèëüíûé çàïàñ òîðôà â îêðåñòíûõ áîëîòàõ è òîïÿõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_PEAT_1</Tag>
+		<English>Peat</English>
+		<French>Tourbe</French>
+		<Italian>Torba</Italian>
+		<Polish>Torf</Polish>
+		<Russian>òîðô</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS</Tag>
+		<English>There has been a recent surge of promising young scholars wishing to study science, magic, and the arcane. %s2_city's current facilities will be overcrowded with activity and suffer material shortages. Additional funding will be needed to expand and accommodate everyone.</English>
+		<French>Il ya eu une récente flambée de jeunes chercheurs prometteurs qui souhaitent étudier les sciences, la magie et les arcanes. Les installations actuelles de %s2_city seront surpeuplées avec toute cette activité et risque de souffrir de pénurie de matériaux. Des fonds supplémentaires seront nécessaires pour développer et accueillir tout le monde.</French>
+		<German>Kürzlich gab es einen Anstieg an vielversprechenden jungen Gelehrten, die sich für Forschung oder magische Studien einschreiben wollen. Die derzeitigen Einrichtungen von %s2_city werden bald überfüllt sein und einen Mangel an Lehrmaterial haben. Zusätzliche Gelder sind für eine Erweiterung und Unterbringung aller Interessenten nötig.</German>
+		<Polish>Ostatnimi czasy wielokrotnie wzrostla liczba studentów i mlodych uczonych chcacyc rozpoczac nauke, poznawanie magii i tajnych sztuk w miescie %s2_city. Obecne budynki uczelni i jej wyposazenie jest niewystarczajace. Dodatkowe pieniadze beda potrzebne by zagospodarowac wszystkich chetnych studentów.</Polish>
+		<Russian>Â ïîñëåäíåå âðåìÿ íàáëþäàåòñÿ èññëåäîâàòåëüñêèé áóì ñðåäè þíûõ ñòóäèîçóñîâ, æåëàþùèõ çàíèìàòüñÿ íàóêîé, ìàãèåé è ñîêðîâåííîãî. Òåêóùèå çàâåäåíèÿ â %s2_city ïåðåæèâàþò ðàñöâåò ñâîåé äåÿòåëüíîñòè, íî èñïûòûâàþò íåõâàòêó ñðåäñòâ. Äîïîëíèòåëüíûå ñðåäñòâà áóäóò íåîáõîäèìû äëÿ ðàñøèðåíèÿ è ïîñòóïëåíèÿ â øêîëû âñåõ æåëàþùèõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_1</Tag>
+		<English>We cannot afford it.</English>
+		<French>Nous ne pouvons pas nous le permettre.</French>
+		<German>Nein. Das können wir uns nicht leisten.</German>
+		<Polish>Nie stac nas na to.</Polish>
+		<Russian>Ìû íå ìîæåì ñåáå ýòî ïîçâîëèòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_2</Tag>
+		<English>Scholarly study is the foundation of advancement! Expand our libraries.</English>
+		<French>L'Etude des connaissances est le fondement du développement! Développez nos Bibliothèques.</French>
+		<German>Wissenschaftliche Studien sind das Fundament unseres Fortschritts. Baut die Biobliotheken aus!</German>
+		<Polish>Uczelnie to podstawa naszego rozwoju naukowego. Rozbudujcie biblioteki.</Polish>
+		<Russian>Íàó÷íûå èññëåäîâàíèÿ - ýòî îñíîâà ïðîãðåññà! Îòêðûòü äâåðè âñåì æåëàþùèì â íàøè áèáëèîòåêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_3</Tag>
+		<English>Sounds like good news. Build them a Apothecary Guild.</English>
+		<French>De bonnes nouvelles. Construisez leur une Guilde des Apothicaires.</French>
+		<German>Klingt nach guten Nachrichten. Errichtet einen Apothecary Zirkel.</German>
+		<Polish>Swietnie. Zalózcie im Gildie Aptekarzy.</Polish>
+		<Russian>Çâó÷èò çàìàí÷èâî. Âûäåëèòå äåíüãè íà îòêðûòèå Ãèëüäèè Ìàãîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_4</Tag>
+		<English>Scholarly societies are for the weak. Press these foolish youths into our army.</English>
+		<French>Les sociétés savantes sont pour les faibles. Envoyez ces jeunes fous dans notre armée.</French>
+		<German>Wissenschaft ist etwas für Schwächlinge. Sie wissen nicht wohin? Teilt sie unserer Armee zu!</German>
+		<Polish>Bractwa studentów sa dla mieczaków. Wcielic wszystkich studentów do armii!</Polish>
+		<Russian>Ýòè âñå àêàäåìèè äëÿ ñëþíòÿåâ è ñëàáàêîâ. Çàáðåéòå ýòèõ ãëóïûõ þíöîâ â ðÿäû íàøåé àðìèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TUSK</Tag>
+		<English>%s1_civ_adjective whalers are now hunting narwhals.</English>
+		<French>Les baleiniers %s1_civ_adjective chassent des narvals.</French>
+		<Italian>Le baleniere %s1_civ_adjective danno la caccia ai narvali.</Italian>
+		<Polish>Wielorybnicy z %s1_civ_adjective poluja od teraz na narwale.</Polish>
+		<Russian>Ó %s1_civ_adjective êèòîáîåâ îòêðûëñÿ ñåçîí ïðîìûñëà íàðâàëîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TUSK_1</Tag>
+		<English>Whalers have figured out the migration cycles of the narwhal. They have begun to hunt the male narwhals, in a way that does not endanger the long term survival of the creatures.</English>
+		<French>Les baleiniers ont compris le cycle de migration des narvals de la région. Ils chassent les plus gros males, pour récupérer leurs défenses sans compromettre la survie de ces créatures.</French>
+		<Polish>Wielorybnicy poznali cykle migracyjne narwali i rozpoczeli polowania na samce tych wielkich ssaków tak by nie zmniejszyc populacji w dluzszym okresie czasu.</Polish>
+		<Russian>Êèòîáîè âìåøàëèñü â öèêëû ìèãðàöèè íàðâàëîâ. Îíè íà÷àëè îõîòèòüñÿ íà ñàìöîâ íàðâàëîâ, òàêèì îáðàçîì, ÷òîáû íå ïîñòàâèòü ïîä óãðîçó äîëãîñðî÷íîå âûæèâàíèå ýòèõ ñóùåñòâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TUSK_1</Tag>
+		<English>We can sell the precious tusk for additional profit.</English>
+		<French>Nous pouvons vendre les précieuses défenses pour un bon prix.</French>
+		<Polish>Mozemy sprzedwac cenne kly z niezlym zyskiem!</Polish>
+		<Russian>Ìû ìîæåì ïðîäàòü äðàãîöåííûå áèâíè è ïîëó÷àòü äîïîëíèòåëüíóþ ïðèáûëü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_TUSK_1</Tag>
+		<English>narwhal tusk</English>
+		<French>défense de narval</French>
+		<Polish>Kiel Narwala</Polish>
+		<Russian>áèâíè íàðâàëà</Russian>
+	</TEXT>
 </Civ4GameText>

@@ -219,6 +219,8 @@ public:
 	bool isNonStateReligionCommerce() const;
 
 	int getRevIdxNational() const;
+	int getRevIdxDistanceModifier() const;
+
 	bool canFoundReligion() const;
 
 	int getNumMilitaryUnits() const;

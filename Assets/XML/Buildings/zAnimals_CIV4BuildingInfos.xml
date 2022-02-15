@@ -908,12 +908,6 @@
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1415,12 +1409,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -2697,11 +2685,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_LIFE</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_RE_PET_SHOP</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2717,12 +2700,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LIZARDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>

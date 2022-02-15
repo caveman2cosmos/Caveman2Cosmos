@@ -167,7 +167,6 @@ void CyInfoPythonInterface3()
 
 		.def("getRevIdxLocal", &CvTraitInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvTraitInfo::getRevIdxNational, "int ()")
-		.def("getRevIdxDistanceModifier", &CvTraitInfo::getRevIdxDistanceModifier, "int ()")
 		.def("getRevIdxHolyCityGood", &CvTraitInfo::getRevIdxHolyCityGood, "int ()")
 		.def("getRevIdxHolyCityBad", &CvTraitInfo::getRevIdxHolyCityBad, "int ()")
 		.def("getRevIdxNationalityMod", &CvTraitInfo::getRevIdxNationalityMod, "float ()")

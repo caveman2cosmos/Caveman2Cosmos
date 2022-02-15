@@ -24,7 +24,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		column = self.addOneColumnLayout(screen, panel)
 		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
 
-		if not GAME.isGameMultiPlayer():
+		if not GAME.isNetworkMultiPlayer():
 			self.addLabel(screen, left, "RevDCM__RevDCMInterface", TRNSLTR.getText("TXT_KEY_REVDCMTAB_INTERFACE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "interfaceOptions")
 			self.addCheckbox(screen, col1, "RevDCM__RevDCMHiddenAttitude")

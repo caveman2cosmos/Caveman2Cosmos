@@ -137,6 +137,8 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setRevIndexAverage", &CyCity::setRevIndexAverage, "void (int iNewValue)" )
 		.def("updateRevIndexAverage", &CyCity::updateRevIndexAverage, "void ( )" )
 
+		.def("getRevIndexDistanceMod", &CyCity::getRevIndexDistanceMod, "int ()" )
+
 		.def("getRevolutionCounter", &CyCity::getRevolutionCounter, "int ()")
 		.def("setRevolutionCounter", &CyCity::setRevolutionCounter, "void ( int iNewValue )")
 		.def("changeRevolutionCounter", &CyCity::changeRevolutionCounter, "void ( int iChange )" )

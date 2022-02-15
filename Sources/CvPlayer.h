@@ -2008,7 +2008,7 @@ protected:
 
 	void verifyGoldCommercePercent();
 
-	void processCivics(CivicTypes eCivic, int iChange, bool bLimited = false);
+	void processCivics(const CivicTypes eCivic, const int iChange, const bool bLimited = false);
 
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
