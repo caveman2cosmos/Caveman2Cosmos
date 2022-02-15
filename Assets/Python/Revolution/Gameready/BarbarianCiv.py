@@ -197,11 +197,8 @@ class BarbarianCiv:
 		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
 		leaders = []
 		for iLeader in xrange(GC.getNumLeaderHeadInfos()):
-			if iLeader in aList: continue
-			if bLeadAnyCiv:
-				if not GC.getLeaderHeadInfo(iLeader).isNPC(): continue
-			elif not GC.getCivilizationInfo(iCivType).isLeaders(iLeader): continue
-			leaders.append(iLeader)
+			if iLeader not in aList and not GC.getLeaderHeadInfo(iLeader).isNPC() and (bLeadAnyCiv or GC.getCivilizationInfo(iCivType).isLeaders(iLeader)):
+				leaders.append(iLeader)
 
 		if not leaders:
 			print "[ERROR] Unexpected lack of possible leaders." + POST_FIX
@@ -255,6 +252,7 @@ class BarbarianCiv:
 		else:
 			iNumTeams = GAME.countCivTeamsAlive()
 			iTechFrac = self.RevOpt.getBarbTechPercent()
+			if iTechFrac < 1: iTechFrac = 1
 			for iTech in xrange(iNumTechs):
 				if iTech in techsOwned:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
