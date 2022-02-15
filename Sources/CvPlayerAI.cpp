@@ -13187,23 +13187,21 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestVal
 	(*iBestValue) = MIN_INT;
 	CivicTypes eBestCivic = NO_CIVIC;
 
-	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	for (int iI = GC.getNumCivicInfos() - 1; iI > -1; iI--)
 	{
-		if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == eCivicOption)
-		{
-			if (canDoCivics((CivicTypes)iI))
-			{
-				const int iValue = AI_civicValue((CivicTypes)iI, bCivicOptionVacuum, paeSelectedCivics);
+		const CivicTypes eCivicX = static_cast<CivicTypes>(iI);
 
-				if (iValue > (*iBestValue))
-				{
-					(*iBestValue) = iValue;
-					eBestCivic = ((CivicTypes)iI);
-				}
+		if (GC.getCivicInfo(eCivicX).getCivicOptionType() == eCivicOption && canDoCivics(eCivicX))
+		{
+			const int iValue = AI_civicValue(eCivicX, bCivicOptionVacuum, paeSelectedCivics);
+
+			if (iValue > (*iBestValue))
+			{
+				(*iBestValue) = iValue;
+				eBestCivic = eCivicX;
 			}
 		}
 	}
-
 	return eBestCivic;
 }
 
@@ -13224,20 +13222,16 @@ int CvPlayerAI::AI_getOverallHappyness(int iExtraUnhappy) const
 //	Helper function to compute a trnuncated quadratic to asign a value to (net) happyness
 static int happynessValue(int iNetHappyness)
 {
-	if ( iNetHappyness > 5 )
+	if (iNetHappyness > 0)
 	{
-		//	Cap useful gains 0n the postive side at 5
-		iNetHappyness = 5;
-	}
-
-	if ( iNetHappyness > 0 )
-	{
+		// Cap useful gains 0n the postive side
+		if (iNetHappyness >= 5)
+		{
+			return 250; // Value from below calculation when iNetHappyness=5
+		}
 		return 100 * iNetHappyness - 10 * iNetHappyness * iNetHappyness;
 	}
-	else
-	{
-		return 100 * iNetHappyness;	//	Just linear on the negative side since each is one less working pop
-	}
+	return 100 * iNetHappyness; // Just linear on the negative side since each is one less working pop
 }
 
 
