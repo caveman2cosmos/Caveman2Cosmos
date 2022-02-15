@@ -19,9 +19,8 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 
-		GC = CyGlobalContext()
-		GAME = GC.getGame()
-		bCanAdjustSettings = not GAME.isGameMultiPlayer() or GAME.getActivePlayer() == 0
+		GAME = CyGlobalContext().getGame()
+		bCanAdjustSettings = not GAME.isNetworkMultiPlayer() or GAME.getActivePlayer() == 0
 
 		#Flexible Difficulty
 		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
@@ -100,6 +99,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CORPORATIONS):
 			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding"), bCanAdjustSettings)
 
-		if GAME.isGameMultiPlayer():
+		if GAME.isNetworkMultiPlayer():
 			self.addCheckbox(screen, right, "RoMSettings__PlayWaitingAlertSound")
 			self.addIntDropdown(screen, right, right, "RoMSettings__PlayWaitingAlertSoundTimer")
