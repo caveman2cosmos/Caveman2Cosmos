@@ -841,18 +841,6 @@ def getCivicsReligionMods(pPlayer):
 
 	return [goodMod,badMod]
 
-def getCivicsDistanceMod(pPlayer):
-
-	if not pPlayer or pPlayer.getNumCities() < 1:
-		return 0
-
-	distModifier = 0
-	for i in xrange(GC.getNumCivicOptionInfos()):
-
-		distModifier += GC.getCivicInfo(pPlayer.getCivics(i)).getRevIdxDistanceModifier()
-
-	return distModifier
-
 
 def getCivicsNationalityMod(pPlayer):
 
@@ -1133,20 +1121,6 @@ def getTraitsReligionMods(pPlayer):
 	return [goodMod, badMod]
 
 
-def getTraitsDistanceMod(pPlayer):
-
-	if pPlayer is None or not pPlayer.getNumCities():
-		return 0
-
-	distModifier = 0
-
-	for i in range(GC.getNumTraitInfos()):
-		if pPlayer.hasTrait(i):
-			distModifier += GC.getTraitInfo(i).getRevIdxDistanceModifier()
-
-	return distModifier
-
-
 ########################## Traits effect helper functions #####################
 def getBuildingsRevIdxLocal(CyCity):
 
@@ -1191,18 +1165,6 @@ def getBuildingsCivStabilityIndex(player):
 				civStabilityIdx += buildingEffect
 
 	return [civStabilityIdx, posList, negList]
-
-
-def getBuildingsDistanceMod(CyCity):
-
-	distModifier = 0
-
-	for iBuilding in range(GC.getNumBuildingInfos()):
-		iDistanceModifier = GC.getBuildingInfo(iBuilding).getRevIdxDistanceModifier()
-		if iDistanceModifier and CyCity.getNumActiveBuilding(iBuilding) > 0:
-			distModifier += iDistanceModifier
-
-	return distModifier
 
 
 ## Text Utility

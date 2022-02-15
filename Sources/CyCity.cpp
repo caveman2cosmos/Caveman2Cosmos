@@ -60,6 +60,11 @@ void CyCity::updateRevIndexAverage()
 	m_pCity->updateRevIndexAverage();
 }
 
+int CyCity::getRevIndexDistanceMod() const
+{
+	return m_pCity->getRevIndexDistanceMod();
+}
+
 int CyCity::getReinforcementCounter() const
 {
 	return m_pCity->getReinforcementCounter();

@@ -826,6 +826,11 @@ int CyPlayer::getRevIdxNational() const
 	return m_pPlayer->getRevIdxNational();
 }
 
+int CyPlayer::getRevIdxDistanceModifier() const
+{
+	return m_pPlayer->getRevIdxDistanceModifier();
+}
+
 bool CyPlayer::canFoundReligion() const
 {
 	return m_pPlayer->canFoundReligion();

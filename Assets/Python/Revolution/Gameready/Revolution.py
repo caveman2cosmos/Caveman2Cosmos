@@ -1144,18 +1144,15 @@ class Revolution:
 			cityDistModifier = ( 307.0*cityDistRaw / cityDistMapModifier ) / ( 1.0 + ( cityDistCommBonus / 100.0 ) )
 			cityDistModifier -= int(666 / cityDistMapModifier)
 
-			CivicsDistModifier = RevUtils.getCivicsDistanceMod(pPlayer)
-			TraitsDistModifier = RevUtils.getTraitsDistanceMod(pPlayer)
-			BuildingsDistModifier = RevUtils.getBuildingsDistanceMod( pCity )
-			DistModifier = (CivicsDistModifier + TraitsDistModifier + BuildingsDistModifier) / 100.0
+			DistModifier = (pPlayer.getRevIdxDistanceModifier() + pCity.getRevIndexDistanceMod()) / 100.0
 			distMod = 1.0
-			if( DistModifier < 0 ) :
+			if DistModifier < 0:
 				distMod /= (1.0 - DistModifier)
-			elif( DistModifier > 0 ) :
+			elif DistModifier > 0:
 				distMod += DistModifier
 
 			distMod *= self.distToCapModifier
-			if( pCity.isGovernmentCenter() ) :
+			if pCity.isGovernmentCenter():
 				distMod *= 0.5
 
 			locationRevIdx = 0

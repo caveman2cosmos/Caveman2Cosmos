@@ -72,6 +72,9 @@ public:
 	void setRevIndexAverage( int iNewValue );
 	void updateRevIndexAverage( );
 
+	int getRevIndexDistanceMod() const { return m_iRevIndexDistanceMod; }
+	void changeRevIndexDistanceMod(const int iChange);
+
 	int getRevolutionCounter() const;
 	void setRevolutionCounter( int iNewValue );
 	void changeRevolutionCounter( int iChange );
@@ -1765,6 +1768,7 @@ protected:
 	int m_iRevolutionIndex;
 	int m_iLocalRevIndex;
 	int m_iRevIndexAverage;
+	int m_iRevIndexDistanceMod;
 	int m_iRevolutionCounter;
 	int m_iReinforcementCounter;
 
