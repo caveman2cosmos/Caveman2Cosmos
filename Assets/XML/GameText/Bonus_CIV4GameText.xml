@@ -5953,6 +5953,14 @@
 		<Russian>Наногенератор - это технология, которая преобразует механическую/тепловую энергию, полученную в результате небольших физических изменений, в электричество. Наногенераторы имеют три типичных подхода: пьезоэлектрические, трибоэлектрические и пироэлектрические наногенераторы. И пьезоэлектрические, и трибоэлектрические наногенераторы могут преобразовывать механическую энергию в электричество. Однако пироэлектрические наногенераторы можно использовать для сбора тепловой энергии из зависящих от времени колебаний температуры.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_NANOPUNK</Tag>
+		<English>Nanopunk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_NANOPUNK_PEDIA</Tag>
+		<English>Nanopunk refers to an emerging subgenre of science fiction that is still very much in its infancy in comparison to its ancestor-genre, cyberpunk, and some of its other derivatives. The genre is especially similar to biopunk, but describes a world where nanites and bio-nanotechnologies are widely in use and nanotechnologies are the predominant technological forces in society. Currently the genre is mainly concerned with the artistic, psychological, and societal impact of nanotechnology, rather than aspects of the technology which itself is still in its infancy. Unlike cyberpunk, which can be distinguished by a gritty and low-life yet technologically advanced character, nanopunk can have a darker dystopian character that might examine potential risks by nanotechnology as well as a more optimistic outlook that might emphasize potential uses of nanotechnology.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS</Tag>
 		<English>Nanomorphic Habitats</English>
 		<French>Habitats nanomorphiques</French>

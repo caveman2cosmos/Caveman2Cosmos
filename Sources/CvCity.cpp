@@ -646,6 +646,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	m_iRevolutionIndex = 0;
 	m_iLocalRevIndex = -1;
+	m_iRevIndexDistanceMod = 0;
 	m_iRevIndexAverage = 0;
 	m_iRevolutionCounter = 0;
 	m_iReinforcementCounter = 0;
@@ -1120,6 +1121,11 @@ void CvCity::setRevIndexAverage(int iNewValue)
 void CvCity::updateRevIndexAverage()
 {
 	setRevIndexAverage((2 * getRevIndexAverage() + getRevolutionIndex()) / 3);
+}
+
+void CvCity::changeRevIndexDistanceMod(const int iChange)
+{
+	m_iRevIndexDistanceMod += iChange;
 }
 
 int CvCity::getRevolutionCounter() const
@@ -4899,6 +4905,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeNoUnhappinessCount(kBuilding.isNoUnhappiness() ? iChange : 0);
 		changeNoUnhealthyPopulationCount(kBuilding.isNoUnhealthyPopulation() ? iChange : 0);
 		changeBuildingOnlyHealthyCount(kBuilding.isBuildingOnlyHealthy() ? iChange : 0);
+
 		if (iChange == 1)
 		{
 			changePopulation(kBuilding.getPopulationChange() * iChange);
@@ -4908,6 +4915,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 				changePopulation(-iPopChange);
 			}
 		}
+		changeRevIndexDistanceMod(kBuilding.getRevIdxDistanceModifier() * iChange);
 	}
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
@@ -9903,7 +9911,6 @@ void CvCity::changeBuildingOnlyHealthyCount(int iChange)
 		AI_setAssignWorkDirty(true);
 	}
 }
-
 
 int CvCity::getFood() const
 {
@@ -17472,6 +17479,8 @@ void CvCity::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+	WRAPPER_READ(wrapper, "CvCity", &m_iRevIndexDistanceMod);
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMaxFoodKeptPercent, SAVE_VALUE_ANY);	// was present in old formats
@@ -17910,6 +17919,8 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, plotYieldChange.second.elems, "PlotYieldChanges");
 		}
 	}
+	WRAPPER_WRITE(wrapper, "CvCity", m_iRevIndexDistanceMod);
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 

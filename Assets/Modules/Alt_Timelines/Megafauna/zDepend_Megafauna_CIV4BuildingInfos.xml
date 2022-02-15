@@ -43,5 +43,18 @@
 				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CARCASS_PROVIDER</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_IVORY_PROVIDER</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

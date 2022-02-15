@@ -253,7 +253,6 @@
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
 				<BuildingType>BUILDING_LLAMA_HERD</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
 				<BuildingType>BUILDING_MEGATHERIUM_CAMP</BuildingType>
 				<BuildingType>BUILDING_MOOSE_CAMP</BuildingType>
@@ -276,7 +275,6 @@
 				<BuildingType>BUILDING_WHALERS</BuildingType>
 				<BuildingType>BUILDING_WOOLLYRHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -972,7 +970,6 @@
 				<BuildingType>BUILDING_ELEPHANT_FARM</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 				<BuildingType>BUILDING_NARWAL_CAMP</BuildingType>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_WALRUS_CAMP</BuildingType>

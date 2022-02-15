@@ -34,6 +34,8 @@ public:
 	void setRevIndexAverage(int iNewValue);
 	void updateRevIndexAverage();
 
+	int getRevIndexDistanceMod() const;
+
 	int getRevolutionCounter() const;
 	void setRevolutionCounter(int iNewValue);
 	void changeRevolutionCounter(int iChange);

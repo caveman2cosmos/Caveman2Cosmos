@@ -13187,23 +13187,21 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestVal
 	(*iBestValue) = MIN_INT;
 	CivicTypes eBestCivic = NO_CIVIC;
 
-	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	for (int iI = GC.getNumCivicInfos() - 1; iI > -1; iI--)
 	{
-		if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == eCivicOption)
-		{
-			if (canDoCivics((CivicTypes)iI))
-			{
-				const int iValue = AI_civicValue((CivicTypes)iI, bCivicOptionVacuum, paeSelectedCivics);
+		const CivicTypes eCivicX = static_cast<CivicTypes>(iI);
 
-				if (iValue > (*iBestValue))
-				{
-					(*iBestValue) = iValue;
-					eBestCivic = ((CivicTypes)iI);
-				}
+		if (GC.getCivicInfo(eCivicX).getCivicOptionType() == eCivicOption && canDoCivics(eCivicX))
+		{
+			const int iValue = AI_civicValue(eCivicX, bCivicOptionVacuum, paeSelectedCivics);
+
+			if (iValue > (*iBestValue))
+			{
+				(*iBestValue) = iValue;
+				eBestCivic = eCivicX;
 			}
 		}
 	}
-
 	return eBestCivic;
 }
 
@@ -13224,64 +13222,43 @@ int CvPlayerAI::AI_getOverallHappyness(int iExtraUnhappy) const
 //	Helper function to compute a trnuncated quadratic to asign a value to (net) happyness
 static int happynessValue(int iNetHappyness)
 {
-	if ( iNetHappyness > 5 )
+	if (iNetHappyness > 0)
 	{
-		//	Cap useful gains 0n the postive side at 5
-		iNetHappyness = 5;
-	}
-
-	if ( iNetHappyness > 0 )
-	{
+		// Cap useful gains 0n the postive side
+		if (iNetHappyness >= 5)
+		{
+			return 250; // Value from below calculation when iNetHappyness=5
+		}
 		return 100 * iNetHappyness - 10 * iNetHappyness * iNetHappyness;
 	}
-	else
-	{
-		return 100 * iNetHappyness;	//	Just linear on the negative side since each is one less working pop
-	}
+	return 100 * iNetHappyness; // Just linear on the negative side since each is one less working pop
 }
 
 
 int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicTypes* paeSelectedCivics) const
 {
 	PROFILE_FUNC();
+	FASSERT_BOUNDS(-1, GC.getNumCivicInfos(), eCivic);
 
-	int iConnectedForeignCities;
-	int iTotalReligonCount;
-	int iHighestReligionCount;
-	int iWarmongerPercent;
-	//int iHappiness;
-	int iValue;
-	int iTempValue;
-	int iI, iJ;
-	bool bCultureVictory3 = AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
-	bool bCultureVictory2 = AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
-
-	if (eCivic == NO_CIVIC)
+	if (eCivic == NO_CIVIC || isNPC())
 	{
 		return 1;
 	}
 
-	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eCivic is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eCivic >= 0, "eCivic is expected to be non-negative (invalid Index)");
-
-	if( isNPC() )
+	if (m_aiCivicValueCache[eCivic + (bCivicOptionVacuum ? 0 : GC.getNumCivicInfos())] != MAX_INT)
 	{
-		return 1;
-	}
-
-	if (m_aiCivicValueCache[eCivic + (bCivicOptionVacuum ? 0 : GC.getNumCivicInfos())] != MAX_INT) {
 		return m_aiCivicValueCache[eCivic + (bCivicOptionVacuum ? 0 : GC.getNumCivicInfos())];
 	}
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-
-	bool bWarPlan = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
 	const CvTeamAI& pTeam = GET_TEAM(getTeam());
-	if( bWarPlan )
+
+	bool bWarPlan = pTeam.getAnyWarPlanCount(true) > 0;
+	if (bWarPlan)
 	{
 		bWarPlan = false;
 		int iEnemyWarSuccess = 0;
 
-		for( int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++ )
+		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 		{
 			const CvTeamAI& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 			if (kLoopTeam.isAlive() && !kLoopTeam.isMinorCiv() && pTeam.AI_getWarPlan((TeamTypes)iTeam) != NO_WARPLAN)
@@ -13297,41 +13274,21 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 					bWarPlan = true;
 					break;
 				}
-
 				iEnemyWarSuccess += kLoopTeam.AI_getWarSuccess(getTeam());
 			}
 		}
 
-		if( !bWarPlan )
+		if (!bWarPlan)
 		{
-			if( iEnemyWarSuccess > std::min(getNumCities(), 4) * GC.getWAR_SUCCESS_CITY_CAPTURING() )
+			if (iEnemyWarSuccess > std::min(getNumCities(), 4) * GC.getWAR_SUCCESS_CITY_CAPTURING() // Lots of fighting, so war is real
+			|| iEnemyWarSuccess > std::min(getNumCities(), 2) * GC.getWAR_SUCCESS_CITY_CAPTURING()
+			&& pTeam.AI_getEnemyPowerPercent() > 120)
 			{
-				// Lots of fighting, so war is real
 				bWarPlan = true;
 			}
-			else if( iEnemyWarSuccess > std::min(getNumCities(), 2) * GC.getWAR_SUCCESS_CITY_CAPTURING() )
-			{
-				if( GET_TEAM(getTeam()).AI_getEnemyPowerPercent() > 120 )
-				{
-					bWarPlan = true;
-				}
-			}
 		}
 	}
 
-/*RevDCM - Fuyu commented out
-	if( !bWarPlan )
-	{
-		// Aggressive players will stick with war civics
-		if( GET_TEAM(getTeam()).AI_getTotalWarOddsTimes100() > 200 )
-		{
-			bWarPlan = true;
-		}
-	}
-*/
-
-	iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
-	iTotalReligonCount = countTotalHasReligion();
 	ReligionTypes eBestReligion = AI_bestReligion();
 	if (!kCivic.isStateReligion() && !isStateReligion())
 	{
@@ -13341,31 +13298,22 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	{
 		eBestReligion = getStateReligion();
 	}
-	iHighestReligionCount = ((eBestReligion == NO_RELIGION) ? 0 : getHasReligionCount(eBestReligion));
-	iWarmongerPercent = 25000 / std::max(100, (100 + GC.getLeaderHeadInfo(getPersonalityType()).getMaxWarRand()));
 
 //Fuyu Civic AI: restructuring
 	//#0: constant values
-	iValue = (getNumCities() * 6);
-
-	iValue += (kCivic.getAIWeight() * getNumCities());
+	int iValue = getNumCities() * 6 + kCivic.getAIWeight() * getNumCities();
 
 	if ( gPlayerLogLevel > 2 )
 	{
-		logBBAI("Civic %S base value %d",
-				 kCivic.getDescription(),
-				 iValue);
+		logBBAI("Civic %S base value %d", kCivic.getDescription(), iValue);
 	}
-	//	Koshling - Anarchy length is not part of the civi's value - its part of the cost of an overall switch
-	//	and is now evaluated in that process
+	// Koshling - Anarchy length is not part of the civic's value - it's part of the cost of an overall switch and is now evaluated in that process
 	//iValue += -(kCivic.getAnarchyLength() * getNumCities());
 
-	iTempValue = -(getSingleCivicUpkeep(eCivic, true)*80)/100;
+	int iTempValue = -getSingleCivicUpkeep(eCivic, true) * 80 / 100;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S upkeep value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S upkeep value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 
@@ -13396,6 +13344,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		logBBAI("Civic %S #cities maintenance modifier value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
+
+	const int iWarmongerPercent = 25000 / std::max(100, 100 + GC.getLeaderHeadInfo(getPersonalityType()).getMaxWarRand());
 
 	if (kCivic.getFreeExperience() > 0)
 	{
@@ -13693,7 +13643,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		if (getStateReligion() != NO_RELIGION)
 		{
 			//check that we don't have a civic that already blocks this inquisitions...
-			for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{
 				//we are considering changing this civic, so ignore it
 				if (kCivic.getCivicOptionType() != (CivicOptionTypes)iI)
@@ -13706,7 +13656,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			}
 			if (bValid && hasInquisitionTarget())
 			{
-				for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+				for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 				{
 					if ((ReligionTypes)iI != getStateReligion())
 					{
@@ -13733,7 +13683,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		iTempValue += (kCivic.getUnitCombatProductionModifier(iI) * 2) / 3;
 	}
@@ -13757,7 +13707,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		iTempValue += kCivic.getBonusMintedPercent(iI) * getNumAvailableBonuses((BonusTypes)iI) * getNumCities() * 2;
 	}
@@ -13770,7 +13720,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		iTempValue += (kCivic.getUnitProductionModifier(iI) * 2) / 5;
 	}
@@ -13929,7 +13879,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		if (kCivic.getFreeSpecialistCount(iI) > 0)
 		{
@@ -13938,9 +13888,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S free speciailist value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S free speciailist value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 
@@ -13951,7 +13899,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 		const CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
 
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 			bool bValidCivicsWith = true;
@@ -14122,7 +14070,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				bool bHasEnablingCivic = (hasAllReligionsActive());
 				bool bHasMultipleEnablingCivicCategories = (getAllReligionsActiveCount() > 1);
 
-				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
 					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
@@ -14202,7 +14150,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 							int iValueDivisor = bHasMultipleEnablingCivicCategories ? 12 : 6;
 
 							if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH
-							&& !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
+							&& !pTeam.isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
 							{
 								iValueDivisor *= 2;
 							}
@@ -14227,11 +14175,11 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	bool bFinancialTrouble = AI_isFinancialTrouble();
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
 			if (kCivic.getBuildingCommerceModifier(eLoopBuilding, iJ) != 0)
 			{
@@ -14254,7 +14202,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+	for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 	{
 		iTempValue += (8 * (kCivic.getImprovementHappinessChanges(iJ) * (getImprovementCount((ImprovementTypes)iJ) + getNumCities())));
 		iTempValue += ((8 * (kCivic.getImprovementHealthPercentChanges(iJ) * (getImprovementCount((ImprovementTypes)iJ) + getNumCities()))) / 100);
@@ -14268,13 +14216,13 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
 			iTempValue += ((kCivic.getSpecialistCommercePercentChanges(iI, iJ) * getTotalPopulation()) / 500);
 		}
-		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
 			iTempValue += ((kCivic.getSpecialistYieldPercentChanges(iI, iJ) * getTotalPopulation()) / 500);
 		}
@@ -14288,9 +14236,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+		for (int iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
 		{
 			iTempValue += (AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getTerrainYieldChanges(iJ, iI) * (NUM_CITY_PLOTS + getNumCities()/2))) / 100;
 		}
@@ -14304,7 +14252,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumFlavorTypes(); iI++)
+	for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
 	{
 		iValue += AI_getFlavorValue((FlavorTypes)iI) * kCivic.getFlavorValue((FlavorTypes)iI);
 	}
@@ -14320,7 +14268,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	CivicTypes eTargetCivic;
 	CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		int iOurPower = std::max(1, pTeam.getPower(true));
 		int iTheirPower = std::max(1, GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getDefensivePower());
@@ -14393,7 +14341,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			{
 				iTempValue = getNumCities() + ((bWarPlan) ? 30 : 10);
 
-				iTempValue *= range(GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), 50, 300);
+				iTempValue *= range(pTeam.AI_getEnemyPowerPercent(), 50, 300);
 				iTempValue /= 100;
 
 				iTempValue *= iCombatValue;
@@ -14445,7 +14393,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	int iYieldValue = 0;
-	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
 		iTempValue = 0;
 
@@ -14464,7 +14412,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		iTempValue += ((kCivic.getTradeYieldModifier(iI) * getNumCities()) / 11);
 
-		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+		for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 		{
 			// Free Speech
 			iTempValue += (AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getImprovementYieldChanges(iJ, iI) * (getImprovementCount((ImprovementTypes)iJ) + getNumCities()/2))) / 100;
@@ -14494,8 +14442,11 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iYieldValue;
 
+	const bool bCultureVictory2 = AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
+	const bool bCultureVictory3 = AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
+
 	int iCommerceValue = 0;
-	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
 		iTempValue = 0;
 
@@ -14509,7 +14460,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 
 		// Representation
-		iTempValue += ((kCivic.getSpecialistExtraCommerce(iI) * getTotalPopulation()) / 15);
+		iTempValue += kCivic.getSpecialistExtraCommerce(iI) * getTotalPopulation() / 15;
 
 		iTempValue *= AI_commerceWeight((CommerceTypes)iI);
 
@@ -14639,6 +14590,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	}
 
+	int iHighestReligionCount = ((eBestReligion == NO_RELIGION) ? 0 : getHasReligionCount(eBestReligion));
+
 	//happiness is handled in CvCity::getAdditionalHappinessByCivic
 /*
 	iValue += (getCivicPercentAnger(eCivic, true) / 10);
@@ -14672,13 +14625,13 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iHighestReligionCount = 0;
 	}
 
-	iValue += (kCivic.getNonStateReligionHappiness() * (iTotalReligonCount - iHighestReligionCount) * 5);
+	iValue += (kCivic.getNonStateReligionHappiness() * (countTotalHasReligion() - iHighestReligionCount) * 5);
 	iValue += (kCivic.getStateReligionHappiness() * iHighestReligionCount * 4);
 */
 
 	if (kCivic.isAnyBuildingHappinessChange())
 	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			iTempValue = kCivic.getBuildingHappinessChanges(iI);
 			if (iTempValue != 0 && !isLimitedWonder((BuildingTypes)iI) && !pTeam.isObsoleteBuilding((BuildingTypes)iI))
@@ -14727,7 +14680,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iCivicsBuildingOnlyHealthyCountThen++;
 		}
 
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			const CivicTypes eTempCivic = ((paeSelectedCivics == NULL)? getCivics((CivicOptionTypes)iI) : paeSelectedCivics[iI]);
 			if ( eTempCivic != NO_CIVIC )
@@ -14791,7 +14744,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				iCityHealth -= pLoopCity->getAdditionalHealthByCivic(eCivicOptionCivic, iTempGood, iTempBad, iTempBadBuilding, false, iExtraPop, /* bCivicOptionVacuum */ true, 0, 0);
 				iTempAdditionalHealthByPlayerBuildingOnlyHealthy -= iTempBadBuilding;
 			}
-			for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{
 				if (kCivic.getCivicOptionType() == iI)
 					continue;
@@ -14964,8 +14917,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 
 
-
-
 	//health is handled in CvCity::getAdditionalHealthByCivic
 /*
 	iValue += ((kCivic.isNoUnhealthyPopulation()) ? (getTotalPopulation() / 3) : 0);
@@ -14993,57 +14944,51 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S building health value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S building health value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 	//#2: Health - end
 
 	//#3: Trade
-	int iTempNoForeignTradeCount = getNoForeignTradeCount();
-	if (!bCivicOptionVacuum)
 	{
-		iTempNoForeignTradeCount -= ((eCivicOptionCivic != NO_CIVIC && GC.getCivicInfo(eCivicOptionCivic).isNoForeignTrade()) ? 1 : 0);
-	}
+		int iTempNoForeignTradeCount = getNoForeignTradeCount();
 
-	iTempValue = 0;
-	//if (isNoForeignTrade())
-	if (iTempNoForeignTradeCount > 0)
-	{
-		if (kCivic.isNoForeignTrade())
+		if (!bCivicOptionVacuum)
 		{
-			iTempValue -= (iConnectedForeignCities * 3)/(1 + iTempNoForeignTradeCount);
-			//no additional negative value from NoForeignTrade
-			iTempValue += (kCivic.getTradeRoutes() * (/*std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + */ (getNumCities() * 2)));
+			iTempNoForeignTradeCount -= (eCivicOptionCivic != NO_CIVIC && GC.getCivicInfo(eCivicOptionCivic).isNoForeignTrade());
+		}
+		const int iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
+		int iTempValue = 0;
+		if (iTempNoForeignTradeCount > 0)
+		{
+			if (kCivic.isNoForeignTrade())
+			{
+				iTempValue -= iConnectedForeignCities * 3 / (1 + iTempNoForeignTradeCount);
+				// No additional negative value from NoForeignTrade
+				iTempValue += kCivic.getTradeRoutes() * getNumCities() * 2;
+			}
+			else
+			{
+				//kCivic.getTradeRoutes() should be 0
+				//FAssertMsg(kCivic.getTradeRoutes() == 0, "kCivic.getTradeRoutes() is supposed to be 0 if kPlayer.isNoForeignTrade() is true");
+				iTempValue += kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + getNumCities() * 2);
+			}
+		}
+		else if (kCivic.isNoForeignTrade())
+		{
+			iTempValue -= iConnectedForeignCities * 3;
+			iTempValue += kCivic.getTradeRoutes() * getNumCities() * 2;
 		}
 		else
 		{
-			//kCivic.getTradeRoutes() should be 0
-			//FAssertMsg(kCivic.getTradeRoutes() == 0, "kCivic.getTradeRoutes() is supposed to be 0 if kPlayer.isNoForeignTrade() is true");
-			iTempValue += (kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + (getNumCities() * 2)));
+			iTempValue += kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + getNumCities() * 2);
 		}
+		if (gPlayerLogLevel > 2 && iTempValue != 0)
+		{
+			logBBAI("Civic %S foreign trade value %d", kCivic.getDescription(), iTempValue);
+		}
+		iValue += iTempValue;
 	}
-	else if (kCivic.isNoForeignTrade())
-	{
-		iTempValue -= iConnectedForeignCities * 3;
-		iTempValue += (kCivic.getTradeRoutes() * (/*std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + */ (getNumCities() * 2)));
-	}
-	else
-	{
-		iTempValue += (kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + (getNumCities() * 2)));
-	}
-	if (gPlayerLogLevel > 2 && iTempValue != 0)
-	{
-		logBBAI("Civic %S foreign trade value %d", kCivic.getDescription(), iTempValue);
-	}
-	iValue += iTempValue;
-
-
-/*
-	iValue += (kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + (getNumCities() * 2)));
-	iValue += -((kCivic.isNoForeignTrade()) ? (iConnectedForeignCities * 3) : 0);
-*/
 	//#3: Trade - end
 
 
@@ -15058,7 +15003,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		int iForeignCorpCount = 0;
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 		{
-			if (GET_TEAM(getTeam()).hasHeadquarters((CorporationTypes)iCorp))
+			if (pTeam.hasHeadquarters((CorporationTypes)iCorp))
 			{
 				iHQCount++;
 				iOwnCorpCount += countCorporations((CorporationTypes)iCorp);
@@ -15168,7 +15113,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	{
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 		{
-			if (!GET_TEAM(getTeam()).hasHeadquarters((CorporationTypes)iCorp))
+			if (!pTeam.hasHeadquarters((CorporationTypes)iCorp))
 			{
 				iValue += countCorporations((CorporationTypes)iCorp) * 3;
 			}
@@ -15180,7 +15125,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		int iHQCount = 0;
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 		{
-			if (GET_TEAM(getTeam()).hasHeadquarters((CorporationTypes)iCorp))
+			if (pTeam.hasHeadquarters((CorporationTypes)iCorp))
 			{
 				iHQCount++;
 			}
@@ -15331,7 +15276,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iValue += iTempValue;
 	}
 
-	for (iI = 0; iI < GC.getNumHurryInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumHurryInfos(); iI++)
 	{
 		if (kCivic.isHurry(iI))
 		{
@@ -15367,7 +15312,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
 	{
 		if (kCivic.isSpecialBuildingNotRequired(iI))
 		{
@@ -15394,7 +15339,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	int iTempSpecialistValue = 0;
-	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		iTempValue = 0;
 		if (kCivic.isSpecialistValid(iI))
@@ -15609,7 +15554,7 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 {
 	int iBestValue = 0;
 	ReligionTypes eBestReligion = NO_RELIGION;
-	ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
+	const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
 
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
@@ -15642,21 +15587,20 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 		return eBestReligion;
 	}
 
-	int iBestCount = getHasReligionCount(eBestReligion);
-	int iSpreadPercent = (iBestCount * 100) / std::max(1, getNumCities());
-	int iPurityPercent = (iBestCount * 100) / std::max(1, countTotalHasReligion());
+	const int iBestCount = getHasReligionCount(eBestReligion);
+	const int iPurityPercent = (iBestCount * 100) / std::max(1, countTotalHasReligion());
+
 	if (iPurityPercent < 49)
 	{
-		if (iSpreadPercent > ((eBestReligion == eFavorite) ? 65 : 75))
+		const int iSpreadPercent = (iBestCount * 100) / std::max(1, getNumCities());
+
+		if (iSpreadPercent > ((eBestReligion == eFavorite) ? 65 : 75)
+		&& iPurityPercent > ((eBestReligion == eFavorite) ? 25 : 32))
 		{
-			if (iPurityPercent > ((eBestReligion == eFavorite) ? 25 : 32))
-			{
-				return eBestReligion;
-			}
+			return eBestReligion;
 		}
 		return NO_RELIGION;
 	}
-
 	return eBestReligion;
 }
 

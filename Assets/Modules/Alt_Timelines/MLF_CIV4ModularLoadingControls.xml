@@ -7,72 +7,59 @@
 	<ConfigurationInfos>
 		<ConfigurationInfo>
 			<Type>Alternate_Timelines_1</Type>
-			<Description>All the Modules concerned with alternate timline units and buildings.</Description>
+			<Description>All the Modules concerned with alternate timeline units and buildings.</Description>
 			<Modules>
 				<Module>
 					<Directory>Lara_Croft</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Megafauna</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Clockpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Steampunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Dieselpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Biopunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes <-->
 				</Module>
 				<Module>
 					<Directory>Cyberpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes <-->
 				</Module>
 				<Module>
 					<Directory>Apocalypse</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? NO not started<-->
 				</Module>
 				<Module>
 					<Directory>Atompunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Nanopunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Crystalpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Spacepunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Starpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

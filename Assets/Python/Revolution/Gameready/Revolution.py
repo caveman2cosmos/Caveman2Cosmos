@@ -1144,18 +1144,15 @@ class Revolution:
 			cityDistModifier = ( 307.0*cityDistRaw / cityDistMapModifier ) / ( 1.0 + ( cityDistCommBonus / 100.0 ) )
 			cityDistModifier -= int(666 / cityDistMapModifier)
 
-			CivicsDistModifier = RevUtils.getCivicsDistanceMod(pPlayer)
-			TraitsDistModifier = RevUtils.getTraitsDistanceMod(pPlayer)
-			BuildingsDistModifier = RevUtils.getBuildingsDistanceMod( pCity )
-			DistModifier = (CivicsDistModifier + TraitsDistModifier + BuildingsDistModifier) / 100.0
+			DistModifier = (pPlayer.getRevIdxDistanceModifier() + pCity.getRevIndexDistanceMod()) / 100.0
 			distMod = 1.0
-			if( DistModifier < 0 ) :
+			if DistModifier < 0:
 				distMod /= (1.0 - DistModifier)
-			elif( DistModifier > 0 ) :
+			elif DistModifier > 0:
 				distMod += DistModifier
 
 			distMod *= self.distToCapModifier
-			if( pCity.isGovernmentCenter() ) :
+			if pCity.isGovernmentCenter():
 				distMod *= 0.5
 
 			locationRevIdx = 0
@@ -2146,7 +2143,7 @@ class Revolution:
 				popup.setHeaderString( TRNSLTR.getText("TXT_KEY_REV_WARN_TITLE",()), 1<<2)
 				bodStr = (
 					TRNSLTR.getText("TXT_KEY_REV_WARN_NEWS",())
-					+ ' ' + getCityTextList(warnCities)
+					+ ' ' + RevUtils.getCityTextList(warnCities)
 					+ ' ' + TRNSLTR.getText("TXT_KEY_REV_WARN_CONTEMPLATING",())
 					+ self.updateLocalRevIndices(GAME.getGameTurn(), pPlayer.getID(), subCityList = warnCities, bIsRevWatch = True)
 					+ '\n\n' + TRNSLTR.getText("TXT_KEY_REV_WARN_CIV_WIDE",()) + '\n'
@@ -2465,8 +2462,8 @@ class Revolution:
 									if self.LOG_DEBUG: print "[REV] Revolt: Rebels rival homeland power, limiting enlistment"
 									bIsJoinWar = True
 
-								handoverStr = getCityTextList(handoverCities)
-								cityStr = getCityTextList(joinRevCities)
+								handoverStr = RevUtils.getCityTextList(handoverCities)
+								cityStr = RevUtils.getCityTextList(joinRevCities)
 
 								bodStr = pRevPlayer.getName() + TRNSLTR.getText("TXT_KEY_REV_LEADER",()) + ' ' + pRevPlayer.getCivilizationDescription(0)
 								bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_JOINREV_OFFER",())
@@ -2525,7 +2522,7 @@ class Revolution:
 				cultPlayer = GC.getPlayer( cultOwnerID )
 				cultTeam = GC.getTeam( cultPlayer.getTeam() )
 
-				bodStr = getCityTextList(cultCities, bPreCity = True, second = TRNSLTR.getText("TXT_KEY_REV_ALONG_WITH",()) + ' ', bPostIs = True)
+				bodStr = RevUtils.getCityTextList(cultCities, bPreCity = True, second = TRNSLTR.getText("TXT_KEY_REV_ALONG_WITH",()) + ' ', bPostIs = True)
 
 				if( bPeaceful ) :
 
@@ -2715,7 +2712,7 @@ class Revolution:
 						if( level < -5 or (newLevel > 5 and level < 0) ) :
 							if self.LOG_DEBUG: print "[REV] Revolt: Asking for change from %s to %s"%(GC.getCivicInfo(pPlayer.getCivics(optionType)).getDescription(),GC.getCivicInfo(newRelCivic).getDescription())
 
-							bodStr = getCityTextList(relCities, bPreCity = True, bPostIs = True)
+							bodStr = RevUtils.getCityTextList(relCities, bPreCity = True, bPostIs = True)
 
 							# Can't pay them enough so they don't feel oppressed
 
@@ -2749,7 +2746,7 @@ class Revolution:
 					stateRelCount = pPlayer.getHasReligionCount(stateRel)
 					if( revRelCount > stateRelCount/4 ) :
 
-						bodStr = getCityTextList(relCities, bPreCity = True, bPostIs = True)
+						bodStr = RevUtils.getCityTextList(relCities, bPreCity = True, bPostIs = True)
 
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change in state religion, %d practice new, %d practice state" % (revRelCount, stateRelCount)
 						totalRevIdx = 0
@@ -2804,7 +2801,7 @@ class Revolution:
 									if self.LOG_DEBUG: print "[REV] Revolt: %s is close enough to another rebelling city to join in independence quest" % pCity.getName()
 									indCities.append(pCity)
 
-					bodStr = getCityTextList(indCities, bPreCity = True, bPostIs = True)
+					bodStr = RevUtils.getCityTextList(indCities, bPreCity = True, bPostIs = True)
 
 					#iBuyOffCost = (60 + 12*pPlayer.getCurrentEra())*len(indCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 					totalRevIdx = 0
@@ -2873,7 +2870,7 @@ class Revolution:
 									if self.LOG_DEBUG: print "[REV] Revolt: %s is close enough to another rebellin city to join in independence quest" % pCity.getName()
 									indCities.append(pCity)
 
-					bodStr = getCityTextList(indCities, bPreCity = True, bPostIs = True)
+					bodStr = RevUtils.getCityTextList(indCities, bPreCity = True, bPostIs = True)
 
 					bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_REL_VIOLENT_IND_1",()) + ' %s.'%(GC.getReligionInfo( revRel ).getDescription())
 					bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_REL_VIOLENT_IND_2",()) + ' %s '%(GC.getReligionInfo( pPlayer.getStateReligion() ).getDescription()) + TRNSLTR.getText("TXT_KEY_REV_REL_VIOLENT_IND_3",())
@@ -2929,7 +2926,7 @@ class Revolution:
 										print "[REV] %s has state religion" % city.getName()
 									relCities.append(city)
 
-							bodStr = getCityTextList(revCities, bPreCity = True, bPostIs = True)
+							bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
 							if( not stateHolyCityOwner.getStateReligion() == stateRel ) :
 								if self.LOG_DEBUG: print "[REV] Revolt: Ask for Crusade against %s!" % stateHolyCityOwner.getCivilizationDescription(0)
@@ -2987,7 +2984,7 @@ class Revolution:
 					if( (10*abs(laborLevel) > GAME.getSorenRandNum(100, 'Revolt - emancipation request')) ):
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change to emancipation, " + str(newCivic)
 
-						bodStr = getCityTextList(revCities, bPreCity = True, bPostIs = True)
+						bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
 						#iBuyOffCost = (50 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						totalRevIdx = 0
@@ -3045,7 +3042,7 @@ class Revolution:
 											slaveCities.append(pCity)
 
 							bodStr = TRNSLTR.getText("TXT_KEY_REV_HL_SLAVE_REBELLION",())
-							bodStr += getCityTextList(slaveCities) + '!'
+							bodStr += RevUtils.getCityTextList(slaveCities) + '!'
 
 							bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_HL_SLAVE_DEMAND",())
 							if self.LOG_DEBUG: print "[REV] Revolt: Asking change to " + GC.getCivicInfo(newCivic).getDescription()
@@ -3077,7 +3074,7 @@ class Revolution:
 					if( 30 > GAME.getSorenRandNum(100, 'Revolt - environmentalism request') ):
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change to %s, %d (environment)"%(GC.getCivicInfo(newCivic).getDescription(),newCivic)
 
-						bodStr = getCityTextList(revCities, bPreCity = True, bPostIs = True)
+						bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
 						#iBuyOffCost = (50 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						totalRevIdx = 0
@@ -3123,7 +3120,7 @@ class Revolution:
 					if self.LOG_DEBUG: print "[REV] Revolt: %s is colony" % pCity.getName()
 					foreignCities.append( pCity )
 
-			bodStr = getCityTextList(foreignCities, bPreCity = True, bPostIs = True)
+			bodStr = RevUtils.getCityTextList(foreignCities, bPreCity = True, bPostIs = True)
 
 			if bPeaceful and self.civicRevolution:
 				# Sufferage or representation
@@ -3175,7 +3172,7 @@ class Revolution:
 #-------- If capital or majority of cities,
 		if revInCapital or len(revCities) >= (pPlayer.getNumCities()-1)/2 and len(revCities) > 2:
 
-			bodStr = getCityTextList(revCities, bPreCity = True, bPostIs = True)
+			bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
 			if bPeaceful:
 				# If peaceful, ask change to civics ... if no civics, ask for change of leader
@@ -3288,7 +3285,7 @@ class Revolution:
 						if( 50 > GAME.getSorenRandNum(100, 'Revolt - free speech request') ):
 							if self.LOG_DEBUG: print "[REV] Revolt: Asking change to Free Speech, " + str(newCivic)
 
-							bodStr = getCityTextList(revCities, bPreCity = True, bPostIs = True)
+							bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
 							#iBuyOffCost = (50 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 							totalRevIdx = 0
@@ -3478,7 +3475,7 @@ class Revolution:
 						if self.LOG_DEBUG: print "[REV] Revolt: %s is close enough to another rebelling city to join in independence quest" % pCity.getName()
 						indCities.append(pCity)
 
-		bodStr = getCityTextList(indCities, bPreCity = True, bPostIs = True)
+		bodStr = RevUtils.getCityTextList(indCities, bPreCity = True, bPostIs = True)
 
 		iBuyOffCost = -1
 
@@ -5220,7 +5217,7 @@ class Revolution:
 							elif( iPlayer == pPlayer.getID() ) :
 								pPlayerName = str(TRNSLTR.getText("TXT_KEY_REV_YOU",()))
 
-							cityString = bodStr = getCityTextList(cityList)
+							cityString = bodStr = RevUtils.getCityTextList(cityList)
 
 							mess = TRNSLTR.getText("TXT_KEY_REV_MESS_CEDE",())%(pPlayerName,cityString,revPlayerName)
 
@@ -5369,7 +5366,7 @@ class Revolution:
 
 						popup.setHeaderString(TRNSLTR.getText("TXT_KEY_REV_TITLE_GOOD_NEWS",()), 1<<2)
 
-						bodStr = getCityTextList(cityList, bPreCitizens = True)
+						bodStr = RevUtils.getCityTextList(cityList, bPreCitizens = True)
 
 						bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_HUMAN_GRANTED",()) + ' %s!'%(pPlayer.getName())
 						bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_HUMAN_REGAIN",()) + ' %s.'%(pRevPlayer.getCivilizationShortDescription(0))
@@ -5405,7 +5402,7 @@ class Revolution:
 								elif( iPlayer == pPlayer.getID() ) :
 									pPlayerName = str(TRNSLTR.getText("TXT_KEY_REV_YOU",()))
 
-								cityString = getCityTextList(cityList)
+								cityString = RevUtils.getCityTextList(cityList)
 
 								mess = TRNSLTR.getText("TXT_KEY_REV_MESS_CEDE",())%(pPlayerName,cityString,joinPlayerName)
 
@@ -5619,7 +5616,7 @@ class Revolution:
 			return
 
 		try:
-			cityStr = getCityTextList(cityList)
+			cityStr = RevUtils.getCityTextList(cityList)
 			if len(cityList) > 1:
 				cityStr2 = TRNSLTR.getText("TXT_KEY_REV_CITIES", ())
 			else:
@@ -5833,7 +5830,7 @@ class Revolution:
 		if( self.isLocalHumanPlayer(pPlayer.getID()) ) :
 			# Threatening popup to remind player what's coming
 
-			bodStr = getCityTextList(cityList, bPreCity = True, bPostIs = True) + ' '
+			bodStr = RevUtils.getCityTextList(cityList, bPreCity = True, bPostIs = True) + ' '
 
 			if( pRevPlayer.isAlive() ) :
 				bodStr += TRNSLTR.getText("TXT_KEY_REV_JOINING_WAR",())%(pRevPlayer.getCivilizationDescription(0))
