@@ -197,10 +197,9 @@ class BarbarianCiv:
 		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
 		leaders = []
 		for iLeader in xrange(GC.getNumLeaderHeadInfos()):
-			if iLeader in aList: continue
-			if bLeadAnyCiv:
-				if not GC.getLeaderHeadInfo(iLeader).isNPC(): continue
-			elif not GC.getCivilizationInfo(iCivType).isLeaders(iLeader): continue
+			if iLeader in aList or GC.getLeaderHeadInfo(iLeader).isNPC(): continue
+			if not bLeadAnyCiv and not GC.getCivilizationInfo(iCivType).isLeaders(iLeader):
+				continue
 			leaders.append(iLeader)
 
 		if not leaders:
