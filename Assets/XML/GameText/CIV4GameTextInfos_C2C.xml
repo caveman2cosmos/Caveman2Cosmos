@@ -547,6 +547,14 @@
 		<Polish>Opcje DCM:</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_GAME</Tag>
+		<English>Game Options:</English>
+		<French>Options du Jeu:</French>
+		<Spanish>Opciones de juego:</Spanish>
+		<Polish>Opcje Gry:</Polish>
+		<Russian>Îïöèè Revolution:</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_IDW</Tag>
 		<English>IDW Options:</English>
 		<French>Options IDW:</French>
