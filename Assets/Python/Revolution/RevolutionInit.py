@@ -138,7 +138,7 @@ class RevolutionInit:
 		revComponentsText = (
 			"<color=250,170,0,255><font=4b>Caveman2Cosmos<font=2b><color=255,255,0>\n"
 			+ TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP",())
-			+ sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_GAME",())
+			+ sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_GAME_REV",())
 		)
 		temp = ""
 		for iI in range(GC.getNumGameOptionInfos()):
