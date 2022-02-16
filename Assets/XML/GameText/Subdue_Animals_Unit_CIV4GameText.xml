@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Tag>
-		<English>Can build Folklore, animal related buildings, fight for entertainment and spread their tales.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Tag>
-		<English>Can build animal related buildings.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIG_GAME_HUNTER</Tag>
 		<English>Big Game Hunter</English>
 		<French>Grand Chasseur</French>
@@ -4242,6 +4234,571 @@
 		<Spanish>Cebra</Spanish>
 		<Polish>Poskromiona Zebra</Polish>
 		<Russian>Çåáðà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY</Tag>
+		<English>Subdued African Grey Parrot</English>
+		<French>Perroquet gris d'Afrique (App.)</French>
+		<Polish>Poskromiona Papuga Żako</Polish>
+		<Russian>Àôð. ïîïóãàé (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
+		<English>Subdued African Penguin</English>
+		<French>Pingouin d'Afrique (App.)</French>
+		<German>
+			<Text>Gefangener Brillenpinguin:Gefangenen Brillenpinguins:Gefangenen Brillenpinguin:Gefangenen Brillenpinguin:Gefangene Brillenpinguine:Gefangenen Brillenpinguine:Gefangenen Brillenpinguinen:Gefangenen Brillenpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Polish>Poskromiony Pingwin Przylądkowy</Polish>
+		<Russian>Àôð. ïèíãâèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
+		<English>Subdued Moon Bear</English>
+		<French>Ours Lune (App.)</French>
+		<Italian>
+			<Text>Orso luna addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Niedźwiedź Himalajski</Polish>
+		<Russian>Áåëîãðóäûé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL</Tag>
+		<English>Subdued Barn Owl</English>
+		<French>
+			<Text>Chouette effraie (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gefangene Schleiereule:Gefangenen Schleiereule:Gefangenen Schleiereule:Gefangene Schleiereule:Gefangene Schleiereulen:Gefangenen Schleiereulen:Gefangenen Schleiereulen:Gefangenen Schleiereulen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Polish>Poskromiona Płomykówka Zwyczajna</Polish>
+		<Russian>Ñèïóõà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
+		<English>Subdued Barred Owl</English>
+		<French>
+			<Text>Chouette rayée(App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Poskromiony Puszczyk</Polish>
+		<Russian>Ñû÷ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
+		<English>Subdued Black Bear</English>
+		<French>Ours noir (App.)</French>
+		<Italian>
+			<Text>Orso nero addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Baribal</Polish>
+		<Russian>×åðíûé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
+		<English>Subdued Blue-footed Booby</English>
+		<French>Fou à pieds bleus (App.)</French>
+		<Polish>Poskromiony Głuptak Niebieskonogi</Polish>
+		<Russian>Îëóøà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
+		<English>Subdued Brown Bear</English>
+		<French>Ours brun (App.)</French>
+		<Italian>
+			<Text>Orso addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Niedźwiedź Brunatny</Polish>
+		<Russian>Áóðûé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
+		<English>Subdued Cave Bear</English>
+		<French>Ours des cavernes (App.)</French>
+		<Italian>
+			<Text>Orso delle caverne addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Niedźwiedź Jaskiniowy</Polish>
+		<Russian>Ïåùåðíûé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
+		<English>Subdued Galapagos Penguin</English>
+		<French>Pingouin des Galapagos (App.)</French>
+		<Polish>Poskromiony Pingwin Równikowy</Polish>
+		<Russian>Î÷êîâûé ïèíãâèí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
+		<English>Subdued Grizzly</English>
+		<French>Grizzly (App.)</French>
+		<Italian>
+			<Text>Grizzly addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Grizzly</Polish>
+		<Russian>Ãðèçëè (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Tag>
+		<English>Subdued Harpy Eagle</English>
+		<French>
+			<Text>Harpie féroce (App.)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Poskromiona Harpia Wielka</Polish>
+		<Russian>Ãàðïèÿ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
+		<English>Subdued Giant Panda</English>
+		<French>Panda Géant (App.)</French>
+		<Italian>
+			<Text>Panda gigante addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Panda Wielka</Polish>
+		<Russian>Ãèãàíòñêàÿ ïàíäà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT</Tag>
+		<English>Subdued Parrot</English>
+		<French>Perroquet (App.)</French>
+		<Polish>Poskromiona Papuga</Polish>
+		<Russian>Ïîïóãàé (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
+		<English>Subdued Polar Bear</English>
+		<French>Ours polaire (App.)</French>
+		<Italian>
+			<Text>Orso polare addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Niedźwiedź Polarny</Polish>
+		<Russian>Áåëûé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN</Tag>
+		<English>Subdued Raven</English>
+		<French>Corbeau (App.)</French>
+		<Polish>Poskromiona Wrona</Polish>
+		<Russian>Âîðîí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Tag>
+		<English>Subdued Razorbill</English>
+		<French>Pingouin torda (App.)</French>
+		<Polish>Poskromiona Alka</Polish>
+		<Russian>Ãàãàðêà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
+		<English>Subdued Red Panda</English>
+		<French>Panda roux (App.)</French>
+		<Italian>
+			<Text>Panda rosso addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiona Panda Czerwona</Polish>
+		<Russian>Êðàñíàÿ ïàíäà (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
+		<English>Subdued Steller's Sea Eagle</English>
+		<French>Pigargue empereur (App.)</French>
+		<Polish>Poskromiony Bielik Olbrzymi</Polish>
+		<Russian>Îðëàí (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Tag>
+		<English>Subdued Secretary Bird</English>
+		<French>Messager sagittaire (App.)</French>
+		<Polish>Poskromiony Sekretarz</Polish>
+		<Russian>Ïòèöà-ñåêðåòàðü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
+		<English>Subdued Sloth Bear</English>
+		<French>Ours lippu (App.)</French>
+		<Italian>
+			<Text>Orso pigro addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Wargacz</Polish>
+		<Russian>Ãóáà÷ (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
+		<English>Subdued Spectacled Bear</English>
+		<French>Ours à lunettes (App.)</French>
+		<Italian>
+			<Text>Orso giocoliere addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Niedźwiedź Andyjski</Polish>
+		<Russian>Î÷êîâûé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
+		<English>Subdued Sun Bear</English>
+		<French>Ours malais (App.)</French>
+		<Italian>
+			<Text>Orso sole addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Niedźwiedź Malajski</Polish>
+		<Russian>Ìàëàéñêèé ìåäâåäü (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Tag>
+		<English>Subdued Mammoth</English>
+		<French>
+			<Text>Mammouth (App.)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gefangenes Mammut:Gefangenen Mammuts:Gefangenen Mammut:Gefangene Mammut:Gefangene Mammuts:Gefangenen Mammuts:Gefangenen Mammuts:Gefangenen Mammuts</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Mammut addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Mamut</Polish>
+		<Russian>Ìàìîíò (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Tag>
+		<English>Can build Folklore, animal related buildings, fight for entertainment and spread their tales.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_ASIANBEAR</Tag>
+		<English>Tamed Moon Bear</English>
+		<French>Ours Lune (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Himalajski</Polish>
+		<Russian>Áåëîãðóäûé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_BLACKBEAR</Tag>
+		<English>Tamed Black Bear</English>
+		<French>Ours Noir (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Czarny</Polish>
+		<Russian>×åðíûé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Tag>
+		<English>Tamed Brown Bear</English>
+		<French>Ours brun (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Brunatny</Polish>
+		<Russian>Áóðûé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Tag>
+		<English>Tamed Cave Bear</English>
+		<French>Ours des cavernes (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Jaskiniowy</Polish>
+		<Russian>Ïåùåðíûé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_GRIZZLY</Tag>
+		<English>Tamed Grizzly</English>
+		<French>Grizzly (dompté)</French>
+		<Polish>Ujarzmiony Grizzly</Polish>
+		<Russian>Ãðèçëè (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_PANDA_BEAR</Tag>
+		<English>Tamed Giant Panda</English>
+		<French>Panda Géant (dompté)</French>
+		<Polish>Ujarzmiony Panda Olbrzymia</Polish>
+		<Russian>Ãèãàíòñêàÿ ïàíäà (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_POLARBEAR</Tag>
+		<English>Tamed Polar Bear</English>
+		<French>Ours polaire (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Polarny</Polish>
+		<Russian>Áåëûé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_REDPANDA</Tag>
+		<English>Tamed Red Panda</English>
+		<French>Panda roux (dompté)</French>
+		<Polish>Ujarzmiony Czerwona Panda</Polish>
+		<Russian>Êðàñíàÿ ïàíäà (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_SLOTHBEAR</Tag>
+		<English>Tamed Sloth Bear</English>
+		<French>Ours lippu (dompté)</French>
+		<Polish>Ujarzmiony Wargacz</Polish>
+		<Russian>Ãóáà÷ (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_SPECTACLEDBEAR</Tag>
+		<English>Tamed Spectacled Bear</English>
+		<French>Ours à lunettes (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Andyjski</Polish>
+		<Russian>Î÷êîâûé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_SUNBEAR</Tag>
+		<English>Tamed Sun Bear</English>
+		<French>Ours malais (dompté)</French>
+		<Polish>Ujarzmiony Niedźwiedź Malajski</Polish>
+		<Russian>Ìàëàéñêèé ìåäâåäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_AARDVARK</Tag>
+		<English>Tamed Aardvark</English>
+		<French>
+			<Text>Oryctérope (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Mrówkojad</Polish>
+		<Russian>Òðóáêîçóá (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Tag>
+		<English>Tamed animals are similar to subdued animals except they can fight and reveal the map. Their primary use it to spread animal buildings to all of your cities.[PARAGRAPH:2]Some can place resources on the map depending on your tech level, the terrain and the animal.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Tag>
+		<English>Can build animal related buildings.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_BISON</Tag>
+		<English>Tamed Bison</English>
+		<French>
+			<Text>Bison (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Bizon</Polish>
+		<Russian>Áèçîí (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_BOAR</Tag>
+		<English>Tamed Wild Boar</English>
+		<French>
+			<Text>Ours sauvage (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Dzik</Polish>
+		<Russian>Êàáàí (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_BUFFALO</Tag>
+		<English>Tamed Buffalo</English>
+		<French>
+			<Text>Buffle (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Żubr</Polish>
+		<Russian>Áóéâîë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_CAMEL</Tag>
+		<English>Tamed Camel</English>
+		<French>
+			<Text>Chameau (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Wielbłąd</Polish>
+		<Russian>Âåðáëþä (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_CATTLE</Tag>
+		<English>Tamed Cattle</English>
+		<French>
+			<Text>Boeuf (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Tur</Polish>
+		<Russian>Êîðîâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_DONKEY</Tag>
+		<English>Tamed Donkey</English>
+		<French>
+			<Text>Ane (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Osioł</Polish>
+		<Russian>Îñåë (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_ELEPHANT</Tag>
+		<English>Tamed Elephant</English>
+		<French>
+			<Text>Éléphant (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Słoń</Polish>
+		<Russian>Ñëîí (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_HIPPO</Tag>
+		<English>Tamed Hippos</English>
+		<French>Hippopotame (dompté)</French>
+		<Polish>Oswojony Hipopotam</Polish>
+		<Russian>Áåãåìîò (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_HORSE</Tag>
+		<English>Tamed Horse</English>
+		<French>
+			<Text>Cheval (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Koń</Polish>
+		<Russian>Ëîøàäü (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_LION</Tag>
+		<English>Tamed Lion</English>
+		<French>
+			<Text>Lion (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gezähmter Löwe:Gezähmten Löwen:Gezähmten Löwen:Gezähmten Löwen:Gezähmte Löwen:Gezähmten Löwen:Gezähmten Löwen:Gezähmten Löwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Leone ammaestrato:Leoni ammaestrati</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tamed Lion:Tamed Lion</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Oswojony Lew</Polish>
+		<Russian>Ëåâ (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_LLAMA</Tag>
+		<English>Tamed Llama</English>
+		<French>
+			<Text>Lama (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojona Llama</Polish>
+		<Russian>Ëàìà (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_MAMMOTH</Tag>
+		<English>Tamed Mammoth</English>
+		<French>
+			<Text>Mammouth (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Mamut</Polish>
+		<Russian>Ìàìîíò (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_MUSKOX</Tag>
+		<English>Tamed Musk Ox</English>
+		<French>
+			<Text>Boeuf musqué (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Oswojony Wół Piżmowy</Polish>
+		<Russian>Îâöåáûê (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_PANTHER</Tag>
+		<English>Tamed Panther</English>
+		<French>
+			<Text>Panthère (domptée)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gezähmter Panther:Gezähmten Panthers:Gezähmten Panther:Gezähmten Panther:Gezähmte Panther:Gezähmten Panther:Gezähmten Panthern:Gezähmten Panther</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Pantera ammaestrata:Pantere ammaestrate</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tamed Panther:Tamed Panther</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Oswojona Pantera</Polish>
+		<Russian>Ïàíòåðà (äîì.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_WOLF</Tag>
+		<English>Tamed Wolf</English>
+		<French>
+			<Text>Loup (dompté)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gezähmter Wolf:Gezähmten Wolfes:Gezähmten Wolf:Gezähmten Wolf:Gezähmte Wölfe:Gezähmten Wölfe:Gezähmten Wölfen:Gezähmten Wölfe</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Lupo ammaestrato:Lupi ammaestrati</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tamed Wolf:Tamed Wolf</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Oswojony Wilk</Polish>
+		<Russian>Âîëê (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BAIRDS_TAPIR</Tag>
