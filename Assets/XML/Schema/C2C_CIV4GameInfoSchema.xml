@@ -605,8 +605,6 @@
 	<ElementType name="iAttitudeChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoTechTradeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iTechTradeKnownModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnownedTilesPerGameAnimal" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnownedTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedWaterTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedTilesPerBarbarianCity" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianCityCreationTurnsElapsed" content="textOnly" dt:type="int"/>
@@ -675,8 +673,6 @@
 		<element type="iAttitudeChange" minOccurs="0"/>
 		<element type="iNoTechTradeModifier" minOccurs="0"/>
 		<element type="iTechTradeKnownModifier" minOccurs="0"/>
-		<element type="iUnownedTilesPerGameAnimal" minOccurs="0"/>
-		<element type="iUnownedTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedWaterTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedTilesPerBarbarianCity" minOccurs="0"/>
 		<element type="iBarbarianCityCreationTurnsElapsed" minOccurs="0"/>
