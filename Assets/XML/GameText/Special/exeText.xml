@@ -4626,7 +4626,7 @@
 		<Italian>Impossibile caricare la versione %d1, prevista la versione %d2 o inferiore</Italian>
 		<Spanish>No se puede cargar la versión %d1. Es necesaria la %d2 o inferior.</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_DESC</Tag>
 		<English>Please enter the required password for this Civ.</English>
 		<French>Saisissez le mot de passe requis pour cette civilisation.</French>

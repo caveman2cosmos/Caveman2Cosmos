@@ -2616,7 +2616,7 @@
 		<Tag>TXT_KEY_CANCLAIM</Tag>
 		<English>Can claim</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CANT_NUKE_FRIENDS</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot Nuke Friendly Territory or Units[COLOR_REVERT][NEWLINE]</English>
 		<French>[COLOR_WARNING_TEXT]Impossible de lancer le missile nucléaire sur des unités ou un territoire amis[COLOR_REVERT][NEWLINE]</French>
