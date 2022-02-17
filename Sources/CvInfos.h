@@ -3645,8 +3645,6 @@ public:
 	int getAttitudeChange() const;
 	int getNoTechTradeModifier() const;
 	int getTechTradeKnownModifier() const;
-	int getUnownedTilesPerGameAnimal() const;
-	int getUnownedTilesPerBarbarianUnit() const;
 	int getUnownedWaterTilesPerBarbarianUnit() const;
 	int getUnownedTilesPerBarbarianCity() const;
 	int getBarbarianCityCreationTurnsElapsed() const;
@@ -3719,8 +3717,6 @@ private:
 	int m_iAttitudeChange;
 	int m_iNoTechTradeModifier;
 	int m_iTechTradeKnownModifier;
-	int m_iUnownedTilesPerGameAnimal;
-	int m_iUnownedTilesPerBarbarianUnit;
 	int m_iUnownedWaterTilesPerBarbarianUnit;
 	int m_iUnownedTilesPerBarbarianCity;
 	int m_iBarbarianCityCreationTurnsElapsed;

@@ -1291,11 +1291,8 @@ void CvPlot::verifyUnitValidPlot()
 		CvUnit* pLoopUnit = *it;
 		bool bErased = false;
 
-		if (pLoopUnit->atPlot(this) &&
-			!(pLoopUnit->isCargo()) &&
-			!(pLoopUnit->isCombat()) &&
-			(!isValidDomainForLocation(*pLoopUnit) || !pLoopUnit->canEnterArea(getTeam(), area()))
-			)
+		if (pLoopUnit->atPlot(this) && !pLoopUnit->isCargo() && !pLoopUnit->isCombat()
+		&& (!isValidDomainForLocation(*pLoopUnit) || !pLoopUnit->canEnterArea(getTeam(), area())))
 		{
 			bAnyMoved = true;
 			if (!pLoopUnit->jumpToNearestValidPlot())
@@ -5269,12 +5266,7 @@ bool CvPlot::isTradeNetworkConnected(const CvPlot* pPlot, TeamTypes eTeam) const
 
 bool CvPlot::isValidDomainForLocation(const CvUnit& unit) const
 {
-	if (isValidDomainForAction(unit))
-	{
-		return true;
-	}
-
-	return isCity(true, unit.getTeam());
+	return isValidDomainForAction(unit) || isCity(true, unit.getTeam());
 }
 
 
