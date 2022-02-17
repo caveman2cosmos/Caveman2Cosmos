@@ -1626,30 +1626,6 @@
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS2</Tag>
-		<English>Upgrade Space Station to Level 2</English>
-		<French>Upgrade Station spatiale to Level 2</French>
-		<Russian>Óñîâ. êîñì. ñòàíöèþ (óð.2)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS2_HELP</Tag>
-		<English>Upgrade the Space Station</English>
-		<French>Upgrade the Station spatiale</French>
-		<Russian>Óñîâåðø. êîñì. ñòàíöèþ </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS3</Tag>
-		<English>Upgrade Space Station to Level 3</English>
-		<French>Upgrade Station spatiale to Level 3</French>
-		<Russian>Óñîâ. êîñì. ñòàíöèþ (óð.3)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS3_HELP</Tag>
-		<English>Upgrade the Space Station</English>
-		<French>Upgrade the Station spatiale</French>
-		<Russian>Óñîâåðø. êîñì. ñòàíöèþ </Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_CAPTURE_ASTEROID</Tag>
 		<English>Do Research Mission</English>
 		<French>Faire une Mission de Recherche</French>
@@ -1984,30 +1960,6 @@
 		<English>Analysis Successful!</English>
 		<French>Analyse Réussie !</French>
 		<Russian>Àíàëèç çàâåðøåí!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS2</Tag>
-		<English>Upgrade Space Station</English>
-		<French>Upgrade Station spatiale</French>
-		<Russian>Óëó÷ø. êîñì. ñòàíöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS2_MESSAGE</Tag>
-		<English>Mission Successful!</English>
-		<French>Mission Réussie !</French>
-		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS3</Tag>
-		<English>Upgrade Space Station</English>
-		<French>Upgrade Station spatiale</French>
-		<Russian>Óëó÷ø. êîñì. ñòàíöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS3_MESSAGE</Tag>
-		<English>Mission Successful!</English>
-		<French>Mission Réussie !</French>
-		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Tag>

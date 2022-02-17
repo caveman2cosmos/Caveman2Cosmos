@@ -4056,6 +4056,8 @@
 			<iAsset>1</iAsset>
 			<Builds>
 				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV2</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV3</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -4151,68 +4153,6 @@
 									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS3_REWARD'),capital.getX(),capital.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS2</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS2</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS2</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV1']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS3</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS3</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS3</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV2']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
@@ -5622,6 +5562,8 @@
 			<iAsset>1</iAsset>
 			<Builds>
 				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV2</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV3</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -5717,68 +5659,6 @@
 									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS3_REWARD'),capital.getX(),capital.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS2</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS2</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS2</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV1']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS3</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS3</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS3</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV2']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
 								def getAIValue(unit, plot):
 									return 1
 							</Python>

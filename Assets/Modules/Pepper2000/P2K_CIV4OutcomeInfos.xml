@@ -70,24 +70,6 @@
 			<bCity>0</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_SS2</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_SS2</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_SS2_MESSAGE</Message>
-			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_SS3</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_SS3</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_SS3_MESSAGE</Message>
-			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM_MESSAGE</Message>
