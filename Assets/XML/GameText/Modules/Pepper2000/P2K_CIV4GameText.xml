@@ -1171,18 +1171,6 @@
 		<Russian>Çàõâàò àñòåðîèäà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Become Bulldozer</English>
-		<French>Convertir en Bulldozer</French>
-		<Russian>Ñáîðêà Êîìáàéíà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
-		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
-		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
-		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
 		<English>Explore an Ancient Civilization</English>
 		<French>Explorer une civilization antique</French>
@@ -1962,18 +1950,6 @@
 		<Russian>Àíàëèç çàâåðøåí!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Will transform the Construction Ship into a Bulldozer.</English>
-		<French>Va Transformer le Vaisseau Spatial en Bulldozer.</French>
-		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER_MESSAGE</Tag>
-		<English>Your Construction Ship was transformed into a Bulldozer.</English>
-		<French>Votre Vaisseau Spatial a été transformé en Bulldozer.</French>
-		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Tag>
 		<English>Found a City</English>
 		<French>Fonder une Ville</French>
@@ -2195,7 +2171,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.[NEWLINE]It also can be transformed to [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_BASES]Lunar Bases[\LINK] to build lunar mines and route.</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK] is early unit dedicated to resource extraction.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2325,7 +2301,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
-		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.[NEWLINE]Upgrades to a Cislunar, Lunar, Planetary settler on Space Station Lv. 3 at [LINK=TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS]Advanced Environmental Systems[\LINK], [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK], [LINK=TECH_PLANETARY_COLONIZATION]Planetary Colonization[\LINK] respectively</English>
+		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2549,7 +2525,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
+		<English>[ICON_BULLET]Can build cities on the Moon.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 	</TEXT>
 	<TEXT>

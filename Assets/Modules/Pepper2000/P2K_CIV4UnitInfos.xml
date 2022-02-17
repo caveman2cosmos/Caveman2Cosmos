@@ -83,47 +83,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<Actions>
-				<Action>
-					<MissionType>MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_LUNAR_BULLDOZER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-							<PythonCallback/>
-							<Python>
-								from CvPythonExtensions import CyGlobalContext
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									return plot.getTerrainType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									return 0
-								def getDisplay(unit,plot):
-									return u""
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-			</Actions>
 		</UnitInfo>
 		<!-- Lunar Rover-->
 		<UnitInfo>
@@ -8424,10 +8383,7 @@
 				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
 				<BuildType>BUILD_LUNAR_MINE</BuildType>
 			</Builds>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
-			</PrereqAndBuildings>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>1700</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
