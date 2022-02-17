@@ -1708,13 +1708,19 @@ void CvPlayerAI::AI_makeProductionDirty()
 	algo::for_each(cities(), CvCity::fn::AI_setChooseProductionDirty(true));
 }
 
-// BETTER_BTS_AI_MOD 07/05/10	jdog5000
 // War tactics AI
 void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 {
 	bool bRaze = false;
 
-	if (canRaze(pCity))
+	if ( // Can raze
+			!GC.getGame().isOption(GAMEOPTION_NO_CITY_RAZING)
+		&&	(
+				!pCity->isEverOwned(getID())
+			&&	!pCity->plot()->isCultureRangeCity(getID(), std::max(0, GC.getNumCultureLevelInfos() - 1))
+			||	pCity->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT("RAZING_CULTURAL_PERCENT_THRESHOLD")
+		)
+	)
 	{
 		int iRazeValue = 0;
 		const int iCloseness = pCity->AI_playerCloseness(getID());
@@ -26718,7 +26724,7 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 	PROFILE_FUNC();
 
 	m_bHasInquisitionTarget = false;
-	if(!(isInquisitionConditions()))
+	if(!isInquisitionConditions())
 	{
 		return;
 	}

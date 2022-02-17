@@ -11549,3 +11549,26 @@ void CvGame::enforceOptionCompatibility(GameOptionTypes eOption)
 		}
 	}
 }
+
+
+bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner) const
+{
+	if (isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE)
+	&& (eNewOwner == BARBARIAN_PLAYER || eNewOwner == NEANDERTHAL_PLAYER)
+	//Insectoids always raze
+	|| eNewOwner == INSECT_PLAYER)
+	{
+		return true;
+	}
+	if (isOption(GAMEOPTION_NO_CITY_RAZING))
+	{
+		return false;
+	}
+	if (isOption(GAMEOPTION_ONE_CITY_CHALLENGE)
+	|| getMaxCityElimination() > 0
+	|| city->getPopulation() == 1)
+	{
+		return true;
+	}
+	return false;
+}

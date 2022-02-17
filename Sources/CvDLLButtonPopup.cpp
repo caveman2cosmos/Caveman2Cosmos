@@ -1696,14 +1696,18 @@ bool CvDLLButtonPopup::launchRazeCityPopup(CvPopup* pPopup, CvPopupInfo &info)
 		return false;
 	}
 
-	PlayerTypes eHighestCulturePlayer = (PlayerTypes)info.getData2();
+	const PlayerTypes eHighestCulturePlayer = (PlayerTypes)info.getData2();
 
-	int iCaptureGold = info.getData3();
-	bool bRaze = player.canRaze(pNewCity);
-	bool bGift = ((eHighestCulturePlayer != NO_PLAYER)
-		&& (eHighestCulturePlayer != player.getID())
-		&& ((player.getTeam() == GET_PLAYER(eHighestCulturePlayer).getTeam()) || GET_TEAM(player.getTeam()).isOpenBorders(GET_PLAYER(eHighestCulturePlayer).getTeam()) || GET_TEAM(GET_PLAYER(eHighestCulturePlayer).getTeam()).isVassal(player.getTeam())));
-
+	const int iCaptureGold = info.getData3();
+	const bool bGift = (
+			eHighestCulturePlayer != NO_PLAYER
+		&&	eHighestCulturePlayer != player.getID()
+		&& (
+				player.getTeam() == GET_PLAYER(eHighestCulturePlayer).getTeam()
+			||	GET_TEAM(player.getTeam()).isOpenBorders(GET_PLAYER(eHighestCulturePlayer).getTeam())
+			||	GET_TEAM(GET_PLAYER(eHighestCulturePlayer).getTeam()).isVassal(player.getTeam())
+		)
+	);
 	CvWString szBuffer;
 	if (iCaptureGold > 0)
 	{
@@ -1716,7 +1720,7 @@ bool CvDLLButtonPopup::launchRazeCityPopup(CvPopup* pPopup, CvPopupInfo &info)
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, szBuffer);
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_KEEP_CAPTURED_CITY").c_str(), NULL, 0, WIDGET_GENERAL);
 
-	if (bRaze)
+	if (!GC.getGame().isOption(GAMEOPTION_NO_CITY_RAZING))
 	{
 		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_RAZE_CAPTURED_CITY").c_str(), NULL, 1, WIDGET_GENERAL);
 	}

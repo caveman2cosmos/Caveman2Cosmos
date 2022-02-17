@@ -7109,34 +7109,33 @@ void CvCity::setPopulation(int iNewValue)
 		GET_TEAM(getTeam()).changeTotalPopulation(iNewValue - iOldPopulation);
 		GC.getGame().changeTotalPopulation(iNewValue - iOldPopulation);
 
-		checkBuildings();
-
-		if (plot()->getFeatureType() != NO_FEATURE)
+		if (iNewValue > 0)
 		{
-			const int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
-			if (iPopDestroys > -1 && iNewValue >= iPopDestroys)
+			if (plot()->getFeatureType() != NO_FEATURE)
 			{
-				plot()->setFeatureType(NO_FEATURE);
+				const int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
+				if (iPopDestroys > -1 && iNewValue >= iPopDestroys)
+				{
+					plot()->setFeatureType(NO_FEATURE);
+				}
 			}
+			updateFeatureHealth();
+			checkBuildings();
+
+			if (
+				!isHuman()
+			&&
+				(
+					iOldPopulation == 1 && iNewValue > 1
+					||
+					iNewValue == 1 && iOldPopulation > 1
+					||
+					iNewValue > iOldPopulation && GET_PLAYER(getOwner()).getNumCities() <= 2
+				)
+			) AI_setChooseProductionDirty(true);
 		}
-
 		plot()->updateYield();
-
-		updateFeatureHealth();
 		setMaintenanceDirty(true);
-
-		if (
-			!isHuman()
-		&&
-			(
-				iOldPopulation == 1 && iNewValue > 1
-				||
-				iNewValue == 1 && iOldPopulation > 1
-				||
-				iNewValue > iOldPopulation && GET_PLAYER(getOwner()).getNumCities() <= 2
-			)
-		) AI_setChooseProductionDirty(true);
-
 
 		GET_PLAYER(getOwner()).AI_makeAssignWorkDirty();
 
@@ -7275,10 +7274,7 @@ int CvCity::getRealPopulation() const
 	{
 		return realPopulationTable[getPopulation()];
 	}
-	else
-	{
-		return realPopulationTable[NUM_POP_TABLE_ENTRIES - 1] + ((realPopulationTable[NUM_POP_TABLE_ENTRIES - 1] - realPopulationTable[NUM_POP_TABLE_ENTRIES - 2]) * (getPopulation() - NUM_POP_TABLE_ENTRIES));
-	}
+	return realPopulationTable[NUM_POP_TABLE_ENTRIES - 1] + ((realPopulationTable[NUM_POP_TABLE_ENTRIES - 1] - realPopulationTable[NUM_POP_TABLE_ENTRIES - 2]) * (getPopulation() - NUM_POP_TABLE_ENTRIES));
 }
 
 int CvCity::getHighestPopulation() const
@@ -19289,29 +19285,6 @@ int CvCity::getBestYieldAvailable(YieldTypes eYield) const
 	return iBestYieldAvailable;
 }
 
-bool CvCity::isAutoRaze() const
-{
-	if (GC.getGame().isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE) && isHominid()
-	//Insectoids always raze
-	|| getOwner() == INSECT_PLAYER)
-	{
-		return true;
-	}
-	if (GC.getGame().isOption(GAMEOPTION_NO_CITY_RAZING))
-	{
-		return false;
-	}
-	if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
-	{
-		return true;
-	}
-	if (getHighestPopulation() == 1 || GC.getGame().getMaxCityElimination() > 0)
-	{
-		return true;
-	}
-	return false;
-}
-
 int CvCity::getMusicScriptId() const
 {
 	bool bIsHappy = true;
@@ -20652,7 +20625,10 @@ void CvCity::checkBuildings(bool bAlertOwner)
 					CvWString szBuffer;
 
 					if (bMissingBonus)
+					{
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_RESOURCES", kBuilding.getDescription(), getNameKey(), kBuilding.getDescription());
+						FErrorMsg("bMissingBonus");
+					}
 					else if (bRequiresWar)
 						szBuffer = gDLL->getText("TXT_KEY_REMOVED_BUILDINGS_WARTIME", kBuilding.getDescription(), getNameKey());
 					else if (bRequiresCivics)

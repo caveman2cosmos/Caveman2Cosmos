@@ -1234,8 +1234,6 @@ public:
 	int getNoBonusCount(BonusTypes eBonus) const;
 	bool isNoBonus(BonusTypes eBonus) const;
 
-	bool isAutoRaze() const;
-
 	DllExport int getMusicScriptId() const;
 	DllExport int getSoundscapeScriptId() const;
 	DllExport void cheat(bool bCtrl, bool bAlt, bool bShift);

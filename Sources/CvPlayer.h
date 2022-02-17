@@ -249,7 +249,6 @@ public:
 	void findNewCapital();
 	int getNumGovernmentCenters() const;
 
-	bool canRaze(CvCity* pCity) const;
 	void raze(CvCity* pCity);
 	void disband(CvCity* pCity);
 
@@ -2363,6 +2362,8 @@ public:
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
 #endif
+	virtual void AI_invalidateAttitudeCache(PlayerTypes ePlayer) = 0;
+	virtual void AI_setHasInquisitionTarget() = 0;
 };
 
 #endif
