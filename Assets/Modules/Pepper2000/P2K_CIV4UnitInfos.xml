@@ -297,6 +297,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
@@ -313,9 +314,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -389,6 +391,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -406,9 +409,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
@@ -487,6 +491,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -510,9 +515,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
@@ -5777,102 +5783,6 @@
 									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
 								def getDisplay(unit,plot):
 									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_CISLUNAR_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_CISLUNAR_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeCislunarSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CISLUNARSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Cislunar Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_LUNAR_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_LUNAR_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeLunarSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNARSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Lunar Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_PLANET_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_PLANET_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradePlanetSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_PLANETARYSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Planetary Settler"
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
