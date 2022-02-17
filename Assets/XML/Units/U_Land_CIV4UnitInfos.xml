@@ -28428,6 +28428,7 @@
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
+			<bHiddenNationality>1</bHiddenNationality>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
 			<bStealPlans>1</bStealPlans>
