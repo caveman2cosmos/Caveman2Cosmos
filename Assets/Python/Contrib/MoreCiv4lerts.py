@@ -73,11 +73,10 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		self.CheckForAlerts(iPlayer, True)
 
 	def OnCityAcquired(self, argsList):
-		owner, playerType, city, bConquest, bTrade = argsList
-		iPlayer = city.getOwner()
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		if not self.getCheckForDomVictory(): return
-		if iPlayer == GAME.getActivePlayer():
-			self.CheckForAlerts(iPlayer, False)
+		if iOwnerNew == GAME.getActivePlayer():
+			self.CheckForAlerts(iOwnerNew, False)
 
 	def OnCityBuilt(self, argsList):
 		CyCity = argsList[0]

@@ -27,7 +27,7 @@ def init():
 	EM = getEventManager()
 	EM.addEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.addEventHandler("setPlayerAlive", onSetPlayerAlive)
-	EM.addEventHandler("cityAcquired", onCityAcquired)
+	EM.addEventHandler("cityAcquiredAndKept", onCityAcquiredAndKept)
 	EM.addEventHandler("cityBuilt", onCityBuilt)
 	EM.addEventHandler("vassalState", onVassalState)
 	EM.addEventHandler("addTeam", onAddTeam)
@@ -131,11 +131,11 @@ def onBeginPlayerTurn(argsList):
 			return
 
 
-def onCityAcquired(argsList):
-	city = argsList[2]
-	owner = GC.getPlayer(city.getOwner())
+def onCityAcquiredAndKept(argsList):
+	iPlayer = argsList[0]
+	owner = GC.getPlayer(iPlayer)
 	if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
-		setNewNameByCivics(owner.getID())
+		setNewNameByCivics(iPlayer)
 
 
 def onCityBuilt(argsList):

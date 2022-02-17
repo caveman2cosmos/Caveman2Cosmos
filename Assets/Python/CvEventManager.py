@@ -2556,6 +2556,7 @@ class CvEventManager:
 				self.iArcologyCityID = -1
 
 
+	# This is before city has changed owner or been autorazed
 	def onCityAcquired(self, argsList):
 		iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade = argsList
 		iOldCityID = self.iOldCityID
