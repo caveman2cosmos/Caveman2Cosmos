@@ -1,9 +1,95 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
+		<English>Enclosure - Amphibian Pond</English>
+		<French>Enclos - Mare à amphibiens</French>
+		<Italian>Stagno per anfibi</Italian>
+		<Polish>Klatka - Płazy</Polish>
+		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Tag>
 		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
 		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
+		<English>Autobuild - Presence of Coral</English>
+		<German>Präsenz von Korallen</German>
+		<Italian>Presenza di corallo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
+		<English>Autobuild - Presence of Earth</English>
+		<German>Präsenz der Erde</German>
+		<Italian>Presenza della Terra</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
+		<English>Autobuild - Presence of Crater</English>
+		<German>Präsenz von Kratern</German>
+		<Italian>Presenza di un cratere</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
+		<English>Autobuild - Presence of Fire</English>
+		<German>Präsenz des Feuers</German>
+		<Italian>Presenza del Fuoco</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
+		<English>Autobuild - Presence of Metal</English>
+		<German>Präsenz von Metall</German>
+		<Italian>Presenza di metallo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
+		<English>Autobuild - Presence of Oasis</English>
+		<German>Präsenz von Oasen</German>
+		<Italian>Presenza di un'oasi</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
+		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
+		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
+		<English>Autobuild - Presence of Landform</English>
+		<German>Präsenz von Felsformationen</German>
+		<Italian>Presenza di un rilievo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
+		<English>Autobuild - Presence of Reef</English>
+		<German>Präsenz von Riffen</German>
+		<Italian>Presenza di una barriera corallina</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
+		<English>Autobuild - Folklore Requirement</English>
+		<German>Folklore-Grundlagen</German>
+		<Italian>Requisito per il folklore</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
+		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] richiedono la lingua parlata come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 pseudoedifici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
+		<English>Autobuild - Presence of Sea</English>
+		<German>Präsenz der See</German>
+		<Italian>Presenza di un mare</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
+		<English>Autobuild - Presence of Volcano</English>
+		<German>Präsenz von Vulkanen</German>
+		<Italian>Presenza di un vulcano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Tag>
@@ -26,12 +112,6 @@
 		<Russian>Çâåðèíûé òîòåì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Tag>
-		<English>The tradition of having a mascot or flag/standard that identifies the people in a military unit.</English>
-		<Italian>La tradizione di avere una mascotte o una bandiera che identifica le persone che fanno parte di un'unità militare.</Italian>
-		<Polish>Tradycja posiadania maskotki lub sztandaru, który identyfikuje ludzi w jednostce wojskowej.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Tag>
 		<English>Military Standard (Canines)</English>
 		<French>Standards Militaires (Canins)</French>
@@ -48,6 +128,12 @@
 		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Tag>
+		<English>The tradition of having a mascot or flag/standard that identifies the people in a military unit.</English>
+		<Italian>La tradizione di avere una mascotte o una bandiera che identifica le persone che fanno parte di un'unità militare.</Italian>
+		<Polish>Tradycja posiadania maskotki lub sztandaru, który identyfikuje ludzi w jednostce wojskowej.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
 		<French>Standards Militaires (Ouvriers)</French>
@@ -61,6 +147,38 @@
 		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
 		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
 		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
+		<English>Enclosure - Bad Boys</English>
+		<French>Enclos - Animaux nuisibles</French>
+		<Italian>Gabbia dei parassiti</Italian>
+		<Polish>Klatka - Groźne Zwierzęta</Polish>
+		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
+		<English>Enclosure - Bear</English>
+		<French>Enclos - Ours</French>
+		<Italian>Gabbia degli orsi</Italian>
+		<Polish>Klatka - Niedźwiedź</Polish>
+		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
+		<English>Enclosure - Big Cat</English>
+		<French>Enclos - Félins</French>
+		<Italian>Gabbia dei grossi felini</Italian>
+		<Polish>Klatka - Wielki kot</Polish>
+		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
+		<English>Enclosure - Bird</English>
+		<French>Enclos - Oiseaux</French>
+		<Italian>Gabbia degli uccelli</Italian>
+		<Polish>Klatka - Ptaki</Polish>
+		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
@@ -332,6 +450,21 @@
 		<Polish>Oswajanie słoni (lecz nie udomowienie wciąż łapano dziko żyjące osobniki) rozpoczęło się około 4000 lat temu w dolinie Indusu. Pierwszym oswojonym gatunkiem słonia był słoń indyjski (Elephas maximus), którego używano do prac w polu. Pierwsze użycie tych zwierząt do celów militarnych, wspomniane w zapisanych w języku wedyjskim hymnach, datuje się na rok 1100 p.n.e., a miało miejsce w północnych Indiach.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Tag>
+		<English>Enclosure - Exotic Herbivore</English>
+		<French>Enclos - Herbivores exotiques</French>
+		<Italian>Gabbia degli erbivori esotici</Italian>
+		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
+		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Tag>
+		<English>A cage used for wild subdued animals.</English>
+		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici addomesticati.</Italian>
+		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
+		<Russian>Êëåòêà äëÿ óêðîùåííûõ äèêèõ æèâîòíûõ.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
 		<English>Unit Reward - Feather Worker</English>
 		<French>Atelier de Plumes</French>
@@ -360,689 +493,6 @@
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
-		<English>Unit Reward - Dance (Fox)</English>
-		<French>Danse du Renard</French>
-		<Italian>Danza della volpe</Italian>
-		<Russian>Òàíåö ëèñû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
-		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
-		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
-		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
-		<English>Unit Reward - Fur Farm</English>
-		<French>Ferme de Fourrures</French>
-		<Italian>Allevamento di animali da pelliccia</Italian>
-		<Polish>Ferma Futer</Polish>
-		<Russian>Ìåõîâàÿ ôåðìà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FUR_FARM_PEDIA</Tag>
-		<English>Fur farming is the practice of breeding or raising certain types of animals for their fur. This became possible in the 1860's.</English>
-		<Italian>L'allevamento di animali da pelliccia è la pratica di incrociare e allevare certi tipi di animali principalmente per ottenere la loro pelliccia. Quest'attività divenne possibile negli anni sessanta del XIX secolo.</Italian>
-		<Polish>Można spotkać się z poglądem, że hodowla norek i innych stworzeń na futro wiąże się z niehumanitarnym traktowaniem zwierząt. Szczególnie dobrze jest to udokumentowane w krajach Trzeciego Zwiata. Jednak raport dotyczący sytuacji wielkopolskich ferm futrzarskich autorstwa Najwyższej Izby Kontroli z 2011 roku, wskazuje że "w 87% tych ferm nie przestrzegano wymagań ochrony środowiska, w 48% działalność hodowlana prowadzona była w obiektach nielegalnie wybudowanych lub użytkowanych, a w 35% niezgodnie z przepisami weterynaryjnymi." Aktywiści pro-zwierzęcy twierdzą iż fermy hodowlane są przyczyną skażenia środowiska licznymi związkami takimi jak siarkowodór, amoniak, mocznik, fosfor czy azot, które nie są odpowiednio utylizowane.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
-		<English>Remains - Glyptodon</English>
-		<French>Restes de Glyptodon</French>
-		<Italian>Resti di glittodonte</Italian>
-		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOAT_HERD</Tag>
-		<English>Herd (Goat)</English>
-		<French>Troupeau de Chèvres</French>
-		<Italian>Branco di capre</Italian>
-		<Polish>Efekt Mitu - Koza</Polish>
-		<Russian>Ñòàäî êîçëîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOAT_HERD_PEDIA</Tag>
-		<English>The domestic goat (Capra aegagrus hircus) is a subspecies of goat domesticated from the wild goat of southwest Asia and Eastern Europe. The goat is a member of the Bovidae family and is closely related to the sheep as both are in the goat-antelope subfamily Caprinae. There are over three hundred distinct breeds of goat.[PARAGRAPH:2]Goats are one of the oldest domesticated species. Goats have been used for their milk, meat, hair, and skins over much of the world. In the twentieth century they also gained in popularity as pets.[PARAGRAPH:2]Female goats are referred to as does or nannies, intact males as bucks or billies; their offspring are kids. Note that many goat breeders prefer the terms "buck" and "doe" to "billy" and "nanny". Castrated males are wethers. Goat meat from younger animals is called kid or cabrito, and from older animals is sometimes called chevon, or in some areas "mutton".</English>
-		<Italian>La capra domestica (Capra aegagrus hircus) è una sottospecie di capra addomesticata dalla capra selvatica dall'Asia sud-occidentale e dell'Europa orientale. La capra è un membro della famiglia dei bovidi ed è strettamente correlata alle pecore in quanto entrambi appartengono alla sottofamiglia Caprinae. Ci sono oltre trecento razze distinte di capra.[PARAGRAPH:2]Le capre sono una delle più antiche specie domestiche. Le capre sono state utilizzate per il loro latte, carne, capelli e pelle su gran parte del mondo. Nel XX secolo, hanno anche guadagnato in popolarità come animali da compagnia.</Italian>
-		<Polish>Badania genetyczne współczesnych kóz ujawniają, że chociaż zostały one oswojone równolegle w kilku częściach świata to geny tych pionierów zmieszały się w całej populacji. Pewnie wynika to z tego, że kozy są doskonałymi towarzyszami podróży nie przeszkadzają im ciężkie warunki środowiskowe i nie mają wygórowanych wymagań pokarmowych. Dużym plusem owych zwierząt były ich małe wymiary ułatwiające sprzedaż kóz pomiędzy sąsiadującymi nawet w dużych odległościach osadami. W starożytności podawano całkiem słuszny przykład popierający tę tezę "posiadanie czterech kóz daje ci większy zasięg w handlu i mniejsze ryzyko niż posiadanie jednej krowy". Bez tych zwierząt migracje plemion ludzkich mogłyby wyglądać zupełnie inaczej, gdyż przybycie koczowniczych pasterzy zapewne mobilizowało miejscową ludność do udomowiania także innych ras zwierząt.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Tag>
-		<English>Unit Reward - Governor's Menagerie</English>
-		<French>Ménagerie du Gouverneur</French>
-		<Italian>Serraglio del governatore</Italian>
-		<Polish>Menażeria Gubernatora</Polish>
-		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Tag>
-		<English>If one wild animal is a status symbol, what's better than having many to boost your standing among your fellows and foreigners alike?</English>
-		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di averne molti per aumentare il tuo stato sociale tra i tuoi sudditi e gli stranieri?</Italian>
-		<Polish>Jeśli jedno zwierzę to za mało to dlaczego nie stworzyć całej menażerii?</Polish>
-		<Russian>Åñëè îäíî äèêîå æèâîòíîå ÿâëÿåòñÿ ñèìâîëîì ñòàòóñà, ÷òî ëó÷øå, ÷åì ìíîãèå, ïîâûñèòü âàøó ðåïóòàöèþ ñðåäè âàøèõ ñîïëåìåííèêîâ è èíîñòðàíöåâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS</Tag>
-		<English>Unit Reward - Governor's Pets</English>
-		<French>Animaux du Gouverneurs</French>
-		<Italian>Animali del governatore</Italian>
-		<Polish>Maskotka Gubernatora</Polish>
-		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Tag>
-		<English>As a status symbol a live wild, dangerous, large or exotic animal is a boon for any leader.</English>
-		<Italian>Come status symbol, un animale selvatico pericoloso, grande o esotico è una manna per qualsiasi leader.</Italian>
-		<Polish>Jako symbol statusu, dziko żyjące zwierzęta, wielkie lub egzotyczne zwierzęta są ozdobą każdej kolekcji nowoczesnego przywódcy.</Polish>
-		<Russian>Â êà÷åñòâå ñèìâîëà èëè ñòàòóñà äèêîå, îïàñíîå, êðóïíîå èëè ýêçîòè÷åñêîå æèâîòíîå ÿâëÿåòñÿ áëàãîì äëÿ ëþáîãî ëèäåðà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
-		<English>Dance - Haka</English>
-		<French>Danse - Haka</French>
-		<Italian>Haka</Italian>
-		<Russian>Òàíåö Õàêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
-		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
-		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
-		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
-		<English>Unit Reward - Hawking Hut</English>
-		<French>Cabane du Fauconnier</French>
-		<Italian>Capanna del falconiere</Italian>
-		<Polish>Chata Sokolnika</Polish>
-		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAWKING_PEDIA</Tag>
-		<English>Hawking is the practice of hunting with a trained falconry bird. Falconry is "the taking of wild quarry in its natural state and habitat by means of a trained raptor". There are two traditional terms used to describe a person involved in falconry: a falconer flies a falcon; an austringer (German origin) flies a hawk (Accipiter and some buteos and similar) or an eagle (Aquila or similar). In modern falconry the Red-tailed Hawk (Buteo jamaicensis) and the Harris hawk are often used. The words "hawking" and "hawker" have become used so much to mean petty traveling traders, that the terms "falconer" and "falconry" now apply to all use of trained birds of prey to catch game. In early English falconry literature, the word "falcon" referred to a female falcon only, while the word "hawk" or "hawke" referred to a female hawk. A male hawk or falcon was referred to as a "tiercel" (sometimes spelled "tercel") as it was roughly one third less than the female in size. Many contemporary practitioners still use these words in their original meaning.</English>
-		<Italian>La falconeria è la pratica della caccia con un falco addestrato. La falconeria è "la cattura di prede selvatiche nel suo stato naturale e habitat per mezzo di un rapace addestrato". Ci sono due termini tradizionali usati per descrivere una persona coinvolta nella falconeria: un falconiere fa volare un falco, un austringer (di origine tedesca) fa volare un falco (Accipiter e alcune poiane e simili) o un'aquila. Nella falconeria moderna vengono spesso utilizzati il falco dalla coda rossa (Buteo jamaicensis) e il falco Harris. Le parole "Falconiere" e "Venditore ambulante" sono diventate usate così tanto da definire meschini i commercianti che viaggiano, tanto che i termini "falconiere" e "falconeria" ora si applicano a tutti gli usi di uccelli rapaci addestrati a catturare selvaggina. Nell'antica letteratura inglese riguardante la falconeria, la parola "falcon" si riferiva solo a un falcone femmina, mentre le parole "hawk" o "hawke" indicavano un falco femmina. Un falco o falcone maschio veniva chiamato "tiercel" (a volte scritto "tercel") dato che aveva una taglia circa un terzo in meno rispetto alla femmina. Molti praticanti contemporanei utilizzano ancora queste parole nel loro significato originale.</Italian>
-		<Polish>Początki sokolnictwa sięgają początków ludzkiej cywilizacji i zamierzchłych czasów, kiedy to nawet u prymitywnych ludów, a zwłaszcza nomadów wiodących koczowniczy tryb życia, stało ono na bardzo wysokim poziomie. Było podstawą ich egzystencji obok zbieractwa i myślistwa. Zwiadczą o tym m.in. motywy na starożytnych malowidłach. Myśliwego z ptakiem na pięści, przedstawiają też datowane na 1500 lat p.n.e rzeźby, znalezione w Turcji.Płaskorzeźba z czasów Sargona II (722-705 p.n.e) myśliwy z orłem, potwierdza, że ten sposób polowania znali Asyryjczycy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
-		<English>Horse Breeder</English>
-		<French>Éleveur de chevaux</French>
-		<Italian>Allevatore di cavalli</Italian>
-		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_HERD</Tag>
-		<English>Herd (Horse)</English>
-		<French>Troupeau de Chevaux</French>
-		<Italian>Mandria di cavalli</Italian>
-		<Polish>Stado - Konie</Polish>
-		<Russian>Òàáóí ëîøàäåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_HERD_PEDIA</Tag>
-		<English>The history of horse breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the horse as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history.[PARAGRAPH:2]One of the earliest people known to document the breedings of their horses were the Bedouin of the Middle East, the breeders of the Arabian horse. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian horses by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred horses for several thousand years as well.[PARAGRAPH:2]The types of horses bred varied with culture and with the times. The uses to which a horse was put also determined its qualities, including smooth amblers for riding, fast horses for carrying messengers, heavy horses for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, packhorses, carriage horses and many others.</English>
-		<Italian>La storia dell'allevamento dei cavalli risale a migliaia di anni fa. Anche se la data precisa è in discussione, gli esseri umani potrebbero avere addomesticato i cavalli nel lontano 4500 a.C.; tuttavia, le prove di un allevamento più intensivo sono molto rare.[PARAGRAPH:2]Uno dei primi popoli noti per aver documentato l'allevamento dei loro cavalli sono stati i beduini del Medio Oriente, gli allevatori del cavallo arabo. Anche se è difficile determinare per quanto tempo i beduini abbiano tramandato informazioni sull'allevamento attraverso una tradizione orale, ci sono state documentazioni scritte riguardo cavalli arabi sin dal 1330 d.C.. Gli Akhal-Teke dell'Asia centro-occidentale sono un'altra razza con radici antiche che è stata allevata appositamente per la guerra e la corsa. I nomadi delle steppe mongole allevarono i cavalli per diverse migliaia di anni.[PARAGRAPH:2]I tipi di cavalli addomesticati variarono con la cultura e con i tempi. Gli usi a cui un elefante era destinato determinavano anche le sue qualità, tra cui cavalli a pelle liscia per l'equitazione, cavalli veloci per trasportare messaggeri, cavalli pesanti per l'aratura e per tirare carri pesanti, pony per trasportare carichi di minerali dalle miniere, cavalli per carrozze e molti altri.</Italian>
-		<Polish>Zwinia domowa pochodzi od dzika, którego udomowienie nastąpiło przed ok. 7 tys. lat w Azji, a następnie w Europie. Według innych badaczy domestykacja tego gatunku nastąpiła znacznie wcześniej - już 12 700 - 13 000 lat p.n.e., a miało to miejsce w dorzeczu Eufratu i Tygrysu (późniejsza Mezopotamia).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_HERD</Tag>
-		<English>Herd (Llama)</English>
-		<French>Troupeau de Lama</French>
-		<Italian>Branco di lama</Italian>
-		<Polish>Stado - Lam</Polish>
-		<Russian>Ñòàäî ëàì</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Tag>
-		<English>The domestication of the lama took place around 4,000,000 BC. in the Andean basin, probably near Lake Titicaca. In pre-Inca times, representatives of the Mochica culture placed the remains of llamas in their graves, and also presented them on their pottery. Llamas and alpacas were the staple animal in the Inca State as food, fuel, fiber for clothing, as pack animals. They were also used in religious ceremonies as sacrificial animals. After the Inca conquest by the conquistadors, the importance of the llamas declined significantly, as the conquistadors brought their own pack animals. Despite this, llamas and alpacas remained important animals in South America, mainly in highland areas. South American countries at the beginning of the 20th century introduced a ban on the export of these animals. This ban was finally lifted for llamas and alpacas in the 1980s.</English>
-		<Polish>Udomowienie lamy miało miejsce około 4000 5000 lat p.n.e. na terenach andyjskiej puny, prawdopodobnie w okolicach jeziora Titicaca. W czasach przedinkaskich, przedstawiciele kultury Mochica umieszczali szczątki lam w grobach, przedstawiali je także na swojej ceramice. Lamy i alpaki były podstawowym zwierzęciem w Państwie Inków, jako żywność, źródło paliwa, włókien na ubrania, jako zwierzęta juczne. Były także wykorzystywane w ceremoniach religijnych, jako zwierzęta ofiarne. Po podboju Państwa Inków przez konkwistadorów znaczenie lam znacznie spadło, gdyż konkwistadorzy sprowadzili własne zwierzęta juczne. Mimo tego lamy i alpaki pozostały ważnymi zwierzętami w Ameryce Południowej, głównie na terenach wysokogórskich. Państwa południowoamerykańskie na początku XX wieku wprowadziły zakaz eksportu tych zwierząt. Zakaz ten został ostatecznie zniesiony dla lam i alpak w latach 80. XX wieku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
-		<English>Unit Reward - Marine Institute</English>
-		<French>Institut de la Mer</French>
-		<Italian>Istituto marino</Italian>
-		<Polish>Instytut Morski</Polish>
-		<Russian>Ìîðñêîé èíñòèòóò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_PEDIA</Tag>
-		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country’s marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
-		<English>Unit Reward - Master Hunter</English>
-		<French>Cabane du Maître chasseur</French>
-		<Italian>Mastro cacciatore</Italian>
-		<Polish>Wybitny Łowca</Polish>
-		<Russian>Õèæèíà îõîòíèêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Tag>
-		<English>«I fletch arrows, as hunters feast on game. I sharpen blades as the rangers trades the secrets of the wilds, of topography and the enemies movements. I brew poison as the assassins discuss their cleanest kills with grim smiles. Why do I toil away, you ask, serving the brave brothers and deadly sisters of the lodge, not to mention their pets? Because one day, one day soon, I will be one of them.» --Locke Thorne, Scout</English>
-		<French>«Je tire des flèches, alors que les chasseurs se régalent de gibier. J'affûte les lames pendant que les rangers troquent les secrets de la nature, de la topographie et des mouvements des ennemis. Je prépare du poison pendant que les assassins discutent de leurs meurtres les plus purs avec des sourires sinistres. Pourquoi est-ce que je travaille dur, demandez-vous, au service des braves frères et sœurs mortelles de la loge, sans parler de leurs animaux de compagnie? Parce qu'un jour, un jour bientôt, je serai l'un d'entre eux.» -- Locke Thorne, Scout</French>
-		<German>«Ich bewege Pfeile, während Jäger sich am Wild erfreuen. Ich schärfe die Klingen, während die Waldläufer die Geheimnisse der Wildnis, der Topographie und der Bewegungen des Feindes tauschen. Ich braue Gift, während die Attentäter ihre grimmigsten Tötungen mit grimmigem Lächeln besprechen. Warum arbeite ich mich ab, fragst du und diene den tapferen Brüdern und tödlichen Schwestern der Lodge, ganz zu schweigen von ihren Haustieren? Denn eines Tages, eines Tages werde ich einer von ihnen sein.» -- Locke Thorne, Pfadfinder</German>
-		<Italian>«Io costruisco le frecce, mentre i cacciatori banchettano con la selvaggina. Io affilo le spade, mentre i ranger commerciano i segreti della natura, della topografia e dei movimenti dei nemici. Io fermento il veleno mentre gli assassini discutono le loro uccisioni più pulite con sorrisi torvi. Perché lavoro duramente, chiedete, servendo i fratelli coraggiosi e le sorelle mortali, per non accennare ai loro animali domestici? Poiché un giorno, presto, io sarò uno di loro.» -- Locke Thorne, esploratore</Italian>
-		<Spanish>«Hago flechas, mientras los cazadores se deleitan con la caza. Afilo las espadas, mientras los guardabosques intercambian los secretos de la naturaleza, la topografía y los movimientos de los enemigos. Revuelvo el veneno mientras los asesinos discuten sus asesinatos más limpios con sonrisas sombrías. ¿Por qué trabajo duro, preguntas, sirviendo a hermanos valientes y hermanas mortales, sin mencionar a sus mascotas? Porque algún día pronto seré uno de ellos.» -- Locke Thorne, explorador</Spanish>
-		<Polish>Łowy polowanie było jedną z najważniejszych czynności pierwotnych ludzi przez wiele tysiącleci. Nie było wówczas pojęcia "własności" i zwierzyna była niczyja. Polowania były głównym źródłem utrzymania i przeżycia ludzi oprócz pożywienia pozyskiwano w ten sposób skóry na okrycia, a kości i rogi na proste narzędzia. Na przestrzeni wieków, w wyniku zachodzących zmian cywilizacyjnych jak i społecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przestały być głównym zajęciem człowieka, a stały się okazją do wykazania swojej siły, zręczności i męstwa w bezpośrednich spotkaniach z dzikim zwierzem. Poczynając od ok. X w. łowy zaczęły być w coraz większym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, królów, duchowieństwa i rycerstwa. Łowy stały się również głównym źródłem zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
-		<Russian>«ß ìåòàþ ñòðåëû, êàê îõîòíèêè íàñëàæäàþòñÿ ïîéìàííîé äè÷üþ. ß òî÷ó ëåçâèÿ, ïîêà ñëåäîïûòû îáìåíèâàþòñÿ òàéíàìè äèêîé ïðèðîäû, òîïîãðàôèè è ïåðåìåùåíèé âðàãîâ. ß çàâàðèâàþ ÿä, êîãäà àññàñèíû îáñóæäàþò ñâîè ÷èñòåéøèå óáèéñòâà ñ ìðà÷íûìè óëûáêàìè. Âû áóäåòå ñïðàøèâàòü, ñëóæèòå ëè âû õðàáðûì ñîáðàòüÿì è ñìåðòåëüíûì ñåñòðàì ïî ëîæå, íå ãîâîðÿ óæå î èõ äîìàøíèõ æèâîòíûõ? Èáî îäíàæäû ñêîðî ÿ áóäó îäíèì èç íèõ.» - Ëîêê Òîðí, ðàçâåä÷èê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
-		<English>Unit Reward - Master Sea Hunter</English>
-		<French>Maître Chasseur des mers</French>
-		<Italian>Mastro pescatore</Italian>
-		<Polish>Wybitny Morski Łowca</Polish>
-		<Russian>Øêîëà ðûáàëêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Tag>
-		<English>Hunting is the practice of killing or trapping any animal, or pursuing it with the intent of doing so. Hunting wildlife or feral animals is most commonly done by humans for food, recreation, or trade. In present-day use, lawful hunting is distinguished from poaching, which is the illegal killing, trapping or capture of the hunted species. The species that are hunted are referred to as game and are usually mammals and birds.</English>
-		<Italian>Un mastro pescatore rappresenta le conoscenze che la tua gente ha riguardo ai pesci.</Italian>
-		<Polish>Rybak osoba trudniąca się rybołówstwem, utrzymująca się z połowu ryb i innych owoców morza (frutti di mare) krewetek, małży itp. Słowem tym współcześnie określa się zarówno osoby wykonujące ten zawód w pojedynkę (na morzu rzadko) lub w niewielkich, kilkuosobowych zespołach, pływających na kilkutonowych kutrach (rybactwo), jak również marynarzy wielkich jednostek oceanicznych (rybołówstwo przemysłowe). Na potrzeby rybactwa śródlądowego, na rzekach i jeziorach rybacy na ogół posługują się niewielkimi łodziami, kutry morskie są zazwyczaj większe i dysponują mocniejszymi silnikami.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
-		<English>Animal Trainer (Donkey)</English>
-		<French>Elevage de Mules</French>
-		<Italian>Addestratore di muli</Italian>
-		<Polish>Treser Mułów</Polish>
-		<Russian>Äðåññ. ìóëîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MULE_TRAINER_PEDIA</Tag>
-		<English>The Mule Trainer is required to build Mule units.</English>
-		<Italian>L'addestratore di muli è necessario per addestrare le unità di muli.</Italian>
-		<Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD</Tag>
-		<English>Herd (Muskox)</English>
-		<French>Troupeau de Bœufs musqués</French>
-		<Italian>Branco di buoi muschiati</Italian>
-		<Polish>Stado - Woły Piżmowe</Polish>
-		<Russian>Ñòàäî îâöåáûêîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Tag>
-		<English>A herd of Muskoxes.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
-		<English>Unit Reward - Naval Standard (Animal mascot)</English>
-		<French>Mascotte de la Marine</French>
-		<Italian>Mascotte della marina</Italian>
-		<Polish>Bandera (Zwierzęca Maskotka)</Polish>
-		<Russian>Ìîðñêîé øòàíäàðò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>
-		<English>The mascot of a ship.</English>
-		<Italian>La mascotte di una nave.</Italian>
-		<Polish>Maskotka statku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
-		<English>Remains - Dire Wolf</English>
-		<French>Restes de Loup sinistre</French>
-		<Italian>Resti di lupo paleolitico</Italian>
-		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
-		<English>Remains - Ground Sloth</English>
-		<French>Restes de Xénarthre</French>
-		<Italian>Resti di bradipo paleolitico</Italian>
-		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
-		<English>Remains - Mammoth</English>
-		<French>Restes de Mammouths</French>
-		<Italian>Resti di mammut</Italian>
-		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
-		<English>Flocks of Peacock</English>
-		<Italian>Branco di fagiani</Italian>
-		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
-		<English>Your nation has flocks of Peacocks.</English>
-		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
-		<English>Herd (Pig)</English>
-		<French>Troupeau de Cochons</French>
-		<Italian>Branco di maiali</Italian>
-		<Polish>Stado - Świnie</Polish>
-		<Russian>Ñòàäî ñâèíåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_HERD_PEDIA</Tag>
-		<English>Pigs were originally wild boars in Europe and Asia that were first tamed to be domestic animals about 10000 years ago. There are many different kinds of pig. Some pigs have a pink skin but there are brown, white and black skinned pigs too. Some pigs have patterns or spots. Something in skin called pigment makes the colour and it's different for different pig breeds. There are about 73 different breeds of pig.</English>
-		<Italian>I maiali erano originariamente cinghiali selvatici in Europa e in Asia, addomesticati circa 10000 anni fa. Ci sono molti tipi diversi di maiali: alcuni maiali hanno una pelle di colore rosa, ma ci sono anche maiali con pelle marrone, bianca e nera. Alcuni maiali hanno strisce o macchie. Qualcosa nella pelle chiamato pigmento è responsabile del colore, ed è diverso nelle diverse razze suine. Ci sono circa 73 diverse razze di maiali.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POULTRY_HERD</Tag>
-		<English>Herd (Poultry)</English>
-		<French>Troupeau de Volailles</French>
-		<Italian>Branco di pollame</Italian>
-		<Polish>Stado - Drobiu</Polish>
-		<Russian>Ñòàÿ ïòèö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Tag>
-		<English>A poultry herd.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
-		<English>Remains - Procoptodon</English>
-		<French>Remains - Procoptodon</French>
-		<Italian>Resti di procoptodonte</Italian>
-		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
-		<English>Herd (Ratite)</English>
-		<French>Troupeau d'Autruches</French>
-		<Italian>Branco di ratiti</Italian>
-		<Polish>Stado - Strusi</Polish>
-		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Tag>
-		<English>A ratite is any of a diverse group of large, flightless birds of Gondwanan origin, most of them now extinct. There is still some controversy regarding the systematics involved. Some sources state that Ratites are synonymous with Struthioiniformes, while other sources state that Ratites are the same group, only that the order Struthioniformes contains only the Ostrich and possibly the Elephant Bird. Unlike other flightless birds, the ratites have no keel on their sternum hence the name from the Latin ratis (for raft). Without this to anchor their wing muscles, they could not fly even if they were to develop suitable wings.[PARAGRAPH:2]Most parts of the former Gondwana have ratites, or did have until the fairly recent past. Their closest living relatives are the tinamous of South America.[PARAGRAPH:2]Some taxonomical systems consider the various families of ratites to be orders, but the system used here uses the order "Struthioniformes" to refer to all ratites. The African Ostrich is the largest living ratite. A large member of this species can be nearly 2.8 metres (9.2 ft) tall, weigh as much as 156 kilograms (340 lb), and can outrun a horse.[PARAGRAPH:2]Of the living species, the Australian emu is next in height, reaching up to 1.9 metres (6.2 ft) tall and about 50 kilograms (110 lb). Like the ostrich, it is a fast-running, powerful bird of the open plains and woodlands.[PARAGRAPH:2]Also native to Australia and the islands to the north are the three species of cassowary. Shorter than an emu, but heavier and solidly built, cassowaries prefer thickly vegetated tropical forest. They can be very dangerous when surprised or cornered because of their razor sharp talons. In New Guinea, cassowary eggs are brought back to villages and the chicks raised for eating as a much-prized delicacy, despite (or perhaps because of) the risk they pose to life and limb. They reach up to 1.7 metres (5.6 ft) tall and weigh as much as 59 kilograms (130 lb)[PARAGRAPH:2]South America has two species of rhea, large fast-running birds of the Pampas. The larger American rhea grows to about 1.4 metres (4.6 ft) tall and usually weighs 15 to 40 kilograms (3388 lb).[PARAGRAPH:2]The smallest ratites are the five species of kiwi from New Zealand. Kiwi are chicken-sized, shy, and nocturnal. They nest in deep burrows and use a highly developed sense of smell to find small insects and grubs in the soil. Kiwi are notable for laying eggs that are very large in relation to their body size. A kiwi egg may equal 15 to 20 percent of the body mass of a female kiwi. The smallest species of kiwi is the Little Spotted Kiwi, at 0.9 to 1.9 kilograms (2.04.2 lb) and 35 to 45 centimetres (1418 in).</English>
-		<Italian>I ratiti sono una famiglia di uccelli, che comprende i Paleognati, che non volano. Il termine "Ratiti" viene dal latino "ratis" ("zattera"), poiché questi uccelli hanno lo sterno piatto invece che carenato. La loro distribuzione è australe di origine gondwaniana. Tranne il kiwi sono tutti di taglia grande e sono onnivori. Hanno prole precoce e le femmine covano nella stessa buca a turno; la cova è effettuata anche dal maschio. I ratiti più importanti sono gli struzzi africani, i nandù, i casuari, i kiwi e i moa (attualmente estinti).</Italian>
-		<Polish>Struś syryjski od dawna zajmuje znaczące miejsce w kulturze regionu. Dorosły struś z jedenastoma młodymi został przedstawiony na słynnym prehistorycznym "Graffiti Rock I" (rysunki wyryte na skale datowane na 20001000 p.n.e. odkryte w pobliżu Rijad). W Mezopotamii, był wykorzystywany jako zwierzę ofiarne i przedstawiany na dziełach sztuki, malowany na kubkach i innych przedmiotach wykonanych ze strusich jaj, sprzedawanych aż po Etrurię w okresie nowoasyryjskim. W epoce ekspansji islamu struś syryjski reprezentował bogactwo i elegancję. Polowanie na strusie stało się popularną rozrywką dla bogaczy i szlachty (jeśli zabito strusia w odpowiedni sposób, jego mięso uznawane było przez muzułmanów za halaal). Jaja, pióra i skóry były szeroko wykorzystywane w rękodziele. Zarówno produkty otrzymane ze strusi jak i żywe ptaki były eksportowane aż do Chin.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ROO_HERD</Tag>
-		<English>Herd (Kangaroo)</English>
-		<French>Troupeau de Kangourou</French>
-		<Italian>Branco di canguri</Italian>
-		<Polish>Stado - Kangurów</Polish>
-		<Russian>Ñòàäî êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ROO_HERD_PEDIA</Tag>
-		<English>A kangoroo herd.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
-		<English>Remains - Sabretooth</English>
-		<French>Restes de Tigre à dents de sabre</French>
-		<Italian>Resti di tigre dai denti a sciabola</Italian>
-		<Polish>Resztki - Tygrys Szablozębny</Polish>
-		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
-		<English>Unit Reward - Center for Shark Studies</English>
-		<French>Centre d'étude des Requins</French>
-		<Italian>Centro per gli studi sugli squali</Italian>
-		<Polish>Centrum Badań Rekinów</Polish>
-		<Russian>Öåíòð èçó÷. àêóë</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Tag>
-		<English>Until recently only a few benthic species of shark, such as hornsharks, leopard sharks, catsharks, and zebra sharks had survived in aquarium conditions for up to a year or more. This gave rise to the belief that sharks, as well as being difficult to capture and transport, were difficult to care for. A better knowledge of sharks has led to more species (including the large pelagic sharks) being able to be kept for far longer. At the same time, transportation techniques have improved and long distance movement of sharks is becoming easier. One shark that never had been successfully held in captivity for long was the great white. But in September 2004 the Monterey Bay Aquarium successfully kept a young female great white shark for 198 days before releasing her back into the wild.</English>
-		<Italian>Fino ad oggi poche specie di squali sono in grado di sopravvivere più di un anno in cattività. Questo ha portato a credere che gli squali, oltre a essere difficili da catturare e da trasportare, fossero anche difficili da mantenere. Recenti studi sugli squali hanno però permesso di mantenere in buone condizioni un maggior numero di specie di squali. Allo stesso tempo, le tecniche di trasporto sono migliorate e il movimento a lunga distanza di squali sta diventando più facile. Uno squalo che non era mai stato tenuto con successo in cattività per lungo tempo è stato il grande squalo bianco. Ma nel settembre 2004 il Monterey Bay Aquarium ha tenuto con successo una giovane femmina di squalo bianco per 198 giorni prima di rilasciarla di nuovo in libertà.</Italian>
-		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHEEP_HERD</Tag>
-		<English>Herd (Sheep)</English>
-		<French>Troupeau de Moutons</French>
-		<Italian>Gregge di pecore</Italian>
-		<Russian>Îòàðà îâåö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHEEP_HERD_PEDIA</Tag>
-		<English>A sheep herd.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
-		<English>Unit Reward - Snake Charmer</English>
-		<French>Charmeur de Serpents</French>
-		<Italian>Incantatore di serpenti</Italian>
-		<Polish>Zaklinacz Węży</Polish>
-		<Russian>Çàêëèíàòåëü çìåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER_PEDIA</Tag>
-		<English>The earliest evidence for snake charming comes from Ancient Egyptian sources. Charmers there mainly acted as magicians and healers. As literate and high-status men, part of their studies involved learning the various types of snake, the gods to whom they were sacred, and how to treat those who were bitten by the reptiles. Entertainment was also part of their repertoire, and they knew how to handle the animals and charm them for their patrons.[PARAGRAPH:2]One of the earliest records of snake charming appears in the Bible in Psalm (58:3-5): "The wicked turn aside from birth; liars go astray as soon as they are born. Their venom is like that of a snake, like a deaf serpent that does not hear, that does not respond to the magicians, or to a skilled snake-charmer." Snakes have long been popular subjects of Hindu art.[PARAGRAPH:2]Snake charming as it exists today probably originated in India. Hinduism has long held serpents to be sacred; the animals are related to the Nagas, and many gods are pictured under the protection of the cobra. Indians thus considered snake charmers to be holy men who were influenced by the gods.</English>
-		<Italian>Le prime prove dell'esistenza degli incantatori di serpenti provengono da fonti egiziane antiche; qui gli incantatori agivano principalmente come maghi e guaritori. Come uomini colti e di alto rango, una parte dei loro studi consisteva nell'imparare i vari tipi di serpenti, gli dei a cui erano sacri e come trattare coloro che erano stati morsi dai rettili. Anche l'intrattenimento era parte del loro repertorio, e sapevano come gestire ed incantare gli animali.[PARAGRAPH:2]Uno dei più antichi documenti di serpenti incantati appare nella Bibbia nel Salmo (58:3-5): "i malvagi si allontanano dalla nascita; i bugiardi vanno fuori strada, non appena nascono. Il loro veleno è come quello di un serpente, come un serpente sordo che non sente, che non risponde ai maghi o ad un esperto incantatore di serpenti". I serpenti sono stati a lungo soggetti popolari nell'arte indù.[PARAGRAPH:2]Gli incantatori di serpenti attuali probabilmente ebbero origine in India. L'induismo ha da sempre ritenuto i serpenti sacri; gli animali sono legati ai Naga, e molti dei sono raffigurati sotto la protezione del cobra. Gli indiani quindi consideravano gli incantatori di serpenti essere uomini santi che venivano influenzati dagli dei.</Italian>
-		<Polish>Zaklinanie węży to jedna z najstarszych rozrywek towarzyszących człowiekowi.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
-		<English>Unit Reward - Snake Pit</English>
-		<French>Fosse à Serpents</French>
-		<Italian>Fossa dei serpenti</Italian>
-		<Polish>Dół z wężami</Polish>
-		<Russian>ßìà ñî çìåÿìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKE_PIT_PEDIA</Tag>
-		<English>[COLOR_BUILDING_TEXT]Snake Pits[COLOR_REVERT] are places of horror, torture and even death in European legends and fairy tales. The Viking warlord Ragnar Lodbrok is said to have been thrown into a snake pit and died there, after his army had been defeated in battle by King Aelle II of Northumbria. An older legend recorded in Atlakvioa and Oddrunargratr tells that Attila the Hun murdered Gunnarr, the King of Burgundy, in a snake pit. In a medieval German poem, Dietrich von Bern is thrown into a snake pit by the giant Sigenot - he is protected by a magical jewel that had been given to him earlier by a dwarf.[PARAGRAPH:2]Nothing however supports the assumption, that snake pits were ever actually maintained or used for torture or execution. The necessary effort and the risks would have been far too big for something the effect of which could hardly been foreseen or controlled with sufficient precision.</English>
-		<Italian>Le [COLOR_BUILDING_TEXT]Fosse dei serpenti[COLOR_REVERT] sono descritti nelle leggende europee come posti di orrore, tortura e perfino morte. Si dice che il guerriero vichingo Ragnar Lodbrok sia stato gettato in una fossa piena di serpenti e sia morto lì, dopo che il suo esercito era stato sconfitto in battaglia da Re Aelle II di Northumbria. Un'antica leggenda tramandata a Atlakviða e Oddrúnargrátr narra che Attila uccise Gunnarr, Re di Burgundia, gettandolo in una fossa piena di serpenti velenosi. In un poema medievale tedesco, Dietrich von Bern viene gettato in una fossa piena di serpenti dal gigante Sigenot - anche se è protetto da un gioiello magico che gli era appena stato donato da un nano.[PARAGRAPH:2]Nulla invece sostiene l'ipotesi che le fosse di serpenti siano state effettivamente mantenute o utilizzate per torture o esecuzioni. Lo sforzo necessario e il rischio sarebbero stati troppo grandi per qualcosa il cui effetto sarebbe stato difficilmente previsto o controllato con sufficiente precisione.</Italian>
-		<Polish>[COLOR_BUILDING_TEXT]Dół z wężami[COLOR_REVERT] to miejsce do którego wrzuca się skazańców na tortury i śmierć przez pokąsanie przez węże i żmije.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
-		<English>Remains - Thylacine</English>
-		<French>Restes de Thylacine</French>
-		<Italian>Resti di tilacino</Italian>
-		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
-		<English>Unit Reward - Shell Worker's Hut</English>
-		<French>Cabane du sculpteur de carapaces</French>
-		<Italian>Capanna dell'intagliatore di conchiglie</Italian>
-		<Polish>Chata Rzeźbiarza Muszli</Polish>
-		<Russian>Ëîâåö óñòðèö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_PEDIA</Tag>
-		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
-		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
-		<Polish>Skorupy żółwi od dawien dawna były wykorzystywane do produkcji ozdób i prostych narzędzi na całym świecie.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTER</Tag>
-		<English>Tradition - Hunter</English>
-		<French>Tradition - Chasseur</French>
-		<Italian>Tradizione della caccia</Italian>
-		<Polish>Tradycja - Łowcy</Polish>
-		<Russian>Ñîþç îõîòíèêîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Tag>
-		<English>Tradition - Naval Mascot</English>
-		<French>Tradition - Mascotte Navale</French>
-		<Italian>Tradizione - Mascotte della marina</Italian>
-		<Polish>Tradycja - Bandera (Maskotka)</Polish>
-		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING</Tag>
-		<English>Tradition - Sea Hunting</English>
-		<French>Tradition - Chasse en mer</French>
-		<Italian>Tradizione della pesca</Italian>
-		<Polish>Tradycja - Polowania na morzu</Polish>
-		<Russian>Òðàäèöèè ðûáàëêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_TOTEM</Tag>
-		<English>Tradition - Military Standard (Mascot)</English>
-		<French>Tradition - Standard militaire (Mascotte)</French>
-		<Italian>Tradizione - Stendardo militare (Mascotte)</Italian>
-		<Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
-		<Russian>Òðàäèöèè òîòåìîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
-		<English>Unit Reward - Carnival (Trained Seal)</English>
-		<French>Phoques dressés</French>
-		<Italian>Fiera delle foche ammaestrate</Italian>
-		<Polish>Tresowana Foka</Polish>
-		<Russian>Äðåññ. òþëåíåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Tag>
-		<English>A carnival of seals trained for entertainment.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
-		<English>Flocks of Turkey</English>
-		<Italian>Branco di tacchini</Italian>
-		<Russian>Ñòàÿ èíäååê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
-		<English>Your nation has flocks of Turkey.</English>
-		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
-		<English>Unit Reward - Wonders of the Deep</English>
-		<French>Merveilles des profondeurs</French>
-		<Italian>Meraviglie degli abissi</Italian>
-		<Polish>Cuda Głębin</Polish>
-		<Russian>×óäåñà ãëóáèí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP_PEDIA</Tag>
-		<English>Wonders of the deep represent the knowledge of your people about sea animals.</English>
-		<Italian>Le meraviglie degli abissi rappresentano la conoscenza che la tua gente ha degli animali marini.</Italian>
-		<Polish>Cuda Głębin reprezentują wiedzę jaką Twoi ludzi posiadają o zwierzętach morskich.</Polish>
-		<Russian>×óäåñà Ãëóáèí ïðåäñòàâëÿþò çíàíèÿ âàøåìó íàðîäó î ìîðñêèõ îáèòàòåëÿõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_PEDIA</Tag>
-		<English>A zebra herd.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
-		<English>A cage used for wild subdued animals.</English>
-		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi addomesticati.</Italian>
-		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
-		<English>Enclosure - Amphibian Pond</English>
-		<French>Enclos - Mare à amphibiens</French>
-		<Italian>Stagno per anfibi</Italian>
-		<Polish>Klatka - Płazy</Polish>
-		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
-		<English>Enclosure - Bad Boys</English>
-		<French>Enclos - Animaux nuisibles</French>
-		<Italian>Gabbia dei parassiti</Italian>
-		<Polish>Klatka - Groźne Zwierzęta</Polish>
-		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
-		<English>Enclosure - Bear</English>
-		<French>Enclos - Ours</French>
-		<Italian>Gabbia degli orsi</Italian>
-		<Polish>Klatka - Niedźwiedź</Polish>
-		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
-		<English>Enclosure - Big Cat</English>
-		<French>Enclos - Félins</French>
-		<Italian>Gabbia dei grossi felini</Italian>
-		<Polish>Klatka - Wielki kot</Polish>
-		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
-		<English>Enclosure - Bird</English>
-		<French>Enclos - Oiseaux</French>
-		<Italian>Gabbia degli uccelli</Italian>
-		<Polish>Klatka - Ptaki</Polish>
-		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Tag>
-		<English>Enclosure - Exotic Herbivore</English>
-		<French>Enclos - Herbivores exotiques</French>
-		<Italian>Gabbia degli erbivori esotici</Italian>
-		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
-		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Tag>
-		<English>A cage used for wild subdued animals.</English>
-		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici addomesticati.</Italian>
-		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
-		<Russian>Êëåòêà äëÿ óêðîùåííûõ äèêèõ æèâîòíûõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Tag>
-		<English>Enclosure - Marsupial</English>
-		<French>Enclos - Marsupiaux</French>
-		<Italian>Gabbia dei marsupiali</Italian>
-		<Polish>Klatka - Torbacze</Polish>
-		<Russian>Êëåòêè ñ ñóì÷àòûìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Tag>
-		<English>Enclosure - Nocturnal</English>
-		<French>Enclos - Animaux Nocturnes</French>
-		<Italian>Gabbia degli animali notturni</Italian>
-		<Polish>Klatka - Zwierzęta Nocne</Polish>
-		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PRIMATE_CAGE</Tag>
-		<English>Enclosure - Primate</English>
-		<French>Enclos - Primates</French>
-		<Italian>Gabbia dei primati</Italian>
-		<Polish>Klatka - Małpa</Polish>
-		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REPTILE_CAGE</Tag>
-		<English>Enclosure - Reptile</English>
-		<French>Enclos - Reptiles</French>
-		<Italian>Gabbia dei rettili</Italian>
-		<Polish>Klatka - Gady</Polish>
-		<Russian>Òåððàðèóì</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
-		<English>Enclosure - Rodent</English>
-		<French>Enclos - Rongeurs</French>
-		<Italian>Gabbia dei roditori</Italian>
-		<Polish>Klatka - Gryzonie</Polish>
-		<Russian>Êëåòêè ñ ãðûçóíàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEAL_CAGE</Tag>
-		<English>Enclosure - Seal</English>
-		<French>Enclos - Phoques</French>
-		<Italian>Gabbia delle foche</Italian>
-		<Polish>Klatka - Foka</Polish>
-		<Russian>Êëåòêè ñ òþëåíÿìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
-		<English>Enclosure - Walrus</English>
-		<French>Enclos - Morses</French>
-		<Italian>Gabbia dei trichechi</Italian>
-		<Polish>Klatka - Mors</Polish>
-		<Russian>Êëåòêè ñ ìîðæàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOLF_CAGE</Tag>
-		<English>Enclosure - Wolf</English>
-		<French>Enclos - Loups</French>
-		<Italian>Gabbia dei lupi</Italian>
-		<Polish>Klatka - Wilk</Polish>
-		<Russian>Êëåòêè ñ âîëêàìè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
-		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
-		<English>Folklore associated with formations found in the landscape.</English>
-		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
-		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
-		<Polish>Mity związane z formacjami terenu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
-		<English>Autobuild - Folklore Requirement</English>
-		<German>Folklore-Grundlagen</German>
-		<Italian>Requisito per il folklore</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
-		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
-		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
-		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] richiedono la lingua parlata come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 pseudoedifici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
-		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
-		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
-		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
-		<English>Autobuild - Presence of Coral</English>
-		<German>Präsenz von Korallen</German>
-		<Italian>Presenza di corallo</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
-		<English>Autobuild - Presence of Earth</English>
-		<German>Präsenz der Erde</German>
-		<Italian>Presenza della Terra</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
-		<English>Autobuild - Presence of Crater</English>
-		<German>Präsenz von Kratern</German>
-		<Italian>Presenza di un cratere</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
-		<English>Autobuild - Presence of Fire</English>
-		<German>Präsenz des Feuers</German>
-		<Italian>Presenza del Fuoco</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
-		<English>Autobuild - Presence of Metal</English>
-		<German>Präsenz von Metall</German>
-		<Italian>Presenza di metallo</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
-		<English>Autobuild - Presence of Oasis</English>
-		<German>Präsenz von Oasen</German>
-		<Italian>Presenza di un'oasi</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
-		<English>Autobuild - Presence of Landform</English>
-		<German>Präsenz von Felsformationen</German>
-		<Italian>Presenza di un rilievo</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
-		<English>Autobuild - Presence of Reef</English>
-		<German>Präsenz von Riffen</German>
-		<Italian>Presenza di una barriera corallina</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
-		<English>Autobuild - Presence of Volcano</English>
-		<German>Präsenz von Vulkanen</German>
-		<Italian>Presenza di un vulcano</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
-		<English>Autobuild - Presence of Sea</English>
-		<German>Präsenz der See</German>
-		<Italian>Presenza di un mare</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
 		<English>Folklore - Aardvark</English>
 		<French>Mythe de l'Oryctérope du Cap</French>
@@ -1063,6 +513,10 @@
 		<Italian>Mito degli anfibi (T)</Italian>
 		<Polish>Mit (T) Płazów</Polish>
 		<Russian>Ìèô îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
+		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
@@ -1439,20 +893,20 @@
 		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
-		<English>Folklore (T) - Elephant</English>
-		<French>Mythe de l'Eléphant (T)</French>
-		<Italian>Mito dell'elefante (T)</Italian>
-		<Polish>Mit (T) Słonia</Polish>
-		<Russian>Ìèô î ñëîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEMENTAL_PEDIA</Tag>
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They become fables.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie.</French>
 		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
+		<English>Folklore (T) - Elephant</English>
+		<French>Mythe de l'Eléphant (T)</French>
+		<Italian>Mito dell'elefante (T)</Italian>
+		<Polish>Mit (T) Słonia</Polish>
+		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
@@ -1756,6 +1210,13 @@
 		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
+		<English>Folklore associated with formations found in the landscape.</English>
+		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
+		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
+		<Polish>Mity związane z formacjami terenu.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEMUR</Tag>
 		<English>Folklore - Ring-tailed Lemur</English>
 		<Italian>Mito del lemure</Italian>
@@ -1867,20 +1328,20 @@
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
-		<English>Folklore Minke Whale</English>
-		<French>Mythe du Rorqual</French>
-		<Italian>Mito della balenottera minore</Italian>
-		<Polish>Mit Płetwala</Polish>
-		<Russian>Ìèô î ïîëîñàòèêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_METAL</Tag>
 		<English>Folklore (E) - Metal</English>
 		<French>Mythe du Métal (E)</French>
 		<Italian>Mito del Metallo (E)</Italian>
 		<Polish>Mit (E) - Metal</Polish>
 		<Russian>Ìèô î ìåòàëëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
+		<English>Folklore Minke Whale</English>
+		<French>Mythe du Rorqual</French>
+		<Italian>Mito della balenottera minore</Italian>
+		<Polish>Mit Płetwala</Polish>
+		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MONOTREMES</Tag>
@@ -2573,5 +2034,544 @@
 		<French>Mythe du Zèbre</French>
 		<Italian>Mito della zebra</Italian>
 		<Russian>Ìèô î çåáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
+		<English>Unit Reward - Dance (Fox)</English>
+		<French>Danse du Renard</French>
+		<Italian>Danza della volpe</Italian>
+		<Russian>Òàíåö ëèñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
+		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
+		<English>Unit Reward - Fur Farm</English>
+		<French>Ferme de Fourrures</French>
+		<Italian>Allevamento di animali da pelliccia</Italian>
+		<Polish>Ferma Futer</Polish>
+		<Russian>Ìåõîâàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FUR_FARM_PEDIA</Tag>
+		<English>Fur farming is the practice of breeding or raising certain types of animals for their fur. This became possible in the 1860's.</English>
+		<Italian>L'allevamento di animali da pelliccia è la pratica di incrociare e allevare certi tipi di animali principalmente per ottenere la loro pelliccia. Quest'attività divenne possibile negli anni sessanta del XIX secolo.</Italian>
+		<Polish>Można spotkać się z poglądem, że hodowla norek i innych stworzeń na futro wiąże się z niehumanitarnym traktowaniem zwierząt. Szczególnie dobrze jest to udokumentowane w krajach Trzeciego Zwiata. Jednak raport dotyczący sytuacji wielkopolskich ferm futrzarskich autorstwa Najwyższej Izby Kontroli z 2011 roku, wskazuje że "w 87% tych ferm nie przestrzegano wymagań ochrony środowiska, w 48% działalność hodowlana prowadzona była w obiektach nielegalnie wybudowanych lub użytkowanych, a w 35% niezgodnie z przepisami weterynaryjnymi." Aktywiści pro-zwierzęcy twierdzą iż fermy hodowlane są przyczyną skażenia środowiska licznymi związkami takimi jak siarkowodór, amoniak, mocznik, fosfor czy azot, które nie są odpowiednio utylizowane.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
+		<English>Remains - Glyptodon</English>
+		<French>Restes de Glyptodon</French>
+		<Italian>Resti di glittodonte</Italian>
+		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOAT_HERD</Tag>
+		<English>Herd (Goat)</English>
+		<French>Troupeau de Chèvres</French>
+		<Italian>Branco di capre</Italian>
+		<Polish>Efekt Mitu - Koza</Polish>
+		<Russian>Ñòàäî êîçëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOAT_HERD_PEDIA</Tag>
+		<English>The domestic goat (Capra aegagrus hircus) is a subspecies of goat domesticated from the wild goat of southwest Asia and Eastern Europe. The goat is a member of the Bovidae family and is closely related to the sheep as both are in the goat-antelope subfamily Caprinae. There are over three hundred distinct breeds of goat.[PARAGRAPH:2]Goats are one of the oldest domesticated species. Goats have been used for their milk, meat, hair, and skins over much of the world. In the twentieth century they also gained in popularity as pets.[PARAGRAPH:2]Female goats are referred to as does or nannies, intact males as bucks or billies; their offspring are kids. Note that many goat breeders prefer the terms "buck" and "doe" to "billy" and "nanny". Castrated males are wethers. Goat meat from younger animals is called kid or cabrito, and from older animals is sometimes called chevon, or in some areas "mutton".</English>
+		<Italian>La capra domestica (Capra aegagrus hircus) è una sottospecie di capra addomesticata dalla capra selvatica dall'Asia sud-occidentale e dell'Europa orientale. La capra è un membro della famiglia dei bovidi ed è strettamente correlata alle pecore in quanto entrambi appartengono alla sottofamiglia Caprinae. Ci sono oltre trecento razze distinte di capra.[PARAGRAPH:2]Le capre sono una delle più antiche specie domestiche. Le capre sono state utilizzate per il loro latte, carne, capelli e pelle su gran parte del mondo. Nel XX secolo, hanno anche guadagnato in popolarità come animali da compagnia.</Italian>
+		<Polish>Badania genetyczne współczesnych kóz ujawniają, że chociaż zostały one oswojone równolegle w kilku częściach świata to geny tych pionierów zmieszały się w całej populacji. Pewnie wynika to z tego, że kozy są doskonałymi towarzyszami podróży nie przeszkadzają im ciężkie warunki środowiskowe i nie mają wygórowanych wymagań pokarmowych. Dużym plusem owych zwierząt były ich małe wymiary ułatwiające sprzedaż kóz pomiędzy sąsiadującymi nawet w dużych odległościach osadami. W starożytności podawano całkiem słuszny przykład popierający tę tezę "posiadanie czterech kóz daje ci większy zasięg w handlu i mniejsze ryzyko niż posiadanie jednej krowy". Bez tych zwierząt migracje plemion ludzkich mogłyby wyglądać zupełnie inaczej, gdyż przybycie koczowniczych pasterzy zapewne mobilizowało miejscową ludność do udomowiania także innych ras zwierząt.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Tag>
+		<English>Unit Reward - Governor's Menagerie</English>
+		<French>Ménagerie du Gouverneur</French>
+		<Italian>Serraglio del governatore</Italian>
+		<Polish>Menażeria Gubernatora</Polish>
+		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Tag>
+		<English>If one wild animal is a status symbol, what's better than having many to boost your standing among your fellows and foreigners alike?</English>
+		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di averne molti per aumentare il tuo stato sociale tra i tuoi sudditi e gli stranieri?</Italian>
+		<Polish>Jeśli jedno zwierzę to za mało to dlaczego nie stworzyć całej menażerii?</Polish>
+		<Russian>Åñëè îäíî äèêîå æèâîòíîå ÿâëÿåòñÿ ñèìâîëîì ñòàòóñà, ÷òî ëó÷øå, ÷åì ìíîãèå, ïîâûñèòü âàøó ðåïóòàöèþ ñðåäè âàøèõ ñîïëåìåííèêîâ è èíîñòðàíöåâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS</Tag>
+		<English>Unit Reward - Governor's Pets</English>
+		<French>Animaux du Gouverneurs</French>
+		<Italian>Animali del governatore</Italian>
+		<Polish>Maskotka Gubernatora</Polish>
+		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Tag>
+		<English>As a status symbol a live wild, dangerous, large or exotic animal is a boon for any leader.</English>
+		<Italian>Come status symbol, un animale selvatico pericoloso, grande o esotico è una manna per qualsiasi leader.</Italian>
+		<Polish>Jako symbol statusu, dziko żyjące zwierzęta, wielkie lub egzotyczne zwierzęta są ozdobą każdej kolekcji nowoczesnego przywódcy.</Polish>
+		<Russian>Â êà÷åñòâå ñèìâîëà èëè ñòàòóñà äèêîå, îïàñíîå, êðóïíîå èëè ýêçîòè÷åñêîå æèâîòíîå ÿâëÿåòñÿ áëàãîì äëÿ ëþáîãî ëèäåðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
+		<English>Dance - Haka</English>
+		<French>Danse - Haka</French>
+		<Italian>Haka</Italian>
+		<Russian>Òàíåö Õàêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
+		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
+		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
+		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
+		<English>Unit Reward - Hawking Hut</English>
+		<French>Cabane du Fauconnier</French>
+		<Italian>Capanna del falconiere</Italian>
+		<Polish>Chata Sokolnika</Polish>
+		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAWKING_PEDIA</Tag>
+		<English>Hawking is the practice of hunting with a trained falconry bird. Falconry is "the taking of wild quarry in its natural state and habitat by means of a trained raptor". There are two traditional terms used to describe a person involved in falconry: a falconer flies a falcon; an austringer (German origin) flies a hawk (Accipiter and some buteos and similar) or an eagle (Aquila or similar). In modern falconry the Red-tailed Hawk (Buteo jamaicensis) and the Harris hawk are often used. The words "hawking" and "hawker" have become used so much to mean petty traveling traders, that the terms "falconer" and "falconry" now apply to all use of trained birds of prey to catch game. In early English falconry literature, the word "falcon" referred to a female falcon only, while the word "hawk" or "hawke" referred to a female hawk. A male hawk or falcon was referred to as a "tiercel" (sometimes spelled "tercel") as it was roughly one third less than the female in size. Many contemporary practitioners still use these words in their original meaning.</English>
+		<Italian>La falconeria è la pratica della caccia con un falco addestrato. La falconeria è "la cattura di prede selvatiche nel suo stato naturale e habitat per mezzo di un rapace addestrato". Ci sono due termini tradizionali usati per descrivere una persona coinvolta nella falconeria: un falconiere fa volare un falco, un austringer (di origine tedesca) fa volare un falco (Accipiter e alcune poiane e simili) o un'aquila. Nella falconeria moderna vengono spesso utilizzati il falco dalla coda rossa (Buteo jamaicensis) e il falco Harris. Le parole "Falconiere" e "Venditore ambulante" sono diventate usate così tanto da definire meschini i commercianti che viaggiano, tanto che i termini "falconiere" e "falconeria" ora si applicano a tutti gli usi di uccelli rapaci addestrati a catturare selvaggina. Nell'antica letteratura inglese riguardante la falconeria, la parola "falcon" si riferiva solo a un falcone femmina, mentre le parole "hawk" o "hawke" indicavano un falco femmina. Un falco o falcone maschio veniva chiamato "tiercel" (a volte scritto "tercel") dato che aveva una taglia circa un terzo in meno rispetto alla femmina. Molti praticanti contemporanei utilizzano ancora queste parole nel loro significato originale.</Italian>
+		<Polish>Początki sokolnictwa sięgają początków ludzkiej cywilizacji i zamierzchłych czasów, kiedy to nawet u prymitywnych ludów, a zwłaszcza nomadów wiodących koczowniczy tryb życia, stało ono na bardzo wysokim poziomie. Było podstawą ich egzystencji obok zbieractwa i myślistwa. Zwiadczą o tym m.in. motywy na starożytnych malowidłach. Myśliwego z ptakiem na pięści, przedstawiają też datowane na 1500 lat p.n.e rzeźby, znalezione w Turcji.Płaskorzeźba z czasów Sargona II (722-705 p.n.e) myśliwy z orłem, potwierdza, że ten sposób polowania znali Asyryjczycy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
+		<English>Horse Breeder</English>
+		<French>Éleveur de chevaux</French>
+		<Italian>Allevatore di cavalli</Italian>
+		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_HERD</Tag>
+		<English>Herd (Horse)</English>
+		<French>Troupeau de Chevaux</French>
+		<Italian>Mandria di cavalli</Italian>
+		<Polish>Stado - Konie</Polish>
+		<Russian>Òàáóí ëîøàäåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_HERD_PEDIA</Tag>
+		<English>The history of horse breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the horse as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history.[PARAGRAPH:2]One of the earliest people known to document the breedings of their horses were the Bedouin of the Middle East, the breeders of the Arabian horse. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian horses by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred horses for several thousand years as well.[PARAGRAPH:2]The types of horses bred varied with culture and with the times. The uses to which a horse was put also determined its qualities, including smooth amblers for riding, fast horses for carrying messengers, heavy horses for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, packhorses, carriage horses and many others.</English>
+		<Italian>La storia dell'allevamento dei cavalli risale a migliaia di anni fa. Anche se la data precisa è in discussione, gli esseri umani potrebbero avere addomesticato i cavalli nel lontano 4500 a.C.; tuttavia, le prove di un allevamento più intensivo sono molto rare.[PARAGRAPH:2]Uno dei primi popoli noti per aver documentato l'allevamento dei loro cavalli sono stati i beduini del Medio Oriente, gli allevatori del cavallo arabo. Anche se è difficile determinare per quanto tempo i beduini abbiano tramandato informazioni sull'allevamento attraverso una tradizione orale, ci sono state documentazioni scritte riguardo cavalli arabi sin dal 1330 d.C.. Gli Akhal-Teke dell'Asia centro-occidentale sono un'altra razza con radici antiche che è stata allevata appositamente per la guerra e la corsa. I nomadi delle steppe mongole allevarono i cavalli per diverse migliaia di anni.[PARAGRAPH:2]I tipi di cavalli addomesticati variarono con la cultura e con i tempi. Gli usi a cui un elefante era destinato determinavano anche le sue qualità, tra cui cavalli a pelle liscia per l'equitazione, cavalli veloci per trasportare messaggeri, cavalli pesanti per l'aratura e per tirare carri pesanti, pony per trasportare carichi di minerali dalle miniere, cavalli per carrozze e molti altri.</Italian>
+		<Polish>Zwinia domowa pochodzi od dzika, którego udomowienie nastąpiło przed ok. 7 tys. lat w Azji, a następnie w Europie. Według innych badaczy domestykacja tego gatunku nastąpiła znacznie wcześniej - już 12 700 - 13 000 lat p.n.e., a miało to miejsce w dorzeczu Eufratu i Tygrysu (późniejsza Mezopotamia).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LLAMA_HERD</Tag>
+		<English>Herd (Llama)</English>
+		<French>Troupeau de Lama</French>
+		<Italian>Branco di lama</Italian>
+		<Polish>Stado - Lam</Polish>
+		<Russian>Ñòàäî ëàì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Tag>
+		<English>The domestication of the lama took place around 4,000,000 BC. in the Andean basin, probably near Lake Titicaca. In pre-Inca times, representatives of the Mochica culture placed the remains of llamas in their graves, and also presented them on their pottery. Llamas and alpacas were the staple animal in the Inca State as food, fuel, fiber for clothing, as pack animals. They were also used in religious ceremonies as sacrificial animals. After the Inca conquest by the conquistadors, the importance of the llamas declined significantly, as the conquistadors brought their own pack animals. Despite this, llamas and alpacas remained important animals in South America, mainly in highland areas. South American countries at the beginning of the 20th century introduced a ban on the export of these animals. This ban was finally lifted for llamas and alpacas in the 1980s.</English>
+		<Polish>Udomowienie lamy miało miejsce około 4000 5000 lat p.n.e. na terenach andyjskiej puny, prawdopodobnie w okolicach jeziora Titicaca. W czasach przedinkaskich, przedstawiciele kultury Mochica umieszczali szczątki lam w grobach, przedstawiali je także na swojej ceramice. Lamy i alpaki były podstawowym zwierzęciem w Państwie Inków, jako żywność, źródło paliwa, włókien na ubrania, jako zwierzęta juczne. Były także wykorzystywane w ceremoniach religijnych, jako zwierzęta ofiarne. Po podboju Państwa Inków przez konkwistadorów znaczenie lam znacznie spadło, gdyż konkwistadorzy sprowadzili własne zwierzęta juczne. Mimo tego lamy i alpaki pozostały ważnymi zwierzętami w Ameryce Południowej, głównie na terenach wysokogórskich. Państwa południowoamerykańskie na początku XX wieku wprowadziły zakaz eksportu tych zwierząt. Zakaz ten został ostatecznie zniesiony dla lam i alpak w latach 80. XX wieku.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
+		<English>Unit Reward - Marine Institute</English>
+		<French>Institut de la Mer</French>
+		<Italian>Istituto marino</Italian>
+		<Polish>Instytut Morski</Polish>
+		<Russian>Ìîðñêîé èíñòèòóò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_PEDIA</Tag>
+		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country’s marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Tag>
+		<English>Enclosure - Marsupial</English>
+		<French>Enclos - Marsupiaux</French>
+		<Italian>Gabbia dei marsupiali</Italian>
+		<Polish>Klatka - Torbacze</Polish>
+		<Russian>Êëåòêè ñ ñóì÷àòûìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
+		<English>Unit Reward - Master Hunter</English>
+		<French>Cabane du Maître chasseur</French>
+		<Italian>Mastro cacciatore</Italian>
+		<Polish>Wybitny Łowca</Polish>
+		<Russian>Õèæèíà îõîòíèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Tag>
+		<English>«I fletch arrows, as hunters feast on game. I sharpen blades as the rangers trades the secrets of the wilds, of topography and the enemies movements. I brew poison as the assassins discuss their cleanest kills with grim smiles. Why do I toil away, you ask, serving the brave brothers and deadly sisters of the lodge, not to mention their pets? Because one day, one day soon, I will be one of them.» --Locke Thorne, Scout</English>
+		<French>«Je tire des flèches, alors que les chasseurs se régalent de gibier. J'affûte les lames pendant que les rangers troquent les secrets de la nature, de la topographie et des mouvements des ennemis. Je prépare du poison pendant que les assassins discutent de leurs meurtres les plus purs avec des sourires sinistres. Pourquoi est-ce que je travaille dur, demandez-vous, au service des braves frères et sœurs mortelles de la loge, sans parler de leurs animaux de compagnie? Parce qu'un jour, un jour bientôt, je serai l'un d'entre eux.» -- Locke Thorne, Scout</French>
+		<German>«Ich bewege Pfeile, während Jäger sich am Wild erfreuen. Ich schärfe die Klingen, während die Waldläufer die Geheimnisse der Wildnis, der Topographie und der Bewegungen des Feindes tauschen. Ich braue Gift, während die Attentäter ihre grimmigsten Tötungen mit grimmigem Lächeln besprechen. Warum arbeite ich mich ab, fragst du und diene den tapferen Brüdern und tödlichen Schwestern der Lodge, ganz zu schweigen von ihren Haustieren? Denn eines Tages, eines Tages werde ich einer von ihnen sein.» -- Locke Thorne, Pfadfinder</German>
+		<Italian>«Io costruisco le frecce, mentre i cacciatori banchettano con la selvaggina. Io affilo le spade, mentre i ranger commerciano i segreti della natura, della topografia e dei movimenti dei nemici. Io fermento il veleno mentre gli assassini discutono le loro uccisioni più pulite con sorrisi torvi. Perché lavoro duramente, chiedete, servendo i fratelli coraggiosi e le sorelle mortali, per non accennare ai loro animali domestici? Poiché un giorno, presto, io sarò uno di loro.» -- Locke Thorne, esploratore</Italian>
+		<Spanish>«Hago flechas, mientras los cazadores se deleitan con la caza. Afilo las espadas, mientras los guardabosques intercambian los secretos de la naturaleza, la topografía y los movimientos de los enemigos. Revuelvo el veneno mientras los asesinos discuten sus asesinatos más limpios con sonrisas sombrías. ¿Por qué trabajo duro, preguntas, sirviendo a hermanos valientes y hermanas mortales, sin mencionar a sus mascotas? Porque algún día pronto seré uno de ellos.» -- Locke Thorne, explorador</Spanish>
+		<Polish>Łowy polowanie było jedną z najważniejszych czynności pierwotnych ludzi przez wiele tysiącleci. Nie było wówczas pojęcia "własności" i zwierzyna była niczyja. Polowania były głównym źródłem utrzymania i przeżycia ludzi oprócz pożywienia pozyskiwano w ten sposób skóry na okrycia, a kości i rogi na proste narzędzia. Na przestrzeni wieków, w wyniku zachodzących zmian cywilizacyjnych jak i społecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przestały być głównym zajęciem człowieka, a stały się okazją do wykazania swojej siły, zręczności i męstwa w bezpośrednich spotkaniach z dzikim zwierzem. Poczynając od ok. X w. łowy zaczęły być w coraz większym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, królów, duchowieństwa i rycerstwa. Łowy stały się również głównym źródłem zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
+		<Russian>«ß ìåòàþ ñòðåëû, êàê îõîòíèêè íàñëàæäàþòñÿ ïîéìàííîé äè÷üþ. ß òî÷ó ëåçâèÿ, ïîêà ñëåäîïûòû îáìåíèâàþòñÿ òàéíàìè äèêîé ïðèðîäû, òîïîãðàôèè è ïåðåìåùåíèé âðàãîâ. ß çàâàðèâàþ ÿä, êîãäà àññàñèíû îáñóæäàþò ñâîè ÷èñòåéøèå óáèéñòâà ñ ìðà÷íûìè óëûáêàìè. Âû áóäåòå ñïðàøèâàòü, ñëóæèòå ëè âû õðàáðûì ñîáðàòüÿì è ñìåðòåëüíûì ñåñòðàì ïî ëîæå, íå ãîâîðÿ óæå î èõ äîìàøíèõ æèâîòíûõ? Èáî îäíàæäû ñêîðî ÿ áóäó îäíèì èç íèõ.» - Ëîêê Òîðí, ðàçâåä÷èê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
+		<English>Unit Reward - Master Sea Hunter</English>
+		<French>Maître Chasseur des mers</French>
+		<Italian>Mastro pescatore</Italian>
+		<Polish>Wybitny Morski Łowca</Polish>
+		<Russian>Øêîëà ðûáàëêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Tag>
+		<English>Hunting is the practice of killing or trapping any animal, or pursuing it with the intent of doing so. Hunting wildlife or feral animals is most commonly done by humans for food, recreation, or trade. In present-day use, lawful hunting is distinguished from poaching, which is the illegal killing, trapping or capture of the hunted species. The species that are hunted are referred to as game and are usually mammals and birds.</English>
+		<Italian>Un mastro pescatore rappresenta le conoscenze che la tua gente ha riguardo ai pesci.</Italian>
+		<Polish>Rybak osoba trudniąca się rybołówstwem, utrzymująca się z połowu ryb i innych owoców morza (frutti di mare) krewetek, małży itp. Słowem tym współcześnie określa się zarówno osoby wykonujące ten zawód w pojedynkę (na morzu rzadko) lub w niewielkich, kilkuosobowych zespołach, pływających na kilkutonowych kutrach (rybactwo), jak również marynarzy wielkich jednostek oceanicznych (rybołówstwo przemysłowe). Na potrzeby rybactwa śródlądowego, na rzekach i jeziorach rybacy na ogół posługują się niewielkimi łodziami, kutry morskie są zazwyczaj większe i dysponują mocniejszymi silnikami.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
+		<English>Animal Trainer (Donkey)</English>
+		<French>Elevage de Mules</French>
+		<Italian>Addestratore di muli</Italian>
+		<Polish>Treser Mułów</Polish>
+		<Russian>Äðåññ. ìóëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MULE_TRAINER_PEDIA</Tag>
+		<English>The Mule Trainer is required to build Mule units.</English>
+		<Italian>L'addestratore di muli è necessario per addestrare le unità di muli.</Italian>
+		<Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD</Tag>
+		<English>Herd (Muskox)</English>
+		<French>Troupeau de Bœufs musqués</French>
+		<Italian>Branco di buoi muschiati</Italian>
+		<Polish>Stado - Woły Piżmowe</Polish>
+		<Russian>Ñòàäî îâöåáûêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Tag>
+		<English>A herd of Muskoxes.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
+		<English>Unit Reward - Naval Standard (Animal mascot)</English>
+		<French>Mascotte de la Marine</French>
+		<Italian>Mascotte della marina</Italian>
+		<Polish>Bandera (Zwierzęca Maskotka)</Polish>
+		<Russian>Ìîðñêîé øòàíäàðò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>
+		<English>The mascot of a ship.</English>
+		<Italian>La mascotte di una nave.</Italian>
+		<Polish>Maskotka statku.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Tag>
+		<English>Enclosure - Nocturnal</English>
+		<French>Enclos - Animaux Nocturnes</French>
+		<Italian>Gabbia degli animali notturni</Italian>
+		<Polish>Klatka - Zwierzęta Nocne</Polish>
+		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
+		<English>Remains - Dire Wolf</English>
+		<French>Restes de Loup sinistre</French>
+		<Italian>Resti di lupo paleolitico</Italian>
+		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
+		<English>Remains - Ground Sloth</English>
+		<French>Restes de Xénarthre</French>
+		<Italian>Resti di bradipo paleolitico</Italian>
+		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
+		<English>Remains - Mammoth</English>
+		<French>Restes de Mammouths</French>
+		<Italian>Resti di mammut</Italian>
+		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
+		<English>Flocks of Peacock</English>
+		<Italian>Branco di fagiani</Italian>
+		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Peacocks.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
+		<English>Herd (Pig)</English>
+		<French>Troupeau de Cochons</French>
+		<Italian>Branco di maiali</Italian>
+		<Polish>Stado - Świnie</Polish>
+		<Russian>Ñòàäî ñâèíåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PIG_HERD_PEDIA</Tag>
+		<English>Pigs were originally wild boars in Europe and Asia that were first tamed to be domestic animals about 10000 years ago. There are many different kinds of pig. Some pigs have a pink skin but there are brown, white and black skinned pigs too. Some pigs have patterns or spots. Something in skin called pigment makes the colour and it's different for different pig breeds. There are about 73 different breeds of pig.</English>
+		<Italian>I maiali erano originariamente cinghiali selvatici in Europa e in Asia, addomesticati circa 10000 anni fa. Ci sono molti tipi diversi di maiali: alcuni maiali hanno una pelle di colore rosa, ma ci sono anche maiali con pelle marrone, bianca e nera. Alcuni maiali hanno strisce o macchie. Qualcosa nella pelle chiamato pigmento è responsabile del colore, ed è diverso nelle diverse razze suine. Ci sono circa 73 diverse razze di maiali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POULTRY_HERD</Tag>
+		<English>Herd (Poultry)</English>
+		<French>Troupeau de Volailles</French>
+		<Italian>Branco di pollame</Italian>
+		<Polish>Stado - Drobiu</Polish>
+		<Russian>Ñòàÿ ïòèö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Tag>
+		<English>A poultry herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PRIMATE_CAGE</Tag>
+		<English>Enclosure - Primate</English>
+		<French>Enclos - Primates</French>
+		<Italian>Gabbia dei primati</Italian>
+		<Polish>Klatka - Małpa</Polish>
+		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
+		<English>Remains - Procoptodon</English>
+		<French>Remains - Procoptodon</French>
+		<Italian>Resti di procoptodonte</Italian>
+		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
+		<English>Herd (Ratite)</English>
+		<French>Troupeau d'Autruches</French>
+		<Italian>Branco di ratiti</Italian>
+		<Polish>Stado - Strusi</Polish>
+		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Tag>
+		<English>A ratite is any of a diverse group of large, flightless birds of Gondwanan origin, most of them now extinct. There is still some controversy regarding the systematics involved. Some sources state that Ratites are synonymous with Struthioiniformes, while other sources state that Ratites are the same group, only that the order Struthioniformes contains only the Ostrich and possibly the Elephant Bird. Unlike other flightless birds, the ratites have no keel on their sternum hence the name from the Latin ratis (for raft). Without this to anchor their wing muscles, they could not fly even if they were to develop suitable wings.[PARAGRAPH:2]Most parts of the former Gondwana have ratites, or did have until the fairly recent past. Their closest living relatives are the tinamous of South America.[PARAGRAPH:2]Some taxonomical systems consider the various families of ratites to be orders, but the system used here uses the order "Struthioniformes" to refer to all ratites. The African Ostrich is the largest living ratite. A large member of this species can be nearly 2.8 metres (9.2 ft) tall, weigh as much as 156 kilograms (340 lb), and can outrun a horse.[PARAGRAPH:2]Of the living species, the Australian emu is next in height, reaching up to 1.9 metres (6.2 ft) tall and about 50 kilograms (110 lb). Like the ostrich, it is a fast-running, powerful bird of the open plains and woodlands.[PARAGRAPH:2]Also native to Australia and the islands to the north are the three species of cassowary. Shorter than an emu, but heavier and solidly built, cassowaries prefer thickly vegetated tropical forest. They can be very dangerous when surprised or cornered because of their razor sharp talons. In New Guinea, cassowary eggs are brought back to villages and the chicks raised for eating as a much-prized delicacy, despite (or perhaps because of) the risk they pose to life and limb. They reach up to 1.7 metres (5.6 ft) tall and weigh as much as 59 kilograms (130 lb)[PARAGRAPH:2]South America has two species of rhea, large fast-running birds of the Pampas. The larger American rhea grows to about 1.4 metres (4.6 ft) tall and usually weighs 15 to 40 kilograms (3388 lb).[PARAGRAPH:2]The smallest ratites are the five species of kiwi from New Zealand. Kiwi are chicken-sized, shy, and nocturnal. They nest in deep burrows and use a highly developed sense of smell to find small insects and grubs in the soil. Kiwi are notable for laying eggs that are very large in relation to their body size. A kiwi egg may equal 15 to 20 percent of the body mass of a female kiwi. The smallest species of kiwi is the Little Spotted Kiwi, at 0.9 to 1.9 kilograms (2.04.2 lb) and 35 to 45 centimetres (1418 in).</English>
+		<Italian>I ratiti sono una famiglia di uccelli, che comprende i Paleognati, che non volano. Il termine "Ratiti" viene dal latino "ratis" ("zattera"), poiché questi uccelli hanno lo sterno piatto invece che carenato. La loro distribuzione è australe di origine gondwaniana. Tranne il kiwi sono tutti di taglia grande e sono onnivori. Hanno prole precoce e le femmine covano nella stessa buca a turno; la cova è effettuata anche dal maschio. I ratiti più importanti sono gli struzzi africani, i nandù, i casuari, i kiwi e i moa (attualmente estinti).</Italian>
+		<Polish>Struś syryjski od dawna zajmuje znaczące miejsce w kulturze regionu. Dorosły struś z jedenastoma młodymi został przedstawiony na słynnym prehistorycznym "Graffiti Rock I" (rysunki wyryte na skale datowane na 20001000 p.n.e. odkryte w pobliżu Rijad). W Mezopotamii, był wykorzystywany jako zwierzę ofiarne i przedstawiany na dziełach sztuki, malowany na kubkach i innych przedmiotach wykonanych ze strusich jaj, sprzedawanych aż po Etrurię w okresie nowoasyryjskim. W epoce ekspansji islamu struś syryjski reprezentował bogactwo i elegancję. Polowanie na strusie stało się popularną rozrywką dla bogaczy i szlachty (jeśli zabito strusia w odpowiedni sposób, jego mięso uznawane było przez muzułmanów za halaal). Jaja, pióra i skóry były szeroko wykorzystywane w rękodziele. Zarówno produkty otrzymane ze strusi jak i żywe ptaki były eksportowane aż do Chin.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_CAGE</Tag>
+		<English>Enclosure - Reptile</English>
+		<French>Enclos - Reptiles</French>
+		<Italian>Gabbia dei rettili</Italian>
+		<Polish>Klatka - Gady</Polish>
+		<Russian>Òåððàðèóì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
+		<English>Enclosure - Rodent</English>
+		<French>Enclos - Rongeurs</French>
+		<Italian>Gabbia dei roditori</Italian>
+		<Polish>Klatka - Gryzonie</Polish>
+		<Russian>Êëåòêè ñ ãðûçóíàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROO_HERD</Tag>
+		<English>Herd (Kangaroo)</English>
+		<French>Troupeau de Kangourou</French>
+		<Italian>Branco di canguri</Italian>
+		<Polish>Stado - Kangurów</Polish>
+		<Russian>Ñòàäî êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROO_HERD_PEDIA</Tag>
+		<English>A kangoroo herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
+		<English>Remains - Sabretooth</English>
+		<French>Restes de Tigre à dents de sabre</French>
+		<Italian>Resti di tigre dai denti a sciabola</Italian>
+		<Polish>Resztki - Tygrys Szablozębny</Polish>
+		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
+		<English>Unit Reward - Center for Shark Studies</English>
+		<French>Centre d'étude des Requins</French>
+		<Italian>Centro per gli studi sugli squali</Italian>
+		<Polish>Centrum Badań Rekinów</Polish>
+		<Russian>Öåíòð èçó÷. àêóë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Tag>
+		<English>Until recently only a few benthic species of shark, such as hornsharks, leopard sharks, catsharks, and zebra sharks had survived in aquarium conditions for up to a year or more. This gave rise to the belief that sharks, as well as being difficult to capture and transport, were difficult to care for. A better knowledge of sharks has led to more species (including the large pelagic sharks) being able to be kept for far longer. At the same time, transportation techniques have improved and long distance movement of sharks is becoming easier. One shark that never had been successfully held in captivity for long was the great white. But in September 2004 the Monterey Bay Aquarium successfully kept a young female great white shark for 198 days before releasing her back into the wild.</English>
+		<Italian>Fino ad oggi poche specie di squali sono in grado di sopravvivere più di un anno in cattività. Questo ha portato a credere che gli squali, oltre a essere difficili da catturare e da trasportare, fossero anche difficili da mantenere. Recenti studi sugli squali hanno però permesso di mantenere in buone condizioni un maggior numero di specie di squali. Allo stesso tempo, le tecniche di trasporto sono migliorate e il movimento a lunga distanza di squali sta diventando più facile. Uno squalo che non era mai stato tenuto con successo in cattività per lungo tempo è stato il grande squalo bianco. Ma nel settembre 2004 il Monterey Bay Aquarium ha tenuto con successo una giovane femmina di squalo bianco per 198 giorni prima di rilasciarla di nuovo in libertà.</Italian>
+		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEAL_CAGE</Tag>
+		<English>Enclosure - Seal</English>
+		<French>Enclos - Phoques</French>
+		<Italian>Gabbia delle foche</Italian>
+		<Polish>Klatka - Foka</Polish>
+		<Russian>Êëåòêè ñ òþëåíÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHEEP_HERD</Tag>
+		<English>Herd (Sheep)</English>
+		<French>Troupeau de Moutons</French>
+		<Italian>Gregge di pecore</Italian>
+		<Russian>Îòàðà îâåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHEEP_HERD_PEDIA</Tag>
+		<English>A sheep herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
+		<English>Unit Reward - Snake Charmer</English>
+		<French>Charmeur de Serpents</French>
+		<Italian>Incantatore di serpenti</Italian>
+		<Polish>Zaklinacz Węży</Polish>
+		<Russian>Çàêëèíàòåëü çìåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER_PEDIA</Tag>
+		<English>The earliest evidence for snake charming comes from Ancient Egyptian sources. Charmers there mainly acted as magicians and healers. As literate and high-status men, part of their studies involved learning the various types of snake, the gods to whom they were sacred, and how to treat those who were bitten by the reptiles. Entertainment was also part of their repertoire, and they knew how to handle the animals and charm them for their patrons.[PARAGRAPH:2]One of the earliest records of snake charming appears in the Bible in Psalm (58:3-5): "The wicked turn aside from birth; liars go astray as soon as they are born. Their venom is like that of a snake, like a deaf serpent that does not hear, that does not respond to the magicians, or to a skilled snake-charmer." Snakes have long been popular subjects of Hindu art.[PARAGRAPH:2]Snake charming as it exists today probably originated in India. Hinduism has long held serpents to be sacred; the animals are related to the Nagas, and many gods are pictured under the protection of the cobra. Indians thus considered snake charmers to be holy men who were influenced by the gods.</English>
+		<Italian>Le prime prove dell'esistenza degli incantatori di serpenti provengono da fonti egiziane antiche; qui gli incantatori agivano principalmente come maghi e guaritori. Come uomini colti e di alto rango, una parte dei loro studi consisteva nell'imparare i vari tipi di serpenti, gli dei a cui erano sacri e come trattare coloro che erano stati morsi dai rettili. Anche l'intrattenimento era parte del loro repertorio, e sapevano come gestire ed incantare gli animali.[PARAGRAPH:2]Uno dei più antichi documenti di serpenti incantati appare nella Bibbia nel Salmo (58:3-5): "i malvagi si allontanano dalla nascita; i bugiardi vanno fuori strada, non appena nascono. Il loro veleno è come quello di un serpente, come un serpente sordo che non sente, che non risponde ai maghi o ad un esperto incantatore di serpenti". I serpenti sono stati a lungo soggetti popolari nell'arte indù.[PARAGRAPH:2]Gli incantatori di serpenti attuali probabilmente ebbero origine in India. L'induismo ha da sempre ritenuto i serpenti sacri; gli animali sono legati ai Naga, e molti dei sono raffigurati sotto la protezione del cobra. Gli indiani quindi consideravano gli incantatori di serpenti essere uomini santi che venivano influenzati dagli dei.</Italian>
+		<Polish>Zaklinanie węży to jedna z najstarszych rozrywek towarzyszących człowiekowi.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
+		<English>Unit Reward - Snake Pit</English>
+		<French>Fosse à Serpents</French>
+		<Italian>Fossa dei serpenti</Italian>
+		<Polish>Dół z wężami</Polish>
+		<Russian>ßìà ñî çìåÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_PIT_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Snake Pits[COLOR_REVERT] are places of horror, torture and even death in European legends and fairy tales. The Viking warlord Ragnar Lodbrok is said to have been thrown into a snake pit and died there, after his army had been defeated in battle by King Aelle II of Northumbria. An older legend recorded in Atlakvioa and Oddrunargratr tells that Attila the Hun murdered Gunnarr, the King of Burgundy, in a snake pit. In a medieval German poem, Dietrich von Bern is thrown into a snake pit by the giant Sigenot - he is protected by a magical jewel that had been given to him earlier by a dwarf.[PARAGRAPH:2]Nothing however supports the assumption, that snake pits were ever actually maintained or used for torture or execution. The necessary effort and the risks would have been far too big for something the effect of which could hardly been foreseen or controlled with sufficient precision.</English>
+		<Italian>Le [COLOR_BUILDING_TEXT]Fosse dei serpenti[COLOR_REVERT] sono descritti nelle leggende europee come posti di orrore, tortura e perfino morte. Si dice che il guerriero vichingo Ragnar Lodbrok sia stato gettato in una fossa piena di serpenti e sia morto lì, dopo che il suo esercito era stato sconfitto in battaglia da Re Aelle II di Northumbria. Un'antica leggenda tramandata a Atlakviða e Oddrúnargrátr narra che Attila uccise Gunnarr, Re di Burgundia, gettandolo in una fossa piena di serpenti velenosi. In un poema medievale tedesco, Dietrich von Bern viene gettato in una fossa piena di serpenti dal gigante Sigenot - anche se è protetto da un gioiello magico che gli era appena stato donato da un nano.[PARAGRAPH:2]Nulla invece sostiene l'ipotesi che le fosse di serpenti siano state effettivamente mantenute o utilizzate per torture o esecuzioni. Lo sforzo necessario e il rischio sarebbero stati troppo grandi per qualcosa il cui effetto sarebbe stato difficilmente previsto o controllato con sufficiente precisione.</Italian>
+		<Polish>[COLOR_BUILDING_TEXT]Dół z wężami[COLOR_REVERT] to miejsce do którego wrzuca się skazańców na tortury i śmierć przez pokąsanie przez węże i żmije.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
+		<English>Remains - Thylacine</English>
+		<French>Restes de Thylacine</French>
+		<Italian>Resti di tilacino</Italian>
+		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
+		<English>Unit Reward - Shell Worker's Hut</English>
+		<French>Cabane du sculpteur de carapaces</French>
+		<Italian>Capanna dell'intagliatore di conchiglie</Italian>
+		<Polish>Chata Rzeźbiarza Muszli</Polish>
+		<Russian>Ëîâåö óñòðèö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_PEDIA</Tag>
+		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
+		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
+		<Polish>Skorupy żółwi od dawien dawna były wykorzystywane do produkcji ozdób i prostych narzędzi na całym świecie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTER</Tag>
+		<English>Tradition - Hunter</English>
+		<French>Tradition - Chasseur</French>
+		<Italian>Tradizione della caccia</Italian>
+		<Polish>Tradycja - Łowcy</Polish>
+		<Russian>Ñîþç îõîòíèêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Tag>
+		<English>Tradition - Naval Mascot</English>
+		<French>Tradition - Mascotte Navale</French>
+		<Italian>Tradizione - Mascotte della marina</Italian>
+		<Polish>Tradycja - Bandera (Maskotka)</Polish>
+		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING</Tag>
+		<English>Tradition - Sea Hunting</English>
+		<French>Tradition - Chasse en mer</French>
+		<Italian>Tradizione della pesca</Italian>
+		<Polish>Tradycja - Polowania na morzu</Polish>
+		<Russian>Òðàäèöèè ðûáàëêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_TOTEM</Tag>
+		<English>Tradition - Military Standard (Mascot)</English>
+		<French>Tradition - Standard militaire (Mascotte)</French>
+		<Italian>Tradizione - Stendardo militare (Mascotte)</Italian>
+		<Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
+		<Russian>Òðàäèöèè òîòåìîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
+		<English>Unit Reward - Carnival (Trained Seal)</English>
+		<French>Phoques dressés</French>
+		<Italian>Fiera delle foche ammaestrate</Italian>
+		<Polish>Tresowana Foka</Polish>
+		<Russian>Äðåññ. òþëåíåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Tag>
+		<English>A carnival of seals trained for entertainment.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
+		<English>Flocks of Turkey</English>
+		<Italian>Branco di tacchini</Italian>
+		<Russian>Ñòàÿ èíäååê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Turkey.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
+		<English>Enclosure - Walrus</English>
+		<French>Enclos - Morses</French>
+		<Italian>Gabbia dei trichechi</Italian>
+		<Polish>Klatka - Mors</Polish>
+		<Russian>Êëåòêè ñ ìîðæàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
+		<English>A cage used for wild subdued animals.</English>
+		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi addomesticati.</Italian>
+		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_CAGE</Tag>
+		<English>Enclosure - Wolf</English>
+		<French>Enclos - Loups</French>
+		<Italian>Gabbia dei lupi</Italian>
+		<Polish>Klatka - Wilk</Polish>
+		<Russian>Êëåòêè ñ âîëêàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
+		<English>Unit Reward - Wonders of the Deep</English>
+		<French>Merveilles des profondeurs</French>
+		<Italian>Meraviglie degli abissi</Italian>
+		<Polish>Cuda Głębin</Polish>
+		<Russian>×óäåñà ãëóáèí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP_PEDIA</Tag>
+		<English>Wonders of the deep represent the knowledge of your people about sea animals.</English>
+		<Italian>Le meraviglie degli abissi rappresentano la conoscenza che la tua gente ha degli animali marini.</Italian>
+		<Polish>Cuda Głębin reprezentują wiedzę jaką Twoi ludzi posiadają o zwierzętach morskich.</Polish>
+		<Russian>×óäåñà Ãëóáèí ïðåäñòàâëÿþò çíàíèÿ âàøåìó íàðîäó î ìîðñêèõ îáèòàòåëÿõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_PEDIA</Tag>
+		<English>A zebra herd.</English>
 	</TEXT>
 </Civ4GameText>

@@ -63,10 +63,6 @@
 	</TEXT>
 -->
 	<TEXT>
-		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
-		<English>UNKNOWN CIV</English>
-	</TEXT>
-	<TEXT>
 		<Tag>INTERFACE_ANARCHY</Tag>
 		<English>Anarchy!!! (%d1)</English>
 		<French>Anarchie ! (%d1)</French>
@@ -630,20 +626,16 @@
 		<English>[ICON_BULLET]%s1</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
+		<English>[ICON_BULLET]%s1:[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
 		<English>[ICON_BULLET]%s1 %F2 from %s3</English>
 		<French>[ICON_BULLET]%s1 %F2 en raison de %s3</French>
 		<German>[ICON_BULLET]%s1 %F2 durch %s3</German>
 		<Italian>[ICON_BULLET]%s1 %F2 [NUM3:da:dai] %s3</Italian>
 		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
-		<English>[ICON_BULLET]%s1:[SPACE]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
-		<English>%s1:[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>
@@ -2559,6 +2551,18 @@
 		<Polish>'Osiągnięcia' to wyjątkowe cuda, które mogą zostać stworzone przez [COLOR_UNIT_TEXT]Bohaterów Narodowych[COLOR_REVERT]. W grze występuje osiem [COLOR_BUILDING_TEXT]Osiągnięć[COLOR_REVERT], które posiadają różne zalety; jednakże, kiedy jakieś [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] zostanie stworzone przez jedną cywilizację, nie może już zostać zbudowane przez inną. Czasem dobrze jest poczekać jeśli chce się stworzyć [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] dostępne w późniejszej erze. Choć na początku [COLOR_BUILDING_TEXT]Osiągnięcia[COLOR_REVERT] nie zapewniają ogromnych bonusów, to jednak z biegiem czasu ich zalety się zwiększają.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDUP_CHOOSE</Tag>
+		<English>Select a Build Up Promotion Line for your [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</English>
+		<French>Choisissez une Spécialisation à suivre pour votre [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</French>
+		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
+		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
+		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
+		<English>Disband current build-up!</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>
 		<English>Create [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Beacon[\LINK] (Great Barrier Reef)</English>
 		<French>Placer une [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Balise[\LINK] (Great Barrier Reef)</French>
@@ -2607,6 +2611,10 @@
 		<German>Patch-Download abbrechen</German>
 		<Italian>Annulla il download della patch</Italian>
 		<Spanish>Cancelar la descarga del parche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CANCLAIM</Tag>
+		<English>Can claim</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CANT_NUKE_FRIENDS</Tag>
@@ -2914,18 +2922,6 @@
 		<Spanish>[COLOR_NEGATIVE_TEXT]Ya has escogido tu(s) tecnología(s) gratis[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Już wybrałeś swoje darmowe technologie[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]Âû óæå âûáðàëè âàøó ñâîáîäíóþ òåõíîëîãèþ(è)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDUP_CHOOSE</Tag>
-		<English>Select a Build Up Promotion Line for your [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</English>
-		<French>Choisissez une Spécialisation à suivre pour votre [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</French>
-		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
-		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
-		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
-		<English>Disband current build-up!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_ESPIONAGE_MISSION</Tag>
@@ -4025,6 +4021,10 @@
 		<German>Kein Unterhalt</German>
 		<Italian>Nessun mantenimento</Italian>
 		<Spanish>Sin mantenimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
+		<English>UNKNOWN CIV</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CLIMATE_ARID</Tag>
@@ -20460,6 +20460,26 @@
 		<Russian>Âàñ ïîâòîðíî íàçíà÷èëè íà ñàìóþ ñëàáóþ êîìàíäó! Ïåðåâåðíèòå ýòó ñòðàíó è ñòàíüòå ¹1 ñíîâà!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOTS_FLATLAND</Tag>
+		<English>Flatland Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_HILL</Tag>
+		<English>Hill Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_PEAK</Tag>
+		<English>Peak Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_WATER</Tag>
+		<English>Water Plots</English>
+		<French>Cases d'eau[SPACE]</French>
+		<German>Wasser-Geländefelder</German>
+		<Italian>Caselle d'acqua</Italian>
+		<Spanish>Casillas de agua</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PLOT_BLOCKADED</Tag>
 		<English>Trade Blocked by Enemy Ship</English>
 		<French>Route commerciale bloquée par un navire ennemi</French>
@@ -20586,26 +20606,6 @@
 		<German>, Forschung: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
 		<Italian>, Ricerca: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
 		<Spanish>, investigar: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOTS_FLATLAND</Tag>
-		<English>Flatland Plots</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOTS_HILL</Tag>
-		<English>Hill Plots</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOTS_PEAK</Tag>
-		<English>Peak Plots</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOTS_WATER</Tag>
-		<English>Water Plots</English>
-		<French>Cases d'eau[SPACE]</French>
-		<German>Wasser-Geländefelder</German>
-		<Italian>Caselle d'acqua</Italian>
-		<Spanish>Casillas de agua</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPULATION</Tag>
@@ -22771,6 +22771,10 @@
 		<English>Vactrain</English>
 		<French>Ligne de Train sous vide</French>
 		<Russian>Вакуумн. тоннель</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
+		<English>%s1:[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAME_UNITS_TYPE</Tag>
@@ -25179,7 +25183,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
 		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
-		<German>[ICON_BULLET]neue Modernisierung: %s1 -> %s2</German>
+		<German>[ICON_BULLET]neue Modernisierung: %s1 -&gt; %s2</German>
 		<Italian>[ICON_BULLET]Permette a %s1 di migliorare in %s2.</Italian>
 		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
 		<Polish>[ICON_BULLET]Umożliwia ulepszenie %s1 do %s2.</Polish>
@@ -28198,6 +28202,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNCLAIMED</Tag>
+		<English>Unclaimed</English>
+		<Italian>Non reclamato</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_AREA_BUILDINGS</Tag>
 		<English>+%d1[ICON_UNHAPPY] "Buildings and Effects that influence the region we are in are driving us crazy!"</English>
 		<French>+%d1[ICON_UNHAPPY] "Les bâtiments et effets influençant notre religion nous rendent fous!"</French>
@@ -30870,14 +30879,5 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNCLAIMED</Tag>
-		<English>Unclaimed</English>
-		<Italian>Non reclamato</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CANCLAIM</Tag>
-		<English>Can claim</English>
 	</TEXT>
 </Civ4GameText>

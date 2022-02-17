@@ -5472,12 +5472,12 @@
 		<Russian>Äèñò. îáñòðåë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_TEXT</Tag>
-		<English>Dynamic Civ Names</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
 		<English>Civ names will have various names depending on civic choices and other factors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_TEXT</Tag>
+		<English>Dynamic Civ Names</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_EMERGENCY_DRAFT_ENABLED_HOVER</Tag>

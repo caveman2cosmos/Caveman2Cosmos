@@ -103,6 +103,14 @@
 		<Russian>Íàçâàíèå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_WORD_PEAK</Tag>
+		<English>Peak</English>
+		<French>Montagne</French>
+		<German>Gipfel</German>
+		<Italian>Montagna</Italian>
+		<Spanish>Pico</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_WORD_PLAYER</Tag>
 		<English>Player</English>
 		<French>Joueur</French>
@@ -113,14 +121,6 @@
 		<Russian>Èãðîê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_WORD_PEAK</Tag>
-		<English>Peak</English>
-		<French>Montagne</French>
-		<German>Gipfel</German>
-		<Italian>Montagna</Italian>
-		<Spanish>Pico</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_WORD_PLOT</Tag>
 		<English>Plot</English>
 		<French>Case</French>
@@ -129,6 +129,11 @@
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
 		<Russian>Ó÷àñòîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_SPOT</Tag>
+		<English>Spot</English>
+		<German>Sicht</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>
@@ -158,10 +163,5 @@
 		<Spanish>Con</Spanish>
 		<Polish>Z</Polish>
 		<Russian>Ñ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_SPOT</Tag>
-		<English>Spot</English>
-		<German>Sicht</German>
 	</TEXT>
 </Civ4GameText>

@@ -194,14 +194,6 @@ class Revolution:
 		# Determines whether to show popup to active player
 		return GC.getPlayer(playerID).isHuman() and GAME.getActivePlayer() == playerID
 
-	def isLocalHumanPlayerOrAutoPlay(self, playerID):
-		# Determines whether to show popup to active player
-		return (GC.getPlayer(playerID).isHuman() or GC.getPlayer(playerID).isHumanDisabled()) and GAME.getActivePlayer() == playerID
-
-	def isHumanPlayerOrAutoPlay(self, playerID):
-		# Determines whether to show popup to active player
-		return GC.getPlayer(playerID).isHuman() or GC.getPlayer(playerID).isHumanDisabled()
-
 	def loadInfo(self):
 		# Function loads info required by other components
 		print "[REV] Loading revolution data"
@@ -482,10 +474,50 @@ class Revolution:
 
 	def onEndGameTurn(self, argsList):
 
-		if self.iNationalismTech == None:
+		if self.iNationalismTech is None:
 			self.loadInfo()
 
-		self.topCivAdjustments()
+		# Penalty on top score/power to help keep game even. Benefit for highest culture
+		powerList = []; cultureList = []; scoreList = []
+
+		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+			player = GC.getPlayer(iPlayer)
+			if player.isAlive():
+				powerList.append((player.getPower(), iPlayer))
+				cultureList.append((player.getCulture(), iPlayer))
+				scoreList.append((GAME.getPlayerScore(iPlayer), iPlayer))
+
+		powerList.sort()
+		powerList.reverse()
+		cultureList.sort()
+		cultureList.reverse()
+		scoreList.sort()
+		scoreList.reverse()
+		bLog = self.LOG_DEBUG and not (GAME.getGameTurn() % 25)
+
+		iNumTopPlayers = (GAME.countCivPlayersAlive() - 4) / 3
+		if bLog: print "[REV] Revolt: Adjustments for top %d players" % iNumTopPlayers
+
+		for [iRank, listElement] in enumerate(powerList[0:iNumTopPlayers]):
+			[iPower, iPlayer] = listElement
+			if iPower * 3/2 > powerList[0][0]:
+				iPowerEffect = 3 - 3*iRank/iNumTopPlayers
+				if bLog: print "[REV] Revolt: %s have %dth most power, effect: %d"%(GC.getPlayer(iPlayer).getCivilizationDescription(0),iRank+1,-iPowerEffect)
+				GC.getPlayer(iPlayer).changeStabilityIndex(-iPowerEffect)
+
+		for [iRank, listElement] in enumerate(cultureList[0:iNumTopPlayers]):
+			[iCulture, iPlayer] = listElement
+			if iCulture * 3/2 > cultureList[0][0]:
+				iCultureEffect = 3 - 3*iRank/iNumTopPlayers
+				if bLog: print "[REV] Revolt: %s have %dth most culture, effect: %d"%(GC.getPlayer(iPlayer).getCivilizationDescription(0),iRank+1,iCultureEffect)
+				GC.getPlayer(iPlayer).changeStabilityIndex(iCultureEffect)
+
+		for [iRank, listElement] in enumerate(scoreList[0:iNumTopPlayers]):
+			[iScore, iPlayer] = listElement
+			if iScore * 3/2 > scoreList[0][0]:
+				iScoreEffect = 3 - 3*iRank/iNumTopPlayers
+				if bLog: print "[REV] Revolt: %s have %dth highest score, effect: %d"%(GC.getPlayer(iPlayer).getCivilizationDescription(0),iRank+1,-iScoreEffect)
+				GC.getPlayer(iPlayer).changeStabilityIndex(-iScoreEffect)
 
 
 	def onBeginPlayerTurn(self, argsList):
@@ -496,13 +528,19 @@ class Revolution:
 		iPlayer -= 1
 
 		while iPlayer > -1:
-			if GC.getPlayer(iPlayer).isAlive():
-				self.checkForRevReinforcement(iPlayer)
-				self.checkCivics(iPlayer)
+			player = GC.getPlayer(iPlayer)
+			if player.isAlive():
+				# Checks iPlayer's cities for any rebel reinforcement units that should be spawned
+				for city in player.cities():
+					if city.getReinforcementCounter() == 1:
+						self.doRevReinforcement(city)
+				self.checkCivics(iPlayer, player)
 				break
 			iPlayer -= 1
 
 
+	# Confusing name as this is called before the autosave -at the beginning of the turn- is created.
+	# I.e. it has always been called before the player's turn has officially ended.
 	def onEndPlayerTurn(self, argsList):
 		iGameTurn, iPlayer = argsList
 
@@ -532,40 +570,28 @@ class Revolution:
 			iNextPlayer += 1
 
 
-	def onCityAcquired( self, argsList):
-		'City Acquired'
-
-		owner,playerType,pCity,bConquest,bTrade = argsList
-
-		self.updateLocalRevIndices( GAME.getGameTurn(), pCity.getOwner(), subCityList = [pCity], bIsRevWatch = True )
+	def onCityAcquired(self, argsList):
+		city = argsList[2]
+		self.updateLocalRevIndices(GAME.getGameTurn(), city.getOwner(), subCityList = [city], bIsRevWatch = True)
 
 ##--- Player turn functions ---------------------------------------
 
-	def checkForRevReinforcement(self, iPlayer):
-		# Checks iPlayer's cities for any rebel reinforcement units that should be spawned
-		# Should be called at end of player's turn
-		for city in GC.getPlayer(iPlayer).cities():
-			if city.getReinforcementCounter() == 1:
-				self.doRevReinforcement(city)
-
-
-	def doRevReinforcement( self, pCity ) :
+	def doRevReinforcement(self, pCity):
 
 		revCivType = RevData.getCityVal(pCity, 'RevolutionCiv')
-		ownerID = pCity.getOwner()
-		owner = GC.getPlayer(ownerID)
 
 		# City must have valid rev player
-		if( revCivType < 0 ) :
+		if revCivType < 0:
 			return
-		if( revCivType == owner.getCivilizationType() ) :
-			# Already captured and got capture bonus
-			return
+		ownerID = pCity.getOwner()
+		owner = GC.getPlayer(ownerID)
+		if revCivType == owner.getCivilizationType():
+			return # Already captured and got capture bonus
 
 		pRevPlayer = None
-		for i in xrange(GC.getMAX_PC_PLAYERS()) :
+		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			playerI = GC.getPlayer(i)
-			if( playerI.isAlive() and playerI.getCivilizationType() == revCivType ) :
+			if playerI.isAlive() and playerI.getCivilizationType() == revCivType:
 				pRevPlayer = playerI
 				break
 
@@ -575,9 +601,8 @@ class Revolution:
 
 		pRevTeam = GC.getTeam(pRevPlayer.getTeam())
 
-		if( not pRevTeam.isAtWar(owner.getTeam()) ) :
-			# Revolt has ended
-			return
+		if not pRevTeam.isAtWar(owner.getTeam()):
+			return # Revolt has ended
 
 		# City must still be rebellious
 		revIdx = pCity.getRevolutionIndex()
@@ -585,9 +610,6 @@ class Revolution:
 		localRevEffect = 0
 		revIdxHist = RevData.getCityVal( pCity, 'RevIdxHistory' )
 
-#-------------------------------------------------------------------------------------------------
-# Lemmy101 RevolutionMP edit
-#-------------------------------------------------------------------------------------------------
 		if revIdx < self.revInstigatorThreshold:
 			localRevEffect = min([-revIdx/10.0,6.0*localRevIdx,-25.0])
 			revIdxHist['RevoltEffects'][0] += localRevEffect
@@ -596,20 +618,18 @@ class Revolution:
 			if self.LOG_DEBUG: print "[REV] Revolt: Local rebellion in %s ends due to low rev index" % pCity.getName()
 			return
 
-		if localRevIdx < -(self.badLocalThreshold/2):
+		if localRevIdx < -(self.badLocalThreshold / 2):
 			localRevEffect = min([-revIdx/8.0,8.0*localRevIdx,-50.0])
 			revIdxHist['RevoltEffects'][0] += localRevEffect
 			RevData.updateCityVal( pCity, 'RevIdxHistory', revIdxHist )
 			pCity.changeRevolutionIndex( int(localRevEffect))
 			if self.LOG_DEBUG: print "[REV] Revolt: Local rebellion in %s ends due to improving situation" % pCity.getName()
 			return
-#-------------------------------------------------------------------------------------------------
-# END Lemmy101 RevolutionMP edit
-#-------------------------------------------------------------------------------------------------
+
 		rebPower = pCity.area().getPower(pRevPlayer.getID())
 		ownerPower = pCity.area().getPower(ownerID)
 
-		if( rebPower > 2*ownerPower ) :
+		if rebPower > 2*ownerPower:
 			if self.LOG_DEBUG:
 				print "[REV] Revolt: Reinforcing %s: Rebel power %d much higher than owner %d in area, No Reinforce for 3 turns" % (pCity.getName(), rebPower, ownerPower)
 			pCity.setReinforcementCounter(3 + 1)
@@ -835,87 +855,84 @@ class Revolution:
 			pCity.setReinforcementCounter(4)
 
 
-	def checkCivics(self, iPlayer):
+	def checkCivics(self, iPlayer, player):
 
-		pPlayer = GC.getPlayer(iPlayer)
-
-		if not pPlayer == None or pPlayer.getNumCities() == 0 or pPlayer.isNPC():
+		if not player or not player.getNumCities() or player.isNPC():
 			return
 
 		curCivics = []
 		for i in xrange(GC.getNumCivicOptionInfos()):
-			curCivics.append(pPlayer.getCivics(i))
+			curCivics.append(player.getCivics(i))
 
-		prevCivics = RevData.revObjectGetVal( pPlayer, "CivicList" )
+		prevCivics = RevData.revObjectGetVal(player, "CivicList")
 
-		if prevCivics == None or not len(prevCivics) == len(curCivics):
-			RevEvents.recordCivics(pPlayer)
+		if prevCivics is None or len(prevCivics) != len(curCivics):
+			RevEvents.recordCivics(player)
 			return
 
-		else:
-			sumRevIdx = 0
-			bChanged = False
-			for [i, curCivic] in enumerate(curCivics):
+		sumRevIdx = 0
+		bChanged = False
+		for [i, curCivic] in enumerate(curCivics):
 
-				if curCivic != prevCivics[i] and prevCivics[i] != -1:
+			if curCivic != prevCivics[i] and prevCivics[i] != -1:
 
-					curInfo  = GC.getCivicInfo(curCivic)
-					prevInfo = GC.getCivicInfo(prevCivics[i])
-					if self.LOG_DEBUG:
-						print "[REV] Revolt: %s changing civic option %d from %s to %s"%(pPlayer.getCivilizationDescription(0), i, prevInfo.getDescription(), curInfo.getDescription())
-					iRevIdxChange = curInfo.getRevIdxSwitchTo() - prevInfo.getRevIdxSwitchTo()
-					sumRevIdx += iRevIdxChange
+				curInfo  = GC.getCivicInfo(curCivic)
+				prevInfo = GC.getCivicInfo(prevCivics[i])
+				if self.LOG_DEBUG:
+					print "[REV] Revolt: %s changing civic option %d from %s to %s"%(player.getCivilizationDescription(0), i, prevInfo.getDescription(), curInfo.getDescription())
+				iRevIdxChange = curInfo.getRevIdxSwitchTo() - prevInfo.getRevIdxSwitchTo()
+				sumRevIdx += iRevIdxChange
 
-					if iRevIdxChange:
+				if iRevIdxChange:
 
-						keyList = []
-						if( curInfo.getRevDemocracyLevel()*prevInfo.getRevDemocracyLevel() < 0 ) :
-							# Democracy level changed sign
-							keyList.extend( ['Location', 'Colony', 'Nationality'] )
-						elif( curInfo.getRevReligiousFreedom()*prevInfo.getRevReligiousFreedom() < 0 ) :
-							# Rel freedom changed sign
-							keyList.append( 'Religion' )
-						elif( curInfo.getRevLaborFreedom()*prevInfo.getRevLaborFreedom() < 0 ) :
-							# Democracy level changed sign
-							keyList.extend( ['Colony', 'Nationality'] )
+					keyList = []
+					if( curInfo.getRevDemocracyLevel()*prevInfo.getRevDemocracyLevel() < 0 ) :
+						# Democracy level changed sign
+						keyList.extend( ['Location', 'Colony', 'Nationality'] )
+					elif( curInfo.getRevReligiousFreedom()*prevInfo.getRevReligiousFreedom() < 0 ) :
+						# Rel freedom changed sign
+						keyList.append( 'Religion' )
+					elif( curInfo.getRevLaborFreedom()*prevInfo.getRevLaborFreedom() < 0 ) :
+						# Democracy level changed sign
+						keyList.extend( ['Colony', 'Nationality'] )
 
-						if self.LOG_DEBUG and keyList:
-							keyStr = ''
-							for key in keyList :
-								keyStr += key + ', '
-							print "[REV] Revolt: Increasing effect for cities with high %s factors" % keyStr
+					if self.LOG_DEBUG and keyList:
+						keyStr = ''
+						for key in keyList :
+							keyStr += key + ', '
+						print "[REV] Revolt: Increasing effect for cities with high %s factors" % keyStr
 
-						for cityX in pPlayer.cities():
-							revIdxHist = RevData.getCityVal(cityX,'RevIdxHistory')
-							iThisRevIdxChange = iRevIdxChange
-							mod = 1.0
-							for [listIdx,key] in enumerate(keyList):
-								if revIdxHist[key][0] > 9:
-									mod *= 1.8
-								elif revIdxHist[key][0] > 3:
-									mod *= 1.4
-								elif revIdxHist[key][0] > 0:
-									mod *= 1.2
+					for cityX in player.cities():
+						revIdxHist = RevData.getCityVal(cityX,'RevIdxHistory')
+						iThisRevIdxChange = iRevIdxChange
+						mod = 1.0
+						for [listIdx,key] in enumerate(keyList):
+							if revIdxHist[key][0] > 9:
+								mod *= 1.8
+							elif revIdxHist[key][0] > 3:
+								mod *= 1.4
+							elif revIdxHist[key][0] > 0:
+								mod *= 1.2
 
-							mod = min([3.0, mod])
-							iThisRevIdxChange = int( mod*iRevIdxChange + 0.5 )
+						mod = min([3.0, mod])
+						iThisRevIdxChange = int( mod*iRevIdxChange + 0.5 )
 
-							if mod > 1.0 and self.LOG_DEBUG:
-								print "[REV] Increasing civic effects in %s" % cityX.getName()
+						if mod > 1.0 and self.LOG_DEBUG:
+							print "[REV] Increasing civic effects in %s" % cityX.getName()
 
-							cityX.changeRevolutionIndex( int(iThisRevIdxChange) )
+						cityX.changeRevolutionIndex( int(iThisRevIdxChange) )
 
-							revIdxHist['Events'][0] += iThisRevIdxChange
-							RevData.updateCityVal(cityX,'RevIdxHistory',revIdxHist)
+						revIdxHist['Events'][0] += iThisRevIdxChange
+						RevData.updateCityVal(cityX,'RevIdxHistory',revIdxHist)
 
-			if sumRevIdx != 0:
-				if self.LOG_DEBUG: print "[REV] Revolt: Avg net effect for %s: %d" % (pPlayer.getCivilizationDescription(0), sumRevIdx)
+		if sumRevIdx != 0:
+			if self.LOG_DEBUG: print "[REV] Revolt: Avg net effect for %s: %d" % (player.getCivilizationDescription(0), sumRevIdx)
 
 
 	def updatePlayerRevolution(self, argsList):
 		iGameTurn, iPlayer = argsList
 
-		if self.iNationalismTech == None:
+		if self.iNationalismTech is None:
 			self.loadInfo()
 
 		self.updateRevolutionCounters(iGameTurn, iPlayer)
@@ -964,7 +981,7 @@ class Revolution:
 
 		pTeam = GC.getTeam(pPlayer.getTeam())
 
-		if self.iNationalismTech == None:
+		if self.iNationalismTech is None:
 			self.loadInfo()
 
 		hasNationalism = GC.getTeam(pPlayer.getTeam()).isHasTech(self.iNationalismTech)
@@ -2179,54 +2196,6 @@ class Revolution:
 
 
 ##--- Game turn functions  ---------------------------------------------------
-
-	def topCivAdjustments( self ) :
-		# Penalty on top score/power to help keep game even
-		# Benefit for highest culture
-
-		powerList = []
-		cultureList = []
-		scoreList = []
-
-		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-			pPlayer = GC.getPlayer(iPlayer)
-			if (pPlayer.isAlive()):
-				powerList.append((pPlayer.getPower(),iPlayer))
-				cultureList.append((pPlayer.getCulture(), iPlayer))
-				scoreList.append((GAME.getPlayerScore(iPlayer), iPlayer))
-
-
-		powerList.sort()
-		powerList.reverse()
-		cultureList.sort()
-		cultureList.reverse()
-		scoreList.sort()
-		scoreList.reverse()
-
-		iNumTopPlayers = (GAME.countCivPlayersAlive() - 4)/3
-		if( self.LOG_DEBUG and GAME.getGameTurn()%25 == 0 ) : print "[REV] Revolt: Adjustments for top %d players" % iNumTopPlayers
-
-		for [iRank,listElement] in enumerate(powerList[0:iNumTopPlayers]) :
-			[iPower,iPlayer] = listElement
-			if( (3*iPower)/2 > powerList[0][0] ) :
-				iPowerEffect = 3 - (3*iRank)/iNumTopPlayers
-				if( self.LOG_DEBUG and GAME.getGameTurn()%25 == 0 ) : print "[REV] Revolt: %s have %dth most power, effect: %d"%(GC.getPlayer(iPlayer).getCivilizationDescription(0),iRank+1,-iPowerEffect)
-				GC.getPlayer(iPlayer).changeStabilityIndex(-iPowerEffect)
-
-		for [iRank,listElement] in enumerate(cultureList[0:iNumTopPlayers]) :
-			[iCulture,iPlayer] = listElement
-			if( (3*iCulture)/2 > cultureList[0][0] ) :
-				iCultureEffect = 3 - (3*iRank)/iNumTopPlayers
-				if( self.LOG_DEBUG and GAME.getGameTurn()%25 == 0 ) : print "[REV] Revolt: %s have %dth most culture, effect: %d"%(GC.getPlayer(iPlayer).getCivilizationDescription(0),iRank+1,iCultureEffect)
-				GC.getPlayer(iPlayer).changeStabilityIndex(iCultureEffect)
-
-		for [iRank,listElement] in enumerate(scoreList[0:iNumTopPlayers]) :
-			[iScore,iPlayer] = listElement
-			if( (3*iScore)/2 > scoreList[0][0] ) :
-				iScoreEffect = 3 - (3*iRank)/iNumTopPlayers
-				if( self.LOG_DEBUG and GAME.getGameTurn()%25 == 0 ) : print "[REV] Revolt: %s have %dth highest score, effect: %d"%(GC.getPlayer(iPlayer).getCivilizationDescription(0),iRank+1,-iScoreEffect)
-				GC.getPlayer(iPlayer).changeStabilityIndex(-iScoreEffect)
-
 
 	def revIndexAdjusted(self, pCity):
 		return pCity.getRevolutionIndex() - pCity.isCapital() * self.revInstigatorThreshold
@@ -3542,15 +3511,14 @@ class Revolution:
 			if pPlayer.getGold() > iBuyOffCost:
 				bodStr += '\n\n' + TRNSLTR.getText("TXT_KEY_REV_IND_PEACE_ACTION2",())
 
-		else :
-			[pRevPlayer,bIsJoinWar] = self.chooseRevolutionCiv( indCities, bJoinCultureWar = False, bReincarnate = True, bJoinRebels = True, bSpreadRebels = False )
+		else:
+			[pRevPlayer, bIsJoinWar] = self.chooseRevolutionCiv(indCities, bJoinCultureWar = False, bReincarnate = True, bJoinRebels = True, bSpreadRebels = False)
 			vassalStyle = None
-			if( self.allowSmallBarbRevs and len(indCities) == 1 ) :
-				if( instRevIdx < int(1.4*self.revInstigatorThreshold) ) :
-					if( not instigator.area().isBorderObstacle(pPlayer.getTeam()) ) :
-						pRevPlayer = GC.getPlayer( GC.getBARBARIAN_PLAYER() )
-						bIsJoinWar = False
-						if self.LOG_DEBUG: print "[REV] Revolt: Small, disorganized Revolution"
+			if self.allowSmallBarbRevs and len(indCities) == 1 and instRevIdx < int(1.4*self.revInstigatorThreshold) and not instigator.area().isBorderObstacle(pPlayer.getTeam()):
+				pRevPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
+				bIsJoinWar = False
+				if self.LOG_DEBUG: print "[REV] Revolt: Small, disorganized Revolution"
+
 			bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_IND_VIOLENT_DEMAND",())
 			if( pRevPlayer.isBarbarian() ) :
 				bodStr += " " + TRNSLTR.getText("TXT_KEY_REV_IND_VIOLENT_BARB",())
@@ -3583,60 +3551,63 @@ class Revolution:
 		pRevPlayer = None
 		bIsJoinWar = False
 
-		owner = GC.getPlayer( cityList[0].getOwner() )
-		ownerTeam = GC.getTeam( owner.getTeam() )
+		iParentPlayer = cityList[0].getOwner()
+		owner = GC.getPlayer(iParentPlayer)
+		ownerTeam = GC.getTeam(owner.getTeam())
 
 		# TODO:  Turn into a pick best option as opposed to first option
 		# Attempt to find a worthy civ to reincarnate from these cities
 		instigator = cityList[0]
 		closeCityList = []
-		for pCity in cityList :
-			if( plotDistance( pCity.getX(), pCity.getY(), instigator.getX(), instigator.getY() ) < 0.7*self.closeRadius ) :
-				closeCityList.append( pCity )
+		for pCity in cityList:
+			if plotDistance( pCity.getX(), pCity.getY(), instigator.getX(), instigator.getY() ) < 0.7*self.closeRadius:
+				closeCityList.append(pCity)
 
-		for pCity in closeCityList :
+		for pCity in closeCityList:
 
-			if( pRevPlayer == None ) :
+			if self.LOG_DEBUG: print "[REV] Revolt: Looking for revolution worthy civ in " + pCity.getName()
 
-				if self.LOG_DEBUG: print "[REV] Revolt: Looking for revolution worthy civ in " + pCity.getName()
+			cultPlayer = None
+			if pCity.countTotalCultureTimes100() > 5000:
+				cultPlayer = GC.getPlayer(pCity.findHighestCulture())
+				if cultPlayer.getID() == iParentPlayer or cultPlayer.isNPC() or cultPlayer.isMinorCiv():
+					cultPlayer = None
 
-				cultPlayer = None
-				if( pCity.countTotalCultureTimes100() > 50*100 ) :
-					cultPlayer = GC.getPlayer( pCity.findHighestCulture() )
-					if( cultPlayer.getID() == owner.getID() or cultPlayer.isNPC() or cultPlayer.isMinorCiv() ) :
-						cultPlayer = None
-
-				if( bJoinCultureWar and not cultPlayer == None ) :
+				elif bJoinCultureWar and ownerTeam.isAtWar(cultPlayer.getID()) and cultPlayer.isAlive():
 					# If at war with significant culture, join them
-					if( ownerTeam.getAtWarCount(True) > 0 ) :
-						if( ownerTeam.isAtWar(cultPlayer.getID()) and cultPlayer.isAlive() ) :
-							if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with dominant culture player " + cultPlayer.getCivilizationDescription(0)
-							pRevPlayer = cultPlayer
-							if( cultPlayer.getNumCities() > 2 ) :
-								bIsJoinWar = True
+					if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with dominant culture player " + cultPlayer.getCivilizationDescription(0)
+					pRevPlayer = cultPlayer
+					if cultPlayer.getNumCities() > 2:
+						bIsJoinWar = True
+					break;
 
-				if( bJoinRebels and pRevPlayer == None ) :
-					# If at war with this cities rebel civ type, join them
-					revCivType = RevData.getCityVal(pCity, 'RevolutionCiv')
-					if( revCivType >= 0 ) :
-						for i in xrange(GC.getMAX_PC_PLAYERS()) :
-							if( not i == owner.getID() ) :
-								playerI = GC.getPlayer( i )
-								if( playerI.isAlive() and playerI.getCivilizationType() == revCivType ) :
-									if( ownerTeam.isAtWar(playerI.getTeam()) and ownerTeam.isHasMet(playerI.getTeam()) ) :
-										if( RevUtils.getNumDefendersNearPlot( pCity.getX(), pCity.getY(), i, iRange = 5, bIncludePlot = True, bIncludeCities = True ) ) :
-											pRevPlayer = playerI
-											if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with cities revolt civ type, player " + pRevPlayer.getCivilizationDescription(0)
-
-				if( bReincarnate and pRevPlayer == None ) :
-					# Check for civ that can rise from the ashes
-					for i in xrange(GC.getMAX_PC_PLAYERS()) :
-						if( not i == owner.getID() ) :
-							playerI = GC.getPlayer( i )
-							if( (not playerI.isAlive()) and (pCity.getCulture( i ) > 50) ) :
+			if bJoinRebels:
+				# If at war with this cities rebel civ type, join them
+				revCivType = RevData.getCityVal(pCity, 'RevolutionCiv')
+				if revCivType > -1:
+					for i in xrange(GC.getMAX_PC_PLAYERS()):
+						if i != iParentPlayer:
+							playerI = GC.getPlayer(i)
+							if (
+								playerI.isAlive() and playerI.getCivilizationType() == revCivType
+							and ownerTeam.isAtWar(playerI.getTeam()) and ownerTeam.isHasMet(playerI.getTeam())
+							and RevUtils.getNumDefendersNearPlot(pCity.getX(), pCity.getY(), i, iRange = 5, bIncludePlot = True, bIncludeCities = True)
+							):
 								pRevPlayer = playerI
-								if self.LOG_DEBUG: print "[REV] Revolt: Reincarnating player " + pRevPlayer.getCivilizationDescription(0)
-								break
+								if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with cities revolt civ type, player " + pRevPlayer.getCivilizationDescription(0)
+								break # Toffer - should perhaps randomize between all valid ones instead of always chosing the one with lowest player index...
+					if pRevPlayer: break
+
+			if bReincarnate:
+				# Check for civ that can rise from the ashes
+				for i in xrange(GC.getMAX_PC_PLAYERS()):
+					if not i == iParentPlayer and pCity.getCulture(i) > 50:
+						playerI = GC.getPlayer(i)
+						if not playerI.isAlive():
+							pRevPlayer = playerI
+							if self.LOG_DEBUG: print "[REV] Revolt: Reincarnating player " + pRevPlayer.getCivilizationDescription(0)
+							break
+			if pRevPlayer: break
 
 		# Search around all cities for a rebellion that wants to spill over into this territory
 		if bSpreadRebels and pRevPlayer == None:
@@ -3644,10 +3615,10 @@ class Revolution:
 
 			rebelIDList = []
 			for i in xrange(GC.getMAX_PC_PLAYERS()) :
-				if( not i == owner.getID() and pCity.area().getUnitsPerPlayer(i) > 0 ) :
+				if( not i == iParentPlayer and pCity.area().getUnitsPerPlayer(i) > 0 ) :
 					playerI = GC.getPlayer(i)
 					teamI = GC.getTeam( playerI.getTeam() )
-					relations = playerI.AI_getAttitude(owner.getID())
+					relations = playerI.AI_getAttitude(iParentPlayer)
 
 					if( playerI.isRebel() and teamI.canDeclareWar(ownerTeam.getID()) ) :
 						if( not playerI.isFoundedFirstCity() ) :  # Is a homeless rebel
@@ -3697,45 +3668,45 @@ class Revolution:
 						break
 
 		# Search around all cities in list for a dead player to reincarnate
-		if( pRevPlayer == None and bReincarnate ) :
-			if( GAME.countCivPlayersAlive() < GAME.countCivPlayersEverAlive() ) :
+		if not pRevPlayer and bReincarnate and GAME.countCivPlayersAlive() < GAME.countCivPlayersEverAlive():
 
-				deadCivs = []
-				for idx in xrange(GC.getMAX_PC_PLAYERS()) :
-					playerI = GC.getPlayer(idx)
-					if( not playerI.isAlive() and playerI.isEverAlive() ) :
-						# TODO: Should this also check for revData?
-						deadCivs.append(idx)
+			deadCivs = []
+			for idx in xrange(GC.getMAX_PC_PLAYERS()):
+				playerI = GC.getPlayer(idx)
+				if not playerI.isAlive() and playerI.isEverAlive():
+					# TODO: Should this also check for revData?
+					deadCivs.append(idx)
 
-				for pCity in closeCityList :
-					if( pRevPlayer == None ) :
-						for civIdx in deadCivs :
-							playerI = GC.getPlayer(civIdx)
-							if( playerI.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv') ) :
-								if self.LOG_DEBUG: print "[REV] Revolt: Reincarnation %s's rev civ, the %s"%(pCity.getName(),playerI.getCivilizationDescription(0))
-								pRevPlayer = playerI
-								break
+			for pCity in closeCityList:
+				for civIdx in deadCivs:
+					playerI = GC.getPlayer(civIdx)
+					if( playerI.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv') ) :
+						if self.LOG_DEBUG: print "[REV] Revolt: Reincarnation %s's rev civ, the %s"%(pCity.getName(),playerI.getCivilizationDescription(0))
+						pRevPlayer = playerI
+						break
+				if pRevPlayer: break
 
-				for pCity in closeCityList :
-					if( pRevPlayer == None ) :
+			if not pRevPlayer:
+				for pCity in closeCityList:
 
-						if self.LOG_DEBUG: print "[REV] Revolt: Checking around %s for dead player" % pCity.getName()
-						maxCult = 0
-						maxCultRad = 5
-						for [radius,plotI] in RevUtils.plotGenerator( pCity.plot(), 4 ) :
+					if self.LOG_DEBUG: print "[REV] Revolt: Checking around %s for dead player" % pCity.getName()
+					maxCult = 0
+					maxCultRad = 5
+					for [radius, plotI] in RevUtils.plotGenerator(pCity.plot(), 4):
 
-							if( not pRevPlayer == None and radius > maxCultRad ) :
-								break
+						for civIdx in deadCivs:
+							if plotI.getCulture(civIdx) > maxCult:
+								if self.LOG_DEBUG: print "Revolt: Found plot culture from dead player " + str(civIdx)
+								maxCult = plotI.getCulture(civIdx)
+								maxCultRad = radius
+								pRevPlayer = GC.getPlayer(civIdx)
 
-							for civIdx in deadCivs :
-								if( plotI.getCulture(civIdx) > maxCult ) :
-									if self.LOG_DEBUG: print "Revolt: Found plot culture from dead player " + str(civIdx)
-									maxCult = plotI.getCulture(civIdx)
-									maxCultRad = radius
-									pRevPlayer = GC.getPlayer(civIdx)
+						if pRevPlayer and radius > maxCultRad:
+							break
+					if pRevPlayer: break
 
 		# Create new civ based on culture/owner of first city in list
-		if pRevPlayer == None:
+		if not pRevPlayer:
 
 			pCity = cityList[0]
 			owner = GC.getPlayer(pCity.getOwner())
@@ -3786,8 +3757,7 @@ class Revolution:
 
 			if not availableCivs:
 				print "[REV] Revolt: No available civs, spawning as Barbarians"
-				pRevPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
-				return [pRevPlayer, bIsJoinWar]
+				return [GC.getPlayer(GC.getBARBARIAN_PLAYER()), bIsJoinWar]
 
 			newCivIdx = None
 
@@ -3834,8 +3804,7 @@ class Revolution:
 
 			if not leaderList:
 				print "[INFO] Unexpected lack of possible leaders, spawning as Barbarians"
-				pRevPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
-				return [pRevPlayer, bIsJoinWar]
+				return [GC.getPlayer(GC.getBARBARIAN_PLAYER()), bIsJoinWar]
 
 			newLeaderIdx = leaderList[GAME.getSorenRandNum(len(leaderList), 'Revolution: pick leader')]
 
@@ -3848,40 +3817,38 @@ class Revolution:
 		# Do special setup for non-living revolutionaries ...
 
 		if giveTechs and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian():
+			if pRevPlayer.isNPC(): raise "Revolution error, please report it"
 			RevUtils.giveTechs(pRevPlayer, owner)
 
-		if( not giveRelType == None and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian() ) :
-			if giveRelType >= 0:
-				# Give specified religion
-				pRevPlayer.setLastStateReligion( giveRelType )
+		if not giveRelType == None and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian():
+
+			if giveRelType > 0: # Give specified religion
+				pRevPlayer.setLastStateReligion(giveRelType)
 			else:
 				# Give minority religion in city
 				availRels = []
-				for relType in xrange(GC.getNumReligionInfos()) :
-					if( not relType == owner.getStateReligion() ) :
-						if( pCity.isHolyCityByType(relType) ) :
+				for relType in xrange(GC.getNumReligionInfos()):
+					if not relType == owner.getStateReligion():
+						if pCity.isHolyCityByType(relType):
 							giveRelType = relType
-						elif( pCity.isHasReligion(relType) ) :
-							availRels.append( relType )
+						elif pCity.isHasReligion(relType):
+							availRels.append(relType)
 
-				if( giveRelType < 0 ) :
-					if( len(availRels) > 0 ) :
-						giveRelType = availRels[GAME.getSorenRandNum(len(availRels),'Revolution: pick religion')]
+				if giveRelType < 0 and availRels:
+					giveRelType = availRels[GAME.getSorenRandNum(len(availRels),'Revolution: pick religion')]
 
-				if( giveRelType >= 0 ) :
-					pRevPlayer.setLastStateReligion( giveRelType )
+				if giveRelType >= 0:
+					pRevPlayer.setLastStateReligion(giveRelType)
 
-		if( bMatchCivics ) :
-			pPlayer = GC.getPlayer( pCity.getOwner() )
+		if bMatchCivics:
+			pPlayer = GC.getPlayer(pCity.getOwner())
 			for civicOptionID in xrange(GC.getNumCivicOptionInfos()) :
-				#civicOption = GC.getCivicOptionInfo(civicOptionID)
 				civicType = pPlayer.getCivics(civicOptionID)
-				if( pRevPlayer.canDoCivics( civicType ) ) :
-					pRevPlayer.setCivics( civicOptionID, civicType )
+				if pRevPlayer.canDoCivics(civicType):
+					pRevPlayer.setCivics(civicOptionID, civicType)
 
-		if( not pRevPlayer.isAlive() and GAME.countCivPlayersAlive() >= self.maxCivs ) :
-			pRevPlayer = GC.getPlayer( GC.getBARBARIAN_PLAYER() )
-			return [pRevPlayer, False]
+		if not pRevPlayer.isAlive() and GAME.countCivPlayersAlive() >= self.maxCivs:
+			return [GC.getPlayer(GC.getBARBARIAN_PLAYER()), False]
 
 		return [pRevPlayer, bIsJoinWar]
 
@@ -3937,9 +3904,9 @@ class Revolution:
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-				# Enable only for debugging different revolution styles
-		if( self.LOG_DEBUG and self.isHumanPlayerOrAutoPlay(pPlayer.getID()) and GAME.getAIAutoPlay(pPlayer.getID()) > 0 ) :
-			bCanCancelAuto = SdToolKit.sdObjectGetVal( "AIAutoPlay", GAME, "bCanCancelAuto" )
+		# Enable only for debugging different revolution styles
+		if self.LOG_DEBUG and (pPlayer.isHuman() or pPlayer.isHumanDisabled()) and GAME.getAIAutoPlay(pPlayer.getID()) > 0:
+			bCanCancelAuto = SdToolKit.sdObjectGetVal("AIAutoPlay", GAME, "bCanCancelAuto")
 			GAME.setForcedAIAutoPlay(pPlayer.getID(), 0, False)
 #-------------------------------------------------------------------------------------------------
 # END Lemmy101 RevolutionMP edit
