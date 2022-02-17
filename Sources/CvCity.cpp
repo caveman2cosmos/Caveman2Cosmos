@@ -356,7 +356,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	setGameTurnFounded(GC.getGame().getGameTurn());
 	setGameTurnAcquired(GC.getGame().getGameTurn());
 
-	changePopulation(GC.getINITIAL_CITY_POPULATION() + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation());
+	setPopulation(GC.getINITIAL_CITY_POPULATION() + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation(), false);
 
 	changeAirUnitCapacity(GC.getCITY_AIR_UNIT_CAPACITY());
 
@@ -7087,7 +7087,7 @@ int CvCity::getPopulation() const
 }
 
 
-void CvCity::setPopulation(int iNewValue)
+void CvCity::setPopulation(int iNewValue, bool bNormal)
 {
 	const int iOldPopulation = getPopulation();
 
@@ -7120,7 +7120,10 @@ void CvCity::setPopulation(int iNewValue)
 				}
 			}
 			updateFeatureHealth();
-			checkBuildings();
+			if (bNormal)
+			{
+				checkBuildings();
+			}
 
 			if (
 				!isHuman()
@@ -20627,7 +20630,6 @@ void CvCity::checkBuildings(bool bAlertOwner)
 					if (bMissingBonus)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_RESOURCES", kBuilding.getDescription(), getNameKey(), kBuilding.getDescription());
-						FErrorMsg("bMissingBonus");
 					}
 					else if (bRequiresWar)
 						szBuffer = gDLL->getText("TXT_KEY_REMOVED_BUILDINGS_WARTIME", kBuilding.getDescription(), getNameKey());

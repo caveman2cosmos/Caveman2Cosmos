@@ -2368,7 +2368,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				}
 			}
 			CvWString szName;
-			szName.Format(L"%s (%s)", cityName.GetCString(), oldOwner.getName());
+			szName.Format(L"%s (%s)", pOldCity->getName().GetCString(), oldOwner.getName());
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
@@ -2630,7 +2630,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pNewCity->setPreviousOwner(eOldOwner);
 		pNewCity->setOriginalOwner(eOriginalOwner);
 		pNewCity->setGameTurnFounded(iGameTurnFounded);
-		pNewCity->setPopulation((bConquest && !bRecapture) ? std::max(1, (iPopulation - 1)) : iPopulation);
+		pNewCity->setPopulation((bConquest && !bRecapture) ? std::max(1, (iPopulation - 1)) : iPopulation, false);
 		pNewCity->setHighestPopulation(iHighestPopulation);
 		pNewCity->setName(cityName);
 		pNewCity->setNeverLost(false);

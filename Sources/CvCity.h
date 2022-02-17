@@ -503,7 +503,7 @@ public:
 	void setGameTurnAcquired(int iNewValue);
 
 	int getPopulation() const;
-	void setPopulation(int iNewValue);
+	void setPopulation(int iNewValue, bool bNormal = true);
 	void changePopulation(int iChange);
 
 	int getRealPopulation() const;
