@@ -454,10 +454,6 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_improvement_strings = ['LUNAR_OUTPOST','LUNAR_HABITATION_COMPLEX']
-									valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
-									if plot.getImprovementType() not in valid_improvements:
-										return False
 									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
