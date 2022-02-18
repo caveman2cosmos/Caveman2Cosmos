@@ -129,6 +129,7 @@
 			<Description>TXT_KEY_BUILD_SPACE_STATION_LV1</Description>
 			<Help/>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
+			<ObsoleteTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</ObsoleteTech>
 			<iTime>6000</iTime>
 			<iCost>250</iCost>
 			<bKill>0</bKill>
@@ -148,6 +149,7 @@
 			<Description>TXT_KEY_BUILD_SPACE_STATION_LV2</Description>
 			<Help/>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
+			<ObsoleteTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</ObsoleteTech>
 			<iTime>9000</iTime>
 			<iCost>500</iCost>
 			<bKill>0</bKill>

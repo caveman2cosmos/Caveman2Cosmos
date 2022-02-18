@@ -1899,7 +1899,6 @@ void CvUnit::doTurn()
 	{
 		jumpToNearestValidPlot(false);
 	}
-
 	setMoves(0);
 }
 
@@ -5910,18 +5909,7 @@ bool CvUnit::canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage) cons
 
 bool CvUnit::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const
 {
-	if (!canEnterTerritory(eTeam, bIgnoreRightOfPassage))
-	{
-		return false;
-	}
-	/*
-	if (isBarbarian() && DOMAIN_LAND == getDomainType() && eTeam != NO_TEAM && eTeam != getTeam()
-	&& pArea && pArea->isBorderObstacle(eTeam) && pArea->getID() != getArea())
-	{
-		return false;
-	}
-	*/
-	return true;
+	return canEnterTerritory(eTeam, bIgnoreRightOfPassage);
 }
 
 
