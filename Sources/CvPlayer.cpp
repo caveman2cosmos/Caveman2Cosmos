@@ -11720,13 +11720,13 @@ int CvPlayer::getCombatExperience() const
 namespace {
 	int calculateGreatGeneralSpawnCityScore(const CvCity* city, int numCities)
 	{
-		int iValue = 4 * GC.getGame().getSorenRandNum(numCities, "Warlord City Selection");
+		int iValue = 3 * GC.getGame().getSorenRandNum(numCities, "Warlord City Selection");
 
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
 			iValue += city->findYieldRateRank((YieldTypes)i);
 		}
-		iValue += city->findPopulationRank();
+		iValue += 3*city->findPopulationRank();
 
 		return iValue;
 	}
