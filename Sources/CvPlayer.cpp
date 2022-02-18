@@ -11728,6 +11728,10 @@ namespace {
 		}
 		iValue += 3*city->findPopulationRank();
 
+		if (!city->plot()->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
+		{
+			iValue *= 100;
+		}
 		return iValue;
 	}
 }
