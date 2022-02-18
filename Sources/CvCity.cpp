@@ -14799,6 +14799,7 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 }
 
 
+// Toffer - ToDo - Would make more sense to store this info in the CvArea object, mapped to player, rather than duplicating the info across all cities in the area.
 void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
@@ -14811,7 +14812,7 @@ void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int i
 		if (iChange > 0)
 		{
 			m_freeAreaBuildingCount.insert(std::make_pair((short)eIndex, iChange));
-			algo::for_each(GET_PLAYER(getOwner()).cities(), CvCity::fn::setFreeBuilding(eIndex, true));
+			setFreeBuilding(eIndex, true);
 		}
 		else FErrorMsg("Expected positive iChange for first building of a kind");
 	}
@@ -14819,7 +14820,7 @@ void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int i
 	{
 		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_freeAreaBuildingCount.erase(itr->first);
-		algo::for_each(GET_PLAYER(getOwner()).cities(), CvCity::fn::setFreeBuilding(eIndex, false));
+		setFreeBuilding(eIndex, false);
 	}
 	else // change building count
 	{
@@ -14852,8 +14853,9 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 			setNumRealBuilding(eIndex, 1);
 		}
 	}
-	else if (itr != m_vFreeBuildings.end() && getFreeAreaBuildingCount(eIndex) != 0
-	&& GET_PLAYER(getOwner()).getFreeBuildingCount(eIndex) != 0)
+	else if (itr != m_vFreeBuildings.end()
+	&& getFreeAreaBuildingCount(eIndex) == 0
+	&& GET_PLAYER(getOwner()).getFreeBuildingCount(eIndex) == 0)
 	{
 		m_vFreeBuildings.erase(itr);
 		if (getNumRealBuilding(eIndex) > 0)
