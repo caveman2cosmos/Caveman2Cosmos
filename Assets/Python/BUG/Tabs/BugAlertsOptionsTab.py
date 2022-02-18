@@ -40,6 +40,14 @@ class BugAlertsOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, left, "Civ4lerts__CityCanHurryGold")
 		self.addCheckbox(screen, left, "MoreCiv4lerts__CityFounded")
 
+		self.addLabel(screen, left, "Alerts_City", "Production Complete:")
+		leftL, leftR = self.addTwoColumnLayout(screen, left, "Civ4lerts_TableComplete")
+		self.addCheckbox(screen, leftL, "Civ4lerts__CompleteUnit")
+		self.addCheckbox(screen, leftR, "Civ4lerts__CompleteBuilding")
+		self.addCheckbox(screen, leftL, "Civ4lerts__CompleteProject")
+		self.addCheckbox(screen, leftR, "Civ4lerts__CompleteSpecial")
+		self.addCheckbox(screen, left, "Civ4lerts__CompleteBegunOn")
+
 		# Diplomacy
 		self.addLabel(screen, center, "Alerts_Diplomacy", "Diplomacy:")
 		self.addCheckbox(screen, center, "Civ4lerts__RefusesToTalk")
