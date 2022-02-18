@@ -7516,6 +7516,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 		const BuildingTypes eFreeAreaBuilding = kBuilding.getFreeAreaBuilding();
 		if (eFreeAreaBuilding != NO_BUILDING)
 		{
+			// Toffer - ToDo - Would make more sense to store this info in the CvArea object, mapped to player, rather than duplicating the info across all cities in the area.
 			algo::for_each(cities() | filtered(CvCity::fn::area() == pArea), CvCity::fn::changeFreeAreaBuildingCount(eFreeAreaBuilding, iChange));
 		}
 
@@ -11719,14 +11720,18 @@ int CvPlayer::getCombatExperience() const
 namespace {
 	int calculateGreatGeneralSpawnCityScore(const CvCity* city, int numCities)
 	{
-		int iValue = 4 * GC.getGame().getSorenRandNum(numCities, "Warlord City Selection");
+		int iValue = 3 * GC.getGame().getSorenRandNum(numCities, "Warlord City Selection");
 
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
 			iValue += city->findYieldRateRank((YieldTypes)i);
 		}
-		iValue += city->findPopulationRank();
+		iValue += 3*city->findPopulationRank();
 
+		if (!city->plot()->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
+		{
+			iValue *= 100;
+		}
 		return iValue;
 	}
 }
