@@ -53,7 +53,6 @@ public:
 	bool hasTrait(int /*TraitTypes*/ iIndex) const;
 	bool isHuman() const;
 	bool isHumanDisabled() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	std::wstring getName() const;

@@ -5602,11 +5602,6 @@ bool CvCity::hasTrait(TraitTypes eTrait) const
 	return GET_PLAYER(getOwner()).hasTrait(eTrait);
 }
 
-bool CvCity::isBarbarian() const
-{
-	return GET_PLAYER(getOwner()).isBarbarian();
-}
-
 bool CvCity::isNPC() const
 {
 	return GET_PLAYER(getOwner()).isNPC();

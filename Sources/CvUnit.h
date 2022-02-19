@@ -852,7 +852,6 @@ public:
 
 	int flavorValue(FlavorTypes eFlavor) const;
 
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;

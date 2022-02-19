@@ -2515,7 +2515,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	int iOldCityId = pOldCity->getID();
 
 	int iCiv = pOldCity->getCivilizationType();
-	if (pOldCity->isBarbarian())
+	if (pOldCity->isNPC())
 	{
 		iCiv = NO_CIVILIZATION;
 	}
@@ -3382,9 +3382,11 @@ void CvPlayer::updateHuman()
 	}
 }
 
-bool CvPlayer::isBarbarian() const
+
+/*DllExport*/ bool CvPlayer::isBarbarian() const
 {
-	return (getID() == BARBARIAN_PLAYER);
+	OutputDebugString("exe is asking if the player is barbarian\n");
+	return getID() == BARBARIAN_PLAYER;
 }
 
 bool CvPlayer::isNPC() const
@@ -6468,8 +6470,6 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 {
-	UnitTypes eDefenderUnit;
-
 	//	This is checked by the caller on the main AI call path, but it is also usable (and used) form a few other paths, so best to leave it in
 	if (!canFound(iX, iY))
 	{
@@ -6481,34 +6481,30 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iI).isNewCityFree(pCity->getGameObject()))
+		if (GC.getBuildingInfo((BuildingTypes)iI).isNewCityFree(pCity->getGameObject())
+		&& pCity->canConstruct((BuildingTypes)iI, false, false, false, false, true))
 		{
-			if (pCity->canConstruct((BuildingTypes)iI, false, false, false, false, true))
-			{
-				pCity->setNumRealBuilding((BuildingTypes)iI, 1);
-			}
+			pCity->setNumRealBuilding((BuildingTypes)iI, 1);
 		}
 	}
-
 
 	if (isNPC())
 	{
 		int iDummyValue;
-		eDefenderUnit = pCity->AI_bestUnitAI(UNITAI_CITY_DEFENSE, iDummyValue);
+		UnitTypes eDefenderUnit = pCity->AI_bestUnitAI(UNITAI_CITY_DEFENSE, iDummyValue);
 
 		if (eDefenderUnit == NO_UNIT)
 		{
 			eDefenderUnit = pCity->AI_bestUnitAI(UNITAI_ATTACK, iDummyValue);
 		}
 
-		if (eDefenderUnit == NO_UNIT && isHominid() && !isBarbarian())
+		if (eDefenderUnit == NO_UNIT)
 		{
-			eDefenderUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_NEANDERTHAL");
-		}
-
-		if (eDefenderUnit == NO_UNIT && isBarbarian())
-		{
-			eDefenderUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_STONE_THROWER");
+			if (getID() == NEANDERTHAL_PLAYER)
+			{
+				eDefenderUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_NEANDERTHAL");
+			}
+			else eDefenderUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_STONE_THROWER");
 		}
 
 		if (eDefenderUnit != NO_UNIT)
@@ -6522,28 +6518,18 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 				}
 			}
 		}
-		else
-		{
-			if (gPlayerLogLevel >= 1)
-			{
-				logBBAI("	 Player %d (%S) no initial defender availible for city %S at %d, %d", getID(), getCivilizationDescription(0), pCity->getName(0).GetCString(), iX, iY);
-			}
-		}
+		else FErrorMsg(CvString::format("Player %d (%S) no initial defender availible for city %S at %d, %d", getID(), getCivilizationDescription(0), pCity->getName(0).GetCString(), iX, iY).c_str());
 	}
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
 
-		if (GC.getBuildingInfo(eLoopBuilding).getFreeStartEra() != NO_ERA)
+		if (GC.getBuildingInfo(eBuildingX).getFreeStartEra() != NO_ERA
+		&& GC.getGame().getStartEra() >= GC.getBuildingInfo(eBuildingX).getFreeStartEra()
+		&& pCity->canConstruct(eBuildingX))
 		{
-			if (GC.getGame().getStartEra() >= GC.getBuildingInfo(eLoopBuilding).getFreeStartEra())
-			{
-				if (pCity->canConstruct(eLoopBuilding))
-				{
-					pCity->setNumRealBuilding(eLoopBuilding, 1);
-				}
-			}
+			pCity->setNumRealBuilding(eBuildingX, 1);
 		}
 	}
 
@@ -6552,17 +6538,19 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 		pCity->setFreeSpecialistCount(((SpecialistTypes)iI), 0);
 	}
 
-	//Team Project (6)
-	if (getNationalCityStartCulture() > 0)
 	{
-		int iCulture = getNationalCityStartCulture();
-		pCity->changeCulture(getID(), iCulture, true, true);
+		const int iCulture = getNationalCityStartCulture();
+		if (iCulture > 0)
+		{
+			pCity->changeCulture(getID(), iCulture, true, true);
+		}
 	}
-
-	if (getNationalCityStartBonusPopulation() > 0)
 	{
-		int iBonusPop = getNationalCityStartBonusPopulation();
-		pCity->changePopulation(iBonusPop);
+		const int iBonusPop = getNationalCityStartBonusPopulation();
+		if (iBonusPop > 0)
+		{
+			pCity->changePopulation(iBonusPop);
+		}
 	}
 
 	if (hasCitiesStartwithStateReligion())
@@ -26723,28 +26711,6 @@ void CvPlayer::changeCivicHappiness(int iChange)
 		AI_makeAssignWorkDirty();
 	}
 }
-
-//TB Bugfix: left this here for reference if any problems arise from the new method.
-//bool CvPlayer::hasFixedBorders()
-//{
-//	int iI;
-//	if (isBarbarian() || !GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
-//	{
-//		return false;
-//	}
-//
-//	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
-//	{
-//		CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
-//
-//		if ( eCivic != NO_CIVIC && GC.getCivicInfo(eCivic).IsFixedBorders())
-//		{
-//			return true;
-//		}
-//	}
-//
-//	return false;
-//}
 
 int CvPlayer::getForeignTradeRouteModifier() const
 {

@@ -132,11 +132,6 @@ DomainTypes CyUnit::getDomainType() const
 	return m_pUnit->getDomainType();
 }
 
-bool CyUnit::isBarbarian() const
-{
-	return m_pUnit->isBarbarian();
-}
-
 bool CyUnit::isNPC() const
 {
 	return m_pUnit->isNPC();

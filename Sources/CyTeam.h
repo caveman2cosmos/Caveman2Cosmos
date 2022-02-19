@@ -59,7 +59,6 @@ public:
 	bool hasHeadquarters(int /*CorporationTypes*/ eCorporation) const;
 
 	bool isHuman() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isMinorCiv() const;

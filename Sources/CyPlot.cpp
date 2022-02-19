@@ -136,11 +136,6 @@ bool CyPlot::isOwned() const
 	return m_pPlot ? m_pPlot->isOwned() : false;
 }
 
-bool CyPlot::isBarbarian() const
-{
-	return m_pPlot ? m_pPlot->isBarbarian() : false;
-}
-
 bool CyPlot::isNPC() const
 {
 	return m_pPlot ? m_pPlot->isNPC() : false;

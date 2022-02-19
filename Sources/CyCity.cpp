@@ -358,11 +358,6 @@ bool CyCity::hasTrait(int /*TraitTypes*/ iTrait) const
 	return m_pCity->hasTrait((TraitTypes) iTrait);
 }
 
-bool CyCity::isBarbarian() const
-{
-	return m_pCity->isBarbarian();
-}
-
 bool CyCity::isNPC() const
 {
 	return m_pCity->isNPC();

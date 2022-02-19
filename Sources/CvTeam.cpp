@@ -1232,7 +1232,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 				kLoopDeal.kill();
 			}
 		}
-		const bool bInFull = (!teamFoe.isNPC() || teamFoe.isBarbarian()) && (!isNPC() || isBarbarian());
+		const bool bInFull = (!teamFoe.isNPC() || teamFoe.isHominid()) && (!isNPC() || isHominid());
 
 		if (bInFull)
 		{
@@ -2709,11 +2709,6 @@ bool CvTeam::isHuman(const bool bCountDisabledHuman) const
 		}
 	}
 	return false;
-}
-
-bool CvTeam::isBarbarian() const
-{
-	return getID() == BARBARIAN_TEAM;
 }
 
 bool CvTeam::isNPC() const

@@ -533,7 +533,7 @@ class WBDiplomacyScreen:
 
 	def editAttitude(self, iPlayer):
 		pPlayer = GC.getPlayer(iPlayer)
-		if pPlayer.isBarbarian(): return
+		if pPlayer.isNPC(): return
 		iPlayer2 = iPlayer
 		pPlayer1 = GC.getPlayer(iSelectedPlayer)
 		if bTowardsPlayer:
@@ -555,7 +555,7 @@ class WBDiplomacyScreen:
 		iPlayer2 = iPlayer
 		pPlayer1 = GC.getPlayer(iSelectedPlayer)
 		if bTowardsPlayer:
-			pPlayer1 = GC.getPlayer(iPlayer)
+			pPlayer1 = pPlayer
 			iPlayer2 = iSelectedPlayer
 		iCount = iChange
 		if bRemove:

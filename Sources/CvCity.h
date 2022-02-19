@@ -291,7 +291,6 @@ public:
 	DllExport float getBuildingVisibilityPriority(BuildingTypes eBuilding) const;
 
 	bool hasTrait(TraitTypes eTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
