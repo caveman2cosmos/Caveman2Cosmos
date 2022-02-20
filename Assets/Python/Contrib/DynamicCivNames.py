@@ -132,7 +132,8 @@ def onBeginPlayerTurn(argsList):
 
 
 def onCityAcquiredAndKept(argsList):
-	iPlayer = argsList[0]
+	#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+	iPlayer = argsList[1]
 	owner = GC.getPlayer(iPlayer)
 	if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
 		setNewNameByCivics(iPlayer)

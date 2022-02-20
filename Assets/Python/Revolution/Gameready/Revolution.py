@@ -571,8 +571,8 @@ class Revolution:
 
 
 	def onCityAcquiredAndKept(self, argsList):
-		city = argsList[1]
-		self.updateLocalRevIndices(GAME.getGameTurn(), city.getOwner(), subCityList = [city], bIsRevWatch = True)
+		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		self.updateLocalRevIndices(GAME.getGameTurn(), argsList[1], subCityList = [argsList[2]], bIsRevWatch = True)
 
 ##--- Player turn functions ---------------------------------------
 

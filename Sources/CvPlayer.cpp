@@ -2826,7 +2826,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 					pInfo->setData1(pNewCity->getID());
 					gDLL->getInterfaceIFace()->addPopup(pInfo, eNewOwner);
 				}
-				else CvEventReporter::getInstance().cityAcquiredAndKept(eNewOwner, pNewCity);
+				else CvEventReporter::getInstance().cityAcquiredAndKept(eOldOwner, eNewOwner, pNewCity, bConquest, bTrade);
 			}
 		}
 		else if (bHuman)
@@ -2850,15 +2850,17 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				pInfo->setData1(pNewCity->getID());
 				pInfo->setData2(eHighestCulturePlayer);
 				pInfo->setData3(iCaptureGold);
+				pInfo->setOption1(bConquest);
+				pInfo->setOption2(bTrade);
 				gDLL->getInterfaceIFace()->addPopup(pInfo, eNewOwner);
 			}
 			else
 			{
 				pNewCity->chooseProduction();
-				CvEventReporter::getInstance().cityAcquiredAndKept(eNewOwner, pNewCity);
+				CvEventReporter::getInstance().cityAcquiredAndKept(eOldOwner, eNewOwner, pNewCity, bConquest, bTrade);
 			}
 		}
-		else AI_conquerCity(pNewCity); // could delete the pNewCity pointer...
+		else AI_conquerCity(eOldOwner, pNewCity, bConquest, bTrade); // could delete the pNewCity pointer...
 	}
 
 	// Forcing events that deal with the old city not to expire just because we conquered that city

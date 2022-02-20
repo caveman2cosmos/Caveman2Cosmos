@@ -1753,7 +1753,8 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		break;
 	}
 	case TASK_KEEP:
-		CvEventReporter::getInstance().cityAcquiredAndKept((PlayerTypes)iData1, this);
+		// In this context: bOption = bConquest; bAlt = bTrade.
+		CvEventReporter::getInstance().cityAcquiredAndKept((PlayerTypes)iData1, getOwner(), this, bOption, bAlt);
 		break;
 
 	case TASK_LIBERATE:
