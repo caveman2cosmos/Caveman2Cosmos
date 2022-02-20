@@ -954,17 +954,11 @@ class CvEventManager:
 					CyTeamL = GC.getTeam(iTeamL)
 
 				# Factor in winners handicap versus losers handicap
-				iHandicapFactor = 100
-				if CyPlayerW.isHuman():
-					if CyPlayerL.isHuman():
-						iHandicapFactorW = GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
-						iHandicapFactorL = GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent()
-					else:
-						iHandicapFactorW = GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
-						iHandicapFactorL = 100
+				iHandicapFactor = 100 + 4 * (GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent() - GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent())
+				if iHandicapFactor < 1: iHandicapFactor = 1
+				# Test variant, may be better.
+				iHandicapFactor2 = 1000 * GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent() / GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
 
-					if iHandicapFactorW > iHandicapFactorL:
-						iHandicapFactor = 4 * (iHandicapFactorW - iHandicapFactorL + 100)
 				# Message
 				if iPlayerAct is None:
 					iPlayerAct = GAME.getActivePlayer()
@@ -1004,10 +998,12 @@ class CvEventManager:
 							)
 				# Marauder promo
 				if bMarauder:
-					iStolen = 100 * CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
-					if iStolen > 1:
-						# intSqrt(intSqrt(x)) = x ** 0.25 = pow(x, 0.25)
-						iStolen = intSqrt(intSqrt(iStolen) * 1000) / iHandicapFactor
+					iStolen = CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
+					if iStolen > 0:
+						iStolen = intSqrt(iStolen)
+						iStolen *= iHandicapFactor2
+						iStolen /= 1000
+
 					if iStolen > 0:
 						CyPlayerL.changeGold(-iStolen)
 						CyPlayerW.changeGold(iStolen)
