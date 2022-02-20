@@ -263,7 +263,7 @@ def doWeddingFeud2(argsList):
 def getHelpWeddingFeud2(argsList):
 	data = argsList[1]
 	religion = GC.getReligionInfo(data.eReligion)
-	return TRNSLTR.getText("TXT_KEY_EVENT_WEDDING_FEUD_2_HELP", (GC.getTEMP_HAPPY(), 30, religion.getChar()))
+	return TRNSLTR.getText("TXT_KEY_EVENT_WEDDING_FEUD_2_HELP", (GC.getDefineINT("TEMP_HAPPY"), 30, religion.getChar()))
 
 def canDoWeddingFeud3(argsList):
 	data = argsList[1]

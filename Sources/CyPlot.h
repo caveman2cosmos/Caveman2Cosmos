@@ -55,7 +55,6 @@ public:
 	bool isAdjacentPlayer(int /*PlayerTypes*/ ePlayer, bool bLandOnly) const;
 	int /*PlayerTypes*/ calculateCulturalOwner() const;
 	bool isOwned() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isVisible(int /*TeamTypes*/ eTeam, bool bDebug) const;

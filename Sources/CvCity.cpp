@@ -1765,7 +1765,7 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		break;
 
 	case TASK_SET_AUTOMATED_PRODUCTION:
-		setProductionAutomated(bOption, bAlt && bShift && bCtrl);
+		setProductionAutomated(bOption);
 		break;
 
 	case TASK_SET_EMPHASIZE:
@@ -4288,9 +4288,9 @@ void CvCity::hurry(HurryTypes eHurry)
 		logBBAI("    City %S hurrying production of %S at cost of %d pop, %lld gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
 	}
 
-	if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+	if (isCitySelected())
 	{
-		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 
 	// Python Event
@@ -5600,11 +5600,6 @@ float CvCity::getBuildingVisibilityPriority(BuildingTypes eBuilding) const
 bool CvCity::hasTrait(TraitTypes eTrait) const
 {
 	return GET_PLAYER(getOwner()).hasTrait(eTrait);
-}
-
-bool CvCity::isBarbarian() const
-{
-	return GET_PLAYER(getOwner()).isBarbarian();
 }
 
 bool CvCity::isNPC() const
@@ -7145,10 +7140,11 @@ void CvCity::setPopulation(int iNewValue)
 
 		plot()->plotAction(PUF_makeInfoBarDirty);
 
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
+		if (isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
 }
@@ -10619,9 +10615,9 @@ void CvCity::setCitizensAutomated(bool bNewValue)
 			}
 		}
 
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
+		if (isCitySelected())
 		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 		}
 	}
@@ -10633,27 +10629,17 @@ bool CvCity::isProductionAutomated() const
 	return m_bProductionAutomated;
 }
 
-
-void CvCity::setProductionAutomated(bool bNewValue, bool bClear)
+void CvCity::setProductionAutomated(bool bNewValue)
 {
-	if (isProductionAutomated() != bNewValue)
+	if (m_bProductionAutomated != bNewValue)
 	{
 		m_bProductionAutomated = bNewValue;
 
-		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+		if (bNewValue)
 		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-
-			// if automated and not network game and all 3 modifiers down, clear the queue and choose again
-			if (bNewValue && bClear)
-			{
-				clearOrderQueue();
-			}
-		}
-
-		if (!isProduction())
-		{
+			clearOrderQueue();
 			AI_chooseProduction();
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
 }
@@ -11457,12 +11443,11 @@ void CvCity::onYieldChange()
 	if (getTeam() == GC.getGame().getActiveTeam())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 }
 
@@ -11928,12 +11913,11 @@ void CvCity::updateExtraSpecialistCommerce()
 	if (getTeam() == GC.getGame().getActiveTeam())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 }
 
@@ -15643,14 +15627,11 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			//gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			//gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 	}
 }
 
@@ -16106,12 +16087,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 	}
 }
 
