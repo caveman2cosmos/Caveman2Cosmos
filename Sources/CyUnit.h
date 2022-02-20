@@ -51,7 +51,6 @@ public:
 	int /*UnitCombatTypes*/ getUnitCombatType() const;
 	DomainTypes getDomainType() const;
 
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;

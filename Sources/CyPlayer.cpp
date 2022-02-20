@@ -159,11 +159,6 @@ bool CyPlayer::isHumanDisabled() const
 	return m_pPlayer->isHumanDisabled();
 }
 
-bool CyPlayer::isBarbarian() const
-{
-	return m_pPlayer->isBarbarian();
-}
-
 bool CyPlayer::isNPC() const
 {
 	return m_pPlayer->isNPC();

@@ -595,9 +595,13 @@ class Revolution:
 				pRevPlayer = playerI
 				break
 
-		if pRevPlayer == None:
+		if pRevPlayer is None:
 			if self.LOG_DEBUG: print "[REV] Revolt: Checking for end to Barbarian uprising in " + pCity.getName()
 			pRevPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
+			bBarbarian = True
+		else: bBarbarian = False
+
+		iRevPlayer = pRevPlayer.getID()
 
 		pRevTeam = GC.getTeam(pRevPlayer.getTeam())
 
@@ -626,7 +630,7 @@ class Revolution:
 			if self.LOG_DEBUG: print "[REV] Revolt: Local rebellion in %s ends due to improving situation" % pCity.getName()
 			return
 
-		rebPower = pCity.area().getPower(pRevPlayer.getID())
+		rebPower = pCity.area().getPower(iRevPlayer)
 		ownerPower = pCity.area().getPower(ownerID)
 
 		if rebPower > 2*ownerPower:
@@ -636,7 +640,7 @@ class Revolution:
 			return
 
 		# Do reinforcement
-		if self.LOG_DEBUG and not pRevPlayer.isBarbarian():
+		if not bBarbarian and self.LOG_DEBUG:
 			print "[REV] Revolt: Reinforcing rebel %s outside %s (%d, %d, owned by %s)" % (pRevPlayer.getCivilizationDescription(0), pCity.getName(), revIdx, localRevIdx, owner.getCivilizationDescription(0))
 		spawnableUnits = RevUtils.getUprisingUnitTypes(pCity)
 
@@ -653,10 +657,10 @@ class Revolution:
 				break
 		else: bRecentSuccess = False
 
-		iRebelsIn6 = RevUtils.getNumDefendersNearPlot( ix, iy, pRevPlayer.getID(), iRange = 6 )
-		iRebelsIn3 = RevUtils.getNumDefendersNearPlot( ix, iy, pRevPlayer.getID(), iRange = 3 )
+		iRebelsIn6 = RevUtils.getNumDefendersNearPlot( ix, iy, iRevPlayer, iRange = 6 )
+		iRebelsIn3 = RevUtils.getNumDefendersNearPlot( ix, iy, iRevPlayer, iRange = 3 )
 
-		if pRevPlayer.isBarbarian():
+		if bBarbarian:
 
 			if iRebelsIn6 == 0:
 
@@ -722,9 +726,9 @@ class Revolution:
 
 
 
-		spawnablePlots = RevUtils.getSpawnablePlots(ix, iy, pRevPlayer, bLand = True, bIncludePlot = False, bIncludeCities = False, bSameArea = True, iRange = 1, iSpawnPlotOwner = pRevPlayer.getID(), bCheckForEnemy = True)
+		spawnablePlots = RevUtils.getSpawnablePlots(ix, iy, pRevPlayer, bLand = True, bIncludePlot = False, bIncludeCities = False, bSameArea = True, iRange = 1, iSpawnPlotOwner = iRevPlayer, bCheckForEnemy = True)
 		if not spawnablePlots:
-			spawnablePlots = RevUtils.getSpawnablePlots(ix, iy, pRevPlayer, bLand = True, bIncludePlot = False, bIncludeCities = False, bSameArea = True, iRange = 2, iSpawnPlotOwner = pRevPlayer.getID(), bCheckForEnemy = True)
+			spawnablePlots = RevUtils.getSpawnablePlots(ix, iy, pRevPlayer, bLand = True, bIncludePlot = False, bIncludeCities = False, bSameArea = True, iRange = 2, iSpawnPlotOwner = iRevPlayer, bCheckForEnemy = True)
 		if not spawnablePlots:
 			spawnablePlots = RevUtils.getSpawnablePlots(ix, iy, pRevPlayer, bLand = True, bIncludePlot = False, bIncludeCities = False, bSameArea = True, iRange = 3, iSpawnPlotOwner = -1, bCheckForEnemy = True)
 
@@ -770,19 +774,19 @@ class Revolution:
 
 		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()) :
 
-			if( ownerID == iPlayer ) :
+			if ownerID == iPlayer:
 				mess = TRNSLTR.getText("TXT_KEY_REV_MESS_REINFORCEMENTS",()) + " %s!"%(pCity.getName())
 				CyInterface().addMessage(iPlayer, True, GC.getEVENT_MESSAGE_TIME(), mess, "AS2D_CITY_REVOLT", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath(), ColorTypes(7), ix, iy, True, True)
-			elif( pRevTeam.isAtWar(GC.getPlayer(iPlayer).getTeam()) and pRevPlayer.canContact(iPlayer) ) :
+			elif pRevTeam.isAtWar(GC.getPlayer(iPlayer).getTeam()) and pRevPlayer.canContact(iPlayer):
 				mess = TRNSLTR.getText("TXT_KEY_REV_MESS_REINFORCEMENTS",()) + " %s!"%(pCity.getName())
 				CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), mess, None, InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, None, ColorTypes(7), -1, -1, False, False)
-			elif( pRevPlayer.getID() == iPlayer ) :
+			elif iRevPlayer == iPlayer:
 				mess = TRNSLTR.getText("TXT_KEY_REV_MESS_YOUR_REINFORCEMENTS",()) + " %s!"%(pCity.getName())
 				CyInterface().addMessage(iPlayer, True, GC.getEVENT_MESSAGE_TIME(), mess, "AS2D_CITY_REVOLT", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath(), ColorTypes(8), ix, iy, True, True)
 
 		if self.LOG_DEBUG: print "[REV] Revolt: Reinforcement strength %.2f, spawning %d reinforcements for city of size %d" % (revStrength, iNumUnits, pCity.getPopulation())
 
-		if len(RevUtils.getEnemyUnits( revSpawnLoc[0], revSpawnLoc[1], pRevPlayer.getID())) > 0:
+		if len(RevUtils.getEnemyUnits(revSpawnLoc[0], revSpawnLoc[1], iRevPlayer)) > 0:
 			if self.LOG_DEBUG: print "[REV] Revolt: ERROR!  Spawning on plot with enemy units!!!"
 
 		if self.LOG_DEBUG: print "[REV] Revolt: City at %d,%d spawning at %d,%d" % (ix, iy, revSpawnLoc[0], revSpawnLoc[1])
@@ -801,21 +805,22 @@ class Revolution:
 				newUnit.setDamage( iDamage, ownerID )
 
 			# Check AI settings
-			if( newUnit.isBarbarian() ) :
-				if( iNumUnits > 2 and pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_ATTACK_CITY_LEMMING,newUnit.area()) > 0 ) :
-					newUnit.setUnitAIType( UnitAITypes.UNITAI_ATTACK_CITY_LEMMING )
-				elif( newUnit.canFight() ) :
-					newUnit.setUnitAIType( UnitAITypes.UNITAI_ATTACK )
-			else :
-				if( iNum < 2 and iNumUnits + iRebelsIn3 > 2 and pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_ATTACK_CITY,newUnit.area()) > 0 ) :
-					newUnit.setUnitAIType( UnitAITypes.UNITAI_ATTACK_CITY )
-				elif( iNumUnits == 1 and iRebelsIn6 < 3 and pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_PILLAGE,newUnit.area()) > 0 ) :
-					newUnit.setUnitAIType( UnitAITypes.UNITAI_PILLAGE )
-				else :
-					iniAI = newUnit.getUnitAIType()
-					if( not (iniAI == UnitAITypes.UNITAI_COUNTER or iniAI == UnitAITypes.UNITAI_ATTACK_CITY) ) :
-						newUnit.setUnitAIType( UnitAITypes.UNITAI_ATTACK )
-					if self.LOG_DEBUG: print "[REV] Revolt: %s starting with AI type: %d (ini %d)" % (newUnit.getName(), newUnit.getUnitAIType(), iniAI)
+			if bBarbarian:
+				if iNumUnits > 2 and pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_ATTACK_CITY_LEMMING,newUnit.area()) > 0:
+					newUnit.setUnitAIType(UnitAITypes.UNITAI_ATTACK_CITY_LEMMING)
+				elif newUnit.canFight():
+					newUnit.setUnitAIType(UnitAITypes.UNITAI_ATTACK)
+
+			elif iNum < 2 and iNumUnits + iRebelsIn3 > 2 and pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_ATTACK_CITY,newUnit.area()) > 0:
+				newUnit.setUnitAIType( UnitAITypes.UNITAI_ATTACK_CITY )
+
+			elif iNumUnits == 1 and iRebelsIn6 < 3 and pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_PILLAGE,newUnit.area()) > 0:
+				newUnit.setUnitAIType( UnitAITypes.UNITAI_PILLAGE )
+			else:
+				iniAI = newUnit.getUnitAIType()
+				if iniAI != UnitAITypes.UNITAI_COUNTER and iniAI != UnitAITypes.UNITAI_ATTACK_CITY:
+					newUnit.setUnitAIType(UnitAITypes.UNITAI_ATTACK)
+				if self.LOG_DEBUG: print "[REV] Revolt: %s starting with AI type: %d (ini %d)" % (newUnit.getName(), newUnit.getUnitAIType(), iniAI)
 
 			if( revStrength > 1.5 and pRevPlayer.isRebel() ) :
 				newUnit.setPromotionReady(True)
@@ -2565,7 +2570,7 @@ class Revolution:
 						if( bIsJoinWar ) :
 							bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_JOIN_DENY",()) + ' ' + pRevPlayer.getCivilizationShortDescription(0) + '.'
 						else :
-							if( pRevPlayer.isBarbarian() ) :
+							if pRevPlayer.isNPC():
 								bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_JOIN_DENY_BARB",())
 							elif( pRevPlayer.isAlive() ) :
 								bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_JOIN_DENY_ALIVE",())%(pRevPlayer.getCivilizationDescription(0))
@@ -2575,7 +2580,7 @@ class Revolution:
 								bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_JOIN_DECLARE_WAR",()) + ' ' +  joinPlayer.getCivilizationDescription(0) + '.'
 					else :
 						if self.LOG_DEBUG: print "[REV] Revolt: Violent, demanding to join the " + pRevPlayer.getCivilizationDescription(0)
-						if( pRevPlayer.isBarbarian() ) :
+						if( pRevPlayer.isNPC() ) :
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_REFORM_BARB",())
 						elif( not pRevPlayer.isAlive() ) :
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_REFORM",()) + ' ' + pRevPlayer.getCivilizationShortDescription(0) + '.'
@@ -2583,17 +2588,15 @@ class Revolution:
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_JOIN",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + '.'
 
 					bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_1",())
-					if( not joinPlayer == None ) :
+					if not joinPlayer == None:
 						bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_THE",()) + ' ' + joinPlayer.getCivilizationDescription(0) + ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_2",())
-						if( pRevPlayer.isBarbarian() ) :
+						if pRevPlayer.isNPC():
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_BARB",())
-						else :
+						else:
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_FIGHT",()) + ' ' + pRevPlayer.getCivilizationShortDescription(0) + '.'
-					else :
-						if( pRevPlayer.isBarbarian() ) :
-							pass
-						elif( pRevPlayer.isAlive() ) :
-							bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_ENEMY",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + '.'
+
+					elif not pRevPlayer.isNPC() and pRevPlayer.isAlive():
+						bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_ENEMY",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + '.'
 
 					bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_VIOLENT_FINAL",())
 
@@ -3520,7 +3523,7 @@ class Revolution:
 				if self.LOG_DEBUG: print "[REV] Revolt: Small, disorganized Revolution"
 
 			bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_IND_VIOLENT_DEMAND",())
-			if( pRevPlayer.isBarbarian() ) :
+			if( pRevPlayer.isNPC() ) :
 				bodStr += " " + TRNSLTR.getText("TXT_KEY_REV_IND_VIOLENT_BARB",())
 			else :
 				bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_IND_VIOLENT_FORM",()) + ' %s.'%(pRevPlayer.getCivilizationShortDescription(0))
@@ -3816,11 +3819,10 @@ class Revolution:
 
 		# Do special setup for non-living revolutionaries ...
 
-		if giveTechs and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian():
-			if pRevPlayer.isNPC(): raise "Revolution error, please report it"
+		if giveTechs and not pRevPlayer.isAlive() and not pRevPlayer.isNPC():
 			RevUtils.giveTechs(pRevPlayer, owner)
 
-		if not giveRelType == None and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian():
+		if not giveRelType == None and not pRevPlayer.isAlive() and not pRevPlayer.isNPC():
 
 			if giveRelType > 0: # Give specified religion
 				pRevPlayer.setLastStateReligion(giveRelType)
@@ -3919,9 +3921,9 @@ class Revolution:
 
 		pRevPlayer = None
 		bIsBarbRev = False
-		if( 'iRevPlayer' in revData.dict.keys() ) :
+		if 'iRevPlayer' in revData.dict.keys():
 			pRevPlayer = GC.getPlayer(revData.dict['iRevPlayer'])
-			bIsBarbRev = pRevPlayer.isBarbarian()
+			bIsBarbRev = pRevPlayer.isNPC()
 
 		isRevType = True
 
@@ -4537,7 +4539,7 @@ class Revolution:
 				if( bPeaceful and joinPlayer == None and (pRevPlayer.getNumCities() == 0) ) :
 					popup.addButton( TRNSLTR.getText("TXT_KEY_REV_BUTTON_CONTROL",()) )
 					buttons += ('control',)
-				elif( not bPeaceful and joinPlayer == None and not pRevPlayer.isBarbarian() and (pRevPlayer.getNumCities() == 0) ) :
+				elif( not bPeaceful and joinPlayer == None and not pRevPlayer.isNPC() and (pRevPlayer.getNumCities() == 0) ) :
 					popup.addButton( TRNSLTR.getText("TXT_KEY_REV_BUTTON_CONTROL",()) )
 					buttons += ('control',)
 				if( not bPeaceful and joinPlayer == None and not bIsBarbRev and (pRevPlayer.getNumCities() == 0) and self.offerDefectToRevs ) :
@@ -4945,7 +4947,7 @@ class Revolution:
 
 					# else :
 					pRevPlayer = GC.getPlayer( revData.dict['iRevPlayer'] )
-					if( not pRevPlayer.isBarbarian() ) :
+					if not pRevPlayer.isNPC():
 						pRevPlayer.AI_changeAttitudeExtra( pPlayer.getID(), -5 )
 						if( 'iJoinPlayer' in revData.dict.keys() ) : pRevPlayer.AI_changeAttitudeExtra( revData.dict['iJoinPlayer'], 5 )
 						if self.LOG_DEBUG: print "[REV] Revolt: %s's Extra Attitude towards %s now %d"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0),pRevPlayer.AI_getAttitudeExtra(pPlayer.getID()))
@@ -5016,7 +5018,7 @@ class Revolution:
 
 						else :
 							pRevPlayer = GC.getPlayer( revData.dict['iRevPlayer'] )
-							if( not pRevPlayer.isBarbarian() ) :
+							if not pRevPlayer.isNPC():
 								pRevPlayer.AI_changeAttitudeExtra( pPlayer.getID(), -5 )
 								pRevPlayer.AI_changeAttitudeExtra( joinPlayer.getID(), 5 )
 								if self.LOG_DEBUG: print "[REV] Revolt: %s's Extra Attitude towards %s now %d"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0),pRevPlayer.AI_getAttitudeExtra(pPlayer.getID()))
@@ -5026,7 +5028,7 @@ class Revolution:
 
 					else :
 						pRevPlayer = GC.getPlayer( revData.dict['iRevPlayer'] )
-						if( not pRevPlayer.isBarbarian() ) :
+						if not pRevPlayer.isNPC():
 							pRevPlayer.AI_changeAttitudeExtra( pPlayer.getID(), -5 )
 							if self.LOG_DEBUG: print "[REV] Revolt: %s's Extra Attitude towards %s now %d"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0),pRevPlayer.AI_getAttitudeExtra(pPlayer.getID()))
 							pPlayer.AI_changeAttitudeExtra( pRevPlayer.getID(), -3 )
@@ -5100,7 +5102,7 @@ class Revolution:
 					# Grant independence
 					if self.LOG_DEBUG: print "[REV] Revolt: The %s are taking over the revolutionary cities" % pRevPlayer.getCivilizationDescription(0)
 
-					bIsBarbRev = pRevPlayer.isBarbarian()
+					bIsBarbRev = pRevPlayer.isNPC()
 
 					pRevTeam = GC.getTeam( pRevPlayer.getTeam() )
 					pTeam = GC.getTeam( pPlayer.getTeam() )
@@ -5353,7 +5355,7 @@ class Revolution:
 						joinPlayer = GC.getPlayer( revData.dict['iJoinPlayer'] )
 						if self.LOG_DEBUG: print "[REV] Revolt: The %s are claiming their cultural cities" % joinPlayer.getCivilizationDescription(0)
 
-						bIsBarbRev = joinPlayer.isBarbarian()
+						bIsBarbRev = joinPlayer.isNPC()
 
 						for iPlayer in xrange(GC.getMAX_PC_PLAYERS()) :
 							# Craft revolution anouncement message for all players
@@ -5897,11 +5899,11 @@ class Revolution:
 			print "[REV] Error: attempted spawning of revs for NPC player"
 			return
 
-		if pRevPlayer.isNPC() and not pRevPlayer.isBarbarian():
+		if pRevPlayer.isNPC() and not pRevPlayer.isNPC():
 			print "[REV] Error: attempted to spawn non barbarian NPC revolutionaries!"
 			return
 
-		bIsBarbRev = pRevPlayer.isBarbarian()
+		bIsBarbRev = pRevPlayer.isNPC()
 		bGaveMap = False
 
 		pTeam = GC.getTeam(pPlayer.getTeam())
@@ -6536,7 +6538,7 @@ class Revolution:
 						newUnit.setDamage(iDamage, pPlayer.getID())
 
 						# Check AI settings
-						if newUnit.isBarbarian():
+						if newUnit.isNPC():
 							if pRevPlayer.AI_unitValue(newUnit.getUnitType(),UnitAITypes.UNITAI_ATTACK_CITY_LEMMING,newUnit.area()) > 0:
 								newUnit.setUnitAIType(UnitAITypes.UNITAI_ATTACK_CITY_LEMMING)
 							else:

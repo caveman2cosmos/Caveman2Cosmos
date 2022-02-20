@@ -49,7 +49,6 @@ public:
 	void doContactCiv(CvWidgetDataStruct &widgetDataStruct);
 	void doConvert(CvWidgetDataStruct &widgetDataStruct);
 	void doAutomateCitizens();
-	void doAutomateProduction();
 	void doEmphasize(CvWidgetDataStruct &widgetDataStruct);
 	void doEmphasizeSpecialist(CvWidgetDataStruct &widgetDataStruct);
 	void doBuildingFilter(CvWidgetDataStruct &widgetDataStruct);
@@ -123,7 +122,6 @@ public:
 	void parseScoreHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 
 	void parseAutomateCitizensHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseAutomateProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseEmphasizeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseTradeItem(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);

@@ -260,10 +260,14 @@ void CvCityAI::AI_doTurn()
 		return;
 	}
 	AI_doPanic();
-	AI_doDraft();
-	AI_doHurry();
-	AI_doEmphasize();
-	AI_doContractFloatingDefenders();
+
+	if (!isNPC())
+	{
+		AI_doDraft();
+		AI_doHurry();
+		AI_doEmphasize();
+		AI_doContractFloatingDefenders();
+	}
 }
 
 
@@ -334,12 +338,9 @@ void CvCityAI::AI_doContractFloatingDefenders()
 			eFloatingDefenderUnitAI,
 			iRequiredStrength);
 	}
-	else
+	else if (gCityLogLevel >= 2)
 	{
-		if (gCityLogLevel >= 2)
-		{
-			logBBAI("      City %S adequately defended", getName().GetCString());
-		}
+		logBBAI("      City %S adequately defended", getName().GetCString());
 	}
 }
 
@@ -442,8 +443,9 @@ void CvCityAI::AI_assignWorkingPlots()
 
 	AI_setAssignWorkDirty(false);
 
-	if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
+	if (isCitySelected())
 	{
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 	}
 }
@@ -1050,7 +1052,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			logBBAI("      Barb city %S - area workers %d (need %d more), local %d (need %d more)", getName().GetCString(), iExistingWorkers, iNeededWorkersInArea, AI_getWorkersHave(), iWorkersNeeded);
 		}
-		if (!AI_isDefended(plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_isUnitAIType, UNITAI_ATTACK, -1, getOwner()))) // XXX check for other team's units?
+		if (!AI_isDefended(0, true))
 		{
 			if (AI_chooseDefender("barbarian defenders"))
 			{
@@ -1063,7 +1065,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		iBuildUnitProb += (3 * iFreeLandExperience);
+		iBuildUnitProb += iFreeLandExperience;
 
 		bool bRepelColonists = false;
 		if (pArea->getNumCities() > pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) + 2)
@@ -1072,17 +1074,15 @@ void CvCityAI::AI_chooseProduction()
 			{
 				// New world scenario with invading colonists ... fight back!
 				bRepelColonists = true;
-				iBuildUnitProb += 8 * (pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER));
+				iBuildUnitProb += 5 * (pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER));
 			}
 		}
+		if (iBuildUnitProb > 99) iBuildUnitProb = 99;
 
-		if (!bDanger && GC.getGame().getSorenRandNum(100, "AI Build Unit Production") > iBuildUnitProb)
+		if (!bDanger && GC.getGame().getSorenRandNum(100, "NPC build building") >= iBuildUnitProb)
 		{
-
-			int iBarbarianFlags = 0;
+			int iBarbarianFlags = BUILDINGFOCUS_PRODUCTION | BUILDINGFOCUS_EXPERIENCE;
 			if (getPopulation() < 4) iBarbarianFlags |= BUILDINGFOCUS_FOOD;
-			iBarbarianFlags |= BUILDINGFOCUS_PRODUCTION;
-			iBarbarianFlags |= BUILDINGFOCUS_EXPERIENCE;
 			if (getPopulation() > 3) iBarbarianFlags |= BUILDINGFOCUS_DEFENSE;
 
 			if (AI_chooseBuilding(iBarbarianFlags, 15))
@@ -1091,19 +1091,16 @@ void CvCityAI::AI_chooseProduction()
 				return;
 			}
 
-			if (GC.getGame().getSorenRandNum(100, "AI Build Unit Production") > iBuildUnitProb)
+			if (GC.getGame().getSorenRandNum(128, "NPC build building 2") > iBuildUnitProb && AI_chooseBuilding())
 			{
-				if (AI_chooseBuilding())
-				{
-					if (gCityLogLevel >= 2) logBBAI("      City %S uses barb AI_chooseBuilding without flags and iBuildUnitProb = %d", getName().GetCString(), iBuildUnitProb);
-					return;
-				}
+				if (gCityLogLevel >= 2) logBBAI("      City %S uses barb AI_chooseBuilding without flags and iBuildUnitProb = %d", getName().GetCString(), iBuildUnitProb);
+				return;
 			}
 		}
 
-		if (plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwner()) > 0)
+		if (eAreaAI == AREAAI_OFFENSIVE || eAreaAI == AREAAI_ASSAULT || plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwner()) > 0)
 		{
-			if (AI_chooseUnit("barbarian choose attack city for transports", UNITAI_ATTACK_CITY))
+			if (AI_chooseUnit("barbarian choose attack city", UNITAI_ATTACK_CITY))
 			{
 				return;
 			}
@@ -1113,7 +1110,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			if (GC.getGame().getSorenRandNum(3, "AI Coast Raiders!") == 0)
 			{
-				if (player.AI_totalUnitAIs(UNITAI_ASSAULT_SEA) <= (1 + player.getNumCities() / 2))
+				if (player.AI_totalUnitAIs(UNITAI_ASSAULT_SEA) <= player.getNumCities() * 2)
 				{
 					if (AI_chooseUnit("barbarian transports", UNITAI_ASSAULT_SEA))
 					{
@@ -1123,7 +1120,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 			if (GC.getGame().getSorenRandNum(110, "AI arrrr!") < (iWaterPercent + 10))
 			{
-				if (player.AI_totalUnitAIs(UNITAI_PIRATE_SEA) <= player.getNumCities())
+				if (player.AI_totalUnitAIs(UNITAI_PIRATE_SEA) <= player.getNumCities() * 2)
 				{
 					if (AI_chooseUnit("barbarian pirates", UNITAI_PIRATE_SEA))
 					{
@@ -1131,7 +1128,7 @@ void CvCityAI::AI_chooseProduction()
 					}
 				}
 
-				if (player.AI_totalAreaUnitAIs(pWaterArea, UNITAI_ATTACK_SEA) < iNumCitiesInArea)
+				if (player.AI_totalAreaUnitAIs(pWaterArea, UNITAI_ATTACK_SEA) < iNumCitiesInArea * 3)
 				{
 					if (AI_chooseUnit("barbarian sea attack", UNITAI_ATTACK_SEA))
 					{
@@ -1155,20 +1152,21 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		UnitTypeWeightArray barbarianTypes;
-		barbarianTypes.push_back(std::make_pair(UNITAI_ATTACK, 125));
-		barbarianTypes.push_back(std::make_pair(UNITAI_ATTACK_CITY, (bRepelColonists ? 200 : 100)));
-		barbarianTypes.push_back(std::make_pair(UNITAI_COUNTER, 100));
-		barbarianTypes.push_back(std::make_pair(UNITAI_CITY_DEFENSE, 50));
-
-		if (AI_chooseLeastRepresentedUnit("barbarian units", barbarianTypes))
 		{
-			return;
-		}
+			UnitTypeWeightArray barbarianTypes;
+			barbarianTypes.push_back(std::make_pair(UNITAI_ATTACK, 125));
+			barbarianTypes.push_back(std::make_pair(UNITAI_ATTACK_CITY, (bRepelColonists ? 200 : 100)));
+			barbarianTypes.push_back(std::make_pair(UNITAI_PILLAGE, 60));
+			barbarianTypes.push_back(std::make_pair(UNITAI_COUNTER, 40));
+			barbarianTypes.push_back(std::make_pair(UNITAI_CITY_DEFENSE, 10));
 
+			if (AI_chooseLeastRepresentedUnit("barbarian units", barbarianTypes))
+			{
+				return;
+			}
+		}
 		// As last resort choose any unit we can build
 		AI_chooseUnit("barbarian last resort", NO_UNITAI);
-
 		return;
 	}
 
@@ -6603,9 +6601,6 @@ bool CvCityAI::AI_isDefended(int iExtra, bool bAllowAnyDefenders)
 	PROFILE_FUNC();
 
 	return getGarrisonStrength(bAllowAnyDefenders) + iExtra >= AI_neededDefenseStrength();
-	//	Note - the isDefended range check is slightly flawed since its possible for units 2 away to not actually
-	//	be able to get to the city (e.g. - over water) so this probably needs tweaking slightly
-	//return ((plot()->plotCount(PUF_canDefend /*PUF_canDefendGroupHead*/, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, iRange) + iExtra) >= AI_neededDefenders()); // XXX check for other team's units?
 }
 
 bool CvCityAI::AI_isAdequateHappinessMilitary(int iExtra) const
@@ -6848,29 +6843,7 @@ int CvCityAI::AI_neededHappinessDefenders() const
 
 int CvCityAI::AI_minDefenders() const
 {
-	int iDefenders = 4;
-
-	//TB Option Control:
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		iDefenders += 3;
-		//Intention is to drive the amount up to the amount needed to start merging/splitting to get at least one really tough defender.
-		//May slow the AI a bit and get them building a lot of units but try to attack them and see how far we get!
-	}
-
-	const int iEra = GET_PLAYER(getOwner()).getCurrentEra();
-	if (iEra > 0)
-	{
-		iDefenders++;
-		//TB testing:
-		iDefenders += (iEra / 3);
-	}
-	if (((iEra - GC.getGame().getStartEra() / 2) >= GC.getNumEraInfos() / 2) && isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
-	{
-		iDefenders++;
-	}
-
-	return iDefenders;
+	return 3 + (GET_PLAYER(getOwner()).getCurrentEra() + 2) / 2;
 }
 
 int CvCityAI::getGarrisonStrength(bool bAllowAnyDefenders) const
@@ -7271,11 +7244,6 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 
 		AI_assignWorkingPlots();
 
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-		}
-
 		//	If we're using AI govenors and not part way through a build reflect
 		//	the changes in a new production choice immediately
 		if (isHuman() && (!isProduction() || getProduction() == 0) && isProductionAutomated() && GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_3))
@@ -7294,12 +7262,6 @@ void CvCityAI::AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue)
 		m_pbEmphasizeSpecialist[eIndex] = bNewValue;
 
 		AI_assignWorkingPlots();
-
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
-		}
 	}
 }
 
@@ -10586,11 +10548,11 @@ bool CvCityAI::AI_doPanic()
 		//TBRUSHFIX
 		//AI_getEnemyPlotStrength was not keeping units that could not attack the city out of account.
 		const int iRatio =
-			(
-				100 * GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false)
-				/
-				std::max(1, GET_PLAYER(getOwner()).AI_getOurPlotStrength(plot(), 0, true, false))
-				);
+		(
+			100 * GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false)
+			/
+			std::max(1, GET_PLAYER(getOwner()).AI_getOurPlotStrength(plot(), 0, true, false))
+		);
 
 		//TBRUSHFIX
 		//Playtesting has shown this needs to be a bit less sensitive.

@@ -3162,7 +3162,7 @@ bool CvPlayerAI::AI_isPrimaryArea(const CvArea* pArea) const
 
 int CvPlayerAI::AI_militaryWeight(const CvArea* pArea) const
 {
-	return (pArea->getPopulationPerPlayer(getID()) + pArea->getCitiesPerPlayer(getID()) + 1);
+	return 1 + pArea->getPopulationPerPlayer(getID()) + 3 * pArea->getCitiesPerPlayer(getID());
 }
 
 

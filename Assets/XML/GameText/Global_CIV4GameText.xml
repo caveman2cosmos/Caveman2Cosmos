@@ -13527,23 +13527,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CONSTRUCTED_BUILD_IN</Tag>
-		<English>You have constructed a %s1_BldgName in %s2_CityName.</English>
-		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
-		<Italian>Hai costruito l'edificio %s1_BldgName a %s2_CityName.</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] %s1_BldgName en %s2_CityName.</Spanish>
-		<Polish>Skonstruowałeś %s1_BldgName w %s2_CityName.</Polish>
-		<Russian>Çàâåðøåíà ïîñòðîéêà çäàíèÿ %s1_BldgName â ãîðîäå %s2_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED</Tag>
-		<English>You have constructed %s1_BldgName in %s2_CityName.</English>
-		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
-		<Italian>Hai costruito l'edificio %s1_BldgName a %s2_CityName.</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] %s1_BldgName en %s2_CityName.</Spanish>
-		<Polish>Skonstruowałeś %s1_BldgName w %s2_CityName.</Polish>
-		<Russian>Â ãîðîäå %s2_CityName ãîòîâî çäàíèå %s1_BldgName.</Russian>
+		<English>Constructed in %s2: [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT].</English>
+		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
+		<German>[COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
+		<Italian>Hai costruito l'edificio [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
+		<Polish>Skonstruowałeś [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
+		<Russian>Çàâåðøåíà ïîñòðîéêà çäàíèÿ [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CONTACT_LEADER</Tag>
@@ -13633,21 +13623,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CREATED_PROJECT_IN</Tag>
-		<English>You have created a %s1_PrjctName in %s2_CityName.</English>
-		<French>Vous avez créé [NUM1:un:une:des:des] %s1_PrjctName à %s2_CityName.</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_PrjctName[COLOR_REVERT] in %s2_CityName abgeschlossen.</German>
-		<Italian>Hai creato %s1_PrjctName a %s2_CityName.</Italian>
-		<Spanish>Habéis creado %s1_PrjctName en %s2_CityName.</Spanish>
-		<Polish>Stworzyłeś %s1_PrjctName w %s2_CityName.</Polish>
-		<Russian>Çàâåðøåíà ðàçðàáîòêà ïðîåêòà %s1_PrjctName â ãîðîäå %s2_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_CREATED_PROJECT_IN_LIMITED</Tag>
-		<English>You have created %s1_PrjctName in %s2_CityName.</English>
-		<French>Vous avez créé : %s1_PrjctName à %s2_CityName.</French>
-		<German>Das Projekt %s1_PrjctName wurde in %s2_CityName fertig gestellt.</German>
-		<Italian>Hai creato il progetto %s1_PrjctName a %s2_CityName.</Italian>
-		<Spanish>Habéis creado %s1_PrjctName en %s2_CityName.</Spanish>
+		<English>You have created [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] in %s2.</English>
+		<French>Vous avez créé [NUM1:un:une:des:des] [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] in %s2_CityName abgeschlossen.</German>
+		<Italian>Hai creato [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
+		<Polish>Stworzyłeś [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
+		<Russian>Çàâåðøåíà ðàçðàáîòêà ïðîåêòà [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_COUNT_DEFENSE_HOVER</Tag>
@@ -16617,23 +16599,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAINED_UNIT_IN</Tag>
-		<English>You have trained a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName.</English>
-		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
-		<Italian>Hai addestrato [NUM1:un:una:dei:delle] %s1_UnitName a %s2_CityName.</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] %s1_UnitName en %s2_CityName.</Spanish>
-		<Polish>Zwerbowałeś %s1_UnitName w %s2_CityName.</Polish>
-		<Russian>Çàâåðøåíî ñîçäàíèå þíèòà %s1_UnitName â ãîðîäå %s2_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_TRAINED_UNIT_IN_LIMITED</Tag>
-		<English>You have trained %s1_UnitName in %s2_CityName.</English>
-		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
-		<Italian>Hai realizzato l'unità %s1_UnitName a %s2_CityName.</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] %s1_UnitName en %s2_CityName.</Spanish>
-		<Polish>Zwerbowałeś %s1_UnitName w %s2_CityName.</Polish>
-		<Russian>Â ãîðîäå %s2_CityName ãîòîâ þíèò %s1_UnitName.</Russian>
+		<English>Trained in %s2: [COLOR_UNIT_TEXT]%s1[COLOR_REVERT].</English>
+		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
+		<German>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
+		<Italian>Hai addestrato [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
+		<Polish>Zwerbowałeś [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
+		<Russian>Çàâåðøåíî ñîçäàíèå þíèòà [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAIT_ADOPTED</Tag>
@@ -17048,23 +17020,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WORK_HAS_BEGUN</Tag>
-		<English>[SPACE]Work has now begun on a %s1_ProdName.</English>
-		<French>[SPACE]La production [NUM1:d'un:d'une:de:de] [COLOR_BUILDING_TEXT]%s1_ProdName[COLOR_REVERT] a commencé.</French>
-		<German>[SPACE]Neues Produktionsziel: %s1_ProdName</German>
-		<Italian>[SPACE]Sono iniziati i lavori per: %s1_ProdName.</Italian>
-		<Spanish>[SPACE]Se ha empezado a trabajar en: %s1_ProdName.</Spanish>
-		<Polish>[SPACE]Rozpoczęto pracę nad %s1_ProdName.</Polish>
-		<Russian>[SPACE]Íà÷àòà ðàáîòà (%s1_ProdName).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_WORK_HAS_BEGUN_LIMITED</Tag>
-		<English>[SPACE]Work has now begun on %s1_ProdName.</English>
-		<French>[SPACE]L'entraînement [NUM1:d'un:d'une:de:de] [COLOR_UNIT_TEXT]%s1_ProdName[COLOR_REVERT] a commencé.</French>
-		<German>[SPACE]Neues Produktionsziel: %s1_ProdName</German>
-		<Italian>[SPACE]Sono iniziati i lavori su %s1_ProdName.</Italian>
-		<Spanish>[SPACE]Se ha empezado a trabajar en: %s1_ProdName.</Spanish>
-		<Polish>[SPACE]Rozpoczęto pracę nad %s1_ProdName.</Polish>
-		<Russian>[SPACE]Íà÷àò íîâûé îáúåêò: %s1_ProdName.</Russian>
+		<English>[SPACE]Work has now begun on: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</English>
+		<French>[SPACE]La production [NUM1:d'un:d'une:de:de] [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] a commencé.</French>
+		<German>[SPACE]Neues Produktionsziel: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</German>
+		<Italian>[SPACE]Sono iniziati i lavori per: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Italian>
+		<Spanish>[SPACE]Se ha empezado a trabajar en: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Spanish>
+		<Polish>[SPACE]Rozpoczęto pracę nad [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Polish>
+		<Russian>[SPACE]Íà÷àòà ðàáîòà ([COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WORLD_MAP</Tag>

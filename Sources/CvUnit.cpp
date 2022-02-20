@@ -5781,17 +5781,11 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			break;
 
 		case COMMAND_MERGE:
-			if (!GET_PLAYER(getOwner()).isBarbarian())
-			{
-				doMerge();
-			}
+			doMerge();
 			break;
 
 		case COMMAND_SPLIT:
-			if (!GET_PLAYER(getOwner()).isBarbarian())
-			{
-				doSplit();
-			}
+			doSplit();
 			break;
 
 		case COMMAND_STATUS:
@@ -12441,12 +12435,6 @@ InvisibleTypes CvUnit::getSeeInvisibleType(int i) const
 int CvUnit::flavorValue(FlavorTypes eFlavor) const
 {
 	return m_pUnitInfo->getFlavorValue(eFlavor);
-}
-
-
-bool CvUnit::isBarbarian() const
-{
-	return GET_PLAYER(getOwner()).isBarbarian();
 }
 
 

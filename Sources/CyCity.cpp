@@ -358,11 +358,6 @@ bool CyCity::hasTrait(int /*TraitTypes*/ iTrait) const
 	return m_pCity->hasTrait((TraitTypes) iTrait);
 }
 
-bool CyCity::isBarbarian() const
-{
-	return m_pCity->isBarbarian();
-}
-
 bool CyCity::isNPC() const
 {
 	return m_pCity->isNPC();
@@ -1061,7 +1056,7 @@ bool CyCity::isProductionAutomated() const
 
 void CyCity::setProductionAutomated(bool bNewValue)
 {
-	m_pCity->setProductionAutomated(bNewValue, false);
+	m_pCity->setProductionAutomated(bNewValue);
 }
 
 bool CyCity::isWallOverride() const

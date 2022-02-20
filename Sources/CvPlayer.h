@@ -1320,7 +1320,6 @@ public:
 	int getCivicHappiness() const;
 	void changeCivicHappiness(int iChange);
 
-	/*bool hasFixedBorders();*/
 	bool hasEnemyDefenderUnit(const CvPlot* pPlot) const;
 
 	CvCity* getBestHQCity(CorporationTypes eCorporation) const;

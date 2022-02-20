@@ -44,7 +44,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getUnitCombatType", &CyUnit::getUnitCombatType, "int ()")
 		.def("getDomainType", &CyUnit::getDomainType, "int ()")
 
-		.def("isBarbarian", &CyUnit::isBarbarian, "bool ()")
 		.def("isNPC", &CyUnit::isNPC, "bool ()")
 		.def("isHominid", &CyUnit::isHominid, "bool ()")
 		.def("isHuman", &CyUnit::isHuman, "bool ()")

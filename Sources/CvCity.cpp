@@ -1765,7 +1765,7 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		break;
 
 	case TASK_SET_AUTOMATED_PRODUCTION:
-		setProductionAutomated(bOption, bAlt && bShift && bCtrl);
+		setProductionAutomated(bOption);
 		break;
 
 	case TASK_SET_EMPHASIZE:
@@ -4288,9 +4288,9 @@ void CvCity::hurry(HurryTypes eHurry)
 		logBBAI("    City %S hurrying production of %S at cost of %d pop, %lld gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
 	}
 
-	if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+	if (isCitySelected())
 	{
-		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 
 	// Python Event
@@ -5600,11 +5600,6 @@ float CvCity::getBuildingVisibilityPriority(BuildingTypes eBuilding) const
 bool CvCity::hasTrait(TraitTypes eTrait) const
 {
 	return GET_PLAYER(getOwner()).hasTrait(eTrait);
-}
-
-bool CvCity::isBarbarian() const
-{
-	return GET_PLAYER(getOwner()).isBarbarian();
 }
 
 bool CvCity::isNPC() const
@@ -7147,10 +7142,11 @@ void CvCity::setPopulation(int iNewValue, bool bNormal)
 
 		plot()->plotAction(PUF_makeInfoBarDirty);
 
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
+		if (isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
 }
@@ -10618,9 +10614,9 @@ void CvCity::setCitizensAutomated(bool bNewValue)
 			}
 		}
 
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
+		if (isCitySelected())
 		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 		}
 	}
@@ -10632,27 +10628,17 @@ bool CvCity::isProductionAutomated() const
 	return m_bProductionAutomated;
 }
 
-
-void CvCity::setProductionAutomated(bool bNewValue, bool bClear)
+void CvCity::setProductionAutomated(bool bNewValue)
 {
-	if (isProductionAutomated() != bNewValue)
+	if (m_bProductionAutomated != bNewValue)
 	{
 		m_bProductionAutomated = bNewValue;
 
-		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+		if (bNewValue)
 		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-
-			// if automated and not network game and all 3 modifiers down, clear the queue and choose again
-			if (bNewValue && bClear)
-			{
-				clearOrderQueue();
-			}
-		}
-
-		if (!isProduction())
-		{
+			clearOrderQueue();
 			AI_chooseProduction();
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
 }
@@ -11456,12 +11442,11 @@ void CvCity::onYieldChange()
 	if (getTeam() == GC.getGame().getActiveTeam())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 }
 
@@ -11927,12 +11912,11 @@ void CvCity::updateExtraSpecialistCommerce()
 	if (getTeam() == GC.getGame().getActiveTeam())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 }
 
@@ -14798,6 +14782,7 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 }
 
 
+// Toffer - ToDo - Would make more sense to store this info in the CvArea object, mapped to player, rather than duplicating the info across all cities in the area.
 void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
@@ -14810,7 +14795,7 @@ void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int i
 		if (iChange > 0)
 		{
 			m_freeAreaBuildingCount.insert(std::make_pair((short)eIndex, iChange));
-			algo::for_each(GET_PLAYER(getOwner()).cities(), CvCity::fn::setFreeBuilding(eIndex, true));
+			setFreeBuilding(eIndex, true);
 		}
 		else FErrorMsg("Expected positive iChange for first building of a kind");
 	}
@@ -14818,7 +14803,7 @@ void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int i
 	{
 		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_freeAreaBuildingCount.erase(itr->first);
-		algo::for_each(GET_PLAYER(getOwner()).cities(), CvCity::fn::setFreeBuilding(eIndex, false));
+		setFreeBuilding(eIndex, false);
 	}
 	else // change building count
 	{
@@ -14851,8 +14836,9 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 			setNumRealBuilding(eIndex, 1);
 		}
 	}
-	else if (itr != m_vFreeBuildings.end() && getFreeAreaBuildingCount(eIndex) != 0
-	&& GET_PLAYER(getOwner()).getFreeBuildingCount(eIndex) != 0)
+	else if (itr != m_vFreeBuildings.end()
+	&& getFreeAreaBuildingCount(eIndex) == 0
+	&& GET_PLAYER(getOwner()).getFreeBuildingCount(eIndex) == 0)
 	{
 		m_vFreeBuildings.erase(itr);
 		if (getNumRealBuilding(eIndex) > 0)
@@ -15640,14 +15626,11 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			//gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			//gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 	}
 }
 
@@ -16016,18 +15999,6 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		startHeadOrder();
 	}
 
-	//if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
-	//{
-	//	setInfoDirty(true);
-
-	//	if (isCitySelected())
-	//	{
-	//		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true );
-	//		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-	//		//gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-	//	}
-	//}
-
 	if (bResolveList)
 	{
 		// Check if head of queue is a build list and resolve it in that case
@@ -16068,32 +16039,46 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		const char* szIcon = NULL;
 		wchar_t szBuffer[1024];
 		char szSound[1024];
+		bool bCompletionMessage = false;
+
 		if (eTrainUnit != NO_UNIT)
 		{
-			swprintf(szBuffer, gDLL->getText(isLimitedUnit(eTrainUnit) ? "TXT_KEY_MISC_TRAINED_UNIT_IN_LIMITED" : "TXT_KEY_MISC_TRAINED_UNIT_IN", GC.getUnitInfo(eTrainUnit).getTextKeyWide(), getNameKey()).GetCString());
-			strcpy(szSound, GC.getUnitInfo(eTrainUnit).getArtInfo(0, GET_PLAYER(getOwner()).getCurrentEra(), NO_UNIT_ARTSTYLE)->getTrainSound());
-			szIcon = GET_PLAYER(getOwner()).getUnitButton(eTrainUnit);
+			if (getBugOptionBOOL("Civ4lerts__CompleteUnit", false) || isLimitedUnit(eTrainUnit) && getBugOptionBOOL("Civ4lerts__CompleteSpecial", true))
+			{
+				swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_TRAINED_UNIT_IN", GC.getUnitInfo(eTrainUnit).getTextKeyWide(), getNameKey()).GetCString());
+				strcpy(szSound, GC.getUnitInfo(eTrainUnit).getArtInfo(0, GET_PLAYER(getOwner()).getCurrentEra(), NO_UNIT_ARTSTYLE)->getTrainSound());
+				szIcon = GET_PLAYER(getOwner()).getUnitButton(eTrainUnit);
+				bCompletionMessage = true;
+			}
 		}
 		else if (eConstructBuilding != NO_BUILDING)
 		{
-			swprintf(szBuffer, gDLL->getText(isLimitedWonder(eConstructBuilding) ? "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED" : "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN", GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), getNameKey()).GetCString());
-			strcpy(szSound, GC.getBuildingInfo(eConstructBuilding).getConstructSound());
-			szIcon = GC.getBuildingInfo(eConstructBuilding).getButton();
+			if (getBugOptionBOOL("Civ4lerts__CompleteBuilding", false) || isLimitedWonder(eConstructBuilding) && getBugOptionBOOL("Civ4lerts__CompleteSpecial", true))
+			{
+				swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_CONSTRUCTED_BUILD_IN", GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), getNameKey()).GetCString());
+				strcpy(szSound, GC.getBuildingInfo(eConstructBuilding).getConstructSound());
+				szIcon = GC.getBuildingInfo(eConstructBuilding).getButton();
+				bCompletionMessage = true;
+			}
 		}
 		else if (eCreateProject != NO_PROJECT)
 		{
-			swprintf(szBuffer, gDLL->getText(isLimitedProject(eCreateProject) ? "TXT_KEY_MISC_CREATED_PROJECT_IN_LIMITED" : "TXT_KEY_MISC_CREATED_PROJECT_IN", GC.getProjectInfo(eCreateProject).getTextKeyWide(), getNameKey()).GetCString());
-			strcpy(szSound, GC.getProjectInfo(eCreateProject).getCreateSound());
-			szIcon = GC.getProjectInfo(eCreateProject).getButton();
+			if (getBugOptionBOOL("Civ4lerts__CompleteProject", true) || isLimitedProject(eCreateProject) && getBugOptionBOOL("Civ4lerts__CompleteSpecial", true))
+			{
+				swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_CREATED_PROJECT_IN", GC.getProjectInfo(eCreateProject).getTextKeyWide(), getNameKey()).GetCString());
+				strcpy(szSound, GC.getProjectInfo(eCreateProject).getCreateSound());
+				szIcon = GC.getProjectInfo(eCreateProject).getButton();
+				bCompletionMessage = true;
+			}
 		}
-		if (isProduction())
+		if (bCompletionMessage)
 		{
-			wchar_t szTempBuffer[1024];
-			swprintf(szTempBuffer, gDLL->getText(((isProductionLimited()) ? "TXT_KEY_MISC_WORK_HAS_BEGUN_LIMITED" : "TXT_KEY_MISC_WORK_HAS_BEGUN"), getProductionNameKey()).GetCString());
-			wcscat(szBuffer, szTempBuffer);
-		}
-		{
-
+			if (isProduction() && getBugOptionBOOL("Civ4lerts__CompleteBegunOn", true))
+			{
+				wchar_t szTempBuffer[1024];
+				swprintf(szTempBuffer, gDLL->getText("TXT_KEY_MISC_WORK_HAS_BEGUN", getProductionNameKey()).GetCString());
+				wcscat(szBuffer, szTempBuffer);
+			}
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_MINOR_EVENT, szIcon, GC.getCOLOR_WHITE(), getX(), getY(), true, true);
 		}
 	}
@@ -16101,14 +16086,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
 	{
 		setInfoDirty(true);
-
-		if (isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			//gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			//gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
-		}
+	}
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 	}
 }
 
