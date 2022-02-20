@@ -338,18 +338,15 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPr
 	{
 		if (pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) == 0)
 		{
-			return AREAAI_ASSAULT;
+			return AREAAI_ASSAULT; // Toffer - Basically means that it should naval invade
 		}
-		if (
-		(
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK) +
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) +
-			countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) +
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)
-		)
-		> 1 + AI_countMilitaryWeight(pArea) * 20 / 100)
+		if (  countNumAIUnitsByArea(pArea, UNITAI_ATTACK)
+			+ countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY)
+			+ countNumAIUnitsByArea(pArea, UNITAI_PILLAGE)
+			>
+			2 * AI_countMilitaryWeight(pArea))
 		{
-			return AREAAI_OFFENSIVE; // XXX does this ever happen?
+			return AREAAI_OFFENSIVE;
 		}
 		return AREAAI_MASSING;
 	}

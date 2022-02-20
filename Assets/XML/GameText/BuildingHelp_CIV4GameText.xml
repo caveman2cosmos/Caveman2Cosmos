@@ -173,7 +173,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_CITY_FAST_GROWTH_SPEED</Tag>
-		<English>[ICON_BULLET]Cities Require %d1%% Less [ICON_FOOD] to Grow</English>
+		<English>[ICON_BULLET]City Require %d1%% Less [ICON_FOOD] to Grow</English>
 		<French>[ICON_BULLET]Les Villes ont besoin de %d1%% [ICON_FOOD] en moins pour croître</French>
 		<German>[ICON_BULLET]Städte benötigen %d1%% weniger [ICON_FOOD] um zu wachsen</German>
 		<Italian>[ICON_BULLET]Le città richiedono %d1%% in meno di [ICON_FOOD] per crescere</Italian>
@@ -183,7 +183,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_CITY_SLOW_GROWTH_SPEED</Tag>
-		<English>[ICON_BULLET]Cities Require %d1%% More [ICON_FOOD] to Grow</English>
+		<English>[ICON_BULLET]City Require %d1%% More [ICON_FOOD] to Grow</English>
 		<French>[ICON_BULLET]Les Villes ont besoin de %d1%% [ICON_FOOD] supplémentaire pour croître</French>
 		<German>[ICON_BULLET]Städte benötigen %d1%% mehr [ICON_FOOD] um zu wachsen</German>
 		<Italian>[ICON_BULLET]Le città richiedono %d1%% in più di [ICON_FOOD] per crescere</Italian>
