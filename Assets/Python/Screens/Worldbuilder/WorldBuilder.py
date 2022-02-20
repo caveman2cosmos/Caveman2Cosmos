@@ -1327,11 +1327,15 @@ class WorldBuilder:
 		pNewCity.setOverflowProduction(pOldCity.getOverflowProduction())
 		pNewCity.setPlundered(pOldCity.isPlundered())
 		pNewCity.setProduction(pOldCity.getProduction())
-		pNewCity.setProductionAutomated(pOldCity.isProductionAutomated())
 		pNewCity.setScriptData(pOldCity.getScriptData())
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 
-	def rightMouseDown (self):
+		if pOldCity.isProductionAutomated():
+			# Can only be true for human player, it is false by default and false for all AI.
+			pNewCity.setProductionAutomated(True)
+
+
+	def rightMouseDown(self):
 
 		if self.iPlayerAddMode in self.RevealMode:
 			if not self.m_pCurrentPlot.isNone():

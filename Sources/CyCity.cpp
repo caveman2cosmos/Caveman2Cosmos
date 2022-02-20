@@ -1056,7 +1056,7 @@ bool CyCity::isProductionAutomated() const
 
 void CyCity::setProductionAutomated(bool bNewValue)
 {
-	m_pCity->setProductionAutomated(bNewValue, false);
+	m_pCity->setProductionAutomated(bNewValue);
 }
 
 bool CyCity::isWallOverride() const
