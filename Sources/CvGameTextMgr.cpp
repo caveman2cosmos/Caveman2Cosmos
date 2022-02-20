@@ -3288,7 +3288,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					}
 				}
 
-				if (pUnit->canAnimalIgnoresBorders() && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+				if (pUnit->isAnimal() && pUnit->canAnimalIgnoresBorders())
 				{
 					if (bShort)
 					{

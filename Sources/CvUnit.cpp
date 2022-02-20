@@ -15110,41 +15110,38 @@ int CvUnit::dynamicDefenseTotal() const
 
 bool CvUnit::canAnimalIgnoresBorders() const
 {
+	if (GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+	{
+		return false;
+	}
     if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
     {
         return true;
     }
-	if (!GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT) && mayAnimalIgnoresBorders())
-	{
-		return true;
-	}
-	return false;
+	return mayAnimalIgnoresBorders();
 }
 
 bool CvUnit::canAnimalIgnoresImprovements() const
 {
+	if (GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+	{
+		return false;
+	}
     if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
     {
         return true;
     }
-	if (!GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
-	{
-		int iAnswer = m_pUnitInfo->canAnimalIgnoresBorders();
-		iAnswer += getAnimalIgnoresBordersCount();
-		return (iAnswer > 1);
-	}
-	return false;
+	return m_pUnitInfo->canAnimalIgnoresBorders() + getAnimalIgnoresBordersCount() > 1;
+
 }
 
 bool CvUnit::canAnimalIgnoresCities() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+	if (GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 	{
-		int iAnswer = m_pUnitInfo->canAnimalIgnoresBorders();
-		iAnswer += getAnimalIgnoresBordersCount();
-		return (iAnswer > 2);
+		return false;
 	}
-	return false;
+	return m_pUnitInfo->canAnimalIgnoresBorders() + getAnimalIgnoresBordersCount() > 2;
 }
 
 bool CvUnit::canOnslaught() const
