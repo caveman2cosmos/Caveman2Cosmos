@@ -153,7 +153,7 @@ class Revolution:
 
 		############# Register events and popups ##############
 		# City and civ events
-		customEM.addEventHandler("cityAcquired", self.onCityAcquired)
+		customEM.addEventHandler("cityAcquiredAndKept", self.onCityAcquiredAndKept)
 		customEM.addEventHandler("PreEndGameTurn", self.onEndGameTurn)
 		customEM.addEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn)
 		customEM.addEventHandler("EndPlayerTurn", self.onEndPlayerTurn)
@@ -170,7 +170,7 @@ class Revolution:
 	def removeEventHandlers(self):
 		print "Removing event handlers from Revolution"
 
-		self.customEM.removeEventHandler("cityAcquired", self.onCityAcquired)
+		self.customEM.removeEventHandler("cityAcquiredAndKept", self.onCityAcquiredAndKept)
 		self.customEM.removeEventHandler("PreEndGameTurn", self.onEndGameTurn)
 		self.customEM.removeEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn)
 		self.customEM.removeEventHandler("EndPlayerTurn", self.onEndPlayerTurn)
@@ -570,9 +570,9 @@ class Revolution:
 			iNextPlayer += 1
 
 
-	def onCityAcquired(self, argsList):
-		city = argsList[2]
-		self.updateLocalRevIndices(GAME.getGameTurn(), city.getOwner(), subCityList = [city], bIsRevWatch = True)
+	def onCityAcquiredAndKept(self, argsList):
+		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		self.updateLocalRevIndices(GAME.getGameTurn(), argsList[1], subCityList = [argsList[2]], bIsRevWatch = True)
 
 ##--- Player turn functions ---------------------------------------
 

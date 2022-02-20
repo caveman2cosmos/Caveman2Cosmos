@@ -2556,15 +2556,16 @@ class CvEventManager:
 				self.iArcologyCityID = -1
 
 
+	# This is before city has changed owner or been autorazed
 	def onCityAcquired(self, argsList):
-		iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		iOldCityID = self.iOldCityID
-		iCityID = CyCity.getID()
+		iCityID = city.getID()
 		aWonderTuple = self.aWonderTuple
 		if bConquest:
 			if "HELSINKI" in aWonderTuple[0] and iOwnerNew == aWonderTuple[4][aWonderTuple[0].index("HELSINKI")]:
-				iX = CyCity.getX()
-				iY = CyCity.getY()
+				iX = city.getX()
+				iY = city.getY()
 				for x in xrange(iX - 1, iX + 2):
 					for y in xrange(iY - 1, iY + 2):
 						CyPlot = GC.getMap().plot(x, y)
@@ -2611,14 +2612,14 @@ class CvEventManager:
 
 
 	def onCityAcquiredAndKept(self, argsList):
-		iPlayer, CyCity = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		# Messages - Wonder Captured
-		NumWonders = CyCity.getNumWorldWonders()
+		NumWonders = city.getNumWorldWonders()
 		if NumWonders:
-			if CyCity.isRevealed(GAME.getActiveTeam(), False):
+			if city.isRevealed(GAME.getActiveTeam(), False):
 				iActivePlayer = GAME.getActivePlayer()
 				if iActivePlayer > -1:
-					if iPlayer == iActivePlayer:
+					if iOwnerNew == iActivePlayer:
 						bActive = True
 						artPath = 'Art/Interface/Buttons/General/happy_person.dds'
 						eColor = ColorTypes(GC.getCOLOR_GREEN())
@@ -2627,11 +2628,11 @@ class CvEventManager:
 						artPath = 'Art/Interface/Buttons/General/warning_popup.dds'
 						eColor = -1
 
-					szPlayerName = GC.getPlayer(iPlayer).getName()
-					iX = CyCity.getX()
-					iY = CyCity.getY()
+					szPlayerName = GC.getPlayer(iOwnerNew).getName()
+					iX = city.getX()
+					iY = city.getY()
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if CyCity.getNumRealBuilding(iBuilding):
+						if city.getNumRealBuilding(iBuilding):
 							CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
