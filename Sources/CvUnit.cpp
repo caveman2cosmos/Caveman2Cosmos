@@ -15118,7 +15118,7 @@ bool CvUnit::canAnimalIgnoresBorders() const
     {
         return true;
     }
-	return mayAnimalIgnoresBorders();
+	return getAnimalIgnoresBordersCount() > 0;
 }
 
 bool CvUnit::canAnimalIgnoresImprovements() const
@@ -15127,11 +15127,11 @@ bool CvUnit::canAnimalIgnoresImprovements() const
 	{
 		return false;
 	}
-    if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
-    {
-        return true;
-    }
-	return m_pUnitInfo->canAnimalIgnoresBorders() + getAnimalIgnoresBordersCount() > 1;
+	if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+	{
+		return true;
+	}
+	return getAnimalIgnoresBordersCount() > 1;
 
 }
 
@@ -15141,7 +15141,11 @@ bool CvUnit::canAnimalIgnoresCities() const
 	{
 		return false;
 	}
-	return m_pUnitInfo->canAnimalIgnoresBorders() + getAnimalIgnoresBordersCount() > 2;
+	if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+	{
+		return true;
+	}
+	return getAnimalIgnoresBordersCount() > 2;
 }
 
 bool CvUnit::canOnslaught() const
@@ -18369,14 +18373,7 @@ void CvUnit::changeExtraDynamicDefense(int iChange)
 
 int CvUnit::getAnimalIgnoresBordersCount() const
 {
-	return m_iAnimalIgnoresBordersCount;
-}
-
-bool CvUnit::mayAnimalIgnoresBorders() const
-{
-	int iAnswer = m_pUnitInfo->canAnimalIgnoresBorders();
-	iAnswer += getAnimalIgnoresBordersCount();
-	return (iAnswer > 0);
+	return m_pUnitInfo->canAnimalIgnoresBorders() + m_iAnimalIgnoresBordersCount;
 }
 
 void CvUnit::changeAnimalIgnoresBordersCount(int iChange)

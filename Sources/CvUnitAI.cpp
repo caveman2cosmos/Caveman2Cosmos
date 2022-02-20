@@ -15735,7 +15735,14 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 
 			if (isAnimal())
 			{
-				if (!pAdjacentPlot->isOwned())
+				if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+				{
+					if (pAdjacentPlot->isVisibleEnemyUnit(this))
+					{
+						iValue += 5000;
+					}
+				}
+				else if (!pAdjacentPlot->isOwned())
 				{
 					iValue += 5000;
 
