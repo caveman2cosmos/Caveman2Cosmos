@@ -15110,41 +15110,42 @@ int CvUnit::dynamicDefenseTotal() const
 
 bool CvUnit::canAnimalIgnoresBorders() const
 {
+	if (GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+	{
+		return false;
+	}
     if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
     {
         return true;
     }
-	if (!GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT) && mayAnimalIgnoresBorders())
-	{
-		return true;
-	}
-	return false;
+	return getAnimalIgnoresBordersCount() > 0;
 }
 
 bool CvUnit::canAnimalIgnoresImprovements() const
 {
-    if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
-    {
-        return true;
-    }
-	if (!GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+	if (GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 	{
-		int iAnswer = m_pUnitInfo->canAnimalIgnoresBorders();
-		iAnswer += getAnimalIgnoresBordersCount();
-		return (iAnswer > 1);
+		return false;
 	}
-	return false;
+	if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+	{
+		return true;
+	}
+	return getAnimalIgnoresBordersCount() > 1;
+
 }
 
 bool CvUnit::canAnimalIgnoresCities() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+	if (GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 	{
-		int iAnswer = m_pUnitInfo->canAnimalIgnoresBorders();
-		iAnswer += getAnimalIgnoresBordersCount();
-		return (iAnswer > 2);
+		return false;
 	}
-	return false;
+	if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+	{
+		return true;
+	}
+	return getAnimalIgnoresBordersCount() > 2;
 }
 
 bool CvUnit::canOnslaught() const
@@ -18372,14 +18373,7 @@ void CvUnit::changeExtraDynamicDefense(int iChange)
 
 int CvUnit::getAnimalIgnoresBordersCount() const
 {
-	return m_iAnimalIgnoresBordersCount;
-}
-
-bool CvUnit::mayAnimalIgnoresBorders() const
-{
-	int iAnswer = m_pUnitInfo->canAnimalIgnoresBorders();
-	iAnswer += getAnimalIgnoresBordersCount();
-	return (iAnswer > 0);
+	return m_pUnitInfo->canAnimalIgnoresBorders() + m_iAnimalIgnoresBordersCount;
 }
 
 void CvUnit::changeAnimalIgnoresBordersCount(int iChange)

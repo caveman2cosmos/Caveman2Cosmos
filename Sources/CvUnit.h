@@ -1386,7 +1386,6 @@ public:
 	void setSMStrength ();
 
 	int getAnimalIgnoresBordersCount() const;
-	bool mayAnimalIgnoresBorders() const;
 	void changeAnimalIgnoresBordersCount(int iChange);
 
 	int getOnslaughtCount() const;
