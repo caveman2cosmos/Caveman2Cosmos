@@ -443,8 +443,9 @@ void CvCityAI::AI_assignWorkingPlots()
 
 	AI_setAssignWorkDirty(false);
 
-	if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
+	if (isCitySelected())
 	{
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 	}
 }
@@ -7243,11 +7244,6 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 
 		AI_assignWorkingPlots();
 
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-		}
-
 		//	If we're using AI govenors and not part way through a build reflect
 		//	the changes in a new production choice immediately
 		if (isHuman() && (!isProduction() || getProduction() == 0) && isProductionAutomated() && GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_3))
@@ -7266,12 +7262,6 @@ void CvCityAI::AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue)
 		m_pbEmphasizeSpecialist[eIndex] = bNewValue;
 
 		AI_assignWorkingPlots();
-
-		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
-		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
-		}
 	}
 }
 

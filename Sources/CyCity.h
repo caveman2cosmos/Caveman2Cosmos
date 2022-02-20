@@ -105,7 +105,6 @@ public:
 	int /*ArtStyleTypes*/ getArtStyleType() const;
 
 	bool hasTrait(int /*TraitTypes*/ iTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;

@@ -291,7 +291,6 @@ public:
 	DllExport float getBuildingVisibilityPriority(BuildingTypes eBuilding) const;
 
 	bool hasTrait(TraitTypes eTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -828,7 +827,7 @@ public:
 	void setCitizensAutomated(bool bNewValue);
 
 	bool isProductionAutomated() const;
-	void setProductionAutomated(bool bNewValue, bool bClear);
+	void setProductionAutomated(bool bNewValue);
 
 	/* allows you to programatically specify a cities walls rather than having them be generated automagically */
 	DllExport bool isWallOverride() const;

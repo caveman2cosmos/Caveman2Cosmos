@@ -4627,12 +4627,6 @@ bool CvPlot::isOwned() const
 	return getOwner() != NO_PLAYER;
 }
 
-
-bool CvPlot::isBarbarian() const
-{
-	return getOwner() == BARBARIAN_PLAYER;
-}
-
 bool CvPlot::isNPC() const
 {
 	return getOwner() >= MAX_PC_PLAYERS;

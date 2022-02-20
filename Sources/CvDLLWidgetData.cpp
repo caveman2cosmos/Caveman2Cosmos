@@ -197,10 +197,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseAutomateCitizensHelp(widgetDataStruct, szBuffer);
 		break;
 
-	case WIDGET_AUTOMATE_PRODUCTION:
-		parseAutomateProductionHelp(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_EMPHASIZE:
 		parseEmphasizeHelp(widgetDataStruct, szBuffer);
 		break;
@@ -795,10 +791,6 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 
 	case WIDGET_AUTOMATE_CITIZENS:
 		doAutomateCitizens();
-		break;
-
-	case WIDGET_AUTOMATE_PRODUCTION:
-		doAutomateProduction();
 		break;
 
 	case WIDGET_EMPHASIZE:
@@ -1439,16 +1431,6 @@ void CvDLLWidgetData::doAutomateCitizens()
 	if (pHeadSelectedCity != NULL)
 	{
 		GC.getGame().selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_SET_AUTOMATED_CITIZENS, -1, -1, !(pHeadSelectedCity->isCitizensAutomated()));
-	}
-}
-
-void CvDLLWidgetData::doAutomateProduction()
-{
-	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if (pHeadSelectedCity != NULL)
-	{
-		GC.getGame().selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_SET_AUTOMATED_PRODUCTION, -1, -1, !pHeadSelectedCity->isProductionAutomated(), gDLL->altKey(), gDLL->shiftKey(), gDLL->ctrlKey());
 	}
 }
 
@@ -4615,20 +4597,6 @@ void CvDLLWidgetData::parseAutomateCitizensHelp(CvWidgetDataStruct &widgetDataSt
 	}
 }
 
-
-void CvDLLWidgetData::parseAutomateProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if (pHeadSelectedCity != NULL)
-	{
-		if (pHeadSelectedCity->isProductionAutomated())
-		{
-			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_OFF_PROD_AUTO"));
-		}
-		else szBuffer.assign(gDLL->getText("TXT_KEY_MISC_ON_PROD_AUTO"));
-	}
-}
 
 void CvDLLWidgetData::parseEmphasizeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {

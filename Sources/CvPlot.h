@@ -398,7 +398,6 @@ public:
 	int plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 
 	bool isOwned() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isRevealedBarbarian() const;

@@ -205,7 +205,7 @@ class WBProjectScreen:
 		if bApplyAll:
 			for i in xrange(GC.getMAX_TEAMS()):
 				pTeamX = GC.getTeam(i)
-				if pTeamX.isBarbarian() and bNoBarb: continue
+				if pTeamX.isNPC() and bNoBarb: continue
 				if pTeamX.isAlive():
 					self.modifyCount(item, pTeamX)
 		else:
