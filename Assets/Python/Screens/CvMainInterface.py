@@ -1432,6 +1432,11 @@ class CvMainInterface:
 						screen.hide("UnitButtons")
 					bFirst = True
 
+				if bFirst:
+					screen.show("Conscript")
+					screen.show("AutomateCitizens")
+					screen.show("CS|AutomateProduction0")
+
 				self.InCity = InCity = City(CyCity, iCityID)
 				if InCity.iPlayer == self.iPlayer or self.bDebugMode:
 					iTab = self.iCityTab
@@ -2064,6 +2069,7 @@ class CvMainInterface:
 			if bMyCity:
 				screen.setState("AutomateCitizens", city.isCitizensAutomated())
 				screen.setState("CS|AutomateProduction0", city.isProductionAutomated())
+
 			screen.enable("AutomateCitizens", bMyCity)
 			screen.enable("CS|AutomateProduction0", bMyCity)
 
