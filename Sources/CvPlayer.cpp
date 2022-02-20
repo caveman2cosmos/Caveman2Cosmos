@@ -2559,7 +2559,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		const int iDamage = pOldCity->getDefenseDamage();
 
 		int iCiv = pOldCity->getCivilizationType();
-		if (pOldCity->isBarbarian())
+		if (pOldCity->isNPC())
 		{
 			iCiv = NO_CIVILIZATION;
 		}
