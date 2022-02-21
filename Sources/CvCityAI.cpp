@@ -4210,7 +4210,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 				if (gCityLogLevel > 3)
 				{
-					logBBAI("City %S base value for %S (flags %08lx)=%ll", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
+					logBBAI("City %S base value for %S (flags %08lx)=%I64u", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 				}
 
 				// If this new building replaces an old one, subtract the old value.
@@ -4230,7 +4230,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 							if (gCityLogLevel > 3)
 							{
-								logBBAI("    replaces %S - reduce value to %ll", GC.getBuildingInfo(eBuildingX).getDescription(), iValue);
+								logBBAI("    replaces %S - reduce value to %I64u", GC.getBuildingInfo(eBuildingX).getDescription(), iValue);
 							}
 						}
 					}
@@ -4277,7 +4277,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 						if (gCityLogLevel > 3)
 						{
-							logBBAI("    enables %S - increase value to %ll", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue);
+							logBBAI("    enables %S - increase value to %I64u", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue);
 						}
 					}
 				}
@@ -4302,7 +4302,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 			if (gCityLogLevel > 3)
 			{
-				logBBAI("    final value %ll", iValue);
+				logBBAI("    final value %I64u", iValue);
 			}
 
 			// If we got here, and the building value is above zero, then it certainly
