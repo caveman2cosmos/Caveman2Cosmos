@@ -3158,7 +3158,7 @@ class CvMainInterface:
 		ScPnl = "CityWorkQueue"
 		y = self.yBotBar + 16
 		h = self.yRes - y - 20
-		w = self.xMidL - 80
+		w = self.xMidL - 78
 
 		if self.iResID == 2:
 			dy = 24
@@ -3166,7 +3166,7 @@ class CvMainInterface:
 			dy = 22
 		else:
 			dy = 20
-		screen.addScrollPanel(ScPnl, "", -6, y, w, h, ePanelSTD)
+		screen.addScrollPanel(ScPnl, "", -8, y, w, h, ePanelSTD)
 		screen.setStyle(ScPnl, "ScrollPanel_Alt_Style")
 		iOrders = CyIF.getNumOrdersQueued()
 		y = 0
@@ -3234,13 +3234,13 @@ class CvMainInterface:
 			InCity.WorkQueue.append([szName, iType, szRow])
 			szName += "QueueEntry" + szRow
 			ROW = "QueueRow" + szRow
-			screen.attachPanelAt(ScPnl, ROW, "", "", True, False, ePanelSTD, -2, y-2, w-18, dy, eWidGen, 1, 1)
+			screen.attachPanelAt(ScPnl, ROW, "", "", True, False, ePanelSTD, -2, y-2, w-21, dy, eWidGen, 1, 1)
 
 			szTxt1 = TextUtil.evalTextWidth(w - 80, uFont, szTxt1)
 
 			screen.setTextAt(szName, ROW, szTxt1, 1<<0, 4, -2, 0, eFontGame, eWidGen, 1, 1)
 			if szTxt2:
-				screen.setLabelAt("QueueTime"+szRow, ROW, uFont+szTxt2, 1<<0, w-66, 0, 0, eFontGame, eWidGen, 1, 1)
+				screen.setLabelAt("QueueTime"+szRow, ROW, uFont+szTxt2, 1<<0, w-64, 0, 0, eFontGame, eWidGen, 1, 1)
 			y += dy
 
 		InCity.QueueIndex = iOrders

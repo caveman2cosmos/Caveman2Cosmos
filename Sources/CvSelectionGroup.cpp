@@ -3771,36 +3771,9 @@ bool CvSelectionGroup::groupDeclareWar(const CvPlot* pPlot, bool bForce)
 	return (iNumUnits != getNumUnits());
 }
 
-namespace {
-	bool performSupport(CvPlot* from, CvPlot* to, PlayerTypes fromPlayer, TeamTypes toTeam)
-	{
-		bool performedAttack = false;
-		foreach_(CvUnit* pLoopUnit, from->units())
-		{
-			if ((toTeam == NO_TEAM || GET_TEAM(pLoopUnit->getTeam()).isAtWar(toTeam)) &&
-				(fromPlayer == NO_PLAYER || pLoopUnit->getOwner() == fromPlayer))
-			{
-				if (pLoopUnit->canBombardAtRanged(from, to->getX(), to->getY()))
-				{
-					if (pLoopUnit->bombardRanged(to->getX(), to->getY(), true))
-					{
-						performedAttack = true;
-					}
-				}
-				else if (pLoopUnit->getDomainType() == DOMAIN_AIR && !pLoopUnit->isSuicide())
-				{
-					pLoopUnit->updateAirStrike(to, false, true);//airStrike(plot()))
-				}
-				pLoopUnit->setMadeAttack(false);
-			}
-		}
-		return performedAttack;
-	}
-}
-
 
 // Returns true if attack was made...
-bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth)
+bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting)
 {
 	PROFILE_FUNC();
 
@@ -3820,12 +3793,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	bool bAttack = false;
 	bFailedAlreadyFighting = false;
-	bool bStealthDefense = bStealth;
+	bool bStealthDefense = false;
 	bool bAffixFirstAttacker = false;
 	bool bAffixFirstDefender = false;
 
 	if (getNumUnits() > 0 && (getDomainType() == DOMAIN_AIR || stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) <= 1)
-	&& ((iFlags & MOVE_DIRECT_ATTACK) || getDomainType() == DOMAIN_AIR || (iFlags & MOVE_THROUGH_ENEMY) || bStealth || generatePath(plot(), pDestPlot, iFlags) && getPathFirstPlot() == pDestPlot))
+	&& ((iFlags & MOVE_DIRECT_ATTACK) || getDomainType() == DOMAIN_AIR || (iFlags & MOVE_THROUGH_ENEMY) || generatePath(plot(), pDestPlot, iFlags) && getPathFirstPlot() == pDestPlot))
 	{
 		int iAttackOdds = 0;
 		CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
@@ -3857,7 +3830,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			}
 // BUG - Safe Move - end
 
-			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack() && !bStealth);
+			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
 
 			if (groupDeclareWar(pDestPlot))
 			{
@@ -3869,28 +3842,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				return false;
 			}
 
-			// RevolutionDCM - attack support
-			if (GC.isDCM_ATTACK_SUPPORT())
-			{
-				if (pDestPlot->getNumUnits() > 0 && !bStealth)
-				{
-					performSupport(pDestPlot, plot(), NO_PLAYER, getTeam());
-				}
-				else
-				{
-					return bAttack;
-				}
-				if (plot()->getNumUnits() > 0 && !bStealth)
-				{
-					performSupport(plot(), pDestPlot, getOwner(), NO_TEAM);
-				}
-				else
-				{
-					return bAttack;
-				}
-			}
-			// RevolutionDCM - attack support end
-
+			bool bStealth = false;
 			bool bBombardExhausted = false;
 			bool bLoopStealthDefense = false;
 			while (true)
@@ -3908,33 +3860,26 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				{
 					pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
 				}
-				if (pBestAttackUnit == NULL/* || !pBestAttackUnit->canEnterPlot(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense)*/)//TB: I realize this was probably placed here for a reason, BUT, that reason may have been negated at a point by a later debug effort AND if it is NOT necessary then it is a major waste of processing time.  groupStackAttack has been getting away without it.
+				if (pBestAttackUnit == NULL)
 				{
 					break;
 				}
-				else
-				{
-					// if there are no defenders, do not attack
-					if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-					{
-						if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
-						{
-							pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-							bStealth = true;
-						}
-					}
-					if (!bAffixFirstDefender)
-					{
-						pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
-					}
-					bAffixFirstAttacker = false;
-					bAffixFirstDefender = false;
-				}
 
-				//if (!pBestAttackUnit->canEnterPlot(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense))
-				//{
-				//	break;
-				//}//TB again, not sure this is necessary
+				// if there are no defenders, do not attack
+				if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+				{
+					if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+					{
+						pDestPlot->revealBestStealthDefender(pBestAttackUnit);
+						bStealth = true;
+					}
+				}
+				if (!bAffixFirstDefender)
+				{
+					pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
+				}
+				bAffixFirstAttacker = false;
+				bAffixFirstDefender = false;
 
 				if (iAttackOdds < 68 && !isHuman() && !bStealth)
 				{
@@ -3973,6 +3918,10 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					{
 						bFailedAlreadyFighting = true;
 					}
+					else if (!pBestDefender)
+					{
+						break;
+					}
 					else
 					{
 						//TB: This is a fix for (standard bts) stack attack.
@@ -3982,16 +3931,9 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						{
 							iPlus++;
 						}
-						bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
-						bool bQuick = (bStack || bMore || bLoopStealthDefense);
-						if (pBestDefender)
-						{
-							pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
-						}
-						else
-						{
-							break;
-						}
+						const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
+						const bool bQuick = (bStack || bMore || bLoopStealthDefense);
+						pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
 					}
 				}
 				else if (pBestDefender)
@@ -4020,7 +3962,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					{
 						AI_queueGroupAttack(iX, iY);
 					}
-
 					break;
 				}
 			}
@@ -6230,22 +6171,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 						return true;
 					}
 
-					// RevolutionDCM - attack support
-					if (GC.isDCM_ATTACK_SUPPORT())
-					{
-						if (pDestPlot->getNumUnits() < 1 || bStealth)
-						{
-							return bAttack;
-						}
-						bAction = performSupport(pDestPlot, pOrigPlot, NO_PLAYER, getTeam());
-
-						if (pOrigPlot->getNumUnits() < 1 || bStealth)
-						{
-							return bAttack;
-						}
-						bAction = performSupport(pOrigPlot, pDestPlot, getOwner(), NO_TEAM);
-					}
-					// RevolutionDCM - attack support end
 					bool bBombardExhausted = false;
 					while (true)
 					{

@@ -4286,7 +4286,7 @@ void CvCity::hurry(HurryTypes eHurry)
 			szString = GC.getProjectInfo(getProductionProject()).getDescription();
 		}
 
-		logBBAI("    City %S hurrying production of %S at cost of %d pop, %lld gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
+		logBBAI("    City %S hurrying production of %S at cost of %d pop, %I64d gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
 	}
 
 	if (isCitySelected())

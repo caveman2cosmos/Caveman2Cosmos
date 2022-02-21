@@ -1744,16 +1744,6 @@ int64_t CyPlayer::getCulture() const
 	return m_pPlayer->getCulture();
 }
 
-void CyPlayer::setCulture(int64_t iNewValue)
-{
-	m_pPlayer->setCulture(iNewValue);
-}
-
-void CyPlayer::changeCulture(int64_t iAddValue)
-{
-	m_pPlayer->changeCulture(iAddValue);
-}
-
 CvProperties* CyPlayer::getProperties() const
 {
 	return m_pPlayer->getProperties();

@@ -8648,23 +8648,19 @@ bool CvUnit::paradrop(int iX, int iY)
 	{
 		return false;
 	}
-
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
-	changeMoves(GC.getMOVE_DENOMINATOR() / 2);
-	setMadeAttack(true);
-
-	if (isFreeDrop() == true)
+	if (!isFreeDrop())
 	{
-		changeMoves(-(GC.getMOVE_DENOMINATOR() / 2));
-		setMadeAttack(false);
+		changeMoves(GC.getMOVE_DENOMINATOR() / 2);
+		setMadeAttack(true);
 	}
 
 	//GC.getGame().logOOSSpecial(19, getID(), pPlot->getX(), pPlot->getY());
 	setXY(pPlot->getX(), pPlot->getY());
 
 	//check if intercepted
-	if(interceptTest(pPlot))
+	if (interceptTest(pPlot))
 	{
 		return true;
 	}

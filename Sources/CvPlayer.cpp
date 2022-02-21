@@ -3998,12 +3998,12 @@ void CvPlayer::dumpStats() const
 	logBBAI("	Total gold income from trade agreements: %d", getGoldPerTurn());
 	logBBAI("	Num units: %d", getNumUnits());
 	logBBAI("	Num selection groups: %d", getNumSelectionGroups());
-	logBBAI("	Unit Upkeep (pre inflation): %llu", iUnitUpkeep);
+	logBBAI("	Unit Upkeep (pre inflation): %I64u", iUnitUpkeep);
 	logBBAI("	Unit supply cost (pre inflation): %d", iUnitSupplyCosts);
 	logBBAI("	Maintenance cost (pre inflation): %d", iMaintenanceCosts);
 	logBBAI("	Civic upkeep cost (pre inflation): %d", iCivicUpkeepCosts);
 	logBBAI("	Corporate income (pre inflation): %d", iCorporateTaxIncome);
-	logBBAI("	Inflation effect: %lld", iTotalCosts - iTotalPreInflatedCosts);
+	logBBAI("	Inflation effect: %I64d", iTotalCosts - iTotalPreInflatedCosts);
 	logBBAI("	Is in financial difficulties: %s", AI_isFinancialTrouble() ? "yes" : "no");
 	logBBAI("	Total science output: %d", calculateResearchRate());
 	logBBAI("	Total espionage output: %d", getCommerceRate(COMMERCE_ESPIONAGE));
@@ -27985,14 +27985,10 @@ int64_t CvPlayer::getCulture() const
 	return m_iCulture;
 }
 
-void CvPlayer::setCulture(int64_t iNewValue)
-{
-	m_iCulture = iNewValue;
-}
-
 void CvPlayer::changeCulture(int64_t iAddValue)
 {
 	m_iCulture += iAddValue;
+	FASSERT_NOT_NEGATIVE(m_iCulture);
 }
 
 
@@ -29746,14 +29742,26 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25;
 }
 
-int64_t CvPlayer::getLeaderLevelupCultureToEarn() const
+uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 {
-	return getLeaderLevelupNextCultureTotal() - getCulture();
+	const int64_t iCurrent = getCulture();
+	const uint64_t iNext = getLeaderLevelupNextCultureTotal();
+
+	if (iCurrent < 0)
+	{
+		FErrorMsg("Negative total national culture, Ss baad m'kay.");
+		return iNext;
+	}
+	if (iNext <= static_cast<uint64_t>(iCurrent))
+	{
+		return 0;
+	}
+	return iNext - iCurrent;
 }
 
 bool CvPlayer::canLeaderPromote() const
 {
-	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() < 1;
+	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() == 0;
 }
 
 void CvPlayer::doPromoteLeader()

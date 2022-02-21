@@ -816,7 +816,6 @@ public:
 	void setCurrentEra(EraTypes eNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
 	void changeCulture(int64_t iAddValue);
 
 	ReligionTypes getLastStateReligion() const;
@@ -2067,7 +2066,7 @@ public:
 	void changeLeaderHeadLevel(int iChange);
 
 	uint64_t getLeaderLevelupNextCultureTotal() const;
-	int64_t getLeaderLevelupCultureToEarn() const;
+	uint64_t getLeaderLevelupCultureToEarn() const;
 
 	bool canLeaderPromote() const;
 	void doPromoteLeader();

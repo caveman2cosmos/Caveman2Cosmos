@@ -8536,7 +8536,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
 				int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
 				int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%lld / %lld)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
+				szString.append(CvWString::format(L"\nUnit cost percentage: %I64d (%I64d / %I64d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
 
 				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
 
@@ -9827,7 +9827,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 				const int64_t iGold = pCity->getHurryGold((HurryTypes)iI);
 				if (iGold > 0)
 				{
-					szTempBuffer.Format(L"%lld %c", -iGold, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
+					szTempBuffer.Format(L"%I64d %c", -iGold, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
 					setListHelp(szString, NULL, szTempBuffer, L", ", bFirst);
 					bFirst = false;
 				}
@@ -31143,16 +31143,16 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", iLevel));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", CvWString::format(L"%lld", kPlayer.getCulture()).GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", CvWString::format(L"%I64d", kPlayer.getCulture()).GetCString()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", CvWString::format(L"%llu", kPlayer.getLeaderLevelupNextCultureTotal()).GetCString(), iLevel+1));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", CvWString::format(L"%I64u", kPlayer.getLeaderLevelupNextCultureTotal()).GetCString(), iLevel+1));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", CvWString::format(L"%lld", kPlayer.getLeaderLevelupCultureToEarn()).GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", CvWString::format(L"%I64u", kPlayer.getLeaderLevelupCultureToEarn()).GetCString()));
 	}
 	else
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", CvWString::format(L"%lld", kPlayer.getCulture()).GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", CvWString::format(L"%I64d", kPlayer.getCulture()).GetCString()));
 	}
 }
 
