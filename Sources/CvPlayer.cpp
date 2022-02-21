@@ -29746,14 +29746,23 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25;
 }
 
-int64_t CvPlayer::getLeaderLevelupCultureToEarn() const
+uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 {
-	return getLeaderLevelupNextCultureTotal() - getCulture();
+	int64_t iCurrent = getCulture();
+	uint64_t iNext = getLeaderLevelupNextCultureTotal();
+
+	if (iCurrent < 0) return iNext;
+
+	if (iNext <= static_cast<uint64_t>(iCurrent))
+	{
+		return 0;
+	}
+	return iNext - iCurrent;
 }
 
 bool CvPlayer::canLeaderPromote() const
 {
-	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() < 1;
+	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() == 0;
 }
 
 void CvPlayer::doPromoteLeader()
