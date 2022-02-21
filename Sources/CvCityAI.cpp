@@ -8216,7 +8216,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 				{
 					if (gCityLogLevel >= 2)
 					{
-						logBBAI("      City %S hurry gold at %lld to rush defenses for recent attack", getName().GetCString(), iHurryGold);
+						logBBAI("      City %S hurry gold at %I64d to rush defenses for recent attack", getName().GetCString(), iHurryGold);
 					}
 					hurry((HurryTypes)iI);
 					return;
@@ -8256,9 +8256,9 @@ void CvCityAI::AI_doHurry(bool bForce)
 				{
 					if (gCityLogLevel >= 2)
 					{
-						// %lld format bug requires more than one log entry as all % after it will get the wrong value.
-						logBBAI("\tCity %S hurry production: cost %lld, ...", getName().GetCString(), iCost);
-						logBBAI("\t... Building-Value %d, turns left %d, treasury %lld", iValue, iTurns, iGold);
+						// %I64d format bug requires more than one log entry as all % after it will get the wrong value.
+						logBBAI("\tCity %S hurry production: cost %I64d, ...", getName().GetCString(), iCost);
+						logBBAI("\t... Building-Value %d, turns left %d, treasury %I64d", iValue, iTurns, iGold);
 					}
 					hurry((HurryTypes)iI);
 					return;

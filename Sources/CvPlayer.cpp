@@ -3998,12 +3998,12 @@ void CvPlayer::dumpStats() const
 	logBBAI("	Total gold income from trade agreements: %d", getGoldPerTurn());
 	logBBAI("	Num units: %d", getNumUnits());
 	logBBAI("	Num selection groups: %d", getNumSelectionGroups());
-	logBBAI("	Unit Upkeep (pre inflation): %llu", iUnitUpkeep);
+	logBBAI("	Unit Upkeep (pre inflation): %I64u", iUnitUpkeep);
 	logBBAI("	Unit supply cost (pre inflation): %d", iUnitSupplyCosts);
 	logBBAI("	Maintenance cost (pre inflation): %d", iMaintenanceCosts);
 	logBBAI("	Civic upkeep cost (pre inflation): %d", iCivicUpkeepCosts);
 	logBBAI("	Corporate income (pre inflation): %d", iCorporateTaxIncome);
-	logBBAI("	Inflation effect: %lld", iTotalCosts - iTotalPreInflatedCosts);
+	logBBAI("	Inflation effect: %I64d", iTotalCosts - iTotalPreInflatedCosts);
 	logBBAI("	Is in financial difficulties: %s", AI_isFinancialTrouble() ? "yes" : "no");
 	logBBAI("	Total science output: %d", calculateResearchRate());
 	logBBAI("	Total espionage output: %d", getCommerceRate(COMMERCE_ESPIONAGE));
@@ -29748,8 +29748,8 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 
 uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 {
-	int64_t iCurrent = getCulture();
-	uint64_t iNext = getLeaderLevelupNextCultureTotal();
+	const int64_t iCurrent = getCulture();
+	const uint64_t iNext = getLeaderLevelupNextCultureTotal();
 
 	if (iCurrent < 0) return iNext;
 
