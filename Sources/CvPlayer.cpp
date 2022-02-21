@@ -27985,14 +27985,10 @@ int64_t CvPlayer::getCulture() const
 	return m_iCulture;
 }
 
-void CvPlayer::setCulture(int64_t iNewValue)
-{
-	m_iCulture = iNewValue;
-}
-
 void CvPlayer::changeCulture(int64_t iAddValue)
 {
 	m_iCulture += iAddValue;
+	FASSERT_NOT_NEGATIVE(m_iCulture);
 }
 
 
@@ -29751,8 +29747,11 @@ uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 	const int64_t iCurrent = getCulture();
 	const uint64_t iNext = getLeaderLevelupNextCultureTotal();
 
-	if (iCurrent < 0) return iNext;
-
+	if (iCurrent < 0)
+	{
+		FErrorMsg("Negative total national culture, Ss baad m'kay.");
+		return iNext;
+	}
 	if (iNext <= static_cast<uint64_t>(iCurrent))
 	{
 		return 0;

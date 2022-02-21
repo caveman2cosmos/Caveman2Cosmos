@@ -816,7 +816,6 @@ public:
 	void setCurrentEra(EraTypes eNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
 	void changeCulture(int64_t iAddValue);
 
 	ReligionTypes getLastStateReligion() const;
