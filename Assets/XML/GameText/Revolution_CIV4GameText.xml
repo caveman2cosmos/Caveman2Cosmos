@@ -31,16 +31,6 @@
 		<Russian>Ïàðàìåòðû ìîùè âàðâàðîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REVDCMTAB_BATTLE_OPTIONS</Tag>
-		<English>Battle Options:</English>
-		<French>Options Battle:</French>
-		<German>Kampf-Optionen:</German>
-		<Italian>Opzioni battaglia:</Italian>
-		<Spanish>Opciones de batalla:</Spanish>
-		<Polish>Opcje Bitwy:</Polish>
-		<Russian>Îïöèè ñðàæåíèÿ:</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REVDCMTAB_IDW_OPTIONS</Tag>
 		<English>IDW Options:</English>
 		<French>Options IDW:</French>
@@ -119,25 +109,6 @@
 		<Spanish>Opciones de espionaje:</Spanish>
 		<Polish>Opcje Szpiegów:</Polish>
 		<Russian>Îïöèè øïèîíàæà:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REVDCM_NOTES</Tag>
-		<English>RevDCM Notes:</English>
-		<French>Notes RevDCM:</French>
-		<German>RevDCM Notizen:</German>
-		<Italian>RevDCM Note:</Italian>
-		<Spanish>Notas de RevDCM:</Spanish>
-		<Polish>Notatki RevDCM:</Polish>
-		<Russian>RevDCM ïðèìå÷àíèÿ:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REVDCM_TAB_HELP</Tag>
-		<English>In depth information about this mod can be found in in the Docs folder of this mod: (Your Computer's Path to Civ4)/Beyond the Sword/Mods/RevolutionDCM/Docs</English>
-		<French>Vous pouvez trouver des informations plus détaillées de ce mod dans le dossier Documents dans le mod: (Route Civ4 sur votre ordinateur)/Beyond the Sword/Mods/RevolutionDCM/Docs</French>
-		<German>Vertiefte Informationen zu diesm Mod können im zugehörigen Docs-Verzeichnis gefunden werden: (Ihr Computer-Pfad zu Civ4)/Beyond the Sword/Mods/RevolutionDCM/Docs</German>
-		<Italian>Potete trovare informazioni piu dettagliate di questo mod nella cartella Documenti nel mod: (Route Civ4 sul computer)/Beyond the Sword/Mods/RevolutionDCM/Docs</Italian>
-		<Spanish>Se puede encontrar información mas detallada sobre este mod en la carpeta "Docs" en el directorio: (Ruta de Civilization 4 en tu ordenador)/Beyond the Sword/Mods/RevolutionDCM/Docs</Spanish>
-		<Polish>Szczegółowe informacje na temat modu możesz znaleźć w folderze docs: (Twoja ścieżka do Civ4)/Beyond the Sword/Mods/RevolutionDCM/Docs</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVERT_COLOR</Tag>

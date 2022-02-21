@@ -192,9 +192,6 @@ class RevolutionInit:
 		# DCM
 		revComponentsText += sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_DCM",())
 
-		if RevDCMOpt.isDCM_ATTACK_SUPPORT():
-			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_TEXT",())
-
 		if RevDCMOpt.isDCM_RANGE_BOMBARD():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_RANGE_BOMBARD_TEXT",())
 

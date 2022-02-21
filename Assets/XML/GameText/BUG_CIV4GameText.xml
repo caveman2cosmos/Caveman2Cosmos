@@ -5448,22 +5448,6 @@
 		<Russian>Óëó÷øåííûå àâèàíàëåòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_HOVER</Tag>
-		<English>Enables both offensive and defensive bombard units to bombard assist the attacking/defending unit while retaining their turn; is dependent on whether archer and ranged bombardment are enabled</English>
-		<French>Permet aux unités de bombardement (offensif et défensif) d'assister les attaquants ou défenseurs, tout les privant alors de la possibilité d'effectuer d'autres actions. Cette Option dépend des choix concernant les options de bombardement et d'attaque à distance des Archers.</French>
-		<German>Ermöglicht es, offensiven und defensiven Bombardierungseinheiten andere angreifende oder verteidigende Einheiten durch Bombardement zu unterstützen und dabei keinen Bewegungspunkt zu verlieren; hängt davon ab, ob Bogenschützen- und Fernbombardierung aktiviert sind</German>
-		<Spanish>Habilita a las unidades capaces de bombardeo a distancia, el apoyo tanto al ataque como a la defensa de otras unidades mientras permanezcan en su turno; depende de si está habilitado el bombardeo a distancia de arqueros y unidades de asedio.</Spanish>
-		<Russian>Ïîçâîëÿåò êàê íàñòóïàòåëüíûì, òàê è îáîðîíèòåëüíûì îòðÿäàì îêàçûâàòü îãíåâóþ ïîääåðæêó ñîþçíèêó, ñîõðàíèâ ñâîþ î÷åðåäü õîäà; çàâèñèìîñòü îò íàëè÷èÿ ëó÷íèêà è äèñòàíöèîííîãî îáñòðåëà âêëþ÷åíà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_TEXT</Tag>
-		<English>Attack Support</English>
-		<French>Support d'Attaques</French>
-		<German>Angriffsunterstützung</German>
-		<Spanish>Apoyo al ataque</Spanish>
-		<Russian>Êîîðäèíàöèÿ àòàêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_HOVER</Tag>
 		<English>Enables fighters to actively target and engage enemy aircraft</English>
 		<French>Permet aux Avions de Chasse d'engager le Combat en sélectionnant une cible aérienne.</French>
