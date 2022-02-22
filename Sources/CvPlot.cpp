@@ -4315,64 +4315,51 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 {
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
-	CvCity* pLoopCity;
-	CvCity* pBestCity;
-	CvPlot* pLoopPlot;
-	bool bValid;
-	int iCulture;
-	int iPriority;
-	int iBestPriority;
-	int iI;
-
 	if (isForceUnowned())
 	{
 		return NO_PLAYER;
 	}
-
 	int iBestCulture = 0;
-	int iBestCultureRange = MAX_INT;
+	int iBestRange = MAX_INT;
 	PlayerTypes eBestPlayer = NO_PLAYER;
+	const PlayerTypes eOwner = getOwner();
+	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
 
-	for (iI = 0; iI < MAX_PLAYERS; ++iI)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
+		if (GET_PLAYER(ePlayerX).isAlive())
 		{
-			iCulture = getCulture((PlayerTypes)iI);
+			const int iCulture = getCulture(ePlayerX);
 
 			if (iCulture > 0)
 			{
 				int iCultureRange;
 
 				// Super Forts begin *culture*
-				if (isWithinCultureRange((PlayerTypes)iI, &iCultureRange))
+				if (isWithinCultureRange(ePlayerX, &iCultureRange))
 				// Super Forts end
 				{
-					//	Koshling - modified so that equal culture victory goes to the player with the closest culture source as
-					//	first tie-breaker
-					if (iCulture > iBestCulture ||
-						(iCulture == iBestCulture &&
-						 (iCultureRange < iBestCultureRange || (getOwner() == iI && iCultureRange == iBestCultureRange))))
+					// Koshling - modified so that equal culture victory goes to the player with the closest culture source as first tie-breaker.
+					if (iCulture > iBestCulture
+					|| iCulture == iBestCulture
+					&& (iCultureRange < iBestRange || eOwner == ePlayerX && iCultureRange == iBestRange))
 					{
 						iBestCulture = iCulture;
-						eBestPlayer = ((PlayerTypes)iI);
-						iBestCultureRange = iCultureRange;
+						eBestPlayer = ePlayerX;
+						iBestRange = iCultureRange;
 					}
 				}
 			}
 		}
 	}
-	iCulture = 0;
-	if (getOwner() != NO_PLAYER && eBestPlayer == NO_PLAYER)
+	if (eOwner != NO_PLAYER && eBestPlayer == NO_PLAYER && getCulture(eOwner) < 1)
 	{
-		iCulture = getCulture(getOwner());
-		if (iCulture < 1)
-		{
-			return NO_PLAYER;
-		}
+		return ePlayerSurrounds;
 	}
 
 	/* plots that are not forts and are adjacent to cities always belong to those cities' owners */
-	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isActsAsCity())
+	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
 		if (adjacentCity != NULL)
@@ -4381,128 +4368,95 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		}
 	}
 
-	//	Have to check for the current owner being alive for this to work correctly
-	//	in the cultural re-assignment that takes place as he dies during processing of the capture
-	//	of his last city
-	if (getOwner() != NO_PLAYER && GET_PLAYER(getOwner()).isAlive())
+	// Have to check for the current owner being alive for this to work correctly in the cultural
+	//	re-assignment that takes place as he dies during processing of the capture of his last city.
+	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
 	{
-		if (GET_PLAYER(getOwner()).hasFixedBorders())
+		// Owner have fixed borders
+		// Can not steal land from other, more dominant fixed border civilization
+		if (eBestPlayer != NO_PLAYER
+		&&  eBestPlayer != eOwner
+		&& !GET_PLAYER(eBestPlayer).hasFixedBorders()
+		// Koshling - changed Fixed Borders to not unconditionally hold territory, but only
+		//	to hold it against a natural owner with less than twice the FB player's culture
+		&& getCulture(eOwner) > iBestCulture/2
+		&& (isWithinCultureRange(eOwner) || isWithinOccupationRange(eOwner)))
 		{
-			//Can not steal land from other, more dominant fixed border civilization
-			bool bValidCulture = true;
-			if (eBestPlayer != NO_PLAYER && getOwner() != eBestPlayer)
-			{
-				bValidCulture = !GET_PLAYER(eBestPlayer).hasFixedBorders();
-			}
+			return eOwner;
+		}
 
-			//	Koshling - changed Fixed Borders to not unconditionally hold territory, but only
-			//	to hold it against a natural owner with less than twice the FB player's culture
-			if (bValidCulture &&
-				getCulture(getOwner()) > iBestCulture/2 &&
-				(isWithinCultureRange(getOwner()) || isWithinOccupationRange(getOwner())))
-			{
-				return getOwner();
-			}
-
-			const bool bOwnerHasUnit = algo::any_of(units(),
-				CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)
-			);
-			if (bOwnerHasUnit)
-			{
-				return getOwner();
-			}
-
-			//This is a fort, outside of our normal borders, but we have fixed borders, and it has not been claimed
-			if (isActsAsCity())
-			{
-				return getOwner();
-			}
+		// Unit claiming the plot
+		if (algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL))
+		// Or this is a fort, outside of our normal borders.
+		|| isActsAsCity())
+		{
+			return eOwner;
 		}
 	}
 
-	if (!isCity())
+	if (!isCity() && eBestPlayer != NO_PLAYER)
 	{
-		if (eBestPlayer != NO_PLAYER)
+		int iBestPriority = MAX_INT;
+
+		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			iBestPriority = MAX_INT;
-			pBestCity = NULL;
+			const CvPlot* plotX = plotCity(getX(), getY(), iI);
 
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+			if (plotX != NULL)
 			{
-				pLoopPlot = plotCity(getX(), getY(), iI);
+				const CvCity* cityX = plotX->getPlotCity();
 
-				if (pLoopPlot != NULL)
+				if (cityX == NULL)
 				{
-					pLoopCity = pLoopPlot->getPlotCity();
+					continue;
+				}
+				const TeamTypes eBestTeam = GET_PLAYER(eBestPlayer).getTeam();
 
-					if (pLoopCity != NULL)
+				if (cityX->getTeam() == eBestTeam || GET_TEAM(eBestTeam).isVassal(cityX->getTeam()))
+				{
+					const PlayerTypes ePlayerX = cityX->getOwner();
+
+					if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
 					{
-						if (pLoopCity->getTeam() == GET_PLAYER(eBestPlayer).getTeam() || GET_TEAM(GET_PLAYER(eBestPlayer).getTeam()).isVassal(pLoopCity->getTeam()))
+						const int iPriority = GC.getCityPlotPriority()[iI] + 5 * (cityX->getTeam() == eBestTeam);
+
+						if (iPriority < iBestPriority)
 						{
-							if (getCulture(pLoopCity->getOwner()) > 0)
-							{
-								if (isWithinCultureRange(pLoopCity->getOwner()))
-								{
-									iPriority = GC.getCityPlotPriority()[iI];
-
-									if (pLoopCity->getTeam() == GET_PLAYER(eBestPlayer).getTeam())
-									{
-										iPriority += 5; // priority ranges from 0 to 4 -> give priority to Masters of a Vassal
-									}
-
-									if ((iPriority < iBestPriority) || ((iPriority == iBestPriority) && (pLoopCity->getOwner() == eBestPlayer)))
-									{
-										iBestPriority = iPriority;
-										pBestCity = pLoopCity;
-									}
-								}
-							}
+							iBestPriority = iPriority;
+							eBestPlayer = ePlayerX;
 						}
 					}
 				}
 			}
-
-			if (pBestCity != NULL)
-			{
-				eBestPlayer = pBestCity->getOwner();
-			}
 		}
 	}
 
-	if (eBestPlayer == NO_PLAYER)
+	// Toffer - If all plots around this neutral plot is owned by a player, grant that player this plot.
+	if (eBestPlayer == NO_PLAYER || ePlayerSurrounds != NO_PLAYER)
 	{
-		bValid = true;
-
-		foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
-		{
-			if (pLoopPlot->isOwned())
-			{
-				if (eBestPlayer == NO_PLAYER)
-				{
-					eBestPlayer = pLoopPlot->getOwner();
-				}
-				else if (eBestPlayer != pLoopPlot->getOwner())
-				{
-					bValid = false;
-					break;
-				}
-			}
-			else
-			{
-				bValid = false;
-				break;
-			}
-		}
-
-		if (!bValid || !GET_PLAYER(eBestPlayer).isAlive())
-		{
-			eBestPlayer = NO_PLAYER;
-		}
+		return ePlayerSurrounds;
 	}
-
 	return eBestPlayer;
 }
 
+
+PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
+{
+	PlayerTypes ePlayer = NO_PLAYER;
+
+	foreach_(const CvPlot* plotX, cardinalDirectionAdjacent())
+	{
+		if (!plotX->isOwned() || ePlayer != NO_PLAYER && ePlayer != plotX->getOwner())
+		{
+			return NO_PLAYER;
+		}
+		if (GET_PLAYER(plotX->getOwner()).isAlive())
+		{
+			ePlayer = plotX->getOwner();
+		}
+	}
+	return ePlayer;
+}
 
 void CvPlot::plotAction(PlotUnitFunc func, int iData1, int iData2, PlayerTypes eOwner, TeamTypes eTeam)
 {
@@ -4740,12 +4694,12 @@ void CvPlot::removeGoody()
 
 bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 {
-	if (bCheckImprovement && NO_IMPROVEMENT != getImprovementType() && GC.getImprovementInfo(getImprovementType()).isActsAsCity()
+	if (bCheckImprovement && isActsAsCity()
 	&& (NO_TEAM == eForTeam || NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders() || GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
 	{
 		return true;
 	}
-	return (getPlotCity() != NULL);
+	return getPlotCity() != NULL;
 }
 
 
@@ -12366,7 +12320,7 @@ void CvPlot::setClaimingOwner(PlayerTypes eNewValue)
 
 bool CvPlot::isActsAsCity() const
 {
-	return (getImprovementType() != NO_IMPROVEMENT) && GC.getImprovementInfo(getImprovementType()).isActsAsCity();
+	return getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isActsAsCity();
 }
 
 
