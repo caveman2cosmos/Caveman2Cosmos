@@ -2409,7 +2409,7 @@ void CvUnitAI::AI_barbAttackMove()
 	{
 		return;
 	}
-	
+
 	const bool bRaging = GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS);
 
 	if (bRaging || GC.getGame().getNumCivCities() > GC.getGame().countCivPlayersAlive() * 2)

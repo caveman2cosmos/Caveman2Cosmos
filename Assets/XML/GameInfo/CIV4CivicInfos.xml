@@ -3746,7 +3746,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -3756,7 +3756,7 @@
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
