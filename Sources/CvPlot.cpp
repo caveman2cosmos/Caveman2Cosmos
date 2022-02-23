@@ -3195,27 +3195,18 @@ CvUnit* CvPlot::getBestDefender(EDefenderScore::flags flags, PlayerTypes eOwner,
 
 CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate, bool bClearCache) const
 {
-
 	PROFILE_FUNC();
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//TB - Commented out due to suspicion that this will lead to some of the strange problems we have with bad defense decisions or poor group evaluations changing once attack is launched.
-	//if (isCity() && getPlotCity()->isInvaded() && !bAssassinate)
-	//{
-	//	return getWorstDefender(eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove);
-	//}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+/*TB - Commented out due to suspicion that this will lead to some of the strange problems we have with bad defense decisions or poor group evaluations changing once attack is launched.
+	if (isCity() && getPlotCity()->isInvaded() && !bAssassinate)
+	{
+		return getWorstDefender(eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove);
+	}
+*/
 
-	//	Heavily cache this routine as during large stack fights the question is asked over and over, with the
-	//	same attacker cropping up repeatedly
-
-	if ( g_bestDefenderCachePlot != this )
+	// Heavily cache this routine as during large stack fights the question is asked over and over,
+	//	with the same attacker cropping up repeatedly
+	if (g_bestDefenderCachePlot != this)
 	{
 		g_bestDefenderCachePlot = this;
 		g_bestDefenderCache->clear();
