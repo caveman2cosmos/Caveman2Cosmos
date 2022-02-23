@@ -8562,30 +8562,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_FERTILTY_DANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CHILDBIRTH_HUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_ANCIENT_CUSTOMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CHILDCAREHUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DAYCARE_CENTER</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
