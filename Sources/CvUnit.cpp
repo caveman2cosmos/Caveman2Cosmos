@@ -15019,27 +15019,6 @@ bool CvUnit::canOnslaught() const
 	return m_pUnitInfo->isOnslaught() || mayOnslaught();
 }
 
-bool CvUnit::hasCombatType(UnitCombatTypes eCombatType) const
-{
-	if ((getUnitCombatType() == eCombatType || hasExtraSubCombatType(eCombatType)) && !hasRemovesUnitCombatType(eCombatType))
-	{
-		return true;
-	}
-	// AIAndy: This could be removed if the unit type sub combat types get added to the extra sub combat type counts
-	return algo::any_of_equal(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
-}
-
-bool CvUnit::hasSubCombatType(UnitCombatTypes eCombatType) const
-{
-	const bool bSubCombat = algo::any_of_equal(m_pUnitInfo->getSubCombatTypes(), eCombatType);
-
-	if ((bSubCombat || hasExtraSubCombatType(eCombatType)) && m_pUnitInfo->getUnitCombatType() != eCombatType && !hasRemovesUnitCombatType(eCombatType))
-	{
-		return true;
-	}
-	return false;
-}
-
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 bool CvUnit::hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const
 {
@@ -18315,8 +18294,7 @@ int CvUnit::getSubCombatTypeCount(UnitCombatTypes eCombatType) const
 
 bool CvUnit::hasExtraSubCombatType(UnitCombatTypes eCombatType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType);
-	return (getSubCombatTypeCount(eCombatType) > 0);
+	return getSubCombatTypeCount(eCombatType) > 0;
 }
 
 void CvUnit::changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange)
@@ -34608,31 +34586,22 @@ void CvUnit::setHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType
 
 void CvUnit::doSetUnitCombats()
 {
-	bool bUpdated = false;
 	if (getUnitCombatType() != NO_UNITCOMBAT)
 	{
 		setHasUnitCombat(getUnitCombatType(), true);
-
-		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
-		{
-			setHasUnitCombat(eSubCombat, true);
-			bUpdated = true;
-		}
 	}
-
-	const TechTypes ePrereq = (TechTypes)m_pUnitInfo->getPrereqAndTech();
-
-	EraTypes eEra = NO_ERA;
-
-	if (ePrereq == NO_TECH)
+	foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 	{
-		eEra = GC.getGame().getCurrentEra();
+		setHasUnitCombat(eSubCombat, true);
 	}
-	else
-	{
-		eEra = (EraTypes)GC.getTechInfo(ePrereq).getEra();
-	}
-
+	const EraTypes eEra =
+	(
+		m_pUnitInfo->getPrereqAndTech() > -1
+		?
+		(EraTypes)GC.getTechInfo((TechTypes)m_pUnitInfo->getPrereqAndTech()).getEra()
+		:
+		GC.getGame().getCurrentEra()
+	);
 	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra() == eEra)
@@ -34641,7 +34610,7 @@ void CvUnit::doSetUnitCombats()
 			break;
 		}
 	}
-	if (bUpdated && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		setSMValues();
 	}
